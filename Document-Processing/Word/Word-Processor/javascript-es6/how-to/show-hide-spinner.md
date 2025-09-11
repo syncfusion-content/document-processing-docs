@@ -4,7 +4,6 @@ title: Show hide spinner in JavaScript (ES6) Document editor control | Syncfusio
 description: Learn here all about Show hide spinner in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Show hide spinner 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -29,14 +28,14 @@ Refer to the following example.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/spinner-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/spinner-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/spinner-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/spinner-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/spinner-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/spinner-cs1" %}
 
 
 

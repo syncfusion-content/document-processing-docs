@@ -5,14 +5,11 @@ component: "DocumentEditor"
 description: Learn how to enable ruler in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Enable ruler 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable ruler
-
-## How to enable ruler in Document Editor component
+## How to enable ruler in JavaScript (ES5) Document Editor component
 
 Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor.
 
@@ -27,7 +24,7 @@ The following example illustrates how to enable ruler in Document Editor
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/ruler-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/ruler-cs1" %}
 
 ## How to enable ruler in Document Editor Container component
 
@@ -44,4 +41,4 @@ The following example illustrates how to enable ruler in Document Editor Contain
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/ruler-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/ruler-cs2" %}

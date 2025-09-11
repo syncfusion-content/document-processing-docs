@@ -4,7 +4,6 @@ title: Document management in JavaScript (ES5) Document editor control | Syncfus
 description: Learn here all about Document management in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Document management 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -37,7 +36,7 @@ documentEditor.userColor = '#fff000';
 
 You can toggle the highlight the editable region value using the "highlightEditableRanges" property.
 
-The folowing code shows how to toggle the highlight editable region value.
+The following code shows how to toggle the highlight editable region value.
 
 ```javascript
 documentEditor.documentEditorSettings.highlightEditableRanges = true; 
@@ -64,7 +63,7 @@ The following code shows Restrict Editing Pane. To unprotect the document, use p
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/data-protection-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/data-protection-cs1" %}
 
 ## See Also
 

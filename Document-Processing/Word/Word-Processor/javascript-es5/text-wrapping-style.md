@@ -4,7 +4,6 @@ title: Text wrapping style in JavaScript (ES5) Document editor control | Syncfus
 description: Learn here all about Text wrapping style in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Text wrapping style 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

@@ -4,7 +4,6 @@ title: Open document by address in JavaScript (ES5) Document editor control | Sy
 description: Learn here all about Open document by address in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open document by address 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

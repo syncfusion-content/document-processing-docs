@@ -1,5 +1,5 @@
 ---
-title: "how to enable ruler in document edior"
+title: "how to enable ruler in document edior  | Syncfusion"
 component: "DocumentEditor"
 description: "Learn how to enable ruler in Angular Document Editor component."
 platform: document-processing
@@ -8,9 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable ruler
-
-## How to enable ruler in Document Editor component
+## How to enable ruler in Angular Document Editor component
 
 Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor.
 
@@ -18,15 +16,15 @@ The following example illustrates how to enable ruler in Document Editor
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/ruler-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/ruler-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/ruler-cs1/src/main.ts %}
+{% include code-snippet/document-editor/angular/ruler-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/ruler-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/angular/ruler-cs1" %}
 
 ## How to enable ruler in Document Editor Container component
 
@@ -36,12 +34,12 @@ The following example illustrates how to enable ruler in Document Editor Contain
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/ruler-cs2/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/ruler-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/ruler-cs2/src/main.ts %}
+{% include code-snippet/document-editor/angular/ruler-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/ruler-cs2" %}
+{% previewsample "/document-processing/samples/document-editor/angular/ruler-cs2" %}

@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Content Control in Syncfusion ##Platform_Name## Document Editor Component 
-description: Learn here all about Content Control in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Content Control in Syncfusion ASP.NET MVC Document Editor Component 
+description: Learn here all about Content Control in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Content Control
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -88,7 +87,7 @@ var contentControlInfos = container.documentEditor.exportContentControlData();
 
 ## Reset content control
 
-Content control properties can be reset using the `resetcontentcontroldata`
+Content control properties can be reset using the `resetContentControlData`
 
 {% highlight ts %}
 var data = [];

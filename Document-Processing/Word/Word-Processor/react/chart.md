@@ -16,17 +16,17 @@ The following example shows chart preservation in Document Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/chart-cs1/app/index.jsx %}
+{% include code-snippet/document-editor/react/chart-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/chart-cs1/app/index.tsx %}
+{% include code-snippet/document-editor/react/chart-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/react/document-editor/chart-cs1/index.html %}
+{% include code-snippet/document-editor/react/chart-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/react/document-editor/chart-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/chart-cs1" %}
 
 ## Supported Chart Types
 

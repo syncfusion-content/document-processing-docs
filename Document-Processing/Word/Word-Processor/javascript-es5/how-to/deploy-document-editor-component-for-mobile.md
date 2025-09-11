@@ -4,7 +4,6 @@ title: Deploy document editor component for mobile in JavaScript (ES5) Document 
 description: Learn here all about Deploy document editor component for mobile in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Deploy document editor component for mobile 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

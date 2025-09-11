@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Keyboard Shortcut in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about keyboard shortcut in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Keyboard Shortcut in ASP.NET MVC Document Editor Component | Syncfusion
+description: Learn here all about keyboard shortcut in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Keyboard Shortcut
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

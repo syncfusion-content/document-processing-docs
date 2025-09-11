@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Text Format in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about text format in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Text Format in ASP.NET MVC Document Editor Component | Syncfusion
+description: Learn here all about text format in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Text Format
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -166,10 +165,10 @@ documenteditor.selection.characterFormat.highlightColor= '#FFC0CB';
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/text-format/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/text-format/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Text-format.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/text-format/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/text-format/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

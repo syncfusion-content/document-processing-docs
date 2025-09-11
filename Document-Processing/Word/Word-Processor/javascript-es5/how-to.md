@@ -4,7 +4,6 @@ title: How to in JavaScript (ES5) Document editor control | Syncfusion
 description: Learn here all about How to in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: How to 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -26,7 +25,7 @@ The following code shows how to prevent the `CTRL + C` keyboard shortcut for cop
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/prevent-keyboard-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/prevent-keyboard-cs1" %}
 
 ## Override or define the keyboard shortcut
 
@@ -43,4 +42,4 @@ For example, `Ctrl + S` keyboard shortcut saves the document in SFDT format by d
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/override-keyboard-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/override-keyboard-cs1" %}

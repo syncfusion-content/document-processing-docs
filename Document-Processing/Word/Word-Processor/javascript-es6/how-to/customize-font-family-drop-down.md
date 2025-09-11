@@ -4,7 +4,6 @@ title: Customize font family drop down in JavaScript (ES6) Document editor contr
 description: Learn here all about Customize font family drop down in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize font family drop down 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

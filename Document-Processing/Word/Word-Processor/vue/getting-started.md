@@ -82,7 +82,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [`npmjs.com`](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
 This article uses the [Vue Document editor component](https://www.syncfusion.com/vue-components/vue-wysiwyg-document-editor) as an example. Install the `@syncfusion/ej2-vue-documenteditor` package by running the following command:
 
@@ -190,11 +190,11 @@ Output will be displayed as follows.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/document-editor/vue/document-editor/getting-started-cs2/app.vue %}
+{% include code-snippet/document-editor/vue/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/vue/document-editor/getting-started-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/getting-started-cs2" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
@@ -258,11 +258,11 @@ DocumentEditorContainer output will be displayed as follows.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/document-editor/vue/document-editor/getting-started-cs3/app.vue %}
+{% include code-snippet/document-editor/vue/getting-started-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/vue/document-editor/getting-started-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/getting-started-cs3" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 

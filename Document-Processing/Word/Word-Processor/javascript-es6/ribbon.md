@@ -4,7 +4,6 @@ title: Ribbon in JavaScript (ES6) Document editor control | Syncfusion
 description: Learn here all about the Ribbon UI in Syncfusion JavaScript (ES6) Document editor control, how to switch between Ribbon and Toolbar modes.
 platform: document-processing
 control: Ribbon
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

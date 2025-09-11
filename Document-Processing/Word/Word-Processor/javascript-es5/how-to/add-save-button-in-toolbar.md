@@ -4,7 +4,6 @@ title: Add save button in JavaScript (ES5) Document editor toolbar | Syncfusion
 description: Learn here to add save button in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Add save button tool bar 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -13,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## To add a save button to the existing toolbar in DocumentEditorContainer
 
-DocumentEditorContainer allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/customToolbarItemModel/) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/javascript/documentation/api/toolbar/clickEventArgs/).
+DocumentEditorContainer allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/customToolbarItemModel/) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#toolbaritems/) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/javascript/documentation/api/toolbar/clickEventArgs/).
 
 ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
 var hostUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';

@@ -4,7 +4,6 @@ title: Overview of JavaScript (ES6) Document editor control | Syncfusion
 description: Document editor for JavaScript (ES6) is used to create, edit, view and print word documents.
 platform: document-processing
 control: Index 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

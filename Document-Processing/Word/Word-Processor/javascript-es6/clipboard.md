@@ -4,7 +4,6 @@ title: Clipboard in JavaScript (ES6) Document editor control | Syncfusion
 description: Learn here all about Clipboard in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Clipboard 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

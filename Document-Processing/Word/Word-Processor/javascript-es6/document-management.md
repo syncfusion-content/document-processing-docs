@@ -4,7 +4,6 @@ title: Document management in JavaScript (ES6) Document editor control | Syncfus
 description: Learn here all about Document management in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Document management 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -59,14 +58,14 @@ The following code shows Restrict Editing Pane. To unprotect the document, use p
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/data-protection-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/data-protection-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/data-protection-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/data-protection-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/data-protection-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/data-protection-cs1" %}
 
 ## See Also
 

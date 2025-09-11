@@ -4,7 +4,6 @@ title: Fields in JavaScript (ES5) Document editor control | Syncfusion
 description: Learn here all about Fields in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Fields 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -15,7 +14,7 @@ Document Editor has preservation support for all types of fields in an existing 
 
 ## Adding Fields
 
-You can add a field to the document by using [`insertField`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertfield) method in [`Editor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/) module.
+You can add a field to the document by using [`insertField`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertfield/) method in [`Editor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/) module.
 
 The following example code illustrates how to insert merge field programmatically by providing the field code and field result.
 
@@ -50,7 +49,7 @@ The following type of fields are automatically updated in Document Editor.
 
 ## Get field info
 
-You can get field code and field result of the current selected field by using [`getFieldInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#getfieldinfo) method in the [`Selection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection/) module.
+You can get field code and field result of the current selected field by using [`getFieldInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#getfieldinfo/) method in the [`Selection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection/) module.
 
 ```ts
 //Gets the field information of the selected field.
@@ -61,7 +60,7 @@ let fieldInfo: FieldInfo = documentEditor.selection.getFieldInfo();
 
 ## Set field info
 
-You can modify the field code and field result of the current selected field by using [`setFieldInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#setfieldinfo) method in the [`Editor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/) module.
+You can modify the field code and field result of the current selected field by using [`setFieldInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#setfieldinfo/) method in the [`Editor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/) module.
 
 ```ts
 //Gets the field information for the selected field.

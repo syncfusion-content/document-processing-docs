@@ -4,7 +4,6 @@ title: Track changes in JavaScript (ES5) Document editor control | Syncfusion
 description: Learn here all about Track changes in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Track changes 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

@@ -22,15 +22,15 @@ The following example illustrates how to add requestNavigate event for DocumentE
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs2/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/link-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs2/src/main.ts %}
+{% include code-snippet/document-editor/angular/link-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/link-cs2" %}
+{% previewsample "/document-processing/samples/document-editor/angular/link-cs2" %}
 
 ### Add the requestNavigate event for DocumentEditorContainer component
 
@@ -94,21 +94,21 @@ To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT
 > `<https://>`<br>
 > `file:///`<br>
 > `www.`<br>
-> `mailto:`<br>
+> `mail-to:`<br>
 
 Refer to the following example.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs3/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/link-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs3/src/main.ts %}
+{% include code-snippet/document-editor/angular/link-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/link-cs3" %}
+{% previewsample "/document-processing/samples/document-editor/angular/link-cs3" %}
 
 ## Customize screen tip
 
@@ -136,15 +136,15 @@ Document Editor provides dialog support to insert or edit a hyperlink. Refer to 
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs4/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/link-cs4/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs4/src/main.ts %}
+{% include code-snippet/document-editor/angular/link-cs4/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/link-cs4" %}
+{% previewsample "/document-processing/samples/document-editor/angular/link-cs4" %}
 
 You can use the following keyboard shortcut to open the hyperlink dialog if the selection is in hyperlink.
 

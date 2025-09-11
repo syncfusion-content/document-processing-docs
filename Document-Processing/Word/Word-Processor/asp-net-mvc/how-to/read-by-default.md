@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Read By Default in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about read by default in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Read By Default in ASP.NET MVC Document Editor Component | Syncfusion
+description: Learn here all about read by default in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Read By Default
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -20,7 +19,7 @@ Using [`isReadOnly`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/read-only/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/read-only/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Read-only.cs" %}
 {% endhighlight %}{% endtabs %}

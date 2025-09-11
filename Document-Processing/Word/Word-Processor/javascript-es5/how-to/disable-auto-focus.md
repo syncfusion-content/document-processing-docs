@@ -4,7 +4,6 @@ title: Disable auto focus in JavaScript (ES5) Document editor control | Syncfusi
 description: Learn here all about Disable auto focus in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Disable auto focus 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

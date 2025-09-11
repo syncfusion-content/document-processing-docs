@@ -1,10 +1,9 @@
 ---
 layout: post
-title: List Format in ##Platform_Name## Document Editor Component
-description: Learn here all about List Format in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: List Format in ASP.NET MVC Document Editor Component
+description: Learn here all about List Format in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: List Format
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -56,7 +55,7 @@ documenteditor.editor.clearList();
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/list/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/list/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="List.cs" %}
 {% endhighlight %}{% endtabs %}

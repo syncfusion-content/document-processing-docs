@@ -4,7 +4,6 @@ title: Customize tool bar in JavaScript (ES6) Document editor control | Syncfusi
 description: Learn here all about Customize tool bar in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize tool bar 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

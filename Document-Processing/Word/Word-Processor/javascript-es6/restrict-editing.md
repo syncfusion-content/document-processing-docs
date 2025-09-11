@@ -4,7 +4,6 @@ title: Restrict editing in JavaScript (ES6) Document Editor Control | Syncfusion
 description: Learn here all about Restrict editing in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Restrict editing 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -49,14 +48,14 @@ The following code shows Restrict Editing Pane. To unprotect the document, use p
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/data-protection-cs2/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/data-protection-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/data-protection-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es6/data-protection-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/data-protection-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/data-protection-cs2" %}
 
 ### See Also
 

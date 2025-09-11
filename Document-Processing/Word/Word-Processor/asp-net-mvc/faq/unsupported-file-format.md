@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Unsupported file in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about Unsupported file in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Unsupported file in ASP.NET MVC Document Editor Component | Syncfusion
+description: Learn here all about Unsupported file in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Unsupported file
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

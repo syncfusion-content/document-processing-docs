@@ -4,7 +4,6 @@ title: Print in JavaScript (ES6) Document editor control | Syncfusion
 description: Learn here all about Print in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Print 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -19,14 +18,14 @@ Refer to the following example for showing a document and print it.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/print-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/print-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/print-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/print-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/print-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/print-cs1" %}
 
 Refer to the following example for creating a document and print it.
 
@@ -34,14 +33,14 @@ Refer to the following example for creating a document and print it.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/print-cs2/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/print-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/print-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es6/print-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/print-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/print-cs2" %}
 
 ## Improve print quality
 
@@ -114,14 +113,14 @@ The following example shows how to customize layout options only for printing.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/print-cs3/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/print-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/print-cs3/index.html %}
+{% include code-snippet/document-editor/javascript-es6/print-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/print-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/print-cs3" %}
 
 ## See Also
 

@@ -4,7 +4,6 @@ title: Bookmark in JavaScript (ES6) Document editor control | Syncfusion
 description: Learn here all about Bookmark in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Bookmark 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -94,14 +93,14 @@ The following example shows how to open bookmark dialog in Document Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/dialog-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/dialog-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/dialog-cs1" %}
 
 ## See Also
 

@@ -4,7 +4,6 @@ title: Open default document in JavaScript (ES6) Document editor control | Syncf
 description: Learn here all about Open default document in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open default document 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -25,14 +24,14 @@ The following example illustrates how to open the default SFDT content once Docu
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/open-default-document-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/open-default-document-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/open-default-document-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/open-default-document-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/open-default-document-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/open-default-document-cs1" %}
 
 
 
@@ -46,13 +45,13 @@ Document editor Container have [`created`](https://ej2.syncfusion.com/documentat
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/open-default-document-cs2/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/open-default-document-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/open-default-document-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es6/open-default-document-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/open-default-document-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/open-default-document-cs2" %}
 
 

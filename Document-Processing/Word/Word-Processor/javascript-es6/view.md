@@ -4,7 +4,6 @@ title: View in JavaScript (ES6) Document editor control | Syncfusion
 description: Learn here all about View in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: View 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -30,14 +29,14 @@ The following example illustrates how to enable ruler in Document Editor
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/ruler-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/ruler-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/ruler-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/ruler-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/ruler-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/ruler-cs1" %}
 
 ## Navigation Pane
 

@@ -4,7 +4,6 @@ title: Open document from Azure Blob Storage in JavaScript (ES6) Document editor
 description:  Learn about how to Open document from Azure Blob Storage in JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Azure Blob Storage
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -110,10 +109,10 @@ In the client-side, the document is returned from the web service is opening usi
 
 {% tabs %}
 {% highlight ts tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/open-azure-blob/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/open-azure-blob/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/open-azure-blob/index.html %}
+{% include code-snippet/document-editor/javascript-es6/open-azure-blob/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

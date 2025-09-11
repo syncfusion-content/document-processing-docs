@@ -4,7 +4,6 @@ title: Read only default in JavaScript (ES6) Document editor control | Syncfusio
 description: Learn here all about Read only default in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Read only default 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -19,14 +18,14 @@ In this article, we are going to see how to open a document in read only mode by
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/read-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/read-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/read-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/read-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/read-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/read-cs1" %}
 
 
 
@@ -36,14 +35,14 @@ In this article, we are going to see how to open a document in read only mode by
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/read-container-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/read-container-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/read-container-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/read-container-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/read-container-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/read-container-cs1" %}
 
 
 

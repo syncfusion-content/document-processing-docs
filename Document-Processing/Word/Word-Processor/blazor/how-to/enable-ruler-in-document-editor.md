@@ -7,9 +7,7 @@ control: DocumentEditor
 documentation: ug
 ---
 
-# Enable ruler in Document Editor
-
-## How to enable ruler in Document Editor Container component
+## How to enable ruler in Blazor Document Editor Container component
 
 Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor Container.
 

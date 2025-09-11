@@ -60,17 +60,17 @@ The following sample demonstrates how to create bullet and numbering lists in do
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/list-cs1/app/index.jsx %}
+{% include code-snippet/document-editor/react/list-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/list-cs1/app/index.tsx %}
+{% include code-snippet/document-editor/react/list-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/react/document-editor/list-cs1/index.html %}
+{% include code-snippet/document-editor/react/list-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/react/document-editor/list-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/list-cs1" %}
 
 ## Editing numbered list
 

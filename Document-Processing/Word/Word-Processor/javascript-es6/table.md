@@ -4,7 +4,6 @@ title: Table in JavaScript (ES6) Document editor control | Syncfusion
 description: Learn here all about Table in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -182,14 +181,14 @@ The following sample demonstrates how to delete the table row or columns, merge 
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/table-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/table-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/table-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/table-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/table-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/table-cs1" %}
 
 
 

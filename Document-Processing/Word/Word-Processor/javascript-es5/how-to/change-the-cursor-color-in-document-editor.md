@@ -4,7 +4,6 @@ title: Change the cursor color in document editor in JavaScript (ES5) Document e
 description: Learn here all about Change the cursor color in document editor in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Change the cursor color in document editor 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

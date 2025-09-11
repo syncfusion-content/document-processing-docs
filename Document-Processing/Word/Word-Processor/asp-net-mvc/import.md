@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Import in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about Import in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Import in ASP.NET MVC Document Editor Component | Syncfusion
+description: Learn here all about Import in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Import
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
 
-# Importing in the ##Platform_Name## Document Editor Component
+# Importing in the ASP.NET MVC Document Editor Component
 
 In Document Editor, the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
 
@@ -19,10 +18,10 @@ The following example shows how to open SFDT data in Document Editor.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/import/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/import/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/import/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/import/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,10 +36,10 @@ The following example shows how to import document from local machine.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/import-sfdt/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/import-sfdt/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/import-sfdt/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/import-sfdt/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -55,10 +54,10 @@ You can convert word documents into SFDT format using the [`Syncfusion.EJ2.WordE
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/import-docx/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/import-docx/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/import-docx/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/import-docx/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Image in ##Platform_Name## Document Editor Component
-description: Learn here all about image in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Image in ASP.NET MVC Document Editor Component
+description: Learn here all about image in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Image
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -17,7 +16,7 @@ Document Editor supports common raster format images like PNG, BMP, JPEG, SVG an
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/image/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/image/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Image.cs" %}
 {% endhighlight %}{% endtabs %}

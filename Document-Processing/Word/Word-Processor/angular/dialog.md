@@ -20,15 +20,15 @@ Refer to the following example.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/dialog-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/dialog-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/dialog-cs1/src/main.ts %}
+{% include code-snippet/document-editor/angular/dialog-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/dialog-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/angular/dialog-cs1" %}
 
 ## Paragraph dialog
 
@@ -38,15 +38,15 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/dialog-cs2/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/dialog-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/dialog-cs2/src/main.ts %}
+{% include code-snippet/document-editor/angular/dialog-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/dialog-cs2" %}
+{% previewsample "/document-processing/samples/document-editor/angular/dialog-cs2" %}
 
 ## Table dialog
 
@@ -56,15 +56,15 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/dialog-cs3/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/dialog-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/dialog-cs3/src/main.ts %}
+{% include code-snippet/document-editor/angular/dialog-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/dialog-cs3" %}
+{% previewsample "/document-processing/samples/document-editor/angular/dialog-cs3" %}
 
 ## Bookmark dialog
 
@@ -78,15 +78,15 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/dialog-cs4/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/dialog-cs4/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/dialog-cs4/src/main.ts %}
+{% include code-snippet/document-editor/angular/dialog-cs4/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/dialog-cs4" %}
+{% previewsample "/document-processing/samples/document-editor/angular/dialog-cs4" %}
 
 ## Hyperlink dialog
 
@@ -96,15 +96,15 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/dialog-cs5/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/dialog-cs5/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/dialog-cs5/src/main.ts %}
+{% include code-snippet/document-editor/angular/dialog-cs5/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/dialog-cs5" %}
+{% previewsample "/document-processing/samples/document-editor/angular/dialog-cs5" %}
 
 ## Table of contents dialog
 
@@ -486,15 +486,15 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/dialog-cs6/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/dialog-cs6/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/dialog-cs6/src/main.ts %}
+{% include code-snippet/document-editor/angular/dialog-cs6/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/dialog-cs6" %}
+{% previewsample "/document-processing/samples/document-editor/angular/dialog-cs6" %}
 
 ## See Also
 

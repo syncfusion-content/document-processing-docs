@@ -4,7 +4,6 @@ title: Print in JavaScript (ES5) Document editor control | Syncfusion
 description: Learn here all about Print in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Print 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -24,7 +23,7 @@ Refer to the following example for showing a document and print it.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/print-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/print-cs1" %}
 
 Refer to the following example for creating a document and print it.
 
@@ -37,7 +36,7 @@ Refer to the following example for creating a document and print it.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/print-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/print-cs2" %}
 
 ## Improve print quality
 
@@ -115,7 +114,7 @@ The following example shows how to customize layout options only for printing.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/print-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/print-cs3" %}
 
 ## See Also
 

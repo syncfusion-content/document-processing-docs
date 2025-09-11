@@ -4,7 +4,6 @@ title: Save document to One Drive in JavaScript (ES5) Document editor control | 
 description:  Learn about how to Save document to One Drive in JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to One Drive
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -134,7 +133,7 @@ private string GetValue(IFormCollection data, string key)
 
 ```
 
-N> Replace **Your_Tenent_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
+N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
 
 **Step 4:**  Modify the index File in the Document Editor sample
 

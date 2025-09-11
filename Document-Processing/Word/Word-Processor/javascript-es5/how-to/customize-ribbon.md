@@ -4,7 +4,6 @@ title: Customize Ribbon in JavaScript (ES5) Document Editor | Syncfusion
 description: Learn how to customize the ribbon in Syncfusion JavaScript (ES5) Document Editor - file menu, backstage, tabs, groups, and items.
 platform: document-processing
 control: Ribbon Customization
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

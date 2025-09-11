@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Table Of Contents in ##Platform_Name## Document Editor Component
-description: Learn here all about table of contents in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Table Of Contents in ASP.NET MVC Document Editor Component
+description: Learn here all about table of contents in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table Of Contents
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -37,7 +36,7 @@ documenteditor.editor.insertTableOfContents(tocSettings);
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/table-of-contents/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/table-of-contents/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Table-of-contents.cs" %}
 {% endhighlight %}{% endtabs %}

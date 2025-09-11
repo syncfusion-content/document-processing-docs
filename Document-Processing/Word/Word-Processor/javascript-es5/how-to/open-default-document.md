@@ -4,7 +4,6 @@ title: Open default document in JavaScript (ES5) Document editor control | Syncf
 description: Learn here all about Open default document in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open default document 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -30,7 +29,7 @@ The following example illustrates how to open the default SFDT content once Docu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/open-default-document-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/open-default-document-cs1" %}
 
 ## Opening a default document in DocumentEditorContainer
 
@@ -47,4 +46,4 @@ Document editor Container have [`created`](https://ej2.syncfusion.com/javascript
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/open-default-document-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/open-default-document-cs2" %}

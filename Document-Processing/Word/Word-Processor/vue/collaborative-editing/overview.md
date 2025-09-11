@@ -4,7 +4,6 @@ title: Collaborative Editing in Vue Document editor control | Syncfusion
 description: Learn about collaborative editing in Syncfusion Vue Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Collaborative Editing
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---

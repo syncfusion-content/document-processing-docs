@@ -114,7 +114,7 @@ this.$refs.container.ej2Instances.documentEditor.editor.insertText('\n');
 
 To insert the HTML content, you have to convert the HTML content to SFDT Format using [`web service`](../web-services-overview). Then use [`paste`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#paste) API to insert the sfdt at current cursor position.
 
->Note: Html string should be welformatted html. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only welformatted XHTML.  
+>Note: Html string should be well formatted html. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only well formatted XHTML.  
 
 The following example illustrates how to insert the HTML content at current cursor position.
 
