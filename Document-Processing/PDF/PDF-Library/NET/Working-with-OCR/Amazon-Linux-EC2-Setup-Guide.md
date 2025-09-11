@@ -1,6 +1,6 @@
 ---
-title: Setup of .NET 8 and Tesseract OCR on Amazon Linux 2023 EC2 | Syncfusion  
-description: Learn how to install and configure .NET 8 and Tesseract OCR on Amazon Linux 2023 EC2 to perform OCR on PDF and image files using the Syncfusion .NET OCR library.  
+title: .NET 8 & Tesseract OCR on Amazon Linux 2023 EC2 | Syncfusion 
+description: Install & configure .NET 8, Tesseract OCR on Amazon Linux 2023 EC2 to perform OCR on PDFs & images using Syncfusion .NET OCR library.
 control: PDF  
 documentation: UG  
 keywords: Assemblies
