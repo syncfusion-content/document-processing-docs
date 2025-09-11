@@ -13,7 +13,7 @@ import {
   Annotation, FormDesigner, FormFields, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
