@@ -18,10 +18,10 @@ This provides the options to search for a portion of text in the document. After
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/find-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/find-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/find-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/find-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -134,10 +134,10 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/replace-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/replace-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/replace-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/replace-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

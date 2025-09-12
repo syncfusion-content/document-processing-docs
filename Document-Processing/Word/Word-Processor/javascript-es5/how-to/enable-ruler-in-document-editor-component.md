@@ -17,10 +17,10 @@ The following example illustrates how to enable ruler in Document Editor
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/ruler-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/ruler-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/ruler-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/ruler-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -34,10 +34,10 @@ The following example illustrates how to enable ruler in Document Editor Contain
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/ruler-cs2/index.js %}
+{% include code-snippet/document-editor/javascript-es5/ruler-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/ruler-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es5/ruler-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
