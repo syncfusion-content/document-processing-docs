@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Notes in EJ2 ASP.NET CORE Syncfusion Spreadsheet Control
+title: Notes in EJ2 ASP.NET Core Syncfusion Spreadsheet Control
 description: Learn here all about the notes feature in EJ2 ASP.NET CORE Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Notes

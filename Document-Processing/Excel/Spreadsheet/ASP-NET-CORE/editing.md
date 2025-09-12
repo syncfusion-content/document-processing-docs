@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Editing in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+title: Editing in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
 description: Learn here all about Editing in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Editing
