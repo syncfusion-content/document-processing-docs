@@ -38,10 +38,10 @@ The following code example shows `filter` functionality in the Spreadsheet contr
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/filter-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/filter-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/filter-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/filter-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -88,10 +88,10 @@ The following code example shows how to get the filtered rows.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/filter-cs2/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/filter-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/filter-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/filter-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         

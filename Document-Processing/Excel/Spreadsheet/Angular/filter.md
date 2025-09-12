@@ -37,11 +37,11 @@ The following code example shows `filter` functionality in the Spreadsheet contr
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/filter-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/filter-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/filter-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/filter-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -87,11 +87,11 @@ The following code example shows how to get the filtered rows.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/filter-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/filter-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/filter-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/filter-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

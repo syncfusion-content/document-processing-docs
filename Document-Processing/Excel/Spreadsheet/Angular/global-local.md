@@ -382,11 +382,11 @@ The following example demonstrates the Spreadsheet in `French` culture. In the b
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -411,11 +411,11 @@ The following example demonstrates the Spreadsheet in French [ `fr-CH`] culture.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/internationalization-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/internationalization-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/internationalization-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/internationalization-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -427,11 +427,11 @@ RTL provides an option to switch the text direction and layout of the Spreadshee
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs3/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs3/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

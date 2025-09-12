@@ -19,10 +19,10 @@ In the below example, you can add, edit, save, and delete notes.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/note-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/note-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/note-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/note-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -71,10 +71,10 @@ In the below example, the note functionality is disabled in the Spreadsheet.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/note-cs2/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/note-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/note-cs2/app.vue %}
+{% include code-snippet/spreadsheet/vue/note-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -86,10 +86,10 @@ The notes can be added initially when the Spreadsheet loads using cell data bind
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/note-cs3/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/note-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/note-cs3/app.vue %}
+{% include code-snippet/spreadsheet/vue/note-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         

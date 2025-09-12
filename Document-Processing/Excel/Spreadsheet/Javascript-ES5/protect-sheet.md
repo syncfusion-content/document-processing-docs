@@ -49,10 +49,10 @@ The following example shows `Protect Sheet` functionality with password in the S
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/protect-sheet-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/protect-sheet-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/protect-sheet-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/protect-sheet-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -81,10 +81,10 @@ In protected spreadsheet, to make some particular cell or range of cells are edi
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/protect-sheet-cs2/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/protect-sheet-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/protect-sheet-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/protect-sheet-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -140,10 +140,10 @@ The following example demonstrates how to make rows, columns, and cells read-onl
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/readonly-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/readonly-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/readonly-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/readonly-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -167,10 +167,10 @@ The following example shows `Protect Workbook` by using the [`isProtected`](http
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/protect-workbook/default-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/protect-workbook/default-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/protect-workbook/default-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/protect-workbook/default-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -180,10 +180,10 @@ The following example shows `Protect Workbook` by using the [`password`](https:/
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/protect-workbook/default-cs2/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/protect-workbook/default-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/protect-workbook/default-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/protect-workbook/default-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

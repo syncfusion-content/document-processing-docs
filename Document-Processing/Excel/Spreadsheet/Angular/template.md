@@ -17,11 +17,11 @@ Sample link: [`Cell template`](https://document.syncfusion.com/demos/spreadsheet
 
 <!-- {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/template-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/template-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/template-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/template-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

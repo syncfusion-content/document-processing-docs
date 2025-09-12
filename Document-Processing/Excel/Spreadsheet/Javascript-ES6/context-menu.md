@@ -70,10 +70,10 @@ In this demo, Custom Item is added after the Paste item in the context menu.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/contextmenu/addContextMenu-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/contextmenu/addContextMenu-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/contextmenu/addContextMenu-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/contextmenu/addContextMenu-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -87,10 +87,10 @@ In this demo, Insert Column item has been removed from the row/column header con
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/contextmenu/removeContextMenu-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/contextmenu/removeContextMenu-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/contextmenu/removeContextMenu-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/contextmenu/removeContextMenu-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -104,10 +104,10 @@ In this demo, Rename item is disabled in the pager context menu.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/contextmenu/enableContextMenuItems-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/contextmenu/enableContextMenuItems-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/contextmenu/enableContextMenuItems-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/contextmenu/enableContextMenuItems-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         

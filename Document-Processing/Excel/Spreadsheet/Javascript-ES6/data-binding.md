@@ -21,10 +21,10 @@ Refer to the following code example for local data binding.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/data-binding-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/data-binding-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/data-binding-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/data-binding-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -42,10 +42,10 @@ The following code example demonstrates how to customize the mapping of column d
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/field-mapping-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/field-mapping-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/field-mapping-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/field-mapping-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -59,10 +59,10 @@ Refer to the following code example for remote data binding.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/data-binding-cs2/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/data-binding-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/data-binding-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/data-binding-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -76,10 +76,10 @@ Refer to the following code example for remote data binding.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/data-binding-cs3/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/data-binding-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/data-binding-cs3/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/data-binding-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -91,10 +91,10 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/data-binding-cs4/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/data-binding-cs4/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/data-binding-cs4/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/data-binding-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -109,10 +109,10 @@ Refer to the following code example for cell data binding.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/data-binding-cs5/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/data-binding-cs5/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/data-binding-cs5/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/data-binding-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -138,10 +138,10 @@ The following table defines the arguments of the `dataSourceChanged` event.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/dynamic-data-binding-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/dynamic-data-binding-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/dynamic-data-binding-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/dynamic-data-binding-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -157,10 +157,10 @@ The following code example demonstrates how to dynamically update data using the
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/dynamic-data-binding-cs2/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/dynamic-data-binding-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/dynamic-data-binding-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/dynamic-data-binding-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         

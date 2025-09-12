@@ -23,10 +23,10 @@ The following code example shows the insert sheet operation in spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/insert/sheet-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/insert/sheet-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/insert/sheet-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/insert/sheet-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -40,10 +40,10 @@ The following code example shows how to insert a sheet programmatically and make
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/insert-sheet-change-active-sheet-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/insert-sheet-change-active-sheet-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/insert-sheet-change-active-sheet-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/insert-sheet-change-active-sheet-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -80,10 +80,10 @@ The following code example shows the headers and gridlines operation in spreadsh
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/headers-gridlines-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/headers-gridlines-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/headers-gridlines-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/headers-gridlines-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -105,10 +105,10 @@ The following code example shows the three types of sheet visibility state.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/sheet-visibility-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/sheet-visibility-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/sheet-visibility-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/sheet-visibility-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         

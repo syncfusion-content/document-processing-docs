@@ -23,16 +23,16 @@ The following code example shows the insert sheet operation in spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-sheet-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/insert-sheet-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-sheet-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/insert-sheet-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-sheet-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/insert-sheet-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-sheet-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/insert-sheet-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -46,10 +46,10 @@ The following code example shows how to insert a sheet programmatically and make
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-sheet-change-active-sheet-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/insert-sheet-change-active-sheet-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-sheet-change-active-sheet-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/insert-sheet-change-active-sheet-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -86,16 +86,16 @@ The following code example shows the headers and gridlines operation in spreadsh
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/headers-gridlines-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/headers-gridlines-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/headers-gridlines-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/headers-gridlines-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/headers-gridlines-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/headers-gridlines-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/headers-gridlines-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/headers-gridlines-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -117,16 +117,16 @@ The following code example shows the three types of sheet visibility state.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/sheet-visiblity-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/sheet-visiblity-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/sheet-visiblity-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/sheet-visiblity-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/sheet-visiblity-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/sheet-visiblity-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/sheet-visiblity-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/sheet-visiblity-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

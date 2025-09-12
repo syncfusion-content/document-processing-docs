@@ -33,10 +33,10 @@ In the example below, the Spreadsheet component is rendered with the `German` [`
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/formula-cs3/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/formula-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/formula-cs3/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/formula-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -52,10 +52,10 @@ The following code example shows an unsupported formula in the spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/formula-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/formula-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/formula-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/formula-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -67,10 +67,10 @@ The following code example shows how to use `computeExpression` method in the sp
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/formula-cs2/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/formula-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/formula-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/formula-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -93,10 +93,10 @@ The following code example shows the usage of named ranges support.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/defined-name-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/defined-name-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/defined-name-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/defined-name-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -121,10 +121,10 @@ The following code example demonstrates how to set the Automatic calculation mod
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/calculation-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/calculation-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/calculation-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/calculation-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -143,10 +143,10 @@ The following code example demonstrates how to set the Manual calculation mode i
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/calculation-cs2/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/calculation-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/calculation-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/calculation-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         

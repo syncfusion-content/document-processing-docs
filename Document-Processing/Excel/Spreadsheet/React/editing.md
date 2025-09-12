@@ -44,16 +44,16 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/editing-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/editing-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/editing-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/editing-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/editing-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/editing-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/editing-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/editing-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -25,10 +25,10 @@ The following code example shows the wrap text functionality in spreadsheet.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/wrap-text-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/wrap-text-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/wrap-text-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/wrap-text-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -64,10 +64,10 @@ The following code example shows the merge cells operation in spreadsheet.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/merge-cells-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/merge-cells-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/merge-cells-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/merge-cells-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -124,10 +124,10 @@ You can clear the highlighted invalid data by using the following ways,
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/number-format-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/number-format-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/number-format-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/number-format-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -152,10 +152,10 @@ The following code example demonstrates how to add custom data validation with a
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/data-validation-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/data-validation-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/data-validation-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/data-validation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -196,10 +196,10 @@ Clear the cell contents and formats in the Spreadsheet document by using the [cl
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/clear-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/clear-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/clear-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/clear-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         

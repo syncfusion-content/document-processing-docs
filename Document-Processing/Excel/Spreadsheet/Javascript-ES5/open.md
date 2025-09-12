@@ -25,7 +25,7 @@ The following code example shows `Open` option in the Spreadsheet control.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/open-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/open-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

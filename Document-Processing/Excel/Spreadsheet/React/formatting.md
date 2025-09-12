@@ -94,16 +94,16 @@ The following code example shows the number formatting in cell data.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/numberformat-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/numberformat-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/numberformat-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/numberformat-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/numberformat-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/numberformat-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/numberformat-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/numberformat-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -154,16 +154,16 @@ The following code example demonstrates how to configure culture-based formats f
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/globalization-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/globalization-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/globalization-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/globalization-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/globalization-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/globalization-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/globalization-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/globalization-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -230,16 +230,16 @@ The following code example shows the style formatting in text and cells of the s
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/cellformat-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/cellformat-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/cellformat-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/cellformat-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/cellformat-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/cellformat-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/cellformat-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/cellformat-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -333,16 +333,16 @@ You can clear the defined rules by using one of the following ways,
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/conditional-formatting-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/conditional-formatting-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/conditional-formatting-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/conditional-formatting-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/conditional-formatting-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/conditional-formatting-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/conditional-formatting-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/conditional-formatting-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

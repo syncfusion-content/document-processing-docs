@@ -109,10 +109,10 @@ The following example shows a basic spreadsheet component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/getting-started-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/getting-started-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/getting-started-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/getting-started-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

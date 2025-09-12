@@ -51,10 +51,10 @@ You can clear the highlighted invalid data by using the following ways,
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs2/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/data-validation-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/data-validation-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         

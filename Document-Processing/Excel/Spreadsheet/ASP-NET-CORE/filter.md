@@ -38,10 +38,10 @@ The following code example shows `filter` functionality in the Spreadsheet contr
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/filter/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/filter/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="FilterController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/filter/filterController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/filter/filterController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,10 +87,10 @@ The following code example shows how to get the filtered rows.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/filter-cs1/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/filter-cs1/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="InsertSheetController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/filter-cs1/filterController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/filter-cs1/filterController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

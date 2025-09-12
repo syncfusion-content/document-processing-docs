@@ -31,10 +31,10 @@ The following code example shows the usage of ribbon customization.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/ribbon-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/ribbon-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/ribbon-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/ribbon-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         

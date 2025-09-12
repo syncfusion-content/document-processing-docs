@@ -383,10 +383,10 @@ The following example demonstrates the Spreadsheet in `French` culture. In the b
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/global/locale-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/global/locale-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/global/locale-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/global/locale-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -400,10 +400,10 @@ The following example demonstrates the Spreadsheet in French [`fr-CH`] culture. 
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/global/internationalization-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/global/internationalization-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/global/internationalization-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/global/internationalization-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -415,10 +415,10 @@ RTL provides an option to switch the text direction and layout of the Spreadshee
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/global/rtl-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/global/rtl-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/global/rtl-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/global/rtl-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

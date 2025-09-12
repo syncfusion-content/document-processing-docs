@@ -25,7 +25,7 @@ The following code example shows `Save` option in the Spreadsheet control.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/save-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/save-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

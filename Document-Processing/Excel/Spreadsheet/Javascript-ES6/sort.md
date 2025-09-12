@@ -37,10 +37,10 @@ The following code example shows `Sort` functionality in the Spreadsheet control
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/sort-cs2/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/sort-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/sort-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/sort-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -119,10 +119,10 @@ The multi-column sorting can also be performed manually by passing sort options 
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/sort-cs3/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/sort-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/sort-cs3/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/sort-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -146,10 +146,10 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/sort-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/sort-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/sort-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/sort-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         

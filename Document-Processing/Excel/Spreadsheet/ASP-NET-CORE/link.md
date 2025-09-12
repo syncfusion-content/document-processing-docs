@@ -54,10 +54,10 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/link/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/link/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="HyperlinkController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/link/hyperlinkController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/link/hyperlinkController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

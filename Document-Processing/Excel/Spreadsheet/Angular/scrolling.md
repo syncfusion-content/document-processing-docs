@@ -52,11 +52,11 @@ The following code example shows the finite scrolling with defined rows and colu
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/scrolling-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/scrolling-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/scrolling-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/scrolling-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

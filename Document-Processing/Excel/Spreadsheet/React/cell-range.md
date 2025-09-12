@@ -29,16 +29,16 @@ The following code example shows the wrap text functionality in spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/wrap-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/wrap-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/wrap-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/wrap-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/wrap-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/wrap-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/wrap-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/wrap-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -74,16 +74,16 @@ The following code example shows the merge cells operation in spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/merge-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/merge-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/merge-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/merge-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/merge-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/merge-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/merge-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/merge-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -140,10 +140,10 @@ You can clear the highlighted invalid data by using the following ways,
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/data-validation-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/data-validation-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/data-validation-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/data-validation-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -168,10 +168,10 @@ The following code example demonstrates how to add custom data validation with a
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/data-validation-cs2/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/data-validation-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/data-validation-cs2/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/data-validation-cs2/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -251,16 +251,16 @@ In the following sample, you can enable/disable the fill option on the button cl
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/autofill-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/autofill-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/autofill-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/autofill-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/autofill-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/autofill-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/autofill-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/autofill-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -299,16 +299,16 @@ Clear the cell contents and formats in the Spreadsheet document by using the [cl
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/clear-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/clear-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/clear-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/clear-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/clear-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/clear-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/clear-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/clear-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

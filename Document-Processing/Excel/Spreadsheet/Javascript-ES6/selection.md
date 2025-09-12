@@ -48,10 +48,10 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/selection-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/selection-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/selection-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/selection-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -74,10 +74,10 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/selection-cs2/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/selection-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/selection-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/selection-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -91,10 +91,10 @@ Below is a code example demonstrating how to retrieve the selected cell values a
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/selected-cell-values/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/selected-cell-values/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/selected-cell-values/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/selected-cell-values/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -106,10 +106,10 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/selection-cs3/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/selection-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/selection-cs3/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/selection-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         

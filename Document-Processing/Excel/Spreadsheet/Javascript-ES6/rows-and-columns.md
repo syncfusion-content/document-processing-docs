@@ -30,10 +30,10 @@ The following code example shows the options for inserting rows in the spreadshe
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/insert/row-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/insert/row-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/insert/row-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/insert/row-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -50,10 +50,10 @@ The following code example shows the options for inserting columns in the spread
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/insert/column-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/insert/column-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/insert/column-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/insert/column-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -72,10 +72,10 @@ The following code example shows the delete operation of rows and columns in the
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/delete/row-column-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/delete/row-column-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/delete/row-column-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/delete/row-column-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -114,10 +114,10 @@ The following code example shows the hide/show rows and columns operation in the
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/hide-show-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/hide-show-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/hide-show-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/hide-show-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -142,10 +142,10 @@ The following code example shows how to change the height for single/multiple ro
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/row-height-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/row-height-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/row-height-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/row-height-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -166,10 +166,10 @@ The following code example shows how to change the width for single/multiple col
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/column-width-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/column-width-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/column-width-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/column-width-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -183,10 +183,10 @@ The following code example shows how to change the text in the column headers.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/column-header-change-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/column-header-change-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/column-header-change-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/column-header-change-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         

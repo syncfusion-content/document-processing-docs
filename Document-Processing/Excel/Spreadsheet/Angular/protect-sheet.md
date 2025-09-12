@@ -46,11 +46,11 @@ The following example shows `Protect Sheet` functionality with password in the S
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/protect-sheet-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/protect-sheet-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/protect-sheet-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/protect-sheet-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -78,11 +78,11 @@ In protected spreadsheet, to make some particular cell or range of cells are edi
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/lock-cells-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/lock-cells-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/lock-cells-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/lock-cells-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -142,11 +142,11 @@ The following example demonstrates how to make rows, columns, and cells read-onl
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/readonly-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/readonly-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/readonly-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/readonly-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -168,11 +168,11 @@ The following example shows `Protect Workbook` by using the [`isProtected`](http
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs4/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs4/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs4/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs4/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -182,11 +182,11 @@ The following example shows `Protect Workbook` by using the [`password`](https:/
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs5/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs5/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs5/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs5/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

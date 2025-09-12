@@ -46,10 +46,10 @@ The following example shows `Protect Sheet` functionality in the Spreadsheet con
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/protect-sheet-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/protect-sheet-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/protect-sheet-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/protect-sheet-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -77,10 +77,10 @@ In protected spreadsheet, to make some particular cell or range of cells are edi
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/lock-cells-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/lock-cells-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/lock-cells-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/lock-cells-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -137,10 +137,10 @@ The following example demonstrates how to make rows, columns, and cells read-onl
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/readonly-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/readonly-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/readonly-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/readonly-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -162,10 +162,10 @@ The following example shows `Protect Workbook` by using the [`isProtected`](http
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/local-data-binding-cs4/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/local-data-binding-cs4/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/local-data-binding-cs4/app.vue %}
+{% include code-snippet/spreadsheet/vue/local-data-binding-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -175,10 +175,10 @@ The following example shows `Protect Workbook` by using the [`password`](https:/
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/local-data-binding-cs5/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/local-data-binding-cs5/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/local-data-binding-cs5/app.vue %}
+{% include code-snippet/spreadsheet/vue/local-data-binding-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         

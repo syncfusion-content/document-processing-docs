@@ -23,10 +23,10 @@ The following code example shows the insert sheet operation in spreadsheet.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/insert-sheet-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/insert-sheet-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/insert-sheet-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/insert-sheet-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -40,10 +40,10 @@ The following code example shows how to insert a sheet programmatically and make
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/insert-sheet-change-active-sheet-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/insert-sheet-change-active-sheet-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/insert-sheet-change-active-sheet-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/insert-sheet-change-active-sheet-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -80,10 +80,10 @@ The following code example shows the headers and gridlines operation in spreadsh
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/header-gridlines-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/header-gridlines-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/header-gridlines-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/header-gridlines-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -105,10 +105,10 @@ The following code example shows the three types of sheet visibility state.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/sheet-visiblity-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/sheet-visiblity-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/sheet-visiblity-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/sheet-visiblity-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         

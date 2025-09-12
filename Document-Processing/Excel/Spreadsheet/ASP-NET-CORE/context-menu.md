@@ -71,10 +71,10 @@ In this demo, Custom Item is added after the Paste item in the context menu.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/add-context-menu/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/add-context-menu/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="AddContextMenu.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/add-context-menu/addContextMenu.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/add-context-menu/addContextMenu.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,10 +88,10 @@ In this demo, Insert Column item has been removed from the row/column header con
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/remove-context-menu/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/remove-context-menu/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="RemoveContextMenu.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/remove-context-menu/removeContextMenu.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/remove-context-menu/removeContextMenu.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -105,10 +105,10 @@ In this demo, Rename item is disabled in the pager context menu.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/enable-context-menu/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/enable-context-menu/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="EnableContextMenu.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/enable-context-menu/enableContextMenu.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/enable-context-menu/enableContextMenu.cs %}
 {% endhighlight %}
 {% endtabs %}
 

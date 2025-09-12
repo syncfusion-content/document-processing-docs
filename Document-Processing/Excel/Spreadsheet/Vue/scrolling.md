@@ -52,10 +52,10 @@ The following code example shows the finite scrolling with defined rows and colu
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/scrolling-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/scrolling-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/scrolling-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/scrolling-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         

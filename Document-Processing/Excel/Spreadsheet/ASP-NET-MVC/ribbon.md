@@ -37,10 +37,10 @@ The following code example shows the usage of ribbon customization.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/ribbon/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/ribbon/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="RibbonController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/ribbon/ribbonController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/ribbon/ribbonController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

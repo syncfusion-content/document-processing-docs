@@ -61,10 +61,10 @@ Paste can be done in one of the following ways.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/clipboard-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/clipboard-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/clipboard-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/clipboard-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -76,10 +76,10 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/clipboard-cs2/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/clipboard-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/clipboard-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/clipboard-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         

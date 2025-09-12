@@ -37,16 +37,16 @@ The following code example shows `sort` functionality in the Spreadsheet control
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/sort-by-cell-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/sort-by-cell-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/sort-by-cell-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/sort-by-cell-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/sort-by-cell-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/sort-by-cell-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/sort-by-cell-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/sort-by-cell-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -117,16 +117,16 @@ The multi-column sorting can also be performed manually by passing sort options 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/passing-sort-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/passing-sort-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/passing-sort-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/passing-sort-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/passing-sort-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/passing-sort-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/passing-sort-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/passing-sort-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -150,16 +150,16 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/custom-sort-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/custom-sort-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/custom-sort-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/custom-sort-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/custom-sort-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/custom-sort-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/custom-sort-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/custom-sort-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

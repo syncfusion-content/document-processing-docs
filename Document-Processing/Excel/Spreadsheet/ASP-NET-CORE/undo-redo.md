@@ -40,10 +40,10 @@ The following code example shows `How to update and customize your own actions f
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/undo-redo/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/undo-redo/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="UndoRedoController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/undo-redo/undoRedoController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/undo-redo/undoRedoController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

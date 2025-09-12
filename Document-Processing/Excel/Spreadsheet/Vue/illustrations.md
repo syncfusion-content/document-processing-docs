@@ -70,10 +70,10 @@ Image feature allows you to view and insert an image in a spreadsheet, and you c
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/link-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/link-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/link-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/link-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -127,10 +127,10 @@ The available arguments in the `ChartModel` are:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/chart-cs2/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/chart-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/chart-cs2/app.vue %}
+{% include code-snippet/spreadsheet/vue/chart-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -157,10 +157,10 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/chart-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/chart-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/chart-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/chart-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -172,10 +172,10 @@ Using the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/sprea
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/chart-cs3/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/chart-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/chart-cs3/app.vue %}
+{% include code-snippet/spreadsheet/vue/chart-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         

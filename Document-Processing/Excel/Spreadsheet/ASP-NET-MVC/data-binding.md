@@ -22,10 +22,10 @@ Refer to the following code example for local data binding.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/local-data-binding/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/local-data-binding/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="LocalDataController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/local-data-binding/localDataController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/local-data-binding/localDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -44,10 +44,10 @@ The following code example demonstrates how to customize the mapping of column d
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/field-mapping/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/field-mapping/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="FieldMappingController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/field-mapping/fieldMappingController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/field-mapping/fieldMappingController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -59,10 +59,10 @@ Refer to the following code example for remote data binding.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/remote-data-binding/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/remote-data-binding/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="RemoteDataController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/remote-data-binding/remoteDataController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/remote-data-binding/remoteDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -76,10 +76,10 @@ N> By default, `DataManager` uses **ODataAdaptor** for remote data-binding.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/odata-adaptor/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/odata-adaptor/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ODataController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/odata-adaptor/oDataController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/odata-adaptor/oDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -91,10 +91,10 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/webapi-adaptor/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/webapi-adaptor/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="WebApiController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/webapi-adaptor/webApiController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/webapi-adaptor/webApiController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -108,10 +108,10 @@ Refer to the following code example for cell data binding.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/cell-data-binding/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/cell-data-binding/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="CellDataController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/cell-data-binding/cellDataController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/cell-data-binding/cellDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -137,10 +137,10 @@ N> For `add` action, the value for all the fields will be `null` in the data. In
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/dynamic-data-binding/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/dynamic-data-binding/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="DynamicDataController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/dynamic-data-binding/dynamicDataController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/dynamic-data-binding/dynamicDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -154,10 +154,10 @@ The following code example demonstrates how to dynamically update data using the
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/dynamic-data-binding-cs2/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/dynamic-data-binding-cs2/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="UpdateRangeController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/dynamic-data-binding-cs2/updateRangeController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/dynamic-data-binding-cs2/updateRangeController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

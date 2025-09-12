@@ -31,10 +31,10 @@ The following code example shows the usage of ribbon customization.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/ribbon/cutomization-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/ribbon/cutomization-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/ribbon/cutomization-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/ribbon/cutomization-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         

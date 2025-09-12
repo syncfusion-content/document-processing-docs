@@ -41,10 +41,10 @@ The following code example shows the number formatting in cell data.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/number-format-cs2/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/number-format-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/number-format-cs2/app.vue %}
+{% include code-snippet/spreadsheet/vue/number-format-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -99,10 +99,10 @@ The following code example demonstrates how to configure culture-based formats f
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/globalization-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/globalization-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/globalization-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/globalization-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -169,10 +169,10 @@ The following code example shows the style formatting in text and cells of the s
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/cell-format-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/cell-format-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/cell-format-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/cell-format-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -266,10 +266,10 @@ You can clear the defined rules by using one of the following ways,
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/conditional-formatting-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/conditional-formatting-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/conditional-formatting-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/conditional-formatting-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         

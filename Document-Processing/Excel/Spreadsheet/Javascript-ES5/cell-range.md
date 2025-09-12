@@ -26,10 +26,10 @@ The following code example shows the wrap text functionality in spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/wrap-text-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/wrap-text-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/wrap-text-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/wrap-text-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -65,10 +65,10 @@ The following code example shows the merge cells operation in spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/merge-cells-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/merge-cells-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/merge-cells-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/merge-cells-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -124,10 +124,10 @@ You can clear the highlighted invalid data by using the following ways,
 * Use the [`removeInvalidHighlight()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#removeinvalidhighlight) method programmatically.
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/data-validation-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/data-validation-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/data-validation-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/data-validation-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -152,10 +152,10 @@ The following code example demonstrates how to add custom data validation with a
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/data-validation-cs3/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/data-validation-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/data-validation-cs3/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/data-validation-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -235,10 +235,10 @@ In the following sample, you can enable/disable the fill option on the button cl
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/autofill-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/autofill-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/autofill-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/autofill-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -277,10 +277,10 @@ Clear the cell contents and formats in the Spreadsheet document by using the [cl
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/clear-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/clear-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/clear-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/clear-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

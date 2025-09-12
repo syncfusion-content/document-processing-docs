@@ -21,10 +21,10 @@ Refer to the following code example for local data binding.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/local-data-binding-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/local-data-binding-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/local-data-binding-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/local-data-binding-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -42,10 +42,10 @@ The following code example demonstrates how to customize the mapping of column d
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/field-mapping-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/field-mapping-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/field-mapping-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/field-mapping-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -59,10 +59,10 @@ Refer to the following code example for remote data binding.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/remote-data-binding-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/remote-data-binding-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/remote-data-binding-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/remote-data-binding-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -76,10 +76,10 @@ Refer to the following code example for remote data binding.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/remote-data-binding-cs2/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/remote-data-binding-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/remote-data-binding-cs2/app.vue %}
+{% include code-snippet/spreadsheet/vue/remote-data-binding-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -91,10 +91,10 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/remote-data-binding-cs3/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/remote-data-binding-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/remote-data-binding-cs3/app.vue %}
+{% include code-snippet/spreadsheet/vue/remote-data-binding-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -109,10 +109,10 @@ Refer to the following code example for cell data binding.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/cell-data-binding-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/cell-data-binding-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/cell-data-binding-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/cell-data-binding-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -138,10 +138,10 @@ The following table defines the arguments of the `dataSourceChanged` event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/dynamic-data-binding-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/dynamic-data-binding-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/dynamic-data-binding-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/dynamic-data-binding-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -157,10 +157,10 @@ The following code example demonstrates how to dynamically update data using the
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/dynamic-data-binding-cs2/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/dynamic-data-binding-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/dynamic-data-binding-cs2/app.vue %}
+{% include code-snippet/spreadsheet/vue/dynamic-data-binding-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         

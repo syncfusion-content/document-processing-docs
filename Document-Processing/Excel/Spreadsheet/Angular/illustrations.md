@@ -70,11 +70,11 @@ Image feature allows you to view and insert an image in a spreadsheet, and you c
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/image-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/image-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/image-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/image-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -128,11 +128,11 @@ The available arguments in the `ChartModel` are:
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/chart-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/chart-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/chart-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/chart-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -159,11 +159,11 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/chart-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/chart-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/chart-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/chart-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -175,11 +175,11 @@ Using the [`actionBegin`](https://ej2.syncfusion.com/angular/documentation/api/s
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/chart-cs3/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/chart-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/chart-cs3/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/chart-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

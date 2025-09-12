@@ -61,16 +61,16 @@ Paste can be done in one of the following ways.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/clipboard-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/clipboard-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/clipboard-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/clipboard-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/clipboard-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/clipboard-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/clipboard-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/clipboard-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -82,16 +82,16 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/clipboard-cs2/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/clipboard-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/clipboard-cs2/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/clipboard-cs2/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/clipboard-cs2/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/clipboard-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/clipboard-cs2/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/clipboard-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

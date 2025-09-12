@@ -40,10 +40,10 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
  
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/editing-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/editing-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/editing-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/editing-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         

@@ -25,16 +25,16 @@ Refer to the following code example for local data binding.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/local-data-binding-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/local-data-binding-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/local-data-binding-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/local-data-binding-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,10 +52,10 @@ The following code example demonstrates how to customize the mapping of column d
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/field-mapping-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/field-mapping-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/field-mapping-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/field-mapping-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -69,16 +69,16 @@ Refer to the following code example for remote data binding.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -92,16 +92,16 @@ Refer to the following code example for remote data binding.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs2/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs2/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs2/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs2/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs2/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -113,16 +113,16 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs3/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs3/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs3/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs3/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs3/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs3/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -136,16 +136,16 @@ Refer to the following code example for cell data binding.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/cell-data-binding-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/cell-data-binding-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/cell-data-binding-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/cell-data-binding-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/cell-data-binding-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/cell-data-binding-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/cell-data-binding-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/cell-data-binding-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -171,16 +171,16 @@ The following table defines the arguments of the `dataSourceChanged` event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/dynamic-data-binding-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/dynamic-data-binding-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/dynamic-data-binding-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/dynamic-data-binding-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -196,16 +196,16 @@ The following code example demonstrates how to dynamically update data using the
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs2/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/dynamic-data-binding-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs2/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/dynamic-data-binding-cs2/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs2/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/dynamic-data-binding-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs2/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/dynamic-data-binding-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

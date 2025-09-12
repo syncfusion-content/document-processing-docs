@@ -24,11 +24,11 @@ The following code example shows how to identify the context menu opened.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/contextmenu-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/contextmenu-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/contextmenu-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/contextmenu-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

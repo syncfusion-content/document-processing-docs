@@ -30,10 +30,10 @@ The following code example shows the options for inserting rows in the spreadshe
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/insert-row-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/insert-row-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/insert-row-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/insert-row-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -50,10 +50,10 @@ The following code example shows the options for inserting columns in the spread
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/insert-column-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/insert-column-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/insert-column-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/insert-column-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -72,10 +72,10 @@ The following code example shows the delete operation of rows and columns in the
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/delete-row-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/delete-row-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/delete-row-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/delete-row-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -114,10 +114,10 @@ The following code example shows the hide/show rows and columns operation in the
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/show-hide-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/show-hide-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/show-hide-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/show-hide-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -142,10 +142,10 @@ The following code example shows how to change the height for single/multiple ro
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/row-height-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/row-height-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/row-height-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/row-height-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -166,10 +166,10 @@ The following code example shows how to change the width for single/multiple col
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/column-width-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/column-width-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/column-width-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/column-width-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -183,10 +183,10 @@ The following code example shows how to change the text in the column headers.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/column-header-change-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/column-header-change-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/column-header-change-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/column-header-change-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         

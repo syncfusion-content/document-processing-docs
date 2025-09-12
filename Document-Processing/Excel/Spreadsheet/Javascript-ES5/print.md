@@ -31,10 +31,10 @@ The `printOptions` contain three properties, as described below.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/print-cs2/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/print-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/print-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/print-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -48,10 +48,10 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/print-cs3/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/print-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/print-cs3/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/print-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

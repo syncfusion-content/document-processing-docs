@@ -41,10 +41,10 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/editing/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/editing/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="EditingController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/editing/editingController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/editing/editingController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

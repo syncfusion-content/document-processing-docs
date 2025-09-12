@@ -23,10 +23,10 @@ The following sample shows the `Open` option by using the [`openUrl`](https://ej
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-save-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/open-save-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-save-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/open-save-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -49,10 +49,10 @@ If you explore your machine to select and upload an excel document using the fil
  
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/import-using-uploader/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/import-using-uploader/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/import-using-uploader/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/import-using-uploader/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -64,10 +64,10 @@ You can achieve to access the remote excel file by using the [`created`](https:/
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-save-cs2/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/open-save-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-save-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/open-save-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -81,10 +81,10 @@ Please find the code to fetch the blob data and load it into the Spreadsheet con
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-from-blobdata-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/open-from-blobdata-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-from-blobdata-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/open-from-blobdata-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -242,10 +242,10 @@ The following code example shows how to save the spreadsheet data as base64 stri
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/base-64-string/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/base-64-string/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/base-64-string/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/base-64-string/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -257,10 +257,10 @@ You can open excel file into a read-only mode by using the [`openComplete`](http
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-save-cs4/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/open-save-cs4/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-save-cs4/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/open-save-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -294,10 +294,10 @@ The following code snippet demonstrates how to configure the deserialization opt
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-from-json/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/open-from-json/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-from-json/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/open-from-json/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -401,10 +401,10 @@ You can add your own custom header to the open action in the Spreadsheet. For pr
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-save-cs3/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/open-save-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-save-cs3/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/open-save-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -450,10 +450,10 @@ The following sample shows the `Save` option by using the [`saveUrl`](https://ej
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-save-cs5/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/open-save-cs5/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-save-cs5/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/open-save-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -484,10 +484,10 @@ Please find below the code to retrieve blob data from the Spreadsheet control be
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/save-as-blobdata-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/save-as-blobdata-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/save-as-blobdata-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/save-as-blobdata-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -658,10 +658,10 @@ The following code example shows how to save the spreadsheet data as base64 stri
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/base-64-string/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/base-64-string/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/base-64-string/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/base-64-string/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -695,10 +695,10 @@ The following code snippet demonstrates how to configure the serialization optio
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/save-as-json/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/save-as-json/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/save-as-json/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/save-as-json/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -710,10 +710,10 @@ Passing the custom parameters from client to server by using [`beforeSave`](http
  
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-save-cs6/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/open-save-cs6/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-save-cs6/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/open-save-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -736,10 +736,10 @@ You can add your own custom header to the save action in the Spreadsheet. For pr
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-save-cs7/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/open-save-cs7/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-save-cs7/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/open-save-cs7/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -756,10 +756,10 @@ The possible values are:
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-save-cs8/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/open-save-cs8/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/open-save-cs8/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/open-save-cs8/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -780,10 +780,10 @@ To save the Spreadsheet document as an `xlsx, xls, csv, or pdf` file, by using [
  
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/save-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/save-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/save-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/save-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
