@@ -1,14 +1,13 @@
 ---
 layout: post
-title: View in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about View in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: View in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about View in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: View 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# View in ##Platform_Name## Document editor control
+# View in JavaScript (ES5) Document editor control
 
 ## Web layout
 
@@ -35,7 +34,7 @@ The following example illustrates how to enable ruler in Document Editor
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/ruler-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/ruler-cs1" %}
 
 ## Navigation Pane
 

@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Chart in ##Platform_Name## Document Editor Component
-description: Learn here all about chart in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Chart in ASP.NET MVC Document Editor Component
+description: Learn here all about chart in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Chart
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -16,10 +15,10 @@ Document Editor provides chart preservation support. Using Document Editor, you 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/chart/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/chart/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/chart/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/chart/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

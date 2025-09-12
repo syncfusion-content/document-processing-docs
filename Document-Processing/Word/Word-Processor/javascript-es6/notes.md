@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Notes in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Notes in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Notes in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Notes in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Notes 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Notes in ##Platform_Name## Document editor control
+# Notes in JavaScript (ES6) Document editor control
 
 DocumentEditorContainer component provides support for inserting footnotes and endnotes through the in-built toolbar. Refer to the following screenshot.
 

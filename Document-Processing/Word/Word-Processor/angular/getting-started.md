@@ -86,7 +86,7 @@ cd my-app
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor package
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmJs.com`](https://www.npmjs.com/~syncfusionorg) registry.
 
 To install Document Editor component, use the following command.
 
@@ -165,15 +165,15 @@ DocumentEditorContainer output will be displayed as follows.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/document-editor-container-cs2/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/document-editor-container-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/document-editor-container-cs2/src/main.ts %}
+{% include code-snippet/document-editor/angular/document-editor-container-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/document-editor-container-cs2" %}
+{% previewsample "/document-processing/samples/document-editor/angular/document-editor-container-cs2" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
@@ -213,7 +213,7 @@ export class AppComponent implements OnInit {
 
 #### Run the  DocumentEditor application
 
-The quickstart project is configured to compile and run the application in a browser. Use the following command to run the application.
+The quick start project is configured to compile and run the application in a browser. Use the following command to run the application.
 
 ```javascript
 ng serve --open
@@ -223,15 +223,15 @@ Output will be displayed as follows.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/getting-started-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/getting-started-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/getting-started-cs1/src/main.ts %}
+{% include code-snippet/document-editor/angular/getting-started-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/getting-started-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/angular/getting-started-cs1" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 

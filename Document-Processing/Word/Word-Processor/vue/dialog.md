@@ -20,14 +20,14 @@ Refer to the following example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/dialog-cs1/app-composition.vue %}
+{% include code-snippet/document-editor/vue/dialog-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/dialog-cs1/app.vue %}
+{% include code-snippet/document-editor/vue/dialog-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/dialog-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/dialog-cs1" %}
 
 ## Paragraph dialog
 
@@ -37,14 +37,14 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/dialog-cs2/app-composition.vue %}
+{% include code-snippet/document-editor/vue/dialog-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/dialog-cs2/app.vue %}
+{% include code-snippet/document-editor/vue/dialog-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/dialog-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/dialog-cs2" %}
 
 ## Table dialog
 
@@ -54,14 +54,14 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/dialog-cs3/app-composition.vue %}
+{% include code-snippet/document-editor/vue/dialog-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/dialog-cs3/app.vue %}
+{% include code-snippet/document-editor/vue/dialog-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/dialog-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/dialog-cs3" %}
 
 ## Bookmark dialog
 
@@ -75,14 +75,14 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/dialog-cs4/app-composition.vue %}
+{% include code-snippet/document-editor/vue/dialog-cs4/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/dialog-cs4/app.vue %}
+{% include code-snippet/document-editor/vue/dialog-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/dialog-cs4" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/dialog-cs4" %}
 
 ## Hyperlink dialog
 
@@ -92,14 +92,14 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/dialog-cs5/app-composition.vue %}
+{% include code-snippet/document-editor/vue/dialog-cs5/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/dialog-cs5/app.vue %}
+{% include code-snippet/document-editor/vue/dialog-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/dialog-cs5" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/dialog-cs5" %}
 
 ## Table of contents dialog
 
@@ -779,14 +779,14 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/dialog-cs6/app-composition.vue %}
+{% include code-snippet/document-editor/vue/dialog-cs6/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/dialog-cs6/app.vue %}
+{% include code-snippet/document-editor/vue/dialog-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/dialog-cs6" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/dialog-cs6" %}
 
 ## See Also
 

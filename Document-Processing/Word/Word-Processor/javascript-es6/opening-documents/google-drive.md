@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Open document from Google Drive in ##Platform_Name## Document editor control | Syncfusion
-description: Learn about how to Open document from Google Drive in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open document from Google Drive in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn about how to Open document from Google Drive in JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Google Drive
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -147,10 +146,10 @@ In the client-side, the document is returned from the web service is opening usi
 
 {% tabs %}
 {% highlight ts tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/open-box-cloud-file-storage/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/open-box-cloud-file-storage/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/open-box-cloud-file-storage/index.html %}
+{% include code-snippet/document-editor/javascript-es6/open-box-cloud-file-storage/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

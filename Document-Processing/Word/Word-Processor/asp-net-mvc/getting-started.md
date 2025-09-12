@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Getting Started with ##Platform_Name## DocumentEditor | Syncfusion
-description: Checkout and learn about getting started with ##Platform_Name## DocumentEditor control of Syncfusion Essential JS 2 and more details.
+title: Getting Started with ASP.NET MVC DocumentEditor | Syncfusion
+description: Checkout and learn about getting started with ASP.NET MVC DocumentEditor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting Started
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -88,7 +87,7 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Docume
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/getting-started/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/getting-started/razor %}
 {% endhighlight %}
 {% endtabs %}
 

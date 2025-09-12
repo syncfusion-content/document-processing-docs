@@ -1,14 +1,13 @@
 ---
 layout: post
-title: How to deploy word processor server docker container in azure kubernetes service in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about How to deploy word processor server docker container in azure kubernetes service in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: How to deploy word processor server docker container in azure kubernetes service in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about How to deploy word processor server docker container in azure kubernetes service in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: How to deploy word processor server docker container in azure kubernetes service 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# How to deploy word processor server docker container in azure kubernetes service in ##Platform_Name## Document editor control
+# How to deploy word processor server docker container in azure kubernetes service in JavaScript (ES5) Document editor control
 
 ## Prerequisites
 

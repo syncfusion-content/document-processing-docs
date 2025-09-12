@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Collaborative Editing in Angular | Syncfusion
-description: Learn how to enable collaborative editing in Syncfusion Angular Document editor control of Syncfusion Essential JS 2 and more.
+title: Collaborative Editing with Redis in ASP.NET Core | Syncfusion
+description: Learn about collaborative editing in Syncfusion Angular Document editor control With Redis in ASP.NET Core of Syncfusion Essential JS 2 and more
 platform: document-processing
 control: Collaborative Editing
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---

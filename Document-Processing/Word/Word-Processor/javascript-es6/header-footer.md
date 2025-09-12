@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Header footer in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Header footer in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Header footer in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Header footer in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Header footer 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header footer in ##Platform_Name## Document editor control
+# Header footer in JavaScript (ES6) Document editor control
 
 Document Editor supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
 

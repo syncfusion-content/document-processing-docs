@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Set Default Format In Document Editor in ##Platform_Name## Document Editor Component
-description: Learn here all about how to set default format in Document Editor in Syncfusion ##Platform_Name## Document Editor component of syncfusion and more.
+title: Set Default Format In Document Editor in ASP.NET MVC Document Editor Component
+description: Learn here all about how to set default format in Document Editor in Syncfusion ASP.NET MVC Document Editor component of syncfusion and more.
 platform: document-processing
 control: Set Default Format In Document Editor
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

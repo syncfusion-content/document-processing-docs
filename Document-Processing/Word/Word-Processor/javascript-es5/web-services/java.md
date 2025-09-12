@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Java in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Java in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Java in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Java in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Java 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Java in ##Platform_Name## Document editor control
+# Java in JavaScript (ES5) Document editor control
 
 This page illustrates how to create web service in Java for the server-side dependent functionalities of Word Processor component a.k.a. Document Editor. Document Editor depends on server side interaction for below listed operations and it can be written in Java using `syncfusion-ej2-wordprocessor.jar` file.
 

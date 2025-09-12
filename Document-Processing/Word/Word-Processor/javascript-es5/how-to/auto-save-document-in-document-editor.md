@@ -1,21 +1,20 @@
 ---
 layout: post
-title: Auto save document in document editor in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Auto save document in document editor in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Auto save document in document editor in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Auto save document in document editor in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Auto save document in document editor 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Auto save document in document editor in ##Platform_Name## Document editor control
+# Auto save document in document editor in JavaScript (ES5) Document editor control
 
 In this article, we are going to see how to auto save the document in AWS S3. You can automatically save the edited content in regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
 
 The following example illustrates how to auto save the document in AWS S3.
 
-* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as Docx format to server-side using [`saveAsBlob`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#saveasblob) method.
+* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as DOCX format to server-side using [`saveAsBlob`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#saveasblob) method.
 
 ```ts
 import {

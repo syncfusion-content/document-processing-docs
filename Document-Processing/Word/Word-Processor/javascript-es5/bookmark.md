@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Bookmark in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Bookmark in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Bookmark in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Bookmark in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Bookmark 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark in ##Platform_Name## Document editor control
+# Bookmark in JavaScript (ES5) Document editor control
 
 Bookmark is a powerful tool that helps you to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 
@@ -102,7 +101,7 @@ The following example shows how to open bookmark dialog in Document Editor.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs1" %}
 
 ## See Also
 

@@ -7,7 +7,7 @@ control: DocumentEditor
 documentation: ug
 ---
 
-# Move selection to specific position in ##Platform_Name## Document editor
+# Move selection to specific position in Blazor Document editor
 
 Using [`SelectAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectAsync_System_String_System_String_) API in selection module, You can set cursor position to anywhere in the document.
 

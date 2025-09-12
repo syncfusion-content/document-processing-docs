@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Getting started with ##Platform_Name## Document editor control | Syncfusion
-description:  Checkout and learn about Getting started with ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
+title: Getting started with JavaScript (ES6) Document editor control | Syncfusion
+description:  Checkout and learn about Getting started with JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting started 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in ##Platform_Name## Document editor control
+# Getting started in JavaScript (ES6) Document editor control
 
 This section briefly explains how to create a simple **Document editor** component and configure its available functionalities in TypeScript, using Essential<sup style="font-size:70%">&reg;</sup> JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository.
 
@@ -181,14 +180,14 @@ Document Editor output will be displayed as follows.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/getting-started-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/getting-started-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/getting-started-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/getting-started-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/getting-started-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/getting-started-cs1" %}
 
 ### Document Editor Container component
 
@@ -260,14 +259,14 @@ DocumentEditorContainer output will be displayed as follows.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/getting-started-cs2/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/getting-started-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/getting-started-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es6/getting-started-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/getting-started-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/getting-started-cs2" %}
 
 ## Frequently Asked Questions
 

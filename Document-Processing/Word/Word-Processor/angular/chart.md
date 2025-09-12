@@ -16,15 +16,15 @@ The following example shows chart preservation in Document Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/import-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/import-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/import-cs1/src/main.ts %}
+{% include code-snippet/document-editor/angular/import-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/import-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/angular/import-cs1" %}
 
 ## Supported Chart Types
 

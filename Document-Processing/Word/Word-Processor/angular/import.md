@@ -16,15 +16,15 @@ The following example shows how to open SFDT data in Document Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/import-cs2/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/import-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/import-cs2/src/main.ts %}
+{% include code-snippet/document-editor/angular/import-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/import-cs2" %}
+{% previewsample "/document-processing/samples/document-editor/angular/import-cs2" %}
 
 ## Import document from local machine
 
@@ -32,15 +32,15 @@ The following example shows how to import document from local machine.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/import-cs3/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/import-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/import-cs3/src/main.ts %}
+{% include code-snippet/document-editor/angular/import-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/import-cs3" %}
+{% previewsample "/document-processing/samples/document-editor/angular/import-cs3" %}
 
 ## Convert word documents into SFDT
 

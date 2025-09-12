@@ -4,7 +4,6 @@ title: Spell Check in Document Editor Component
 description: Learn here all about spell check in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Spell Check
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -16,7 +15,7 @@ Document editor supports performing spell checking for any input text. You can p
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/spell-checker/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/spell-checker/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Spell-checker.cs" %}
 {% endhighlight %}{% endtabs %}
