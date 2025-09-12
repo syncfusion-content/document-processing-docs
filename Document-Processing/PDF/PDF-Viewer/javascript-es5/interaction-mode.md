@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Interaction mode in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Interaction mode in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Interaction mode in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Interaction mode in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Interaction mode
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Interaction mode in ##Platform_Name## Pdfviewer control
+# Interaction mode in Javascript Pdfviewer control
 
 The PDF Viewer provides interaction mode for easy interaction with the loaded PDF document.  Selection mode and panning mode are the two interactions modes.
 
@@ -69,13 +69,13 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/selection.png)
+![Alt text](./images/selection.png)
 
 ## Panning Mode
 
 In this mode, the panning and scrolling of the pages by touch can be performed in the PDF document loaded in the PDF Viewer, but the text selection cannot be performed.
 
-![Alt text](../images/pan.png)
+![Alt text](./images/pan.png)
 
 You can switch the interaction mode of PDF Viewer by using the following code snippet.,
 

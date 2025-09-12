@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotations in mobile view in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Annotations in mobile view in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Annotations in mobile view in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Annotations in mobile view in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Annotations in mobile view
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Annotations in mobile view in ##Platform_Name## Pdfviewer control
+# Annotations in mobile view in Typescript Pdfviewer control
 
 ## To Open the Annotation Toolbar
 

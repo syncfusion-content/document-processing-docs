@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Magnification in ##Platform_Name## Pdfviewer Component
-description: Learn here all about Magnification in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Magnification in ASP.NET Core Pdfviewer Component
+description: Learn here all about Magnification in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Magnification
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
@@ -51,7 +51,7 @@ The following magnification options are available in the default toolbar of PDF 
 * **FitWidth**:- Fits the view port width based on the page content size.
 * **Auto**:- Fits the page content with-in the viewport on resizing action.
 
-![Alt text ](./images/zoom.png)
+![Alt text ](../images/zoom.png)
 
 N>PDF Viewer can support the zoom value ranges from 10 to 400.
 

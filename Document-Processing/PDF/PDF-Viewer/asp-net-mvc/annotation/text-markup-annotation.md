@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Text Markup Annotations in ##Platform_Name## PDF Viewer | Syncfusion
-description: Learn here all about Text Markup Annotation in Syncfusion ##Platform_Name## PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Text Markup Annotations in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn here all about Text Markup Annotation in Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Text Markup Annotation
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Export As Image in EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about Export As Image in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Export As Image in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

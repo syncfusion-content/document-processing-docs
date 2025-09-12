@@ -4,7 +4,7 @@ title: Open PDF files in EJ2 ASP.NET CORE PDF Viewer | Syncfusion
 description: Learn here all about Opening PDF in ASP.NET CORE PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

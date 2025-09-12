@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Restrict Zoom Percentage in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all how to restrict zoom percentage in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Restrict Zoom Percentage in Javascript Pdfviewer control | Syncfusion
+description: Learn here all how to restrict zoom percentage in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---

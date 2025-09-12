@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Box cloud file storage in ##Platform_Name## PDF Viewer Component
+title: Box cloud file storage in ASP.NET MVC PDF Viewer Component
 description: Learn here all about how to Open PDF files from Box cloud file storage in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

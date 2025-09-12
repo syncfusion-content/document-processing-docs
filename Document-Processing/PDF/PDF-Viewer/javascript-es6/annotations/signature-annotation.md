@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Handwritten signature in ##Platform_Name## PDF Viewer control | Syncfusion
-description: Learn here all about Handwritten signature in Syncfusion ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Handwritten signature in Typescript PDF Viewer control | Syncfusion
+description: Learn here all about Handwritten signature in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Handwritten signature ##Platform_Name## PDF Viewer control
+# Handwritten signature Typescript PDF Viewer control
 
 The PDF Viewer control supports adding handwritten signatures to a PDF document. The handwritten signature reduces the paper work of reviewing the content and verifies it digitally.
 

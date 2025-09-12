@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Add Annotation in Text Search in ##Platform_Name## | Syncfusion
+title: Add Annotation in Text Search in ASP.NET MVC | Syncfusion
 description: Learn how to add rectangle annotations using search text bounds in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Line Angle Constraints in TypeScript PdfViewer | Syncfusion
-description: Learn here all about Line Angle Constraints in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Line Angle Constraints in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Line Angle Constraints
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

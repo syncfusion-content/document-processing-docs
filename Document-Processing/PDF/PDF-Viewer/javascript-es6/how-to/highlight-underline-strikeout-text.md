@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Highlight underline strikeout text in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Highlight underline strikeout text in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Highlight underline strikeout text in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Highlight underline strikeout text in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Highlight underline strikeout text
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Highlight underline strikeout text in ##Platform_Name## Pdfviewer control
+# Highlight underline strikeout text in Typescript Pdfviewer control
 
 The PDF Viewer library allows you to highlight, underline and strikeout text in the loaded PDF document programmatically using the [**setAnnotationMode()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#setannotationmode) method.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Managing Local Storage in ASP.NET Core PDF Viewer Control | Syncfusion
-description: Learn how to manage local storage in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn how to manage local storage in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: ej2-angular
 control: PDF Viewer
 documentation: ug

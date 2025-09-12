@@ -4,7 +4,7 @@ title: Controlling File Downloads in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn here how to Controlling File Downloads in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

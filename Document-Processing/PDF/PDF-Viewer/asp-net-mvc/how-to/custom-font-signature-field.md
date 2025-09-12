@@ -4,7 +4,7 @@ title: How to change the font family in Syncfusion ASP .MVC.
 description: Learn how to change the font family in Form Field's Type Signature in Syncfusion ASP .MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

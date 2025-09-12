@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Authorization Token in ##Platform_Name## Pdfviewer Component
-description: Learn here all about Authorization Token in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Authorization Token in ASP.NET Core Pdfviewer Component
+description: Learn here all about Authorization Token in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Authorization Token
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Import Export Annotation in ##Platform_Name## Pdfviewer Component | Syncfusion
-description: Learn here all about Import Export Annotation Object in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Import Export Annotation in ASP.NET Core Pdfviewer Component | Syncfusion
+description: Learn here all about Import Export Annotation Object in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Import Export Annotation Object
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

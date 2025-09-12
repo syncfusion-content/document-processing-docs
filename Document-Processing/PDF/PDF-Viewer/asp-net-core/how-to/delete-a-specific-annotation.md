@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Delete A Specific Annotation in ##Platform_Name## Pdfviewer Component
-description: Learn here all about Delete A Specific Annotation in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Delete A Specific Annotation in ASP.NET Core Pdfviewer Component
+description: Learn here all about Delete A Specific Annotation in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Delete A Specific Annotation
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

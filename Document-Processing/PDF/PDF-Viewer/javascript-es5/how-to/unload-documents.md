@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Unload documents in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Unload documents in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Unload documents in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Unload documents in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Unload documents
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Unload documents in ##Platform_Name## Pdfviewer control
+# Unload documents in Javascript Pdfviewer control
 
 The PDF Viewer library allows you to unload the PDF document being display in the PDF Viewer control programmatically using the [**unload()**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#unload) method.
 

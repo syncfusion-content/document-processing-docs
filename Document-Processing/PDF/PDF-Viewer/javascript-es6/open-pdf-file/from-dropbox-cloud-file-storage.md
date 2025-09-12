@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Open PDF from Dropbox cloud storage in ##Platform_Name## Pdfviewer | Syncfusion
-description: Learn here all about Open PDF files from Dropbox cloud file storage in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Open PDF from Dropbox cloud storage in Typescript Pdfviewer | Syncfusion
+description: Learn here all about Open PDF files from Dropbox cloud file storage in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open PDF files from Dropbox cloud file storage
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

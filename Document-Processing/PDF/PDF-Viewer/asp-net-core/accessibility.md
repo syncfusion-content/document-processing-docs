@@ -4,7 +4,7 @@ title: Accessibility with EJ2 ASP.NET Core PDF Viewer | Syncfusion
 description: Learn here all about accessibility in ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 # Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer components
