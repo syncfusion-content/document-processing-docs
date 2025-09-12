@@ -16,10 +16,10 @@ The following example shows how to open SFDT data in Document Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/import-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/import-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/import-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/import-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -31,10 +31,10 @@ The following example shows how to import document from local machine.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/import-sfdt-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/import-sfdt-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/import-sfdt-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/import-sfdt-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
