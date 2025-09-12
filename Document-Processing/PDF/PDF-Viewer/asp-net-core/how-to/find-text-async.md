@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Find Text Async in EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn about the `findTextAsync` in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn about the `findTextAsync` in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

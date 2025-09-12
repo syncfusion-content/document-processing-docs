@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Measurement Annotation in ##Platform_Name## PDF Viewer Component | Syncfusion
-description: Learn here all about Measurement Annotation in Syncfusion ##Platform_Name## PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Measurement Annotation in ASP.NET MVC PDF Viewer Component | Syncfusion
+description: Learn here all about Measurement Annotation in Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Measurement Annotation
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

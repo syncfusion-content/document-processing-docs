@@ -120,10 +120,10 @@ The following is the output of custom context menu with customization.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/customize-context-menu-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/customize-context-menu-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/customize-context-menu-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/customize-context-menu-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Delete annotation in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Delete annotation in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Delete annotation in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Delete annotation in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Delete annotation
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Delete annotation in ##Platform_Name## Pdfviewer control
+# Delete annotation in Typescript Pdfviewer control
 
 The PDF Viewer library allows you to delete a specific annotation from a PDF document. Deleting a specific annotation can be done using the **deleteAnnotationById()** method. This method is used to delete a specific annotation using its id.
 

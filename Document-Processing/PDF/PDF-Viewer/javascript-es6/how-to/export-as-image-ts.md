@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Export As Image in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Export As Image in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Export As Image in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Export As Image in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export As Image ##Platform_Name## Pdfviewer control
+# Export As Image Typescript Pdfviewer control
 
 The PDF Viewer library allows you to export specified pages as a Base64-encoded image string using the **exportAsImage()** method and exporting a range of pages as Base64-encoded image strings using the **exportAsImages()** method.
 

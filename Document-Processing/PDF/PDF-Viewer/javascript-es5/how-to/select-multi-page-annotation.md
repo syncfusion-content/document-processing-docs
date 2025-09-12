@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Select multi page annotation in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Select multi page annotation in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Select multi page annotation in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Select multi page annotation in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Select multi page annotation
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Select multi page annotation in ##Platform_Name## Pdfviewer control
+# Select multi page annotation in Javascript Pdfviewer control
 
 To select a multi-page TextMarkup annotation as a single annotation in a Syncfusion PDF viewer, you can use by enabling the [**enableMultiPageAnnotation**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablemultipageannotation) property. By default it is `false`.
 

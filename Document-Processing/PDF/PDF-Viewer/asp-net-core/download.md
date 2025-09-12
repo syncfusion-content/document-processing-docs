@@ -34,7 +34,7 @@ The PDF Viewer supports downloading the loaded PDF file. You can enable/disable 
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/download.png)
+![Alt text](../images/download.png)
 
 You can invoke download action using following code snippet.,
 

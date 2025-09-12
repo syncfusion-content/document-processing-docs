@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Print in ##Platform_Name## Pdfviewer Component
-description: Learn here all about Print in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Print in ASP.NET Core Pdfviewer Component
+description: Learn here all about Print in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Print
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
@@ -38,7 +38,7 @@ The PDF Viewer supports printing the loaded PDF file. You can enable/disable the
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/print.png)
+![Alt text](../images/print.png)
 
 You can invoke print action using the following code snippet.,
 

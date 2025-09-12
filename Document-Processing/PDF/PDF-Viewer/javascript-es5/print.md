@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Print in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Print in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Print in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Print
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Print in ##Platform_Name## Pdfviewer control
+# Print in Javascript Pdfviewer control
 
 The PDF Viewer supports printing the loaded PDF file. You can enable/disable the print using the following code snippet.
 
@@ -58,7 +58,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/print.png)
+![Alt text](./images/print.png)
 
 You can invoke print action using the following code snippet.,
 

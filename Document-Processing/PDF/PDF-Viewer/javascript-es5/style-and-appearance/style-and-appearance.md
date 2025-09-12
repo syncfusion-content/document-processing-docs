@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Style and appearance in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Style and appearance in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Style and appearance in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and Appearance in ##Platform_Name## Pdfviewer control
+# Style and Appearance in Javascript Pdfviewer control
 
 To modify the PDF Viewer appearance, you need to override the default CSS of PDF Viewer. Please find the CSS structure that can be used to modify the PDF Viewer appearance. Also, you have an option to create your own custom theme for all the JavaScript controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

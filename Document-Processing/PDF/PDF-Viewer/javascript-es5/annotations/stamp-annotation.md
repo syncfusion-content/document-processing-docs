@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Stamp annotation in ##Platform_Name## PDF Viewer control | Syncfusion
-description: Learn here all about Stamp annotation in Syncfusion ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Stamp annotation in Javascript PDF Viewer control | Syncfusion
+description: Learn here all about Stamp annotation in Syncfusion Javascript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stamp annotation in ##Platform_Name## PDF Viewer control
+# Stamp annotation in Javascript PDF Viewer control
 
 The PDF Viewer control provides options to add, edit, delete, and rotate the following stamp annotation in the PDF documents:
 

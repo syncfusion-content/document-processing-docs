@@ -4,7 +4,7 @@ title: Open and Close Bookmark in EJ2 ASP.NET Core PDF Viewer | Syncfusion
 description: Learn here all about Open and Close Bookmark in ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

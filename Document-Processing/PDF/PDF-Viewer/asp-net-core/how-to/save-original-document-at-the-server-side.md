@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Save Original Document At The Server Side in ##Platform_Name## Pdfviewer Component
-description: Learn here all about Save Original Document At The Server Side in Syncfusion ##Platform_Name## Pdfviewer component of syncfusion and more.
+title: Save Original Document At The Server Side in ASP.NET Core Pdfviewer Component
+description: Learn here all about Save Original Document At The Server Side in Syncfusion ASP.NET Core Pdfviewer component of syncfusion and more.
 platform: document-processing
 control: Save Original Document At The Server Side
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

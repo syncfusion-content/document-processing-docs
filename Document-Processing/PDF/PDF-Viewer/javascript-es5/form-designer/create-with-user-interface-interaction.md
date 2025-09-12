@@ -1,10 +1,10 @@
 ---
 layout: post
-title: User interaction in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Create with user interface interaction in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: User interaction in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Create with user interface interaction in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Create with user interface interaction
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---

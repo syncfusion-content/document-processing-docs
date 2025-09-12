@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Sticky notes in ##Platform_Name## PDF Viewer control | Syncfusion
-description: Learn here all about Sticky notes in Syncfusion ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Sticky notes in Javascript PDF Viewer control | Syncfusion
+description: Learn here all about Sticky notes in Syncfusion Javascript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sticky notes in ##Platform_Name## PDF Viewer control
+# Sticky notes in Javascript PDF Viewer control
 
 The PDF Viewer control provides the options to add, edit, and delete the sticky note annotations in the PDF document.
 

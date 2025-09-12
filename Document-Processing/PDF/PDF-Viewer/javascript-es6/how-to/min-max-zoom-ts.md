@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Minimum and Maximum Zoom in ##Platform_Name## PDF Viewer control | Syncfusion
-description: Learn here all about Minimum and Maximum Zoom in Syncfusion ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Minimum and Maximum Zoom in Typescript PDF Viewer control | Syncfusion
+description: Learn here all about Minimum and Maximum Zoom in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

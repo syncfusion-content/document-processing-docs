@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Open PDF from Azure Blob Storage in ##Platform_Name## Pdfviewer | Syncfusion
-description:  Learn about how to Open PDF files from Azure Blob Storage in ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more details.
+title: Open PDF from Azure Blob Storage in Javascript Pdfviewer | Syncfusion
+description:  Learn about how to Open PDF files from Azure Blob Storage in Javascript Pdfviewer control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open PDF files from Azure Blob Storage
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---

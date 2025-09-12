@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Save PDF to Azure Blob Storage ##Platform_Name## Pdfviewer | Syncfusion
-description: Learn here all about how to Save PDF files to Azure Blob Storage in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Save PDF to Azure Blob Storage Typescript Pdfviewer | Syncfusion
+description: Learn here all about how to Save PDF files to Azure Blob Storage in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Save PDF files to Azure Blob Storage
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

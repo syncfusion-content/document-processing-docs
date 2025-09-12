@@ -1,14 +1,14 @@
 ---
 layout: post
-title: PDF Viewer Server Docker Image in ##Platform_Name## | Syncfusion
-description: Learn here all about Pdfviewer server docker image overview in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: PDF Viewer Server Docker Image in Javascript | Syncfusion
+description: Learn here all about Pdfviewer server docker image overview in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Pdfviewer server docker image overview
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Pdfviewer server docker image overview in ##Platform_Name## Pdfviewer control
+# Pdfviewer server docker image overview in Javascript Pdfviewer control
 
 The Syncfusion PDF Viewer control allows you to view, print, form-fill, and annotate PDF files in your web applications. This PDF Viewer control requires a server-side backend Web API service to render PDF contents.
 

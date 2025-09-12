@@ -4,7 +4,7 @@ title: Converting Library Bounds in EJ2 ASP.NET MVC PdfViewer | Syncfusion
 description: Learn how to convert Library bounds into Viewer bounds in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

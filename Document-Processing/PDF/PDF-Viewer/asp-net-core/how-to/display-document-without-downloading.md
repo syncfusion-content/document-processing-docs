@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Display Document Without Downloading in ##Platform_Name## Pdfviewer Component
-description: Learn here all about Display Document Without Downloading in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Display Document Without Downloading in ASP.NET Core Pdfviewer Component
+description: Learn here all about Display Document Without Downloading in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Display Document Without Downloading
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

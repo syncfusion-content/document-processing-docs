@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Print document in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Print document in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Print document in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Print document in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Print document
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print document in ##Platform_Name## Pdfviewer control
+# Print document in Typescript Pdfviewer control
 
 The PDF Viewer library allows you to print the PDF document programmatically using the [**print()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#print) method in the **PrintModule**.
 
