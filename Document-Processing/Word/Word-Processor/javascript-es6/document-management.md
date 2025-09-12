@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Document management in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Document management in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Document management in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Document management in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Document management 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Document management in ##Platform_Name## Document editor control
+# Document management in JavaScript (ES6) Document editor control
 
 Document Editor provides support to restrict editing. When the protected document includes range permission, then unique user or user group only authorized to edit separate text area.
 
@@ -59,14 +58,14 @@ The following code shows Restrict Editing Pane. To unprotect the document, use p
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/data-protection-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/data-protection-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/data-protection-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/data-protection-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/data-protection-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/data-protection-cs1" %}
 
 ## See Also
 

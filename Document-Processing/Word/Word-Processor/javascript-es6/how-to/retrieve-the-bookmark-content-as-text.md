@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Retrieve the bookmark content as text in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Retrieve the bookmark content as text in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Retrieve the bookmark content as text in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Retrieve the bookmark content as text in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Retrieve the bookmark content as text 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieve the bookmark content as text in ##Platform_Name## Document editor control
+# Retrieve the bookmark content as text in JavaScript (ES6) Document editor control
 
 You can get the bookmark or whole document content from the JavaScript Document Editor component as plain text and SFDT (rich text).
 

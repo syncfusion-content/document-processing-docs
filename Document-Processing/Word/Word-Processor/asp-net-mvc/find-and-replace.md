@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Find And Replace in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about find and replace in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Find And Replace in ASP.NET MVC Document Editor Component | Syncfusion
+description: Learn here all about find and replace in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Find And Replace
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -21,10 +20,10 @@ This provides the options to search for a portion of text in the document. After
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/options-pane/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/options-pane/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Options-pane.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/options-pane/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/options-pane/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -130,10 +129,10 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/find-replace/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/find-replace/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Find-replace.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/find-replace/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/find-replace/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

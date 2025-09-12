@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Chart in ##Platform_Name## Document Editor Control | Syncfusion
-description: Learn here all about Chart in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Chart in JavaScript (ES5) Document Editor Control | Syncfusion
+description: Learn here all about Chart in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Chart 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chart in ##Platform_Name## Document Editor Control
+# Chart in JavaScript (ES5) Document Editor Control
 
 Document Editor provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
 
@@ -24,7 +23,7 @@ The following example shows chart preservation in Document Editor.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/chart-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/chart-cs1" %}
 
 ## Supported Chart Types
 

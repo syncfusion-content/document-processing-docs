@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Notes in ##Platform_Name## Document Editor Component
-description: Learn here all about notes in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Notes in ASP.NET MVC Document Editor Component
+description: Learn here all about notes in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Notes
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -23,10 +22,10 @@ Document editor exposes an API to insert footnotes at cursor position programmat
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/footnote/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/footnote/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/footnote/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/footnote/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -39,10 +38,10 @@ Document editor exposes an API to insert endnotes at cursor position programmati
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/endnote/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/endnote/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/endnote/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/endnote/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

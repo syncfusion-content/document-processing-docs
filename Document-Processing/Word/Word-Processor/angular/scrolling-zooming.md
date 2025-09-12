@@ -14,15 +14,15 @@ The Document Editor renders the document as page by page. You can scroll through
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/find-replace-cs3/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/find-replace-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/find-replace-cs3/src/main.ts %}
+{% include code-snippet/document-editor/angular/find-replace-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/find-replace-cs3" %}
+{% previewsample "/document-processing/samples/document-editor/angular/find-replace-cs3" %}
 
 > Calling this method brings the specified page into view but doesn’t move selection. Hence this method will work by default. That is, it works even if selection is not enabled.
 
@@ -30,15 +30,15 @@ In case, if you wish to move the selection to any page in document editor and br
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/find-replace-cs4/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/find-replace-cs4/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/find-replace-cs4/src/main.ts %}
+{% include code-snippet/document-editor/angular/find-replace-cs4/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/find-replace-cs4" %}
+{% previewsample "/document-processing/samples/document-editor/angular/find-replace-cs4" %}
 
 ## Zooming
 

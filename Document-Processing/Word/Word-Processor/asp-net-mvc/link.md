@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Link in ##Platform_Name## Document Editor Component
-description: Learn here all about Link in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Link in ASP.NET MVC Document Editor Component
+description: Learn here all about Link in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Link
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -25,10 +24,10 @@ The following example illustrates how to add requestNavigate event for DocumentE
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/hyperlink/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/hyperlink/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/hyperlink/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/hyperlink/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,10 +40,10 @@ The following example illustrates how to add requestNavigate event for DocumentE
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/link/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/link/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/link/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/link/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,10 +74,10 @@ N> `<http://>`<br>
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/hyperlink-edit/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/hyperlink-edit/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/hyperlink-edit/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/hyperlink-edit/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -109,10 +108,10 @@ Document editor provides dialog support to insert or edit a hyperlink.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/hyperlink-dialog/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/hyperlink-dialog/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/hyperlink-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/hyperlink-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

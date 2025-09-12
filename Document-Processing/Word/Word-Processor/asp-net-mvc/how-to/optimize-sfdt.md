@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Optimize the SFDT file in ##Platform_Name## Document Editor Component
-description: Learn here all about optimize the SFDT file in Document Editor in Syncfusion ##Platform_Name## Document Editor component of syncfusion and more.
+title: Optimize the SFDT file in ASP.NET MVC Document Editor Component
+description: Learn here all about optimize the SFDT file in Document Editor in Syncfusion ASP.NET MVC Document Editor component of syncfusion and more.
 platform: document-processing
 control: Optimize the SFDT file
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -30,7 +29,7 @@ As a backward compatibility to create older format SFDT files, refer the followi
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/optimize-sfdt/razorOld %}
+{% include code-snippet/document-editor/asp-net-mvc/optimize-sfdt/razorOld %}
 {% endhighlight %}
 {% endtabs %}
 </td>
@@ -39,7 +38,7 @@ As a backward compatibility to create older format SFDT files, refer the followi
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/optimize-sfdt/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/optimize-sfdt/razor %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -81,7 +80,7 @@ To convert from older format SFDT from a new optimized SFDT file, refer the foll
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/optimize-sfdt/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/optimize-sfdt/razor %}
 {% endhighlight %}
 {% endtabs %}
 </td>

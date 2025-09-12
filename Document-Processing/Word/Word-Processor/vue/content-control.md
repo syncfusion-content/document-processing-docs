@@ -88,7 +88,7 @@ var contentControlInfos = this.$refs.container.ej2Instances.documentEditor.expor
 
 ## Reset content control
 
-Content control properties can be reset using the [`resetcontentcontroldata`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#resetcontentcontroldata)
+Content control properties can be reset using the [`resetContentControlData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#resetcontentcontroldata)
 
 {% highlight ts %}
 var data = [];

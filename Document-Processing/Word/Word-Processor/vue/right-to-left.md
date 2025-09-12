@@ -14,11 +14,11 @@ Document Editor provides RTL (right-to-left) support. This can be enabled using 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/right-to-left-cs1/app-composition.vue %}
+{% include code-snippet/document-editor/vue/right-to-left-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/right-to-left-cs1/app.vue %}
+{% include code-snippet/document-editor/vue/right-to-left-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/right-to-left-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/right-to-left-cs1" %}

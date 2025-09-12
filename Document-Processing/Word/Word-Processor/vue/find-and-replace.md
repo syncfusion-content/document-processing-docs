@@ -238,11 +238,11 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/replace-all-cs1/app-composition.vue %}
+{% include code-snippet/document-editor/vue/replace-all-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/replace-all-cs1/app.vue %}
+{% include code-snippet/document-editor/vue/replace-all-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/replace-all-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/replace-all-cs1" %}

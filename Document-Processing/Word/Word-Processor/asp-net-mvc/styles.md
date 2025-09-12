@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Styles in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about styles in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Styles in ASP.NET MVC Document Editor Component | Syncfusion
+description: Learn here all about styles in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Styles
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -76,7 +75,7 @@ New Styles are defined and added to the style collection of the document. In thi
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/character-style/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/character-style/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Character-style.cs" %}
 {% endhighlight %}
@@ -89,7 +88,7 @@ New Styles are defined and added to the style collection of the document. In thi
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/paragraph-style/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/paragraph-style/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Paragraph-style.cs" %}
 {% endhighlight %}
@@ -102,7 +101,7 @@ New Styles are defined and added to the style collection of the document. In thi
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/linked-style/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/linked-style/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Linked-style.cs" %}
 {% endhighlight %}

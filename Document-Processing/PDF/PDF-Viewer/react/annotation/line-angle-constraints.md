@@ -49,6 +49,7 @@ root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
+{% endtabs %}
 
 ## Configuration Properties
 

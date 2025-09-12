@@ -16,17 +16,17 @@ The following example shows how to open SFDT data in Document Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/import-cs1/app/index.jsx %}
+{% include code-snippet/document-editor/react/import-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/import-cs1/app/index.tsx %}
+{% include code-snippet/document-editor/react/import-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/react/document-editor/import-cs1/index.html %}
+{% include code-snippet/document-editor/react/import-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/import-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/import-cs1" %}
 
 ## Import document from local machine
 
@@ -34,17 +34,17 @@ The following example shows how to import document from local machine.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/import-cs2/app/index.jsx %}
+{% include code-snippet/document-editor/react/import-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/import-cs2/app/index.tsx %}
+{% include code-snippet/document-editor/react/import-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/react/document-editor/import-cs2/index.html %}
+{% include code-snippet/document-editor/react/import-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/import-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/import-cs2" %}
 
 ## Convert word documents into SFDT
 

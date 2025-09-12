@@ -10,39 +10,39 @@ domainurl: ##DomainURL##
 
 # Print in Angular Document editor component
 
-To print the document, use the [`print`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#print) method from document editor instance.
+To print the document, use the [`print`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#print/) method from document editor instance.
 
 Refer to the following example for showing a document and print it.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs5/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/link-cs5/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs5/src/main.ts %}
+{% include code-snippet/document-editor/angular/link-cs5/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/link-cs5" %}
+{% previewsample "/document-processing/samples/document-editor/angular/link-cs5" %}
 
 Refer to the following example for creating a document and print it.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs6/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/link-cs6/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs6/src/main.ts %}
+{% include code-snippet/document-editor/angular/link-cs6/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/link-cs6" %}
+{% previewsample "/document-processing/samples/document-editor/angular/link-cs6" %}
 
 ## Improve print quality
 
-Document editor provides an option to improve the print quality using [`printDevicePixelRatio`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel#printdevicepixelratio) in Document editor settings. Document editor using canvas approach to render content. Then, canvas are converted to image and it process for print. Using printDevicePixelRatio API, you can increase the image quality based on your requirement.
+Document editor provides an option to improve the print quality using [`printDevicePixelRatio`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel/#printdevicepixelratio/) in Document editor settings. Document editor using canvas approach to render content. Then, canvas are converted to image and it process for print. Using printDevicePixelRatio API, you can increase the image quality based on your requirement.
 
 The following example code illustrates how to improve the print quality in Document editor container.
 
@@ -148,18 +148,18 @@ However, you can customize margins, paper, and layout options by modifying the s
 this.documentEditor.showPageSetupDialog();
 ```
 
-By customizing margins, papers, and layouts, the layout of the document will be changed in document editor. To modify these options during print operation, serialize the document as SFDT using the [`serialize`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#serialize) method in document editor instance and open the SFDT data in another instance of document editor in separate window.
+By customizing margins, papers, and layouts, the layout of the document will be changed in document editor. To modify these options during print operation, serialize the document as SFDT using the [`serialize`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#serialize/) method in document editor instance and open the SFDT data in another instance of document editor in separate window.
 
 The following example shows how to customize layout options only for printing.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs7/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/link-cs7/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs7/src/main.ts %}
+{% include code-snippet/document-editor/angular/link-cs7/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/link-cs7" %}
+{% previewsample "/document-processing/samples/document-editor/angular/link-cs7" %}

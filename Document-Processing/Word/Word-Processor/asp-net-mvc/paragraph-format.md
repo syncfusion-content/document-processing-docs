@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Paragraph Format in ##Platform_Name## Document Editor Control | Syncfusion
-description: Learn here all about paragraph format in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Paragraph Format in ASP.NET MVC Document Editor Control | Syncfusion
+description: Learn here all about paragraph format in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Paragraph Format
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -147,7 +146,7 @@ documenteditor.documentEditorSettings.showHiddenMarks = true;
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/paragraph-format/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/paragraph-format/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Paragraph-format.cs" %}
 {% endhighlight %}{% endtabs %}

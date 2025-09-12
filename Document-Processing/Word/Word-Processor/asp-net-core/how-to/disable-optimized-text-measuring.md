@@ -4,7 +4,6 @@ title: Disable Optimized Text Measuring in Document Editor Component
 description: Learn here all about disable optimized text measuring in Syncfusion Document Editor component of syncfusion and more.
 platform: document-processing
 control: Disable Optimized Text Measuring
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -22,7 +21,7 @@ The following example code illustrates how to disable optimized text measuring i
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/optimized-text/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/optimized-text/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Optimized-text.cs" %}
 {% endhighlight %}{% endtabs %}

@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Export in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Export in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Export in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Export in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Export 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export in ##Platform_Name## Document editor control
+# Export in JavaScript (ES5) Document editor control
 
 Document Editor exports the document into various known file formats in client-side such as Microsoft Word document (.docx), Word template (.dotx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
 
@@ -33,7 +32,7 @@ The following example shows how to export documents in Document Editor as Syncfu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/export-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/export-cs1" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -44,7 +43,7 @@ The following example shows how to export documents in Document Editor as Syncfu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/export-container-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/export-container-cs1" %}
 
 ## Word export
 
@@ -61,7 +60,7 @@ The following example shows how to export the document as Word document (.docx).
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/export-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/export-cs2" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -72,7 +71,7 @@ The following example shows how to export the document as Word document (.docx).
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/export-container-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/export-container-cs2" %}
 
 ## Word Template Export 
 
@@ -89,7 +88,7 @@ The following example shows how to export the document as Word Template (.dotx).
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/export-cs4" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/export-cs4" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -100,7 +99,7 @@ The following example shows how to export the document as Word Template (.dotx).
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/export-container-cs4" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/export-container-cs4" %}
 
 ## Text export
 
@@ -115,7 +114,7 @@ The following example shows how to export document as text document (.txt).
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/export-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/export-cs3" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -126,7 +125,7 @@ The following example shows how to export document as text document (.txt).
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/export-container-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/export-container-cs3" %}
 
 ## Export as blob
 

@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Save document to One Drive in ##Platform_Name## Document editor control | Syncfusion
-description:  Learn about how to Save document to One Drive in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save document to One Drive in Angular Document editor control | Syncfusion
+description:  Learn about how to Save document to One Drive in Angular Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to One Drive
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -134,11 +133,11 @@ private string GetValue(IFormCollection data, string key)
 
 ```
 
-> Replace **Your_Tenent_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
+> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) and sent to server-side for saving in One Drive.
+In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#saveasblob) and sent to server-side for saving in One Drive.
 
 ```typescript
 

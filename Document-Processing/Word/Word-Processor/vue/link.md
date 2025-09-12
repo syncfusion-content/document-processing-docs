@@ -22,14 +22,14 @@ The following example illustrates how to add requestNavigate event for DocumentE
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/link-cs1/app-composition.vue %}
+{% include code-snippet/document-editor/vue/link-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/link-cs1/app.vue %}
+{% include code-snippet/document-editor/vue/link-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/link-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/link-cs1" %}
 
 ### Add the requestNavigate event for DocumentEditorContainer component
 
@@ -146,14 +146,14 @@ Refer to the following example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/link-cs2/app-composition.vue %}
+{% include code-snippet/document-editor/vue/link-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/link-cs2/app.vue %}
+{% include code-snippet/document-editor/vue/link-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/link-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/link-cs2" %}
 
 ## Customize screen tip
 
@@ -179,14 +179,14 @@ Document Editor provides dialog support to insert or edit a hyperlink. Refer to 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/link-cs3/app-composition.vue %}
+{% include code-snippet/document-editor/vue/link-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/link-cs3/app.vue %}
+{% include code-snippet/document-editor/vue/link-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/link-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/link-cs3" %}
 
 You can use the following keyboard shortcut to open the hyperlink dialog if the selection is in hyperlink.
 

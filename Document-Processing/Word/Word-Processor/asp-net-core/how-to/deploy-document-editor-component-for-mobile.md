@@ -4,7 +4,6 @@ title: Deploy Document Editor For Mobile in | Syncfusion
 description: Learn here all about deploy document editor component for mobile in Syncfusion Document Editor component of syncfusion and more.
 platform: document-processing
 control: Deploy Document Editor Component For Mobile
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -20,7 +19,7 @@ Hence, it is recommended to switch the Document editor component as read-only in
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/mobile-view/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/mobile-view/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Mobile-view.cs" %}
 {% endhighlight %}{% endtabs %}

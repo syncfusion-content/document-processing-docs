@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Section format in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Section format in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Section format in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Section format in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Section format 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Section format in ##Platform_Name## Document editor control
+# Section format in JavaScript (ES5) Document editor control
 
 Document Editor supports various section formatting such as page size, page margins, and more.
 

@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Show hide spinner in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Show hide spinner in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Show hide spinner in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Show hide spinner in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Show hide spinner 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show hide spinner in ##Platform_Name## Document editor control
+# Show hide spinner in JavaScript (ES6) Document editor control
 
 Using [`spinner`](https://ej2.syncfusion.com/documentation/spinner/getting-started#create-the-spinner-globally) component, you can show/hide spinner while opening document in DocumentEditor .
 
@@ -29,14 +28,14 @@ Refer to the following example.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/spinner-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/spinner-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/spinner-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/spinner-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/spinner-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/spinner-cs1" %}
 
 
 

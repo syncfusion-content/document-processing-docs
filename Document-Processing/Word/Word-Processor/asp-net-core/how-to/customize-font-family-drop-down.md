@@ -4,7 +4,6 @@ title: Customize FontFamily DropDown in Document Editor | Syncfusion
 description: Learn here all about how to customize font family drop down in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize Font Family Drop Down
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
