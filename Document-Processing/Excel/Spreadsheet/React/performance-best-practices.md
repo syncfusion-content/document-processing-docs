@@ -81,9 +81,6 @@ To improve performance when opening large Excel files, use parsing options to sk
 
 By configuring the parse options, you can load Excel files into the Spreadsheet while retaining only the necessary content. This ensures efficient handling of large or high-memory files without compromising essential data.
 
-To learn how to configure the parsing options, please refer to the UG section below.
-* [Configure Parsing Options](./open-save#improving-excel-file-open-performance-with-parsing-options)
-
 ## How to improve performance on formula calculation in Spreadsheet?
 
 ### Manual calculation mode
