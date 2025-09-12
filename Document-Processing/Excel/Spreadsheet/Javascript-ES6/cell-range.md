@@ -25,14 +25,14 @@ The following code example shows the wrap text functionality in spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/wrap-text-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/wrap-text-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/wrap-text-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/wrap-text-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/wrap-text-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/wrap-text-cs1" %}
 
 ### Limitations of Wrap text
 
@@ -65,14 +65,14 @@ The following code example shows the merge cells operation in spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/merge-cells-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/merge-cells-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/merge-cells-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/merge-cells-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/merge-cells-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/merge-cells-cs1" %}
 
 ### Limitations of Merge
 
@@ -125,14 +125,14 @@ You can clear the highlighted invalid data by using the following ways,
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/data-validation-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/data-validation-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/data-validation-cs1" %}
 
 ### Custom Data validation
 
@@ -153,14 +153,14 @@ The following code example demonstrates how to add custom data validation with a
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs3/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/data-validation-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs3/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/data-validation-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs3" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/data-validation-cs3" %}
 
 ### Limitations of Data validation
 
@@ -236,14 +236,14 @@ In the following sample, you can enable/disable the fill option on the button cl
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/autofill-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/autofill-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/autofill-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/autofill-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/autofill-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/autofill-cs1" %}
 
 ### Limitations of Autofill
 
@@ -278,14 +278,14 @@ Clear the cell contents and formats in the Spreadsheet document by using the [cl
  
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/clear-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/clear-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/clear-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/clear-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/clear-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/clear-cs1" %}
 
 ## See Also
 

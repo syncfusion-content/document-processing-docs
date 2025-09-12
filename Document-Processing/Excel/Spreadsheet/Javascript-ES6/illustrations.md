@@ -70,14 +70,14 @@ Image feature allows you to view and insert an image in a spreadsheet, and you c
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/image-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/image-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/image-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/image-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/image-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/image-cs1" %}
 
 ### Limitations of Image
 
@@ -127,14 +127,14 @@ The available arguments in the `ChartModel` are:
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/chart-cs2/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/chart-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/chart-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/chart-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/chart-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/chart-cs2" %}
 
 ### Delete Chart
 
@@ -157,14 +157,14 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/chart-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/chart-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/chart-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/chart-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/chart-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/chart-cs1" %}
 
 #### Customization of line chart markers
 
@@ -172,14 +172,14 @@ Using the [`actionBegin`](https://ej2.syncfusion.com/documentation/api/spreadshe
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/chart-cs3/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/chart-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/chart-cs3/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/chart-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/chart-cs3" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/chart-cs3" %}
 
 ### Limitations of Chart
 

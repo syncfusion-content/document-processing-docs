@@ -25,14 +25,14 @@ The following code example shows `Save` option in the Spreadsheet control.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/save-cs2/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/save-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/save-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/save-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/save-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/save-cs2" %}
 
 > * Use `Ctrl + S` keyboard shortcut to save the Spreadsheet data as Excel file.
 > * The default value of [allowSave](../api/spreadsheet/#allowsave) property is `true`. For demonstration purpose, we have showcased the [allowSave](../api/spreadsheet/#allowsave) property in previous code snippet.

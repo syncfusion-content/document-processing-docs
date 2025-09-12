@@ -382,10 +382,10 @@ The following example demonstrates the Spreadsheet in `French` culture. In the b
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/locale/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/locale/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="LocaleController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/locale/localeController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/locale/localeController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -399,10 +399,10 @@ The following example demonstrates the Spreadsheet in French [ `fr-CH`] culture.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/internationalization/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/internationalization/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="InternationalizationController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/internationalization/internationalizationController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/internationalization/internationalizationController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -414,10 +414,10 @@ RTL provides an option to switch the text direction and layout of the Spreadshee
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/rtl/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/rtl/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="RtlController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/rtl/rtlController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/rtl/rtlController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
