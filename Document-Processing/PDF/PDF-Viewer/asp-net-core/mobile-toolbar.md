@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Mobile Toolbar Interface in ##Platform_Name## Pdfviewer Component| Syncfusion
-description: Learn All About the Mobile Toolbar Interface in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Mobile Toolbar Interface in ASP.NET Core Pdfviewer Component| Syncfusion
+description: Learn All About the Mobile Toolbar Interface in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Mobile Toolbar Interface
 documentation: ug

@@ -4,7 +4,7 @@ title: Retrieving Base64 Value in EJ2 ASP.NET MVC PdfViewer | Syncfusion
 description: Learn how to retrieve the Base64 value in the Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: How to retrieve Base64
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

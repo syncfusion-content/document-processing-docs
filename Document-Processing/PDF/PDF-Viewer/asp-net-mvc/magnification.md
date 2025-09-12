@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Magnification in ##Platform_Name## Pdfviewer Component
-description: Learn here all about Magnification in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Magnification in ASP.NET MVC Pdfviewer Component
+description: Learn here all about Magnification in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Magnification
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

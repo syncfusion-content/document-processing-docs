@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Extract Text Option in Syncfusion ##Platform_Name## Pdfviewer Control | Syncfusion
+title: Extract Text Option in Syncfusion Javascript Pdfviewer Control | Syncfusion
 description: Learn about the `extractTextOption` in Syncfusion #Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Extract Text Option
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 
-# Extract Text Option in Syncfusion ##Platform_Name## Pdfviewer Control
+# Extract Text Option in Syncfusion Javascript Pdfviewer Control
 
 The `extractTextOption` property in the Syncfusion PdfViewer control allows you to optimize memory usage by controlling the level of text extraction. This setting influences the data returned in the `extractTextCompleted` event. You can select one of the following options to determine the kind of text extraction and layout information to retrieve.
 

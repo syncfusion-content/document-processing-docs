@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Text markup annotation in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Text markup annotation in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Text markup annotation in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Text markup annotation in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Text markup annotation
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text markup annotation in ##Platform_Name## Pdfviewer control
+# Text markup annotation in Typescript Pdfviewer control
 
 The PDF Viewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline, strikethrough and squiggly annotations in the PDF document.
 

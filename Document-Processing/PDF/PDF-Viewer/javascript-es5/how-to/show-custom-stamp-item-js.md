@@ -4,7 +4,7 @@ title: Displaying Custom Items in Custom Stamp in Syncfusion PDF Viewer
 description: Learn how to display custom items in the custom stamp Dropdown in Syncfusion PDF Viewer using JavaScript.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---

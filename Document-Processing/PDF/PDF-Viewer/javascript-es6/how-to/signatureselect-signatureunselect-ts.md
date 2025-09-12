@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Selection events in ##Platform_Name## PDF Viewer control | Syncfusion
-description: Learn here all about SignatureSelect and SignatureUnselect event in Syncfusion ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Selection events in Typescript PDF Viewer control | Syncfusion
+description: Learn here all about SignatureSelect and SignatureUnselect event in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

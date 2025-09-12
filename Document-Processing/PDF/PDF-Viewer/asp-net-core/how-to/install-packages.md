@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Install Packages in Syncfusion ##Platform_Name## Pdfviewer Component
-description: Learn here all about Install Packages in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Install Packages in Syncfusion ASP.NET Core Pdfviewer Component
+description: Learn here all about Install Packages in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Install Packages
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Import annotations in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Import annotations in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Import annotations in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Import annotations in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Import annotations
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import annotations in ##Platform_Name## Pdfviewer control
+# Import annotations in Typescript Pdfviewer control
 
 To import annotations into a Syncfusion PDF Viewer when loading a PDF document, you can use the [**importAnnotations()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#importannotation) method of the PDF Viewer. This method allows you to import annotations from a file or a string in the PDF Viewer.
 

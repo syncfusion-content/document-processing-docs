@@ -1,15 +1,15 @@
 ---
 layout: post
-title: How to deploy docker image in azure app service for container in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about How to deploy docker image in azure app service for container in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: How to deploy docker image in azure app service for container in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about How to deploy docker image in azure app service for container in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: How to deploy docker image in azure app service for container
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to deploy docker image in azure app service for container in ##Platform_Name## Pdfviewer control
+# How to deploy docker image in azure app service for container in Javascript Pdfviewer control
 
 ## Prerequisites
 

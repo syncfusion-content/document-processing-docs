@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Extract Text Using Text Collection in Syncfusion ##Platform_Name## Pdfviewer Component
-description: Learn here all about Extract Text Using Text Collection in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Extract Text Using Text Collection in Syncfusion ASP.NET MVC Pdfviewer Component
+description: Learn here all about Extract Text Using Text Collection in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Extract Text Using Text Collection
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

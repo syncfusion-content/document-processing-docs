@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Download document on window closing in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Download document on window closing in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Download document on window closing in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Download document on window closing in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Download document on window closing
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Download document on window closing in ##Platform_Name## Pdfviewer control
+# Download document on window closing in Javascript Pdfviewer control
 
 The PDF Viewer library allows you to download a PDF document rendered in the viewer while refreshing the window or clicking the close window using the [onbeforeunload](https://ej2.syncfusion.com/documentation/api/pdfviewer/#unload) event.
 

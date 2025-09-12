@@ -4,7 +4,7 @@ title: Displaying Custom stamp Item in EJ2 ASP.NET MVC PdfViewer | Syncfusion
 description: Learn how to display custom stamp items in the custom stamp in the Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

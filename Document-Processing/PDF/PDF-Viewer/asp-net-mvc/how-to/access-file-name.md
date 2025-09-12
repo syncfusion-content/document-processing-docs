@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Access File Name in ##Platform_Name## Pdfviewer Component
-description: Learn here all about Access File Name in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Access File Name in ASP.NET MVC Pdfviewer Component
+description: Learn here all about Access File Name in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Access File Name
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

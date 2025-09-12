@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable or Disable Text Selection in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable text selection in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn how to enable text selection in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

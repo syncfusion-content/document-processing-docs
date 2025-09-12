@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Show Bookmark in ##Platform_Name## Pdfviewer Component
-description: Learn here all about Show Bookmark in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Show Bookmark in ASP.NET Core Pdfviewer Component
+description: Learn here all about Show Bookmark in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Show Bookmark
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
