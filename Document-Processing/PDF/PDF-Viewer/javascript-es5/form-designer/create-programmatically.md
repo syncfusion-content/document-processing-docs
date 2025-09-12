@@ -28,10 +28,10 @@ Using addFormField method, the form fields can be added to the PDF document prog
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/pdfviewer/javascript/addformfield-cs1/index.js %}
+{% include code-snippet/pdfviewer/javascript-es5/addformfield-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/addformfield-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/addformfield-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -47,10 +47,10 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/pdfviewer/javascript/updateformfield-cs1/index.js %}
+{% include code-snippet/pdfviewer/javascript-es5/updateformfield-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/updateformfield-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/updateformfield-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -66,10 +66,10 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/pdfviewer/javascript/deleteformfield-cs1/index.js %}
+{% include code-snippet/pdfviewer/javascript-es5/deleteformfield-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/deleteformfield-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/deleteformfield-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

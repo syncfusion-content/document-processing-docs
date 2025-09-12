@@ -34,7 +34,7 @@ The Essential JS 2 for JavaScript (global script) is an ES5 formatted pure JavaS
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-getting-started-cs2/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-getting-started-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

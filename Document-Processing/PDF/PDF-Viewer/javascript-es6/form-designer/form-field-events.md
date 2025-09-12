@@ -35,10 +35,10 @@ The [formFieldAdd](https://ej2.syncfusion.com/javascript/documentation/api/pdfvi
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript/formfieldaddevent-cs2/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldaddevent-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/formfieldaddevent-cs2/ts/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldaddevent-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -48,10 +48,10 @@ The [formFieldClick](https://ej2.syncfusion.com/javascript/documentation/api/pdf
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript/formfieldclickevent-cs2/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldclickevent-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/formfieldclickevent-cs2/ts/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldclickevent-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,10 +61,10 @@ The [formFieldDoubleClick](https://ej2.syncfusion.com/javascript/documentation/a
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript/formfielddoubleclickevent-cs2/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/formfielddoubleclickevent-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/formfielddoubleclickevent-cs2/ts/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/formfielddoubleclickevent-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -74,10 +74,10 @@ The [formFieldFocusOut](https://ej2.syncfusion.com/javascript/documentation/api/
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript/formfieldfocusoutevent-cs2/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldfocusoutevent-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/formfieldfocusoutevent-cs2/ts/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldfocusoutevent-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,10 +87,10 @@ The [formFieldMouseLeave](https://ej2.syncfusion.com/javascript/documentation/ap
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript/formfieldmouseleaveevent-cs2/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldmouseleaveevent-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/formfieldmouseleaveevent-cs2/ts/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldmouseleaveevent-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -100,10 +100,10 @@ The [formFieldMouseOver](https://ej2.syncfusion.com/javascript/documentation/api
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript/formfieldmouseoverevent-cs2/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldmouseoverevent-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/formfieldmouseoverevent-cs2/ts/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldmouseoverevent-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -113,10 +113,10 @@ The [formFieldMove](https://ej2.syncfusion.com/javascript/documentation/api/pdfv
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript/formfieldmoveevent-cs2/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldmoveevent-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/formfieldmoveevent-cs2/ts/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldmoveevent-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -126,10 +126,10 @@ The [formFieldPropertiesChange](https://ej2.syncfusion.com/javascript/documentat
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript/formfieldpropertieschangeevent-cs2/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldpropertieschangeevent-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/formfieldpropertieschangeevent-cs2/ts/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldpropertieschangeevent-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -139,10 +139,10 @@ The [formFieldRemove](https://ej2.syncfusion.com/javascript/documentation/api/pd
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript/formfieldremoveevent-cs2/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldremoveevent-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/formfieldremoveevent-cs2/ts/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldremoveevent-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -152,10 +152,10 @@ The [formFieldResize](https://ej2.syncfusion.com/javascript/documentation/api/pd
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript/formfieldresizeevent-cs2/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldresizeevent-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/formfieldresizeevent-cs2/ts/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldresizeevent-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -165,10 +165,10 @@ The [formFieldSelect](https://ej2.syncfusion.com/javascript/documentation/api/pd
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript/formfieldselectevent-cs2/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldselectevent-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/formfieldselectevent-cs2/ts/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldselectevent-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -178,10 +178,10 @@ The [formFieldUnselect](https://ej2.syncfusion.com/javascript/documentation/api/
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript/formfieldunselectevent-cs2/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldunselectevent-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/formfieldunselectevent-cs2/ts/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldunselectevent-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -191,9 +191,9 @@ The [validateFormFields](https://ej2.syncfusion.com/javascript/documentation/api
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript/formfieldvalidationevent-cs2/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldvalidationevent-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/formfieldvalidationevent-cs2/ts/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/formfieldvalidationevent-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}

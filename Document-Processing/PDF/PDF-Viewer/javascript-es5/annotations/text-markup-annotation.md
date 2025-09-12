@@ -40,7 +40,7 @@ Refer to the following code snippet to switch to highlight mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/highlight-mode-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/highlight-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,7 +54,7 @@ Refer to the following code snippet to switch back to normal mode from highlight
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/highlight-normal-mode-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/highlight-normal-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -144,7 +144,7 @@ Refer to the following code snippet to switch to underline mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/underline-mode-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/underline-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -159,7 +159,7 @@ Refer to the following code snippet to switch back to normal mode from underline
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/underline-normal-mode-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/underline-normal-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -250,7 +250,7 @@ Refer to the following code snippet to switch to strikethrough mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/strikethrough-mode-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/strikethrough-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -264,7 +264,7 @@ Refer to the following code snippet to switch back to normal mode from underline
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/strikethrough-normal-mode-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/strikethrough-normal-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -354,7 +354,7 @@ Refer to the following code snippet to switch to squiggly mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/squiggly-mode-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/squiggly-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -368,7 +368,7 @@ Refer to the following code snippet to switch back to normal mode from squiggly 
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/squiggly-normal-mode-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/squiggly-normal-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -522,7 +522,7 @@ Refer to the following code snippet for calling undo and redo actions from the c
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/undo-redo-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/undo-redo-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

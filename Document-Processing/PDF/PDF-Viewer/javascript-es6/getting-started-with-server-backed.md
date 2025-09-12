@@ -136,10 +136,10 @@ Output will be displayed as follows.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript/getting-started-cs1/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/getting-started-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/getting-started-cs1/ts/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/getting-started-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
