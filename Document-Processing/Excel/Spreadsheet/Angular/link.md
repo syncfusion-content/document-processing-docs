@@ -61,7 +61,7 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/link-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/link-cs1" %}
 
 ## Limitations
 

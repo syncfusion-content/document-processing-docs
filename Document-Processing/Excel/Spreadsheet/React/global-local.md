@@ -396,7 +396,7 @@ The following example demonstrates the Spreadsheet in `French` culture. In the b
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/local-data-binding-cs2" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/local-data-binding-cs2" %}
 
 ## Internationalization
 
@@ -518,7 +518,7 @@ RTL provides an option to switch the text direction and layout of the Spreadshee
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/internationalization-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/internationalization-cs1" %}
 
 ## Note
 

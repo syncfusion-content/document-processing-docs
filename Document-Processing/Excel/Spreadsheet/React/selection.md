@@ -61,7 +61,7 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/selection-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/selection-cs1" %}
 
 ## Column selection
 
@@ -93,7 +93,7 @@ The following sample shows the column selection in the spreadsheet, here selecti
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/selection-cs2" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/selection-cs2" %}
 
 ## Get selected cell values
 
@@ -116,7 +116,7 @@ Below is a code example demonstrating how to retrieve the selected cell values a
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/selected-cell-values" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/selected-cell-values" %}
 
 ## Remove selection
 
@@ -137,7 +137,7 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/selection-cs3" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/selection-cs3" %}
 
 ## Limitations
 

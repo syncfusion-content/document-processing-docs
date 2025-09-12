@@ -54,7 +54,7 @@ In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as 
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/freezepane-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/freezepane-cs1" %}
 
 ## Limitations
 

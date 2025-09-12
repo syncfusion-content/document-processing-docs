@@ -390,7 +390,7 @@ The following example demonstrates the Spreadsheet in `French` culture. In the b
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/local-data-binding-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/local-data-binding-cs2" %}
 
 ## Internationalization
 
@@ -419,7 +419,7 @@ The following example demonstrates the Spreadsheet in French [ `fr-CH`] culture.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/internationalization-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/internationalization-cs1" %}
 
 ## Right to left (RTL)
 
@@ -435,7 +435,7 @@ RTL provides an option to switch the text direction and layout of the Spreadshee
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/local-data-binding-cs3" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/local-data-binding-cs3" %}
 
 ## Note
 

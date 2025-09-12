@@ -22,4 +22,4 @@ The following code example shows how to set the active sheet when importing an E
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/change-active-sheet-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/change-active-sheet-cs1" %}

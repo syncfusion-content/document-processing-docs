@@ -48,7 +48,7 @@ The following code example shows the number formatting in cell data.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/number-format-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/number-format-cs2" %}
 
 ### Limitations of Number Formatting
 
@@ -106,7 +106,7 @@ The following code example demonstrates how to configure culture-based formats f
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/globalization-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/globalization-cs1" %}
 
 ## Text and cell formatting
 
@@ -176,7 +176,7 @@ The following code example shows the style formatting in text and cells of the s
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/cell-format-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/cell-format-cs1" %}
 
 ### Limitations of Formatting
 
@@ -273,7 +273,7 @@ You can clear the defined rules by using one of the following ways,
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/conditional-formatting-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/conditional-formatting-cs1" %}
 
 ### Limitations of Conditional formatting
 

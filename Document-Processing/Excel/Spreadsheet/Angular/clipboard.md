@@ -69,7 +69,7 @@ Paste can be done in one of the following ways.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/clipboard-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/clipboard-cs1" %}
 
 ## Prevent the paste functionality
 
@@ -85,7 +85,7 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/clipboard-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/clipboard-cs2" %}
 
 ## Limitations
 

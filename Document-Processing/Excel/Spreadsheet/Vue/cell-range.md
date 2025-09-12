@@ -32,7 +32,7 @@ The following code example shows the wrap text functionality in spreadsheet.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/wrap-text-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/wrap-text-cs1" %}
 
 ### Limitations of Wrap text
 
@@ -71,7 +71,7 @@ The following code example shows the merge cells operation in spreadsheet.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/merge-cells-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/merge-cells-cs1" %}
 
 ### Limitations of Merge
 
@@ -131,7 +131,7 @@ You can clear the highlighted invalid data by using the following ways,
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/number-format-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/number-format-cs1" %}
 
 ### Custom Data validation
 
@@ -159,7 +159,7 @@ The following code example demonstrates how to add custom data validation with a
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/data-validation-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/data-validation-cs1" %}
 
 ### Limitations of Data validation
 
@@ -203,7 +203,7 @@ Clear the cell contents and formats in the Spreadsheet document by using the [cl
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/clear-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/clear-cs1" %}
 
 ## Note
 

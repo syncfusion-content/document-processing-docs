@@ -78,7 +78,7 @@ In this demo, Custom Item is added after the Paste item in the context menu.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/contextmenu/addContextMenu-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/contextmenu/addContextMenu-cs1" %}
 
 ### Remove Context Menu Items
 
@@ -96,7 +96,7 @@ In this demo, Insert Column item has been removed from the row/column header con
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/contextmenu/addContextMenu-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/contextmenu/addContextMenu-cs2" %}
 
 ### Enable/Disable Context Menu Items
 
@@ -114,7 +114,7 @@ In this demo, Rename item is disabled in the pager context menu.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/contextmenu/addContextMenu-cs3" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/contextmenu/addContextMenu-cs3" %}
 
 ## Note
 

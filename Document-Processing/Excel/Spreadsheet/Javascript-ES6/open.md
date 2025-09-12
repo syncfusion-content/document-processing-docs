@@ -32,7 +32,7 @@ The following code example shows `Open` option in the Spreadsheet control.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/open-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/open-cs1" %}
 
 > * Use `Ctrl + O` keyboard shortcut to open Excel documents.
 > * The default value of the [allowOpen](../api/spreadsheet/#allowopen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](../api/spreadsheet/#allowopen) property in previous code snippet.

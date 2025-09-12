@@ -44,7 +44,7 @@ The following code example shows `Sort` functionality in the Spreadsheet control
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/sort-by-cell-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/sort-by-cell-cs1" %}
 
 ## Data contains header
 
@@ -117,7 +117,7 @@ The multi-column sorting can also be performed manually by passing sort options 
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/passing-sort-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/passing-sort-cs1" %}
 
 ## Custom sort comparer
 
@@ -144,7 +144,7 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/custom-sort-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/custom-sort-cs1" %}
 
 ## Known error validations
 

@@ -31,7 +31,7 @@ The following sample shows the `Open` option by using the [`openUrl`](https://ej
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/open-save-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs1" %}
 
 Please find the below table for the beforeOpen event arguments.
 
@@ -60,7 +60,7 @@ The following code example shows how to import an excel document using file uplo
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/open-save-cs7" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs7" %}
 
 ### Open an external URL excel file while initial load
 
@@ -76,7 +76,7 @@ You can achieve to access the remote excel file by using the [`created`](https:/
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/open-save-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs2" %}
 
 ### Open an excel file from blob data
 
@@ -94,7 +94,7 @@ Please find the code to fetch the blob data and load it into the Spreadsheet com
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/open-from-blobdata-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-from-blobdata-cs1" %}
 
 ### Open an Excel file located on a server
 
@@ -269,7 +269,7 @@ The following code example shows how to open the spreadsheet data as base64 stri
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/base-64-string" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/base-64-string" %}
 
 ### Open excel file into a read-only mode
 
@@ -285,7 +285,7 @@ You can open excel file into a read-only mode by using the [`openComplete`](http
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/open-save-cs12" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs12" %}
 
 
 
@@ -326,7 +326,7 @@ The following code snippet demonstrates how to configure the deserialization opt
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/open-from-json" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-from-json" %}
 
 ### Improving Excel file open performance with parsing options
 
@@ -445,7 +445,7 @@ You can add your own custom header to the open action in the Spreadsheet. For pr
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/open-save-cs8" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs8" %}
 
 ### External workbook confirmation dialog
 
@@ -485,7 +485,7 @@ The following sample shows the `Save` option by using the [`saveUrl`](https://ej
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/open-save-cs3" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs3" %}
 
 Please find the below table for the beforeSave event arguments.
 
@@ -519,7 +519,7 @@ Please find below the code to retrieve blob data from the Spreadsheet component 
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/save-as-blobdata-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/save-as-blobdata-cs1" %}
 
 ### Save an Excel file to a server
 
@@ -708,7 +708,7 @@ The following code example shows how to save the spreadsheet data as base64 stri
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/base-64-string" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/base-64-string" %}
 
 ### Configure JSON serialization options
 
@@ -746,7 +746,7 @@ The following code snippet demonstrates how to configure the serialization optio
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/save-as-json" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/save-as-json" %}
 
 ### Send and receive custom params from client to server
 
@@ -762,7 +762,7 @@ Passing the custom parameters from client to server by using [`beforeSave`](http
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/open-save-cs4" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs4" %}
 
 Server side code snippets:
 
@@ -789,7 +789,7 @@ You can add your own custom header to the save action in the Spreadsheet. For pr
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/open-save-cs11" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs11" %}
 
 ### Change the PDF orientation
 
@@ -810,7 +810,7 @@ The possible values are:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/open-save-cs6" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs6" %}
 
 
 
@@ -829,7 +829,7 @@ To save the Spreadsheet document as an `xlsx, xls, csv, or pdf` file, by using [
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/open-save-cs5" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs5" %}
 
 ## Server Configuration
 

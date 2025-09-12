@@ -59,7 +59,7 @@ The following example shows `Protect Sheet` functionality in the Spreadsheet con
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/protect-sheet-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/protect-sheet-cs1" %}
 
 ### Limitations of Protect sheet
 
@@ -96,7 +96,7 @@ In protected spreadsheet, to make some particular cell or range of cells are edi
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/unlock-cells-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/unlock-cells-cs1" %}
 
 ## Make cells read-only without protecting worksheet
 
@@ -165,7 +165,7 @@ The following example demonstrates how to make rows, columns, and cells read-onl
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/readonly-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/readonly-cs1" %}
 
 ## Protect Workbook
 
@@ -194,7 +194,7 @@ The following example shows `Protect Workbook` by using the [`isProtected`](http
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/local-data-binding-cs3" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/local-data-binding-cs3" %}
 
 The following example shows `Protect Workbook` by using the [`password`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#password) property in the Spreadsheet control. To unprotect the workbook, click the unprotect workbook button in the data tab and provide the password as syncfusion<sup style="font-size:70%">&reg;</sup> in the dialog box.
 
@@ -213,7 +213,7 @@ The following example shows `Protect Workbook` by using the [`password`](https:/
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/local-data-binding-cs4" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/local-data-binding-cs4" %}
 
 ## Unprotect Workbook
 

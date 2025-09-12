@@ -72,7 +72,7 @@ In the following sample, searching can be done by following ways:
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/searching-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/searching-cs1" %}
 
 ## Limitations
 

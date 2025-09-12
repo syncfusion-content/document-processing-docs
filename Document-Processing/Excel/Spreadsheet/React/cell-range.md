@@ -42,7 +42,7 @@ The following code example shows the wrap text functionality in spreadsheet.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/wrap-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/wrap-cs1" %}
 
 ### Limitations of Wrap text
 
@@ -87,7 +87,7 @@ The following code example shows the merge cells operation in spreadsheet.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/merge-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/merge-cs1" %}
 
 ### Limitations of Merge
 
@@ -147,7 +147,7 @@ You can clear the highlighted invalid data by using the following ways,
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/data-validation-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/data-validation-cs1" %}
 
 ### Custom Data validation
 
@@ -175,7 +175,7 @@ The following code example demonstrates how to add custom data validation with a
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/data-validation-cs2" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/data-validation-cs2" %}
 
 ### Limitations of Data validation
 
@@ -264,7 +264,7 @@ In the following sample, you can enable/disable the fill option on the button cl
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/autofill-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/autofill-cs1" %}
 
 ### Limitations of Autofill
 
@@ -312,7 +312,7 @@ Clear the cell contents and formats in the Spreadsheet document by using the [cl
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/clear-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/clear-cs1" %}
 
 ## Note
 

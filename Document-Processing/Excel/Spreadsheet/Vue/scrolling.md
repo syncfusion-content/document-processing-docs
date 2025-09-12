@@ -59,7 +59,7 @@ The following code example shows the finite scrolling with defined rows and colu
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/scrolling-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/scrolling-cs1" %}
 
 ## Note
 

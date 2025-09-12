@@ -44,7 +44,7 @@ The following code example shows `filter` functionality in the Spreadsheet contr
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/filter-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/filter-cs1" %}
 
 ## Filter by cell value
 
@@ -93,7 +93,7 @@ The following code example shows how to get the filtered rows.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/filter-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/filter-cs2" %}
 
 ## Limitations
 

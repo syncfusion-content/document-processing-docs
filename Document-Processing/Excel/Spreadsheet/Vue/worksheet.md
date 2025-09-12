@@ -30,7 +30,7 @@ The following code example shows the insert sheet operation in spreadsheet.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/insert-sheet-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/insert-sheet-cs1" %}
 
 ### Insert a sheet programmatically and make it active sheet
 
@@ -47,7 +47,7 @@ The following code example shows how to insert a sheet programmatically and make
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/insert-sheet-change-active-sheet-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/insert-sheet-change-active-sheet-cs1" %}
 
 ## Delete sheet
 
@@ -87,7 +87,7 @@ The following code example shows the headers and gridlines operation in spreadsh
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/header-gridlines-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/header-gridlines-cs1" %}
 
 ## Sheet visibility
 
@@ -112,7 +112,7 @@ The following code example shows the three types of sheet visibility state.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/sheet-visiblity-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/sheet-visiblity-cs1" %}
 
 ## Note
 

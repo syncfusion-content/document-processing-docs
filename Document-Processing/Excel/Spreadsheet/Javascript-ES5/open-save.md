@@ -30,7 +30,7 @@ The following sample shows the `Open` option by using the [`openUrl`](https://ej
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/open-save-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-save-cs1" %}
 
 Please find the below table for the beforeOpen event arguments.
 
@@ -56,7 +56,7 @@ If you explore your machine to select and upload an excel document using the fil
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/import-using-uploader" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/import-using-uploader" %}
 
 ### Open an external URL excel file while initial load
 
@@ -71,7 +71,7 @@ You can achieve to access the remote excel file by using the [`created`](https:/
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/open-save-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-save-cs2" %}
 
 ### Open an excel file from blob data
 
@@ -88,7 +88,7 @@ Please find the code to fetch the blob data and load it into the Spreadsheet con
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/open-from-blobdata-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-from-blobdata-cs1" %}
 
 ### Open an Excel file located on a server
 
@@ -245,7 +245,7 @@ The following code example shows how to save the spreadsheet data as base64 stri
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/base-64-string" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/base-64-string" %}
 
 ### Open excel file into a read-only mode
 
@@ -260,7 +260,7 @@ You can open excel file into a read-only mode by using the [`openComplete`](http
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/open-save-cs4" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-save-cs4" %}
 
 ### Configure JSON deserialization options
 
@@ -297,7 +297,7 @@ The following code snippet demonstrates how to configure the deserialization opt
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/open-from-json" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-from-json" %}
 
 ### Improving Excel file open performance with parsing options
 
@@ -402,7 +402,7 @@ You can add your own custom header to the open action in the Spreadsheet. For pr
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/open-save-cs3" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-save-cs3" %}
 
 ### External workbook confirmation dialog
 
@@ -451,7 +451,7 @@ The following sample shows the `Save` option by using the [`saveUrl`](https://ej
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/open-save-cs5" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-save-cs5" %}
 
 Please find the below table for the beforeSave event arguments.
 
@@ -485,7 +485,7 @@ Please find below the code to retrieve blob data from the Spreadsheet control be
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/save-as-blobdata-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/save-as-blobdata-cs1" %}
 
 ### Save an Excel file to a server
 
@@ -657,7 +657,7 @@ The following code example shows how to save the spreadsheet data as base64 stri
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/base-64-string" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/base-64-string" %}
 
 ### Configure JSON serialization options
 
@@ -694,7 +694,7 @@ The following code snippet demonstrates how to configure the serialization optio
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/save-as-json" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/save-as-json" %}
 
 ### Send and receive custom params from client to server
 
@@ -710,7 +710,7 @@ Passing the custom parameters from client to server by using [`beforeSave`](http
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/open-save-cs6" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-save-cs6" %}
 
 Server side code snippets:
 
@@ -736,7 +736,7 @@ You can add your own custom header to the save action in the Spreadsheet. For pr
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/open-save-cs7" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-save-cs7" %}
 
 ### Change the PDF orientation
 
@@ -756,7 +756,7 @@ The possible values are:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/open-save-cs8" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-save-cs8" %}
 
 ### Supported file formats
 
@@ -780,7 +780,7 @@ To save the Spreadsheet document as an `xlsx, xls, csv, or pdf` file, by using [
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/save-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/save-cs1" %}
 
 ## Server Configuration
 

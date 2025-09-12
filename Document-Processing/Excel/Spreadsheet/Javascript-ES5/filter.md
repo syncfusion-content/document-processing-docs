@@ -46,7 +46,7 @@ The following code example shows `filter` functionality in the Spreadsheet contr
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/filter-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/filter-cs1" %}
 
 ## Filter by cell value
 
@@ -96,7 +96,7 @@ The following code example shows how to get the filtered rows.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/filter-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/filter-cs2" %}
 
 ## Limitations
 

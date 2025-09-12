@@ -177,4 +177,4 @@ In the following demo, the JSON structure is passed to the `openFromJson` method
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/json-structure-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/json-structure-cs1" %}

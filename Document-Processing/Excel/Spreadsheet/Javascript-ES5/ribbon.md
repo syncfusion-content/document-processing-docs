@@ -38,7 +38,7 @@ The following code example shows the usage of ribbon customization.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/ribbon/cutomization-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/ribbon/cutomization-cs1" %}
 
 ## See Also
 

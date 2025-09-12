@@ -60,7 +60,7 @@ The following code example shows the finite scrolling with defined rows and colu
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/scrolling-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/scrolling-cs1" %}
 
 ## Note
 

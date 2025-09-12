@@ -28,7 +28,7 @@ Refer to the following code example for local data binding.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/data-binding-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/data-binding-cs1" %}
 
 > The local data source can also be provided as an instance of the [`DataManager`](https://helpej2.syncfusion.com/javascript/documentation/data/). By default, [`DataManager`](https://helpej2.syncfusion.com/javascript/documentation/data/) uses [`JsonAdaptor`](https://ej2.syncfusion.com/javascript/documentation/data/adaptors#json-adaptor) for local data-binding.
 
@@ -49,7 +49,7 @@ The following code example demonstrates how to customize the mapping of column d
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/field-mapping-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/field-mapping-cs1" %}
 
 ## Remote data
 
@@ -66,7 +66,7 @@ Refer to the following code example for remote data binding.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/data-binding-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/data-binding-cs2" %}
 
 > By default, `DataManager` uses **ODataAdaptor** for remote data-binding.
 
@@ -83,7 +83,7 @@ Refer to the following code example for remote data binding.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/data-binding-cs3" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/data-binding-cs3" %}
 
 ### Web API
 
@@ -98,7 +98,7 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/data-binding-cs4" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/data-binding-cs4" %}
 
 ## Cell data binding
 
@@ -116,7 +116,7 @@ Refer to the following code example for cell data binding.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/data-binding-cs5" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/data-binding-cs5" %}
 
 > The cell data binding also supports formula, style, number format, and more.
 
@@ -145,7 +145,7 @@ The following table defines the arguments of the `dataSourceChanged` event.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/dynamic-data-binding-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/dynamic-data-binding-cs1" %}
 
 ## Dynamic data binding using updateRange method
 
@@ -164,7 +164,7 @@ The following code example demonstrates how to dynamically update data using the
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/dynamic-data-binding-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/dynamic-data-binding-cs2" %}
 
 ## See Also
 

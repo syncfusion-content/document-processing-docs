@@ -162,7 +162,7 @@ or
 yarn run serve
 ```
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/getting-started-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/getting-started-cs1" %}
 
 > You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) that shows you how to present and manipulate data.
 

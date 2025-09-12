@@ -46,7 +46,7 @@ The following code example shows `How to update and customize your own actions f
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/undo-redo-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/undo-redo-cs1" %}
 
 ## See Also
 

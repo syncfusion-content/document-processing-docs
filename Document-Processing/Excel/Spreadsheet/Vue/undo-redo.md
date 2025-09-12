@@ -46,7 +46,7 @@ The following code example shows `How to update and customize your own actions f
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/undo-redo-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/undo-redo-cs1" %}
 
 ## Note
 

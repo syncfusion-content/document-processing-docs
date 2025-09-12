@@ -63,7 +63,7 @@ In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/freeze-pane-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/freeze-pane-cs1" %}
 
 ## Limitations
 

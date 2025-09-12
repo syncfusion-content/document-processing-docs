@@ -48,7 +48,7 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/editing-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/editing-cs1" %}
 
 ## Limitations
 

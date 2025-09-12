@@ -38,7 +38,7 @@ The `printOptions` contain three properties, as described below.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/print-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/print-cs2" %}
 
 ## Disable printing
 
@@ -55,7 +55,7 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/print-cs3" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/print-cs3" %}
 
 ## Limitations
 

@@ -74,7 +74,7 @@ Paste can be done in one of the following ways.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/clipboard-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/clipboard-cs1" %}
 
 ## Prevent the paste functionality
 
@@ -95,7 +95,7 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/clipboard-cs2" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/clipboard-cs2" %}
 
 ## Limitations
 

@@ -62,7 +62,7 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/link-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/link-cs2" %}
 
 ## Limitations
 

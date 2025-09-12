@@ -71,7 +71,7 @@ Go to feature is used to navigate to a specific cell address in the sheet or wor
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/searching-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/searching-cs1" %}
 
 ## Limitations
 

@@ -57,7 +57,7 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/editing-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/editing-cs1" %}
 
 ## Limitations
 

@@ -24,7 +24,7 @@ Sample link: [`Cell template`](https://document.syncfusion.com/demos/spreadsheet
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/template-cs1" %} 
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/template-cs1" %} 
 
 ## Note
 

@@ -31,4 +31,4 @@ The following code example shows how to identify the context menu opened.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/find-target-context-menu" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/find-target-context-menu" %}

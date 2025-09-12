@@ -25,7 +25,7 @@ Sample link: [`Cell template`](https://document.syncfusion.com/demos/spreadsheet
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/template-cs1" %} -->
+{% previewsample "/document-processing/samples/spreadsheet/angular/template-cs1" %} -->
 
 ## Note
 

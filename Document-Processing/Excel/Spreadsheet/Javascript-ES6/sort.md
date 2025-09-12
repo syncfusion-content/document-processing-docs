@@ -44,7 +44,7 @@ The following code example shows `Sort` functionality in the Spreadsheet control
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/sort-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/sort-cs2" %}
 
 ## Data contains header
 
@@ -126,7 +126,7 @@ The multi-column sorting can also be performed manually by passing sort options 
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/sort-cs3" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/sort-cs3" %}
 
 ## Custom sort comparer
 
@@ -153,7 +153,7 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/sort-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/sort-cs1" %}
 
 ## Known error validations
 

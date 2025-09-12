@@ -71,7 +71,7 @@ In the following sample, searching can be done by following ways:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/searching-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/searching-cs1" %}
 
 ## Limitations
 

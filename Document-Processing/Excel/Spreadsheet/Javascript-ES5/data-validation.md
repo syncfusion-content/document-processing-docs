@@ -58,7 +58,7 @@ You can clear the highlighted invalid data by using the following ways,
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/data-validation-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/data-validation-cs2" %}
 
 ## See Also
 

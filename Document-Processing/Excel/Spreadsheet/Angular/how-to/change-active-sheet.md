@@ -23,4 +23,4 @@ The following code example shows how to set the active sheet when importing an E
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/change-active-sheet-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/change-active-sheet-cs1" %}

@@ -32,4 +32,4 @@ The following code example shows how to identify the context menu opened.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/contextmenu-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/contextmenu-cs1" %}

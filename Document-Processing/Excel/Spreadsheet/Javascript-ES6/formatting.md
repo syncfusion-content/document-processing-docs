@@ -100,7 +100,7 @@ The following code example shows the number formatting in cell data.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/format/number-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/format/number-cs1" %}
 
 ## Configure culture-based custom format
 
@@ -154,7 +154,7 @@ The following code example demonstrates how to configure culture-based formats f
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/format/globalization-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/format/globalization-cs1" %}
 
 ## Text and cell formatting
 
@@ -224,7 +224,7 @@ The following code example shows the style formatting in text and cells of the s
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/format/cell-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/format/cell-cs1" %}
 
 ### Limitations of Formatting
 
@@ -324,7 +324,7 @@ You can clear the defined rules by using one of the following ways,
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/conditional-formatting-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/conditional-formatting-cs1" %}
 
 ### Limitations of Conditional formatting
 

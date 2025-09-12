@@ -183,4 +183,4 @@ In the following demo, the JSON structure is passed to the `openFromJson` method
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/json-structure-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/json-structure-cs1" %}

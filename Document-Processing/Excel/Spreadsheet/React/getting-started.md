@@ -116,7 +116,7 @@ The following example shows a basic spreadsheet component.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/getting-started-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/getting-started-cs1" %}
 
 > You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-components/react-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default) that shows you how to present and manipulate data.
 
