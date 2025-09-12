@@ -46,10 +46,10 @@ The following code shows Restrict Editing Pane. To unprotect the document, use p
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/data-protection-cs2/index.js %}
+{% include code-snippet/document-editor/javascript-es5/data-protection-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/data-protection-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es5/data-protection-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

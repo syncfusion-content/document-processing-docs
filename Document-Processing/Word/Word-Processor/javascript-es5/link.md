@@ -22,10 +22,10 @@ The following example illustrates how to add requestNavigate event for DocumentE
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/hyperlink-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/hyperlink-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/hyperlink-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/hyperlink-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -91,10 +91,10 @@ Refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/hyperlink-cs2/index.js %}
+{% include code-snippet/document-editor/javascript-es5/hyperlink-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/hyperlink-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es5/hyperlink-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -134,10 +134,10 @@ Document Editor provides dialog support to insert or edit a hyperlink. Refer to 
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs16/index.js %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs16/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs16/index.html %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs16/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -22,10 +22,10 @@ The following example illustrates how to open the default SFDT content once Docu
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/open-default-document-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/open-default-document-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/open-default-document-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/open-default-document-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -39,10 +39,10 @@ Document editor Container have [`created`](https://ej2.syncfusion.com/javascript
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/open-default-document-cs2/index.js %}
+{% include code-snippet/document-editor/javascript-es5/open-default-document-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/open-default-document-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es5/open-default-document-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
