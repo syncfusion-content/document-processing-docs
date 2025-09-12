@@ -76,7 +76,6 @@ public IActionResult Open(IFormCollection openRequest)
 ```
 
 ### Optimize Excel open with parsing options
-
 ## How to improve performance on formula calculation in Spreadsheet?
 
 ### Manual calculation mode
