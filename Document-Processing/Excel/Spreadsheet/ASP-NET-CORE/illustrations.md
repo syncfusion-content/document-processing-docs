@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Illustrations in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+title: Illustrations in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
 description: Learn here all about Illustrations in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Illustrations

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Print in EJ2 ASP.NET CORE Syncfusion Spreadsheet Control
+title: Print in EJ2 ASP.NET Core Syncfusion Spreadsheet Control
 description: Learn here all about print feature in EJ2 ASP.NET CORE Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Print
