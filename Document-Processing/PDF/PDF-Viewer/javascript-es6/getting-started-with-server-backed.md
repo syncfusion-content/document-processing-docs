@@ -139,7 +139,7 @@ Output will be displayed as follows.
 {% include code-snippet/pdfviewer/javascript-es6/getting-started-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es6/getting-started-cs1/ts/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/getting-started-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
