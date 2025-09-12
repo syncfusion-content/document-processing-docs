@@ -79,8 +79,6 @@ public IActionResult Open(IFormCollection openRequest)
 
 To improve performance when opening large Excel files, use parsing options to skip non-essential properties during import. These options help reduce memory usage, speed up loading, and minimize JSON size—especially useful for files with complex formatting or large datasets.
 
-By configuring the parse options, you can load Excel files into the Spreadsheet while retaining only the necessary content. This ensures efficient handling of large or high-memory files without compromising essential data.
-
 ## How to improve performance on formula calculation in Spreadsheet?
 
 ### Manual calculation mode
