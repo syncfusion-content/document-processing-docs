@@ -59,7 +59,7 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-hide-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-hide-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,7 +73,7 @@ Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewe
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-method-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -91,7 +91,7 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-items-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -105,7 +105,7 @@ Add the below `serviceUrl` in the `index.html` file
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-items-method-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

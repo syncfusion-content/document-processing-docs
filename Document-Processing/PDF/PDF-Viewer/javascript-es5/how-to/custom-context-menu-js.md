@@ -265,10 +265,10 @@ The following is the output of custom context menu with customization.
 
 {% tabs %}
 {% highlight ts tabtitle="index.js" %}
-{% include code-snippet/pdfviewer/javascript/custom-context-menu/index.js %}
+{% include code-snippet/pdfviewer/javascript-es5/custom-context-menu/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/custom-context-menu/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/custom-context-menu/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
