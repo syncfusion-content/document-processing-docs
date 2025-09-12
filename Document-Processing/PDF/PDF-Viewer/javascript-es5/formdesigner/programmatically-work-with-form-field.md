@@ -28,14 +28,14 @@ Using addFormField method, the form fields can be added to the PDF document prog
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/pdfviewer/javascript/addformfield-cs2/index.js %}
+{% include code-snippet/pdfviewer/javascript-es5/addformfield-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/addformfield-cs2/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/addformfield-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/addformfield-cs2" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/addformfield-cs2/index.html" %}
 
 ## Edit/Update form field programmatically
 
@@ -43,14 +43,14 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/pdfviewer/javascript/updateformfield-cs2/index.js %}
+{% include code-snippet/pdfviewer/javascript-es5/updateformfield-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/updateformfield-cs2/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/updateformfield-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/updateformfield-cs2" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/updateformfield-cs2/index.html" %}
 
 ## Delete form field programmatically
 
@@ -58,14 +58,14 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/pdfviewer/javascript/deleteformfield-cs2/index.js %}
+{% include code-snippet/pdfviewer/javascript-es5/deleteformfield-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/deleteformfield-cs2/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/deleteformfield-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/deleteformfield-cs2" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/deleteformfield-cs2/index.html" %}
 
 ## Saving the form fields
 

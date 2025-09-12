@@ -35,7 +35,7 @@ Using addFormField method, the form fields can be added to the PDF document prog
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/pdfviewer/angular/addformfield-cs2" %}
+{% previewsample "Document-Processing/samples/pdfviewer/angular/addformfield-cs2/index.html" %}
 
 ## Edit/Update form field programmatically
 
@@ -51,7 +51,7 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/pdfviewer/angular/updateformfield-cs2" %}
+{% previewsample "Document-Processing/samples/pdfviewer/angular/updateformfield-cs2/index.html" %}
 
 ## Delete form field programmatically
 
@@ -67,7 +67,7 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/pdfviewer/angular/deleteformfield-cs2" %}
+{% previewsample "Document-Processing/samples/pdfviewer/angular/deleteformfield-cs2/index.html" %}
 
 ## Saving the form fields
 
