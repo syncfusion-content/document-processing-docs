@@ -14,10 +14,10 @@ Document Editor supports common raster format images like PNG, BMP, JPEG, SVG an
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/image-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/image-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/image-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/image-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
