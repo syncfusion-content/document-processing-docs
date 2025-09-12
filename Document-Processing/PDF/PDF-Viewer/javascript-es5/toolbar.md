@@ -59,7 +59,7 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-hide-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-hide-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -67,13 +67,13 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-hide-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-hide-cs1/index.html" %}
 
 * **Show/Hide toolbar using showToolbar as in the following code snippet**
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-method-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -81,7 +81,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-method-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-method-cs1/index.html" %}
 
 ## Show/Hide the default toolbaritem
 
@@ -91,7 +91,7 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-items-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -99,13 +99,13 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-items-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-cs1/index.html" %}
 
 * **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-items-method-cs1/js/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -113,7 +113,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-items-method-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-method-cs1/index.html" %}
 
 ## Customize Built-In Toolbar
 

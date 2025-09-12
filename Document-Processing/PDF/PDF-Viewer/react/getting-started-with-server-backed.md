@@ -184,7 +184,7 @@ Output will be appears as follows.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/react/base-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/react/base-cs1/index.html" %}
 
 > For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service)
 
