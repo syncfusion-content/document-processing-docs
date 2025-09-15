@@ -4209,7 +4209,7 @@ The following code example demonstrates how to get values from a PDF annotation.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Get-value-from-PDF-annotation/.NET/Get-value-from-PDF-annotation/Program.cs" %}
 
 // Load the existing PDF document using FileStream
 using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
@@ -4307,12 +4307,12 @@ End Using
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Get-value-from-PDF-annotation/.NET).
 
 The following code example demonstrates how to set values from a PDF annotation.
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Set-value-from-PDF-annotation/.NET/Set-value-from-PDF-annotation/Program.cs" %}
 
 // Load the existing PDF document using FileStream
 using (FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read))
@@ -4407,7 +4407,7 @@ using (FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, File
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Set-value-from-PDF-annotation/.NET).
 
 ## Setting transparency for annotations 
 
@@ -5791,13 +5791,13 @@ ldoc.Close(True)
 
 ## Multi-line text redaction
 
-The Essential&reg; PDF provides support for Quad Points, allowing users to select and redact multiple lines of text within a PDF document. This is achieved by setting the BoundsCollection property through the [PdfRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html) class.
+The Essential&reg; PDF provides support for Quad Points, allowing users to select and redact multiple lines of text within a PDF document. This is achieved by setting the [BoundsCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html#Syncfusion_Pdf_Interactive_PdfRedactionAnnotation_BoundsCollection) property through the [PdfRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html) class.
 
 Refer to the following code example to achieve the same.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Multi-line-text-redaction-using-quad-points/.NET/Multi-line-text-redaction-using-quad-points/Program.cs"  %}
 
 //Create a new PDF document. 
 PdfDocument document = new PdfDocument(); 
@@ -5919,7 +5919,7 @@ document.Close(True)
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Multi-line-text-redaction-using-quad-points/.NET).
 
 ## Adding quad points to existing redaction annotations
 
@@ -5929,7 +5929,7 @@ Refer to the following code example to apply the BoundsCollection property to a 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Adding-quad-points-to-existing-redaction-annotations/.NET/Adding-quad-points-to-existing-redaction-annotations/Program.cs" %}
 
 FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read); 
 PdfLoadedDocument document = new PdfLoadedDocument(docStream); 
@@ -6034,7 +6034,7 @@ document.Close(True)
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Adding-quad-points-to-existing-redaction-annotations/.NET).
 
 ## Printing Annotations
 
