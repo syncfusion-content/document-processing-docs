@@ -294,7 +294,7 @@ sudo apt-get install libleptonica-dev
 {% endhighlight %}
 {% endtabs %}
 <br><br>
-<img src="OCR-Images/Install-leptonica.png">
+<img alt="OCR Install leptonica logo" src="OCR-Images/Install-leptonica.png">
 <br><br>
 2.Install the tesseract.
 <br>
@@ -306,7 +306,7 @@ sudo apt-get install tesseract-ocr-eng
 {% endhighlight %}
 {% endtabs %}
 <br><br>
-<img src="OCR-Images/Install-tesseract.png">
+<img alt="OCR Install tesseract logo" src="OCR-Images/Install-tesseract.png">
 <br><br>
 3. Copy the binaries (liblept.so and libtesseract.so) to the missing files exception folder in the project location.
 <br>
