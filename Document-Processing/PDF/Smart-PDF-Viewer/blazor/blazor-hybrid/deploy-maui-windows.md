@@ -19,8 +19,6 @@ To use the MAUI project templates, install the Mobile development with the .NET 
 
 Create a new Blazor MAUI app and by selecting the template **.NET MAUI Blazor Hybrid APP ** in VS.
 
-N> The PDF Viewer component is supported from .NET 6.0 onwards.
-
 ## Install Smart PDF Viewer NuGet package in Blazor Maui App
 
 Add the following NuGet packages into the Blazor Maui app.
