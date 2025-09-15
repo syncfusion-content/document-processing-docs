@@ -14,10 +14,8 @@ While the XlsIO API allows setting alpha (transparency) values for cell backgrou
 
 **For example:**
 ~~~
-worksheet.Range["A1"].CellStyle.Color = Color.FromArgb(128, 255, 0, 0) (50% transparent red)
-worksheet.Range["A2"].CellStyle.Color = Color.FromArgb(255, 255, 0, 0) (solid red)
+worksheet.Range["A1"].CellStyle.Color = Color.FromArgb(128, 255, 0, 0) //(50% transparent red)
+worksheet.Range["A2"].CellStyle.Color = Color.FromArgb(255, 255, 0, 0) //(solid red)
 ~~~
 
-Both render identically in Excel as solid red.
-
-While XlsIO accepts ARGB inputs, the alpha component has no effect due to Excel's inherent limitations. Only the RGB portion of the color is applied.
+Both render identically in Excel as solid red. While XlsIO accepts ARGB inputs, the alpha component has no effect due to Excel's inherent limitations. Only the RGB portion of the color is applied.
