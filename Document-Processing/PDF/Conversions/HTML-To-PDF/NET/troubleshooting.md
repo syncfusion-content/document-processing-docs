@@ -851,13 +851,13 @@ apt-get update && apt-get install -yq --no-install-recommends libasound2 libatk1
 Please refer to the below screenshot,
 <br/><br/>
 
-<img src="htmlconversion_images/Failedtolaunchchromium.png"><br>
+<img alt="Failed to launch chromium logo" src="htmlconversion_images/Failedtolaunchchromium.png"><br>
 <br/><br/>
 (Or)
 <br/><br/>
 We can install the required dependencies using the dependencies vis shell script. Please find the below.
 <br/><br/>
-<img src="htmlconversion_images/dependencies.png"><br>
+<img alt="HTML Conversion Dependencies Logo" src="htmlconversion_images/dependencies.png"><br>
 <br/><br/>
 code snippet:
 <br/><br/>
