@@ -10,12 +10,13 @@ documentation: UG
 
 XlsIO does not support opacity or transparency for cell background colors in Excel.
 
-Syncfusion XlsIO's API technically allows setting <code spellcheck="false">ARGB</code> values (including alpha transparency) for cell backgrounds via calls like <code spellcheck="false">Color.FromArgb(alpha, r, g, b)</code>. However, Microsoft Excel does not support transparent cell backgrounds and silently discards the alpha component during rendering or file saving. As a result, any transparency value set in XlsIO will be ignored, and Excel will apply only the RGB portion of the color. 
+While the XlsIO API allows setting alpha (transparency) values for cell background colors, Microsoft Excel does not support rendering transparent cell fills. Excel silently discards the alpha component during rendering and file saving. As a result, any transparency value set in XlsIO will be ignored, and Excel will apply only the RGB portion of the color. 
 
 **For example:**
-
-<code spellcheck="false">Color.FromArgb(128, 255, 0, 0)</code> (50% transparent red)
-<code spellcheck="false">Color.FromArgb(255, 255, 0, 0)</code> (solid red)
+~~~
+Color.FromArgb(128, 255, 0, 0) (50% transparent red)
+Color.FromArgb(255, 255, 0, 0) (solid red)
+~~~
 
 Both render identically in Excel as solid red.
 
