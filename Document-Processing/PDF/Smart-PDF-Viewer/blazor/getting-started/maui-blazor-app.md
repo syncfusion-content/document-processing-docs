@@ -7,7 +7,7 @@ control: SfSmartPdfViewer
 documentation: ug
 ---
 
-# View PDF files using Smart PDF Viewer Component in the Blazor MAUI app 
+# Using Smart PDF Viewer Component in the Blazor MAUI app 
 
 In this section, we'll guide you through the process of adding Syncfusion&reg; Blazor Smart PDF Viewer component to your Blazor Maui app. We'll break it down into simple steps to make it easy to follow.
 
@@ -192,13 +192,46 @@ To run the PDF Viewer in a Blazor Android MAUI application using the Android emu
 	[model](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/blob/master/Common/LocalEmbeddingsModel/model.onnx) & [vocab](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/blob/master/Common/LocalEmbeddingsModel/vocab.txt)
 	
 2. Right click the Added files and go to (Properties -> BuildAction) set as AndroidAsset.
-3. Add the following code in your cs project file	
+3. Add the following code in your .csproj file	
 ```
 <ItemGroup>
 	<AndroidAsset Include="Platforms\Android\Assets\model.onnx" />
 	<AndroidAsset Include="Platforms\Android\Assets\vocab.txt" />
 </ItemGroup>
 ```
+4. Add the following code in your MauiProgram.cs file
+
+{% tabs %}
+{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="7 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25" %}
+
+public static class MauiProgram
+{
+    public static MauiApp CreateMauiApp()
+    {
+	   ...
+	   builder.Services.AddSyncfusionBlazor();
+	   Task.Run(async () => await EnsureModelExistsAsync()).Wait();
+       return builder.Build();
+	}
+	private static async Task EnsureModelExistsAsync()
+	{
+		string[] requiredFiles = { "model.onnx", "vocab.txt" };
+		string targetDir = Path.Combine(FileSystem.AppDataDirectory, "LocalEmbeddingsModel/default");
+		Directory.CreateDirectory(targetDir);
+		foreach (var fileName in requiredFiles)
+		{
+			var targetPath = Path.Combine(targetDir, fileName);
+			if (!File.Exists(targetPath))
+			{
+				using var assetStream = await FileSystem.OpenAppPackageFileAsync(fileName);
+				using var fileStream = File.Create(targetPath);
+				await assetStream.CopyToAsync(fileStream);
+			}
+		}
+	}
+}
+{% endhighlight %}
+{% endtabs %}
 
 ![Run Windows machine](gettingstarted-images/android-maui.png)
 
