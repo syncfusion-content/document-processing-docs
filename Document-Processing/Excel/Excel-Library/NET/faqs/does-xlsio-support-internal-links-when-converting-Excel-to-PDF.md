@@ -1,6 +1,6 @@
 ---
-title: Support for internal links when converting Excel to PDF
-description: Learn whether Syncfusion XlsIO supports internal links when converting Excel to PDF.
+title: Support for internal links when converting Excel to PDF | Syncfusion
+description: This page explains whether Syncfusion XlsIO supports internal links when converting Excel to PDF.
 platform: document-processing
 control: XlsIO
 documentation: UG
