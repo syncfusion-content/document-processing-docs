@@ -21,7 +21,7 @@ Create a new Blazor MAUI app and by selecting the template **.NET MAUI Blazor Hy
 
 N> The PDF Viewer component is supported from .NET 6.0 onwards.
 
-## Install PDF Viewer NuGet package in Blazor Maui App
+## Install Smart PDF Viewer NuGet package in Blazor Maui App
 
 Add the following NuGet packages into the Blazor Maui app.
 
@@ -152,7 +152,7 @@ Add the following stylesheet and script to the head section of the **~/wwwroot/i
 {% highlight html %}
 
 <head>
-    <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
+    <!-- Syncfusion Blazor Smart PDF Viewer control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <!-- Syncfusion Blazor Smart PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfSmartPdfViewer/scripts/syncfusion-blazor-sfsmartpdfviewer.min.js" type="text/javascript"></script>
@@ -161,7 +161,7 @@ Add the following stylesheet and script to the head section of the **~/wwwroot/i
 {% endhighlight %}
 {% endtabs %}
 
-## Add PDF Viewer component
+## Add Smart PDF Viewer component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
 
@@ -191,7 +191,7 @@ Upon successfully launching the application, the PDF Viewer component will seaml
 To run the PDF Viewer in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
 1. Add the following Assets files in your Project by creating Assets folder(Platform -> Android -> Assets)
-	[model](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Common/Pdfium%20files/pdfium.js) & [vocab](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Common/Pdfium%20files/pdfium.js)
+	[model](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/blob/master/Common/LocalEmbeddingsModel/model.onnx) & [vocab](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/blob/master/Common/LocalEmbeddingsModel/vocab.txt)
 	
 2. Right click the Added files and go to (Properties -> BuildAction) set as AndroidAsset.
 3. Add the following code in your cs project file	
@@ -210,7 +210,7 @@ N> If you encounter any errors while using the Android Emulator, refer to the fo
 
 ![Blazor SfPdfViewer Component](gettingstarted-images/android-emulator.png)
 
->[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/GettingStarted).
+>[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/GettingStartedMAUI).
 
 ## See also
 
