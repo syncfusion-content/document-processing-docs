@@ -191,9 +191,9 @@ Upon successfully launching the application, the PDF Viewer component will seaml
 To run the PDF Viewer in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
 1. Add the following Assets files in your Project by creating Assets folder(Platform -> Android -> Assets)
-	[model.onnx](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/blob/master/Common/LocalEmbeddingsModel/model.onnx) & [vocab.txt](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/blob/master/Common/LocalEmbeddingsModel/vocab.txt)
+	[model](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Common/Pdfium%20files/pdfium.js) & [vocab](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Common/Pdfium%20files/pdfium.js)
 	
-2. Right click the Added files and go to (Properties -> BuildAction) set as AndriodAsset.
+2. Right click the Added files and go to (Properties -> BuildAction) set as AndroidAsset.
 3. Add the following code in your cs project file	
 ```
 <ItemGroup>
@@ -210,7 +210,7 @@ N> If you encounter any errors while using the Android Emulator, refer to the fo
 
 ![Blazor SfPdfViewer Component](gettingstarted-images/android-emulator.png)
 
->[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/GettingStarted-MAUI).
+>[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/GettingStarted).
 
 ## See also
 
