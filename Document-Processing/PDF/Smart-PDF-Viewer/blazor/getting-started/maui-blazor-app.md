@@ -210,7 +210,9 @@ public static class MauiProgram
     {
 	   ...
 	   builder.Services.AddSyncfusionBlazor();
+#if ANDROID	   
 	   EnsureModelExistsAsync();
+#endif	   
        return builder.Build();
 	}
 	private static async void EnsureModelExistsAsync()
