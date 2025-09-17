@@ -1,5 +1,5 @@
 ---
-title: Essential Studio Document Processing 2018 volume 1 Migration | Syncfusion
+title: Essential Studio Document Processing 2018 volume 1 | Syncfusion
 description: Learn here all about Essential Studio Document Processing 2018 volume 1 Migration of Syncfusion's Word (DocIO) Library and more.
 platform: file-formats
 keywords: migration, upgrade-changes, 2018vol1-changes
