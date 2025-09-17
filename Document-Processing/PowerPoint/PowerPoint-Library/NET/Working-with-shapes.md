@@ -7,6 +7,9 @@ documentation: UG
 ---
 # Working with PowerPoint Shapes
 
+To quickly start working with Shapes in a PowerPoint, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=_qYKp7aNIvs" %}
+
 ## Adding shapes to a slide
 
 In every slide, there is a shape collection that can contain any form of graphical objects such as AutoShape, chart, text, or picture.  You can add any shape element to this collection. The [IShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IShape.html) is the base type for the shape elements.
