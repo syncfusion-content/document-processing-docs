@@ -1159,7 +1159,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The [PdfLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutFormat.html) class enables text to flow seamlessly across multiple pages in a PDF document. The [PdfLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutResult.html) class provides the position and bounds of the previously rendered text, allowing you to place subsequent elements without overlapping.
 
-The following code snippet illustrates how to add elements relatively and also allow the text to flow across multiple pages.
+The following code example demonstrates how to add elements relatively and also allow the text to flow across multiple pages.
 
 {% tabs %}
 
