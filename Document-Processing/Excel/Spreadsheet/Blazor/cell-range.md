@@ -134,9 +134,8 @@ The event uses the [AutofillActionBeginEventArgs](https://help.syncfusion.com/cr
 
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet DataSource="DataSourceBytes">
+<SfSpreadsheet DataSource="DataSourceBytes" AutofillActionBegin="OnAutofillActionBegin">
     <SpreadsheetRibbon></SpreadsheetRibbon>
-    <SpreadsheetEvents AutofillActionBegin="OnAutofillActionBegin" ></SpreadsheetEvents>
 </SfSpreadsheet>
 
 @code {
@@ -190,9 +189,8 @@ The event uses the [AutofillActionEndEventArgs](https://help.syncfusion.com/cr/b
 
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet DataSource="DataSourceBytes">
+<SfSpreadsheet DataSource="DataSourceBytes" AutofillActionEnd="OnAutofillActionEnd">
     <SpreadsheetRibbon></SpreadsheetRibbon>
-    <SpreadsheetEvents AutofillActionEnd="OnAutofillActionEnd" ></SpreadsheetEvents>
 </SfSpreadsheet>
 
 @code {
