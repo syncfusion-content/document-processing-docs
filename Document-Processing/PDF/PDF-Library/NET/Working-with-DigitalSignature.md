@@ -2722,41 +2722,54 @@ The following code example explains how to validate the digitally signed PDF doc
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Validate-the-digitally-signed-PDF-signature/.NET/Validate-the-digitally-signed-PDF-signature/Program.cs" %}
 
-//Get the stream from the document.
+// Load the input PDF document stream from the specified file path
 FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
 
-//Load an existing signed PDF document.
+// Load the signed PDF document using the stream
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
 
-//Get signature field.
+// Retrieve the first signature field from the PDF form
 PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
 
-//X509Certificate2Collection to check the signer's identity using root certificates.
+// Create a certificate collection to hold trusted root certificates for validation
 X509CertificateCollection collection = new X509CertificateCollection();
 
-//Creates a certificate instance from PFX file with private key.
+// Load the root certificate from a PFX file (includes private key)
 FileStream certificateStream = new FileStream(Path.GetFullPath(@"Data/PDF.pfx"), FileMode.Open, FileAccess.Read);
 byte[] data = new byte[certificateStream.Length];
 certificateStream.Read(data, 0, data.Length);
 
-//Create new X509Certificate2 with the root certificate.
+// Create an X509Certificate2 instance using the loaded certificate data and password
 X509Certificate2 certificate = new X509Certificate2(data, "syncfusion");
 
-//Add the certificate to the collection.
+// Add the certificate to the validation collection
 collection.Add(certificate);
 
-//Validate signature and get the validation result.
+// Validate the signature using the provided certificate collection
 PdfSignatureValidationResult result = signatureField.ValidateSignature(collection);
 
-//Checks whether the signature is valid or not.
+// Check if the signature is valid
 SignatureStatus status = result.SignatureStatus;
 
-//Checks whether the document is modified or not.
+// Check if the document has been modified after signing
 bool isModified = result.IsDocumentModified;
 
-Console.WriteLine("Document modified: " + isModified);
+// Check if Long-Term Validation (LTV) is enabled in the signature
+bool isLtvEnabled = result.LtvVerificationInfo.IsLtvEnabled;
 
-//Signature details.
+// Check if Certificate Revocation List (CRL) data is embedded in the PDF
+bool isCrlEmbedded = result.LtvVerificationInfo.IsCrlEmbedded;
+
+// Check if Online Certificate Status Protocol (OCSP) data is embedded in the PDF
+bool isOcspEmbedded = result.LtvVerificationInfo.IsOcspEmbedded;
+
+// Output the validation results to the console
+Console.WriteLine("Document modified: " + isModified);
+Console.WriteLine("LTV enabled: " + isLtvEnabled);
+Console.WriteLine("CRL embedded: " + isCrlEmbedded);
+Console.WriteLine("OCSP embedded: " + isOcspEmbedded);
+
+// Extract and display signature certificate details
 string issuerName = signatureField.Signature.Certificate.IssuerName;
 DateTime validFrom = signatureField.Signature.Certificate.ValidFrom;
 DateTime validTo = signatureField.Signature.Certificate.ValidTo;
@@ -2769,7 +2782,7 @@ Console.WriteLine("Valid To: " + validTo);
 Console.WriteLine("Signature Algorithm: " + signatureAlgorithm);
 Console.WriteLine("Digest Algorithm: " + digestAlgorithm);
 
-//Revocation validation details.
+// Extract and display revocation validation details
 RevocationResult revocationDetails = result.RevocationResult;
 RevocationStatus revocationStatus = revocationDetails.OcspRevocationStatus;
 bool isRevokedCRL = revocationDetails.IsRevokedCRL;
@@ -2777,48 +2790,61 @@ bool isRevokedCRL = revocationDetails.IsRevokedCRL;
 Console.WriteLine("Revocation Status: " + revocationStatus);
 Console.WriteLine("Is Revoked CRL: " + isRevokedCRL);
 
-//Close the document.
+// Close the loaded PDF document and release resources
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Get the stream from the document.
+// Load the input PDF document stream from the specified file path
 FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
 
-//Load an existing signed PDF document.
+// Load the signed PDF document using the stream
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
 
-//Get signature field.
+// Retrieve the first signature field from the PDF form
 PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
 
-//X509Certificate2Collection to check the signer's identity using root certificates.
+// Create a certificate collection to hold trusted root certificates for validation
 X509CertificateCollection collection = new X509CertificateCollection();
 
-//Creates a certificate instance from PFX file with private key.
+// Load the root certificate from a PFX file (includes private key)
 FileStream certificateStream = new FileStream(Path.GetFullPath(@"Data/PDF.pfx"), FileMode.Open, FileAccess.Read);
 byte[] data = new byte[certificateStream.Length];
 certificateStream.Read(data, 0, data.Length);
 
-//Create new X509Certificate2 with the root certificate.
+// Create an X509Certificate2 instance using the loaded certificate data and password
 X509Certificate2 certificate = new X509Certificate2(data, "syncfusion");
 
-//Add the certificate to the collection.
+// Add the certificate to the validation collection
 collection.Add(certificate);
 
-//Validate signature and get the validation result.
+// Validate the signature using the provided certificate collection
 PdfSignatureValidationResult result = signatureField.ValidateSignature(collection);
 
-//Checks whether the signature is valid or not.
+// Check if the signature is valid
 SignatureStatus status = result.SignatureStatus;
 
-//Checks whether the document is modified or not.
+// Check if the document has been modified after signing
 bool isModified = result.IsDocumentModified;
 
-Console.WriteLine("Document modified: " + isModified);
+// Check if Long-Term Validation (LTV) is enabled in the signature
+bool isLtvEnabled = result.LtvVerificationInfo.IsLtvEnabled;
 
-//Signature details.
+// Check if Certificate Revocation List (CRL) data is embedded in the PDF
+bool isCrlEmbedded = result.LtvVerificationInfo.IsCrlEmbedded;
+
+// Check if Online Certificate Status Protocol (OCSP) data is embedded in the PDF
+bool isOcspEmbedded = result.LtvVerificationInfo.IsOcspEmbedded;
+
+// Output the validation results to the console
+Console.WriteLine("Document modified: " + isModified);
+Console.WriteLine("LTV enabled: " + isLtvEnabled);
+Console.WriteLine("CRL embedded: " + isCrlEmbedded);
+Console.WriteLine("OCSP embedded: " + isOcspEmbedded);
+
+// Extract and display signature certificate details
 string issuerName = signatureField.Signature.Certificate.IssuerName;
 DateTime validFrom = signatureField.Signature.Certificate.ValidFrom;
 DateTime validTo = signatureField.Signature.Certificate.ValidTo;
@@ -2831,7 +2857,7 @@ Console.WriteLine("Valid To: " + validTo);
 Console.WriteLine("Signature Algorithm: " + signatureAlgorithm);
 Console.WriteLine("Digest Algorithm: " + digestAlgorithm);
 
-//Revocation validation details.
+// Extract and display revocation validation details
 RevocationResult revocationDetails = result.RevocationResult;
 RevocationStatus revocationStatus = revocationDetails.OcspRevocationStatus;
 bool isRevokedCRL = revocationDetails.IsRevokedCRL;
@@ -2839,48 +2865,61 @@ bool isRevokedCRL = revocationDetails.IsRevokedCRL;
 Console.WriteLine("Revocation Status: " + revocationStatus);
 Console.WriteLine("Is Revoked CRL: " + isRevokedCRL);
 
-//Close the document.
+// Close the loaded PDF document and release resources
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Get the stream from the document.
+' Load the input PDF document stream from the specified file path
 Dim documentStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
 
-' Load an existing signed PDF document.
+' Load the signed PDF document using the stream
 Dim loadedDocument As New PdfLoadedDocument(documentStream)
 
-' Get signature field.
+' Retrieve the first signature field from the PDF form
 Dim signatureField As PdfLoadedSignatureField = TryCast(loadedDocument.Form.Fields(0), PdfLoadedSignatureField)
 
-' X509Certificate2Collection to check the signer's identity using root certificates.
+' Create a certificate collection to hold trusted root certificates for validation
 Dim collection As New X509CertificateCollection()
 
-' Creates a certificate instance from PFX file with private key.
+' Load the root certificate from a PFX file (includes private key)
 Dim certificateStream As New FileStream(Path.GetFullPath("Data/PDF.pfx"), FileMode.Open, FileAccess.Read)
 Dim data(CInt(certificateStream.Length) - 1) As Byte
 certificateStream.Read(data, 0, data.Length)
 
-' Create new X509Certificate2 with the root certificate.
+' Create an X509Certificate2 instance using the loaded certificate data and password
 Dim certificate As New X509Certificate2(data, "syncfusion")
 
-' Add the certificate to the collection.
+' Add the certificate to the validation collection
 collection.Add(certificate)
 
-' Validate signature and get the validation result.
+' Validate the signature using the provided certificate collection
 Dim result As PdfSignatureValidationResult = signatureField.ValidateSignature(collection)
 
-' Checks whether the signature is valid or not.
+' Check if the signature is valid
 Dim status As SignatureStatus = result.SignatureStatus
 
-' Checks whether the document is modified or not.
+' Check if the document has been modified after signing
 Dim isModified As Boolean = result.IsDocumentModified
 
-Console.WriteLine("Document modified: " & isModified)
+' Check if Long-Term Validation (LTV) is enabled in the signature
+Dim isLtvEnabled As Boolean = result.LtvVerificationInfo.IsLtvEnabled
 
-' Signature details.
+' Check if Certificate Revocation List (CRL) data is embedded in the PDF
+Dim isCrlEmbedded As Boolean = result.LtvVerificationInfo.IsCrlEmbedded
+
+' Check if Online Certificate Status Protocol (OCSP) data is embedded in the PDF
+Dim isOcspEmbedded As Boolean = result.LtvVerificationInfo.IsOcspEmbedded
+
+' Output the validation results to the console
+Console.WriteLine("Document modified: " & isModified)
+Console.WriteLine("LTV enabled: " & isLtvEnabled)
+Console.WriteLine("CRL embedded: " & isCrlEmbedded)
+Console.WriteLine("OCSP embedded: " & isOcspEmbedded)
+
+' Extract and display signature certificate details
 Dim issuerName As String = signatureField.Signature.Certificate.IssuerName
 Dim validFrom As DateTime = signatureField.Signature.Certificate.ValidFrom
 Dim validTo As DateTime = signatureField.Signature.Certificate.ValidTo
@@ -2893,7 +2932,7 @@ Console.WriteLine("Valid To: " & validTo)
 Console.WriteLine("Signature Algorithm: " & signatureAlgorithm)
 Console.WriteLine("Digest Algorithm: " & digestAlgorithm)
 
-' Revocation validation details.
+' Extract and display revocation validation details
 Dim revocationDetails As RevocationResult = result.RevocationResult
 Dim revocationStatus As RevocationStatus = revocationDetails.OcspRevocationStatus
 Dim isRevokedCRL As Boolean = revocationDetails.IsRevokedCRL
@@ -2901,7 +2940,7 @@ Dim isRevokedCRL As Boolean = revocationDetails.IsRevokedCRL
 Console.WriteLine("Revocation Status: " & revocationStatus)
 Console.WriteLine("Is Revoked CRL: " & isRevokedCRL)
 
-' Close the document.
+' Close the loaded PDF document and release resources
 loadedDocument.Close(True)
 
 {% endhighlight %}
