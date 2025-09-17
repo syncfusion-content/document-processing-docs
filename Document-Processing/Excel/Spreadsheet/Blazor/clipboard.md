@@ -541,9 +541,8 @@ The `CutCopyActionBeginEventArgs` includes the following properties:
  
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet DataSource="DataSourceBytes">
+<SfSpreadsheet DataSource="DataSourceBytes" CutCopyActionBegin="OnCutCopyActionBegin">
     <SpreadsheetRibbon></SpreadsheetRibbon>
-    <SpreadsheetEvents CutCopyActionBegin="OnCutCopyActionBegin" ></SpreadsheetEvents>
 </SfSpreadsheet>
  
 @code {
@@ -589,9 +588,8 @@ The `PastingEventArgs` includes the following properties:
  
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet DataSource="DataSourceBytes">
+<SfSpreadsheet DataSource="DataSourceBytes"Pasting="OnPasting">
     <SpreadsheetRibbon></SpreadsheetRibbon>
-    <SpreadsheetEvents Pasting="OnPasting" ></SpreadsheetEvents>
 </SfSpreadsheet>
  
 @code {

@@ -257,9 +257,8 @@ The event uses the [HyperlinkCreatingEventArgs](https://help.syncfusion.com/cr/b
 
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet DataSource="DataSourceBytes">
+<SfSpreadsheet DataSource="DataSourceBytes" HyperlinkCreating="OnHyperlinkCreating" >
     <SpreadsheetRibbon></SpreadsheetRibbon>
-    <SpreadsheetEvents HyperlinkCreating="OnHyperlinkCreating" ></SpreadsheetEvents>
 </SfSpreadsheet>
 
 @code {
@@ -319,9 +318,8 @@ The [HyperlinkCreatedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet DataSource="DataSourceBytes">
+<SfSpreadsheet DataSource="DataSourceBytes" HyperlinkCreated="OnHyperlinkCreated">
     <SpreadsheetRibbon></SpreadsheetRibbon>
-    <SpreadsheetEvents HyperlinkCreated="OnHyperlinkCreated" ></SpreadsheetEvents>
 </SfSpreadsheet>
 
 @code {
@@ -367,9 +365,8 @@ The [HyperlinkClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet DataSource="DataSourceBytes">
+<SfSpreadsheet DataSource="DataSourceBytes" HyperlinkClick="OnHyperlinkClick" >
     <SpreadsheetRibbon></SpreadsheetRibbon>
-    <SpreadsheetEvents HyperlinkClick="OnHyperlinkClick" ></SpreadsheetEvents>
 </SfSpreadsheet>
 
 @code {
