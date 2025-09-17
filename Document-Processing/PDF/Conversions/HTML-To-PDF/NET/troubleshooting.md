@@ -477,39 +477,6 @@ Refer to this <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-t
 </tr>
 </table>
 
-## HTML to PDF Conversion Fails on Azure App Service When Published via GitHub Actions Using CEF Rendering Engine
-
-<table>
-<th style="font-size:14px" width="100px">Issue
-</th>
-<th style="font-size:14px">When publishing an application using <b>Syncfusion.HtmlToPdfConverter.Cef.Net.Windows</b> to Azure App Service via GitHub Actions, the HTML to PDF conversion fails. This typically results in a runtime error indicating that a required component or dependency could not be found or initialized.
-</th>
-
-<tr>
-<th style="font-size:14px" width="100px">Reason
-</th>
-<td>The failure is due to native binaries for the <b>CEF(Chromium Embedded Framework)</b> rendering engine located in the <b>runtime/win-x64/native</b> directory not being copied correctly to the output directory during the publishing process. This issue is common in CI/CD pipelines like <b>GitHub Actions</b>, causing the application to fail at runtime due to missing native files.<br>
-</td>
-</tr>
-
-<tr>
-<th style="font-size:14px" width="100px">Solution
-</th>
-<td>To fix this, explicitly include the <b>CEF runtime package</b> in your <b>.csproj</b> file to ensure the necessary binaries are included in the published output. Add the following package reference.<br>
-
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
-
-<PackageReference Include="chromiumembeddedframework.runtime.win-x64" Version="119.4.3" />
-
-{% endhighlight %}
-{% endtabs %}
-
-<b>Note</b>: Use version 119.4.3, which is a verified dependency for <b>CefSharp.OffScreen.NetCore (v119.4.30)</b>. Using a different version is not advised and may lead to unexpected behavior.<br>
-</td>
-</tr>
-</table>
-
 ## Unable to convert unsecured https URL to PDF using Blink
 
 <table>
@@ -1110,41 +1077,6 @@ KB: <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-a
 
 </table>
 
-## How to prevent the DawnCache and CPUCache folders creation during HTML to PDF conversion using CEF rendering engine.
-
-<table>
-<th style="font-size:14px" width="100px">Issue</th>
-<th style="font-size:14px">How to remove the DawnCache and CPUCache folders during HTML to PDF conversion using CEF rendering engine.
-</th>
-<tr>
-<th style="font-size:14px" width="100px">Reason
-</th>
-<td>	
-
-The DawnCache and CPUCache folders are created in project folder while performing HTML to PDF conversion using CEF rendering engine.
-
-</td>
-</tr>
-<tr>
-<th style="font-size:14px" width="100px">Solution</th>
-<td>
-	
-You can add below command-line arguments in Cef converter settings to prevent the DawnCache and CPUCache folders creation.
-
-{% tabs %}
-{% highlight C# %}
-
-cefConverterSettings.CommandLineArguments.Add("disable-gpu");
-cefConverterSettings.CommandLineArguments.Add("disable-gpu-shader-disk-cache");
-cefConverterSettings.CommandLineArguments.Add("disable-gpu-program-cache");
-
-{% endhighlight %}
-{% endtabs %}
-</td>
-</tr>
-
-</table>
-
 ## Blink files are missing at /user/local/bin while performing HTML to PDF conversion with docker and docker compose file.
 
 <table>
@@ -1350,14 +1282,6 @@ To perform HTML to PDF conversion using the Blink rendering engine, you can use 
 * <a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-linux">Azure Functions (Linux)</a>: Linux-based Azure Functions can also utilize the Blink rendering engine for successful conversions.
 * <a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux-with-docker">Azure App Service (Linux Docker)</a>: Deploying the application in a Linux-based Docker container offers another way to use Blink.
 
-<b>Use CEF Rendering Engine in Azure App Service Windows</b>
-
-If you must use Azure App Service on Windows, the <b>CEF rendering engine</b> is a suitable alternative for HTML to PDF conversion.
-Refer to the following documentation for more details:
-
-* <a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-windows">Azure App Service (Windows)</a>
-* <a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-windows">Azure Function (Windows)</a>
-
 </td>
 </tr>
 
@@ -1481,38 +1405,6 @@ This will trigger the execution of your startup script, resolving installation a
 <br/><br/>
 After the service restarts, try the conversion or operation again to ensure the issues are resolved.
 <br/><br/>
-</td>
-</tr>
-
-</table>
-
-<table>
-
-<th style="font-size:14px" width="100px">Exception
-</th>
-<th style="font-size:14px">Failed to convert webpage exception in Azure App Service (Windows) using CEF rendering engine — deployed via Azure DevOps pipeline
-</th>
-
-<tr>
-<th style="font-size:14px" width="100px">Reason
-</th>
-<td>Missing <b>CEF (Chromium Embedded Framework)</b> binaries during Azure pipeline deployment.
-</td>
-</tr>
-
-<tr>
-<th style="font-size:14px" width="100px">Solution
-</th>
-<td>Add the following package references to your `.csproj` file to ensure CEF binaries are included during Azure DevOps build:
-<br><br/>
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
-
-<PackageReference Include="Syncfusion.HtmlToPdfConverter.Cef.Net.Windows" Version="29.1.41" />
-<PackageReference Include="chromiumembeddedframework.runtime.win-x64" Version="119.4.3" />
-
-{% endhighlight %}
-{% endtabs %}
 </td>
 </tr>
 
