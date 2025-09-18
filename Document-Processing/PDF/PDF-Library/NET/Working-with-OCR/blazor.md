@@ -22,11 +22,11 @@ The [Syncfusion<sup>&reg;</sup> .NET OCR library](https://www.syncfusion.com/doc
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
 * Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
-Step 1: Create a new C# Blazor Server application project. Select Blazor App from the template and click Next.
-![Blazor server app creation](OCR-Images/blazor_server_app_creation.png)
+Step 1: Create a new C# Blazor server-side application project. Select **Blazor Web App** from the template and click the Next button.
+![Blazor sample creation](OCR-Images/Blazor-web-app.png)
 
-Step 2: In the project configuration window, name your project and click Create.
-![Blazor server project configuraion1](OCR-Images/blazor_server_configuration1.png)
+Step 2: In the **Interactive Render Mode section**, choose `Server` as the render mode. Then, click the `Create` button to generate a new Blazor Server-Side Application.
+![Blazor server app](OCR-Images/Blazor-Server-App.png)
 
 Step 3:  Install the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) NuGet package as a reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).   
 ![NuGet package installation](OCR-Images/OCR-Core-NuGet-package.png)

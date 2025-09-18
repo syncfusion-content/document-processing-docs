@@ -9,7 +9,7 @@ keywords: blazor save pdf, blazor load pdf, c# save pdf, c# load pdf
 
 # Open and save PDF document in Blazor
 
-The [Syncfusion<sup>&reg;</sup> Blazor PDF library](https://www.syncfusion.com/document-processing/pdf-framework/blazor) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in ASP.NET Core**. 
+The [Syncfusion<sup>&reg;</sup> Blazor PDF library](https://www.syncfusion.com/document-processing/pdf-framework/blazor) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in ASP.NET Core**. 
 
 **Prerequisites:**
 
@@ -26,21 +26,18 @@ The [Syncfusion<sup>&reg;</sup> Blazor PDF library](https://www.syncfusion.com/d
 
 ## Server app
 
-Step 1: Create a new C# Blazor Server app project. Select Blazor App from the template and click the *Next* button.
-![Create Blazor server app](Images/Create_Blazor_server_application.png)
+Step 1: Create a new C# Blazor server-side application project. Select **Blazor Web App** from the template and click the Next button.
+![Blazor sample creation](Images/Blazor-web-app.png)
 
-Step 2: Now, the project configuration window will popup. Click *Create* button to create a new project with the required project name.
-![Create a new project in configuration window](Images/Blazor_server_configuration_window.png)
+Step 2: In the **Interactive Render Mode section**, choose `Server` as the render mode. Then, click the `Create` button to generate a new Blazor Server-Side Application.
+![Blazor server app](Images/Blazor-Server-App.png)
 
-Step 3: Choose **Blazor Server App**  and click *Create* button to create a new Blazor Server app for .NET Core 3.0.0-preview9.
-![Choose blazor server application](Images/Choose_Blazor_server_app.png)
-
-Step 4: To **open and save a PDF document in Blazor Server app**, install [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) to the Blazor project.
+Step 3: To **open and save a PDF document in Blazor Server app**, install [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) to the Blazor project.
 ![Install NuGet package](Images/Blazor_NuGet_package.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 5:  Inject ExportService into `FetchData.razor` using the following code.
+Step 4:  Inject ExportService into `FetchData.razor` using the following code.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -52,7 +49,7 @@ Step 5:  Inject ExportService into `FetchData.razor` using the following code.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Create a button in the `FetchData.razor` using the following code.
+Step 5: Create a button in the `FetchData.razor` using the following code.
 
 {% tabs %}
 
@@ -64,7 +61,7 @@ Step 6: Create a button in the `FetchData.razor` using the following code.
 
 {% endtabs %}
 
-Step 7: Add the `LoadAndSavePDF` method in `FetchData.razor` page to call the export service.
+Step 6: Add the `LoadAndSavePDF` method in `FetchData.razor` page to call the export service.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -80,7 +77,7 @@ protected async Task LoadAndSave()
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Create a new cs file named `ExportService` under `Data` folder and include the following namespaces in the file.
+Step 7: Create a new cs file named `ExportService` under `Data` folder and include the following namespaces in the file.
 
 {% tabs %}
 
@@ -97,7 +94,7 @@ using System.IO;
 
 {% endtabs %}
 
-Step 9: Register your service in the `ConfigureServices` method available in the `Startup.cs` class as follows.
+Step 8: Register your service in the `ConfigureServices` method available in the `Startup.cs` class as follows.
 
 {% tabs %}
 
@@ -115,7 +112,7 @@ public void ConfigureServices(IServiceCollection services)
 
 {% endtabs %}
 
-Step 10: Create a new MemoryStream method with name as **LoadAndSavePDF** in **ExportService** class and include the following code snippet to **open an existing PDF document in Blazor** Server app.
+Step 9: Create a new MemoryStream method with name as **LoadAndSavePDF** in **ExportService** class and include the following code snippet to **open an existing PDF document in Blazor** Server app.
 
 {% tabs %}
 
@@ -131,7 +128,7 @@ public static MemoryStream LoadAndSavePDF()
 
 {% endtabs %}
 
-Step 11: Add below code example to add a table in PDF document. 
+Step 10: Add below code example to add a table in PDF document. 
 
 {% tabs %}
 
@@ -160,7 +157,7 @@ pdfGrid.Draw(graphics, new RectangleF(40, 400, loadedPage.Size.Width - 80, 0));
 
 {% endtabs %}
 
-Step 12: Add the below code example to save the PDF document in Blazor server application. 
+Step 11: Add the below code example to save the PDF document in Blazor server application. 
 
 {% tabs %}
 
@@ -179,7 +176,7 @@ using (MemoryStream stream = new MemoryStream())
 
 {% endtabs %}
 
-Step 13: Create a class file with `FileUtil` name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 12: Create a class file with `FileUtil` name and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 
@@ -198,7 +195,7 @@ public static class FileUtil
 
 {% endtabs %}
 
-Step 14: Add the following JavaScript function in the `_Host.cshtml` available under the `Pages` folder.
+Step 13: Add the following JavaScript function in the `_Host.cshtml` available under the `Pages` folder.
 
 {% tabs %}
 
@@ -240,19 +237,16 @@ Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor
 
 ## WASM app 
 
-Step 1: Create a new C# Blazor WASM app project. Select Blazor App from the template and click the Next button.
-![Create Blazor WASM app in Visual Studio](Images/Create_WASM_application.png)
+Step 1: Create a new C# Blazor server-side application project. Select **Blazor Web App** from the template and click the Next button.
+![Blazor sample creation](Images/Blazor-web-app.png)
 
-Step 2: Now, the project configuration window appears. Click Create button to create a new project with the default project configuration.
-![Create a project name for your new project](Images/Blazor_client_configuration_window.png)
+Step 2: In the **Interactive Render Mode section**, choose `WebAssembly` as the render mode. Then, click the `Create` button to generate a new Blazor client-Side Application.
+![Select Blazor WASM app](Images/Blazor-Web-Assembly.png)
 
-Step 3: Blazor WebAssembly App from the dashboard and click Create button to create a new Blazor client-side application.
-![Select .NET Core, ASP.NET Core 3.0 and Blazor WASM.](Images/Choose_Blazor_client_app.png)    
-
-Step 4: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org/).
 ![NuGet package installation](Images/Blazor_NuGet_package.png)  
 
-Step 5: Next, include the following namespaces in that `FetchData.razor` file.
+Step 4: Next, include the following namespaces in that `FetchData.razor` file.
 
 {% tabs %}
 
@@ -268,7 +262,7 @@ Step 5: Next, include the following namespaces in that `FetchData.razor` file.
 
 {% endtabs %}
 
-Step 6: Create a button in the `FetchData.razor` using the following code.
+Step 5: Create a button in the `FetchData.razor` using the following code.
 
 {% tabs %}
 
@@ -280,7 +274,7 @@ Step 6: Create a button in the `FetchData.razor` using the following code.
 
 {% endtabs %}
 
-Step 7: Create a new async method with name as ``LoadAndSavePDF`` and include the following code snippet to **open an existing PDF document in Blazor** WASM app.
+Step 6: Create a new async method with name as ``LoadAndSavePDF`` and include the following code snippet to **open an existing PDF document in Blazor** WASM app.
 
 {% tabs %}
 
@@ -298,7 +292,7 @@ Step 7: Create a new async method with name as ``LoadAndSavePDF`` and include th
 
 {% endtabs %}
 
-Step 8: Add the below code example to add table in the PDF document. 
+Step 7: Add the below code example to add table in the PDF document. 
 
 {% tabs %}
 
@@ -327,7 +321,7 @@ pdfGrid.Draw(graphics, new RectangleF(40, 400, loadedPage.Size.Width - 80, 0));
 
 {% endtabs %}
 
-Step 9: Add below code example to **save the PDF document in Blazor**.
+Step 8: Add below code example to **save the PDF document in Blazor**.
 
 {% tabs %}
 
@@ -345,7 +339,7 @@ await JS.SaveAs("Sample.pdf", memoryStream.ToArray());
 
 {% endtabs %}
 
-Step 10: Create a class file with `FileUtil` name and add the following code to invoke the JavaScript action to download the file in the browser. 
+Step 9: Create a class file with `FileUtil` name and add the following code to invoke the JavaScript action to download the file in the browser. 
 
 {% tabs %}
 
@@ -364,7 +358,7 @@ public static class FileUtil
 
 {% endtabs %}
 
-Step 11: Add the following JavaScript function in the `index.html` available under the wwwroot folder. 
+Step 10: Add the following JavaScript function in the `index.html` available under the wwwroot folder. 
 
 {% tabs %}
 
