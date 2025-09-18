@@ -2748,6 +2748,65 @@ collection.Add(certificate);
 // Validate the signature using the provided certificate collection
 PdfSignatureValidationResult result = signatureField.ValidateSignature(collection);
 
+// Initialize flag to detect timestamp signatures
+bool isTimeStampSignature = false;
+
+// Check if the TimeStampInformation object is not null
+if (result.TimeStampInformation != null)
+{
+    // Check if the signature is a document timestamp
+    if (result.TimeStampInformation.IsDocumentTimeStamp)
+    {
+        isTimeStampSignature = true;
+        Console.WriteLine("Signature is a document timestamp signature.");
+    }
+
+    // Retrieve signer certificates if available
+    PdfSignerCertificate[] certificates = result.TimeStampInformation.SignerCertificates;
+    if (certificates != null && certificates.Length > 0)
+    {
+        Console.WriteLine($"Retrieved {certificates.Length} signer certificate(s).");
+    }
+    else
+    {
+        Console.WriteLine("No signer certificates found.");
+    }
+
+    // Retrieve the main certificate
+    X509Certificate2 certificate2 = result.TimeStampInformation.Certificate;
+    if (certificate2 != null)
+    {
+        Console.WriteLine($"Certificate Subject: {certificate2.Subject}");
+    }
+    else
+    {
+        Console.WriteLine("No certificate found.");
+    }
+
+    // Retrieve timestamp date
+    DateTime dateTime = result.TimeStampInformation.Time;
+    Console.WriteLine($"Timestamp Date: {dateTime}");
+
+    // Retrieve timestamp policy ID
+    string policyID = result.TimeStampInformation.TimeStampPolicyId;
+    if (!string.IsNullOrEmpty(policyID))
+    {
+        Console.WriteLine($"Timestamp Policy ID: {policyID}");
+    }
+    else
+    {
+        Console.WriteLine("No Timestamp Policy ID found.");
+    }
+
+    // Check if the timestamp is valid
+    bool valid = result.TimeStampInformation.IsValid;
+    Console.WriteLine($"Timestamp Validity: {(valid ? "Valid" : "Invalid")}");
+}
+else
+{
+    Console.WriteLine("TimeStampInformation is null. Cannot retrieve timestamp details.");
+}
+
 // Check if the signature is valid
 SignatureStatus status = result.SignatureStatus;
 
@@ -2823,6 +2882,65 @@ collection.Add(certificate);
 // Validate the signature using the provided certificate collection
 PdfSignatureValidationResult result = signatureField.ValidateSignature(collection);
 
+// Initialize flag to detect timestamp signatures
+bool isTimeStampSignature = false;
+
+// Check if the TimeStampInformation object is not null
+if (result.TimeStampInformation != null)
+{
+    // Check if the signature is a document timestamp
+    if (result.TimeStampInformation.IsDocumentTimeStamp)
+    {
+        isTimeStampSignature = true;
+        Console.WriteLine("Signature is a document timestamp signature.");
+    }
+
+    // Retrieve signer certificates if available
+    PdfSignerCertificate[] certificates = result.TimeStampInformation.SignerCertificates;
+    if (certificates != null && certificates.Length > 0)
+    {
+        Console.WriteLine($"Retrieved {certificates.Length} signer certificate(s).");
+    }
+    else
+    {
+        Console.WriteLine("No signer certificates found.");
+    }
+
+    // Retrieve the main certificate
+    X509Certificate2 certificate2 = result.TimeStampInformation.Certificate;
+    if (certificate2 != null)
+    {
+        Console.WriteLine($"Certificate Subject: {certificate2.Subject}");
+    }
+    else
+    {
+        Console.WriteLine("No certificate found.");
+    }
+
+    // Retrieve timestamp date
+    DateTime dateTime = result.TimeStampInformation.Time;
+    Console.WriteLine($"Timestamp Date: {dateTime}");
+
+    // Retrieve timestamp policy ID
+    string policyID = result.TimeStampInformation.TimeStampPolicyId;
+    if (!string.IsNullOrEmpty(policyID))
+    {
+        Console.WriteLine($"Timestamp Policy ID: {policyID}");
+    }
+    else
+    {
+        Console.WriteLine("No Timestamp Policy ID found.");
+    }
+
+    // Check if the timestamp is valid
+    bool valid = result.TimeStampInformation.IsValid;
+    Console.WriteLine($"Timestamp Validity: {(valid ? "Valid" : "Invalid")}");
+}
+else
+{
+    Console.WriteLine("TimeStampInformation is null. Cannot retrieve timestamp details.");
+}
+
 // Check if the signature is valid
 SignatureStatus status = result.SignatureStatus;
 
@@ -2897,6 +3015,54 @@ collection.Add(certificate)
 
 ' Validate the signature using the provided certificate collection
 Dim result As PdfSignatureValidationResult = signatureField.ValidateSignature(collection)
+
+' Initialize flag to detect timestamp signatures
+Dim isTimeStampSignature As Boolean = False
+
+' Check if the TimeStampInformation object is not null
+If result.TimeStampInformation IsNot Nothing Then
+
+    ' Check if the signature is a document timestamp
+    If result.TimeStampInformation.IsDocumentTimeStamp Then
+        isTimeStampSignature = True
+        Console.WriteLine("Signature is a document timestamp signature.")
+    End If
+
+    ' Retrieve signer certificates if available
+    Dim certificates As PdfSignerCertificate() = result.TimeStampInformation.SignerCertificates
+    If certificates IsNot Nothing AndAlso certificates.Length > 0 Then
+        Console.WriteLine($"Retrieved {certificates.Length} signer certificate(s).")
+    Else
+        Console.WriteLine("No signer certificates found.")
+    End If
+
+    ' Retrieve the main certificate
+    Dim certificate2 As X509Certificate2 = result.TimeStampInformation.Certificate
+    If certificate2 IsNot Nothing Then
+        Console.WriteLine($"Certificate Subject: {certificate2.Subject}")
+    Else
+        Console.WriteLine("No certificate found.")
+    End If
+
+    ' Retrieve timestamp date
+    Dim dateTime As DateTime = result.TimeStampInformation.Time
+    Console.WriteLine($"Timestamp Date: {dateTime}")
+
+    ' Retrieve timestamp policy ID
+    Dim policyID As String = result.TimeStampInformation.TimeStampPolicyId
+    If Not String.IsNullOrEmpty(policyID) Then
+        Console.WriteLine($"Timestamp Policy ID: {policyID}")
+    Else
+        Console.WriteLine("No Timestamp Policy ID found.")
+    End If
+
+    ' Check if the timestamp is valid
+    Dim valid As Boolean = result.TimeStampInformation.IsValid
+    Console.WriteLine($"Timestamp Validity: {(If(valid, "Valid", "Invalid"))}")
+
+Else
+    Console.WriteLine("TimeStampInformation is null. Cannot retrieve timestamp details.")
+End If
 
 ' Check if the signature is valid
 Dim status As SignatureStatus = result.SignatureStatus
