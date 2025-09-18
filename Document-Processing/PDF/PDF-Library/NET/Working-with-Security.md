@@ -900,6 +900,91 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Security/Encrypt-only-attachment-in-the-PDF-document).
 
+## Decrypting encrypted PDF document
+
+The Syncfusion<sup>&reg;</sup> PDF library has provided decrypt an encrypted PDF document by removing its `owner` or `user` password and resetting its permissions to default. This is particularly useful when you need to access or modify a secured PDF.
+
+The following code example demonstrates how to decrypt a PDF document and restore its default permissions.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using (FileStream inputStream = new FileStream(@"Data/Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Load the encrypted PDF document from the input stream
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream, "syncfusion");
+
+    // Set the document permissions to default (removes any restrictions)
+    loadedDocument.Security.Permissions = PdfPermissionsFlags.Default;
+
+    // Clear the owner and user passwords to decrypt the document
+    loadedDocument.Security.OwnerPassword = string.Empty;
+    loadedDocument.Security.UserPassword = string.Empty;
+
+    using (FileStream outputStream = new FileStream(@"Output/Output.pdf", FileMode.Create, FileAccess.Write))
+    {
+        // Save the decrypted PDF document to the output stream
+        loadedDocument.Save(outputStream);
+    }
+    // Close the loaded PDF document and release resources
+    loadedDocument.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using (FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read))
+{
+    // Load the encrypted PDF document from the input stream
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream, "syncfusion");
+
+    // Set the document permissions to default (removes any restrictions)
+    loadedDocument.Security.Permissions = PdfPermissionsFlags.Default;
+
+    // Clear the owner and user passwords to decrypt the document
+    loadedDocument.Security.OwnerPassword = string.Empty;
+    loadedDocument.Security.UserPassword = string.Empty;
+
+    // Save the decrypted PDF document to the output stream
+    loadedDocument.Save("Output.pdf");
+
+    // Close the loaded PDF document and release resources
+    loadedDocument.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Open the encrypted PDF document using FileStream
+Using inputStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
+
+    ' Load the encrypted PDF document from the input stream with password
+    Dim loadedDocument As New PdfLoadedDocument(inputStream, "syncfusion")
+
+    ' Set the document permissions to default (removes any restrictions)
+    loadedDocument.Security.Permissions = PdfPermissionsFlags.Default
+
+    ' Clear the owner and user passwords to decrypt the document
+    loadedDocument.Security.OwnerPassword = String.Empty
+    loadedDocument.Security.UserPassword = String.Empty
+
+    ' Save the decrypted PDF document to the specified file
+    loadedDocument.Save("Output.pdf")
+
+    ' Close the loaded PDF document and release resources
+    loadedDocument.Close(True)
+
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Opening an encrypt-only-attachment document
 
 The Syncfusion Essential<sup>&reg;</sup> PDF library now provides support for loading the encrypt-only-attachment PDF documents. To access the attachments in the existing PDF document, the [UserPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_UserPassword) is mandatory. 
