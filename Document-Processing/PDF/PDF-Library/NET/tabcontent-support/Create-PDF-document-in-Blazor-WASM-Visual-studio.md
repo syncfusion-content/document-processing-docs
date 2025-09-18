@@ -9,12 +9,12 @@ Step 1: Create a new C# Blazor client-side application project. Select Blazor We
 Step 2: In the **Interactive Render Mode section**, choose `WebAssembly` as the render mode. Then, click the `Create` button to generate a new Blazor client-Side Application.
 ![Select Blazor WASM app](Create-PDF-Blazor/Blazor-Web-Assembly.png)
 
-Step 4: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
+Step 3: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
 ![Blazor WASM NuGet package installation](Create-PDF-Blazor/Blazor_server_NuGet.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 5: Next, include the following namespaces in that  ``FetchData.razor`` file.
+Step 4: Next, include the following namespaces in that  ``FetchData.razor`` file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -29,7 +29,7 @@ Step 5: Next, include the following namespaces in that  ``FetchData.razor`` file
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Create a button in the ``FetchData.razor`` using the following code.
+Step 5: Create a button in the ``FetchData.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -37,7 +37,7 @@ Step 6: Create a button in the ``FetchData.razor`` using the following code.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Define the ``@ExportToPdf`` click function on ``FetchData.razor`` file.
+Step 6: Define the ``@ExportToPdf`` click function on ``FetchData.razor`` file.
 
 The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created and add a [PdfPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPage.html) to it. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
  
@@ -91,7 +91,7 @@ JS.SaveAs("Sample.pdf", memoryStream.ToArray());
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Create a class file with ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 7: Create a class file with ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 
@@ -110,7 +110,7 @@ public static class FileUtil
 
 {% endtabs %}
 
-Step 9: Add the following JavaScript function in the ``index.html`` available under the ``wwwroot`` folder.
+Step 8: Add the following JavaScript function in the ``index.html`` available under the ``wwwroot`` folder.
 
 {% tabs %}
 
@@ -143,10 +143,10 @@ Step 9: Add the following JavaScript function in the ``index.html`` available un
 
 {% endtabs %}
 
-Step 10: Build the project.
+Step 9: Build the project.
 
 Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
 
-Step 11: Run the project.
+Step 10: Run the project.
 
 Click the Start button (green arrow) or press F5 to run the app.

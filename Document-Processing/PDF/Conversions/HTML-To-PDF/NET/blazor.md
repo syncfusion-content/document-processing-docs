@@ -24,18 +24,18 @@ N> Currently, HTML to PDF converter is mainly supported in Blazor Server-Side, w
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
 * Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
-Step 1: Create a new C# Blazor Server application project. Select Blazor App from the template and click the Next button.
-![Create Blazor application](htmlconversion_images/blazor_step1.png)  
+Step 1: Create a new C# Blazor server-side application project. Select **Blazor Web App** from the template and click the Next button.
+![Blazor sample creation](htmlconversion_images/Blazor-web-app.png)
 
-In the project configuration window, name your project and select Create.
-![Project configuration1](htmlconversion_images/blazor_step2.png) 
+Step 2: In the **Interactive Render Mode section**, choose `Server` as the render mode. Then, click the `Create` button to generate a new Blazor Server-Side Application.
+![Blazor server app](htmlconversion_images/Blazor-Server-App.png)
 
-Step 2: Install the [Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows/) NuGet package as a reference to your Blazor Server application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows/) NuGet package as a reference to your Blazor Server application from [NuGet.org](https://www.nuget.org/).
 ![NuGet package installation](htmlconversion_images/blazor_step_nuget.png)  
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Create a new class file named ExportService under Data folder and include the following namespaces in the file.
+Step 4: Create a new class file named ExportService under Data folder and include the following namespaces in the file.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -45,7 +45,7 @@ using System.IO;
 
 {% endhighlight %}
 
-Step 4: Add the following code to convert HTML to PDF document in ExportService class using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
+Step 5: Add the following code to convert HTML to PDF document in ExportService class using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -64,7 +64,7 @@ public MemoryStream CreatePdf(string url)
 
 {% endhighlight %}
 
-Step 5: Register your service in the ConfigureServices method available in the Startup.cs class as follows.
+Step 6: Register your service in the ConfigureServices method available in the Startup.cs class as follows.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -81,7 +81,7 @@ public void ConfigureServices(IServiceCollection services)
 
 {% endhighlight %}
 
-Step 6: Inject ExportService into FetchData.razor using the following code.
+Step 7: Inject ExportService into FetchData.razor using the following code.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -92,7 +92,7 @@ Step 6: Inject ExportService into FetchData.razor using the following code.
 
 {% endhighlight %}
 
-Step 7: Create a button in the FetchData.razor using the following code.
+Step 8: Create a button in the FetchData.razor using the following code.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -100,7 +100,7 @@ Step 7: Create a button in the FetchData.razor using the following code.
 
 {% endhighlight %}
 
-Step 8: Add the ExportToPdf method in FetchData.razor page to call the export service.
+Step 9: Add the ExportToPdf method in FetchData.razor page to call the export service.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -132,7 +132,7 @@ Step 8: Add the ExportToPdf method in FetchData.razor page to call the export se
 
 {% endhighlight %}
 
-Step 9: Create a class file with FileUtil name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 10: Create a class file with FileUtil name and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -147,7 +147,7 @@ public static class FileUtil
 
 {% endhighlight %}
 
-Step 10: Add the following JavaScript function in the _Host.cshtml available under the Pages folder.
+Step 11: Add the following JavaScript function in the _Host.cshtml available under the Pages folder.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -180,11 +180,11 @@ Step 10: Add the following JavaScript function in the _Host.cshtml available und
 
 {% endhighlight %}
 
-Step 11: Build the project.
+Step 12: Build the project.
 
 Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
 
-Step 12: Run the project.
+Step 13: Run the project.
 
 Click the Start button (green arrow) or press F5 to run the app.
 
