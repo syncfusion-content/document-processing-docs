@@ -29,13 +29,13 @@ Refer to the following code example for local data binding.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/local-data-binding-cs1/" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/local-data-binding-cs1" %}
 
 > The local data source can also be provided as an instance of the [`DataManager`](https://ej2.syncfusion.com/angular/documentation/data/getting-started). By default, [`DataManager`](https://ej2.syncfusion.com/angular/documentation/data/getting-started) uses [`JsonAdaptor`](https://ej2.syncfusion.com/angular/documentation/data/adaptors#json-adaptor) for local data-binding.
 
 ### Customizing column data mapping
 
-By default, when a data source is bound to a sheet, columns are auto-assigned from the data source fields sequentially. This means that the first field in the data source is assigned to Column A, the second to Column B, and so on, sequentially. However, now you can customize the column assignments by specifying the appropriate field names in the desired order using the [fieldsOrder](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/rangemodel/#fieldsorder) property.
+By default, when a data source is bound to a sheet, columns are auto-assigned from the data source fields sequentially. This means that the first field in the data source is assigned to Column A, the second to Column B, and so on, sequentially. However, now you can customize the column assignments by specifying the appropriate field names in the desired order using the [fieldsOrder](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/rangeModel/#fieldsorder) property.
 
 > You can customize the mapping of column data only in the local data binding support.
 
@@ -51,7 +51,7 @@ The following code example demonstrates how to customize the mapping of column d
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/field-mapping-cs1/" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/field-mapping-cs1" %}
 
 ## Remote data
 
@@ -69,7 +69,7 @@ Refer to the following code example for remote data binding.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/remote-data-binding-cs1/" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/remote-data-binding-cs1" %}
 
 > By default, `DataManager` uses **ODataAdaptor** for remote data-binding.
 
@@ -87,7 +87,7 @@ Refer to the following code example for remote data binding.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/remote-data-binding-cs2/" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/remote-data-binding-cs2" %}
 
 ### Web API
 
@@ -103,7 +103,7 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/remote-data-binding-cs3/" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/remote-data-binding-cs3" %}
 
 ## Cell data binding
 
@@ -121,7 +121,7 @@ Refer to the following code example for cell data binding.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/cell-data-binding-cs1/" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/cell-data-binding-cs1" %}
 
 > The cell data binding also supports formula, style, number format, and more.
 
@@ -151,7 +151,7 @@ The following table defines the arguments of the `dataSourceChanged` event.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/dynamic-data-binding-cs1/" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/dynamic-data-binding-cs1" %}
 
 ## Dynamic data binding using updateRange method
 
@@ -171,7 +171,7 @@ The following code example demonstrates how to dynamically update data using the
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/dynamic-data-binding-cs2/" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/dynamic-data-binding-cs2" %}
 
 ## Note
 
