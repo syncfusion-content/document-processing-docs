@@ -96,7 +96,7 @@ The Blazor SfPdfViewer component follows the [keyboard interaction](https://www.
 
 The Blazor SfPdfViewer component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Blazor SfPdfViewer component is demonstrated in the following sample. Open the [SfPdfViewer accessibility sample](https://blazor.syncfusion.com/accessibility/pdfviewer) in a new window to evaluate the accessibility of the Blazor SfPdfViewer component with accessibility tools.
+The accessibility compliance of the Blazor SfPdfViewer component is demonstrated in the following sample. Open the [SfPdfViewer accessibility sample](https://blazor.syncfusion.com/accessibility/sfpdfviewer) in a new window to evaluate the accessibility of the Blazor SfPdfViewer component with accessibility tools.
 
 ## See also
 

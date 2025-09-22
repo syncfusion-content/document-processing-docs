@@ -20,7 +20,7 @@ The built-in toolbar of SfPdfViewer contains the following two interaction optio
 
 In this mode, users can select and copy text from the PDF document loaded in SfPdfViewer. This is useful for extracting and sharing textual content.
 
-N> In Selection mode, page panning by touch/drag is disabled. Scrolling is still available through the mouse wheel, trackpad scroll, scrollbars, or keyboard shortcuts.
+N> In Selection mode, page panning by touch/drag is disabled. Scrolling is still available through the mouse wheel scrollbars, or keyboard shortcuts.
 
 You can enable or disable text selection by setting the [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSelection) property.
 
