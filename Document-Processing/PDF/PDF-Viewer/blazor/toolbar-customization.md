@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar Customization in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to customize the toolbar in the Syncfusion SfPdfViewer component, including show hide toolbar items, rearrange, adding custom items, and redaction toolbars.
+description: Learn how to customize the toolbar in the Syncfusion SfPdfViewer, including show hide toolbar items, rearrange, adding custom items, and redaction toolbars.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
