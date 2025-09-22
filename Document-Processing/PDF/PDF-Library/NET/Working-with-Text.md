@@ -1153,11 +1153,13 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Creating-a-multicolumn-PDF-document/). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Creating-a-multicolumn-PDF-document/).
 
-The [PdfLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutFormat.html) class helps to allow the text to flow across pages. The [PdfLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutResult.html) class provides the rendered bounds of the previously added text which can be used to place successive elements without overlapping.
+## Add text across multiple PDF pages
 
-The following code snippet illustrates how to add elements relatively and also allow the text to flow across multiple pages.
+The [PdfLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutFormat.html) class enables text to flow seamlessly across multiple pages in a PDF document. The [PdfLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutResult.html) class provides the position and bounds of the previously rendered text, allowing you to place subsequent elements without overlapping.
+
+The following code example demonstrates how to add elements relatively and also allow the text to flow across multiple pages.
 
 {% tabs %}
 
