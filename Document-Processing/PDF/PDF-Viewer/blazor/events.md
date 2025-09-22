@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about events in Syncfusion Blazor SfPdfViewer component and much more details.
+description: Explore all events available in the Syncfusion Blazor SfPdfViewer component, including lifecycle, navigation, annotation, search, and printing events.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,59 +9,59 @@ documentation: ug
 
 # Events in Blazor SfPdfViewer Component
 
-The events provided in SfPdfViewer component are listed out as follows:
+The following events are available in the SfPdfViewer component.
 
 |Name|Description|
 |---|---|
-|AddSignature|Triggers when signature is added over the page of the PDF document.|
-|AjaxRequestFailed|Triggers when the AJAX request is failed.|
-|AnnotationAdded|Triggers when an annotation is added over the page of the PDF document.|
-|AnnotationMouseover|Triggers when mouse over the annotation object.|
-|AnnotationMoved|Triggers when an annotation is moved over the page of the PDF document.|
-|AnnotationPropertiesChanged|Triggers when the property of the annotation is changed in the page of the PDF document.|
-|AnnotationRemoved|Triggers when an annotation is removed from the page of the PDF document.|
-|AnnotationResized|Triggers when an annotation is resized over the page of the PDF document.|
-|AnnotationSelected|Triggers when an annotation is selected over the page of the PDF document.|
-|AnnotationUnselected|Triggers when an annotation is unselected over the page of the PDF document.|
-|Created|Triggers when the PDFViewer component is created.|
-|DocumentEdited|Triggers when the PDF Document getting edited in SfPdfViewer.|
-|DocumentLoaded|Triggers while loading document into PdfViewer.|
-|DocumentLoadFailed|Triggers while loading document got failed in PdfViewer.|
-|DcoumentUnloaded|Triggers while close the document|
-|DownloadEnd|Triggers an event when the download actions is finished.|
-|DownloadStart|Triggers an event when the download action is started.|
-|ExportFailed|Triggers when an export annotations failed in the SfPdfViewer.|
-|ExportStarted|Triggers when an exported annotations started in the SfPdfViewer.|
-|ExportSucceed|Triggers when an export annotations succeed in the SfPdfViewer.|
-|ExtractTextCompleted|Triggers when an text extraction is completed in the SfPdfViewer.|
-|ImportFailed|Triggers when an imports annotations failed in the PDF document.
-|ImportStarted|Triggers when an imported annotations started in the PDF document.|
-|ImportSucceed|Triggers when an imports annotations succeed in the PDF document.|
-|MoveSignature|Triggers when an signature is moved over the page of the PDF document.|
-|OnAnnotationDoubleClick|Triggers an event when the annotation is double click.|
-|OnHyperlinkClick|Triggers when hyperlink in the PDF Document is clicked|
-|OnHyperlinkMouseOver|Triggers when hyperlink in the PDF Document is hovered|
-|OnPageClick|Triggers when the mouse click is performed over the page of the PDF document.|
-|OnTextSearchComplete|Triggers an event when the text search is completed.|
-|OnTextSearchHighlight|Triggers an event when the text search text is highlighted.|
-|OnTextSearchStart|Triggers an event when the text search is started.|
-|OnTextSelectionEnd|Triggers an event when the text selection is finished.|
-|OnTextSelectionStart|Triggers an event when the text selection is started.|
-|OnThumbnailClick|Triggers an event when the thumbnail is clicked in the thumbnail panel of SfPdfViewer.|
-|PageChanged|Triggers when there is change in current page number.|
-|PageMouseover|Triggers when mouse over the page.|
-|PrintEnd|Triggers an event when the print actions is finished.|
-|PrintStart|Triggers an event when the print action is started.|
-|RemoveSignature|Triggers when signature is removed over the page of the PDF document.|
-|ResizeSignature|Triggers when signature is resized over the page of the PDF document.|
-|SignaturePropertiesChange|Triggers when the property of the signature is changed in the page of the PDF document.|
-|SignatureSelected|Triggers when signature is selected over the page of the PDF document.|
-|SignatureUnselected|Triggers when signature is unselected over the page of the PDF document.|
-|ZoomChanged|Triggers when there is change in the magnification value.|
+|AddSignature|Triggers when a signature is added to a page in the PDF document.|
+|AjaxRequestFailed|Triggers when an AJAX request fails.|
+|AnnotationAdded|Triggers when an annotation is added to a page in the PDF document.|
+|AnnotationMouseover|Triggers when the mouse pointer moves over an annotation object.|
+|AnnotationMoved|Triggers when an annotation is moved on a page in the PDF document.|
+|AnnotationPropertiesChanged|Triggers when annotation properties are modified on a PDF page.|
+|AnnotationRemoved|Triggers when an annotation is removed from a page in the PDF document.|
+|AnnotationResized|Triggers when an annotation is resized on a page in the PDF document.|
+|AnnotationSelected|Triggers when an annotation is selected on a page in the PDF document.|
+|AnnotationUnselected|Triggers when an annotation is unselected on a page in the PDF document.|
+|Created|Triggers when the PDF Viewer component is created.|
+|DocumentEdited|Triggers when the PDF document is edited in the SfPdfViewer.|
+|DocumentLoaded|Triggers when a document is loaded into the PDF Viewer.|
+|DocumentLoadFailed|Triggers when loading a document into the PDF Viewer fails.|
+|DcoumentUnloaded|Triggers when the document is closed.|
+|DownloadEnd|Triggers when a download action is completed.|
+|DownloadStart|Triggers when a download action starts.|
+|ExportFailed|Triggers when exporting annotations fails in the SfPdfViewer.|
+|ExportStarted|Triggers when exporting annotations starts in the SfPdfViewer.|
+|ExportSucceed|Triggers when exporting annotations succeeds in the SfPdfViewer.|
+|ExtractTextCompleted|Triggers when text extraction is completed in the SfPdfViewer.|
+|ImportFailed|Triggers when importing annotations fails in the PDF document.|
+|ImportStarted|Triggers when importing annotations starts in the PDF document.|
+|ImportSucceed|Triggers when importing annotations succeeds in the PDF document.|
+|MoveSignature|Triggers when a signature is moved on a page in the PDF document.|
+|OnAnnotationDoubleClick|Triggers when an annotation is double-clicked.|
+|OnHyperlinkClick|Triggers when a hyperlink in the PDF document is clicked.|
+|OnHyperlinkMouseOver|Triggers when a hyperlink in the PDF document is hovered.|
+|OnPageClick|Triggers when a mouse click is performed on a page in the PDF document.|
+|OnTextSearchComplete|Triggers when a text search is completed.|
+|OnTextSearchHighlight|Triggers when searched text is highlighted.|
+|OnTextSearchStart|Triggers when a text search starts.|
+|OnTextSelectionEnd|Triggers when text selection ends.|
+|OnTextSelectionStart|Triggers when text selection starts.|
+|OnThumbnailClick|Triggers when a thumbnail is clicked in the thumbnail panel of the SfPdfViewer.|
+|PageChanged|Triggers when the current page number changes.|
+|PageMouseover|Triggers when the mouse pointer moves over a page.|
+|PrintEnd|Triggers when a print action is completed.|
+|PrintStart|Triggers when a print action starts.|
+|RemoveSignature|Triggers when a signature is removed from a page in the PDF document.|
+|ResizeSignature|Triggers when a signature is resized on a page in the PDF document.|
+|SignaturePropertiesChange|Triggers when the properties of a signature are changed on a page in the PDF document.|
+|SignatureSelected|Triggers when a signature is selected on a page in the PDF document.|
+|SignatureUnselected|Triggers when a signature is unselected on a page in the PDF document.|
+|ZoomChanged|Triggers when the magnification value changes.|
 
 ## Adding SfPdfViewer events to Blazor component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer events has to be wrapped inside the [PdfViewerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html) tag.
+Wrap the SfPdfViewer events inside the [PdfViewerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html) tag.
 
 ```cshtml
 
@@ -84,9 +84,9 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer events has to b
 
 ## Created event
 
-The Created event is triggered when the PDFViewer component is rendered.
+The Created event Triggers when the PDF Viewer component is rendered.
 
-The following code illustrates how to load PDF document on created event.
+The following example illustrates how to load a PDF document in the Created event.
 
 ```cshtml
 
@@ -116,9 +116,9 @@ The following code illustrates how to load PDF document on created event.
 
 ## DocumentEdited Event
 
-The DocumentEdited Event is Triggered when the PDF document getting Edited. 
+The DocumentEdited event Triggers when the PDF document is edited. 
 
-The following code illustrates how to trigger the DocumentEdited Event. In that code , [EditingAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.EditingAction.html) provides the information related to document edited. 
+The following example illustrates how to handle the DocumentEdited event. In this example, [EditingAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.EditingAction.html) provides information related to the edit operation. 
 
 ```cshtml
 
