@@ -22,7 +22,7 @@ You can customize the loading indicator color by setting the color of the activi
         <ResourceDictionary.MergedDictionaries> 
             <ResourceDictionary> 
                 <x:String x:Key="SfPdfViewerTheme">Custom Theme</x:String> 
-                <Color x:Key="SfPdfViewerLoadingIndicatorColor">Red </Color> 
+                <Color x:Key="SfPdfViewerLoadingIndicatorColor">Red</Color> 
             </ResourceDictionary> 
         </ResourceDictionary.MergedDictionaries> 
     </ResourceDictionary> 
@@ -32,7 +32,7 @@ You can customize the loading indicator color by setting the color of the activi
 
 ## Hiding loading indicator: 
 
-To disable the loading indicator while loading the pdf and rendering the pages, you can set the color of the loading indicator as Transparent using the [Themes key for .NET MAUI PdfViewer](https://help.syncfusion.com/maui/themes/keys). Refer the code example below to disable the loading indicator. 
+To disable the loading indicator while loading the pdf and rendering the pages, you can set the color of the loading indicator as transparent using the [Themes key for .NET MAUI PdfViewer](https://help.syncfusion.com/maui/themes/keys). Refer the code example below to disable the loading indicator. 
 
 {% tabs %} 
 {% highlight xaml %} 
