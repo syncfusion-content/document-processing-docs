@@ -9,7 +9,7 @@ documentation: ug
 
 # Migration from PDF Viewer (Classic) to PDF Viewer
 
-## Why PDF Viewer (Classic) to PDF Viewer control
+### Why PDF Viewer (Classic) to PDF Viewer control
 
 Migrating to the PDF Viewer control delivers better performance and a simplified deployment model. Scrolling, page navigation, and printing are optimized for a smoother user experience. The newer viewer also removes the WebAssembly server service dependency required by the classic control, reducing app complexity and maintenance.
 
