@@ -9,7 +9,7 @@ documentation: ug
 
 # Data binding in Angular Spreadsheet component
 
-The Spreadsheet uses [`DataManager`](https://ej2.syncfusion.com/angular/documentation/data/getting-started), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [`DataManager`](https://ej2.syncfusion.com/angular/documentation/data/getting-started) or JavaScript object array collection.
+The Spreadsheet uses [`DataManager`](https://helpej2.syncfusion.com/angular/documentation/data/), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [`DataManager`](https://helpej2.syncfusion.com/angular/documentation/data/) or JavaScript object array collection.
 
 > To bind data to a cell, use `cell data binding` support.
 
@@ -31,7 +31,7 @@ Refer to the following code example for local data binding.
   
 {% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/local-data-binding-cs1" %}
 
-> The local data source can also be provided as an instance of the [`DataManager`](https://ej2.syncfusion.com/angular/documentation/data/getting-started). By default, [`DataManager`](https://ej2.syncfusion.com/angular/documentation/data/getting-started) uses [`JsonAdaptor`](https://ej2.syncfusion.com/angular/documentation/data/adaptors#json-adaptor) for local data-binding.
+> The local data source can also be provided as an instance of the [`DataManager`](https://helpej2.syncfusion.com/angular/documentation/data/). By default, [`DataManager`](https://helpej2.syncfusion.com/angular/documentation/data/) uses [`JsonAdaptor`](https://ej2.syncfusion.com/angular/documentation/data/adaptors#json-adaptor) for local data-binding.
 
 ### Customizing column data mapping
 
