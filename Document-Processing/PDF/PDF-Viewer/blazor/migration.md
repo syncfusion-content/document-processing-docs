@@ -1,15 +1,13 @@
 ---
 layout: post
-title: Migration from PDF Viewer (Classic) to SfPdfViewer2 in Blazor | Syncfusion
-description: Step-by-step migration guide from Blazor PDF Viewer (Classic) to SfPdfViewer2, covering packages, scripts, Program.cs, markup, and WebAssembly.
+title: Migrate from (Classic) PDFViewer to SfPdfViewer in Blazor | Syncfusion
+description: Step-by-step migration guide from Blazor PDF Viewer (Classic) to SfPdfViewer, covering packages, scripts, Program.cs, markup, and WebAssembly.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Migrate from PDF Viewer (Classic) to SfPdfViewer2
-
-This guide explains how to migrate from PDF Viewer (Classic) (SfPdfViewer/SfPdfViewerServer) to the new PDF Viewer (SfPdfViewer2) for Blazor. It outlines required changes to NuGet packages and scripts, Syncfusion service registration, component markup, and WebAssembly project settings.
+# Migration from PDF Viewer (Classic) to SfPdfViewer
 
 ## Why PDF Viewer (Classic) to PDF Viewer control
 
