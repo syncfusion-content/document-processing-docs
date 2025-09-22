@@ -42,7 +42,7 @@ using(WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
         //Create new Word document
         WordDocument newDocument = new WordDocument();
         //Add cloned section into new Word document
-        newDocument.Sections.Add(section.Clone());
+        newDocument.Sections.Add(document.Sections[i].Clone());
         //Saves the Word document to  MemoryStream
         FileStream outputStream = new FileStream("Section" + i + ".docx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
         newDocument.Save(outputStream, FormatType.Docx);
@@ -62,7 +62,7 @@ using (WordDocument document = new WordDocument(@"Template.docx"))
         //Create new Word document
         WordDocument newDocument = new WordDocument();
         //Add cloned section into new Word document
-        newDocument.Sections.Add(section.Clone());
+        newDocument.Sections.Add(document.Sections[i].Clone());
         //Save and close the new Word documet
         newDocument.Save("Section" + i + ".docx");
         newDocument.Close();
