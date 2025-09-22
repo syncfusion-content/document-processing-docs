@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Docker Image Hosting Guide for Blazor Web App | Syncfusion
-description: Learn here all about creating Docker image from Blazor Web App.
+description: Learn here all about creating Docker image from Blazor Smart PDF Viewer Web App and ensure the images locally by hosting it as a link.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
@@ -28,10 +28,10 @@ Web Browser: Microsoft Edge, Mozilla Firefox, and Chrome.
 
 ## Steps to configure and run docker container
 ### Step1:
-Install the Racher desktop application [Rancher Desktop](https://github.com/rancher-sandbox/rancher-desktop/releases)
+Install the Rancher desktop application [Rancher Desktop](https://github.com/rancher-sandbox/rancher-desktop/releases)
 
 ### Step2:
-Open the rancher desktop application Select the dockerd (moby).
+Open the rancher desktop application Select the displayed option.
 ![Docker Moby](../images/docker-moby.png)
 
 ### Step3:
@@ -67,14 +67,14 @@ EXPOSE 8081
 {% endtabs %}
 
 ![Docker Support Line](../images/line-to-add-docker.png).
-N> Remove the `User` if not needed or change the User type to  `root` for providing elevated previleges.
+N> Remove the `User` if not needed or change the User type to  `root` for providing elevated privileges.
 
 ### Step6:
 Publish the image by building the DockerFile
 ![Build Docker File](../images/build-docker.png).
 
 ### Step7:
-Open the comment prompt or powershell and enter the following command to list the published docker images.
+Open the comment prompt or power shell and enter the following command to list the published docker images.
 
 {% tabs %}
 {% highlight c# tabtitle="Docker Image" %}
