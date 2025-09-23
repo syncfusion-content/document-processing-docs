@@ -13,7 +13,7 @@ To save a PDF file to Azure Blob Storage, follow the steps below.
 
 **Step 1:** Create the Azure Blob Storage account
 
-Sign in to the Azure portal and create a Storage account with the desired configuration. Record the connection string during setup. Within the Storage account, create a Blob container. For detailed guidance, see Create a Storage account and container in the [Azure portal](https://learn.microsoft.com/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal).
+Sign in to the Azure portal and create a Storage account with the desired configuration. Record the connection string during setup. Within the Storage account, create a Blob container. For detailed guidance, see Create a Storage account and container in the [Azure portal](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal).
 
 **Step 2:** Create a Simple SfPdfViewer Sample in Blazor
 
