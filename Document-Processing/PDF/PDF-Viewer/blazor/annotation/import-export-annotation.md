@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import and Export annotations in Blazor SfPdfViewer | Syncfusion
-description: Learn here all about import and export annotations in Syncfusion Blazor SfPdfViewer component and more.
+description: Learn how to import and export annotations as JSON in the Syncfusion Blazor SfPdfViewer component using the toolbar and API methods.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,40 +9,40 @@ documentation: ug
 
 # Import and Export annotations in Blazor SfPdfViewer Component
 
-The SfPdfViewer control provides the support to import and export annotations using JSON object in the PDF document.
+The SfPdfViewer component supports importing and exporting annotations as a JSON object in the loaded PDF document. The following sections describe how to perform these actions through the built-in toolbar and programmatically using the API.
 
-* Click the Add or Edit annotation button in the SfPdfViewer toolbar.
+* Select Add or Edit annotation in the SfPdfViewer toolbar to enable the annotation tools.
 
-![Blazor SfPdfViewer with Edit Button](../../blazor-classic/images/blazor-pdfviewer-edit-button.png)
+![SfPdfViewer toolbar with the Edit annotation button highlighted](../../blazor-classic/images/blazor-pdfviewer-edit-button.png)
 
-* The annotation toolbar will appear.
-* Click the Comment Panel button in the annotation toolbar.
+* The annotation toolbar appears.
+* Select Comment Panel in the annotation toolbar.
 
-![Blazor SfPdfViewer with Comment Panel](../../blazor-classic/images/blazor-pdfviewer-edit-sticknotes-comment.png)
+![Comment panel button shown in the annotation toolbar of SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-edit-sticknotes-comment.png)
 
-* The comments panel will be displayed.
-* Click the **More Option** button in the comment panel container.
+* The comment panel is displayed.
+* Select **More Option** in the comment panel container.
 
-![Displaying More Option in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-show-more-option.png)
+![More options menu opened in the comment panel of SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-show-more-option.png)
 
 ## Importing annotation to the PDF document
 
-* Click the Add or Edit annotation button in the SfPdfViewer toolbar.
-* The annotation toolbar will appear.
-* Click the Comment Panel button in the annotation toolbar.
-* The comments panel will displayed.
-* Click the **More Option** button in the comment panel container.
-* Select the Import Annotations Option.
+* Select Add or Edit annotation in the SfPdfViewer toolbar.
+* The annotation toolbar appears.
+* Select Comment Panel in the annotation toolbar.
+* The comment panel is displayed.
+* Select **More Option** in the comment panel container.
+* Choose Import Annotations.
 
-![Importing Annotation in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-import-annotation.png)
+![Import annotations option selected in the comment panel of SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-import-annotation.png)
 
-* Then the file explorer dialog will be opened. Choose the JSON file to be imported into the loaded PDF document.
+* A file explorer dialog opens. Choose the JSON file to import into the loaded PDF document.
 
-![Blazor PDFViewer with Imported Annotation](../../blazor-classic/images/blazor-pdfviewer-imported-annotation.png)
+![PDF document in SfPdfViewer after annotations have been imported from JSON](../../blazor-classic/images/blazor-pdfviewer-imported-annotation.png)
 
 ## Importing annotation using SfPdfViewer API
 
-You can import annotations using JSON file or JSON object in code behind like the following code snippet.
+Annotations can also be imported from a JSON file or JSON object in code-behind, as shown in the following example. The sample uses the SfPdfViewer2 component and its ImportAnnotationAsync method.
 
 ```cshtml
 
@@ -68,26 +68,26 @@ You can import annotations using JSON file or JSON object in code behind like th
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Import-Export/Annotations%20as%20JSON%20object).
 
-N>The JSON file for importing the annotation should be placed in the desired location and the path has to be provided correctly.
+N> Ensure that the JSON file used for importing annotations is available at the specified path. Paths are case-sensitive in some hosting environments.
 
 ## Exporting annotation from the PDF document
 
-The SfPdfViewer control provides the support to export the annotations as JSON file and JSON object using annotation toolbar.
+The SfPdfViewer component supports exporting annotations as a JSON file or JSON object using the annotation toolbar.
 
-* Click the Add or Edit annotation button in the SfPdfViewer toolbar.
-* The annotation toolbar will appear.
-* Click the Comment Panel button in the annotation toolbar.
-* The comments panel will be displayed.
-* Click the **More Option** button in the comment panel container.
-* Select the Export Annotations Option.
+* Select Add or Edit annotation in the SfPdfViewer toolbar.
+* The annotation toolbar appears.
+* Select Comment Panel in the annotation toolbar.
+* The comments panel is displayed.
+* Select **More Option** in the comments panel container.
+* Choose Export Annotations.
 
-![Exporting Annotation in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-export-annotation.png)
+![Export annotations option selected in the comments panel of SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-export-annotation.png)
 
-N>Export annotations will be in the disabled state when the loaded PDF document does not contain any annotations.
+N> The Export Annotations option is disabled when the loaded PDF document does not contain any annotations.
 
 ## Exporting annotation using SfPdfViewer API
 
-You can export annotations as JSON file in code behind like the following code snippet.
+Annotations can also be exported as a JSON file in code-behind using the ExportAnnotationAsync method, as shown in the following example.
 
 ```cshtml
 

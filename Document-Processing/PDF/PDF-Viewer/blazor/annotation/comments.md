@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comments in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about comments in Syncfusion Blazor SfPdfViewer component and much more details.
+description: Learn how to add, edit, and manage comments and replies in the Syncfusion Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Comments in Blazor SfPdfViewer Component
 
-The SfPdfViewer control provides options to add, edit, and delete the comments to the following annotation in the PDF documents:
+The SfPdfViewer component provides options to add, edit, and delete comments for the following annotation types in PDF documents:
 
 * Shape annotation
 * Stamp annotation
@@ -22,96 +22,96 @@ The SfPdfViewer control provides options to add, edit, and delete the comments t
 
 ## Adding a comment to the annotation
 
-Annotation comment, comment replies, and status can be added to the PDF document using the comment panel.
+Comments, replies, and status can be added to a PDF document using the comment panel.
 
 ### Comment panel
 
-Annotation comments can be added to the PDF using the comment panel. Comment panel can be opened by the following ways:
+Annotation comments can be added using the comment panel. Open the comment panel in any of the following ways:
 
 1. Using the annotation menu.
 
     * Click the Edit Annotation button in the SfPdfViewer toolbar. A toolbar appears below it.
-    * Click the Comment Panel button. A comment panel will appear.
+    * Click the Comment panel button. The comment panel opens.
 
-2. Using Context menu.
+2. Using the context menu.
 
-    * Select annotation in the PDF document and right-click it.
-    * Select comment option in the context menu that appears.
+    * Select an annotation in the PDF document and right-click it.
+    * Select the Comment option in the context menu.
 
-3. Using Mouse click.
+3. Using mouse click.
 
-    * Select annotation in the PDF document and double click it, a comment panel will appear.
+    * Select an annotation in the PDF document and double-click it to open the comment panel.
 
-If the comment panel is already in open state, you can select the annotations and add annotation comment using comment panel.
+If the comment panel is already open, select an annotation and add a comment using the panel.
 
 ### Adding comments
 
-* Select annotation in the PDF document and click it.
-* Selected annotation comment container is highlighted in the comment panel.
-* Now, you can add comment and comment replies using comment panel.
+* Select an annotation in the PDF document and click it.
+* The selected annotation’s comment container is highlighted in the comment panel.
+* Add a comment and any required replies using the comment panel.
 
 ![Adding Comments in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-add-new-comment.png)
 
 ### Adding Comment Replies
 
-* SfPdfViewer control provides an option to add multiple replies to the comment.
-* After adding the annotation comment, you can add reply to the comment.
+* The SfPdfViewer supports adding multiple replies to a comment.
+* After adding an annotation comment, add one or more replies as needed.
 
 ### Adding Comment or Reply Status
 
-* Select the Annotation Comments in the comment panel.
-* Click the more options button showing in Comments or reply container.
-* Select Set Status option in the context menu that appears.
-* Select the status of the annotation comment in the context menu that appears.
+* Select the annotation comment in the comment panel.
+* Click the More options button in the comment or reply container.
+* Select Set status in the context menu.
+* Choose the required status for the annotation comment.
 
 ![Blazor PDFViewer with Comment Status](../../blazor-classic/images/blazor-pdfviewer-comment-status.png)
 
 ### Editing the comments and comments replies of the annotations
 
-The comment, comment replies, and status of the annotation can be edited using the comment panel.
+Edit the comment, its replies, and the status of an annotation using the comment panel.
 
 ### Editing Comment or Comment Replies
 
-The annotation comment and comment replies can be edited by the following ways:
+Edit comments and replies in the following ways:
 
-1. Using Context menu.
+1. Using the context menu.
 
-    * Select the Annotation Comments in comment panel.
-    * Click the More option button showing in Comments or reply container.
-    * Select Edit option in the context menu that appears.
-    * Now, editable text box appears. You can change the content of the annotation comment or comment reply.
+    * Select the annotation comment in the comment panel.
+    * Click the More options button in the comment or reply container.
+    * Select Edit in the context menu.
+    * An editable text box appears to change the content of the comment or reply.
 
-2. Using Mouse Click.
+2. Using mouse click.
 
-    * Select the annotation comments in comment panel.
-    * Double click the comment or comment reply content.
-    * Now, editable text box appears. You can change the content of the annotation comment or comment reply.
+    * Select the annotation comment in the comment panel.
+    * Double-click the comment or reply content.
+    * An editable text box appears to change the content of the comment or reply.
 
 ### Editing Comment or Reply Status
 
-* Select the Annotation Comments in comment panel.
-* Click the more options button showing in Comments or reply container.
-* Select Set Status option in the context menu that appears.
-* Select the status of the annotation comment in the context menu that appears.
-* Status ‘None’ is the default state. If status set to ‘None’, the comments or reply does not appear.
+* Select the annotation comment in the comment panel.
+* Click the More options button in the comment or reply container.
+* Select Set status in the context menu.
+* Choose the required status for the annotation comment.
+* Status 'None' is the default. Choosing 'None' removes the status indicator from the comment or reply.
 
 ![Editing Comment in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-comment-editing.png)
 
 ### Delete Comment or Comment Replies
 
-* Select the Annotation Comments in comment panel.
-* Click the more options button shown in Comments or reply container.
-* Select Delete option in the context menu that appears.
+* Select the annotation comment in the comment panel.
+* Click the More options button in the comment or reply container.
+* Select Delete in the context menu.
 
 ![Deleting Comment in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-delete-comments.png)
 
-N> The annotation will be deleted on deleting the comment using comment panel.
+N> Deleting the root comment from the comment panel also deletes the associated annotation.
 
 ### Show or hide the Comment panel
 
-The SfPdfViewer control provides an option to show or hide the Comment panel by using the `CommentPanelVisible` property of the SfPdfViewerServer class.
+The SfPdfViewer component provides an option to show or hide the comment panel by using the `CommentPanelVisible` property.
 
-The following code snippet explains how to show the Comment panel.
+The following code snippet explains how to show the comment panel.
 
 ```cshtml
 
@@ -152,9 +152,9 @@ The following code snippet explains how to show the Comment panel.
 
 ## Add Comments and Reply Comments Programmatically
 
-The Blazor SfPdfViewer offers the capability to programmatically add the line annotation with Comment and Reply Comment to the annotation within the SfPdfViewer control using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+The Blazor SfPdfViewer supports programmatically adding a line annotation with a comment and reply comments using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
-Below is an example demonstrating how you can use this method to add Line annotation with Comment and Reply Comment to a PDF document:
+The following example demonstrates how to add a line annotation with a comment and reply comments to a PDF document:
 
 ```cshtml
 
@@ -242,7 +242,7 @@ Below is an example demonstrating how you can use this method to add Line annota
 
 ```
 
-This code will add a line annotation with comment and reply comment to the first page of the PDF document.
+This code adds a line annotation with a comment and reply comments to the first page of the PDF document.
 
 ![Programmatically Added Comment and Reply Comment in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-comment-reply-comment.png)
 
@@ -250,9 +250,9 @@ This code will add a line annotation with comment and reply comment to the first
 
 ## Edit Comments and Reply Comments Programmatically
 
-The Blazor SfPdfViewer offers the capability to programmatically edit the Comment and Reply Comment of the annotation within the SfPdfViewer control using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+The Blazor SfPdfViewer supports programmatically editing the comment and reply comments of an annotation using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
-Below is an example demonstrating how you can utilize this method to edit the Comment and Reply Comment of the annotation programmatically:
+The following example demonstrates how to edit the comment and reply comments programmatically:
 
 ```cshtml
 
@@ -296,7 +296,7 @@ Below is an example demonstrating how you can utilize this method to edit the Co
 }
 
 ```
-This code snippet will edit the comment and reply comment programmatically within the SfPdfViewer control.
+This code edits the comment and reply comments programmatically within the SfPdfViewer control.
 
 ![Programmatically Edit Comment and Reply Comment in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-comment-reply-comment.png)
 
@@ -304,11 +304,11 @@ This code snippet will edit the comment and reply comment programmatically withi
 
 ## Customizing DateTime Format
 
-The PDF Viewer provides the support to customize the date and time format displayed in the comment panel using the [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html). This feature allows you to tailor the appearance of date and time according to your preferences or regional standards.   
+The PDF Viewer supports customizing the date and time format displayed in the comment panel using the [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html). This feature tailors the appearance of date and time according to preferences or regional standards.
 
-The [DateTimeFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerCommentPanelSettings_DateTimeFormat) API in [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html) enables you to change the format of date and time displayed in the comment panel. 
+The [DateTimeFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerCommentPanelSettings_DateTimeFormat) API in [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html) changes the format of the date and time displayed in the comment panel.
 
-The following table describes various supported patterns
+The following table describes various supported patterns.
 
 | Format | Result |
 |---|---|
@@ -325,9 +325,9 @@ The following table describes various supported patterns
 | DateTime.Now.ToString("MM/dd/yyyy h:mm tt") | 05/29/2015 5:50 AM |
 | DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") | 05/29/2015 05:50:06 |
 | DateTime.Now.ToString("MMMM dd") | May 29 |
-| DateTime.Now.ToString("yyyy’-‘MM’-‘dd’T’HH’:’mm’:’ss.fffffffK") | 2015-05-16T05:50:06.7199222-04:00 |
-| DateTime.Now.ToString("ddd, dd MMM yyy HH’:’mm’:’ss ‘GMT’") | Fri, 16 May 2015 05:50:06 GMT |
-| DateTime.Now.ToString("yyyy’-‘MM’-‘dd’T’HH’:’mm’:’ss") | 2015-05-16T05:50:06 |
+| DateTime.Now.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss.fffffffK") | 2015-05-16T05:50:06.7199222-04:00 |
+| DateTime.Now.ToString("ddd, dd MMM yyyy HH':'mm':'ss 'GMT'") | Fri, 16 May 2015 05:50:06 GMT |
+| DateTime.Now.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss") | 2015-05-16T05:50:06 |
 | DateTime.Now.ToString("HH:mm") | 05:50 |
 | DateTime.Now.ToString("hh:mm tt") | 05:50 AM |
 | DateTime.Now.ToString("H:mm") | 5:50 |
@@ -335,7 +335,7 @@ The following table describes various supported patterns
 | DateTime.Now.ToString("HH:mm:ss") | 05:50:06 |
 | DateTime.Now.ToString("yyyy MMMM") | 2015 May |
 
-Here is a sample code snippet demonstrating how to apply this setting 
+Here is a sample code snippet demonstrating how to apply this setting.
 
 ```cshtml
 
@@ -352,7 +352,7 @@ Here is a sample code snippet demonstrating how to apply this setting
 } 
 
 ```
-This code implements date and time formatting for the comment panel of the PDF viewer 
+This code implements date and time formatting for the comment panel of the PDF Viewer.
 
 ![Customizing DateTime Format](../images/customizing_datetime_format.png)
 
@@ -360,11 +360,11 @@ This code implements date and time formatting for the comment panel of the PDF v
 
 ## Enabling Multiline Support 
 
-The multiline support feature in the comment panel enhances the functionality of the PDF Viewer by allowing users to input and display comments that span multiple lines. The PDF Viewer provides the support to enable multiline support in the comment panel using the [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html). 
+Multiline support in the comment panel allows users to input and display comments that span multiple lines. Enable multiline support using the [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html).
 
-The [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerCommentPanelSettings_Multiline) API in [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html) is used to enable or disable multiline support in the comment panel.
+The [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerCommentPanelSettings_Multiline) API in [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html) enables or disables multiline support in the comment panel.
 
-Here is a sample code snippet demonstrating how to apply this setting
+Here is a sample code snippet demonstrating how to apply this setting.
 
 ```cshtml
 
@@ -382,7 +382,7 @@ Here is a sample code snippet demonstrating how to apply this setting
 
 ```
 
-This code will enable multiline support in the Comment panel of the PDF Viewer
+This code enables multiline support in the comment panel of the PDF Viewer.
 
 ![Enabling Multiline Support](../images/enabling_multiline_support.png)
 
