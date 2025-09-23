@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploy SfPdfViewer in Blazor .NET MAUI on Windows | Syncfusion
-description: Learn how to deploy the SfPdfViewer in a Blazor .NET MAUI application on Windows.
+description: Learn how to deploy the Syncfusion Blazor SfPdfViewer in a Blazor .NET MAUI application on Windows.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
