@@ -18,9 +18,13 @@ The SfPdfViewer includes a built-in toolbar that offers the following options:
 * Text selection tool
 * Text search
 * Print
+* SubmitForm
+* Comment Tool
 * Download
 * Undo and redo
 * Various annotation tools
+* Form designer tools
+* Redaction annotation tools
 * Bookmark panel
 * Thumbnail panel
 
@@ -114,7 +118,7 @@ The following code snippet explains how to show or hide navigation toolbar using
 
 ## Show or hide the toolbar item
 
-Toolbar items can be shown or hidden by configuring the `PdfViewerToolbarSettings` class. The following example demonstrates how to display only the specified items in the toolbar. The toolbar will render the items listed in the collection.
+Toolbar items can be shown or hidden by configuring the `PdfViewerToolbarSettings` class. The following example demonstrates how to display only the specified items in the toolbar. The toolbar will only render the items listed in the collection.
 
 ```cshtml
 
