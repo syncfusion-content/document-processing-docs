@@ -4,7 +4,6 @@ description: Open and save PDF document in Blazor application using Syncfusion B
 platform: document-processing
 control: PDF
 documentation: UG
-layout: post
 keywords: blazor save pdf, blazor load pdf, c# save pdf, c# load pdf
 ---
 

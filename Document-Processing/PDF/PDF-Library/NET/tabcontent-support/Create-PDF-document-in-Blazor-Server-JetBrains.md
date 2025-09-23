@@ -122,7 +122,7 @@ Step 6: Inject `ExportService` into `FetchData.razor` using the following code.
 {% tabs %}
 {% highlight CSHTML %}
 
-@inject ExportService exportService
+@inject ExportToFileService exportService
 @inject Microsoft.JSInterop.IJSRuntime JS
 @using  System.IO;
 

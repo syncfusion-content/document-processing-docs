@@ -4,7 +4,6 @@ description: Learn how to create or generate a PDF file in Blazor applications w
 platform: document-processing
 control: PDF
 documentation: UG
-layout: post
 keywords: blazor pdf, pdf generation, document creation, blazor server, blazor wasm, pdf library
 ---
 
