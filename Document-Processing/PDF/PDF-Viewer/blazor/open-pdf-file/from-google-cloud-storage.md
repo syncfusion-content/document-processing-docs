@@ -17,7 +17,7 @@ Open the Google Cloud Console and navigate to `IAM & Admin` > `Service accounts`
 
 **Step 2:** Create a simple SfPdfViewer sample in Blazor.
 
-Follow the [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview) guide to create a basic Blazor application with the SfPdfViewer component. This provides the required project setup and a working viewer instance.
+Follow the [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) guide to create a basic Blazor application with the SfPdfViewer component. This provides the required project setup and a working viewer instance.
 
 **Step 3:** Include the following namespaces in the Index.razor file.
 

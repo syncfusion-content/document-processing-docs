@@ -17,7 +17,7 @@ Create a project in Google Developers Console and enable the Google Drive API. O
 
 **Step 2:** Create a simple SfPdfViewer sample in Blazor
 
-Follow the [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview) guide to create a basic Blazor application with the SfPdfViewer component.
+Follow the [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) guide to create a basic Blazor application with the SfPdfViewer component.
 
 **Step 3:** Include the following namespaces in the **Index.razor** file.
 

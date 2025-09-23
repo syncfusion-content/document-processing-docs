@@ -17,7 +17,7 @@ Set up an AWS account by following the official guide: [AWS Management Console](
 
 **Step 2:** Create a simple SfPdfViewer sample in Blazor
 
-Follow the steps in the Blazor Server getting started guide for PDF Viewer to create a basic sample: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app. This provides the required project setup and SfPdfViewer configuration.
+Follow the steps in the Blazor Server [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) guide for PDF Viewer to create a basic sample. This provides the required project setup and SfPdfViewer configuration.
 
 **Step 3:** Include the following namespaces in the **Index.razor** file.
 
