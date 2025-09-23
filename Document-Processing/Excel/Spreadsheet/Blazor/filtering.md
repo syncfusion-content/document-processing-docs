@@ -31,7 +31,7 @@ The filter dialog appears when clicking on a column's filter icon and provides t
 
 * **Sort options** - Provides commands for sorting data in **Ascending** or **Descending** order.
 * **Clear filter** - Removes any filtering applied to the selected column.
-* **Data type-specific filters** - Displays submenus tailored to the column's content type, such as **Text Filters**, **Number Filters**, or **Date Filters**.
+* **Data type-specific filters** - Displays submenu tailored to the column's content type, such as **Text Filters**, **Number Filters**, or **Date Filters**.
 * **Search box** - Enables quick lookup of values within the filter list.
 * **Select All** checkbox - Toggles the selection of all available values in the column.
 * **Value** checkboxes - Lists individual checkboxes for each unique value found in the column.
