@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Deploy Blazor Server SfPdfViewer to AWS Elastic Beanstalk (Linux) | Syncfusion
-description: Add the Syncfusion Blazor PDF Viewer (SfPdfViewer2) to a Blazor Server app and deploy it to AWS Elastic Beanstalk on Linux using Visual Studio.
+title: Deploy Blazor SfPdfViewer to AWS Elastic Beanstalk | Syncfusion
+description: Add the Syncfusion Blazor PDF Viewer to a Blazor Server app and deploy it to AWS Elastic Beanstalk on Linux.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -110,7 +110,7 @@ Run the application to display the PDF file in the Syncfusion&reg; Blazor PDF Vi
 ## Steps to publish as AWS Elastic Beanstalk
 
 1. Right-click the project and select Publish to AWS Elastic Beanstalk (Legacy).
-![Publish to AWS Elastic Beanstalk (Legacy) in Visual Studio](aws-benstalk-deployment-images/beanstalk-publish.png)
+![Publish to AWS Elastic Beanstalk in Visual Studio](aws-benstalk-deployment-images/beanstalk-publish.png)
 2. Select the deployment target Create a new application environment, and then click Next.
 ![Create a new application environment selection](aws-benstalk-deployment-images/beanstalk-instance.png)
 3. Choose an environment name. The URL is assigned automatically—verify availability. If the URL is available, click Next; otherwise, change the URL and retry.

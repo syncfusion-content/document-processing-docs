@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with SfPdfViewer in Blazor WSL (Windows Subsystem for Linux) | Syncfusion
+title: Getting started with SfPdfViewer in Blazor WSL | Syncfusion
 description: Learn how to run the SfPdfViewer control in a Blazor app using Windows Subsystem for Linux (WSL).
 platform: document-processing
 control: SfPdfViewer
