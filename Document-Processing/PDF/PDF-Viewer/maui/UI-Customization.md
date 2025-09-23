@@ -13,7 +13,7 @@ This section walks you through the UI customization options supported in the [Sf
 
 ## Customize the loading indicator 
  
-To customize the loading indicator while loading the pdf and rendering the pages, merge the `SfPdfViewerTheme` key into application resources, you can customize the appearance of SfPdfViewer without merging common theme resource and control style resource dictionaries. Set the color of the loading indicator using the [Themes key for .NET MAUI PdfViewer](https://help.syncfusion.com/maui/themes/keys). Refer the code example below to disable the loading indicator.
+You can customize the loading indicator while loading the pdf and rendering the pages, merge the `SfPdfViewerTheme` key into application resources, you can customize the appearance of SfPdfViewer without merging common theme resource and control style resource dictionaries. Set the color of the loading indicator using the [Themes key for .NET MAUI PdfViewer](https://help.syncfusion.com/maui/themes/keys). Refer the code example below to disable the loading indicator.
 
 {% tabs %}
 {% highlight xaml tabtitle="App.xaml" %}
