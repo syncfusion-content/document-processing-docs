@@ -1,29 +1,29 @@
 ---
 layout: post
-title: Deploy SfPdfViewer in Blazor MAUI in windows | Syncfusion
-description: Learn how to deploy SfPdfViewer in Blazor MAUI Application on Windows in Syncfusion Blazor SfPdfViewer component and much more details.
+title: Deploy SfPdfViewer in Blazor .NET MAUI on Windows | Syncfusion
+description: Learn how to deploy the SfPdfViewer in a Blazor .NET MAUI application on Windows.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# View PDF files using PDF Viewer Component in the Blazor MAUI app 
+# View PDF files using the PDF Viewer in a Blazor .NET MAUI app
 
-In this section, we'll guide you through the process of adding Syncfusion&reg; Blazor PDF Viewer component to your Blazor Maui app. We'll break it down into simple steps to make it easy to follow.
+This article describes how to add the Syncfusion&reg; Blazor PDF Viewer component to a Blazor .NET MAUI app and deploy it on Windows.
 
 ## Prerequisites
 
-To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin).
+To use the .NET MAUI project templates, install the Mobile development with .NET workload for Visual Studio. For installation details, see the Microsoft documentation: [Install .NET MAUI](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin).
 
-## Create a new Blazor MAUI App in Visual Studio
+## Create a new Blazor .NET MAUI app in Visual Studio
 
-Create a new Blazor MAUI app and name it **PDFViewerGettingStarted**.
+Create a new Blazor .NET MAUI app and name it **PDFViewerGettingStarted**.
 
-N> The PDF Viewer component is supported from .NET 6.0 onwards.
+N> The PDF Viewer component is supported on .NET 6.0 and later.
 
-## Install PDF Viewer NuGet package in Blazor Maui App
+## Install PDF Viewer NuGet packages in the Blazor .NET MAUI app
 
-Add the following NuGet packages into the Blazor Maui app.
+Add the following NuGet packages to the Blazor .NET MAUI app.
 
 * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
@@ -35,7 +35,7 @@ Add the following NuGet packages into the Blazor Maui app.
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
-@using Syncfusion.Blazor 
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.SfPdfViewer
 
 {% endhighlight %}
@@ -98,9 +98,9 @@ Add the following stylesheet and script to the head section of the **~/wwwroot/i
 {% endhighlight %}
 {% endtabs %}
 
-## Add PDF Viewer component
+## Add the PDF Viewer component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -121,34 +121,34 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) c
 {% endhighlight %}
 {% endtabs %}
 
-N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property value is not provided, the PDF Viewer component will be rendered without loading a PDF document. Users can then use the open option from the toolbar to browse and open a PDF as required.
+N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property is not set, the PDF Viewer renders without loading a PDF document. Users can use the Open option in the toolbar to browse and open a PDF as needed.
 
 ## Run on Windows
 
-Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
+Run the sample on a Windows machine to execute the Blazor .NET MAUI app.
 
-![Run Windows machine](gettingstarted-images/Windows-machine.png)
+![Running the app on a Windows machine](gettingstarted-images/Windows-machine.png)
 
-Upon successfully launching the application, the PDF Viewer component will seamlessly render the specified PDF document within its interface.
+After the application launches, the PDF Viewer renders the specified PDF document.
 
-![Blazor SfPdfViewer Component](gettingstarted-images/Windows-maui-output.png)
+![Blazor SfPdfViewer rendering the PDF document](gettingstarted-images/Windows-maui-output.png)
 
 ## Run on Android
 
-To run the PDF Viewer in a Blazor Android MAUI application using the Android emulator, follow these steps:
+To run the PDF Viewer in a Blazor .NET MAUI Android application using the Android emulator, follow these steps:
 
-![Run Windows machine](gettingstarted-images/android-maui.png)
+![Android emulator configuration for .NET MAUI](gettingstarted-images/android-maui.png)
 
-Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
+For setup and usage, see [Android Emulator setup for .NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows).
 
-N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
+N> If any errors occur while using the Android Emulator, see [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor SfPdfViewer Component](gettingstarted-images/android-emulator.png)
+![Blazor SfPdfViewer running in the Android emulator](gettingstarted-images/android-emulator.png)
 
->[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorWindow).
+>[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorWindow).
 
 ## See also
 
-* [Supported Features: Desktop vs Mobile](./features#supported-features-desktop-vs-mobile).
+* [Supported features: desktop vs. mobile](./features#supported-features-desktop-vs-mobile)
 
-* [Render PDF Document from embedded source in the MAUI Android app](../how-to/deploy-maui-using-android-emulator).
+* [Render a PDF document from an embedded source in the .NET MAUI Android app](../how-to/deploy-maui-using-android-emulator)
