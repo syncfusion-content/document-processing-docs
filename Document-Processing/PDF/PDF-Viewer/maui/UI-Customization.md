@@ -38,6 +38,6 @@ To disable the loading indicator while loading the pdf and rendering the pages, 
 {% highlight xaml %} 
 <Color x:Key="SfPdfViewerLoadingIndicatorColor">Transparent</Color> 
 {% endhighlight %} 
-{% endtabs %}  
+{% endtabs %}
 
 N> For complete customization of the PDF Viewer, refer to the [theme user guide](https://help.syncfusion.com/maui/themes/themes) for detailed instructions. You can also explore the [sample project](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Styles/PDFViewerThemes), which demonstrates the custom theme implementation for the PDF Viewer in .NET MAUI applications.
