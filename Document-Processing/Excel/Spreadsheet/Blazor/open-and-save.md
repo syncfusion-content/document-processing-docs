@@ -48,7 +48,7 @@ To load Excel files programmatically, they can be converted into byte arrays. Th
 {% endtabs %}
 
 ### Open an Excel file from a Base64 string
-You can load an Excel file encoded as a Base64 string by converting it to a byte array and then into a stream. This approach is effective when retrieving file data from a database or API.
+An Excel file encoded as a Base64 string can be loaded into the Spreadsheet component by converting the string into a byte array and then into a stream. This method is effective when retrieving file data from a database or an API.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
