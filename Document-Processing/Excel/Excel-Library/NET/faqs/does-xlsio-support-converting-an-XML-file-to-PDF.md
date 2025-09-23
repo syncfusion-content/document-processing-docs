@@ -1,6 +1,6 @@
 ---
 title: Converting an XML file to PDF | Syncfusion
-description: Learn whether Syncfusion XlsIO supports converting an XML file to PDF.
+description: This page explains whether Syncfusion XlsIO supports converting an XML file to PDF using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
