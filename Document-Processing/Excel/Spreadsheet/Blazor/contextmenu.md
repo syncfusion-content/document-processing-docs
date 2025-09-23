@@ -13,7 +13,7 @@ The context menu enhances interaction with the Syncfusion Blazor Spreadsheet com
 N> When the `EnableContextMenu` property is set to **false**, the context menu does not appear upon right-clicking any element in the component.
 
 
-## Context Menu options categorized by Element
+## Context Menu Options Based on Spreadsheet Element Type
 
 The context menu options are dynamically adjusted based on the specific element in the Spreadsheet that is right-clicked. Each element displays context-specific functionality relevant to its type.
 
