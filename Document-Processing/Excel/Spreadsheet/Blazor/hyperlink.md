@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hyperlinks in the Blazor Spreadsheet component | Syncfusion
-description: Learn how to insert, edit, remove, and manage hyperlinks in the Syncfusion Blazor Spreadsheet component, including UI interactions, programmatic methods, and events.
+description: Learn how to insert, edit, remove, and manage hyperlinks in the Syncfusion Blazor Spreadsheet component,programmatic methods, and events.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
