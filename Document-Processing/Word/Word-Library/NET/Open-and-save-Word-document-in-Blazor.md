@@ -154,7 +154,7 @@ public static class FileUtils
 {% endtabs %}
 
 Step 11: Add JavaScript function to `_Host.cshtml`.
-Add the following JavaScript function in the `_Host.cshtml` filse located in the `Pages` folder.
+Add the following JavaScript function in the `_Host.cshtml` file located in the `Pages` folder.
 
 {% tabs %}
 
