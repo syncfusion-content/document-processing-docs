@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Designer UI interactions in Blazor PDF Viewer | Syncfusion
-description: Learn about UI interactions in the Form Designer of the Syncfusion Blazor PDF Viewer Component.
+description: Learn about UI interactions in the Form Designer of the Syncfusion Blazor PDF Viewer (SfPdfViewer2) component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
