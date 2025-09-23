@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open PDF files from Box cloud storage in Blazor SfPdfViewer | Syncfusion
+title: Open PDF files from cloud storage in Blazor SfPdfViewer | Syncfusion
 description: Learn how to open PDF files from Box cloud storage in the Syncfusion Blazor SfPdfViewer component and the Box .NET SDK.
 platform: document-processing
 control: SfPdfViewer

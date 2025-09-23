@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Open PDF file from AWS S3
+# Open PDF file from AWS S3 in SfPdfViewer
 
 To load a PDF file from AWS S3 in the SfPdfViewer component, follow the steps below.
 
