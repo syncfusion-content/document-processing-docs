@@ -105,7 +105,7 @@ N> Deleting a Named Range used in formulas may cause formula errors. Ensure the 
 
 ## Supported Formulas
 
-The Spreadsheet Component supports a wide range of built-in formulas, enabling powerful data analysis and manipulation. Below is the list of formulas supported in the Spreadsheet Component:
+The Spreadsheet component supports a wide range of built-in formulas, enabling powerful data analysis and manipulation. Below is the list of formulas supported in the Spreadsheet component:
 
 <table>
 <tr>
