@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Create Word document in Blazor | DocIO | Syncfusion 
 description: Create Word documents without Microsoft Word or interop dependencies in Blazor applications using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
 platform: document-processing
@@ -265,7 +264,7 @@ Click the Start button (green arrow) or press <kbd>F5</kbd> to run the applicati
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Blazor/Blazor-Server-app).
 
-Upon executing the program, the Word document will be generated as follows:
+Upon executing the program, the **Word document** will be generated as follows:
 
 ![Blazor Server app output Word document](Blazor_Images/Blazor_Output.png)
 
@@ -291,7 +290,7 @@ Step 1: Create a new C# Blazor Server app project.
 
 Step 2: Install the `Syncfusion.DocIO.Net.Core` NuGet package.
 To **create a Word document in a Blazor Server app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) into your Blazor project.
-*   Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+*   Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (back-tick) to open the integrated terminal in Visual Studio Code.
 *   Ensure you are in the project root directory where your `.csproj` file is located.
 *   Run the command `dotnet add package Syncfusion.DocIO.Net.Core` to install the NuGet package.
 
@@ -535,7 +534,7 @@ dotnet run
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Blazor/Blazor-Server-app).
 
-Upon executing the program, the Word document will be generated as follows:
+Upon executing the program, the **Word document** will be generated as follows:
 
 ![Blazor Server app output Word document](Blazor_Images/Blazor_Output.png)
 
@@ -802,7 +801,7 @@ Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to 
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Blazor/Blazor-Server-app).
 
-Upon executing the program, the Word document will be generated as follows:
+Upon executing the program, the **Word document** will be generated as follows:
 
 ![Blazor Server app output Word document](Blazor_Images/Blazor_Output.png)
 
@@ -1029,7 +1028,7 @@ Click the Start button (green arrow) or press <kbd>F5</kbd> to run the applicati
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Blazor/Blazor-WASM-app).
 
-Upon executing the program, the Word document will be generated as follows:
+Upon executing the program, the **Word document** will be generated as follows:
 
 ![Blazor WASM output Word document](Blazor_Images/Blazor_Output.png)
 
@@ -1057,7 +1056,7 @@ Step 1: Create a new C# Blazor WASM app project.
 
 Step 2: Install the `Syncfusion.DocIO.Net.Core` NuGet package.
 To **create a Word document in a Blazor WASM app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) into your Blazor project.
-*   Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+*   Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (back-tick) to open the integrated terminal in Visual Studio Code.
 *   Ensure you are in the project root directory where your `.csproj` file is located.
 *   Run the command `dotnet add package Syncfusion.DocIO.Net.Core` to install the NuGet package.
 
@@ -1265,7 +1264,7 @@ dotnet run
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Blazor/Blazor-WASM-app).
 
-Upon executing the program, the Word document will be generated as follows:
+Upon executing the program, the **Word document** will be generated as follows:
 
 ![Blazor WASM output Word document](Blazor_Images/Blazor_Output.png)
 
@@ -1501,7 +1500,7 @@ Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to 
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Blazor/Blazor-WASM-app).
 
-Upon executing the program, the Word document will be generated as follows:
+Upon executing the program, the **Word document** will be generated as follows:
 
 ![Blazor WASM output Word document](Blazor_Images/Blazor_Output.png)
 
