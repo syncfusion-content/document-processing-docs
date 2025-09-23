@@ -43,7 +43,7 @@ You can enable or disable text selection by setting the [EnableTextSelection](ht
 
 In this mode, users can pan and scroll pages in the loaded PDF document in the SfPdfViewer, but the text selection cannot be performed.
 
-You can change the interaction mode of SfPdfViewer using the [InteractionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_InteractionMode) property. The interaction mode can be switched at runtime, and the change takes effect immediately in the SfPdfViewer.
+The interaction mode of the SfPdfViewer component can be modified using the [InteractionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_InteractionMode) property. This property supports runtime updates, and any changes are applied immediately to the viewer.
 
 ```cshtml
 
@@ -61,7 +61,7 @@ You can change the interaction mode of SfPdfViewer using the [InteractionMode](h
 ```
 ## Disable interaction with Annotations
 
-You can disable annotation interactions—such as dragging, resizing, and deleting—by using the `IsLock` property of [AnnotationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AnnotationSettings).
+Annotation interactions such as dragging, resizing, and deleting can be disabled by setting the `IsLock` property in the [AnnotationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AnnotationSettings) configuration.
 
 The following code illustrates how to disable the annotation interaction.
 
