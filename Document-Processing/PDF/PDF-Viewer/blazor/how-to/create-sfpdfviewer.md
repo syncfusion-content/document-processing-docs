@@ -1,6 +1,6 @@
 ---
 layout: post
-title: View the created PDF document | Syncfusion
+title: Preview the Generated PDF Document | Syncfusion
 description: Learn how to display a runtime-generated PDF in the Syncfusion Blazor SfPdfViewer using the Created event.
 platform: document-processing
 control: SfPdfViewer
