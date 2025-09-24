@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Identify if the Viewer has values in the Undo, Redo stack | Syncfusion
-description: Learn how to identify if the Viewer has values in Undo, Redo stack in Syncfusion Blazor SfPdfViewer component and more.
+title: Determine undo and redo availability in Blazor SfPdfViewer | Syncfusion
+description: Learn how to determine whether undo and redo actions are available in the Blazor SfPdfViewer by binding CanUndo and CanRedo, with a working example.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Identify if the SfPdfViewer has values in the Undo, Redo collections
+# Determine whether SfPdfViewer has values in the undo and redo collections
 
-Syncfusion&reg; Blazor SfPdfViewer component allows you to identify if the SfPdfViewer has values in the Undo and Redo collections using the [CanUndo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanUndo) and [CanRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanRedo) APIs of the SfPdfViewer.
+The Blazor SfPdfViewer makes it possible to determine whether undo and redo history is available by using the [CanUndo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanUndo) and [CanRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanRedo). In SfPdfViewer2, bind these properties to boolean fields to reflect availability in the UI.
 
-The following code example shows how to achieve this based on the Undo Redo actions.
+The following example binds these properties and enables or disables the buttons as the undo and redo history changes.
 
 ```cshtml
 
@@ -70,4 +70,4 @@ else
 
 ```
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Identify%20the%20PdfViewer%20has%20Undo%2C%20Redo)
+[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Identify%20the%20PdfViewer%20has%20Undo%2C%20Redo)

@@ -1,34 +1,32 @@
 ---
 layout: post
-title: Coordinate Conversion Between Page and Client Points | Syncfusion
-description: Learn here all about how to perform coordinate conversion between page and client points into Syncfusion Blazor SfPdfViewer component and more.
+title: Convert between page and client coordinates | Syncfusion
+description: Learn how to convert between page and client coordinates in the Blazor SfPdfViewer using JavaScript interop helper functions.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Coordinate Conversion Between Page and Client Points.
+# Convert between page and client coordinates
 
-The PDF viewer provides two essential conversion methods for translating between the document's internal page coordinate system and the client's browser coordinate system:
+Use JavaScript interop helper functions to translate between the document page coordinate system and the browser client (viewport) coordinate system:
 
-1. **Converting Page Coordinates to Client Coordinates**
+1. Converting page coordinates to client coordinates
 
-   - `convertPagePointToClientPoint`: Transforms document page coordinates to browser viewport coordinates
+   - `convertPagePointToClientPoint`: Transforms document page coordinates to browser viewport coordinates.
 
-   
+2. Converting client coordinates to page coordinates
 
-2. **Converting Client Coordinates to Page Coordinates**
+   - `convertClientPointToPagePoint`: Transforms browser viewport coordinates to document page coordinates.
 
-   - `convertClientPointToPagePoint`: Transforms browser viewport coordinates to document page coordinates
+## Converting page coordinates to client coordinates
+- ConvertPagePointToClientPoint
 
-## Converting Page Coordinates to Client Coordinates
-- **ConvertPagePointToClientPoint**
+Translate a point from the document page coordinate system to the browser client (viewport) coordinate system.
 
-This method is used to translate a point from the document's page coordinate system to the browser's client (viewport) coordinate system. 
+The following example shows how to convert page coordinates to client coordinates in a Blazor component.
 
-The following code example shows how to convert page coordinates to client coordinates into the blazor component.
-
-**Step 1:** Add a script file to your application and refer it to the head tag.
+**Step 1:** Add a JavaScript file to the app and reference it in the head element.
 
 ```cshtml
 
@@ -38,7 +36,7 @@ The following code example shows how to convert page coordinates to client coord
 
 ```
 
-**Step 2:** Add the following code to render the JS component in the blazor to the newly added JS file.
+**Step 2:** Add the following code to the JavaScript file.
 
 ```javascript
 
@@ -53,7 +51,7 @@ window.convertPagePointToClientPoint = function (pagePoint) {
 
 ```
 
-**Step 3:** Add the following code to the blazor component.
+**Step 3:** Add the following code to the Blazor component.
 
 ```cshtml
 
@@ -89,16 +87,16 @@ window.convertPagePointToClientPoint = function (pagePoint) {
 }
 
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Coordinate%20Conversion%20Between%20Page%20and%20Client%20Points)
+[View the coordinate conversion sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Coordinate%20Conversion%20Between%20Page%20and%20Client%20Points)
 
-## Converting Client Coordinates To Page Coordinates
-- **ConvertClientPointToPagePoint** 
+## Converting client coordinates to page coordinates
+- ConvertClientPointToPagePoint 
 
-This method is used to translate a point from the browser's client (viewport) coordinate system to the document's page coordinate system.
+Translate a point from the browser client (viewport) coordinate system to the document page coordinate system.
 
-The following code example shows how to convert client coordinates to page coordinates into the blazor component.
+The following example shows how to convert client coordinates to page coordinates in a Blazor component.
 
-**Step 1:** Add a script file to your application and refer it to the head tag.
+**Step 1:** Add a JavaScript file to the app and reference it in the head element.
 
 ```cshtml
 
@@ -108,7 +106,7 @@ The following code example shows how to convert client coordinates to page coord
 
 ```
 
-**Step 2:** Add the following code to render the JS component in the blazor to the newly added JS file.
+**Step 2:** Add the following code to the JavaScript file.
 
 ```javascript
 
@@ -123,7 +121,7 @@ window.convertClientPointToPagePoint = function (clientPoint) {
 
 ```
 
-**Step 3:** Add the following code to the blazor component.
+**Step 3:** Add the following code to the Blazor component.
 
 ```cshtml
 
@@ -161,4 +159,4 @@ window.convertClientPointToPagePoint = function (clientPoint) {
     }
 }
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Coordinate%20Conversion%20Between%20Page%20and%20Client%20Points)
+[View the coordinate conversion sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Coordinate%20Conversion%20Between%20Page%20and%20Client%20Points)

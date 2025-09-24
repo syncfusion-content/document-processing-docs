@@ -1,18 +1,21 @@
 ---
 layout: post
-title: Improve the performance using CDN | Syncfusion
-description: Learn here all about how to improve the performance using CDN in Blazor SfPdfViewer component and more.
+title: Improve performance using a CDN | Syncfusion
+description: Learn how to improve performance in the Blazor SfPdfViewer by using versioned CDN script references, understanding caching behavior, and placing references correctly.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Improve the performance using CDN in Blazor SfPdfViewer component
+# Improve performance using a CDN in the Blazor SfPdfViewer
 
-When all the JavaScript files in the sample are referenced from the application's hosted location or NuGet location, each time we fetch them from that location, causing delays in fetching the script files. This delay can potentially slow down component rendering. To mitigate this performance issue, you can reference the script from a **CDN**. If the file is not available in the browser cache, it will be retrieved only from the hosted location. Subsequent fetches will retrieve the script file from the browser cache unless the file has been modified.
+Referencing scripts from the application's hosted or NuGet location can add network overhead and slow initial rendering. To reduce latency, reference the scripts from a content delivery network (CDN). The browser will download the assets once and then reuse them from cache on subsequent loads (unless the version changes).
 
-The Syncfusion&reg; Blazor SfPdfViewer component allows to improve performance by referring the below **CDN** link in **~/Pages/Layout.cshtml** or **~/Pages/_Host.cshtml** file.
+Improve load performance by referencing the following CDN links in the app's host page:
+- Blazor Server: **~/Pages/_Host.cshtml**
+- Blazor WebAssembly: **wwwroot/index.html**
 
+Use version-pinned URLs and update them when upgrading the package.
 
 ```html
 
@@ -25,10 +28,10 @@ The Syncfusion&reg; Blazor SfPdfViewer component allows to improve performance b
 
 ```
 
-We have a file named pdfium.js in our source. Whenever that file is fetched, it is downloaded from the hosted location while referring to the script from the NuGet. Below is a clear image that illustrates this process.
+The viewer depends on pdfium.js (and its companion pdfium.wasm). When scripts are referenced from NuGet or a hosted path, these files download from that location on first use. The following image shows the network behavior in this case.
 
-![Using Nuget](../getting-started/gettingstarted-images/Filesize_using_NuGet.png)
+![Network and file size when referencing scripts from NuGet](../getting-started/gettingstarted-images/Filesize_using_NuGet.png)
 
-When referencing the script from the **CDN**, it is initially fetched from the hosted location. Subsequently, it is retrieved from the browser cache. The image below provides a clear illustration of this process.
+When referencing scripts from a **CDN**, assets are fetched from the CDN on first load and then served from the browser cache on subsequent loads, improving perceived performance. The image below illustrates this behavior.
 
-![Using CDN](../getting-started/gettingstarted-images/Filesize_using_CDN.png)
+![Network and file size when referencing scripts from a CDN](../getting-started/gettingstarted-images/Filesize_using_CDN.png)
