@@ -4,7 +4,7 @@ description: Learn how to convert an HTML to PDF file in a Blazor application us
 platform: document-processing
 control: PDF
 documentation: UG
-keywords: HTML to PDF, Blazor PDF conversion, .NET, convert html to pdf blazor
+keywords: Assemblies
 ---
 
 # Convert HTML to PDF in Blazor
