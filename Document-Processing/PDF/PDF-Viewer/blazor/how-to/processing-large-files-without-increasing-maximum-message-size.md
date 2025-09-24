@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Process large files without increasing maximum message size | Syncfusion
+title: Process large PDFs without upping message size | Syncfusion
 description: Learn how to process large PDFs in the Blazor SfPdfViewer by enabling chunk messaging to avoid SignalR hub message size limits.
 platform: document-processing
 control: SfPdfViewer
