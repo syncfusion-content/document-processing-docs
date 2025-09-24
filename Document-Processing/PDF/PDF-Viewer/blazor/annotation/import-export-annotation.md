@@ -42,25 +42,37 @@ The SfPdfViewer component supports importing and exporting annotations as a JSON
 
 ## Importing annotation using SfPdfViewer API
 
-Annotations can also be imported from a JSON file or JSON object in code-behind, as shown in the following example. The sample uses the SfPdfViewer2 component and its ImportAnnotationAsync method.
+Annotations can also be imported from a JSON or XFDF file, or from an in-memory object, in code-behind using the ImportAnnotationAsync method. The following example uses the SfPdfViewer2 component.
+
+Supported formats:
+- [JSON](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationDataFormat.html#Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_Json)
+- [XFDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationDataFormat.html#Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_Xfdf)
 
 ```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfButton OnClick="@OnImportAnnotationsClick">Import Annotation</SfButton>
+<SfButton OnClick="@OnImportAnnotationsJson">Import Annotation JSON</SfButton>
+<SfButton OnClick="@OnImportAnnotationsXfdf">Import Annotation XFDF</SfButton>
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
     SfPdfViewer2 Viewer;
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public async void OnImportAnnotationsClick(MouseEventArgs args)
+    public async void OnImportAnnotationsJson(MouseEventArgs args)
     {
         //The json file has been placed inside the data folder.
         byte[] bytes = System.IO.File.ReadAllBytes("wwwroot/Data/PDF_Succinctly.json");
-        await Viewer.ImportAnnotationAsync(new MemoryStream(bytes));
+        await Viewer.ImportAnnotationAsync(new MemoryStream(bytes), AnnotationDataFormat.Json);
+    }
+
+    public async void OnImportAnnotationsXfdf(MouseEventArgs args)
+    {
+        //The json file has been placed inside the data folder.
+        byte[] bytes = System.IO.File.ReadAllBytes("wwwroot/Data/PDF_Succinctly.xfdf");
+        await Viewer.ImportAnnotationAsync(new MemoryStream(bytes), AnnotationDataFormat.Xfdf);
     }
 }
 
@@ -87,23 +99,52 @@ N> The Export Annotations option is disabled when the loaded PDF document does n
 
 ## Exporting annotation using SfPdfViewer API
 
-Annotations can also be exported as a JSON file in code-behind using the ExportAnnotationAsync method, as shown in the following example.
+Annotations can also be exported as a file or as a stream in code-behind using the ExportAnnotationAsync and ExportAnnotationAsStreamAsync methods. Supported formats:
+
+- [JSON](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationDataFormat.html#Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_Json)
+- [XFDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationDataFormat.html#Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_Xfdf)
 
 ```cshtml
 
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
-<SfButton OnClick="@OnExportAnnotationsClick">Export Annotation</SfButton>
+<SfButton OnClick="@OnExportAnnotationsJson">Export Annotation as Json</SfButton>
+<SfButton OnClick="@OnExportAnnotationsXfdf">Export Annotation as Xfdf</SfButton>
+<SfButton OnClick="@OnExportAsStreamJson">Export Stream as Json</SfButton>
+<SfButton OnClick="@OnExportAsStreamXfdf">Export Stream as Xfdf</SfButton>
+<SfButton OnClick="@OnImportStreamJson">Import Annotation JSON</SfButton>
+<SfButton OnClick="@OnImportStreamXfdf">Import Annotation XFDF</SfButton>
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
     SfPdfViewer2 Viewer;
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
-
-    public async void OnExportAnnotationsClick(MouseEventArgs args)
+    private Stream? annotationStreamJson;
+    private Stream? annotationStreamXfdf;
+    public async void OnExportAnnotationsJson(MouseEventArgs args)
     {
-        await Viewer.ExportAnnotationAsync();
+        await Viewer.ExportAnnotationAsync(AnnotationDataFormat.Json);
+    }
+    public async void OnExportAnnotationsXfdf(MouseEventArgs args)
+    {
+        await Viewer.ExportAnnotationAsync(AnnotationDataFormat.Xfdf);
+    }
+    public async Task OnExportAsStreamJson(MouseEventArgs args)
+    {
+        annotationStreamJson = await Viewer.ExportAnnotationAsStreamAsync(AnnotationDataFormat.Json);
+    }
+    public async Task OnExportAsStreamXfdf(MouseEventArgs args)
+    {
+        annotationStreamXfdf = await Viewer.ExportAnnotationAsStreamAsync(AnnotationDataFormat.Xfdf);
+    }
+    public async void OnImportStreamJson(MouseEventArgs args)
+    {
+        await Viewer.ImportAnnotationAsync(annotationStreamJson, AnnotationDataFormat.Json);
+    }
+    public async void OnImportStreamXfdf(MouseEventArgs args)
+    {
+        await Viewer.ImportAnnotationAsync(annotationStreamXfdf, AnnotationDataFormat.Xfdf);
     }
 }
 
