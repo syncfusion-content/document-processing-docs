@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unload the PDF document from Viewer in Blazor SfPdfViewer | Syncfusion
-description: Learn here all about Unload the PDF document from Viewer in Syncfusion Blazor SfPdfViewer component and more.
+description: Learn how to automatically and programmatically unload PDF documents and release resources in the Syncfusion Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Unload the PDF document from Viewer in Blazor SfPdfViewer Component
 
-The SfPdfViewer component will automatically unload and clear the resources occupied by the PDF document when the control is disposed. Also, when loading another PDF file, the resources occupied by previous loaded file in viewer will be automatically unloaded and cleared.
+The SfPdfViewer component automatically unloads the current PDF and releases its resources when the component is disposed. When a different PDF is loaded, the resources used by the previously loaded file are also released.
 
-If you want to unload and clear the resources occupied by the PDF file programmatically, invoke the [Unload()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UnloadAsync) method as shown below.
+To unload a PDF and release its resources programmatically, call the [UnloadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UnloadAsync) method, as shown below.
 
 ```cshtml
 
