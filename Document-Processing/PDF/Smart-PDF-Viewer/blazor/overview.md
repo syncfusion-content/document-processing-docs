@@ -23,7 +23,7 @@ The **[Blazor Smart PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor
 
 * Detects and removes sensitive or confidential information.
 * Identifies patterns such as personal identifiers and financial data.
-* Ensures consistent, auditable redaction across documents.
+* Ensures consistent redaction across documents.
 * Supports privacy and compliance requirements while reducing manual effort.
 
 [View the Smart Redaction demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/smart-pdf-viewer/smartredact?theme=fluent2)
