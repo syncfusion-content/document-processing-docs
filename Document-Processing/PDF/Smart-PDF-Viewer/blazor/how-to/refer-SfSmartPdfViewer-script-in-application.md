@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Refer the SfSmartPdfViewer script into Blazor application | Syncfusion
-description: Learn how to reference the Syncfusion SfSmartPdfViewer script file in a Blazor application.
+description: Learn how to include the SfSmartPdfViewer script in Syncfusion Blazor apps using CDN seamless setup.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
