@@ -133,4 +133,9 @@ Open the comments panel from the **more option** menu at the right end of the mo
 
 To close the comments panel, tap the Close icon within the panel.
 
-![Comments panel displayed in Blazor SfPdfViewer](../images/open-cooment-panel.png)
+![Open CommentPanel in Blazor SfPdfViewer](../images/open-cooment-panel.png)
+
+## See also
+
+* [Mobile Toolbar](./formdesigner-in-mobile-view)
+* [FormDesinger in Mobile View](./form-designer/form-designer-in-mobile-view)

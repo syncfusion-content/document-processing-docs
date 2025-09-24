@@ -93,4 +93,4 @@ N> In mobile mode, the print functionality will not be available unless desktop 
 ## See also
 
 * [Annotations in Mobile View](./annotation/annotations-in-mobile-view)
-* [FormDesinger in Mobiel View](./form-designer/form-designer-in-mobile-view)
+* [FormDesinger in Mobile View](./form-designer/form-designer-in-mobile-view)
