@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Move the scrollbar to the exact location of annotations | Syncfusion
+title: Move the scrollbar to the exact annotations location | Syncfusion
 description: Learn how to scroll the scrollbar precisely to the location of annotations in the Syncfusion Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer

@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# View the created PDF document
+# Preview the newly created PDF file
 
 Use the Syncfusion&reg; Blazor PDF Viewer to display a PDF that is generated at runtime when the viewer initializes using the [**Created**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_Created) event. The sample below targets the SfPdfViewer component and binds the generated document to the [**DocumentPath**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer2_DocumentPath) property via a data URI.
 
