@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mobile Toolbar Interface in in Blazor SfPdfViewer Component | Syncfusion
+title: Mobile Toolbar in Blazor SfPdfViewer Component | Syncfusion
 description: Learn All About the Mobile Toolbar Interface in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: document-processing
 control: SfPdfViewer
@@ -93,4 +93,4 @@ N> In mobile mode, the print functionality will not be available unless desktop 
 ## See also
 
 * [Annotations in Mobile View](./annotation/annotations-in-mobile-view)
-* [FormDesinger in Mobile View](./form-designer/form-designer-in-mobile-view)
+* [FormDesigner in Mobile View](./form-designer/form-designer-in-mobile-view)

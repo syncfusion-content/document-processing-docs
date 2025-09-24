@@ -138,4 +138,4 @@ To close the comments panel, tap the Close icon within the panel.
 ## See also
 
 * [Mobile Toolbar](./formdesigner-in-mobile-view)
-* [FormDesinger in Mobile View](./form-designer/form-designer-in-mobile-view)
+* [FormDesigner in Mobile View](./form-designer/form-designer-in-mobile-view)

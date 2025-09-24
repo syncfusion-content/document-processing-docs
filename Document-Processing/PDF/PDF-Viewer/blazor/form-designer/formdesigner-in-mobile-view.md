@@ -77,7 +77,7 @@ After adjustments, click the Save button to apply the changes instantly to the f
 
 ## Delete Form Field
 
-To delete a form field, first, select the form field you want to remove. The delete icon will appear in the form Desinger toolbar. Clicking on the delete icon will remove the form field from the PDF.
+To delete a form field, first, select the form field you want to remove. The delete icon will appear in the form Designer toolbar. Clicking on the delete icon will remove the form field from the PDF.
 
 ![Delete Selected Form Field in Blazor SfPdfViewer](../form-designer/form-designer-images/formDesinger-delete.png)
 
