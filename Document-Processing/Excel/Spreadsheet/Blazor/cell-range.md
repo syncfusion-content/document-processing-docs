@@ -106,10 +106,6 @@ The following illustration demonstrates the use of autofill in the Spreadsheet c
 
 The Blazor Spreadsheet provides events that are triggered during autofill operations, such as [AutofillActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionBeginEventArgs.html) and [AutofillActionEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionEndEventArgs.html). These events enable the execution of custom actions before and after an autofill operation, allowing for validation, customization, and response handling.
 
-**AutofillActionBegin** - The `AutofillActionBegin` event is triggered prior to the execution of an autofill operation. It offers an opportunity to validate the autofill operation and apply custom restrictions before it is executed, enabling control over when the operation should proceed.
-
-**AutofillActionEnd** - The `AutofillActionEnd` event is triggered after an autofill operation has been successfully completed. It provides detailed information about the completed autofill action, enabling further processing or logging if required.
-
 ### AutofillActionBegin
 
 The `AutofillActionBegin` event is triggered before an autofill operation is performed. This event provides an opportunity to validate the autofill operation and apply restrictions based on custom logic, such as preventing the operation under specific conditions.
@@ -124,10 +120,10 @@ The event uses the [AutofillActionBeginEventArgs](https://help.syncfusion.com/cr
 
 | Event Arguments | Description |
 |----------------|-------------|
-| FillRange | Specifies the address of the target range where the autofill operation will be applied (e.g., "Sheet1!A2:A5"). **Note**: This property is read-only. |
-| DataRange | Represents the source data range used for the autofill operation (e.g., "Sheet1!A1:A1"). **Note**: This property is read-only. |
-| Direction | Indicates the direction of the autofill operation (e.g., "Down", "Right", "Up", "Left"), reflecting the drag direction of the fill handle. **Note**: This property is read-only. |
-| Cancel | Indicates whether the autofill operation should be aborted. Setting this property to **true** prevents the autofill from proceeding, allowing for conditional validation or restriction logic. |
+| FillRange (read-only) | The address of the target range for the autofill operation (e.g., "Sheet1!A2:A5"). |
+| DataRange (read-only) | The source data range for the autofill operation (e.g., "Sheet1!A1:A1"). |
+| Direction (read-only) | The direction of the autofill operation ("Down", "Right", "Up", or "Left"). |
+| Cancel | A boolean value to cancel the autofill operation. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -176,13 +172,13 @@ This event is useful for scenarios where post-autofill actions are needed, such 
 
 **Event Arguments**
 
-The event uses the [AutofillActionEndEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionEndEventArgs.html) class, which includes properties detailing the completed autofill operation, such as the filled range and the source data used.
+The event uses the [AutofillActionEndEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionEndEventArgs.html) class, which includes the following properties:
 
 | Event Arguments | Description |
 |----------------|-------------|
-| FillRange | Specifies the address of the target range where the autofill operation will be applied (e.g., "Sheet1!A2:A5"). **Note**: This property is read-only. |
-| DataRange | Represents the source data range used for the autofill operation (e.g., "Sheet1!A1:A1"). **Note**: This property is read-only. |
-| Direction | Indicates the direction of the autofill operation (e.g., "Down", "Right", "Up", "Left"), reflecting the drag direction of the fill handle. **Note**: This property is read-only. |
+| FillRange (read-only) | The address of the target range where the autofill was applied (e.g., "Sheet1!A2:A5"). |
+| DataRange (read-only) | The source data range used for the autofill operation (e.g., "Sheet1!A1:A1"). |
+| Direction (read-only) | The direction of the autofill operation ("Down", "Right", "Up", or "Left"). |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
