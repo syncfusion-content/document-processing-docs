@@ -24,11 +24,11 @@ Step 1: Create a new C# Blazor Web app project.
 
 *   Name the project and click **Next**.
 
-![Name the Blazor Web App in Visual Studio](Blazor_images/Blazor_images_Web_ProjectName.png)
+![Name the Blazor Web App in Visual Studio](Blazor_Images/Blazor_images_Web_ProjectName.png)
 
 *   Select the framework and click **Create** button.
 
-![Select the framework in Blazor Web Server Side app in Visual Studio](Blazor_images/Blazor_images_Server_Web_Additional_Information.png)
+![Select the framework in Blazor Web Server Side app in Visual Studio](Blazor_Images/Blazor_images_Server_Web_Additional_Information.png)
 
 Step 2: Install the `Syncfusion.DocIO.Net.Core` NuGet package.
 To **open and save a Word document in a Blazor Web app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) into your Blazor project.
