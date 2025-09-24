@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Improve performance using a CDN | Syncfusion
-description: Learn how to improve performance in the Blazor SfPdfViewer by using versioned CDN script references, understanding caching behavior, and placing references correctly.
+description: Learn how to improve performance in the Blazor SfPdfViewer by using versioned CDN script references.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

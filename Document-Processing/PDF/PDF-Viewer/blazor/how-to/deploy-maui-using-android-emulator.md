@@ -65,7 +65,7 @@ To run the PDF Viewer in a Blazor .NET MAUI Android app using the Android emulat
 
 ![Set embedded resource properties for the PDF file](../getting-started/gettingstarted-images/android_maui_properties.png)
 
-**Step 3** Install and launch Android Device Manager. In Android SDK Manager, on the `SDK Tools` tab, select `Android Device Manager` and click `Apply` or `OK`. This enables creating and managing Android Virtual Devices (AVDs) for testing.
+**Step 3** Install and launch Android Device Manager. In Android SDK Manager, on the `SDK Tools` tab, select `Android Device Manager` and click `Apply` or `OK`. This enables creating and managing Android Virtual Devices (AVD) for testing.
 
 ![Android Device Manager with a Pixel emulator](../getting-started/gettingstarted-images/pixcel-emulator_maui.png)
 
