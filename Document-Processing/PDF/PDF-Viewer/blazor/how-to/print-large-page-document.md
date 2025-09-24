@@ -1,18 +1,18 @@
 ---
 layout: post
 title: Print large page document in SfPdfViewer | Syncfusion
-description: Learn how to efficiently print large page documents using the SfPdfViewer with optimized memory usage and custom toolbar actions
+description: Learn how to print large PDF documents in the Syncfusion Blazor SfPdfViewer using a custom toolbar action and a Blob URL.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Print large page documents in SfPdfViewer component in Blazor
+# Print large PDF documents in Blazor SfPdfViewer
 
-This guide demonstrates how to implement a custom printing solution for large PDF documents in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer component.
+This guide shows how to implement a client-side printing approach for large PDFs in the Syncfusion Blazor SfPdfViewer component using JavaScript interop.
 
-### Implement Print Handler
-Add a custom print toolbar item to the primary toolbar of the SfPdfViewer, and implement a click handler to handle its functionality. The handler retrieves the byte array of the loaded PDF document and invokes a JavaScript function to print the PDF on the client-side.
+### Implement a print handler
+Add a custom print toolbar item to the primary toolbar, then handle its click to retrieve the loaded PDF as a byte array and invoke a JavaScript function to print the PDF on the client-side.
 
 ```cshtml
 private async Task ClickAction(ClickEventArgs Item)
@@ -29,8 +29,8 @@ private async Task ClickAction(ClickEventArgs Item)
 
 ```
 
-### Add JavaScript Function
-Add a `printPDF` function to your JavaScript file that converts the byte array into a Blob object and generates a Blob URL for the loaded PDF. The Blob URL is then used to open the PDF in a new tab or trigger the print dialog.
+### Add the JavaScript function
+Add a `printPDF` function to a JavaScript file that converts the byte array into a Blob and generates a Blob URL for the loaded PDF. Reference the script in the app so it loads before use (for example, in wwwroot/js/site.js and referenced from index.html for WebAssembly, or _Host.cshtml for Server). The Blob URL can then be used to open the PDF in a new tab or trigger the print dialog.
 
 ```javascript
 // Convert the byte array to a Blob object
@@ -38,7 +38,7 @@ const blob = new Blob([byteArray], { type: 'application/pdf' });
 // Generate a Blob URL for the loaded PDF
 const blobUrl = URL.createObjectURL(blob);
 ```
-The Blob URL is opened in a new browser window or tab, and the native window.print() function is called to execute the print operation.
+Open the Blob URL in a new browser window or tab, then call window.print() to display the browser's print dialog.
 
 ```javascript
 // Open the Blob URL in a new window or tab
@@ -50,10 +50,10 @@ const tryPrint = () => {
 };
 ```
 
->N> Ensure that users have pop-ups enabled for your site in their browser settings, as this solution opens the PDF in a new window or tab for printing.
+N> Ensure that the browser allows pop-ups for the site, because this approach opens the PDF in a new window or tab. Printing typically requires a user gesture (such as clicking a button), and behavior may vary by browser.
 ![Allow pop-up for large page print window](../images/allow-popup-largepage-print.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Print/Print%20Large%20page%20document).
+[View the large document printing sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Print/Print%20Large%20page%20document).
 
 ## See also
 
