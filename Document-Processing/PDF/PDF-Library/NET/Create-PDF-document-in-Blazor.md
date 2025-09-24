@@ -44,8 +44,6 @@ N> Server-Side Blazor applications are recommended to reduce the payload, which 
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://blazor.syncfusion.com/demos/pdf/hello-world?theme=fluent) in Blazor.
-
 ## Steps to create PDF document in Blazor WASM application
 
 {% tabcontents %}
@@ -71,8 +69,6 @@ Click the Export to PDF button to obtain the PDF document with the following out
 ![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)    
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
-
-An online sample link to [create PDF document](https://blazor.syncfusion.com/demos/pdf/hello-world?theme=fluent) in Blazor. 
 
 ## Steps to create PDF documents in .NET MAUI Blazor application
 
