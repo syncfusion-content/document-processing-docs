@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Create a PDF document in the Created event of the SfPdfViewer component
+# Create a PDF in the Created event of SfPdfViewer
 
 A PDF document can be created during the SfPdfViewer `Created` event and immediately loaded in the viewer.
 
