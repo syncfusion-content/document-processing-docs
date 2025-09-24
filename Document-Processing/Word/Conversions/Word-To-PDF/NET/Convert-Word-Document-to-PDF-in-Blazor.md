@@ -45,7 +45,8 @@ Include the following namespaces in the file:
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 @rendermode InteractiveServer
-@page "/docio"
+@page "/DocIO"
+@using System.IO;
 @using Convert_Word_Document_to_PDF;
 @inject Convert_Word_Document_to_PDF.Data.WordService service
 @inject Microsoft.JSInterop.IJSRuntime JS
@@ -133,7 +134,7 @@ Add the following line to the `Program.cs` file to register `WordService` as a s
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-builder.Services.AddSingleton<WordService>();
+builder.Services.AddScoped<Convert_Word_Document_to_PDF.Data.WordService>();
 
 {% endhighlight %}
 {% endtabs %}
