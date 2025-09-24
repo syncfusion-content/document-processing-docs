@@ -2,14 +2,14 @@
 layout: post
 title: Form fields in Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn here all about Form fields in Syncfusion Blazor DocumentEditor component and more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---
 
 # Form Fields in Blazor DocumentEditor Component
 
-[`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
+The [`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (Document Editor) component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 
 ![Form Fields](images/toolbar-form-fields.png)
 
