@@ -10,12 +10,12 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> DocIO is a [Blazor Word library](https://www.syncfusion.com/document-processing/word-framework/blazor/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in Blazor**.
 
+## Word to PDF in Blazor Web Application
+
 **Prerequisites:**
 
 *   Visual Studio 2022.
 *   Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
-
-## Word to PDF in Blazor Web Application
 
 Step 1: Create a new C# Blazor Web app project.
 *   Select "Blazor Web App" from the template and click **Next**.
