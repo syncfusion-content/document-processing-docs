@@ -15,7 +15,7 @@ documentation: ug
 
 The **Formula Bar** simplifies editing or entering cell data. The [ShowFormulaBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFormulaBar) property is used to enable or disable the **Formula Bar**. The default value of the `ShowFormulaBar` property is **true**.
 
-### Working with Formulas via the UI
+### Working With Formulas via The UI
 
 Formulas in the Syncfusion Blazor Spreadsheet can be accessed and inserted using the following methods:
 
@@ -65,7 +65,7 @@ The **Named Ranges** support allows you to assign a meaningful name to a specifi
 
 N> Named Ranges can be defined only for cells or ranges that contain values.
 
-### Creating Named Ranges via the UI
+### Creating Named Ranges via The UI
 
 **Named Ranges** can be created using the following methods:
 
@@ -75,7 +75,7 @@ N> Named Ranges can be defined only for cells or ranges that contain values.
 
     ![Name Manager Dialog](./images/named-range.gif)
 
-### Editing or Deleting Named Ranges
+### Editing Or Deleting Named Ranges
 
 **Named Ranges** are managed through the **Name Manager** dialog, which supports editing and deletion.
 
