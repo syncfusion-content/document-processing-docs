@@ -2296,11 +2296,13 @@ PdfStringLayouter layouter = new PdfStringLayouter();
 // Layout the text and get the result to check if it fits within the bounds
 PdfStringLayoutResult result = layouter.Layout(text, font, new PdfStringFormat(PdfTextAlignment.Center), new SizeF(border.Width, border.Height));
 
-// Check if any part of the text was clipped (did not fit in the bounds)
+// Check if any part of the text was clipped (did not fit within the specified bounds)
 if (result.Remainder != null)
 {
-    // Store the clipped portion of the text
+    // Store the clipped portion of the text for further processing or logging
     string remainderText = result.Remainder;
+    // Output the clipped text to the console for debugging or review
+    Console.WriteLine("Remainder Text: " + remainderText);
 }
 // Close the document and release resources
 document.Close(true);
@@ -2336,11 +2338,13 @@ PdfStringLayouter layouter = new PdfStringLayouter();
 // Layout the text and get the result to check if it fits within the bounds
 PdfStringLayoutResult result = layouter.Layout(text, font, new PdfStringFormat(PdfTextAlignment.Center), new SizeF(border.Width, border.Height));
 
-// Check if any part of the text was clipped (did not fit in the bounds)
+// Check if any part of the text was clipped (did not fit within the specified bounds)
 if (result.Remainder != null)
 {
-    // Store the clipped portion of the text
+    // Store the clipped portion of the text for further processing or logging
     string remainderText = result.Remainder;
+    // Output the clipped text to the console for debugging or review
+    Console.WriteLine("Remainder Text: " + remainderText);
 }
 // Close the document and release resources
 document.Close(true);
@@ -2348,7 +2352,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
 
 ' Create a new PDF document
 Dim document As New PdfDocument()
@@ -2377,10 +2380,12 @@ Dim layouter As New PdfStringLayouter()
 ' Layout the text and get the result to check if it fits within the bounds
 Dim result As PdfStringLayoutResult = layouter.Layout(text, font, New PdfStringFormat(PdfTextAlignment.Center), New SizeF(border.Width, border.Height))
 
-' Check if any part of the text was clipped (did not fit in the bounds)
+' Check if any part of the text was clipped (did not fit within the specified bounds)
 If result.Remainder IsNot Nothing Then
-    ' Store the clipped portion of the text
+    ' Store the clipped portion of the text for further processing or logging
     Dim remainderText As String = result.Remainder
+    ' Output the clipped text to the console for debugging or review
+    Console.WriteLine("Remainder Text: " & remainderText)
 End If
 ' Close the document and release resources
 document.Close(True)
@@ -2388,6 +2393,8 @@ document.Close(True)
 {% endhighlight %}
 
 {% endtabs %}
+
+A complete working sample is available for download on GitHub.
 
 ## Customizing TrueType fonts in a PDF document
 
