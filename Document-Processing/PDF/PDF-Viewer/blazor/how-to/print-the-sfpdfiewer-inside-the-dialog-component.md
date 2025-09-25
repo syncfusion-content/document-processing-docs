@@ -9,7 +9,7 @@ documentation: ug
 
 # Print the SfPdfViewer component inside the Dialog component in Blazor
 
-The SfPdfViewer supports printing the loaded PDF file by default. Here, we perform print action once SfPdfViewer is loaded with document.
+The SfPdfViewer supports printing the loaded PDF document by default. The following example hosts the viewer inside a Syncfusion Dialog (popup) and triggers printing automatically after the PDF finishes loading.
 
 The following code illustrates how to perform print action once SfPdfViewer is loaded.
 

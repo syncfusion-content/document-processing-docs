@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Create SfPdfViewer in a Splitter Component in Blazor | Syncfusion
-description: Learn here all about how to create SfPdfViewer in a Splitter Component in Syncfusion Blazor SfPdfViewer component.
+title: Host the PDF Viewer in a Splitter pane in Blazor | Syncfusion
+description: Learn how to place the Syncfusion Blazor PDF Viewer inside a Splitter pane and display a document alongside other content.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Create SfPdfViewer Component in a Splitter Component in Blazor
+# Create the PDF Viewer in a Splitter component in Blazor
 
-You can use Splitter to render the SfPdfViewer while rendering more than one component. The following code snippet explains how to render the SfPdfViewer component inside a Splitter pane. In this example, the Syncfusion&reg; Splitter component is used to render SfPdfViewer.
+The Syncfusion Blazor Splitter organizes content into resizable panes. The following example shows how to place the PDF Viewer inside a Splitter pane so users can view a document alongside other UI content.
 
 ```cshtml
 

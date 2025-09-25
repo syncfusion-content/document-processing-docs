@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create a SfPdfViewer within a popup window in Blazor | Syncfusion
-description: Learn here all about Create SfPdfViewer in a popup window in Syncfusion Blazor SfPdfViewer component and more.
+description: Learn everything about integrating the Syncfusion Blazor SfPdfViewer component within a popup window.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Create a SfPdfViewer within a popup window in Blazor
 
-For quick view, you might need to display the PDF file in a dialog window. The following code snippet explains how to use the SfPdfViewer component inside a dialog window. In this example, the Syncfusion&reg; dialog component is used for Blazor.
+For a quick preview experience, the PDF viewer can be hosted inside a dialog (popup) window. The following example demonstrates placing the SfPdfViewer component inside a Syncfusion&reg; Dialog in a Blazor application. Selecting the Open PDF Viewer button opens a modal dialog sized to its container, and the viewer loads the specified document in the Created event.
 
 ```cshtml
 
@@ -55,7 +55,7 @@ For quick view, you might need to display the PDF file in a dialog window. The f
 
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/PdfViewer%20in%20Popup%20window)
+[View the popup dialog sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/PdfViewer%20in%20Popup%20window)
 
 ## See also
 

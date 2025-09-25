@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Render JS PDF Viewer inside Blazor SfPdfViewer Component | Syncfusion
-description: Learn here all about how to render the JS SfPdfViewer in Syncfusion Blazor SfPdfViewer component and more.
+title: Render JavaScript PDF Viewer in Blazor SfPdfViewer | Syncfusion
+description: Learn how to render the EJ2 JavaScript PDF Viewer inside the Syncfusion Blazor SfPdfViewer using JavaScript interop, including setup and usage notes.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,11 +9,13 @@ documentation: ug
 
 # Render JS PDF Viewer inside Blazor SfPdfViewer Component
 
-The Syncfusion&reg; Blazor SfPdfViewer component allows you to render the JS PDF Viewer component inside the blazor component.
+The Syncfusion&reg; Blazor SfPdfViewer component supports rendering the EJ2 JavaScript PDF Viewer inside a Blazor page using JavaScript interop.
 
-The following code example shows how to render the JS PDF Viewer component into the blazor component.
+The following steps show how to embed the JavaScript PDF Viewer in a Blazor component.
 
-**Step 1:** Add a script file to your application and refer it to the head tag.
+>Note: Ensure that the EJ2 PDF Viewer scripts and styles are referenced in the application, and that the serviceUrl points to a reachable EJ2 PDF Viewer web service endpoint.
+
+**Step 1:** Add a JavaScript file to the application and reference it in the head element.
 
 ```cshtml
 
@@ -23,7 +25,7 @@ The following code example shows how to render the JS PDF Viewer component into 
 
 ```
 
-**Step 2:** Add the following code to render the JS component in the blazor to the newly added JS file.
+**Step 2:** Add the following code to the newly created JavaScript file to render the EJ2 PDF Viewer inside Blazor.
 
 ```javascript
 
@@ -51,7 +53,7 @@ window.renderJsPdfViewer = (id) => {
 
 ```
 
-**Step 3:** Add the following code to the blazor component.
+**Step 3:** Add the following code to the Blazor component.
 
 ```cshtml
 
@@ -71,6 +73,6 @@ window.renderJsPdfViewer = (id) => {
 
 ```
 
->N : you can’t able to use the API calls from C# side. You have to use a JS code snippet to use the PDF Viewer component API since we have rendered the JS component.
+N> The PDF Viewer is rendered as a JavaScript component. C# APIs on SfPdfViewer are not available in this approach; use JavaScript interop to call the PDF Viewer APIs.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Render%20JS%20PDF%20Viewer%20component%20in%20Blazor)

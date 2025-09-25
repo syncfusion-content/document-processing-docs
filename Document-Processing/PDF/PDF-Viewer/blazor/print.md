@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about print in Syncfusion Blazor SfPdfViewer component and much more details.
+description: Learn how to print PDF files in the Syncfusion Blazor SfPdfViewer component using the toolbar or programmatically.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Print in Blazor SfPdfViewer Component
 
-The SfPdfViewer supports printing the loaded PDF file by default. You can enable or disable printing by setting the [EnablePrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrint) property.
+The SfPdfViewer supports printing the loaded PDF by default. Enable or disable the toolbar Print option by setting the [EnablePrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrint) property.
 
 ```cshtml
 
@@ -26,7 +26,7 @@ The SfPdfViewer supports printing the loaded PDF file by default. You can enable
 
 ```
 
-![Printing in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-print.png)
+![Print a PDF using the SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-print.png)
 
 
 ```cshtml
@@ -54,8 +54,8 @@ The SfPdfViewer supports printing the loaded PDF file by default. You can enable
 
 ## See also
 
-* [Download in Blazor SfPdfViewer Component](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/saving-pdf-file#download-in-blazor-sfpdfviewer-component)
+* [Download in Blazor SfPdfViewer component](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/saving-pdf-file#download-in-blazor-sfpdfviewer-component)
 
-* [How to perform print in same window](./how-to/perform-print-in-same-window)
+* [How to print in the same window](./how-to/perform-print-in-same-window)
 
 * [How to print the SfPdfViewer inside the Dialog](./how-to/print-the-sfpdfiewer-inside-the-dialog-component)

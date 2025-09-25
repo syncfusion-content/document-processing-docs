@@ -1,7 +1,7 @@
 ---
-title: "Opening PDF file in Blazor SfPdfViewer Component | Syncfusion"
-component: "SfPdfViewer"
-description: "This page helps you to learn about how to load PDF files from various locations in Syncfusion Blazor SfPdfViewer."
+layout: post
+title: Opening PDF file in Blazor SfPdfViewer Component | Syncfusion
+description: Learn how to load PDF files from various locations like database, cloud and remote URL in the Syncfusion Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Open PDF files in SfPdfViewer for Blazor from various storage location
 
-You might need to open and view the PDF files from various location. In this section, you can find the information about how to open PDF files from URL, Cloud, database, local file system, and as base64 string.
+This article explains how to open and display PDF files in the SfPdfViewer component from multiple sources, including URL, cloud storage, database, local file system, Base64 string, and stream. The DocumentPath parameter accepts either a direct URL to the PDF file or a data URL that contains Base64-encoded PDF content.
 
 ## Opening a PDF from remote URL
 
-If you have your PDF files in the web, you can open it in the viewer using URL.
+If a PDF file is hosted on the web, it can be opened in the viewer by providing its URL to the DocumentPath parameter.
 
 ```cshtml
 
@@ -32,9 +32,9 @@ If you have your PDF files in the web, you can open it in the viewer using URL.
 
 ## Opening a PDF from Cloud
 
-You can open the PDF file from Cloud storage.
+Open PDF files stored in cloud storage by converting the file to a Base64 string and assigning it to DocumentPath.
 
-The following code example shows how to open and load the PDF file stored in Azure Blob Storage.
+The following code example shows how to open and load a PDF file stored in Azure Blob Storage.
 
 ```cshtml
 
@@ -68,7 +68,7 @@ The following code example shows how to open and load the PDF file stored in Azu
 
 ```
 
-N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
+N> The **Azure.Storage.Blobs** NuGet package must be installed in the application to use the previous code example. Configure credentials securely (for example, using configuration providers or managed identity) and ensure CORS is enabled on the storage account if the file is fetched from the browser.
 
 ```cshtml
 @using Azure.Storage.Files.Shares
@@ -101,12 +101,11 @@ N> The **Azure.Storage.Blobs** NuGet package must be installed in your applicati
 }
 ```
 
-N> The **Azure.Storage.Files.Shares** NuGet package must be installed in your application to use the previous code example.
-
+N> The **Azure.Storage.Files.Shares** NuGet package must be installed in the application to use the previous code example. Use appropriate authentication (for example, SAS tokens or Azure AD) and configure network access as required.
 
 ## Opening a PDF from database
 
-The following code example shows how to open the PDF file in viewer from SQL Server database.
+The following code example shows how to open a PDF file from a SQL Server database by reading the file as a byte array and assigning a Base64 data URL to DocumentPath.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -133,12 +132,11 @@ The following code example shows how to open the PDF file in viewer from SQL Ser
 }
 ```
 
-N> The **System.Data.SqlClient** package must be installed in your application to use the previous code example. You need to modify the connectionString variable in the previous code example as per the connection string of your database.
-
+Note: The System.Data.SqlClient package must be installed in the application to use the previous code example. For production scenarios, use parameterized queries and dispose database objects properly. Store connection strings securely (for example, appsettings.json or user secrets).
 
 ## Opening a PDF from file system
 
-There is an UI option in built-in toolbar to open the PDF file from local file system. If you want to achieve the same functionality while designing your own toolbar, you can use the following code example to load and open the PDF file. In this sample, the Syncfusion&reg; Uploader control is used for Blazor.
+The built-in toolbar includes an Open option that loads a PDF from the local file system. To replicate this behavior in a custom toolbar, the following example uses the Syncfusion Uploader component to obtain a file and then loads it in the viewer. Ensure the application processes the file content correctly (for example, reading the stream and converting to a Base64 data URL) before assigning it to the viewer.
 
 ```cshtml
 
@@ -170,7 +168,7 @@ There is an UI option in built-in toolbar to open the PDF file from local file s
 
 ## Opening a PDF from base64 data
 
-The following code snippet explains how the PDF file can be loaded in SfPdfViewer as base64 string.
+The following code snippet shows how to load a PDF in SfPdfViewer using a Base64 string by assigning a data URL to DocumentPath. Large files encoded as Base64 increase memory usage; consider using a URL for very large documents.
 
 ```cshtml
 
@@ -194,7 +192,7 @@ The following code snippet explains how the PDF file can be loaded in SfPdfViewe
 
 ## Opening a PDF from stream
 
-You can load a PDF file from stream in SfPdfViewer by converting the stream into a base64 string. The following code sample explains how the PDF file can be loaded in SfPdfViewer from stream.
+Load a PDF from a stream by converting it to a Base64 string and assigning it to DocumentPath. This approach is useful when the file originates from an API or in-memory source.
 
 ```cshtml
 

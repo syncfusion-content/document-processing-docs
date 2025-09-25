@@ -1,7 +1,7 @@
 ---
 layout: post
-title: View DOCX file in Blazor application using SfPdfViewer | Syncfusion
-description: Learn here all about View DOCX file in Blazor application in Syncfusion Blazor SfPdfViewer component and more.
+title: View DOCX in Blazor using SfPdfViewer | Syncfusion
+description: Learn how to view DOCX in a Blazor application using the Word Processor component or using the SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,19 +9,19 @@ documentation: ug
 
 # View DOCX file in Blazor application
 
-You can achieve this requirement of viewing DOCX file in two ways:.
+DOCX files can be viewed in a Blazor application in two ways:
 
 **Option** **1:**
 
-You can use Syncfusion&reg; Word Processor component for Blazor to compose, view, and edit DOC, DOCX, RTF, and SFDT file formats.
+Use the Syncfusion&reg; Word Processor component for Blazor to compose, view, and edit DOC, DOCX, RTF, and SFDT file formats.
 
-To learn more about the [Word Processor component](https://www.syncfusion.com/blazor-components/blazor-word-processor), check out Syncfusion<sup style="font-size:70%">&reg;</sup> online samples and documentation.
+For details, see the [Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component product page and documentation.
 
 **Option** **2:**
 
-You can convert [Word document to PDF](https://help.syncfusion.com/file-formats/docio/word-to-pdf) using the Syncfusion&reg; Word (DocIO) server-side library and view the resultant PDF file using SfPdfViewer component.
+Convert the Word document to PDF using the Syncfusion Word (DocIO) server-side library, then display the resulting PDF in the SfPdfViewer component. SfPdfViewer renders only PDF files.
 
-N> You can refer to our [Blazor SfPdfViewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor SfPdfViewer example](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of SfPdfViewer.
+N> For an overview of capabilities, see the [Blazor SfPdfViewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) feature tour. Explore the [online demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/default-functionalities?theme=bootstrap4) to review core features.
 
 ## See also
 

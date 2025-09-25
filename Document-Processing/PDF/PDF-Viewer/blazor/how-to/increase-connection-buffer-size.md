@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Increase the connection buffer size in Blazor SfPdfViewer | Syncfusion
-description: Learn here all about how to increase the connection buffer size in Syncfusion Blazor SfPdfViewer component and more.
+title: Increase buffer size in Blazor SfPdfViewer | Syncfusion
+description: Learn how to increase the SignalR connection buffer size (MaximumReceiveMessageSize) for the Syncfusion Blazor SfPdfViewer to handle large PDF documents.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Increase the connection buffer size in Blazor SfPdfViewer Component
 
-The Syncfusion&reg; Blazor SfPdfViewer component allows to increase the connection buffer size by adding the below service in program.cs file if the size of the SfPdfViewer is too large.
+The Syncfusion&reg; Blazor SfPdfViewer supports increasing the SignalR connection buffer size by configuring MaximumReceiveMessageSize in `Program.cs`. This setting applies to Blazor Server and it does not apply to purely client-side WebAssembly apps.
 
 ```cshtml
 builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });

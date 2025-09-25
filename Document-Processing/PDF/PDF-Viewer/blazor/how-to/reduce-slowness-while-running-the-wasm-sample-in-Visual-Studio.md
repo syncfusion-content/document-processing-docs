@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Reduce slowness while running the WASM sample | Syncfusion
-description: Learn here all about how to reduce slowness while running the WASM sample in Visual Studio and more.
+title: Reduce slowness when running WASM in Visual Studio | Syncfusion
+description: Improve performance when running or debugging the Blazor WebAssembly (WASM) samples in Visual Studio.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Reduce slowness while running the WASM sample in Visual Studio
+# Reduce slowness when running Blazor WebAssembly in Visual Studio
 
-You may experience performance issues when running the WASM sample in Visual Studio. To improve performance and reduce slowness, we recommend disabling the new .NET 9+ Mono Debugger, as it can impact the execution speed in this mode.
+Performance issues may occur when running or debugging Blazor WebAssembly in Visual Studio. To improve execution speed, disable the .NET 9+ Mono WASM debugger, which can introduce overhead during debugging sessions.
 
-![Mono Debugger](../images/mono_debugger.png)
+![Visual Studio setting for the Mono WASM debugger](../images/mono_debugger.png)
 
-Disabling the Mono Debugger should help resolve the performance issues and provide a smoother experience while debugging your WebAssembly project.
+Disabling the Mono WASM debugger can provide a smoother experience while running or debugging WebAssembly projects. This change affects debugging behavior; re-enable it when full debugging features are required.
 
-For detailed instructions on why disabling the Mono Debugger is recommended, and to follow the necessary steps, please refer to the links below:
+For background details and guidance, see the following resources:
   * [Performance Regression debugging Blazor WebAssembly with .NET 9](https://developercommunity.visualstudio.com/t/Performance-Regression-debugging-Blazor/10773897)
   * [Performance Regression in Blazor WebAssembly with .NET 9](https://github.com/dotnet/aspnetcore/issues/58507)
