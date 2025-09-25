@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor Spreadsheet Component | Syncfusion
-description: Learn about the comprehensive filter functionality in the Syncfusion Blazor Spreadsheet component, including data type-specific filters, custom filters, and programmatic control.
+description: Checkout and learn all about the comprehensive filter functionality in Syncfusion Blazor Spreadsheet component and much more.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
