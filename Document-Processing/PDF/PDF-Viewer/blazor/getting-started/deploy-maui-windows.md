@@ -19,7 +19,7 @@ To use the .NET MAUI project templates, install the Mobile development with .NET
 
 Create a new Blazor .NET MAUI app and name it **PDFViewerGettingStarted**.
 
-N> The PDF Viewer component is supported on .NET 6.0 and later.
+N> The PDF Viewer component is supported on .NET 8.0 and later.
 
 ## Install PDF Viewer NuGet packages in the Blazor .NET MAUI app
 

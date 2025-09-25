@@ -23,7 +23,7 @@ This article describes how to add the Syncfusion&reg; Blazor PDF Viewer componen
 
 You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-N> The PDF Viewer component is supported on .NET 6.0 and later.
+N> The PDF Viewer component is supported on .NET 8.0 and later.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer and Themes NuGet packages in the app
 
@@ -32,13 +32,13 @@ To add **Blazor PDFViewer** component in the app, open the NuGet package manager
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.Blazor.SfPdfViewer -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.SfPdfViewer -Version 28.2.12
+Install-Package Syncfusion.Blazor.Themes -Version 28.2.12
 
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details. For .NET 6 and .NET 7, use version 28.2.12 or earlier version.
 
 {% endtabcontent %}
 
@@ -65,7 +65,7 @@ cd BlazorApp
 
 {% endtabs %}
 
-N> The PDF Viewer component is supported on .NET 6.0 and later.
+N> The PDF Viewer component is supported on .NET 8.0 and later.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer and Themes NuGet packages in the app
 
@@ -77,8 +77,8 @@ N> The PDF Viewer component is supported on .NET 6.0 and later.
 
 {% highlight c# tabtitle="Package Manager" %}
 
-dotnet add package Syncfusion.Blazor.SfPdfViewer -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.SfPdfViewer -v 28.2.12
+dotnet add package Syncfusion.Blazor.Themes -v 28.2.12
 dotnet restore
 
 {% endhighlight %}
@@ -90,6 +90,8 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 {% endtabcontent %}
 
 {% endtabcontents %}
+
+N> For .NET 6 and .NET 7, use version 28.2.12 or earlier version.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 

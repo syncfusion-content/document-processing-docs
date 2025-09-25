@@ -19,7 +19,7 @@ This article describes how to add the Syncfusion&reg; Blazor PDF Viewer componen
 
 Create a new Blazor Server app and name it **PDFViewerGettingStarted**.
 
-N> The PDF Viewer component is supported on .NET 6.0 and later.
+N> The PDF Viewer component is supported on .NET 8.0 and later.
 
 ## Install Blazor PDF Viewer NuGet package in Blazor Server App
 

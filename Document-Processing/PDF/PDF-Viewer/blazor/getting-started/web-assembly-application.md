@@ -27,7 +27,7 @@ This article describes how to add the Syncfusion&reg; Blazor PDF Viewer componen
 
 You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-N> The PDF Viewer component is supported on .NET 6.0 and later.
+N> The PDF Viewer component is supported on .NET 8.0 and later.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer and Themes NuGet packages in the app
 
@@ -68,7 +68,7 @@ cd BlazorApp
 
 {% endtabs %}
 
-N> The PDF Viewer component is supported on .NET 6.0 and later.
+N> The PDF Viewer component is supported on .NET 8.0 and later.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in the app
 
