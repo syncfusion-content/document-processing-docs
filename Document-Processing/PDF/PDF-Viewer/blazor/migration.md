@@ -225,6 +225,6 @@ N> When hosting in certain environments (for example, Azure App Service), use [S
 
 ## See also
 
-* [Getting Started with Blazor SfPdfViewer Component in Blazor Webapp Server App](./getting-started/web-app)
+* [Getting Started with Blazor SfPdfViewer Component in Blazor Web app Server App](./getting-started/web-app)
 
 * [Getting Started with Blazor SfPdfViewer Component in Blazor WASM App](./getting-started/web-assembly-application)
