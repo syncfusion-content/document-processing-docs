@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor Spreadsheet Component | Syncfusion
-description: Learn how to perform data sorting in the Syncfusion Blazor Spreadsheet component and much more.
+description: Learn how to perform data sorting in the Blazor Spreadsheet component and much more.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
