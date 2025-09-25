@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text Search in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about text search in Syncfusion Blazor SfPdfViewer component and much more.
+description: Learn how to search text in the Syncfusion Blazor SfPdfViewer, enable or disable the search, and perform programmatic search operations.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Text Search in Blazor SfPdfViewer Component
 
-You can find the specified text content in the PDF document using the built-in options provided with the toolbar. On initiating the search operation, the control searches for the specified text and highlights all the occurrences in the pages.
+Use the built-in toolbar to find text in a PDF document. When a search is initiated, the viewer highlights all matches across pages and supports navigation between occurrences with next and previous controls.
 
-![Text Search in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-text-search.png)
+![Blazor SfPdfViewer text search](../blazor-classic/images/blazor-pdfviewer-text-search.png)
 
-You can enable or disable the text search by setting the [EnableTextSearch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSearch) API.
+Enable or disable the text search UI using the [EnableTextSearch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSearch) property. When disabled, search commands are unavailable.
 
 ```cshtml
 
@@ -27,7 +27,7 @@ You can enable or disable the text search by setting the [EnableTextSearch](http
 
 ```
 
-Also, you can programmatically perform search operation as given in the following code example.
+Text search can also be performed programmatically using the following APIs: [SearchTextAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SearchTextAsync_System_String_System_Boolean_), [SearchNextAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SearchNextAsync), [SearchPreviousAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SearchPreviousAsync), and [CancelTextSearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CancelTextSearchAsync).
 
 ```cshtml
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar Customization in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about toolbar customization in Syncfusion Blazor SfPdfViewer component and more.
+description: Learn how to customize the toolbar in the Syncfusion SfPdfViewer, including show hide toolbar items, rearrange, adding custom items, and redaction toolbars.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar Customization in Blazor SfPdfViewer Component
 
-The SfPdfViewer comes with a powerful built-in toolbar with the following important options,
+The SfPdfViewer includes a built-in toolbar that offers the following options:
 
 * Open PDF file
 * Page navigation
@@ -18,17 +18,21 @@ The SfPdfViewer comes with a powerful built-in toolbar with the following import
 * Text selection tool
 * Text search
 * Print
+* SubmitForm
+* Comment Tool
 * Download
 * Undo and redo
 * Various annotation tools
+* Form designer tools
+* Redaction annotation tools
 * Bookmark panel
 * Thumbnail panel
 
-![Blazor SfPdfViewer with Custom Toolbar](../blazor-classic/images/blazor-pdfviewer-custom-toolbar.png)
+![Blazor SfPdfViewer toolbar with customized items](../blazor-classic/images/blazor-pdfviewer-custom-toolbar.png)
 
 ## Show or hide toolbar
 
-At times, you might need to create your own toolbar. In that case, you need to hide the built-in toolbar. For that customization purpose, the SfPdfViewer control provides an option to show or hide the main (top) toolbar either by using the [EnableToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableToolbar) property or [ShowToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowToolbarAsync_System_Boolean_) method.
+In scenarios where a custom toolbar is required, the built-in toolbar can be hidden. Use the [EnableToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableToolbar) property or the [ShowToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowToolbarAsync_System_Boolean_) method to show or hide the primary toolbar.
 
 The following code snippet explains how to show or hide toolbar using the EnableToolbar property.
 
@@ -68,11 +72,11 @@ The following code snippet explains how to show or hide toolbar using the ShowTo
 
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20Toolbar).
+[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20Toolbar).
 
 ## Show or hide navigation toolbar
 
-Navigation toolbar is the side bar, which contains the options to expand and collapse the bookmark panel and page thumbnail panel. This navigation toolbar visibility can be toggled either by using the [EnableNavigationToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigationToolbar) property or [ShowNavigationToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowAnnotationToolbar_System_Boolean_) method.
+The navigation toolbar is the sidebar that provides options to expand or collapse the bookmark and page thumbnail panels. Toggle its visibility by using the [EnableNavigationToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigationToolbar) property or the [ShowNavigationToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowNavigationToolbar_System_Boolean_) method.
 
 The following code snippet explains how to show or hide navigation toolbar using the EnableNavigationToolbar property.
 
@@ -114,7 +118,7 @@ The following code snippet explains how to show or hide navigation toolbar using
 
 ## Show or hide the toolbar item
 
-You can show or hide the toolbar items using the “PdfViewerToolbarSettings” class. The following code snippet explains how to show only the desired options in the toolbar. The resultant SfPdfViewer’s toolbar will have these options - Open file, magnification tools, comment tool, and download option.
+Toolbar items can be shown or hidden by configuring the `PdfViewerToolbarSettings` class. The following example demonstrates how to display only the specified items in the toolbar. The toolbar will only render the items listed in the collection.
 
 ```cshtml
 
@@ -149,7 +153,7 @@ You can show or hide the toolbar items using the “PdfViewerToolbarSettings” 
 
 ## Show or hide annotation toolbar
 
-Annotation toolbar appears below the main toolbar, which contains the options to edit the annotations. This annotation toolbar visibility can be toggled either by using the [EnableAnnotationToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableAnnotationToolbar) or [ShowAnnotationToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowAnnotationToolbar_System_Boolean_) method.
+The annotation toolbar appears below the primary toolbar and provides options to edit annotations. Toggle its visibility using the [EnableAnnotationToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableAnnotationToolbar) property or the [ShowAnnotationToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowAnnotationToolbar_System_Boolean_) method.
 
 The following code snippet explains how to show or hide annotation toolbar using the ShowAnnotationToolbar method.
 
@@ -178,15 +182,15 @@ The following code snippet explains how to show or hide annotation toolbar using
 }
 
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Annotation%20Toolbar/Show%20or%20hide%20on%20loading).
+[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Annotation%20Toolbar/Show%20or%20hide%20on%20loading).
 
 ## Primary Toolbar Customization
 
-You have the capability to modify the primary toolbar options by rearranging them, disabling default options and adding new items and moreover, you can specify the index at which to add a new item within the existing toolbar options.
+The primary toolbar can be customized by rearranging existing options, disabling default options, and adding new items. A specific index can also be provided to place new items among existing options.
 
 ## Rearrange the default options of toolbar
 
-You can adjust the order of the [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) by rearranging how the items are listed. The toolbar will display the items based on the order in which they appear in the list
+Reorder the [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) list to control the display order. The toolbar renders items in the order defined in the collection.
 
 ```cshtml
 
@@ -218,13 +222,13 @@ You can adjust the order of the [ToolbarItems](https://help.syncfusion.com/cr/bl
 
 ```
 
-![Blazor PDFViewer with Custom Toolbar](./images/Rearrange-Default-Options.png)
+![Primary toolbar with rearranged items](./images/Rearrange-Default-Options.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar/Rearrange-Default-Options).
+[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar/Rearrange-Default-Options).
 
 ## Disable the default items and Add new items in Primary Toolbar
 
-To customize the Primary Toolbar in the PDF Viewer, you can achieve this by setting the [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) property to null and creating a list of [PdfToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_PdfToolbarItem__ctor) objects. Each PdfToolbarItem contains a **RenderFragment** and an **Index** for positioning the toolbar items. Finally, assign this list to the [CustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_CustomToolbarItems) property. 
+To customize the primary toolbar by replacing defaults with custom items, set the [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) property to null and provide a list of [PdfToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_PdfToolbarItem__ctor) objects. Each PdfToolbarItem defines a **RenderFragment** and an **Index** to position the custom item. Assign the list to [CustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_CustomToolbarItems).
 
 ```cshtml
 
@@ -326,13 +330,13 @@ To customize the Primary Toolbar in the PDF Viewer, you can achieve this by sett
 
 ```
 
-![Blazor PDFViewer with Custom Toolbar](./images/primary-toolbar-customization-with-save-option.png)
+![Primary toolbar with custom items including Save](./images/primary-toolbar-customization-with-save-option.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar/Without-Default-Options).
+[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar/Without-Default-Options).
 
 ## How to customize the Primary Toolbar with default options
 
-You can implement the both [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) and [CustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_CustomToolbarItems). The [CustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_CustomToolbarItems) list allows you to specify items with their respective index positions, which are then incorporated into the ToolbarItems list accordingly. 
+Both [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) and [CustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_CustomToolbarItems) can be used together. Items defined in CustomToolbarItems are inserted at the specified index positions among the ToolbarItems.
 
 ```cshtml
 
@@ -371,13 +375,13 @@ You can implement the both [ToolbarItems](https://help.syncfusion.com/cr/blazor/
 } 
 
 ```
-![Blazor PDFViewer with Custom Toolbar](./images/primary-toolbar-customization-with-default-toolbaritems.png)
+![Primary toolbar with default and custom items](./images/primary-toolbar-customization-with-default-toolbaritems.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar/With-Default-Options).
+[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar/With-Default-Options).
 
 ## How modify the toolbar Icons in the Primary Toolbar
 
-You can customize the appearance of the toolbar icons. The below code illustrates how to create custom toolbar with custom toolbar icon.
+The appearance of toolbar icons can be customized. The following example demonstrates a custom toolbar with custom icon styles.
 
 ```cshtml
 
@@ -434,11 +438,11 @@ You can customize the appearance of the toolbar icons. The below code illustrate
 </style> 
 
 ```
-![Blazor PDFViewer with Custom Toolbar](./images/primary-toolbar-customization-icon-change.png)
+![Primary toolbar with custom icon styles](./images/primary-toolbar-customization-icon-change.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar/Icon-Style-Change).
+[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar/Icon-Style-Change).
 
-N> This is applicable only for custom toolbar.
+N> This applies only to a custom toolbar.
 
 ## How to customize the Annotation Toolbar
 
@@ -477,13 +481,13 @@ The following example demonstrates how to customize the Annotation Toolbar by sp
 ```
 Refer to the image below for the desktop view.
 
-![Blazor PDFViewer with Custom Toolbar](./images/Annotation_Toolbar_Customization_Desktop.png)
+![Annotation toolbar with selected tools on desktop](./images/Annotation_Toolbar_Customization_Desktop.png)
 
 Refer to the image below for the mobile view.
 
-![Blazor PDFViewer with Custom Toolbar](./images/Annotation_Toolbar_Customization_Mobile.png)
+![Annotation toolbar with selected tools on mobile](./images/Annotation_Toolbar_Customization_Mobile.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/CustomAnnotationToolbar.razor).
+[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/CustomAnnotationToolbar.razor).
 
 ## How to customize the Form Designer Toolbar
 
@@ -518,21 +522,21 @@ The following example demonstrates how to customize the Form Designer Toolbar by
 
 Refer to the image below for the desktop view.
 
-![Blazor PDFViewer with Custom Toolbar](./images/Form_Designer_Toolbar_Customization_Desktop.png)
+![Form Designer toolbar with selected tools on desktop](./images/Form_Designer_Toolbar_Customization_Desktop.png)
 
 Refer to the image below for the mobile view.
 
-![Blazor PDFViewer with Custom Toolbar](./images/Form_Designer_Toolbar_Customization_Mobile.png)
+![Form Designer toolbar with selected tools on mobile](./images/Form_Designer_Toolbar_Customization_Mobile.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/CustomFormDesignerToolbar.razor).
+[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/CustomFormDesignerToolbar.razor).
 
 ## How to customize the  Redaction Toolbar
 
-The **Redaction Toolbar** in the PDF Viewer allows users to mark and permanently redact sensitive content from a PDF document. This guide explains how to enable and customize the Redaction Toolbar for both desktop and mobile platforms, and how to control its visibility dynamically.
+The Redaction toolbar allows users to mark and permanently redact sensitive content in a PDF document. The following sections explain how to enable and customize the Redaction toolbar for desktop and mobile views and how to control its visibility.
 
 ### Enabling the Redaction Toolbar on Desktop
 
-To enable the Redaction Toolbar on desktop platforms, include the required `ToolbarItems` in the `SfPdfViewer2` component as shown below:
+To enable the Redaction toolbar on desktop, include the required `ToolbarItems` in the `SfPdfViewer` component as shown below:
 
 #### Code Example
 
@@ -567,12 +571,12 @@ To enable the Redaction Toolbar on desktop platforms, include the required `Tool
     }
 }
 ```
-Refer to the image below for the desktop view.
-![Enable Redaction Toolbar for Desktop](./annotation/redaction-annotations-images/enable-redaction-toolbar-for-desktop.png)
+Refer to the following image for the desktop view.
+![Enable Redaction toolbar for desktop](./annotation/redaction-annotations-images/enable-redaction-toolbar-for-desktop.png)
 
 ### Enabling the Redaction Toolbar on Mobile
 
-To enable the Redaction Toolbar in mobile view, use the `MobileToolbarItems` property as shown below:
+To enable the Redaction toolbar on mobile, configure the `MobileToolbarItems` property as shown below:
 
 #### Code Example
 
@@ -600,26 +604,26 @@ To enable the Redaction Toolbar in mobile view, use the `MobileToolbarItems` pro
 }
 ```
 
-Refer to the image below for the mobile view.
+Refer to the following image for the mobile view.
 
-![Mobile Redaction Toolbar](./annotation/redaction-annotations-images/mobile-redaction-toolbar.png)
+![Enable Redaction toolbar for mobile](./annotation/redaction-annotations-images/mobile-redaction-toolbar.png)
 
 ## Showing or Hiding the Redaction Toolbar
 
-The Redaction Toolbar in the Blazor PDF Viewer provides tools for applying redactions to PDF documents. Its visibility can be controlled either through the built-in toolbar interface or programmatically using the `ShowRedactionToolbar` API.
+The Redaction toolbar can be shown or hidden using the built-in toolbar icon or programmatically through the `ShowRedactionToolbar` API.
 
 ### Displaying the Redaction Toolbar Using the Toolbar Icon
 
-When `ToolbarItem.Redaction` or `MobileToolbarItem.Redaction` is enabled, clicking the redaction icon in the main toolbar toggles the visibility of the Redaction Toolbar.
+When `ToolbarItem.Redaction` or `MobileToolbarItem.Redaction` is enabled, selecting the redaction icon in the primary toolbar toggles the visibility of the Redaction toolbar.
 
-Refer to the Image below for details.
-![Show Redaction Toolbar](./annotation/redaction-annotations-images/redaction-icon-toolbar.png)
+Refer to the following image for details.
+![Show Redaction toolbar from the primary toolbar](./annotation/redaction-annotations-images/redaction-icon-toolbar.png)
 
 ### Displaying the Redaction Toolbar Programmatically
 
-The visibility of the Redaction Toolbar can also be controlled programmatically by invoking the `ShowRedactionToolbar` method of the SfPdfViewer component. This approach is suitable for scenarios where toolbar visibility must be managed based on application logic, user permissions, or contextual requirements.
+The visibility of the Redaction toolbar can also be controlled programmatically by invoking the `ShowRedactionToolbar` method on the SfPdfViewer instance. This is useful when visibility must be driven by application logic, permissions, or context.
 
-The following example demonstrates how to toggle the visibility of the Redaction Toolbar using a button:
+The following example demonstrates how to toggle the visibility of the Redaction toolbar using a button:
 
 ```cshtml
 private void ToggleRedactionToolbar()
@@ -629,8 +633,8 @@ private void ToggleRedactionToolbar()
 }
 ```
 
-Refer to the Image below for details.
-![Show Redaction Toolbar](./annotation/redaction-annotations-images/show-redaction-toolbar.png)
+Refer to the following image for details.
+![Programmatically show the Redaction toolbar](./annotation/redaction-annotations-images/show-redaction-toolbar.png)
 
 ## See also
 
