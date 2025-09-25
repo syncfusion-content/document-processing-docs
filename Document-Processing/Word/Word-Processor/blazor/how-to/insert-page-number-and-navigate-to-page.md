@@ -2,7 +2,7 @@
 layout: post
 title: Insert page number and Navigate in Blazor DocumentEditor | Syncfusion
 description: Learn how to Insert Page number and Navigate to specific page from the Syncfusion Blazor Document Editor component and much more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---

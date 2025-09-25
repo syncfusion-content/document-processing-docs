@@ -2,7 +2,7 @@
 layout: post
 title: Optimize the SFDT file in Blazor DocumentEditor Component | Syncfusion
 description: Learn here all about optimize the SFDT file in Document Editor in Syncfusion Blazor DocumentEditor component and more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---

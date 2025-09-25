@@ -2,7 +2,7 @@
 layout: post
 title: Bookmarks in Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn here all about the Bookmarks in Syncfusion Blazor DocumentEditor component and more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---

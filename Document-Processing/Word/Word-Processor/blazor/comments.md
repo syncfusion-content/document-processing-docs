@@ -2,7 +2,7 @@
 layout: post
 title: Comments in Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn here all about the Comments in Syncfusion Blazor DocumentEditor component and more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---

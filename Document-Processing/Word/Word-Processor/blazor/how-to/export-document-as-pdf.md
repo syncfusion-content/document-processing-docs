@@ -2,7 +2,7 @@
 layout: post
 title: PDF Export in Blazor DocumentEditor Component | Syncfusion
 description: Learn how to export the document as PDF in Syncfusion Blazor DocumentEditor component and much more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---

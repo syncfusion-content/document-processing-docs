@@ -2,7 +2,7 @@
 layout: post
 title: Images in Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn here all about Images in Syncfusion Blazor DocumentEditor component and much more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---

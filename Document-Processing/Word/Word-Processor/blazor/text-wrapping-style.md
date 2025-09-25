@@ -2,7 +2,7 @@
 layout: post
 title: Text Wrapping Style in Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn here all about Text Wrapping Style in Syncfusion Blazor DocumentEditor component and more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---
