@@ -44,7 +44,7 @@ The Document Editor component is used to create, edit, view, and print Word docu
 * [Vue](../vue/getting-started)
 * [ASP.NET Core](../asp-net-core/getting-started-core)
 * [ASP.NET MVC](../asp-net-mvc/getting-started)
-* [Blazor](../blazor/getting-started/server-side-application)
+* [Blazor](../blazor/getting-started/web-app)
 
 ### Supported platforms for server-side dependencies
 

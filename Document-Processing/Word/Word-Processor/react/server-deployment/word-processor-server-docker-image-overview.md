@@ -178,4 +178,4 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
-Refer to these getting started pages to create a Word Processor in [`Typescript`](../../javascript-es6/getting-started), [`Angular`](../../angular/getting-started), [`Vue`](../../vue/getting-started), [`ASP.NET MVC`](../../asp-net-mvc/getting-started), [`ASP.NET Core`](../../asp-net-core/getting-started-core), and [`Blazor`](../../blazor/getting-started/server-side-application).
+Refer to these getting started pages to create a Word Processor in [`Typescript`](../../javascript-es6/getting-started), [`Angular`](../../angular/getting-started), [`Vue`](../../vue/getting-started), [`ASP.NET MVC`](../../asp-net-mvc/getting-started), [`ASP.NET Core`](../../asp-net-core/getting-started-core), and [`Blazor`](../../blazor/getting-started/web-app).
