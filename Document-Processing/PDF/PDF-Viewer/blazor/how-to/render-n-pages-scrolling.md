@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Render N number pages on scrolling | Syncfusion
-description: Learn here all about OverscanCount in Blazor application in Syncfusion Blazor SfPdfViewer component and more.
+title: Render multiple pages while scrolling using OverscanCount | Syncfusion
+description: Learn how to improve scrolling performance in the Blazor SfPdfViewer by preloading pages with the OverscanCount property.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Render N number pages on scrolling
+# Render multiple pages while scrolling in Blazor SfPdfViewer
 
-The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_OverscanCount) feature in a PDF Viewer allows users to preload/render specified number of pages before and after the visible view port when opening a PDF document, thereby enhance the scrolling experience.
+Use the [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_OverscanCount) property to preload a specified number of pages before and after the current viewport, improving perceived performance while scrolling through a PDF document.
  
-To utilize this capability in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, adjust the OverscanCount property. By setting this property to a desired number, users can preload pages adjacent to the active page. This ensures quicker access to specific pages without waiting for the entire document to load.
+To use this capability in the Blazor SfPdfViewer, set OverscanCount to the desired number of adjacent pages to render. This reduces wait time when navigating across pages. Tune the value based on device capability and document size.
 
-Below is a code snippet illustrating how to implement the OverscanCount:
+The following example shows how to set OverscanCount:
 
 ```cshtml
 
@@ -23,4 +23,4 @@ Below is a code snippet illustrating how to implement the OverscanCount:
 </SfPdfViewer2>
     
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Render%20N%20number%20pages%20on%20scrolling).
+[View the OverscanCount sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Render%20N%20number%20pages%20on%20scrolling).
