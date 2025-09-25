@@ -35,8 +35,8 @@ Alternatively, you can utilize the following package manager command to achieve 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.Blazor.SfSmartPdfViewer -Version 31.1.17
-Install-Package Syncfusion.Blazor.Themes -Version 31.1.17
+Install-Package Syncfusion.Blazor.SfSmartPdfViewer -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
