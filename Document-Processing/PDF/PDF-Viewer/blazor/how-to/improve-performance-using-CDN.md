@@ -11,9 +11,7 @@ documentation: ug
 
 Referencing scripts from the application's hosted or NuGet location can add network overhead and slow initial rendering. To reduce latency, reference the scripts from a content delivery network (CDN). The browser will download the assets once and then reuse them from cache on subsequent loads (unless the version changes).
 
-Improve load performance by referencing the following CDN links in the app's host page:
-- Blazor Server: **~/Pages/_Host.cshtml**
-- Blazor WebAssembly: **wwwroot/index.html**
+Improve load performance by injecting the following CDN links in **Components/App.razor**.
 
 Use version-pinned URLs and update them when upgrading the package.
 

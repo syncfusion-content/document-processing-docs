@@ -20,9 +20,8 @@ Use JavaScript interop helper functions to translate between the document page c
    - `convertClientPointToPagePoint`: Transforms browser viewport coordinates to document page coordinates.
 
 ## Converting page coordinates to client coordinates
-- ConvertPagePointToClientPoint
 
-Translate a point from the document page coordinate system to the browser client (viewport) coordinate system.
+- ConvertPagePointToClientPoint translates a point from the document page coordinate system to the browser client (viewport) coordinate system.
 
 The following example shows how to convert page coordinates to client coordinates in a Blazor component.
 
@@ -90,9 +89,8 @@ window.convertPagePointToClientPoint = function (pagePoint) {
 [View the coordinate conversion sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Coordinate%20Conversion%20Between%20Page%20and%20Client%20Points)
 
 ## Converting client coordinates to page coordinates
-- ConvertClientPointToPagePoint 
 
-Translate a point from the browser client (viewport) coordinate system to the document page coordinate system.
+- ConvertClientPointToPagePoint translates a point from the browser client (viewport) coordinate system to the document page coordinate system.
 
 The following example shows how to convert client coordinates to page coordinates in a Blazor component.
 
