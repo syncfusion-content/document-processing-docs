@@ -17,7 +17,7 @@ Sign in to the Azure portal and create a Storage account with the desired config
 
 **Step 2:** Create a Simple SfPdfViewer Sample in Blazor
 
-Create a basic Blazor Server application that hosts the SfPdfViewer component by following [Getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) with Blazor SfPdfViewer. This provides the baseline configuration required for the viewer.
+Create a basic Blazor Web App Server application that hosts the SfPdfViewer component by following [Getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) with Blazor SfPdfViewer. This provides the baseline configuration required for the viewer.
 
 **Step 3:** Include the following namespaces in the **Index.razor** file.
 
