@@ -17,7 +17,7 @@ The **Protect Sheet** support helps prevent accidental changes such as editing, 
 
 ### Protecting a sheet via the UI
 
-You can protect the active sheet in one of the following ways:
+The active sheet can be protected using any of the following ways:
 
 *   Navigate to the **Review** tab in the Ribbon and select **Protect Sheet**.
 *   Right-click the sheet's tab in the bottom bar and select **Protect Sheet** from the context menu.
