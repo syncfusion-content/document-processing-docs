@@ -83,5 +83,5 @@ To delete a form field, first, select the form field you want to remove. The del
 
 ## See also
 
-* [Mobile Toolbar](./formdesigner-in-mobile-view)
-* [Annotations in Mobile View](./annotation/annotations-in-mobile-view)
+* [Mobile Toolbar](../mobile-toolbar)
+* [Annotations in Mobile View](../annotation/annotations-in-mobile-view)
