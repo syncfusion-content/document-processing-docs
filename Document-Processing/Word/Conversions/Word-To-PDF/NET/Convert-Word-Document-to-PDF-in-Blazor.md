@@ -44,6 +44,7 @@ Include the following namespaces in the file:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
+
 @rendermode InteractiveServer
 @page "/DocIO"
 @using System.IO;
@@ -97,7 +98,7 @@ using Syncfusion.Pdf;
 {% endtabs %}
 
 Step 7: Implement the `ConvertWordtoPDF` method in `WordService.cs`.
-Create a new `MemoryStream` method named `ConvertWordtoPDF` in the `WordService` class, and include the following code snippet to **convert the Word document to Pdf in Blazor** Web app:
+Create a new `MemoryStream` method named `ConvertWordtoPDF` in the `WordService` class, and include the following code snippet to **convert the Word document to PDF in Blazor** Web app:
 
 {% tabs %}
 
@@ -306,7 +307,7 @@ using Syncfusion.Pdf;
 {% endtabs %}
 
 Step 7: Implement the `ConvertWordtoPDF` method in `WordService.cs`.
-Create a new `MemoryStream` method named `ConvertWordtoPDF` in the `WordService` class, and include the following code snippet to **convert the Word document to Pdf in Blazor** Server app:
+Create a new `MemoryStream` method named `ConvertWordtoPDF` in the `WordService` class, and include the following code snippet to **convert the Word document to PDF in Blazor** Server app:
 
 {% tabs %}
 
@@ -453,7 +454,7 @@ Step 1: Create a new C# Blazor Server app project.
 
 Step 2: Install the `Syncfusion.DocIORenderer.Net.Core` NuGet package.
 To **convert a Word document to PDF in server app**, install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) into your Blazor project.
-*   Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+*   Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (back-tick) to open the integrated terminal in Visual Studio Code.
 *   Ensure you're in the project root directory where your .csproj file is located.
 *   Run the command `dotnet add package Syncfusion.DocIORenderer.Net.Core` to install the NuGet package.
 
@@ -521,7 +522,7 @@ using Syncfusion.Pdf;
 {% endtabs %}
 
 Step 7: Implement the `ConvertWordtoPDF` method in `WordService.cs`.
-Create a new `MemoryStream` method named `ConvertWordtoPDF` in the `WordService` class, and include the following code snippet to **convert the Word document to Pdf in Blazor** Server app:
+Create a new `MemoryStream` method named `ConvertWordtoPDF` in the `WordService` class, and include the following code snippet to **convert the Word document to PDF in Blazor** Server app:
 
 {% tabs %}
 
@@ -678,7 +679,7 @@ Step 1: Open JetBrains Rider and create a new Blazor Server app project.
 
 ![Creating a new .NET Core console application in JetBrains Rider](Blazor_Images/Create-Blazor-Server-application.png)
 
-Step 2: Install the `Syncfusion.DocIORenderer.Net.Core` NuGet package. from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the `Syncfusion.DocIORenderer.Net.Core` NuGet package from [NuGet.org](https://www.nuget.org/).
 *   Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) in the search bar.
 *   Ensure that "nuget.org" is selected as the package source.
 *   Select the latest `Syncfusion.DocIORenderer.Net.Core` NuGet package from the list.
@@ -691,7 +692,7 @@ Step 2: Install the `Syncfusion.DocIORenderer.Net.Core` NuGet package. from [NuG
 ![Install the Syncfusion.DocIORenderer.Net.Core NuGet package](Blazor_Images/Install-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
 
 N> 1. If you're deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
-N> 2. Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you must also add the  "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> 2. Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you must also add the  "Syncfusion.Licensing" assembly reference and include a license key in your projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder.
 Include the following namespaces in the file:
@@ -751,7 +752,7 @@ using Syncfusion.Pdf;
 {% endtabs %}
 
 Step 7: Implement the `ConvertWordtoPDF` method in `WordService.cs`.				
-Create a new `MemoryStream` method named `ConvertWordtoPDF` in the `WordService` class, and include the following code snippet to **convert the Word document to Pdf in Blazor** Server app.
+Create a new `MemoryStream` method named `ConvertWordtoPDF` in the `WordService` class, and include the following code snippet to **convert the Word document to PDF in Blazor** Server app.
 
 {% tabs %}
 
@@ -871,7 +872,7 @@ Step 13: Run the project.
 
 Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the application.
 
-A complete working sample is availble on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Blazor/Server-app).
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Blazor/Server-app).
 
 Upon executing the program, the **PDF document** will be generated as follows.
 
@@ -1085,7 +1086,7 @@ Step 1: Create a new C# Blazor WASM app project.
 *   Then choose **Create project**.
 
 Step 2: To **convert a Word document to PDF in Blazor WASM app**, install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) and [SkiaSharp.Views.Blazor v3.116.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.116.1) to the Blazor project.
-*   Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+*   Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (back-tick) to open the integrated terminal in Visual Studio Code.
 *   Ensure you're in the project root directory where your .csproj file is located.
 *   Run the command `dotnet add package Syncfusion.DocIORenderer.Net.Core` and `dotnet add package SkiaSharp.Views.Blazor --version 3.116.1` to install the NuGet package.
 
@@ -1298,7 +1299,7 @@ Step 2: Install the `Syncfusion.DocIORenderer.Net.Core` NuGet package from [NuGe
 
 ![Install the Syncfusion.DocIORenderer.Net.Core NuGet package](Blazor_Images/Install-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
 
-* Similary install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) NuGet package from [NuGet.org](https://www.nuget.org/)
+* Similarly install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) NuGet package from [NuGet.org](https://www.nuget.org/)
 
 ![Install the SkiaSharp.Views.Blazor NuGet package](Blazor_Images/Install-SkiaSharp.Views.Blazor-NuGet.png)
 
