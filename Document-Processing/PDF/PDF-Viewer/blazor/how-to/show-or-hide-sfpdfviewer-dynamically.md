@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Show or hide the pdfviewer dynamically in Blazor | Syncfusion
-description: Learn here all about how to show or hide the pdfviewer dynamically in Syncfusion Blazor SfPdfViewer component and more.
+title: Show or hide the Blazor SfPdfViewer dynamically in Blazor | Syncfusion
+description: Learn how to dynamically show or hide the Syncfusion Blazor SfPdfViewer, toggle visibility with a button, and load PDFs from a local file.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Show or hide the SfPdfViewer Component dynamically in Blazor 
 
-In the below code, the SfPdfViewer is hidden at page load. Then, on clicking a button, the SfPdfViewer container will be loaded. When the user clicks on a PDF file (here it is demonstrated with buttons), the SfPdfViewer already present on the same page will be updated to show the selected document. 
+The following example initializes the PDF Viewer hidden and toggles its visibility with a button. When shown, selecting a source loads a PDF either from a physical path or a remote URL into the same viewer instance using a Base64 data URI. Ensure the container has an explicit size so Height="100%" and Width="100%" render correctly.
 
 ```cshtml
 
@@ -70,7 +70,7 @@ In the below code, the SfPdfViewer is hidden at page load. Then, on clicking a b
 }
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Render%20the%20PDF%20Viewer%20on%20a%20button%20click).
+[View the Blazor SfPdfViewer toggle sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Render%20the%20PDF%20Viewer%20on%20a%20button%20click).
 
 ## See also
 
