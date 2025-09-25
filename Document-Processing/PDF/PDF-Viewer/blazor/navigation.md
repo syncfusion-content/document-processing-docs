@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Navigation in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about navigation in Syncfusion Blazor SfPdfViewer component and much more.
+description: Learn all about page navigation, bookmarks, thumbnails, hyperlinks, and the modern navigation panel in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,27 +9,27 @@ documentation: ug
 
 # Navigation in Blazor SfPdfViewer Component
 
-You can navigate between pages in Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer in the following ways:
+Page navigation in the Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer component can be performed using the following methods:
 
 * Scroll through the pages.
-* Click Go to pages in the built-in toolbar.
-* Click the desired bookmark in bookmark pane.
-* Click the desired page in thumbnail pane.
-* Click hyperlink and table of contents.
+* Use the Go to page option in the built-in toolbar.
+* Select a bookmark in the bookmark panel.
+* Select a page in the thumbnail panel.
+* Click hyperlinks or entries in the table of contents.
 
 ## Page navigation
 
 The built-in toolbar of SfPdfViewer contains the following page navigation tools:
 
-* **First** **Page**: Navigates you to the first page in the document.
-* **Last** **Page**: Navigates you to the last page in the document.
-* **Next** **Page**: Scrolls forwards through pages, one page at a time.
-* **Go** **To**: Allows you to quickly jump to the desired page number.
-* **Previous** **Page**: Scrolls backwards through pages, one page at a time.
+* **First** **Page**: Navigates to the first page in the document.
+* **Last** **Page**: Navigates to the last page in the document.
+* **Next** **Page**: Scrolls forward one page at a time.
+* **Go** **To**: Quickly jumps to a specified page number.
+* **Previous** **Page**: Scrolls backward one page at a time.
 
-![Blazor SfPdfViewer with Page Navigation](../blazor-classic/images/blazor-pdfviewer-page-navigation.png)
+![Page navigation tools in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-page-navigation.png)
 
-You can enable or disable the page navigation option in SfPdfViewer default toolbar by setting the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigation) property.
+Enable or disable the page navigation tools in the default toolbar by setting the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigation) property.
 
 ```cshtml
 
@@ -46,7 +46,7 @@ You can enable or disable the page navigation option in SfPdfViewer default tool
 
 ```
 
-Also, you can programmatically perform page navigation as follows.
+You can also perform page navigation programmatically as follows.
 
 ```cshtml
 
@@ -116,11 +116,11 @@ Also, you can programmatically perform page navigation as follows.
 
 ## Bookmark navigation
 
-The bookmarks saved in PDF files are loaded and listed in the bookmark pane (in the left navigation pane). The users can jump to areas of interest by clicking the desired bookmark easily.
+Bookmarks saved in the PDF are loaded and listed in the bookmark panel (left navigation pane). Users can jump to areas of interest by selecting a bookmark.
 
-![Blazor SfPdfViewer with Bookmark Navigation](../blazor-classic/images/blazor-pdfviewer-bookmark-navigation.png)
+![Bookmark navigation in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-bookmark-navigation.png)
 
-You can enable or disable the bookmark navigation pane by setting the [EnableBookmark](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableBookmarkPanel) property.
+Enable or disable the bookmark panel by setting the [EnableBookmarkPanel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableBookmarkPanel) property.
 
 ```cshtml
 
@@ -136,11 +136,11 @@ You can enable or disable the bookmark navigation pane by setting the [EnableBoo
 
 ## Page thumbnail navigation
 
-Page thumbnails is the miniature representation of actual pages in the PDF files. This feature displays thumbnails of the pages and represents a link to the respective pages. Clicking a page thumbnail will display the respective page in the document view.
+Page thumbnails are miniature representations of the document pages. Selecting a thumbnail navigates to the corresponding page in the viewer.
 
-![Blazor SfPdfViewer with Page Thumbnail Navigation](../blazor-classic/images/blazor-pdfviewer-page-thumbnail-navigation.png)
+![Page thumbnail navigation in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-page-thumbnail-navigation.png)
 
-You can enable or disable the thumbnail navigation pane by setting the [EnableThumbnail](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableThumbnailPanel) property.
+Enable or disable the thumbnail panel by setting the [EnableThumbnailPanel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableThumbnailPanel) property.
 
 ```cshtml
 
@@ -156,9 +156,9 @@ You can enable or disable the thumbnail navigation pane by setting the [EnableTh
 
 ### Open thumbnail panel programmatically
 
-You can view the thumbnail navigation initially while loading the PDF document in the PDFViewer using the [IsThumbnailPanelOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_IsThumbnailPanelOpen) property.
+To display the thumbnail panel initially when loading a document, set the [IsThumbnailPanelOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_IsThumbnailPanelOpen) property to true.
 
-The following code illustrates how to open thumbnail panel programmatically.
+The following code illustrates how to open the thumbnail panel programmatically.
 
 ```cshtml
 
@@ -185,17 +185,17 @@ The following code illustrates how to open thumbnail panel programmatically.
 
 ## Hyperlink navigation
 
-Hyperlink navigation features enables navigation to the URLs (website links) in a PDF file.
+The hyperlink navigation feature enables navigation to URLs (website links) in a PDF file.
 
-![Blazor SfPdfViewer Hyperlink Navigation](../blazor-classic/images/blazor-pdfviewer-hyperlink-navigation.png)
+![Hyperlink navigation in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-hyperlink-navigation.png)
 
 ## Table of content navigation
 
-Table of contents navigation allows users to navigate to different parts of a PDF file that are listed in the table of contents section.
+Table of contents navigation allows users to move to different sections of a PDF listed in the table of contents.
 
-![Table of Content in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-title-of-content.png)
+![Table of contents in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-title-of-content.png)
 
-You can enable or disable both hyperlink and table of content navigation by setting the `EnableHyperlink` property.
+Enable or disable both hyperlink and table of contents navigation by setting the [EnableHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableHyperlink) property.
 
 ```cshtml
 
@@ -209,7 +209,7 @@ You can enable or disable both hyperlink and table of content navigation by sett
 
 ```
 
-You can set the target attribute for a hyperlink in SfPdfViewer using the [HyperlinkOpenState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_HyperlinkOpenState) property.
+Specify the target behavior for hyperlinks using the [HyperlinkOpenState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_HyperlinkOpenState) property.
 
 ```cshtml
 
@@ -227,11 +227,11 @@ You can set the target attribute for a hyperlink in SfPdfViewer using the [Hyper
 
 ## Modern Navigation Panel
 
-The SfPdfViewer includes a modern navigation panel that replaces the legacy panel. It expands the viewer's capabilities beyond simple thumbnails, bookmarks, and comments to offer a more comprehensive and interactive viewing experience.
+The SfPdfViewer includes a modern navigation panel that replaces the legacy panel. It extends the viewer beyond thumbnails, bookmarks, and comments to provide a more comprehensive and interactive experience.
 
-You can toggle the visibility of this modern navigation panel using the [`EnableNavigationPanel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigationPanel) property.
+Toggle the visibility of the modern navigation panel using the [EnableNavigationPanel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigationPanel) property.
 
-The following code snippet demonstrates how to enable the modern navigation panel:
+The following example enables the modern navigation panel:
 
 ```cshtml
 
@@ -245,7 +245,7 @@ The following code snippet demonstrates how to enable the modern navigation pane
 
 ```
 
-![Enable Modern Navigation Panel](../blazor-classic/images/enable_modern_navigation_panel.png)
+![Enable modern navigation panel in SfPdfViewer](../blazor-classic/images/enable_modern_navigation_panel.png)
 
 ### Default items in navigation panel
 
@@ -257,9 +257,9 @@ The modern navigation panel contains the following built-in items:
 
 ### Rearrange the default items of navigation panel
 
-This customization is achieved using the `BuiltInItems` property, which accepts a list of [`NavigationToolbarItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarItem.html) enums. The viewer will render the navigation icons in the exact sequence you provide in this list.
+Use the `BuiltInItems` property, which accepts a list of [NavigationToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarItem.html) enums. The viewer renders the navigation icons in the exact sequence provided.
 
-The following code snippet demonstrates how to set the navigation panel to display the Thumbnails first, followed by Bookmarks and comment panel.
+The following example displays Thumbnails first, followed by Bookmarks and the Comment panel.
 
 ```cshtml
 
@@ -284,13 +284,13 @@ The following code snippet demonstrates how to set the navigation panel to displ
 
 ```
 
-![Rearrange the default items of navigation panel](../blazor-classic/images/rearrange_navigation_panel_items.png)
+![Rearrange the default items of the navigation panel](../blazor-classic/images/rearrange_navigation_panel_items.png)
 
 ### Open or close navigation panel programmatically
 
-You can programmatically open or close a navigation panel by calling the [`ToggleItemByIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ToggleItemByIndex_System_Int32_) method. This method takes the index of the panel item and toggles its state which opens it if closed, and then closes it if open.
+Open or close a navigation panel programmatically by calling the [ToggleItemByIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ToggleItemByIndex_System_Int32_) method. This method toggles the item at the specified index, opening it if closed and closing it if open.
 
-The following code snippet demonstrates to toggle the visibility of the second item in the navigation panel (which has an index of 1).
+The following example toggles the visibility of the second item in the navigation panel (index 1).
 
 ```cshtml
 
@@ -315,26 +315,26 @@ The following code snippet demonstrates to toggle the visibility of the second i
 
 ```
 
-![Open or Close Navigation Panel Programmatically](../blazor-classic/images/navigation_panel_toggleitembyindex.png)   
+![Open or close the navigation panel programmatically](../blazor-classic/images/navigation_panel_toggleitembyindex.png)   
 
 ### How to add customize items in the navigation panel
 
-You can add custom items to the SfPdfViewer navigation toolbar. To do this, create a list of [`CustomNavigationToolbarItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CustomNavigationToolbarItem.html) objects and assign it to the `CustomItems` property.
+You can add custom items to the SfPdfViewer navigation toolbar. Create a list of [CustomNavigationToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CustomNavigationToolbarItem.html) objects and assign it to the `CustomItems` property.
 
-Each CustomNavigationToolbarItem object has several properties to define its appearance and behavior: 
+Each CustomNavigationToolbarItem object has the following properties to define its appearance and behavior: 
 * **Index** : Sets the position of the item in the toolbar.
 * **Name** : Assigns a custom name to the item.
-* **TooltipText** : Defines the text that appears when hovering over the item.
+* **TooltipText** : Defines the text shown on hover.
 * **HeaderText** : Sets the header text displayed at the top of the custom panel.
 * **IconCss** : Specifies the CSS class for the item's icon.
-* **Template** : Allows you to define a custom template for the panel's content. 
-* **ItemType** : Determines the item's type, such as a clickable button [`NavigationToolbarItemType.Button`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarItemType.html#Syncfusion_Blazor_SfPdfViewer_NavigationToolbarItemType_Button) or a visual separator [`NavigationToolbarItemType.Separator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarItemType.html#Syncfusion_Blazor_SfPdfViewer_NavigationToolbarItemType_Separator).
+* **Template** : Defines a custom template for the panel content.
+* **ItemType** : Determines the item type, such as a clickable button [NavigationToolbarItemType.Button](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarItemType.html#Syncfusion_Blazor_SfPdfViewer_NavigationToolbarItemType_Button) or a visual separator [NavigationToolbarItemType.Separator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarItemType.html#Syncfusion_Blazor_SfPdfViewer_NavigationToolbarItemType_Separator).
 
 ### How to add the customize template for the navigation panel
 
-You can define a completely custom UI for a navigation panel by assigning a RenderFragment to the `Template` property of a [`CustomNavigationToolbarItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CustomNavigationToolbarItem.html).
+Define a custom UI for a navigation panel by assigning a RenderFragment to the `Template` property of a [CustomNavigationToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CustomNavigationToolbarItem.html).
 
-The following code snippet demonstrates to add the default toolbar with a custom item containing a small, interactive panel with the customized UI.
+The following example adds a default toolbar with a custom item containing a small, interactive panel with a customized UI.
 
 ```cshtml
 
@@ -430,17 +430,17 @@ The following code snippet demonstrates to add the default toolbar with a custom
 
 ```
 
-![Customize Template for the Navigation Panel](../blazor-classic/images/custom_navigation_panel_template.png)
+![Customize the template for the navigation panel](../blazor-classic/images/custom_navigation_panel_template.png)
 
 ### Demand rendering for navigation panel
 
-The SfPdfViewer allows you to specify a loading strategy for the content of the navigation panels to optimize performance. The available options are:
+SfPdfViewer supports different loading strategies for navigation panel content to optimize performance. The available options are:
 
 * **Dynamic** : The content for a panel is only loaded into the DOM when that panel is selected. When you switch to a different panel, the previous content is removed and replaced.
 * **Init** : The content for all navigation panels is rendered during the initial load and is always present in the DOM.
 * **Demand** : The content for a panel is loaded into the DOM the first time it is selected. The content is then kept in the DOM, even if you navigate to other panels.
 
-The following code demonstrates how to set the loading strategy to Demand.
+The following example sets the loading strategy to Demand.
 
 ```cshtml
 
