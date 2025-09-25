@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Hyperlinks in Blazor Spreadsheet component
+# Hyperlinks in the Blazor Spreadsheet component
 
 Hyperlinks in the Blazor Spreadsheet enable interactive navigation both within and outside of spreadsheets. This feature creates clickable links that connect to external web URLs, specific cells within the current worksheet, or cells in other worksheets. To control this functionality, use the [AllowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowHyperlink) property, which enables or disables hyperlink support in the Spreadsheet. The default value of the `AllowHyperlink` property is **true**.
 
@@ -15,7 +15,7 @@ The keyboard shortcut `Ctrl + K` can be used to quickly open the **Insert** or *
 
 N> When `AllowHyperlink` is set to **false**, the hyperlink options are removed from the interface (Ribbon and Context Menu), although existing hyperlinks will still function. Additionally, shortcut keys (**Ctrl + K**) and API methods related to this feature will no longer work.
 
-## Insert hyperlink
+## Insert Hyperlink
 
 Hyperlinks can be added to worksheet cells to create interactive elements that improve navigation and connect data to external sources. These links can point to:
 * **Web URLs** - Direct access to websites, such as `https://www.syncfusion.com`.
@@ -24,7 +24,7 @@ Hyperlinks can be added to worksheet cells to create interactive elements that i
 
 The linked cells are typically formatted with underlined and colored text to indicate they are clickable.
 
-### Insert hyperlink via UI
+### Insert Hyperlink via UI
 
 Hyperlinks can be inserted through the user interface (UI) using any of the following methods:
 
@@ -47,7 +47,7 @@ Hyperlinks can be inserted through the user interface (UI) using any of the foll
 
 ![Insert hyperlink using Context Menu](images/insert-hyperlink-using-contextmenu.gif)
 
-### Insert hyperlink programmatically
+### Insert Hyperlink Programmatically
 
 Hyperlinks can be added programmatically using the [AddHyperlinkAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method. This method allows hyperlinks to be added to a cell or range of cells without using the UI. The available parameters in the `AddHyperlinkAsync` method are:
 
@@ -119,7 +119,7 @@ await spreadsheetInstance.AddHyperlinkAsync("D1", "https://www.syncfusion.com", 
 {% endhighlight %}
 {% endtabs %}
 
-## Edit hyperlink
+## Edit Hyperlink
 
 Hyperlinks in a spreadsheet can be edited to update the destination or the display text. This includes:
 
@@ -128,7 +128,7 @@ Hyperlinks in a spreadsheet can be edited to update the destination or the displ
 - **Updating Cell References** - Modify the hyperlink to point to a different cell in the same sheet (e.g., from `A1` to `B5`).
 - **Linking to Another Sheet** - Redirect the hyperlink to a different sheet by modifying the sheet name in the reference (e.g., from `Sheet1!A1` to `Sheet2!C3`).
 
-### Edit hyperlink via UI
+### Edit Hyperlink via UI
 
 Hyperlinks can be edited through the user interface (UI) using any of the following methods:
 
@@ -153,11 +153,11 @@ Hyperlinks can be edited through the user interface (UI) using any of the follow
 
 > When editing hyperlinks to other sheets, ensure that the target sheet exists in the workbook. Links to non-existent sheets result in errors when clicked.
 
-## Remove hyperlink
+## Remove Hyperlink
 
 Removing a hyperlink disconnects the cell from its associated destination while retaining the display text. This operation eliminates only the hyperlink functionality without altering the actual content of the cell. Any cells that do not contain a hyperlink are ignored during the process, and no errors are generated.
 
-### Remove hyperlink via UI
+### Remove Hyperlink via UI
 
 To remove a hyperlink using the interface, select the cell that contains the hyperlink, then right-click to open the context menu. From the available options, choose **Remove Hyperlink** to delete the link from the selected cell.
 
@@ -165,7 +165,7 @@ When dealing with multiple hyperlinks, selecting a range of cells-such as `A1` t
 
 ![Remove hyperlink using Context Menu](images/remove-hyperlink.png)
 
-### Remove hyperlink programmatically
+### Remove Hyperlink Programmatically
 
 Hyperlinks can be removed programmatically by using the  [RemoveHyperlinkAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method. This method eliminates hyperlink functionality from the specified cell or range of cells within a spreadsheet, allowing for efficient bulk removal through code. The available parameters in the `RemoveHyperlinkAsync` method are:
 
