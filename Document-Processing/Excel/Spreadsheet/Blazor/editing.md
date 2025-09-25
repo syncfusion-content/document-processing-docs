@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cell Editing in Blazor Spreadsheet component | Syncfusion
-description: Learn to manage cell editing feature in the Syncfusion Blazor Spreadsheet component and more.
+description: Checkout and learn here about the cell editing features in the Syncfusion Blazor Spreadsheet component and more.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
