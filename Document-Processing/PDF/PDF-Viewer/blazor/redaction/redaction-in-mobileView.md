@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Redaction in Mobile View
+# Redaction in Mobile View in Blazor SfPdfViewer Component
 
 The **Redaction Tool** enables users to permanently mark and remove sensitive content from PDF documents in mobile view using the SfPdfViewer component. This feature is optimized for touch interactions and provides a streamlined redaction workflow specifically designed for mobile devices.
 
@@ -195,6 +195,8 @@ To remove existing redaction annotations before they are applied:
 ![Delete Redaction Annotation](./redaction-annotations-images/Delete-Redaction-Annotation.png)
 
 N> Once redactions have been applied to the document, they become part of the PDF content and cannot be removed or modified.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar)
 
 ## See Also
 

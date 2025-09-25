@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Page Redaction in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about redaction annotations in Syncfusion Blazor SfPdfViewer component and more.
+description: Learn here all about redaction annotations in Syncfusion Blazor SfPdfViewer component and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Add Page Redaction
+# Add Page Redaction in Blazor SfPdfViewer Component
 
 The Blazor PDF Viewer provides support to redact entire pages containing sensitive or confidential information. Redaction can be done programmatically or through the built-in UI dialog that offers flexible page selection options.
 

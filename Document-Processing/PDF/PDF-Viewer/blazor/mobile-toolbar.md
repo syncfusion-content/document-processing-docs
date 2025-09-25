@@ -89,6 +89,8 @@ protected override void OnInitialized()
 
 N> In mobile mode, Redaction toolbar is conveniently displayed at the bottom of the viewer.
 
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar)
+
 ### More Options Menu:
 When you open the "more options" menu, you will see additional actions such as:
 
@@ -117,6 +119,8 @@ The desktop version of the toolbar can be enabled on mobile devices by using the
 </SfPdfViewer2>
 ```
 
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar)
+
 ## Modern Navigation Panel in Mobile view
 
 On mobile devices, the navigation toolbar is collapsed into a toggle menu to save space. Custom items you add will appear at the beginning of this menu.
@@ -133,6 +137,7 @@ You can achieve this modern Navigation by setting the `EnableNavigationPanel` op
               Width="100%" EnableNavigationPanel="true">
 </SfPdfViewer2>
 ```
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar)
 
 ## Enable Scrolling in Desktop Mode with Touch Gestures
 
@@ -146,6 +151,7 @@ To ensure smooth scrolling of PDF documents on a mobile device in desktop mode, 
               Width="100%" EnableDesktopMode="true" EnableTextSelection="true">
 </SfPdfViewer2>
 ```
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar)
 
 ## Print Option Not Available
 

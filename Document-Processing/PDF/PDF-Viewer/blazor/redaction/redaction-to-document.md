@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Applying Redaction to the Document
+# Applying Redaction to the Document in Blazor SfPdfViewer Component
 
 The Blazor PDF Viewer provides functionality to permanently apply redaction annotations to the document, removing the marked content and making the redaction irreversible. This can be done through the UI using the redact button or programmatically.
 
