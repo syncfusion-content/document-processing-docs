@@ -2,7 +2,7 @@
 layout: post
 title: Move to selection position in Blazor DocumentEditor | Syncfusion
 description: Learn how to Move to selection position in Syncfusion Blazor DocumentEditor component and much more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---

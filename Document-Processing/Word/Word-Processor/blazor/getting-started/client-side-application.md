@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with DocumentEditor in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor DocumentEditor Component in Blazor WebAssembly (WASM) App using Visual Studio and more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---

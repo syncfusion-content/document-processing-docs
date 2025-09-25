@@ -2,7 +2,7 @@
 layout: post
 title: Headers and Footers in Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn here all about Headers and Footers in Syncfusion Blazor DocumentEditor component and more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---

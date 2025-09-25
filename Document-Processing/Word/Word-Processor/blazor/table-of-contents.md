@@ -2,7 +2,7 @@
 layout: post
 title: Table of contents in Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn here all about Table of contents in Syncfusion Blazor DocumentEditor component and more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Read only by default in Blazor DocumentEditor Component | Syncfusion
 description: Learn how to open a document in read only mode by default in Syncfusion Blazor DocumentEditor component and much more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---

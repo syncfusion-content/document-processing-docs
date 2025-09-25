@@ -2,7 +2,7 @@
 layout: post
 title: Unsupported file in Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn here all about Unsupported file in Syncfusion Blazor DocumentEditor component and more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---

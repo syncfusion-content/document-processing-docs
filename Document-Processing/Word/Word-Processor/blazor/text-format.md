@@ -2,7 +2,7 @@
 layout: post
 title: Working with Text Formatting in Blazor DocumentEditor | Syncfusion
 description: Learn here all about Working with Text Formatting in Syncfusion Blazor DocumentEditor component and more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Customize context menu in Blazor DocumentEditor Component | Syncfusion
 description: Learn how to customize context menu with document editor in real time scenarios like create simple word processor in Syncfusion Blazor DocumentEditor component.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---
