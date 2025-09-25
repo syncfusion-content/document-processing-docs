@@ -92,6 +92,6 @@ Close the project, reopen it, and run it in WSL mode. It should run properly.
 
 ## See also
 
-* [Getting started with the Blazor PDF Viewer in a Blazor Server app](./server-side-application)
+* [Getting started with the Blazor PDF Viewer in a Blazor Web app Server app](./web-app)
 
 * [Getting started with the Blazor PDF Viewer in a Blazor WebAssembly app](./web-assembly-application)

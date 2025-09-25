@@ -177,7 +177,7 @@ Run the application to display the PDF file in the Syncfusion&reg; Blazor PDF Vi
 
 ## See also
 
-* [Getting started with the Blazor PDF Viewer in a Blazor Server app](./server-side-application)
+* [Getting started with the Blazor PDF Viewer in a Blazor Web app Server app](./web-app)
 
 * [Getting started with the Blazor PDF Viewer in WSL mode](./wsl-application)
 
