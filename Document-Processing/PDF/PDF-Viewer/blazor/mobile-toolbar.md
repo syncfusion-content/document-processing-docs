@@ -36,7 +36,7 @@ N> In mobile mode, the annotation toolbar is conveniently displayed at the botto
 
 ![Form designer toolbar for managing form fields in PDF](./images/formDesigner.png)
 
-N> In mobile mode, the Form Desinger toolbar is conveniently displayed at the bottom of the viewer.
+N> In mobile mode, the Form Designer toolbar is conveniently displayed at the bottom of the viewer.
 
 **RedactionTool:** Opens Redaction Toolbar, allowing users to mark and remove sensitive content.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redaction Properties in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about redaction annotations in Syncfusion Blazor SfPdfViewer component and more.
+description: Learn here all about redaction annotations properties in Syncfusion Blazor SfPdfViewer component and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
