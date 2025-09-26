@@ -14,7 +14,7 @@ To quickly get started with creating a Word document in Blazor, watch this video
 
 {% youtube "https://www.youtube.com/watch?v=yVfDlpewbpU" %}
 
-## Web Application Server 
+## Blazor Web App Server Application
 
 **Prerequisites:**
 
