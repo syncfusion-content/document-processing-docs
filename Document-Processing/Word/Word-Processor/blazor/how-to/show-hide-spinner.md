@@ -2,7 +2,7 @@
 layout: post
 title: Show and hide spinner in Blazor DocumentEditor Component | Syncfusion
 description: Learn show and hide spinner while opening document in Syncfusion Blazor DocumentEditor component and much more.
-platform: blazor
+platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---

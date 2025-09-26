@@ -2,7 +2,7 @@
 layout: post
 title: Change the cursor color in Blazor document editor | Syncfusion
 description: Learn how to change the cursor color using CSS in the Syncfusion Blazor Document Editor component and much more.
-platform: blazor
+platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---

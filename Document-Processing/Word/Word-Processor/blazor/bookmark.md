@@ -2,7 +2,7 @@
 layout: post
 title: Bookmarks in Blazor DocumentEditor Component | Syncfusion
 description: Learn how to add, navigate, and manage bookmarks in the Syncfusion Blazor Document Editor component both through the UI and programmatically.
-platform: blazor
+platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---

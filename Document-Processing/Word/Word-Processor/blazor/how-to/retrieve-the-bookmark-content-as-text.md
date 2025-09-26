@@ -2,7 +2,7 @@
 layout: post
 title: Retrieve bookmark content in Blazor DocumentEditor | Syncfusion
 description: Learn how to retrieve the whole document and bookmark content as text from the Syncfusion Blazor Document Editor and much more.
-platform: blazor
+platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---

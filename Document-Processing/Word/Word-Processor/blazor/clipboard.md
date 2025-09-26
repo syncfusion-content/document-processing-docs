@@ -2,7 +2,7 @@
 layout: post
 title: Clipboard in Blazor DocumentEditor Component | Syncfusion
 description: Learn how to perform cut, copy, and paste clipboard operations in the Syncfusion Blazor Document Editor component, both programmatically and through the UI.
-platform: blazor
+platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---

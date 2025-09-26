@@ -2,7 +2,7 @@
 layout: post
 title: Comments in Blazor DocumentEditor Component | Syncfusion
 description: Learn how to add, navigate, reply to, and manage comments in the Syncfusion Blazor Document Editor component, including how to use comments-only protection.
-platform: blazor
+platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---

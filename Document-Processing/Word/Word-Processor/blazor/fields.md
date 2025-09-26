@@ -2,7 +2,7 @@
 layout: post
 title: Working with Fields in Blazor DocumentEditor Component | Syncfusion
 description: Learn how to preserve, update, and manage fields like merge fields and page numbers in the Syncfusion Blazor Document Editor component.
-platform: blazor
+platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---
