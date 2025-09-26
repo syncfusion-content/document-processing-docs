@@ -107,7 +107,7 @@ JS.SaveAs("Sample.pdf", memoryStream.ToArray());
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Create a class file with ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 6: Create a class file with ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 
@@ -126,7 +126,7 @@ public static class FileUtil
 
 {% endtabs %}
 
-Step 6: Add the following JavaScript function in the ``index.html`` available under the ``wwwroot`` folder.
+Step 7: Add the following JavaScript function in the ``index.html`` available under the ``wwwroot`` folder.
 
 {% tabs %}
 
@@ -159,10 +159,10 @@ Step 6: Add the following JavaScript function in the ``index.html`` available un
 
 {% endtabs %}
 
-Step 7: Build the project.
+Step 8: Build the project.
 
 Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 8: Run the project.
+Step 9: Run the project.
 
 Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the application.
