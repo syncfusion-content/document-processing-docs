@@ -2,7 +2,7 @@
 layout: post
 title: Working with Lists in Blazor DocumentEditor Component | Syncfusion
 description: Learn how to create, format, and manage bulleted, numbered, and multilevel lists in the Syncfusion Blazor Document Editor component, both through the UI and programmatically.
-platform: blazor
+platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---

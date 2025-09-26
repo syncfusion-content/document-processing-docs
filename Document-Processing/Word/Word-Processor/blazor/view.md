@@ -2,7 +2,7 @@
 layout: post
 title: View in Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn here all about the view in the Syncfusion Blazor DocumentEditor component and more.
-platform: blazor
+platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---

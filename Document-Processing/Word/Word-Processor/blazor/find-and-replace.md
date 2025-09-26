@@ -2,7 +2,7 @@
 layout: post
 title: Find and Replace in Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn here all about Find and Replace in Syncfusion Blazor DocumentEditor component and more.
-platform: blazor
+platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---

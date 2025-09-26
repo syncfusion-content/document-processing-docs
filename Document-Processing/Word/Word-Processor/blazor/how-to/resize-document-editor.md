@@ -2,7 +2,7 @@
 layout: post
 title: Resize in Blazor DocumentEditor Component | Syncfusion
 description: Learn how to change the height and width of Syncfusion Blazor DocumentEditor component and much more.
-platform: blazor
+platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---
