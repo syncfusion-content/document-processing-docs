@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Get loaded PDF document's data from Blazor SfPdfViewer | Syncfusion
-description: Learn here all about how to get loaded PDF document's data in Syncfusion Blazor SfPdfViewer component and more.
+title: Get PDF document data in Blazor SfPdfViewer | Syncfusion
+description: Learn how to retrieve the current PDF as a byte array using GetDocumentAsync and reload it with LoadAsync (data URI/base64) in Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Get PDF document's data from Blazor SfPdfViewer Component
+# Get PDF document data from Blazor SfPdfViewer2
 
-You can get the loaded PDF document's data from the SfPdfViewer component using the [GetDocumentAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetDocumentAsync) method of SfPdfViewer. 
+Use the [GetDocumentAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer2_GetDocumentAsync) method of the SfPdfViewer2 component to retrieve the currently loaded PDF document as a byte array, including user edits, annotations, and form field data.
 
-The following code example shows how to get the loaded/edited document data and re-load the document.
+The following example retrieves the current document data and then reloads the same document into the viewer.
 
 ```cshtml
 
@@ -51,6 +51,7 @@ The following code example shows how to get the loaded/edited document data and 
 }
 
 ```
+
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Get%20the%20PDF%20document%20as%20a%20byte%20array).
 
 ## See also

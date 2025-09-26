@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Load Custom Fonts in a PDF Viewer | Syncfusion
-description: Learn here all about Custom Fonts in Blazor application in Syncfusion Blazor SfPdfViewer component and more.
+title: Load custom fonts with Pdfium in Blazor SfPdfViewer | Syncfusion
+description: Learn how to load custom fonts in the Blazor SfPdfViewer using Pdfium CustomFonts, including hosting fonts in wwwroot or via a CDN.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Load Custom Fonts in a PDF Viewer
+# Load custom fonts in the Blazor SfPdfViewer
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer utilizes Pdfium to extract the text and convert the PDF document as images. Pdfium supports a limited set of fonts by default. To expand this capability, [CustomFonts](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CustomFonts) can be used to load additional fonts that are not embedded within Pdfium.
+The Blazor SfPdfViewer uses Pdfium to extract text and render pages as images. Pdfium includes a limited set of built-in fonts. Use [CustomFonts](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CustomFonts) to supply additional fonts when the required fonts are not available.
 
-To implement CustomFonts, follow these steps: 
+To use CustomFonts, follow these steps:
 
-1. Upload the font files you want to use into the `wwwroot` folder of your project.
+1. Add the font files (TTF, TTC, or OTF) to the `wwwroot` folder so they are available as static assets at runtime.
    
-2. Include the exact paths to these font files in the customFonts list for proper referencing. This ensures that Pdfium can utilize these fonts as needed.
+2. Reference the exact paths to these font files in the customFonts list. Ensure the paths resolve correctly when the app is running.
 
-![CustomFonts in Blazor PDFViewer](../../blazor-classic/images/customfont-files.png)
+![Custom font files in wwwroot for Blazor SfPdfViewer](../../blazor-classic/images/customfont-files.png)
 
-The following code demonstrates how to load the CustomFonts to PDF Viewer.
+The following example shows how to load custom fonts into the PDF Viewer.
 
 ```cshtml
 
@@ -36,7 +36,7 @@ The following code demonstrates how to load the CustomFonts to PDF Viewer.
 }
     
 ```
-Below code snippet illustrates how to load a CustomFonts using a CDN link.
+The following example shows how to load a custom font using a CDN link.
 
 ```cshtml
 
@@ -53,4 +53,4 @@ Below code snippet illustrates how to load a CustomFonts using a CDN link.
 }
     
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20custom%20fonts%20in%20PDF%20document).
+[View the custom fonts sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20custom%20fonts%20in%20PDF%20document).

@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Deploy SfPdfViewer in Blazor MAUI in Android | Syncfusion
-description: Learn how to deploy SfPdfViewer in Blazor MAUI Application on Android in Syncfusion Blazor SfPdfViewer component and much more details.
+title: Deploy SfPdfViewer in Blazor MAUI on Android | Syncfusion
+description: Learn how to render a PDF from an embedded resource and run the Syncfusion Blazor SfPdfViewer on Android using the .NET MAUI emulator.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Render PDF document from embedded source in the MAUI Android app 
+# Render a PDF from an embedded resource in a MAUI Android app 
 
-In this section, we'll guide you how to render PDF Viewer from embedded source in a MAUI app. We'll break it down into simple steps to make it easy to follow.
+This section describes how to render the PDF Viewer from an embedded resource in a .NET MAUI Android app using the Android emulator.
 
-Refer [here](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/deploy-maui-windows) to create MAUI app.
+To create the .NET MAUI project, see Create a [MAUI app](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/deploy-maui-windows)
 
-## Add PDF Viewer component
+## Add the PDF Viewer component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
+Add the Syncfusion Blazor PDF Viewer component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -45,41 +45,42 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) c
         base.OnInitialized();
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
-N> When developing a Blazor Android MAUI application, passing the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) to the PDF Viewer component as a `base64 string` is needed. This ensures that the application can retrieve and render a PDF document correctly within the PDF Viewer component.
+N> In a Blazor .NET MAUI Android app, pass the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) as a Base64 data URL. This ensures the viewer can retrieve and render the PDF correctly.
 
-## Run on Android emulator
+## Run on the Android emulator
 
-To run the PDF Viewer in a Blazor Android MAUI application using the Android emulator, follow these steps:
+To run the PDF Viewer in a Blazor .NET MAUI Android app using the Android emulator, follow these steps:
 
-![Run Windows machine](../getting-started/gettingstarted-images/emulator_maui.png)
+![Run on Windows machine](../getting-started/gettingstarted-images/emulator_maui.png)
 
-**Step 1** Set up the necessary dependencies, SDKs, and tools for Blazor Android MAUI on your Windows machine. Ensure that you have installed the required `Android SDK licenses`. If any errors occur during installation, follow the provided prompts or instructions to resolve them.
+**Step 1** Install the required dependencies, SDKs, and tools for .NET MAUI Android on Windows. Ensure the Android SDK licenses are accepted. If errors occur during installation, follow the prompts to resolve them.
 
-![android-sdk-liscence](../getting-started/gettingstarted-images/android-sdk-liscence_maui.png)
+![Android SDK license acceptance](../getting-started/gettingstarted-images/android-sdk-liscence_maui.png)
 
-**Step 2** Right-click the **~wwwroot/data/pdf_succinctly.pdf** file in Solution Explorer, go to `Properties`, and set Build Action to `Embedded Resource` and Copy to Output Directory to `Copy Always`.
+**Step 2** In Solution Explorer, right-click **~wwwroot/data/pdf_succinctly.pdf**, choose `Properties`, set Build Action to `Embedded Resource`, and set Copy to Output Directory to `Copy always`.
 
-![android_maui_properties](../getting-started/gettingstarted-images/android_maui_properties.png)
+![Set embedded resource properties for the PDF file](../getting-started/gettingstarted-images/android_maui_properties.png)
 
-**Step 3** Install and launch the Android Device Manager. Open the Android SDK Manager, go to the `SDK Tools` tab, select the `Android Device Manager` checkbox, and click `Apply` or `OK`. This will allow you to create, manage, and launch Android Virtual Devices (AVD's) for testing and running Android applications.
+**Step 3** Install and launch Android Device Manager. In Android SDK Manager, on the `SDK Tools` tab, select `Android Device Manager` and click `Apply` or `OK`. This enables creating and managing Android Virtual Devices (AVD) for testing.
 
-![picxel emulator](../getting-started/gettingstarted-images/pixcel-emulator_maui.png)
+![Android Device Manager with a Pixel emulator](../getting-started/gettingstarted-images/pixcel-emulator_maui.png)
 
-**Step 4** Ensure the Android emulator is running. Launch the Android Device Manager and create or select an existing AVD to run the emulator.
+**Step 4** Ensure the Android emulator is running. In Android Device Manager, create or select an AVD and start the emulator.
 
-Now, relaunch the project in emulator mode. It will render the PDF Viewer component using the Blazor Android MAUI application.
+Finally, run the project with the emulator. The PDF Viewer component renders in the Blazor .NET MAUI Android app.
 
-N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
+N> For emulator issues, see Troubleshooting Android Emulator: https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting
 
-![Blazor SfPdfViewer Component](../getting-started/gettingstarted-images/emulator.png)
+![Blazor SfPdfViewer rendering in the Android emulator](../getting-started/gettingstarted-images/emulator.png)
 
->[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorAndroid).
+>[View sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorAndroid).
 
 ## See also
 
-* [Supported Features: Desktop vs Mobile](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview#supported-features-desktop-vs-mobile).
+* [Supported features: Desktop vs mobile](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview#supported-features-desktop-vs-mobile).
 
-* [Render PDF document from url in the MAUI app](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/deploy-maui-windows).
+* [Render a PDF document from a URL in the MAUI app](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/deploy-maui-windows).
