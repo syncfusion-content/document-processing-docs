@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Spreadsheet Component | Syncfusion
-description: Learn how to get started with the Blazor Spreadsheet component in a Blazor WebAssembly Application.
+description: Check out the documentation for getting started with Syncfusion Blazor Spreadsheet Component in Blazor Web App.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
