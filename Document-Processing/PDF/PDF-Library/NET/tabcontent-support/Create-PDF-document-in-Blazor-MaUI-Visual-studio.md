@@ -1,15 +1,15 @@
 **Prerequisites**:
 
-* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+*   **Install .NET SDK**: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
+*   **Install Visual Studio**: Download and install Visual Studio. For this example, we'll use Visual Studio 2022. You can download it from the [official Visual Studio website](https://visualstudio.microsoft.com/downloads/).
 
-Step 1: Create a new project by choosing `.NET MAUI Blazor Hybrid and Web App` template in Visual Studio.
+Step 1: Create a new .NET MAUI Blazor Hybrid project in Visual Studio
 ![Blazor client project creation step1](Create-PDF-Blazor/Maui-web-app.png)
 
 Step 2: Install the [Syncfusion.PDF.NET](https://www.nuget.org/packages/Syncfusion.pdf.Net) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
 ![Blazor WASM NuGet package installation](Create-PDF-Blazor/Blazor_server_NuGet_Net.png)
 
-Step 3: Next, include the following namespaces in the ``_Imports.razor`` file.
+Step 3: Include necessary namespaces in `_Imports.razor` file.
 
 {% tabs %}
 
@@ -25,7 +25,7 @@ Step 3: Next, include the following namespaces in the ``_Imports.razor`` file.
 
 {% endtabs %}
 
-Step 4: Create a button in the ``Weather.razor`` using the following code.
+Step 4: Create a button in `Weather.razor` using the following code.
 
 {% tabs %}
 
@@ -98,8 +98,8 @@ The [PdfDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Pdf
 
 Step 6: Build the project.
 
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+Click on Build > Build Solution or press `Ctrl + Shift + B` to build the project.
 
 Step 7: Run the project.
 
-Click the Start button (green arrow) or press F5 to run the app.
+Click the `Start` button (green arrow) or press `F5` to run the app.
