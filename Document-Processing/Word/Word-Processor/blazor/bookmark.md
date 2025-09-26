@@ -15,7 +15,7 @@ The [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-
 
 N>Bookmark names need to begin with a letter. They can include both numbers and letters, but not spaces. To separate the words, use an underscore. Bookmark names starting with an underscore are called hidden bookmarks. For example, bookmarks generated for table of contents.
 
-You can open the bookmark dialog using Bookmark options in toolbar. You can also explore our [`Blazor Word Processor - Bookmark`](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/hyperlinks-and-bookmarks) example to know more about bookmark.
+The bookmark dialog can be opened using the Bookmark option in the toolbar. For more details on bookmark functionality, refer to the [`Blazor Word Processor - Bookmark`](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/hyperlinks-and-bookmarks) example.
 
 
 ## Add a bookmark

@@ -26,7 +26,7 @@ The following fields are updated automatically without any user intervention:
 
 ### Manually Updating Fields
 
-Other fields, such as bookmark cross-references, must be updated manually. You can trigger this update either through the UI or programmatically.
+Other fields, such as bookmark cross-references, must be updated manually. This update can be triggered either through the user interface or programmatically.
 
 #### Update via the UI
 
@@ -49,7 +49,7 @@ The Document Editor provides APIs to insert fields and to get or set the informa
 
 ### Inserting a Field
 
-You can insert a new field at the current selection using the [`InsertFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertFieldAsync_System_String_System_String_) method. This requires providing the `fieldCode` and the `fieldResult`.
+A new field can be inserted at the current selection using the [`InsertFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertFieldAsync_System_String_System_String_) method. This requires specifying both the fieldCode and the `fieldResult`.
 
 *   **Field Code**: The instruction that defines the field's behavior (e.g., `MERGEFIELD FirstName`).
 *   **Field Result**: The text displayed in the document (e.g., `«FirstName»`).
@@ -69,7 +69,7 @@ N> The Document Editor does not validate the field code or result; it simply ins
 
 ### Getting and Modifying Field Information
 
-You can retrieve and modify the properties of the currently selected field.
+The properties of the currently selected field can be retrieved and modified as needed.
 
 *   **Get Field Info**: Use the [`GetFieldInfoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetFieldInfoAsync) method to get a `FieldInfo` object containing the code and result of the selected field.
 *   **Set Field Info**: Use the [`SetFieldInfoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_SetFieldInfoAsync_Syncfusion_Blazor_DocumentEditor_FieldInfo_) method to update the properties of the selected field with a modified `FieldInfo` object.
