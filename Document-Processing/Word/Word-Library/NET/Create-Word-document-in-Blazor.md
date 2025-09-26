@@ -285,7 +285,7 @@ Click [here](https://www.syncfusion.com/document-processing/word-framework/blazo
 Step 1: Create a new C# Blazor WASM app project.
 Select "Blazor WebAssembly Standalone App" from the template and click **Next**.
 
-![Create Blazor WebAssembly Standalone application in Visual Studio](Blazor_Images/Blazor_WASM.png)
+![Create Blazor WebAssembly Standalone application in Visual Studio](Blazor_Images/Blazor_WASM_Standalone.png)
 
 Step 2: Install the `Syncfusion.DocIO.Net.Core` NuGet package.
 To **create a Word document in a Blazor WASM Standalone app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) into the Blazor project.
