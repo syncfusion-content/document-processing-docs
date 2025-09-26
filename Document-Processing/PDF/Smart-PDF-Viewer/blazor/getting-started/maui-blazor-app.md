@@ -21,10 +21,18 @@ Create a new .NET MAUI Blazor App in Visual Studio by selecting the template nam
 
 ## Install Smart PDF Viewer NuGet package in Blazor Maui App
 
-Add the following NuGet packages to the Blazor MAUI app.
+To add NuGet packages into the Blazor Maui app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.SfSmartPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfSmartPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-* [Syncfusion.Blazor.SfSmartPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfSmartPdfViewer) 
-* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
+Alternatively, you can utilize the following package manager command to achieve the same.
+
+{% tabs %}
+{% highlight razor tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.SfSmartPdfViewer -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
