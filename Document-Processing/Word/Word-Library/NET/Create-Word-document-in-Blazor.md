@@ -32,10 +32,10 @@ Step 1: Create a new C# Blazor Web app project.
 
 *   Select the framework and click **Create** button.
 
-![Select the framework in Blazor Web App Server Side app in Visual Studio](Blazor_Images/Blazor_image_Server_Web_Additional_Information.png)
+![Select the framework in Blazor Web App Server in Visual Studio](Blazor_Images/Blazor_image_Server_Web_Additional_Information.png)
 
 Step 2: Install the `Syncfusion.DocIO.Net.Core` NuGet package.
-To **create a Word document in a Blazor Web App Server app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) into the Blazor project.
+To **create a Word document in a Blazor Web App Server**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) into the Blazor project.
 
 ![Install DocIO.NET Core NuGet Package](Blazor_Images/Install_Nuget.png)
 
@@ -99,7 +99,7 @@ using System.IO;
 {% endtabs %}
 
 Step 7: Implement the `CreateWord` method in `WordService.cs`.
-Create a new `MemoryStream` method named `CreateWord` in the `WordService` class, and include the following code snippet to **create a simple Word document in Blazor** Web App Server app:
+Create a new `MemoryStream` method named `CreateWord` in the `WordService` class, and include the following code snippet to **create a simple Word document in Blazor** Web App Server:
 
 {% tabs %}
 
@@ -271,7 +271,7 @@ A complete working sample is available on [GitHub](https://github.com/Syncfusion
 
 Upon executing the program, the **Word document** will be generated as follows:
 
-![Blazor Web App Server App output Word document](Blazor_Images/Blazor_Output.png)
+![Blazor Web App Server output Word document](Blazor_Images/Blazor_Output.png)
 
 Click [here](https://www.syncfusion.com/document-processing/word-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features.
 
