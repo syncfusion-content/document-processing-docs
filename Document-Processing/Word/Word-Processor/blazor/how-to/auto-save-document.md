@@ -2,7 +2,7 @@
 layout: post
 title: Auto save document in Blazor DocumentEditor Component | Syncfusion
 description: Learn here all about Auto save document in document editor in Syncfusion Blazor DocumentEditor component and much more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---

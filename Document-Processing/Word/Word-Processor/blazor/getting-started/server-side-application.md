@@ -2,7 +2,7 @@
 layout: post
 title: Getting Stared with Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn about getting started with Blazor DocumentEditor component in Blazor Server App using Visual Studio and more.
-platform: document-processing
+platform: blazor
 control: DocumentEditor
 documentation: ug
 ---
