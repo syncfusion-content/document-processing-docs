@@ -90,7 +90,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 N>  Due to the inherent limitations of the PDF specification and the rendering capabilities of PDF libraries, emojis with skin tone modifiers are not supported in generated PDF documents. Only the base versions of emojis can be displayed. This limitation is common across most PDF libraries, as the PDF format does not explicitly support rendering skin tone variations in emojis.
 
 ## The importance of saving and restoring graphics state in PDF content rendering
-Saving and restoring the graphics state in a PDF document is crucial for maintaining the consistency and integrity of the document's layout and appearance. This approach allows you to make temporary changes to the graphics state, such as transformations, clipping paths, or color adjustments, without affecting subsequent content rendering by using the [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Save) and [Restore](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Restore) methods of the [PdfGraphics][https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html] class.
+Saving and restoring the graphics state in a PDF document is crucial for maintaining the consistency and integrity of the document's layout and appearance. This approach allows you to make temporary changes to the graphics state, such as transformations, clipping paths, or color adjustments, without affecting subsequent content rendering by using the [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Save) and [Restore](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Restore) methods of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class.
 
 Please refer to the below code example to understand how to save and restore the graphics state in PDF rendering.
 
@@ -2258,6 +2258,143 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Add-text-encoding-using-standard-PDF-fonts).
+
+## Detecting Text Clipping in PDF Layouts
+
+Essential PDF provides functionality to determine whether text exceeds the specified layout bounds using the Remainder property of [PdfStringLayoutResult](https://help.syncfusion.com/cr/xamarin/Syncfusion.Pdf.Graphics.PdfStringLayoutResult.html) and [PdfStringLayouter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringLayouter.html). This feature helps identify clipped text and retrieve the remaining portion that doesn't fit within the defined area.
+
+The following code example demonstrates how to access the remainder text when the content overflows the given bounds.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Create a new PDF document
+PdfDocument document = new PdfDocument();
+
+// Add a page to the document
+PdfPage page = document.Pages.Add();
+
+// Create PDF graphics for the page
+PdfGraphics graphics = page.Graphics;
+
+// Set the standard font
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 30);
+
+// Declare the text to be drawn
+string text = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
+
+// Define the bounds within which the text should be drawn
+RectangleF border = new RectangleF(0, 0, page.GetClientSize().Width, 150);
+
+// Draw a rectangle to visualize the layout bounds
+graphics.DrawRectangle(PdfPens.Black, border);
+
+// Initialize the PdfStringLayouter to layout the text
+PdfStringLayouter layouter = new PdfStringLayouter();
+
+// Layout the text and get the result to check if it fits within the bounds
+PdfStringLayoutResult result = layouter.Layout(text, font, new PdfStringFormat(PdfTextAlignment.Center), new SizeF(border.Width, border.Height));
+
+// Check if any part of the text was clipped (did not fit within the specified bounds)
+if (result.Remainder != null)
+{
+    // Store the clipped portion of the text for further processing or logging
+    string remainderText = result.Remainder;
+    // Output the clipped text to the console for debugging or review
+    Console.WriteLine("Remainder Text: " + remainderText);
+}
+// Close the document and release resources
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Create a new PDF document
+PdfDocument document = new PdfDocument();
+
+// Add a page to the document
+PdfPage page = document.Pages.Add();
+
+// Create PDF graphics for the page
+PdfGraphics graphics = page.Graphics;
+
+// Set the standard font
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 30);
+
+// Declare the text to be drawn
+string text = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
+
+// Define the bounds within which the text should be drawn
+RectangleF border = new RectangleF(0, 0, page.GetClientSize().Width, 150);
+
+// Draw a rectangle to visualize the layout bounds
+graphics.DrawRectangle(PdfPens.Black, border);
+
+// Initialize the PdfStringLayouter to layout the text
+PdfStringLayouter layouter = new PdfStringLayouter();
+
+// Layout the text and get the result to check if it fits within the bounds
+PdfStringLayoutResult result = layouter.Layout(text, font, new PdfStringFormat(PdfTextAlignment.Center), new SizeF(border.Width, border.Height));
+
+// Check if any part of the text was clipped (did not fit within the specified bounds)
+if (result.Remainder != null)
+{
+    // Store the clipped portion of the text for further processing or logging
+    string remainderText = result.Remainder;
+    // Output the clipped text to the console for debugging or review
+    Console.WriteLine("Remainder Text: " + remainderText);
+}
+// Close the document and release resources
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document
+Dim document As New PdfDocument()
+
+' Add a page to the document
+Dim page As PdfPage = document.Pages.Add()
+
+' Create PDF graphics for the page
+Dim graphics As PdfGraphics = page.Graphics
+
+' Set the standard font
+Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 30)
+
+' Declare the text to be drawn
+Dim text As String = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."
+
+' Define the bounds within which the text should be drawn
+Dim border As New RectangleF(0, 0, page.GetClientSize().Width, 150)
+
+' Draw a rectangle to visualize the layout bounds
+graphics.DrawRectangle(PdfPens.Black, border)
+
+' Initialize the PdfStringLayouter to layout the text
+Dim layouter As New PdfStringLayouter()
+
+' Layout the text and get the result to check if it fits within the bounds
+Dim result As PdfStringLayoutResult = layouter.Layout(text, font, New PdfStringFormat(PdfTextAlignment.Center), New SizeF(border.Width, border.Height))
+
+' Check if any part of the text was clipped (did not fit within the specified bounds)
+If result.Remainder IsNot Nothing Then
+    ' Store the clipped portion of the text for further processing or logging
+    Dim remainderText As String = result.Remainder
+    ' Output the clipped text to the console for debugging or review
+    Console.WriteLine("Remainder Text: " & remainderText)
+End If
+' Close the document and release resources
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+A complete working sample is available for download on GitHub.
 
 ## Customizing TrueType fonts in a PDF document
 
