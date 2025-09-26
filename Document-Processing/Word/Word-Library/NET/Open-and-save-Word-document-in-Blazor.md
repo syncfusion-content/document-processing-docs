@@ -8,34 +8,34 @@ documentation: UG
 
 # Open and Save Word Document in Blazor
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in Blazor**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, a **open and save a Word document in Blazor**.
+
+## Blazor Web App Server Application
 
 **Prerequisites:**
 
 *   Visual Studio 2022.
 *   Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
-## Web Server Application
-
 Step 1: Create a new C# Blazor Web app project.
 *   Select "Blazor Web App" from the template and click **Next**.
 
-![Create Blazor Web App application in Visual Studio](Blazor_Images/Blazor_images_Web_App.png)
+![Create Blazor Web App application in Visual Studio](Blazor_Images/Blazor_image_Web_App.png)
 
 *   Name the project and click **Next**.
 
-![Name the Blazor Web App in Visual Studio](Blazor_Images/Blazor_images_Web_ProjectName.png)
+![Name the Blazor Web App in Visual Studio](Blazor_Images/Blazor_image_Web_ProjectName.png)
 
 *   Select the framework and click **Create** button.
 
-![Select the framework in Blazor Web Server Side app in Visual Studio](Blazor_Images/Blazor_images_Server_Web_Additional_Information.png)
+![Select the framework in Blazor Web App Server in Visual Studio](Blazor_Images/Blazor_image_Server_Web_Additional_Information.png)
 
 Step 2: Install the `Syncfusion.DocIO.Net.Core` NuGet package.
-To **open and save a Word document in a Blazor Web Server app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) into your Blazor project.
+To **open and save a Word document in a Blazor Web App Server**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) into the Blazor project.
 
 ![Install Syncfusion.DocIO.Net.Core NuGet Package](Blazor_Images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you must also add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder, which is located inside the `Components` folder.
 Include the following namespaces in the file:		  
@@ -57,7 +57,7 @@ Include the following code to create a new button that triggers document process
 {% tabs %}
 {% highlight CSHTML %}
 <h2>Syncfusion DocIO Library (DocIO)</h2>
-<p>The Syncfusion DocIO library (DocIO) is a Blazor DocIO library used to create, read, edit, and convert Word files in your applications without Microsoft Office dependencies.</p>
+<p>The Syncfusion DocIO library (DocIO) is a Blazor DocIO library used to create, read, edit, and convert Word files in applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@OpenAndSaveDocument">Open and save Document</button>
 {% endhighlight %}
 {% endtabs %}
@@ -93,7 +93,7 @@ using Syncfusion.DocIO.DLS;
 
 {% endtabs %}
 
-Step 7: Create a new `MemoryStream` method named `OpenAndSaveDocument` in the `WordService` class, and include the following code snippet to **open an existing Word document in Blazor** Web Server app.
+Step 7: Create a new `MemoryStream` method named `OpenAndSaveDocument` in the `WordService` class, and include the following code snippet to **open an existing Word document in Blazor** Web App Server.
 
 {% tabs %}
 
@@ -213,7 +213,7 @@ Add the following code snippet to the Navigation menu's Razor file in the `Share
 {% endtabs %}
 
 Step 13: Add the service in `Program.cs`.
-Add the following line to the `Program.cs` file to register `WordService` as a scoped service in your Blazor application. 
+Add the following line to the `Program.cs` file to register `WordService` as a scoped service in the Blazor application. 
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -227,23 +227,28 @@ A complete working sample is available on [GitHub](https://github.com/Syncfusion
 
 Upon executing the program, the **Word document** will be generated as follows:
 
-![Blazor Web Server App output Word document](Blazor_Images/Blazor_Output.png)
+![Blazor Web App Server output Word document](Blazor_Images/Blazor_Output.png)
 
 Click [here](https://www.syncfusion.com/document-processing/word-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features.
 
-## WASM Application
+## WASM Standalone Application
 
+**Prerequisites:**
+
+*   Visual Studio 2022.
+*   Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+																			
 Step 1: Create a new C# Blazor WASM app project.
-Select "Blazor WebAssembly App" from the template and click **Next**.
+Select "Blazor WebAssembly Standalone App" from the template and click **Next**.
 
-![Create Blazor WebAssembly application in Visual Studio](Blazor_Images/Blazor_WASM.png)
+![Create Blazor WebAssembly Standalone application in Visual Studio](Blazor_Images/Blazor_WASM.png)
 
 Step 2: Install the `Syncfusion.DocIO.Net.Core` NuGet package.
-To **open and save a Word document in Blazor WASM app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) into your Blazor project.
+To **open and save a Word document in Blazor WASM Standalone app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) into the Blazor project.
 
 ![Install Syncfusion.DocIO.Net.Core NuGet Package](Blazor_Images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you must also add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder.
 Add the following namespaces:
@@ -252,8 +257,11 @@ Add the following namespaces:
 
 {% highlight c# tabtitle="C#" %}
 @page "/DocIO"
+@inject Microsoft.JSInterop.IJSRuntime JS
+@inject HttpClient client
 @using Syncfusion.DocIO
 @using Syncfusion.DocIO.DLS
+@using System.IO
 {% endhighlight %}
 
 {% endtabs %}
@@ -266,15 +274,15 @@ Add the following code to create a new button that triggers document processing:
 {% highlight CSHTML %}
 
 <h2>Syncfusion DocIO Library (DocIO)</h2>
-<p>The Syncfusion Blazor DocIO library (DocIO) used to create, read, edit, and convert DocIO files in your applications without Microsoft Office dependencies.</p>
-<button class="btn btn-primary" @onclick="@OpenAndSaveWordDocument">Open and save Document</button>
+<p>The Syncfusion Blazor DocIO library (DocIO) used to create, read, edit, and convert DocIO files in applications without Microsoft Office dependencies.</p>
+<button class="btn btn-primary" @onclick="@OpenAndSaveDocument">Open and save Document</button>
 
 {% endhighlight %}
 
 {% endtabs %}
 
 Step 5: Implement `OpenAndSaveDocument` method in `DocIO.razor`.
-Create a new `async` method named `OpenAndSaveDocument` and include the following code snippet to **open an existing Word document in Blazor** WASM app.
+Create a new `async` method named `OpenAndSaveDocument` and include the following code snippet to **open an existing Word document in Blazor** WASM Standalone app.
 
 {% tabs %}
 
@@ -385,22 +393,22 @@ Add the following code snippet to the Navigation menu's Razor file in the `Share
 
 {% highlight HTML %}
 
-<li class="nav-item px-3">
+<div class="nav-item px-3">
     <NavLink class="nav-link" href="docio">
         <span class="oi oi-list-rich" aria-hidden="true"></span> Create Word
     </NavLink>
-</li>
+</div>
 {% endhighlight %}
 
 {% endtabs %}
 
-A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/Blazor/Blazor-WASM-app).
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/Blazor/Blazor-WASM-Standalone-app).
 
 Upon executing the program, the **Word document** will be generated as follows:
 
-![Blazor WASM output Word document](Blazor_Images/Blazor_Output.png)
+![Blazor WASM Standalone output Word document](Blazor_Images/Blazor_Output.png)
 
-N> While the Word library functions in WASM, server-side deployment is recommended. WASM deployment increases the application payload size.
+N> While the Word library functions in WASM Standalone, server-side deployment is recommended. WASM Standalone deployment increases the application payload size.
 
 Click [here](https://www.syncfusion.com/document-processing/word-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features.
 
