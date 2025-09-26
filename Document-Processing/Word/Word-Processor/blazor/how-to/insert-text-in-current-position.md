@@ -2,7 +2,7 @@
 layout: post
 title: Insert text and rich-text in Blazor DocumentEditor | Syncfusion
 description: Learn how to insert text, paragraph and rich-text content in Blazor Document Editor component and much more.
-platform: blazor
+platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---

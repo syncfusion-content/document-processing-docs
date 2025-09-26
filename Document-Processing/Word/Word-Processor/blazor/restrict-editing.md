@@ -2,7 +2,7 @@
 layout: post
 title: Restrict editing in Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn here all about Restrict editing in Syncfusion Blazor DocumentEditor component and more.
-platform: blazor
+platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---

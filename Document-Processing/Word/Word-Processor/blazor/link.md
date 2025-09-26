@@ -2,7 +2,7 @@
 layout: post
 title: Using Hyperlinks in Blazor DocumentEditor Component | Syncfusion
 description: Learn how to create, manage, and customize hyperlinks in the Syncfusion Blazor Document Editor component, including linking to web pages, bookmarks, and handling navigation.
-platform: blazor
+platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---

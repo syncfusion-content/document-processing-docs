@@ -2,7 +2,7 @@
 layout: post
 title: Clipboard in Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn here all about Clipboard in Syncfusion Blazor DocumentEditor component and much more.
-platform: blazor
+platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---

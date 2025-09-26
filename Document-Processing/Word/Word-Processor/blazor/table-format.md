@@ -2,7 +2,7 @@
 layout: post
 title: Table Formatting in Blazor DocumentEditor Component | Syncfusion
 description: Learn here all about working with table formatting in Syncfusion Blazor DocumentEditor component and more.
-platform: blazor
+platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---
