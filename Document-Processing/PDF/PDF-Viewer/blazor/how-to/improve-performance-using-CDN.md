@@ -19,10 +19,12 @@ Use version-pinned URLs and update them when upgrading the package.
 
 <head>
     <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
-    <link href="https://cdn.syncfusion.com/blazor/25.1.35/styles/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion Blazor PDF Viewer control's scripts -->
-    <script src="https://cdn.syncfusion.com/blazor/25.1.35/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
+    <link href="https://cdn.syncfusion.com/blazor/31.1.21/styles/bootstrap5.css" rel="stylesheet" />
 </head>
+<body>    
+    <!-- Syncfusion Blazor PDF Viewer control's scripts -->
+    <script src="https://cdn.syncfusion.com/blazor/31.1.21/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
+</body>
 
 ```
 
