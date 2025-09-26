@@ -102,6 +102,112 @@ The following illustration demonstrates the use of autofill in the Spreadsheet c
 
 ![Autofill Illustration](images/autofill.gif)
 
+## Events
+
+The Blazor Spreadsheet provides events that are triggered during autofill operations, such as [AutofillActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionBeginEventArgs.html) and [AutofillActionEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionEndEventArgs.html). These events enable the execution of custom actions before and after an autofill operation, allowing for validation, customization, and response handling.
+
+### AutofillActionBegin
+
+The `AutofillActionBegin` event is triggered before an autofill operation is performed. This event provides an opportunity to validate the autofill operation and apply restrictions based on custom logic, such as preventing the operation under specific conditions.
+
+**Purpose**
+
+This event is useful for scenarios where autofill behavior needs to be controlled dynamically—such as restricting autofill in specific ranges or preventing autofill based on certain conditions.
+
+**Event Arguments**
+
+The event uses the [AutofillActionBeginEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionBeginEventArgs.html) class, which includes the following properties:
+
+| Event Arguments | Description |
+|----------------|-------------|
+| FillRange (read-only) | The address of the target range for the autofill operation (e.g., "Sheet1!A2:A5"). |
+| DataRange (read-only) | The source data range for the autofill operation (e.g., "Sheet1!A1:A1"). |
+| Direction (read-only) | The direction of the autofill operation ("Down", "Right", "Up", or "Left"). |
+| Cancel | A boolean value to cancel the autofill operation. |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet DataSource="DataSourceBytes" AutofillActionBegin="OnAutofillActionBegin">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public void OnAutofillActionBegin(AutofillActionBeginEventArgs args)
+    {
+        // Prevent autofill for a specific range.
+        if (args.FillRange == "A1:A10")
+        {
+            args.Cancel = true;
+        }
+
+        // Prevent autofill when dragging upward.
+        if (args.Direction == "Up")
+        {
+            args.Cancel = true;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**AutofillActionEnd**
+
+The `AutofillActionEnd` event is triggered after an autofill operation has been successfully completed. This event provides detailed information about the completed autofill action, enabling further processing or logging if required.
+
+**Purpose**
+
+This event is useful for scenarios where post-autofill actions are needed, such as logging the autofill operation, updating related data, or triggering additional UI updates.
+
+**Event Arguments**
+
+The event uses the [AutofillActionEndEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionEndEventArgs.html) class, which includes the following properties:
+
+| Event Arguments | Description |
+|----------------|-------------|
+| FillRange (read-only) | The address of the target range where the autofill was applied (e.g., "Sheet1!A2:A5"). |
+| DataRange (read-only) | The source data range used for the autofill operation (e.g., "Sheet1!A1:A1"). |
+| Direction (read-only) | The direction of the autofill operation ("Down", "Right", "Up", or "Left"). |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet DataSource="DataSourceBytes" AutofillActionEnd="OnAutofillActionEnd">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public void OnAutofillActionEnd(AutofillActionEndEventArgs args)
+    {
+        // Log or process the completed autofill operation.
+        Console.WriteLine($"Autofill completed for range: {args.FillRange}");
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Clear
 
 Clear support helps clear the cell contents (formulas and data) and formats (including number formats) in a Spreadsheet. When **Clear All** is applied, both the contents and the formats will be cleared simultaneously.
