@@ -247,9 +247,11 @@ Add the following stylesheet and script to the head section of the **~/Component
 <head>
     <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+<body>
     <!-- Syncfusion Blazor PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
-</head>
+</body>
 ```
 
 ## Adding Blazor PDF Viewer Component
