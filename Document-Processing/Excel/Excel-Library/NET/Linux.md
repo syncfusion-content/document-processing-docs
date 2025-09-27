@@ -30,7 +30,7 @@ ENV LANG="en_US.UTF-8"
 
 ## How to resolve LibSkiaSharp not found exception?
 
-This exception occurs when required native dependencies are missing. Ensure **libfontconfig** is installed by adding this to your Dockerfile:
+This exception occurs when required native dependencies are missing. Ensure the necessary packages are installed by adding this to your Docker file:
 
 {% tabs %}
 
