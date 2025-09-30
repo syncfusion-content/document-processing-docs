@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Import export annotation in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Import export annotation in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Import and Export Annotations in Angular PDF Viewer | Syncfusion
+description: Learn how to import and export annotations in Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: Import export annotation
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import and Export annotation
+# Import and Export Annotations
 
-The PDF Viewer library allows you to import annotations from objects or streams instead of loading it as a file. To import such annotation objects, the PDF Viewer control must export the PDF annotations as objects by using the [**ExportAnnotationsAsObject()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#exportannotationsasobject) method. Only the annotation objects that are exported from the PDF Viewer can be imported.
+The PDF Viewer library allows importing annotations from objects or streams, rather than directly from a file. To facilitate this, the PDF Viewer control must export annotations as objects using the [**ExportAnnotationsAsObject()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#exportannotationsasobject) method. Only annotation objects previously exported from the PDF Viewer can be imported.
 
-The following steps are used to import and export annotations in various formats such as objects, JSON, and XFDF.
+To import and export annotations in formats such as objects, JSON, and XFDF, refer to these steps:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Refer to the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to set up a basic Angular PDF Viewer.
 
-**Step 2:** Use the following code snippet to perform import and export annotation.
+**Step 2:** Use the following code snippet to perform annotation import and export operations.
 
 ```html
   <button (click)="ExportAsJson()" >ExportAsJson</button>

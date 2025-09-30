@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Create form fields programmatically
 
-The PDF Viewer control provides the option to add, edit and delete the Form Fields. The Form Fields type supported by the PDF Viewer Control are:
+The Angular PDF Viewer component lets you add, edit, and delete form fields. The supported form field types are:
 
   * Textbox
   * Password
@@ -21,9 +21,9 @@ The PDF Viewer control provides the option to add, edit and delete the Form Fiel
   * SignatureField
   * InitialField
 
-## Add a form field to PDF document programmatically
+## Add a form field to a PDF document programmatically
 
-Using addFormField method, the form fields can be added to the PDF document programmatically. We need to pass two parameters in this method. They are Form Field Type and Properties of Form Field Type. To add form field programmatically, Use the following code.
+Using the addFormField method, you can add form fields to a PDF document programmatically. Pass two parameters to this method: the form field type and the properties for that field. To add a form field programmatically, use the following code.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -97,9 +97,9 @@ Within the template, configure the PDF Viewer by adding the `[serviceUrl]='servi
 
 {% previewsample "Document-Processing/samples/pdfviewer/anagular/addformfield-cs1/index.html" %}
 
-## Edit/Update form field programmatically
+## Edit or update a form field programmatically
 
-Using updateFormField method, Form Field can be updated programmatically. We should get the Form Field object/Id from FormFieldCollections property that you would like to edit and pass it as a parameter to updateFormField method. The second parameter should be the properties that you would like to update for Form Field programmatically. We have updated the value and background Color properties of Textbox Form Field.
+Using the updateFormField method, a form field can be updated programmatically. Retrieve the target form field object or ID from the formFieldCollections property, pass it as the first parameter, and provide the properties to update as the second parameter. In the example below, the value and backgroundColor properties of a Textbox field are updated.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -174,9 +174,9 @@ Within the template, configure the PDF Viewer by adding the `[serviceUrl]='servi
 
 {% previewsample "Document-Processing/samples/pdfviewer/angular/updateformfield-cs1/index.html" %}
 
-## Delete form field programmatically
+## Delete a form field programmatically
 
-Using deleteFormField method, the form field can be deleted programmatically. We should retrieve the Form Field object/Id from FormFieldCollections property that you would like to delete and pass it as a parameter to deleteFormField method. To delete a Form Field programmatically, use the following code.
+Using the deleteFormField method, a form field can be deleted programmatically. Retrieve the form field object or ID from the formFieldCollections property and pass it to deleteFormField. To delete a form field programmatically, use the following code.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -316,7 +316,7 @@ When the print icon is selected on the toolbar, the PDF document will be printed
 
 ![Alt text](../images/printformfield.gif)
 
-You can invoke print action using the following code snippet.,
+You can invoke the print action using the following code snippet.
 
 ```html
 <script>
@@ -330,7 +330,7 @@ You can invoke print action using the following code snippet.,
 
 ## Open the existing PDF document
 
-We can open the already saved PDF document contains Form Fields in it by clicking the open icon in the toolbar. Refer the below GIF for further reference.
+Open an existing PDF document that contains form fields by clicking the Open icon in the toolbar. See the following GIF for reference.
 
 ![Alt text](../images/openexistingpdf.gif)
 
@@ -338,7 +338,7 @@ We can open the already saved PDF document contains Form Fields in it by clickin
 
 The form fields in the PDF Document will be validated when the [enableFormFieldsValidation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/validateFormFieldsArgs/) is set to true and hook the validateFormFields. The validateFormFields will be triggered when the PDF document is downloaded or printed with the non-filled form fields. The non-filled fields will be obtained in the [nonFillableFields](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/validateFormFieldsArgs/) property of the event arguments of validateFormFields.
 
-Add the following code snippet to validate the form fields,
+Add the following code snippet to validate the form fields.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -428,7 +428,7 @@ export class AppComponent implements OnInit {
 {% endtabs %}
 ## Export and import form fields
 
-The PDF Viewer control provides the support to export and import the form field data in the following formats using the methods `importFormFields`, `exportFormFields`, `exportFormFieldsAsObject`.
+The PDF Viewer component supports exporting and importing form field data in the following formats using the methods `importFormFields`, `exportFormFields`, and `exportFormFieldsAsObject`.
 
 * FDF
 * XFDF

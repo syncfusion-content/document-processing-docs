@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Load office files in PDF Viewer
-description: Learn about how to load office files in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Load Office Files in Angular PDF Viewer | Syncfusion
+description: Learn how to load Microsoft Office files in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: How to load the Office products
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load Microsoft Office files
+# Load Microsoft Office Files
 
-The PDF Viewer library allows you to load Microsoft office files such as PowerPoint, Excel, Word and image by using the ajax request.
+The PDF Viewer allows loading Microsoft Office files such as PowerPoint, Excel, Word, and images using an AJAX request.
 
-The following steps are used to load the office files in the PDF Viewer.
+To load Office files in the PDF Viewer, follow these steps:
 
-**Step 1:** Follow the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create simple PDF Viewer sample in Angular.
+**Step 1:** Refer to the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a basic Angular PDF Viewer setup.
 
-**Step 2:** Add the following code to the controller.cs file in the web service project to load the Microsoft office files. In the `GetImageStream()` method, a word document is converted into a PDF document, and return that PDF document into a base64 string. Similarly, load the PowerPoint, Excel and image into the PDF Viewer.
+**Step 2:** Add the following code to the `Controller.cs` file in the web service project to handle loading Microsoft Office files. In the `GetImageStream()` method, a Word document is converted into a PDF document, and then the PDF document is returned as a base64 string. The process is similar for loading PowerPoint, Excel, and images into the PDF Viewer.
 
 ```c#
 //Post action for loading the Office products.
@@ -96,7 +96,7 @@ public IActionResult GetImageStream([FromBody] Dictionary<string, string> jsonOb
 
 ```
 
-**Step 3:** In the following code, an XMLHttpRequest will generate the responseText from the base64 string and set that text as the `documentPath` of the PDF Viewer.
+**Step 3:** The following code utilizes an XMLHttpRequest to generate the `responseText` from the base64 string, which is then set as the `documentPath` of the PDF Viewer.
 
 ```html
 

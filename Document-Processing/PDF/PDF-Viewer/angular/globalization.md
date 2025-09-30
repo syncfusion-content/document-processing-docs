@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Globalization in Angular PDF Viewer component | Syncfusion
+description: Learn here all about Globalization in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Globalization
 documentation: ug
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Localization in Angular PDF Viewer component
 
-The text contents provided in the PDF Viewer can be localized using the collection of localized strings for different cultures. By default, the PDF Viewer is localized in “__en-US__”.
+Text content in the PDF Viewer can be localized using culture-specific string collections. The default culture is “__en-US__”.
 
-The following table shows the default text values used in PDF Viewer in 'en-US' culture:
+The following table lists the default text values used by the PDF Viewer in the 'en-US' culture:
 
 |Keywords|Values|
 |---|---|
@@ -266,7 +266,7 @@ The following table shows the default text values used in PDF Viewer in 'en-US' 
 |Exact Matches|EXACT MATCHES|
 |Total Matches|TOTAL MATCHES|
 
-The different locale value for the PDF Viewer can be specified using the locale property.
+The locale for the PDF Viewer can be set using the locale property.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -332,7 +332,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-You have to map the text content based on locale like following script in sample level.,
+Text content must be mapped for each locale using a script at the sample level, as shown below.
 
 ```html
 <script>

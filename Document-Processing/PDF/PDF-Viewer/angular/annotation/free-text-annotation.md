@@ -10,21 +10,21 @@ domainurl: ##DomainURL##
 
 # Free text annotation
 
-The PDF Viewer control provides the options to add, edit, and delete the free text annotations.
+The Angular PDF Viewer component provides options to add, edit, and delete free text annotations.
 
 ## Adding a free text annotation to the PDF document
 
-The Free text annotations can be added to the PDF document using the annotation toolbar.
+Free text annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Select the **Free Text Annotation** button in the annotation toolbar. It enables the Free Text annotation mode.
-* You can add the text over the pages of the PDF document.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar. The annotation toolbar appears.
+* Select the **Free Text Annotation** button in the annotation toolbar to enable Free Text mode.
+* Add text anywhere on the pages of the PDF document.
 
-In the pan mode, if the free text annotation mode is entered, the PDF Viewer control will switch to text select mode.
+While in pan mode, entering Free Text mode switches the viewer to text selection mode.
 
 ![FreeTextAnnotation in Angular PDF Viewer](../images/freetext_tool.png)
 
-Refer to the following code sample to switch to the Free Text annotation mode using a button click.
+The following example shows how to switch to Free Text mode using a button click.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -102,9 +102,9 @@ import { LinkAnnotationService, BookmarkViewService,
 
 ## How to clear the selection focus from free text annotation
 
-The free text annotations selection focus can be cleared by using the [setAnnotationMode](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/)  property of the `annotationModule`.
+The selection focus of free text annotations can be cleared by using the [setAnnotationMode](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/) property of the `annotationModule`.
 
-Refer to the following code sample to remove the selection focus from the annotation by using a button click.
+The following example shows how to remove the selection focus from the annotation using a button click.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -145,13 +145,13 @@ RemoveSelection() {
 {% endhighlight %}
 {% endtabs %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Annotations/How%20to%20clear%20the%20selection%20from%20annotation)
+[View sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Annotations/How%20to%20clear%20the%20selection%20from%20annotation)
 
 ## Adding a Free Text annotation to the PDF document Programmatically
 
-With the PDF Viewer library, you can add a Free Text annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+With the PDF Viewer library, a Free Text annotation can be added programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
 
-Here's a example of how you can utilize the **addAnnotation()** method to include a Free Text annotation programmatically
+Here is an example of how to use the **addAnnotation()** method to include a Free Text annotation programmatically:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -264,7 +264,7 @@ export class AppComponent implements OnInit {
 
 ## Editing the properties of free text annotation
 
-The font family, font size, font styles, font color, text alignment, fill color, the border stroke color, border thickness, and opacity of the free text annotation can be edited using the Font Family tool, Font Size tool, Font Color tool, Text Align tool, Font Style tool  Edit Color tool, Edit Stroke Color tool, Edit Thickness tool, and Edit Opacity tool in the annotation toolbar.
+The font family, font size, font styles, font color, text alignment, fill color, border color, border thickness, and opacity of the free text annotation can be edited using the Font Family, Font Size, Font Color, Text Align, Font Style, Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
 ### Editing font family
 
@@ -322,9 +322,9 @@ The opacity of the annotation can be edited using the range slider provided in t
 
 ## Move the free text annotation programmatically
 
-The PDF Viewer library allows you to move the free text annotation in the PDF Viewer control programmatically using the **editAnnotation()** method.
+The PDF Viewer library allows moving a free text annotation programmatically using the **editAnnotation()** method.
 
-Here is an example of how you can use the **editAnnotation()** method to move the free text annotation programmatically:
+The following example shows how to move a free text annotation using the **editAnnotation()** method:
 
 ```html
  <button (click)="moveFreeText()">Move the Free Text</button>
@@ -347,13 +347,13 @@ Here is an example of how you can use the **editAnnotation()** method to move th
 
 ```
 
-Find the sample [how to move the free text annotation programmatically](https://stackblitz.com/edit/angular-dxub1a-qjbisb?file=app.component.ts)
+Sample: [Move a free text annotation programmatically](https://stackblitz.com/edit/angular-dxub1a-qjbisb?file=app.component.ts)
 
 ## Get the newly added free text annotation ID
 
-To get the ID of a newly added free text annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer, you can use the **annotationAdd()** event. This event is triggered whenever a new annotation is added to the PDF document, and it provides the annotationAddEventHandler object as a parameter. You can access the ID of the new annotation through the AnnotationID property of the annotationAddEventHandler object.
+To get the ID of a newly added free text annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, use the **annotationAdd()** event. This event is triggered whenever a new annotation is added and provides an event argument object (annotationAddEventHandler). The ID of the new annotation is available in the `annotationId` property of this object.
 
-Here is an example of how you can use the **annotationAdd()** event to get the ID of a new free text annotation:
+The following example shows how to get the ID of a new free text annotation using the **annotationAdd()** event:
 
 ```typescript
 
@@ -365,13 +365,13 @@ public annotationAddEventHandler(args) {
 
 ```
 
-Find the sample [how to get the newly added free text annotation id](https://stackblitz.com/edit/angular-dxub1a-utuefq?file=app.component.ts)
+Sample: [Get the newly added free text annotation ID](https://stackblitz.com/edit/angular-dxub1a-utuefq?file=app.component.ts)
 
 ## Change the content of an existing Free text annotation programmatically
 
-To change the content of an existing free text annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer programmatically, you can use the **editAnnotation()** method.
+To change the content of an existing free text annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer programmatically, use the **editAnnotation()** method.
 
-Here is an example of how you can use the **editAnnotation()** method to change the content of a free text annotation:
+The following example shows how to change the content of a free text annotation using the **editAnnotation()** method:
 
 ```html
  <button (click)="changeContent()">Change Contect</button>
@@ -391,13 +391,13 @@ changeContent() {
 
 ```
 
-Find the sample [how to change the content of an existing  free text annotation programmatically](https://stackblitz.com/edit/angular-dxub1a-krsywy?file=app.component.ts)
+Sample: [Change the content of an existing free text annotation programmatically](https://stackblitz.com/edit/angular-dxub1a-krsywy?file=app.component.ts)
 
 ## Setting default properties during control initialization
 
-The properties of the free text annotation can be set before creating the control using the FreeTextSettings.
+Free text annotation properties can be set before initializing the component using FreeTextSettings.
 
-After editing the default values, they will be changed to the selected values.
+After editing default values, the active defaults change to the selected values.
 Refer to the following code sample to set the default free text annotation settings.
 
 {% tabs %}
@@ -470,7 +470,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 {% endhighlight %}
 {% endtabs %}
 
-You can also enable the autofit support for free text annotation by using the enableAutoFit boolean property in freeTextSettings as below. The width of the free text rectangle box will be increased based on the text added to it.
+Autofit support for free text annotations can be enabled using the enableAutoFit boolean property in freeTextSettings. The width of the free text rectangle increases based on the text added to it.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -544,4 +544,4 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Annotations/How%20to%20change%20the%20properties%20of%20free%20text%20annotation)
+[View sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Annotations/How%20to%20change%20the%20properties%20of%20free%20text%20annotation)

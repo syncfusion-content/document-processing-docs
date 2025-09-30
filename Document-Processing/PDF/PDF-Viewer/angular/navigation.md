@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Navigation in Angular PDF Viewer component
 
-The ASP.NET Core PDF Viewer supports different internal and external navigations.
+The Angular PDF Viewer supports internal and external navigation.
 
 ## Toolbar page navigation option
 
-The default toolbar of PDF Viewer contains the following navigation options
+The default toolbar of the PDF Viewer includes the following navigation options:
 
 * **Go to page**:- Navigates to the specific page of a PDF document.
 * **Show next page**:- Navigates to the next page of PDF a document.
@@ -22,7 +22,7 @@ The default toolbar of PDF Viewer contains the following navigation options
 * **Show first page**:-  Navigates to the first page of a PDF document.
 * **Show last page**:- Navigates to the last page of a PDF document.
 
-You can enable/disable page navigation option in PDF Viewer using the following code snippet.,
+Page navigation can be enabled or disabled in the PDF Viewer using the following code snippet.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -88,12 +88,12 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](images/navigation.png)
+![Toolbar navigation options in PDF Viewer](images/navigation.png)
 
 ## Bookmark navigation
 
-The Bookmarks saved in PDF files are loaded and made ready for easy navigation.
-You can enable/disable bookmark navigation by using the following code snippet.,
+Bookmarks saved in PDF files are loaded for easy navigation.
+Bookmark navigation can be enabled or disabled using the following code snippet.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -159,12 +159,12 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](images/bookmark.png)
+![Bookmark pane in PDF Viewer](images/bookmark.png)
 
 ## Thumbnail navigation
 
-Thumbnails is the miniature representation of actual pages in PDF files. This feature displays thumbnails of the pages and allows navigation.
-You can enable/disable thumbnail navigation by using the following code snippet.,
+Thumbnails are miniature representations of pages in PDF files. This feature displays thumbnails of the pages and allows navigation.
+Thumbnail navigation can be enabled or disabled using the following code snippet.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -228,19 +228,19 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](images/thumbnail.png)
+![Thumbnail pane in PDF Viewer](images/thumbnail.png)
 
 ## Hyperlink navigation
 
-Hyperlink navigation features enables navigation to the URLs (website links) in a PDF file.
+The hyperlink navigation feature enables navigation to URLs (website links) in a PDF file.
 
-![Alt text](images/link.png)
+![Hyperlink navigation in PDF Viewer](images/link.png)
 
-## Table of content navigation
+## Table of contents navigation
 
 Table of contents navigation allows users to navigate to different parts of a PDF file that are listed in the table of contents section.
 
-You can enable/disable link navigation by using the following code snippet.,
+Link navigation can be enabled or disabled using the following code snippet.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -304,7 +304,7 @@ You can enable/disable link navigation by using the following code snippet.,
 {% endhighlight %}
 {% endtabs %}
 
-You can change the open state of the hyperlink in the PDF Viewer by using the following code snippet,
+The open state of hyperlinks in the PDF Viewer can be changed using the following code snippet.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -370,23 +370,23 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](images/toc.png)
+![Table of contents navigation in PDF Viewer](images/toc.png)
 
 ## Keyboard navigation with Tab and Shift+Tab keys
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component supports keyboard navigation for the form fields in a PDF document using the `Tab` and `Shift+Tab` keys. This allows users to easily navigate through the form fields in a PDF document, making it easier for them to fill out forms.
+Keyboard navigation for form fields is supported using the `Tab` and `Shift+Tab` keys.
 
-Here's how it works:
 
-Pressing the `Tab` key will move the focus to the `next formfield` in the document.
 
-![Alt text](images/tab.gif)
+Pressing `Tab` moves focus to the next form field in the document.
 
-Pressing `Shift+Tab` will move the focus to the `previous formfield` in the document.
+![Tab key moves focus to next form field](images/tab.gif)
 
-![Alt text](images/shift+tab.gif)
+Pressing `Shift+Tab` moves focus to the previous form field in the document.
 
-N> The order of the form fields is determined by the order in which they appear in a PDF document.
+![Shift+Tab moves focus to previous form field](images/shift+tab.gif)
+
+N> Form field order is determined by the order in which fields appear in the PDF document.
 
 ## See also
 

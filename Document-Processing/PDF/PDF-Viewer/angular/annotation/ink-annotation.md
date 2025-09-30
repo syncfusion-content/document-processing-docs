@@ -8,23 +8,23 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ink Annotation in Angular PDF Viewer component
+# Ink annotation in Angular PDF Viewer component
 
-The PDF Viewer control provides the options to add, edit, and delete the ink annotations.
+The PDF Viewer component provides options to add, edit, and delete ink annotations.
 
 ![InkAnnotation](../images/ink_annotation.png)
 
-## Adding an ink annotation to the PDF document
+## Add an ink annotation to a PDF document
 
 The ink annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Select the **Draw Ink** button in the annotation toolbar. It enables the ink annotation mode.
-* You can draw anything over the pages of the PDF document.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar. The annotation toolbar appears.
+* Select the **Draw Ink** button in the annotation toolbar to enable ink mode.
+* Draw on any page of the PDF document.
 
 ![InkTool](../images/ink_tool.png)
 
-Refer to the following code sample to switch to the ink annotation mode.
+The following example shows how to switch to ink mode.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -103,11 +103,11 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 {% endhighlight %}
 {% endtabs %}
 
-## Adding a Ink annotation to the PDF document Programmatically
+## Add an ink annotation to a PDF document programmatically
 
-With the PDF Viewer library, you can add a Ink annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+With the PDF Viewer library, an ink annotation can be added programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
 
-Here's a example of how you can utilize the **addAnnotation()** method to include a Ink annotation programmatically
+Here is an example of how to use the **addAnnotation()** method to include an ink annotation programmatically:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -197,11 +197,11 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the existing Ink annotation programmatically
+## Edit an existing ink annotation programmatically
 
-To modify existing Ink annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer programmatically, you can use the **editAnnotation()** method.
+To modify an existing ink annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer programmatically, use the **editAnnotation()** method.
 
-Here is an example of how you can use the **editAnnotation()** method:
+The following example shows how to use the **editAnnotation()** method:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -305,33 +305,33 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-## Editing the properties of the ink annotation
+## Edit the properties of an ink annotation
 
-The stroke color, thickness, and opacity of the ink annotation can be edited using the Edit stroke color tool, Edit thickness tool, and Edit opacity tool in the annotation toolbar.
+The stroke color, thickness, and opacity of an ink annotation can be edited using the Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
-### Editing stroke color
+### Edit stroke color
 
-The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
+The stroke color of the annotation can be changed using the color palette in the Edit Stroke Color tool.
 
 ![InkStrokeColor](../images/ink_strokecolor.png)
 
-### Editing thickness
+### Edit thickness
 
-The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
+The annotation border thickness can be adjusted using the range slider in the Edit Thickness tool.
 
 ![InkThickness](../images/ink_thickness.png)
 
-### Editing opacity
+### Edit opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+The annotation opacity can be adjusted using the range slider in the Edit Opacity tool.
 
 ![InkOpacity](../images/ink_opacity.png)
 
-## Setting default properties during the control initialization
+## Set default properties during control initialization
 
-The properties of the ink annotation can be set before creating the control using the InkAnnotationSettings.
+Ink annotation properties can be set before initializing the component using InkAnnotationSettings.
 
-After editing the default values, they will be changed to the selected values.
+After editing default values, the active defaults change to the selected values.
 Refer to the following code sample to set the default ink annotation settings.
 
 {% tabs %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Copying assets from node_modules into my app in React PDF Viewer component | Syncfusion
+title: Copy assets from node_modules into the application in React PDF Viewer component | Syncfusion
 description: Learn here all about copying assets from node_modules into my app in Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
@@ -8,10 +8,10 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Experience the Standalone PDF Viewer Component by copying assets from node_modules into my app
+# Use the Standalone PDF Viewer by copying assets from node_modules into the application
 
-It is must to copy the assets from node_modules in to your app to experience the new Standalone PDF Viewer component. It offers flexibility across different build systems, remaining both framework-agnostic and independent of bundlers. Even without a bundler, you can seamlessly integrate the PDF Viewer by directly linking its assets into your app.
+Copying assets from node_modules into the application is required to use the Standalone PDF Viewer component. This approach works across different build systems, remaining framework-agnostic and independent of bundlers. Even without a bundler, the PDF Viewer can be integrated by directly linking its assets in the application.
 
-This strategic approach to lazy loading prevents unwieldy file sizes that a single bundle might impose, which is often impractical.
+Lazy loading of assets prevents large bundle sizes that are often impractical.
 
-Assets from 'ej2-pdfviewer-lib' need to be manually incorporated due to their on-demand loading. This necessity arises because the host application lacks inherent awareness of these assets' lazy loading behavior.
+Assets from 'ej2-pdfviewer-lib' must be added manually due to on-demand loading, as the host application is not inherently aware of these assets during lazy loading.

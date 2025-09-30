@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Controlling File Downloads in Angular Pdfviewer component | Syncfusion
-description: Learn here how to Controlling File Downloads in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Control File Downloads in Angular PDF Viewer | Syncfusion
+description: Learn how to control file downloads in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Controlling File Downloads in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer
+# Control file downloads in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, we've introduced a new feature that enables you to manage file downloads more effectively. This feature allows you to intercept and potentially skip the download process of a PDF document, providing enhanced control over user interactions within your application.
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, a new feature enables file download management. This feature allows interception and potential skipping of the PDF document download process, providing enhanced control over user interactions within the application.
 
 ### Using the downloadStart Event
 
-The key to this functionality lies in the downloadStart event, which offers a mechanism to intercept the initiation of the download process. Within the event handler, you can set the cancel argument to true to programmatically prevent the download action from proceeding.
+The key to this functionality lies in the `downloadStart` event, which offers a mechanism to intercept the initiation of the download process. Within the event handler, the `cancel` argument can be set to `true` to programmatically prevent the download action from proceeding.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -92,8 +92,8 @@ import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
 {% endhighlight %}
 {% endtabs %}
 
-By default, the cancel argument is set to `false`, indicating that the download action will proceed unless explicitly canceled by your custom logic.
+By default, the `cancel` argument is set to `false`, indicating that the download action proceeds unless explicitly cancelled by custom logic.
 
-### Enhanced Flexibility
+### Enhanced flexibility
 
-By leveraging the [downloadStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/downloadStartEventArgs/) event and its cancel argument, you gain the ability to implement custom logic to control and potentially prevent download actions based on your application's specific requirements. This enhancement provides greater flexibility in managing user interactions with PDF documents, empowering you to tailor the experience according to your needs.
+By leveraging the [downloadStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/downloadStartEventArgs/) event and its `cancel` argument, custom logic can be implemented to control and potentially prevent download actions based on the application's specific requirements. This enhancement provides greater flexibility in managing user interactions with PDF documents, empowering experience tailoring.

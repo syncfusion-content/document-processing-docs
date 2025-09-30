@@ -1,119 +1,119 @@
 ---
 layout: post
-title: Save PDF To AAD in Angular Pdfviewer Component | Syncfusion
-description: Learn how to Save PDF To AAD in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Save PDF to Azure Active Directory in Angular PDF Viewer Component | Syncfusion
+description: Learn how to save PDF files to Azure Active Directory (AAD) in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: Load PDF From AAD
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF To Azure Active Directory in Viewer
+# Save PDF to Azure Active Directory in PDF Viewer
 
-### **Overview**
+### Overview
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer allows you to load and save PDF files directly from Azure Active Directory (AAD). Below are the steps to securely load and store PDF documents from and to AAD using the PDF Viewer.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer supports loading and saving PDF files directly from Azure Active Directory (AAD). The steps to securely load and store PDF documents from and to AAD using the PDF Viewer are provided below.
 
-### **Steps to Open the PDF File from Azure Active Directory**
+### Open a PDF file from Azure Active Directory
 
 ---
 
-### **Step 1: Register an Application in Azure Active Directory (AAD)**
+### Step 1: Register an application in Azure Active Directory (AAD)
 
-1. **Go to the Azure Portal**:
-   - Navigate to [Azure Portal](https://portal.azure.com).
+1. **Go to the Azure portal**:
+   - Navigate to the [Azure Portal](https://portal.azure.com).
 
-2. **Register your Application**:
+2. **Register an application**:
    - In the Azure portal, go to **Azure Active Directory** > **App registrations** > **New registration**.
-   - Register your application and note down the **Application (client) ID** and **Directory (tenant) ID**.
+   - Register the application and note down the **Application (client) ID** and **Directory (tenant) ID**.
 
    ![app-registration](../images/app-registration.png)
 
-3. **Create a Client Secret**:
+3. **Create a client secret**:
    - In the registered application, go to **Certificates & secrets**.
    - Click **New client secret**.
    - Provide a description and set an expiration period.
    - Click **Add**.
-   - Copy the client secret value immediately, as it will be hidden later. Store it securely.
+   - Copy the client secret value immediately, as it will be hidden later and must be stored securely.
 
    ![client-secret](../images/client-secret.png)
 
 ---
 
-### **Step 2: Create the Azure Storage Account**
+### Step 2: Create the Azure Storage account
 
-1. **Create a Storage Account**:
-   - In the Azure portal, use the search bar to search for **Storage accounts**.
-   - Create a new storage account by filling in the required details (e.g., name, location, resource group, etc.).
+1. **Create a Storage account**:
+   - In the Azure portal, use the search bar to find **Storage accounts**.
+   - Create a new storage account by providing the required details (e.g., name, location, resource group).
 
-    ![storage-account](../images/storage-account.png)
+   ![storage-account](../images/storage-account.png)
 
 ---
 
-### **Step 3: Assign Role to the Application**
+### Step 3: Assign role to the application
 
-1. **Go to your Storage Account**:
-   - Navigate to **Access control (IAM)** > **Add role assignment** in your Azure Storage Account.
+1. **Go to a Storage account**:
+   - Navigate to **Access control (IAM)** > **Add role assignment** in the Azure Storage account.
 
-2. **Assign Role**:
-   - Assign the **Storage Blob Data Contributor** role to your registered application.
+2. **Assign role**:
+   - Assign the **Storage Blob Data Contributor** role to the registered application.
    - In the **Assign access to** dropdown, select **User, group, or service principal**.
-   - Click on **Select members** and search for your registered application by name or client ID.
-   - Select your application and click **Select**.
+   - Click **Select members** and search for the registered application by name or client ID.
+   - Select the application and click **Select**.
    - Click **Review + assign** to finalize the role assignment.
 
-    ![add-role](../images/add-role.png)
+   ![add-role](../images/add-role.png)
 ---
 
-### **Step 4: Upload the PDF Document to the Azure Storage Account**
+### Step 4: Upload the PDF document to the Azure Storage account
 
 1. **Navigate to Data Storage**:
    - In the Azure portal, go to **Data storage** > **Containers**.
 
-2. **Upload the PDF File**:
-   - Create a new container and upload the PDF document you want to access in the PDF Viewer.
+2. **Upload the PDF file**:
+   - Create a new container and upload the PDF document for access in the PDF Viewer.
 
-    ![upload-pdf](../images/upload-pdf.png)
+   ![upload-pdf](../images/upload-pdf.png)
 ---
 
-### **Step 5: Server-Side Configuration**
+### Step 5: Server-side configuration
 
-1. **Configure Server-Side Code**:
+1. **Configure server-side code**:
    - Open the server-side application (e.g., ASP.NET Core) and configure the following details in the `PdfViewerController` file:
-     - `tenantId` (your Azure AD tenant ID),
-     - `clientId` (your registered application client ID),
-     - `clientSecret` (your registered application client secret),
-     - `blobServiceEndpoint` (your storage account blob service URL),
-     - `containerName` (your container name in Azure Blob Storage).
+     - `tenantId` (Azure AD tenant ID),
+     - `clientId` (registered application client ID),
+     - `clientSecret` (registered application client secret),
+     - `blobServiceEndpoint` (storage account blob service URL),
+     - `containerName` (container name in Azure Blob Storage).
 
-2. **Run the Web Service**:
+2. **Run the web service**:
    - After configuring the necessary details, run the web service to make it accessible.
 
 ---
 
-### **Step 6: Client-Side Configuration**
+### Step 6: Client-side configuration
 
-1. **Run the Angular Sample**:
+1. **Run the Angular sample**:
    - Start the Angular sample that includes the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer.
 
 2. **Load PDF from AAD**:
-   - When the user clicks the **Load from AAD** button, the Angular client will make an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.
-   - The server will retrieve the PDF from Azure, convert it to a base64 string, and return it to the client.
+   - When the **Load from AAD** button is clicked, the Angular client makes an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.
+   - The server retrieves the PDF from Azure, converts it to a Base64 string, and returns it to the client.
 
 3. **Display PDF in the PDF Viewer**:
-   - Once the base64 string is received, the PDF Viewer will load the PDF using the `viewer.load()` method.
+   - Once the Base64 string is received, the PDF Viewer loads the PDF using the `viewer.load()` method.
 
 ---
 
-### **Step 7: Save the PDF Document to Azure**
+### Step 7: Save the PDF document to Azure
 
 1. **Save PDF to AAD**:
-   - The user can click the **Save to AAD** button to upload any modifications to the PDF back to Azure Blob Storage.
+   - Clicking the **Save to AAD** button uploads any modifications to the PDF back to Azure Blob Storage.
    - This action sends the modified PDF to the server, where it is converted into a byte array and saved to the specified Azure Blob container.
 
 ---
 
-### **Server-Side Code Snippets**
+### Server-side code snippets
 ```cs
 string tenantId = "Provide the tenant id here";
 string clientId = "Provide the clientid here";
@@ -167,7 +167,7 @@ public async Task<IActionResult> SaveToAAD([FromBody] Dictionary<string, string>
 
 ```
 
-### **Client-side Code Snippets**
+### Client-side code snippets
 
 ```typescript
 

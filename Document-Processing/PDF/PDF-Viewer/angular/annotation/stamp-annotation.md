@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stamp Annotation in Angular PDF Viewer component
+# Stamp annotation in Angular PDF Viewer component
 
-The PDF Viewer control provides options to add, edit, delete, and rotate the following stamp annotation in the PDF documents:
+The Angular PDF Viewer component provides options to add, edit, delete, and rotate the following stamp annotations in PDF documents:
 
 * Dynamic
 * Sign Here
@@ -19,24 +19,24 @@ The PDF Viewer control provides options to add, edit, delete, and rotate the fol
 
 ![StampAnnotation](../images/stamp_annot.png)
 
-## Adding stamp annotations to the PDF document
+## Add stamp annotations to a PDF document
 
 The stamp annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the **Stamp Annotation** drop-down button. A drop-down pop-up will appear and shows the stamp annotations to be added.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar. The annotation toolbar appears.
+* Click the **Stamp Annotation** dropdown. A popup appears showing available stamp annotations.
 
 ![StampTool](../images/stamp_tool.png)
 
-* Select the annotation type to be added to the page in the pop-up.
+* Select a stamp type to add to the page.
 
 ![StampPopup](../images/selectstamp_annot.png)
 
-* You can add the annotation over the pages of the PDF document.
+* Add the annotation anywhere on the PDF pages.
 
-In the pan mode, if the stamp annotation mode is entered, the PDF Viewer control will switch to text select mode.
+While in pan mode, entering stamp annotation mode switches the viewer to text selection mode.
 
-Refer to the following code sample to switch to the stamp annotation mode.
+The following example shows how to switch to stamp annotation mode.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -114,11 +114,11 @@ Refer to the following code sample to switch to the stamp annotation mode.
 {% endhighlight %}
 {% endtabs %}
 
-## Adding a Stamp annotation to the PDF document Programmatically
+## Add a stamp annotation to a PDF document programmatically
 
-With the PDF Viewer library, you can add a Stamp annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+With the PDF Viewer library, a stamp annotation can be added programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
 
-Here's a example of how you can utilize the **addAnnotation()** method to include a Stamp annotation programmatically:
+Here is an example of how to use the **addAnnotation()** method to include a stamp annotation programmatically:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -279,11 +279,11 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the existing sticky note annotation programmatically
+## Edit an existing stamp annotation programmatically
 
-To modify existing sticky note annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer programmatically, you can use the **editAnnotation()** method.
+To modify an existing stamp annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer programmatically, use the **editAnnotation()** method.
 
-Here is an example of how you can use the **editAnnotation()** method:
+The following example shows how to use the **editAnnotation()** method:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -381,24 +381,24 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-## Adding custom stamp to the PDF document
+## Add a custom stamp to a PDF document
 
 * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the **Stamp Annotation** drop-down button. A drop-down pop-up will appear and shows the stamp annotations to be added.
+* Click the **Stamp Annotation** dropdown. A popup appears showing available stamp annotations.
 * Click the Custom Stamp button.
 
 ![CustomStamp](../images/customStamp.png)
 
-* The file explorer dialog will appear, choose the image and then add the image to the PDF page.
+* The file explorer dialog appears. Choose an image and add it to the PDF page.
 
->The JPG and JPEG image format is only supported in the custom stamp annotations.
+>Only JPG and JPEG image formats are supported for custom stamps.
 
-## Setting default properties during control initialization
+## Set default properties during control initialization
 
-The properties of the stamp annotation can be set before creating the control using the StampSettings.
+Stamp annotation properties can be set before initializing the component using StampSettings.
 
-After editing the default opacity using the Edit Opacity tool, they will be changed to the selected values.
-Refer to the following code sample to set the default sticky note annotation settings.
+After editing the default opacity using the Edit Opacity tool, the active default changes to the selected value.
+Refer to the following code sample to set the default stamp annotation settings.
 
 
 {% tabs %}

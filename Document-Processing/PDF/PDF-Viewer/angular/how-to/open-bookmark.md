@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Open Bookmark in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Open Bookmark in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Open Bookmark in Angular PDF Viewer | Syncfusion
+description: Learn how to open and close the bookmark pane programmatically in Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open and Close Bookmark pane programmatically
+# Open and Close Bookmark Pane Programmatically
 
-The PDF Viewer library allows you to open the Bookmark pane programmatically using the **openBookmarkPane()** method.
+The PDF Viewer allows programmatic opening of the Bookmark pane using the **openBookmarkPane()** method.
 
-The following steps are used to open the Bookmark.
+To programmatically open the Bookmark pane, follow these steps:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Refer to the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to set up a basic Angular PDF Viewer.
 
 **Step 2:** Insert the following code snippet to implement the functionality for opening the Bookmark pane:
 
@@ -43,4 +43,4 @@ closeBookmark() {
 }
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to/Open%20and%20Close%20bookmark%20pane)
+For a complete example, refer to the sample demonstrating [how to open and close the bookmark pane programmatically](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to/Open%20and%20Close%20bookmark%20pane)

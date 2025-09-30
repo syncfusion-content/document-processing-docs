@@ -7,9 +7,9 @@ control: Text search
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Text Search in Angular PDF Viewer component
+# Text search in Angular PDF Viewer component
 
-The Text Search option in PDF Viewer is used to find and highlight the text content from the document. You can enable/disable the text search using the following code snippet.
+The Text Search option in the PDF Viewer finds and highlights text in the document. Enable or disable text search using the following code.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -73,41 +73,41 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-## Text search Features
+## Text search features
 
-### Real time search suggestion while typing
-Entering text into the search input dynamically displays search suggestions based on the provided input. The suggestions are updated in real-time as text is typed, offering relevant matches from the available content. This feature enhances the search experience by allowing quick access to potential results while typing.
+### Real-time search suggestions while typing
+Entering text into the search input dynamically displays suggestions based on the provided input. Suggestions update in real time, offering relevant matches from the available content and enabling quick access to potential results while typing.
 
-![Alt text](./images/SingleSearchPopup.png)
+![Real-time search suggestions popup](./images/SingleSearchPopup.png)
 
-### Selecting Search Suggestions from the Popup
-Entering text into the search input triggers a popup displaying relevant suggestions based on the input. Selecting a suggestion from the popup enables direct navigation to its occurrences in the document.
+### Select search suggestions from the popup
+Entering text into the search input triggers a popup displaying relevant suggestions. Selecting a suggestion enables direct navigation to its occurrences in the document.
 
-![Alt text](./images/SearchResultFromPopup.png)
+![Search result navigation from popup](./images/SearchResultFromPopup.png)
 
-### Search Text with enabling 'Match Case' checkbox
-By enabling the 'Match Case' option and entering text into the search input, only the exact case-sensitive matches in the document are highlighted. This feature allows navigation through each occurrence of the exact text match within the document.
+### Search text with 'Match Case' enabled
+With 'Match Case' enabled, only exact case-sensitive matches are highlighted. Navigate through each occurrence of the exact text match within the document.
 
-![Alt text](./images/SearchNavigationMatchCase.png)
+![Match Case enabled navigation](./images/SearchNavigationMatchCase.png)
 
-### Search Text without enabling 'Match Case' checkbox
-When text is entered into the search input without enabling the 'Match Case' option, all instances of the text, regardless of case, are highlighted in the document. This allows easy navigation through every occurrence of the search term.
+### Search text without 'Match Case' enabled
+Without 'Match Case' enabled, all instances of the text—regardless of case—are highlighted, allowing easy navigation through every occurrence.
 
-![Alt text](./images/SearchNavigationNoMatchCase.png)
+![Match Case disabled navigation](./images/SearchNavigationNoMatchCase.png)
 
-### Search list of text by enabling 'Match Any Word' checkbox
-When the 'Match Any Word' option is enabled, the entered text in the search input is split into individual words based on spaces. As the text is typed, the popup dynamically displays search suggestions for each word in real time, highlighting potential matches within the document.
+### Search list of text with 'Match Any Word' enabled
+With 'Match Any Word' enabled, the entered text is split into individual words based on spaces. As text is typed, the popup dynamically displays search suggestions for each word in real time, highlighting potential matches within the document.
 
-![Alt text](./images/MultiSearchPopup.png)
+![Match Any Word suggestions popup](./images/MultiSearchPopup.png)
 
-The following text search methods are available in the PDF Viewer,
+The following text search methods are available in the PDF Viewer.
 
 * [**Search text**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchtext):- Searches the target text in the PDF document and highlights the occurrences in the pages.
 * [**Search next**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchnext):- Searches the next occurrence of the searched text from the current occurrence of the PdfViewer.
 * [**Search previous**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchprevious):- Searches the previous occurrence of the searched text from the current occurrence of the PdfViewer.
 * [**Cancel text search**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#canceltextsearch):- The text search can be canceled and the highlighted occurrences from the PDF Viewer can be removed .
 
-![Alt text](images/search.png)
+![Text search results](images/search.png)
 
 ## Find text method
 Searches for the specified text or an array of strings within the document and returns the bounding rectangles for each occurrence. The search can be case-sensitive based on the provided parameters. If a specific page index is provided, it returns the bounding rectangles for these search strings on that page; otherwise, it returns the bounding rectangles for all pages in the document where the strings were found.

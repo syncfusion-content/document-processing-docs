@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Customize context menu in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Customize context menu in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Customize Context Menu in Angular PDF Viewer component | Syncfusion
+description: Learn how to customize the context menu in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize context menu
+# Customize the context menu
 
-PDF Viewer allows you to add custom option in context menu. It can be achieved by using the `addCustomMenu()` method and custom action is defined using the `customContextMenuSelect()`method.
+The PDF Viewer allows adding custom options to the context menu using the `addCustomMenu()` method, and defining custom actions using the `customContextMenuSelect()` method.
 
-### Add Custom Option
+### Add a custom option
 
-The following code shows how to add custom option in context menu.
+The following code shows how to add a custom option to the context menu:
 
 ```ts
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
@@ -56,9 +56,9 @@ The following code shows how to add custom option in context menu.
 
 ```
 
-### Customize custom option in context menu
+### Customize a custom option in the context menu
 
-The PDF Viewer feature enables customization of custom options and the ability to toggle the display of the default context menu. When the addCustomMenu parameter is set to `true`, the default menu is hidden; conversely, when it is set to `false`, the default menu items are displayed.
+The PDF Viewer feature enables customization of custom options and the ability to toggle the display of the default context menu. When the `addCustomMenu` parameter is set to `true`, the default menu is hidden; conversely, when it is set to `false`, the default menu items are displayed.
 
 ```js
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
@@ -101,7 +101,7 @@ The PDF Viewer feature enables customization of custom options and the ability t
 
 #### Customize added context menu items
 
-The following code shows how to hide/show added custom option in context menu using the `customContextMenuBeforeOpen()` method.
+The following code shows how to hide or show added custom options in the context menu using the `customContextMenuBeforeOpen()` method.
 
 ```js
 export class CustomContextMenuComponent implements OnInit {
@@ -222,7 +222,7 @@ The following is the output of custom context menu with customization.
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
-Add the below serviceUrl in the `app.component.ts` file
+add the `serviceUrl` in the `app.component.ts` file:
 `public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`;
 Within the template, configure the PDF Viewer by adding the `[serviceUrl]='service'` attribute inside the div element.
 

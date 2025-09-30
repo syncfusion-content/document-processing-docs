@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Know the supported conformance PDF documents | Syncfusion
-Description: Learn here all about the supported conformance PDF documents in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Supported Conformance PDF Documents | Syncfusion
+Description: Learn about the supported conformance PDF documents in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: Conformance
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Know the supported conformance PDF documents in Anglar PDF Viewer component
+# Supported Conformance PDF Documents in Angular PDF Viewer component
 
-The PDF Viewer supports the below conformance documents:
+The PDF Viewer supports the following conformance documents:
 
 * **PDF/A-1a conformance**
 * **PDF/A-1b conformance**

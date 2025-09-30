@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Restrict Zoom Percentage in Angular PDF Viewer component | Syncfusion
-description: Learn here all how to restrict zoom percentage in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Restrict Zoom Percentage in Angular PDF Viewer | Syncfusion
+description: Learn how to restrict zoom percentage on mobile devices in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Restrict Zoom Percentage on Mobile Devices
 
-In Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, you can easily restrict the zoom percentage on mobile devices using the **maxZoom** and **minZoom** property. This feature allows you to set specific limits for zooming, ensuring smoother scrolling performance and efficient document loading, on mobile devices.
+In Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, the zoom percentage on mobile devices can be restricted using the **maxZoom** and **minZoom** properties. This feature sets specific zoom limits, ensuring smoother scrolling performance and efficient document loading on mobile devices.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -105,6 +105,6 @@ import  {Browser} from '@syncfusion/ej2-base';
 {% endhighlight %}
 {% endtabs %}
 
-By implementing this, you ensure that the maximum zoom percentage on mobile devices is limited to 200% and the minimum zoom percentage is set to 10%. This prevents performance issues that may arise from excessive zooming on mobile platforms.
+With this configuration, the maximum zoom percentage on mobile devices is limited to 200% and the minimum zoom percentage is set to 10%. This helps prevent performance issues that can arise from excessive zooming on mobile platforms.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to/Restrict%20Zoom%20Percentage%20on%20Mobile%20Devices)
