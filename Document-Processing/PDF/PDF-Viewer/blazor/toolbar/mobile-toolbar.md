@@ -9,7 +9,7 @@ documentation: ug
 
 # Mobile toolbar in Blazor SfPdfViewer
 
-Use the mobile toolbar to access core viewer actions and feature toolsets on small screens. The primary toolbar adapts to the available width, and feature toolbars (annotation, form designer, redaction) when the corresponding feature is enabled and activated.
+Use the mobile toolbar to access core viewer actions and feature tools on small screens. The primary toolbar adapts to the available width, and feature toolbars (annotation, form designer, redaction) when the corresponding feature is enabled and activated.
 
 ## Primary toolbar in mobile mode
 
