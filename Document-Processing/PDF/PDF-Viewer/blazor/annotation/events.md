@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation Events in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to subscribe to and handle annotation events in the Syncfusion Blazor SfPdfViewer.
+description: Learn how to subscribe to and handle annotations and signature annotation events in the Syncfusion Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Annotation Events in Blazor SfPdfViewer Component
 
-Annotation events notify the application when annotations are added, selected, moved, resized, modified, or removed. The following events can be subscribed through the PdfViewerEvents tag in the SfPdfViewer component.
+Annotation events notify the application when annotations are added, selected, moved, resized, modified, or removed. Subscribe to these events by using the PdfViewerEvents tag inside the SfPdfViewer component.
 
 |Name|Description|
 |---|---|
@@ -34,6 +34,10 @@ Annotation events notify the application when annotations are added, selected, m
 
 The [AddSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AddSignature) event triggers when a signature is added to a page in the PDF document.
 
+#### Event Arguments
+
+For event data, see [AddSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AddSignatureEventArgs.html) for properties such as AnnotationId, PageNumber, and Bounds.
+
 The following example illustrates how to handle the AddSignature event.
 
 ```cshtml
@@ -48,7 +52,7 @@ The following example illustrates how to handle the AddSignature event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task AddSignature(AddSignatureEventArgs args) 
     {
-        Console.WriteLine(args.EditingAction);
+        Console.WriteLine($"Added Signature ID: {args.AnnotationId}");
     }	 
 }
 
@@ -57,6 +61,10 @@ The following example illustrates how to handle the AddSignature event.
 ## AnnotationAdded Event
 
 The [AnnotationAdded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationAdded) event triggers when an annotation is added to a page in the PDF document.
+
+#### Event Arguments
+
+See [AnnotationAddedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationAddedEventArgs.html) for details such as AnnotationId, AnnotationType, PageNumber, and Bounds.
 
 The following example illustrates how to handle the AnnotationAdded event.
 
@@ -72,7 +80,7 @@ The following example illustrates how to handle the AnnotationAdded event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task AnnotationAdded(AnnotationAddEventArgs args) 
     {
-        Console.WriteLine(args.EditingAction);
+        Console.WriteLine($"Added Annotation ID: {args.AnnotationId}");
     }	 
 }
 
@@ -81,6 +89,10 @@ The following example illustrates how to handle the AnnotationAdded event.
 ## AnnotationMouseover Event
 
 The [AnnotationMouseover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationMouseover) event triggers when the mouse pointer moves over an annotation object.
+
+#### Event Arguments
+
+See [AnnotationMouseoverEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationMouseoverEventArgs.html) for details such as AnnotationId, AnnotationType, PageNumber, and cursor position.
 
 The following example illustrates how to handle the AnnotationMouseover event.
 
@@ -96,7 +108,7 @@ The following example illustrates how to handle the AnnotationMouseover event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task AnnotationMouseover(AnnotationMouseoverEventArgs args) 
     {
-        Console.WriteLine(args.EditingAction);
+        Console.WriteLine($"Annotation Mouseover X: {args.X} and y: {args.X}");
     }	 
 }
 
@@ -105,6 +117,10 @@ The following example illustrates how to handle the AnnotationMouseover event.
 ## AnnotationMoved Event
 
 The [AnnotationMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationMoved) event triggers when an annotation is moved on a page in the PDF document.
+
+#### Event Arguments
+
+See [AnnotationMovedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationMovedEventArgs.html) for details such as AnnotationId, PageNumber, PreviousBounds, and Bounds.
 
 The following example illustrates how to handle the AnnotationMoved event.
 
@@ -120,7 +136,7 @@ The following example illustrates how to handle the AnnotationMoved event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task AnnotationMoved(AnnotationMoveEventArgs args) 
     {
-        Console.WriteLine(args.EditingAction);
+        Console.WriteLine($"Annotation Current Position: {args.CurrentPosition}");
     }	 
 }
 
@@ -129,6 +145,10 @@ The following example illustrates how to handle the AnnotationMoved event.
 ## AnnotationPropertiesChanged Event
 
 The [AnnotationPropertiesChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationPropertiesChanged) event triggers when annotation properties are modified on a PDF page.
+
+#### Event Arguments
+
+See [AnnotationPropertiesChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationPropertiesChangedEventArgs.html) for details such as AnnotationId, PageNumber, changed property names, and old/new values.
 
 The following example illustrates how to handle the AnnotationPropertiesChanged event.
 
@@ -144,7 +164,7 @@ The following example illustrates how to handle the AnnotationPropertiesChanged 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task AnnotationPropertiesChanged(AnnotationPropertiesChangeEventArgs args) 
     {
-        Console.WriteLine(args.EditingAction);
+        Console.WriteLine($"Is Annotation Color Changed: {args.IsColorChanged}");
     }	 
 }
 
@@ -153,6 +173,10 @@ The following example illustrates how to handle the AnnotationPropertiesChanged 
 ## AnnotationRemoved Event
 
 The [AnnotationRemoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationRemoved) event triggers when an annotation is removed from a page in the PDF document.
+
+#### Event Arguments
+
+See [AnnotationRemovedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationRemovedEventArgs.html) for details such as AnnotationId, AnnotationType, and PageNumber.
 
 The following example illustrates how to handle the AnnotationRemoved event.
 
@@ -168,7 +192,7 @@ The following example illustrates how to handle the AnnotationRemoved event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task AnnotationRemoved(AnnotationRemoveEventArgs args) 
     {
-        Console.WriteLine(args.EditingAction);
+        Console.WriteLine($"Removed Annotation ID: {args.AnnotationId}");
     }	 
 }
 
@@ -177,6 +201,10 @@ The following example illustrates how to handle the AnnotationRemoved event.
 ## AnnotationResized Event
 
 The [AnnotationResized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationResized) event triggers when an annotation is resized on a page in the PDF document.
+
+#### Event Arguments
+
+See [AnnotationResizedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationResizedEventArgs.html) for details such as AnnotationId, PageNumber, PreviousBounds, and Bounds.
 
 The following example illustrates how to handle the AnnotationResized event.
 
@@ -192,7 +220,7 @@ The following example illustrates how to handle the AnnotationResized event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task AnnotationResized(AnnotationResizeEventArgs args) 
     {
-        Console.WriteLine(args.EditingAction);
+        Console.WriteLine($"Resized Annotation ID: {args.AnnotationId}");
     }	 
 }
 
@@ -201,6 +229,10 @@ The following example illustrates how to handle the AnnotationResized event.
 ## AnnotationSelected Event
 
 The [AnnotationSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationSelected) event triggers when an annotation is selected on a page in the PDF document.
+
+#### Event Arguments
+
+See [AnnotationSelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationSelectedEventArgs.html) for details such as AnnotationId, AnnotationType, and PageNumber.
 
 The following example illustrates how to handle the AnnotationSelected event.
 
@@ -216,7 +248,7 @@ The following example illustrates how to handle the AnnotationSelected event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task AnnotationSelected(AnnotationSelectEventArgs args) 
     {
-        Console.WriteLine(args.EditingAction);
+        Console.WriteLine($"Selected Annotation ID: {args.AnnotationId}");
     }	 
 }
 
@@ -225,6 +257,10 @@ The following example illustrates how to handle the AnnotationSelected event.
 ## AnnotationUnselected Event
 
 The [AnnotationUnselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationUnselected) event triggers when an annotation is unselected on a page in the PDF document.
+
+#### Event Arguments
+
+See [AnnotationUnselectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationUnselectedEventArgs.html) for details such as AnnotationId, AnnotationType, and PageNumber.
 
 The following example illustrates how to handle the AnnotationUnselected event.
 
@@ -240,7 +276,7 @@ The following example illustrates how to handle the AnnotationUnselected event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task AnnotationUnselected(AnnotationUnselectEventArgs args) 
     {
-        Console.WriteLine(args.EditingAction);
+        Console.WriteLine($"UnSelected Annotation ID: {args.AnnotationId}");
     }	 
 }
 
@@ -249,6 +285,10 @@ The following example illustrates how to handle the AnnotationUnselected event.
 ## MoveSignature Event
 
 The [MoveSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_MoveSignature) event triggers when a signature is moved on a page in the PDF document.
+
+#### Event Arguments
+
+See [MoveSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.MoveSignatureEventArgs.html) for details such as AnnotationId, PageNumber, PreviousBounds, and Bounds.
 
 The following example illustrates how to handle the MoveSignature event.
 
@@ -264,7 +304,7 @@ The following example illustrates how to handle the MoveSignature event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task MoveSignature(MoveSignatureEventArgs args) 
     {
-        Console.WriteLine(args.EditingAction);
+        Console.WriteLine($"Moved Signture ID: {args.AnnotationId}");
     }	 
 }
 
@@ -273,6 +313,10 @@ The following example illustrates how to handle the MoveSignature event.
 ## OnAnnotationDoubleClick Event
 
 The [OnAnnotationDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnAnnotationDoubleClick) event triggers when an annotation is double-clicked.
+
+#### Event Arguments
+
+See [AnnotationDoubleClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationDoubleClickEventArgs.html) for details such as AnnotationId, AnnotationType, PageNumber, and mouse position.
 
 The following example illustrates how to handle the OnAnnotationDoubleClick event.
 
@@ -288,7 +332,7 @@ The following example illustrates how to handle the OnAnnotationDoubleClick even
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task OnAnnotationDoubleClick(AnnotationDoubleClickEventArgs args) 
     {
-        Console.WriteLine(args.EditingAction);
+        Console.WriteLine($"Double Clicked Annotation ID: {args.AnnotationId}");
     }	 
 }
 
@@ -297,6 +341,10 @@ The following example illustrates how to handle the OnAnnotationDoubleClick even
 ## RemoveSignature Event
 
 The [RemoveSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_RemoveSignature) event triggers when a signature is removed from a page in the PDF document.
+
+#### Event Arguments
+
+See [RemoveSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.RemoveSignatureEventArgs.html) for details such as AnnotationId and PageNumber.
 
 The following example illustrates how to handle the RemoveSignature event.
 
@@ -312,7 +360,7 @@ The following example illustrates how to handle the RemoveSignature event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task RemoveSignature(RemoveSignatureEventArgs args) 
     {
-        Console.WriteLine(args.EditingAction);
+        Console.WriteLine($"Removed Signature ID: {args.AnnotationId}");
     }	 
 }
 
@@ -321,6 +369,10 @@ The following example illustrates how to handle the RemoveSignature event.
 ## ResizeSignature Event
 
 The [ResizeSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ResizeSignature) event triggers when a signature is resized on a page in the PDF document.
+
+#### Event Arguments
+
+See [ResizeSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ResizeSignatureEventArgs.html) for details such as AnnotationId, PageNumber, PreviousBounds, and Bounds.
 
 The following example illustrates how to handle the ResizeSignature event.
 
@@ -336,7 +388,7 @@ The following example illustrates how to handle the ResizeSignature event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task ResizeSignature(ResizeSignatureEventArgs args) 
     {
-        Console.WriteLine(args.EditingAction);
+        Console.WriteLine($"Resized Signature ID: {args.AnnotationId}");
     }	 
 }
 
@@ -345,6 +397,10 @@ The following example illustrates how to handle the ResizeSignature event.
 ## SignaturePropertiesChange Event
 
 The [SignaturePropertiesChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_SignaturePropertiesChange) event triggers when the properties of a signature are changed on a page in the PDF document.
+
+#### Event Arguments
+
+See [SignaturePropertiesChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignaturePropertiesChangeEventArgs.html) for details such as AnnotationId, PageNumber, and changed property values.
 
 The following example illustrates how to handle the SignaturePropertiesChange event.
 
@@ -360,7 +416,7 @@ The following example illustrates how to handle the SignaturePropertiesChange ev
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task SignaturePropertiesChange(SignaturePropertiesChangeEventArgs args) 
     {
-        Console.WriteLine(args.EditingAction);
+        Console.WriteLine($"Is Stroke Color Changed: {args.IsStrokeColorChanged}");
     }	 
 }
 
@@ -369,6 +425,10 @@ The following example illustrates how to handle the SignaturePropertiesChange ev
 ## SignatureSelected Event
 
 The [SignatureSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_SignatureSelected) event triggers when a signature is selected on a page in the PDF document.
+
+#### Event Arguments
+
+See [SignatureSelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureSelectedEventArgs.html) for details such as AnnotationId and PageNumber.
 
 The following example illustrates how to handle the SignatureSelected event.
 
@@ -384,7 +444,7 @@ The following example illustrates how to handle the SignatureSelected event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task SignatureSelected(SignatureSelectEventArgs args) 
     {
-        Console.WriteLine(args.EditingAction);
+        Console.WriteLine($"Selected Signture ID: {args.AnnotationId}");
     }	 
 }
 
@@ -393,6 +453,10 @@ The following example illustrates how to handle the SignatureSelected event.
 ## SignatureUnselected Event
 
 The [SignatureUnselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_SignatureUnselected) event triggers when a signature is unselected on a page in the PDF document.
+
+#### Event Arguments
+
+See [SignatureUnselectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureUnselectedEventArgs.html) for details such as AnnotationId and PageNumber.
 
 The following example illustrates how to handle the SignatureUnselected event.
 
@@ -408,7 +472,7 @@ The following example illustrates how to handle the SignatureUnselected event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task SignatureUnselected(SignatureSelectEventArgs args) 
     {
-        Console.WriteLine(args.EditingAction);
+        Console.WriteLine($"UnSelected Signature ID: {args.AnnotationId}");
     }	 
 }
 
