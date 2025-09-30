@@ -64,7 +64,7 @@ Include the following code to create a new button that triggers the Word to PDF 
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Implement `ConvertWordtoPDF` method in `DocIO.razor`.
+Step 5: Implement the method in `DocIO.razor`.
 Add the following code to convert the Word document to PDF and download it:
 
 {% tabs %}
@@ -97,8 +97,8 @@ using Syncfusion.Pdf;
 
 {% endtabs %}
 
-Step 7: Implement the `ConvertWordtoPDF` method in `WordService.cs`.
-Create a new `MemoryStream` method named `ConvertWordtoPDF` in the `WordService` class, and include the following code snippet to **convert the Word document to PDF in Blazor** Web App Server:
+Step 7: Implement the method in `WordService.cs`.
+Create a new `MemoryStream` method in the `WordService` class, and include the following code snippet to **convert the Word document to PDF in Blazor** Web App Server:
 
 {% tabs %}
 
@@ -194,7 +194,7 @@ Add the following JavaScript function in the `App.razor` file located in the `Pa
 {% endtabs %}
 
 Step 11: Add navigation link.
-Add the following code snippet to the Navigation menu's Razor file in the `Shared` folder.
+Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
 
 {% tabs %}
 
@@ -282,7 +282,7 @@ Include the following code to create a new button that triggers the Word to PDF 
 {% endtabs %}
 
 Step 5: Implement `WordToPDF` method in `DocIO.razor`.
-Create a new `async` method named `WordToPDF` and include the following code snippet to **create a Word document in Blazor** WASM app.
+Create a new `async` method named `WordToPDF` and include the following code snippet to **create a Word document in Blazor** WASM Standalone app.
 
 {% tabs %}
 
@@ -370,7 +370,7 @@ Add the following JavaScript function in the `index.html` file present under `ww
 {% endtabs %}
 
 Step 8: Add navigation link.
-Add the following code snippet to the Navigation menu's Razor file in the `Shared` folder.
+Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
 
 {% tabs %}
 
