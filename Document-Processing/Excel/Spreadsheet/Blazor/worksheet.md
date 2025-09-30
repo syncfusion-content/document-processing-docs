@@ -312,7 +312,7 @@ To duplicate a sheet using the user interface (UI), simply right-click on the de
 
 ### Duplicate Sheet Programmatically
 
-Use the [DuplicateSheetAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DuplicateSheetAsync_System_Nullable_System_Int32__) method allows duplicating a sheet programmatically by specifying its index or name. The duplicated sheet is inserted immediately after the original sheet. Below are details for duplicating a sheet by index or by name, including parameter information and code examples.
+Use The [DuplicateSheetAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DuplicateSheetAsync_System_Nullable_System_Int32__) method allows duplicating a sheet programmatically by specifying its index or name. The duplicated sheet is inserted immediately after the original sheet. Below are details for duplicating a sheet by index or by name, including parameter information and code examples.
 
 **Duplicate sheet by index**
 
