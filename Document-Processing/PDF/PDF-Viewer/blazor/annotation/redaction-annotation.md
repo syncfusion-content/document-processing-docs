@@ -350,5 +350,5 @@ For details, see the [Export and import annotations documentation](./import-expo
 ## See also
 
 * [Adding the shape annotation in PDF viewer](./shape-annotation)
-* [Annotation Toolbar customization in PDF viewer](./toolbar/annotation-toolbar-customization)
+* [Annotation Toolbar customization in PDF viewer](../toolbar/annotation-toolbar-customization)
 * [Form designer in PDF viewer](../form-designer/overview)
