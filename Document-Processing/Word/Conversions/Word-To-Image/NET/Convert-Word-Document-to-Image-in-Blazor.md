@@ -233,7 +233,7 @@ Click [here](https://www.syncfusion.com/document-processing/word-framework/blazo
 *   Visual Studio 2022.
 *   Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
-Step 1: Create a new C# Blazor WASM app project.
+Step 1: Create a new C# Blazor WASM Standalone app project.
 Select "Blazor WebAssembly App" from the template and click the **Next** button.
 
 ![Create Blazor WebAssembly Standalone application in Visual Studio ](Blazor_Images/Blazor_WASM_Standalone.png)
@@ -392,9 +392,9 @@ A complete working sample is available on [GitHub](https://github.com/Syncfusion
 
 Upon executing the program, the **image** will be generated as follows.
 
-![Blazor WASM app output](WordToPDF_images/Output-WordtoImage.png)
+![Blazor WASM Standalone app output](WordToPDF_images/Output-WordtoImage.png)
 
-N> To convert Word to image, it is necessary to access the font stream internally. However, this cannot be done automatically in a Blazor WASM application. Therefore, it is recommended to use a Server app, even though Word to image conversion works in a WASM Standalone app.
+N> To convert Word to image, it is necessary to access the font stream internally. However, this cannot be done automatically in a Blazor WASM Standalone application. Therefore, it is recommended to use a Web app Server, even though Word to image conversion works in a WASM Standalone app.
 
 Click [here](https://www.syncfusion.com/document-processing/word-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
  
