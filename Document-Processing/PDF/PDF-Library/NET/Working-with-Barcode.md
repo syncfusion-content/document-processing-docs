@@ -558,6 +558,127 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Barcode/Set-location-and-size-to-the-barcode-in-a-PDF-document/).
 
+## Adding quiet zones to a barcode
+
+Quiet zones are blank spaces surrounding a barcode that ensure accurate scanning by preventing interference from surrounding content. They serve as critical visual boundaries that help scanners identify the start and end of the barcode symbology. Without sufficient quiet zones, barcode readers may fail to decode the symbol correctly due to visual noise or misalignment.
+
+To add quiet zones to a barcode in a PDF document, you can use the [PdfBarcodeQuietZones](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfBarcodeQuietZones.html) class. The following code sample demonstrates how to implement quiet zones for a barcode.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+
+//Create a new page. 
+PdfPage page = document.Pages.Add();
+
+// Create barcode with quiet zones
+PdfCode128Barcode barcode = new PdfCode128Barcode
+{
+    Text = "SYNCFUSION",
+    BarHeight = 40,
+    QuietZone = new PdfBarcodeQuietZones
+    {
+        Left = 15,   // 15 points = ~5.3mm
+        Right = 15,
+        Top = 8,     // 8 points = ~2.8mm
+        Bottom = 8
+    }
+};
+
+//Draw a barcode on the new page.
+barcode.Draw(page, new PointF(10, 10));
+
+//Draw a rectangle based on the barcode size. 
+page.Graphics.DrawRectangle(PdfPens.Red, new RectangleF(10, 10, barcode.Size.Width, barcode.Size.Height));
+
+//Create file stream.
+using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
+{
+    //Save the PDF document to file stream.
+    document.Save(outputFileStream);
+}
+
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+
+//Create a new page. 
+PdfPage page = document.Pages.Add();
+
+// Create barcode with quiet zones
+PdfCode128Barcode barcode = new PdfCode128Barcode
+{
+    Text = "SYNCFUSION",
+    BarHeight = 40,
+    QuietZone = new PdfBarcodeQuietZones
+    {
+        Left = 15,   // 15 points = ~5.3mm
+        Right = 15,
+        Top = 8,     // 8 points = ~2.8mm
+        Bottom = 8
+    }
+};
+
+//Draw a barcode on the new page.
+barcode.Draw(page, new PointF(10, 10));
+
+//Draw a rectangle based on the barcode size. 
+page.Graphics.DrawRectangle(PdfPens.Red, new RectangleF(10, 10, barcode.Size.Width, barcode.Size.Height));
+
+//Save the document to disk.
+document.Save("PdfBarcode1.pdf");
+
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document.
+Dim document As New PdfDocument()
+
+' Add a new page to the PDF document.
+Dim page As PdfPage = document.Pages.Add()
+
+' Create a new Code128 barcode and set its properties.
+Dim barcode As New PdfCode128Barcode() With {
+    .Text = "SYNCFUSION",       ' Set the barcode text.
+    .BarHeight = 40,            ' Set the height of the bars.
+    .QuietZone = New PdfBarcodeQuietZones() With {
+        .Left = 15,             ' Left quiet zone (15 points ≈ 5.3mm).
+        .Right = 15,            ' Right quiet zone.
+        .Top = 8,               ' Top quiet zone (8 points ≈ 28mm).
+        .Bottom = 8             ' Bottom quiet zone.
+    }
+}
+' Draw the barcode on the PDF page at position (10, 10).
+barcode.Draw(page, New PointF(10, 10))
+
+' Draw a red rectangle around the barcode to visualize its size.
+page.Graphics.DrawRectangle(PdfPens.Red, New RectangleF(10, 10, barcode.Size.Width, barcode.Size.Height))
+
+' Save the PDF document to disk.
+document.Save("PdfBarcode1.pdf")
+
+' Close the document and release resources.
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Adding a barcode to the PDF document without displaying the barcode text
 
 The following code example shows how to add a barcode to the PDF document without displaying the barcode text by specifying the [TextDisplayLocation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfUnidimensionalBarcode_TextDisplayLocation) as **None** through the [TextLocation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.TextLocation.html) Enum.
