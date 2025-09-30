@@ -67,7 +67,7 @@ Include the following code to create a new button that triggers the Word to Imag
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Implement `ConvertWordtoImage` method in `DocIO.razor`.
+Step 5: Implement method in `DocIO.razor`.
 Add the following code to convert the Word document to an image and download it:
 
 {% tabs %}
@@ -101,8 +101,8 @@ using Syncfusion.DocIORenderer;
 
 {% endtabs %}
 
-Step 7: Implement the `ConvertWordtoImage` method in `WordService.cs`.
-Create a new `MemoryStream` method named `ConvertWordtoImage` in the `WordService` class, and include the following code snippet to **convert a Word document to an image** Web App Server:									
+Step 7: Implement the method in `WordService.cs`.
+Create a new `MemoryStream` method in the `WordService` class, and include the following code snippet to **convert a Word document to an image** Web App Server:									
 
 {% tabs %}
 
@@ -194,7 +194,7 @@ Add the following JavaScript function in the `App.razor` file located in the `Pa
 {% endtabs %}
 
 Step 11: Add navigation link.
-Add the following code snippet to the Navigation menu's Razor file in the `Shared` folder.
+Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
 
 {% tabs %}
 
@@ -364,7 +364,7 @@ Add the following JavaScript function in the `index.html` file present under `ww
 {% endtabs %}
 
 Step 8: Add navigation link.
-Add the following code snippet to the Navigation menu's Razor file in the `Shared` folder.
+Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
 
 {% tabs %}
 
