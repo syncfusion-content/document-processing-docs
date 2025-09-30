@@ -56,6 +56,6 @@ The SfPdfViewer supports printing the loaded PDF by default. Enable or disable t
 
 * [Download in Blazor SfPdfViewer component](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/saving-pdf-file#download-in-blazor-sfpdfviewer-component)
 
-* [How to print in the same window](./how-to/perform-print-in-same-window)
+* [How to print in the same window](./faqs/how-to-perform-print-in-same-window)
 
-* [How to print the SfPdfViewer inside the Dialog](./how-to/print-the-sfpdfiewer-inside-the-dialog-component)
+* [How to print the SfPdfViewer inside the Dialog](./faqs/how-to-print-the-sfpdfiewer-inside-the-dialog-component)
