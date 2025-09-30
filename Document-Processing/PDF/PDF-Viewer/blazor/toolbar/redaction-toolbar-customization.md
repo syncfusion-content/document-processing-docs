@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the redaction toolbar in Blazor SfPdfViewer | Syncfusion
-description: Learn how to customize the redaction toolbar in the Syncfusion Blazor SfPdfViewer, including showing or hiding default items, rearranging items, and adding custom toolbar items.
+description: Learn how to customize the redaction toolbar in the Syncfusion Blazor SfPdfViewer by showing or hiding default items.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

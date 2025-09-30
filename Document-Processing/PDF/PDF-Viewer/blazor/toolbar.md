@@ -7,6 +7,16 @@ control: SfPdfViewer
 documentation: ug
 ---
 
+# Toolbar in Blazor SfPdfViewer Component
+
+The SfPdfViewer includes a built-in, responsive toolbar that surfaces common PDF actions and provides entry points to feature-specific toolbars. It adapts across desktop, tablet, and mobile, and can be customized to show or hide items, reorder commands, add custom items, and handle toolbar events.
+
+There are four toolbars in the SfPdfViewer:
+* Primary toolbar
+* Annotation toolbar
+* Form designer toolbar
+* Redaction toolbar
+
 ## Primary Toolbar in Blazor SfPdfViewer Component
 
 The SfPdfViewer includes a built-in, responsive primary toolbar that provides quick access to common viewer actions and feature-specific toolbars. It adapts to the available width for desktop, tablet, and mobile layouts.

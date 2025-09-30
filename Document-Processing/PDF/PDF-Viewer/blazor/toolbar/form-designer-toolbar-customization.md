@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the form designer toolbar in Blazor SfPdfViewer | Syncfusion
-description: Learn how to customize the form designer toolbar in the Syncfusion Blazor SfPdfViewer by showing or hiding default items and controlling their order.
+description: Learn how to customize the form designer toolbar in the Syncfusion Blazor SfPdfViewer by showing or hiding default items.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
