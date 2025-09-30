@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Page thumbnail navigation
+# Page thumbnail navigation in SfPdfViewer
 
 Use the thumbnail panel to preview pages and navigate quickly through a PDF. Each thumbnail represents a page; selecting one navigates to that page in the viewer.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Modern navigation panel in Blazor SfPdfViewer | Syncfusion
-description: Learn how the modern navigation panel in the Syncfusion Blazor PDF Viewer (SfPdfViewer2) consolidates thumbnails, bookmarks, comments, and custom panels with flexible layouts.
+description: Learn how the modern navigation panel in the Blazor PDF Viewer with custom panels with flexible layouts.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Modern navigation panel
+# Modern navigation panel in SfPdfViewer
 
 The modern navigation panel consolidates thumbnails, bookmarks, comments, and custom panels in a single, flexible side panel for a streamlined navigation experience.
 

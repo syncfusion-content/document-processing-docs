@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Bookmark navigation
+# Bookmark navigation in SfPdfViewer
 
 Use the bookmark panel to jump directly to labeled destinations in a PDF.
 

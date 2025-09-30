@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Table of contents navigation
+# Table of contents navigation in SfPdfViewer
 
 Use the table of contents (TOC) to jump to sections within a PDF. Each TOC entry maps to a location in the document; selecting one navigates to that destination.
 

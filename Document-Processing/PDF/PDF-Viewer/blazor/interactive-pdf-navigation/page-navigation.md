@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Page navigation
+# Page navigation in SfPdfViewer
 
 Move between pages using the built-in toolbar or programmatic APIs.
 
