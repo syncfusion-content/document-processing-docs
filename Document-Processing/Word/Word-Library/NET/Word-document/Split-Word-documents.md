@@ -42,7 +42,7 @@ using(WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
         //Create new Word document
         WordDocument newDocument = new WordDocument();
         //Add cloned section into new Word document
-        newDocument.Sections.Add(section.Clone());
+        newDocument.Sections.Add(document.Sections[i].Clone());
         //Saves the Word document to  MemoryStream
         FileStream outputStream = new FileStream("Section" + i + ".docx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
         newDocument.Save(outputStream, FormatType.Docx);
@@ -62,7 +62,7 @@ using (WordDocument document = new WordDocument(@"Template.docx"))
         //Create new Word document
         WordDocument newDocument = new WordDocument();
         //Add cloned section into new Word document
-        newDocument.Sections.Add(section.Clone());
+        newDocument.Sections.Add(document.Sections[i].Clone());
         //Save and close the new Word documet
         newDocument.Save("Section" + i + ".docx");
         newDocument.Close();
@@ -641,7 +641,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to split a Word document by section using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/splitbysection#/bootstrap5).
-* See how to split a Word document by heading using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/splitbyheading#/bootstrap5).
-* See how to split a Word document by bookmark using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/splitbybookmark#/bootstrap5).
-* See how to split a Word document by placeholder using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/splitbyplaceholder#/bootstrap5).
+* Explore how to split a Word document by section using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbysection#/tailwind).
+* See how to split a Word document by heading using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbyheading#/tailwind).
+* See how to split a Word document by bookmark using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbybookmark#/tailwind).
+* See how to split a Word document by placeholder using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbyplaceholder#/tailwind).
