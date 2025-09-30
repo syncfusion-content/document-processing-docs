@@ -44,11 +44,11 @@ To ensure proper rendering and saving of form fields that use custom fonts, espe
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Custom%20Font%20Support%20For%20FormFields).
 
-# Custom Font Support for Signature Fields
+## Custom Font Support for Signature Fields
 
 The Blazor SfPdfViewer allows loading, editing, and saving custom fonts in signature fields by using the [FallbackFontCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FallbackFontCollection) and [SignatureFonts](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerSignatureDialogSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerSignatureDialogSettings_SignatureFonts) properties.
 
-## Integrating Custom Font Collections into Signature Fields in SfPdfViewer
+### Integrating Custom Font Collections into Signature Fields in SfPdfViewer
 
 To ensure proper rendering and saving of signatures that use custom fonts, especially when the fonts are not installed on the system, set the FallbackFontCollection property. Additionally, load custom fonts (TTF files), add them to the signature dialog by using the SignatureFonts property (string array), and use them seamlessly in signature fields for loading, editing, and saving.
 
