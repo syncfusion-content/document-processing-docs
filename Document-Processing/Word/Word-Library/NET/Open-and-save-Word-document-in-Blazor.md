@@ -196,7 +196,7 @@ Add the following JavaScript function in the `App.razor` file located in the `Pa
 {% endtabs %}
 
 Step 12: Add navigation link.
-Add the following code snippet to the Navigation menu's Razor file in the `Shared` folder.
+Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
 
 {% tabs %}
 
@@ -238,10 +238,10 @@ Click [here](https://www.syncfusion.com/document-processing/word-framework/blazo
 *   Visual Studio 2022.
 *   Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 																			
-Step 1: Create a new C# Blazor WASM app project.
+Step 1: Create a new C# Blazor WASM Standalone app project.
 Select "Blazor WebAssembly Standalone App" from the template and click **Next**.
 
-![Create Blazor WebAssembly Standalone application in Visual Studio](Blazor_Images/Blazor_WASM.png)
+![Create Blazor WebAssembly Standalone application in Visual Studio](Blazor_Images/Blazor_WASM_Standalone.png)
 
 Step 2: Install the `Syncfusion.DocIO.Net.Core` NuGet package.
 To **open and save a Word document in Blazor WASM Standalone app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) into the Blazor project.
@@ -387,7 +387,7 @@ Add the following JavaScript function in the `index.html` file present under `ww
 {% endtabs %}
 
 Step 10: Add navigation link.
-Add the following code snippet to the Navigation menu's Razor file in the `Shared` folder.
+Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
 
 {% tabs %}
 
