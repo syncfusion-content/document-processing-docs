@@ -379,18 +379,13 @@ Step 6: Add a new action method *createPdf_Click* in *MainWindow.xaml.cs* and in
     }
     #endregion
 
-
-
 {% endhighlight %}
 
 {% endtabs %}
 {% endcapture %}
 {{ codesnippet3 | OrderList_Indent_Level_1 }}
 
-Step 7: Build the project.
+Step 7: Build and Run the Project
 
-Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+Click the **Run** button (green arrow) in the toolbar or press `F5` to build and run the application. When you click the "Export to PDF" button, a PDF document will be generated and opened using the default PDF viewer on the target device.
 
-Step 8: Run the project.
-
-Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
