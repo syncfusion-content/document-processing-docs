@@ -18,7 +18,7 @@ To troubleshoot and resolve this error, consider the following steps:
 
 2. **Network and CORS:** Verify that there are no network-related issues preventing the web worker from fetching the assets. Also, address any CORS-related problems, especially if the assets are hosted on a different origin.
 
-N>  If ej2-pdfviewer-lib folder is not available in the 'src/assets', copy the contents of the ej2-pdfviewer-lib folder from ./node_modules/@syncfusion/ej2-pdfviewer/dist to the src/assets directory using the command:
+N> If the ej2-pdfviewer-lib folder is not available in 'src/assets', copy the contents from node_modules to the assets directory using this command:
 ```bash
 cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib  src/assets/ej2-pdfviewer-lib
 ```

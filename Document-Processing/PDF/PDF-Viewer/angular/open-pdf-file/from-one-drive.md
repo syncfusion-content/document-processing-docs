@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Open PDF files from One Drive in Angular Pdfviewer Component | Syncfusion
-description: Learn here all about how to Open PDF files from One Drive in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Open PDF files from OneDrive in Angular PDF Viewer component | Syncfusion
+description: Learn how to open PDF files from OneDrive in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: Open PDF files from One Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF file from One Drive
+# Open PDF file from OneDrive
 
-To load a PDF file from One Drive in a PDF Viewer, you can follow the steps below
+To load a PDF file from OneDrive in the PDF Viewer, follow these steps.
 
-**Step 1** Create the Microsoft graph API.
+**Step 1:** Create a Microsoft Graph API application
 
-Need to create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs.
+Create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs.
 
 **Step 2:** Create a Simple PDF Viewer Sample in Angular
 
@@ -24,7 +24,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
 
-2. Open the `PdfViewerController.cs` file in your web service project.
+2. Open the `PdfViewerController.cs` file in the web service project.
 
 3. Import the required namespaces at the top of the file:
 
@@ -35,7 +35,7 @@ using Microsoft.Identity.Client;
 using Helpers;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign values from configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -123,7 +123,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in the web service project and add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {
@@ -141,11 +141,11 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 
 ```
 
-N> Replace **Your_Tenent_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
+N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with the actual tenant ID, application ID, and folder name.
 
-**Step 4:**  Set the PDF Viewer Properties in Angular PDF viewer component
+**Step 4:** Set the PDF Viewer properties in the Angular PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from One Drive. Ensure that you correctly pass the document name from the files available in your drive folder to the documentPath property.
+Set the `serviceUrl` property of the PDF Viewer component to the URL of the web service project, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired name of the PDF file to load from OneDrive. Ensure that the document name corresponds to a file available in the Drive folder.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -182,6 +182,6 @@ N> The following NuGet packages are required to use the previous code example
 * **Microsoft.Extensions.Configuration.FileExtensions**
 * **Microsoft.Extensions.Configuration.Json**
 
-You can install these packages using the NuGet Package Manager in Visual Studio or Visual Studio Code.
+These packages can be installed using the NuGet Package Manager in Visual Studio or Visual Studio Code.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-one-drive)

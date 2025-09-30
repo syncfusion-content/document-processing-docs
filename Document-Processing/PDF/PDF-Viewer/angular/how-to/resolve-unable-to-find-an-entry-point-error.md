@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Find an entry point in Angular Pdfviewer component | Syncfusion
-description: Learn here how to resolve unable to find an entry point named error in Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Resolve "Unable to find an entry point" error in Angular PDF Viewer | Syncfusion
+description: Learn how to resolve the "Unable to find an entry point" error in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 control: Resolve unable to find an entry point error
 platform: document-processing
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Resolve "Unable to find an entry point named FPDFText_GetCharAngle" error
 
-From the release of version **21.1.0.35 (2023 Volume 1)** of Essential Studio<sup style="font-size:70%">&reg;</sup>, the Pdfium package has been upgraded to improve various functionalities like text search, text selection, rendering, and even performance. If you are updating your project to this version of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, you may encounter the **"Web-Service is not listening"** error. The Network tab can help you identify the root cause of the issue, which is typically caused by an old version of pdfium assembly being referenced in the local web service project. Below are the assemblies to be referred to in the respective operating systems.
+With the release of version **21.1.0.35 (2023 Volume 1)** of Essential Studio<sup style="font-size:70%">&reg;</sup>, the Pdfium package has been upgraded to improve functionalities such as text search, text selection, rendering, and overall performance. When updating a project to this version of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, users may encounter a **"Web-Service is not listening"** error. The Network tab can assist in identifying the root cause, which is typically an older version of the Pdfium assembly being referenced in the local web service project. The following assemblies should be referenced for their respective operating systems:
 
 * Windows – pdfium.dll
 * Linux – libpdfium.so
@@ -18,9 +18,11 @@ From the release of version **21.1.0.35 (2023 Volume 1)** of Essential Studio<su
 
 ![Error information in the Network tab](../images/ErrorinformationuintheNetworkTab.png)
 
-## To solve this issue, you should follow the below steps:
+### Steps to Resolve:
 
-1. Clear the bin and object files of the web-service project.
-2. Re-publish the web-service project.
+To resolve this issue, follow these steps:
 
-N> **Note:** If you are hosting your application in Azure, AWS, or in Linux environments, delete the older published files and republish the application.
+1.  Clear the `bin` and `obj` files of the web-service project.
+2.  Re-publish the web-service project.
+
+N> **Note:** When hosting the application in Azure, AWS, or Linux environments, ensure older published files are deleted before republishing the application.

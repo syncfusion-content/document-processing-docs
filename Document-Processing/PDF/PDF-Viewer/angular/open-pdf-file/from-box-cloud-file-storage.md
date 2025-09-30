@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open PDF files from Box cloud file storage in Angular Pdfviewer Component | Syncfusion
-description: Learn here all about how to Open PDF files from Box cloud file storage in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Open PDF files from Box cloud file storage in Angular PDF Viewer component | Syncfusion
+description: Learn how to open PDF files from Box cloud file storage in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: Open PDF files from Box cloud file storage
 documentation: ug
@@ -10,21 +10,21 @@ domainurl: ##DomainURL##
 
 # Open PDF file from Box cloud file storage
 
-To load a PDF file from Box cloud file storage in a PDF Viewer, you can follow the steps below
+To load a PDF file from Box cloud file storage in the PDF Viewer, follow these steps.
 
-**Step 1** Set up a Box developer account and create a Box application
+**Step 1:** Set up a Box developer account and create a Box application
 
-To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials Client ID and Client Secret to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
+To access Box storage programmatically, a Box developer account is required. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and create a Box application. This application provides the required credentials (Client ID and Client Secret) to authenticate and access Box APIs. Authentication uses `OAuth 2.0`.
 
-**Step 2:** Create a Simple PDF Viewer Sample in Angular
+**Step 2:** Create a simple PDF Viewer sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
+Follow the steps in this [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This provides a basic setup of the component.
 
-**Step 3:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or later. Refer to this [article](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions.
 
-2. Open the `PdfViewerController.cs` file in your web service project.
+2. Open the `PdfViewerController.cs` file in the web service project.
 
 3. Import the required namespaces at the top of the file:
 
@@ -35,7 +35,7 @@ using Box.V2.Config;
 using Box.V2.Models;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -129,11 +129,11 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-N> replace **Your_Box_Storage_Access_Token** with your actual box access token, and **Your_Folder_ID** with the ID of the folder in your box storage where you want to perform specific operations. Remember to use your valid box API credentials, as **Your_Box_Storage_ClientID** and **Your_Box_Storage_ClientSecret"** are placeholders for your application's API key and secret.
+N> Replace **Your_Box_Storage_Access_Token** with the Box access token, and **Your_Folder_ID** with the ID of the target folder in Box storage. Use valid Box API credentials; **Your_Box_Storage_ClientID** and **Your_Box_Storage_ClientSecret** are placeholders for the application's API key and secret.
 
-**Step 4:**  Set the PDF Viewer Properties in Angular PDF viewer component
+**Step 4:** Set the PDF Viewer properties in the Angular PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Box cloud file storage. Ensure that you correctly pass the document name from the files available in your box folder to the documentPath property.
+Set the `serviceUrl` property of the PDF Viewer component to the URL of the web service project, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired name of the PDF file to load from Box cloud file storage. Ensure that the document name corresponds to a file available in the Box folder.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -165,6 +165,6 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 N> The **Box.V2.Core** NuGet package must be installed in your application to use the previous code example.
 
-N> Replace `PDF_Succinctly.pdf` with the actual document name that you want to load from Box cloud file storage. Make sure to pass the document name from the box folder to the `documentPath` property of the PDF viewer component
+N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud file storage. Ensure the document name is passed from the Box folder to the `documentPath` property of the PDF Viewer component.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-box-cloud-file-storage)

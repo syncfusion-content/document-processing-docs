@@ -1,38 +1,38 @@
 ---
 layout: post
-title: Import export annotation in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Import export annotation in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Import and Export Annotations in Angular PDF Viewer component | Syncfusion
+description: Learn how to import and export annotations in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: Import export annotation
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import and export annotation
+# Import and export annotations
 
-The PDF Viewer control provides the support to import and export annotations using JSON object in the PDF document.
+The PDF Viewer component supports importing and exporting annotations using a JSON object in a PDF document.
 
 * Click the Add or Edit annotation button in the PDF Viewer toolbar.
 
 ![EditButton](../images/edittool.png)
 
-* The annotation toolbar will appear.
+* The annotation toolbar appears.
 * Click the Comment Panel button in the annotation toolbar.
 
 ![CommentPanel](../images/commentPanel.png)
 
-* The comments panel will displayed.
-* Click the **More Option** button in the comment panel container.
+* The Comments panel is displayed.
+* Click the More options button in the Comments panel container.
 
 ![MoreOption](../images/Importandexport.png)
 
-## Importing annotation to the PDF document
+## Import annotations to a PDF document
 
 * Click the Add or Edit annotation button in the PDF Viewer toolbar.
-* The annotation toolbar will appear.
+* The annotation toolbar appears.
 * Click the Comment Panel button in the annotation toolbar.
-* The comments panel will displayed.
-* Click the **More Option** button in the comment panel container.
+* The Comments panel is displayed.
+* Click the More options button in the Comments panel container.
 * Select the Import annotations from JSON file option to import annotations from a JSON file.
 
 ![ImportAnnotationFromJSON](../images/Import_annotation_from_JSON.png)
@@ -41,13 +41,13 @@ The PDF Viewer control provides the support to import and export annotations usi
 
 ![ImportAnnotationFromXFDF](../images/Import_annotation_from_XFDF.png)
 
-* Then the file explorer dialog will be opened. Choose the JSON file or the XFDF file to be imported into the loaded PDF document.
+* The file explorer dialog opens. Choose the JSON or XFDF file to import into the loaded PDF document.
 
 ![ImportedAnnotation](../images/importedannotation.png)
 
-## Importing annotation using PDF Viewer API
+## Import annotations using the PDF Viewer API
 
-You can import annotations using JSON object or JSON file in code behind like the below code snippet.
+Annotations can be imported using a JSON object or JSON file from code, as shown in the following example.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -542,9 +542,9 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 {% endhighlight %}
 {% endtabs %}
 
->Run the [web service](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_3.0) and then the angular code. Also note that, the JSON file for importing the annotation should be placed in the location as specified in the GetDocumentPath method of the PdfViewerController.
+>Run the [web service](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_3.0) and then the Angular code. The JSON file for importing annotations must be placed in the location specified in the `GetDocumentPath` method of the `PdfViewerController`.
 
-Refer to the following code snippet to import annotations from an XFDF file.
+Refer to the following code snippet to import annotations from an XFDF file:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -623,11 +623,11 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 {% endhighlight %}
 {% endtabs %}
 
->Run the [web service](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_3.0) and then the angular code. Also note that, the XFDF file for importing the annotation should be placed in the location as specified in the GetDocumentPath method of the PdfViewerController.
+>Run the [web service](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_3.0) and then the Angular code. The XFDF file for importing annotations must be placed in the location specified in the `GetDocumentPath` method of the `PdfViewerController`.
 
-## Importing Annotation Using Base64 Data
+## Import annotations using Base64 data
 
-You can import annotations into the Syncfusion Angular PDF Viewer by decoding Base64-encoded JSON annotation data at runtime and passing the parsed object to the importAnnotation API, as shown in the following code snippet.
+Import annotations into the Syncfusion Angular PDF Viewer by decoding Base64-encoded JSON annotation data at runtime and passing the parsed object to the `importAnnotation` API, as shown in the following example.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -813,15 +813,15 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-## Exporting annotation from the PDF document
+## Export annotations from a PDF document
 
-The PDF Viewer control provides the support to export the annotations as JSON file or JSON object and XFDF file using annotation toolbar.
+The PDF Viewer component supports exporting annotations as a JSON file, JSON object, or XFDF file using the annotation toolbar.
 
 * Click the Add or Edit annotation button in the PDF Viewer toolbar.
-* The annotation toolbar will appear.
+* The annotation toolbar appears.
 * Click the Comment Panel button in the annotation toolbar.
-* The comments panel will displayed.
-* Click the **More Option** button in the comment panel container.
+* The Comments panel is displayed.
+* Click the More options button in the Comments panel container.
 * Select the Export annotation to JSON file option to export annotations to a JSON file.
 
 ![ExportAnnotation](../images/export_annotation_to_JSON.png)
@@ -830,11 +830,11 @@ The PDF Viewer control provides the support to export the annotations as JSON fi
 
 ![ExportAnnotation](../images/export_annotation_to_XFDF.png)
 
->Export annotations will be in the disabled state when the loaded PDF document does not contain any annotations.
+>Export options are disabled when the loaded PDF document does not contain any annotations.
 
-## Exporting annotation using PDF Viewer API
+## Export annotations using the PDF Viewer API
 
-You can export annotations as JSON file in code behind like the following code snippet.
+Export annotations as a JSON file from code, as shown in the following example:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -917,7 +917,7 @@ import { PdfViewerComponent,LinkAnnotationService, BookmarkViewService,
 {% endhighlight %}
 {% endtabs %}
 
-Refer to the following code snippet to export annotations as XFDF file.
+Refer to the following code snippet to export annotations as an XFDF file:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

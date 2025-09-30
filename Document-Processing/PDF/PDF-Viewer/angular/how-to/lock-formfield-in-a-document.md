@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Lock Form Fields in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Lock Form Fields in a document in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Lock Form Fields in Angular PDF Viewer | Syncfusion
+description: Learn how to lock form fields in a document in Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: Lock Form Fields in a document
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Locking Form Fields in a PDF document
+# Locking Form Fields in a PDF Document
 
-The PDF Viewer component offers the ability to enable or disable the locking option for form fields within a PDF document. When a form field is locked, it's prevented from being moved, resized, or removed.
+The PDF Viewer component allows enabling or disabling the locking option for form fields within a PDF document. When a form field is locked, movement, resizing, or removal of the field is prevented.
 
 ## Locking Form Fields Programmatically
 
 Form fields can be locked either by default settings or by utilizing an event and the [isReadOnly](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formField/) API.
 
-The provided code snippet exemplifies how to lock form fields in a PDF document during the document loading process. It utilizes the `documentLoad` event to add form fields and subsequently sets them as read-only using the [isReadOnly](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formField/) API. This ensures that users cannot modify the form fields, thereby preserving data integrity.
+This code snippet demonstrates how to lock form fields in a PDF document during the document loading process. It uses the `documentLoad` event to add form fields and subsequently sets them as read-only using the [isReadOnly](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formField/) API. This approach ensures that the form fields cannot be modified, thereby preserving data integrity.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

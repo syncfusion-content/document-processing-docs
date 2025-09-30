@@ -10,20 +10,20 @@ domainurl: ##DomainURL##
 
 # Programmatically work with form field
 
-The PDF Viewer control provides the option to add, edit and delete the Form Fields. The Form Fields type supported by the PDF Viewer Control are:
+The Angular PDF Viewer component supports adding, editing, and deleting form fields. The supported form field types are:
 
-    * Textbox
-    * Password
-    * CheckBox
-    * RadioButton
-    * ListBox
-    * DropDown
-    * SignatureField
-    * InitialField
+* Textbox
+* Password
+* CheckBox
+* RadioButton
+* ListBox
+* DropDown
+* SignatureField
+* InitialField
 
-## Add a form field to PDF document programmatically
+## Add a form field to a PDF document programmatically
 
-Using addFormField method, the form fields can be added to the PDF document programmatically. We need to pass two parameters in this method. They are Form Field Type and Properties of Form Field Type. To add form field programmatically, Use the following code.
+Using the addFormField method, form fields can be added to the PDF document programmatically. Pass two parameters to this method: the form field type and the properties for that field. The following code adds a form field programmatically.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -37,9 +37,9 @@ Using addFormField method, the form fields can be added to the PDF document prog
 
 {% previewsample "Document-Processing/samples/pdfviewer/angular/addformfield-cs2/index.html" %}
 
-## Edit/Update form field programmatically
+## Edit or update a form field programmatically
 
-Using updateFormField method, Form Field can be updated programmatically. We should get the Form Field object/Id from FormFieldCollections property that you would like to edit and pass it as a parameter to updateFormField method. The second parameter should be the properties that you would like to update for Form Field programmatically. We have updated the value and background Color properties of Textbox Form Field.
+Using the updateFormField method, a form field can be updated programmatically. Retrieve the form field object/Id from the FormFieldCollections property for the field to be edited and pass it as a parameter to updateFormField. Provide the properties to update as the second parameter. The example updates the value and backgroundColor properties of a Textbox form field.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -53,9 +53,9 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 
 {% previewsample "Document-Processing/samples/pdfviewer/angular/updateformfield-cs2/index.html" %}
 
-## Delete form field programmatically
+## Delete a form field programmatically
 
-Using deleteFormField method, the form field can be deleted programmatically. We should retrieve the Form Field object/Id from FormFieldCollections property that you would like to delete and pass it as a parameter to deleteFormField method. To delete a Form Field programmatically, use the following code.
+Using the deleteFormField method, a form field can be deleted programmatically. Retrieve the form field object/Id from the FormFieldCollections property and pass it as a parameter to deleteFormField. The following code deletes a form field programmatically.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -73,9 +73,9 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 
 When the download icon is selected on the toolbar, the Form Fields will be saved in the PDF document and this action will not affect the original document. Refer the below GIF for further reference.
 
-![Alt text](../images/saveformfield.gif)
+![Save form fields to PDF](../images/saveformfield.gif)
 
-You can invoke download action using following code snippet.
+The download action can be invoked using the following code snippet.
 
 ```html
 <script>
@@ -91,9 +91,9 @@ You can invoke download action using following code snippet.
 
 When the print icon is selected on the toolbar, the PDF document will be printed along with the Form Fields added to the pages and this action will not affect the original document. Refer the below GIF for further reference.
 
-![Alt text](../images/printformfield.gif)
+![Print PDF with form fields](../images/printformfield.gif)
 
-You can invoke print action using the following code snippet.,
+The print action can be invoked using the following code snippet.
 
 ```html
 <script>
@@ -107,6 +107,6 @@ You can invoke print action using the following code snippet.,
 
 ## Open the existing PDF document
 
-We can open the already saved PDF document contains Form Fields in it by clicking the open icon in the toolbar. Refer the below GIF for further reference.
+An existing PDF document that contains form fields can be opened by clicking the Open icon on the toolbar. See the following GIF for reference.
 
-![Alt text](../images/openexistingpdf.gif)
+![Open existing PDF with form fields](../images/openexistingpdf.gif)

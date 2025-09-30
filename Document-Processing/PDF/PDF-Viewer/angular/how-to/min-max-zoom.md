@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Minimum and Maximum Zoom in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Minimum and Maximum Zoom in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Minimum and Maximum Zoom in Angular PDF Viewer | Syncfusion
+description: Learn how to set minimum and maximum zoom levels in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Minimum and Maximum Zoom Properties
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer provides the ability to control zoom levels for viewing PDF documents. The `minZoom` and `maxZoom` properties enable developers to set the minimum and maximum zoom levels, ensuring a consistent and controlled viewing experience.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer allows developers to control zoom levels for PDF documents. The `minZoom` and `maxZoom` properties enable setting the minimum and maximum zoom limits, ensuring a consistent and controlled viewing experience.
 
 ### minZoom
 
-The `minZoom` property specifies the minimum zoom percentage allowed in the PDF Viewer. This ensures that users cannot zoom out beyond a certain limit, which helps maintain readability and performance. Developers can set the `minZoom` property programmatically, defining the minimum zoom level based on the application's requirements. This is particularly useful for preventing users from zooming out too much, which could make the content difficult to read.
+The `minZoom` property specifies the minimum allowed zoom percentage in the PDF Viewer. This prevents zooming out beyond a set limit, thereby helping to maintain readability and performance. The `minZoom` property can be set programmatically to define the minimum zoom level based on application requirements. This feature is particularly useful for preventing excessive zooming out, which could hinder content readability.
 
 ### maxZoom
 
-The `maxZoom` property defines the maximum zoom percentage allowed in the PDF Viewer. By setting this property, developers can prevent users from zooming in too much, helping to avoid performance issues and maintain a smooth viewing experience. The `maxZoom` property can be set programmatically to control the upper limit of the zoom level. This is useful for applications where extremely high zoom levels might degrade performance or user experience.
+The `maxZoom` property defines the maximum allowed zoom percentage in the PDF Viewer. By setting this property, developers can prevent excessive zooming in, which helps mitigate performance issues and ensures a smooth viewing experience. The `maxZoom` property can be set programmatically to control the upper limit of the zoom level. This is beneficial for applications where extremely high zoom levels might degrade performance or user experience.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -97,7 +97,7 @@ export class AppComponent implements OnInit {
 
 #### Restrict Zoom Percentage on Mobile Devices
 
-You can easily restrict the zoom percentage on mobile devices using the `minZoom` and `maxZoom` properties. This feature allows you to set specific limits for zooming, ensuring smoother scrolling performance and efficient document loading on mobile devices. By controlling the zoom levels, you can provide a better user experience across different devices.
+The zoom percentage on mobile devices can be restricted using the `minZoom` and `maxZoom` properties. This feature allows specific limits for zooming, ensuring smoother scrolling performance and efficient document loading on mobile devices. Controlling the zoom levels provides a better user experience across different devices.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

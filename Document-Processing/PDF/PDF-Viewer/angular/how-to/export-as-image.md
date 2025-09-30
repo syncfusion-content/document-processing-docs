@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Export As Image in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Export As Image in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Export As Image in Angular PDF Viewer | Syncfusion
+description: Learn about exporting as an image in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export As Image in Angular PDF Viewer component
+# Export as image in Angular PDF Viewer component
 
-The PDF Viewer library allows you to export specified pages as a Base64-encoded image string using the **exportAsImage()** method and exporting a range of pages as Base64-encoded image strings using the **exportAsImages()** method.
+The PDF Viewer library allows exporting specified pages as a Base64-encoded image string using the `exportAsImage()` method, and exporting a range of pages as Base64-encoded image strings using the `exportAsImages()` method.
 
-The following steps are used to exportAsImage.
+Follow these steps to export as an image:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Create a simple PDF Viewer sample by following the steps in this [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started).
 
-**Step 2:** The following code snippet to implement the functionality for exporting a specified page as a Base64-encoded image string or exporting a range of pages as Base64-encoded image strings.
+**Step 2:** The following code snippet implements the functionality for exporting a specified page as a Base64-encoded image string or exporting a range of pages as Base64-encoded image strings:
 
 ```html
 <button (click)="exportAsImage()">ExportAsImage</button>
@@ -33,7 +33,7 @@ exportAsImage() {
   });
 }
 ```
-Similarly, to code snippet for exports the specified page as a Base64-encoded image string, allowing for custom image size:
+Similarly, the code snippet exports the specified page as a Base64-encoded image string, allowing for a custom image size:
 
 ```html
 <button (click)="exportAsImageWithSize()">exportAsImageWithSize</button>
@@ -51,7 +51,7 @@ exportAsImageWithSize() {
   });
 }
 ```
-Similarly, to code snippet for exports the range of pages as Base64-encoded image strings:
+Similarly, the code snippet exports the range of pages as Base64-encoded image strings:
 
 ```html
 <button (click)="exportAsImages()">exportAsImages</button>
@@ -68,7 +68,7 @@ exportAsImages() {
   });
 }
 ```
-Similarly, to code snippet for exports the range of pages as Base64-encoded image strings, allowing for custom image size:
+Similarly, the code snippet exports the range of pages as Base64-encoded image strings, allowing for a custom image size:
 
 ```html
 <button (click)="exportAsImageWithSize()">exportAsImageWithSize</button>
@@ -87,4 +87,4 @@ exportAsImageWithSize() {
 }
 ```
 
-By following these steps, you can successfully integrate and use the export as image API in the EJ2 PDF Viewer.
+By following these steps, the export as image API can be successfully integrated and used in the EJ2 PDF Viewer.

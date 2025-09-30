@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Download in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Download in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Download in Angular PDF Viewer component | Syncfusion
+description: Learn here all about Download in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Download
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Download in Angular PDF Viewer component
 
-The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
+The PDF Viewer supports downloading the loaded PDF file. Download can be enabled or disabled using the following code snippet.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -73,9 +73,9 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](images/download.png)
+![Download option in PDF Viewer](images/download.png)
 
-You can invoke download action using following code snippet.,
+The download action can be invoked using the following code snippet.
 
 ```html
 <script>

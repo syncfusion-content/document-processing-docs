@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open PDF from Azure Blob Storage into Pdfviewer Component | Syncfusion
-description: Learn here all about how to Open PDF files from Azure Blob Storage in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Open PDF from Azure Blob Storage in Angular PDF Viewer component | Syncfusion
+description: Learn how to open PDF files from Azure Blob Storage in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: Open PDF files from Azure Blob Storage
 documentation: ug
@@ -10,21 +10,21 @@ domainurl: ##DomainURL##
 
 # Open PDF file from Azure Blob Storage
 
-Currently, it's possible to load a PDF file from Azure Blob Storage into a PDF Viewer using either the Standalone or Server-backend PDF Viewer. Below are the steps and a sample to demonstrate how to open a PDF from Azure Blob Storage.
+The PDF Viewer can load a PDF file from Azure Blob Storage using either the standalone or server-backed PDF Viewer. The steps below demonstrate how to open a PDF from Azure Blob Storage.
 
-## Open PDF file from Azure Blob Storage using Standalone PDF Viewer
+## Open PDF file from Azure Blob Storage using the standalone PDF Viewer
 
-To load a PDF file from Azure Blob Storage in a PDF Viewer, you can follow the steps below
+To load a PDF file from Azure Blob Storage in the PDF Viewer, follow these steps.
 
-**Step 1:** Create a Simple PDF Viewer Sample in Angular
+**Step 1:** Create a simple PDF Viewer sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
+Follow the steps in this [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This provides a basic setup of the component.
 
 **Step 2:** Modify the `src/app/app.component.ts` File in the Angular Project
 
 1. Add the following private properties to the `AppComponent` class, and assign the values from the configuration to the corresponding properties
 
-N> Replace **Your account name in Azure** with the actual account name for your Azure Blob Storage account and **Your container name in Azure** with the actual container name and **Your Blob name in Azure** with the actual container name.
+N> Replace **Your account name in Azure**, **Your container name in Azure**, and **Your Blob name in Azure** with the actual account name, container name, and blob name.
 
 ```typescript
 private accountName: string = "*Your account name in Azure*";
@@ -32,7 +32,7 @@ private containerName: string = "*Your container name in Azure*";
 private blobName: string = "*Your Blob name in Azure*";
 ```
 
-2. Constructs the URL to the PDF in Azure Blob Storage. Calls fetchAndConvertToBase64 to fetch the PDF and convert it to a base64 string. Then Loads the base64 string into the PDF Viewer.
+2. Construct the URL to the PDF in Azure Blob Storage. Call fetchAndConvertToBase64 to fetch the PDF and convert it to a base64 string. Then load the base64 string into the PDF Viewer.
 
 ```typescript
 LoadPdfFromBlob() {
@@ -50,7 +50,7 @@ LoadPdfFromBlob() {
 }
 ```
 
-3. Then it retrieves the PDF file from the given URL and converts the fetched Blob to a base64 string using blobToBase64.
+3. Retrieve the PDF file from the given URL and convert the fetched Blob to a base64 string using blobToBase64.
 
 ```typescript
 async fetchAndConvertToBase64(url: string): Promise<string | null> {
@@ -70,7 +70,7 @@ async fetchAndConvertToBase64(url: string): Promise<string | null> {
 }
 ```
 
-4. Uses FileReader to convert a Blob to a base64 string. Resolves the promise with the base64 string or rejects it in case of an error.
+4. Use FileReader to convert a Blob to a base64 string. Resolve the promise with the base64 string or reject it in case of an error.
 
 ```typescript
 blobToBase64(blob: Blob): Promise<string> {
@@ -88,13 +88,13 @@ blobToBase64(blob: Blob): Promise<string> {
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage).
 
-## Open PDF file from Azure Blob Storage using Server-Backend PDF Viewer
+## Open PDF file from Azure Blob Storage using the server-backed PDF Viewer
 
-To load a PDF file from Azure Blob Storage in a PDF Viewer, you can follow the steps below
+To load a PDF file from Azure Blob Storage in the PDF Viewer, follow these steps.
 
-**Step 1:** Create a Simple PDF Viewer Sample in Angular
+**Step 1:** Create a simple PDF Viewer sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
+Follow the steps in this [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This provides a basic setup of the component.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -125,7 +125,7 @@ public PdfViewerController(IConfiguration configuration, ILogger<PdfViewerContro
 }
 ```
 
-5. Modify the `Load()` method to load the PDF files from  Azure Blob Storage
+5. Modify the `Load()` method to load PDF files from Azure Blob Storage.
 
 ```csharp
 
@@ -177,11 +177,11 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name
+N> Replace **Your Connection string from Azure** with the actual connection string for the Azure Blob Storage account and **Your container name in Azure** with the actual container name.
 
-**Step 3:**  Set the PDF Viewer Properties in Angular PDF viewer component
+**Step 3:** Set the PDF Viewer properties in the Angular PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Azure Blob Storage. Ensure that you correctly pass the document name from the files available in your azure contanier to the documentPath property.
+Set the `serviceUrl` property of the PDF Viewer component to the URL of the web service project, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired name of the PDF file to load from Azure Blob Storage. Ensure that the document name corresponds to a file available in the Azure container.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';

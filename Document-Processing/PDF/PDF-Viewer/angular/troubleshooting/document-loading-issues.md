@@ -9,9 +9,9 @@ documentation: ug
 
 # Document Loading Issues in Version 23.1 or Newer
 
-If you're experiencing problems with your document not rendering in the viewer, especially when using version 23.1 or a newer version, follow these troubleshooting steps to resolve the issue:
+If documents do not render in the viewer, especially when using version 23.1 or newer, use the following troubleshooting steps:
 
-* **Check for `viewer.dataBind()` Requirement**: Ensure that you have called `viewer.dataBind()` as required in version 23.1 or newer. This explicit call is Essential<sup style="font-size:70%">&reg;</sup> for initializing data binding and document rendering correctly. It is must to call the dataBind() method before load.
+* **Check for `viewer.dataBind()` requirement**: Call `viewer.dataBind()` as required in version 23.1 or newer. This explicit call is Essential<sup style="font-size:70%">&reg;</sup> for initializing data binding and document rendering correctly. The `dataBind()` method must be called before `load`.
 
 ```typescript
 <button (click)="documentLoad()">Load</button>
@@ -26,18 +26,18 @@ function documentLoad () {
     }
 ```
 
-* **Verify Document Source**: Confirm that the document source or URL you're trying to display is valid and accessible. Incorrect URLs or document paths can lead to loading issues.
+* **Verify document source**: Confirm that the document source or URL is valid and accessible. Incorrect URLs or document paths can cause loading issues.
 
-* **Network Connectivity**: Ensure that your application has a stable network connection. Document rendering may fail if the viewer can't fetch the document due to network issues.
+* **Network connectivity**: Ensure the application has a stable network connection. Document rendering may fail if the viewer cannot fetch the document due to network issues.
 
-* **Console Errors**: Use your browser's developer tools to check for any error messages or warnings in the console. These messages can provide insights into what's causing the document not to load.
+* **Console errors**: Use browser developer tools to check for error messages or warnings in the console. These messages can provide insights into what prevents the document from loading.
 
-* **Loading Sequence**: Make sure that you're calling `viewer.dataBind()` and initiating document loading in the correct sequence. The viewer should be properly initialized before attempting to load a document.
+* **Loading sequence**: Call `viewer.dataBind()` and initiate document loading in the correct sequence. The viewer must be initialized before attempting to load a document.
 
-* **Update Viewer**: Ensure that you're using the latest version of the viewer library or framework. Sometimes, issues related to document loading are resolved in newer releases.
+* **Update viewer**: Use the latest version of the viewer library or framework. Issues related to document loading may be resolved in newer releases.
 
-* **Cross-Origin Resource Sharing (CORS)**: If you're loading documents from a different domain, ensure that CORS headers are correctly configured to allow cross-origin requests.
+* **Cross-Origin Resource Sharing (CORS)**: When loading documents from a different domain, ensure that CORS headers are correctly configured to allow cross-origin requests.
 
-* **Content Security Policies (CSP)**: Check if your application's Content Security Policy allows the loading of external resources, as this can affect document loading. Refer [here](https://ej2.syncfusion.com/javascript/documentation/common/troubleshoot/content-security-policy) to troubleshoot.
+* **Content Security Policies (CSP)**: Ensure the application's Content Security Policy allows loading external resources, as this can affect document loading. Refer [here](https://ej2.syncfusion.com/javascript/documentation/common/troubleshoot/content-security-policy) to troubleshoot.
 
-By following these troubleshooting steps, you should be able to address issues related to document loading in version 23.1 or newer, ensuring that your documents render correctly in the viewer.
+These troubleshooting steps help address document loading issues in version 23.1 or newer and ensure documents render correctly in the viewer.
