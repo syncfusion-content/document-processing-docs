@@ -200,10 +200,6 @@ N> Once redactions have been applied to the document, they become part of the PD
 
 ## See Also
 
-* [Overview of Redaction](./overview)
-* [Page Redaction](./page-redaction)
-* [Redaction Properties](./redaction-properties)
-* [Redaction to Document](./redaction-to-document)
 * [Mobile Toolbar](../mobile-toolbar)
 * [Annotation in Mobile View](../annotation/annotations-in-mobile-view)
 * [Form Designer in Mobile View](../form-designer/formdesigner-in-mobile-view)
