@@ -6,7 +6,7 @@ control: Presentation
 documentation: UG
 ---
 
-# PowerPoint to image performance benchmarks with .NET PowerPoint Library
+# PowerPoint to image performance benchmarks using .NET Library
 
 The Syncfusion<sup>&reg;</sup> .NET PowerPoint library (Presentation) enables seamless integration with PowerPoint files, offering robust features for handling presentations in various formats. This performance benchmark report highlights the speed and efficiency of PowerPoint to image conversion, demonstrating how our library performs in real-world scenarios.
 
