@@ -8,9 +8,9 @@ documentation: UG
 
 # Open and Save PowerPoint Presentation in Blazor
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in Blazor**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, a **open and save a Presentation in Blazor**.
 
-## Web Server Application
+## Blazor Web App Server Application
 
 **Prerequisites:**
 
@@ -28,14 +28,14 @@ Step 1: Create a new C# Blazor Web app project.
 
 *   Select the framework and click **Create** button.
 
-![Select the framework in Blazor Web Server Side app in Visual Studio](Workingwith-Blazor/Blazor_image_Server_Web_Additional_Information.png)
+![Select the framework in Blazor Web App Server in Visual Studio](Workingwith-Blazor/Blazor_image_Server_Web_Additional_Information.png)
 
 Step 2: Install the `Syncfusion.Presentation.Net.Core` NuGet package.
-Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to your project from [NuGet.org](https://www.nuget.org/).
+Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to the project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.Presentation.Net.Core Nuget Package](Workingwith-Core/install_nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you must also add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder, which is located inside the `Components` folder.
 Include the following namespaces in the file:
@@ -60,7 +60,7 @@ Include the following code to create a new button that triggers the presentation
 {% highlight CSHTML %}
 
 <h2>Syncfusion PowerPoint Library (Essential Presentation)</h2>
-<p>The Syncfusion Blazor PowerPoint library (Essential Presentation) used to create, read, edit, and convert PowerPoint files in your applications without Microsoft Office dependencies.</p>
+<p>The Syncfusion Blazor PowerPoint library (Essential Presentation) used to create, read, edit, and convert PowerPoint files in applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@OpenAndSavePresentation">Open and Save Presentation</button>
 
 {% endhighlight %}
@@ -99,7 +99,7 @@ using Syncfusion.Presentation;
 {% endtabs %}
 
 Step 7: Implement the `OpenAndSavePresentation` method in `PowerPointService.cs`.
-Create a new `MemoryStream` method named `OpenAndSavePresentation` in the `PowerPointService` class, and include the following code snippet to **open an existing PowerPoint Presentation in Blazor Web Server app**.
+Create a new `MemoryStream` method named `OpenAndSavePresentation` in the `PowerPointService` class, and include the following code snippet to **open an existing PowerPoint Presentation in Blazor Web app Server**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -127,7 +127,7 @@ if (shape.TextBody.Text == "Company History")
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Add below code example to **save the PowerPoint Presentation in Blazor Web Server app**.
+Step 9: Add below code example to **save the PowerPoint Presentation in Blazor Web App Server**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -143,7 +143,7 @@ return pptxStream;
 {% endtabs %}
 
 Step 10: Add the service in `Program.cs`.
-Add the following line to the `Program.cs` file to register `PresentationService` as a scoped service in your Blazor application.
+Add the following line to the `Program.cs` file to register `PresentationService` as a scoped service in the Blazor application.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -207,7 +207,7 @@ Add this function in the `App.razor` file located in the `Pages` folder.
 {% endtabs %}
 
 Step 13: Add the navigation link.
-Add the following code snippet to the Navigation menu's Razor file in the `Shared` folder.
+Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
 
 {% tabs %}
 
@@ -231,27 +231,32 @@ Step 15: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.
 
-A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/Blazor/Blazor-Server-app).
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/Blazor/Blazor-Web-App-Server).
 
 Upon executing the program, the **PowerPoint document** will be generated as follows.
 
-![Blazor Web Server output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
+![Blazor Web App Server output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features.
 
-## WASM Application
+## WASM Standalone Application
 
-Step 1: Create a new C# Blazor WASM app project.
-Select "Blazor WebAssembly App" from the template and click the **Next** button.
+**Prerequisites:**
 
-![Create Blazor WebAssembly application in Visual Studio for Blazor PowerPoint document](Workingwith-Blazor/Blazor_WASM.png)
+*   Visual Studio 2022.
+*   Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+
+Step 1: Create a new C# Blazor WASM Standalone app project.
+Select "Blazor WebAssembly Standalone App" from the template and click the **Next** button.
+
+![Create Blazor WebAssembly application in Visual Studio for Blazor PowerPoint document](Workingwith-Blazor/Blazor_WASM_Standalone.png)
 
 Step 2: Install the `Syncfusion.Presentation.Net.Core` NuGet package.
-To **create a PowerPoint document in WASM app**, install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the Blazor project.
+To **create a PowerPoint document in WASM Standalone app**, install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the Blazor project.
 
 ![Install Syncfusion.Presentation.Net.Core Nuget Package](Workingwith-Blazor/NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you must also add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder.
 Add the following namespaces in the file.
@@ -275,14 +280,14 @@ Include the following code to create a new button that triggers the presentation
 {% highlight CSHTML %}
 
 <h2>Syncfusion PowerPoint Library (Essential Presentation)</h2>
-<p>The Syncfusion Blazor PowerPoint library (Essential Presentation) used to create, read, edit, and convert PowerPoint files in your applications without Microsoft Office dependencies.</p>
+<p>The Syncfusion Blazor PowerPoint library (Essential Presentation) used to create, read, edit, and convert PowerPoint files in applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@OpenAndSavePresentation">Open and Save Presentation</button>
 
 {% endhighlight %}
 {% endtabs %}
 
 Step 5: Implement `OpenAndSavePresentation` method in `Presentation.razor`.
-Create a new `async` method named `OpenAndSavePresentation` and include the following code snippet to **open an existing PowerPoint Presentation in Blazor WASM app**.
+Create a new `async` method named `OpenAndSavePresentation` and include the following code snippet to **open an existing PowerPoint Presentation in Blazor WASM Standalone app**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -310,7 +315,7 @@ if (shape.TextBody.Text == "Company History")
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add below code example to **save the PowerPoint Presentation in Blazor WASM app**.
+Step 7: Add below code example to **save the PowerPoint Presentation in Blazor WASM Standalone app**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -375,12 +380,39 @@ Add this function in the `index.html` file located in `wwwroot`.
 {% endhighlight %}
 {% endtabs %}
 
-A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/Blazor/Blazor-WASM-app).
+Step 10: Add the navigation link.
+Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
+
+{% tabs %}
+
+{% highlight HTML %}
+
+ <div class="nav-item px-3">
+    <NavLink class="nav-link" href="presentation">
+        <span class="oi oi-list-rich" aria-hidden="true"></span> Generate Presentation
+    </NavLink>
+</div>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 9: Build the project.
+
+Click on **Build** → **Build Solution** or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+
+Step 10: Run the project.
+
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.
+
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/Blazor/WASM-Standalone-App).
 
 Upon executing the program, the **PowerPoint document** will be generated as follows.
 
-![Blazor WASM output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
+![Blazor WASM Standalone output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
-N> While the PowerPoint library works in WASM app, server-side deployment is recommended. WASM app deployment increases the application payload size. You can also explore our [Blazor PowerPoint library demo](https://blazor.syncfusion.com/demos/powerpoint/getting-started) that shows how to create and modify PowerPoint files from C# with just five lines of code.
+N> While the PowerPoint library works in WASM Standalone app, server-side deployment is recommended. WASM Standalone app deployment increases the application payload size.
+
+Kindly explore the [supported and unsupported features of PowerPoint library in Blazor](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/supported-and-unsupported-features).
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features.
