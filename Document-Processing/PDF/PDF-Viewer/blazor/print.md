@@ -112,7 +112,7 @@ The SfPdfViewer supports printing the loaded PDF by default. Enable or disable t
 
 ```
 
-## Print Events in Blazor Pdfviewer
+## Print Events in Blazor SfPdfViewer
 
 The following events are available in the SfPdfViewer component.
 
