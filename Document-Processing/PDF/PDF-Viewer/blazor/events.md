@@ -123,3 +123,8 @@ The following example illustrates how to handle the DocumentEdited event. In thi
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20document%20using%20created%20event)
+
+## See also
+
+* [Annotation Events in Blazor SfPdfViewer Component](./annotation/events)
+* [Form Fields Events in Blazor SfPdfViewer Component](./form-designer/events)
