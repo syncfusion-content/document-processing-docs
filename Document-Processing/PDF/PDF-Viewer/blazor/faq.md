@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Frequently Asked Questions Section
+# Frequently Asked Questions Section in Blazor SfPdfViewer Component
 
 The frequently asked questions in Syncfusion Blazor PDF Viewer
 
@@ -49,3 +49,4 @@ The frequently asked questions in Syncfusion Blazor PDF Viewer
 * [How to Reduce slowness while running the WASM sample in Visual Studio?](./faqs/how-to-reduce-slowness-while-running-the-wasm-sample-in-Visual-Studio)
 * [How to Coordinate Conversion Between Page and Client Points?](./faqs/how-to-coordinate-conversion-between-page-and-client-points)
 * [How to Configure CSP in Blazor SfPdfViewer Component?](./faqs/how-to-configure-content-security-policy)
+* [How to Extract Particular Text and Highlight?](./faqs/how-to-extract-particular-text-and-highlight)
