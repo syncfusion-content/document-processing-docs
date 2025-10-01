@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize context menu in Blazor DocumentEditor Component | Syncfusion
+title: Customize the context menu in Blazor DocumentEditor Component | Syncfusion
 description: Learn how to customize context menu with document editor in real time scenarios like create simple word processor in Syncfusion Blazor DocumentEditor component.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---
 
-# Context menu customization in Blazor DocumentEditor Component
+# Context Menu Customization in Blazor DocumentEditor Component
 
 ## How to customize context menu in Document Editor
 
@@ -79,4 +79,4 @@ The following code shows how to hide default context menu and add custom option 
 }
 ```
 
-You can also explore our [Blazor Word Processor - Context Menu](https://blazor.syncfusion.com/demos/document-editor/custom-context-menu?theme=bootstrap5) example to know how to render and configure the document editor.
+To learn how to render and configure the Document Editor component with a custom context menu, refer to the following example: [Blazor Word Processor - Context Menu]
