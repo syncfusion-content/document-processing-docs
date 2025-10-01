@@ -1,21 +1,19 @@
 ---
 layout: post
-title: Save PDF files to Google Cloud Storage Typescript Pdfviewer control | Syncfusion
-description: Learn here all about how to Save PDF files to Google Cloud Storage in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Save PDF files to Google Cloud Storage in TypeScript PDF Viewer | Syncfusion
+description: Learn how to save PDF files to Google Cloud Storage using the Syncfusion TypeScript PDF Viewer component with a server-backed web service.
 platform: document-processing
-control: Save PDF files to Google Cloud Storage
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Save PDF file to Google Cloud Storage
+# Save PDF files to Google Cloud Storage
 
 To save a PDF file to Google Cloud Storage, you can follow the steps below:
 
 **Step 1:** Create a PDF Viewer sample in TypeScript
 
-Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in typescript. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This sets up the basic structure of the PDF Viewer application.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -31,7 +29,7 @@ using Google.Cloud.Storage.V1;
 using Google.Apis.Auth.OAuth2;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign configuration values to the corresponding fields.
 
 ```csharp
 // Private readonly object _storageClient
@@ -60,7 +58,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF files to Google Cloud Storage bucket
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Google Cloud Storage bucket.
 
 ```csharp
 [HttpPost("Download")]
@@ -88,7 +86,7 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in the web service project and add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -103,13 +101,13 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-N> Replace **Your Bucket name from Google Cloud Storage** with the actual name of your Google Cloud Storage bucket
+N> Replace the placeholder with the actual Google Cloud Storage bucket name.
 
-N> Replace **path/to/service-account-key.json** with the actual file path to your service account key JSON file. Make sure to provide the correct path and filename.
+N> Replace `path/to/service-account-key.json` with the actual file path to the service account key JSON file.
 
-**Step 3:**  Set the PDF Viewer Properties in Typescript PDF viewer component
+**Step 3:** Set the PDF Viewer properties in the TypeScript PDF Viewer component
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Google Cloud Storage. Ensure that you correctly pass the document name from the files available in your bucket to the documentPath property.
+Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Google Cloud Storage, and ensure that the document exists in the target bucket.
 
 ```typescript
 
@@ -127,6 +125,6 @@ viewer.load('PDF_Succinctly.pdf', null);
 
 ```
 
-N> The **Google.Cloud.Storage.V1** NuGet package must be installed in your application to use the previous code example.
+N> Install the Google.Cloud.Storage.V1 NuGet package in the web service application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-google-cloud-storage)

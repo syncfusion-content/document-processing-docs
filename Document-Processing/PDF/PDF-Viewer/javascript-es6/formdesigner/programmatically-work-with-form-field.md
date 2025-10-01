@@ -1,30 +1,28 @@
 ---
 layout: post
-title: Programmatically work with form field in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Programmatically work with form field in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Programmatically work with form fields in the TypeScript PDF Viewer component | Syncfusion
+description: Learn how to programmatically add, update, delete, save, print, and manage form fields in the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
-control: Programmatically work with form field
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Programmatically work with form field in Typescript Pdfviewer control
+# Programmatically work with form fields in TypeScript PDF Viewer component
 
-The PDF Viewer control provides the option to add, edit and delete the Form Fields. The Form Fields type supported by the PDF Viewer Control are:
+The PDF Viewer component provides options to add, edit, and delete form fields. The supported form field types are:
 
-    * Textbox
-    * Password
-    * CheckBox
-    * RadioButton
-    * ListBox
-    * DropDown
-    * SignatureField
-    * InitialField
+- Textbox
+- Password
+- CheckBox
+- RadioButton
+- ListBox
+- DropDown
+- Signature field
+- Initial field
 
-## Add a form field to PDF document programmatically
+## Add a form field to a PDF document programmatically
 
-Using addFormField method, the form fields can be added to the PDF document programmatically. We need to pass two parameters in this method. They are Form Field Type and Properties of Form Field Type. To add form field programmatically, Use the following code.
+Use the addFormField method to add form fields programmatically. Provide the field type and its property object as parameters. Use the following example to add a form field when the document loads.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -37,9 +35,9 @@ Using addFormField method, the form fields can be added to the PDF document prog
 
 {% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/addformfield-cs4/index.html" %}
 
-## Edit/Update form field programmatically
+## Edit or update a form field programmatically
 
-Using updateFormField method, Form Field can be updated programmatically. We should get the Form Field object/Id from FormFieldCollections property that you would like to edit and pass it as a parameter to updateFormField method. The second parameter should be the properties that you would like to update for Form Field programmatically. We have updated the value and background Color properties of Textbox Form Field.
+Use the updateFormField method to modify a form field programmatically. Retrieve the target from the formFieldCollections property (by object or ID) and pass it as the first parameter. Provide the properties to update as the second parameter. The following example updates the value and background color of a Textbox field.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -52,9 +50,9 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 
 {% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/updateformfield-cs4/index.html" %}
 
-## Delete form field programmatically
+## Delete a form field programmatically
 
-Using deleteFormField method, the form field can be deleted programmatically. We should retrieve the Form Field object/Id from FormFieldCollections property that you would like to delete and pass it as a parameter to deleteFormField method. To delete a Form Field programmatically, use the following code.
+Use the deleteFormField method to remove a form field programmatically. Retrieve the target from the formFieldCollections property (by object or ID) and pass it to deleteFormField. The following example deletes the first form field.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -67,13 +65,13 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 
 {% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/deleteformfield-cs4/index.html" %}
 
-## Saving the form fields
+## Save form fields
 
-When the download icon is selected on the toolbar, the Form Fields will be saved in the PDF document and this action will not affect the original document. Refer the below GIF for further reference.
+Selecting the Download icon on the toolbar saves the form fields in the exported PDF. This action does not modify the original source file. Refer to the following GIF for reference.
 
-![Alt text](../images/saveformfield.gif)
+![Save form fields from the PDF Viewer](../images/saveformfield.gif)
 
-You can invoke download action using following code snippet.
+You can invoke the download action using the following code snippet.
 
 ```ts
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
@@ -88,13 +86,13 @@ pdfviewer.download();
 
 ```
 
-## Printing the form fields
+## Print form fields
 
-When the print icon is selected on the toolbar, the PDF document will be printed along with the Form Fields added to the pages and this action will not affect the original document. Refer the below GIF for further reference.
+Selecting the Print icon on the toolbar prints the PDF along with the added form fields. This action does not modify the original document. Refer to the following GIF for reference.
 
-![Alt text](../images/printformfield.gif)
+![Print the PDF with form fields](../images/printformfield.gif)
 
-You can invoke print action using the following code snippet.,
+You can invoke the print action using the following code snippet.
 
 ```ts
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
@@ -109,8 +107,8 @@ pdfviewer.print.print();
 
 ```
 
-## Open the existing PDF document
+## Open an existing PDF document
 
-We can open the already saved PDF document contains Form Fields in it by clicking the open icon in the toolbar. Refer the below GIF for further reference.
+Open a previously saved PDF that contains form fields by selecting the Open icon on the toolbar. Refer to the following GIF for reference.
 
-![Alt text](../images/openexistingpdf.gif)
+![Open a PDF with existing form fields](../images/openexistingpdf.gif)
