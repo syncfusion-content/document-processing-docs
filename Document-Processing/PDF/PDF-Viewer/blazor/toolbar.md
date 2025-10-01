@@ -87,3 +87,6 @@ The Redaction toolbar provides tools to mark and permanently remove sensitive co
 * [Form designer toolbar customization](./toolbar/form-designer-toolbar-customization)
 * [Redaction toolbar customization](./toolbar/redaction-toolbar-customization)
 * [Mobile toolbar](./toolbar/mobile-toolbar)
+* [Adding the shape annotation in PDF viewer](./annotation/shape-annotation)
+* [Adding the redaction annotation in PDF viewer](./annotation/redaction-annotation)
+* [Form designer in PDF viewer](./form-designer/overview)
