@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add save button in Blazor DocumentEditor Component | Syncfusion
-description: Learn how to add a save button to the toolbar in the Syncfusion Blazor DocumentEditor component and much more.
+description: Learn how to add a custom save button to the toolbar in the Syncfusion Blazor Document Editor component and much more.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
