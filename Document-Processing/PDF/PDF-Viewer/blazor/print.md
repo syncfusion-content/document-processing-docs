@@ -112,6 +112,67 @@ The SfPdfViewer supports printing the loaded PDF by default. Enable or disable t
 
 ```
 
+## Print Events in Blazor Pdfviewer
+
+The following events are available in the SfPdfViewer component.
+
+|Name|Description|
+|---|---|
+|PrintStart|Triggers when a print action starts.|
+|PrintEnd|Triggers when a print action is completed.|
+
+### PrintStart Event
+
+The [PrintStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_PrintStart) event triggers when the print action is started.
+
+#### Event Arguments
+
+See [PrintStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html) for details such as Filename, Cancel option.
+
+The following example illustrates how to handle the PrintStart event.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer 
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"> 
+    <PdfViewerEvents PrintStart="@PrintStart"></PdfViewerEvents>
+</SfPdfViewer2>
+@code{ 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
+    public async Task PrintStart(PrintStartEventArgs args) 
+    {
+        Console.WriteLine($"Printed File Name: {args.FileName}");
+    }	 
+}
+
+```
+
+### PrintEnd Event
+
+The [PrintEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_PrintEnd) event triggers when an annotation is added to a page in the PDF document.
+
+#### Event Arguments
+
+See [PrintEndEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintEndEventArgs.html) for details such as Filename.
+
+The following example illustrates how to handle the PrintEnd event.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer 
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"> 
+    <PdfViewerEvents PrintEnd="@PrintEnd"></PdfViewerEvents>
+</SfPdfViewer2>
+@code{ 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
+    public async Task PrintEnd(PrintEndEventArgs args) 
+    {
+        Console.WriteLine($"Printed File Name: {args.FileName}");
+    }	 
+}
+
+```
+
 ## See also
 
 * [Download in Blazor SfPdfViewer component](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/saving-pdf-file#download-in-blazor-sfpdfviewer-component)
