@@ -13,7 +13,7 @@ documentation: ug
 
 ## Indentation
 
-You can modify the left or right indentation of selected paragraphs using the following sample code.
+Indentation is used to adjust the distance between the paragraph and the page margins. You can modify the left or right indentation of selected paragraphs using the following sample code.
 
 ```csharp
 await documentEditor.Selection.ParagraphFormat.SetLeftIndentAsync(24);
