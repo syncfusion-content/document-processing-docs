@@ -13,7 +13,7 @@ Lists are a fundamental feature for organizing content in a document, making it 
 
 ## Creating Lists via the UI
 
-The simplest way to create a list is by using the **Bullets** and **Numbering** buttons in the toolbar. Select the paragraphs you want to format and click the corresponding button to apply the default list style.
+The simplest way to create a list is by using the **Bullets** and **Numbering** buttons in the toolbar. To format paragraphs as a list, select them and click the corresponding button to apply the default list style.
 
 ## Managing Lists Programmatically
 

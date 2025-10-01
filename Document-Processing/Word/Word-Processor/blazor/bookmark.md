@@ -9,13 +9,13 @@ documentation: ug
 
 # Bookmarks in Blazor DocumentEditor Component
 
-Bookmark is a powerful tool that helps you to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
+Bookmarks are powerful tools for marking places in a document for easy navigation. Multiple bookmarks can be entered in a document, with each assigned a unique name for easy identification.
 
-[`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) component provides built-in dialog and using code to add, delete, and navigate bookmarks within the document. To add a bookmark, select a portion of text in the document. After that, jump to the location or add links to it within the document using built-in hyperlink dialog. You can also delete bookmarks from a document.
+[`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) component provides built-in dialog and using code to add, delete, and navigate bookmarks within the document. A bookmark can be added by selecting a portion of text in the document. After that, jump to the location or add links to it within the document using built-in hyperlink dialog. Bookmarks can also be deleted from a document.
 
 N>Bookmark names need to begin with a letter. They can include both numbers and letters, but not spaces. To separate the words, use an underscore. Bookmark names starting with an underscore are called hidden bookmarks. For example, bookmarks generated for table of contents.
 
-You can open the bookmark dialog using Bookmark options in toolbar. You can also explore our [`Blazor Word Processor - Bookmark`](https://blazor.syncfusion.com/demos/document-editor/hyperlinks-and-bookmarks) example to know more about bookmark.
+The bookmark dialog can be opened using the "Bookmark" option in the toolbar. Explore the [`Blazor Word Processor - Bookmark`](https://blazor.syncfusion.com/demos/document-editor/hyperlinks-and-bookmarks) example to learn more about bookmarks..
 
 
 ## Add bookmark
