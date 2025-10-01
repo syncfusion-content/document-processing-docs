@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Load the security documents in Blazor SfPdfViewer Component | Syncfusion
+title: Load the security documents in Blazor PDF Viewer | Syncfusion
 description: Learn how Blazor SfPdfViewer opens password-protected PDFs and enforces owner permissions like print, copy and edit.
 platform: document-processing
 control: SfPdfViewer
