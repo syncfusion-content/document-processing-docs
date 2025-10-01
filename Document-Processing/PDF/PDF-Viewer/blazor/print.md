@@ -52,7 +52,7 @@ The SfPdfViewer supports printing the loaded PDF by default. Enable or disable t
 
 ```
 
-## EnablePrintRotation in the Blazor Pdfviewer
+## EnablePrintRotation in the Blazor SfPdfviewer
 
 [EnablePrintRotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrintRotation) controls whether landscape pages are auto-rotated to best fit when printing. Default: true. Set to false to preserve the original page orientation and suppress automatic rotation during print.
 
@@ -71,7 +71,7 @@ The SfPdfViewer supports printing the loaded PDF by default. Enable or disable t
 
 ```
 
-## Print modes in the Blazor Pdfviewer
+## Print modes in the Blazor SfPdfviewer
 
 [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PrintMode) specifies how the print dialog is opened. Default: PrintMode.Default (prints from the same window). Supported values:
 
@@ -93,7 +93,7 @@ The SfPdfViewer supports printing the loaded PDF by default. Enable or disable t
 
 ```
 
-## PrintScaleFactor in the Blazor Pdfviewer
+## PrintScaleFactor in the Blazor SfPdfviewer
 
 [PrintScaleFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PrintScaleFactor) sets the scale used when rendering pages for printing. By default the scale factor set as 1.0 (prints at the on-screen scale). Valid range from 0.5 to 5.0. Higher values can improve output clarity for documents with smaller page dimensions and may increase print processing time.
 
