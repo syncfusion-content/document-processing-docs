@@ -52,6 +52,66 @@ The SfPdfViewer supports printing the loaded PDF by default. Enable or disable t
 
 ```
 
+## EnablePrintRotation in the Blazor Pdfviewer
+
+[EnablePrintRotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrintRotation) controls whether landscape pages are auto-rotated to best fit when printing. Default: true. Set to false to preserve the original page orientation and suppress automatic rotation during print.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 Height="100%"
+              Width="100%"
+              DocumentPath="@DocumentPath"
+              EnablePrintRotation="true" />
+
+@code{
+    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+}
+
+```
+
+## Print modes in the Blazor Pdfviewer
+
+[PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PrintMode) specifies how the print dialog is opened. Default: PrintMode.Default (prints from the same window). Supported values:
+
+- [PrintMode.Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintMode.html#Syncfusion_Blazor_SfPdfViewer_PrintMode_Default) — Opens the print dialog in the same window.
+- [PrintMode.NewWindow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintMode.html#Syncfusion_Blazor_SfPdfViewer_PrintMode_NewWindow) — Opens the print dialog from a new browser window/tab, which can be useful depending on browser popup policies.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 Height="100%"
+              Width="100%"
+              DocumentPath="@DocumentPath"
+              PrintMode="PrintMode.NewWindow" />
+
+@code{
+    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+}
+
+```
+
+## PrintScaleFactor in the Blazor Pdfviewer
+
+[PrintScaleFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PrintScaleFactor) sets the scale used when rendering pages for printing. By default the scale factor set as 1.0 (prints at the on-screen scale). Valid range from 0.5 to 5.0. Higher values can improve output clarity for documents with smaller page dimensions and may increase print processing time.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 Height="100%"
+              Width="100%"
+              DocumentPath="@DocumentPath"
+              PrintScaleFactor="2" />
+
+@code{
+    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+}
+
+```
+
 ## See also
 
 * [Download in Blazor SfPdfViewer component](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/saving-pdf-file#download-in-blazor-sfpdfviewer-component)
