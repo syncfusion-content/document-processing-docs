@@ -14,7 +14,6 @@ The following events are available in the SfPdfViewer component.
 |Name|Description|
 |---|---|
 |AddSignature|Triggers when a signature is added to a page in the PDF document.|
-|AjaxRequestFailed|Triggers when an AJAX request fails.|
 |AnnotationAdded|Triggers when an annotation is added to a page in the PDF document.|
 |AnnotationMouseover|Triggers when the mouse pointer moves over an annotation object.|
 |AnnotationMoved|Triggers when an annotation is moved on a page in the PDF document.|
@@ -34,9 +33,29 @@ The following events are available in the SfPdfViewer component.
 |ExportStarted|Triggers when exporting annotations starts in the SfPdfViewer.|
 |ExportSucceed|Triggers when exporting annotations succeeds in the SfPdfViewer.|
 |ExtractTextCompleted|Triggers when text extraction is completed in the SfPdfViewer.|
+|FormFieldAdded|Triggered when a form field is added to the PDF document.|
+|FormFieldAdding|Triggered before a new form field is added, allowing validation before insertion.|
+|FormFieldClick|Triggered when a user clicks on a form field while designer mode is off.|
+|FormFieldDeleted|Triggered when a form field is removed from the document.|
+|FormFieldDoubleClick|Triggered when a form field is double-clicked.|
+|FormFieldFocusIn|Triggered when focus enters a form field.|
+|FormFieldFocusOut|Triggered when focus leaves a form field.|
+|FormFieldMouseEnter|Triggered when the mouse hovers over a form field.|
+|FormFieldMouseLeave|Triggered when the mouse leaves a form field.|
+|FormFieldPropertyChanged|Triggered when a form field's properties are modified.|
+|FormFieldResized|Triggered when a form field is resized.|
+|FormFieldSelected|Triggered when a form field is selected.|
+|FormFieldsExported|Triggered when form fields are successfully exported.|
+|FormFieldsExportFailed |Triggered when form fields export operation fails.|
+|FormFieldsExporting|Triggered before form fields are exported, allowing customization of the export process.|
+|FormFieldsImported|Triggered when form fields are successfully imported.|
+|FormFieldsImportFailed |Triggered when form fields import operation fails.|
+|FormFieldsImporting|Triggered before form fields are imported, allowing validation or modifications.|
+|FormFieldUnselected|Triggered when a form field is unselected.|
 |ImportFailed|Triggers when importing annotations fails in the PDF document.|
 |ImportStarted|Triggers when importing annotations starts in the PDF document.|
 |ImportSucceed|Triggers when importing annotations succeeds in the PDF document.|
+|IsDesignerModeChanged|Triggered when the designer mode state changes in the PDF Viewer.|
 |MoveSignature|Triggers when a signature is moved on a page in the PDF document.|
 |OnAnnotationDoubleClick|Triggers when an annotation is double-clicked.|
 |OnHyperlinkClick|Triggers when a hyperlink in the PDF document is clicked.|
@@ -57,6 +76,8 @@ The following events are available in the SfPdfViewer component.
 |SignaturePropertiesChange|Triggers when the properties of a signature are changed on a page in the PDF document.|
 |SignatureSelected|Triggers when a signature is selected on a page in the PDF document.|
 |SignatureUnselected|Triggers when a signature is unselected on a page in the PDF document.|
+|ToolbarClicked|Triggers an event when a Custom Toolbar Item is clicked in the Toolbar.|
+|ValidateFormFields|Triggered when form fields are validated.|
 |ZoomChanged|Triggers when the magnification value changes.|
 
 ## Adding SfPdfViewer events to Blazor component
