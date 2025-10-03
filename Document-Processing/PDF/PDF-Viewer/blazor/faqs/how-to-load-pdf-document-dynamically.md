@@ -78,4 +78,4 @@ N> You can refer to our [Blazor SfPdfViewer](https://www.syncfusion.com/pdf-view
 
 * [How to unload the PDF document from Viewer](./unload-the-pdf-document-from-viewer)
 
-* [How to show or hide the Component dynamically](../how-to/show-or-hide-sfpdfviewer-dynamically)
+* [How to show or hide the Component dynamically](../faqs/how-to-show-or-hide-sfpdfviewer-dynamically)
