@@ -22,6 +22,12 @@ Annotation events notify the application when annotations are added, selected, m
 |AnnotationResized|Triggers when an annotation is resized on a page in the PDF document.|
 |AnnotationSelected|Triggers when an annotation is selected on a page in the PDF document.|
 |AnnotationUnselected|Triggers when an annotation is unselected on a page in the PDF document.|
+|ExportFailed|Triggers when exporting annotations fails in the SfPdfViewer.|
+|ExportStarted|Triggers when exporting annotations starts in the SfPdfViewer.|
+|ExportSucceed|Triggers when exporting annotations succeeds in the SfPdfViewer.|
+|ImportFailed|Triggers when importing annotations fails in the PDF document.|
+|ImportStarted|Triggers when importing annotations starts in the PDF document.|
+|ImportSucceed|Triggers when importing annotations succeeds in the PDF document.|
 |MoveSignature|Triggers when a signature is moved on a page in the PDF document.|
 |OnAnnotationDoubleClick|Triggers when an annotation is double-clicked.|
 |RemoveSignature|Triggers when a signature is removed from a page in the PDF document.|
@@ -277,6 +283,174 @@ The following example illustrates how to handle the AnnotationUnselected event.
     public async Task AnnotationUnselected(AnnotationUnselectEventArgs args) 
     {
         Console.WriteLine($"UnSelected Annotation ID: {args.AnnotationId}");
+    }	 
+}
+
+```
+
+## ExportFailed Event
+
+The [ExportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ExportFailed) event triggers when an export annotations failed in the PDF Viewer.
+
+#### Event Arguments
+
+See [ExportFailureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportFailureEventArgs.html) for details such as ErrorDetails.
+
+The following example illustrates how to handle the ExportFailed event.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer 
+
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"> 
+    <PdfViewerEvents ExportFailed="@ExportFailed"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code{ 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
+    public async Task ExportFailed(ExportFailureEventArgs args) 
+    {
+        Console.WriteLine($"Error details: {args.ErrorDetails}");
+    }	 
+}
+
+```
+
+## ExportStarted Event
+
+The [ExportStarted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ExportStarted) event triggers  when an exported annotations started in the PDF Viewer.
+
+#### Event Arguments
+
+See [ExportStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportStartEventArgs.html) triggers when an exported annotations started in the PDF Viewer.
+
+The following example illustrates how to handle the ExportStarted event.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer 
+
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"> 
+    <PdfViewerEvents ExportStarted="@ExportStarted"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code{ 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
+    public async Task ExportStarted(ExportStartEventArgs args) 
+    {
+        Console.WriteLine("Export Action Started");
+    }	 
+}
+
+```
+
+## ExportSucceed Event
+
+The [ExportSucceed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ExportSucceed) event triggers when an export annotations succeed in the PDF Viewer.
+
+#### Event Arguments
+
+See [ExportSuccessEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportSuccessEventArgs.html) for details such as FileName.
+
+The following example illustrates how to handle the ExportSucceed event.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer 
+
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"> 
+    <PdfViewerEvents ExportSucceed="@ExportSucceed"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code{ 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
+    public async Task ExportSucceed(ExportSuccessEventArgs args) 
+    {
+        Console.WriteLine($"Exported File name : {args.FileName }");
+    }	 
+}
+
+```
+
+## ImportFailed Event
+
+The [ImportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportFailed) event triggers when an imports annotations failed in the PDF document.
+
+#### Event Arguments
+
+See [ImportFailureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportFailureEventArgs.html) for details such as ErrorDetails.
+
+The following example illustrates how to handle the ImportFailed event.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer 
+
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"> 
+    <PdfViewerEvents ImportFailed="@ImportFailed"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code{ 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
+    public async Task ImportFailed(ImportFailureEventArgs args) 
+    {
+        Console.WriteLine($"Error details: {args.ErrorDetails}");
+    }	 
+}
+
+```
+
+## ImportStarted Event
+
+The [ImportStarted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportStarted) event triggers when an imported annotations started in the PDF document.
+
+#### Event Arguments
+
+See [ImportStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportStartEventArgs.html) triggers when an imported annotations started in the PDF document.
+
+The following example illustrates how to handle the ImportStarted event.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer 
+
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"> 
+    <PdfViewerEvents ImportStarted="@ImportStarted"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code{ 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
+    public async Task ImportStarted(ImportStartEventArgs args) 
+    {
+        Console.WriteLine("Import Annotation Started");
+    }	 
+}
+
+```
+
+## ImportSucceed Event
+
+The [ImportSucceed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportSucceed) event triggers when an imports annotations succeed in the PDF document.
+
+#### Event Arguments
+
+See [ImportSuccessEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportSuccessEventArgs.html) triggers when an imports annotations succeed in the PDF document.
+
+The following example illustrates how to handle the ImportSucceed event.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer 
+
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"> 
+    <PdfViewerEvents ImportSucceed="@ImportSucceed"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code{ 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
+    public async Task ImportSucceed(ImportSuccessEventArgs args) 
+    {
+        Console.WriteLine("Annotation Imported Successfully");
     }	 
 }
 
