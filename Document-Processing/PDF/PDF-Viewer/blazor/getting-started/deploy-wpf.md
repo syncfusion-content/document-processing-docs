@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with SfPdfViewer in a WPF Blazor Hybrid App | Syncfusion
+title: Getting started with SfPdfViewer in a WPF App | Syncfusion
 description: Learn how to get started with the SfPdfViewer control in a WPF Blazor Hybrid App to view, comment on, and fill PDF forms.
 platform: document-processing
 control: SfPdfViewer
