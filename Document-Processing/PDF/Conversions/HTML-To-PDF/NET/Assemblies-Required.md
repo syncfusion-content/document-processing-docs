@@ -1,6 +1,6 @@
 ---
 title: Assemblies Required for HTML to PDF | Syncfusion
-description: This section explains the Syncfusion assemblies required for performing HTML to PDF conversion
+description: This section details the Syncfusion assemblies required to implement HTML-to-PDF conversion functionality using the .NET PDF library.
 platform: document-processing
 control: PDF
 documentation: UG
