@@ -74,6 +74,8 @@ public IActionResult ExportToPDF()
     PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
     MemoryStream stream = new MemoryStream();
     document.Save(stream);
+    //Close the document
+    document.Close(true); 
     //Download the PDF document in the browser
     return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
 }
@@ -155,6 +157,8 @@ public IActionResult ExportToPDF()
     PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
     MemoryStream stream = new MemoryStream();
     document.Save(stream);
+    //Close the document
+    document.Close(true); 
     //Download the PDF document in the browser
     return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
 }

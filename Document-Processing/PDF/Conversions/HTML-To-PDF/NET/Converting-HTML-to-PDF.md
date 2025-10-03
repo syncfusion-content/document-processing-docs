@@ -73,10 +73,9 @@ blinkConverterSettings.ViewPortSize = new Syncfusion.Drawing.Size(1280, 0);
 htmlConverter.ConverterSettings = blinkConverterSettings;
 //Convert URL to PDF document.
 PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
-//Create a filestream.
-FileStream fileStream = new FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
+
 //Save and close the PDF document.
-document.Save(fileStream);
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}

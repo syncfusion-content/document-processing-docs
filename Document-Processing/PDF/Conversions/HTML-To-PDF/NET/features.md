@@ -137,9 +137,8 @@ using Syncfusion.HtmlConverter;
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
 //Convert URL to Image
 Image image = htmlConverter.ConvertToImage("https://www.google.com");
-//Save and dispose the image file
-image[0].Save("Output.jpg");
-image[0].Dispose();
+//Save the image.
+File.WriteAllBytes(Path.GetFullPath(@"Output/Output.jpg"), image.ImageData);
 
 {% endhighlight %}
 
@@ -152,9 +151,8 @@ using Syncfusion.HtmlConverter;
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
 //Convert URL to Image
 Image[] image = htmlConverter.ConvertToImage("https://www.google.com");
-//Save and dispose the image file
-image[0].Save("Output.jpg");
-image[0].Dispose();
+//Save the image.
+File.WriteAllBytes(Path.GetFullPath(@"Output/Output.jpg"), image.ImageData);
 
 {% endhighlight %}
 
@@ -167,10 +165,8 @@ Imports Syncfusion.HtmlConverter
 Dim htmlConverter As HtmlToPdfConverter = New HtmlToPdfConverter()
 'Convert URL to Image
 Dim image As Image[] = htmlConverter.ConvertToImage("https://www.google.com")
-'Save and dispose the image file
-image[0].Save("Output.jpg")
-
-image[0].Dispose(True)
+'Save the image.
+File.WriteAllBytes(Path.GetFullPath(@"Output/Output.jpg"), image.ImageData)
 
 {% endhighlight %}
 
@@ -208,9 +204,8 @@ string baseUrl = @"C:/Temp/HTMLFiles/";
 
 //Convert HTML string to Image
 Image image = htmlConverter.ConvertToImage(htmlText, baseUrl);
-//Save and dispose the image file
-image[0].Save("Output.jpg");
-image[0].Dispose();
+//Save the image.
+File.WriteAllBytes(Path.GetFullPath(@"Output/Output.jpg"), image.ImageData);
 
 {% endhighlight %}
 
@@ -227,10 +222,9 @@ string htmlText = "<html><body><img src=\"syncfusion_logo.gif\" alt=\"Syncfusion
 string baseUrl = @"C:/Temp/HTMLFiles/";
 
 //Convert HTML string to Image
-Image[] image = htmlConverter.ConvertToImage(htmlText, baseUrl)
-//Save and dispose the image file
-image[0].Save("Output.jpg");
-image[0].Dispose();
+Image[] image = htmlConverter.ConvertToImage(htmlText, baseUrl);
+//Save the image.
+File.WriteAllBytes(Path.GetFullPath(@"Output/Output.jpg"), image.ImageData);
 
 {% endhighlight %}
 
@@ -248,9 +242,8 @@ Dim baseUrl As String = "C:/Temp/HTMLFiles/"
 
 'Convert HTML string to Image
 Dim image As Image[] = htmlConverter.Convert(htmlText, baseUrl)
-'Save and dispose the image file
-image[0].Save("Output.jpg")
-image[0].Dispose(True)
+'Save the image.
+File.WriteAllBytes(Path.GetFullPath(@"Output/Output.jpg"), image.ImageData)
 
 {% endhighlight %}
 
@@ -2452,7 +2445,7 @@ N>  EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTM
     ' Save the generated PDF document to a specified output file.
      document.Save("Output.pdf")
     ' Close the document.
-    document.Close()
+    document.Close(True)
 
 {% endhighlight %}
 
@@ -2646,9 +2639,8 @@ The Blink HTML converter support adding the image background from HTML to Image 
     htmlConverter.ConverterSettings = settings;
     //Convert HTML to Image.
     Image image = htmlConverter.ConvertToImage("Input.html");
-    //Save and dispose the image file
-    image[0].Save("Output.png");
-    image[0].Dispose();
+    //Save the image.
+    File.WriteAllBytes(Path.GetFullPath(@"Output/Output.jpg"), image.ImageData);
 
 {% endhighlight %}
 
@@ -2667,9 +2659,8 @@ The Blink HTML converter support adding the image background from HTML to Image 
     htmlConverter.ConverterSettings = settings
     ' Convert HTML to Image.
     Dim image As Image = htmlConverter.ConvertToImage("Input.html")
-    ' Save and dispose the image file
-    image[0].Save("Output.png")
-    image[0].Dispose()
+    ' Save the image.
+    File.WriteAllBytes(Path.GetFullPath(@"Output/Output.jpg"), image.ImageData)
 
 {% endhighlight %}
 
@@ -2702,9 +2693,8 @@ N> EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTML
     htmlConverter.ConverterSettings = blinkConverterSettings;
     // Convert the HTML file to an image
     Image image = htmlConverter.ConvertToImage(Path.GetFullPath("Input.html"));
-    //Save and dispose the image file
-    image[0].Save("Output.png");
-    image[0].Dispose();
+    //Save the image.
+    File.WriteAllBytes(Path.GetFullPath(@"Output/Output.jpg"), image.ImageData);
 
 {% endhighlight %}
 
@@ -2725,9 +2715,8 @@ N> EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTML
     htmlConverter.ConverterSettings = blinkConverterSettings
     ' Convert the HTML file to an image
     Dim image As Image = htmlConverter.ConvertToImage(Path.GetFullPath("Input.html"))
-    ' Save and dispose the image file
-    image[0].Save("Output.png")
-    image[0].Dispose()
+    ' Save the image
+    File.WriteAllBytes(Path.GetFullPath(@"Output/Output.jpg"), image.ImageData)
 
 {% endhighlight %}
 
