@@ -18,16 +18,55 @@ The SfPdfViewer includes a built-in, responsive primary toolbar that provides qu
 The primary toolbar includes the following options:
 
 * Open PDF File
-* Text search
-* Comments panel
-* Download
 * Undo and Redo
 * Annotation tools
 * Form designer tools
 * Redaction tools
-* Bookmark panel
+* Text search
 
-![Blazor PDF Viewer primary toolbar with customized items](../images/primary-toolbar-mobile-view.png)
+Reorder the [MobileToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_MobileToolbarItems) list to control the display order. The toolbar renders items in the order they appear in the collection.
+
+Use the following code snippet to add the redaction toolbar to the PDF Viewer.
+
+```cshtml
+
+@page "/";
+
+<SfPdfViewer2 @ref="SfPdfViewer2" Height="640px" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerToolbarSettings MobileToolbarItems="MobileToolbarItems"></PdfViewerToolbarSettings>
+</SfPdfViewer2>
+@code {
+    SfPdfViewer2? SfPdfViewer2;
+    bool redactionToolbar;
+    private string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+    public List<ToolbarItem>? ToolbarItems { get; set; }
+    public List<MobileToolbarItem>? MobileToolbarItems { get; set; }
+    protected override void OnInitialized()
+    {
+        MobileToolbarItems = new List<MobileToolbarItem>()
+        {
+            MobileToolbarItem.Open,
+            MobileToolbarItem.UndoRedo,
+            MobileToolbarItem.EditAnnotation,
+            MobileToolbarItem.Redaction,
+            MobileToolbarItem.FormDesigner,
+            MobileToolbarItem.Search
+        };
+    }
+}
+
+```
+
+![Blazor PDF Viewer primary toolbar in mobile view](../images/primary-toolbar-mobile-view.png)
+
+### More options menu
+
+Open the overflow (three-dots) menu to access additional actions such as:
+
+- Download: Download the currently opened PDF document.
+- Bookmark: View and navigate bookmarks within the document.
+
+![More options menu showing additional actions like download and bookmark](../images/moreOptions.png)
 
 ## Annotation toolbar in mobile mode
 
@@ -66,3 +105,59 @@ The redaction toolbar provides tools to mark and permanently remove sensitive co
 * Close
 
 ![Blazor PDF Viewer primary toolbar with customized items](../images/mobile-redaction-toolbar.png)
+
+## Enable desktop mode on mobile
+
+Enable the desktop toolbar on mobile devices with the [EnableDesktopMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDesktopMode) API. This replaces the mobile toolbar with the desktop layout and provides access to additional actions and controls.
+
+```cshtml
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+              Height="100%"
+              Width="100%" EnableDesktopMode="true">
+</SfPdfViewer2>
+```
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar)
+
+## Modern navigation panel in mobile view
+
+On mobile devices, the navigation toolbar collapses into a toggle menu to save space. Any custom items added appear at the beginning of this menu.
+
+![Modern navigation in mobile view](../images/ModernNavigation-mobile.png)
+
+Enable the modern navigation panel by setting [EnableNavigationPanel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigationPanel) to true.
+
+```cshtml
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+              Height="100%"
+              Width="100%" EnableNavigationPanel="true">
+</SfPdfViewer2>
+```
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar)
+
+## Enable scrolling in desktop mode with touch gestures
+
+For smooth scrolling of PDF documents on mobile while in desktop mode, disable text selection (set [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSelection) to false) to allow touch panning.
+
+```cshtml
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+              Height="100%"
+              Width="100%" EnableDesktopMode="true" EnableTextSelection="false">
+</SfPdfViewer2>
+```
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar)
+
+## Print option availability
+
+The Print option is not available in mobile mode by default. To use printing on mobile, enable the desktop toolbar with the [EnableDesktopMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDesktopMode) API. Availability and behavior may vary by mobile browser.
+
+## See also
+
+- [Annotations in mobile view](../annotation/annotations-in-mobile-view)
+- [Form designer in mobile view](../form-designer/form-designer-in-mobile-view)
