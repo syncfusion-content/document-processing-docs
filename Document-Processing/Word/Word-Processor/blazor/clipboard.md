@@ -9,7 +9,7 @@ documentation: ug
 
 # Clipboard in Blazor DocumentEditor Component
 
-[Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) provides built-in support for clipboard operations such as cut, copy, and paste. Clipboard operations can be performed using keyboard shortcuts, touch, and keyboard interactions. Also, the same functionalities can be invoked programmatically.
+[Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (Document Editor) provides built-in support for clipboard operations such as cut, copy, and paste. Clipboard operations can be performed using keyboard shortcuts, touch, and keyboard interactions. Also, the same functionalities can be invoked programmatically.
 
 There is a built-in clipboard (local clipboard) with this Word processor component, which allows the users to perform cut, copy, and paste faster. To use the system clipboard instead of the local clipboard, set the [`EnableLocalPaste`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_EnableLocalPaste) property to false.
 
