@@ -9,7 +9,7 @@ documentation: ug
 
 # Comments in Blazor DocumentEditor Component
 
-[`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) component allows you to add comments to documents. You can add, navigate and remove comments using code and from the UI.
+The [`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) (Document Editor) component allows you to add comments to documents. Comments can be added, navigated, and removed using code or through the UI.
 
 ## Add a new comment
 
