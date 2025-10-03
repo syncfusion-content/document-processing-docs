@@ -3,7 +3,7 @@ layout: post
 title: Download in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Download in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Download
+control: PDF Viewer
 publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##

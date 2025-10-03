@@ -15,18 +15,18 @@ The PDF Viewer features are segregated into individual feature-wise modules to e
 
 The available PdfViewer modules are:
 
-* **Toolbar**:- Built-in toolbar for better user interaction.
-* **Magnification**:- Perform zooming operation for better viewing experience.
-* **Navigation**:- Easy navigation across the PDF pages.
+* [**Toolbar**](./toolbar-customization.md):- Built-in toolbar for better user interaction.
+* [**Magnification**](./magnification.md):- Perform zooming operation for better viewing experience.
+* [**Navigation**](./interactive-pdf-navigation.md):- Easy navigation across the PDF pages.
 * **LinkAnnotation**:- Easy navigation within and outside of the PDF document.
 * **ThumbnailView**:- Easy navigation with in the PDF document.
 * **BookmarkView**:- Easy navigation based on the bookmark content of the PDF document.
 * **TextSelection**:- Select and copy text from a PDF file.
-* **TextSearch**:- Search a text easily across the PDF document.
-* **Print**:- Print the entire document or a specific page directly from the browser.
-* **Annotation**:- Annotations can be added or edited in the PDF document.
-* **FormFields**:- Preserve the form fields in the PDF document.
-* **FormDesigner**:- Form fields can be added or edited in the PDF document.
+* [**TextSearch**](./text-search.md):- Search a text easily across the PDF document.
+* [**Print**](./print.md):- Print the entire document or a specific page directly from the browser.
+* [**Annotation**](./annotations/text-markup-annotation.md):- Annotations can be added or edited in the PDF document.
+* [**FormFields**](./form-designer/create-programmatically.md):- Preserve the form fields in the PDF document.
+* [**FormDesigner**](./form-designer/create-programmatically.md):- Form fields can be added or edited in the PDF document.
 
 >In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a PDF Viewer instance.
 Refer to the following table.
