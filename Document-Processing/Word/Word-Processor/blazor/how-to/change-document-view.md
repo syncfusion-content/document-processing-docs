@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change Document View Type in Blazor DocumentEditor
+title: Change Document View Type in Blazor DocumentEditor | Syncfusion
 description: Learn how to change the document view between Print Layout (Pages) and Web Layout (Continuous) in the Syncfusion Blazor DocumentEditor component.
 platform: document-processing
 control: DocumentEditor
