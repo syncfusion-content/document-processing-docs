@@ -153,4 +153,4 @@ N> If any errors occur while using the Android Emulator, see [Troubleshooting An
 
 * [Supported features: desktop vs. mobile](./features#supported-features-desktop-vs-mobile)
 
-* [Render a PDF document from an embedded source in the .NET MAUI Android app](../how-to/deploy-maui-using-android-emulator)
+* [Render a PDF document from an embedded source in the .NET MAUI Android app](../faqs/how-to-deploy-maui-using-android-emulator)
