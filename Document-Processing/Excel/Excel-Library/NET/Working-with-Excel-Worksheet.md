@@ -35,12 +35,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CreateWorksheet.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/CreateWorksheet.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -95,8 +91,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	#region  Access
 	//Accessing via index
@@ -105,9 +100,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Accessing via sheet name
 	IWorksheet NamedSheet = workbook.Worksheets["Sample"];
 	#endregion
-
-	//Dispose streams
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -173,8 +165,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	#region Remove
 	//Removing the sheet
@@ -183,13 +174,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RemoveWorksheet.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/RemoveWorksheet.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -239,12 +225,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Set sheet name
   worksheet.Name = "Sample";
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-
-  //Dispose streams
-  stream.Dispose();
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -304,12 +286,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/HighlightSheetTab.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/HighlightSheetTab.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -395,12 +373,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   #region Save
   //Saving the workbook
-  FileStream outputStream = new FileStream(Path.GetFullPath("Output/ActivateWorksheet.xlsx"), FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+  workbook.SaveAs(Path.GetFullPath("Output/ActivateWorksheet.xlsx"));
   #endregion
-
-  //Dispose streams
-  outputStream.Dispose();
 }
 {% endhighlight %}
 
