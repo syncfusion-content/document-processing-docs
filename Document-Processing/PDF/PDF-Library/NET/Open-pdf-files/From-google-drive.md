@@ -5,7 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Open PDF file from Google Drive
+# Open PDF from Google Drive
 
 To Open a PDF file from Google Drive, you can follow the steps below
 
@@ -21,7 +21,6 @@ Step 3: Install the [Google.Apis.Drive.v3](https://www.nuget.org/packages/Google
 
 ![NuGet package installation](open-PDF-Images/Google.Apis.Drive.V3-nuget.png)
 
-
 Step 4: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
@@ -36,7 +35,6 @@ using Google.Apis.Util.Store;
 {% endhighlight %}
 
 {% endtabs %}
-
 
 Step 5: Add the below code example to open a PDF from google drive.
 

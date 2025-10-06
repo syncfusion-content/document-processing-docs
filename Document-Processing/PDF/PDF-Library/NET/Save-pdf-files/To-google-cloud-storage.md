@@ -5,7 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Save PDF file to Google Cloud storage
+# Save PDF to Google Cloud storage
 
 To save a PDF file to Google cloud storage, you can follow the steps below
 

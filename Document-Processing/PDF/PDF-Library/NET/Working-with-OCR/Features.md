@@ -17,6 +17,9 @@ To perform OCR for an entire PDF document using [PerformOCR](https://help.syncfu
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-for-the-entire-PDF-document/Perform-OCR-for-the-entire-PDF-document/Program.cs, 300" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -35,6 +38,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor.
 Using processor As OCRProcessor = New OCRProcessor()
@@ -65,6 +71,9 @@ To perform OCR on a particular region or several regions of a PDF page with the 
 {% tabs %} 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-on-particular-region-of-PDF-document/Perform-OCR-on-particular-region-of-PDF-document/Program.cs, 300" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -100,6 +109,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
@@ -150,6 +162,9 @@ The following code sample demonstrates the OCR processor with Tesseract version 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -172,6 +187,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor with tesseract binaries folder path. 
 Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries/3.05/")
@@ -208,6 +226,9 @@ The following code sample explains the OCR processor with Tesseract version 4.0 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -230,6 +251,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor with tesseract binaries folder path. 
 Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries/4.0/")
@@ -261,6 +285,9 @@ The below code example illustrates how to perform OCR on image file using [Perfo
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-on-image-file/Perform-OCR-on-image-file/Program.cs, 300" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -275,6 +302,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
@@ -297,6 +327,9 @@ You can get the OCRed Unicode text from an image file by using the ``UnicodeFont
 {% tabs %} 
 
 {% highlight c# tabtitle="ASP.NET Core" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -342,6 +375,9 @@ N> Memory optimization for performing OCR on large PDF documents is not supporte
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -360,6 +396,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
@@ -389,6 +428,9 @@ You can get the OCRed text from the rotated page of PDF document using the [Page
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -410,6 +452,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
@@ -446,6 +491,9 @@ For more details, refer to the following code sample.
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 // Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -468,6 +516,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 ' Initialize the OCR processor.
 Using processor As New OCRProcessor()
@@ -501,6 +552,9 @@ You can get the OCRed text and its bounds from a scanned PDF document by using t
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -531,6 +585,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
@@ -581,6 +638,9 @@ The following code sample demonstrates the OCR processor with native call suppor
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -602,6 +662,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
@@ -635,6 +698,9 @@ The following code sample demonstrates the OCR processor with native call suppor
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -658,6 +724,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor with tesseract binaries folder path. 
 Using processor As OCRProcessor = New OCRProcessor()
@@ -696,6 +765,9 @@ While performing OCR on an existing scanned PDF document, the OCR Processor will
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -716,6 +788,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
@@ -812,6 +887,9 @@ N> The page segmentation mode is supported only in the Tesseract version 4.0 and
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -835,6 +913,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
@@ -868,6 +949,9 @@ The [OCREngineMode](https://help.syncfusion.com/cr/document-processing/Syncfusio
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -891,6 +975,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
@@ -926,6 +1013,9 @@ The [WhiteList](https://help.syncfusion.com/cr/document-processing/Syncfusion.OC
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -951,6 +1041,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
@@ -984,6 +1077,9 @@ The [BlackList](https://help.syncfusion.com/cr/document-processing/Syncfusion.OC
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -1009,6 +1105,9 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
@@ -1048,6 +1147,9 @@ The following code sample illustrates how to OCR an image to a PDF document:
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/OCR_Image_to_PDF/OCR_Image_to_PDF/Program.cs, 300" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -1072,6 +1174,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
@@ -1108,6 +1213,9 @@ You can perform OCR on Images with Unicode characters. To preserve the Unicode c
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-an-image-and-convert-it-to-a-PDF-document/Perform-OCR-an-image-and-convert-it-to-a-PDF-document/Program.cs, 300" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -1126,12 +1234,6 @@ using (OCRProcessor processor = new OCRProcessor())
     //Close the document.
     document.Close(true);
 }
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-//By default unicode characters can be extracted from image file in .NET Framework applications like WF, WPF, ASP.NET and ASP.NET MVC.
 
 {% endhighlight %}
 
@@ -1170,6 +1272,9 @@ Refer to the following code sample to set the performance of the OCR.
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor
 OCRProcessor processor = new OCRProcessor();
 
@@ -1179,6 +1284,9 @@ processor.Settings.Performance = Performance.Fast;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor
 Dim processor As New OCRProcessor()
@@ -1200,6 +1308,9 @@ N> You can get the TesseractBinaries or TessData files from the NuGet package ru
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor by providing the path of the tesseract binaries (SyncfusionTesseract.dll and liblept168.dll)
 using (OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\"))
 {
@@ -1219,6 +1330,9 @@ using (OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\"))
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor 
 Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries\")
@@ -1248,6 +1362,9 @@ To get the Image rotation angle, you can rotate the image with 4 angles (0,90,18
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Get-image-rotation-angle-from-OCR/Get-image-rotation-angle-from-OCR/Program.cs, 300" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.@
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -1274,10 +1391,12 @@ using (OCRProcessor processor = new OCRProcessor())
     document.Save("Output.pdf);
 }
 
-
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor
 Using processor As OCRProcessor = New OCRProcessor()
@@ -1318,53 +1437,57 @@ We have support to improve the image quality while performing OCR for an image o
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-ImageEnhancement/OCR_ImageEnhancement/Program.cs, 300" %}
 
-    //Initialize the OCR processor. 
-    using (OCRProcessor processor = new OCRProcessor()) 
-    { 
-        //Load an existing PDF document. 
-        PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf"); 
-        //Set the OCR language. 
-        processor.Settings.Language = Languages.English; 
-        processor.ImageProcessor = new ImageProcessor(); 
-        //Perform OCR with input document. 
-        string text = processor.PerformOCR(lDoc); 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
 
-        //Save the document. 
-        lDoc.Save("Output.pdf"); 
-        //Close the document. 
-        lDoc.Close(true); 
-    } 
+//Initialize the OCR processor. 
+using (OCRProcessor processor = new OCRProcessor()) 
+{ 
+    //Load an existing PDF document. 
+    PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf"); 
+    //Set the OCR language. 
+    processor.Settings.Language = Languages.English; 
+    processor.ImageProcessor = new ImageProcessor(); 
+    //Perform OCR with input document. 
+    string text = processor.PerformOCR(lDoc); 
+
+    //Save the document. 
+    lDoc.Save("Output.pdf"); 
+    //Close the document. 
+    lDoc.Close(true); 
+} 
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-    ' Initialize the OCR processor.
-    Using processor As New OCRProcessor()
-        ' Load an existing PDF document.
-        Dim lDoc As New PdfLoadedDocument("Input.pdf")
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
+' Initialize the OCR processor.
+Using processor As New OCRProcessor()
+    ' Load an existing PDF document.
+    Dim lDoc As New PdfLoadedDocument("Input.pdf")
         
-        ' Set the OCR language.
-        processor.Settings.Language = Languages.English
-        processor.ImageProcessor = New ImageProcessor()
+    ' Set the OCR language.
+    processor.Settings.Language = Languages.English
+    processor.ImageProcessor = New ImageProcessor()
         
-        ' Perform OCR with input document.
-        Dim text As String = processor.PerformOCR(lDoc)
+    ' Perform OCR with input document.
+    Dim text As String = processor.PerformOCR(lDoc)
         
-        ' Save the document into stream.
-        lDoc.Save("Output.pdf")
+    ' Save the document into stream.
+    lDoc.Save("Output.pdf")
         
-        ' Close the document.
-        lDoc.Close(True)
-    End Using
+    ' Close the document.
+    lDoc.Close(True)
+End Using
 
 {% endhighlight %}
 
 {% endtabs %}  
-
-
 
 N> Note: In this sample, we are using the SixLabors.ImageSharp library to improve the image quality. You can any image processing library as per your requirement.
 
@@ -1390,7 +1513,10 @@ Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with m
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/OCR-with-multiple-langauages/OCR%20with%20multiple%20languages/Program.cs, 300" %}
+
+    using Syncfusion.OCRProcessor;
+    using Syncfusion.Pdf.Parsing;
 
     // Initialize the OCR processor within a using block to ensure resources are properly disposed
     using (OCRProcessor ocrProcessor = new OCRProcessor())
@@ -1425,43 +1551,10 @@ Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with m
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-    // Initialize the OCR processor within a using block to ensure resources are properly disposed
-    using (OCRProcessor ocrProcessor = new OCRProcessor())
-    {
-        // Set the Unicode font for the OCR processor using a TrueType font file
-        ocrProcessor.UnicodeFont = new Syncfusion.Pdf.Graphics.PdfTrueTypeFont(
-            new FileStream("arialuni.ttf", FileMode.Open), // Path to the TrueType font file
-            12 // Font size
-        );
-
-        // Load the PDF document from the file stream
-        PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-
-        // Configure OCR settings
-        OCRSettings ocrSettings = new OCRSettings();
-
-        // Specify the languages to be used for OCR
-        ocrSettings.Language = "eng+deu+ara+ell+fra"; // English, German, Arabic, Greek, French
-
-        // Apply the OCR settings to the OCR processor
-        ocrProcessor.Settings = ocrSettings;
-
-        // Perform OCR on the loaded PDF document, providing the path to the tessdata directory
-        ocrProcessor.PerformOCR(loadedDocument, "tessdata");
-
-        // Save the OCR-processed document to the file save
-        loadedDocument.Save("OCR_Output.pdf");
-
-        // Close the loaded document and commit changes
-        loadedDocument.Close(true);
-        
-    }
-
-{% endhighlight %}
-
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    Imports Syncfusion.OCRProcessor
+    Imports Syncfusion.Pdf.Parsing
 
     ' Initialize the OCR processor within a Using block to ensure resources are properly disposed
     Using ocrProcessor As New OCRProcessor()
@@ -1508,7 +1601,10 @@ Line breaks can be added to OCRed text using the [OCRLayoutResult](https://help.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Adding-Line-Breaks-Using-OCR/.NET/Adding-Line-Breaks-Using-OCR/Program.cs, 300" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
 
 // Initialize the OCR processor
 using (OCRProcessor processor = new OCRProcessor())
@@ -1530,38 +1626,6 @@ using (OCRProcessor processor = new OCRProcessor())
 
     // Save the PDF document to the file stream
     pdfLoadedDocument.Save("Output.pdf");
-    // Close the PDF document
-    pdfLoadedDocument.Close(true);
-
-    // Write the extracted OCR text to an output text file
-    File.WriteAllText("Output.txt", ocrText);
-}
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-// Initialize the OCR processor
-using (OCRProcessor processor = new OCRProcessor())
-{
-    // Load the PDF document from the file stream
-    PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
-
-    // Set OCR language to English
-    processor.Settings.Language = Languages.English;
-
-    // Set the page segmentation mode to process sparse text with orientation and script detection
-    processor.Settings.PageSegment = PageSegMode.SparseTextOsd;
-
-    // Perform OCR on the loaded PDF document to extract text
-    processor.PerformOCR(pdfLoadedDocument, processor.TessDataPath, out OCRLayoutResult layoutResult);
-
-    // Extract the OCRed text from the first page and join lines with newline characters
-    string ocrText = string.Join("\n", layoutResult.Pages[0].Lines.Select(line => line.Text));
-
-    // Save the PDF document to the file stream
-    pdfLoadedDocument.Save("Output.pdf");
-
     // Close the PDF document
     pdfLoadedDocument.Close(true);
 
@@ -1572,6 +1636,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 ' Initialize the OCR processor
 Using processor As New OCRProcessor()
@@ -1605,4 +1672,4 @@ End Using
 
 {% endtabs %}
 
-You can downloaded a complete working sample from GitHub.
+You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Adding-Line-Breaks-Using-OCR/.NET).

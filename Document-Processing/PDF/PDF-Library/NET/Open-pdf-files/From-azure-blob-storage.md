@@ -5,7 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Open PDF file from Azure Blob storage
+# Open PDF from Azure Blob storage
 
 To load a PDF file from Azure blob storage, you can follow the steps below
 

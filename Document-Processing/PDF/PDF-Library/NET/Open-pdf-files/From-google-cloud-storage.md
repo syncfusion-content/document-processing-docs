@@ -5,7 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Open PDF file from Google Cloud storage
+# Open PDF from Google Cloud storage
 
 To Open a PDF file from Google cloud storage, you can follow the steps below
 

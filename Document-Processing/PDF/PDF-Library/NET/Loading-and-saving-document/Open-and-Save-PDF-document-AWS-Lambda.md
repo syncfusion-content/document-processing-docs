@@ -9,7 +9,7 @@ keywords: aws lambda save pdf, aws load pdf, c# save pdf, c# load pdf
 
 # Open and save PDF document in AWS Lambda
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, **open and save PDF document in AWS Lambda**. 
+The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, **open and save PDF document in AWS Lambda**. 
 
 ## Steps to open and save PDF document in AWS Lambda
 

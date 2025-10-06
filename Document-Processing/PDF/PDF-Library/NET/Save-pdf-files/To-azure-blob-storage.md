@@ -5,10 +5,9 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Save PDF file to Azure Blob storage
+# Save PDF to Azure Blob storage
 
 To save a PDF file to Azure blob storage, you can follow the steps below
-
 
 Step 1: Create a simple console application
 

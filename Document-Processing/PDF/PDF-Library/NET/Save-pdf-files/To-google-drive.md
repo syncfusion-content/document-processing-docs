@@ -5,7 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Save PDF file to Google Drive
+# Save PDF to Google Drive
 
 To save a PDF file to Google Drive, you can follow the steps below
 
@@ -21,7 +21,6 @@ Step 3: Install the [Syncfusion.Pdf.Net.Core ](https://www.nuget.org/packages/Sy
 ![NuGet package installation](Save-PDF-Images/Syncfusion.Pdf.Net.Core-nuget.png)
 <br><br>
 ![NuGet package installation](Save-PDF-Images/Google.Apis.Drive.V3-nuget.png)
-
 
 Step 4: Include the following namespaces in the Program.cs file.
 
