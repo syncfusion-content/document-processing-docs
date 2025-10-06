@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Primary Toolbar Customization in ##Platform_Name## PDF Viewer Component | Syncfusion
-description: Learn here all about primary toolbar customization in Syncfusion ##Platform_Name## PDF Viewer component of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
+title: Primary Toolbar Customization in Typescript PDF Viewer Component | Syncfusion
+description: Learn here all about primary toolbar customization in Syncfusion Typescript PDF Viewer component of Syncfusion Essential JS 2 and more.
+platform: document-processing
 control: Primary Toolbar Customization
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

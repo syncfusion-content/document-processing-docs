@@ -19,9 +19,9 @@ The available PdfViewer modules are:
 * [**Magnification**](./magnification.md):- Perform zooming operation for better viewing experience.
 * [**Navigation**](./interactive-pdf-navigation.md):- Easy navigation across the PDF pages.
 * **LinkAnnotation**:- Easy navigation within and outside of the PDF document.
-* **ThumbnailView**:- Easy navigation with in the PDF document.
-* **BookmarkView**:- Easy navigation based on the bookmark content of the PDF document.
-* **TextSelection**:- Select and copy text from a PDF file.
+* [**ThumbnailView**](.\how-to\open-thumbnail.md):- Easy navigation with in the PDF document.
+* **BookmarkView**(.\how-to\open-bookmark-ts.md):- Easy navigation based on the bookmark content of the PDF document.
+* [**TextSelection**](.\how-to\enable-text-selection-ts.md):- Select and copy text from a PDF file.
 * [**TextSearch**](./text-search.md):- Search a text easily across the PDF document.
 * [**Print**](./print.md):- Print the entire document or a specific page directly from the browser.
 * [**Annotation**](./annotations/text-markup-annotation.md):- Annotations can be added or edited in the PDF document.
