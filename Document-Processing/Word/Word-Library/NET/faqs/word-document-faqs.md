@@ -567,6 +567,10 @@ Syncfusion DocIO processes Word documents by loading them into a memory stream a
  
 When performing operations like editing or cloning, DocIO traverses this structure and carefully handles each element to preserve the document's formatting, styles, and structure. For large or complex documents with many nested elements, it may take some time.
 
+## Why does the document editor sometimes throw a script error when switching between different documents?
+
+This error occurs when the previous editor instance is not properly destroyed before initializing a new one. It can result in residual event listeners and internal state conflicts. To resolve this, ensure that the existing editor instance is explicitly destroyed before creating a new one.
+
 ## Method `GetFontExactHeight` does not have an implementation error occurs at runtime. What is the cause and how to resolve it?
 
 This error occurs due to a version mismatch between dependent libraries. The method may be unavailable or incompatible when different versions of related libraries are used in the same project. Ensure all related libraries used in the project are of the same version to maintain compatibility and prevent runtime errors.
