@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Smart PDF Viewer in a WinForms App | Syncfusion
+title: Use Smart PDF Viewer in a WinForms App | Syncfusion
 description: Learn how to get started with the Smart PDF Viewer control in a WinForms Blazor Hybrid App to view, comment on, and fill PDF forms.
 platform: document-processing
 control: SfSmartPdfViewer
