@@ -2,7 +2,7 @@
 title: Annotations Events in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Annotations Events in Syncfusion Typescript Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: PDF Viewer 
+control: PDF Viewer
 documentation: ug
 publishingplatform: Typescript
 domainurl: ##DomainURL##
@@ -12,26 +12,26 @@ domainurl: ##DomainURL##
 
 The PDF Viewer component triggers various events based on user interactions and changes in the component's state. These events can be used to perform actions when a specific event occurs. This section describes the events available in the PDF Viewer component.
 
-| Event                          | Description                                                                        |
-| ------------------------------ | ---------------------------------------------------------------------------------- |
-| `annotationAdd`                | Triggers when an annotation is added to a page in the PDF document.                |
-| `annotationDoubleClick`        | Triggers when an annotation is double-clicked.                                     |
-| `annotationMouseLeave`         | Triggers when the mouse pointer moves away from an annotation object.              |
-| `annotationMouseover`          | Triggers when the mouse pointer moves over an annotation object.                   |
-| `annotationMove`               | Triggers when an annotation is moved on a page in the PDF document.                |
-| `annotationMoving`             | Triggers while an annotation is being moved.                                       |
-| `annotationPropertiesChange`   | Triggers when the properties of an annotation are modified on a PDF page.          |
-| `annotationRemove`             | Triggers when an annotation is removed from a page in the PDF document.            |
-| `annotationResize`             | Triggers when an annotation is resized on a page in the PDF document.              |
-| `annotationSelect`             | Triggers when an annotation is selected on a page in the PDF document.             |
-| `annotationUnSelect`           | Triggers when an annotation is unselected on a page in the PDF document.           |
-| `beforeAddFreeText`            | Triggers before adding a text in the freeText annotation.                          |
-| `addSignature`                 | Triggers when a signature is added to a page in the PDF document.                  |
-| `removeSignature`              | Triggers when a signature is removed from a page in the PDF document.              |
-| `resizeSignature`              | Triggers when a signature is resized on a page in the PDF document.                |
-| `signaturePropertiesChange`    | Triggers when the properties of a signature are changed on a page in the PDF document. |
-| `signatureSelect`              | Triggers when a signature is selected on a page in the PDF document.               |
-| `signatureUnselect`            | Triggers when a signature is unselected on a page in the PDF document.             |
+| Event                                                              | Description                                                                        |
+| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| [`annotationAdd`](#annotationadd)                                  | Triggers when an annotation is added to a page in the PDF document.                |
+| [`annotationDoubleClick`](#annotationdoubleclick)                  | Triggers when an annotation is double-clicked.                                     |
+| [`annotationMouseLeave`](#annotationmouseleave)                    | Triggers when the mouse pointer moves away from an annotation object.              |
+| [`annotationMouseover`](#annotationmouseover)                      | Triggers when the mouse pointer moves over an annotation object.                   |
+| [`annotationMove`](#annotationmove)                                | Triggers when an annotation is moved on a page in the PDF document.                |
+| [`annotationMoving`](#annotationmoving)                            | Triggers while an annotation is being moved.                                       |
+| [`annotationPropertiesChange`](#annotationpropertieschange)        | Triggers when the properties of an annotation are modified on a PDF page.          |
+| [`annotationRemove`](#annotationremove)                            | Triggers when an annotation is removed from a page in the PDF document.            |
+| [`annotationResize`](#annotationresize)                            | Triggers when an annotation is resized on a page in the PDF document.              |
+| [`annotationSelect`](#annotationselect)                            | Triggers when an annotation is selected on a page in the PDF document.             |
+| [`annotationUnSelect`](#annotationunselect)                        | Triggers when an annotation is unselected on a page in the PDF document.           |
+| [`beforeAddFreeText`](#beforeaddfreetext)                          | Triggers before adding a text in the freeText annotation.                          |
+| [`addSignature`](#addsignature)                                    | Triggers when a signature is added to a page in the PDF document.                  |
+| [`removeSignature`](#removesignature)                              | Triggers when a signature is removed from a page in the PDF document.              |
+| [`resizeSignature`](#resizesignature)                              | Triggers when a signature is resized on a page in the PDF document.                |
+| [`signaturePropertiesChange`](#signaturepropertieschange)          | Triggers when the properties of a signature are changed on a page in the PDF document. |
+| [`signatureSelect`](#signatureselect)                              | Triggers when a signature is selected on a page in the PDF document.               |
+| [`signatureUnselect`](#signatureunselect)                          | Triggers when a signature is unselected on a page in the PDF document.             |
 
 
 ### annotationAdd
@@ -55,17 +55,17 @@ The following example illustrates how to handle the `annotationAdd` event.
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -73,7 +73,7 @@ The following example illustrates how to handle the `annotationAdd` event.
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -118,17 +118,17 @@ The following example illustrates how to handle the `annotationDoubleClick` even
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -136,7 +136,7 @@ The following example illustrates how to handle the `annotationDoubleClick` even
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -179,17 +179,17 @@ The following example illustrates how to handle the `annotationMouseLeave` event
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -197,7 +197,7 @@ The following example illustrates how to handle the `annotationMouseLeave` event
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -213,7 +213,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     annotationMouseLeave: function (args: any) {
-        console.log('Annotation mouse leave event is triggered for annotation with ID: ' + args.annotationId);
+        console.log('Annotation mouse leave event is triggered for annotation with ID: ' + args.pageIndex);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -240,17 +240,17 @@ The following example illustrates how to handle the `annotationMouseover` event.
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -258,7 +258,7 @@ The following example illustrates how to handle the `annotationMouseover` event.
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -301,17 +301,17 @@ The following example illustrates how to handle the `annotationMove` event.
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -319,7 +319,7 @@ The following example illustrates how to handle the `annotationMove` event.
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -335,7 +335,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     annotationMove: function (args: any) {
-        console.log('Annotation moved. ID: ' + args.annotationId + ' on page ' + args.pageNumber);
+        console.log('Annotation moved. ID: ' + args.annotationId + ' on page ' + args.pageIndex);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -362,17 +362,17 @@ The following example illustrates how to handle the `annotationMoving` event.
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -380,7 +380,7 @@ The following example illustrates how to handle the `annotationMoving` event.
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -396,7 +396,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     annotationMoving: function (args: any) {
-        console.log('Annotation is being moved. Current Action: ' + args.currentAction);
+        console.log('Annotation is being moved. Current Action: ' + args.currentPosition);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -423,17 +423,17 @@ The following example illustrates how to handle the `annotationPropertiesChange`
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -441,7 +441,7 @@ The following example illustrates how to handle the `annotationPropertiesChange`
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -458,7 +458,7 @@ let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     annotationPropertiesChange: function (args: any) {
         console.log('Annotation properties changed for ID: ' + args.annotationId);
-        console.log('Action: ' + args.action);
+        console.log('isThicknessChanged: ' + args.isThicknessChanged);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -485,17 +485,17 @@ The following example illustrates how to handle the `annotationRemove` event.
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -503,7 +503,7 @@ The following example illustrates how to handle the `annotationRemove` event.
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -546,17 +546,17 @@ The following example illustrates how to handle the `annotationResize` event.
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -564,7 +564,7 @@ The following example illustrates how to handle the `annotationResize` event.
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -607,17 +607,17 @@ The following example illustrates how to handle the `annotationSelect` event.
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -625,7 +625,7 @@ The following example illustrates how to handle the `annotationSelect` event.
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -668,17 +668,17 @@ The following example illustrates how to handle the `annotationUnselect` event.
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -686,7 +686,7 @@ The following example illustrates how to handle the `annotationUnselect` event.
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -729,17 +729,17 @@ The following example illustrates how to handle the `beforeAddFreeText` event.
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -747,7 +747,7 @@ The following example illustrates how to handle the `beforeAddFreeText` event.
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -763,7 +763,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     beforeAddFreeText: function (args: any) {
-        console.log('Before adding free text on page: ' + args.pageNumber);
+        console.log('Before adding free text on page: ' + args.pageIndex);
         // Set args.cancel to true to prevent adding the free text annotation
         // args.cancel = true;
     }
@@ -794,17 +794,17 @@ The following example illustrates how to handle the `addSignature` event.
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -812,7 +812,7 @@ The following example illustrates how to handle the `addSignature` event.
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -828,7 +828,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     addSignature: function (args: any) {
-        console.log('Signature added to page: ' + args.pageNumber);
+        console.log('Signature added to page: ' + args.pageIndex);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -855,17 +855,17 @@ The following example illustrates how to handle the `removeSignature` event.
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -873,7 +873,7 @@ The following example illustrates how to handle the `removeSignature` event.
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -889,7 +889,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     removeSignature: function (args: any) {
-        console.log('Signature removed from page: ' + args.pageNumber);
+        console.log('Signature removed from page: ' + args.pageIndex);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -916,17 +916,17 @@ The following example illustrates how to handle the `resizeSignature` event.
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -934,7 +934,7 @@ The following example illustrates how to handle the `resizeSignature` event.
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -950,7 +950,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     resizeSignature: function (args: any) {
-        console.log('Signature resized on page ' + args.pageNumber);
+        console.log('Signature resized on page ' + args.pageIndex);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -977,17 +977,17 @@ The following example illustrates how to handle the `signaturePropertiesChange` 
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -995,7 +995,7 @@ The following example illustrates how to handle the `signaturePropertiesChange` 
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -1011,7 +1011,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     signaturePropertiesChange: function (args: any) {
-        console.log('Signature properties changed on page ' + args.pageNumber);
+        console.log('Signature properties changed on page ' + args.pageIndex);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -1038,17 +1038,17 @@ The following example illustrates how to handle the `signatureSelect` event.
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -1056,7 +1056,7 @@ The following example illustrates how to handle the `signatureSelect` event.
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -1072,7 +1072,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     signatureSelect: function (args: any) {
-        console.log('Signature selected on page ' + args.pageNumber);
+        console.log('Signature selected on page ' + args.pageIndex);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -1099,17 +1099,17 @@ The following example illustrates how to handle the `signatureUnselect` event.
     <meta name="description" content="Typescript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-base/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-buttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-popups/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-navigations/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-dropdowns/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-inputs/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.17/ej2-notifications/styles/material.css" rel="stylesheet" />
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
@@ -1117,7 +1117,7 @@ The following example illustrates how to handle the `signatureUnselect` event.
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>        
+        <div id='PdfViewer' style="height:500px;width:100%;"></div>
     </div>
 </body>
 </html>
@@ -1133,7 +1133,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     signatureUnselect: function (args: any) {
-        console.log('Signature unselected on page ' + args.pageNumber);
+        console.log('Signature unselected on page ' + args.pageIndex);
     }
 });
 viewer.appendTo('#pdfViewer');
