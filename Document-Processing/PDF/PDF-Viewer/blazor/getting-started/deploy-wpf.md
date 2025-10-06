@@ -181,7 +181,8 @@ Create a Razor component (for example, Main.razor) in the project and add the Sy
 {% tabs %}
 {% highlight razor %}
 
-@page "/"
+@using Syncfusion.Blazor.SfPdfViewer;
+
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%">
