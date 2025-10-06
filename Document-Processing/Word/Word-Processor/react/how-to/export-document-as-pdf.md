@@ -14,9 +14,12 @@ In this article, we are going to see how to export the document as Pdf format. Y
 
 ## Export the document as pdf in client-side
 
-Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as pdf using [`exportAsImage`](https://ej2.syncfusion.com/react/documentation/api/document-editor#exportasimage) API. Here, all pages will be converted to image and inserted as pdf pages(works like print as PDF). There is one limitation we can’t search the text because we are exporting the pdf as image.
+Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as pdf using [`exportAsImage`](https://ej2.syncfusion.com/react/documentation/api/document-editor#exportasimage) API. Here, all pages will be converted to image and inserted as pdf pages(works like print as PDF).
 
->Note: You can install the pdf export packages from this [`link`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export).
+>Note:
+* The Document Editor exports PDF by converting pages into images on the client-side, which may result in a larger file size for the exported PDF.
+* Text search is not supported in the exported PDF, as the content is stored as images.
+* You can install the pdf export packages from this [`link`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export).
 
 The following example code illustrates how to export the document as pdf in client-side.
 
