@@ -7,7 +7,7 @@ control: SfSmartPdfViewer
 documentation: ug
 ---
 
-# View PDF files using the Smart PDF Viewer in a WPF Blazor Hybrid App
+# Using Smart PDF Viewer Component in the WPF app 
 
 This article explains how to add the Syncfusion&reg; Blazor Smart PDF Viewer component to a WPF Blazor Hybrid App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop application (WPF) that hosts Blazor UI inside a BlazorWebView control.
 
