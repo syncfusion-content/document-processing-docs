@@ -1,4 +1,4 @@
-@Html.EJS().DocumentEditor("container").IsReadOnly(false).EnableEditor(true).EnableSelection(true).EnableSpellChecker(true).Render()
+@Html.EJS().DocumentEditor("container").IsReadOnly(false).EnableEditor(true).EnableSelection(true).EnableSpellCheck(true).Render()
 
 <script>
     var documenteditor;
