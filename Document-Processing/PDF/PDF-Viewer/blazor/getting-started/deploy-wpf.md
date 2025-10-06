@@ -46,7 +46,7 @@ Create a WPF desktop project (not a WPF Blazor HybridApp) using the .NET CLI in 
 {% tabs %}
 {% highlight c# tabtitle="WPF Blazor HybridApp" %}
 
-dotnet new wpf -n WpfBlazorHybridApp
+dotnet new wpf -n WPFBlazorHybridApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -126,7 +126,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Extensions.DependencyInjection;
 using Syncfusion.Blazor;
-namespace BlazorWPF
+namespace WPFBlazorHybridApp;
 {
     public partial class MainWindow : Window
     {
@@ -171,7 +171,6 @@ namespace BlazorWPF
 </body>
 </html>
 
-
 ```
 
 ## Adding Blazor PDF Viewer component
@@ -200,13 +199,13 @@ N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 * Embed the BlazorWebView control, set HostPage to wwwroot/index.html, and map a RootComponent that matches the Razor component type and the selector in index.html (#app).
 
 ```xaml
-<Window x:Class="BlazorWPF.MainWindow"
+<Window x:Class="WPFBlazorHybridApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:blazor="clr-namespace:Microsoft.AspNetCore.Components.WebView.Wpf;assembly=Microsoft.AspNetCore.Components.WebView.Wpf"
-        xmlns:local="clr-namespace:BlazorWPF"
+        xmlns:local="clr-namespace:WPFBlazorHybridApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -227,7 +226,7 @@ Run the WPF application. The Syncfusion&reg; Blazor PDF Viewer renders inside th
 
 ![WPF Blazor HybridApp SfPdfViewer rendering in browser](../images/blazor-hybrid-wpf-sfpdfviewer.png)
 
->[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/WPF).
+>[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/DeployWPF).
 
 ## See also
 
