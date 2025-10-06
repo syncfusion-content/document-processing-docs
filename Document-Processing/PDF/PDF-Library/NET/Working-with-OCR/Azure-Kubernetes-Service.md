@@ -93,10 +93,9 @@ public ActionResult PerformOCR()
         lDoc.Close();
         //Set the position as '0'
         stream.Position = 0;
-        //Download the PDF document in the browser
-        FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-        fileStreamResult.FileDownloadName = "Sample.pdf";
-        return fileStreamResult;
+
+        // Return file result
+        return File(stream.ToArray(), "application/pdf", "Sample.pdf");
     }
 }
 

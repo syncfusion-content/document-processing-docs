@@ -208,7 +208,7 @@ Step 8: Add the following JavaScript function in the `_Host.cshtml` available un
 
 Step 9: Build the project.
 
-Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+To build the project, go to the `Build` menu and select `Build Solution`, or simply press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
 
 Step 10: Run the project.
 

@@ -52,8 +52,8 @@ document.Close(true);
 
 Step 6: Build the project.
 
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+To build the project, go to the `Build` menu and select `Build Solution`, or simply press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
 
 Step 7: Run the project.
 
-Click the Start button (green arrow) or press F5 to run the app.
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
