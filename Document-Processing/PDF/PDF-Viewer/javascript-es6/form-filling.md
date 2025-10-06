@@ -4,7 +4,7 @@ title: Form filling in Typescript PDF Viewer control | Syncfusion
 description:  Learn how to view, fill, export, and import PDF form fields with Typescript PDF Viewer control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: typescript
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 The PDF Viewer component displays existing form fields in a PDF document and enables filling and downloading filled data.
 
-The form fields displayed in the SfPdfViewer are:
+The form fields displayed in the Pdf Viewer are:
 
 * Textbox
 * Password
