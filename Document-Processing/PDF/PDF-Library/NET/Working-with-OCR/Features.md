@@ -21,18 +21,13 @@ To perform OCR for an entire PDF document using [PerformOCR](https://help.syncfu
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -44,17 +39,13 @@ using (OCRProcessor processor = new OCRProcessor())
 'Initialize the OCR processor.
 Using processor As OCRProcessor = New OCRProcessor()
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Perform OCR with input document and tessdata (Language packs). 
     processor.PerformOCR(document)
-    'Create file stream.
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    'Save the PDF document.
+    document.Save("Output.pdf)
     'Close the document
     document.Close(True)
 End Using
@@ -79,8 +70,7 @@ To perform OCR on a particular region or several regions of a PDF page with the 
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
     //Set OCR language.
     processor.Settings.Language = Languages.English;
@@ -101,12 +91,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
@@ -118,8 +104,8 @@ using (OCRProcessor processor = new OCRProcessor())
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
 
     'Set OCR language. 
     processor.Settings.Language = Languages.English
@@ -140,11 +126,8 @@ Using processor As OCRProcessor = New OCRProcessor()
     'Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document)
 
-    'Create file stream.
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    'Save the PDF document.
+    document.Save("Output.pdf)
     'Close the document. 
     document.Close(True)
 End Using
@@ -171,8 +154,7 @@ The following code sample demonstrates the OCR processor with Tesseract version 
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
     //Set OCR language.
     processor.Settings.Language = Languages.English;
@@ -181,12 +163,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -198,8 +176,7 @@ using (OCRProcessor processor = new OCRProcessor())
 'Initialize the OCR processor with tesseract binaries folder path. 
 Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries/3.05/")
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
 
     'Set OCR language. 
     processor.Settings.Language = Languages.English
@@ -208,11 +185,9 @@ Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries/3.05/")
     'Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document)
 
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -237,8 +212,7 @@ The following code sample explains the OCR processor with Tesseract version 4.0 
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
     //Set OCR language.
     processor.Settings.Language = Languages.English;
@@ -247,12 +221,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -264,8 +234,7 @@ using (OCRProcessor processor = new OCRProcessor())
 'Initialize the OCR processor with tesseract binaries folder path. 
 Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries/4.0/")
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
 
     'Set OCR language. 
     processor.Settings.Language = Languages.English
@@ -273,12 +242,9 @@ Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries/4.0/")
     processor.Settings.TesseractVersion = TesseractVersion.Version4_0
     'Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document)
-
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -380,19 +346,14 @@ N> Memory optimization for performing OCR on large PDF documents is not supporte
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Perform OCR with input document, tessdata (Language packs) and enable isMemoryOptimized property.
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -404,19 +365,14 @@ using (OCRProcessor processor = new OCRProcessor())
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Perform OCR with input document, tessdata (Language packs) and enable isMemoryOptimized property. 
     processor.PerformOCR(document)
 
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
-
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document.  
     document.Close(True)
 End Using
@@ -437,8 +393,7 @@ You can get the OCRed text from the rotated page of PDF document using the [Page
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Set OCR page auto detection rotation.
@@ -446,12 +401,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -464,8 +415,7 @@ using (OCRProcessor processor = new OCRProcessor())
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Set OCR page auto detection rotation. 
@@ -473,11 +423,8 @@ Using processor As OCRProcessor = New OCRProcessor()
     'Perform OCR with input document and tessdata (Language packs). 
     processor.PerformOCR(document)
 
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream. 
-        document.Save(outputFileStream)
-    End Using
+    'Save the PDF document to file stream. 
+    document.Save("Output.pdf")
 
     'Close the document.
     document.Close(True)
@@ -504,8 +451,7 @@ using (OCRProcessor processor = new OCRProcessor())
 {
 
     // Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-    PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(stream);
+    PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
 
     // Set the path to the tessdata folder.
     processor.TessDataPath = @"/path/to/tessdata-fast/or/tessdata-best";
@@ -513,12 +459,8 @@ using (OCRProcessor processor = new OCRProcessor())
     // Perform OCR on the loaded PDF document.
     processor.PerformOCR(pdfLoadedDocument);
 
-    // Create a file stream to save the processed PDF document.
-    using (FileStream outputFileStream = new FileStream(@"Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        // Save the processed PDF document to the specified file stream.
-        pdfLoadedDocument.Save(outputFileStream);
-    }
+    // Save the processed PDF document.
+    pdfLoadedDocument.Save("Output.pdf");
     // Close the loaded PDF document.
     pdfLoadedDocument.Close(true);
 }
@@ -531,8 +473,7 @@ using (OCRProcessor processor = new OCRProcessor())
 Using processor As New OCRProcessor()
 
     ' Load an existing PDF document.
-    Dim stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
-    Dim pdfLoadedDocument As New PdfLoadedDocument(stream)
+    Dim pdfLoadedDocument As New PdfLoadedDocument("Input.pdf")
 
     ' Set the path to the tessdata folder.
     processor.TessDataPath = "/path/to/tessdata-fast/or/tessdata-best"
@@ -540,11 +481,8 @@ Using processor As New OCRProcessor()
     ' Perform OCR on the loaded PDF document.
     processor.PerformOCR(pdfLoadedDocument)
 
-    ' Create a file stream to save the processed PDF document.
-    Using outputFileStream As New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        ' Save the processed PDF document to the specified file stream.
-        pdfLoadedDocument.Save(outputFileStream)
-    End Using
+    ' Save the processed PDF document.
+    pdfLoadedDocument.Save("Output.pdf")
 
     ' Close the loaded PDF document.
     pdfLoadedDocument.Close(True)
@@ -567,8 +505,7 @@ You can get the OCRed text and its bounds from a scanned PDF document by using t
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
     //Set OCR language.
     processor.Settings.Language = Languages.English;
@@ -585,12 +522,8 @@ using (OCRProcessor processor = new OCRProcessor())
         RectangleF bounds = line.Rectangle;
     }
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -603,8 +536,7 @@ using (OCRProcessor processor = new OCRProcessor())
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language.
     processor.Settings.Language = Languages.English
     'Create the layout result. 
@@ -619,11 +551,8 @@ Using processor As OCRProcessor = New OCRProcessor()
         Dim bounds As RectangleF = line.Rectangle
     Next
 
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document.
     document.Close(True)
 End Using
@@ -656,8 +585,7 @@ The following code sample demonstrates the OCR processor with native call suppor
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Set tesseract OCR Engine.
@@ -665,12 +593,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -683,20 +607,16 @@ using (OCRProcessor processor = new OCRProcessor())
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Set tesseract OCR Engine. 
     processor.Settings.TesseractVersion = TesseractVersion.Version3_02
     'Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document)
-
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -719,8 +639,7 @@ The following code sample demonstrates the OCR processor with native call suppor
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Set tesseract OCR Engine.
@@ -730,12 +649,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -748,8 +663,7 @@ using (OCRProcessor processor = new OCRProcessor())
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Set tesseract OCR Engine. 
@@ -759,11 +673,8 @@ Using processor As OCRProcessor = New OCRProcessor()
     'Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document)
 
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -789,20 +700,15 @@ While performing OCR on an existing scanned PDF document, the OCR Processor will
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Set custom temp file path location.
     processor.Settings.TempFolder = "D:/Temp/";
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -815,20 +721,16 @@ using (OCRProcessor processor = new OCRProcessor())
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Set custom temp file path location.
     processor.Settings.TempFolder = "D:/Temp/"
     'Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document)
-
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -914,8 +816,7 @@ N> The page segmentation mode is supported only in the Tesseract version 4.0 and
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //** For .NET Framework only **.
@@ -925,12 +826,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -943,8 +840,7 @@ using (OCRProcessor processor = new OCRProcessor())
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     ' ** For .NET Framework only **.
@@ -953,12 +849,9 @@ Using processor As OCRProcessor = New OCRProcessor()
     processor.Settings.PageSegment = PageSegMode.AutoOsd
     'Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document)
-
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -979,8 +872,7 @@ The [OCREngineMode](https://help.syncfusion.com/cr/document-processing/Syncfusio
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Set tesseract version. ** For .NET Framework only. **
@@ -990,12 +882,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -1008,8 +896,7 @@ using (OCRProcessor processor = new OCRProcessor())
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Set tesseract version. ** For .NET Framework only. **
@@ -1018,12 +905,9 @@ Using processor As OCRProcessor = New OCRProcessor()
     processor.Settings.OCREngineMode = OCREngineMode.LSTMOnly
     'Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document)
-
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -1046,8 +930,7 @@ The [WhiteList](https://help.syncfusion.com/cr/document-processing/Syncfusion.OC
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Set tesseract version. ** For .NET Framework only. **
@@ -1059,12 +942,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -1077,8 +956,7 @@ using (OCRProcessor processor = new OCRProcessor())
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Set tesseract version. ** For .NET Framework only. **
@@ -1089,12 +967,9 @@ Using processor As OCRProcessor = New OCRProcessor()
     processor.Settings.WhiteList = "PDF"
     'Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document)
-
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -1113,8 +988,8 @@ The [BlackList](https://help.syncfusion.com/cr/document-processing/Syncfusion.OC
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Set tesseract version. ** For .NET Framework only. **
@@ -1126,12 +1001,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -1143,8 +1014,7 @@ using (OCRProcessor processor = new OCRProcessor())
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Set tesseract version. ** For .NET Framework only. **
@@ -1156,11 +1026,8 @@ Using processor As OCRProcessor = New OCRProcessor()
     'Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document)
 
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -1197,12 +1064,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Process OCR by providing the bitmap image.  
     PdfDocument document = processor.PerformOCR(imageStream);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream(@"Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document to file stream.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
@@ -1226,11 +1089,8 @@ Using processor As OCRProcessor = New OCRProcessor()
     'Process OCR by providing the bitmap image.   
     Dim document As PdfDocument = processor.PerformOCR(imageStream)
 
-    'Create file stream.
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    'Save the PDF document.
+    document.Save("Output.pdf))
     'Close the document.
     document.Close(True)
 End Using
@@ -1252,8 +1112,7 @@ You can perform OCR on Images with Unicode characters. To preserve the Unicode c
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Sets Unicode font to preserve the Unicode characters in a PDF document.
@@ -1262,12 +1121,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -1349,19 +1204,14 @@ N> You can get the TesseractBinaries or TessData files from the NuGet package ru
 using (OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\"))
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language to process.
     processor.Settings.Language = Languages.English;
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document, @"TessData\");
     
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -1380,11 +1230,8 @@ Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries\")
     'Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document, "TessData\")
 
-    'Create file stream.
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+      'Save the PDF document.
+        document.Save("Output.pdf))
     'Close the document.
     document.Close(True)
 End Using
@@ -1404,10 +1251,8 @@ To get the Image rotation angle, you can rotate the image with 4 angles (0,90,18
 //Initialize the OCR processor.@
 using (OCRProcessor processor = new OCRProcessor())
 {
-    //Get the stream from an image file. 
-    FileStream stream = new FileStream(@"D:\Input.pdf", FileMode.Open);
-    //Set the OCR language to process.
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set the OCR language.
     processor.Settings.Language = Languages.English;
     //Set the Unicode font to preserve the Unicode characters in a PDF document.
@@ -1425,12 +1270,8 @@ using (OCRProcessor processor = new OCRProcessor())
             }
         }
     }    
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+   //Save the PDF document.
+    document.Save("Output.pdf);
 }
 
 
@@ -1440,10 +1281,8 @@ using (OCRProcessor processor = new OCRProcessor())
 
 'Initialize the OCR processor
 Using processor As OCRProcessor = New OCRProcessor()
-    'Get the stream from an image file. 
-    Dim stream As FileStream = New FileStream(@"D:\Input.pdf", FileMode.Open);
-    'Set the OCR language to process.
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream);
+    'Load an existing PDF document.. 
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf");
     'Set the OCR language.
     processor.Settings.Language = Languages.English;
     'Set the Unicode font to preserve the Unicode characters in a PDF document.
@@ -1485,21 +1324,17 @@ We have support to improve the image quality while performing OCR for an image o
     using (OCRProcessor processor = new OCRProcessor()) 
     { 
         //Load an existing PDF document. 
-        FileStream stream = new FileStream("../../../document.pdf", FileMode.Open); 
-        PdfLoadedDocument lDoc = new PdfLoadedDocument(stream); 
+        PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf"); 
         //Set the OCR language. 
         processor.Settings.Language = Languages.English; 
         processor.ImageProcessor = new ImageProcessor(); 
         //Perform OCR with input document. 
         string text = processor.PerformOCR(lDoc); 
-        //Create file stream. 
-        FileStream fileStream = new FileStream("../../../OCR.pdf", FileMode.CreateNew); 
-        //Save the document into stream. 
-        lDoc.Save(fileStream); 
+
+        //Save the document. 
+        lDoc.Save("Output.pdf"); 
         //Close the document. 
         lDoc.Close(true); 
-        stream.Dispose(); 
-        fileStream.Dispose(); 
     } 
 
 {% endhighlight %}
@@ -1509,8 +1344,7 @@ We have support to improve the image quality while performing OCR for an image o
     ' Initialize the OCR processor.
     Using processor As New OCRProcessor()
         ' Load an existing PDF document.
-        Dim stream As New FileStream("../../../document.pdf", FileMode.Open)
-        Dim lDoc As New PdfLoadedDocument(stream)
+        Dim lDoc As New PdfLoadedDocument("Input.pdf")
         
         ' Set the OCR language.
         processor.Settings.Language = Languages.English
@@ -1519,16 +1353,11 @@ We have support to improve the image quality while performing OCR for an image o
         ' Perform OCR with input document.
         Dim text As String = processor.PerformOCR(lDoc)
         
-        ' Create file stream.
-        Dim fileStream As New FileStream("../../../OCR.pdf", FileMode.CreateNew)
-        
         ' Save the document into stream.
-        lDoc.Save(fileStream)
+        lDoc.Save("Output.pdf")
         
         ' Close the document.
-        lDoc.Close(true)
-        stream.Dispose()
-        fileStream.Dispose()
+        lDoc.Close(True)
     End Using
 
 {% endhighlight %}
@@ -1572,11 +1401,8 @@ Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with m
             12 // Font size
         );
 
-        // Open the PDF file to be processed
-        FileStream fileStream = new FileStream("Input.pdf", FileMode.Open);
-
-        // Load the PDF document from the file stream
-        PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileStream);
+        // Load the PDF document
+        PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
         // Configure OCR settings
         OCRSettings ocrSettings = new OCRSettings();
@@ -1590,18 +1416,11 @@ Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with m
         // Perform OCR on the loaded PDF document, providing the path to the tessdata directory
         ocrProcessor.PerformOCR(loadedDocument, "tessdata");
 
-        // Create a file stream to save the OCR-processed PDF
-        FileStream outputFileStream = new FileStream("OCR_Output.pdf", FileMode.Create);
-
-        // Save the OCR-processed document to the file stream
-        loadedDocument.Save(outputFileStream);
+        // Save the OCR-processed document
+        loadedDocument.Save("Output.pdf");
 
         // Close the loaded document and commit changes
         loadedDocument.Close(true);
-
-        // Close the file streams
-        outputFileStream.Close();
-        fileStream.Close();
     }
 
 {% endhighlight %}
@@ -1617,11 +1436,8 @@ Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with m
             12 // Font size
         );
 
-        // Open the PDF file to be processed
-        FileStream fileStream = new FileStream("Input.pdf", FileMode.Open);
-
         // Load the PDF document from the file stream
-        PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileStream);
+        PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
         // Configure OCR settings
         OCRSettings ocrSettings = new OCRSettings();
@@ -1654,11 +1470,8 @@ Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with m
             New FileStream("arialuni.ttf", FileMode.Open), ' Path to the TrueType font file
             12 ' Font size
         )
-
-        ' Open the PDF file to be processed
-        Using fileStream As New FileStream("Input.pdf", FileMode.Open)
             ' Load the PDF document from the file stream
-            Dim loadedDocument As New PdfLoadedDocument(fileStream)
+            Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 
             ' Configure OCR settings
             Dim ocrSettings As New OCRSettings()
@@ -1672,10 +1485,8 @@ Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with m
             ' Perform OCR on the loaded PDF document, providing the path to the tessdata directory
             ocrProcessor.PerformOCR(loadedDocument, "tessdata")
 
-            ' Save the OCR-processed document to the specified file
-            Using fileSaveStream As New FileStream("OCR_Output.pdf", FileMode.Create)
-                loadedDocument.Save(fileSaveStream)
-            End Using
+            ' Save the OCR-processed document
+            loadedDocument.Save("Output.pdf")
 
             ' Close the loaded document and commit changes
             loadedDocument.Close(True)
@@ -1702,37 +1513,28 @@ Line breaks can be added to OCRed text using the [OCRLayoutResult](https://help.
 // Initialize the OCR processor
 using (OCRProcessor processor = new OCRProcessor())
 {
-    // Load the existing PDF document
-    using (FileStream stream = new FileStream(@"Input.pdf", FileMode.Open))
-    {
-        // Load the PDF document from the file stream
-        PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(stream);
+    // Load the PDF document from the file stream
+    PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
 
-        // Set OCR language to English
-        processor.Settings.Language = Languages.English;
+    // Set OCR language to English
+    processor.Settings.Language = Languages.English;
 
-        // Set the page segmentation mode to process sparse text with orientation and script detection
-        processor.Settings.PageSegment = PageSegMode.SparseTextOsd;
+    // Set the page segmentation mode to process sparse text with orientation and script detection
+    processor.Settings.PageSegment = PageSegMode.SparseTextOsd;
 
-        // Perform OCR on the loaded PDF document to extract text
-        processor.PerformOCR(pdfLoadedDocument, processor.TessDataPath, out OCRLayoutResult layoutResult);
+    // Perform OCR on the loaded PDF document to extract text
+    processor.PerformOCR(pdfLoadedDocument, processor.TessDataPath, out OCRLayoutResult layoutResult);
 
-        // Extract the OCRed text from the first page and join lines with newline characters
-        string ocrText = string.Join("\n", layoutResult.Pages[0].Lines.Select(line => line.Text));
+    // Extract the OCRed text from the first page and join lines with newline characters
+    string ocrText = string.Join("\n", layoutResult.Pages[0].Lines.Select(line => line.Text));
 
-        // Create a file stream for saving the processed PDF document
-        using (FileStream outputFileStream = new FileStream(@"Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-        {
-            // Save the PDF document to the file stream
-            pdfLoadedDocument.Save(outputFileStream);
-        }
+    // Save the PDF document to the file stream
+    pdfLoadedDocument.Save("Output.pdf");
+    // Close the PDF document
+    pdfLoadedDocument.Close(true);
 
-        // Close the PDF document
-        pdfLoadedDocument.Close(true);
-
-        // Write the extracted OCR text to an output text file
-        File.WriteAllText("Output.txt", ocrText);
-    }
+    // Write the extracted OCR text to an output text file
+    File.WriteAllText("Output.txt", ocrText);
 }
 
 {% endhighlight %}

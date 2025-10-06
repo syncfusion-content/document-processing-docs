@@ -49,9 +49,8 @@ step 7: Add the following code sample in **Function.cs** to **open a PDF documen
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Open an existing PDF document.
-FileStream document = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(stream);
+//Load an existing PDF document.
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 {% endhighlight %}
 {% endtabs %}

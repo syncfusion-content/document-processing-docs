@@ -65,10 +65,8 @@ Step 6: Add a new action method **OpenAndSaveDocument** in HomeController.cs and
 
 {% highlight c# tabtitle="C#" %}
 
-//Load PDF document as stream.
-FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read);
 //Load an existing PDF document.
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 {% endhighlight %}
 

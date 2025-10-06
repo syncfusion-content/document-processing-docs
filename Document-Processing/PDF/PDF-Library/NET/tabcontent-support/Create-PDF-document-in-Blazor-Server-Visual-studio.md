@@ -190,7 +190,7 @@ Step 9: Add the following JavaScript function in the `App.razor` available under
 
 Step 10: Build the project.
 
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+To build the project, go to the `Build` menu and select `Build Solution`, or simply press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
 
 Step 11: Run the project.
 

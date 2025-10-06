@@ -20,24 +20,22 @@ Step 2: Install the [Syncfusion.Pdf.Net.Core ](https://www.nuget.org/packages/Sy
 <br><br>
 ![NuGet package installation](Save-PDF-Images/AWSSDK.S3-nuget.png)
 
-
 Step 3: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-    using Syncfusion.Pdf.Graphics;
-    using Syncfusion.Pdf;
-    using Amazon.S3;
-    using Syncfusion.Drawing;
-    using Amazon.S3.Transfer;
-    using Amazon;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf;
+using Amazon.S3;
+using Syncfusion.Drawing;
+using Amazon.S3.Transfer;
+using Amazon;
 
 {% endhighlight %}
 
 {% endtabs %}
-
 
 Step 4: Add the below code example to create a simple PDF and save in AWS S3.
 
@@ -45,9 +43,9 @@ Step 4: Add the below code example to create a simple PDF and save in AWS S3.
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-    // Create a new PDF document
-    using (PdfDocument document = new PdfDocument())
-    {
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
     // Add a page to the document
     PdfPage page = document.Pages.Add();
 
@@ -85,11 +83,6 @@ Step 4: Add the below code example to create a simple PDF and save in AWS S3.
         }
     }
 }
-    
-
-    
-   
-    
 
 {% endhighlight %}
 
