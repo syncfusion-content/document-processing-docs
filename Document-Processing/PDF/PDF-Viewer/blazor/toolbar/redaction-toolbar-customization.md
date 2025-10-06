@@ -112,3 +112,7 @@ private void ToggleRedactionToolbar()
 
 Refer to the following image for details.
 ![Programmatically show the Redaction toolbar](../annotation/redaction-annotations-images/show-redaction-toolbar.png)
+
+## See also
+
+* [Adding the redaction annotation in PDF viewer](./annotation/redaction-annotation)

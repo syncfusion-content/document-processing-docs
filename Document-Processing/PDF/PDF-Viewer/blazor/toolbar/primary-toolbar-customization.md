@@ -402,3 +402,7 @@ Customize the appearance of toolbar icons for custom toolbar items. The followin
 [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar/Icon-Style-Change).
 
 N> This applies only to a custom toolbar.
+
+## See also
+
+* [Mobile toolbar](./toolbar/mobile-toolbar)

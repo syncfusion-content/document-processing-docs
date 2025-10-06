@@ -66,7 +66,7 @@ Open the overflow (three-dots) menu to access additional actions such as:
 - Download: Download the currently opened PDF document.
 - Bookmark: View and navigate bookmarks within the document.
 
-![More options menu showing additional actions like download and bookmark](../images/moreOptions.png)
+![More options menu showing additional actions like download and bookmark](../images/more-options.png)
 
 ## Annotation toolbar in mobile mode
 
@@ -125,7 +125,7 @@ Enable the desktop toolbar on mobile devices with the [EnableDesktopMode](https:
 
 On mobile devices, the navigation toolbar collapses into a toggle menu to save space. Any custom items added appear at the beginning of this menu.
 
-![Modern navigation in mobile view](../images/ModernNavigation-mobile.png)
+![Modern navigation in mobile view](../images/modern-navigation-mobile.png)
 
 Enable the modern navigation panel by setting [EnableNavigationPanel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigationPanel) to true.
 

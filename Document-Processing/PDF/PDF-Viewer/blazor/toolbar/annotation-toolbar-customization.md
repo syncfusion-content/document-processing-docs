@@ -96,3 +96,7 @@ Refer to the image below for the mobile view (responsive layout adapts to width)
 ![Annotation toolbar with selected tools on mobile](../images/Annotation_Toolbar_Customization_Mobile.png)
 
 [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/CustomAnnotationToolbar.razor).
+
+## See also
+
+* [Adding the shape annotation in PDF viewer](./annotation/shape-annotation)

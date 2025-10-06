@@ -72,3 +72,7 @@ Refer to the image below for the mobile view.
 ![Form designer toolbar with selected tools on mobile](../images/Form_Designer_Toolbar_Customization_Mobile.png)
 
 [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/CustomFormDesignerToolbar.razor).
+
+## See also
+
+* [Form designer in PDF viewer](./form-designer/overview)

@@ -42,6 +42,8 @@ The primary toolbar includes the following options:
 
 ![Blazor PDF Viewer primary toolbar with customized items](../blazor-classic/images/blazor-pdfviewer-custom-toolbar.png)
 
+* [Get more info about primary toolbar customization](./toolbar/primary-toolbar-customization)
+
 ## Annotation toolbar in Blazor SfPdfViewer Component
 
 The Annotation toolbar appears below the primary toolbar when annotation features are enabled. It provides tools to create and edit annotations.
@@ -58,6 +60,8 @@ The Annotation toolbar appears below the primary toolbar when annotation feature
 
 ![Blazor PDF Viewer annotation toolbar](./images/blazor-annotation-toolbar.png)
 
+* [Get more info about annotation toolbar customization](./toolbar/annotation-toolbar-customization)
+
 ## Form Designer toolbar in Blazor SfPdfViewer Component
 
 Use the Form Designer toolbar to add and configure interactive form fields in the PDF. It appears below the primary toolbar when form designer is enabled.
@@ -67,6 +71,8 @@ Use the Form Designer toolbar to add and configure interactive form fields in th
 * Close
 
 ![Blazor PDF Viewer form designer toolbar](./images/blazor-form-deigner-toolbar.png)
+
+* [Get more info about form designer toolbar customization](./toolbar/form-designer-toolbar-customization)
 
 ## Redaction toolbar in Blazor SfPdfViewer Component
 
@@ -80,12 +86,10 @@ The Redaction toolbar provides tools to mark and permanently remove sensitive co
 
 ![Blazor PDF Viewer redaction toolbar](./images/blazor-redaction-toolbar.png)
 
+* [Get more info about redaction toolbar customization](./toolbar/redaction-toolbar-customization)
+
 ## See also
 
-* [Primary toolbar customization](./toolbar/primary-toolbar-customization)
-* [Annotation toolbar customization](./toolbar/annotation-toolbar-customization)
-* [Form designer toolbar customization](./toolbar/form-designer-toolbar-customization)
-* [Redaction toolbar customization](./toolbar/redaction-toolbar-customization)
 * [Mobile toolbar](./toolbar/mobile-toolbar)
 * [Adding the shape annotation in PDF viewer](./annotation/shape-annotation)
 * [Adding the redaction annotation in PDF viewer](./annotation/redaction-annotation)
