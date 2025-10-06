@@ -40,8 +40,7 @@ Step 4: Use the following code sample to perform OCR on a PDF document using [Pe
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument lDoc = new PdfLoadedDocument(stream);
+    PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Initialize the Azure vision OCR external engine.
@@ -49,15 +48,11 @@ using (OCRProcessor processor = new OCRProcessor())
     processor.ExternalEngine = azureOcrEngine;
     //Perform OCR.
     processor.PerformOCR(lDoc);
-    //Create file stream.
-    FileStream outputStream = new FileStream("OCR.pdf", FileMode.CreateNew);
+
     //Save the document into stream.
-    lDoc.Save(outputStream);
-    //If the position is not set to '0' then the PDF will be empty. 
-    outputStream.Position = 0;
+    lDoc.Save("Output.pdf");
     //Close the document. 
     lDoc.Close(true);
-    outputStream.Close();
 }
 
 {% endhighlight %}

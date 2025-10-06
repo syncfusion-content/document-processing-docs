@@ -17,22 +17,20 @@ To perform OCR for an entire PDF document using [PerformOCR](https://help.syncfu
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-for-the-entire-PDF-document/Perform-OCR-for-the-entire-PDF-document/Program.cs, 300" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -41,20 +39,19 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
 'Initialize the OCR processor.
 Using processor As OCRProcessor = New OCRProcessor()
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Perform OCR with input document and tessdata (Language packs). 
     processor.PerformOCR(document)
-    'Create file stream.
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    'Save the PDF document.
+    document.Save("Output.pdf)
     'Close the document
     document.Close(True)
 End Using
@@ -75,12 +72,14 @@ To perform OCR on a particular region or several regions of a PDF page with the 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-on-particular-region-of-PDF-document/Perform-OCR-on-particular-region-of-PDF-document/Program.cs, 300" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
     //Set OCR language.
     processor.Settings.Language = Languages.English;
@@ -101,12 +100,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
@@ -115,11 +110,14 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
 
     'Set OCR language. 
     processor.Settings.Language = Languages.English
@@ -140,11 +138,8 @@ Using processor As OCRProcessor = New OCRProcessor()
     'Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document)
 
-    'Create file stream.
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    'Save the PDF document.
+    document.Save("Output.pdf)
     'Close the document. 
     document.Close(True)
 End Using
@@ -167,12 +162,14 @@ The following code sample demonstrates the OCR processor with Tesseract version 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
     //Set OCR language.
     processor.Settings.Language = Languages.English;
@@ -181,12 +178,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -195,11 +188,13 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
 'Initialize the OCR processor with tesseract binaries folder path. 
 Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries/3.05/")
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
 
     'Set OCR language. 
     processor.Settings.Language = Languages.English
@@ -208,11 +203,9 @@ Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries/3.05/")
     'Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document)
 
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -233,12 +226,14 @@ The following code sample explains the OCR processor with Tesseract version 4.0 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
     //Set OCR language.
     processor.Settings.Language = Languages.English;
@@ -247,12 +242,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -261,11 +252,13 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
 'Initialize the OCR processor with tesseract binaries folder path. 
 Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries/4.0/")
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
 
     'Set OCR language. 
     processor.Settings.Language = Languages.English
@@ -273,12 +266,9 @@ Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries/4.0/")
     processor.Settings.TesseractVersion = TesseractVersion.Version4_0
     'Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document)
-
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -295,6 +285,9 @@ The below code example illustrates how to perform OCR on image file using [Perfo
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-on-image-file/Perform-OCR-on-image-file/Program.cs, 300" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -309,6 +302,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
@@ -331,6 +327,9 @@ You can get the OCRed Unicode text from an image file by using the ``UnicodeFont
 {% tabs %} 
 
 {% highlight c# tabtitle="ASP.NET Core" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -376,23 +375,21 @@ N> Memory optimization for performing OCR on large PDF documents is not supporte
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Perform OCR with input document, tessdata (Language packs) and enable isMemoryOptimized property.
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -400,23 +397,21 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Perform OCR with input document, tessdata (Language packs) and enable isMemoryOptimized property. 
     processor.PerformOCR(document)
 
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
-
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document.  
     document.Close(True)
 End Using
@@ -433,12 +428,14 @@ You can get the OCRed text from the rotated page of PDF document using the [Page
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Set OCR page auto detection rotation.
@@ -446,12 +443,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -460,12 +453,14 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Set OCR page auto detection rotation. 
@@ -473,11 +468,8 @@ Using processor As OCRProcessor = New OCRProcessor()
     'Perform OCR with input document and tessdata (Language packs). 
     processor.PerformOCR(document)
 
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream. 
-        document.Save(outputFileStream)
-    End Using
+    'Save the PDF document to file stream. 
+    document.Save("Output.pdf")
 
     'Close the document.
     document.Close(True)
@@ -499,13 +491,15 @@ For more details, refer to the following code sample.
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 // Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
 
     // Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-    PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(stream);
+    PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
 
     // Set the path to the tessdata folder.
     processor.TessDataPath = @"/path/to/tessdata-fast/or/tessdata-best";
@@ -513,12 +507,8 @@ using (OCRProcessor processor = new OCRProcessor())
     // Perform OCR on the loaded PDF document.
     processor.PerformOCR(pdfLoadedDocument);
 
-    // Create a file stream to save the processed PDF document.
-    using (FileStream outputFileStream = new FileStream(@"Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        // Save the processed PDF document to the specified file stream.
-        pdfLoadedDocument.Save(outputFileStream);
-    }
+    // Save the processed PDF document.
+    pdfLoadedDocument.Save("Output.pdf");
     // Close the loaded PDF document.
     pdfLoadedDocument.Close(true);
 }
@@ -527,12 +517,14 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
 ' Initialize the OCR processor.
 Using processor As New OCRProcessor()
 
     ' Load an existing PDF document.
-    Dim stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
-    Dim pdfLoadedDocument As New PdfLoadedDocument(stream)
+    Dim pdfLoadedDocument As New PdfLoadedDocument("Input.pdf")
 
     ' Set the path to the tessdata folder.
     processor.TessDataPath = "/path/to/tessdata-fast/or/tessdata-best"
@@ -540,11 +532,8 @@ Using processor As New OCRProcessor()
     ' Perform OCR on the loaded PDF document.
     processor.PerformOCR(pdfLoadedDocument)
 
-    ' Create a file stream to save the processed PDF document.
-    Using outputFileStream As New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        ' Save the processed PDF document to the specified file stream.
-        pdfLoadedDocument.Save(outputFileStream)
-    End Using
+    ' Save the processed PDF document.
+    pdfLoadedDocument.Save("Output.pdf")
 
     ' Close the loaded PDF document.
     pdfLoadedDocument.Close(True)
@@ -563,12 +552,14 @@ You can get the OCRed text and its bounds from a scanned PDF document by using t
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
     //Set OCR language.
     processor.Settings.Language = Languages.English;
@@ -585,12 +576,8 @@ using (OCRProcessor processor = new OCRProcessor())
         RectangleF bounds = line.Rectangle;
     }
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -599,12 +586,14 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language.
     processor.Settings.Language = Languages.English
     'Create the layout result. 
@@ -619,11 +608,8 @@ Using processor As OCRProcessor = New OCRProcessor()
         Dim bounds As RectangleF = line.Rectangle
     Next
 
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document.
     document.Close(True)
 End Using
@@ -652,12 +638,14 @@ The following code sample demonstrates the OCR processor with native call suppor
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Set tesseract OCR Engine.
@@ -665,12 +653,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -679,24 +663,23 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Set tesseract OCR Engine. 
     processor.Settings.TesseractVersion = TesseractVersion.Version3_02
     'Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document)
-
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -715,12 +698,14 @@ The following code sample demonstrates the OCR processor with native call suppor
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Set tesseract OCR Engine.
@@ -730,12 +715,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -744,12 +725,14 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
 'Initialize the OCR processor with tesseract binaries folder path. 
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Set tesseract OCR Engine. 
@@ -759,11 +742,8 @@ Using processor As OCRProcessor = New OCRProcessor()
     'Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document)
 
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -785,24 +765,22 @@ While performing OCR on an existing scanned PDF document, the OCR Processor will
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Set custom temp file path location.
     processor.Settings.TempFolder = "D:/Temp/";
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -811,24 +789,23 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Set custom temp file path location.
     processor.Settings.TempFolder = "D:/Temp/"
     'Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document)
-
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -910,12 +887,14 @@ N> The page segmentation mode is supported only in the Tesseract version 4.0 and
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //** For .NET Framework only **.
@@ -925,12 +904,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -939,12 +914,14 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     ' ** For .NET Framework only **.
@@ -953,12 +930,9 @@ Using processor As OCRProcessor = New OCRProcessor()
     processor.Settings.PageSegment = PageSegMode.AutoOsd
     'Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document)
-
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -975,12 +949,14 @@ The [OCREngineMode](https://help.syncfusion.com/cr/document-processing/Syncfusio
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Set tesseract version. ** For .NET Framework only. **
@@ -990,12 +966,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -1004,12 +976,14 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Set tesseract version. ** For .NET Framework only. **
@@ -1018,12 +992,9 @@ Using processor As OCRProcessor = New OCRProcessor()
     processor.Settings.OCREngineMode = OCREngineMode.LSTMOnly
     'Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document)
-
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -1042,12 +1013,14 @@ The [WhiteList](https://help.syncfusion.com/cr/document-processing/Syncfusion.OC
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Set tesseract version. ** For .NET Framework only. **
@@ -1059,12 +1032,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -1073,12 +1042,14 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Set tesseract version. ** For .NET Framework only. **
@@ -1089,12 +1060,9 @@ Using processor As OCRProcessor = New OCRProcessor()
     processor.Settings.WhiteList = "PDF"
     'Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document)
-
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -1109,12 +1077,15 @@ The [BlackList](https://help.syncfusion.com/cr/document-processing/Syncfusion.OC
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Set tesseract version. ** For .NET Framework only. **
@@ -1126,12 +1097,8 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -1139,12 +1106,14 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
 
     'Load an existing PDF document. 
-    Dim stream As FileStream = New FileStream("Input.pdf", FileMode.Open)
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream)
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
     'Set OCR language. 
     processor.Settings.Language = Languages.English
     'Set tesseract version. ** For .NET Framework only. **
@@ -1156,11 +1125,8 @@ Using processor As OCRProcessor = New OCRProcessor()
     'Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document)
 
-    'Create file stream. 
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    'Save the PDF document.
+    document.Save("Output.pdf")
     'Close the document. 
     document.Close(True)
 End Using
@@ -1181,6 +1147,9 @@ The following code sample illustrates how to OCR an image to a PDF document:
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/OCR_Image_to_PDF/OCR_Image_to_PDF/Program.cs, 300" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
@@ -1197,18 +1166,17 @@ using (OCRProcessor processor = new OCRProcessor())
     //Process OCR by providing the bitmap image.  
     PdfDocument document = processor.PerformOCR(imageStream);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream(@"Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document to file stream.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor. 
 Using processor As OCRProcessor = New OCRProcessor()
@@ -1226,11 +1194,8 @@ Using processor As OCRProcessor = New OCRProcessor()
     'Process OCR by providing the bitmap image.   
     Dim document As PdfDocument = processor.PerformOCR(imageStream)
 
-    'Create file stream.
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+    'Save the PDF document.
+    document.Save("Output.pdf))
     'Close the document.
     document.Close(True)
 End Using
@@ -1248,12 +1213,14 @@ You can perform OCR on Images with Unicode characters. To preserve the Unicode c
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-an-image-and-convert-it-to-a-PDF-document/Perform-OCR-an-image-and-convert-it-to-a-PDF-document/Program.cs, 300" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Sets Unicode font to preserve the Unicode characters in a PDF document.
@@ -1262,21 +1229,11 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-//By default unicode characters can be extracted from image file in .NET Framework applications like WF, WPF, ASP.NET and ASP.NET MVC.
 
 {% endhighlight %}
 
@@ -1315,6 +1272,9 @@ Refer to the following code sample to set the performance of the OCR.
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor
 OCRProcessor processor = new OCRProcessor();
 
@@ -1324,6 +1284,9 @@ processor.Settings.Performance = Performance.Fast;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor
 Dim processor As New OCRProcessor()
@@ -1345,23 +1308,21 @@ N> You can get the TesseractBinaries or TessData files from the NuGet package ru
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor by providing the path of the tesseract binaries (SyncfusionTesseract.dll and liblept168.dll)
 using (OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\"))
 {
     //Load an existing PDF document.
-    FileStream stream = new FileStream("Input.pdf", FileMode.Open);
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set OCR language to process.
     processor.Settings.Language = Languages.English;
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document, @"TessData\");
     
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document.
+    document.Save("Output.pdf);
     //Close the document.
     document.Close(true);
 }
@@ -1369,6 +1330,9 @@ using (OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\"))
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 'Initialize the OCR processor 
 Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries\")
@@ -1380,11 +1344,8 @@ Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries\")
     'Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document, "TessData\")
 
-    'Create file stream.
-    Using outputFileStream As FileStream = New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        'Save the PDF document to file stream.
-        document.Save(outputFileStream)
-    End Using
+      'Save the PDF document.
+        document.Save("Output.pdf))
     'Close the document.
     document.Close(True)
 End Using
@@ -1401,13 +1362,14 @@ To get the Image rotation angle, you can rotate the image with 4 angles (0,90,18
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Get-image-rotation-angle-from-OCR/Get-image-rotation-angle-from-OCR/Program.cs, 300" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
 //Initialize the OCR processor.@
 using (OCRProcessor processor = new OCRProcessor())
 {
-    //Get the stream from an image file. 
-    FileStream stream = new FileStream(@"D:\Input.pdf", FileMode.Open);
-    //Set the OCR language to process.
-    PdfLoadedDocument document = new PdfLoadedDocument(stream);
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     //Set the OCR language.
     processor.Settings.Language = Languages.English;
     //Set the Unicode font to preserve the Unicode characters in a PDF document.
@@ -1425,25 +1387,21 @@ using (OCRProcessor processor = new OCRProcessor())
             }
         }
     }    
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+   //Save the PDF document.
+    document.Save("Output.pdf);
 }
-
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
 'Initialize the OCR processor
 Using processor As OCRProcessor = New OCRProcessor()
-    'Get the stream from an image file. 
-    Dim stream As FileStream = New FileStream(@"D:\Input.pdf", FileMode.Open);
-    'Set the OCR language to process.
-    Dim document As PdfLoadedDocument = New PdfLoadedDocument(stream);
+    'Load an existing PDF document.. 
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf");
     'Set the OCR language.
     processor.Settings.Language = Languages.English;
     'Set the Unicode font to preserve the Unicode characters in a PDF document.
@@ -1479,63 +1437,57 @@ We have support to improve the image quality while performing OCR for an image o
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-ImageEnhancement/OCR_ImageEnhancement/Program.cs, 300" %}
 
-    //Initialize the OCR processor. 
-    using (OCRProcessor processor = new OCRProcessor()) 
-    { 
-        //Load an existing PDF document. 
-        FileStream stream = new FileStream("../../../document.pdf", FileMode.Open); 
-        PdfLoadedDocument lDoc = new PdfLoadedDocument(stream); 
-        //Set the OCR language. 
-        processor.Settings.Language = Languages.English; 
-        processor.ImageProcessor = new ImageProcessor(); 
-        //Perform OCR with input document. 
-        string text = processor.PerformOCR(lDoc); 
-        //Create file stream. 
-        FileStream fileStream = new FileStream("../../../OCR.pdf", FileMode.CreateNew); 
-        //Save the document into stream. 
-        lDoc.Save(fileStream); 
-        //Close the document. 
-        lDoc.Close(true); 
-        stream.Dispose(); 
-        fileStream.Dispose(); 
-    } 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor. 
+using (OCRProcessor processor = new OCRProcessor()) 
+{ 
+    //Load an existing PDF document. 
+    PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf"); 
+    //Set the OCR language. 
+    processor.Settings.Language = Languages.English; 
+    processor.ImageProcessor = new ImageProcessor(); 
+    //Perform OCR with input document. 
+    string text = processor.PerformOCR(lDoc); 
+
+    //Save the document. 
+    lDoc.Save("Output.pdf"); 
+    //Close the document. 
+    lDoc.Close(true); 
+} 
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-    ' Initialize the OCR processor.
-    Using processor As New OCRProcessor()
-        ' Load an existing PDF document.
-        Dim stream As New FileStream("../../../document.pdf", FileMode.Open)
-        Dim lDoc As New PdfLoadedDocument(stream)
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
+' Initialize the OCR processor.
+Using processor As New OCRProcessor()
+    ' Load an existing PDF document.
+    Dim lDoc As New PdfLoadedDocument("Input.pdf")
         
-        ' Set the OCR language.
-        processor.Settings.Language = Languages.English
-        processor.ImageProcessor = New ImageProcessor()
+    ' Set the OCR language.
+    processor.Settings.Language = Languages.English
+    processor.ImageProcessor = New ImageProcessor()
         
-        ' Perform OCR with input document.
-        Dim text As String = processor.PerformOCR(lDoc)
+    ' Perform OCR with input document.
+    Dim text As String = processor.PerformOCR(lDoc)
         
-        ' Create file stream.
-        Dim fileStream As New FileStream("../../../OCR.pdf", FileMode.CreateNew)
+    ' Save the document into stream.
+    lDoc.Save("Output.pdf")
         
-        ' Save the document into stream.
-        lDoc.Save(fileStream)
-        
-        ' Close the document.
-        lDoc.Close(true)
-        stream.Dispose()
-        fileStream.Dispose()
-    End Using
+    ' Close the document.
+    lDoc.Close(True)
+End Using
 
 {% endhighlight %}
 
 {% endtabs %}  
-
-
 
 N> Note: In this sample, we are using the SixLabors.ImageSharp library to improve the image quality. You can any image processing library as per your requirement.
 
@@ -1561,7 +1513,10 @@ Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with m
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/OCR-with-multiple-langauages/OCR%20with%20multiple%20languages/Program.cs, 300" %}
+
+    using Syncfusion.OCRProcessor;
+    using Syncfusion.Pdf.Parsing;
 
     // Initialize the OCR processor within a using block to ensure resources are properly disposed
     using (OCRProcessor ocrProcessor = new OCRProcessor())
@@ -1572,11 +1527,8 @@ Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with m
             12 // Font size
         );
 
-        // Open the PDF file to be processed
-        FileStream fileStream = new FileStream("Input.pdf", FileMode.Open);
-
-        // Load the PDF document from the file stream
-        PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileStream);
+        // Load the PDF document
+        PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
         // Configure OCR settings
         OCRSettings ocrSettings = new OCRSettings();
@@ -1590,62 +1542,19 @@ Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with m
         // Perform OCR on the loaded PDF document, providing the path to the tessdata directory
         ocrProcessor.PerformOCR(loadedDocument, "tessdata");
 
-        // Create a file stream to save the OCR-processed PDF
-        FileStream outputFileStream = new FileStream("OCR_Output.pdf", FileMode.Create);
-
-        // Save the OCR-processed document to the file stream
-        loadedDocument.Save(outputFileStream);
+        // Save the OCR-processed document
+        loadedDocument.Save("Output.pdf");
 
         // Close the loaded document and commit changes
         loadedDocument.Close(true);
-
-        // Close the file streams
-        outputFileStream.Close();
-        fileStream.Close();
-    }
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-    // Initialize the OCR processor within a using block to ensure resources are properly disposed
-    using (OCRProcessor ocrProcessor = new OCRProcessor())
-    {
-        // Set the Unicode font for the OCR processor using a TrueType font file
-        ocrProcessor.UnicodeFont = new Syncfusion.Pdf.Graphics.PdfTrueTypeFont(
-            new FileStream("arialuni.ttf", FileMode.Open), // Path to the TrueType font file
-            12 // Font size
-        );
-
-        // Open the PDF file to be processed
-        FileStream fileStream = new FileStream("Input.pdf", FileMode.Open);
-
-        // Load the PDF document from the file stream
-        PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileStream);
-
-        // Configure OCR settings
-        OCRSettings ocrSettings = new OCRSettings();
-
-        // Specify the languages to be used for OCR
-        ocrSettings.Language = "eng+deu+ara+ell+fra"; // English, German, Arabic, Greek, French
-
-        // Apply the OCR settings to the OCR processor
-        ocrProcessor.Settings = ocrSettings;
-
-        // Perform OCR on the loaded PDF document, providing the path to the tessdata directory
-        ocrProcessor.PerformOCR(loadedDocument, "tessdata");
-
-        // Save the OCR-processed document to the file save
-        loadedDocument.Save("OCR_Output.pdf");
-
-        // Close the loaded document and commit changes
-        loadedDocument.Close(true);
-        
     }
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    Imports Syncfusion.OCRProcessor
+    Imports Syncfusion.Pdf.Parsing
 
     ' Initialize the OCR processor within a Using block to ensure resources are properly disposed
     Using ocrProcessor As New OCRProcessor()
@@ -1654,11 +1563,8 @@ Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with m
             New FileStream("arialuni.ttf", FileMode.Open), ' Path to the TrueType font file
             12 ' Font size
         )
-
-        ' Open the PDF file to be processed
-        Using fileStream As New FileStream("Input.pdf", FileMode.Open)
             ' Load the PDF document from the file stream
-            Dim loadedDocument As New PdfLoadedDocument(fileStream)
+            Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 
             ' Configure OCR settings
             Dim ocrSettings As New OCRSettings()
@@ -1672,10 +1578,8 @@ Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with m
             ' Perform OCR on the loaded PDF document, providing the path to the tessdata directory
             ocrProcessor.PerformOCR(loadedDocument, "tessdata")
 
-            ' Save the OCR-processed document to the specified file
-            Using fileSaveStream As New FileStream("OCR_Output.pdf", FileMode.Create)
-                loadedDocument.Save(fileSaveStream)
-            End Using
+            ' Save the OCR-processed document
+            loadedDocument.Save("Output.pdf")
 
             ' Close the loaded document and commit changes
             loadedDocument.Close(True)
@@ -1697,47 +1601,10 @@ Line breaks can be added to OCRed text using the [OCRLayoutResult](https://help.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Adding-Line-Breaks-Using-OCR/.NET/Adding-Line-Breaks-Using-OCR/Program.cs, 300" %}
 
-// Initialize the OCR processor
-using (OCRProcessor processor = new OCRProcessor())
-{
-    // Load the existing PDF document
-    using (FileStream stream = new FileStream(@"Input.pdf", FileMode.Open))
-    {
-        // Load the PDF document from the file stream
-        PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(stream);
-
-        // Set OCR language to English
-        processor.Settings.Language = Languages.English;
-
-        // Set the page segmentation mode to process sparse text with orientation and script detection
-        processor.Settings.PageSegment = PageSegMode.SparseTextOsd;
-
-        // Perform OCR on the loaded PDF document to extract text
-        processor.PerformOCR(pdfLoadedDocument, processor.TessDataPath, out OCRLayoutResult layoutResult);
-
-        // Extract the OCRed text from the first page and join lines with newline characters
-        string ocrText = string.Join("\n", layoutResult.Pages[0].Lines.Select(line => line.Text));
-
-        // Create a file stream for saving the processed PDF document
-        using (FileStream outputFileStream = new FileStream(@"Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-        {
-            // Save the PDF document to the file stream
-            pdfLoadedDocument.Save(outputFileStream);
-        }
-
-        // Close the PDF document
-        pdfLoadedDocument.Close(true);
-
-        // Write the extracted OCR text to an output text file
-        File.WriteAllText("Output.txt", ocrText);
-    }
-}
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
 
 // Initialize the OCR processor
 using (OCRProcessor processor = new OCRProcessor())
@@ -1759,7 +1626,6 @@ using (OCRProcessor processor = new OCRProcessor())
 
     // Save the PDF document to the file stream
     pdfLoadedDocument.Save("Output.pdf");
-
     // Close the PDF document
     pdfLoadedDocument.Close(true);
 
@@ -1770,6 +1636,9 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
 ' Initialize the OCR processor
 Using processor As New OCRProcessor()
@@ -1803,4 +1672,4 @@ End Using
 
 {% endtabs %}
 
-You can downloaded a complete working sample from GitHub.
+You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Adding-Line-Breaks-Using-OCR/.NET).

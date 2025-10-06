@@ -3,8 +3,6 @@
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
 * Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
-
-
 Step 1: Create a new project in VS2022, select the .NET MAUI App (Preview) template, and click the **Next** button.
 ![.NET MAUI sample creation step1](MAUI_images/Create_Project.png)
 
@@ -52,13 +50,13 @@ Step 5: Include the following namespaces in the *MainWindow.xaml.cs* file.
 
 {% highlight c# tabtitle="C#" %}
 
-    using CreatePdfDemoSample.Services;
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Graphics;
-    using Syncfusion.Pdf.Grid;
-    using Syncfusion.Drawing;
-    using System.Reflection;
-    using System.Xml.Linq;
+using CreatePdfDemoSample.Services;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Grid;
+using Syncfusion.Drawing;
+using System.Reflection;
+using System.Xml.Linq;
 
 {% endhighlight %}
 
@@ -375,7 +373,8 @@ Step 6: Add a new action method *createPdf_Click* in *MainWindow.xaml.cs* and in
 
 Step 7: Build the project.
 
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+To build the project, go to the `Build` menu and select `Build Solution`, or simply press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
 
 Step 8: Run the project.
-   Click the Start button (green arrow) or press F5 to run the app.
+
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
