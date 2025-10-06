@@ -46,7 +46,7 @@ Create a WPF desktop project (not a WPF Blazor HybridApp) using the .NET CLI in 
 {% tabs %}
 {% highlight c# tabtitle="WPF Blazor HybridApp" %}
 
-dotnet new wpf -n WpfBlazorHybridApp
+dotnet new wpf -n WPFBlazorHybridApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -158,7 +158,7 @@ using Microsoft.Extensions.AI;
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 using System.ClientModel;
-namespace BlazorWPF
+namespace WPFBlazorHybridApp;
 {
     public partial class MainWindow : Window
     {
@@ -241,13 +241,13 @@ Create a Razor component (for example, Main.razor) in the project and add the Sy
 * Embed the BlazorWebView control, set HostPage to wwwroot/index.html, and map a RootComponent that matches the Razor component type and the selector in index.html (#app).
 
 ```xaml
-<Window x:Class="BlazorWPF.MainWindow"
+<Window x:Class="WPFBlazorHybridApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:blazor="clr-namespace:Microsoft.AspNetCore.Components.WebView.Wpf;assembly=Microsoft.AspNetCore.Components.WebView.Wpf"
-        xmlns:local="clr-namespace:BlazorWPF"
+        xmlns:local="clr-namespace:WPFBlazorHybridApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -268,7 +268,7 @@ Run the WPF application. The Syncfusion&reg; Blazor Smart PDF Viewer renders ins
 
 ![WPF Blazor HybridApp Smart PDF Viewer rendering in browser](../images/blazor-hybrid-wpf-sfsmartpdfviewer.png)
 
->[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/GettingStartedWPF).
+>[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/GettingStartedWPFApp).
 
 ## See also
 
