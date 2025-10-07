@@ -97,5 +97,4 @@ To delete a form field, select the field to remove. The Delete icon appears in t
 * [Annotations in Mobile View](../annotation/annotations-in-mobile-view)
 * [Form designer overview](../form-designer/overview)
 * [UI interactions](../form-designer/ui-interactions)
-* [Form designer events](../form-designer/events)
 * [Create form fields programmatically](../form-designer/create-programmatically)

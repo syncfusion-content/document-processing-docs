@@ -109,4 +109,4 @@ The following example illustrates how to load custom fonts in FreeText annotatio
 
 ## See also
 
-* [Load Custom Fonts in PDF Viewer](../how-to/load-custom-font-pdfium)
+* [Load Custom Fonts in PDF Viewer](../faqs/how-to-load-custom-font-pdfium)
