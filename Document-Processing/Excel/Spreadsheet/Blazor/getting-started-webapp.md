@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the Blazor Spreadsheet in Web App
 
-This section provides a brief guide on including the [Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
+This section provides a brief guide on including the [Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
 {% tabcontents %}
 
