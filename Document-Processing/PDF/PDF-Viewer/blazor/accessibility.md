@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Accessibility in Syncfusion® Blazor SfPdfViewer
-The Blazor SfPdfViewer component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor SfPdfViewer component follows established accessibility guidelines and standards, including the [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles), which are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor SfPdfViewer component is outlined below.
 
@@ -37,7 +37,7 @@ The accessibility compliance for the Blazor SfPdfViewer component is outlined be
 
 ## WAI-ARIA attributes
 
-[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript,and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used in the Blazor SfPdfViewer component:
+[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to enhance the accessibility of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript, and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used in the Blazor SfPdfViewer component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -57,46 +57,46 @@ The accessibility compliance for the Blazor SfPdfViewer component is outlined be
 
 ## Keyboard interaction
 
-The Blazor SfPdfViewer component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Message component.
+The Blazor SfPdfViewer component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it accessible to users who rely on assistive technologies (AT) and keyboard navigation. The following keyboard shortcuts are supported by the SfPdfViewer component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
 |||**Shortcuts for page navigation**|
-| <kbd>Ctrl</kbd> + <kbd>←</kbd> / <kbd>Ctrl</</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>←</kbd> or <kbd>⌘</kbd> + <kbd>↑</kbd> |Navigate to the first page |
-| <kbd>Ctrl</kbd> + <kbd>→</kbd> / <kbd>Ctrl</</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>→</kbd> or <kbd>⌘</kbd> + <kbd>↓</kbd> |Navigate to the last page |
+| <kbd>Ctrl</kbd> + <kbd>←</kbd> / <kbd>Ctrl</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>←</kbd> / <kbd>⌘</kbd> + <kbd>↑</kbd> |Navigate to the first page |
+| <kbd>Ctrl</kbd> + <kbd>→</kbd> / <kbd>Ctrl</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>→</kbd> / <kbd>⌘</kbd> + <kbd>↓</kbd> |Navigate to the last page |
 | <kbd>←</kbd> | <kbd>←</kbd> / <kbd>⇧</kbd> + <kbd>Space</kbd> |Navigate to the previous page |
 | <kbd>→</kbd> | <kbd>→</kbd> / <kbd>Space</kbd> | Navigate to the next page |
 | <kbd>Ctrl</kbd> + <kbd>G</kbd> | <kbd>⌘</kbd> + <kbd>G</kbd> | Go To The Page|
-|<kbd>↑</kbd> |<kbd>↑</kbd> |Scroll up|
+| <kbd>↑</kbd> |<kbd>↑</kbd> |Scroll up|
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Scroll down|
 |||**Shortcuts for Zooming**|
-|<kbd>Ctrl</kbd> + <kbd>=</kbd> |<kbd>⌘</kbd> + <kbd>=</kbd> | Perform zoom-in operation |
+| <kbd>Ctrl</kbd> + <kbd>=</kbd> | <kbd>⌘</kbd> + <kbd>=</kbd> | Perform zoom-in operation |
 | <kbd>Ctrl</kbd> + <kbd>-</kbd> | <kbd>⌘</kbd> + <kbd>-</kbd> | Perform zoom-out operation |
-|<kbd>Ctrl</kbd> + <kbd>0</kbd> | <kbd>⌘</kbd> + <kbd>0</kbd> | Retain the zoom level to 1 |
+|<kbd>Ctrl</kbd> + <kbd>0</kbd> | <kbd>⌘</kbd> + <kbd>0</kbd> | Reset zoom to 100% |
 |||**Shortcut for Text Search**|
 | <kbd>Ctrl</kbd> + <kbd>F</kbd> | <kbd>⌘</kbd> + <kbd>F</kbd> | Open the search toolbar|
 |||**Shortcut for Text Selection**|
 |<kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>⌘</kbd> + <kbd>C</kbd> | Copy the selected text or annotation |
-| <kbd>Ctrl</kbd> + <kbd>X</kbd> | <kbd>⌘</kbd> + <kbd>X</kbd> |Cut the selected text or annotation |
-|<kbd>Ctrl</kbd> + <kbd>V</kbd> | <kbd>⌘</kbd> + <kbd>V</kbd> |Paste the selected text or annotation |
-|||**Shortcuts for the general operation**|
-| <kbd>Ctrl</kbd> + <kbd>Z</kbd> | <kbd>⌘</kbd> + <kbd>Z</kbd> |Undo the action|
-|<kbd>Ctrl</kbd> + <kbd>Y</kbd> | <kbd>⌘</kbd> + <kbd>Y</kbd> |Redo the action|
-| <kbd>Ctrl</kbd> + <kbd>P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> |Print the document|
-| <kbd>Delete</kbd> | <kbd>Delete</kbd> |Delete the annotations|
-| <kbd>Ctrl</kbd>  + <kbd>Shift</kbd> + <kbd>A</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> |Toggle Annotation Toolbar|
-| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>0</kbd> | <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>0</kbd> |Show Command panel|
-| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>2</kbd> | <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>2</kbd> |Show Bookmarks|
-|<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>1</kbd> | <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>1</kbd> |Show Thumbnails|
-| <kbd>Ctrl</kbd> + <kbd>S</kbd> | <kbd>⌘</kbd> + <kbd>S</kbd> |Download|
-| <kbd>Shift</kbd> + <kbd>H</kbd> | <kbd>⇧</kbd> + <kbd>H</kbd> |Enable pan mode |
-| <kbd>Shift</kbd> + <kbd>V</kbd> |<kbd>⇧</kbd> + <kbd>V</kbd> |Enable text selection mode|
+| <kbd>Ctrl</kbd> + <kbd>X</kbd> | <kbd>⌘</kbd> + <kbd>X</kbd> | Cut the selected text or annotation |
+|<kbd>Ctrl</kbd> + <kbd>V</kbd> | <kbd>⌘</kbd> + <kbd>V</kbd> | Paste the selected text or annotation |
+|||**Shortcuts for general operation**|
+| <kbd>Ctrl</kbd> + <kbd>Z</kbd> | <kbd>⌘</kbd> + <kbd>Z</kbd> | Undo the action |
+|<kbd>Ctrl</kbd> + <kbd>Y</kbd> | <kbd>⌘</kbd> + <kbd>Y</kbd> | Redo the action |
+| <kbd>Ctrl</kbd> + <kbd>P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Print the document |
+| <kbd>Delete</kbd> | <kbd>Delete</kbd> | Delete the annotations |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> | Toggle Annotation Toolbar|
+| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>0</kbd> | <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>0</kbd> | Show Command panel |
+| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>2</kbd> | <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>2</kbd> | Show Bookmarks |
+|<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>1</kbd> | <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>1</kbd> | Show Thumbnails |
+| <kbd>Ctrl</kbd> + <kbd>S</kbd> | <kbd>⌘</kbd> + <kbd>S</kbd> | Download |
+| <kbd>Shift</kbd> + <kbd>H</kbd> | <kbd>⇧</kbd> + <kbd>H</kbd> | Enable pan mode |
+| <kbd>Shift</kbd> + <kbd>V</kbd> | <kbd>⇧</kbd> + <kbd>V</kbd> | Enable text selection mode |
 
 ## Ensuring accessibility
 
 The Blazor SfPdfViewer component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Blazor SfPdfViewer component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/pdfviewer) in a new window to evaluate the accessibility of the Blazor SfPdfViewer component with accessibility tools.
+The accessibility compliance of the Blazor SfPdfViewer component is demonstrated in the following sample. Open the [SfPdfViewer accessibility sample](https://blazor.syncfusion.com/accessibility/sfpdfviewer) in a new window to evaluate the accessibility of the Blazor SfPdfViewer component with accessibility tools.
 
 ## See also
 

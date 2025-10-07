@@ -13,11 +13,11 @@ To save a PDF file to AWS S3, you can follow the steps below
 
 **Step 1:** Create AWS S3 account 
 
- Set up an AWS S3 account by following the instructions on the official AWS site: [AWS Management Console](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html). Create an S3 bucket and generate access keys while ensuring secure storage of 
+Set up an AWS account and configure Amazon S3 by following the official guide: [AWS Management Console](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html). Create an S3 bucket, configure an IAM user or role with scoped permissions for S3 access, and generate access keys. Store credentials securely using environment variables.
 
 **Step 2:** Create a Simple SfPdfViewer Sample in blazor
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/server-side-application) to create a simple SfPdfViewer sample in blazor. This will give you a basic setup of the SfPdfViewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) to create a simple SfPdfViewer sample in blazor. This will give you a basic setup of the SfPdfViewer component.
 
 **Step 3:** Include the following namespaces in the **Index.razor** file.
 
@@ -77,9 +77,9 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 }
 ```
 
-Replace the file name with the actual document name that you want to load from AWS S3 bucket. Make sure to pass the document name from the AWS S3 bucket to the `documentPath` property of the SfPdfViewer component
+Replace the file name with the actual document name that you want to load from AWS S3 bucket. Make sure to pass the document name from the AWS S3 bucket to the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property of the SfPdfViewer component.
 
-N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
+N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name.
 
 N> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.
 
@@ -87,4 +87,4 @@ N> The **AWSSDK.S3** NuGet package must be installed in your application to use 
 
 ## See also
 
-* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../faqs/how-to-processing-large-files-without-increasing-maximum-message-size)
