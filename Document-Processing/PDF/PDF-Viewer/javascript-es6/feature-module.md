@@ -15,13 +15,13 @@ The PDF Viewer features are segregated into individual feature-wise modules to e
 
 The available PdfViewer modules are:
 
-* [**Toolbar**](./toolbar-customization.md):- Built-in toolbar for better user interaction.
+* [**Toolbar**](./toolbar-customization):- Built-in toolbar for better user interaction.
 * [**Magnification**](./magnification.md):- Perform zooming operation for better viewing experience.
-* [**Navigation**](./interactive-pdf-navigation.md):- Easy navigation across the PDF pages.
-* **LinkAnnotation**:- Easy navigation within and outside of the PDF document.
-* [**ThumbnailView**](.\how-to\open-thumbnail.md):- Easy navigation with in the PDF document.
-* **BookmarkView**(.\how-to\open-bookmark-ts.md):- Easy navigation based on the bookmark content of the PDF document.
-* [**TextSelection**](.\how-to\enable-text-selection-ts.md):- Select and copy text from a PDF file.
+* [**Navigation**](./interactive-pdf-navigation/page-navigation.md):- Easy navigation across the PDF pages.
+* [**LinkAnnotation**](./interactive-pdf-navigation/table-of-content-navigation.md):- Easy navigation within and outside of the PDF document.
+* [**ThumbnailView**](./interactive-pdf-navigation/page-thumbnail-navigation.md):- Easy navigation with in the PDF document.
+* [**BookmarkView**](./interactive-pdf-navigation/bookmark-navigation.md):- Easy navigation based on the bookmark content of the PDF document.
+* [**TextSelection**](./textselection.md):- Select and copy text from a PDF file.
 * [**TextSearch**](./text-search.md):- Search a text easily across the PDF document.
 * [**Print**](./print.md):- Print the entire document or a specific page directly from the browser.
 * [**Annotation**](./annotations/text-markup-annotation.md):- Annotations can be added or edited in the PDF document.

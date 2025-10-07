@@ -336,11 +336,7 @@ The PDF Viewer triggers events during text search operations, allowing you to cu
 The [textSearchStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchstartevent) event is raised the moment a search is initiated from the toolbar UI or by calling `textSearch.searchText(...)` programmatically.
 
 - Triggers when: the user submits a term in the search box or when code calls the search API.
-- Typical uses:
-  - Show a loading indicator or clear previous highlights.
-  - Log/telemetry for search terms.
-  - Optionally cancel the default behavior before it proceeds.
-  
+
 - Event arguments include ([TextSearchStartEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchStartEventArgs/)):
   - searchText: string — the term to search.
   - matchCase: boolean — whether case-sensitive search is enabled.
@@ -365,10 +361,6 @@ viewer.appendTo('#pdfViewer');
 The [textSearchHighlight](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchhighlightevent) event fires whenever an occurrence is highlighted during search or when navigating to next/previous results.
 
 - Triggers when: a match is brought into view and highlighted (including navigation between matches).
-- Typical uses:
-  - Add custom styling or tooltips for the active match.
-  - Auto-scroll or focus custom UI linked to the current result.
-  - Collect per-match analytics.
 - Event arguments include ([TextSearchHighlightEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchHighlightEventArgs/)):
   - bounds: RectangleBoundsModel | RectangleBoundsModel[] — rectangles of the highlighted match.
   - pageNumber: number — page index where the match is highlighted.
