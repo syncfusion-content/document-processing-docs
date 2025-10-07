@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stamp annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about stamp annotations in Syncfusion Blazor SfPdfViewer component and more.
+description: Learn how to add, edit, rotate, and customize stamp annotations in the Syncfusion Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,49 +9,49 @@ documentation: ug
 
 # Stamp annotations in Blazor SfPdfViewer Component
 
-The SfPdfViewer control provides options to add, edit, delete and rotate the following stamp annotation in the PDF documents:
+The SfPdfViewer component provides options to add, edit, delete, and rotate the following stamp annotation types in PDF documents:
 
-* Dynamic
-* Sign Here
-* Standard Business
-* Custom Stamp
+* Dynamic stamp
+* Sign stamp
+* Standard business stamp
+* Custom stamp
 
-![Stamp Annotation in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-stamp-annotation.png)
+![Stamp annotations displayed in the Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-stamp-annotation.png)
 
 ## Adding stamp annotations to the PDF document
 
-The stamp annotations can be added to the PDF document using the annotation toolbar.
+Stamp annotations can be added using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-* Click the **Stamp Annotation** dropdown button. A dropdown pop-up will appear and shows the stamp annotations to be added.
+* Click the **Stamp Annotation** dropdown button. A dropdown appears showing the available stamp types.
 
 ![Adding Stamp in Blazor SfPdfViewer Toolbar](../../blazor-classic/images/blazor-pdfviewer-add-stamp-in-toolbar.png)
 
-* Select the annotation type to be added to the page in the pop-up.
+* Select the required stamp type from the dropdown to add it to the page.
 
 ![Selecting Annotation from Stamp Popup in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-select-stamp-annotation.png)
 
-* You can add the annotation over the pages of the PDF document.
+* Place the annotation on the desired page in the PDF document.
 
-In the pan mode, if the stamp annotation mode is entered, the SfPdfViewer control will switch to text select mode.
+When entering stamp mode while in pan mode, the SfPdfViewer automatically switches to text selection mode to enable annotation placement.
 
 ## Adding custom stamp to the PDF document through interaction
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-* Click the **Stamp Annotation** dropdown button. A dropdown pop-up will appear and shows the stamp annotations to be added.
-* Click the Custom Stamp button.
+* Click the **Stamp Annotation** dropdown button. A dropdown appears showing the available options.
+* Click the **Custom Stamp** button.
 
-![Custom Stamp in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-custom-stamp.png)
+![Custom stamp picker in the Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-custom-stamp.png)
 
-* The file explorer dialog will appear, choose the image and then add the image in the PDF page.
+* In the file explorer dialog, choose an image to add as a stamp on the PDF page.
 
-N>The JPG and JPEG image format are only supported in custom stamp annotations.
+N> Only JPEG (JPG/JPEG) image formats are supported for custom stamp annotations.
 
 ## Setting default properties during control initialization
 
-The properties of the stamp annotation can be set before creating the control using StampSettings.
+Default properties for stamp annotations can be configured before the component is created by using `StampSettings`. These defaults apply to newly added stamp annotations.
 
-After editing the default opacity using the Edit Opacity tool, they will be changed to the selected values.
+After changing the default opacity using the Edit Opacity tool, the currently selected value is applied to subsequent stamps.
 
 ```cshtml
 
@@ -81,9 +81,9 @@ After editing the default opacity using the Edit Opacity tool, they will be chan
 
 ## Adding a custom stamp to the PDF document via PdfViewerCustomStampSettings
 
-You can add an image as a custom stamp icon using the CustomStamps property of the PdfViewerCustomStampSettings class.
+An image can be added as a custom stamp icon by using the `CustomStamps` property of the `PdfViewerCustomStampSettings` class.
 
-The following code illustrates how to add the image as a stamp annotation in the PDFViewer.
+The following example illustrates how to add an image as a stamp annotation in the SfPdfViewer.
 
 ```cshtml
 
@@ -190,9 +190,9 @@ The following code illustrates how to add the image as a stamp annotation in the
 
 ## Add stamp annotation programmatically
 
-The Blazor SfPdfViewer offers the capability to programmatically add the stamp annotation within the SfPdfViewer control using the [DynamicStampAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_Syncfusion_Blazor_SfPdfViewer_DynamicStampItem_), [SignStampAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_Syncfusion_Blazor_SfPdfViewer_SignStampItem_), and [StandardBusinessStampAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_Syncfusion_Blazor_SfPdfViewer_StandardBusinessStampItem_) method.
+The Blazor SfPdfViewer supports programmatically adding stamp annotations by using the [DynamicStampAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.DynamicStampItem.html), [SignStampAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignStampItem.html), and [StandardBusinessStampAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.StandardBusinessStampItem.html) methods.
 
-Below is an example demonstrating how you can use this method to add stamp annotation to a PDF document:
+The example below demonstrates adding a stamp annotation to a PDF document.
 
 ```cshtml
 
@@ -231,19 +231,19 @@ Below is an example demonstrating how you can use this method to add stamp annot
 
 ```
 
-This code will add a stamp annotation to the first page of the PDF document.
+This code adds a stamp annotation to the first page of the PDF document. Note that `PageNumber` is zero-based indexing (0 refers to page 1).
 
-![Programmatically Added Stamp Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-stamp-annotation.png)
+![Programmatically added stamp annotation in the Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-stamp-annotation.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Stamp/Add).
 
-N> To add a custom stamp annotation, you need to set the annotation type as an [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationType.html#Syncfusion_Blazor_SfPdfViewer_AnnotationType_Image) and [CustomStampSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html#Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_CustomStampSource) API to set the custom stamp image data. Then use [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to add the annotation properly.
+N> To add a custom stamp annotation programmatically, set the annotation type to [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationType.html#Syncfusion_Blazor_SfPdfViewer_AnnotationType_Image) and provide the custom image data using the [CustomStampSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html#Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_CustomStampSource) API. Then call [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to add the annotation.
 
 ## Edit stamp annotation programmatically
 
-The Blazor SfPdfViewer offers the capability to programmatically edit the stamp annotation within the SfPdfViewer control using the  [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+The Blazor SfPdfViewer supports programmatically editing existing stamp annotations by using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
-Below is an example demonstrating how you can utilize this method to edit the stamp annotation programmatically:
+The example below demonstrates how to edit a stamp annotation programmatically.
 
 ```cshtml
 
@@ -278,25 +278,25 @@ Below is an example demonstrating how you can utilize this method to edit the st
 
 ```
 
-This code snippet will edit the stamp annotation programmatically within the SfPdfViewer control.
+This code edits the selected stamp annotation programmatically within the SfPdfViewer component.
 
-![Programmatically Edit Stamp Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-stamp-annotation.png)
+![Programmatically editing a stamp annotation in SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-stamp-annotation.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Stamp/Edit).
 
 ## Customized templated stamp appearance
 
-The customized templated stamp appearance feature provides support for displaying personalized stamps with tailored templates, focusing solely on their visual representation. 
+The customized templated stamp appearance feature displays user-defined stamps with tailored templates, focusing on visual representation only.
 
-![Customized templated stamp appearance](../images/customized_templated_stamp_appearance.png)
+![Customized templated stamp appearance in SfPdfViewer](../images/customized_templated_stamp_appearance.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Stamp/Customized%20templated%20stamp%20appearance).
 
 ## Rotation support for Custom Stamp and Customized templated stamps
 
-The PDF Viewer also supports smooth rotation of Custom stamps and Customized templated stamps 
+The PDF Viewer supports smooth rotation for Custom stamps and customized templated stamps during interaction and editing.
 
-![Rotation support for Custom Stamp and Customized templated stamps](../images/rotation_support_for_customized_templated_stamps.png)
+![Rotation support for custom and customized templated stamps in SfPdfViewer](../images/rotation_support_for_customized_templated_stamps.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Stamp/Customized%20templated%20stamp%20appearance).
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Smart PDF Viewer using DeepSeek AI
 
-This guide demonstrates how to integrate DeepSeek's powerful AI capabilities with Syncfusion Smart PDF Viewer in your Blazor App. 
+This article explains how to integrate DeepSeek AI with the Syncfusion Smart PDF Viewer in a Blazor app.
 
 ## Prerequisites
 
@@ -17,6 +17,7 @@ Before you begin, ensure you have:
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 * DeepSeek account and API key (see setup instructions below)
+* A supported .NET SDK and target framework for the installed Syncfusion Blazor version
 
 ### Setting Up DeepSeek
 
@@ -41,20 +42,22 @@ After completing this setup, you can:
 
 ## Install the following NuGet packages to your project:
 
-open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install the following packages
+Open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search and install the following packages:
 
-1.[Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI).
-2.[Microsoft.SemanticKernel](https://www.nuget.org/packages/Microsoft.SemanticKernel).
-3.[Microsoft.SemanticKernel.Connectors.AzureOpenAI](https://www.nuget.org/packages/Microsoft.SemanticKernel.Connectors.AzureOpenAI).
+1. [Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI).
+2. [Microsoft.SemanticKernel](https://www.nuget.org/packages/Microsoft.SemanticKernel).
+3. [Microsoft.SemanticKernel.Connectors.AzureOpenAI](https://www.nuget.org/packages/Microsoft.SemanticKernel.Connectors.AzureOpenAI).
 
 ## Step 1: Create a Custom AI Service
 
 To integrate DeepSeek with Syncfusion Smart PDF Viewer, we'll create a custom implementation of the `IChatInferenceService` interface. This interface acts as a bridge between Syncfusion Smart PDF Viewer and your AI service.
 
-The `IChatInferenceService` interface is the bridge between Syncfusion Smart PDF Viewer and AI services:S
+The `IChatInferenceService` interface is the bridge between Syncfusion Smart PDF Viewer and AI services:
 
 1. Create a new file named `MyCustomService.cs`
 2. Add the following implementation:
+
+N> Ensure the project includes required using directives and valid XML documentation tags in custom code implementations.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MyCustomService.cs" %}
@@ -148,9 +151,7 @@ var app = builder.Build();
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/DeepseekService)
 
-N> Running Deepseek service may lead to slower response times due to system resource usage.
-To accommodate this, you can configure the Syncfusion Smart PDF Viewer to disable timeout for AI assist view operations by setting the timeout to 0.
-[Learn more](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/document-summarizer#timeout)
+N> Running the DeepSeek service may lead to slower response times due to system resource usage. To accommodate this, configure the Syncfusion Smart PDF Viewer to disable timeout for AI assist view operations by setting the timeout to 0. [Learn more](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/document-summarizer#timeout)
 
 ## See also
 
