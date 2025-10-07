@@ -31,6 +31,10 @@ To add **Blazor PDF Viewer** component in the app, open the NuGet package manage
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 * [Microsoft.AspNetCore.Components.WebView.Wpf](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.WebView.Wpf)
 
+N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.Wpf` updated to version `8.0.16`.
+
+![WPF Blazor App SfPdfViewer NuGet package reference](../images/wpf-sfpdfviewer-package.png)
+
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
@@ -74,6 +78,8 @@ dotnet restore
 
 N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for the list of available packages and component details.
 
+N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.Wpf` updated to version `8.0.16`.
+
 {% endtabcontent %}
 
 {% endtabcontents %}
@@ -82,21 +88,17 @@ N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nu
 
 The WPF project must target Windows and enable WPF. A typical project file looks like the following.
 
-```csproj
+{% tabs %} 
+{% highlight xml tabtitle="WPFBlazorHybridApp.csproj" hl_lines="1" %}
 
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net9.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <UseWPF>true</UseWPF>
-  </PropertyGroup>
+    ....
 
 </Project>
 
-```
+{% endhighlight %} 
+{% endtabs %}
 
 Create an `_Imports.razor` and add the component namespace
 
@@ -112,38 +114,22 @@ Create an `_Imports.razor` and add the component namespace
 Register Syncfusion Blazor services and BlazorWebView in **~/MainWindow.xaml.cs** so that the WPF window can host Blazor components.
 
 {% tabs %}
-{% highlight c# tabtitle="MainWindow.xaml.cs (WPF host)" hl_lines="11 12 20 21 22 23 24" %}
+{% highlight c# tabtitle="MainWindow.xaml.cs (WPF host)" hl_lines="3 4 6 7 8 9 10" %}
 
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+....
+
 using Microsoft.Extensions.DependencyInjection;
 using Syncfusion.Blazor;
-namespace WPFBlazorHybridApp;
-{
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
+        ....
             InitializeComponent();
-            var serviceCollection = new ServiceCollection();
-            serviceCollection.AddWpfBlazorWebView();
-            serviceCollection.AddMemoryCache();
-            serviceCollection.AddSyncfusionBlazor();
-            Resources.Add("services", serviceCollection.BuildServiceProvider());
-        }
-    }
-}
+            ServiceCollection services = new ServiceCollection();
+            services.AddWpfBlazorWebView();
+            services.AddMemoryCache();
+            services.AddSyncfusionBlazor();
+            Resources.Add("services", services.BuildServiceProvider());
+            ....
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ## Create wwwroot folder and index.html file 
@@ -153,7 +139,8 @@ namespace WPFBlazorHybridApp;
 * Inside wwwroot, create an index.html host page for the Blazor UI. This host page is required by BlazorWebView to initialize the Blazor runtime and load static assets (themes and scripts). A basic index.html might look like the following:
 
 
-```html
+{% tabs %} 
+{% highlight html tabtitle="wwwroot/index.html" hl_lines="8 13" %}
 
 <!DOCTYPE html>
 <html>
@@ -171,7 +158,10 @@ namespace WPFBlazorHybridApp;
 </body>
 </html>
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+N> Ensure that the pdfviewer static assets (themes and scripts) are loaded properly.
 
 ## Adding Blazor PDF Viewer component
 
@@ -198,15 +188,13 @@ N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 * Add the Microsoft.AspNetCore.Components.WebView.Wpf namespace.
 * Embed the BlazorWebView control, set HostPage to wwwroot/index.html, and map a RootComponent that matches the Razor component type and the selector in index.html (#app).
 
-```xaml
+{% tabs %} 
+{% highlight xaml tabtitle="MainWindow.xaml" hl_lines="3 7 8 9 11 12" %}
+
 <Window x:Class="WPFBlazorHybridApp.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        ....
         xmlns:blazor="clr-namespace:Microsoft.AspNetCore.Components.WebView.Wpf;assembly=Microsoft.AspNetCore.Components.WebView.Wpf"
-        xmlns:local="clr-namespace:WPFBlazorHybridApp"
-        mc:Ignorable="d"
+        ....
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <blazor:BlazorWebView HostPage="wwwroot\index.html" Services="{DynamicResource services}">
@@ -218,7 +206,8 @@ N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     </Grid>
 </Window>
 
-```
+{% endhighlight %} 
+{% endtabs %}
 
 ## Run the application
 
@@ -232,10 +221,10 @@ Run the WPF application. The Syncfusion&reg; Blazor PDF Viewer renders inside th
 
 * [Getting Started with Blazor PDF Viewer Component in Blazor WASM App](./web-assembly-application)
 
-* [Getting Started with Blazor PDF Viewer Component in WSL mode](./wsl-application)
+* [Getting Started with Blazor PDF Viewer Component in Blazor Web App](./web-app)
 
-* [Learn different ways to add script reference in Blazor Application](https://blazor.syncfusion.com/documentation/common/adding-script-references)
+* [Getting Started with Blazor PDF Viewer Component in WinForms Blazor Hybrid App](./deploy-winforms-blazor-app)
+
+* [Getting Started with Blazor PDF Viewer Component in MAUI Blazor App](./deploy-maui-blazor-app)
 
 * [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
-
-* [.NET 9 Native Linking Issues with SkiaSharp and Emscripten 3.1.56](https://help.syncfusion.com/document-processing/faq/how-to-fix-skiasharp-native-reference-issue-in-blazor-net90-app)
