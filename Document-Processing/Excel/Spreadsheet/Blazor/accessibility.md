@@ -45,8 +45,8 @@ The Syncfusion Blazor Spreadsheet follows WAI-ARIA patterns to meet accessibilit
 | `aria-label`| This attribute describes the accessible name for the interactive elements. |
 | `aria-expanded` | Indicates whether a collapsible element (e.g., a dropdown) is currently expanded or collapsed. |
 | `aria-live` | Defines a region as "live", meaning its content updates dynamically. Values include "off", "polite" (waits until idle), or "assertive" (announces immediately). |
-| `aria-rowindex` | Defines the row index of a cell with respect to the total number of rows in the Spreadsheet. |
-| `aria-colindex` | Defines the column index of a cell with respect to the total number of columns in the Spreadsheet. |
+| `aria-rowindex` | Defines the row index of a row with respect to the total number of rows in the Spreadsheet. |
+| `aria-colindex` | Defines the column index of a column with respect to the total number of columns in the Spreadsheet. |
 | `aria-multiline` | Indicates whether a textbox accepts multiple lines of input or only a single line. |
 
 
@@ -85,7 +85,7 @@ The Syncfusion Blazor Spreadsheet follows keyboard interaction guidelines, makin
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Moves the active cell down one row.|
 | <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Moves the active cell up one row.|
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the active cell right one column.|
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the selection to the cell on the left.|
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the active cell left one column.|
 
 <b>Editing</b>
 
