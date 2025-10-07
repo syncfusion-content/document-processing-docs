@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-This guide explains how to work with annotations in the mobile view of the Blazor SfPdfViewer. It covers opening the annotation toolbar, adding each annotation type, adjusting properties, deleting annotations, and using the comments panel.
+This article explains how to work with annotations in the mobile view of the Blazor SfPdfViewer. It covers opening the annotation toolbar, adding each annotation type, adjusting properties, deleting annotations, and using the comments panel.
 
 # To open the annotation toolbar
 
