@@ -33,7 +33,7 @@ Use the redaction tool on the toolbar to draw over content that should be redact
 
 ![Resizing a redaction annotation](redaction-annotations-images/resizing-redaction-annotation.png)
 
-N> The redaction tool is not shown on the toolbar by default. Customize the toolbar to include it. For instructions, see the [Toolbar customization](./../toolbar-customization).
+N> The redaction tool is not shown on the toolbar by default. Customize the toolbar to include it. For instructions, see the [Redaction Toolbar customization](../toolbar/redaction-toolbar-customization).
 
 ### Adding a Redaction annotation using Programmatically
 
@@ -350,5 +350,5 @@ For details, see the [Export and import annotations documentation](./import-expo
 ## See also
 
 * [Adding the shape annotation in PDF viewer](./shape-annotation)
-* [Toolbar customization in PDF viewer](./../toolbar-customization)
+* [Annotation Toolbar customization in PDF viewer](../toolbar/annotation-toolbar-customization)
 * [Form designer in PDF viewer](../form-designer/overview)

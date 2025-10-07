@@ -43,7 +43,7 @@ Below are the key events provided by the Form Designer to handle form field inte
 
 The event exposes the `Cancel` property, which can be set to `true` to conditionally prevent adding the form field.
 
-###### Event Arguments
+#### Event Arguments
 The FormFieldAdding event provides [FormFieldAddEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldAddEventArgs.html), which includes [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldAddEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldAddEventArgs_Field) (form field details), [PageNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldAddEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldAddEventArgs_PageNumber) (target page), and [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldAddEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldAddEventArgs_Cancel) (to prevent addition).
 
 ```cshtml
@@ -72,7 +72,7 @@ By setting `args.Cancel = true`, the addition of the form field can be condition
 
 [FormFieldAdded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldAdded) event is triggered whenever a new form field is added to the PDF document. It allows developers to monitor the addition of form fields and apply default properties or validations.
 
-###### Event Arguments
+#### Event Arguments
 The FormFieldAdded event provides [FormFieldAddedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldAddedEventArgs.html), which includes properties like [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldAddedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldAddedEventArgs_Field) (details of the added field) and [PageNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldAddedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldAddedEventArgs_PageNumber) (where the field was added). Developers can use these properties to monitor or modify the added form fields.
 
 ```cshtml
@@ -98,7 +98,7 @@ The FormFieldAdded event provides [FormFieldAddedEventArgs](https://help.syncfus
 
 [FormFieldDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldDeleted) event is triggered when a form field is removed from the document. It can be used to ensure proper cleanup and prevent accidental deletions.
 
-###### Event Arguments
+#### Event Arguments
 The FormFieldDeleted event provides [FormFieldDeletedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldDeletedEventArgs.html), which contains properties like [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldDeletedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldDeletedEventArgs_Field) (deleted field details) and [PageNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldDeletedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldDeletedEventArgs_PageNumber). This event helps track and manage field deletions.
 
 ```cshtml
@@ -125,7 +125,7 @@ The FormFieldDeleted event provides [FormFieldDeletedEventArgs](https://help.syn
 
 [FormFieldClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldClick) is triggered when a user clicks on a form field while designer mode is off. This event can be used to display tooltips, highlight fields, or open settings.
 
-###### Event Arguments
+#### Event Arguments
 The FormFieldClick event provides [FormFieldClickArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldClickArgs.html), containing [FormField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldClickArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldClickArgs_FormField) (clicked field details). It enables actions like highlighting fields or opening settings.
 
 ```cshtml
@@ -150,7 +150,7 @@ The FormFieldClick event provides [FormFieldClickArgs](https://help.syncfusion.c
 
 [FormFieldDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldDoubleClick) is triggered when a form field is double-clicked. This event is useful for triggering additional actions.
 
-###### Event Arguments
+#### Event Arguments
 The FormFieldDoubleClick event provides [FormFieldDoubleClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldDoubleClickEventArgs.html), which includes [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldDoubleClickEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldDoubleClickEventArgs_Field) (double-clicked field details). It is useful for triggering additional actions when a field is double-clicked.
 
 ```cshtml
@@ -177,7 +177,7 @@ The FormFieldDoubleClick event provides [FormFieldDoubleClickEventArgs](https://
 
 [FormFieldSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldSelected) is triggered when a form field is selected. It can be used to show additional options or highlight the selected field.
 
-###### Event Arguments
+#### Event Arguments
 The FormFieldSelected event provides [FormFieldSelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSelectedEventArgs.html), which contains [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSelectedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSelectedEventArgs_Field) (selected field details) and [PageNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSelectedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSelectedEventArgs_PageNumber). This event helps in handling field selection and UI updates.
 
 ```cshtml
@@ -205,7 +205,7 @@ The FormFieldSelected event provides [FormFieldSelectedEventArgs](https://help.s
 
 [FormFieldUnselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldUnselected) is triggered when a selected form field is unselected. This event helps in resetting UI elements or hiding additional options.
 
-###### Event Arguments
+#### Event Arguments
 The FormFieldUnselected event provides [FormFieldUnselectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldUnselectedEventArgs.html), which includes [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldUnselectedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldUnselectedEventArgs_Field) (unselected field details). It helps in resetting UI elements or hiding additional options.
 
 ```cshtml
@@ -232,7 +232,7 @@ The FormFieldUnselected event provides [FormFieldUnselectedEventArgs](https://he
 
 [FormFieldResized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldResized) is triggered when a form field is resized. This event is useful for applying constraints on form field sizes or updating layout dynamically.
 
-###### Event Arguments
+#### Event Arguments
 The FormFieldResized event provides [FormFieldResizedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldResizedEventArgs.html), which contains [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldResizedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldResizedEventArgs_Field) (resized field details) and [NewBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldResizedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldResizedEventArgs_NewBounds) (updated field dimensions). This event allows applying constraints on resizing.
 
 ```cshtml
@@ -260,7 +260,7 @@ The FormFieldResized event provides [FormFieldResizedEventArgs](https://help.syn
 
 [ValidateFormFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ValidateFormFields) is triggered when form fields are validated before submission, saving, or printing the PDF. It ensures required fields are completed correctly. To trigger this event, set the [EnableFormFieldsValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableFormFieldsValidation) property to `true` in the SfPdfViewer2 component.
 
-###### Event Arguments
+#### Event Arguments
 The ValidateFormFields event provides [ValidateFormFieldsArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ValidateFormFieldsArgs.html), which contains [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ValidateFormFieldsArgs.html#Syncfusion_Blazor_SfPdfViewer_ValidateFormFieldsArgs_Fields) (validated form fields). This event ensures that required fields are properly filled.
 
 ```cshtml
@@ -288,7 +288,7 @@ The ValidateFormFields event provides [ValidateFormFieldsArgs](https://help.sync
 
 [FormFieldFocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldFocusIn) occurs when focus enters a form field while designer mode is disabled. Typical uses include applying dynamic styling, showing inline help, or suggesting values.
 
-###### Event Arguments
+#### Event Arguments
 The FormFieldFocusIn event provides [FormFieldFocusInEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldFocusInEventArgs.html), which includes [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldFocusInEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldFocusInEventArgs_Field) (details of the focused form field). Use it to identify the target field for styling or tooltips when focus is gained.
 
 ```cshtml
@@ -316,7 +316,7 @@ The FormFieldFocusIn event provides [FormFieldFocusInEventArgs](https://help.syn
 
 [FormFieldFocusOut](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldFocusOut) occurs when focus leaves a form field while designer mode is disabled. Common scenarios include validating input, persisting values, or cleaning up UI state.
 
-###### Event Arguments
+#### Event Arguments
 The FormFieldFocusOut event provides [FormFieldFocusOutEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldFocusOutEventArgs.html), which includes [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldFocusOutEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldFocusOutEventArgs_Field) (the form field losing focus). Use it to validate or save data when the user moves out of a field.
 
 ```cshtml
@@ -344,7 +344,7 @@ The FormFieldFocusOut event provides [FormFieldFocusOutEventArgs](https://help.s
 
 [FormFieldMouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldMouseEnter) occurs when the pointer enters a form field in the PDF Viewer. It is useful for hover styling, showing tooltips, or previewing context-sensitive help.
 
-###### Event Arguments
+#### Event Arguments
 The FormFieldMouseEnter event provides [FormFieldMouseEnterEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldMouseEnterEventArgs.html), which includes properties like [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldMouseEnterEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldMouseEnterEventArgs_Field) (the form field entered) and [PageNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldMouseEnterEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldMouseEnterEventArgs_PageNumber) (page containing the field). Use this to tailor hover behavior based on field and page context.
 
 ```cshtml
@@ -372,7 +372,7 @@ The FormFieldMouseEnter event provides [FormFieldMouseEnterEventArgs](https://he
 
 [FormFieldMouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldMouseLeave) occurs when the pointer leaves a form field. Typical uses include hiding tooltips and reverting hover styling.
 
-###### Event Arguments
+#### Event Arguments
 The FormFieldMouseLeave event provides [FormFieldMouseLeaveEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldMouseLeaveEventArgs.html), which includes properties like [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldMouseLeaveEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldMouseLeaveEventArgs_Field) (the form field exited) and [PageNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldMouseLeaveEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldMouseLeaveEventArgs_PageNumber). Use it to revert UI changes when the pointer moves away.
 
 ```cshtml
@@ -400,7 +400,7 @@ The FormFieldMouseLeave event provides [FormFieldMouseLeaveEventArgs](https://he
 
 [FormFieldPropertyChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldPropertyChanged) occurs when a form field’s properties are modified. This is useful for tracking changes, synchronizing UI, or enforcing rules based on property updates.
 
-###### Event Arguments
+#### Event Arguments
 The FormFieldPropertyChanged event provides [FormFieldPropertyChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldPropertyChangedEventArgs.html), which contains properties like [OldValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldPropertyChangedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldPropertyChangedEventArgs_OldValue) and [NewValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldPropertyChangedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldPropertyChangedEventArgs_NewValue). Use these to compare changes and trigger dependent updates or validations.
 
 ```cshtml
@@ -452,7 +452,7 @@ The FormFieldPropertyChanged event provides [FormFieldPropertyChangedEventArgs](
 
 [FormFieldsExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsExporting) occurs when the form fields export process begins. It enables customization of the export payload or process, including validation or transformation, and the operation can be canceled by setting args.Cancel = true.
 
-###### Event Arguments
+#### Event Arguments
 The FormFieldsExporting event provides [FormFieldsExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldsExportEventArgs.html), which includes properties like [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldsExportEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldsExportEventArgs_Cancel). Use it to modify the export payload, validate data, or cancel the operation when necessary.
 
 ```cshtml
@@ -494,7 +494,7 @@ The FormFieldsExporting event provides [FormFieldsExportEventArgs](https://help.
 
 [FormFieldsImporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsImporting) occurs when the form-fields import process begins. Use this event to validate or modify incoming form-field data before it is applied. Cancel the operation by setting the event argument's Cancel property to true.
 
-###### Event Arguments
+#### Event Arguments
 The FormFieldsImporting event provides [FormFieldsImportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldsImportEventArgs.html), which includes properties such as [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldsImportEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldsImportEventArgs_Cancel). Use this to stop the import or adjust data prior to import.
 
 ```cshtml
@@ -626,7 +626,7 @@ The FormFieldsImporting event provides [FormFieldsImportEventArgs](https://help.
 
 [FormFieldsExportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsExportFailed) occurs when the export operation fails. Handle this event to capture error details, log issues, and provide fallback actions.
 
-###### Event Arguments
+#### Event Arguments
 The event provides [FormFieldsExportFailedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldsExportFailedEventArgs.html), which includes [ErrorDetails](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldsExportFailedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldsExportFailedEventArgs_ErrorDetails) describing the failure. Use this information to diagnose and recover from export errors.
 
 ```cshtml
@@ -665,7 +665,7 @@ The event provides [FormFieldsExportFailedEventArgs](https://help.syncfusion.com
 
 [FormFieldsImportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsImportFailed) occurs when the import operation fails. Handle this event to surface errors to the user, capture diagnostics, and attempt recovery.
 
-###### Event Arguments
+#### Event Arguments
 The event provides [FormFieldsImportFailedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldsImportFailedEventArgs.html), which includes [ErrorDetails](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldsImportFailedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldsImportFailedEventArgs_ErrorDetails) explaining the cause. Use this to troubleshoot and implement fallback mechanisms.
 
 ```cshtml
