@@ -5,7 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Bookmarks
+# Working with Bookmarks in PDF
 
 Essential<sup>&reg;</sup> PDF provides support to insert, remove and modify the bookmarks in the PDF Document.
 
