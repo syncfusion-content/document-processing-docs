@@ -141,7 +141,7 @@ Create a `Component` folder, add an `_Imports.razor` file in it, and include the
 {% endhighlight %}
 {% endtabs %}
 
-N> Ensure that the pdfviewer static assets (themes and scripts) are loaded properly.
+N> Ensure that the PDF Viewer static assets (themes and scripts) are loaded properly.
 
 Register Syncfusion Blazor services and BlazorWebView in **~/Form1.cs** so that the WinForms window can host Blazor components.
 

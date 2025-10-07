@@ -161,7 +161,7 @@ using Syncfusion.Blazor;
 {% endhighlight %}
 {% endtabs %}
 
-N> Ensure that the pdfviewer static assets (themes and scripts) are loaded properly.
+N> Ensure that the PDF Viewer static assets (themes and scripts) are loaded properly.
 
 ## Adding Blazor PDF Viewer component
 
