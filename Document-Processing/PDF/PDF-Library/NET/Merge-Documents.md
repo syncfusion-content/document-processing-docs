@@ -157,6 +157,7 @@ Essential<sup>&reg;</sup> PDF provides support for importing the pages from one 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Importing-pages-from-one-document-another-document/.NET/Importing-pages-from-one-document-another-document/Program.cs" %} 
 
 using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
 PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
@@ -177,6 +178,7 @@ lDoc.Close(true);
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
 PdfLoadedDocument lDoc = new PdfLoadedDocument("file1.pdf");
@@ -196,6 +198,7 @@ lDoc.Close(true)
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document
 Dim lDoc As New PdfLoadedDocument("file1.pdf")
@@ -222,6 +225,7 @@ You can import multiple pages from an existing document by using [ImportPageRang
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Import-multiple-pages-from-an-existing-PDF/.NET/Import-multiple-pages-from-an-existing-PDF/Program.cs" %} 
 
 using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
 PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
@@ -242,6 +246,7 @@ lDoc.Close(true);
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Loads PDF document.
 PdfLoadedDocument lDoc = new PdfLoadedDocument("file1.pdf");
@@ -261,6 +266,7 @@ lDoc.Close(true);
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Loads PDF document
 Dim lDoc As New PdfLoadedDocument("file1.pdf")
@@ -287,6 +293,7 @@ You can also import pages from multiple documents and arrange the pages by using
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Import-pages-from-multiple-documents-and-arrange-pages/.NET/Import-pages-from-multiple-documents-and-arrange-pages/Program.cs" %} 
 
 using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Loads document.
 PdfLoadedDocument lDoc = new PdfLoadedDocument("file1.pdf");
@@ -310,6 +317,7 @@ lDoc2.Close(true);
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Loads document.
 PdfLoadedDocument lDoc = new PdfLoadedDocument("file1.pdf");
@@ -333,6 +341,7 @@ lDoc2.Close(true);
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Loads a document
 Dim lDoc As New PdfLoadedDocument("file1.pdf")
@@ -374,6 +383,7 @@ You can split a large PDF document into multiple documents using [Split](https:/
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Loads the PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("large.pdf");
@@ -387,6 +397,7 @@ loadedDocument.Close(true);
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Loads the PDF document
 Dim loadedDocument As New PdfLoadedDocument("large.pdf")
