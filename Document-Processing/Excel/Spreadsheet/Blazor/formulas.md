@@ -75,7 +75,7 @@ N> Named Ranges can be defined only for cells or ranges that contain values.
 
     ![Name Manager Dialog](./images/named-range.gif)
 
-### Editing Or Deleting Named Ranges
+### Editing or Deleting Named Ranges
 
 **Named Ranges** are managed through the **Name Manager** dialog, which supports editing and deletion.
 
