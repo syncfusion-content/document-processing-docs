@@ -140,7 +140,7 @@ Create a `Component` folder, add an `_Imports.razor` file in it, and include the
 {% endhighlight %}
 {% endtabs %}
 
-N> Ensure that the smart pdfviewer static assets (themes and scripts) are loaded properly.
+N> Ensure that the Smart PDF Viewer static assets (themes and scripts) are loaded properly.
 
 ## To Configure Azure OpenAI Service
 

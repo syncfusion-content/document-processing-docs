@@ -205,7 +205,7 @@ For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](
 {% endhighlight %}
 {% endtabs %}
 
-N> Ensure that the smart pdfviewer static assets (themes and scripts) are loaded properly.
+N> Ensure that the Smart PDF Viewer static assets (themes and scripts) are loaded properly.
 
 ## Adding Blazor Smart PDF Viewer component
 
