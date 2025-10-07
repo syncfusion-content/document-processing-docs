@@ -533,11 +533,7 @@ Essential<sup>&reg;</sup> PDF allows you to compress/change the quality of the i
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
-using System.Text;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -564,11 +560,7 @@ document.Close(true);
 
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
-Imports System
-Imports System.Collections.Generic
-Imports System.Diagnostics
 Imports System.Drawing
-Imports System.Text
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -604,11 +596,7 @@ You can compress the images in an existing PDF document by extract the images us
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
-using System.Text;
 
 //Load the PDF document with images
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -642,11 +630,7 @@ loadedDocument.Close(true);
 
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
-Imports System
-Imports System.Collections.Generic
-Imports System.Diagnostics
 Imports System.Drawing
-Imports System.Text
 Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document which consist of images

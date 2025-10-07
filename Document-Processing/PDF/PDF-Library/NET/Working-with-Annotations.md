@@ -119,6 +119,7 @@ To add [PdfPopupAnnotation](https://help.syncfusion.com/cr/document-processing/S
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -147,6 +148,7 @@ document.Close(true);
 using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Creates a new PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("input.pdf");
@@ -173,7 +175,8 @@ document.Close(true);
 
 Imports System.Drawing
 Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.
+Imports Syncfusion.Pdf.Parsing
 
 'Creates a new PDF document.
 Dim document As New PdfLoadedDocument("input.pdf")
@@ -1010,6 +1013,7 @@ using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
@@ -1036,6 +1040,7 @@ using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Loads the document
 PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
@@ -1062,6 +1067,7 @@ Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
 Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Loads the document
 Dim lDoc As New PdfLoadedDocument("Input.pdf")
@@ -1740,6 +1746,7 @@ using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -1768,6 +1775,7 @@ using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -1795,6 +1803,7 @@ Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
 Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
  Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -3556,6 +3565,7 @@ loadedDocument.Close(true);
 
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -3638,6 +3648,7 @@ loadedDocument.Close(true);
 
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -3727,6 +3738,7 @@ loadedDocument.Close(true);
 
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("PopupAnnotation.pdf")
@@ -3821,6 +3833,7 @@ loadedDocument.Close();
 
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document. 
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("../../Data/Input.pdf")
@@ -3900,6 +3913,7 @@ loadedDocument.Close(true);
 
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -3956,6 +3970,7 @@ loadedDocument.Close(true);
 
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -4027,6 +4042,7 @@ using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
 
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
     ' Load the PDF document from a file path
     Dim loadedDocument As New PdfLoadedDocument("C:\path\to\input.pdf")
@@ -4201,7 +4217,7 @@ lDoc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Pdf.Parsing;
+Imports Syncfusion.Pdf.Parsing
 
 'Loads the document 
 Dim lDoc As New PdfLoadedDocument("input.pdf") 
@@ -4254,7 +4270,7 @@ lDoc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Pdf.Parsing;
+Imports Syncfusion.Pdf.Parsing
 
 'Loads the document
 Dim lDoc As New PdfLoadedDocument("input.pdf")
@@ -4303,7 +4319,7 @@ lDoc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Pdf.Parsing;
+Imports Syncfusion.Pdf.Parsing
 
 'Loads the document
 Dim lDoc As New PdfLoadedDocument("input.pdf")
@@ -4352,7 +4368,7 @@ lDoc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Pdf.Parsing;
+Imports Syncfusion.Pdf.Parsing
 
 'Loads the document 
 Dim lDoc As New PdfLoadedDocument("input.pdf") 
@@ -4452,7 +4468,7 @@ pdfLoadedDocument.Close(true);
 Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Parsing;
+Imports Syncfusion.Pdf.Parsing
 
 ' Load the PDF document from a file stream 
 Dim pdfLoadedDocument As New PdfLoadedDocument("Input.pdf") 
@@ -4573,7 +4589,7 @@ pdfLoadedDocument.Close(true);
 Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Parsing;
+Imports Syncfusion.Pdf.Parsing
 
 ' Load the PDF document from a file stream 
 Dim pdfLoadedDocument As New PdfLoadedDocument("Input.pdf") 
@@ -4695,7 +4711,7 @@ pdfLoadedDocument.Close(true);
 Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Parsing;
+Imports Syncfusion.Pdf.Parsing
 
 ' Load the PDF document from a file stream 
 Dim pdfLoadedDocument As New PdfLoadedDocument("Input.pdf") 
@@ -4809,7 +4825,7 @@ using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
 
 Imports System.Drawing
 Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 ' Load the PDF document from the input stream
 Using loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -4906,7 +4922,7 @@ using (PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf"))
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports System.Drawing
+Imports Syncfusion.Pdf.Parsing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
 
@@ -5200,6 +5216,7 @@ To add comments [PdfPopupAnnotation](https://help.syncfusion.com/cr/document-pro
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
@@ -5235,6 +5252,7 @@ lDoc.Close(true);
 using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf");
@@ -5270,6 +5288,7 @@ ldoc.Close(true);
 Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document
 Dim ldoc As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -5486,6 +5505,7 @@ To add the review status  [PdfAnnotationState](https://help.syncfusion.com/cr/do
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
@@ -5521,6 +5541,7 @@ lDoc.Close(true);
 using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
+Using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf");
@@ -5556,6 +5577,7 @@ ldoc.Close(true);
 Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
 Dim ldoc As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -6694,6 +6716,7 @@ Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
 Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 ' Load an existing document.
 Dim document As New PdfLoadedDocument("Input.pdf")

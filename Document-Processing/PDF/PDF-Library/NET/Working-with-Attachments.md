@@ -332,7 +332,6 @@ using Syncfusion.Pdf.Interactive;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf;
 using Syncfusion.Drawing;
-using System.Reflection.Metadata;
 
 // Load the existing PDF file
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -387,7 +386,6 @@ using Syncfusion.Pdf.Interactive;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf;
 using System.Drawing;
-using System.Reflection.Metadata;
 
 // Load the existing PDF file
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -442,7 +440,6 @@ Imports Syncfusion.Pdf.Interactive
 Imports Syncfusion.Pdf.Parsing
 Imports Syncfusion.Pdf
 Imports System.Drawing
-Imports System.Reflection.Metadata
 
 ' Load the existing PDF file
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")

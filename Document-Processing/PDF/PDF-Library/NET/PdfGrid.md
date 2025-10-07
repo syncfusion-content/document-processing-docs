@@ -29,10 +29,8 @@ The following code sample illustrates how to create a simple table from a data s
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-table-from-data-source-in-a-PDF/.NET/Create-table-from-data-source-in-a-PDF/Program.cs" %} 
 
-using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Grid;
-using System.Data;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -63,10 +61,8 @@ doc.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Grid;
-using System.Data;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -97,10 +93,8 @@ doc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Grid
-Imports System.Data
 
 'Create a new PDF document. 
 Dim doc As PdfDocument = New PdfDocument()
@@ -169,7 +163,7 @@ pdfGridRow.Cells[0].Value = "E01";
 pdfGridRow.Cells[1].Value = "Clay";
 pdfGridRow.Cells[2].Value = "$10,000";
 //Draw the PdfGrid.
-pdfGrid.Draw(pdfPage, Syncfusion.Drawing.PointF.Empty);
+pdfGrid.Draw(pdfPage, PointF.Empty);
 
 //Save the PDF document.
 pdfDocument.Save("Output.pdf");
@@ -266,7 +260,6 @@ Refer to the following code sample to create a table using [PdfGrid](https://hel
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf.Parsing;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -302,7 +295,6 @@ doc.Close(true);
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf.Parsing;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -338,7 +330,6 @@ doc.Close(true);
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Grid
-Imports Syncfusion.Pdf.Parsing
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -841,7 +832,6 @@ using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
-using System.Data;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -887,7 +877,6 @@ using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
-using System.Data;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -932,7 +921,6 @@ Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Grid
-Imports System.Data
 
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()

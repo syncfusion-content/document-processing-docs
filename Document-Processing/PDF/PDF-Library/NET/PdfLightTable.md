@@ -27,7 +27,6 @@ The following code sample illustrates how to create a simple table from a data s
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Tables;
-using System.Data;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -45,7 +44,7 @@ IEnumerable<object> table = data;
 //Assign data source.
 pdfLightTable.DataSource = table;
 //Draw PdfLightTable.
-pdfLightTable.Draw(page, new Syncfusion.Drawing.PointF(0, 0));
+pdfLightTable.Draw(page, new PointF(0, 0));
 
 //Save the PDF document.
 doc.Save("Output.pdf");
@@ -59,7 +58,6 @@ doc.Close(true);
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Tables;
-using System.Data;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -93,7 +91,6 @@ doc.Close(true);
 Imports Syncfusion.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Tables
-Imports System.Data
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -139,7 +136,6 @@ The following code illustrates how to add the data directly into the [PdfLightTa
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Tables;
 using Syncfusion.Pdf;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -174,7 +170,6 @@ doc.Close(true);
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Tables;
 using Syncfusion.Pdf;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -209,7 +204,6 @@ doc.Close(true);
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Tables
 Imports Syncfusion.Pdf
-Imports System.Reflection.Metadata
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -255,7 +249,6 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf.Tables;
 using Syncfusion.Pdf;
-using System.Reflection.Metadata;
 
 //Load the PDF document. 
 PdfLoadedDocument doc = new PdfLoadedDocument("Input.pdf");
@@ -291,7 +284,6 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf.Tables;
 using Syncfusion.Pdf;
-using System.Reflection.Metadata;
 
 //Load a PDF document.
 PdfLoadedDocument doc = new PdfLoadedDocument("input.pdf");
@@ -328,7 +320,6 @@ Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Parsing
 Imports Syncfusion.Pdf.Tables
 Imports Syncfusion.Pdf
-Imports System.Reflection.Metadata
 
 'Load a PDF document.
 Dim doc As New PdfLoadedDocument("input.pdf")
@@ -375,8 +366,6 @@ The following code sample illustrates how to customize the cell properties in ``
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Tables;
-using System.Data.Common;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -423,8 +412,6 @@ doc.Close(true);
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Tables;
-using System.Data.Common;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -472,8 +459,6 @@ doc.Close(true);
 Imports Syncfusion.Pdf.Graphics
 Imports System.Data.Common
 Imports Syncfusion.Pdf.Tables
-Imports Syncfusion.Pdf
-Imports System.Reflection.Metadata
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -700,7 +685,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 using Syncfusion.Pdf.Tables;
 using Syncfusion.Pdf;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -760,7 +744,6 @@ private void pdfLightTable_BeginRowLayout(object sender, BeginRowLayoutEventArgs
 
 using Syncfusion.Pdf.Tables;
 using Syncfusion.Pdf;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -824,7 +807,6 @@ private void pdfLightTable_BeginRowLayout(object sender, BeginRowLayoutEventArgs
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports System.Reflection.Metadata
 Imports Syncfusion.Pdf.Tables
 Imports Syncfusion.Pdf
 
@@ -894,7 +876,6 @@ The following code sample illustrates how to customize the column in [PdfLightTa
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Tables;
-using System.Data.Common;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -940,7 +921,6 @@ doc.Close(true);
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Tables;
-using System.Data.Common;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -986,7 +966,6 @@ doc.Close(true);
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Tables
-Imports System.Data.Common
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
