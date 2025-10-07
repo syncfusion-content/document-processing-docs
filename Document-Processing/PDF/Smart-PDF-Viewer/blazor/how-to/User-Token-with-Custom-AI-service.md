@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Getting Started Smart PDF Viewer using UserToken with Azure Service
 
-This guide provides step-by-step instructions for integrating and using Syncfusion Smart PDF Viewer with a user token and a custom Azure OpenAI service in a Blazor app.
+This article provides step-by-step instructions for integrating and using Syncfusion Smart PDF Viewer with a user token and a custom Azure OpenAI service in a Blazor app.
 
 ## Prerequisites
 
