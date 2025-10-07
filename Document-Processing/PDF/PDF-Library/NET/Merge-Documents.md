@@ -159,9 +159,7 @@ Essential<sup>&reg;</sup> PDF provides support for importing the pages from one 
 using Syncfusion.Pdf;
 
 //Load the PDF document.
-FileStream docStream = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document.
-PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
+PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
 //Create a new document.
 PdfDocument document = new PdfDocument();
 //Imports the page at 1 from the lDoc.
@@ -226,9 +224,7 @@ You can import multiple pages from an existing document by using [ImportPageRang
 using Syncfusion.Pdf;
 
 //Load the PDF document.
-FileStream docStream = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document.
-PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
+PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
 //Create a new document.
 PdfDocument document = new PdfDocument();
 //Imports the page at 1 from the lDoc.

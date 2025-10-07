@@ -97,6 +97,11 @@ doc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Grid
+Imports System.Data
+
 'Create a new PDF document. 
 Dim doc As PdfDocument = New PdfDocument()
 'Add a page. 
@@ -212,6 +217,10 @@ pdfDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Grid
+
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()
 'Add page.
@@ -326,6 +335,11 @@ doc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+Imports Syncfusion.Pdf.Parsing
+
 'Create a new PDF document.
 Dim doc As New PdfDocument()
 'Add a page.
@@ -373,8 +387,7 @@ using Syncfusion.Pdf.Grid;
 using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument doc = new PdfLoadedDocument(docStream);
+PdfLoadedDocument doc = new PdfLoadedDocument("Input.pdf");
 //Get the first page from a document.
 PdfLoadedPage page = doc.Pages[0] as PdfLoadedPage;
 //Create PDF graphics for the page.
@@ -439,6 +452,11 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+Imports Syncfusion.Pdf.Parsing
 
 'Load a PDF document.
 Dim doc As New PdfLoadedDocument("input.pdf")
@@ -602,6 +620,10 @@ pdfDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()
 'Create the page.
@@ -758,6 +780,10 @@ pdfDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()
 'Add page.
@@ -902,6 +928,12 @@ pdfDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+Imports System.Data
+
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()
 'Add a page. 
@@ -1044,6 +1076,10 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Grid
+
 'Create a new PDF document.
 Dim document As New PdfDocument()
 'Add a page.
@@ -1181,6 +1217,9 @@ doc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Grid
+
 'Create a new PDF document.
 Dim doc As New PdfDocument()
 'Add a page.
@@ -1316,6 +1355,9 @@ doc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Grid
+
 'Create a new PDF document.
 Dim doc As New PdfDocument()
 'Add a page.
@@ -1446,6 +1488,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -1578,6 +1624,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
@@ -1732,6 +1782,10 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Grid
+
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
 'Add a page.
@@ -1885,6 +1939,11 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
 'Add page to the document.
@@ -2023,6 +2082,10 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
@@ -2153,6 +2216,12 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
 'Add page to the PdfDocument.
@@ -2289,6 +2358,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
@@ -2429,6 +2503,11 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
 'Create the page.
@@ -2556,6 +2635,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
@@ -2762,6 +2846,11 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim pdfDocument As PdfDocument = New PdfDocument
@@ -2979,6 +3068,11 @@ pdfDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+
 'Create a new PDF document.
 Dim pdfDocument As PdfDocument = New PdfDocument
 'Add a page. 
@@ -3145,6 +3239,11 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+
 ' Create a new PDF document.
 Dim document As New PdfDocument()
 
@@ -3310,6 +3409,11 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+
 'Create a new PDF document. 
 Dim document As PdfDocument = New PdfDocument()
 
@@ -3472,6 +3576,11 @@ private void PdfGrid_BeginPageLayout(object sender, Syncfusion.Pdf.Graphics.Begi
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument()
 'Add a page.
@@ -3623,6 +3732,12 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+Imports Syncfusion.Drawing
+Imports System.Reflection.Metadata
 
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()
@@ -3778,6 +3893,12 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+Imports Syncfusion.Drawing
+Imports System.Reflection.Metadata
 
 'Create a new PDF document.
 Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -3965,6 +4086,12 @@ private static void PdfGrid_BeginCellLayout(object sender, PdfGridBeginCellLayou
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+Imports Syncfusion.Drawing
+Imports System.Reflection.Metadata
+
 'Create a new PDF document.
 Dim pdfDocument As PdfDocument = New PdfDocument()
 'Create the page.   
@@ -4137,6 +4264,12 @@ private static void PdfGrid_BeginCellLayout(object sender, PdfGridBeginCellLayou
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+Imports Syncfusion.Drawing
+Imports System.Reflection.Metadata
 
 'Create a new PDF document. 
 Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -4334,6 +4467,12 @@ pdfDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+Imports Syncfusion.Drawing
+Imports System.Reflection.Metadata
+
 'Create a new PDF document.
 Dim pdfDocument As PdfDocument = New PdfDocument()
 'Create the page.
@@ -4515,6 +4654,11 @@ pdfDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Grid
+Imports Syncfusion.Drawing
+Imports System.Reflection.Metadata
+
 'Create a new PDF document.
 Dim pdfDocument As PdfDocument = New PdfDocument()
 'Create the page.
@@ -4664,6 +4808,12 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf
+Imports Syncfusion.Drawing
+
 'Creates a new PDF document.
 Dim document As PdfDocument = New PdfDocument()
 'Add a new page.
@@ -4794,6 +4944,9 @@ using (PdfDocument document = new PdfDocument())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Grid
+Imports Syncfusion.Pdf
 
 ' Create a new PDF document
 Using document As New PdfDocument()
@@ -4948,6 +5101,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Grid
+Imports Syncfusion.Pdf
+Imports System.Drawing
 
 ' Create PDF document with default settings
 Dim document As New PdfDocument()
