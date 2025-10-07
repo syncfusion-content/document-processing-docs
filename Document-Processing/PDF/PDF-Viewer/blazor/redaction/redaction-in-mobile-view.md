@@ -92,13 +92,13 @@ Touch and drag to draw rectangular redaction overlays on any content area.
 - Annotations remain editable until explicitly applied
 - Can be repositioned or deleted before final application
 
-![Redaction Annotation Tool](./redaction-annotations-images/redaction-annotation.png)
+![Redaction Annotation Tool](./redaction-annotations-images/redaction-annotation-annot.png)
 
 ### 2. Page Redaction Tool (Second Tool)
 
 The **Page Redaction** tool enables batch redaction of entire pages based on specific patterns.
 
-![Page Redaction Tool](./redaction-annotations-images/page-redaction.png)
+![Page Redaction Tool](./redaction-annotations-images/page-redaction-annot.png)
 
 **Function**: Redacts complete pages or page ranges with a single action
 **Options Available**:
@@ -110,13 +110,13 @@ The **Page Redaction** tool enables batch redaction of entire pages based on spe
 **Usage**: 
 Select desired pattern → Review affected pages in the viewer → Confirm redaction scope
 
-![Page Redaction Tool Dialog](./redaction-annotations-images/page-redaction-dialog.png)
+![Page Redaction Tool Dialog](./redaction-annotations-images/page-redaction-dialog-annot.png)
 
 ### 3. Redaction Properties Tool (Third Tool)
 
 The **Redaction Properties** tool allows customization of redaction appearance before application.
 
-![Redaction Properties Mobile View](./redaction-annotations-images/redaction-properties.png)
+![Redaction Properties Mobile View](./redaction-annotations-images/redaction-properties-annot.png)
 
 **Function**: Customize the visual appearance of redaction overlays and text replacement
 **Customizable Properties**:
@@ -128,7 +128,7 @@ The **Redaction Properties** tool allows customization of redaction appearance b
 - **Text Alignment**: Position overlay text within redaction boxes
 - **Text Size**: Adjust overlay text size relative to redaction area
 
-![Redaction Properties Dialog Mobile View](./redaction-annotations-images/redaction-properties-dialog.png)
+![Redaction Properties Dialog Mobile View](./redaction-annotations-images/redaction-properties-dialog-annot.png)
 
 ## Enabling Redaction Mode in Mobile View
 
@@ -171,7 +171,7 @@ Once you have configured redactions using any combination of tools.
 
 **Step 1:** Review all redaction marks and configurations.
 
-![Review Redaction Annotation](./redaction-annotations-images/review-redaction-annotation-mv.png)
+![Review Redaction Annotation](./redaction-annotations-images/review-redaction-annotation-mv-annot.png)
 
 **Step 2:** Tap the **Apply Redactions** button in the redaction toolbar
 
@@ -179,11 +179,11 @@ Once you have configured redactions using any combination of tools.
 
 **Step 3:** Confirm the action when prompted - this operation is permanent and cannot be undone
 
-![Apply Redaction Dialog](./redaction-annotations-images/apply-redaction-dialog-mv.png)
+![Apply Redaction Dialog](./redaction-annotations-images/apply-redaction-dialog-mv-annot.png)
 
 The selected content will be permanently removed and replaced according to your redaction properties (solid color blocks or custom overlay text).
 
-![Applied Redaction](./redaction-annotations-images/applied-redaction.png)
+![Applied Redaction](./redaction-annotations-images/applied-redaction-annot.png)
 
 ## Removing Redaction Annotations (Before Applying)
 
@@ -194,7 +194,7 @@ To remove existing redaction annotations before they are applied:
 **Step 3:** Select **Delete** from the context menu that appears
 **Alternative**: Tap redaction annotation → Use delete button in annotation properties panel
 
-![Delete Redaction Annotation](./redaction-annotations-images/delete-redaction-annotation.png)
+![Delete Redaction Annotation](./redaction-annotations-images/delete-redaction-annotation-annot.png)
 
 N> Once redactions have been applied to the document, they become part of the PDF content and cannot be removed or modified.
 
