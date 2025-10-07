@@ -73,4 +73,4 @@ N> Install the **Google.Cloud.Storage.V1** NuGet package in the application to u
 
 ## See also
 
-* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../faqs/how-to-processing-large-files-without-increasing-maximum-message-size)
