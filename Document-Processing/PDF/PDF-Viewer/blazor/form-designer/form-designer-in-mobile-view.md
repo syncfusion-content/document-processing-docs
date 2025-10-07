@@ -53,7 +53,7 @@ Tap the **List Box** icon in the toolbar, then tap anywhere in the viewer to pla
 
 ## To add dropdown field
 
-Tap the **Dropdown** icon in the toolbar, then tap anywhere in the viewer to place the list box.
+Tap the **Dropdown** icon in the toolbar, then tap anywhere in the viewer to place the dropdown field.
 
 ![Dropdown field added in Blazor SfPdfViewer](../form-designer/form-designer-images/form-designer-dropdown-listbox.png)
 
