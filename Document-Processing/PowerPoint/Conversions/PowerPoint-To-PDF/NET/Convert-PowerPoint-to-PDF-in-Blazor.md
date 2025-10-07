@@ -48,7 +48,7 @@ Add the following namespaces in the file.
 @page "/Presentation"
 @using System.IO;
 @using Convert_PowerPoint_Presentation_to_PDF;
-@inject Convert_PowerPoint_Presentation_to_PDF.Data.PresentationService service
+@inject Convert_PowerPoint_Presentation_to_PDF.Data.PowerPointService service
 @inject Microsoft.JSInterop.IJSRuntime JS
 
 {% endhighlight %}
@@ -67,7 +67,7 @@ Include the following code to create a new button that triggers the PowerPoint t
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Implement `ConvertPPTXtoPDF` method in `Presentation.razor`.
+Step 5: Implement the method in `Presentation.razor`.
 Add the following code to **convert PowerPoint to PDF** and download the **PDF document**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -100,8 +100,8 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Implement `ConvertPPTXtoPDF` method in `PowerPointService.cs`.
-Create a new `MemoryStream` method named `ConvertPPTXtoPDF` in the `PowerPointService` and include the following code snippet to **convert a PowerPoint to PDF in Blazor Web App Server**.
+Step 7: Implement the method in `PowerPointService.cs`.
+Create a new `MemoryStream` method in the `PowerPointService` and include the following code snippet to **convert a PowerPoint to PDF in Blazor Web App Server**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}

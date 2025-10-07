@@ -143,7 +143,7 @@ return pptxStream;
 {% endtabs %}
 
 Step 10: Add the service in `Program.cs`.
-Add the following line to the `Program.cs` file to register `PresentationService` as a scoped service in the Blazor application.
+Add the following line to the `Program.cs` file to register `PowerPointService` as a scoped service in the Blazor application.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
