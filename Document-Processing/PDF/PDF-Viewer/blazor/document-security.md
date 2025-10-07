@@ -13,8 +13,8 @@ This article describes how the Blazor PDF Viewer (SfPdfViewer) handles secured P
 
 The PDF specification supports two primary security configurations:
 
-- Password-protected (user/open password required to decrypt and open the file)
-- Permission-restricted (owner password sets granular permissions such as printing, copying, editing, annotating, and form filling)
+- [Password-protected](./document-security/password-protected) (password required to decrypt and open the file)
+- [Permission-restricted](./document-security/permission) (owner password sets granular permissions such as printing, copying, editing, annotating, and form filling)
 
 Behavior and expectations:
 - When a password-protected PDF is loaded, the viewer prompts for the password. If the password is incorrect or omitted, the document does not open.

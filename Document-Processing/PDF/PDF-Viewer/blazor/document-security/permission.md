@@ -11,13 +11,10 @@ documentation: ug
 
 PDFs can be secured with an owner password and a set of permissions that restrict operations even after opening the file. Examples include:
 
-- Printing: fully allowed, low-resolution only, or disallowed
-- Content copying and extraction
-- Page or content editing
+- Printing: allowed or disallowed
+- Content copying
+- Page editing
 - Commenting and annotations
-- Form filling and signing
-- Document assembly (page insertion/rotation)
-- Accessibility content extraction (screen readers)
 
 The viewer respects these permission flags and disables restricted actions in its UI. It cannot bypass or elevate document permissions. For example, when printing is disallowed, the print action is not available; when copying is restricted, text selection may be limited or copy commands disabled.
 

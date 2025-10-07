@@ -7,14 +7,11 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Password-protected documents (open/user password)
+# Password-protected documents
 
 Some PDFs require a password to open. When such a document is loaded in the viewer, the following behavior applies:
 
-- A password prompt appears if the document requires an open/user password.
-- If the correct password is provided, the document loads and becomes viewable per the document’s permissions.
-- If the password is incorrect, the viewer shows an error and continues to prompt until a valid password is entered or the operation is canceled.
-- If the operation is canceled, the document is not loaded.
+- A password prompt appears if the document requires an password.
 
 The viewer displays a password prompt UI when a protected document is opened.
 
@@ -25,6 +22,19 @@ Desktop password prompt:
 Mobile password prompt:
 
 ![Blazor PDF Viewer mobile password prompt](../images/password-ui-mobile.png)
+
+- If the correct password is provided, the document loads and becomes viewable per the document’s permissions.
+- If the password is incorrect, the viewer shows an error and continues to prompt until a valid password is entered or the operation is canceled.
+
+Invalid password error in desktop:
+
+![Blazor PDF Viewer desktop password error](../images/password-incorrect-desktop.png)
+
+Invalid password error in Mobile:
+
+![Blazor PDF Viewer mobile password error](../images/password-incorrect-mobile.png)
+
+- If the operation is canceled, the document is not loaded.
 
 ## Load the password-protected document programmatically
 
@@ -51,3 +61,7 @@ Use the [LoadAsync method](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20the%20Security%20Document).
+
+## See Also
+
+* [Permission-protected documents](./permission)
