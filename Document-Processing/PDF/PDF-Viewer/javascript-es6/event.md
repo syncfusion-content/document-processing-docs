@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The PDF Viewer component triggers events for creation, page navigation, document lifecycle, context menu interactions, comments, bookmarks, downloads/exports, hyperlinks, import/export of annotations, keyboard commands, printing, signatures, text search, and text selection. Use these events to integrate custom logic into your application workflows.
 
-The following events are listed in alphabetical order.
+The following table lists the commonly used events supported by the PDF Viewer control:
 
 | Event | Description |
 | ----- | ----------- |
