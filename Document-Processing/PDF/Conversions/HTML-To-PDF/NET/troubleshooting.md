@@ -476,16 +476,13 @@ Refer to this <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-t
 </tr>
 </table>
 
-## HTML to PDF conversion fails after deploying to Azure Function (Windows and Linux).
+## HTML to PDF conversion fails after deploying to Azure Function Linux Flex Consumption Plan
 
 <table>
 <th style="font-size:14px" width="100px">Issue
 </th>
-<th style="font-size:14px">HTML to PDF conversion fails after deploying to Azure Function (Windows and Linux).<br>
-Error Message:<br>
-<i>“Could not find a part of the path '/home/site/wwwroot/runtimes/linux/native'”</i>
+<th style="font-size:14px">HTML to PDF conversion fails after deploying to Azure Function Linux Flex Consumption Plan
 </th>
-
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
@@ -508,7 +505,7 @@ As a result, the Blink-based converter cannot initialize Chromium, leading to fa
 * Do not use the Flex Consumption Plan for Linux-based Azure Functions.<br>
 * Instead, use one of the following:<br>
 1.Premium Plan<br>
-2.Standard Consumption Plan (Windows)<br>
+2.Standard Consumption Plan<br>
 These plans provide the necessary environment and permissions to support Chromium and its dependencies, allowing the Blink engine to function correctly.<br>
 </td>
 </tr>
