@@ -476,6 +476,41 @@ Refer to this <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-t
 </tr>
 </table>
 
+## HTML to PDF conversion fails after deploying to Azure Function Linux Flex Consumption Plan
+
+<table>
+<th style="font-size:14px" width="100px">Issue
+</th>
+<th style="font-size:14px">HTML to PDF conversion fails after deploying to Azure Function Linux Flex Consumption Plan
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The Syncfusion HTML-to-PDF converter internally uses the <b>Blink rendering engine</b>, which relies on a <b>headless Chromium browser</b> to render HTML content. On <b>Linux environments</b>, Chromium requires several native dependencies to launch successfully.<br>
+
+In the <b>Azure Function Linux Flex Consumption Plan</b>, these dependencies cannot be installed due to the following limitations:
+
+* No SSH access to manually install packages.<br>
+* Shell script installation attempts fail due to <b>permission restrictions</b>, even when permissions are explicitly set.<br>
+
+As a result, the Blink-based converter cannot initialize Chromium, leading to failure in HTML-to-PDF conversion.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>To enable HTML-to-PDF conversion using Blink in Azure Functions:<br>
+
+* Do not use the Flex Consumption Plan for Linux-based Azure Functions.<br>
+* Instead, use one of the following:<br>
+1.Premium Plan<br>
+2.Standard Consumption Plan<br>
+These plans provide the necessary environment and permissions to support Chromium and its dependencies, allowing the Blink engine to function correctly.<br>
+</td>
+</tr>
+</table>
+
 ## Unable to convert unsecured https URL to PDF using Blink
 
 <table>
