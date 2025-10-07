@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Smart PDF Viewer using DeepSeek AI
 
-This guide explains how to integrate DeepSeek AI with the Syncfusion Smart PDF Viewer in a Blazor app.
+This article explains how to integrate DeepSeek AI with the Syncfusion Smart PDF Viewer in a Blazor app.
 
 ## Prerequisites
 
