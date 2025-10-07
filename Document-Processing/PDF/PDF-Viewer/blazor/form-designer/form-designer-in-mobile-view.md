@@ -17,51 +17,57 @@ Prerequisites:
 
 To open the form designer toolbar, tap the **Form Designer** option in the primary toolbar on mobile. The form designer toolbar opens at the bottom of the viewer.
 
-![Mobile form designer toolbar displayed at bottom in Blazor SfPdfViewer](../form-designer/form-designer-images/formDesinger-toolbar.png)
+![Mobile form designer toolbar displayed at bottom in Blazor SfPdfViewer](../form-designer/form-designer-images/form-designer-toolbar.png)
 
 ## To add text box
 
 Tap the **Text Box** icon in the toolbar, then tap anywhere in the viewer to place the text box form field.
 
-![Tap Text Box icon in Blazor SfPdfViewer](../form-designer/form-designer-images/formDesinger-Textbox.png)
+![Tap Text Box icon in Blazor SfPdfViewer](../form-designer/form-designer-images/form-designer-textbox.png)
 
-![Text box added in Blazor SfPdfViewer](../form-designer/form-designer-images/formDesinger-Textbox-added.png)
+![Text box added in Blazor SfPdfViewer](../form-designer/form-designer-images/form-designer-textbox-added.png)
 
 ## To add password box
 
 Tap the **Password Box** icon in the toolbar, then tap anywhere in the viewer to place the password box.
 
-![Password box added in Blazor SfPdfViewer](../form-designer/form-designer-images/formDesinger-Password.png)
+![Password box added in Blazor SfPdfViewer](../form-designer/form-designer-images/form-designer-password.png)
 
 ## To add check box
 
 Tap the **Check Box** icon in the toolbar, then tap anywhere in the viewer to place the check box.
 
-![Check box added in Blazor SfPdfViewer](../form-designer/form-designer-images/formDesinger-CheckBox.png)
+![Check box added in Blazor SfPdfViewer](../form-designer/form-designer-images/form-designer-checkBox.png)
 
 ## To add radio button
 
 Tap the **Radio Button** icon in the toolbar, then tap anywhere in the viewer to place the radio button.
 
-![Radio button added in Blazor SfPdfViewer](../form-designer/form-designer-images/formDesinger-Radio.png)
+![Radio button added in Blazor SfPdfViewer](../form-designer/form-designer-images/form-designer-radio.png)
 
 ## To add list box
 
 Tap the **List Box** icon in the toolbar, then tap anywhere in the viewer to place the list box.
 
-![List box added in Blazor SfPdfViewer](../form-designer/form-designer-images/formDesinger-ListBox.png)
+![List box added in Blazor SfPdfViewer](../form-designer/form-designer-images/form-designer-listbox.png)
+
+## To add dropdown field
+
+Tap the **Dropdown** icon in the toolbar, then tap anywhere in the viewer to place the list box.
+
+![Dropdown field added in Blazor SfPdfViewer](../form-designer/form-designer-images/form-designer-dropdown-listbox.png)
 
 ## To add signature field
 
 Tap the **Signature Field** icon in the toolbar, then tap anywhere in the viewer to place the signature field.
 
-![Signature field added in Blazor SfPdfViewer](../form-designer/form-designer-images/formDesinger-Signature.png)
+![Signature field added in Blazor SfPdfViewer](../form-designer/form-designer-images/form-designer-signature.png)
 
 ## To add button
 
 Tap the **Button** icon in the toolbar, then tap anywhere in the viewer to place the button.
 
-![Button added in Blazor SfPdfViewer](../form-designer/form-designer-images/formDesinger-Button.png)
+![Button added in Blazor SfPdfViewer](../form-designer/form-designer-images/form-designer-button.png)
 
 ## Modify Form Field Properties
 
@@ -77,13 +83,13 @@ Form field properties can be configured as needed. To edit a field on mobile, se
 
 Tap Save to apply the changes to the selected form field. On mobile, drag the field or its resize handles to reposition or resize; minimum field sizes may apply, and snapping occurs within page bounds where supported.
 
-![Modify form field properties in Blazor SfPdfViewer](../form-designer/form-designer-images/formDesinger-properties.png)
+![Modify form field properties in Blazor SfPdfViewer](../form-designer/form-designer-images/form-designer-properties.png)
 
 ## Delete Form Field
 
 To delete a form field, select the field to remove. The Delete icon appears in the form designer toolbar; tap it to remove the field from the PDF. Alternatively, press the Delete key after selecting the form field.
 
-![Delete selected form field in Blazor SfPdfViewer](../form-designer/form-designer-images/formDesinger-delete.png)
+![Delete selected form field in Blazor SfPdfViewer](../form-designer/form-designer-images/form-designer-delete.png)
 
 ## See also
 
