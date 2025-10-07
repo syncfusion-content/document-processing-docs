@@ -333,14 +333,27 @@ The PDF Viewer triggers events during text search operations, allowing you to cu
 
 ### textSearchStart
 
-The [textSearchStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchstartevent) event triggers when a text search is initiated. This event is useful for performing actions before the search process begins.
+The [textSearchStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchstartevent) event is raised the moment a search is initiated from the toolbar UI or by calling `textSearch.searchText(...)` programmatically.
 
-- Event arguments: [TextSearchStartEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchStartEventArgs/).
+- Triggers when: the user submits a term in the search box or when code calls the search API.
+- Typical uses:
+  - Show a loading indicator or clear previous highlights.
+  - Log/telemetry for search terms.
+  - Optionally cancel the default behavior before it proceeds.
+  
+- Event arguments include ([TextSearchStartEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchStartEventArgs/)):
+  - searchText: string — the term to search.
+  - matchCase: boolean — whether case-sensitive search is enabled.
+  - isMatchWholeWord: boolean — whether whole-word matching is enabled.
+  - name: string — event name.
+  - cancel: boolean — set to true to cancel the default search.
 
 ```typescript
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     textSearchStart: function (args: any) {
+        // args.searchText contains the term being searched
+        // args.cancel can be set to true to stop the default search
         console.log(`Text search started for: "${args.searchText}"`);
     }
 });
@@ -349,15 +362,26 @@ viewer.appendTo('#pdfViewer');
 
 ### textSearchHighlight
 
-The [textSearchHighlight](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchhighlightevent) event triggers when the searched text is highlighted. This allows you to interact with the highlighted occurrences.
+The [textSearchHighlight](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchhighlightevent) event fires whenever an occurrence is highlighted during search or when navigating to next/previous results.
 
-- Event arguments: [TextSearchHighlightEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchHighlightEventArgs/).
+- Triggers when: a match is brought into view and highlighted (including navigation between matches).
+- Typical uses:
+  - Add custom styling or tooltips for the active match.
+  - Auto-scroll or focus custom UI linked to the current result.
+  - Collect per-match analytics.
+- Event arguments include ([TextSearchHighlightEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchHighlightEventArgs/)):
+  - bounds: RectangleBoundsModel | RectangleBoundsModel[] — rectangles of the highlighted match.
+  - pageNumber: number — page index where the match is highlighted.
+  - searchText: string — the searched term.
+  - matchCase: boolean — whether case-sensitive search was used.
+  - name: string — event name.
 
 ```typescript
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     textSearchHighlight: function (args: any) {
-        console.log(`Search result ${args.bounds} highlighted.`);
+        // args.bounds provides the rectangle(s) of the current match
+        console.log('Highlighted match bounds:', args.bounds);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -365,15 +389,26 @@ viewer.appendTo('#pdfViewer');
 
 ### textSearchComplete
 
-The [textSearchComplete](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchcompleteevent) event triggers when a text search is completed. This is useful for performing actions after all occurrences have been found.
+The [textSearchComplete](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchcompleteevent) event is raised after the search engine finishes scanning and resolving all matches for the current query.
 
-- Event arguments: [TextSearchCompleteEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchCompleteEventArgs/).
+- Triggers when: the search for the submitted term has completed across the document.
+- Typical uses:
+  - Update UI with the total number of matches and enable navigation controls.
+  - Hide loading indicators or show a "no results" message if none were found.
+  - Record analytics for search effectiveness.
+- Event arguments include ([TextSearchCompleteEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchCompleteEventArgs/)):
+  - totalMatches: number — total number of occurrences found.
+  - isMatchFound: boolean — indicates whether at least one match was found.
+  - searchText: string — the searched term.
+  - matchCase: boolean — whether case-sensitive search was used.
+  - name: string — event name.
 
 ```typescript
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    textSearchComplete: () => {
-        console.log('Text search completed.');
+    textSearchComplete: (args: any) => {
+        // args.totalMatches may indicate how many results were found (when available)
+        console.log('Text search completed.', args);
     }
 });
 viewer.appendTo('#pdfViewer');

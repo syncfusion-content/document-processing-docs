@@ -77,7 +77,11 @@ The [bookmarkClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfv
 Example:
 
 ```typescript
-import { PdfViewer } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     bookmarkClick: function (args: any) {
@@ -96,6 +100,11 @@ The [toolbarClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfvi
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     toolbarClick: function (args: any) {
@@ -114,6 +123,11 @@ The [validateFormFields](https://ej2.syncfusion.com/javascript/documentation/api
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
 });
@@ -132,6 +146,11 @@ The [zoomChange](https://ej2.syncfusion.com/javascript/documentation/api/pdfview
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     zoomChange: function (args: any) {
@@ -150,6 +169,11 @@ The [buttonFieldClick](https://ej2.syncfusion.com/javascript/documentation/api/p
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     buttonFieldClick: function (args: any) {
@@ -168,6 +192,11 @@ The [commentAdd](https://ej2.syncfusion.com/javascript/documentation/api/pdfview
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     commentAdd: function (args: any) {
@@ -186,6 +215,11 @@ The [commentDelete](https://ej2.syncfusion.com/javascript/documentation/api/pdfv
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     commentDelete: function (args: any) {
@@ -204,6 +238,11 @@ The [commentEdit](https://ej2.syncfusion.com/javascript/documentation/api/pdfvie
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     commentEdit: function (args: any) {
@@ -222,6 +261,11 @@ The [commentSelect](https://ej2.syncfusion.com/javascript/documentation/api/pdfv
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     commentSelect: function (args: any) {
@@ -240,6 +284,11 @@ The [commentStatusChanged](https://ej2.syncfusion.com/javascript/documentation/a
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     commentStatusChanged: function (args: any) {
@@ -258,6 +307,11 @@ The [created](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation } from '@syncfusion/ej2-pdfviewer';
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation);
@@ -280,6 +334,11 @@ The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/javascript/document
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     customContextMenuBeforeOpen: function (args: any) {
@@ -299,6 +358,11 @@ The [customContextMenuSelect](https://ej2.syncfusion.com/javascript/documentatio
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     customContextMenuSelect: function (args: any) {
@@ -317,6 +381,11 @@ The [documentLoad](https://ej2.syncfusion.com/javascript/documentation/api/pdfvi
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     documentLoad: function (args: any) {
@@ -335,6 +404,11 @@ The [documentLoadFailed](https://ej2.syncfusion.com/javascript/documentation/api
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/invalid.pdf',
     documentLoadFailed: function (args: any) {
@@ -353,6 +427,11 @@ The [documentUnload](https://ej2.syncfusion.com/javascript/documentation/api/pdf
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     documentUnload: () => {
@@ -371,6 +450,11 @@ The [downloadEnd](https://ej2.syncfusion.com/javascript/documentation/api/pdfvie
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     downloadEnd: function (args: any) {
@@ -389,6 +473,11 @@ The [downloadStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfv
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     downloadStart: () => {
@@ -407,6 +496,11 @@ The [exportFailed](https://ej2.syncfusion.com/javascript/documentation/api/pdfvi
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     exportFailed: function (args: any) {
@@ -425,6 +519,11 @@ The [exportStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfvie
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     exportStart: () => {
@@ -443,6 +542,11 @@ The [exportSuccess](https://ej2.syncfusion.com/javascript/documentation/api/pdfv
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     exportSuccess: () => {
@@ -461,6 +565,11 @@ The [extractTextCompleted](https://ej2.syncfusion.com/javascript/documentation/a
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     extractTextCompleted: function (args: any) {
@@ -479,6 +588,11 @@ The [hyperlinkClick](https://ej2.syncfusion.com/javascript/documentation/api/pdf
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     hyperlinkClick: function (args: any) {
@@ -497,6 +611,11 @@ The [hyperlinkMouseOver](https://ej2.syncfusion.com/javascript/documentation/api
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     hyperlinkMouseOver: function (args: any) {
@@ -515,6 +634,11 @@ The [importFailed](https://ej2.syncfusion.com/javascript/documentation/api/pdfvi
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     importFailed: function (args: any) {
@@ -533,6 +657,11 @@ The [importStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfvie
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     importStart: () => {
@@ -551,6 +680,11 @@ The [importSuccess](https://ej2.syncfusion.com/javascript/documentation/api/pdfv
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     importSuccess: () => {
@@ -569,6 +703,11 @@ The [keyboardCustomCommands](https://ej2.syncfusion.com/javascript/documentation
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     keyboardCustomCommands: function (args: any) {
@@ -587,6 +726,11 @@ The [moveSignature](https://ej2.syncfusion.com/javascript/documentation/api/pdfv
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     moveSignature: function (args: any) {
@@ -605,6 +749,11 @@ The [pageChange](https://ej2.syncfusion.com/javascript/documentation/api/pdfview
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     pageChange: function (args: any) {
@@ -623,6 +772,11 @@ The [pageClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewe
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     pageClick: function (args: any) {
@@ -641,6 +795,11 @@ The [pageMouseover](https://ej2.syncfusion.com/javascript/documentation/api/pdfv
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     pageMouseover: function (args: any) {
@@ -659,6 +818,11 @@ The [pageOrganizerSaveAs](https://ej2.syncfusion.com/javascript/documentation/ap
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     pageOrganizerSaveAs: function (args: any) {
@@ -677,6 +841,11 @@ The [pageRenderComplete](https://ej2.syncfusion.com/javascript/documentation/api
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     pageRenderComplete: function (args: any) {
@@ -695,6 +864,11 @@ The [pageRenderInitiate](https://ej2.syncfusion.com/javascript/documentation/api
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     pageRenderInitiate: function (args: any) {
@@ -713,6 +887,11 @@ The [printEnd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     printEnd: () => {
@@ -731,6 +910,11 @@ The [printStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfview
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     printStart: () => {
@@ -749,6 +933,11 @@ The [removeSignature](https://ej2.syncfusion.com/javascript/documentation/api/pd
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     removeSignature: function (args: any) {
@@ -767,6 +956,11 @@ The [resizeSignature](https://ej2.syncfusion.com/javascript/documentation/api/pd
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     resizeSignature: function (args: any) {
@@ -785,6 +979,11 @@ The [resourcesLoaded](https://ej2.syncfusion.com/javascript/documentation/api/pd
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     resourcesLoaded: () => {
@@ -803,6 +1002,11 @@ The [signaturePropertiesChange](https://ej2.syncfusion.com/javascript/documentat
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     signaturePropertiesChange: function (args: any) {
@@ -821,6 +1025,11 @@ The [signatureSelect](https://ej2.syncfusion.com/javascript/documentation/api/pd
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     signatureSelect: function (args: any) {
@@ -839,6 +1048,11 @@ The [signatureUnselect](https://ej2.syncfusion.com/javascript/documentation/api/
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     signatureUnselect: () => {
@@ -857,6 +1071,11 @@ The [textSearchComplete](https://ej2.syncfusion.com/javascript/documentation/api
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     textSearchComplete: () => {
@@ -875,6 +1094,11 @@ The [textSearchHighlight](https://ej2.syncfusion.com/javascript/documentation/ap
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     textSearchHighlight: function (args: any) {
@@ -893,6 +1117,11 @@ The [textSearchStart](https://ej2.syncfusion.com/javascript/documentation/api/pd
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     textSearchStart: function (args: any) {
@@ -911,6 +1140,11 @@ The [textSelectionEnd](https://ej2.syncfusion.com/javascript/documentation/api/p
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     textSelectionEnd: function (args: any) {
@@ -929,6 +1163,11 @@ The [textSelectionStart](https://ej2.syncfusion.com/javascript/documentation/api
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     textSelectionStart: function (args: any) {
@@ -947,6 +1186,11 @@ The [thumbnailClick](https://ej2.syncfusion.com/javascript/documentation/api/pdf
 Example:
 
 ```typescript
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
+    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
+             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     thumbnailClick: function (args: any) {
