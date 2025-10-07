@@ -57,7 +57,7 @@ Autofill can be performed in one of the following ways:
 *   Drag and drop the cell using the fill handle element.
 *   Use the [AutofillAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AutofillAsync_System_String_System_String_) method programmatically.
 
-The `AutofillAsync()` method accepts string parameters using A1 notation for `fillRange` and `dataRange`. Its available parameters are:
+The `AutofillAsync()` method accepts string parameters in A1 notation for `fillRange` and `dataRange`. The available parameters are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
