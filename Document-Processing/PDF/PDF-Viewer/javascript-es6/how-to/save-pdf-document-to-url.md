@@ -4,7 +4,6 @@ title: Save pdf document to url in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Save pdf document to url in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Save pdf document to url
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

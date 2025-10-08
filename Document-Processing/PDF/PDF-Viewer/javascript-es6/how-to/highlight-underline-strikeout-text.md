@@ -4,7 +4,6 @@ title: Highlight underline strikeout text in Typescript Pdfviewer control | Sync
 description: Learn here all about Highlight underline strikeout text in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Highlight underline strikeout text
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

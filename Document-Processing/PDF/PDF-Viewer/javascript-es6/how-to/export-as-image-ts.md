@@ -4,7 +4,6 @@ title: Export As Image in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Export As Image in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

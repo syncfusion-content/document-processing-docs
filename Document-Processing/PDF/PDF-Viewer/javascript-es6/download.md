@@ -3,12 +3,11 @@ layout: post
 title: Download in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Download in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Download
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in Typescript Pdfviewer control
+# Download in Typescript Pdf viewer control
 
 The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
 

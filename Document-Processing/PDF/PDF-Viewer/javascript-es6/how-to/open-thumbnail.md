@@ -3,8 +3,7 @@ layout: post
 title: Open thumbnail in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Open thumbnail in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Open thumbnail
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

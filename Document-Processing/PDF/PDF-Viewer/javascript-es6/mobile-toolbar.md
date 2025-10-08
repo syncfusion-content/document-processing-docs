@@ -3,8 +3,7 @@ layout: post
 title: Mobile Toolbar Interface in Typescript Pdfviewer control | Syncfusion
 description: Learn All About the Mobile Toolbar Interface in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Mobile Toolbar Interface
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

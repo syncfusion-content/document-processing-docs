@@ -1,123 +1,122 @@
 ---
 layout: post
-title: Annotations in mobile view in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Annotations in mobile view in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Annotations mobileView in TypeScript PDF Viewer control | Syncfusion
+description: Learn how to use annotations in mobile view with the Syncfusion TypeScript PDF Viewer (Essential JS 2).
 platform: document-processing
-control: Annotations in mobile view
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Annotations in mobile view in Typescript Pdfviewer control
+# Annotations in mobile view in TypeScript PDF Viewer control
 
-## To Open the Annotation Toolbar
+## Open the annotation toolbar
 
-**Step 1:** To enable the annotation toolbar, click the editAnnotation toolbar.
+**Step 1:** Click Edit Annotation on the toolbar to enable the annotation toolbar.
 
-![Alt text](../images/edit-annotation.png)
+![Enable the annotation toolbar](../images/edit-annotation.png)
 
-**Step 2:** After enabling the annotation toolbar.
+**Step 2:** The annotation toolbar appears below the main toolbar.
 
-![Alt text](../images/after-enabling-annotation-toolbar.png)
+![Annotation toolbar displayed](../images/after-enabling-annotation-toolbar.png)
 
-## To add sticky notes annotation
+## Add sticky note annotations
 
-**Step 1:** click sticky notes icon and then click in the page where you want to add this.
+**Step 1:** Click the Sticky Notes icon, then tap the page where the note should be placed.
 
-![Alt text](../images/add-sticky-notes.png)
+![Open sticky note tool](../images/add-sticky-notes.png)
 
-**Step 2:** Click in the page to add the sticky notes annotation.
+**Step 2:** Tap the page to add the sticky note annotation.
 
-![Alt text](../images/sticky-notes-in-page.png)
+![Sticky note annotation added on the page](../images/sticky-notes-in-page.png)
 
-## To add text markup annotation
+## Add text markup annotations
 
-**Step 1:** click any one of the text markup icon, then select the text you want to mark, then touch the selected text to apply the markup annotation.
+**Step 1:** Tap a text markup icon, select the text to mark, then tap the selection to apply the markup.
 
-![Alt text](../images/select-text.png)
+![Select text for markup](../images/select-text.png)
 
-**Step 2:** Add the text markup annotation in the PDF page
+**Step 2:** The text markup annotation is applied to the selected text.
 
-![Alt text](../images/add-text-markup.png)
+![Text markup applied on the page](../images/add-text-markup.png)
 
-## To add shape and measure annotations
+## Add shape and measurement annotations
 
-**Step 1:** click the shape/measure icon in the toolbar. It will show the toolbar with shape/measure types.
+**Step 1:** Tap the Shape or Measure icon to open the corresponding toolbar.
 
-![Alt text](../images/add-shapes.png)
+![Open shape and measurement tools](../images/add-shapes.png)
 
-**Step 2:** Click the shape/measure type and add annotation to the page.
+**Step 2:** Choose a shape or measurement type, then draw it on the page.
 
-![Alt text](../images/open-radius.png)
+![Select measurement type](../images/open-radius.png)
 
-**Step 3:** Add the annotation in the PDF page.
+**Step 3:** The annotation appears on the PDF page.
 
-![Alt text](../images/radius-annotation.png)
+![Measurement annotation placed on the page](../images/radius-annotation.png)
 
-## To add the stamp annotation
+## Add stamp annotations
 
-**Step 1:** click the stamp icon and select the stamp type from the menu items.
+**Step 1:** Tap the Stamp icon and select a stamp type from the menu.
 
-![Alt text](../images/open-stamp.png)
+![Open stamp tool](../images/open-stamp.png)
 
-**Step 2:** Add the stamp annotation in the page.
+**Step 2:** Tap the page to place the stamp annotation.
 
-![Alt text](../images/add-revised.png)
+![Stamp annotation added on the page](../images/add-revised.png)
 
-## To add signature
+## Add signature annotations
 
-**Step 1:** click the signature icon. This will open the signature canvas to draw signature. After drawn the sign, should click the create button and touch the viewer to add the signature.
+**Step 1:** Tap the Signature icon to open the canvas. Draw the signature, tap Create, then tap the viewer to place it.
 
-![Alt text](../images/add-signature.png)
+![Open signature canvas](../images/add-signature.png)
 
-**Step 2:** Add the signature in the page.
+**Step 2:** The signature is added to the page.
 
-![Alt text](../images/adding-signature.png)
+![Signature placed on the page](../images/adding-signature.png)
 
-## To add ink annotation
+## Add ink annotations
 
-**Step 1:** Click the ink icon tool and draw in the page.
+**Step 1:** Tap the Ink tool and draw on the page.
 
-![Alt text](../images/open-ink.png)
+![Open ink tool](../images/open-ink.png)
 
-**Step 2:** Add the ink annotation in the page.
+**Step 2:** The ink annotation appears on the page.
 
-![Alt text](../.././pdfviewer/how-to/images/ink-annotation.png)
+![Ink annotation drawn on the page](../how-to/images/ink-annotation.png)
 
-## Change Annotation Change (Before adding)
+## Change annotation properties (before adding)
 
-**Step 1:** We can change the properties before adding the annotation.
+**Step 1:** Change properties before placing the annotation.
 
-**Step 2:** Click the annotation icon, this will show the toolbar with corresponding properties. We can change the property and add the annotation in the page.
+**Step 2:** Tap the annotation icon to open the property toolbar, adjust properties, then place the annotation on the page.
 
-![Alt text](../images/open-fillcolor.png)
+![Adjust fill color before adding](../images/open-fillcolor.png)
 
-## Change Annotation Property (After Adding)
+## Change annotation properties (after adding)
 
-**Step 1:** We can change the annotation property after adding the annotation.
+**Step 1:** Change annotation properties after adding the annotation.
 
-**Step 2:** Select the added annotation, it will show the corresponding property tool. This will help us to change the property of the annotation.
+**Step 2:** Select the annotation to show the property toolbar, then adjust the properties.
 
-![Alt text](../images/change-property.png)
+![Edit annotation properties after adding](../images/change-property.png)
 
-## Delete Annotation
+## Delete annotations
 
-**Step 1:** To delete the annotation, first select the annotation, it will show the property toolbar. In the property tool there is an icon to delete the annotation.
+**Step 1:** Select the annotation to show the property toolbar, then tap the Delete icon to remove it.
 
-![Alt text](../images/delete-icon.png)
+![Delete icon in the property toolbar](../images/delete-icon.png)
 
-## Open Comment Panel
+## Open the comment panel
 
-**Step 1:** We can open the comment panel through the icon in the property tool or through the annotation toolbar.
+**Step 1:** Open the comment panel using the icon in the property toolbar or the annotation toolbar.
 
-![Alt text](../images/open-comment.png)
+![Open the comment panel](../images/open-comment.png)
 
-**Step 1:** After opening the comment panel
+**Step 2:** The comment panel appears.
 
-![Alt text](../images/comment-panel.png)
+![Comment panel displayed](../images/comment-panel.png)
 
 ## Close the comment panel
 
-**Step 1:** To close the comment panel, click the close button.
+**Step 1:** Tap the Close button to close the comment panel.
 
-![Alt text](../images/close-comment-panel.png)
+![Close the comment panel](../images/close-comment-panel.png)

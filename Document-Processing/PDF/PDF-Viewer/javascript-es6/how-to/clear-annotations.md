@@ -3,8 +3,7 @@ layout: post
 title: Clear annotations in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Clear annotations in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Clear annotations
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

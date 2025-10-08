@@ -4,12 +4,11 @@ title: Getting started with Typescript PDF Viewer control | Syncfusion
 description:  Checkout and learn about Getting started with Typescript PDF Viewer control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in Standalone PDF Viewer control
+# Getting started in Standalone PDF Viewer control in TS
 
 This section briefly explains how to create **PDF Viewer** component and configure its available functionalities in TypeScript using the Essential JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository.
 

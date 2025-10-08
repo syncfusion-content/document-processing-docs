@@ -4,7 +4,6 @@ title: Displaying Custom Items in Typescript PDF Viewer control | Syncfusion
 description: Learn how to display custom items in the custom stamp in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

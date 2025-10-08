@@ -3,8 +3,7 @@ layout: post
 title: Delete annotation in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Delete annotation in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Delete annotation
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

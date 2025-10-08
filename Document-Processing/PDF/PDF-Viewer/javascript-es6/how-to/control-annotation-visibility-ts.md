@@ -4,7 +4,6 @@ title: Control Annotations Visibility in TypeScript PdfViewer | Syncfusion
 description: Learn how to control Annotations Visibility in the Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

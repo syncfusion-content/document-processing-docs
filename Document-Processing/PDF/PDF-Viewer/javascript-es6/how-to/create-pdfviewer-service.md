@@ -3,8 +3,7 @@ layout: post
 title: Create pdfviewer service in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Create pdfviewer service in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Create pdfviewer service
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

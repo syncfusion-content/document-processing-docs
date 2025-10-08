@@ -4,7 +4,6 @@ title: Resolve unable to find an entry point error in Typescript Pdfviewer contr
 description: Learn here all about Resolve unable to find an entry point error in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Resolve unable to find an entry point error
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

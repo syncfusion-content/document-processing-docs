@@ -3,8 +3,7 @@ layout: post
 title: Select multi page annotations in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Select multi page annotations in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Select multi page annotations
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

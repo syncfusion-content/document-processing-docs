@@ -4,7 +4,6 @@ title: Text search in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Text search in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Text search
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -93,6 +92,55 @@ When text is entered into the search input without enabling the 'Match Case' opt
 When the 'Match Any Word' option is enabled, the entered text in the search input is split into individual words based on spaces. As the text is typed, the popup dynamically displays search suggestions for each word in real time, highlighting potential matches within the document.
 
 ![Alt text](./images/MultiSearchPopup.png)
+
+### Programmatic Search with Settings
+
+While the PDF Viewer's toolbar provides a user-friendly way to search, you can also trigger and customize searches programmatically using the `searchText` method and its options.
+
+#### Using `searchText`
+
+The `searchText` method allows you to initiate a search with specific criteria.
+
+```typescript
+// searchText(text: string, isMatchCase?: boolean, isMatchWholeWord?: boolean)
+pdfviewer.textSearch.searchText('search text', false, false);
+```
+
+#### Match Case
+
+To perform a case-sensitive search, set the `isMatchCase` parameter to `true`. This corresponds to the 'Match Case' checkbox in the search panel.
+
+```typescript
+import { PdfViewer } from '@syncfusion/ej2-pdfviewer';
+
+let pdfviewer: PdfViewer = new PdfViewer({
+    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
+});
+pdfviewer.appendTo('#PdfViewer');
+
+// Later, to search programmatically:
+// This will only find instances of "PDF" in uppercase.
+pdfviewer.textSearch.searchText('PDF', true);
+```
+
+#### Match Whole Word
+
+You can search for whole words by setting the `isMatchWholeWord` parameter to `true`. When this is enabled, the search will only match occurrences where the search term is not part of a larger word. For example, a search for "view" will not match "viewer".
+
+```typescript
+import { PdfViewer } from '@syncfusion/ej2-pdfviewer';
+
+let pdfviewer: PdfViewer = new PdfViewer({
+    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
+});
+pdfviewer.appendTo('#PdfViewer');
+
+// Later, to search programmatically:
+// This will find "pdf" but not "pdf-succinctly"
+pdfviewer.textSearch.searchText('pdf', false, true);
+```
+
+**Note on 'Match Any Word':** The 'Match Any Word' checkbox in the UI is a feature that splits the input string into multiple words and performs a search for each of them. This is different from the `isMatchWholeWord` parameter of the `searchText` method, which enforces a whole-word match for the entire search string provided.
 
 The following text search methods are available in the PDF Viewer,
 
@@ -278,7 +326,84 @@ import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,Thumbnail
 {% endhighlight %}
 {% endtabs %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to/TextSearch)
+## Text Search Events
+
+The PDF Viewer triggers events during text search operations, allowing you to customize behavior and respond to different stages of the search process.
+
+### textSearchStart
+
+The [textSearchStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchstartevent) event is raised the moment a search is initiated from the toolbar UI or by calling `textSearch.searchText(...)` programmatically.
+
+- Triggers when: the user submits a term in the search box or when code calls the search API.
+
+- Event arguments include ([TextSearchStartEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchStartEventArgs/)):
+  - searchText: string — the term to search.
+  - matchCase: boolean — whether case-sensitive search is enabled.
+  - isMatchWholeWord: boolean — whether whole-word matching is enabled.
+  - name: string — event name.
+  - cancel: boolean — set to true to cancel the default search.
+
+```typescript
+const viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    textSearchStart: function (args: any) {
+        // args.searchText contains the term being searched
+        // args.cancel can be set to true to stop the default search
+        console.log(`Text search started for: "${args.searchText}"`);
+    }
+});
+viewer.appendTo('#pdfViewer');
+```
+
+### textSearchHighlight
+
+The [textSearchHighlight](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchhighlightevent) event fires whenever an occurrence is highlighted during search or when navigating to next/previous results.
+
+- Triggers when: a match is brought into view and highlighted (including navigation between matches).
+- Event arguments include ([TextSearchHighlightEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchHighlightEventArgs/)):
+  - bounds: RectangleBoundsModel | RectangleBoundsModel[] — rectangles of the highlighted match.
+  - pageNumber: number — page index where the match is highlighted.
+  - searchText: string — the searched term.
+  - matchCase: boolean — whether case-sensitive search was used.
+  - name: string — event name.
+
+```typescript
+const viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    textSearchHighlight: function (args: any) {
+        // args.bounds provides the rectangle(s) of the current match
+        console.log('Highlighted match bounds:', args.bounds);
+    }
+});
+viewer.appendTo('#pdfViewer');
+```
+
+### textSearchComplete
+
+The [textSearchComplete](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchcompleteevent) event is raised after the search engine finishes scanning and resolving all matches for the current query.
+
+- Triggers when: the search for the submitted term has completed across the document.
+- Typical uses:
+  - Update UI with the total number of matches and enable navigation controls.
+  - Hide loading indicators or show a "no results" message if none were found.
+  - Record analytics for search effectiveness.
+- Event arguments include ([TextSearchCompleteEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchCompleteEventArgs/)):
+  - totalMatches: number — total number of occurrences found.
+  - isMatchFound: boolean — indicates whether at least one match was found.
+  - searchText: string — the searched term.
+  - matchCase: boolean — whether case-sensitive search was used.
+  - name: string — event name.
+
+```typescript
+const viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    textSearchComplete: (args: any) => {
+        // args.totalMatches may indicate how many results were found (when available)
+        console.log('Text search completed.', args);
+    }
+});
+viewer.appendTo('#pdfViewer');
+```
 
 ## See also
 
