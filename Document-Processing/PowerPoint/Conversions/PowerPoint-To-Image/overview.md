@@ -395,7 +395,7 @@ During PowerPoint to Image conversions, if a glyph of the input text is unavaila
 
 ## Online Demo
 
-* Explore how to convert the PowerPoint presentation to an image using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/pptxtoimage#/bootstrap5).
+* Explore how to convert the PowerPoint presentation to an image using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind).
 
 ## See Also
 
