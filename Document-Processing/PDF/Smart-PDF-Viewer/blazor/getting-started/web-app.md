@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Smart PDF Viewer
 
-This section briefly explains how to include [Blazor Smart PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-smart-pdf-viewer) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
+This article briefly explains how to include [Blazor Smart PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-smart-pdf-viewer) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 {% tabcontents %}
 
@@ -35,8 +35,8 @@ Alternatively, use the following package manager commands.
 {% tabs %}
 {% highlight razor tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.Blazor.SfSmartPdfViewer -Version 31.1.17
-Install-Package Syncfusion.Blazor.Themes -Version 31.1.17
+Install-Package Syncfusion.Blazor.SfSmartPdfViewer -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}

@@ -99,4 +99,4 @@ The following code illustrates how to disable the annotation interaction.
 
 ## See also
 
-* [Navigation in Blazor SfPdfViewer Component](./navigation)
+* [Navigation in Blazor SfPdfViewer Component](./interactive-pdf-navigation)
