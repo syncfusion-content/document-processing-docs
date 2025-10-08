@@ -1,39 +1,39 @@
 ---
 layout: post
-title: Getting Started with SfPdfViewer in Blazor WSL mode | Syncfusion
-description: Learn how to getting started with SfPdfViewer control in Blazor WSL (Windows Subsystem for Linux) mode. 
+title: Getting started with SfPdfViewer in Blazor WSL | Syncfusion
+description: Learn how to run the Syncfusion Blazor SfPdfViewer control in a Blazor app using Windows Subsystem for Linux (WSL).
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Getting Started with Blazor PDF Viewer in WSL mode
+# Getting started with the Blazor PDF Viewer in WSL mode
 
-To run the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer (Next Gen) component in WSL (Windows Subsystem for Linux) mode, follow these steps:
+Use the following steps to run the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer (Next-Gen) component in WSL (Windows Subsystem for Linux) mode:
 
-**Step 1:** Enable the Windows Subsystem for Linux and the Virtual Machine Platform.
+**Step 1:** Enable Windows Subsystem for Linux and Virtual Machine Platform.
 
-![Create-new-blazor-wsl-app](gettingstarted-images/turn-features.png)
+![Windows Features dialog with WSL and Virtual Machine Platform enabled](gettingstarted-images/turn-features.png)
 
-To enable the Windows Subsystem for Linux (WSL) and the Virtual Machine Platform on Windows, follow these steps:
+To enable Windows Subsystem for Linux (WSL) and Virtual Machine Platform on Windows:
 
-Open the Start menu and search for `Control Panel`. Click on `Programs`, then click on `Turn Windows features on or off`. Scroll down and select the boxes next to `Windows Subsystem for Linux` and `Virtual Machine Platform`. Finally, Click `OK` and restart your machine.
+Open the Start menu and search for `Control Panel`. Select `Programs`, then choose `Turn Windows features on or off`. Select `Windows Subsystem for Linux` and `Virtual Machine Platform`. Click `OK` and restart the computer.
 
-After restarting your computer, you can install a Linux distribution like Ubuntu from the Microsoft Store and execute Linux commands directly in Windows.
+After restart, install a Linux distribution such as Ubuntu from the Microsoft Store and run Linux commands directly in Windows.
 
-**Step 2:** Install the `Ubuntu`
+**Step 2:** Install Ubuntu
 
-![Create-new-blazor-wsl-app](gettingstarted-images/ubuntu-install.png)
+![Ubuntu install page in Microsoft Store](gettingstarted-images/ubuntu-install.png)
 
-Ubuntu can be installed on a Windows machine by the Microsoft Store, follow these steps:
+To install Ubuntu from the Microsoft Store:
 
-Open the Microsoft Store on your Windows machine. Search for `Ubuntu` in the Microsoft Store search bar. Click on the `Ubuntu` application and click the `Get` button to download and install the application. Once the installation is complete, click on the `Launch` button to start Ubuntu. This will install Ubuntu as a Windows Subsystem for Linux (WSL), which allows you to run a Linux environment directly on Windows without the need for a virtual machine.
+Open the Microsoft Store and search for Ubuntu. Select Ubuntu, then choose Get to download and install. After installation, select Launch to start Ubuntu. This installs Ubuntu as a WSL distribution, enabling a Linux environment in Windows without a separate virtual machine.
 
-On Ubuntu, create a new user with a username and password.
+On first launch, create a new Ubuntu user by providing a username and password.
 
-![Create-new-blazor-wsl-app](gettingstarted-images/username-password.png)
+![Ubuntu first-run prompt for username and password](gettingstarted-images/username-password.png)
 
-**Step 3:** Install the dotnet framework for running the WSL (Windows Subsystem for Linux) in the project by running the following code one by one. 
+**Step 3:** Install the .NET SDK for WSL by running the following commands one by one.
 
 ```
     wget https://packages.microsoft.com/config/ubuntu/22.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
@@ -47,11 +47,11 @@ On Ubuntu, create a new user with a username and password.
 
 ```
 
-Check the comment dotnet --info and it should come as follows.
+Run dotnet --info. The output should resemble the following:
 
 ![Create-new-blazor-wsl-app](gettingstarted-images/dotnet-info.png)
 
-If the above result is not shown, please run the comments below 
+If the expected result is not shown, run the following commands:
 
 ```
     sudo apt remove dotnet*
@@ -66,17 +66,17 @@ If the above result is not shown, please run the comments below
     dotnet
     dotnet --info
 ```
-**Step 4:** Now, run the server or webassembly sample in WSL (Windows Subsystem for Linux) mode and it will run our Blazor PDF Viewer component.
+**Step 4:** Run the server or WebAssembly sample in WSL mode; the Blazor PDF Viewer component should load.
 
-![WSL-Mode](gettingstarted-images/WSL-Mode.png)
+![Blazor app running in WSL mode](gettingstarted-images/WSL-Mode.png)
 
-N> If you encounter any issues while running in WSL (Windows Subsystem for Linux) mode, use the following instructions to resolve them.
+N> If any issues occur while running in WSL mode, use the following instructions to resolve them.
 
-If the sample does not load the PDF file and throws an exception.
+If the sample does not load the PDF file and an exception is thrown:
 
-![Create-new-blazor-wsl-app](gettingstarted-images/exception.png)
+![Exception shown when PDF fails to load](gettingstarted-images/exception.png)
 
-Then, in the Ubuntu command window, run the following commands one by one to install all necessary Blazor PDF Viewer dependencies for a Linux run.
+In the Ubuntu terminal, run the following commands one by one to install the required Blazor PDF Viewer dependencies for Linux:
 
 ```
     sudo apt-get install libfontconfig1
@@ -86,12 +86,12 @@ Then, in the Ubuntu command window, run the following commands one by one to ins
 
 ```
 
-Close the project, reopen it, and run it in WSL mode. It will run properly.
+Close the project, reopen it, and run it in WSL mode. It should run properly.
 
-![Create-new-blazor-wsl-app](gettingstarted-images/final.png)
+![Blazor PDF Viewer running successfully in WSL mode](gettingstarted-images/final.png)
 
 ## See also
 
-* [Getting Started with Blazor PDF Viewer Component in Blazor Server App](./server-side-application)
+* [Getting started with the Blazor PDF Viewer in a Blazor Web app Server app](./web-app)
 
-* [Getting Started with Blazor PDF Viewer Component in Blazor WASM App](./web-assembly-application)
+* [Getting started with the Blazor PDF Viewer in a Blazor WebAssembly app](./web-assembly-application)
