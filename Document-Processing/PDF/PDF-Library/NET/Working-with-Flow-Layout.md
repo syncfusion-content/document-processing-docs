@@ -90,11 +90,11 @@ PdfDocument pdfDocument = render.ConvertToPDF(wordDocument);
 render.Dispose();
 wordDocument.Dispose();
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-pdfDocument.Save(stream);
-//Close the documents.
+//Save and close the PDF document. 
+pdfDocument.Save("Output.pdf");
 pdfDocument.Close(true);
+//Close the document.
+wordDocument.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -180,6 +180,11 @@ You can create PDF document with text and image using the following code snippet
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.DocIO.DLS;
+using Syncfusion.DocToPDFConverter;
+
 //A new document is created.
 WordDocument document = new WordDocument();
 //Adding a new section to the document.
@@ -230,14 +235,17 @@ PdfDocument pdfDocument = render.ConvertToPDF(document);
 render.Dispose();
 document.Dispose();
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-pdfDocument.Save(stream);
-//Close the documents.
+//Saves the PDF file. 
+pdfDocument.Save("Sample.pdf");
 pdfDocument.Close(true);
+document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.DocIO.DLS;
+using Syncfusion.DocToPDFConverter;
 
 //A new document is created.
 WordDocument document = new WordDocument();
@@ -293,6 +301,11 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.DocIO.DLS
+Imports Syncfusion.DocToPDFConverter
+Imports Syncfusion.Pdf
+
 'A new document is created
 Dim document As New WordDocument()
 'Adding a new section to the document
@@ -355,6 +368,11 @@ You can create PDF document with simple table using the following code snippet.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.DocIO.DLS;
+using Syncfusion.DocToPDFConverter;
+
 //Creates a new Word document. 
 WordDocument wordDocument = new WordDocument();
 //Adding a new section to the document.
@@ -424,14 +442,18 @@ PdfDocument pdfDocument = render.ConvertToPDF(wordDocument);
 render.Dispose();
 wordDocument.Dispose();
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-pdfDocument.Save(stream);
-//Close the documents.
+//Save and close the PDF document. 
+pdfDocument.Save("Output.pdf");
 pdfDocument.Close(true);
+//Close the document.
+wordDocument.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.DocIO.DLS;
+using Syncfusion.DocToPDFConverter;
 
 //Creates a new Word document. 
 WordDocument wordDocument = new WordDocument();
@@ -508,6 +530,11 @@ wordDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.DocIO.DLS
+Imports Syncfusion.DocToPDFConverter
+Imports Syncfusion.Pdf
+
 'Creates a new Word document 
 Dim wordDocument As New WordDocument()
 'Adding a new section to the document
@@ -593,7 +620,13 @@ Syncfusion Essential<sup>&reg;</sup> PDF supports creating a PDF document with f
 The following code snippet explains how to create a PDF document with image, paragraph text, header text, a line below the header text, and a table using flow model.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C#" [Cross-platform] %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Grid;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -650,14 +683,19 @@ grid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable5DarkAccent5);
 //Draw the table in page, below the line with a height gap of 20.
 grid.Draw(page, new PointF(0, layoutResult.Bounds.Bottom + 20));
 
-//Saving the PDF to the MemoryStream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the PDF document.
+document.Save("Output.pdf");
 //Close the instance of PdfDocument.
 document.Close(true);
+
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -722,6 +760,12 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
+
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument
 'Add a page to the document
