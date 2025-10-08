@@ -113,7 +113,7 @@ private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs 
 {% endhighlight %}
 {% endtabs %}
 
-N> If using an older version of Syncfusion and Skiasharp NuGets as v2.88.8, there is a chance of encountering a libSkiaSharp not found exception during the conversion process.
+N> If using an older version of Syncfusion and Skiasharp NuGet as v2.88.8, there is a chance of encountering a libSkiaSharp not found exception during the conversion process.
 To resolve this, refer to the code snippet provided in the documentation [here]( https://help.syncfusion.com/document-processing/faq/how-to-resolve-libskiasharp-not-found-exception-in-net8-and-net9-on-linux).
 
 Step 9: Right-click the project and select **Publish to AWS Lambda**.

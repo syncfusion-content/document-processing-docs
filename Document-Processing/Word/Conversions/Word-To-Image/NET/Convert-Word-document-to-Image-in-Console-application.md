@@ -289,7 +289,7 @@ By executing the program, you will get the **image** as follows.
 * Visual Studio 2022.
 * Install **.NET desktop development** workload with necessary .NET Framework SDK.
 
-Step 1: Create a new **.NET FrameWork console application** project.
+Step 1: Create a new **.NET Framework console application** project.
 ![Create a .NET FrameWork Console application in Visual Studio](Console-Images/NET-FrameWork/Console-Template-Net-FrameWork.png)
 
 Step 2: Install [Syncfusion.DocIO.WinForms](https://www.nuget.org/packages/Syncfusion.DocIO.WinForms/) NuGet package as a reference to your Windows Forms application from the [NuGet.org](https://www.nuget.org/).

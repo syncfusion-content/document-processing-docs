@@ -58,7 +58,7 @@ Step 5: Add a new button in the **Index.cshtml** as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in the **Homecontroller.cs** file to **convert a Word document to image** and download it.
+Step 6: Include the below code snippet in the **HomeController.cs** file to **convert a Word document to image** and download it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
