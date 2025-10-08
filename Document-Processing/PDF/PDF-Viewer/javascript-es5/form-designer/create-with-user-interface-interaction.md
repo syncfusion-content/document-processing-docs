@@ -4,7 +4,6 @@ title: User interaction in Javascript Pdfviewer control | Syncfusion
 description: Learn here all about Create with user interface interaction in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Create with user interface interaction
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text markup annotation in TypeScript PDF Viewer | Syncfusion
-description: Learn about text markup annotations in the Syncfusion TypeScript PDF Viewer, including highlight, underline, strikethrough, and squiggly—add, edit, delete, and configure programmatically.
+description: Learn to add, edit, delete, and customize text markup annotations like highlight, underline, and squiggly in Syncfusion TypeScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
