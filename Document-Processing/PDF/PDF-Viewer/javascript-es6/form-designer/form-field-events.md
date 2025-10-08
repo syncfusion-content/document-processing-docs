@@ -3,8 +3,7 @@ layout: post
 title: Form Field Events in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about different form field in Syncfusion Typescript Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Form Field Events
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

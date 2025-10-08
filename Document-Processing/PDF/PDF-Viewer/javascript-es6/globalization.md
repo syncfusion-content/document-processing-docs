@@ -3,8 +3,7 @@ layout: post
 title: Globalization in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Globalization in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Globalization
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

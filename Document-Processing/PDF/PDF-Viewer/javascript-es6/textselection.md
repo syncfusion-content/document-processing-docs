@@ -4,7 +4,6 @@ title: Text selection in Typescript Pdfviewer control | Syncfusion
 description: Learn how to enable or disable text selection, programmatically select regions, copy selected text, and handle selection events in the Syncfusion Typescript PDF Viewer.
 platform: document-processing
 control: Text selection
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

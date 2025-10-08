@@ -4,7 +4,6 @@ title: Shape annotation in TypeScript PDF Viewer control | Syncfusion
 description: Learn about shape annotations in the Syncfusion TypeScript PDF Viewer (Essential JS 2), including add, edit, delete, and default settings.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

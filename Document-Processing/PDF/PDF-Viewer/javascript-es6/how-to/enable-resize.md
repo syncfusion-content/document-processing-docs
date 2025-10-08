@@ -3,8 +3,7 @@ layout: post
 title: Enable resize in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Enable resize in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Enable resize
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

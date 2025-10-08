@@ -3,8 +3,7 @@ layout: post
 title: Interactive Navigation in PDF Viewer | Syncfusion
 description: Learn about table of content navigation and hyperlink navigation in the Syncfusion PDF Viewer control for TypeScript.
 platform: document-processing
-control: Navigation
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

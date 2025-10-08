@@ -3,8 +3,7 @@ layout: post
 title: extractTextCompleted Event in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about extractTextCompleted Event in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Extract text
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

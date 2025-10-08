@@ -4,7 +4,6 @@ title: Stamp annotation in TypeScript PDF Viewer control | Syncfusion
 description: Learn about stamp annotations in the Syncfusion TypeScript PDF Viewer (Essential JS 2): dynamic, sign here, standard business, and custom stamps.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

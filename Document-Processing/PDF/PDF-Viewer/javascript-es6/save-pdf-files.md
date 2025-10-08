@@ -4,7 +4,6 @@ title: Saving PDF files Typescript Pdfviewer control | Syncfusion
 description: This page helps you to learn here all about saving PDF files in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Saving PDF files
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

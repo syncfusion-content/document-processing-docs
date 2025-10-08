@@ -4,7 +4,6 @@ title: Comments in TypeScript PDF Viewer control | Syncfusion
 description: Learn about comments, replies, and status in the Syncfusion TypeScript PDF Viewer (Essential JS 2).
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

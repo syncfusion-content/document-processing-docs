@@ -3,8 +3,7 @@ layout: post
 title: Extract Text in Syncfusion Typescript Pdfviewer Control | Syncfusion
 description: Learn about the Extract Text in Syncfusion #Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Extract Text
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

@@ -3,8 +3,7 @@ layout: post
 title: Open PDF files Typescript Pdfviewer control | Syncfusion
 description: This page helps you to learn about how to load PDF files from various locations in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Open PDF files
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

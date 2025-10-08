@@ -4,11 +4,11 @@ description: Learn here all about Annotations Events in Syncfusion Typescript Pd
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-publishingplatform: Typescript
+
 domainurl: ##DomainURL##
 ---
 
-# Annotations Events in Typescript Pdfviewer control
+# Annotations Events in Typescript Pdf viewer control
 
 The PDF Viewer component triggers various events based on user interactions and changes in the component's state. These events can be used to perform actions when a specific event occurs. This section describes the events available in the PDF Viewer component.
 

@@ -4,7 +4,7 @@ title: Change author name using annotation settings in Typescript Pdfviewer cont
 description: Learn here all about Change author name using annotation settings in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Change author name using annotation settings
-publishingplatform: Typescript
+
 documentation: ug
 domainurl: ##DomainURL##
 ---

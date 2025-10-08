@@ -4,7 +4,7 @@ title: Add Save button in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about How to add save button in Toolbar in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Toolbar
-publishingplatform: Typescript
+
 documentation: ug
 domainurl: ##DomainURL##
 ---

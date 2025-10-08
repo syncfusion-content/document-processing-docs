@@ -4,7 +4,6 @@ title: Converting Library Bounds in JavaScript PdfViewer | Syncfusion
 description: Learn how to convert Library bounds into Viewer bounds in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

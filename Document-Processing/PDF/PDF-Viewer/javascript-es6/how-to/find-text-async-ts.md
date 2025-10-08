@@ -3,8 +3,7 @@ layout: post
 title: Find Text Async in Syncfusion Typescript Pdfviewer Control | Syncfusion
 description: Learn about the `findTextAsync` in Syncfusion #Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Find Text Async
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

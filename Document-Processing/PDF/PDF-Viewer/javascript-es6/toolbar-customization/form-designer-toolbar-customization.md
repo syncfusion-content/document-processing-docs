@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Form Designer Toolbar Customization in ##Platform_Name## PDF Viewer Component | Syncfusion
-description: Learn here all about form designer toolbar customization in Syncfusion ##Platform_Name## PDF Viewer component of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
-control: Form Designer Toolbar Customization
-publishingplatform: ##Platform_Name##
+title: Form Designer Toolbar Customization in Typescript PDF Viewer Component | Syncfusion
+description: Learn here all about form designer toolbar customization in Syncfusion Typescript PDF Viewer component of Syncfusion Essential JS 2 and more.
+platform: document-processing
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

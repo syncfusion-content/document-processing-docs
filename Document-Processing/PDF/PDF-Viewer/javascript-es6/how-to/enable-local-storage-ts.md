@@ -4,7 +4,6 @@ title: Managing Local Storage in Typescript Pdfviewer control | Syncfusion
 description: Learn how to manage local storage in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

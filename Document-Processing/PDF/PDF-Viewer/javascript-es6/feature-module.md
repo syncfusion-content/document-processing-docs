@@ -3,13 +3,12 @@ layout: post
 title: Feature module in Typescript Pdfviewer Control | Syncfusion
 description: Learn here all about Feature module in Syncfusion Essential Typescript Pdfviewer control, its elements and more.
 platform: document-processing
-control: Feature module
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature module in Typescript Pdfviewer Control
+# Feature module in Typescript Pdf viewer Control
 
 The PDF Viewer features are segregated into individual feature-wise modules to enable selectively referencing in the application. The required modules should be injected to extend its functionality. The following are the selective modules of PDF Viewer that can be included as required:
 

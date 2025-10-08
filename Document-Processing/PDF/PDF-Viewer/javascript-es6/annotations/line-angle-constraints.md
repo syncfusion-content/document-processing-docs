@@ -3,8 +3,7 @@ layout: post
 title: Line angle constraints in TypeScript PDF Viewer | Syncfusion
 description: Learn about line angle constraints in the Syncfusion TypeScript PDF Viewer, including how to enable snapping, configure angle increments, and draw with precision.
 platform: document-processing
-control: Line Angle Constraints
-publishingplatform: TypeScript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

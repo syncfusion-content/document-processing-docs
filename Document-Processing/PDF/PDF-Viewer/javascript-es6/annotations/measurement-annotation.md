@@ -4,7 +4,6 @@ title: Measurement annotation in TypeScript PDF Viewer control | Syncfusion
 description: Learn about measurement annotations in the Syncfusion TypeScript PDF Viewer (Essential JS 2): distance, perimeter, area, radius, and volume.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

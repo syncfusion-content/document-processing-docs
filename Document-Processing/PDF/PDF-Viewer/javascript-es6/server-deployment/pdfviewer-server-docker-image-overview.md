@@ -2,7 +2,7 @@
 layout: post
 title: PDF Viewer server Docker image overview
 description: Learn how to run and connect to the Syncfusion PDF Viewer server Docker image, set the license key, and configure Redis cache in a TypeScript (JavaScript ES6) application.
-platform: javascript-es6
+platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---

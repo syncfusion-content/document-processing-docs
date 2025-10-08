@@ -4,7 +4,6 @@ title: Identify added annotation mode in Typescript Pdfviewer control | Syncfusi
 description: Learn here all about Identify added annotation mode in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Identify added annotation mode
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

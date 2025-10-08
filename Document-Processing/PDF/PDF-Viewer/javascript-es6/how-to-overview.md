@@ -4,7 +4,6 @@ title: FAQ Section in Pdfviewer control | Syncfusion
 description: In this section, you can know about the various questions asked about manipulation of in Pdfviewer control.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

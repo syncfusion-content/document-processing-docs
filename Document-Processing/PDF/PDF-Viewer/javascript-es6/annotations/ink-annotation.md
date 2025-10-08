@@ -4,7 +4,6 @@ title: Ink annotation in TypeScript PDF Viewer control | Syncfusion
 description: Learn about ink annotations in the Syncfusion TypeScript PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

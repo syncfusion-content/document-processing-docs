@@ -3,8 +3,7 @@ layout: post
 title: Annotations in mobile view in TypeScript PDF Viewer control | Syncfusion
 description: Learn how to use annotations in mobile view with the Syncfusion TypeScript PDF Viewer (Essential JS 2).
 platform: document-processing
-control: Annotations in mobile view
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -82,7 +81,7 @@ domainurl: ##DomainURL##
 
 **Step 2:** The ink annotation appears on the page.
 
-![Ink annotation drawn on the page](../.././pdfviewer/how-to/images/ink-annotation.png)
+![Ink annotation drawn on the page](../how-to/images/ink-annotation.png)
 
 ## Change annotation properties (before adding)
 

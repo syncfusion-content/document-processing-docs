@@ -4,13 +4,12 @@ description: Learn here all about Events in Syncfusion Typescript Pdfviewer comp
 platform: document-processing
 control: PDF Viewer 
 documentation: ug
-publishingplatform: Typescript
 domainurl: ##DomainURL##
 ---
 
-# Events in Typescript Pdfviewer control
+# Events in Typescript Pdf viewer control
 
-The PDF Viewer component triggers events for creation, page navigation, document lifecycle, context menu interactions, comments, bookmarks, downloads/exports, hyperlinks, import/export of annotations, keyboard commands, printing, signatures, text search, and text selection. Use these events to integrate custom logic into your application workflows.
+The PDF Viewer component triggers events for creation, page navigation, document life cycle, context menu interactions, comments, bookmarks, downloads/exports, hyperlinks, import/export of annotations, keyboard commands, printing, signatures, text search, and text selection. Use these events to integrate custom logic into your application workflows.
 
 The following table lists the commonly used events supported by the PDF Viewer control:
 

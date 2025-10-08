@@ -3,8 +3,7 @@ layout: post
 title: Load document in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Load document in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Load document
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

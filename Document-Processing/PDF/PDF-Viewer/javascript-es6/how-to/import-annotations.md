@@ -3,8 +3,7 @@ layout: post
 title: Import annotations in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Import annotations in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Import annotations
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

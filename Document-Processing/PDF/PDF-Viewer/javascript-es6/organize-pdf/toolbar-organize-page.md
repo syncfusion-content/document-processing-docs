@@ -4,7 +4,6 @@ title: Organize Page Toolbar Customization in Typescript PDF Viewer control | Sy
 description: Learn here all about Organize Page Toolbar Customization in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

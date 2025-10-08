@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Custom Toolbar in ##Platform_Name## PDF Viewer Component | Syncfusion
-description: Learn here all about custom toolbar in Syncfusion ##Platform_Name## PDF Viewer component of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
-control: Custom Toolbar
-publishingplatform: ##Platform_Name##
+title: Custom Toolbar in Typescript PDF Viewer Component | Syncfusion
+description: Learn here all about custom toolbar in Syncfusion Typescript PDF Viewer component of Syncfusion Essential JS 2 and more.
+platform: document-processing
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

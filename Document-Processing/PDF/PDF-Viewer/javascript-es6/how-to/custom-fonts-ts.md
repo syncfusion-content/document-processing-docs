@@ -4,7 +4,6 @@ title: Add Custom fonts in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about how to add custom fonts using the PDF document in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
