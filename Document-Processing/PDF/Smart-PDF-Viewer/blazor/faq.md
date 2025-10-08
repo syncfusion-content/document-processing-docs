@@ -13,4 +13,3 @@ The frequently asked questions in Syncfusion Blazor Smart PDF Viewer
 
 * [How to use user token with Custom AI service?](./faqs/how-to-use-user-token-with-custom-ai-service)
 * [How to refer SfSmartPdfViewer script in application?](./faqs/how-to-refer-sfsmartpdfviewer-script-in-application)
-* [How to host SfSmartPdfViewer in docker?](./faqs/how-to-host-sfsmartpdfviewer-in-docker)
