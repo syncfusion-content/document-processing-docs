@@ -42,7 +42,7 @@ The [AddSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdf
 
 #### Event Arguments
 
-For event data, see [AddSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AddSignatureEventArgs.html) for properties such as AnnotationId, PageNumber, and Bounds.
+For event data, see [AddSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AddSignatureEventArgs.html) for properties such as Id, PageNumber, and Bounds.
 
 The following example illustrates how to handle the AddSignature event.
 
@@ -58,7 +58,7 @@ The following example illustrates how to handle the AddSignature event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task AddSignature(AddSignatureEventArgs args) 
     {
-        Console.WriteLine($"Added Signature ID: {args.AnnotationId}");
+        Console.WriteLine($"Added Signature ID: {args.Id}");
     }	 
 }
 
@@ -462,7 +462,7 @@ The [MoveSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPd
 
 #### Event Arguments
 
-See [MoveSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.MoveSignatureEventArgs.html) for details such as AnnotationId, PageNumber, PreviousBounds, and Bounds.
+See [MoveSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.MoveSignatureEventArgs.html) for details such as Id, PageNumber, PreviousBounds, and Bounds.
 
 The following example illustrates how to handle the MoveSignature event.
 
@@ -478,7 +478,7 @@ The following example illustrates how to handle the MoveSignature event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task MoveSignature(MoveSignatureEventArgs args) 
     {
-        Console.WriteLine($"Moved Signture ID: {args.AnnotationId}");
+        Console.WriteLine($"Moved Signture ID: {args.Id}");
     }	 
 }
 
@@ -518,7 +518,7 @@ The [RemoveSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sf
 
 #### Event Arguments
 
-See [RemoveSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.RemoveSignatureEventArgs.html) for details such as AnnotationId and PageNumber.
+See [RemoveSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.RemoveSignatureEventArgs.html) for details such as Id and PageNumber.
 
 The following example illustrates how to handle the RemoveSignature event.
 
@@ -534,7 +534,7 @@ The following example illustrates how to handle the RemoveSignature event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task RemoveSignature(RemoveSignatureEventArgs args) 
     {
-        Console.WriteLine($"Removed Signature ID: {args.AnnotationId}");
+        Console.WriteLine($"Removed Signature ID: {args.Id}");
     }	 
 }
 
@@ -546,7 +546,7 @@ The [ResizeSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sf
 
 #### Event Arguments
 
-See [ResizeSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ResizeSignatureEventArgs.html) for details such as AnnotationId, PageNumber, PreviousBounds, and Bounds.
+See [ResizeSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ResizeSignatureEventArgs.html) for details such as Id, PageNumber, PreviousBounds, and Bounds.
 
 The following example illustrates how to handle the ResizeSignature event.
 
@@ -562,7 +562,7 @@ The following example illustrates how to handle the ResizeSignature event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task ResizeSignature(ResizeSignatureEventArgs args) 
     {
-        Console.WriteLine($"Resized Signature ID: {args.AnnotationId}");
+        Console.WriteLine($"Resized Signature ID: {args.Id}");
     }	 
 }
 
@@ -574,7 +574,7 @@ The [SignaturePropertiesChange](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 #### Event Arguments
 
-See [SignaturePropertiesChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignaturePropertiesChangeEventArgs.html) for details such as AnnotationId, PageNumber, and changed property values.
+See [SignaturePropertiesChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignaturePropertiesChangeEventArgs.html) for details such as Id, PageNumber, and changed property values.
 
 The following example illustrates how to handle the SignaturePropertiesChange event.
 
@@ -602,7 +602,7 @@ The [SignatureSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 #### Event Arguments
 
-See [SignatureSelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureSelectedEventArgs.html) for details such as AnnotationId and PageNumber.
+See [SignatureSelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureSelectedEventArgs.html) for details such as Id and PageNumber.
 
 The following example illustrates how to handle the SignatureSelected event.
 
@@ -618,7 +618,7 @@ The following example illustrates how to handle the SignatureSelected event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task SignatureSelected(SignatureSelectEventArgs args) 
     {
-        Console.WriteLine($"Selected Signture ID: {args.AnnotationId}");
+        Console.WriteLine($"Selected Signture ID: {args.Id}");
     }	 
 }
 
@@ -630,7 +630,7 @@ The [SignatureUnselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 #### Event Arguments
 
-See [SignatureUnselectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureUnselectedEventArgs.html) for details such as AnnotationId and PageNumber.
+See [SignatureUnselectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureUnselectedEventArgs.html) for details such as Id and PageNumber.
 
 The following example illustrates how to handle the SignatureUnselected event.
 
@@ -646,11 +646,13 @@ The following example illustrates how to handle the SignatureUnselected event.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
     public async Task SignatureUnselected(SignatureSelectEventArgs args) 
     {
-        Console.WriteLine($"UnSelected Signature ID: {args.AnnotationId}");
+        Console.WriteLine($"UnSelected Signature ID: {args.Id}");
     }	 
 }
 
 ```
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Annotation%20Events).
 
 ## See also
 
