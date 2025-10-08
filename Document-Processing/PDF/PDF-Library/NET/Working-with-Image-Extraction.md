@@ -221,7 +221,7 @@ dotnet add package SkiaSharp.NativeAssets.Linux --version 3.116.1
 
 {% endhighlight %}
 
-2.For Serverless Environments<br>
+2.For cloud native deployments<br>
 (AWS Lambda, AWS Elastic Beanstalk)
 <br><br/>
 {% highlight c# tabtitle="C#" %}
