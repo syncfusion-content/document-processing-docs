@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Programmatically work with form fields in the TypeScript PDF Viewer component | Syncfusion
+title: Programmatically form fields in TypeScript PDF Viewer component | Syncfusion
 description: Learn how to programmatically add, update, delete, save, print, and manage form fields in the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Programmatically work with form fields in TypeScript PDF Viewer component
+# Programmatically work with form fields in TypeScript PDF Viewer
 
 The PDF Viewer component provides options to add, edit, and delete form fields. The supported form field types are:
 

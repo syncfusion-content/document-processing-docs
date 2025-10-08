@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Save button in Built-In Toolbar
+# Add Save button in Built-In Toolbar in TS
 
 PDF Viewer allows you to customize (add, show, hide, enable, and disable) existing items in a toolbar.
 

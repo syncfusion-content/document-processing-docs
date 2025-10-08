@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Design form fields using the UI in the TypeScript PDF Viewer component | Syncfusion
+title: Design form fields in the TypeScript PDF Viewer component | Syncfusion
 description: Learn how to add, drag, resize, edit, and manage form fields using the UI in the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Create with user interface interaction
+# Create with user interface interaction for TS
 
 The PDF Viewer component supports interactive form field design, including drawing, dragging, and resizing fields directly on the page. Click the Form Field icon on the toolbar to add a field and place it on the document. Supported form field types include:
 

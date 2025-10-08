@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create form fields programmatically in the TypeScript PDF Viewer component | Syncfusion
+title: Create form fields in the TypeScript PDF Viewer component | Syncfusion
 description: Learn how to add, update, delete, save, print, validate, and import/export form fields in the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: PDF Viewer

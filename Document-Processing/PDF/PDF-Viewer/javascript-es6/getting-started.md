@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in Standalone PDF Viewer control
+# Getting started in Standalone PDF Viewer control in TS
 
 This section briefly explains how to create **PDF Viewer** component and configure its available functionalities in TypeScript using the Essential JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository.
 

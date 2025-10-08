@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Annotations in mobile view in TypeScript PDF Viewer control | Syncfusion
+title: Annotations mobileView in TypeScript PDF Viewer control | Syncfusion
 description: Learn how to use annotations in mobile view with the Syncfusion TypeScript PDF Viewer (Essential JS 2).
 platform: document-processing
 control: PDF Viewer
