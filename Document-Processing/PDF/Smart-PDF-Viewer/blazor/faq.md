@@ -7,7 +7,7 @@ control: SfSmartPdfViewer
 documentation: ug
 ---
 
-# Frequently Asked Questions Section in Blazor Smart PDF Viewer Component
+# Frequently Asked Questions Section in Blazor Smart PDF Viewer
 
 The frequently asked questions in Syncfusion Blazor Smart PDF Viewer
 

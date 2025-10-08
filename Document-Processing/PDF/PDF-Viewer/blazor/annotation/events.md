@@ -652,7 +652,7 @@ The following example illustrates how to handle the SignatureUnselected event.
 
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Annotation_Events).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Annotation%20Events).
 
 ## See also
 
