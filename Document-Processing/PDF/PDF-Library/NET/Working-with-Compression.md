@@ -29,7 +29,7 @@ You can compress the existing PDF document by using [PdfLoadedDocument](https://
 
 N> 1.To compress an existing PDF document in .NET Core, you need to add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package from [NuGet.org](https://www.nuget.org/) as a reference in your project.
 N> 2.To ensure compatibility on **Linux** when performing image-based operations such as compression or rendering using `Syncfusion.Pdf.Imaging.Net.Core`, you must include the `SkiaSharp` library along with the `SkiaSharp.NativeAssets.Linux` package in your project.
-N> 3. For Linux environments, refer to the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) for detailed information on the additional NuGet packages required.
+N> 3.For Linux environments, refer to the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) for detailed information on the additional NuGet packages required.
 
 ## Compressing images with image quality
 
@@ -41,10 +41,11 @@ The following example code snippet illustrates how to compress the images in exi
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Compression/Compress-the-images-in-an-existing-PDF-document/.NET/Compress-the-images-in-an-existing-PDF-document/Program.cs" %} 	
 
-//Load an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-//Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
+//Load the existing PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
 
 //Create a new compression option.
 PdfCompressionOptions options = new PdfCompressionOptions();
@@ -54,26 +55,19 @@ options.CompressImages = true;
 options.ImageQuality = 50;
 
 //Assign the compression option to the document.
-loadedDocument.Compress(options);
+loadedDocument.CompressionOptions = options;
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-loadedDocument.Save(stream);
-//Close the documents.
+//Save the PDF document.
+loadedDocument.Save("Output.pdf");
+//Close the document.
 loadedDocument.Close(true);
-//If the position is not set to '0' then the PDF will be empty.
-stream.Position = 0;
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name. 
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name. 
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -96,6 +90,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
@@ -131,10 +128,11 @@ The following example code snippet illustrates how to optimize embedded font in 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Compression/Optimize-embedded-font-in-an-existing-PDF-document/.NET/Optimize-embedded-font-in-an-existing-PDF-document/Program.cs" %}	
 
-//Load an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
 
 //Create a new compression option.
 PdfCompressionOptions options = new PdfCompressionOptions();
@@ -142,26 +140,19 @@ PdfCompressionOptions options = new PdfCompressionOptions();
 options.OptimizeFont = true;
 
 //Assign the compression option to the document.
-loadedDocument.Compress(options);
+loadedDocument.CompressionOptions = options;
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-loadedDocument.Save(stream);
-//Close the documents.
+//Save the PDF document.
+loadedDocument.Save("Output.pdf");
+//Close the document.
 loadedDocument.Close(true);
-//If the position is not set to '0' then the PDF will be empty.
-stream.Position = 0;
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name. 
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name. 
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -182,6 +173,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
@@ -217,10 +211,11 @@ The following example code snippet illustrates how to optimize page contents in 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Compression/Optimize-page-contents-in-an-existing-PDF-document/.NET/Optimize-page-contents-in-an-existing-PDF-document/Program.cs" %}
 
-//Load an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
 
 //Create a new compression option.
 PdfCompressionOptions options = new PdfCompressionOptions();
@@ -228,26 +223,19 @@ PdfCompressionOptions options = new PdfCompressionOptions();
 options.OptimizePageContents = true;
 
 //Assign the compression option to the document.
-loadedDocument.Compress(options);
+loadedDocument.CompressionOptions = options;
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-loadedDocument.Save(stream);
-//Close the documents.
+//Save the PDF document.
+loadedDocument.Save("Output.pdf");
+//Close the document.
 loadedDocument.Close(true);
-//If the position is not set to '0' then the PDF will be empty.
-stream.Position = 0;
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -268,6 +256,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
@@ -301,10 +292,11 @@ The following example code snippet illustrates how to optimize page contents in 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Compression/Reduce-PDF-file-size-by-removing-PDF-metadata/.NET/Reduce-PDF-file-size-by-removing-PDF-metadata/Program.cs" %}	
 
-//Load an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
 
 //Create a new compression option.
 PdfCompressionOptions options = new PdfCompressionOptions();
@@ -312,26 +304,19 @@ PdfCompressionOptions options = new PdfCompressionOptions();
 options.RemoveMetadata = true;
 
 //Assign the compression option to the document.
-loadedDocument.Compress(options);
+loadedDocument.CompressionOptions = options;
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-loadedDocument.Save(stream);
-//Close the documents.
+//Save the PDF document.
+loadedDocument.Save("Output.pdf");
+//Close the document.
 loadedDocument.Close(true);
-//If the position is not set to '0' then the PDF will be empty.
-stream.Position = 0;
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name. 
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name. 
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -352,6 +337,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
@@ -390,6 +378,10 @@ The following code snippet illustrates how to compress the content of the PDF do
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Compression/Compress-the-content-of-the-PDF-document/.NET/Compress-the-content-of-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Set the compression level to best.
@@ -403,30 +395,25 @@ PdfGraphics graphics = page.Graphics;
 PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
 string text = "Hello World!!!";
 PdfTextElement textElement = new PdfTextElement(text, font);
+
 PdfLayoutResult result = textElement.Draw(page, new RectangleF(0, 0, font.MeasureString(text).Width, page.GetClientSize().Height));
 for (int i = 0; i < 1000; i++)
 {
-    result = textElement.Draw(result.Page, new RectangleF(0, result.Bounds.Bottom + 10, font.MeasureString(text).Width, page.GetClientSize().Height));
+result = textElement.Draw(result.Page, new RectangleF(0, result.Bounds.Bottom +10, font.MeasureString(text).Width, page.GetClientSize().Height));
 }
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-document.Save(stream);
-//Close the documents.
+//Save the document.
+document.Save("Output.pdf");
+//Close the document.
 document.Close(true);
-//If the position is not set to '0' then the PDF will be empty.
-stream.Position = 0;
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name. 
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name. 
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -456,6 +443,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+Imports System.Drawing
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -490,6 +481,9 @@ You can compress the existing PDF document by specifying the [PdfCompressionLeve
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
@@ -506,6 +500,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -534,6 +531,10 @@ Essential<sup>&reg;</sup> PDF allows you to compress/change the quality of the i
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Drawing;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -556,6 +557,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -588,6 +593,11 @@ You can compress the images in an existing PDF document by extract the images us
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using System.Drawing;
+
 //Load the PDF document with images
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Disable the incremental update
@@ -617,6 +627,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document which consist of images
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
