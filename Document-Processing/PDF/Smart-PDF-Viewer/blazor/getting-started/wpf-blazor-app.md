@@ -255,7 +255,7 @@ Run the WPF application. The Syncfusion&reg; Blazor Smart PDF Viewer renders ins
 
 ![WPF Blazor HybridApp Smart PDF Viewer rendering in browser](../images/blazor-hybrid-wpf-sfsmartpdfviewer.png)
 
->[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/GettingStartedWPFApp).
+>[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Getting%20Started/WPF%20Blazor%20App).
 
 ## See also
 
