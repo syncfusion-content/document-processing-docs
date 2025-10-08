@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Refer the SfSmartPdfViewer script file in application | Syncfusion
-description: Learn here all about refer the SfSmartPdfViewer script file in the application in Syncfusion Blazor SfSmartPdfViewer component and more.
+title: Refer the SfSmartPdfViewer script into Blazor application | Syncfusion
+description: Learn how to include the SfSmartPdfViewer script in Syncfusion Blazor apps using CDN seamless setup.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 ---
 
-# Refer the SfSmartPdfViewer script file in Blazor application
+# Reference the SfSmartPdfViewer script in a Blazor application
 
-* You can include the script in your application by adding a CDN link. This provides a quick and efficient way to integrate the required functionality without needing to reference the script locally. For more details, please refer to the [CDN Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference)
+* Reference the script using a CDN for a quick setup without local files. For guidance, see the [CDN reference](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference).
 
-* You can also reference the script directly from the NuGet package included in your application. For more details, please refer to the [Refer script from static web assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets)
+* Reference the script from the installed NuGet package via static web assets. For guidance, see [Reference script from static web assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets).
 
-* If you wish to add custom scripts to your application, please refer to the [Custom Resource Generator](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) for generating the necessary resources. You need to include the [pdfium.js](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Common/Pdfium%20files/pdfium.js) and [pdfium.wasm](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Common/Pdfium%20files/pdfium.wasm) files in your application when referencing scripts externally.
+* To include custom scripts, use the [Custom Resource Generator](https://blazor.syncfusion.com/documentation/common/custom-resource-generator). Ensure that [pdfium.js](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Common/Pdfium%20files/pdfium.js) and [pdfium.wasm](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Common/Pdfium%20files/pdfium.wasm) are added to the application (typically under wwwroot) and that the page can resolve their paths at runtime.
 
-To refer the script and pdfium files in your application, please refer the below image.
-![Scripts in Blazor SfSmartPdfViewer](../images/pdfium.png)
+The following image shows the script and Pdfium files referenced in a Blazor application.
+![Scripts and Pdfium files in Blazor SfSmartPdfViewer](../images/pdfium.png)
 
 ## See also
 

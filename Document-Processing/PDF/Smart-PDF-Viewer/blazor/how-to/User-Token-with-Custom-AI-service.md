@@ -1,14 +1,14 @@
 ---
 layout: post
 title: UserToken with Azure AI Service in Smart PDF Viewer| Syncfusion
-description: Learn how to implement a User Token with Custom Azure AI Service in Syncfusion Smart PDF Viewer in a Blazor App.
+description: Implement a user token with a custom Azure OpenAI service in the Syncfusion Smart PDF Viewer for a Blazor app.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 ---
 # Getting Started Smart PDF Viewer using UserToken with Azure Service
 
-This guide provides step-by-step instructions for integrating and using Syncfusion's Smart PDF Viewer with User Token and Custom Azure AI service in your Blazor App.
+This article provides step-by-step instructions for integrating and using Syncfusion Smart PDF Viewer with a user token and a custom Azure OpenAI service in a Blazor app.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ After completing this setup, you can:
 
 ---
 ## Step 1: Create User Token Service
-The `UserTokenService` is responsible for generating secure tokens for users. These tokens can be used to authenticate requests to your Custom Azure AI Service. 
+The `UserTokenService` is responsible for generating and managing per-user quotas. These tokens are used to authenticate and throttle requests to the custom Azure OpenAI service based on user identity.
 
 ### Implementation Steps
 1.	Create a new class file named `UserTokenService.cs` in your project
@@ -154,7 +154,7 @@ public class UserTokenInfo
 {% endtabs %}
 
 ## Step 2: Implement User Token API Controller
-The `UserTokensController` class serves as the API layer for interacting with the user token system.This controller is essential for enabling secure and dynamic token tracking for users interacting with your Custom Azure AI Service.
+The `UserTokensController` class exposes endpoints to check and update user tokens. This enables secure and dynamic quota tracking for users interacting with the custom Azure OpenAI service.
 
 1.	Create a new class file named `UserTokensController.cs` in your project
 2.	Add the following implementation:
@@ -209,7 +209,7 @@ public class UserTokensController : ControllerBase
 
 ## Step 3: Create a Custom Azure AI Service
 
-The Syncfusion Smart PDF Viewer are designed to work with different AI backends through the `IChatInferenceService` interface. This section shows you how to create a custom implementation that connects the Smart PDF Viewer to the Azure AI service.
+The Syncfusion Smart PDF Viewer is designed to work with different AI backends through the `IChatInferenceService` interface. This section shows how to create a custom implementation that connects the Smart PDF Viewer to the Azure OpenAI service.
 
 ### Understanding the Interface
 
@@ -494,7 +494,7 @@ function hideSpinner() {
 
 ## Step 6: Configure the Blazor App
 
-Configure your Blazor application to use the User Token with Azure AI service with Syncfusion Smart PDF Viewer. This involves registering necessary services and setting up the dependency injection container.
+Configure the Blazor application to use the user token with the Azure OpenAI service and Syncfusion Smart PDF Viewer. This includes registering Syncfusion services, the chat client, and the custom AI service.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" %}
