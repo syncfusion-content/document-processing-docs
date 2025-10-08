@@ -232,7 +232,7 @@ Run the WinForms application. The Syncfusion&reg; Blazor Smart PDF Viewer render
 
 ![WinForms Blazor HybridApp Smart PDF Viewer rendering in browser](../images/blazor-hybrid-winforms-sfsmartpdfviewer.png)
 
->[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/GettingStartedWinForms).
+>[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Getting%20Started/WinForms%20Blazor%20App).
 
 ## See also
 
