@@ -367,7 +367,7 @@ During Word to Image conversions, if a glyph of the input text is unavailable in
 
 ## Online Demo
 
-* Explore how to convert a Word document to an image using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/wordtoimage#/bootstrap5).
+* Explore how to convert a Word document to an image using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtoimage#/tailwind).
 
 ## See Also
 
