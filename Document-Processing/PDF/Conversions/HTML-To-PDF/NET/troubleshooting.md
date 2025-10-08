@@ -582,7 +582,7 @@ htmlConverter.ConverterSettings = settings;
 PdfDocument document = htmlConverter.Convert("https://example.com");
 
 //Save and close the document. 
-document.Save(fs);
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
