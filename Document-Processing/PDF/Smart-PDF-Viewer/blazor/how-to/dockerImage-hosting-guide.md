@@ -9,40 +9,40 @@ documentation: ug
 
 # Docker Image Hosting Guide for Blazor Web App
 
-We aim to assist developers in reducing deployment time and simplifying the publishing process using Docker images. The [Syncfusion Document Processing API](https://hub.docker.com/r/syncfusion/document-processing-apis) is available as a ready-to-use Docker image for document processing APIs that ensures a seamless experience for Docker users. The following sections will guide you on how to publish docker images.
+This article helps reduce deployment time and simplify publishing by using Docker images with a Blazor Smart PDF Viewer Web App. The [Syncfusion Document Processing API](https://hub.docker.com/r/syncfusion/document-processing-apis) is available as a ready-to-use Docker image for document processing scenarios and ensures a seamless experience for Docker users. The following sections describe how to publish Docker images for local validation.
 
 ## Deployment requirement
 ### Hardware requirement
-The following hardware requirements are necessary to run document processing API
+The following hardware requirements are necessary to run document processing API:
 
-Windows
-CPU: 2-core
-Memory: 8GB RAM
-Disk space: 8GB or more
+- Windows
+- CPU: 2-core
+- Memory: 8 GB RAM
+- Disk space: 8 GB or more
 
 ### Software requirements
-The following software requirements are necessary to run document processing API
+The following software requirements are necessary to run document processing API:
 
-Application: Rancher Desktop.
-Web Browser: Microsoft Edge, Mozilla Firefox, and Chrome.
+- Application: Rancher Desktop
+- Web browser: Microsoft Edge, Mozilla Firefox, or Google Chrome
 
 ## Steps to configure and run docker container
 ### Step1:
-Install the Rancher desktop application [Rancher Desktop](https://github.com/rancher-sandbox/rancher-desktop/releases)
+Install the Rancher desktop application from the official release page: [Rancher Desktop](https://github.com/rancher-sandbox/rancher-desktop/releases)
 
 ### Step2:
-Open the rancher desktop application Select the displayed option.
-![Docker Moby](../images/docker-moby.png)
+Open the Rancher Desktop application and select the displayed option.
+![Docker engine selection in Rancher Desktop](../images/docker-moby.png)
 
 ### Step3:
-Create a Smart Pdf Viewer web app sample using the following [documentation](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/web-app).
+Create a Smart Pdf Viewer web app sample by following the [documentation](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/web-app).
 
 ### Step4:
-Right-click Smart PDF Viewer web app sample to add the docker support with Linux.
-![Docker Support](../images/add-docker-support.png).
+Right-click the Smart PDF Viewer web app sample to add Docker support with Linux.
+![Add Docker support in project](../images/add-docker-support.png)
 
 ### Step5:
-Once the docker file is added open the docker file and add the following line
+Once the Docker file is added, open the Docker file and add the following line.
 
 {% tabs %}
 {% highlight c# tabtitle="Dockerfile" hl_lines="2 4 6" %}
@@ -66,15 +66,15 @@ EXPOSE 8081
 {% endhighlight %}
 {% endtabs %}
 
-![Docker Support Line](../images/line-to-add-docker.png).
-N> Remove the `User` if not needed or change the User type to  `root` for providing elevated privileges.
+![Line to add in Dockerfile](../images/line-to-add-docker.png)
+N> Remove the `User` if not needed or change the User type to `root` to provide elevated privileges.
 
 ### Step6:
-Publish the image by building the DockerFile
-![Build Docker File](../images/build-docker.png).
+Publish the image by building the DockerFile.
+![Build Dockerfile in IDE](../images/build-docker.png)
 
 ### Step7:
-Open the comment prompt or power shell and enter the following command to list the published docker images.
+Open the command prompt or PowerShell and enter the following command to list the published Docker images.
 
 {% tabs %}
 {% highlight c# tabtitle="Docker Image" %}
@@ -96,9 +96,8 @@ docker run -d -p 6001:8080 4eead1aaf7a5
 {% endtabs %}
 
 ### Step9:
-Ensure the published image is as per requirement in the hosted link `http://localhost:6001/`
+Ensure the published image runs as expected by navigating to the hosted link `http://localhost:6001/`.
 
 ## See also
 
 * [Steps to deploy Docker Images from Container Registry to Azure App Services](https://learn.microsoft.com/en-us/azure/app-service/quickstart-custom-container?tabs=dotnet&pivots=container-linux-azure-portal).
-
