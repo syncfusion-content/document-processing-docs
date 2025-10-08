@@ -522,7 +522,7 @@ The [formFieldSelect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.e
 
 ## formFieldUnselect event
 
-The [formFieldUnselect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldUnselect/) events are triggered when a form field in a PDF is unselected. These events provide the necessary details about the specific form field that has been unselected.
+The [formFieldUnselect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldUnselect) events are triggered when a form field in a PDF is unselected. These events provide the necessary details about the specific form field that has been unselected.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

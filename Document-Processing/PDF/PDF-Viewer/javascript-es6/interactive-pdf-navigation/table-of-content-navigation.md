@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Interactive Navigation in PDF Viewer | Syncfusion
-description: Learn about table of content navigation and hyperlink navigation in the Syncfusion PDF Viewer control for TypeScript.
+title: Table of contents navigation in PDF Viewer | Syncfusion
+description: Learn how to navigate PDFs using the table of contents in the Syncfusion PDF Viewer control for TypeScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Interactive Navigation in PDF Viewer
+# Table of contents navigation in PDF Viewer
 
-The PDF Viewer component supports various interactive navigation features to enhance user experience. This document details two key navigation methods: table of contents and hyperlinks.
+The PDF Viewer supports a built-in table of contents (TOC) experience to help users jump to sections defined by the document’s bookmarks or outline.
 
-## Table of Content Navigation
+## Table of contents navigation
 
-Table of contents navigation allows users to quickly jump to different sections of a PDF document by clicking entries in the table of contents. The PDF Viewer automatically displays a table of contents pane if the document contains a valid table of contents.
+Use the table of contents to quickly navigate to headings and sections defined in the PDF. When the document contains a bookmarks/outline structure, the viewer exposes those entries in the table of contents (Bookmarks) pane. Selecting an entry navigates directly to the mapped destination. If the PDF does not include a table of contents, the pane will not list any entries.
 
-![Table of Contents Navigation in PDF Viewer](../images/toc.png)
+![Table of contents pane in PDF Viewer](../images/toc.png)
 
 ## Hyperlink Navigation
 
@@ -63,7 +63,6 @@ viewer.appendTo('#PdfViewer');
 {% endtabs %}
 
 > Note: Disabling hyperlinks only affects the viewer's behavior and does not alter the original PDF document.
-
 ### Controlling Link Behavior
 
 The `hyperlinkOpenState` property determines how external URLs are opened when a hyperlink is clicked.
@@ -135,11 +134,11 @@ const viewer: PdfViewer = new PdfViewer({
   hyperlinkClick: (args) => {
     // Log the URL of the clicked hyperlink
     console.log('Hyperlink Clicked:', args.hyperlink);
-    
+
     // To prevent the default navigation behavior, set args.cancel to true
     // args.cancel = true;
   },
-  
+
   // Event handler for mouse hover over a hyperlink
   hyperlinkMouseOver: (args) => {
     // Log the href of the hyperlink element when the mouse hovers over it
@@ -159,16 +158,16 @@ const viewer: PdfViewer = new PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
   // Set the service URL for server-backed PDF processing
   serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
-  
+
   // Event handler for hyperlink click
   hyperlinkClick: (args) => {
     // Log the URL of the clicked hyperlink
     console.log('Hyperlink Clicked:', args.hyperlink);
-    
+
     // To prevent the default navigation behavior, set args.cancel to true
     // args.cancel = true;
   },
-  
+
   // Event handler for mouse hover over a hyperlink
   hyperlinkMouseOver: (args) => {
     // Log the href of the hyperlink element when the mouse hovers over it
@@ -181,9 +180,8 @@ viewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-## See Also
+## See also
 
-- [Toolbar Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/toolbar-customization/custom-toolbar/)
-- [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/feature-module/)
-- [Bookmark Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/bookmark-navigation/)
-- [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/page-navigation/)
+- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/bookmark-navigation/)
+- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/page-navigation/)
+- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/page-thumbnail-navigation/)
