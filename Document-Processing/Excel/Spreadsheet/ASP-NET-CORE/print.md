@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Print in EJ2 ASP.NET CORE Syncfusion Spreadsheet Control
+title: Print in EJ2 ASP.NET Core Syncfusion Spreadsheet Control
 description: Learn here all about print feature in EJ2 ASP.NET CORE Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Print
@@ -32,10 +32,10 @@ The `printOptions` contain three properties, as described below.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/print-cs2/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/print-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="PrintController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/print-cs2/printController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/print-cs2/printController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -47,10 +47,10 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/print-cs3/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/print-cs3/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="PrintController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/print-cs3/printController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/print-cs3/printController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

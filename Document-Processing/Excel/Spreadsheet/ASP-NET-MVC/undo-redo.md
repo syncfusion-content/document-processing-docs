@@ -40,10 +40,10 @@ The following code example shows `How to update and customize your own actions f
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/undo-redo/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/undo-redo/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="UndoRedoController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/undo-redo/undoRedoController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/undo-redo/undoRedoController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

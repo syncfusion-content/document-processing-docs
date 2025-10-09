@@ -24,10 +24,10 @@ The following sample shows the `Open` option by using the [`openUrl`](https://he
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/open/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/open/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Opencontroller.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/open/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/open/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,10 +52,10 @@ The following code example shows how to import an excel document using file uplo
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/open-uploader/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/open-uploader/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Opencontroller.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/open-uploader/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/open-uploader/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -65,10 +65,10 @@ You can achieve to access the remote excel file by using the [`created`](https:/
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/open-url/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/open-url/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Opencontroller.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/open-url/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/open-url/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -80,10 +80,10 @@ Please find the code to fetch the blob data and load it into the Spreadsheet con
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/open-from-blob/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/open-from-blob/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="OpenController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/open-from-blob/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/open-from-blob/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -205,10 +205,10 @@ The following code example shows how to open the spreadsheet data as base64 stri
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/base-64-string/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/base-64-string/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="OpenController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/base-64-string/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/base-64-string/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -218,10 +218,10 @@ You can open excel file into a read-only mode by using the [`openComplete`](http
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/open-readonly/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/open-readonly/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Opencontroller.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/open-readonly/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/open-readonly/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -253,10 +253,10 @@ The following code snippet demonstrates how to configure the deserialization opt
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/open-from-json/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/open-from-json/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="OpenController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/open-from-json/openController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/open-from-json/openController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -340,10 +340,10 @@ You can add your own custom header to the open action in the Spreadsheet. For pr
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/open-header/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/open-header/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Opencontroller.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/open-header/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/open-header/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -385,10 +385,10 @@ The following sample shows the `Save` option by using the [`saveUrl`](https://he
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/save/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/save/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Savecontroller.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/save/savecontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/save/savecontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -418,10 +418,10 @@ Please find below the code to retrieve blob data from the Spreadsheet control be
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/save-as-blob/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/save-as-blob/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="SaveController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/save-as-blob/savecontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/save-as-blob/savecontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -569,10 +569,10 @@ The following code example shows how to save the spreadsheet data as base64 stri
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/base-64-string/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/base-64-string/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="OpenController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/base-64-string/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/base-64-string/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -604,10 +604,10 @@ The following code snippet demonstrates how to configure the serialization optio
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/save-as-json/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/save-as-json/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="SaveController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/save-as-json/saveController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/save-as-json/saveController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -617,10 +617,10 @@ Passing the custom parameters from client to server by using [`beforeSave`](http
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/custom-params/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/custom-params/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="CustomParamsController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/custom-params/customParamsController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/custom-params/customParamsController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -630,10 +630,10 @@ You can add your own custom header to the save action in the Spreadsheet. For pr
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/save-header/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/save-header/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="CustomHeaderController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/save-header/CustomHeaderController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/save-header/CustomHeaderController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -648,10 +648,10 @@ The possible values are:
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/pdf-orientation/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/pdf-orientation/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="pdfOrientationController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/pdf-orientation/pdfOrientationController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/pdf-orientation/pdfOrientationController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -670,10 +670,10 @@ To save the Spreadsheet document as an `xlsx, xls, csv, or pdf` file, by using `
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/open-save/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/open-save/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="OpenSaveController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/open-save/openSaveController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/open-save/openSaveController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

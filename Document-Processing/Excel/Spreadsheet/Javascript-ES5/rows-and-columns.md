@@ -30,14 +30,14 @@ The following code example shows the options for inserting rows in the spreadshe
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/insert/row-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/insert/row-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/insert/row-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/insert/row-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/insert/row-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/insert/row-cs1" %}
 
 ### Column
 
@@ -50,14 +50,14 @@ The following code example shows the options for inserting columns in the spread
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/insert/column-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/insert/column-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/insert/column-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/insert/column-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/insert/column-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/insert/column-cs1" %}
 
 ## Delete
 
@@ -72,14 +72,14 @@ The following code example shows the delete operation of rows and columns in the
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/delete/row-column-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/delete/row-column-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/delete/row-column-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/delete/row-column-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/delete/row-column-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/delete/row-column-cs1" %}
 
 ## Limitations of insert and delete
 
@@ -114,14 +114,14 @@ The following code example shows the hide/show rows and columns operation in the
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/hide-show-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/hide-show-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/hide-show-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/hide-show-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/hide-show-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/hide-show-cs1" %}
 
 ## Size
 
@@ -142,14 +142,14 @@ The following code example shows how to change the height for single/multiple ro
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/row-height-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/row-height-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/row-height-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/row-height-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/row-height-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/row-height-cs1" %}
 
 ### Column
 
@@ -166,14 +166,14 @@ The following code example shows how to change the width for single/multiple col
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/column-width-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/column-width-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/column-width-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/column-width-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/column-width-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/column-width-cs1" %}
 
 ## Changing text in column headers
 
@@ -183,14 +183,14 @@ The following code example shows how to change the text in the column headers.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/column-header-change-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/column-header-change-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/column-header-change-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/column-header-change-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/column-header-change-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/column-header-change-cs1" %}
 
 ## See Also
 

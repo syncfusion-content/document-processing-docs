@@ -88,7 +88,7 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spread
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/getting-started-mvc/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/getting-started-mvc/razor %}
 {% endhighlight %}
 {% endtabs %}
 

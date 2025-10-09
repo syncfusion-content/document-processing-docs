@@ -32,10 +32,10 @@ The `printOptions` contain three properties, as described below.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/print-cs2/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/print-cs2/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="PrintController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/print-cs2/printController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/print-cs2/printController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -47,10 +47,10 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/print-cs3/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/print-cs3/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="PrintController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/print-cs3/printController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/print-cs3/printController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -94,14 +94,14 @@ The following code example shows the number formatting in cell data.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/format/number-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/format/number-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/format/number-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/format/number-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/format/number-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/format/number-cs1" %}
 
 ## Configure culture-based custom format
 
@@ -146,14 +146,14 @@ The following code example demonstrates how to configure culture-based formats f
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/format/globalization-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/format/globalization-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/format/globalization-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/format/globalization-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/format/globalization-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/format/globalization-cs1" %}
 
 ## Text and cell formatting
 
@@ -216,14 +216,14 @@ The following code example shows the style formatting in text and cells of the s
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/format/cell-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/format/cell-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/format/cell-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/format/cell-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/format/cell-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/format/cell-cs1" %}
 
 ### Limitations of Formatting
 
@@ -317,14 +317,14 @@ You can clear the defined rules by using one of the following ways,
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/conditional-formatting-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/conditional-formatting-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/conditional-formatting-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/conditional-formatting-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/conditional-formatting-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/conditional-formatting-cs1" %}
 
 ### Limitations of Conditional formatting
 

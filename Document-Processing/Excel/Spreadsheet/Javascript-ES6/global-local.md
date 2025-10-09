@@ -383,14 +383,14 @@ The following example demonstrates the Spreadsheet in `French` culture. In the b
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/global/locale-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/global/locale-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/global/locale-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/global/locale-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/global/locale-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/global/locale-cs1" %}
 
 ## Internationalization
 
@@ -400,14 +400,14 @@ The following example demonstrates the Spreadsheet in French [`fr-CH`] culture. 
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/global/internationalization-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/global/internationalization-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/global/internationalization-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/global/internationalization-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/global/internationalization-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/global/internationalization-cs1" %}
 
 ## Right to left (RTL)
 
@@ -415,14 +415,14 @@ RTL provides an option to switch the text direction and layout of the Spreadshee
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/global/rtl-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/global/rtl-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/global/rtl-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/global/rtl-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/global/rtl-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/global/rtl-cs1" %}
 
 ## See Also
 

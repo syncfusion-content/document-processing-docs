@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Undo Redo in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+title: Undo Redo in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
 description: Learn here all about Undo Redo in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Undo Redo
@@ -40,10 +40,10 @@ The following code example shows `How to update and customize your own actions f
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/undo-redo/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/undo-redo/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="UndoRedoController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/undo-redo/undoRedoController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/undo-redo/undoRedoController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
