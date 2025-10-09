@@ -79,4 +79,4 @@ The following code shows how to hide default context menu and add custom option 
 }
 ```
 
-You can also explore our [Blazor Word Processor - Context Menu](https://blazor.syncfusion.com/demos/document-editor/custom-context-menu?theme=bootstrap5) example to know how to render and configure the document editor.
+Explore the [Blazor Word Processor - Context Menu](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/custom-context-menu?theme=bootstrap5) example to learn how to render and configure the document editor.
