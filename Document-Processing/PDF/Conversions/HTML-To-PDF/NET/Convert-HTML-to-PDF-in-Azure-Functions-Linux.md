@@ -77,7 +77,7 @@ echo "Dependencies installation script completed."
 
 Step 6: Set Copy to Output Directory as “Copy if newer” to the dependenciesInstall.sh file.
 
-![Convert HTMLToPDF Azure Functions Step6](htmlconversion_images\CopyToNewwer.png)
+![Convert HTMLToPDF Azure Functions Step6](htmlconversion_images\CopyToNewer.png)
 
 Step 7: Include the following namespaces in Function1.cs file.
 
