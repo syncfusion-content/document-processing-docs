@@ -37,15 +37,15 @@ The following code example shows `filter` functionality in the Spreadsheet contr
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/filter-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/filter-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/filter-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/filter-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/filter-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/filter-cs1" %}
 
 ## Filter by cell value
 
@@ -87,15 +87,15 @@ The following code example shows how to get the filtered rows.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/filter-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/filter-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/filter-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/filter-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/filter-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/filter-cs2" %}
 
 ## Limitations
 
