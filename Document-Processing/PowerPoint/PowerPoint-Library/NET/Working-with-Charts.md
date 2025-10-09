@@ -2106,7 +2106,7 @@ The following Chart types are supported in Presentation.
 
 ## Online Demo
 
-* Explore how to create charts in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/chart#/bootstrap5).
+* Explore how to create charts in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/chart#/tailwind).
 
 ## See Also
 * [How to set same number of intervals for Primary and Secondary ValueAxis?](https://support.syncfusion.com/kb/article/11366/how-to-set-same-number-of-intervals-for-primary-and-secondary-valueaxis-in-winforms-presentation)

@@ -1190,7 +1190,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to create slides with simple text, table, and image in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/slide#/bootstrap5).
+* Explore how to create slides with simple text, table, and image in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/slide#/tailwind).
 
 ## See Also
 
