@@ -288,16 +288,16 @@ Upon executing the program, the **Word document** will be generated as follows:
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
 
-Step 1: Create a new C# Blazor Server app project.
+Step 1: Create a new C# Blazor Web app project.
 * Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
-* Choose the **Blazor Server App** template.
+* Choose the **Blazor Web App** template.
 
-![Choose Blazor Server app from template](Blazor_Images/Blazor-server-app-template.png)
+![Choose Blazor Web App Server from template](Blazor_Images/Blazor-Web-app-template.png)
 
 * Select the project location, type the project name and press enter.
 * Then choose **Create project**.
 
-Step 2: To **create a Word document in Blazor Server app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
+Step 2: To **create a Word document in Blazor Web app Server**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
 * Run the command `dotnet add package Syncfusion.DocIO.Net.Core` to install the NuGet package.
@@ -555,7 +555,7 @@ Upon executing the program, the **Word document** will be generated as follows:
 * JetBrains Rider.
 * Install .NET 8 SDK or later.
 
-Step 1. Open JetBrains Rider and create a new Blazor Server app project.
+Step 1. Open JetBrains Rider and create a new Blazor Web app project.
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
@@ -1055,16 +1055,16 @@ N> While the Word library functions in WASM Standalone, server-side deployment i
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
-Step 1: Create a new C# Blazor WASM app project.
+Step 1: Create a new C# Blazor WASM Standalone app project.
 * Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
-* Choose the **Blazor WebAssembly App** template.
+* Choose the **Blazor WebAssembly Standalone App** template.
 
 ![Choose Blazor Web app from template](Blazor_Images/Blazor-WASM-app-template.png)
 
 * Select the project location, type the project name and press enter.
 * Then choose **Create project**.
 
-Step 2: To **create a Word document in Blazor WASM app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
+Step 2: To **create a Word document in Blazor WASM Standalone app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
 * Run the command `dotnet add package Syncfusion.DocIO.Net.Core` to install the NuGet package.
@@ -1288,7 +1288,7 @@ N> While the Word library functions in WASM Standalone, server-side deployment i
 * JetBrains Rider.
 * Install .NET 8 SDK or later.
 
-Step 1. Open JetBrains Rider and create a new Blazor WASM app project.
+Step 1. Open JetBrains Rider and create a new Blazor WASM Standalone app project.
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
