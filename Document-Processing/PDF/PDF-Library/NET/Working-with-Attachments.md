@@ -20,6 +20,9 @@ You can add a text file attachment to a PDF document using [PdfAttachment](https
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Adding-attachment-to-a-PDF-document/.NET/Adding-attachment-to-a-PDF-document/Program.cs" %}	
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Creates an attachment
@@ -31,15 +34,17 @@ attachment.MimeType = "application/txt";
 //Adds the attachment to the document
 document.Attachments.Add(attachment);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -58,6 +63,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf
 
 'Create a new PDF document
 Dim document As New PdfDocument()
@@ -85,9 +93,14 @@ Essential<sup>&reg;</sup> PDF also provides support for adding the attachments t
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Adding-the-attachments-to-an-existing-PDF-document/.NET/Adding-the-attachments-to-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Creates an attachment
 Stream fileStream = new FileStream("Input.txt", FileMode.Open, FileAccess.Read);
 PdfAttachment attachment = new PdfAttachment("Input.txt", fileStream);
@@ -99,15 +112,20 @@ if (loadedDocument.Attachments == null)
 //Add the attachment to the document
 loadedDocument.Attachments.Add(attachment);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the document
+loadedDocument.Save("Output.pdf");
 //Close the document
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -128,6 +146,12 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Load an existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -161,23 +185,25 @@ Essential<sup>&reg;</sup> PDF allows you to remove the attachments from the exis
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Remove-attachment-from-an-existing-PDF-document/.NET/Remove-attachment-from-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Removes an attachment
 PdfAttachment attachment = document.Attachments[0];
 //document.Attachments.Remove(attachment);
 document.Attachments.RemoveAt(0);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
 
 //Loads the PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -193,6 +219,8 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
 
 'Loads the PDF document
 Dim document As New PdfLoadedDocument("Input.pdf")
@@ -219,9 +247,11 @@ Essential<sup>&reg;</sup> PDF provides support for extracting the attachments an
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Extract-and-saving-an-attachment-to-the-disk/.NET/Extract-and-saving-an-attachment-to-the-disk/Program.cs" %}
 
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Output.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Iterates the attachments
 foreach (PdfAttachment attachment in document.Attachments)
 {
@@ -231,15 +261,17 @@ foreach (PdfAttachment attachment in document.Attachments)
     s.Dispose();
 }
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Loads the PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Sample.pdf");
@@ -259,6 +291,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Loads the PDF document
 Dim document As New PdfLoadedDocument("Sample.pdf")
@@ -292,109 +327,119 @@ You can achieve this functionality by using JavaScript actions within Syncfusion
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Adding-PDF-Attachments-with-Interactive-Launch-Buttons/.NET/Adding-PDF-Attachments-with-Interactive-Launch-Buttons/Program.cs" %}
 
-//Create FileStream object to read the input PDF file
-using (FileStream inputFileStream = new FileStream(@"Data/Input.pdf", FileMode.Open, FileAccess.Read))
-{
-    // Load the existing PDF file
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputFileStream);
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf;
+using Syncfusion.Drawing;
 
-    // Get the first page of the PDF
-    PdfLoadedPage lpage = loadedDocument.Pages[0] as PdfLoadedPage;
+// Load the existing PDF file
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
-    // Create a PDF attachment
-    PdfAttachment attachment = new PdfAttachment("Attachment.pdf", System.IO.File.ReadAllBytes(@"Data/Attachment.pdf"));
-    attachment.Description = "Attachment";
+// Get the first page of the PDF
+PdfLoadedPage lpage = loadedDocument.Pages[0] as PdfLoadedPage;
 
-    // Create attachments section if it doesn't exist
-    if (loadedDocument.Attachments == null)
-        loadedDocument.CreateAttachment();
+// Create a PDF attachment
+PdfAttachment attachment = new PdfAttachment("Attachment.pdf", System.IO.File.ReadAllBytes(@"Data/Attachment.pdf"));
+attachment.Description = "Attachment";
 
-    // Add the attachment to the document
-    loadedDocument.Attachments.Add(attachment);
+// Create attachments section if it doesn't exist
+if (loadedDocument.Attachments == null)
+    loadedDocument.CreateAttachment();
 
-    // Create a button field on the page
-    PdfButtonField buttonField = new PdfButtonField(lpage, "Button");
-    buttonField.Bounds = new RectangleF(100, 100, 100, 20);
-    buttonField.BorderColor = new PdfColor(Color.Black);
-    buttonField.BackColor = new PdfColor(Color.LightGray);
-    buttonField.Text = "Click Me";
-    buttonField.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+// Add the attachment to the document
+loadedDocument.Attachments.Add(attachment);
 
-    // Add JavaScript action to open the attachment
-    buttonField.Actions.MouseUp = new PdfJavaScriptAction("this.exportDataObject({ cName: \"Attachment.pdf\", nLaunch: 2 });");
+// Create a button field on the page
+PdfButtonField buttonField = new PdfButtonField(lpage, "Button");
+buttonField.Bounds = new RectangleF(100, 100, 100, 20);
+buttonField.BorderColor = new PdfColor(Color.Black);
+buttonField.BackColor = new PdfColor(Color.LightGray);
+buttonField.Text = "Click Me";
+buttonField.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
 
-    // Create a form if it doesn't exist
-    if (loadedDocument.Form == null)
-        loadedDocument.CreateForm();
+// Add JavaScript action to open the attachment
+buttonField.Actions.MouseUp = new PdfJavaScriptAction("this.exportDataObject({ cName: \"Attachment.pdf\", nLaunch: 2 });");
 
-    // Add the button field to the form
-    loadedDocument.Form.Fields.Add(buttonField);
+// Create a form if it doesn't exist
+if (loadedDocument.Form == null)
+    loadedDocument.CreateForm();
 
-    // Set default appearance for form fields
-    loadedDocument.Form.SetDefaultAppearance(false);
+// Add the button field to the form
+loadedDocument.Form.Fields.Add(buttonField);
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream(@"Output/Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        loadedDocument.Save(outputFileStream);
-    }
+// Set default appearance for form fields
+loadedDocument.Form.SetDefaultAppearance(false);
 
-    //Close the document.
-    loadedDocument.Close(true);
-}
+//Save the document
+loadedDocument.Save("Output.pdf");
+
+//Close the document.
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-    // Load the existing PDF file
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf;
+using System.Drawing;
 
-    // Get the first page of the PDF
-    PdfLoadedPage lpage = loadedDocument.Pages[0] as PdfLoadedPage;
+// Load the existing PDF file
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
-    // Create a PDF attachment
-    PdfAttachment attachment = new PdfAttachment("Attachment.pdf", System.IO.File.ReadAllBytes(@"Data/Attachment.pdf"));
-    attachment.Description = "Attachment";
+// Get the first page of the PDF
+PdfLoadedPage lpage = loadedDocument.Pages[0] as PdfLoadedPage;
 
-    // Create attachments section if it doesn't exist
-    if (loadedDocument.Attachments == null)
-        loadedDocument.CreateAttachment();
+// Create a PDF attachment
+PdfAttachment attachment = new PdfAttachment("Attachment.pdf", System.IO.File.ReadAllBytes(@"Data/Attachment.pdf"));
+attachment.Description = "Attachment";
 
-    // Add the attachment to the document
-    loadedDocument.Attachments.Add(attachment);
+// Create attachments section if it doesn't exist
+if (loadedDocument.Attachments == null)
+    loadedDocument.CreateAttachment();
 
-    // Create a button field on the page
-    PdfButtonField buttonField = new PdfButtonField(lpage, "Button");
-    buttonField.Bounds = new RectangleF(100, 100, 100, 20);
-    buttonField.BorderColor = new PdfColor(Color.Black);
-    buttonField.BackColor = new PdfColor(Color.LightGray);
-    buttonField.Text = "Click Me";
-    buttonField.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+// Add the attachment to the document
+loadedDocument.Attachments.Add(attachment);
 
-    // Add JavaScript action to open the attachment
-    buttonField.Actions.MouseUp = new PdfJavaScriptAction("this.exportDataObject({ cName: \"Attachment.pdf\", nLaunch: 2 });");
+// Create a button field on the page
+PdfButtonField buttonField = new PdfButtonField(lpage, "Button");
+buttonField.Bounds = new RectangleF(100, 100, 100, 20);
+buttonField.BorderColor = new PdfColor(Color.Black);
+buttonField.BackColor = new PdfColor(Color.LightGray);
+buttonField.Text = "Click Me";
+buttonField.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
 
-    // Create a form if it doesn't exist
-    if (loadedDocument.Form == null)
-        loadedDocument.CreateForm();
+// Add JavaScript action to open the attachment
+buttonField.Actions.MouseUp = new PdfJavaScriptAction("this.exportDataObject({ cName: \"Attachment.pdf\", nLaunch: 2 });");
 
-    // Add the button field to the form
-    loadedDocument.Form.Fields.Add(buttonField);
+// Create a form if it doesn't exist
+if (loadedDocument.Form == null)
+    loadedDocument.CreateForm();
 
-    // Set default appearance for form fields
-    loadedDocument.Form.SetDefaultAppearance(false);
+// Add the button field to the form
+loadedDocument.Form.Fields.Add(buttonField);
 
-    //Save the PDF document to file stream.
-    loadedDocument.Save("Output.pdf");
+// Set default appearance for form fields
+loadedDocument.Form.SetDefaultAppearance(false);
 
-    //Close the document.
-    loadedDocument.Close(true);
+//Save the document
+loadedDocument.Save("Output.pdf");
+
+//Close the document.
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf
+Imports System.Drawing
 
 ' Load the existing PDF file
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
