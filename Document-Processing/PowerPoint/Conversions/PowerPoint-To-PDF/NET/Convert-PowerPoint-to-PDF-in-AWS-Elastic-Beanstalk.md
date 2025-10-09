@@ -58,7 +58,7 @@ Step 5: Add a new button in the **Index.cshtml** as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in the **Homecontroller.cs** file to **convert a PowerPoint Presentation to Pdf** and download it.
+Step 6: Include the below code snippet in the **HomeController.cs** file to **convert a PowerPoint Presentation to Pdf** and download it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -137,4 +137,4 @@ By executing the program, you will get the **PDF document** as follows.
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
-An online sample link to [convert PowerPoint Presentation to PDF](https://ej2.syncfusion.com/aspnetcore/PowerPoint/PPTXToPDF#/material3) in ASP.NET Core.
+An online sample link to [convert PowerPoint Presentation to PDF](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind) in ASP.NET Core.

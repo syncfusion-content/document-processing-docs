@@ -143,7 +143,7 @@ Refer the below helper files and add them into the mentioned project. These help
     {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Xamarin/Convert-PowerPoint-Presentation-to-Image/Convert-PowerPoint-Presentation-to-Image.iOS/PreviewControllerDS.cs)'| markdownify }}
   </td>
   <td>
-    Helper class for viewing the <b>PowerPoint Presenatation</b> in iOS device
+    Helper class for viewing the <b>PowerPoint Presentation</b> in iOS device
   </td>
   </tr>
   <tr>
@@ -178,5 +178,5 @@ By executing the program, you will get the **image** as follows.
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/xamarin) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features. 
 
-An online sample link to [convert PowerPoint Presentation to image](https://ej2.syncfusion.com/aspnetcore/PowerPoint/PPTXToImage#/material3) in ASP.NET Core. 
+An online sample link to [convert PowerPoint Presentation to image](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind) in ASP.NET Core. 
 

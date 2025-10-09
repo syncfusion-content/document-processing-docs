@@ -642,9 +642,9 @@ By executing the program, you will get the **image** as follows.
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features.
 
-An online sample link to [convert PowerPoint Presentation to image](https://blazor.syncfusion.com/demos/powerpoint/pptx-to-image?theme=fluent) in Blazor. 
+An online sample link to [convert PowerPoint Presentation to image](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind) in ASP.NET Core.  
 
 ## WASM app
 
@@ -806,7 +806,7 @@ By executing the program, you will get the **image** as follows.
 
 ![PowerPoint to Image in Blazor WASM app](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
 
-N> Even though PowerPoint library works in WASM app, it is recommended to use server deployment. Since the WASM app deployment increases the application payload size. You can also explore our [Blazor PowerPoint library demo](https://blazor.syncfusion.com/demos/powerpoint/getting-started) that shows how to create and modify PowerPoint files from C# with just five lines of code.
+N> Even though PowerPoint library works in WASM app, it is recommended to use server deployment. Since the WASM app deployment increases the application payload size.
 
 {% endtabcontent %}
  
@@ -986,7 +986,7 @@ By executing the program, you will get the **image** as follows.
 
 ![PowerPoint to Image in Blazor WASM app](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
 
-N> Even though PowerPoint library works in WASM app, it is recommended to use server deployment. Since the WASM app deployment increases the application payload size. You can also explore our [Blazor PowerPoint library demo](https://blazor.syncfusion.com/demos/powerpoint/getting-started) that shows how to create and modify PowerPoint files from C# with just five lines of code.
+N> Even though PowerPoint library works in WASM app, it is recommended to use server deployment. Since the WASM app deployment increases the application payload size.
 
 {% endtabcontent %}
 
@@ -1023,7 +1023,7 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.PresentationRenderer.Net.Core NuGet package](Workingwith-Blazor/Install-Syncfusion.PresentationRenderer.Net.Core-NuGet.png)
 
-* Similary install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) NuGet package from [NuGet.org](https://www.nuget.org/)
+* Similarly install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) NuGet package from [NuGet.org](https://www.nuget.org/)
 
 ![Install the SkiaSharp.Views.Blazor NuGet package](Workingwith-Blazor/Install-SkiaSharp.Views.Blazor-NuGet.png)
 
@@ -1163,12 +1163,12 @@ By executing the program, you will get the **image** as follows.
 
 ![PowerPoint to Image in Blazor WASM app](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
 
-N> Even though PowerPoint library works in WASM app, it is recommended to use server deployment. Since the WASM app deployment increases the application payload size. You can also explore our [Blazor PowerPoint library demo](https://blazor.syncfusion.com/demos/powerpoint/getting-started) that shows how to create and modify PowerPoint files from C# with just five lines of code.
+N> Even though PowerPoint library works in WASM app, it is recommended to use server deployment. Since the WASM app deployment increases the application payload size.
 
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features.  
 
-An online sample link to [convert PowerPoint Presentation to image](https://blazor.syncfusion.com/demos/powerpoint/pptx-to-image?theme=fluent) in Blazor. 
+An online sample link to [convert PowerPoint Presentation to image](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind) in ASP.NET Core.
