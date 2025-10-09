@@ -20,6 +20,11 @@ The following code example explains how to add a digital signature to the PDF do
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Add-a-digital-signature-to-the-PDF-document/.NET/Add-a-digital-signature-to-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
 //Adds a new page.
@@ -44,22 +49,19 @@ signature.Reason = "I am author of this document.";
 //Draws the signature image.
 signature.Appearance.Normal.Graphics.DrawImage(signatureImage, 0, 0);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
-//Defining the ContentType for PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -89,6 +91,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Security
 
 'Creates a new PDF document
 Dim document As New PdfDocument()
@@ -129,6 +136,11 @@ The following code example illustrates how to add a digital signature in the PDF
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Add-a-digital-signature-to-the-PDF-document/.NET/Add-a-digital-signature-to-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
 //Adds a new page
@@ -153,22 +165,19 @@ signature.Reason = "I am author of this document.";
 //Draws the signature image
 signature.Appearance.Normal.Graphics.DrawImage(signatureImage, 0, 0);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save the document
+document.Save("Output.pdf");
+//Close the document.
 document.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -201,6 +210,11 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
  
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Security
+
 'Creates a new PDF document
 Dim document As New PdfDocument()
 'Adds a new page
@@ -238,9 +252,14 @@ You can add a digital signature to an existing document as follows.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Add-a-digital-signature-to-an-existing-document/.NET/Add-a-digital-signature-to-an-existing-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Gets the page
 PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -255,23 +274,21 @@ signatureField.Signature.Reason = "I am author of this document";
 //Adds the field
 loadedDocument.Form.Fields.Add(signatureField);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save the document
+loadedDocument.Save("Output.pdf");
+//Close the document.
 loadedDocument.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
- 
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
 //Loads the PDF document with signature field
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");         
 //Gets the page
@@ -294,6 +311,12 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
 
 'Loads the PDF document with signature field
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -328,6 +351,12 @@ The following code example illustrates how to add digital signature in a PDF doc
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Add-digital-signature-using-X509Certificate2/.NET/Add-digital-signature-using-X509Certificate2/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography.X509Certificates;
+
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
 //Adds a new page  
@@ -351,24 +380,20 @@ signature.Reason = "I am author of this document.";
 //Draws the signature image
 signature.Appearance.Normal.Graphics.DrawImage(signatureImage, 0, 0);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-document.Save(stream);
-//If the position is not set to '0', then the PDF will be empty
-stream.Position = 0;
-//Close the document
+//Save the document
+document.Save("Output.pdf");
+//Close the document.
 document.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography.X509Certificates;
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -400,6 +425,12 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Security
+Imports System.Security.Cryptography.X509Certificates
 
 'Creates a new PDF document
 Dim document As New PdfDocument()
@@ -442,9 +473,12 @@ You can load the signature field from the existing PDF document using [PdfLoaded
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Signing-an-existing-PDF-document/.NET/Signing-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Gets the first page of the document
 PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
 //Gets the first signature field of the PDF document
@@ -455,22 +489,18 @@ FileStream certificateStream = new FileStream("PDF.pfx", FileMode.Open, FileAcce
 PdfCertificate certificate = new PdfCertificate(certificateStream, "password123");
 field.Signature = new PdfSignature(loadedDocument, page, certificate, "Signature", field);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save the document
+loadedDocument.Save("Output.pdf");
+//Close the document.
 loadedDocument.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
 //Loads a PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -492,6 +522,10 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
  
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+
 'Loads a PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Gets the first page of the document
@@ -522,9 +556,12 @@ You can load the signature field from an existing PDF document using [PdfLoadedS
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Gets the first page of the document
 PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
 //Gets the first signature field of the PDF document
@@ -535,23 +572,19 @@ FileStream certificateStream = new FileStream("PDF.pfx", FileMode.Open, FileAcce
 PdfCertificate certificate = new PdfCertificate(certificateStream, "password123");
 field.Signature = new PdfSignature(loadedDocument, page, certificate, "Signature", field);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save the document
+loadedDocument.Save("Output.pdf");
+//Close the document.
 loadedDocument.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
  
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
 //Loads a PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Gets the first page of the document
@@ -573,7 +606,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
- 
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+
 'Loads a PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Gets the first page of the document
@@ -606,42 +643,43 @@ The following code example demonstrates how to check if a signature field is sig
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Check-If-PDF-Is-Signed/.NET/Check-If-PDF-Is-Signed/Program.cs" %}
 
-// Open the signed PDF file for reading
-using (FileStream inputFileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+using Syncfusion.Pdf.Parsing;
+
+// Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+// Check if the document contains a form with fields
+if (loadedDocument.Form == null || loadedDocument.Form.Fields.Count == 0)
 {
-    // Load the PDF document
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputFileStream);
-
-    // Check if the document contains a form with fields
-    if (loadedDocument.Form == null || loadedDocument.Form.Fields.Count == 0)
+    Console.WriteLine("No signature fields found in the document.");
+}
+else
+{
+    // Iterate through all fields in the form
+    foreach (PdfLoadedField field in loadedDocument.Form.Fields)
     {
-        Console.WriteLine("No signature fields found in the document.");
-    }
-    else
-    {
-        // Iterate through all fields in the form
-        foreach (PdfLoadedField field in loadedDocument.Form.Fields)
+        // Check if the field is a signature field
+        PdfLoadedSignatureField signatureField = field as PdfLoadedSignatureField;
+        if (signatureField != null)
         {
-            // Check if the field is a signature field
-            PdfLoadedSignatureField signatureField = field as PdfLoadedSignatureField;
-            if (signatureField != null)
-            {
-                // Determine whether the signature field is signed or not
-                string status = signatureField.IsSigned ? "Signed" : "UnSigned";
+            // Determine whether the signature field is signed or not
+            string status = signatureField.IsSigned ? "Signed" : "UnSigned";
 
-                // Output the result for each signature field
-                Console.WriteLine("Signature Field " + signatureField.Name + " is: " + status);
-            }
+            // Output the result for each signature field
+            Console.WriteLine("Signature Field " + signatureField.Name + " is: " + status);
         }
     }
-
-    // Close the document
-    loadedDocument.Close(true);
 }
+
+// Close the document
+loadedDocument.Close(true);
+
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    using Syncfusion.Pdf.Parsing;
 
     // Load the PDF document
     PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -675,7 +713,9 @@ using (FileStream inputFileStream = new FileStream("Input.pdf", FileMode.Open, F
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
- 
+
+Imports Syncfusion.Pdf.Parsing
+
 ' Load the PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 
@@ -721,19 +761,22 @@ The following code example shows how to sign the PDF document from an external s
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Externally-sign-a-PDF-document/.NET/Externally-sign-a-PDF-document/Program.cs" %}
 
-//Get the stream from the document
-FileStream documentStream = new FileStream("PDF_Succinctly.pdf ", FileMode.Open, FileAccess.Read);
-//Load the existing PDF document
-PdfLoadedDocument document = new PdfLoadedDocument(documentStream);
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography;
+using System.Security.Cryptography.Pkcs;
+using System.Security.Cryptography.X509Certificates;
+
+//Load the PDF document
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 //Creates a digital signature
 PdfSignature signature = new PdfSignature(document, document.Pages[0], null, "DigitalSignature");
 signature.ComputeHash += Signature_ComputeHash;
 
-//Save the PDF document to stream
-MemoryStream ms = new MemoryStream();
-document.Save(ms);
-//Close the PDF document 
+//Save the document
+document.Save("Output.pdf");
+//Close the document.
 document.Close(true);
 
 private static void Signature_ComputeHash1(object sender, PdfSignatureEventArgs ars)
@@ -758,6 +801,12 @@ private static void Signature_ComputeHash1(object sender, PdfSignatureEventArgs 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography;
+using System.Security.Cryptography.Pkcs;
+using System.Security.Cryptography.X509Certificates;
  
 //Load existing PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("PDF_Succinctly.pdf");
@@ -792,6 +841,12 @@ void Signature_ComputeHash(object sender, PdfSignatureEventArgs arguments)
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
  
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+Imports System.Security.Cryptography
+Imports System.Security.Cryptography.Pkcs
+Imports System.Security.Cryptography.X509Certificates
+
 'Load existing PDF document
 Dim document As PdfLoadedDocument = New PdfLoadedDocument("PDF_Succinctly.pdf")
 'Creates a digital signature
@@ -827,16 +882,21 @@ End Sub
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Externally-sign-a-PDF-document/).
 
 ### Externally sign the PDF document using IPdfExternalSigner
+
 The following code example shows how to sign the PDF document from external signature using [IPdfExternalSigner](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.IPdfExternalSigner.html).
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Externally-sign-the-PDF-document-using-IPdfExternalSigner/.NET/Externally-sign-the-PDF-document/Program.cs" %}
 
-//Get the stream from the document
-FileStream documentStream = new FileStream("Input.pdf ", FileMode.Open, FileAccess.Read);
-//Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using Syncfusion.Drawing;
+using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography;
+
+//Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 //Creates a digital signature.
 PdfSignature signature = new PdfSignature(loadedDocument, loadedDocument.Pages[0], null, "Signature");
@@ -853,18 +913,10 @@ List<X509Certificate2> certificates = new List<X509Certificate2>();
 certificates.Add(new X509Certificate2(Convert.FromBase64String(PublicCert)));
 signature.AddExternalSigner(externalSignature, certificates, null);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save the document
+loadedDocument.Save("Output.pdf");
+//Close the document.
 loadedDocument.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 //Create the external signer class and sign the document hash.
 class ExternalSigner : IPdfExternalSigner
@@ -906,6 +958,12 @@ class ExternalSigner : IPdfExternalSigner
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Drawing;
+using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography;
 
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -965,6 +1023,12 @@ class ExternalSigner : IPdfExternalSigner
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+Imports System.Security.Cryptography
+Imports System.Drawing
+Imports System.Security.Cryptography.X509Certificates
 
 'Load an existing PDF document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -1036,11 +1100,18 @@ The following example illustrates the process of adding timestamps to a PDF docu
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-// Get the stream from the input PDF document.
-FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using Syncfusion.Drawing;
+using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography;
+using Org.BouncyCastle.Tsp;
+using System.Net;
+using System.Text;
+using Org.BouncyCastle.Math;
 
-// Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
+//Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 // Create a digital signature for the first page of the document.
 PdfSignature signature = new PdfSignature(loadedDocument, loadedDocument.Pages[0], null, "Signature");
@@ -1058,18 +1129,24 @@ List<X509Certificate2> certificates = new List<X509Certificate2>();
 certificates.Add(new X509Certificate2(Convert.FromBase64String(PublicCert)));
 signature.AddExternalSigner(externalSignature, certificates, null);
 
-//Create file stream.
-using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
-{
-    //Save the PDF document to file stream.
-    loadedDocument.Save(outputFileStream);
-}
+//Save the document
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using Syncfusion.Drawing;
+using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography;
+using Org.BouncyCastle.Tsp;
+using System.Net;
+using System.Text;
+using Org.BouncyCastle.Math;
 
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -1097,6 +1174,16 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+Imports Syncfusion.Drawing
+Imports System.Security.Cryptography.X509Certificates
+Imports System.Security.Cryptography
+Imports Org.BouncyCastle.Tsp
+Imports System.Net
+Imports System.Text
+Imports Org.BouncyCastle.Math
 
 'Load an existing PDF document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -1388,11 +1475,15 @@ You can create a Long Term validation (LTV) when signing PDF documents externall
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Create-LTV-when-signing-PDF-documents-externally/.NET/Create-LTV-when-signing-PDF-documents-externally/Program.cs" %}
 
-    //Get the stream from the document.
-    FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Parsing;
+    using Syncfusion.Pdf.Security;
+    using System.Security.Cryptography;
+    using System.Security.Cryptography.Pkcs;
+    using System.Security.Cryptography.X509Certificates;
 
-    //Load an existing PDF document.
-    PdfLoadedDocument document = new PdfLoadedDocument(documentStream);
+    //Load the PDF document
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
     //Get the page of the existing PDF document.
     PdfLoadedPage loadedPage = document.Pages[0] as PdfLoadedPage;
@@ -1403,14 +1494,13 @@ You can create a Long Term validation (LTV) when signing PDF documents externall
     //Hook up the ComputeHash event.
     signature.ComputeHash += Signature_ComputeHash;
 
-    //Save the document into stream
-    MemoryStream stream = new MemoryStream();
-    document.Save(stream);
+    //Save the document.
+    document.Save("SignedDocument.pdf");
     //Close the document
     document.Close(true);
 
-    //Load an existing PDF stream..
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
+    //Load an existing PDF stream.
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("SignedDocument.pdf");
 
     //Gets the first signature field of the PDF document
     PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
@@ -1422,12 +1512,9 @@ You can create a Long Term validation (LTV) when signing PDF documents externall
     //Create LTV with your public certificates.
     pdfSignature.CreateLongTermValidity(new List<X509Certificate2> { x509 });
 
-    //Save the PDF document
-    MemoryStream ms = new MemoryStream();
-    loadedDocument.Save(ms);
-    //If the position is not set to '0' then the PDF will be empty
-    ms.Position = 0;
-    //Close the document
+    //Save the document
+    loadedDocument.Save("Output.pdf");
+    //Close the document.
     loadedDocument.Close(true);
 
     void Signature_ComputeHash(object sender, PdfSignatureEventArgs ars)
@@ -1454,6 +1541,13 @@ You can create a Long Term validation (LTV) when signing PDF documents externall
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Parsing;
+    using Syncfusion.Pdf.Security;
+    using System.Security.Cryptography;
+    using System.Security.Cryptography.Pkcs;
+    using System.Security.Cryptography.X509Certificates;
+
     //Load an existing PDF document.
     PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
@@ -1467,12 +1561,12 @@ You can create a Long Term validation (LTV) when signing PDF documents externall
     signature.ComputeHash += Signature_ComputeHash;
 
     //Save the document.
-    document.Save("SignedDocument");
+    document.Save("SignedDocument.pdf");
     //Close the document
     document.Close(true);
 
     //Load an existing PDF stream..
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("SignedDocument");
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("SignedDocument.pdf");
 
     //Gets the first signature field of the PDF document
     PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
@@ -1511,6 +1605,13 @@ You can create a Long Term validation (LTV) when signing PDF documents externall
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    Imports Syncfusion.Pdf
+    Imports Syncfusion.Pdf.Parsing
+    Imports Syncfusion.Pdf.Security
+    Imports System.Security.Cryptography
+    Imports System.Security.Cryptography.Pkcs
+    Imports System.Security.Cryptography.X509Certificates
 
     ' Load an existing PDF document.
     Dim document As New PdfLoadedDocument("Input.pdf")
@@ -1583,6 +1684,10 @@ The following code example shows how to sign a PDF document with LTA using [Time
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Sign_PDF_with_LTA/.NET/Sign_PDF_with_LTA/Program.cs" %}
 
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using Syncfusion.Pdf;
+
 //Load existing PDF document.
 FileStream documentStream1 = new FileStream("PDF_Succinctly.pdf", FileMode.Open, FileAccess.Read);
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream1);
@@ -1599,13 +1704,12 @@ signature.TimeStampServer = new TimeStampServer(new Uri("http://timestamping.ens
 signature.EnableLtv = true;
 
 //Save the PDF document.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+loadedDocument.Save("LTV_document.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
 //Load existing PDF document.
-PdfLoadedDocument ltDocument = new PdfLoadedDocument(stream);
+PdfLoadedDocument ltDocument = new PdfLoadedDocument("LTV_document.pdf");
 //Load the existing PDF page.
 PdfLoadedPage lpage = ltDocument.Pages[0] as PdfLoadedPage;
 
@@ -1613,21 +1717,18 @@ PdfLoadedPage lpage = ltDocument.Pages[0] as PdfLoadedPage;
 PdfSignature timeStamp = new PdfSignature(lpage, "timestamp");
 timeStamp.TimeStampServer = new TimeStampServer(new Uri("http://timestamping.ensuredca.com"));
 
-//Save and close the PDF document.
-MemoryStream stream1 = new MemoryStream();
-ltDocument.Save(stream1);
+//Save the document
+ltDocument.Save("Output.pdf");
 //Close the document.
 ltDocument.Close(true);
-//Defining the ContentType for pdf file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream1, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using Syncfusion.Pdf;
 
 //Load existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("PDF_Succinctly.pdf");
@@ -1662,6 +1763,10 @@ ltDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+Imports Syncfusion.Pdf
 
 'Loads a PDF document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("PDF_Succinctly.pdf")
@@ -1717,6 +1822,11 @@ The following code example shows how to create a PDF digital signature using the
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Sign_PDF_Windows_Certificate/.NET/Sign_PDF_Windows_Certificate/Program.cs" %}
 
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using Syncfusion.Pdf;
+using System.Security.Cryptography.X509Certificates;
+
 //Initialize the Windows store.
 X509Store store = new X509Store("MY", StoreLocation.CurrentUser);
 store.Open(OpenFlags.ReadOnly | OpenFlags.OpenExistingOnly);
@@ -1726,8 +1836,7 @@ X509Certificate2Collection fcollection = (X509Certificate2Collection)collection.
 X509Certificate2 digitalID = collection[0];
 
 //Load existing PDF document.
-FileStream documentStream = new FileStream("PDF_Succinctly.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("PDF_Succinctly.pdf");
 //Load X509Certificate2.
 PdfCertificate certificate = new PdfCertificate(digitalID);
 
@@ -1737,21 +1846,19 @@ PdfSignature signature = new PdfSignature(loadedDocument, loadedDocument.Pages[0
 signature.Settings.CryptographicStandard = CryptographicStandard.CADES;
 signature.Settings.DigestAlgorithm = DigestAlgorithm.SHA512;
 
-//Save the PDF document.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the document
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
-//Defining the ContentType for pdf file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using Syncfusion.Pdf;
+using System.Security.Cryptography.X509Certificates;
 
 //Initialize the Windows store.
 X509Store store = new X509Store("MY", StoreLocation.CurrentUser);
@@ -1780,6 +1887,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+Imports Syncfusion.Pdf
+Imports System.Security.Cryptography.X509Certificates
 
 'Initialize the Windows store.
 Dim store As X509Store = New X509Store("MY", StoreLocation.CurrentUser)
@@ -1820,6 +1932,11 @@ Refer to the following code sample.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-a-signature-validation-appearance-in-a-PDF/.NET/Adding-a-signature-validation-appearance-in-a-PDF/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
 //Adds a new page
@@ -1846,22 +1963,19 @@ signature.Reason = "I am author of this document.";
 //Draws the signature image
 signature.Appearance.Normal.Graphics.DrawImage(signatureImage, 0, 0);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save the document
+document.Save("Output.pdf");
+//Close the document.
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();         
@@ -1892,6 +2006,11 @@ document.Close( true );
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Security
 
 'Creates a new PDF document
 Dim document As New PdfDocument()
@@ -1934,6 +2053,11 @@ Essential<sup>&reg;</sup> PDF allows you to add timestamp in the digital signatu
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-a-timestamp-in-digital-signature-of-PDF/.NET/Adding-a-timestamp-in-digital-signature-of-PDF/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
 //Adds a new page
@@ -1960,22 +2084,19 @@ signature.Reason = "I am author of this document.";
 //Draws the signature image
 signature.Appearance.Normal.Graphics.DrawImage(image, 0, 0);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save the document
+document.Save("Output.pdf");
+//Close the document.
 document.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2010,6 +2131,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Security
 
 'Creates a new PDF document
 Dim document As New PdfDocument()
@@ -2052,6 +2178,9 @@ You can add timestamp to the PDF document using [TimeStampServer](https://help.s
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-a-timestamp-to-PDF-document/.NET/Adding-a-timestamp-to-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Security;
+
 //Create a new pdf document
 PdfDocument document = new PdfDocument();
 //Adds a new page
@@ -2062,22 +2191,17 @@ PdfSignature signature = new PdfSignature(page, "Signature");
 //Add the time stamp by using the server URI
 signature.TimeStampServer = new TimeStampServer(new Uri("http://syncfusion.digistamp.com"), "user", "123456");
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save the document
+document.Save("Output.pdf");
+//Close the document.
 document.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Security;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2096,6 +2220,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Security
 
 'Creates a new PDF document
 Dim document As New PdfDocument()
@@ -2125,9 +2252,12 @@ You can add timestamp to the existing PDF document using [TimeStampServer](https
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-a-timestamp-to-an-existing-PDF/.NET/Adding-a-timestamp-to-an-existing-PDF/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Gets the page
 PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -2136,22 +2266,18 @@ PdfSignature signature = new PdfSignature(page, "Signature");
 //Add the time stamp by using the server URI
 signature.TimeStampServer = new TimeStampServer(new Uri("http://syncfusion.digistamp.com"), "user", "123456");
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save the document
+loadedDocument.Save("Output.pdf");
+//Close the document.
 loadedDocument.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
 //Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -2171,6 +2297,10 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Security
 
 'Load the PDF document
 Dim document As New PdfLoadedDocument("Input.pdf")
@@ -2209,9 +2339,11 @@ You can get the above certificate details from an existing signed PDF document u
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Retrieve-certificate-details-from-an-existing-PDF/.NET/Retrieve-certificate-details-from-an-existing-PDF/Program.cs" %}
 
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the signature field
 PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
 
@@ -2235,6 +2367,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
 //Load the existing signed PDF
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("SignedDocument.pdf");
@@ -2267,6 +2402,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
 
 'Load the existing signed PDF
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("../../Signed.pdf")
@@ -2314,6 +2452,11 @@ The following code example explains how to create LTV PDF using [EnableLtv](http
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Enable-LTV-PDF-signature/.NET/Enable-LTV-PDF-signature/Program.cs" %}
 
+    using Syncfusion.Drawing;
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Graphics;
+    using Syncfusion.Pdf.Parsing;
+    using Syncfusion.Pdf.Security;
 
     //Creates a new PDF document.
     PdfDocument document = new PdfDocument();
@@ -2333,14 +2476,12 @@ The following code example explains how to create LTV PDF using [EnableLtv](http
     signature.Settings.CryptographicStandard = CryptographicStandard.CADES;
     signature.Settings.DigestAlgorithm = DigestAlgorithm.SHA256;
 
-    //Save the document into stream
-    MemoryStream stream = new MemoryStream();
-    document.Save(stream);
+    document.Save("SignedDocument.pdf");
     //Close the document
     document.Close(true);
 
     //Load an existing PDF stream.
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("SignedDocument.pdf");
 
     //Gets the first signature field of the PDF document
     PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
@@ -2349,17 +2490,21 @@ The following code example explains how to create LTV PDF using [EnableLtv](http
     //Enable LTV on Signature.
     pdfSignature.EnableLtv = true;
 
-    //Save the document into stream
-    MemoryStream ms = new MemoryStream();
-    loadedDocument.Save(ms);
-    stream.ms = 0;
-    //Close the document
+    //Save the document
+    loadedDocument.Save("Output.pdf");
+    //Close the document.
     loadedDocument.Close(true);
 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    using System.Drawing;
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Graphics;
+    using Syncfusion.Pdf.Parsing;
+    using Syncfusion.Pdf.Security;
 
     //Creates a new PDF document.
     PdfDocument document = new PdfDocument();
@@ -2401,6 +2546,12 @@ The following code example explains how to create LTV PDF using [EnableLtv](http
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    Imports System.Drawing
+    Imports Syncfusion.Pdf
+    Imports Syncfusion.Pdf.Graphics
+    Imports Syncfusion.Pdf.Parsing
+    Imports Syncfusion.Pdf.Security
 
     ' Creates a new PDF document.
     Dim document As New PdfDocument()
@@ -2459,6 +2610,11 @@ The following code example explains how to add a digital signature with [cryptog
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-a-digital-signature-with-CAdES-format/.NET/Adding-a-digital-signature-with-CAdES-format/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Add a new page
@@ -2487,22 +2643,19 @@ signature.Reason = "I am author of this document.";
 //Draws the signature image
 signature.Appearance.Normal.Graphics.DrawImage(signatureImage, 0, 0);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save the document
+document.Save("Output.pdf");
+//Close the document.
 document.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2536,6 +2689,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Security
 
 'Creates a new PDF document
 Dim document As New PdfDocument()
@@ -2589,6 +2747,11 @@ The following code example explains how to add a digital signature with various 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Add-digital-signature-with-digest-algorithm/.NET/Add-digital-signature-with-digest-algorithm/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Add a new page
@@ -2617,22 +2780,19 @@ signature.Reason = "I am author of this document.";
 //Draws the signature image
 signature.Appearance.Normal.Graphics.DrawImage(signatureImage, 0, 0);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save the document
+document.Save("Output.pdf");
+//Close the document.
 document.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2666,6 +2826,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Security
 
 'Creates a new PDF document
 Dim document As New PdfDocument()
@@ -2722,11 +2887,12 @@ The following code example explains how to validate the digitally signed PDF doc
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Validate-the-digitally-signed-PDF-signature/.NET/Validate-the-digitally-signed-PDF-signature/Program.cs" %}
 
-// Load the input PDF document stream from the specified file path
-FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography.X509Certificates;
 
-// Load the signed PDF document using the stream
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
+// Load the signed PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 // Retrieve the first signature field from the PDF form
 PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
@@ -2856,11 +3022,12 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-// Load the input PDF document stream from the specified file path
-FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography.X509Certificates;
 
-// Load the signed PDF document using the stream
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
+// Load the signed PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 // Retrieve the first signature field from the PDF form
 PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
@@ -2990,11 +3157,12 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Load the input PDF document stream from the specified file path
-Dim documentStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+Imports System.Security.Cryptography.X509Certificates
 
 ' Load the signed PDF document using the stream
-Dim loadedDocument As New PdfLoadedDocument(documentStream)
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 
 ' Retrieve the first signature field from the PDF form
 Dim signatureField As PdfLoadedSignatureField = TryCast(loadedDocument.Form.Fields(0), PdfLoadedSignatureField)
@@ -3127,10 +3295,12 @@ The following code example explains how to validate all the signatures in digita
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Validate-all-signatures-in-digitally-signed-PDF/.NET/Validate-all-signatures-in-digitally-signed-PDF/Program.cs" %}
 
-//Get the stream from the document
-FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-//Load an existing signed PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography.X509Certificates;
+
+//Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 //X509Certificate2Collection to check the signer's identity using root certificates
 X509Certificate2Collection collection = new X509Certificate2Collection();
@@ -3153,6 +3323,10 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography.X509Certificates;
+
 //Load an existing signed PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
@@ -3172,6 +3346,10 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+Imports System.Security.Cryptography.X509Certificates
 
 'Load an existing signed PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -3204,6 +3382,9 @@ This example shows how to validate and identify different types of digital signa
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
 //Get the stream from the document
 FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -3277,6 +3458,9 @@ for (int i = form.Fields.Count - 1; i >= 0; i--)
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
 // Load the signed PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Signed PDF.pdf");
@@ -3349,6 +3533,9 @@ for (int i = form.Fields.Count - 1; i >= 0; i--)
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+
 ' Load the signed PDF document
 Dim loadedDocument As New PdfLoadedDocument("Signed PDF.pdf")
 
@@ -3420,10 +3607,14 @@ Steps for deferred signing:
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Digital%20Signature/Deferred-signing-in-PDF-document/.NET/Deferred-signing-in-PDF-document/Program.cs" %}
 
-//Get the stream from the document.
-FileStream documentStream = new FileStream("PDF_Succinctly.pdf ", FileMode.Open, FileAccess.Read);
-//Load an existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
+
+//Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 //Creates a digital signature.
 PdfSignature signature = new PdfSignature(loadedDocument, loadedDocument.Pages[0], null, "Signature");
@@ -3439,17 +3630,10 @@ System.Collections.Generic.List<X509Certificate2> certificates = new System.Coll
 certificates.Add(new X509Certificate2(Convert.FromBase64String(PublicCert)));
 signature.AddExternalSigner(externalSignature, certificates, null);
 
-//Save the document.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the PDF document.
+//Save the document
+loadedDocument.Save("Output.pdf");
+//Close the document.
 loadedDocument.Close(true);
-//Defining the ContentType for a PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 void DeferredSign()
 {
@@ -3541,6 +3725,12 @@ class ExternalSigner : IPdfExternalSigner
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("PDF_Succinctly.pdf");
@@ -3654,6 +3844,11 @@ class ExternalSigner : IPdfExternalSigner
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+Imports System.Security.Cryptography
 
 'Load an existing PDF document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("PDF_Succinctly.pdf")
@@ -3770,6 +3965,10 @@ The following code sample shows how to add the estimated size of the signature i
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-the-estimated-size-of-the-signature/.NET/Adding-the-estimated-size-of-the-signature/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Security;
+
 //Creating a new PDF Document. 
 PdfDocument document = new PdfDocument();
 //Adding a new page to the PDF document.
@@ -3784,24 +3983,18 @@ signature.Bounds = new Rectangle(10, 20, 400, 200);
 //Sets the estimated size of the signature.
 signature.EstimatedSignatureSize = 20000;
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-document.Save(stream);
-//If the position is not set to '0,' then the PDF will be empty.
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
-//Defining the ContentType for a PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Security;
 
 //Creating a new PDF Document. 
 PdfDocument document = new PdfDocument();
@@ -3825,6 +4018,10 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
  
+Imports System.Drawing
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+
 'Creating a new PDF Document. 
 Dim document As PdfDocument =  New PdfDocument()  
 'Adding a new page to the PDF document. 
@@ -3862,10 +4059,13 @@ Steps for deferred signing:
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Get the stream from a document.
-FileStream documentStream = new FileStream("PDF_Succinctly.pdf ", FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography.X509Certificates;
+
 //Load an existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("PDF_Succinctly.pdf");
 
 //Creates a digital signature.
 PdfSignature signature = new PdfSignature(loadedDocument, loadedDocument.Pages[0], null, "Signature");
@@ -3881,16 +4081,9 @@ System.Collections.Generic.List<X509Certificate2> certificates = new System.Coll
 signature.AddExternalSigner(externalSignature, certificates, null);
 
 //Save a document.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close a PDF document.
+loadedDocument.Save("EmptySignature.pdf");
+//Close a document.
 loadedDocument.Close(true);
-//Defining the ContentType for a PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 //Create an external signer with a signed hash message.
 IPdfExternalSigner externalSigner = new ExternalSigner("SHA1");
@@ -3899,8 +4092,8 @@ System.Collections.Generic.List<X509Certificate2> publicCertificates = new Syste
 publicCertificates.Add(new X509Certificate2(Convert.FromBase64String(PublicCert)));
 
 //Create an output file stream.
-MemoryStream outputFileStream = new MemoryStream();    
-// Get the stream from a document.
+MemoryStream outputFileStream = new MemoryStream();
+//Get the stream from a document.
 FileStream inputFileStream = new FileStream("EmptySignature.pdf", FileMode.Open, FileAccess.Read);
 string pdfPassword = string.Empty;
 //Deferred signing without PKCS7 encoding.
@@ -3959,6 +4152,11 @@ class ExternalSigner : IPdfExternalSigner
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography.X509Certificates;
 
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("PDF_Succinctly.pdf");
@@ -4048,6 +4246,11 @@ class ExternalSigner : IPdfExternalSigner
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+Imports System.Security.Cryptography.X509Certificates
 
 'Load an existing PDF document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("PDF_Succinctly.pdf")
@@ -4147,46 +4350,45 @@ The following code example illustrates how to draw text/images in a digital appe
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Draw-text-or-images-in-the-signature-appearance/.NET/Draw-text-or-images-in-the-signature-appearance/Program.cs" %}
 
-//Create a new PDF document.
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+
+//Creates a new PDF document.
 PdfDocument document = new PdfDocument();
-//Add a new page.
+//Adds a new page.
 PdfPageBase page = document.Pages.Add();
 //Create PDF graphics for the page.
 PdfGraphics graphics = page.Graphics;
 
-//Create a certificate instance from a PFX file with a private key.
-FileStream certificateStream = new FileStream("PDF.pfx", FileMode.Open, FileAccess.Read);
-PdfCertificate pdfCert = new PdfCertificate(certificateStream, "password123");
-//Create a digital signature.
+//Creates a certificate instance from PFX file with private key.
+PdfCertificate pdfCert = new PdfCertificate(@"PDF.pfx", "password123");
+//Creates a digital signature.
 PdfSignature signature = new PdfSignature(document, page, pdfCert, "Signature");
-//Set an image for signature field.
-FileStream imageStream = new FileStream("signature.jpg", FileMode.Open, FileAccess.Read);
-//Set an image for signature field.
-PdfBitmap signatureImage = new PdfBitmap(imageStream);
-//Set the signature information.
-signature.Bounds = new RectangleF(new PointF(0, 0), signatureImage.PhysicalDimension);
+//Sets an image for signature field.
+PdfBitmap signatureImage = new PdfBitmap(@"signature.png");
+//Sets signature information.
+signature.Bounds = new RectangleF(0,0,200,100);
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
-//Create appearance for the digital signature.
+//Create appearance for the digital siganture.
 signature.Appearance.Normal.Graphics.DrawImage(signatureImage, signature.Bounds);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document.
+document.Save("DigitalSignature.pdf");
 //Close the document.
 document.Close(true);
-//Define the ContentType for pdf file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Create a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
 
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -4217,6 +4419,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Security
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -4257,11 +4464,11 @@ Added support for LTV validation and getting CRL and OCSP embedded details from 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Get-LTV-information/.NET/Get-LTV-information/Program.cs" %}
 
-//Gets the stream from the document
-FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
-//Loads an existing signed PDF document
-PdfLoadedDocument document = new PdfLoadedDocument(documentStream);
+//Load the PDF document
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 // Gets the signature field
 PdfLoadedSignatureField signatureField = document.Form.Fields[0] as PdfLoadedSignatureField;
@@ -4292,11 +4499,11 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Gets the stream from the document
-FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
-//Loads an existing signed PDF document
-PdfLoadedDocument document = new PdfLoadedDocument(documentStream);
+//Load the PDF document
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 // Gets the signature field
 PdfLoadedSignatureField signatureField = document.Form.Fields[0] as PdfLoadedSignatureField;
@@ -4327,11 +4534,11 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Gets the stream from the document
-Dim documentStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
 
 ' Loads an existing signed PDF document
-Dim document As New PdfLoadedDocument(documentStream)
+Dim document As New PdfLoadedDocument("Input.pdf")
 
 ' Gets the signature field
 Dim signatureField As PdfLoadedSignatureField = TryCast(document.Form.Fields(0), PdfLoadedSignatureField)
@@ -4372,11 +4579,11 @@ Added support to customize revocation validation using [PdfSignatureValidationOp
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Customized-revocation-validation/.NET/Customized-revocation-validation/Program.cs" %}
 
-//Gets the stream from the document
-FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
-//Loads an existing signed PDF document
-PdfLoadedDocument document = new PdfLoadedDocument(documentStream);
+//Load the PDF document
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 // Gets the signature field
 PdfLoadedSignatureField signatureField = document.Form.Fields[0] as PdfLoadedSignatureField;
@@ -4407,11 +4614,11 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Gets the stream from the document
-FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
-//Loads an existing signed PDF document
-PdfLoadedDocument document = new PdfLoadedDocument(documentStream);
+//Load the PDF document
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 // Gets the signature field
 PdfLoadedSignatureField signatureField = document.Form.Fields[0] as PdfLoadedSignatureField;
@@ -4441,6 +4648,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
 
 ' Gets the stream from the document
 Dim documentStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
@@ -4484,31 +4694,25 @@ The following code example illustrates how to remove existing digital signatures
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Remove_existing_digital_signature_from_PDF/.NET/Remove_existing_digital_signature_from_PDF/Program.cs" %}
 
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
 
 //Get the signature field from PDF form field collection.
 PdfLoadedSignatureField signatureField = pdfLoadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
 //Remove signature field from form field collection.
 pdfLoadedDocument.Form.Fields.Remove(signatureField);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-pdfLoadedDocument.Save(stream);
-stream.Position = 0;
-//Close the document.
+//Save and close the PDF document.
+pdfLoadedDocument.Save("RemoveDigital.pdf");
 pdfLoadedDocument.Close(true);
-//Defining the ContentType for PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document.
 PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -4525,6 +4729,8 @@ pdfLoadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
 
 'Load an existing PDF document.
 Dim pdfLoadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -4552,12 +4758,13 @@ The following code snippet illustrates how to sign a PDF document without showin
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Sign-PDF-without-showing-digital-signature/.NET/Sign-PDF-without-showing-digital-signature/Program.cs" %}
 
-//Get stream from an existing PDF document. 
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
+//Load an existing PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load digital ID with password.
-FileStream certificateStream = new FileStream("PDF.pfx", FileMode.Open, FileAccess.Read);
-PdfCertificate certificate = new PdfCertificate(certificateStream, "password123");
+PdfCertificate certificate = new PdfCertificate(@"PDF.pfx", "password123");
 
 //Create a signature with loaded digital ID.
 PdfSignature signature = new PdfSignature(loadedDocument, loadedDocument.Pages[0], certificate, "DigitalSignature");
@@ -4568,22 +4775,16 @@ signature.Certificated = true;
 //Allow the form fill and and comments.
 signature.DocumentPermissions = PdfCertificationFlags.AllowFormFill | PdfCertificationFlags.AllowComments;
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Close the document.
-document.Close(true);
-//Defining the ContentType for pdf file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
+//Save and close the PDF document.
+loadedDocument.Save("Certifying.pdf");
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -4606,6 +4807,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
 
 'Load an existing PDF document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -4639,9 +4843,11 @@ The following code snippet illustrates how to retrieve digital signature informa
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Retrieve-digital-signature-information-from-PDF/.NET/Retrieve-digital-signature-information-from-PDF/Program.cs" %}
 
-//Get stream from an existing PDF document. 
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
+//Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 //Get the signature field from PdfLoadedDocument form field collection.
 PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
@@ -4660,6 +4866,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -4681,6 +4890,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
 
 'Load an existing PDF document. 
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -4715,23 +4927,25 @@ N> It is recommended to use licensed assemblies or registered license keys in yo
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Digital%20Signature/Multiple-digital-signature/.NET/Multiple-digital-signature/Program.cs" %}
 
-//Load the PDF document.
-FileStream docStream = new FileStream("SignatureFields.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using Syncfusion.Pdf;
+
+//Load an existing PDF document. 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the first page of the document.
 PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
 
 //Get the first signature field of the PDF document.
 PdfLoadedSignatureField signatureField1 = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
-//Creates a certificate.
-FileStream certificateStream1 = new FileStream("PDF.pfx", FileMode.Open, FileAccess.Read);
-PdfCertificate certificate1 = new PdfCertificate(certificateStream1, "password123");
-//Add signature to the signature field.
+//Create a certificate instance from a PFX file with a private key.
+PdfCertificate certificate1 = new PdfCertificate("PDF.pfx", "password123");
+//Add a signature to the signature field.
 signatureField1.Signature = new PdfSignature(loadedDocument, page, certificate1, "Signature", signatureField1);
-//Get the image as a stream. 
-FileStream imageStream = new FileStream("Student Signature.jpg", FileMode.Open, FileAccess.Read);
-PdfBitmap signatureImage = new PdfBitmap(imageStream);
-//Draw an image in signature appearance. 
+//Set an image for the signature field.
+PdfBitmap signatureImage = new PdfBitmap(@"Student Signature.jpg");
+//Insert an image in the signature appearance. 
 signatureField1.Signature.Appearance.Normal.Graphics.DrawImage(signatureImage, 0, 0, 90, 20);
 
 //Save the document into the stream.
@@ -4745,32 +4959,27 @@ PdfLoadedPage loadedPage = signedDocument.Pages[0] as PdfLoadedPage;
 
 //Get the first signature field of the PDF document.
 PdfLoadedSignatureField signatureField2 = signedDocument.Form.Fields[1] as PdfLoadedSignatureField;
-//Add the signature to the signature field. 
-signatureField1.Signature = new PdfSignature(signedDocument, loadedPage, certificate1, "Signature", signatureField2);
-//Load the image as a stream. 
-FileStream imageStream1 = new FileStream("Teacher Signature.png", FileMode.Open, FileAccess.Read);
-PdfBitmap signatureImage1 = new PdfBitmap(imageStream1);
-//Draw the image in signature appearance. 
-signatureField1.Signature.Appearance.Normal.Graphics.DrawImage(signatureImage1, 0, 0, 90, 20);
+//Add a signature to the signature field. 
+signatureField2.Signature = new PdfSignature(signedDocument, loadedPage, certificate1, "Signature", signatureField2);
+//Set an image for the signature field.
+PdfBitmap signatureImage1 = new PdfBitmap(@"Teacher Signature.png");
+//Draw an image in the signature appearance. 
+signatureField2.Signature.Appearance.Normal.Graphics.DrawImage(signatureImage1, 0, 0, 90, 20);
 
-//Saving the PDF to the MemoryStream.
-MemoryStream signedStream = new MemoryStream();
-signedDocument.Save(signedStream);
-//Set the position as '0'.
-signedStream.Position = 0;
-//Close the documents. 
+//Save the PDF document. 
+signedDocument.Save("Multiple_signature.pdf");
+//Close the PDF documents. 
 signedDocument.Close(true);
 loadedDocument.Close(true);
-//Defining the ContentType for a pdf file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Multiple_Signature.pdf";
-//Create the FileContentResult object by using the file contents, content type, and file name. 
-return File(signedStream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using Syncfusion.Pdf;
 
 //Load an existing PDF document. 
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -4815,6 +5024,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+Imports Syncfusion.Pdf
 
 'Load an existing PDF document. 
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -4869,9 +5083,12 @@ The following code example illustrates how to retrieve revocation certificate in
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Retrieve-revocation-certificate-information/.NET/Retrieve-revocation-certificate-information/Program.cs" %}
 
-//Load an existing signed PDF document.
-FileStream documentStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography.X509Certificates;
+
+//Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 //Get signature field.
 PdfLoadedSignatureField loadedSignatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
@@ -4919,6 +5136,10 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography.X509Certificates;
 
 //Load an existing signed PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -4969,6 +5190,10 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+Imports System.Security.Cryptography.X509Certificates
 
 'Load an existing signed PDF document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -5030,9 +5255,10 @@ The following code example illustrates how to retrieve signed revision informati
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Retrieve-signed-revision-information/.NET/Retrieve-signed-revision-information/Program.cs" %}
 
-//Load an existing PDF document.
-FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(inputStream);
+using Syncfusion.Pdf.Parsing;
+
+//Load an existing PDF document
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Get the document revisions. 
 PdfRevision[] revisions = document.Revisions;
 foreach (PdfRevision rev in revisions)
@@ -5046,10 +5272,11 @@ PdfLoadedSignatureField field = document.Form.Fields[0] as PdfLoadedSignatureFie
 int revisionIndex = field.Revision;
 //Close the document.
 document.Close(true);
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -5070,6 +5297,8 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
 
 'Load an existing PDF document.
 Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -5100,9 +5329,12 @@ The following code example illustrates how to retrieve revocation certificate in
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Retrieve-revocation-certificate-information-from-digital-signature-embed-timestamp/.NET/Program.cs" %}
 
-//Load an existing PDF document.
-FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(inputStream);
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography.X509Certificates;
+
+//Load an existing PDF document
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Gets the signature field.
 PdfLoadedSignatureField signatureField = document.Form.Fields[0] as PdfLoadedSignatureField;
 //Validates signature and gets the validation result.
@@ -5115,6 +5347,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography.X509Certificates;
 
 //Load an existing PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -5130,6 +5366,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+Imports System.Security.Cryptography.X509Certificates
 
 'Load an existing PDF document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -5156,15 +5396,17 @@ Utilize the **GetImages** method within the [PdfLoadedSignatureField](https://he
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Get-images-from-the-existing-signed-signature-field/.NET/Get-images-from-the-existing-signed-signature-field/Program.cs" %}
 
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing PDF file.
-FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument ldoc = new PdfLoadedDocument(fileStream);
+PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf");
 //Get the existing signed signature field.
 PdfLoadedSignatureField loadedSignature = ldoc.Form.Fields[0] as PdfLoadedSignatureField;
-//Get the image streams.
-Stream[] imageStreams = loadedSignature.GetImages();
-for (int i = 0; i < imageStreams.Length; i++) {
-    File.WriteAllBytes("Output" + i.ToString() + ".jpg", (imageStreams[i] as MemoryStream).ToArray());               
+//Get the image.
+Image[] images = loadedSignature.GetImages();
+for (int i = 0; i < images.Length; i++) {
+    images[i].Save("Image" + i.ToString() + ".jpg", ImageFormat.Png);
 }
 //Close a PDF document.
 ldoc.Close(true);
@@ -5172,6 +5414,9 @@ ldoc.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF file.
 PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf");
@@ -5188,6 +5433,9 @@ ldoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Interactive
 
 'Load an existing PDF file.
 Dim fileStream As FileStream = New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
@@ -5218,6 +5466,10 @@ Effortlessly Integrate **signature and timestamp** certificates into the Documen
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography.X509Certificates;
+
 //Loads an existing document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Gets the signature field
@@ -5247,6 +5499,10 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography.X509Certificates;
 
 //Gets the stream from the document
 FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -5279,6 +5535,10 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+Imports System.Security.Cryptography.X509Certificates
 
 'Loads an existing signed PDF document
 Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")

@@ -24,9 +24,13 @@ The following code example demonstrates the redaction of PDF documents from the 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Removing-sensitive-content-from-the-PDF-document/.NET/Removing-sensitive-content-from-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
+
 //Load the existing PDF document
-FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Get the first page from the document
 PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
 
@@ -37,16 +41,18 @@ page.AddRedaction(redaction);
 //Redact the contents from the PDF document
 document.Redact();
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document
-document.Save(stream);
-//Close the document
+//Save and close the PDF document
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
 
 //Load a PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -65,6 +71,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Redaction
 
 'Load a PDF document
 Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -96,9 +107,14 @@ The following code example explains how to add overlay text in the redacted area
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Display-text-on-the-redacted-area/.NET/Display-text-on-the-redacted-area/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
+
 //Load the existing PDF document
-FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Get the first page from the document 
 PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
 
@@ -113,16 +129,19 @@ page.AddRedaction(redaction);
 //Redact the contents from the PDF document
 document.Redact();
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document
-document.Save(stream);
-//Close the document
+//Save and close the PDF document
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
 
 //Load a PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -145,6 +164,12 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Redaction
 
 'Load a PDF document
 Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -180,9 +205,14 @@ The following code example explains how to redact the information from a page by
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Draw-image-on-the-redacted-area-in-PDF-document/.NET/Draw-image-on-the-redacted-area-in-PDF-document/Program.cs" %}	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
+
 //Load the existing PDF document
-FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Get the first page from the document 
 PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
 
@@ -196,16 +226,19 @@ page.AddRedaction(redaction);
 //Redact the contents from the PDF document
 document.Redact();
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document
-document.Save(stream);
-//Close the document
+//Save and close the PDF document
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
 
 //Load a PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -227,6 +260,12 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Redaction
 
 'Load a PDF document
 Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -261,9 +300,14 @@ The following code example explains how to redact the information from a page by
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Draw-pattern-on-the-redacted-area-in-PDF-document/.NET/Draw-pattern-on-the-redacted-area-in-PDF-document/Program.cs" %}	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
+
 //Load the existing PDF document
-FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Get the first page from the document 
 PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
 
@@ -299,16 +343,18 @@ page.AddRedaction(redaction);
 //Redact the contents from the PDF document
 document.Redact();
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the documents
-document.Save(stream);
-//Close the documents
+//Save and close the PDF document
+document.Save("Output.pdf");
 document.Close(true);
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
 
 //Load a PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -353,6 +399,12 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Redaction
 
 'Load a PDF document
 Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -410,9 +462,13 @@ The following code example explains how to redact the information from a page wi
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Fill-color-on-the-redacted-area-in-a-PDF/.NET/Fill-color-on-the-redacted-area-in-a-PDF/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
+
 //Load the existing PDF document
-FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Get the first page from the document 
 PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
 
@@ -425,16 +481,18 @@ page.AddRedaction(redaction);
 //Redact the contents from the PDF document
 document.Redact();
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document
-document.Save(stream);
-//Close the document
+//Save and close the PDF document
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
 
 //Load a PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -455,6 +513,12 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Redaction
 
 'Load a PDF document
 Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -488,9 +552,13 @@ The following code snippet explains how to redact the information from a page wi
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Redaction-without-fill-color-and-appearance/.NET/Redaction-without-fill-color-and-appearance/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
+
 //Load the existing PDF document
-FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Get the first page from the document 
 PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
 
@@ -502,16 +570,18 @@ page.AddRedaction(redaction);
 //Redact the contents from the PDF document
 document.Redact();
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document
-document.Save(stream);
-//Close the document
+//Save and close the PDF document
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
 
 //Load a PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -530,6 +600,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Redaction
 
 'Load a PDF document
 Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -560,6 +635,11 @@ The following code example demonstrates how to apply a appearance fill color to 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Redaction-fill-color-customization/.NET/Redaction-fill-color-customization/Program.cs" %}
+
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf;
+using Syncfusion.Drawing;
 
 //Create a new PDF document. 
 PdfDocument document = new PdfDocument(); 
@@ -593,15 +673,18 @@ annot.SetAppearance(true);
 //Add the annotation to the page 
 page.Annotations.Add(annot);  
 
-//Save the document into stream. 
-MemoryStream stream = new MemoryStream();		 
-document.Save(stream); 
-//Close the document. 
+//Save and close the PDF document
+document.Save("Output.pdf");
 document.Close(true); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf;
+using Syncfusion.Drawing;
 
 //Create a new PDF document. 
 PdfDocument document = new PdfDocument(); 
@@ -643,6 +726,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf
+Imports System.Drawing
 
 ' Create a new PDF document 
 Dim document As PdfDocument = New PdfDocument() 
@@ -696,9 +784,13 @@ The code snippet to illustrate the same is given below.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Get-the-redaction-progress-from-PDF-document/.NET/Get-the-redaction-progress-from-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
+
 //Load an existing PDF document
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the first page
 PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -708,11 +800,8 @@ PdfRedaction redaction = new PdfRedaction(new RectangleF(37, 94, 50, 10), System
 page.AddRedaction(redaction);
 loadedDocument.RedactionProgress += redaction_TrackProgress;
 
-//Create the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream
-loadedDocument.Save(stream);
-//Close the document
+//Save and close the PDF document
+loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
 
 //Event handler for Track redaction process
@@ -724,6 +813,11 @@ void redaction_TrackProgress(object sender, RedactionProgressEventArgs arguments
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
 
 //Load a PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -751,6 +845,11 @@ MessageBox.Show(String.Format("Redaction Process " + arguments.Progress + " % co
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Redaction
+
 'Load an existing PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("input.pdf") 
 'Load the first page 
@@ -763,8 +862,7 @@ page.Redactions.Add(redaction)
 loadedDocument.RedactionProgress += redaction_TrackProgress
 
 'Save the document
-Dim stream As New MemoryStream()
-loadedDocument.Save(stream) 
+loadedDocument.Save("Output.pdf") 
 'Close the document
 loadedDocument.Close(True)
 
@@ -786,9 +884,13 @@ Using [PdfRedactionResult](https://help.syncfusion.com/cr/document-processing/Sy
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Get-the-result-of-redaction-with-other-information/.NET/Get-the-result-of-redaction-with-other-information/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
+
 //Load an existing PDF document. 
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the first page.
 PdfLoadedPage page = loadedDocument.Pages[0];
 
@@ -807,16 +909,18 @@ else
 Console.WriteLine("Content not redacted properly...");
 }
 
-//Create the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream
-loadedDocument.Save(stream);
-//Close the document
+//Save and close the PDF document
+loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
 
 //Load an existing PDF document
 PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf");
@@ -847,6 +951,11 @@ lDoc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Redaction
+
 'Load an existing PDF 
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("input.pdf") 
 'Load the first page 
@@ -868,8 +977,7 @@ End If
 Next
 
 'Save the document
-Dim stream As New MemoryStream()
-loadedDocument.Save(stream) 
+loadedDocument.Save("Output.pdf") 
 'Close the document
 loadedDocument.Close(True)
 
@@ -889,9 +997,13 @@ The code snippet to illustrate the same is given below.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Redact-text-content-alone-on-the-redated-area/.NET/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
+
 //Load an existing PDF document
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 PdfRedaction redaction = new PdfRedaction(new RectangleF(150, 150, 60, 24), Color.Transparent);
 //Only the text within the redaction bounds should be redacted.
 redaction.TextOnly = true;
@@ -900,16 +1012,17 @@ foreach (PdfLoadedPage loadedPage in document.Pages)
     loadedPage.AddRedaction(redaction);
 }
 document.Redact();
-//Create the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream
-loadedDocument.Save(stream);
-//Close the document
+//Save and close the PDF document
+loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
 
 //Load a PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -930,6 +1043,11 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Redaction
+
 'Load an existing PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("input.pdf") 
 'Create PDF redaction for the page
@@ -940,8 +1058,7 @@ For Each loadedPage As PdfLoadedPage In document.Pages
 Next
 document.Redact()
 'Save the document
-Dim stream As New MemoryStream()
-loadedDocument.Save(stream) 
+loadedDocument.Save("Output.pdf") 
 'Close the document
 loadedDocument.Close(True)
 
@@ -962,11 +1079,13 @@ The following code snippet explains how to find text by regular expression patte
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Find-text-by-regular-expression-pattern-and-redact-it-from-PDF-document/.NET/Find_text_by_regular_expression/Program.cs" %}
 
-    //Create stream from an existing PDF document.
-    FileStream docStream = new FileStream(Path.GetFullPath("Input.pdf"), FileMode.Open, FileAccess.Read);
+    using Syncfusion.Pdf.Parsing;
+    using Syncfusion.Pdf.Redaction;
+    using Syncfusion.Pdf;
+    using System.Text.RegularExpressions;
 
     //Load the existing PDF document.
-    PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
     //Get the first page from the document.
     PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
@@ -1001,16 +1120,18 @@ The following code snippet explains how to find text by regular expression patte
     //Redact the contents from the PDF document.
     document.Redact();
 
-    //Creating the stream object
-    MemoryStream stream = new MemoryStream();
-    //Save the document
-    document.Save(stream);
-    //Close the document
+    //Save and close the PDF document
+    document.Save("Output.pdf");
     document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    using Syncfusion.Pdf.Parsing;
+    using Syncfusion.Pdf.Redaction;
+    using Syncfusion.Pdf;
+    using System.Text.RegularExpressions;
 
     //Load a PDF document
     PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -1052,11 +1173,13 @@ The following code snippet explains how to find text by regular expression patte
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Create stream from an existing PDF document.
-        Dim docStream As New FileStream(Path.GetFullPath("Input.pdf"), FileMode.Open, FileAccess.Read)
+    Imports Syncfusion.Pdf.Parsing
+    Imports Syncfusion.Pdf.Redaction
+    Imports Syncfusion.Pdf
+    Imports System.Text.RegularExpressions
 
         'Load the existing PDF document.
-        Dim document As New PdfLoadedDocument(docStream)
+        Dim document As New PdfLoadedDocument("Input.pdf")
 
         'Get the first page from the document.
         Dim page As PdfLoadedPage = TryCast(document.Pages(0), PdfLoadedPage)
@@ -1087,10 +1210,8 @@ The following code snippet explains how to find text by regular expression patte
         'Redact the contents from the PDF document.
         document.Redact()
 
-        'Creating the stream object
-        Dim stream As New MemoryStream()
         'Save the document
-        document.Save(stream)
+        document.Save("Output.pdf")
         'Close the document
         document.Close(True)
 

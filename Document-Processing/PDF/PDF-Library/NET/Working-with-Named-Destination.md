@@ -28,6 +28,11 @@ The following code example shows how to add named destination in a new PDF docum
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Named%20Destination/Adding-named-destination-to-a-PDF-document/.NET/Adding-named-destination-to-a-PDF-document/Program.cs" %}	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
 //Add a page to the document.
@@ -43,15 +48,18 @@ doc.NamedDestinationCollection.Add(destination);
 //Draw the text.
 page.Graphics.DrawString("Hello World!!", new PdfStandardFont(PdfFontFamily.Helvetica, 10), PdfBrushes.Black, new PointF(0, 500));
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
-//Closes the document
+//Save the document.
+doc.Save("Output.pdf");
+//Close the document.
 doc.Close(true);
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}	
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -76,6 +84,11 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -111,9 +124,13 @@ The following code example shows how to add named destination in an existing PDF
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Named%20Destination/Adding-named-destination-to-an-existing-PDF-document/.NET/Adding-named-destination-to-an-existing-PDF-document/Program.cs" %}	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the first page of the document.
 PdfPageBase page = loadedDocument.Pages[0];
 //Create an instance for named destination.
@@ -125,15 +142,19 @@ destination.Destination.Location = new PointF(0, 500);
 destination.Destination.Zoom = 4;
 loadedDocument.NamedDestinationCollection.Add(destination);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Closes the document.
+//Save the document.
+loadedDocument.Save("Output.pdf");
+//Close the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -156,6 +177,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Interactive
 
 'Load the PDF document.
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -189,9 +215,11 @@ You can remove the named destination using [Remove](https://help.syncfusion.com/
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Named%20Destination/Remove-and-modify-the-named-destination-in-a-PDF/.NET/Remove-and-modify-the-named-destination-in-a-PDF/Program.cs" %}	
 
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream("Barcode.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
+PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
 //Get the named destination collection.
 PdfNamedDestinationCollection destinationCollection = lDoc.NamedDestinationCollection;
 //Remove the named destination by title.
@@ -200,15 +228,17 @@ destinationCollection.Remove("TOC");
 PdfNamedDestination destination = destinationCollection[0];
 destination.Title = "POC";
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-lDoc.Save(stream);
+//Save the document.
+lDoc.Save("Output.pdf");
 //Close the document.
 lDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
 PdfLoadedDocument lDoc = new PdfLoadedDocument("Sample.pdf");
@@ -229,6 +259,9 @@ lDoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Interactive
 
 'Load the PDF document.
 Dim lDoc As New PdfLoadedDocument("Sample.pdf")
@@ -260,6 +293,11 @@ The following code example shows how to add named destination to the [Bookmarks]
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Named%20Destination/Adding-named-destination-to-the-bookmarks/.NET/Adding-named-destination-to-the-bookmarks/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
 //Add a page to the document.
@@ -278,16 +316,19 @@ PdfBookmark bookmark = doc.Bookmarks.Add("TOC");
 //Assign the named destination to the bookmark.
 bookmark.NamedDestination = destination;
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
-stream.Position = 0;
+//Save the document.
+doc.Save("Sample.pdf");
 //Close the document.
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -315,6 +356,11 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()

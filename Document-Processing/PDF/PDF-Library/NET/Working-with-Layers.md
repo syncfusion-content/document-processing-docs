@@ -20,6 +20,10 @@ Essential<sup>&reg;</sup> PDF allows the users to create a layer in a PDF page u
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Adding-layers-in-a-PDF-document/.NET/Adding-layers-in-a-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create PDF document.
 PdfDocument document = new PdfDocument();
 //Add the page. 
@@ -41,22 +45,18 @@ graphics.TranslateTransform(100, 180);
 //Draw ellipse. 
 graphics.DrawEllipse(pen, bounds);
 
-//Save and close the document.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Close the document.
+//Save the document.
+document.Save("Sample.pdf");
+//Close the document
 document.Close(true);
-//Defining the ContentType for PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create PDF document.
 PdfDocument document = new PdfDocument();
@@ -87,6 +87,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create PDF document.
 Dim document As New PdfDocument()
@@ -126,9 +130,13 @@ The below code illustrates how to add the multiple layers in an existing PDF doc
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Add-the-multiple-layers-in-an-existing-PDF-document/.NET/Add-the-multiple-layers-in-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get first page from document
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -148,25 +156,22 @@ graphics.TranslateTransform(100, 180);
 //Draw ellipse.
 graphics.DrawEllipse(pen, bounds);
 
-//Save and close the document
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-stream.Position = 0;
-//Close the document.
-loadedDocument.Close(true);
-//Defining the ContentType for pdf file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
+//Save the document.
+document.Save("Sample.pdf");
+//Close the document
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get first page from document
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -195,8 +200,13 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+Imports System.Drawing
+
 'Load the existing PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Get first page from document
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
 
@@ -235,6 +245,11 @@ Essential<sup>&reg;</sup> PDF allows the users to add different types of [Annota
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Adding-annotation-to-layer-in-the-PDF-document/.NET/Adding-annotation-to-layer-in-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
 //Create new PDF document
 PdfDocument document = new PdfDocument();
 //Add page
@@ -255,22 +270,19 @@ annotation.Layer = layer;
 //Add annotation to the created page
 page.Annotations.Add(annotation);
 
-//Save and close the document
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document.
+document.Save("Sample.pdf");
 //Close the document
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Create new PDF document
 PdfDocument document = new PdfDocument();
@@ -300,6 +312,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
+Imports System.Drawing
 
 'Create new PDF document
 Dim document As New PdfDocument()
@@ -338,9 +355,14 @@ The following code illustrates how to add annotation to the layers in an existin
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Add-annotation-to-the-layer-in-an-existing-PDF-document/.NET/Add-annotation-to-the-layer-in-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Gets the first page from the document
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -359,22 +381,20 @@ annotation.Layer = Layer;
 //Add annotation to the created page
 loadedPage.Annotations.Add(annotation);
 
-//Save and close the document
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-stream.Position = 0;
+//Save the document.
+loadedDocument.Save("Sample.pdf");
 //Close the document
 loadedDocument.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -404,6 +424,12 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Interactive
+Imports System.Drawing
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -444,6 +470,10 @@ Essential<sup>&reg;</sup> PDF allows users to add nested layers in the PDF docum
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Add-nested-layers-in-the-PDF-document/.NET/Add-nested-layers-in-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create the PDF document
 PdfDocument document = new PdfDocument();
 //Add the page
@@ -466,24 +496,18 @@ graphics.TranslateTransform(100, 180);
 //Draw an ellipse
 graphics.DrawEllipse(pen, bounds);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-document.Save(stream);
-//If the position is not set to '0', the PDF will be empty
-stream.Position = 0;
+//Save the document.
+document.Save("Sample.pdf");
 //Close the document
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}  
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create the PDF document
 PdfDocument document = new PdfDocument();
@@ -515,6 +539,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create the PDF document
 Dim document As New PdfDocument()
@@ -557,9 +585,11 @@ You can remove the layers using [RemoveAt](https://help.syncfusion.com/cr/docume
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Removing-layers-from-an-existing-PDF-document/.NET/Removing-layers-from-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Gets the first page from the document
 PdfLoadedPage loadedPage = document.Pages[0] as PdfLoadedPage;
 
@@ -568,22 +598,17 @@ PdfPageLayerCollection layers = loadedPage.Layers;
 //Remove the layer
 layers.RemoveAt(0);
 
-//Save and close the document
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
-//Defining the ContentType for pdf file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -603,6 +628,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
 Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -633,28 +661,28 @@ You can flatten a layer in a PDF document by removing it from the [PdfDocumentLa
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Flattening-the-layers-in-an-existing-PDF-document/.NET/Flattening-the-layers-in-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the existing PDF document
-FileStream inputStream = new FileStream("Layers.pdf", FileMode.Open);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 //Get the layer collection
 PdfDocumentLayerCollection layers = loadedDocument.Layers;
 //Flatten a layer in the PDF document
 layers.RemoveAt(0);
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Set the position as '0'
-stream.Position = 0;
-//Download the PDF document in the browser
-FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-fileStreamResult.FileDownloadName = "Output.pdf";
-return fileStreamResult;
+//Save the PDF document
+loadedDocument.Save("Output.pdf");
+//Close the instance of PdfLoadedDocument
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Layers.pdf");
@@ -672,6 +700,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Layers.pdf")
@@ -702,6 +733,10 @@ The below code illustrates how to toggle the visibility of layers in new PDF doc
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Toggle-the-visibility-of-layers-in-new-PDF-document/.NET/Toggle-the-visibility-of-layers-in-new-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create the document
 PdfDocument document = new PdfDocument();
 //Create a page
@@ -724,22 +759,18 @@ graphics.TranslateTransform(100, 180);
 //Draw ellipse
 graphics.DrawEllipse(pen, bounds);
 
-//Save and close the document
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save the PDF document
+document.Save("Output.pdf");
+//Close the instance of PdfLoadedDocument
 document.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create the document
 PdfDocument document = new PdfDocument();
@@ -773,6 +804,9 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 'Create the document
 Dim document As New PdfDocument()
 'Create a page
@@ -812,31 +846,28 @@ The following code illustrates how to toggle the visibility of layers in an exis
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Toggle-the-visibility-of-layers-in-an-existing-PDF/.NET/Toggle-the-visibility-of-layers-in-an-existing-PDF/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 //Gets the first layer from the layer collection
 PdfLayer layer = document.Layers[0];
 //Disable the visibility
 layer.Visible = false;
 
-//Save and close the document
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -854,6 +885,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
 Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -884,6 +918,10 @@ The following code sample shows how to add a lock state to the layer in a new PD
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Add-a-lock-state-to-the-layer-in-a-new-PDF-document/.NET/Add-a-lock-state-to-the-layer-in-a-new-PDF-document/Program.cs" %}	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Creating a new PDF document. 
 PdfDocument document = new PdfDocument();
 //Adding a new page to the PDF document.
@@ -899,24 +937,18 @@ PdfGraphics graphics = layer.CreateGraphics(page);
 //Draw ellipse.
 graphics.DrawEllipse(PdfPens.Red, new RectangleF(50, 50, 40, 40));
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-document.Save(stream);
-//If the position is not set to '0,' then the PDF will be empty.
-stream.Position = 0;
-//Close the document.
+//Save the PDF document.
+document.Save("Output.pdf");
+//Close the PDF document.
 document.Close(true);
-//Defining the content type for a PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Creating a new PDF document. 
 PdfDocument document = new PdfDocument();
@@ -941,6 +973,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Creating a new PDF document. 
 Dim document As PdfDocument =  New PdfDocument() 
@@ -986,6 +1022,10 @@ This is illustrated in the following code sample.
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
 //Load the existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Layers.pdf");
 
@@ -1008,6 +1048,10 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Output.pdf")
