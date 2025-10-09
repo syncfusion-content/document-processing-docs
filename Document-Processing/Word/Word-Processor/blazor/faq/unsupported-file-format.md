@@ -7,7 +7,7 @@ control: DocumentEditor
 documentation: ug
 ---
 
-# Why Do I Get the Unsupported Warning Message When Opening a Document in Blazor?
+# Why Do I Get the Unsupported File Warning When Opening a Document ?
 
 If the message “The file format you have selected isn’t supported. Please choose a valid format.” appears when opening a document in the Document Editor, it generally indicates that the file is not provided in a supported format for the current workflow. Here are some common reasons include:
 1.	Unsupported File Format: The document you are trying to open might be in a format that the Document Editor does not support. Ensure you are using a supported format, such as SFDT.

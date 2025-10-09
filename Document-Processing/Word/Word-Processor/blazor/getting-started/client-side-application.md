@@ -125,8 +125,6 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-N> A valid Syncfusion license must be registered in the application. Refer to the [licensing](https://blazor.syncfusion.com/documentation/licensing/overview) topic for instructions on generating and registering a license key in Blazor WebAssembly.
-
 ## Add stylesheet and script resources
 
 Add the following stylesheet and script to the head section of **~/index.html** file. The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
