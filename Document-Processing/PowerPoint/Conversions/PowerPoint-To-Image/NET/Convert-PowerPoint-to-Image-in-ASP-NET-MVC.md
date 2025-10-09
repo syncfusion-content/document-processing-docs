@@ -239,5 +239,3 @@ By executing the program, you will get the **image** as follows.
 {% endtabcontents %}
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
-
-An online sample link to [convert PowerPoint Presentation to image](https://ej2.syncfusion.com/aspnetmvc/PowerPoint/PPTXToImage#/material3) in ASP.NET MVC. 

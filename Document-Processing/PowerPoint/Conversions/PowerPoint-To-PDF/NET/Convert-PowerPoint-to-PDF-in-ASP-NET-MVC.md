@@ -224,6 +224,4 @@ By executing the program, you will get the **PDF** as follows.
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features.
-
-An online sample link to [convert PowerPoint Presentation to PDF](https://ej2.syncfusion.com/aspnetmvc/PowerPoint/PPTXToPdf#/material3) in ASP.NET MVC 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
