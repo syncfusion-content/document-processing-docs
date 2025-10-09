@@ -19,14 +19,14 @@ In the below example, you can add, edit, save, and delete notes.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/note-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/note-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/note-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/note-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/note-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/note-cs1" %}
 
 ## Adding a note
 
@@ -71,14 +71,14 @@ In the below example, the note functionality is disabled in the Spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/note-cs2/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/note-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/note-cs2/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/note-cs2/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/note-cs2" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/note-cs2" %}
 
 ## Integrating notes during initial loading and using cell data binding
 
@@ -86,14 +86,14 @@ The notes can be added initially when the Spreadsheet loads using cell data bind
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/note-cs3/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/note-cs3/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/note-cs3/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/note-cs3/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/note-cs3" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/note-cs3" %}
 
 ## Limitations
 

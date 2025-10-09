@@ -33,14 +33,14 @@ In the example below, the Spreadsheet component is rendered with the `German` [`
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/formula-cs3/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/formula-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/formula-cs3/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/formula-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/formula-cs3" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/formula-cs3" %}
 
 ## Create User Defined Functions / Custom Functions
 
@@ -52,14 +52,14 @@ The following code example shows an unsupported formula in the spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/formula-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/formula-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/formula-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/formula-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/formula-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/formula-cs1" %}
 
 Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/documentation/api/spreadsheet/#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
  
@@ -67,14 +67,14 @@ The following code example shows how to use `computeExpression` method in the sp
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/formula-cs2/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/formula-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/formula-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/formula-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/formula-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/formula-cs2" %}
 
 ## Formula bar
 
@@ -93,14 +93,14 @@ The following code example shows the usage of named ranges support.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/defined-name-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/defined-name-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/defined-name-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/defined-name-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/defined-name-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/defined-name-cs1" %}
 
 ## Calculation Mode
 
@@ -121,14 +121,14 @@ The following code example demonstrates how to set the Automatic calculation mod
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/calculation-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/calculation-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/calculation-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/calculation-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/calculation-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/calculation-cs1" %}
 
 ### Manual Mode
 
@@ -143,14 +143,14 @@ The following code example demonstrates how to set the Manual calculation mode i
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/calculation-cs2/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/calculation-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/calculation-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/calculation-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/calculation-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/calculation-cs2" %}
 
 ## Supported Formulas
 

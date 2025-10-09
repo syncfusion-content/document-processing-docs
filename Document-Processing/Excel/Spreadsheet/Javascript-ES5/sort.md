@@ -37,14 +37,14 @@ The following code example shows `Sort` functionality in the Spreadsheet control
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/sort-cs2/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/sort-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/sort-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/sort-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/sort-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/sort-cs2" %}
 
 ## Data contains header
 
@@ -120,14 +120,14 @@ The multi-column sorting can also be performed manually by passing sort options 
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/sort-cs3/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/sort-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/sort-cs3/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/sort-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/sort-cs3" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/sort-cs3" %}
 
 ## Custom sort comparer
 
@@ -147,14 +147,14 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/sort-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/sort-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/sort-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/sort-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/sort-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/sort-cs1" %}
 
 ## Known error validations
 

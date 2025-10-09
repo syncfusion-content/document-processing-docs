@@ -47,10 +47,10 @@ In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/freeze-pane/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/freeze-pane/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="FreezePane.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/freeze-pane/freezePane.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/freeze-pane/freezePane.cs %}
 {% endhighlight %}
 {% endtabs %}
 

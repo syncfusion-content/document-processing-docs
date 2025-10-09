@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sort in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+title: Sort in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
 description: Learn here all about Sort in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Sort
@@ -38,10 +38,10 @@ The following code example shows `sort` functionality in the Spreadsheet control
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/sort-by-cell/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/sort-by-cell/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SortController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/sort-by-cell/sortController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/sort-by-cell/sortController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -112,10 +112,10 @@ N> * All the arguments are optional.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/passing-sort/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/passing-sort/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="PassingSortController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/passing-sort/passingSortController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/passing-sort/passingSortController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -139,10 +139,10 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/custom-sort/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/custom-sort/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CustomSortController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/custom-sort/customSortController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/custom-sort/customSortController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

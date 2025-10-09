@@ -53,14 +53,14 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/link-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/link-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/link-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/link-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/link-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/link-cs1" %}
 
 ## Limitations
 
