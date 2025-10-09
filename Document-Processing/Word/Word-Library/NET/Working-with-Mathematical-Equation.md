@@ -2103,8 +2103,8 @@ By executing the above code example, it generates output Word document as follow
 
 ## Online Demo
 
-* Explore how to create a Word document with mathematical equations using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/createequation#/bootstrap5).
-* See how to modify a mathematical equation in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/editequation#/bootstrap5).
+* Explore how to create a Word document with mathematical equations using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/createequation#/tailwind).
+* See how to modify a mathematical equation in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/editequation#/tailwind).
 
 ## See Also
 
