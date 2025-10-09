@@ -1,27 +1,27 @@
 ---
 layout: post
 title: Ink Annotation in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about free Ink annotations in Syncfusion Blazor SfPdfViewer component and more.
+description: Learn how to add, edit, and programmatically manage ink annotations in the Syncfusion Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Ink Annotation in the Blazor SfPdfViewer component
+# Ink annotation in the Blazor SfPdfViewer component
 
-The SfPdfViewer control provides the options to add, edit, and delete the ink annotations.
+The Blazor SfPdfViewer component supports adding, editing, and deleting ink annotations.
 
-![InkAnnotation](../../blazor-classic/images/ink_annotation.png)
+![Ink annotation toolbar in Blazor PDF Viewer](../../blazor-classic/images/ink_annotation.png)
 
 ## Adding an ink annotation to the PDF document
 
-The ink annotations can be added to the PDF document using the annotation toolbar.
+Ink annotations can be added using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-* Select the **Draw Ink** button in the annotation toolbar. It enables the ink annotation mode.
-* You can draw anything over the pages of the PDF document.
+* Select the **Edit Annotation** button in the SfPdfViewer toolbar to open the annotation toolbar.
+* Choose the **Draw Ink** button to enable ink mode.
+* Draw on any page of the loaded PDF document.
 
-![InkTool](../../blazor-classic/images/ink_tool.png)
+![Draw ink tool in annotation toolbar](../../blazor-classic/images/ink_tool.png)
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -43,31 +43,29 @@ The ink annotations can be added to the PDF document using the annotation toolba
 
 ## Editing the properties of the ink annotation
 
-The stroke color, thickness, and opacity of the ink annotation can be edited using the Edit stroke color tool, Edit thickness tool, and Edit opacity tool in the annotation toolbar.
+The stroke color, thickness, and opacity of an ink annotation can be modified using the corresponding tools in the annotation toolbar.
 
 ### Editing stroke color
 
-The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
+Change the stroke color using the color palette available in the Edit Stroke Color tool.
 
-![InkStrokeColor](../../blazor-classic/images/ink_strokecolor.png)
+![Change stroke color of ink annotation](../../blazor-classic/images/ink_strokecolor.png)
 
 ### Editing thickness
 
-The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
+Adjust the border thickness using the range slider in the Edit Thickness tool.
 
-![InkThickness](../../blazor-classic/images/ink_thickness.png)
+![Change thickness of ink annotation](../../blazor-classic/images/ink_thickness.png)
 
 ### Editing opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+Control the transparency using the range slider in the Edit Opacity tool.
 
-![InkOpacity](../../blazor-classic/images/ink_opacity.png)
+![Change opacity of ink annotation](../../blazor-classic/images/ink_opacity.png)
 
 ## Setting default properties during the control initialization
 
-The properties of the ink annotation can be set before creating the control using the InkAnnotationSettings.
-
-After editing the default values, they will be changed to the selected values.
+Default properties for ink annotations can be configured before rendering the component using InkAnnotationSettings. After interacting with the toolbar, subsequent annotations will use the most recently selected values.
 
 ```cshtml
 
@@ -97,9 +95,9 @@ After editing the default values, they will be changed to the selected values.
 
 ## Add ink annotation programmatically
 
-The Blazor SfPdfViewer offers the capability to programmatically add the ink annotation within the SfPdfViewer control using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+The Blazor SfPdfViewer supports programmatically adding ink annotations using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method. Use the [PdfAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html) model with [AnnotationType.Ink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationType.html) and define its [Bound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.Bound.html) and path data.
 
-Below is an example demonstrating how you can use this method to add ink annotation to a PDF document:
+Below is an example demonstrating how to add an ink annotation to a PDF document:
 
 ```cshtml
 
@@ -136,17 +134,17 @@ Below is an example demonstrating how you can use this method to add ink annotat
 
 ```
 
-This code will add a ink annotation to the first page of the PDF document.
+This code adds an ink annotation to the first page of the PDF document (page indices are zero-based).
 
-![Programmatically Added Ink Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-ink-annotation.png)
+![Programmatically added ink annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-ink-annotation.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Ink/Add).
+[View programmatic ink annotation sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Ink/Add).
 
 ## Edit ink annotation programmatically
 
-The Blazor SfPdfViewer offers the capability to programmatically edit the ink annotation within the SfPdfViewer control using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+The Blazor SfPdfViewer supports programmatic editing of ink annotations using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method. Retrieve annotations with [GetAnnotationsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetAnnotationsAsync) and modify properties such as position, size, [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html#Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_StrokeColor), and [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html#Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_Opacity).
 
-Below is an example demonstrating how you can utilize this method to edit the ink annotation programmatically:
+Below is an example demonstrating how to edit an ink annotation programmatically:
 
 ```cshtml
 
@@ -183,11 +181,11 @@ Below is an example demonstrating how you can utilize this method to edit the in
 
 ```
 
-This code snippet will edit the ink annotation programmatically within the SfPdfViewer control.
+This code edits the first available ink annotation programmatically within the SfPdfViewer component.
 
-![Programmatically Edit Ink Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-ink-annotation.png)
+![Programmatically edit ink annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-ink-annotation.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Ink/Edit).
+[View programmatic edit sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Ink/Edit).
 
 ## See also
 
