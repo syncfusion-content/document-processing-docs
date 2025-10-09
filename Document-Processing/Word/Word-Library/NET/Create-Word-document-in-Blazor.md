@@ -1059,7 +1059,7 @@ Step 1: Create a new C# Blazor WASM Standalone app project.
 * Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
 * Choose the **Blazor WebAssembly Standalone App** template.
 
-![Choose Blazor Web app from template](Blazor_Images/Blazor-WASM-app-template.png)
+![Choose Blazor Web app from template](Blazor_Images/Blazor-WASM-Standalone-app-template.png)
 
 * Select the project location, type the project name and press enter.
 * Then choose **Create project**.
