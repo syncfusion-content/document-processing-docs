@@ -17,6 +17,9 @@ You can create a portfolio using [PdfPortfolioInformation](https://help.syncfusi
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Portfolio/Create-a-portfolio-and-attach-variety-of-documents/.NET/Create-a-portfolio-and-attach-variety-of-documents/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new instance of PdfDocument class
 PdfDocument document = new PdfDocument();
 
@@ -35,22 +38,16 @@ document.PortfolioInformation.StartupDocument = pdfFile;
 //Add the attachment to the document
 document.Attachments.Add(pdfFile);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save and close the document.
+document.Save("Sample.pdf");
 document.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Sample.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new instance of PdfDocument class
 PdfDocument document = new PdfDocument();
@@ -76,6 +73,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Create a new instance of PdfDocument class
 Dim document As New PdfDocument()
@@ -112,9 +112,11 @@ The Essential<sup>&reg;</sup> PDF provides support for extracting the files from
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Portfolio/Extracting-the-files-from-PDF-portfolio/.NET/Extracting-the-files-from-PDF-portfolio/Program.cs" %}
 
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing PDF document
-FileStream docStream = new FileStream("Sample.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 //Iterate the attachments
 foreach (PdfAttachment attachment in document.Attachments)
@@ -125,22 +127,16 @@ foreach (PdfAttachment attachment in document.Attachments)
     s.Dispose();
 }
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save and close the document.
+document.Save("Sample.pdf");
 document.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Sample.pdf");
@@ -161,6 +157,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document
 Dim document As New PdfLoadedDocument("Sample.pdf")
@@ -191,29 +190,23 @@ The following code example illustrates how to remove files from an existing PDF 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Portfolio/Remove-the-files-from-PDF-portfolio/.NET/Remove-the-files-from-PDF-portfolio/Program.cs" %}
 
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Sample.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 //Remove the file from the Portfolio
 document.Attachments.RemoveAt(0);
 
-//Save and close the document
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save and close the document.
+document.Save("Sample.pdf");
 document.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Sample.pdf");
@@ -228,6 +221,8 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document
 Dim document As New PdfLoadedDocument("Sample.pdf")

@@ -1,11 +1,11 @@
 ---
-title: Working with Hyperlinks | Syncfusion
+title: Working with Hyperlinks in PDF | Syncfusion
 description: This section explains how to add hyperlink in a new and existing PDF document using Syncfusion .NET PDF library 
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Hyperlinks
+# Working with Hyperlinks in PDF
 
 In PDF, hyperlinks can be added to allow the users to navigate to another part of PDF file, web page or any other external content. Essential<sup>&reg;</sup> PDF provides support for all these types of hyperlink.
 

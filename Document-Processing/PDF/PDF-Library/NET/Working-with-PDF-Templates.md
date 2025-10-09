@@ -19,6 +19,10 @@ The below code snippet illustrates how to add contents to the [PdfTemplate](http
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Templates/Add-the-contents-to-template-and-render-into-PDF-page/.NET/Add-the-contents-to-template-and-render-into-PDF-page/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
 //Add a page to the PDF document.
@@ -37,15 +41,18 @@ template.Graphics.DrawString("Hello World", font, brush, 5, 5);
 //Draw the template on the page graphics of the document.
 pdfPage.Graphics.DrawPdfTemplate(template, PointF.Empty);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-pdfDocument.Save(stream);
+//Save the document.
+pdfDocument.Save("Output.pdf");
 //Close the document.
 pdfDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -73,6 +80,10 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()
@@ -109,9 +120,12 @@ The below code snippet illustrates how to render the [PdfTemplate](https://help.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Templates/Render-the-template-in-an-existing-PDF-document/.NET/Render-the-template-in-an-existing-PDF-document/Program.cs" %}	
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the page into Pdf document.
 PdfLoadedPage LoadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -128,9 +142,8 @@ template.Graphics.DrawString("Hello World", font, brush, 5, 5);
 //Draw the template on the page graphics of the document.
 LoadedPage.Graphics.DrawPdfTemplate(template, Syncfusion.Drawing.PointF.Empty);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -138,8 +151,12 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
 //Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the page into Pdf document.
 PdfLoadedPage LoadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -165,8 +182,12 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
+
 'Load the existing PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Load the page into Pdf document.
 Dim LoadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
 
@@ -204,9 +225,12 @@ The below code illustrates how to create the template from an existing page and 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Templates/Create-template-from-an-existing-PDF-document/.NET/Create-template-from-an-existing-PDF-document/Program.cs" %}	
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the page.
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 //Create the template from the page.
@@ -221,19 +245,21 @@ PdfGraphics graphics = page.Graphics;
 //Draw the template.
 graphics.DrawPdfTemplate(template, Syncfusion.Drawing.PointF.Empty, new Syncfusion.Drawing.SizeF(page.Size.Width / 2, page.Size.Height));
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+loadedDocument.Save("Output.pdf");
 //Close the document.
-document.Close(true);
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
 //Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the page.
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 //Create the template from the page.
@@ -258,8 +284,12 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
+
 'Load the existing PDF document
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Load the page
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
 'Create the template from the page
@@ -296,6 +326,10 @@ The below code illustrates how to add the page template elements in a PDF docume
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Templates/Add-the-page-template-elements-in-a-PDF-document/.NET/Add-the-page-template-elements-in-a-PDF-document/Program.cs" %}	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
 //Add a page to the PDF document.
@@ -329,15 +363,18 @@ compositeField.Draw(footer.Graphics, new Syncfusion.Drawing.PointF(470, 40));
 //Add the footer template at the bottom.
 pdfDocument.Template.Bottom = footer;
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-pdfDocument.Save(stream);
+//Save the document.
+pdfDocument.Save("Output.pdf");
 //Close the document.
 pdfDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -378,6 +415,10 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()
@@ -429,12 +470,15 @@ Multiple templates can be drawn over a PDF page, to create a document-overlay us
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Templates/Creating-the-document-overlays/.NET/Creating-the-document-overlays/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream1 = new FileStream(fileName1, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument1 = new PdfLoadedDocument(docStream1);
+PdfLoadedDocument loadedDocument1 = new PdfLoadedDocument("Input1.pdf");
 //Load the PDF document.
-FileStream docStream2 = new FileStream(fileName2, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument2 = new PdfLoadedDocument(docStream2);
+PdfLoadedDocument loadedDocument2 = new PdfLoadedDocument("Input2.pdf");
 //Create the new document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -451,23 +495,25 @@ template = loadedPage.CreateTemplate();
 //Draw the loaded template into new document.
 page.Graphics.DrawPdfTemplate(template, new PointF(10, 10), new SizeF(400, 500));
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Set the position as '0'.
-stream.Position = 0;
+//Save the new document.
+document.Save("Output.pdf");
 //Closes the documents.
-document.Close(true);
 loadedDocument1.Close(true);
 loadedDocument2.Close(true);
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
 //Load the existing documents.
-PdfLoadedDocument loadedDocument1 = new PdfLoadedDocument(fileName1);
-PdfLoadedDocument loadedDocument2 = new PdfLoadedDocument(fileName2);
+PdfLoadedDocument loadedDocument1 = new PdfLoadedDocument("Input1.pdf");
+PdfLoadedDocument loadedDocument2 = new PdfLoadedDocument("Input2.pdf");
 //Create the new document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -495,9 +541,14 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+Imports System.Drawing
+
 'Load the existing documents.
-Dim loadedDocument1 As New PdfLoadedDocument(fileName1)
-Dim loadedDocument2 As New PdfLoadedDocument(fileName2)
+Dim loadedDocument1 As New PdfLoadedDocument("Input1.pdf")
+Dim loadedDocument2 As New PdfLoadedDocument("Input2.pdf")
 'Create the new document.
 Dim document As New PdfDocument()
 'Add a page to the document.
@@ -535,9 +586,12 @@ The following code sample shows how to add a [PdfPageTemplate](https://help.sync
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Templates/Add-a-template-from-an-existing-PDF-document/.NET/Add-a-template-from-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Loads an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the first page of the document.
 PdfPageBase page = loadedDocument.Pages[0];
 
@@ -550,16 +604,18 @@ pageTemplate.IsVisible = true;
 //Adds the page template.
 loadedDocument.PdfPageTemplates.Add(pageTemplate);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-loadedDocument.Save(stream);
-//Close the document.
+//Save the PDF document.
+loadedDocument.Save("output.pdf");
+//Close the PDF document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Loads an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -583,6 +639,10 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Loads an existing PDF document.
 Dim loadedDocument As PdfLoadedDocument =  New PdfLoadedDocument("input.pdf") 
