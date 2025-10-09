@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize the toolbar in Blazor DocumentEditor Component | Syncfusion
+title: Customize the Toolbar in Blazor DocumentEditor Component | Syncfusion
 description: Learn how to Customize the existing toolbar in Syncfusion Blazor DocumentEditor component and much more.
 platform: document-processing
 control: DocumentEditor
@@ -10,7 +10,7 @@ documentation: ug
 
 ## How to customize existing toolbar in Document Editor Container
 
-[`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) component allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
+[`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (Document Editor) component allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 
 * Add - New items can defined by [`CustomToolbarItemModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.CustomToolbarItemModel.html) and with existing items in [`toolbarItems`]https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_ToolbarItems property. Newly added item click action can be defined in [`toolbarClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorContainerEvents.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorContainerEvents_OnToolbarClick).
 * Show, Hide - Existing items can be shown or hidden using the [`toolbarItems`]https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_ToolbarItems property. Pre-defined toolbar items are available with [`ToolbarItem`]https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.ToolbarItem.html.

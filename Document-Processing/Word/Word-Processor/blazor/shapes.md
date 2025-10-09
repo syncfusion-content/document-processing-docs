@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Shapes in Blazor DocumentEditor Component | Syncfusion
+title: Working with Shapes in Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn here all about the Shapes in Syncfusion Blazor DocumentEditor component and more.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---
 
-# Shapes in DocumentEditor
+# Working with Shapes in Blazor DocumentEditor
 
 Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, DocumentEditor does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
 
@@ -21,7 +21,7 @@ N> When using ASP.NET MVC service, the unsupported shapes will be converted as i
 
 ## Text box Shape
 
-A text box is a rectangular area on the document where you can enter text. When you click in a text box, a flashing cursor will display indicating that you can begin typing. It allows you to enter multiple lines of text with all text formatting.
+A text box is a rectangular area on the document where you can enter text. Clicking in a text box displays a flashing cursor, indicating that text can be entered. It allows you to enter multiple lines of text with all text formatting.
 
 ![Text box shape view in DocumentEditor](images/Shapes_images/textbox_shape.png)
 

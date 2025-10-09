@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about the Print functionality in Syncfusion Blazor DocumentEditor component and more.
+title: Printing a Document in Blazor DocumentEditor | Syncfusion
+description: Learn how to print a document and improve print quality in the Syncfusion Blazor DocumentEditor component.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---
 
-# Print in Blazor DocumentEditor Component
+# Printing a Document in Blazor DocumentEditor
 
 To print the document, use the [`PrintAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_PrintAsync) method from document editor instance.
 
@@ -28,9 +28,9 @@ Refer to the following example for print.
 }
 ```
 
-## Improve print quality
+## Improving print quality
 
-Document editor provides an option to improve the print quality using [`PrintDevicePixelRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_PrintDevicePixelRatio) in Document editor settings. Document editor using canvas approach to render content. Then, canvas are converted to image and it process for print. Using PrintDevicePixelRatio API, you can increase the image quality based on your requirement.
+Document editor provides an option to improve the print quality using [`PrintDevicePixelRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_PrintDevicePixelRatio) in Document editor settings. Document editor using canvas approach to render content. Then, canvas are converted to image and it process for print. Using the PrintDevicePixelRatio API, the image quality can be increased based on specific requirements.
 
 The following example code illustrates how to improve the print quality in Document editor container.
 

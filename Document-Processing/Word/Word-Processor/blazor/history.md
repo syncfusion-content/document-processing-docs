@@ -13,7 +13,7 @@ documentation: ug
 
 ## Enable or disable history
 
-Inject the [`EditorHistory`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorHistoryModule.html) module in your application to provide history preservation functionality for [`DocumentEditor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html). Refer to the following code example.
+Inject the [`EditorHistory`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorHistoryModule.html) module into the application to enable history preservation functionality for the [`DocumentEditor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html). Refer to the following code example.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
@@ -31,7 +31,7 @@ Inject the [`EditorHistory`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 }
 ```
 
-You can enable or disable history preservation for a document editor instance any time using the `EnableEditorHistory` property. Refer to the following sample code.
+History preservation for a Document Editor instance can be enabled or disabled at any time using the `EnableEditorHistory` property. Refer to the following sample code.
 
 ```csharp
 documentEditor.EnableEditorHistory = true;
