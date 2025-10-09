@@ -22,6 +22,9 @@ You can add the JavaScript action to the PDF document by using [PdfJavaScriptAct
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/JavaScript/Add-the-JavaScript-action-to-the-PDF-document/.NET/Add-the-JavaScript-action-to-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new document
 PdfDocument document = new PdfDocument();
 //Add a page
@@ -32,22 +35,16 @@ PdfJavaScriptAction scriptAction = new PdfJavaScriptAction("app.alert(\"Hello Wo
 //Add the JavaScript action
 document.Actions.AfterOpen = scriptAction;
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save and close the PDF document
+document.Save("Output.pdf");
 document.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new document
 PdfDocument document = new PdfDocument();
@@ -66,6 +63,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new document
 Dim document As New PdfDocument()
@@ -97,6 +97,11 @@ The following code snippet illustrate this.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/JavaScript/Add-JavaScript-action-to-the-form-fields-in-a-PDF/.NET/Add-JavaScript-action-to-the-form-fields-in-a-PDF/Program.cs" %}	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -116,22 +121,18 @@ submitButton.Actions.MouseDown = scriptAction;
 //Add the submit button to the new document
 document.Form.Fields.Add(submitButton);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save and close the PDF document
+document.Save("Output.pdf");
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -160,6 +161,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim document As New PdfDocument()
@@ -199,6 +205,10 @@ The 3D Annotations are used to represent 3D artworks in a PDF document. You can 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/JavaScript/Add-JavaScript-to-3D-annotation-in-a-PDF-document/.NET/Add-JavaScript-to-3D-annotation-in-a-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -218,22 +228,17 @@ pdf3dAnnotation.Activation = activation;
 //Adds annotation to page
 page.Annotations.Add(pdf3dAnnotation);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Closes the document
+//Save and close the PDF document
+document.Save("Output.pdf");
 document.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "3DAnnotation.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -260,6 +265,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Creates a new PDF document
 Dim document As New PdfDocument()
@@ -297,6 +306,10 @@ Add or modify the JavaScript action in a [PdfLoadedDocument](https://help.syncfu
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
@@ -311,6 +324,10 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Load the PDF document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
