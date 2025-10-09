@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Spreadsheet Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Spreadsheet component and much more.
+description: Learn about accessibility support in the Syncfusion Blazor Spreadsheet component, including WCAG 2.2, Section 508, keyboard shortcuts, and WAI-ARIA attributes.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
@@ -9,9 +9,17 @@ documentation: ug
 
 # Accessibility in Blazor Spreadsheet
 
-The Syncfusion Blazor Spreadsheet followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
-
-The accessibility compliance for the Spreadsheet is outlined below.
+The Syncfusion Blazor Spreadsheet follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA](https://www.w3.org/TR/wai-aria/#roles) roles that are commonly used to evaluate accessibility.
+<style>
+    .post .post-content img {
+        display: inline-block;
+        margin: 0.5em 0;
+    }
+</style>
+The accessibility compliance for the Spreadsheet component is outlined below.
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -24,39 +32,27 @@ The accessibility compliance for the Spreadsheet is outlined below.
 | [Keyboard Navigation Support](https://blazor.syncfusion.com/documentation/common/accessibility#keyboard-navigation-support) |<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 | [Axe-core Accessibility Validation](https://blazor.syncfusion.com/documentation/common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 
-<style>
-    .post .post-content img {
-        display: inline-block;
-        margin: 0.5em 0;
-    }
-</style>
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
-
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
-
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
-
 ## WAI-ARIA attributes
-The Syncfusion Blazor Spreadsheet followed the WAI-ARIA patterns to meet the accessibility. The following ARIA attributes are used in the Spreadsheet:
+The Syncfusion Blazor Spreadsheet follows WAI-ARIA patterns to meet accessibility standards. The following ARIA attributes are used in the Spreadsheet component:
 
 | Attributes | Purpose |
 |---------------|-------------|
 | `role=textbox` | Identifies an element as an input field that allows text entry.|
-| `role=button` | To represent the element that acts as a button in the component. |
+| `role=button` | Identifies an element that functions as a button. |
 | `role=combobox` | Identifies a component that combines a text input with a popup listbox or tree. |
 | `role=menu` | Defines a container for a collection of choices or commands presented in a contextual or dropdown format. |
-| `role=alert` | Designates an element that displays im  portant, time-sensitive information. |
+| `role=alert` | Designates an element that displays important, time-sensitive information. |
 | `aria-label`| This attribute describes the accessible name for the interactive elements. |
-| `aria-expanded` | This attribute describes the control (for example, dropdown) is expanded or collapsed. |
+| `aria-expanded` | Indicates whether a collapsible element (e.g., a dropdown) is currently expanded or collapsed. |
 | `aria-live` | Defines a region as "live", meaning its content updates dynamically. Values include "off", "polite" (waits until idle), or "assertive" (announces immediately). |
-| `aria-rowindex` | Defines row index of the row with respect to the total number of rows within the Spreadsheet. |
-| `aria-colindex` | Defines the column index of the column with respect to the total number of columns within the Spreadsheet. |
+| `aria-rowindex` | Defines the row index of a row with respect to the total number of rows in the Spreadsheet. |
+| `aria-colindex` | Defines the column index of a column with respect to the total number of columns in the Spreadsheet. |
 | `aria-multiline` | Indicates whether a textbox accepts multiple lines of input or only a single line. |
 
 
 ## Keyboard shortcuts
 
-The Syncfusion Blazor Spreadsheet followed keyboard interaction guidelines, making it accessible for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet.
+The Syncfusion Blazor Spreadsheet follows keyboard interaction guidelines, making it accessible for people who use assistive technologies (AT) and those who rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet.
 
 <b>Clipboard</b>
 
@@ -86,27 +82,27 @@ The Syncfusion Blazor Spreadsheet followed keyboard interaction guidelines, maki
 |-----|----- | -----|
 | <kbd>Page Up</kbd> / <kbd>Page Down</kbd> | <kbd>Fn</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> |Scrolls up or down one screen at a time.|
 | <kbd>Arrow keys</kbd> | <kbd>Arrow keys</kbd> | Navigates between adjacent cells in the direction of the arrow key.|
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Moves the selection to the cell below.|
-| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Moves the selection to the cell above.|
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the selection to the cell on the right.|
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the selection to the cell on the left.|
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Moves the active cell down one row.|
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Moves the active cell up one row.|
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the active cell right one column.|
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the active cell left one column.|
 
 <b>Editing</b>
 
 | Windows | MAC | Actions |
 |-----|----- | -----|
-| <kbd>F2</kbd> | <kbd>F2</kbd> | Begin typing in the selected cell.|
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Finish typing in the current cell and move to the one below.|
-| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Finish typing in the current cell and move to the one above.|
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Finish typing in the current cell and move to the one on the right. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> |Finish typing in the current cell and move to the one on the left.|
-| <kbd>Escape</kbd> | <kbd>Esc</kbd> | Cancel editing and return to the original value in the cell.|
+| <kbd>F2</kbd> | <kbd>F2</kbd> | Enters edit mode for the selected cell.|
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Confirms the edit and moves the active cell down one row.|
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Confirms the edit and moves the active cell up one row.|
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Confirms the edit and moves the active cell right one column. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Confirms the edit and moves the active cell left one column.|
+| <kbd>Escape</kbd> | <kbd>Esc</kbd> | Cancels the edit and restores the cell's original value.|
 
 <b>Clear</b>
 
 | Windows | MAC | Actions |
 |-----|----- | -----|
-| <kbd>Delete</kbd> | <kbd>Delete</kbd> | Clear contents of the selected cells.|
+| <kbd>Delete</kbd> | <kbd>Delete</kbd> | Clears the contents of the selected cells.|
 
 <b>Hyperlink</b>
 
