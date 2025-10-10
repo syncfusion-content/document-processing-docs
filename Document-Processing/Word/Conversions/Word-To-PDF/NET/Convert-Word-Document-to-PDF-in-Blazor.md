@@ -674,6 +674,8 @@ Upon executing the program, the **PDF document** will be generated as follows.
 
 Click [here](https://www.syncfusion.com/document-processing/word-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features.
 
+An online sample link to [convert Word document to PDF](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind) in ASP.NET Core.
+
 ## Word to PDF in Blazor WASM Standalone Application
 
 {% tabcontents %}
@@ -1260,5 +1262,7 @@ N> To convert Word to image, it is necessary to access the font stream internall
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features.
+
+An online sample link to [convert Word document to PDF](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind) in ASP.NET Core.
 
