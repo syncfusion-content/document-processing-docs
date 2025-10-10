@@ -1517,7 +1517,7 @@ using Syncfusion.Pdf.Graphics;
 //Create a new PDF document 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4);     
 
-//Set Pdf File version 2.0 
+//Set PDF File version 2.0 
 document.FileStructure.Version = PdfVersion.Version2_0; 
 
 //Set true to auto tag all elements in document 
@@ -1564,7 +1564,7 @@ using Syncfusion.Pdf.Graphics;
 //Create a new PDF document 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4);     
 
-//Set Pdf File version 2.0 
+//Set PDF File version 2.0 
 document.FileStructure.Version = PdfVersion.Version2_0; 
 
 //Set true to auto tag all elements in document 
@@ -1611,7 +1611,7 @@ Imports Syncfusion.Pdf.Graphics
 'Creates new PDF document 
 Dim doc As PdfDocument = New PdfDocument(PdfConformanceLevel.Pdf_A4) 
 
-'Set Pdf File version 2.0 
+'Set PDF File version 2.0 
 doc.FileStructure.Version = PdfVersion.Version2_0 
 
 'Set true to auto tag all elements in document  
@@ -1670,7 +1670,7 @@ using Syncfusion.Pdf.Graphics;
 //Create a new PDF document 
 PdfDocument document = new PdfDocument();     
 
-//Set Pdf File version 2.0 
+//Set PDF File version 2.0 
 document.FileStructure.Version = PdfVersion.Version2_0; 
 
 //Set true to auto tag all elements in document 
@@ -1715,7 +1715,7 @@ using Syncfusion.Pdf.Graphics;
 //Create a new PDF document 
 PdfDocument document = new PdfDocument();     
 
-//Set Pdf File version 2.0 
+//Set PDF File version 2.0 
 document.FileStructure.Version = PdfVersion.Version2_0; 
 
 //Set true to auto tag all elements in document 
@@ -1760,7 +1760,7 @@ Imports Syncfusion.Pdf.Graphics
 'Creates new PDF document 
 Dim doc As PdfDocument = New PdfDocument() 
 
-'Set Pdf File version 2.0 
+'Set PDF File version 2.0 
 doc.FileStructure.Version = PdfVersion.Version2_0  
 
 'Set true to auto tag all elements in document 
