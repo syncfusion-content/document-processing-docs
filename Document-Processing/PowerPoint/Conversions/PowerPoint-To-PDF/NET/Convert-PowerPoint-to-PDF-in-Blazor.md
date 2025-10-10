@@ -1086,7 +1086,7 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.PresentationRenderer.Net.Core NuGet package](Workingwith-Blazor/Install-Syncfusion.PresentationRenderer.Net.Core-NuGet.png)
 
-* Similary install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) NuGet package from [NuGet.org](https://www.nuget.org/)
+* Similarly install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) NuGet package from [NuGet.org](https://www.nuget.org/)
 
 ![Install the SkiaSharp.Views.Blazor NuGet package](Workingwith-Blazor/Install-SkiaSharp.Views.Blazor-NuGet.png)
 
