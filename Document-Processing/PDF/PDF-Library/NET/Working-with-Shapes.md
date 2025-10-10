@@ -31,6 +31,10 @@ You can draw a polygon in PDF document by using the [DrawPolygon](https://help.s
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-polygon-in-new-PDF-document/.NET/Draw-polygon-in-new-PDF-document/Program.cs" %}	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Add a page to the document
@@ -50,15 +54,18 @@ PointF[] points = { p1, p2, p3, p4, p5 };
 //Draw the polygon on PDF document
 page.Graphics.DrawPolygon(pen, brush, points);
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the PDF document
+document.Save("Output.pdf");
 //Close the instance of PdfDocument
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -86,6 +93,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument
@@ -122,9 +133,12 @@ The following code snippet explains how to draw a polygon in an existing PDF doc
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-polygon-in-an-existing-PDF-document/.NET/Draw-a-polygon-in-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Load the PDF document as stream
-FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the page into PdfLoadedPage
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 //Initialize PdfPen to draw the polygon
@@ -141,15 +155,18 @@ PointF[] points = { p1, p2, p3, p4, p5 };
 //Draw the polygon on PDF document
 loadedPage.Graphics.DrawPolygon(pen, brush, points);
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the PDF document
+loadedDocument.Save("Output.pdf");
 //Close the instance of PdfLoadedDocument
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -177,6 +194,10 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Load an existing PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -215,6 +236,10 @@ You can draw a line in PDF document by using the [DrawLine](https://help.syncfus
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-line-in-new-PDF-document/.NET/Draw-a-line-in-new-PDF-document/Program.cs" %}	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Add a page to the document
@@ -228,15 +253,18 @@ PointF point2 = new PointF(10, 100);
 //Draw the line on PDF document
 page.Graphics.DrawLine(pen, point1, point2);
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the PDF document
+document.Save("Output.pdf");
 //Close the instance of PdfDocument
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -258,6 +286,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument
@@ -288,12 +320,15 @@ The following code snippet explains how to draw a line in an existing PDF docume
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-line-in-an-existing-PDF-document/.NET/Draw-a-line-in-an-existing-PDF-document/Program.cs" %}
 
-//Load the PDF document as stream
-FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
+//Load an existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the page into PdfLoadedPage
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
-
 //Initialize pen to draw the line
 PdfPen pen = new PdfPen(PdfBrushes.Black, 5f);
 //Create the line points
@@ -302,15 +337,19 @@ PointF point2 = new PointF(10, 100);
 //Draw the line on PDF document
 loadedPage.Graphics.DrawLine(pen, point1, point2);
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the PDF document
+loadedDocument.Save("Output.pdf");
 //Close the instance of PdfLoadedDocument
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -332,6 +371,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Load an existing PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -365,6 +409,10 @@ You can draw a curve in PDF document by using the [Draw](https://help.syncfusion
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-curve-in-new-PDF-document/.NET/Draw-a-curve-in-new-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Add a page to the document
@@ -377,15 +425,18 @@ PdfBezierCurve bezier = new PdfBezierCurve(new PointF(0, 0), new PointF(100, 50)
 //Draw the bezier curve on PDF document
 bezier.Draw(graphics, new PointF(10, 10));
 
-//Save the PDF document to MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the PDF document
+document.Save("Output.pdf");
 //Close the instance of PdfDocument
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -407,6 +458,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument
@@ -437,28 +492,36 @@ The following code snippet explains how to draw a curve in an existing PDF docum
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-curve-in-an-existing-PDF-document/.NET/Draw-a-curve-in-an-existing-PDF-document/Program.cs" %}	
 
-//Load the PDF document as stream
-FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
+//Load an existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the page into PdfLoadedPage
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
 //Get the graphics of PdfLoadedPage
 PdfGraphics graphics = loadedPage.Graphics;
 //Create new instance of PdfBezierCurve
-PdfBezierCurve bezier = new PdfBezierCurve(new PointF(0, 0), new PointF(100, 50), new PointF(50, 50), new PointF(100, 100));
+PdfBezierCurve bezier = new PdfBezierCurve(new PointF(0, 0), new PointF(100, 50), new PointF(50, 50), new PointF(100, 100));          
 //Draw the bezier curve on PDF document
 bezier.Draw(graphics, new PointF(10, 10));
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the PDF document
+loadedDocument.Save("Output.pdf");
 //Close the instance of PdfLoadedDocument
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -480,6 +543,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Load an existing PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -512,6 +580,10 @@ You can draw a path in PDF document by using the [DrawPath](https://help.syncfus
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-path-in-a-new-PDF-document/.NET/Draw-path-in-a-new-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Add a page to the document
@@ -527,15 +599,18 @@ path.AddLine(new PointF(100, 200), new PointF(10, 100));
 //Draw the PDF path on page
 page.Graphics.DrawPath(PdfPens.Black, path);
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the PDF document
+document.Save("Output.pdf");
 //Close the instance of PdfDocument
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -560,6 +635,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument
@@ -593,9 +672,13 @@ The following code snippet explains how to draw path in an existing PDF document
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-path-in-an-existing-PDF-document/.NET/Draw-path-in-an-existing-PDF-document/Program.cs" %}
 
-//Load the PDF document as stream
-FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
+//Load an existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the page into PdfLoadedPage
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -609,15 +692,19 @@ path.AddLine(new PointF(100, 200), new PointF(10, 100));
 //Draw the PDF path on page
 loadedPage.Graphics.DrawPath(PdfPens.Black, path);
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the PDF document
+loadedDocument.Save("Output.pdf");
 //Close the instance of PdfLoadedDocument
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -642,6 +729,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Load an existing PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -681,6 +773,10 @@ You can draw a rectangle in PDF document by using the [DrawRectangle](https://he
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-rectangle-in-a-new-PDF-document/.NET/Draw-a-rectangle-in-a-new-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Add a page to the document
@@ -693,15 +789,18 @@ RectangleF bounds = new RectangleF(10, 10, 100, 50);
 //Draw the rectangle on PDF document
 page.Graphics.DrawRectangle(brush, bounds);
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the PDF document
+document.Save("Output.pdf");
 //Close the instance of PdfDocument
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -723,6 +822,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument
@@ -753,12 +856,16 @@ The following code snippet explains how to draw a rectangle in an existing PDF d
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-rectangle-in-an-existing-PDF-document/.NET/Draw-a-rectangle-in-an-existing-PDF-document/Program.cs" %}
 
-//Load the PDF document as stream
-FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
+//Load an existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the page into PdfLoadedPage
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+
 //Initialize PdfSolidBrush for drawing the rectangle
 PdfSolidBrush brush = new PdfSolidBrush(Color.Green);
 //Set the bounds for rectangle
@@ -766,15 +873,19 @@ RectangleF bounds = new RectangleF(10, 10, 100, 50);
 //Draw the rectangle on PDF document
 loadedPage.Graphics.DrawRectangle(brush, bounds);
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the PDF document
+loadedDocument.Save("Output.pdf");
 //Close the instance of PdfLoadedDocument
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -796,6 +907,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Load an existing PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -828,6 +944,10 @@ You can draw a pie in PDF document by using the [DrawPie](https://help.syncfusio
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-pie-in-new-PDF-document/.NET/Draw-a-pie-in-new-PDF-document/Program.cs" %}	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Add a page to the document
@@ -842,15 +962,18 @@ RectangleF rectangle = new RectangleF(10, 50, 200, 200);
 //Draw the pie on PDF document
 page.Graphics.DrawPie(pen, PdfBrushes.Green, rectangle, 180, 60);
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the PDF document
+document.Save("Output.pdf");
 //Close the instance of PdfDocument
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -874,6 +997,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument
@@ -906,9 +1033,13 @@ The following code snippet explains how to draw a pie in an existing PDF documen
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-pie-in-an-existing-PDF-document/.NET/Draw-a-pie-in-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document as stream
-FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the page into PdfLoadedPage
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -921,15 +1052,19 @@ RectangleF rectangle = new RectangleF(10, 50, 200, 200);
 //Draw the pie on PDF document
 loadedPage.Graphics.DrawPie(pen, PdfBrushes.Green, rectangle, 180, 60);
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the instance of PdfLoadedDocument
-loadedDocument.Close(true);
+//Save the PDF document
+document.Save("Output.pdf");
+//Close the instance of PdfDocument
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -953,6 +1088,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Load an existing PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -987,6 +1127,10 @@ You can draw an arc in PDF document by using the [DrawArc](https://help.syncfusi
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-an-arc-in-new-PDF-document/.NET/Draw-an-arc-in-new-PDF-document/Program.cs" %}	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Add a page to the document
@@ -1000,15 +1144,18 @@ RectangleF bounds = new RectangleF(20, 40, 200, 200);
 //Draw the arc on PDF document
 page.Graphics.DrawArc(pen, bounds, 270, 90);
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the PDF document
+document.Save("Output.pdf");
 //Close the instance of PdfDocument
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1032,6 +1179,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument
@@ -1064,9 +1215,13 @@ The following code snippet explains how to draw an arc in an existing PDF docume
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-an-arc-in-an-existing-PDF-document/.NET/Draw-an-arc-in-an-existing-PDF-document/Program.cs" %}	
 
-//Load the PDF document as stream
-FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
+//Load an existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the page into PdfLoadedPage
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -1079,15 +1234,19 @@ RectangleF bounds = new RectangleF(20, 40, 200, 200);
 //Draw the arc on PDF document
 loadedPage.Graphics.DrawArc(pen, bounds, 270, 90);
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the PDF document
+loadedDocument.Save("Output.pdf");
 //Close the instance of PdfLoadedDocument
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -1111,6 +1270,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Load an existing PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -1145,6 +1309,10 @@ You can draw a bezier in PDF document by using the [DrawBezier](https://help.syn
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-bazier-in-new-PDF-document/.NET/Draw-a-bazier-in-new-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Add a page to the document
@@ -1155,15 +1323,18 @@ PdfPen pen = new PdfPen(PdfBrushes.Brown, 1f);
 //Draw the bezier on PDF document
 page.Graphics.DrawBezier(pen, new PointF(10, 10), new PointF(10, 50), new PointF(50, 80), new PointF(80, 10));
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the PDF document
+document.Save("Output.pdf");   
 //Close the instance of PdfDocument
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1183,6 +1354,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument
@@ -1211,9 +1386,13 @@ The following code snippet explains how to draw a bezier in an existing PDF docu
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-bazier-in-an-existing-PDF-document/.NET/Draw-a-bazier-in-an-existing-PDF-document/Program.cs" %}
 
-//Load the PDF document as stream
-FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the page into PdfLoadedPage
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -1222,15 +1401,19 @@ PdfPen pen = new PdfPen(PdfBrushes.Brown, 1f);
 //Draw the bezier on PDF document
 loadedPage.Graphics.DrawBezier(pen, new PointF(10, 10), new PointF(10, 50), new PointF(50, 80), new PointF(80, 10));
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the PDF document
+loadedDocument.Save("Output.pdf");
 //Close the instance of PdfLoadedDocument
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -1250,6 +1433,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Load an existing PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -1280,6 +1468,10 @@ You can draw an ellipse in PDF document by using the [DrawEllipse](https://help.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-an-ellipse-in-new-PDF-document/.NET/Draw-an-ellipse-in-new-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Add a page to the document
@@ -1290,15 +1482,18 @@ PdfSolidBrush brush = new PdfSolidBrush(Color.Red);
 //Draw ellipse on the page
 page.Graphics.DrawEllipse(brush, new RectangleF(10, 10, 200, 100));
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the PDF document
+document.Save("Output.pdf");
 //Close the instance of PdfDocument
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1318,6 +1513,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument
@@ -1346,9 +1545,13 @@ The following code snippet explains how to draw an ellipse in an existing PDF do
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-an-ellipse-in-an-existing-PDF-document/.NET/Draw-an-ellipse-in-an-existing-PDF-document/Program.cs" %}
 
-//Load the PDF document as stream
-FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
+//Load an existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the page into PdfLoadedPage
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -1357,15 +1560,19 @@ PdfSolidBrush brush = new PdfSolidBrush(Color.Red);
 //Draw ellipse on the page
 loadedPage.Graphics.DrawEllipse(brush, new RectangleF(10, 10, 200, 100));
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the PDF document
+loadedDocument.Save("Output.pdf");
 //Close the instance of PdfLoadedDocument
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -1385,6 +1592,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Load an existing PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -1415,6 +1627,10 @@ You can also allow large shapes to paginate across pages by assigning ```Paginat
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-large-shapes-across-multiple-pages/.NET/Draw-large-shapes-across-multiple-pages/Program.cs" %}	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create Document
 PdfDocument doc = new PdfDocument();
 //Add new page
@@ -1432,15 +1648,17 @@ ellipse.Brush = PdfBrushes.Brown;
 //Draw ellipse.
 ellipse.Draw(page, 20, 20, format);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
-//Closes the document
+//Save and close the PDF document
+doc.Save("Shapes.pdf");
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create Document
 PdfDocument doc = new PdfDocument();
@@ -1466,6 +1684,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create Document
 Dim doc As New PdfDocument()
@@ -1504,6 +1726,10 @@ The following code example demonstrates applying a dash pattern to a line shape.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Dash-pattern-in-shapes/.NET/Dash-pattern-in-shapes/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 // Create a new PDF document
 PdfDocument document = new PdfDocument();
 // Add a page to the document
@@ -1523,18 +1749,19 @@ dashPen.DashPattern = dashPattern;
 
 // Draw a line with the custom dash pattern
 graphics.DrawLine(dashPen, new Syncfusion.Drawing.PointF(10, 10), new PointF(300, 10));
-//Create file stream.
-using (FileStream outputFileStream = new FileStream("Output/Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-{
-    //Save the PDF document to file stream.
-    document.Save(outputFileStream);
-}
+
+//Save the PDF document to file stream.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 // Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1564,6 +1791,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 ' Create a new PDF document
 Dim document As New PdfDocument()

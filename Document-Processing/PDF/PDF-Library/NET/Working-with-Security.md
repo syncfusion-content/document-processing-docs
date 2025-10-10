@@ -26,6 +26,11 @@ User password: Prevents people from opening or viewing a PDF document. Once the 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Encrypt-PDF-with-RC4-using-user-password/.NET/Encrypt-PDF-with-RC4-using-user-password/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -46,15 +51,18 @@ security.UserPassword = "password";
 //Draw the text.
 graphics.DrawString("Encrypted with RC4 128bit", font, brush, new PointF(0, 40));
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Close the document.
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -83,6 +91,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Security
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -124,6 +137,11 @@ Owner password: Sets PDF document restrictions, which can include printing, cont
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Encrypt-PDF-with-RC4-using-owner-password/.NET/Encrypt-PDF-with-RC4-using-owner-password/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -147,15 +165,18 @@ security.UserPassword = "password";
 //Draw the text.
 graphics.DrawString("This document is protected with owner password", font, brush, new PointF(0, 40));
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Close the document.
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -187,6 +208,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Security
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -229,6 +255,11 @@ You can encrypt PDF document by specifying the [Algorithm](https://help.syncfusi
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Encrypt-PDF-with-AES-using-user-password/.NET/Encrypt-PDF-with-AES-using-user-password/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -249,15 +280,18 @@ security.UserPassword = "password";
 //Draw the text.
 graphics.DrawString("Encrypted with AES 256bit", font, brush, new PointF(0, 40));
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Close the document.
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -286,6 +320,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Security
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -323,6 +362,11 @@ You can protect the PDF document from printing, editing, copying with the [Owner
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Encrypt-PDF-with-AES-using-owner-password/.NET/Encrypt-PDF-with-AES-using-owner-password/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -346,15 +390,18 @@ security.UserPassword = "password";
 //Draw the text.
 graphics.DrawString("This document is protected with owner password", font, brush, new PointF(0, 40));
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Close the document.
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -386,6 +433,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Security
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -432,6 +484,11 @@ Refer to the following code example for further details.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Secure_data%20_with%20_AES_GCM/.NET/Secure_data%20_with%20_AES_GCM/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+
 //Create a new PDF document. 
 PdfDocument document = new PdfDocument(); 
 
@@ -461,16 +518,18 @@ security.Algorithm = PdfEncryptionAlgorithm.AESGCM;
 security.OwnerPassword = "ownerPassword"; 
 security.UserPassword = "userPassword"; 
 
-//Save the document into stream. 
-MemoryStream stream = new MemoryStream(); 
-document.Save(stream); 
-
-//Close the document. 
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
 
 //Create a new PDF document. 
 PdfDocument document = new PdfDocument(); 
@@ -509,6 +568,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Security
 
 ' Create a new PDF document 
 Dim document As PdfDocument = New PdfDocument() 
@@ -570,6 +634,11 @@ You can encrypt all the PDF content by specifying the [EncryptionOptions](https:
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Encrypt-all-contents-of-the-PDF-document/.NET/Encrypt-all-contents-of-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -592,15 +661,18 @@ security.UserPassword = "password";
 //Draw the text.
 graphics.DrawString("Encrypted with AES 256bit", font, brush, new PointF(0, 40));                        
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream(); 
-document.Save(stream); 
-//Close the document.
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -631,6 +703,11 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Security
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -676,6 +753,11 @@ N> Encrypt all contents except metadata  is only supported in AES algorithms wit
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Encrypt-all-contents-except-metadata-of-the-PDF/.NET/Encrypt-all-contents-except-metadata-of-the-PDF/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -698,15 +780,18 @@ security.UserPassword = "password";
 //Draw the text.
 graphics.DrawString("Encrypted all contents except metadata with AES 256bit", font, brush, new PointF(0, 40));                        
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream(); 
-document.Save(stream);
-//Close the document.
-document.Close(true);
+//Save and close the document.
+document.Save("Output.pdf");
+document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -737,6 +822,11 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Security
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -782,6 +872,11 @@ N> [UserPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Encrypt-only-attachment-in-the-PDF-document/.NET/Encrypt-only-attachment-in-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -812,15 +907,18 @@ attachment.MimeType = "application/txt";
 //Add the attachment to the document.
 document.Attachments.Add(attachment);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream(); 
-document.Save(stream); 
-//Close the document.
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Security;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -859,6 +957,11 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Security
 
 'Create a new PDF document.      
 Dim document As New PdfDocument()
@@ -908,61 +1011,64 @@ The following code example demonstrates how to decrypt a PDF document and restor
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Decrypting-encrypted-PDF-document/.NET/Decrypting-encrypted-PDF-document/Program.cs" %}
 
-using (FileStream inputStream = new FileStream(@"Data/Input.pdf", FileMode.Open, FileAccess.Read))
-{
-    // Load the encrypted PDF document from the input stream
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream, "syncfusion");
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
-    // Set the document permissions to default (removes any restrictions)
-    loadedDocument.Security.Permissions = PdfPermissionsFlags.Default;
+  // Load the encrypted PDF document from the input stream
+  PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "syncfusion");
 
-    // Clear the owner and user passwords to decrypt the document
-    loadedDocument.Security.OwnerPassword = string.Empty;
-    loadedDocument.Security.UserPassword = string.Empty;
+  // Set the document permissions to default (removes any restrictions)
+  loadedDocument.Security.Permissions = PdfPermissionsFlags.Default;
 
-    using (FileStream outputStream = new FileStream(@"Output/Output.pdf", FileMode.Create, FileAccess.Write))
-    {
-        // Save the decrypted PDF document to the output stream
-        loadedDocument.Save(outputStream);
-    }
-    // Close the loaded PDF document and release resources
-    loadedDocument.Close(true);
-}
+  // Clear the owner and user passwords to decrypt the document
+  loadedDocument.Security.OwnerPassword = string.Empty;
+  loadedDocument.Security.UserPassword = string.Empty;
+
+  //Save and close the document.
+  loadedDocument.Save("Output.pdf");
+  loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using (FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read))
-{
-    // Load the encrypted PDF document from the input stream
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream, "syncfusion");
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
-    // Set the document permissions to default (removes any restrictions)
-    loadedDocument.Security.Permissions = PdfPermissionsFlags.Default;
+  // Load the encrypted PDF document from the input stream
+  PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "syncfusion");
 
-    // Clear the owner and user passwords to decrypt the document
-    loadedDocument.Security.OwnerPassword = string.Empty;
-    loadedDocument.Security.UserPassword = string.Empty;
+  // Set the document permissions to default (removes any restrictions)
+  loadedDocument.Security.Permissions = PdfPermissionsFlags.Default;
 
-    // Save the decrypted PDF document to the output stream
-    loadedDocument.Save("Output.pdf");
+  // Clear the owner and user passwords to decrypt the document
+  loadedDocument.Security.OwnerPassword = string.Empty;
+  loadedDocument.Security.UserPassword = string.Empty;
 
-    // Close the loaded PDF document and release resources
-    loadedDocument.Close(true);
-}
+  //Save and close the document.
+  loadedDocument.Save("Output.pdf");
+  loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Open the encrypted PDF document using FileStream
-Using inputStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
 
     ' Load the encrypted PDF document from the input stream with password
-    Dim loadedDocument As New PdfLoadedDocument(inputStream, "syncfusion")
+    Dim loadedDocument As New PdfLoadedDocument("Input.pdf", "syncfusion")
 
     ' Set the document permissions to default (removes any restrictions)
     loadedDocument.Security.Permissions = PdfPermissionsFlags.Default
@@ -977,13 +1083,11 @@ Using inputStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode
     ' Close the loaded PDF document and release resources
     loadedDocument.Close(True)
 
-End Using
-
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Security/Decrypting-encrypted-PDF-document/.NET).
 
 ## Opening an encrypt-only-attachment document
 
@@ -1001,11 +1105,11 @@ The following code example explains how to load an encrypt-only-attachment docum
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Load-an-encrypt-only-attachment-document/.NET/Load-an-encrypt-only-attachment-document/Program.cs" %}
 
-//Get the stream from an existing PDF document. 
-FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
-PdfLoadedDocument document = new PdfLoadedDocument(docStream, "password");
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf", "password");
 
 //Accessing the attachments.
 foreach (PdfAttachment attachment in document.Attachments)
@@ -1022,11 +1126,11 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Get the stream from an existing PDF document. 
-FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
-PdfLoadedDocument document = new PdfLoadedDocument(docStream, "password");
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf", "password");
 
 //Accessing the attachments.
 foreach (PdfAttachment attachment in document.Attachments)
@@ -1043,11 +1147,11 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Get the stream from an existing PDF document. 
-Dim docStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Interactive
 
 ' Load the PDF document.
-Dim document As New PdfLoadedDocument(docStream, "password")
+Dim document As New PdfLoadedDocument("Input.pdf", "password")
 
 ' Accessing the attachments.
 For Each attachment As PdfAttachment In document.Attachments
@@ -1073,11 +1177,11 @@ The following code example illustrates how to provide the password when accessin
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Set-user-password-when-accessing-the-attachment/.NET/Set-user-password-when-accessing-the-attachment/Program.cs" %}
 
-//Get stream from an existing PDF document.  
-FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 document.OnPdfPassword += Document_OnPdfPassword;
 
@@ -1104,11 +1208,11 @@ void Document_OnPdfPassword(object sender, OnPdfPasswordEventArgs args)
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Get stream from an existing PDF document.  
-FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 document.OnPdfPassword += Document_OnPdfPassword;
 
@@ -1135,11 +1239,11 @@ void Document_OnPdfPassword(object sender, OnPdfPasswordEventArgs args)
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Get stream from an existing PDF document.
-Dim docStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Interactive
 
 ' Load the PDF document.
-Dim document As New PdfLoadedDocument(docStream)
+Dim document As New PdfLoadedDocument("Input.pdf")
 
 ' Add the event handler for PDF password.
 AddHandler document.OnPdfPassword, AddressOf Document_OnPdfPassword
@@ -1175,9 +1279,11 @@ N> [UserPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Protect-attachments-in-existing-PDF-document/.NET/Protect-attachments-in-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
 //Load the PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read); 
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 //PDF document security.
 PdfSecurity security = document.Security; 
@@ -1189,15 +1295,17 @@ security.UserPassword = "password";
 //Specifies encryption option.
 security.EncryptionOptions = PdfEncryptionOptions.EncryptOnlyAttachments;
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream(); 
-document.Save(stream); 
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
 //Load the PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -1220,6 +1328,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
 
 'Load the PDF document.        
 Dim document As New PdfLoadedDocument("Input.pdf")
@@ -1253,9 +1364,11 @@ You can protect an existing PDF document with both [UserPassword](https://help.s
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Protect-an-existing-PDF-document/.NET/Protect-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
 //Load the PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 //PDF document security.
 PdfSecurity security = document.Security;
@@ -1266,15 +1379,16 @@ security.Algorithm = PdfEncryptionAlgorithm.AES;
 security.OwnerPassword = "ownerPassword256";
 security.UserPassword = "userPassword256";
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Close the document.
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
 //Load the PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -1296,6 +1410,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
 
 'Load an existing document.
 Dim document As New PdfLoadedDocument("Input.pdf")
@@ -1328,21 +1445,25 @@ You can change the [UserPassword](https://help.syncfusion.com/cr/document-proces
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Change-password-of-the-PDF-document/.NET/Change-password-of-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream, "password");
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "password");
 //Change the user password 
 loadedDocument.Security.UserPassword = "NewPassword";
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document
+//Save the password changed PDF document.
+loadedDocument.Save("Output.pdf");
+//Close the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
 //Load the password protected PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf","password");
@@ -1357,6 +1478,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
 
 'Load the password protected PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf", "password")
@@ -1429,21 +1553,24 @@ You can change the permission of the PDF document using the [Permissions](https:
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Change-the-permission-of-the-PDF-document/.NET/Change-the-permission-of-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream, "syncfusion");
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "syncfusion");
 //Change the permission
 loadedDocument.Security.Permissions = PdfPermissionsFlags.CopyContent | PdfPermissionsFlags.AssembleDocument;
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the PDF document
+//Save and Close the PDF document
+loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
 //Load the password protected PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "syncfusion");
@@ -1457,6 +1584,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
 
 'Load the password protected PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf", "syncfusion")
@@ -1481,21 +1611,24 @@ You can remove the [UserPassword](https://help.syncfusion.com/cr/document-proces
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Remove-password-from-user-password-PDF-document/.NET/Remove-password-from-user-password-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream, "password");
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "password");
 //Change the user password
 loadedDocument.Security.UserPassword = string.Empty;
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document
+//Save and Close the PDF document
+loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
 //Load the password protected PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf","password");
@@ -1510,6 +1643,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
 
 'Load the password protected PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf", "password")
@@ -1535,11 +1671,13 @@ You can determine whether the existing PDF document is password protected or not
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Determine-whether-the-PDF-is-protected-or-not/.NET/Determine-whether-the-PDF-is-protected-or-not/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 try
 {
   //Load the PDF document
-  FileStream docStream = new FileStream("Output.pdf", FileMode.Open, FileAccess.Read);
-  PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+  PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 }
 catch (PdfDocumentException exception)
 {
@@ -1552,6 +1690,9 @@ catch (PdfDocumentException exception)
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 try
 {
@@ -1569,6 +1710,9 @@ catch (PdfDocumentException exception)
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 Try
 	'Load the password protected PDF document without user password

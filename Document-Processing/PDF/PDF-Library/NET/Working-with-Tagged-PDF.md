@@ -28,6 +28,10 @@ The following code sample explains you how to add tag for the text element in PD
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Add-tag-for-the-text-element-in-PDF-document/.NET/Add-tag-for-the-text-element-in-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Creates new PDF document
 PdfDocument doc = new PdfDocument();
 //Set the document title
@@ -53,22 +57,17 @@ element.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
 //Draws text
 PdfLayoutResult result = element.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200));
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
-stream.Position = 0;
-//Closes the document
+//Save the document and dispose it
+doc.Save("Output.pdf");
 doc.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Creates new PDF document
 PdfDocument doc = new PdfDocument();
@@ -102,6 +101,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Creates new PDF document
 Dim doc As PdfDocument = New PdfDocument()
@@ -148,6 +151,10 @@ The following code explains how to add tag for image element in PDF document.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Add-tag-for-image-element-in-PDF-document/.NET/Add-tag-for-image-element-in-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Creates new PDF document
 PdfDocument doc = new PdfDocument();
 //Set the document title
@@ -172,22 +179,17 @@ bitmap.PdfTag = imageElement;
 //Draw image
 bitmap.Draw(page.Graphics, new PointF(50, 20));
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
-stream.Position = 0;
-//Closes the document
+//Save the document and dispose it
+doc.Save("Image.pdf");
 doc.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Image.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Creates new PDF document
 PdfDocument doc = new PdfDocument();
@@ -217,6 +219,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Creates new PDF document
 Dim doc As PdfDocument = New PdfDocument()
@@ -259,6 +265,10 @@ The following code explains how to add tag for shape element in the PDF document
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Adding-tag-to-shape-element-in-the-PDF-document/.NET/Adding-tag-to-shape-element-in-the-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Creates new PDF document
 PdfDocument doc = new PdfDocument();
 //Set the document title
@@ -284,22 +294,17 @@ line.PdfTag = element;
 //Draws the line
 line.Draw(page.Graphics);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
-stream.Position = 0;
-//Closes the document
+//Save the document and dispose it
+doc.Save("Output.pdf");
 doc.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Creates new PDF document
 PdfDocument doc = new PdfDocument();
@@ -330,6 +335,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Creates new PDF document
 Dim doc As PdfDocument = New PdfDocument()
@@ -373,6 +382,11 @@ The following code explains how to add tag for the form fields in PDF document.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Adding-tag-to-form-fields-in-the-PDF-document/.NET/Adding-tag-to-form-fields-in-the-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
 //Creates new PDF document
 PdfDocument doc = new PdfDocument();
 //Set document information 
@@ -395,22 +409,18 @@ textBoxField.ToolTip = "TextBox field";
 //Add the form field to the document.
 doc.Form.Fields.Add(textBoxField);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
-stream.Position = 0;
-//Closes the document
+//Save the document and dispose it
+doc.Save("Output.pdf");
 doc.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Creates new PDF document
 PdfDocument doc = new PdfDocument();
@@ -441,6 +451,11 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
 
 'Creates new PDF document
 Dim doc As PdfDocument = New PdfDocument()
@@ -484,6 +499,10 @@ The following code explains how to add tag for the annotations in PDF document.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Adding-tag-to-annotation-in-the-PDF-document/.NET/Adding-tag-to-annotation-in-the-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Creates new PDF document
 PdfDocument doc = new PdfDocument();
 //Set the document title
@@ -508,22 +527,17 @@ popupAnnotation.Icon = PdfPopupIcon.NewParagraph;
 //Adds this annotation to a new page
 page.Annotations.Add(popupAnnotation);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
-stream.Position = 0;
-//Closes the document
+//Save the document and dispose it
+doc.Save("Output.pdf");
 doc.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "PopupAnnotation.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Creates new PDF document
 PdfDocument doc = new PdfDocument();
@@ -557,6 +571,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Creates new PDF document
 Dim doc As PdfDocument = New PdfDocument()
@@ -603,6 +621,11 @@ The following code example shows how to add tag for hyperlink in PDF document
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Add-tag-for-hyperlink-in-the-PDF-document/.NET/Add-tag-for-hyperlink-in-the-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 document.DocumentInformation.Title = "Link";
@@ -630,23 +653,20 @@ textLink.Brush = PdfBrushes.Blue;
 //Draw the hyperlink in PDF page
 textLink.DrawTextWebLink(page, new PointF(10, 40));
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Closes the document
+//Save the document
+document.Save("Output.pdf");
+//Close the document
 document.Close(true);
 fontStream.Dispose();
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -684,6 +704,11 @@ fontStream.Dispose();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument()
@@ -733,6 +758,10 @@ The following code sample explains how to add tag support for the template eleme
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Add-tags-to-template-in-PDF-document/.NET/Add-tags-to-template-in-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Creates a new PDF document
 PdfDocument pdfDocument = new PdfDocument();
 pdfDocument.DocumentInformation.Title = "TemplateDocument";
@@ -760,22 +789,17 @@ template.Graphics.DrawRectangle(brush, new RectangleF(0, 30, 150, 90));
 //Draw the template on the page graphics of the document
 pdfPage.Graphics.DrawPdfTemplate(template, PointF.Empty);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-pdfDocument.Save(stream);
-stream.Position = 0;
-//Closes the document
+//Save the document and dispose it
+pdfDocument.Save("Output.pdf");
 pdfDocument.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Creates a new PDF document
 PdfDocument pdfDocument = new PdfDocument();
@@ -809,6 +833,10 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Creates a new PDF document
 Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -856,6 +884,11 @@ The following code snippet illustrates how to add tag for table element.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Add-tags-to-table-in-the-PDF-document/.NET/Add-tags-to-table-in-the-PDF-document/Program.cs" %} 
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Grid;
 
 //Creates a new PDF document
 PdfDocument pdfDocument = new PdfDocument();
@@ -906,22 +939,18 @@ pdfGridRow.Cells[2].PdfTag = new PdfStructureElement(PdfTagType.TableDataCell);
 //Draw the PdfGrid
 pdfGrid.Draw(pdfPage, PointF.Empty);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-pdfDocument.Save(stream);
-stream.Position = 0;
-//Closes the document
+//Save the document and dispose it
+pdfDocument.Save("Output.pdf");
 pdfDocument.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Grid;
 
 //Creates a new PDF document
 PdfDocument pdfDocument = new PdfDocument();
@@ -979,6 +1008,11 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
 
 'Creates a new PDF document
 Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -1049,6 +1083,10 @@ The following code example illustrates how to add tag support for list element.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Add-the-tag-to-list-element-in-PDF-document/.NET/Add-the-tag-to-list-element-in-PDF-document/Program.cs" %} 	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Sets document title
@@ -1092,22 +1130,17 @@ for (int i = 0; i < products.Length; i++)
 //Draw the list
 pdfList.Draw(page, new RectangleF(0, 20, size.Width, size.Height));
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Closes the document
+//Save and close the document
+document.Save("Output.pdf");
 document.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1157,6 +1190,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument()
@@ -1217,6 +1254,10 @@ You can apply tags to nested list elements using the [PdfStructureElement](https
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %} 
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 // Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1285,18 +1326,18 @@ mainList.Items[1].SubList = subList;
 // Draw the main list, which includes the nested sublist, on the PDF
 mainList.Draw(page, new RectangleF(0, 30, size.Width, size.Height));
 
-//Create file stream.
-using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-{
-    //Save the PDF document to file stream.
-    document.Save(outputFileStream);
-}
+//Save the PDF document
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 // Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1373,6 +1414,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 ' Create a new PDF document
 Dim document As New PdfDocument()
@@ -1465,10 +1510,14 @@ The following code sample demonstrates how to create a well-tagged PDF document.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Well-Tagged-PDF/.NET/Well-Tagged-PDF/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4);     
 
-//Set Pdf File version 2.0 
+//Set PDF File version 2.0 
 document.FileStructure.Version = PdfVersion.Version2_0; 
 
 //Set true to auto tag all elements in document 
@@ -1499,21 +1548,23 @@ textElement.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
 // Draw text element with tag 
 textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
 
-//Save the document into stream 
-MemoryStream stream = new MemoryStream(); 
-document.Save(stream); 
-stream.Position = 0; 
+//Save the document
+document.Save("Output.pdf"); 
 //Closes the document 
-document.Close(true); 
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4);     
 
-//Set Pdf File version 2.0 
+//Set PDF File version 2.0 
 document.FileStructure.Version = PdfVersion.Version2_0; 
 
 //Set true to auto tag all elements in document 
@@ -1553,10 +1604,14 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+
 'Creates new PDF document 
 Dim doc As PdfDocument = New PdfDocument(PdfConformanceLevel.Pdf_A4) 
 
-'Set Pdf File version 2.0 
+'Set PDF File version 2.0 
 doc.FileStructure.Version = PdfVersion.Version2_0 
 
 'Set true to auto tag all elements in document  
@@ -1608,10 +1663,14 @@ The following code sample demonstrates how to create a PDF with Universal Access
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/PDF-for-Universal-Accessibility/.NET/PDF-for-Universal-Accessibility/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document 
 PdfDocument document = new PdfDocument();     
 
-//Set Pdf File version 2.0 
+//Set PDF File version 2.0 
 document.FileStructure.Version = PdfVersion.Version2_0; 
 
 //Set true to auto tag all elements in document 
@@ -1640,21 +1699,23 @@ textElement.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
 // Draw text element with tag 
 textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
 
-//Save the document into stream 
-MemoryStream stream = new MemoryStream(); 
-document.Save(stream); 
-stream.Position = 0; 
+//Save the document
+document.Save("Output.pdf"); 
 //Closes the document 
-document.Close(true); 
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document 
 PdfDocument document = new PdfDocument();     
 
-//Set Pdf File version 2.0 
+//Set PDF File version 2.0 
 document.FileStructure.Version = PdfVersion.Version2_0; 
 
 //Set true to auto tag all elements in document 
@@ -1692,10 +1753,14 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+
 'Creates new PDF document 
 Dim doc As PdfDocument = New PdfDocument() 
 
-'Set Pdf File version 2.0 
+'Set PDF File version 2.0 
 doc.FileStructure.Version = PdfVersion.Version2_0  
 
 'Set true to auto tag all elements in document 
@@ -1745,6 +1810,10 @@ The following code explains how to add tag for header and footers in the PDF doc
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Add-tags-for-header-and-footer-in-the-PDF-document/.NET/Add-tags-for-header-and-footer-in-the-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Creates new PDF document
 PdfDocument pdfDocument = new PdfDocument();
 //Add a page to the PDF document
@@ -1786,22 +1855,17 @@ compositeField.Draw(footer.Graphics, new PointF(470, 40));
 //Add the footer template at the bottom
 pdfDocument.Template.Bottom = footer;
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-pdfDocument.Save(stream);
-stream.Position = 0;
-//Closes the document
+//Save the document and dispose it
+pdfDocument.Save("HeaderFooter.pdf");
 pdfDocument.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "HeaderFooter.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Creates new PDF document
 PdfDocument pdfDocument = new PdfDocument();
@@ -1849,6 +1913,10 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Creates new PDF document
 Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -1909,6 +1977,10 @@ The following code example illustrates how to order the tagged elements in a PDF
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Order-the-tagged-elements-in-a-PDF-document/.NET/Order-the-tagged-elements-in-a-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Sets document title
@@ -1951,22 +2023,17 @@ element2.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
 element2.PdfTag = paraStruct2;
 element2.Draw(page.Graphics, new PointF(0, 100));
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Closes the document
+//Save the document and dispose it
+document.Save("Output.pdf");
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2018,6 +2085,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument()
@@ -2083,6 +2154,10 @@ N> Enabling the auto-tag feature will never add alternate texts/descriptions for
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Auto-tag-the-elements-in-a-PDF-document/.NET/Auto-tag-the-elements-in-a-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Creates new PDF document
 PdfDocument document = new PdfDocument();
 //Set true to auto tag all elements in document
@@ -2106,22 +2181,17 @@ PdfTextElement element2 = new PdfTextElement("This is paragraph THREE.", new Pdf
 element2.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
 element2.Draw(page.Graphics, new PointF(0, 100));
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Closes the document
+//Save the document and dispose it
+document.Save("Output.pdf");
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "AutoTag.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Creates new PDF document
 PdfDocument document = new PdfDocument();
@@ -2153,6 +2223,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Creates new PDF document
 Dim document As PdfDocument = New PdfDocument()
@@ -2212,10 +2286,12 @@ The following code sample shows how to preserve document structured tags in the 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Converting-word-document-to-Tagged-PDF/.NET/Converting-word-document-to-Tagged-PDF/Program.cs" %} 
 
-//Open the file as Stream
-FileStream docStream = new FileStream(@"D:\Template.docx", FileMode.Open, FileAccess.Read);
+using Syncfusion.DocIO.DLS;
+using Syncfusion.DocIORenderer;
+using Syncfusion.Pdf;
+
 //Loads file stream into Word document
-WordDocument wordDocument = new WordDocument(docStream, Syncfusion.DocIO.FormatType.Automatic);
+WordDocument wordDocument = new WordDocument("Template.docx", Syncfusion.DocIO.FormatType.Automatic);
 
 //Instantiation of DocIORenderer for Word to PDF conversion
 DocIORenderer render = new DocIORenderer();
@@ -2225,18 +2301,19 @@ render.Settings.AutoTag = true;
 //Converts Word document into PDF document
 PdfDocument pdfDocument = render.ConvertToPDF(wordDocument);
 
-//Releases all resources used by the Word document and DocIO Renderer objects
-render.Dispose();
-wordDocument.Dispose();
-//Saves the PDF file
-MemoryStream outputStream = new MemoryStream();
-pdfDocument.Save(outputStream);
-//Closes the instance of PDF document object
-pdfDocument.Close();
+//Saves the PDF file to file system
+pdfDocument.Save("WordtoPDF.pdf");
+//Closes the instance of document objects
+pdfDocument.Close(true);
+wordDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.DocIO.DLS;
+using Syncfusion.DocIORenderer;
+using Syncfusion.Pdf;
 
 //Loads an existing Word document
 WordDocument wordDocument = new WordDocument("Sample.docx", FormatType.Docx);
@@ -2258,6 +2335,10 @@ wordDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.DocIO.DLS
+Imports Syncfusion.DocIORenderer
+Imports Syncfusion.Pdf
 
 'Loads an existing Word document
 Dim wordDocument As New WordDocument("Sample.docx", FormatType.Docx)
@@ -2304,6 +2385,10 @@ The following code sample demonstrates how to create custom role mapping documen
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Custom-Role-Mapping/.NET/Custom-Role-Mapping/Program.cs" %}
 
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf;
+using Syncfusion.Drawing;
+
 // Create a new PDF document 
 PdfDocument doc = new PdfDocument(); 
 
@@ -2344,16 +2429,18 @@ element.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
 // Draw text on the page 
 PdfLayoutResult result = element.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
 
-// Save the document into a memory stream (Cross-platform compatibility) 
-MemoryStream stream = new MemoryStream(); 
-doc.Save(stream); 
-stream.Position = 0; // Reset stream position for further processing if needed 
+// Save the document 
+doc.Save("Output.pdf"); 
 // Close the document to release resources 
 doc.Close(true); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf;
+using System.Drawing;
 
 // Create a new PDF document 
 PdfDocument doc = new PdfDocument(); 
@@ -2404,6 +2491,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 ' Create a new PDF document 
 Dim doc As New PdfDocument() 
@@ -2464,10 +2555,13 @@ You can extract the existing tag details by using the [StructureElement](https:/
 
 {% highlight c# tabtitle="C# [Cross-platform]" %} 	
 
-//Get the stream from the document.
-FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using System.Drawing;
+
 //Load the existing PDF document.
-PdfLoadedDocument document = new PdfLoadedDocument(documentStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Get the structure element root from the document.
 PdfStructureElement rootElement = document.StructureElement;
 //Get the child elements for the element.
@@ -2492,6 +2586,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using System.Drawing;
 
 //Load the existing PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -2521,6 +2620,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document.
 Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -2557,10 +2661,13 @@ You can also extract the accessibility tags page-wise with the help of the [Stru
 
 {% highlight c# tabtitle="C# [Cross-platform]" %} 
 
-//Get the stream from the document.
-FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using System.Drawing;
+
 //Load the existing PDF document.
-PdfLoadedDocument document = new PdfLoadedDocument(documentStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Get the first page from the document.
 PdfLoadedPage loadedPage = document.Pages[0] as PdfLoadedPage;
 //Get the structure elements associated with the page.
@@ -2589,6 +2696,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using System.Drawing;
 
 //Load the existing PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -2621,6 +2733,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document.
 Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")

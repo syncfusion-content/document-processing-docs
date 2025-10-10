@@ -24,6 +24,8 @@ The following code example explains how to add a new page using [PdfXfaPage](htt
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-a-new-page-in-a-PDF-XFA-document/.NET/Add-a-new-page-in-a-PDF-XFA-document/Program.cs" %} 
 
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add a new XFA page.
@@ -38,15 +40,15 @@ mainForm.Fields.Add(textElement);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Save the PDF document to stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream, PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf", PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -70,6 +72,8 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Xfa
 
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
@@ -110,6 +114,10 @@ The below sample illustrates how to create a new PDF document with XFA page size
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Create-a-new-PDF-document-with-XFA-page-size/.NET/Create-a-new-PDF-document-with-XFA-page-size/Program.cs" %} 
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Set the page size.
@@ -128,15 +136,18 @@ mainForm.Fields.Add(textElement);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Save the PDF document to stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream, PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -164,6 +175,10 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Xfa
 
 'Create a new PDF XFA document.
 Dim document As New PdfXfaDocument()
@@ -200,6 +215,10 @@ You can create a custom page size to the PDF document by using following code sn
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Create-a-custom-page-size-to-the-PDF-document/.NET/Create-a-custom-page-size-to-the-PDF-document/Program.cs" %} 	
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Set the page size.
@@ -218,15 +237,18 @@ mainForm.Fields.Add(textElement);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Save the PDF document to stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream, PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -254,6 +276,10 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Xfa
 
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
@@ -290,6 +316,10 @@ You can change page orientation from portrait to landscape by using [PdfXfaPageO
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Change-page-orientation-from-portrait-to-landscape-in-PDF/.NET/Change-page-orientation-from-portrait-to-landscape-in-PDF/Program.cs" %} 	
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Set the page size.
@@ -310,15 +340,18 @@ mainForm.Fields.Add(textElement);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Save the PDF document to stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream, PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -348,6 +381,10 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Xfa
 
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
@@ -388,6 +425,10 @@ To create a dynamic XFA forms using [PdfXfaType](https://help.syncfusion.com/cr/
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Create-a-dynamic-XFA-forms-in-a-PDF-document/.NET/Create-a-dynamic-XFA-forms-in-a-PDF-document/Program.cs" %} 
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Set the page size.
@@ -406,15 +447,18 @@ mainForm.Fields.Add(textElement);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Save the PDF document to stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream, PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -442,6 +486,10 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Xfa
 
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
@@ -480,6 +528,10 @@ To create a static XFA forms using [PdfXfaType](https://help.syncfusion.com/cr/d
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Create-a-static-XFA-forms-in-a-PDF-document/.NET/Create-a-static-XFA-forms-in-a-PDF-document/Program.cs" %} 
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Set the page size.
@@ -498,15 +550,18 @@ mainForm.Fields.Add(textElement);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Save the PDF document to stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream, PdfXfaType.Static);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -534,6 +589,10 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Xfa
 
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
@@ -574,6 +633,9 @@ The below code snippet illustrates how to add a textbox field to a new PDF docum
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-a-textbox-field-to-a-new-PDF-document/.NET/Add-a-textbox-field-to-a-new-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add a new XFA page.
@@ -592,15 +654,17 @@ mainForm.Fields.Add(textBoxField);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Save the PDF document to stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream, PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();   
@@ -628,6 +692,9 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Create a new PDF XFA document.
 Dim document As New PdfXfaDocument()
@@ -664,10 +731,11 @@ The below code snippet illustrates how to add a textbox field to an existing PDF
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-a-textbox-field-to-an-existing-PDF-document/.NET/Add-a-textbox-field-to-an-existing-PDF-document/Program.cs" %} 
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -680,16 +748,17 @@ textBoxField.ToolTip = "First Name";
 //Add the field to the existing XFA form.
 loadedForm.Fields.Add(textBoxField);
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
 //Save the document.
-loadedDocument.Save(stream);
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing XFA document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm.pdf");
@@ -713,6 +782,9 @@ loadedDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Load the existing XFA document.
 Dim loadedDocument As New PdfLoadedXfaDocument("XfaForm.pdf")
@@ -747,6 +819,9 @@ The below code snippet illustrates how to add a numeric field to a new PDF docum
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-a-XFA-numeric-field-to-a-new-PDF-document/.NET/Add-a-XFA-numeric-field-to-a-new-PDF-document/Program.cs" %} 	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add a new XFA page.
@@ -763,15 +838,17 @@ mainForm.Fields.Add(numericField);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Save the PDF document to stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream, PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -797,6 +874,9 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.
 
 'Create a new PDF XFA document.
 Dim document As New PdfXfaDocument()
@@ -831,10 +911,11 @@ The below code snippet illustrates how to add the numeric field to an existing P
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-numeric-field-to-an-existing-PDF-document/.NET/Add-the-XFA-numeric-field-to-an-existing-PDF-document/Program.cs" %} 
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -845,16 +926,17 @@ numericField.Caption.Text = "Numeric Field";
 //Add the field to the existing XFA form.
 loadedForm.Fields.Add(numericField);
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
 //Save the document.
-loadedDocument.Save(stream);
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing XFA document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm.pdf");
@@ -876,6 +958,9 @@ loadedDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Load the existing XFA document
 Dim loadedDocument As New PdfLoadedXfaDocument("XfaForm.pdf")
@@ -908,6 +993,9 @@ The below code snippet illustrates how to add a combo box field to a new PDF doc
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-a-combobox-field-to-a-new-PDF-document/.NET/Add-a-combobox-field-to-a-new-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add a new XFA page.
@@ -929,16 +1017,17 @@ mainForm.Fields.Add(comboBoxField);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
 //Save the document.
-document.Save(stream, PdfXfaType.Dynamic);
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();   
@@ -968,6 +1057,9 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Create a new PDF XFA document
 Dim document As PdfXfaDocument = New PdfXfaDocument()
@@ -1006,10 +1098,11 @@ The below code snippet illustrates how to add the combo box field to an existing
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-combobox-field-to-an-existing-PDF-document/.NET/Add-the-combobox-field-to-an-existing-PDF-document/Program.cs" %} 	
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -1024,16 +1117,17 @@ comboBoxField.Items.Add("Documentation.");
 //Add the field to the existing XFA form.
 loadedForm.Fields.Add(comboBoxField);
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
 //Save the document.
-loadedDocument.Save(stream);
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing XFA document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm.pdf");
@@ -1059,6 +1153,9 @@ loadedDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Load the existing XFA document
 Dim loadedDocument As New PdfLoadedXfaDocument("XfaForm.pdf")
@@ -1095,6 +1192,9 @@ The below code snippet illustrates how to add a list box field to a new PDF docu
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-listbox-field-to-a-new-PDF-document/.NET/Add-the-XFA-listbox-field-to-a-new-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add a new XFA page.
@@ -1117,16 +1217,17 @@ mainForm.Fields.Add(listBoxField);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
 //Save the document.
-document.Save(stream, PdfXfaType.Dynamic);
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -1159,6 +1260,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -1198,10 +1301,11 @@ The below code snippet illustrates how to add the list box field to an existing 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-listbox-field-to-an-existing-PDF-document/.NET/Add-the-XFA-listbox-field-to-an-existing-PDF-document/Program.cs" %} 	
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -1218,16 +1322,17 @@ listBoxField.Items.Add("German");
 //Add the field to the existing XFA form.
 loadedForm.Fields.Add(listBoxField);
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
 //Save the document.
-loadedDocument.Save(stream);
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing XFA document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm.pdf");
@@ -1255,6 +1360,9 @@ loadedDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Load the existing XFA document
 Dim loadedDocument As New PdfLoadedXfaDocument("XfaForm.pdf")
@@ -1293,6 +1401,9 @@ The below code snippet illustrates how to add a check box field to a new PDF doc
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-checkbox-field-to-a-new-PDF-document/.NET/Add-the-XFA-checkbox-field-to-a-new-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add a new XFA page.
@@ -1310,16 +1421,17 @@ mainForm.Fields.Add(checkBoxField);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
 //Save the document.
-document.Save(stream, PdfXfaType.Dynamic);
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -1347,6 +1459,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -1381,10 +1495,11 @@ The below code snippet illustrates how to add the check box field to an existing
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-checkbox-field-to-an-existing-PDF-document/.NET/Add-the-XFA-checkbox-field-to-an-existing-PDF-document/Program.cs" %} 	
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -1396,16 +1511,17 @@ checkBoxField.CheckedStyle = PdfXfaCheckedStyle.Cross;
 //Add the field to the existing XFA form.
 loadedForm.Fields.Add(checkBoxField);
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
 //Save the document.
-loadedDocument.Save(stream);
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing XFA document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm.pdf");
@@ -1428,6 +1544,9 @@ loadedDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Load the existing XFA document
 Dim loadedDocument As New PdfLoadedXfaDocument("XfaForm.pdf")
@@ -1461,6 +1580,9 @@ The below code snippet illustrates how to add a radio button field to a new PDF 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-radio-button-field-to-a-new-PDF-document/.NET/Add-the-XFA-radio-button-field-to-a-new-PDF-document/Program.cs" %} 	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add a new XFA page.
@@ -1486,16 +1608,17 @@ mainForm.Fields.Add(group);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
 //Save the document.
-document.Save(stream, PdfXfaType.Dynamic);
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -1531,6 +1654,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -1573,10 +1698,11 @@ The below code snippet illustrates how to add the radio button field to an exist
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-radio-button-field-to-an-existing-PDF-document/.NET/Add-the-XFA-radio-button-field-to-an-existing-PDF-document/Program.cs" %} 
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -1596,16 +1722,17 @@ group.Items.Add(radioButtonField2);
 //Add the field to the existing XFA form.
 loadedForm.Fields.Add(group);
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %} 
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing XFA document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm.pdf");
@@ -1636,6 +1763,9 @@ loadedDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Load the existing XFA document
 Dim loadedDocument As New PdfLoadedXfaDocument("XfaForm.pdf")
@@ -1677,6 +1807,9 @@ The below code snippet illustrates how to add a date time field to a new PDF doc
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-datetime-field-in-a-new-PDF-document/.NET/Add-the-XFA-datetime-field-in-a-new-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add a new XFA page.
@@ -1695,16 +1828,16 @@ mainForm.Fields.Add(dateTimeField);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream, PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();   
@@ -1733,6 +1866,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -1768,10 +1903,11 @@ The below code snippet illustrates how to add the date time field to an existing
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-datetime-field-in-an-existing-PDF-document/.NET/Add-the-XFA-datetime-field-in-an-existing-PDF-document/Program.cs" %} 
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -1784,16 +1920,17 @@ dateTimeField.ToolTip = "Date Time";
 //Add the field to the existing XFA form.
 loadedForm.Fields.Add(dateTimeField);
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing XFA document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm.pdf");
@@ -1817,6 +1954,9 @@ loadedDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Load the existing XFA document
 Dim loadedDocument As New PdfLoadedXfaDocument("XfaForm.pdf")
@@ -1851,6 +1991,9 @@ The below code snippet illustrates how to add a button field to a new PDF docume
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-button-field-to-a-new-PDF-document/.NET/Add-the-XFA-button-field-to-a-new-PDF-document/Program.cs" %} 	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add a new XFA page.
@@ -1867,16 +2010,16 @@ mainForm.Fields.Add(buttonField);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream, PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();   
@@ -1903,6 +2046,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -1936,10 +2081,11 @@ The below code snippet illustrates how to add the button field to an existing PD
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-button-field-to-an-existing-PDF-document/.NET/Add-the-XFA-button-field-to-an-existing-PDF-document/Program.cs" %} 
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -1950,16 +2096,17 @@ buttonField.Content = "Click";
 //Add the field to the existing XFA form.
 loadedForm.Fields.Add(buttonField);
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing XFA document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm.pdf");
@@ -1981,6 +2128,9 @@ loadedDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Load the existing XFA document
 Dim loadedDocument As New PdfLoadedXfaDocument("XfaForm.pdf")
@@ -2013,6 +2163,9 @@ The below code snippet illustrates how to add a text element to a new PDF docume
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-text-element-to-a-new-PDF-document/.NET/Add-the-XFA-text-element-to-a-new-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add a new XFA page.
@@ -2029,16 +2182,17 @@ mainForm.Fields.Add(textElement);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream,PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();   
@@ -2065,6 +2219,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -2098,10 +2254,11 @@ The below code snippet illustrates how to add a text element to an existing PDF 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-text-element-to-an-existing-PDF-document/.NET/Add-the-XFA-text-element-to-an-existing-PDF-document/Program.cs" %} 
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -2112,16 +2269,17 @@ textElement.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 14, PdfFontStyle
 //Add the text element to the existing XFA form.
 loadedForm.Fields.Add(textElement);
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing XFA document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm.pdf");
@@ -2143,6 +2301,9 @@ loadedDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Load the existing XFA document
 Dim loadedDocument As New PdfLoadedXfaDocument("XfaForm.pdf")
@@ -2175,6 +2336,9 @@ The below code snippet illustrates how to add the rectangle field to a new PDF d
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-rectangle-field-to-a-new-PDF-document/.NET/Add-the-XFA-rectangle-field-to-a-new-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add a new XFA page.
@@ -2191,16 +2355,16 @@ mainForm.Fields.Add(rectangle);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream, PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();   
@@ -2227,6 +2391,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -2260,10 +2426,11 @@ The below code snippet illustrates how to add the rectangle field to an existing
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-rectangle-field-to-an-existing-PDF-document/.NET/Add-the-XFA-rectangle-field-to-an-existing-PDF-document/Program.cs" %} 
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -2274,16 +2441,17 @@ rectangle.Border.FillColor = new PdfXfaSolidBrush(Color.FromArgb(0,255,0,0));
 //Add the rectangle to the existing XFA form.
 loadedForm.Fields.Add(rectangle);
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing XFA document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm.pdf");
@@ -2305,6 +2473,9 @@ loadedDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Load the existing XFA document
 Dim loadedDocument As New PdfLoadedXfaDocument("XfaForm.pdf")
@@ -2337,6 +2508,9 @@ The below code snippet illustrates how to add the circle field to a new PDF docu
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-circle-field-to-a-new-PDF-document/.NET/Add-the-XFA-circle-field-to-a-new-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add a new XFA page.
@@ -2353,16 +2527,16 @@ mainForm.Fields.Add(circle);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream, PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();   
@@ -2389,6 +2563,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -2422,10 +2598,11 @@ The below code snippet illustrates how to add the circle field to an existing PD
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-circle-field-to-an-existing-PDF-document/.NET/Add-circle-field-to-an-existing-PDF-document/Program.cs" %} 	
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -2436,16 +2613,17 @@ circle.Border.FillColor = new PdfXfaSolidBrush(Color.FromArgb(0,255,0,0));
 //Add the circle to the existing XFA form.
 loadedForm.Fields.Add(circle);
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing XFA document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm.pdf");
@@ -2467,6 +2645,9 @@ loadedDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Load the existing XFA document
 Dim loadedDocument As New PdfLoadedXfaDocument("XfaForm.pdf")
@@ -2499,6 +2680,9 @@ The below code snippet illustrates how to add a line to a new PDF document using
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-line-to-a-new-PDF-document/.NET/Add-the-XFA-line-to-a-new-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add a new XFA page.
@@ -2515,16 +2699,16 @@ mainForm.Fields.Add(line);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream, PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();   
@@ -2551,6 +2735,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -2584,10 +2770,11 @@ The below code snippet illustrates how to add a line to an existing PDF document
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-XFA-line-to-an-existing-PDF-document/.NET/Add-XFA-line-to-an-existing-PDF-document/Program.cs" %} 	
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -2598,16 +2785,17 @@ line.Color = new PdfColor(Color.FromArgb(0,255,0,0));
 //Add the line to the existing XFA form.
 loadedForm.Fields.Add(line);
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing XFA document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm.pdf");
@@ -2629,6 +2817,9 @@ loadedDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Load the existing XFA document
 Dim loadedDocument As New PdfLoadedXfaDocument("XfaForm.pdf")
@@ -2661,6 +2852,9 @@ The below code snippet illustrates how to add an image to a new PDF document usi
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-image-to-a-new-PDF-document/.NET/Add-the-XFA-image-to-a-new-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add a new XFA page.
@@ -2677,16 +2871,16 @@ mainForm.Fields.Add(image);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream, PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();   
@@ -2711,6 +2905,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -2742,30 +2938,32 @@ The below code snippet illustrates how to add an image to an existing PDF docume
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-image-to-an-existing-PDF-document/.NET/Add-the-XFA-image-to-an-existing-PDF-document/Program.cs" %} 
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
 //Load the image as stream.
-MemoryStream imageStream = new MemoryStream(File.ReadAllBytes(imageFileName));
+MemoryStream imageStream = new MemoryStream(File.ReadAllBytes("Image.png"));
 //Create a image and add the properties.
 PdfXfaImage image = new PdfXfaImage("imgage1", imageStream);
 //Add the image to the existing XFA form.
 loadedForm.Fields.Add(image);
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing XFA document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
@@ -2785,6 +2983,9 @@ loadedDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Load the existing XFA document
 Dim loadedDocument As New PdfLoadedXfaDocument("XfaForm1.pdf")
@@ -2822,6 +3023,9 @@ You can set the flow direction to an XFA form while creating, using [PdfXfaFlowD
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Set-the-horizontal-flow-direction-in-XFA-forms/.NET/Set-the-horizontal-flow-direction-in-XFA-forms/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add new XFA page.
@@ -2846,16 +3050,17 @@ mainForm.Fields.Add(textBoxField1);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Add the field to the XFA form.
-document.Save(stream,PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf", PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -2890,6 +3095,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -2933,6 +3140,9 @@ You can set the flow direction to an XFA form while creating, using [PdfXfaFlowD
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Set-the-vertical-flow-direction-in-XFA-forms/.NET/Set-the-vertical-flow-direction-in-XFA-forms/Program.cs" %} 	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add new XFA page.
@@ -2957,17 +3167,18 @@ mainForm.Fields.Add(textBoxField1);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream,PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-                                                                                              
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;                                                                                            
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add new XFA page.
@@ -3001,6 +3212,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3044,6 +3257,9 @@ You can rotate a form field in XFA document, using [PdfXfaRotateAngle](https://h
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Rotating-the-XFA-form-fields-in-a-PDF-document/.NET/Rotating-the-XFA-form-fields-in-a-PDF-document/Program.cs" %} 	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add new XFA page.
@@ -3064,16 +3280,17 @@ mainForm.Fields.Add(textBoxField);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream,PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3104,6 +3321,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3143,6 +3362,9 @@ You can validate the date time fields of the input text by enabling the [Require
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Validating-the-XFA-datetime-field-in-a-PDF-document/.NET/Validating-the-XFA-datetime-field-in-a-PDF-document/Program.cs" %} 	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add new XFA page.
@@ -3163,16 +3385,17 @@ mainForm.Fields.Add(dateTimeField);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream,PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3203,6 +3426,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3244,6 +3469,9 @@ Please refer the below link for numeric pattern format in detail,
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Customizing-the-XFA-numeric-field-in-a-PDF-document/.NET/Customizing-the-XFA-numeric-field-in-a-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add new XFA page.
@@ -3262,16 +3490,17 @@ mainForm.Fields.Add(numericField);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream,PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3337,6 +3566,9 @@ You can add the nested sub forms by using [PdfXfaForm](https://help.syncfusion.c
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-XFA-nested-subforms-in-a-PDF-document/.NET/Add-XFA-nested-subforms-in-a-PDF-document/Program.cs" %} 	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add new XFA page.
@@ -3366,16 +3598,17 @@ mainForm.Fields.Add(form1);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream,PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3415,6 +3648,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3487,16 +3722,17 @@ mainForm.Fields.Add(textBoxField);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream,PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3525,6 +3761,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3562,6 +3800,9 @@ You can add the vertical alignments in XFA form fields through [VerticalAlignmen
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-vertical-alignments-in-XFA-form-fields/.NET/Add-the-vertical-alignments-in-XFA-form-fields/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add new XFA page.
@@ -3580,16 +3821,17 @@ mainForm.Fields.Add(textBoxField);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream,PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3618,6 +3860,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3655,6 +3899,9 @@ You can add margin to the XFA form fields by using [Margins](https://help.syncfu
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Adding-margins-to-the-XFA-form-fields/.NET/Adding-margins-to-the-XFA-form-fields/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add new XFA page.
@@ -3674,16 +3921,17 @@ mainForm.Fields.Add(textBoxField);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream,PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3713,6 +3961,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3751,6 +4001,9 @@ You can add padding to the XFA form fields by using [padding](https://help.syncf
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-padding-to-XFA-form-fields/.NET/Add-the-padding-to-XFA-form-fields/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add new XFA page.
@@ -3769,16 +4022,17 @@ mainForm.Fields.Add(textBoxField);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream,PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3807,6 +4061,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3844,6 +4100,9 @@ You can add border to the XFA fields by using [Border](https://help.syncfusion.c
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-border-to-the-XFA-form-fields/.NET/Add-border-to-the-XFA-form-fields/Program.cs" %} 	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add new XFA page.
@@ -3863,16 +4122,17 @@ mainForm.Fields.Add(textBoxField);
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream,PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3902,6 +4162,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3944,10 +4206,11 @@ Please refer the below sample for filling the XFA text box field using [PdfLoade
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Filling-the-XFA-textbox-field-in-an-existing-PDF-document/.NET/Filling-the-XFA-textbox-field-in-an-existing-PDF-document/Program.cs" %} 
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -3956,16 +4219,17 @@ PdfLoadedXfaTextBoxField loadedTextBox = (loadedForm.Fields["subform1[0]"] as Pd
 //fill the text box.
 loadedTextBox.Text = "First Name";
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing PDF document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("input.pdf");
@@ -3986,6 +4250,8 @@ loadedDocument.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4015,10 +4281,11 @@ You can fill the XFA numeric field by using [PdfLoadedXfaNumericField](https://h
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Filling-the-XFA-numeric-field-in-an-existing-PDF-document/.NET/Filling-the-XFA-numeric-field-in-an-existing-PDF-document/Program.cs" %} 
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -4027,16 +4294,17 @@ PdfLoadedXfaNumericField loadedNumericField = (loadedForm.Fields["subform1[0]"] 
 //fill the numeric field.
 loadedNumericField.NumericValue = 945322;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing PDF document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("input.pdf");
@@ -4057,6 +4325,8 @@ loadedDocument.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4086,10 +4356,11 @@ You can fill the XFA combo box field by using [PdfLoadedXfaComboBoxField](https:
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Filling-the-XFA-combobox-field-in-an-existing-PDF-document/.NET/Program.cs" %} 
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -4098,16 +4369,17 @@ PdfLoadedXfaComboBoxField loadedComboBoxField = (loadedForm.Fields["subform1[0]"
 //Set the combo box selected index.
 loadedComboBoxField.SelectedIndex = 1;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing PDF document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("input.pdf");
@@ -4128,6 +4400,8 @@ loadedDocument.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4155,10 +4429,11 @@ You can fill and save hidden items in XFA combo box field by using [HiddenItems]
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-and-save-hidden-items-in-XFA-combobox-field/.NET/Fill-and-save-hidden-items-in-XFA-combobox-field/Program.cs" %} 	
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -4170,16 +4445,17 @@ loadedComboBoxField.SelectedValue = loadedComboBoxField.HiddenItems[0];
 List<string> hiddenValues = new List<string>();
 hiddenValues = loadedComboBoxField.HiddenItems;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing PDF document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("Input.pdf");
@@ -4203,6 +4479,8 @@ loadedDocument.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("Input.pdf")
 'Load the existing XFA form
@@ -4235,10 +4513,11 @@ You can fill the XFA list box field by using [PdfLoadedXfaListBoxField](https://
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-the-XFA-listbox-field-in-an-existing-PDF-document/.NET/Fill-the-XFA-listbox-field-in-an-existing-PDF-document/Program.cs" %} 	
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -4247,16 +4526,17 @@ PdfLoadedXfaListBoxField loadedListBoxField = (loadedForm.Fields["subform1[0]"] 
 //Set the list box selected index.
 loadedListBoxField.SelectedIndex = 1;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing PDF document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("input.pdf");
@@ -4277,6 +4557,8 @@ loadedDocument.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4304,10 +4586,11 @@ You can also select the multiple values by using [SelectedItems](https://help.sy
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Select-multiple-values-in-an-existing-XFA-listbox-field/.NET/Select-multiple-values-in-an-existing-XFA-listbox-field/Program.cs" %} 
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -4316,16 +4599,17 @@ PdfLoadedXfaListBoxField loadedListBoxField = (loadedForm.Fields["subform1[0]"] 
 //Set the list box selected items.
 loadedListBoxField.SelectedItems = new string[] { "English", "Spanish" };
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing PDF document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("input.pdf");
@@ -4346,6 +4630,8 @@ loadedDocument.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4375,10 +4661,11 @@ You can fill the XFA date time field by using [PdfLoadedXfaDateTimeField](https:
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-the-XFA-datetime-field-in-an-existing-PDF-document/.NET/Fill-the-XFA-datetime-field-in-an-existing-PDF-document/Program.cs" %} 	
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -4387,16 +4674,17 @@ PdfLoadedXfaDateTimeField loadedDateTimeField = (loadedForm.Fields["subform1[0]"
 //Set the value.
 loadedDateTimeField.Value = DateTime.Now;
 
-//Save the document to memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing PDF document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("input.pdf");
@@ -4417,6 +4705,8 @@ loadedDocument.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4446,10 +4736,11 @@ You can fill the XFA check box field by using [PdfLoadedXfaCheckBoxField](https:
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-the-XFA-checkbox-field-in-an-existing-PDF-document/.NET/Fill-the-XFA-checkbox-field-in-an-existing-PDF-document/Program.cs" %} 	
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -4458,16 +4749,17 @@ PdfLoadedXfaCheckBoxField loadedCheckBox = (loadedForm.Fields["subform1[0]"] as 
 //Check the check box.          
 loadedCheckBox.IsChecked = true;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing PDF document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("input.pdf");
@@ -4488,6 +4780,8 @@ loadedDocument.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4517,10 +4811,11 @@ You can fill the XFA radio button field by using [PdfLoadedXfaRadioButtonField](
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-the-XFA-radiobutton-field-in-an-existing-PDF-document/.NET/Program.cs" %} 
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -4531,16 +4826,17 @@ PdfLoadedXfaRadioButtonField loadedRadioButtonField = loadedRadioButtonGroup.Fie
 //Check the radio button.
 loadedRadioButtonField.IsChecked = true;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing PDF document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("input.pdf");
@@ -4563,6 +4859,8 @@ loadedDocument.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4596,6 +4894,9 @@ The below code snippet illustrates how to set the [ReadOnly](https://help.syncfu
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Removing-editing-capability-of-form-fields-in-a-new-PDF/.NET/Removing-editing-capability-of-form-fields-in-a-new-PDF/Program.cs" %} 	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
 //Add new XFA page.
@@ -4614,16 +4915,17 @@ mainForm.ReadOnly = true;
 //Add the XFA form to the document.
 document.XfaForm = mainForm;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-document.Save(stream,PdfXfaType.Dynamic);
+//Save the document.
+document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -4652,6 +4954,8 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -4687,25 +4991,27 @@ The below code snippet illustrates how to set the [ReadOnly](https://help.syncfu
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Remove-editing-capability-to-an-existing-form-fields/.NET/Remove-editing-capability-to-an-existing-form-fields/Program.cs" %} 
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 //Set the form as read only.
 loadedForm.ReadOnly = true;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing PDF document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("input.pdf");
@@ -4723,6 +5029,8 @@ loadedDocument.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Load the existing PDF document 
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4757,6 +5065,9 @@ The following code snippet illustrates how to flatten the XFA form field.
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing document.
 PdfLoadedXfaDocument ldoc = new PdfLoadedXfaDocument("input.pdf");
 //Set flatten.
@@ -4771,6 +5082,8 @@ ldoc.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Load the existing document
 Dim ldoc As New PdfLoadedXfaDocument("input.pdf")
 'Set flatten
@@ -4795,10 +5108,11 @@ You can remove the dynamic XFA form fields by using [Remove](https://help.syncfu
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Removing-the-dynamic-form-fields-from-an-existing-PDF/.NET/Removing-the-dynamic-form-fields-from-an-existing-PDF/Program.cs" %} 
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -4807,16 +5121,17 @@ PdfLoadedXfaTextBoxField loadedText = (loadedForm.Fields["subform1[0]"] as PdfLo
 //Remove the field.
 loadedForm.Fields.Remove(loadedText);
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing PDF document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("input.pdf");
@@ -4837,6 +5152,8 @@ loadedDocument.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Load the existing PDF document 
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4866,10 +5183,11 @@ You can modify the existing dynamic XFA fields like Width, Height and Text by us
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Modidy-the-existing-fields-in-XFA-document/.NET/Modidy-the-existing-fields-in-XFA-document/Program.cs" %} 
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Load the existing XFA form.
 PdfLoadedXfaForm loadedForm = loadedDocument.XfaForm;
 
@@ -4881,16 +5199,17 @@ loadedText.Height = 30;
 //Set the caption text.
 loadedText.Caption.Text = "Second Name";
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing PDF document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("input.pdf");
@@ -4914,6 +5233,8 @@ loadedDocument.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 'Load the existing PDF document 
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4948,25 +5269,27 @@ The following sample illustrates how to clear the date time field in an existing
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Clear-XFA-datetime-field-value-in-an-existing-XFA-document/.NET/Program.cs" %} 	
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
+
 //Load the existing XFA document.
-PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument(docStream);
+PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm1.pdf");
 //Get the date time field.
 PdfLoadedXfaDateTimeField dateTimeField = loadedDocument.XfaForm.TryGetFieldByCompleteName("form[0].subform[0].dateTime[0]") as PdfLoadedXfaDateTimeField;
 //Clear the date time field value.
 dateTimeField.ClearValue();
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document to memory stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("XfaForm.pdf");
 //Close the document.
 loadedDocument.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Load the existing XFA PDF document.
 PdfLoadedXfaDocument loadedXfaDocument = new PdfLoadedXfaDocument("input.pdf");
@@ -4983,7 +5306,8 @@ loadedXfaDocument.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the existing XFA PDF document
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa'Load the existing XFA PDF document
 Dim loadedXfaDocument As PdfLoadedXfaDocument = New PdfLoadedXfaDocument("input.pdf")
 'Get the date time field
 Dim dateTimeField As PdfLoadedXfaDateTimeField = TryCast(loadedXfaDocument.XfaForm.TryGetFieldByCompleteName("form[0].subform[0].dateTime[0]"), PdfLoadedXfaDateTimeField)
