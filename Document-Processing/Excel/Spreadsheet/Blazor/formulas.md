@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Formulas in Blazor Spreadsheet component
+# Formulas in Blazor Spreadsheet Component
 
 **Formulas** enable calculations within a worksheet by referencing cells from either the same worksheet or other worksheets in the workbook.
 
@@ -19,25 +19,25 @@ The **Formula Bar** simplifies editing or entering cell data. The [ShowFormulaBa
 
 Formulas in the Syncfusion Blazor Spreadsheet can be accessed and inserted using the following methods:
 
-* Select **Insert Function** from the **Formulas** tab in the Ribbon toolbar. In the **Insert Function** dialog, choose a category, then select the desired function to insert it into the selected cell.
+*   Select **Insert Function** from the **Formulas** tab in the Ribbon toolbar. In the **Insert Function** dialog, choose a category, then select the desired function to insert it into the selected cell.
 
-![Insert Function Dialog](./images/insert-formula.gif)
+    ![Insert Function Dialog](./images/insert-formula.gif)
 
-* Type **(=)** in a cell or the **Formula Bar** to display a list of available functions. Select a function from the list to insert it into the cell.
+*   Type **(=)** in a cell or the **Formula Bar** to display a list of available functions. Select a function from the list to insert it into the cell.
 
-![Formulas Intellisense](./images/formula-cell.gif)
+    ![Formulas Intellisense](./images/formula-cell.gif)
 
-* Click the **Insert Function** button next to the **Formula Bar** to open the **Insert Function** dialog, which provides the same categorized function list and insertion options as the Ribbon toolbar.
+*   Click the **Insert Function** button next to the **Formula Bar** to open the **Insert Function** dialog, which provides the same categorized function list and insertion options as the Ribbon toolbar.
 
-![Insert Function Button](./images/insert-function.gif)
+    ![Insert Function Button](./images/insert-function.gif)
 
 ## Calculation Mode
 
 The Spreadsheet includes **Calculation Option** functionality, similar to Excel's calculation settings, which controls when and how formulas are recalculated. The available modes are:
 
-* **Automatic**: Formulas recalculate instantly when any dependent cell changes.
+*   **Automatic**: Formulas recalculate instantly when any dependent cell changes.
 
-* **Manual**: Formulas recalculate only when explicitly triggered using the **Calculate Sheet** or **Calculate Workbook** options.
+*   **Manual**: Formulas recalculate only when explicitly triggered using the **Calculate Sheet** or **Calculate Workbook** options.
 
 ### Automatic
 
@@ -61,7 +61,7 @@ If cell **C1** contains the formula **=A1 + B1**, and the value in **A1** or **B
 
 ## Named Ranges
 
-The **Named Ranges** support allows to assign a meaningful name to a specific cell or range of cells. This simplifies referencing and managing data within the Spreadsheet. Named Ranges can also be used in formulas, making them easier to read, understand, and maintain.
+The **Named Ranges** support allows you to assign a meaningful name to a specific cell or range of cells. This simplifies referencing and managing data within the Spreadsheet. Named Ranges can also be used in formulas, making them easier to read, understand, and maintain.
 
 N> Named Ranges can be defined only for cells or ranges that contain values.
 
@@ -69,11 +69,11 @@ N> Named Ranges can be defined only for cells or ranges that contain values.
 
 **Named Ranges** can be created using the following methods:
 
-* Select the desired range of cells and enter a name in the **Name Box**.
+*   Select the desired range of cells and enter a name in the **Name Box**.
 
-* Select the range of cells, then click the **Name Manager** button in the Ribbon toolbar under the **Formulas** tab.
+*   Select the range of cells, then click the **Name Manager** button in the Ribbon toolbar under the **Formulas** tab.
 
-![Name Manager Dialog](./images/named-range.gif)
+    ![Name Manager Dialog](./images/named-range.gif)
 
 ### Editing or Deleting Named Ranges
 
@@ -81,23 +81,23 @@ N> Named Ranges can be defined only for cells or ranges that contain values.
 
 To edit a Named Range:
 
-* Open the **Name Manager** dialog.
+*   Open the **Name Manager** dialog.
 
-* Select the Named Range to be edited.
+*   Select the Named Range to be edited.
 
-* Click the **Edit** icon.
+*   Click the **Edit** icon.
 
-* Modify the name, range, or scope as needed.
+*   Modify the name, range, or scope as needed.
 
 * Click the **Update Range** button, then click **OK** button to save changes.
 
 To delete a Named Range:
   
-* Open the **Name Manager** dialog.
+1.  Open the **Name Manager** dialog.
 
-* Select the Named Range to be deleted.
+2.  Select the Named Range to be deleted.
 
-* Click the **Delete** icon, then click **OK** button to confirm.
+3.  Click the **Delete** icon, then click the **OK** button to confirm.
 
 N> Deleting a Named Range used in formulas may cause formula errors. Ensure the Named Range is not referenced before deleting it.
 
