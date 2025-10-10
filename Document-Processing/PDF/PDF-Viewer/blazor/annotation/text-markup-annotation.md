@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text markup annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about text markup annotations in Syncfusion Blazor SfPdfViewer component and more.
+description: Learn how to add, edit, and delete text markup annotations—highlight, underline, strikethrough, and squiggly—in the Syncfusion Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,35 +9,35 @@ documentation: ug
 
 # Text markup annotations in Blazor SfPdfViewer Component
 
-The SfPdfViewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline, strikethrough and squiggly annotations in the PDF document.
+The SfPdfViewer control supports adding, editing, and deleting text markup annotations, including highlight, underline, strikethrough, and squiggly, in a PDF document.
 
-![Blazor SfPdfViewer with Text Markup Annotation](../../blazor-classic/images/blazor-pdfviewer-text-markup-annotation.png)
+![Blazor SfPdfViewer showing text markup annotations](../../blazor-classic/images/blazor-pdfviewer-text-markup-annotation.png)
 
 ## Adding text markup annotation to the PDF Document
 
-Text Markup annotations can be added to the PDF document using the annotation toolbar and by using context menu.
+Text markup annotations can be added using either the annotation toolbar or the context menu.
 
 ## Highlight a text
 
-There are two ways to highlight a text in the PDF document.
+There are two ways to highlight text in a PDF document.
 
 **Using the context menu.**
 
-* Select a text in the PDF document and right-click it.
-* Select **Highlight** option in the context menu that appears
+* Select text in the PDF document and right-click it.
+* Select the **Highlight** option in the context menu.
 
-![Highlighting Context in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-highlight-context.png)
+![Context menu with Highlight option in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-highlight-context.png)
 
 **Using the annotation toolbar.**
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-* Select the **Highlight** button in the annotation toolbar. It enables the highlight mode.
-* Select the text and the highlight annotation will be added.
-* You can also select the text and apply the highlight annotation using the **Highlight** button.
+* Select the **Highlight** button in the annotation toolbar to enable highlight mode.
+* Select the text to add the highlight annotation.
+* Alternatively, select the text first and then click **Highlight** to apply it.
 
-![Highlighting Text in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-highlight-text.png)
+![Highlighted text in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-highlight-text.png)
 
-In the pan mode, if the highlight mode is entered, the SfPdfViewer control will switch to text select mode to enable the text selection for highlighting the text.
+In pan mode, entering highlight mode switches the viewer to text select mode to enable text selection for highlighting.
 
 ```cshtml
 
@@ -65,25 +65,25 @@ In the pan mode, if the highlight mode is entered, the SfPdfViewer control will 
 
 ## Underline a text
 
-There are two ways to underline a text in the PDF document.
+There are two ways to underline text in a PDF document.
 
 **Using the context menu.**
 
-* Select a text in the PDF document and right-click it.
-* Select **Underline** option in the context menu that appears.
+* Select text in the PDF document and right-click it.
+* Select the **Underline** option in the context menu.
 
-![Displaying Underline in Blazor SfPdfViewer ContextMenu](../../blazor-classic/images/blazor-pdfviewer-underline-context-menu.png)
+![Context menu with Underline option in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-underline-context-menu.png)
 
 **Using the annotation toolbar.**
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-* Select the **Underline** button in the annotation toolbar. It enables the underline mode.
-* Select the text and the underline annotation will be added.
-* You can also select the text and apply the underline annotation using the **Underline** button.
+* Select the **Underline** button in the annotation toolbar to enable underline mode.
+* Select the text to add the underline annotation.
+* Alternatively, select the text first and then click **Underline** to apply it.
 
-![Blazor SfPdfViewer with Underline Text](../../blazor-classic/images/blazor-pdfviewer-underline-text.png)
+![Underlined text in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-underline-text.png)
 
-In the pan mode, if the underline mode is entered, the SfPdfViewer control will switch to text select mode to enable the text selection for underlining the text.
+In pan mode, entering underline mode switches the viewer to text select mode to enable text selection for underlining.
 
 ```cshtml
 
@@ -111,25 +111,25 @@ In the pan mode, if the underline mode is entered, the SfPdfViewer control will 
 
 ## Strikethrough a text
 
-There are two ways to strikethrough a text in the PDF document:
+There are two ways to apply strikethrough to text in a PDF document:
 
 Using the context menu.
 
-* Select a text in the PDF document and right-click it.
-* Select **strikethrough** option in the context menu that appears.
+* Select text in the PDF document and right-click it.
+* Select the **Strikethrough** option in the context menu.
 
-![Displaying Strike Through in Blazor SfPdfViewer ContextMenu](../../blazor-classic/images/blazor-pdfviewer-strike-through-in-contextmenu.png)
+![Context menu with Strikethrough option in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-strike-through-in-contextmenu.png)
 
 **Using the annotation toolbar.**
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-* Select the **Strikethrough** button in the annotation toolbar. It enables the strikethrough mode.
-* Select the text and the strikethrough annotation will be added.
-* You can also select the text and apply the strikethrough annotation using the **Strikethrough** button.
+* Select the **Strikethrough** button in the annotation toolbar to enable strikethrough mode.
+* Select the text to add the strikethrough annotation.
+* Alternatively, select the text first and then click **Strikethrough** to apply it.
 
-![Blazor PDFViewer with StrikeThrough Text](../../blazor-classic/images/blazor-pdfviewer-strike-through-text.png)
+![Strikethrough text in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-strike-through-text.png)
 
-In the pan mode, if the strikethrough mode is entered, the SfPdfViewer control will switch to text select mode to enable the text selection to strike through the text.
+In pan mode, entering strikethrough mode switches the viewer to text select mode to enable text selection for striking through.
 
 ```cshtml
 
@@ -156,25 +156,25 @@ In the pan mode, if the strikethrough mode is entered, the SfPdfViewer control w
 ```
 ## Squiggly a text
 
-There are two ways to squiggly a text in the PDF document:
+There are two ways to apply squiggly to text in a PDF document:
 
 Using the context menu.
 
-* Select a text in the PDF document and right-click it.
-* Select **squiggly** option in the context menu that appears.
+* Select text in the PDF document and right-click it.
+* Select the **Squiggly** option in the context menu.
 
-![Displaying Squiggly in Blazor SfPdfViewer ContextMenu](../images/blazor-pdfviewer-squiggly-in-contextmenu.png)
+![Context menu with Squiggly option in Blazor SfPdfViewer](../images/blazor-pdfviewer-squiggly-in-contextmenu.png)
 
 **Using the annotation toolbar.**
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-* Select the **Squiggly** button in the annotation toolbar. It enables the squiggly mode.
-* Select the text and the squiggly annotation will be added.
-* You can also select the text and apply the squiggly annotation using the **Squiggly** button.
+* Select the **Squiggly** button in the annotation toolbar to enable squiggly mode.
+* Select the text to add the squiggly annotation.
+* Alternatively, select the text first and then click **Squiggly** to apply it.
 
-![Blazor PDFViewer with Squiggly Text](../images/blazor-pdfviewer-squiggly-text.png)
+![Squiggly annotation in Blazor SfPdfViewer](../images/blazor-pdfviewer-squiggly-text.png)
 
-In the pan mode, if the squiggly mode is entered, the SfPdfViewer control will switch to text select mode to enable the text selection to squiggly the text.
+In pan mode, entering squiggly mode switches the viewer to text select mode to enable text selection for applying the squiggly annotation.
 
 ```cshtml
 
@@ -202,25 +202,25 @@ In the pan mode, if the squiggly mode is entered, the SfPdfViewer control will s
 
 ## Editing the properties of the text markup annotation
 
-The color and the opacity of the text markup annotation can be edited using the Edit Color tool and the Edit Opacity tool in the annotation toolbar.
+The color and opacity of a text markup annotation can be changed using the **Edit Color** and **Edit Opacity** tools in the annotation toolbar.
 
 ### Editing color
 
-The color of the annotation can be edited using the color palette provided in the Edit Color tool.
+Change the annotation color using the color palette in the **Edit Color** tool.
 
-![Editing Text Color in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-editing-text-color.png)
+![Editing text markup color in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-editing-text-color.png)
 
 ### Editing opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+Change the annotation opacity using the range slider in the **Edit Opacity** tool.
 
-![Editing Text Opacity in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-edit-text-opacity.png)
+![Editing text markup opacity in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-edit-text-opacity.png)
 
 ## Text markup annotation settings
 
-The properties of the text markup annotation can be set before creating the control using highlightSettings, underlineSettings, strikethroughSettings and squigglySettings.
+Set default properties for text markup annotations before rendering the component using the `HighlightSettings`, `UnderlineSettings`, `StrikethroughSettings`, and `SquigglySettings` parameters.
 
-N> After editing the default color and opacity using the Edit color tool and Edit opacity tool, they will be changed to the selected values.
+N> After changing the default color and opacity using the **Edit Color** and **Edit Opacity** tools, those values become the new defaults for subsequent annotations.
 
 ```cshtml
 
@@ -268,9 +268,9 @@ N> After editing the default color and opacity using the Edit color tool and Edi
 ```
 ## Add text markup annotation programmatically
 
-The Blazor SfPdfViewer offers the capability to programmatically add the text markup annotation such as Highlight, Underline, Strikethrough and squiggly within the SfPdfViewer control using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_)  method.
+The Blazor SfPdfViewer supports programmatically adding text markup annotations such as Highlight, Underline, Strikethrough, and Squiggly using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
-Below is an example demonstrating how you can use this method to add a text markup annotation to a PDF document:
+Below is an example demonstrating how to add a text markup annotation to a PDF document:
 
 ```cshtml
 
@@ -312,17 +312,17 @@ Below is an example demonstrating how you can use this method to add a text mark
 
 ```
 
-This code will add a text markup annotation to the third page of the PDF document.
+This example adds a text markup annotation to the third page of the PDF document (page index is zero-based).
 
-![Programmatically Added Textmarkup annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-textmarkup-annotation.png)
+![Programmatically added text markup annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-textmarkup-annotation.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Text%20Markup/Add).
 
 ## Edit text markup annotation programmatically
 
-The Blazor SfPdfViewer offers the capability to programmatically edit the text markup annotation such as Highlight, Underline, Strikethrough and Squiggly within the SfPdfViewer control using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+The Blazor SfPdfViewer supports programmatically editing text markup annotations using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
-Below is an example demonstrating how you can utilize this method to edit the text markup annotation programmatically:
+Below is an example demonstrating how to edit a text markup annotation programmatically:
 
 ```cshtml
 
@@ -352,17 +352,17 @@ Below is an example demonstrating how you can utilize this method to edit the te
 
 ```
 
-This code snippet will edit the text markup annotation programmatically within the SfPdfViewer control.
+This code edits an existing text markup annotation programmatically.
 
-![Programmatically Edit Textmarkup annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-textmarkup-annotation.png)
+![Programmatically edit text markup annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-textmarkup-annotation.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Text%20Markup/Edit).
 
 ## Delete annotation programmatically
 
-The Blazor SfPdfViewer additionally offers the functionality to programmatically remove annotations within the SfPdfViewer control using the [DeleteAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+The Blazor SfPdfViewer can also remove annotations programmatically using the [DeleteAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
-Below is an example demonstrating how you can utilize this method to delete an annotation programmatically:
+Below is an example demonstrating how to delete an annotation programmatically:
 
 ```cshtml
 
@@ -390,9 +390,9 @@ Below is an example demonstrating how you can utilize this method to delete an a
 }
 
 ```
-This code snippet demonstrates how to programmatically delete an annotation within the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer using the [DeleteAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+This example demonstrates how to programmatically delete an annotation within the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer using the [DeleteAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
-N> Alternatively, delete the annotation with the annotation ID using the [DeleteAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_System_String_) method.
+N> Alternatively, the annotation can be deleted using its annotation ID with the [DeleteAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_System_String_) method.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Delete%20Annotation).
 

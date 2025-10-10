@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL in Blazor Smart PDF Viewer | Syncfusion
-description: Learn how to enable and use Right-to-Left (RTL) text support in Blazor SfSmartPdfViewer for multilingual PDF viewing.
+description: Learn how to enable and use Right-to-Left (RTL) layout in the Blazor SfSmartPdfViewer using the EnableRtl property.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # RTL in Blazor Smart PDF Viewer
 
-The Blazor Smart PDF Viewer supports Right-to-Left (RTL) rendering to accommodate languages that are read from right to left, such as Arabic and Hebrew. By default, RTL support is disabled. You can enable it by setting the [EnableRtl](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableRtl) property to `true`.
+The Blazor Smart PDF Viewer supports Right-to-Left (RTL) layout for languages that are read from right to left, such as Arabic and Hebrew. RTL affects the viewer UI, toolbar alignment, and content flow. RTL is disabled by default and can be enabled by setting the [EnableRtl](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableRtl) property to `true`.
 
-![RTL Desktop](images/rtl-desktop.png)
+![RTL layout on desktop](images/rtl-desktop.png)
 
 ## Example
 
