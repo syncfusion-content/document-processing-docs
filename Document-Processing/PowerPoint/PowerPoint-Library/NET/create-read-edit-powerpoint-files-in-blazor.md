@@ -268,7 +268,7 @@ Upon executing the program, the **PowerPoint document** will be generated as fol
 
 Step 1: Create a new C# Blazor Web app project.
 * Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
-* Choose the **Blazor Server App** template.
+* Choose the **Blazor Web App** template.
 
 ![Choose Blazor Web app from template](Workingwith-Blazor/Blazor-Web-app-template.png)
 
