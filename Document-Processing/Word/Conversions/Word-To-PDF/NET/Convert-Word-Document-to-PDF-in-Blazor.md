@@ -858,7 +858,7 @@ Upon executing the program, the **PDF document** will be generated as follows.
 
 ![Word to PDF in Blazor WASM Standalone app](WordToPDF_images/OutputImage.png)
 
-N> To convert Word to image, it is necessary to access the font stream internally. However, this cannot be done automatically in a Blazor WASM Standalone application. Therefore, it is recommended to use a Web app Server, even though Word to image conversion works in a WASM Standalone app.
+N> To convert Word to PDF, it is necessary to access the font stream internally. However, this cannot be done automatically in a Blazor WASM Standalone application. Therefore, it is recommended to use a Web app Server, even though Word to PDF conversion works in a WASM Standalone app.
 
 {% endtabcontent %}
  
@@ -1056,7 +1056,7 @@ Upon executing the program, the **PDF document** will be generated as follows.
 
 ![Word to PDF in Blazor WASM Standalone app](WordToPDF_images/OutputImage.png)
 
-N> To convert Word to image, it is necessary to access the font stream internally. However, this cannot be done automatically in a Blazor WASM Standalone application. Therefore, it is recommended to use a Web app Server, even though Word to image conversion works in a WASM Standalone app.
+N> To convert Word to PDF, it is necessary to access the font stream internally. However, this cannot be done automatically in a Blazor WASM Standalone application. Therefore, it is recommended to use a Web app Server, even though Word to PDF conversion works in a WASM Standalone app.
 
 {% endtabcontent %}
 
@@ -1256,7 +1256,7 @@ Upon executing the program, the **PDF document** will be generated as follows.
 
 ![Word to PDF in Blazor WASM Standalone app](WordToPDF_images/OutputImage.png)
 
-N> To convert Word to image, it is necessary to access the font stream internally. However, this cannot be done automatically in a Blazor WASM Standalone application. Therefore, it is recommended to use a Web app Server, even though Word to image conversion works in a WASM Standalone app.
+N> To convert Word to PDF, it is necessary to access the font stream internally. However, this cannot be done automatically in a Blazor WASM Standalone application. Therefore, it is recommended to use a Web app Server, even though Word to PDF conversion works in a WASM Standalone app.
 
 {% endtabcontent %}
 
