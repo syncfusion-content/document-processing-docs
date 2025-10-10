@@ -821,6 +821,8 @@ Upon executing the program, the **Word document** will be generated as follows:
 
 Click [here](https://www.syncfusion.com/document-processing/word-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features.
 
+An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core.
+
 ## WASM Standalone Application
 
 {% tabcontents %}
@@ -1522,4 +1524,6 @@ N> While the Word library functions in WASM Standalone, server-side deployment i
 Kindly explore the [supported and unsupported features of the Word library in Blazor](https://help.syncfusion.com/document-processing/word/word-library/net/supported-and-unsupported-features#blazor-supported-features).
 
 Click [here](https://www.syncfusion.com/document-processing/word-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+
+An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core.
 
