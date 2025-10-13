@@ -16,19 +16,16 @@ The [PdfViewerCommandManager](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 ## Command Execution
 To execute custom commands, simply provide a list of keyboard shortcuts along with the corresponding actions. These actions will be triggered when the specified keyboard shortcuts are pressed.
 
-* [Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyboardCommand.html): 
-Defines the collection of custom keyboard shortcuts and the action names to execute in the PDF Viewer.
+* [Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyboardCommand.html): Defines the collection of custom keyboard shortcuts and the action names to execute in the PDF Viewer.
 
-* [CommandExecuted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CommandExecutedEventArgs.html): 
-Raised when a registered keyboard shortcut is detected; handle this event to perform the action.
+* [CommandExecuted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CommandExecutedEventArgs.html): Raised when a registered keyboard shortcut is detected; handle this event to perform the action.
 
 ## How to create custom command: 
 Create custom keyboard commands by specifying an action name and the corresponding key gesture for the PDF Viewer.
 
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CommandExecutedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_CommandExecutedEventArgs_ActionName): Specifies the name of the action to execute when the keyboard shortcut is pressed (for example, FitToWidth, FitToPage). The action name must correspond to a recognized PDF Viewer action.
 
-* [Gesture](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyGesture.html): 
-Specifies the combination of [keys](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyGesture.html#Syncfusion_Blazor_SfPdfViewer_KeyGesture_Key) and [modifiers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyGesture.html#Syncfusion_Blazor_SfPdfViewer_KeyGesture_Modifiers), including Control, Shift, Alt or Meta key that are utilized within the PDF viewer. On macOS, Meta maps to the Command key.
+* [Gesture](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyGesture.html): Specifies the combination of [keys](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyGesture.html#Syncfusion_Blazor_SfPdfViewer_KeyGesture_Key) and [modifiers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyGesture.html#Syncfusion_Blazor_SfPdfViewer_KeyGesture_Modifiers), including Control, Shift, Alt or Meta key that are utilized within the PDF viewer. On macOS, Meta maps to the Command key.
 
 The following example registers two custom keyboard commands (FitToWidth and FitToPage) and handles them in CommandExecuted. The example uses SfPdfViewer2; use the component that matches the project version.
 
@@ -85,6 +82,7 @@ The following example registers two custom keyboard commands (FitToWidth and Fit
 } 
 
 ```
+
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Keyboard%20accessibility/Command%20Manager)
 
 ## See also
