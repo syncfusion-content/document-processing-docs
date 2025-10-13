@@ -670,4 +670,4 @@ The following table shows the list of Word document elements supported in Word t
 
 ## Online Demo
 
-* Explore how to convert the Word document to Markdown using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/wordtomarkdown#/bootstrap5).
+* Explore how to convert the Word document to Markdown using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtomarkdown#/tailwind).

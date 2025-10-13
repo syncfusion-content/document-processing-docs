@@ -351,17 +351,17 @@ Step 1: Execute the following command in terminal window to check dependencies a
 {% tabs %}
 {% highlight C# %}
 
-        ldd  liblept1753.so
-        ldd  libSyncfusionTesseract.so
+ldd  liblept1753.so
+ldd  libSyncfusionTesseract.so
 
 {% endhighlight %}
 {% endtabs %}
-Run the following commands in terminal
+Run the following commands in terminal<br>
 Step 1:
 {% tabs %}
 {% highlight C# %}
 
-        sudo apt-get install libleptonica-dev libjpeg62
+sudo apt-get install libleptonica-dev libjpeg62
 
 {% endhighlight %}
 {% endtabs %}
@@ -369,7 +369,7 @@ Step 2:
 {% tabs %}
 {% highlight C# %}
 
-        ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5
+ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5
 
 {% endhighlight %}
 {% endtabs %}
@@ -377,7 +377,7 @@ Step 3:
 {% tabs %}
 {% highlight C# %}
 
-        ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
+ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
 
 {% endhighlight %}
 {% endtabs %}

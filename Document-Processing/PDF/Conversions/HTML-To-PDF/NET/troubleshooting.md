@@ -476,6 +476,41 @@ Refer to this <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-t
 </tr>
 </table>
 
+## HTML to PDF conversion fails after deploying to Azure Function Linux Flex Consumption Plan
+
+<table>
+<th style="font-size:14px" width="100px">Issue
+</th>
+<th style="font-size:14px">HTML to PDF conversion fails after deploying to Azure Function Linux Flex Consumption Plan
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The Syncfusion HTML-to-PDF converter internally uses the <b>Blink rendering engine</b>, which relies on a <b>headless Chromium browser</b> to render HTML content. On <b>Linux environments</b>, Chromium requires several native dependencies to launch successfully.<br>
+
+In the <b>Azure Function Linux Flex Consumption Plan</b>, these dependencies cannot be installed due to the following limitations:
+
+* No SSH access to manually install packages.<br>
+* Shell script installation attempts fail due to <b>permission restrictions</b>, even when permissions are explicitly set.<br>
+
+As a result, the Blink-based converter cannot initialize Chromium, leading to failure in HTML-to-PDF conversion.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>To enable HTML-to-PDF conversion using Blink in Azure Functions:<br>
+
+* Do not use the Flex Consumption Plan for Linux-based Azure Functions.<br>
+* Instead, use one of the following:<br>
+1.Premium Plan<br>
+2.Standard Consumption Plan<br>
+These plans provide the necessary environment and permissions to support Chromium and its dependencies, allowing the Blink engine to function correctly.<br>
+</td>
+</tr>
+</table>
+
 ## Unable to convert unsecured https URL to PDF using Blink
 
 <table>
@@ -504,6 +539,58 @@ settings.CommandLineArguments.Add("--ignore-certificate-errors");
 
 {% endhighlight %}
 {% endtabs %}
+</td>
+</tr>
+</table>
+
+## Security Alert - Bundled chrome.exe in HTML-to-PDF Conversion
+
+<table>
+<th style="font-size:14px" width="100px">Issue
+</th>
+<th style="font-size:14px">Security alerts are triggered when the Syncfusion HTML-to-PDF converter uses a bundled `chrome.exe` executable to render HTML content in headless mode during PDF generation.
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The HTML-to-PDF conversion relies on Chromium's Blink rendering engine:<br>
+
+1.The NuGet package includes Blink binaries (`chrome.exe`) under `runtimes/win-x64/native`<br
+2.This bundled Chrome instance launches in headless mode to render web content<br>
+3.Security systems flag the execution of embedded binaries as potential risks<br>
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>Use system-installed Chromium instead of bundled binaries:
+<br><br/>
+Step 1: Configure Blink Path
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+BlinkConverterSettings settings = new BlinkConverterSettings();
+
+// Point to system-installed Chrome.
+settings.BlinkPath = @"C:\Program Files\Google\Chrome\Application"; 
+
+//Convert HTML to PDF.
+htmlConverter.ConverterSettings = settings;
+PdfDocument document = htmlConverter.Convert("https://example.com");
+
+//Save and close the document. 
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 2: Verify Installation <br>
+Ensure Chrome exists at the specified path (standard locations): `C:\Program Files\Google\Chrome\Application`
+
 </td>
 </tr>
 </table>
