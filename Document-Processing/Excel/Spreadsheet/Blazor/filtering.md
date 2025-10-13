@@ -11,7 +11,7 @@ documentation: ug
 
 Filtering in the Blazor Spreadsheet component enables focused data analysis by displaying only the rows that meet specific criteria. This functionality helps create interactive views by hiding rows that do not match the filtering conditions. Filtering behavior is controlled using the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowFiltering) property, which is set to **true** by default.
 
-N> When `AllowFiltering` is set to **false**, filtering options are disabled in the ribbon and removed from the context menu. API methods related to filtering will also be inactive. Additionally, if the worksheet is protected, the filtering feature is disabled. For more information on worksheet protection, refer [here](./protection#protect-sheet).
+N> When `AllowFiltering` is set to **false**, filtering options are disabled in the ribbon and removed from the context menu. API methods related to filtering will also be inactive. Additionally, if the worksheet is protected, the filtering feature is disabled. For more information, refer to the [Worksheet Protection](./protection#protect-sheet) documentation.
 
 Filtering can be accessed through the user interface using the following method:
 
@@ -31,7 +31,7 @@ The filter dialog appears when clicking on a column's filter icon and provides t
 
 * **Sort options** - Provides commands for sorting data in **Ascending** or **Descending** order.
 * **Clear filter** - Removes any filtering applied to the selected column.
-* **Data type-specific filters** - Displays sub menus tailored to the column's content type, such as **Text Filters**, **Number Filters**, or **Date Filters**.
+* **Data type-specific filters** - Displays submenu tailored to the column's content type, such as **Text Filters**, **Number Filters**, or **Date Filters**.
 * **Search box** - Enables quick lookup of values within the filter list.
 * **Select All** checkbox - Toggles the selection of all available values in the column.
 * **Value** checkboxes - Lists individual checkboxes for each unique value found in the column.
@@ -66,13 +66,13 @@ Number filters provide specialized filtering options for columns containing nume
 
 | Operator | Description |
 | -- | -- |
-| Equal | Displays rows where the cell value exactly match the specified number. |
+| Equal | Displays rows where the cell value exactly matches the specified number. |
 | Not Equal | Displays rows where the cell value does not match the specified number. |
 | Less Than | Displays rows where the cell value is less than the specified number. |
 | Less Than Or Equal | Displays rows where the cell value is less than or equal to the specified number. |
 | Greater Than | Displays rows where the cell value is greater than the specified number. |
-| Greater Than Or Equal | Displays rows where the cell value falls within a specified numeric range. |
-| Between | Displays rows with cell values that include the specified text. |
+| Greater Than Or Equal | Displays rows where the cell value is greater than or equal to the specified number. |
+| Between | Displays rows where the cell value falls within a specified numeric range. |
 | Custom Filter | Opens a dialog for defining advanced numeric filter conditions. This dialog allows the combination of multiple criteria using logical operators such as **AND** and **OR**. Each condition can be configured using numeric comparison operators and custom values, enabling flexible and targeted filtering of numerical data. |
 
 ![Number filter](./images/number-filter.png)
@@ -83,10 +83,10 @@ The date filters provide specialized filtering options for columns containing da
 
 | Operator | Description |
 | -- | -- |
-| Equal | Displays rows where the cell value exactly match the specified value. |
-| Not Equal | Displays rows where the cell value does not match the specified value. |
-| Less Than | Displays rows where the date is earlier than the specified value. |
-| Greater Than | Displays rows where the date is later than the specified value. |
+| Equal | Displays rows where the cell value exactly matches the specified date. |
+| Not Equal | Displays rows where the cell value does not match the specified date. |
+| Less Than | Displays rows where the date is earlier than the specified date. |
+| Greater Than | Displays rows where the date is later than the specified date. |
 | Between | Displays rows where the date falls within a defined date range. |
 | This Month | Filters rows where the date falls within the current calendar month. |
 | Last Month | Filters rows where the date falls within the previous calendar month. |
@@ -353,11 +353,11 @@ The [ClearAllFiltersAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## Reapply filter
 
-The reapply filter updates filtered results after changes are made to the data. It preserves the existing filter conditions and refreshes the view to reflect the most current data accurately.
+Reapplying filters updates the filtered results after changes are made to the data. It preserves the existing filter conditions and refreshes the view to reflect the most current data accurately.
 
 For instance, if a filter is applied to display only rows where the **Status** column is set to **Approved**, and a new row is added with **Approved** as its value, the new row will not immediately appear. Using **Reapply Filter** recalculates the filter and ensures the new row is included in the filtered results.
 
-### Reapply filter via UI
+### Reapply filters via UI
 
 Filters can be reapplied using the interface through the following methods:
 
@@ -378,9 +378,9 @@ Filters can be reapplied using the interface through the following methods:
 
 ![Reapply filter using Context Menu](./images/clearfilter-option-contextmenu.png)
 
-### Reapply filter programmatically
+### Reapply filters programmatically
 
-The [ReapplyFilterAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ReapplyFiltersAsync) method refreshes all active filters to match updated worksheet data. This method is especially beneficial when rows are modified, inserted, or imported.
+The [ReapplyFiltersAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ReapplyFiltersAsync) method refreshes all active filters to match updated worksheet data. This method is especially beneficial when rows are modified, inserted, or imported.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

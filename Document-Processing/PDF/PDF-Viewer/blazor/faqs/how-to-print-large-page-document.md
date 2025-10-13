@@ -9,7 +9,7 @@ documentation: ug
 
 # Print large PDF documents in Blazor SfPdfViewer
 
-This guide shows how to implement a client-side printing approach for large PDFs in the Syncfusion Blazor SfPdfViewer component using JavaScript interop.
+This article shows how to implement a client-side printing approach for large PDFs in the Syncfusion Blazor SfPdfViewer component using JavaScript interop.
 
 ### Implement a print handler
 Add a custom print toolbar item to the primary toolbar, then handle its click to retrieve the loaded PDF as a byte array and invoke a JavaScript function to print the PDF on the client-side.
@@ -57,4 +57,4 @@ N> Ensure that the browser allows pop-ups for the site, because this approach op
 
 ## See also
 
-* [Primary Toolbar Customization in SfPdfViewer](../toolbar-customization)
+* [Primary Toolbar Customization in SfPdfViewer](../toolbar/primary-toolbar-customization)
