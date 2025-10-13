@@ -9,7 +9,7 @@ documentation: ug
 
 # Render a PDF from an embedded resource in a MAUI Android app 
 
-This section describes how to render the PDF Viewer from an embedded resource in a .NET MAUI Android app using the Android emulator.
+This article describes how to render the PDF Viewer from an embedded resource in a .NET MAUI Android app using the Android emulator.
 
 To create the .NET MAUI project, see Create a [MAUI app](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/deploy-maui-windows)
 

@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Context Menu in Blazor Spreadsheet component | Syncfusion
-description: Checkout and learn here about the context menu functionality in the Syncfusion Blazor Spreadsheet component and more.
-platform: document-processing
+description: Explore the context menu functionality in the Syncfusion Blazor Spreadsheet component, including options for cells, rows, columns, and sheet tabs.
 control: Spreadsheet
 documentation: ug
 ---
@@ -13,7 +12,8 @@ The context menu enhances interaction with the Syncfusion Blazor Spreadsheet com
 
 N> When the `EnableContextMenu` property is set to **false**, the context menu does not appear upon right-clicking any element in the component.
 
-## Context menu options categorized by element
+
+## Context Menu Options Based on Spreadsheet Element Type
 
 The context menu options are dynamically adjusted based on the specific element in the Spreadsheet that is right-clicked. Each element displays context-specific functionality relevant to its type.
 
@@ -65,8 +65,8 @@ When right-clicking a single column header or a range of selected column headers
 | Cut | Removes data from the selected columns and temporarily stores it on the clipboard for reuse within the Spreadsheet or in an external application. |
 | Copy | Copies data from the selected columns and temporarily stores it on the clipboard for reuse within the Spreadsheet or in an external application. |
 | Paste | Inserts data from the clipboard into the Spreadsheet at the current selection. |
-| Insert columns  to the left |  Adds new columns to the left of the selected columns. The number of columns inserted matches the number of columns selected. |
-| Insert columns  to the right | Adds new columns to the right of the selected columns. The number of columns inserted matches the number of columns selected. |
+| Insert column to the left |  Adds a new column to the left of the selected column. The number of columns inserted matches the number of columns selected. |
+| Insert column to the right | Adds a new column to the right of the selected column. The number of columns inserted matches the number of columns selected. |
 
 ![Context menu options for column-header](./images/contextmenu-column.png)
 
@@ -91,7 +91,7 @@ When right-clicking on a sheet tab located at the bottom of the Spreadsheet, the
 
 ![Context menu options for sheet tab](./images/contextmenu-sheettab.png)
 
-Sheet tab context menu behavior is controlled by workbook-level protection. In protected workbook, only the **Protect Sheet** or **Unprotect Sheet** option remains active. All other options like **Insert**, **Delete**, **Rename**, **Move Right**, **Move Left**, **Hide**, and **Duplicate** are disabled to preserve workbook structure.
+Sheet tab context menu behavior is controlled by workbook-level protection. In a protected workbook, only the **Protect Sheet** or **Unprotect Sheet** option remains active. All other options like **Insert**, **Delete**, **Rename**, **Move Right**, **Move Left**, **Hide**, and **Duplicate** are disabled to preserve workbook structure.
 
 ## Properties that influence context menu options
 

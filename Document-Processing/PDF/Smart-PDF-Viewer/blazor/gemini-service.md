@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Smart PDF Viewer using Gemini AI Service
 
-This guide provides step-by-step instructions for integrating and using the Syncfusion Blazor Smart PDF Viewer with Gemini AI services in a Blazor app.
+This article provides step-by-step instructions for integrating and using the Syncfusion Blazor Smart PDF Viewer with Gemini AI services in a Blazor app.
 
 ## Prerequisites
 
