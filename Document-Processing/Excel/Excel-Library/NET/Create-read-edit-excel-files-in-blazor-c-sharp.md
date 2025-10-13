@@ -1,17 +1,19 @@
+
 ---
+
 title: Create, read, and edit Excel files in Blazor | Syncfusion
-description: Learn here how to create, read, and edit Excel files in Blazor applications using Syncfusion Excel library.
+description: Learn how to create, read, edit, and convert Excel files to PDF and images in Blazor applications using Syncfusion Excel library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: ug
 ---
 # Create, read, and edit Excel files in Blazor
 
-[Syncfusion Excel library for Blazor platform](https://www.syncfusion.com/document-processing/excel-framework/blazor/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
+[Syncfusion Excel library for Blazor platform](https://www.syncfusion.com/document-processing/excel-framework/blazor/excel-library) can be used to create, read, and edit Excel files. It also supports converting Excel files to PDF and images.
 
 ## Create a simple Excel report in Blazor Server application
 
-The below steps illustrates the creation of a simple Invoice formatted Excel document in Blazor Server application.
+The following steps illustrate the creation of a simple invoice-formatted Excel document in a Blazor Server application.
 
 {% tabcontents %}
 
@@ -21,7 +23,7 @@ Step 1: Create a new C# Blazor Server application project. Select Blazor App fro
 
 ![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_images_Blazor_App.png)
 
-Step 2: Now, the project configuration window will popup. Click Create button to create a new project with the required project name.
+Step 2: Now, the project configuration window will pop up. Click Create button to create a new project with the required project name.
 
 ![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_images_Server_ProjectName.png)
 
@@ -35,7 +37,7 @@ Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/S
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 5: Create a razor file with name as ``Excel`` under ``Pages`` folder and include the following namespaces in the file.
+Step 5: Create a Razor file named `Excel.razor` under the `Pages` folder and include the following namespaces in the file.
 {% capture codesnippet1 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -54,14 +56,14 @@ Step 6: Add the following code to create a new button.
 {% tabs %}
 {% highlight CSHTML %}
 <h2>Syncfusion Excel library (Essential XlsIO)</h2>
-<p>Syncfusion Excel library (Essential XlsIO)  is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
+<p>Syncfusion Excel library (Essential XlsIO) is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@CreateExcel">Create Excel</button>
 {% endhighlight %}
 {% endtabs %}
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 7: Add the following code in ``Excel.razor`` file to create and download the Excel document.
+Step 7: Add the following code in `Excel.razor` file to create and download the Excel document.
 {% capture codesnippet3 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -82,19 +84,19 @@ Step 7: Add the following code in ``Excel.razor`` file to create and download th
 {% endcapture %}
 {{ codesnippet3 | OrderList_Indent_Level_1 }}
 
-Step 8: Create a new cs file with name as ``CreateExcel`` under ``Data`` folder and include the following namespaces in the file.
+Step 8: Create a new .cs file named `CreateExcel.cs` under the `Data` folder and include the following namespaces in the file.
 {% capture codesnippet4 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-@using Syncfusion.XlsIO;
-@using Syncfusion.Drawing;
-@using System.IO;
+using Syncfusion.XlsIO;
+using Syncfusion.Drawing;
+using System.IO;
 {% endhighlight %}
 {% endtabs %}
 {% endcapture %}
 {{ codesnippet4 | OrderList_Indent_Level_1 }}
 
-Step 9: Create a new MemoryStream method with name as ``CreateDocument`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Server application.
+Step 9: Create a new `MemoryStream` method named `CreateDocument` and include the following code snippet to create a simple invoice-formatted Excel document in the Blazor Server application. Ensure you have an `AdventureCycle.png` image in your project's root directory for this example.
 {% capture codesnippet5 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -109,6 +111,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorksheet worksheet = workbook.Worksheets[0];
   
   //Add a picture
+  // Ensure "AdventureCycle.png" is present in your project's root directory or modify the path accordingly.
   FileStream imageStream = new FileStream("AdventureCycle.png", FileMode.Open);
   Image image = Image.FromStream(imageStream);
   IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, image, 20, 20);
@@ -283,7 +286,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endcapture %}
 {{ codesnippet5 | OrderList_Indent_Level_1 }}
 
-Step 10: Create a new class file in the project, with name as ``FileUtils`` and add the following code to invoke the JavaScript action for downloading the file in browser.
+Step 10: Create a new class file in the project, named `FileUtils.cs`, and add the following code to invoke the JavaScript action for downloading the file in the browser.
 {% capture codesnippet6 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -300,7 +303,7 @@ public static class FileUtils
 {% endcapture %}
 {{ codesnippet6 | OrderList_Indent_Level_1 }}
 
-Step 11: Add the following JavaScript function in the ``_Host.cshtml`` file present under ``Pages`` folder.
+Step 11: Add the following JavaScript function in the `App.razor` file (for .NET 6/7/8 Blazor Server applications, this replaces `_Host.cshtml`).
 {% capture codesnippet7 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -335,7 +338,7 @@ Step 11: Add the following JavaScript function in the ``_Host.cshtml`` file pres
 {% endcapture %}
 {{ codesnippet7 | OrderList_Indent_Level_1 }}
 
-Step 12: Add the following code under ``NavMenu.razor`` file present under ``Shared`` folder.
+Step 12: Add the following code under `NavMenu.razor` file present under `Shared` folder to create a navigation link.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -347,7 +350,7 @@ Step 12: Add the following code under ``NavMenu.razor`` file present under ``Sha
 {% endhighlight %}
 {% endtabs %}
 
-Step 13: Add the service to services collection in ``ConfigureServices`` method of ``Startup.cs`` file.
+Step 13: Add the service to services collection in `ConfigureServices` method of `Startup.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -363,20 +366,20 @@ Step 1: Create a new C# Blazor Server app project using Create .NET Project opti
 
 ![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_VSimages_Blazor_App.png)
 
-Step 2:  Name the project and create the project.
+Step 2: Name the project and create the project.
 
 ![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_VSimages_Server_ProjectName.png)
 
 Alternatively, create a Server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
-```
+```bash
 dotnet new blazorserver -o CreateExcel
 cd CreateExcel
 ```
 
-Step 3: To **create a Excel document in Blazor Server app**,run the following command to  install [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) to the Blazor project.
+Step 3: To **create an Excel document in Blazor Server app**, run the following command to install [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) to the Blazor project.
 
-```
+```bash
 dotnet add package Syncfusion.XlsIO.Net.Core
 ```
 
@@ -385,7 +388,7 @@ dotnet add package Syncfusion.XlsIO.Net.Core
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 4: Create a razor file with name as ``Excel`` under ``Pages`` folder and include the following namespaces in the file.
+Step 4: Create a Razor file named `Excel.razor` under the `Pages` folder and include the following namespaces in the file.
 {% capture codesnippet1 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -404,14 +407,14 @@ Step 5: Add the following code to create a new button.
 {% tabs %}
 {% highlight CSHTML %}
 <h2>Syncfusion Excel library (Essential XlsIO)</h2>
-<p>Syncfusion Excel library (Essential XlsIO)  is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
+<p>Syncfusion Excel library (Essential XlsIO) is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@CreateExcel">Create Excel</button>
 {% endhighlight %}
 {% endtabs %}
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 6: Add the following code in ``Excel.razor`` file to create and download the Excel document.
+Step 6: Add the following code in `Excel.razor` file to create and download the Excel document.
 {% capture codesnippet3 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -432,7 +435,7 @@ Step 6: Add the following code in ``Excel.razor`` file to create and download th
 {% endcapture %}
 {{ codesnippet3 | OrderList_Indent_Level_1 }}
 
-Step 7: Create a new cs file with name as ``CreateExcel`` under ``Data`` folder and include the following namespaces in the file.
+Step 7: Create a new .cs file named `CreateExcel.cs` under the `Data` folder and include the following namespaces in the file.
 {% capture codesnippet4 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -444,7 +447,7 @@ Step 7: Create a new cs file with name as ``CreateExcel`` under ``Data`` folder 
 {% endcapture %}
 {{ codesnippet4 | OrderList_Indent_Level_1 }}
 
-Step 8: Create a new MemoryStream method with name as ``CreateDocument`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Server application.
+Step 8: Create a new `MemoryStream` method named `CreateDocument` and include the following code snippet to create a simple invoice-formatted Excel document in the Blazor Server application. Ensure you have an `AdventureCycle.png` image in your project's root directory for this example.
 {% capture codesnippet5 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -459,6 +462,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorksheet worksheet = workbook.Worksheets[0];
   
   //Add a picture
+  // Ensure "AdventureCycle.png" is present in your project's root directory or modify the path accordingly.
   FileStream imageStream = new FileStream("AdventureCycle.png", FileMode.Open);
   Image image = Image.FromStream(imageStream);
   IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, image, 20, 20);
@@ -633,7 +637,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endcapture %}
 {{ codesnippet5 | OrderList_Indent_Level_1 }}
 
-Step 9: Create a new class file in the project, with name as ``FileUtils`` and add the following code to invoke the JavaScript action for downloading the file in browser.
+Step 9: Create a new class file in the project, named `FileUtils.cs`, and add the following code to invoke the JavaScript action for downloading the file in the browser.
 {% capture codesnippet6 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -650,7 +654,7 @@ public static class FileUtils
 {% endcapture %}
 {{ codesnippet6 | OrderList_Indent_Level_1 }}
 
-Step 10: Add the following JavaScript function in the ``_Host.cshtml`` file present under ``Pages`` folder.
+Step 10: Add the following JavaScript function in the `App.razor` file (for .NET 6/7/8 Blazor Server applications, this replaces `_Host.cshtml`).
 {% capture codesnippet7 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -685,7 +689,7 @@ Step 10: Add the following JavaScript function in the ``_Host.cshtml`` file pres
 {% endcapture %}
 {{ codesnippet7 | OrderList_Indent_Level_1 }}
 
-Step 11: Add the following code under ``NavMenu.razor`` file present under ``Shared`` folder.
+Step 11: Add the following code under `NavMenu.razor` file present under `Shared` folder to create a navigation link.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -697,7 +701,7 @@ Step 11: Add the following code under ``NavMenu.razor`` file present under ``Sha
 {% endhighlight %}
 {% endtabs %}
 
-Step 12: Add the service to services collection in ``ConfigureServices`` method of ``Startup.cs`` file.
+Step 12: Add the service to services collection in `Startup.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -716,7 +720,7 @@ By executing the program, you will get the Excel file as below.
 
 ## Read and Edit Excel file in Blazor Server application
 
-The below code snippet illustrates how to read and edit an Excel file in Blazor Server application.
+The below code snippet illustrates how to read and edit an Excel file in a Blazor Server application.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -730,6 +734,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   application.DefaultVersion = ExcelVersion.Xlsx;
   
   //Load the existing Excel workbook into IWorkbook
+  // Ensure "Sample.xlsx" is present in your project's root directory or modify the path accordingly.
   FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open);
   IWorkbook workbook = application.Workbooks.Open(inputStream);
   
@@ -742,7 +747,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Access a cell value from Excel
   var value = worksheet.Range["A1"].Value;
   
-  //Save the document as a stream and retrun the stream.
+  //Save the document as a stream and return the stream.
   using (MemoryStream stream = new MemoryStream())
   {
     //Save the created Excel document to MemoryStream.
@@ -756,23 +761,23 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 A complete working example of how to read and edit an Excel file in Blazor Server application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Server%20Side/Edit%20Excel).
 
-## Create a simple Excel report in Blazor WASM application
+## Create a simple Excel report in Blazor Standalone application
 
-The below steps illustrates the creation of a simple Invoice formatted Excel document in Blazor WASM application.
+The following steps illustrate the creation of a simple invoice-formatted Excel document in a Blazor Standalone application.
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Step 1: Create a new C# Blazor WASM application project. Select Blazor App from the template and click the Next button.
+Step 1: Create a new C# Blazor Standalone application project. Select Blazor App from the template and click the Next button.
 
 ![Create Blazor Client Side application in Visual Studio](Blazor_images/Blazor_images_Blazor_App.png)
 
-Step 2: Now, the project configuration window will popup. Click Create button to create a new project with the required project name.
+Step 2: Now, the project configuration window will pop up. Click Create button to create a new project with the required project name.
 
 ![Create Blazor Client Side application in Visual Studio](Blazor_images/Blazor_image_Client_ProjectName.png)
 
-Step 3: Choose Blazor WebAssembly App and click Create button to create a new Blazor WASM application for .NET Core 3.0.0-preview9.
+Step 3: Choose Blazor WebAssembly App and click Create button to create a new Blazor Standalone application for .NET Core 3.0.0-preview9.
 
 ![Create Blazor Client Side application in Visual Studio](Blazor_images/Blazor_image_Blazor_Client_App.png)
 
@@ -782,15 +787,14 @@ Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/S
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 5: Create a razor file with name as ``Excel`` under ``Pages`` folder and add the following namespaces in the file.
+Step 5: Create a Razor file named `Excel.razor` under the `Pages` folder and add the following namespaces in the file.
 {% capture codesnippet8 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 @page "/Excel"
-@using Syncfusion.XlsIO;
-@using Syncfusion.Drawing;
 @using System.IO;
 @inject Microsoft.JSInterop.IJSRuntime JS
+@inject HttpClient client
 {% endhighlight %}
 {% endtabs %}
 {% endcapture %}
@@ -801,14 +805,14 @@ Step 6: Add the following code to create a new button.
 {% tabs %}
 {% highlight CSHTML %}
 <h2>Syncfusion Excel library (Essential XlsIO)</h2>
-<p>Syncfusion Excel library (Essential XlsIO)  is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
+<p>Syncfusion Excel library (Essential XlsIO) is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@CreateDocument">Create Document</button>
 {% endhighlight %}
 {% endtabs %}
 {% endcapture %}
 {{ codesnippet9 | OrderList_Indent_Level_1 }}
 
-Step 7: Create a new async method with name as ``CreateDocument`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor WASM application.
+Step 7: Create a new async method named `CreateDocument` and include the following code snippet to create a simple invoice-formatted Excel document in a Blazor Standalone application. Ensure you have an `AdventureCycle.png` image in your `wwwroot/images` directory for this example.
 {% capture codesnippet10 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -994,7 +998,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endcapture %}
 {{ codesnippet10 | OrderList_Indent_Level_1 }}
 
-Step 8: Create a class file with name as ``FileUtils`` and add the following code to invoke the JavaScript action for downloading the file in browser.
+Step 8: Create a class file named `FileUtils.cs` and add the following code to invoke the JavaScript action for downloading the file in the browser.
 {% capture codesnippet11 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -1011,7 +1015,7 @@ public static class FileUtils
 {% endcapture %}
 {{ codesnippet11 | OrderList_Indent_Level_1 }}
 
-Step 9: Add the following JavaScript function in the ``index.html`` file present under ``wwwroot``.
+Step 9: Add the following JavaScript function in the `wwwroot/index.html` file.
 {% capture codesnippet12 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -1046,7 +1050,7 @@ Step 9: Add the following JavaScript function in the ``index.html`` file present
 {% endcapture %}
 {{ codesnippet12 | OrderList_Indent_Level_1 }}
 
-Step 10: Add the following code under ``NavMenu.razor`` file present under ``Shared`` folder.
+Step 10: Add the following code under `NavMenu.razor` file present under `Shared` folder to create a navigation link.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -1062,7 +1066,7 @@ Step 10: Add the following code under ``NavMenu.razor`` file present under ``Sha
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new C# Blazor WASM application project using Create .NET Project option.
+Step 1: Create a new C# Blazor Standalone application project using Create .NET Project option.
 
 ![Create Blazor Client Side application in Visual Studio](Blazor_images/Blazor_VSimages_Blazor_Client_App.png)
 
@@ -1072,14 +1076,14 @@ Step 2: Name the project and create the project.
 
 Alternatively, create a Client application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
-```
+```bash
 dotnet new blazorwasm -o CreateExcel
 cd CreateExcel
 ```
 
-Step 3: To **create a Excel document in Blazor WASM app**,run the following command to  install [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) to the Blazor project.
+Step 3: To **create an Excel document in Blazor Standalone app**, run the following command to install [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) to the Blazor project.
 
-```
+```bash
 dotnet add package Syncfusion.XlsIO.Net.Core
 ```
 
@@ -1087,33 +1091,32 @@ dotnet add package Syncfusion.XlsIO.Net.Core
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 5: Create a razor file with name as ``Excel`` under ``Pages`` folder and add the following namespaces in the file.
+Step 4: Create a Razor file named `Excel.razor` under the `Pages` folder and add the following namespaces in the file.
 {% capture codesnippet8 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 @page "/Excel"
-@using Syncfusion.XlsIO;
-@using Syncfusion.Drawing;
 @using System.IO;
 @inject Microsoft.JSInterop.IJSRuntime JS
+@inject HttpClient client
 {% endhighlight %}
 {% endtabs %}
 {% endcapture %}
 {{ codesnippet8 | OrderList_Indent_Level_1 }}
 
-Step 6: Add the following code to create a new button.
+Step 5: Add the following code to create a new button.
 {% capture codesnippet9 %}
 {% tabs %}
 {% highlight CSHTML %}
 <h2>Syncfusion Excel library (Essential XlsIO)</h2>
-<p>Syncfusion Excel library (Essential XlsIO)  is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
+<p>Syncfusion Excel library (Essential XlsIO) is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@CreateDocument">Create Document</button>
 {% endhighlight %}
 {% endtabs %}
 {% endcapture %}
 {{ codesnippet9 | OrderList_Indent_Level_1 }}
 
-Step 7: Create a new async method with name as ``CreateDocument`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor WASM application.
+Step 6: Create a new async method named `CreateDocument` and include the following code snippet to create a simple invoice-formatted Excel document in a Blazor Standalone application. Ensure you have an `AdventureCycle.png` image in your `wwwroot/images` directory for this example.
 {% capture codesnippet10 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -1299,7 +1302,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endcapture %}
 {{ codesnippet10 | OrderList_Indent_Level_1 }}
 
-Step 8: Create a class file with name as ``FileUtils`` and add the following code to invoke the JavaScript action for downloading the file in browser.
+Step 7: Create a class file named `FileUtils.cs` and add the following code to invoke the JavaScript action for downloading the file in the browser.
 {% capture codesnippet11 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -1316,7 +1319,7 @@ public static class FileUtils
 {% endcapture %}
 {{ codesnippet11 | OrderList_Indent_Level_1 }}
 
-Step 9: Add the following JavaScript function in the ``index.html`` file present under ``wwwroot``.
+Step 8: Add the following JavaScript function in the `wwwroot/index.html` file.
 {% capture codesnippet12 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -1351,7 +1354,7 @@ Step 9: Add the following JavaScript function in the ``index.html`` file present
 {% endcapture %}
 {{ codesnippet12 | OrderList_Indent_Level_1 }}
 
-Step 10: Add the following code under ``NavMenu.razor`` file present under ``Shared`` folder.
+Step 9: Add the following code under `NavMenu.razor` file present under `Shared` folder to create a navigation link.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -1368,14 +1371,14 @@ Step 10: Add the following code under ``NavMenu.razor`` file present under ``Sha
 {% endtabcontents %}
 
 
-A complete working example of how to create an Excel file in Blazor WASM Application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/Create%20Excel).
+A complete working example of how to create an Excel file in Blazor Standalone Application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/Create%20Excel).
 
 By executing the program, you will get the Excel file as below.
 ![Output File](Blazor_images/Blazor_images_Client_Output.png)
 
-## Read and Edit Excel file in Blazor WASM application
+## Read and Edit Excel file in Blazor Standalone application
 
-The below code snippet illustrates how to read and edit an Excel file in Blazor WASM application.
+The below code snippet illustrates how to read and edit an Excel file in a Blazor Standalone application. Ensure `sample-data/Sample.xlsx` is available in your `wwwroot` folder, and HttpClient is injected into the component (e.g., `@inject HttpClient client`).
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -1401,10 +1404,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Access a cell value from Excel
   var value = worksheet.Range["A1"].Value;
 
-  //Save the document as a stream and retrun the stream.
+  //Save the document as a stream and return the stream.
   using (MemoryStream stream = new MemoryStream())
   {
-    //Save the created Excel document to MemoryStream
+    //Save the created Excel document to MemoryStream.
     workbook.SaveAs(stream);
 
     //Download the excel file
@@ -1414,25 +1417,25 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to read and edit an Excel file in Blazor WASM application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/EditExcel).
+A complete working example of how to read and edit an Excel file in Blazor Standalone application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/EditExcel).
 
-N> It is recommended to use Blazor Server application to reduce the pay back load which is high in Blazor WASM.
+N> It is recommended to use Blazor Server application to reduce the payload which is high in Blazor Standalone applications.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (Excel) features.
 
 An online sample link to [create an Excel document](https://blazor.syncfusion.com/demos/excel/create-excel?theme=fluent) in Blazor.
 
-## Convert Excel to Image in Blazor WASM application
+## Convert Excel to Image in Blazor Standalone application
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Step 1: Create a new C# Blazor WASM project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
+Step 1: Create a new C# Blazor Standalone project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application). Ensure `HttpClient` is injected into the component (e.g., `@inject HttpClient client`).
 
-Step 2: Install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) from nuget.org.
+Step 2: Install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) from nuget.org. Make sure to define `Syncfusion.Pdf` and `Syncfusion.Pdf.Graphics` namespaces and to use `Syncfusion.XlsIO.PdfRendering` for PDF conversion capabilities.
 
-Step 3: Add below tag in your Blazor WASM csproj file.
+Step 3: Add the below tag in your Blazor Standalone csproj file.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -1453,10 +1456,11 @@ Step 4: Enable the below properties in csproj file.
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Add the below code snippet in button click.
+Step 5: Add the below code snippet in button click. Ensure `sample-data/InputTemplate.xlsx` is available in your `wwwroot` folder.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
+@using Syncfusion.XlsIO.PdfRendering; // Required for rendering
 //Create an instance of ExcelEngine
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -1488,16 +1492,16 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new C# Blazor WASM project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
+Step 1: Create a new C# Blazor Standalone project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application). Ensure `HttpClient` is injected into the component (e.g., `@inject HttpClient client`).
 
-Step 2: Install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core).
+Step 2: Install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core). Make sure to define `Syncfusion.Pdf` and `Syncfusion.Pdf.Graphics` namespaces and to use `Syncfusion.XlsIO.PdfRendering` for PDF conversion capabilities.
 
-```
+```bash
 dotnet add package SkiaSharp.Views.Blazor
 dotnet add package Syncfusion.XlsIORenderer.Net.Core
 ```
 
-Step 4: Add below tag in your Blazor WASM csproj file.
+Step 3: Add the below tag in your Blazor Standalone csproj file.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -1509,7 +1513,7 @@ Step 4: Add below tag in your Blazor WASM csproj file.
 
 N> Install `wasm-tools` and `wasm-tools-net6` using `dotnet workload install wasm-tools` and `dotnet workload install wasm-tools-net6` commands respectively, while facing issues related to skiasharp, during runtime.
 
-Step 5: Enable the below properties in csproj file.
+Step 4: Enable the below properties in csproj file.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -1518,10 +1522,11 @@ Step 5: Enable the below properties in csproj file.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the below code snippet in button click.
+Step 5: Add the below code snippet in button click. Ensure `sample-data/InputTemplate.xlsx` is available in your `wwwroot` folder.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
+@using Syncfusion.XlsIO.PdfRendering; // Required for rendering
 //Create an instance of ExcelEngine
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -1553,19 +1558,19 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% endtabcontents %}
 
-A complete working example of how to convert an Excel worksheet to image in Blazor WASM application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/ExcelToImage).
+A complete working example of how to convert an Excel worksheet to image in Blazor Standalone application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/ExcelToImage).
 
-## Convert Excel to PDF in Blazor WASM application
+## Convert Excel to PDF in Blazor Standalone application
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Step 1: Create a new C# Blazor WASM project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
+Step 1: Create a new C# Blazor Standalone project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application). Ensure `HttpClient` is injected into the component (e.g., `@inject HttpClient client`).
 
-Step 2: Install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) from nuget.org.
+Step 2: Install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) from nuget.org. Make sure to define `Syncfusion.Pdf` and `Syncfusion.Pdf.Graphics` namespaces and to use `Syncfusion.XlsIO.PdfRendering` for PDF conversion capabilities.
 
-Step 3: Add below tag in your Blazor WASM csproj file.
+Step 3: Add the below tag in your Blazor Standalone csproj file.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -1586,10 +1591,14 @@ Step 4: Enable the below properties in csproj file.
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Add the below code snippet in button click.
+Step 5: Add the below code snippet in button click. Ensure `sample-data/InputTemplate.xlsx` is available in your `wwwroot` folder.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
+@using Syncfusion.Pdf;         // Required for PdfDocument
+@using Syncfusion.Pdf.Graphics; // Required for PdfGraphics, etc.
+@using Syncfusion.XlsIO.PdfRendering; // Required for ConvertToPDF
+
 //Create an instance of ExcelEngine
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -1623,16 +1632,16 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% tabcontent Visual Studio Code%}
 
-Step 1: Create a new C# Blazor WASM project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
+Step 1: Create a new C# Blazor Standalone project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application). Ensure `HttpClient` is injected into the component (e.g., `@inject HttpClient client`).
 
-Step 2: Install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core).
+Step 2: Install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core). Make sure to define `Syncfusion.Pdf` and `Syncfusion.Pdf.Graphics` namespaces and to use `Syncfusion.XlsIO.PdfRendering` for PDF conversion capabilities.
 
-```
+```bash
 dotnet add package SkiaSharp.Views.Blazor
 dotnet add package Syncfusion.XlsIORenderer.Net.Core
 ```
 
-Step 3: Add below tag in your Blazor WASM csproj file.
+Step 3: Add the below tag in your Blazor Standalone csproj file.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -1653,10 +1662,14 @@ Step 4: Enable the below properties in csproj file.
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Add the below code snippet in button click.
+Step 5: Add the below code snippet in button click. Ensure `sample-data/InputTemplate.xlsx` is available in your `wwwroot` folder.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
+@using Syncfusion.Pdf;         // Required for PdfDocument
+@using Syncfusion.Pdf.Graphics; // Required for PdfGraphics, etc.
+@using Syncfusion.XlsIO.PdfRendering; // Required for ConvertToPDF
+
 //Create an instance of ExcelEngine
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -1690,13 +1703,13 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% endtabcontents %}
 
-A complete working example of how to convert an Excel file to PDF in Blazor WASM application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/ExcelToPDF).
+A complete working example of how to convert an Excel file to PDF in Blazor Standalone application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/ExcelToPDF).
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. You can also explore our [Blazor Excel library demo](https://blazor.syncfusion.com/demos/excel/create-excel?theme=bootstrap5) that shows how to create and modify Excel files from C# with just five lines of code.
 
 ## Create a simple Excel report in Blazor Server Web application
 
-The below steps illustrates the creation of a simple Invoice formatted Excel document in Blazor Server web application.
+The following steps illustrate the creation of a simple invoice-formatted Excel document in a Blazor Server web application.
 
 {% tabcontents %}
 
@@ -1720,7 +1733,7 @@ Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/S
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
 
-Step 5: Create a razor file with name as ``Excel`` under ``Pages`` folder, which is located inside the ``Components`` folder and include the following namespaces in the file.
+Step 5: Create a Razor file named `Excel.razor` under the `Components/Pages` folder and include the following namespaces in the file.
 
 {% capture codesnippet1 %}
 {% tabs %}
@@ -1742,14 +1755,14 @@ Step 6: Add the following code to create a new button.
 {% tabs %}
 {% highlight CSHTML %}
 <h2>Syncfusion Excel library (Essential XlsIO)</h2>
-<p>Syncfusion Excel library (Essential XlsIO)  is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
-<button class="btn btn-primary" @onclick="@CreateDocument">Create Document</button>
+<p>Syncfusion Excel library (Essential XlsIO) is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
+<button class="btn btn-primary" @onclick="@CreateExcelDocument">Create Document</button>
 {% endhighlight %}
 {% endtabs %}
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 7: Add the following code in ``Excel.razor`` file to create and download the Excel document.
+Step 7: Add the following code in `Excel.razor` file to create and download the Excel document.
 {% capture codesnippet3 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -1759,10 +1772,10 @@ Step 7: Add the following code in ``Excel.razor`` file to create and download th
     /// <summary>
     /// Create and download the Excel document
     /// </summary>
-    protected async void CreateDocument()
+    protected void CreateExcelDocument()
     {
         excelStream = service.CreateExcel();
-        await JS.SaveAs("Sample.xlsx", excelStream.ToArray());
+        JS.SaveAs("Sample.xlsx", excelStream.ToArray());
     }
 }
 {% endhighlight %}
@@ -1770,7 +1783,7 @@ Step 7: Add the following code in ``Excel.razor`` file to create and download th
 {% endcapture %}
 {{ codesnippet3 | OrderList_Indent_Level_1 }}
 
-Step 8: Create a new cs file with name as ``ExcelService`` under ``Data`` folder and include the following namespaces in the file.
+Step 8: Create a new .cs file named `ExcelService.cs` under the `Components/Data` folder and include the following namespaces in the file.
 
 {% capture codesnippet4 %}
 {% tabs %}
@@ -1783,7 +1796,7 @@ using System.IO;
 {% endcapture %}
 {{ codesnippet4 | OrderList_Indent_Level_1 }}
 
-Step 9: Create a new MemoryStream method with name as ``CreateExcel`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Server web application.
+Step 9: Create a new `MemoryStream` method named `CreateExcel` and include the following code snippet to create a simple invoice-formatted Excel document in a Blazor Server web application. Ensure you have an `AdventureCycle.png` image in your project's root directory for this example.
 {% capture codesnippet5 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -1798,6 +1811,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorksheet worksheet = workbook.Worksheets[0];
   
   //Add a picture
+  // Ensure "AdventureCycle.png" is present in your project's root directory or modify the path accordingly.
   FileStream imageStream = new FileStream("AdventureCycle.png", FileMode.Open);
   Image image = Image.FromStream(imageStream);
   IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, image, 20, 20);
@@ -1959,7 +1973,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A9:A14"].RowHeight = 15;
   worksheet.Range["A15:A23"].RowHeight = 18;
   
-  //Save the document as a stream and retrun the stream.
+  //Save the document as a stream and return the stream.
   using (MemoryStream stream = new MemoryStream())
   {
     //Save the created Excel document to MemoryStream
@@ -1972,7 +1986,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endcapture %}
 {{ codesnippet5 | OrderList_Indent_Level_1 }}
 
-Step 10: Create a new class file in the project, with name as ``FileUtils`` and add the following code to invoke the JavaScript action for downloading the file in browser.
+Step 10: Create a new class file in the project, named `FileUtils.cs`, and add the following code to invoke the JavaScript action for downloading the file in the browser.
 
 {% capture codesnippet6 %}
 {% tabs %}
@@ -1990,7 +2004,7 @@ public static class FileUtils
 {% endcapture %}
 {{ codesnippet6 | OrderList_Indent_Level_1 }}
 
-Step 11: Add the following JavaScript function in the ``App.razor``.
+Step 11: Add the following JavaScript function in the `App.razor` file.
 {% capture codesnippet7 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -2025,7 +2039,7 @@ Step 11: Add the following JavaScript function in the ``App.razor``.
 {% endcapture %}
 {{ codesnippet7 | OrderList_Indent_Level_1 }}
 
-Step 12: Add the following code in ``NavMenu.razor`` file present under ``Layout`` folder.
+Step 12: Add the following code in `NavMenu.razor` file present under `Components/Layout` folder to create a navigation link.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -2037,11 +2051,11 @@ Step 12: Add the following code in ``NavMenu.razor`` file present under ``Layout
 {% endhighlight %}
 {% endtabs %}
 
-Step 13: Add the service in the ``Program.cs`` file.
+Step 13: Add the service in the `Program.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-builder.Services.AddScoped <Create_Excel.Components.Data.ExcelService>();
+builder.Services.AddScoped<Create_Excel.Components.Data.ExcelService>();
 {% endhighlight %}
 {% endtabs %}
 
@@ -2059,14 +2073,14 @@ Step 2: Name the project and create the project.
 
 Alternatively, create a Server Web application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
-```
+```bash
 dotnet new blazor -o CreateExcel
 cd CreateExcel
 ```
 
-Step 3: To **create a Excel document in Blazor Server app**,run the following command to  install [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) to the Blazor project.
+Step 3: To **create an Excel document in Blazor Server app**, run the following command to install [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) to the Blazor project.
 
-```
+```bash
 dotnet add package Syncfusion.XlsIO.Net.Core
 ```
 
@@ -2074,7 +2088,7 @@ dotnet add package Syncfusion.XlsIO.Net.Core
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
 
-Step 4: Create a razor file with name as ``Excel`` under ``Pages`` folder, which is located inside the ``Components`` folder and include the following namespaces in the file.
+Step 4: Create a Razor file named `Excel.razor` under the `Components/Pages` folder and include the following namespaces in the file.
 
 {% capture codesnippet1 %}
 {% tabs %}
@@ -2096,14 +2110,14 @@ Step 5: Add the following code to create a new button.
 {% tabs %}
 {% highlight CSHTML %}
 <h2>Syncfusion Excel library (Essential XlsIO)</h2>
-<p>Syncfusion Excel library (Essential XlsIO)  is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
-<button class="btn btn-primary" @onclick="@CreateDocument">Create Document</button>
+<p>Syncfusion Excel library (Essential XlsIO) is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
+<button class="btn btn-primary" @onclick="@CreateExcelDocument">Create Document</button>
 {% endhighlight %}
 {% endtabs %}
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 6: Add the following code in ``Excel.razor`` file to create and download the Excel document.
+Step 6: Add the following code in `Excel.razor` file to create and download the Excel document.
 {% capture codesnippet3 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -2113,10 +2127,10 @@ Step 6: Add the following code in ``Excel.razor`` file to create and download th
     /// <summary>
     /// Create and download the Excel document
     /// </summary>
-    protected async void CreateDocument()
+    protected void CreateExcelDocument()
     {
         excelStream = service.CreateExcel();
-        await JS.SaveAs("Sample.xlsx", excelStream.ToArray());
+        JS.SaveAs("Sample.xlsx", excelStream.ToArray());
     }
 }
 {% endhighlight %}
@@ -2124,11 +2138,11 @@ Step 6: Add the following code in ``Excel.razor`` file to create and download th
 {% endcapture %}
 {{ codesnippet3 | OrderList_Indent_Level_1 }}
 
-Step 7: Create a new cs file with name as ``ExcelService`` under ``Data`` folder and include the following namespaces in the file.
+Step 7: Create a new .cs file named `ExcelService.cs` under the `Components/Data` folder and include the following namespaces in the file.
 
 {% capture codesnippet4 %}
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight csharp tabtitle="C#" %}
 using Syncfusion.XlsIO;
 using Syncfusion.Drawing;
 using System.IO; 
@@ -2137,7 +2151,7 @@ using System.IO;
 {% endcapture %}
 {{ codesnippet4 | OrderList_Indent_Level_1 }}
 
-Step 8: Create a new MemoryStream method with name as ``CreateExcel`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Server web application.
+Step 8: Create a new `MemoryStream` method named `CreateExcel` and include the following code snippet to create a simple invoice-formatted Excel document in a Blazor Server web application. Ensure you have an `AdventureCycle.png` image in your project's root directory for this example.
 {% capture codesnippet5 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -2152,6 +2166,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorksheet worksheet = workbook.Worksheets[0];
   
   //Add a picture
+  // Ensure "AdventureCycle.png" is present in your project's root directory or modify the path accordingly.
   FileStream imageStream = new FileStream("AdventureCycle.png", FileMode.Open);
   Image image = Image.FromStream(imageStream);
   IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, image, 20, 20);
@@ -2313,7 +2328,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A9:A14"].RowHeight = 15;
   worksheet.Range["A15:A23"].RowHeight = 18;
   
-  //Save the document as a stream and retrun the stream.
+  //Save the document as a stream and return the stream.
   using (MemoryStream stream = new MemoryStream())
   {
     //Save the created Excel document to MemoryStream
@@ -2326,7 +2341,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endcapture %}
 {{ codesnippet5 | OrderList_Indent_Level_1 }}
 
-Step 9: Create a new class file in the project, with name as ``FileUtils`` and add the following code to invoke the JavaScript action for downloading the file in browser.
+Step 9: Create a new class file in the project, named `FileUtils.cs`, and add the following code to invoke the JavaScript action for downloading the file in the browser.
 
 {% capture codesnippet6 %}
 {% tabs %}
@@ -2344,7 +2359,7 @@ public static class FileUtils
 {% endcapture %}
 {{ codesnippet6 | OrderList_Indent_Level_1 }}
 
-Step 10: Add the following JavaScript function in the ``App.razor``.
+Step 10: Add the following JavaScript function in the `App.razor` file.
 {% capture codesnippet7 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -2379,7 +2394,7 @@ Step 10: Add the following JavaScript function in the ``App.razor``.
 {% endcapture %}
 {{ codesnippet7 | OrderList_Indent_Level_1 }}
 
-Step 11: Add the following code in ``NavMenu.razor`` file present under ``Layout`` folder.
+Step 11: Add the following code in `NavMenu.razor` file present under `Components/Layout` folder to create a navigation link.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -2391,11 +2406,11 @@ Step 11: Add the following code in ``NavMenu.razor`` file present under ``Layout
 {% endhighlight %}
 {% endtabs %}
 
-Step 12: Add the service in the ``Program.cs`` file.
+Step 12: Add the service in the `Program.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-builder.Services.AddScoped <Create_Excel.Components.Data.ExcelService>();
+builder.Services.AddScoped<Create_Excel.Components.Data.ExcelService>();
 {% endhighlight %}
 {% endtabs %}
 
@@ -2410,7 +2425,7 @@ By executing the program, you will get the Excel file as below.
 
 ## Read and Edit Excel file in Blazor Server web application
 
-The below code snippet illustrates how to read and edit an Excel file in Blazor Server web application.
+The below code snippet illustrates how to read and edit an Excel file in a Blazor Server web application. Ensure `Sample.xlsx` is available in your project's root directory for this example.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -2436,7 +2451,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Access a cell value from Excel
   var value = worksheet.Range["A1"].Value;
   
-  //Save the document as a stream and retrun the stream.
+  //Save the document as a stream and return the stream.
   using (MemoryStream stream = new MemoryStream())
   {
     //Save the created Excel document to MemoryStream.
