@@ -223,8 +223,8 @@ Run the WPF application. The Syncfusion&reg; Blazor PDF Viewer renders inside th
 
 * [Getting Started with Blazor PDF Viewer Component in Blazor Web App](./web-app)
 
-* [Getting Started with Blazor PDF Viewer Component in WinForms Blazor Hybrid App](./deploy-winforms-blazor-app)
+* [Getting Started with Blazor PDF Viewer Component in WinForms Blazor Hybrid App](./winforms-blazor-app)
 
-* [Getting Started with Blazor PDF Viewer Component in MAUI Blazor App](./deploy-maui-blazor-app)
+* [Getting Started with Blazor PDF Viewer Component in MAUI Blazor App](./maui-blazor-app)
 
 * [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)

@@ -33,10 +33,10 @@ In the classic viewer, many C# service calls were required to retrieve informati
 
 * Accurate, reliable rendering of PDF pages.
 * Easy page navigation with:
-    * [Thumbnail page view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/navigation#page-thumbnail-navigation)
-    * [Bookmark panel](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/navigation#bookmark-navigation)
-    * [Hyperlink navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/navigation#hyperlink-navigation)
-    * [Table of contents navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/navigation#table-of-content-navigation)
+    * [Thumbnail page view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/interactive-pdf-navigation/page-thumbnail-navigation)
+    * [Bookmark panel](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/interactive-pdf-navigation/bookmark-navigation)
+    * [Hyperlink navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/interactive-pdf-navigation/hyperlink-navigation)
+    * [Table of contents navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/interactive-pdf-navigation/table-of-content-navigation)
 * Core interactions:
     * [Zooming](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/magnification) and [panning](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/interaction#panning-mode)
     * [Text searching](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/text-search)
@@ -48,7 +48,7 @@ In the classic viewer, many C# service calls were required to retrieve informati
     * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/stamp-annotation): built-in and custom stamps
     * [Measurement annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/measurement-annotation)
     * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/free-text-annotation)
-    * [Redaction annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/redaction-annotation)
+    * [Redaction annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/redaction/overview)
     * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/sticky-notes-annotation) for all annotation types
 * [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/form-filling)
 * [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/form-designer)
