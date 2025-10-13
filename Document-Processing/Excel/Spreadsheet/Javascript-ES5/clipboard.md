@@ -64,14 +64,14 @@ Paste can be done in one of the following ways.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/clipboard-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/clipboard-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/clipboard-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/clipboard-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/clipboard-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/clipboard-cs1" %}
 
 ## Prevent the paste functionality
 
@@ -80,14 +80,14 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/clipboard-cs2/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/clipboard-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/clipboard-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/clipboard-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/clipboard-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/clipboard-cs2" %}
 
 ## Limitations
 

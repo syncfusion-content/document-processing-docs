@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-## Identify the context menu opened in Spreadsheet control
+## Identify the context menu opened in ASP.NET MVC Spreadsheet control
 
 The Spreadsheet includes several context menus that will open and display depending on the action. When you right-click on a cell, for example, a context menu with options related to the cell element appears.
 
@@ -24,6 +24,6 @@ The following code example shows how to identify the context menu opened.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/find-target-context-menu/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/find-target-context-menu/razor %}
 {% endhighlight %}
 {% endtabs %}

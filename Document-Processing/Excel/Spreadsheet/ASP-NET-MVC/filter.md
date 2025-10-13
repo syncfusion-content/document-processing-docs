@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Filtering in Spreadsheet control
+# Filtering in ASP.NET MVC Spreadsheet control
 
 Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowFiltering) property to enable or disable filtering functionality.
 
@@ -38,10 +38,10 @@ The following code example shows `filter` functionality in the Spreadsheet contr
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/filter/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/filter/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="FilterController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/filter/filterController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/filter/filterController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,10 +87,10 @@ The following code example shows how to get the filtered rows.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/filter-cs1/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/filter-cs1/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="InsertSheetController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/filter-cs1/filterController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/filter-cs1/filterController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
