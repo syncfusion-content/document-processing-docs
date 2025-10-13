@@ -1584,3 +1584,129 @@ N> Note: We have option to exclude the default Blink binaries from the installat
 
 {% endhighlight %}
 {% endtabs %}
+
+
+## Installing Chromium on Alpine without using edge to avoid Twistlock/Prisma security alerts
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">
+Chromium is installed from the Alpine edge/community repository using:
+<br/>
+<code>apk add chromium --update-cache --repository http://nl.alpinelinux.org/alpine/edge/community</code>
+<br/>
+This enables HTML-to-PDF conversion but triggers Twistlock/Prisma Cloud security alerts due to packages pulled from the edge repository.
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason</th>
+<td>
+The <b>edge</b> repository is rolling/testing and can introduce newer dependencies and CVEs flagged by enterprise scanners. Using edge also reduces build reproducibility across environments.
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+Install Chromium from the <b>stable Alpine repositories</b> (main/community) and include required runtime dependencies. This avoids the edge repo entirely and reduces security findings.
+<br/><br/>
+Use the following Dockerfile as a reference:
+<br/><br/>
+
+{% tabs %}
+{% highlight C# tabtitle="Dockerfile (Alpine, stable repos)" %}
+# Base image for runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS base
+
+# Install required packages from stable Alpine repositories (no edge)
+RUN apk upgrade -U && \
+    apk add --no-cache tzdata && \
+    apk add --no-cache icu-libs && \
+    apk update && \
+    apk upgrade && \
+    apk add --no-cache openssl && \
+    apk update && \
+    apk upgrade --available && \
+    apk add --update ca-certificates && \
+    apk add --no-cache chromium && \
+    rm -rf /var/cache/apk/* && \
+    apk update && \
+    apk upgrade && \
+    apk add --no-cache \
+      libgdiplus fontconfig freetype ttf-dejavu libjpeg-turbo libpng mpg123 libopenmpt alsa-lib cairo cups-libs dbus-libs \
+      expat gdk-pixbuf glib gtk+3.0 nspr nss pango libstdc++ \
+      libx11 libxcomposite libxcursor libxdamage \
+      libxext libxfixes libxi libxrandr libxrender libxtst \
+      mesa-gl mesa-dri-gallium && \
+    rm -rf /var/cache/apk/*
+
+# Create crashpad directory (required by newer Chromium)
+RUN mkdir -p /crashpad && \
+    chown -R root:root /crashpad
+
+# Runtime environment variables
+ENV XDG_CONFIG_HOME=/tmp/.chromium
+ENV XDG_CACHE_HOME=/tmp/.chromium
+ENV CHROME_CRASHPAD_DATABASE=/crashpad
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
+
+# Create Chrome crashpad directory
+RUN mkdir -p /var/www/.config/google-chrome/Crashpad
+
+WORKDIR /app
+EXPOSE 8080
+
+# Build stage
+FROM mcr.microsoft.com/dotnet/sdk:8.0-alpine AS build
+ARG BUILD_CONFIGURATION=Release
+WORKDIR /src
+
+# Copy project files
+COPY ["Directory.Build.targets", "."]
+COPY ["NuGet.config", "."]
+COPY ["production/Ops.PDFConversionAPI.Web/Ops.PDFConversionAPI.Web.csproj", "production/Ops.PDFConversionAPI.Web/"]
+
+# Restore dependencies
+RUN dotnet restore "./production/Ops.PDFConversionAPI.Web/Ops.PDFConversionAPI.Web.csproj"
+
+# Copy full source
+COPY . .
+
+# Build project
+WORKDIR "/src/production/Ops.PDFConversionAPI.Web"
+RUN dotnet build "./Ops.PDFConversionAPI.Web.csproj" -c $BUILD_CONFIGURATION -o /app/build
+
+# Publish stage
+FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish "./Ops.PDFConversionAPI.Web.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+
+# Final stage
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+
+# Start the application
+ENTRYPOINT ["dotnet", "Ops.PDFConversionAPI.Web.dll"]
+{% endhighlight %}
+{% endtabs %}
+
+<b>Notes</b>:
+- No edge repository is referenced; Chromium comes from stable Alpine repos.
+- Typical Chromium paths on Alpine:
+  - <code>/usr/bin/chromium-browser</code> (symlink) or
+  - <code>/usr/lib/chromium/chromium</code>
+  Set this path in your converter settings:
+{% tabs %}
+{% highlight C# tabtitle="C# (BlinkPath)" %}
+var settings = new BlinkConverterSettings();
+settings.BlinkPath = "/usr/bin/chromium-browser"; // or "/usr/lib/chromium/chromium"
+settings.CommandLineArguments.Add("--no-sandbox");
+settings.CommandLineArguments.Add("--disable-setuid-sandbox");
+settings.CommandLineArguments.Add("--disable-dev-shm-usage");
+{% endhighlight %}
+{% endtabs %}
+
+We have attached the modified docker file for your reference <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/Dockerfile">Docker file</a>.
+
+</td>
+</tr>
+</table>
