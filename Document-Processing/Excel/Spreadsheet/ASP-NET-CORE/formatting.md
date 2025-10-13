@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Formatting in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Formatting in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Formatting in EJ2 ASP.NET Core Syncfusion Spreadsheet Control
+description: Learn here all about Formatting in Syncfusion EJ2 ASP.NET CORE Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Formatting
 documentation: ug
 ---
 
 
-# Formatting in Spreadsheet Component
+# Formatting in ASP.NET Core Spreadsheet Control
 
 Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are,
 * Number Formatting

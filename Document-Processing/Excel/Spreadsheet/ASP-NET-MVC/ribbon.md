@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ribbon in EJ2 ASP.NET MVC Syncfusion Spreadsheet Component
-description: Learn here all about Ribbon in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Ribbon in EJ2 ASP.NET MVC Syncfusion Spreadsheet Control
+description: Learn here all about Ribbon in Syncfusion EJ2 ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Ribbon
 documentation: ug
 ---
 
 
-# Ribbon in Spreadsheet control
+# Ribbon in ASP.NET MVC Spreadsheet Control
 
 It helps to organize a spreadsheet’s features into a series of tabs. By clicking the expand or collapse icon, you can expand or collapse the ribbon toolbar dynamically.
 

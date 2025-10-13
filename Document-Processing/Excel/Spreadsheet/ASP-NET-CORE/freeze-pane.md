@@ -8,11 +8,11 @@ documentation: ug
 ---
 
 
-# FreezePanes in Spreadsheet control
+# FreezePanes in ASP.NET Core Spreadsheet control
 
 Freeze Panes helps you to keep particular rows or columns visible when scrolling the sheet content in the spreadsheet. You can specify the number of frozen rows and columns using the `frozenRows` and `frozenColumns` properties inside the [`Sheet`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Sheets) property.
 
-## Apply freezepanes on UI
+## Apply freeze panes on UI
 
 **User Interface**:
 

@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Editing in Spreadsheet control
+# Editing in ASP.NET Core Spreadsheet control
 
 You can edit the contents of a cell directly in the cell or by typing in the formula bar. By default, the editing feature is enabled in the spreadsheet. Use the [`allowEditing`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowEditing) property to enable or disable the editing feature.
 
