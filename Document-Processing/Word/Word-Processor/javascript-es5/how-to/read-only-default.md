@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Read only default in JavaScript (ES5) Document editor control
+title: Read only default in JavaScript (ES5) Document editor | Syncfusion
 description: Learn here all about Read only default in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Read only default 
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Read only default in JavaScript (ES5) Document editor control
+# Read only default in JavaScript (ES5) Document editor
 
 In this article, we are going to see how to open a document in read only mode by default in DocumentEditor & DocumentEditorContainer.
 

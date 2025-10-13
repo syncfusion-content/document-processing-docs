@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Find and replace in JavaScript (ES5) Document editor control
+title: Find and replace in JavaScript (ES5) Document editor | Syncfusion
 description: Learn here all about Find and replace in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Find and replace 
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Find and replace in JavaScript (ES5) Document editor control
+# Find and replace in JavaScript (ES5) Document editor
 
 The Document Editor component searches a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with selection performs various operations on the search results like replacing it with some other text, highlighting it, making it bolder, and more.
 

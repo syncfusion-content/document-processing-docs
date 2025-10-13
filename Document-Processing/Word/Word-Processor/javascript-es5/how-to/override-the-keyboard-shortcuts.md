@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Override the keyboard shortcuts in JavaScript (ES5) Document editor control
+title: Override the keyboard shortcuts in JavaScript (ES5) | Syncfusion
 description: Learn here all about Override the keyboard shortcuts in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Override the keyboard shortcuts 

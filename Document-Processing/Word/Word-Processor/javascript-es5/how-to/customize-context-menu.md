@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize context menu in JavaScript (ES5) Document editor control
+title: Customize context menu in JavaScript (ES5) DocumentEditor | Syncfusion
 description: Learn here all about Customize context menu in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize context menu 
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize context menu in JavaScript (ES5) Document editor control
+# Customize context menu in JavaScript (ES5) Document editor
 
 ## How to customize context menu in Document Editor
 

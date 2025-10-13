@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Collaborative Editing in JavaScript (ES5) with Redis in Java | Syncfusion
+title: Collaborative Editing in JavaScript (ES5) Document editor | Syncfusion
 description: Learn how to enable collaborative editing in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Collaborative Editing Java
