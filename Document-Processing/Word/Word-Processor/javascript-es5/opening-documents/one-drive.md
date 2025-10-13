@@ -16,9 +16,9 @@ To load a document from One Drive in a Document editor, you can follow the steps
 
 Need to create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs. 
 
-**Step 2:** Create a Simple Document Editor Sample in Javascript
+**Step 2:** Create a Simple Document Editor Sample in JavaScript
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in Javascript. This will give you a basic setup of the Document Editor component.
+Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in JavaScript. This will give you a basic setup of the Document Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -129,7 +129,7 @@ public async Task<string> LoadFromOneDrive([FromBody] Dictionary<string, string>
 
 ```
 
-N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
+N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_One_drive** with your actual tenant ID, application ID, and folder name.
 
 **Step 4:**  Modify the index File in the Document Editor sample
 

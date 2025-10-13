@@ -85,7 +85,7 @@ To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT
 > `<https://>`<br>
 > `file:///`<br>
 > `www.`<br>
-> `mailto:`<br>
+> `mail-to:`<br>
 
 Refer to the following example.
 
