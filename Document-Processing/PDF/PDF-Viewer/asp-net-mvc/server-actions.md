@@ -407,7 +407,7 @@ The jsonObjects used as the parameter in each method is a class with various pro
         public string freeTextAnnotation { get; set; }
         public string signatureData { get; set; }
         public string fieldsData { get; set; }
-        public string FormDesigner { get; set; }
+        public string formDesigner { get; set; }
         public string inkSignatureData { get; set; }
         public string tileXCount { get; set; }
         public string tileYCount { get; set; }
