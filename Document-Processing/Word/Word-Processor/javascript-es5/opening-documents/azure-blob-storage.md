@@ -101,7 +101,7 @@ In the client-side, the document is returned from the web service is opening usi
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/open-azure-blob/index.html %}
+{% include code-snippet/document-editor/javascript-es5/open-azure-blob/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

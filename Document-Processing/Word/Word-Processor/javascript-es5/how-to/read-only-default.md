@@ -16,10 +16,10 @@ In this article, we are going to see how to open a document in read only mode by
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/read-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/read-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/read-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/read-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -29,10 +29,10 @@ In this article, we are going to see how to open a document in read only mode by
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/read-container-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/read-container-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/read-container-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/read-container-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

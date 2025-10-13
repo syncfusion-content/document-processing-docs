@@ -26,10 +26,10 @@ Refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/spinner-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/spinner-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/spinner-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/spinner-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
