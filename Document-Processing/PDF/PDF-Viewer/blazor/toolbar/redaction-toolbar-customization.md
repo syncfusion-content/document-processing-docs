@@ -15,9 +15,10 @@ The redaction toolbar can be customized by rearranging existing items, disabling
 
 Show the redaction toolbar on desktop by including the required [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ToolbarItem.html) in the SfPdfViewer2 component.
 
-### Code example
+The following example demonstrates how to enable the redaction toolbar on desktop.
 
 ```cshtml
+
 @page "/"
 
 <SfPdfViewer2 Height="100%" Width="100%" DocumentPath="Annotations.pdf">
@@ -47,17 +48,21 @@ Show the redaction toolbar on desktop by including the required [ToolbarItems](h
         };
     }
 }
+
 ```
+
 Refer to the following image for the desktop view.
+
 ![Enable redaction toolbar for desktop](../annotation/redaction-annotations-images/enable-redaction-toolbar-for-desktop.png)
 
 ## Enable the redaction toolbar on mobile
 
 Show the redaction toolbar on mobile by configuring the [MobileToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.MobileToolbarItem.html) property.
 
-### Code example
+The following example demonstrates how to enable the redaction toolbar on mobiles.
 
 ```cshtml
+
 @page "/"
 
 <SfPdfViewer2 Height="100%" Width="100%" DocumentPath="Annotations.pdf">
@@ -79,6 +84,7 @@ Show the redaction toolbar on mobile by configuring the [MobileToolbarItems](htt
         };
     }
 }
+
 ```
 
 Refer to the following image for the mobile view.
@@ -103,16 +109,19 @@ Control visibility through application logic by invoking the `ShowRedactionToolb
 The following example demonstrates how to toggle the visibility of the redaction toolbar using a button:
 
 ```cshtml
+
 private void ToggleRedactionToolbar()
 {
     isRedactionToolbarVisible = !isRedactionToolbarVisible;
     SfPdfViewer2.ShowRedactionToolbar(isRedactionToolbarVisible);
 }
+
 ```
 
 Refer to the following image for details.
+
 ![Programmatically show the Redaction toolbar](../annotation/redaction-annotations-images/show-redaction-toolbar.png)
 
 ## See also
 
-* [Adding the redaction annotation in PDF viewer](./annotation/redaction-annotation)
+* [Adding the redaction annotation in PDF viewer](../redaction/overview)
