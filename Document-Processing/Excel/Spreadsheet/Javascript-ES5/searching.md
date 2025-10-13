@@ -64,14 +64,14 @@ In the following sample, searching can be done by following ways:
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/searching-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/searching-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/searching-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/searching-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/searching-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/searching-cs1" %}
 
 ## Limitations
 

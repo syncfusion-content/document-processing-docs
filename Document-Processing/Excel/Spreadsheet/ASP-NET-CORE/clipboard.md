@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clipboard in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+title: Clipboard in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
 description: Learn here all about Clipboard in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Clipboard
@@ -62,10 +62,10 @@ N> If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`)
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/clipboard/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/clipboard/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ClipboardController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/clipboard/clipboardController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/clipboard/clipboardController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -77,10 +77,10 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/prevent-paste/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/prevent-paste/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ClipboardController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/prevent-paste/clipboardController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/prevent-paste/clipboardController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

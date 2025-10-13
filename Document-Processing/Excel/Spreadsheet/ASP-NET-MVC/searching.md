@@ -65,10 +65,10 @@ In the following sample, searching can be done by following ways:
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/search/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/search/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="SearchController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/search/searchController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/search/searchController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

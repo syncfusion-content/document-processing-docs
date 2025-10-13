@@ -49,10 +49,10 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/row-selection/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/row-selection/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/row-selection/selectionController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/row-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,10 +75,10 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/column-selection/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/column-selection/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/column-selection/selectionController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/column-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -90,10 +90,10 @@ Below is a code example demonstrating how to retrieve the selected cell values a
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/selected-cell-values/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/selected-cell-values/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectedCellValuesController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/selected-cell-values/selectedCellValuesController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/selected-cell-values/selectedCellValuesController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -103,10 +103,10 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/disable-selection/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/disable-selection/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/disable-selection/selectionController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/disable-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -24,6 +24,6 @@ The following code example shows how to identify the context menu opened.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/find-target-context-menu/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/find-target-context-menu/razor %}
 {% endhighlight %}
 {% endtabs %}

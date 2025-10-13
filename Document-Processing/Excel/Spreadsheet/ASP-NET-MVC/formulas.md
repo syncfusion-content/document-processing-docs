@@ -33,10 +33,10 @@ In the example below, the Spreadsheet control is rendered with the `German cultu
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/formula-cs3/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/formula-cs3/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="FormulaController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/formula-cs3/formulaController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/formula-cs3/formulaController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,10 +50,10 @@ The following code example shows an unsupported formula in the spreadsheet.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/formula/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/formula/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="FormulaController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/formula/formulaController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/formula/formulaController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -63,10 +63,10 @@ The following code example shows how to use `computeExpression` method in the sp
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/formula-cs2/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/formula-cs2/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="FormulaController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/formula-cs2/formulaController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/formula-cs2/formulaController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,10 +87,10 @@ The following code example shows the usage of named ranges support.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/defined-names/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/defined-names/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="DefinedNameController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/defined-names/definedNameController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/defined-names/definedNameController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -113,10 +113,10 @@ The following code example demonstrates how to set the Automatic calculation mod
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/calculation-cs1/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/calculation-cs1/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="CalculationModeController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/calculation-cs1/calculationModeController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/calculation-cs1/calculationModeController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -133,10 +133,10 @@ The following code example demonstrates how to set the Manual calculation mode i
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/calculation-cs2/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/calculation-cs2/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="CalculationModeController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/calculation-cs2/calculationModeController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/calculation-cs2/calculationModeController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

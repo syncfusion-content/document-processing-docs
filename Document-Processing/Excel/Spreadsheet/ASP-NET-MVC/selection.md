@@ -49,10 +49,10 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/row-selection/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/row-selection/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/row-selection/selectionController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/row-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,10 +75,10 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/column-selection/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/column-selection/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/column-selection/selectionController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/column-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -90,10 +90,10 @@ Below is a code example demonstrating how to retrieve the selected cell values a
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/selected-cell-values/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/selected-cell-values/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectedCellValuesController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/selected-cell-values/selectedCellValuesController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/selected-cell-values/selectedCellValuesController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -103,10 +103,10 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/disable-selection/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/disable-selection/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/disable-selection/selectionController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/disable-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
