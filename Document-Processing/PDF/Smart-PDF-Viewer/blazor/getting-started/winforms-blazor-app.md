@@ -104,7 +104,7 @@ The WinForms project must target Windows and enable WinForms. A typical project 
 Create a `Component` folder, add an `_Imports.razor` file in it, and include the required component namespaces within that folder.
 
 {% tabs %}
-{% highlight razor  tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Microsoft.AspNetCore.Components.Web
 @using Syncfusion.Blazor.SmartPdfViewer

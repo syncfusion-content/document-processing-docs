@@ -103,7 +103,7 @@ The WPF project must target Windows and enable WPF. A typical project file looks
 Create an `_Imports.razor` and add the component namespace
 
 {% tabs %}
-{% highlight razor  tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Microsoft.AspNetCore.Components.Web
 @using Syncfusion.Blazor.SmartPdfViewer
