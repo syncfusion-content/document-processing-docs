@@ -107,3 +107,9 @@ N> GoToPageAsync expects a 1-based page number.
 }
 
 ```
+
+## See Also
+
+* [Magnification in Blazor SfPdfViewer](../magnification)
+
+* [Bookmark navigation in Blazor SfPdfViewer](./bookmark-navigation)

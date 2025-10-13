@@ -100,3 +100,7 @@ Use the [PdfViewerTextSearchColorSettings](https://help.syncfusion.com/cr/blazor
 ```
 
 ![Blazor SfPdfViewer text search highlight color customization](./images/blazor-pdfviewer-text-search-settings.png)
+
+## See Also
+
+* [Extract and Highlight Text in Blazor PDF Viewer Component](./faqs/how-to-extract-particular-text-and-highlight)

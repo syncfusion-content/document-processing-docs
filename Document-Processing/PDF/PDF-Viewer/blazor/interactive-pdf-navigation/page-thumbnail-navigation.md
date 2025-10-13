@@ -55,3 +55,7 @@ The following example opens the thumbnail panel at initial render.
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Thumbnail/Show%20thumbnail%20panel).
+
+## See Also
+
+* [Hyperlink navigation in Blazor SfPdfViewer](./hyperlink-navigation)
