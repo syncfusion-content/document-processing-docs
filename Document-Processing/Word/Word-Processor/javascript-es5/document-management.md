@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Document management in JavaScript (ES5) Document editor control | Syncfusion
+title: Document management in JavaScript (ES5) Document editor control
 description: Learn here all about Document management in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Document management 

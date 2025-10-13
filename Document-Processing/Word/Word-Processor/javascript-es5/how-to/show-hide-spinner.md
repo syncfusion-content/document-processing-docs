@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Show hide spinner in JavaScript (ES5) Document editor control | Syncfusion
+title: Show hide spinner in JavaScript (ES5) Document editor control
 description: Learn here all about Show hide spinner in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Show hide spinner 

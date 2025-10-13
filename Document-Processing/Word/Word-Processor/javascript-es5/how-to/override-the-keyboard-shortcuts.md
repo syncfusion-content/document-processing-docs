@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Override the keyboard shortcuts in JavaScript (ES5) Document editor control | Syncfusion
+title: Override the keyboard shortcuts in JavaScript (ES5) Document editor control
 description: Learn here all about Override the keyboard shortcuts in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Override the keyboard shortcuts 
@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Override the keyboard shortcuts in JavaScript (ES5) Document editor control
+# Override the keyboard shortcuts in JavaScript (ES5) Document editor
 
-Document Editor triggers the [`keyDown`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#keydown) event every time when any key is entered and provides an instance of [`DocumentEditorKeyDownEventArgs`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorKeyDownEventArgs/). You can use the [`isHandled`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorKeyDownEventArgs#ishandled) property to override the keyboard shortcut behavior.
+Document Editor triggers the [`keyDown`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#keydown) event every time when any key is entered and provides an instance of [`DocumentEditorKeyDownEventArgs`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorKeyDownEventArgs/). You can use the [`isHandled`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorKeyDownEventArgs/#ishandled) property to override the keyboard shortcut behavior.
 
 ## Preventing default keyboard shortcut
 

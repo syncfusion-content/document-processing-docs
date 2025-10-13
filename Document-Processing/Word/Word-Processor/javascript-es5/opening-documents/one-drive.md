@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open document from One Drive in JavaScript (ES5) Document editor control | Syncfusion
+title: Open document from One Drive in JavaScript (ES5) Document editor
 description: Learn about how to Open document from One Drive in JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from One Drive
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from One Drive
+# Open document from One Drive in JavaScript (ES5) Document editor
 
 To load a document from One Drive in a Document editor, you can follow the steps below
 
@@ -133,7 +133,7 @@ N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_T
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#open) method.
+In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#open) method.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}

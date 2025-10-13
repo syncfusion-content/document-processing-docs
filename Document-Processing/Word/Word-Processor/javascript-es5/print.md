@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Print in JavaScript (ES5) Document editor control
 
-To print the document, use the [`print`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#print) method from Document Editor instance.
+To print the document, use the [`print`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#print) method from Document Editor instance.
 
 Refer to the following example for showing a document and print it.
 
@@ -101,7 +101,7 @@ documenteditor.appendTo('#DocumentEditor');
 documenteditor.showPageSetupDialog();
 ```
 
-By customizing margins, papers, and layouts, the layout of the document will be changed in Document Editor. To modify these options during print operation, serialize the document as SFDT using the [`serialize`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#serialize) method in Document Editor instance and open the SFDT data in another instance of Document Editor in separate window.
+By customizing margins, papers, and layouts, the layout of the document will be changed in Document Editor. To modify these options during print operation, serialize the document as SFDT using the [`serialize`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#serialize) method in Document Editor instance and open the SFDT data in another instance of Document Editor in separate window.
 
 The following example shows how to customize layout options only for printing.
 

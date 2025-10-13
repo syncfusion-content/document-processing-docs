@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open document from AWS S3 in JavaScript (ES5) Document editor control | Syncfusion
+title: Open document from AWS S3 in JavaScript (ES5) Document editor
 description:  Learn about how to Open document from AWS S3 in JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from AWS S3
@@ -110,7 +110,7 @@ N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and
 
 **Step 3:**  Modify the index File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#open) method.
+In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#open) method.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}

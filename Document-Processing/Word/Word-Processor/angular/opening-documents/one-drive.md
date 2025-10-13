@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from One Drive
+# Open document from One Drive in Angular Document editor
 
 To load a document from One Drive in a Document editor, you can follow the steps below
 

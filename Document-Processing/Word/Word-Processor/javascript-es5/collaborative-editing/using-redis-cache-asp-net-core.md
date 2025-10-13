@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Collaborative Editing in JavaScript (ES5) Document editor control | Syncfusion
+title: Collaborative Editing with Redis in ASP.NET Core | Syncfusion
 description: Learn how to enable collaborative editing using Redis in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Collaborative Editing

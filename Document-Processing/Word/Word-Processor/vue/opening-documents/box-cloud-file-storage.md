@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 --- 
 
-# Open document from Box cloud file storage
+# Open document from Box cloud file storage in Vue Document editor
 
 To load a document from Box cloud file storage in a document Editor, you can follow the steps below
 

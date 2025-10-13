@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Azure Blob Storage
+# Open document from Azure Blob Storage in Vue Document editor
 
 To load document from Azure Blob Storage in a Document Editor, you can follow the steps below
 

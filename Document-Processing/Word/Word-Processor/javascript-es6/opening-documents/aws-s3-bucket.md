@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from AWS S3
+# Open document from AWS S3 in JavaScript (ES6) Document editor
 
 To load a document from AWS S3 in a Document Editor, you can follow the steps below
 
