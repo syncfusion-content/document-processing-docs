@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 --- 
 
-# Open document from Box cloud file storage in React Document editor
+# Open document from Box cloud file storage 
 
 To load a document from Box cloud file storage in a document Editor, you can follow the steps below
 

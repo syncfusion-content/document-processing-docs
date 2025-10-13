@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Google Drive in Angular Document editor
+# Open document from Google Drive 
 
 To load a document from Google Drive in a Document editor, you can follow the steps below
 
