@@ -246,4 +246,4 @@ On mobile devices, the navigation toolbar collapses into a toggle menu to save s
 
 ## See Also
 
-* [Page navigation in Blazor SfPdfViewer](./page-navigation)
+* [Page navigation in Blazor SfPdfViewer](./pages)

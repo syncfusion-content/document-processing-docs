@@ -230,4 +230,4 @@ Use the panel to update overlay text, font settings, opacity, and related option
 
 * [Overview of redaction](./overview)
 * [Interact with redaction using the UI](./ui-interactions)
-* [Redaction in mobile view](./redaction-in-mobileView)
+* [Redaction in mobile view](./mobile-view)

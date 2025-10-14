@@ -139,4 +139,4 @@ To close the comments panel, tap the Close icon within the panel.
 
 ## See Also
 
-* [Annotation Toolbar in Mobile mode](../annotation/annotations-in-mobile-view)
+* [Annotation Toolbar in Mobile mode](../toolbar-customization/mobile-toolbar)

@@ -25,7 +25,7 @@ Use the redaction tool on the toolbar to draw over content that should be redact
 
 ![Resizing a redaction annotation](redaction-annotations-images/resizing-redaction-annotation.png)
 
-N> The redaction tool is hidden by default. Customize the toolbar to include it. For instructions, see the [Toolbar customization](../toolbar-customization).
+N> The redaction tool is hidden by default. Customize the toolbar to include it. For instructions, see the [Toolbar customization](../toolbar-customization-overview).
 
 ## Update redaction properties
 
@@ -94,4 +94,4 @@ N> The redaction process is irreversible. Once applied, the original content can
 
 * [Overview of Redaction](./overview)
 * [Programmatic Support in Redaction](./create-programmatically)
-* [Redaction in Mobile View](./redaction-in-mobileView)
+* [Redaction in Mobile View](./mobile-view)

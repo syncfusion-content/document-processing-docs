@@ -58,4 +58,4 @@ The following example opens the thumbnail panel at initial render.
 
 ## See Also
 
-* [Hyperlink navigation in Blazor SfPdfViewer](./hyperlink-navigation)
+* [Hyperlink navigation in Blazor SfPdfViewer](./hyperlink)
