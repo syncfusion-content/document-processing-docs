@@ -11,7 +11,7 @@ documentation: ug
 
 Customize the annotation selector using the [annotationSelectorSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselectorsettings) property of the PDF Viewer.
 
-Example: customize the selector of a shape annotation
+Example: Customize the selector of a shape annotation
 
 ```
 

@@ -1,18 +1,17 @@
 ---
 layout: post
-title: Overlapped annotation in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Overlapped annotation in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Get overlapped annotations on click in TypeScript PDF Viewer | Syncfusion
+description: Learn how to get overlapped annotations on click using the annotationSelect event in the Syncfusion TypeScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Overlapped annotation in Typescript Pdfviewer control
+# Get overlapped annotations on click in TypeScript PDF Viewer
 
-To get the overlapped annotations on a mouse click in a Syncfusion PDF Viewer, you can use the [**annotationCollection**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationcollection) property of [**annotationSelect**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselect) event.This event is triggered when the user clicks on an annotation in the PDF document.
+Use the [annotationCollection](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationcollection) property of the [annotationSelect](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselect) event to get overlapped annotations when the user clicks an annotation.
 
-Here is an example of how you can use the **annotationSelect** event to get the overlapped annotations on a mouse click in a Syncfusion PDF Viewer:
+The following example shows how to access overlapped annotations on click:
 
 ```ts
 
@@ -23,4 +22,4 @@ viewer.annotationSelect =(args) =>{
 
 ```
 
-Find the sample [how to get the overlapped annotations on mouse click](https://stackblitz.com/edit/9jn6bk-kmzqr5?devtoolsheight=33&file=index.ts)
+Find the sample: [Get overlapped annotations on click](https://stackblitz.com/edit/9jn6bk-kmzqr5?devtoolsheight=33&file=index.ts)

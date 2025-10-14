@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Import annotations in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Import annotations in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Import annotations in TypeScript PDF Viewer | Syncfusion
+description: Learn how to import annotations in the Syncfusion TypeScript PDF Viewer using the importAnnotations method.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Import annotations in Typescript Pdfviewer control
+# Import annotations in TypeScript PDF Viewer
 
-To import annotations into a Syncfusion PDF Viewer when loading a PDF document, you can use the [**importAnnotations()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#importannotation) method of the PDF Viewer. This method allows you to import annotations from a file or a string in the PDF Viewer.
+Use the [importAnnotations()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#importannotation) method to import annotations from a file or a string when loading a PDF document.
 
-Here is an example of how you can use the [**importAnnotations()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#importannotation) method to import annotations when loading a PDF document:
+The following example shows how to import annotations during document load:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps in the [Get started with JavaScript ES6 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) guide to create a sample.
 
-**Step 2:** Add the following code snippet to import annotations on load PDF document.
+**Step 2:** Add the following code to import annotations when a PDF is loaded.
 
 ```ts
 
@@ -114,9 +113,9 @@ viewer.importAnnotation({
 
 ```
 
-In this example, the PDF Viewer is first used to load the PDF document from a file. The **importAnnotations()** method is then used to import annotations from a string. The imported annotations will be added to the PDF Viewer and displayed along with the document.
+In this example, the PDF Viewer loads a document and then imports annotations from a string. The imported annotations are added to the viewer and displayed along with the document.
 
-Alternatively, we can import annotations from a file in JSON or XFDF format.
+Alternatively, annotations can be imported from a file in JSON or XFDF format.
 
 ```ts
 
@@ -126,4 +125,4 @@ document.getElementById('import').addEventListener('click', function() {
 
 ```
 
-Find the sample [how to import annotations on loading a PDF Document](https://stackblitz.com/edit/maxwf1-fqxduj?devtoolsheight=33&file=index.ts)
+Find the sample: [Import annotations on loading a PDF document](https://stackblitz.com/edit/maxwf1-fqxduj?devtoolsheight=33&file=index.ts)

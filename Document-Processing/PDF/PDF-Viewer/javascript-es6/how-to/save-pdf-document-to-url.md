@@ -1,20 +1,19 @@
 ---
 layout: post
-title: Save pdf document to url in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Save pdf document to url in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Save a PDF document to a URL in TypeScript PDF Viewer | Syncfusion
+description: Learn how to save a PDF document to a specific URL using the Syncfusion TypeScript PDF Viewer and a web service endpoint.
 platform: document-processing
-control: Save pdf document to url
+control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Save pdf document to url in Typescript Pdfviewer control
+# Save a PDF document to a URL in TypeScript PDF Viewer
 
-The PDF Viewer library allows you to save the PDF document to specific URL.
+Save the loaded PDF document to a specific URL using a custom web service endpoint.
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) to create simple PDF Viewer sample.
 
-**Step 2:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service/) to create the PDF Viewer web service.
+**Step 2:** Follow the steps in the [Create PDF Viewer web service](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service/) guide to create the PDF Viewer web service.
 
 **Step 3:** Add the below code snippet in the PDF Viewer controller code to save the PDF document to the URL.
 
@@ -56,7 +55,7 @@ public async Task<IActionResult> SaveUrl([FromBody] Dictionary<string, string> j
 
 ```
 
-**Step 4:** Add the following code in your file server which you want to rewrite the content.
+**Step 4:** Add the following code in your file server to rewrite the content.
 
 ```ts
 
@@ -81,7 +80,7 @@ stream.Write(bytes, 0, bytes.Length);
 
 ```
 
-**Step 5:** The following code snippet explains how to send Ajax Request for sending request to save the PDF document to specific URL.
+**Step 5:** Send an AJAX request to save the PDF document to a specific URL.
 
 ```
 <button id="save">SaveURL</button>

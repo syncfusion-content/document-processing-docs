@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Show and Hide Annotations in TypeScript PdfViewer | Syncfusion
-description: Learn how to show and hide annotations in the Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Show or hide annotations in TypeScript PDF Viewer | Syncfusion
+description: Learn how to toggle annotation visibility in the Syncfusion TypeScript PDF Viewer by exporting and importing annotations.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Show and Hide Annotations in PDF Viewer
+# Show or hide annotations in the PDF Viewer
 
 ### Overview
 
-This guide demonstrates how to toggle the visibility of annotations in the Syncfusion PDF Viewer using TypeScript. This feature is useful when you want to temporarily hide annotations for a cleaner view or show them again as needed.
+Toggle annotation visibility in the Syncfusion PDF Viewer using TypeScript. Hide annotations for a cleaner view and show them again as needed.
 
 ### How to Toggle Annotation Visibility
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in the [Get started with JavaScript ES6 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) guide to create a sample.
 
 **Step 2:** Create Toggle Buttons in Your HTML File
 
@@ -76,6 +75,6 @@ document.getElementById('unhideBtn')?.addEventListener('click', UnHideAnnotation
 
 ### Conclusion
 
-By implementing these steps, you can easily add functionality to toggle the visibility of annotations in your PDF Viewer application. This feature enhances user experience by allowing selective viewing of annotations.
+These steps add the ability to toggle annotation visibility in a PDF Viewer application for selective viewing.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to)
