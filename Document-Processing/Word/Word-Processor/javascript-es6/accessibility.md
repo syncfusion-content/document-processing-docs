@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in JavaScript (ES6) Document editor component|Syncfusion
+title: Accessibility in JavaScript (ES6) Document editor | Syncfusion
 description: Learn here all about Accessibility in Syncfusion JavaScript (ES6) Document editor component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
 platform: document-processing
