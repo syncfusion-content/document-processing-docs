@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Opening the document from Box cloud file storage in JavaScript (ES5)
+title: Open Box cloud Files in JavaScript (ES5) Document editor | Syncfusion
 description: Learn here to open a document from Box cloud file storage in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Opening from Box cloud file storage

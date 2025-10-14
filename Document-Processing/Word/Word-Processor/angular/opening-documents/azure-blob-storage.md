@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open document from Azure Blob Storage in Angular | Syncfusion
+title: Open document from Azure Blob in Angular Document editor | Syncfusion
 description:  Learn about how to Open document from Azure Blob Storage in Angular Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Azure Blob Storage

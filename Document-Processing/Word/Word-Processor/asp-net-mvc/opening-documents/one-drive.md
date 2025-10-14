@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open document from One Drive in ASP.NET MVC | Syncfusion
+title: Open OneDrive Files in ASP.NET MVC Document editor | Syncfusion
 description: Learn about how to Open document from One Drive in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from One Drive
@@ -124,12 +124,12 @@ public async Task<string> LoadFromOneDrive([FromBody] Dictionary<string, string>
   "AllowedHosts": "*",
   "TenantId": "Your_Tenant_ID",
   "applApplicationIdicationId": "Your_Application_ID",
-  "FolderName": "Your_Folder_Name_To_Access_The_Files_In_Onedrive"
+  "FolderName": "Your_Folder_Name_To_Access_The_Files_In_OneDrive"
 }
 
 ```
 
-N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
+N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_OneDrive** with your actual tenant ID, application ID, and folder name.
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 

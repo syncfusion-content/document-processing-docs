@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open document from Box cloud file storage in ASP.NET MVC | Syncfusion
+title: Open Box Cloud Files in ASP.NET MVC Document Editor | Syncfusion
 description: Learn here to open a document from Box cloud file storage in Syncfusion ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Opening from Box cloud file storage

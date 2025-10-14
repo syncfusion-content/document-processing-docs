@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open document from Dropbox cloud file in React | Syncfusion
+title: Open Dropbox cloud files in React Document editor | Syncfusion
 description: Learn about how to Open document from Dropbox cloud file storage in React Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Dropbox cloud file storage
