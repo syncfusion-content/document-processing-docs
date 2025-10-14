@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open PDF files from Azure in SfPdfViewer Component | Syncfusion
-description: Learn here all about how to Open PDF files from Azure Blob Storage in Syncfusion Blazor SfPdfViewer component and much more details.
+description: Learn how to load a PDF from Azure Blob Storage into the Syncfusion Blazor SfPdfViewer component, including setup steps, and configuration guidance.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,19 +9,19 @@ documentation: ug
 
 # Open PDF file from Azure Blob Storage in Blazor SfPdfViewer
 
-To load a PDF file from Azure Blob Storage  in a SfPdfViewer, you can follow the steps below
+To load a PDF file from Azure Blob Storage in the SfPdfViewer component, follow the steps below.
 
 **Step 1:** Create the Azure Blob Storage account
 
-Log in to the Azure Portal. Create a new Storage Account with preferred settings. Note access keys during the setup. Within the Storage Account, create a Blob Container following the steps in this [link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal).
+Sign in to the Azure portal and create a Storage account with the required settings. Record the access keys or prepare a SAS token for secure access. Within the Storage Account, create a Blob Container following the steps in this [link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal).
 
-**Step 2:** Create a Simple SfPdfViewer Sample in blazor
+**Step 2:** Create a simple SfPdfViewer sample in Blazor
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/server-side-application) to create a simple SfPdfViewer sample in blazor. This will give you a basic setup of the SfPdfViewer component.
+Create a basic Blazor Server application and integrate the SfPdfViewer component by following [Getting started with the Blazor PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app). This provides the required project configuration and a working viewer scaffold.
 
-**Step 3:** Include the following namespaces in the **Index.razor** file.
+**Step 3:** Include the following namespaces in the  **Index.razor**  file.
 
-1. Import the required namespaces at the top of the file:
+1. Add the required namespaces at the top of Index.razor:
 
 ```csharp
 @using System.IO;
@@ -61,12 +61,15 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 }
 ```
 
-N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account, **File Name to be Loaded into Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer** with the file name to load from the Azure container to the SfPdfViewer, and **Your container name in Azure** with the actual container name.
+N> Replace the placeholder values as follows:  
+• **Your Connection string from Azure**: the actual connection string or SAS-based connection for the Azure Storage account.
+• **Your container name in Azure**: the name of the Blob container that stores the PDF.  
+• **File Name to be Loaded into Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer**: the file name to load from the Azure container to the SfPdfViewer.
 
-N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
+N> Ensure the **Azure.Storage.Blobs** NuGet package is installed in the application to compile the preceding code. The example converts the blob to a Base64 data URL and assigns it to the `DocumentPath` property.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20Azure%20blob%20storage).
+[View the Azure Blob Storage sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20Azure%20blob%20storage).
 
 ## See also
 
-* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../faqs/how-to-processing-large-files-without-increasing-maximum-message-size)
