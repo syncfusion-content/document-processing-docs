@@ -33,9 +33,8 @@ IShape shape = slide1.Shapes.AddShape(AutoShapeType.Rectangle, 100, 20, 200, 100
 IHyperLink hyperLink = shape.SetHyperlink("1");
 //Gets the target slide of the hyperlink
 ISlide targetSlide = hyperLink.TargetSlide;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -101,9 +100,8 @@ IParagraph paragraph = shape.TextBody.AddParagraph();
 paragraph.Text = "Syncfusion";
 //Sets the web hyperlink to the TextPart
 IHyperLink hyperLink = paragraph.TextParts[0].SetHyperlink("http://www.syncfusion.com");
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -168,9 +166,8 @@ FileStream pictureStream = new FileStream("Image.png", FileMode.Open);
 IPicture picture = slide.Pictures.AddPicture(pictureStream, 0, 0, 250, 250);
 //Sets the Email hyperlink to the picture
 IHyperLink hyperLink = (picture as IShape).SetHyperlink("mailto:sales@syncfusion.com");
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -228,9 +225,8 @@ FileStream pictureStream = new FileStream("Image.png", FileMode.Open);
 IPicture picture = slide.Pictures.AddPicture(pictureStream, 0, 0, 250, 250);
 //Sets the File path as hyperlink
 IHyperLink hyperLink = (picture as IShape).SetHyperlink("WordDocument.docx");
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -285,9 +281,8 @@ The following code example demonstrates how to get the details about the hyperli
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Get-hyperlink-from-shape/.NET/Get-hyperlink-from-shape/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Retrieves the first slide from the Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first shape from the slide
@@ -302,9 +297,8 @@ ISlide targetSlide = hyperlink.TargetSlide;
 string url = hyperlink.Url;
 //Gets the screen tip text of a hyperlink
 string screenTip = hyperlink.ScreenTip;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Result.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Result.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -362,9 +356,8 @@ The following code example demonstrates how to get the details about the hyperli
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Get-hyperlink-from-text/.NET/Get-hyperlink-from-text/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Retrieves the first slide from the Presentation.
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first shape from the slide
@@ -383,9 +376,8 @@ ISlide targetSlide = hyperlink.TargetSlide;
 string url = hyperlink.Url;
 //Gets the screen tip text of a hyperlink
 string screenTip = hyperlink.ScreenTip;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Result.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Result.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -455,18 +447,16 @@ The following code example demonstrates how to remove a hyperlink from the shape
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Remove-hyperlink-from-shape/.NET/Remove-hyperlink-from-shape/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Retrieves the first slide from the Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first shape from the slide
 IShape shape = slide.Shapes[0] as IShape;
 //Removes the hyperlink from the shape
 shape.RemoveHyperlink();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Result.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Result.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -508,9 +498,8 @@ The following code example demonstrates how to remove a hyperlink from the text 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Remove-hyperlink-from-text/.NET/Remove-hyperlink-from-text/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Retrieves the first slide from the Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first shape from the slide
@@ -521,9 +510,8 @@ IParagraph paragraph = shape.TextBody.Paragraphs[0];
 ITextPart textPart = paragraph.TextParts[0];
 //Removes the hyperlink from the TextPart
 textPart.RemoveHyperLink();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Result.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Result.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}

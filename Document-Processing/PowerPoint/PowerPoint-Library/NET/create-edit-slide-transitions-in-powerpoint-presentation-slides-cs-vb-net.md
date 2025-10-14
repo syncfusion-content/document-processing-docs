@@ -38,9 +38,8 @@ IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300)
 slide.SlideTransition.TransitionEffect = TransitionEffect.Checkerboard;
 //Set the transition effect options
 slide.SlideTransition.TransitionEffectOption = TransitionEffectOption.Across;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -90,18 +89,16 @@ You can edit the transition effects that already applied to the PowerPoint slide
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slide-transitions/Modify-transition-effect/.NET/Modify-transition-effect/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Retrieve the first slide from the presentation
 ISlide slide = pptxDoc.Slides[0];
 //Modify the transition effect applied to the slide
 slide.SlideTransition.TransitionEffect = TransitionEffect.Cover;
 //Set the transition subtype
 slide.SlideTransition.TransitionEffectOption = TransitionEffectOption.Right;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Transition.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Transition.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -157,9 +154,8 @@ IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
 slide.SlideTransition.TransitionEffect = TransitionEffect.Checkerboard;
 // Set the duration in seconds for the transition effect. Maximum duration value is 59 seconds
 slide.SlideTransition.Duration = 40;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Transition.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Transition.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -221,9 +217,8 @@ slide.SlideTransition.TransitionEffect = TransitionEffect.Checkerboard;
 slide.SlideTransition.TriggerOnTimeDelay = true;
 //Assign the value for the advance time delay in seconds
 slide.SlideTransition.TimeDelay = 5;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -292,9 +287,8 @@ IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
 slide.SlideTransition.TransitionEffect = TransitionEffect.Checkerboard;
 //Set transition advance on click to true. This will enable the next transition after a click
 slide.SlideTransition.TriggerOnClick = true;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -359,9 +353,8 @@ IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
 slide.SlideTransition.TransitionEffect = TransitionEffect.Checkerboard;
 //Set the transition effect speed enumeration. This will reduce the transition duration to 0.75 seconds from the default 2 second
 slide.SlideTransition.Speed = TransitionSpeed.Medium;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}

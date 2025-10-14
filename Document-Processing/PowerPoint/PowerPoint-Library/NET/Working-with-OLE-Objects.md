@@ -32,9 +32,8 @@ oleObject.Left = 10;
 oleObject.Top = 10;
 oleObject.Width = 400;
 oleObject.Height = 300;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("OleObjectSample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("OleObjectSample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -111,9 +110,8 @@ oleObject.Width = 400;
 oleObject.Height = 300;
 //Set DisplayAsIcon as true, to open the embedded document in separate (default) application.
 oleObject.DisplayAsIcon = true;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("OleObjectSample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("OleObjectSample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -177,10 +175,8 @@ The following code example demonstrates how to extract the embedded OLE Object d
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/OLE-objects/Extract-embedded-OLE-Object-data/.NET/Extract-embedded-OLE-Object-data/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("EmbeddedOleObject.pptx", FileMode.Open);
 //Opens the specified presentation
-IPresentation pptxDoc = Presentation.Open(inputStream);
+IPresentation pptxDoc = Presentation.Open("EmbeddedOleObject.pptx");
 //Gets the first slide of the Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Gets the Ole Object of the slide
@@ -253,19 +249,16 @@ The following code example demonstrates how to get the file path of a linked OLE
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/OLE-objects/Get-file-path-of-linked-OLE-Object/.NET/Get-file-path-of-linked-OLE-Object/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("EmbeddedOleObject.pptx", FileMode.Open);
 //Opens the specified presentation
-IPresentation pptxDoc = Presentation.Open(inputStream);
+IPresentation pptxDoc = Presentation.Open("EmbeddedOleObject.pptx");
 //Gets the first slide of the Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Gets the Ole Object of the slide
 IOleObject oleObject = slide.Shapes[1] as IOleObject;
 //Gets the path of linked Ole Object
 string linkOlePath = oleObject.LinkPath;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("OleObjectSample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("OleObjectSample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -311,10 +304,8 @@ The following code example demonstrates how to get the OLE image data.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/OLE-objects/Get-OLE-image-data/.NET/Get-OLE-image-data/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("EmbeddedOleObject.pptx", FileMode.Open);
 //Opens the specified presentation
-IPresentation pptxDoc = Presentation.Open(inputStream);
+IPresentation pptxDoc = Presentation.Open("EmbeddedOleObject.pptx");
 //Gets the first slide of the Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Gets the Ole Object of the slide

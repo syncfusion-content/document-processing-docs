@@ -27,9 +27,10 @@ ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 INotesSlide notesSlide = slide.AddNotesSlide();
 //Adds text content into the Notes Slide.
 notesSlide.NotesTextBody.AddParagraph("Notes content");
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("PresentationWithNotesSlide.pptx");
+//Closes the Presentation 
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -43,6 +44,8 @@ INotesSlide notesSlide = slide.AddNotesSlide();
 notesSlide.NotesTextBody.AddParagraph("Notes content");
 //Saves Presentation with specified file name with extension.
 pptxDoc.Save("PresentationWithNotesSlide.pptx");
+//Closes the Presentation 
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -87,9 +90,10 @@ textPart.Font.Bold=true;
 textPart.Font.FontName = "Times New Roman";
 // Sets text content size using FontSize property.
 textPart.Font.FontSize = 20;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("PresentationWithNotesSlide.pptx");
+//Closes the Presentation 
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -112,6 +116,8 @@ textPart.Font.FontName = "Times New Roman";
 textPart.Font.FontSize = 20;
 //Saves Presentation with specified file name with extension.
 pptxDoc.Save("PresentationWithNotesSlide.pptx");
+//Closes the Presentation 
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -192,9 +198,8 @@ paragraph.IndentLevelNumber = 1;
 paragraph.FirstLineIndent = -20; 
 // Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400. 
 paragraph.ListFormat.Size = 100; 
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Closes the Presentation 
 pptxDoc.Close();
 {% endhighlight %}
@@ -313,16 +318,16 @@ The below code example demonstrates how to remove a Notes from a PowerPoint Slid
 
 {% highlight c# tabtitle="C# [Cross-platform]"
 playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Notes/Remove-notes-from-slide/.NET/Remove-notes-from-slide/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Gets instance of the first slide from the Presentation.
 ISlide slide = pptxDoc.Slides[0] as ISlide;
 //Removes Notes Slide from a corresponding slide.
 slide.RemoveNotesSlide();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("PresentationWithNotesSlide.pptx");
+//Closes the Presentation 
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}

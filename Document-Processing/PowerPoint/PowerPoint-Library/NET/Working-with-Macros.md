@@ -19,15 +19,13 @@ The following code illustrates how to load and save a macro enabled presentation
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Macros/Load-and-save-macro-PowerPoint/.NET/Load-and-save-macro-PowerPoint/Program.cs" %}
 //Opens an existing macro enabled PowerPoint presentation
-FileStream inputStream = new FileStream("Sample.PPTM",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+IPresentation pptxDoc = Presentation.Open("Sample.PPTM");
 //Adds a blank slide to the presentation
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Adds a text box to the slide
 IParagraph paragraph = slide.Shapes.AddTextBox(100, 100, 300, 80).TextBody.AddParagraph("Preserve Macros");
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.PPTM", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.PPTM");
 //Closes the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -70,14 +68,12 @@ The following code example illustrates how to remove the macros present in the p
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Macros/Remove-macros/.NET/Remove-macros/Program.cs" %}
 //Opens an existing macro enabled PowerPoint presentation
-FileStream inputStream = new FileStream("Sample.PPTM",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+IPresentation pptxDoc = Presentation.Open("Sample.PPTM");
 //Checks whether the presentation has macros and then removes them
 if (pptxDoc.HasMacros)
     pptxDoc.RemoveMacros();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the presentation
 pptxDoc.Close();
 {% endhighlight %}

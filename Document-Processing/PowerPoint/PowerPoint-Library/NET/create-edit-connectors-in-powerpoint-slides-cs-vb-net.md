@@ -26,9 +26,8 @@ using (IPresentation pptxDoc = Presentation.Create())
     IShape oval = slide.Shapes.AddShape(AutoShapeType.Oval, 400, 10, 100, 100);
     //Add elbow connector on the slide and connect the end points of connector with specified port positions 0 and 4 of the beginning and end shapes
     IConnector connector = slide.Shapes.AddConnector(ConnectorType.Elbow, rectangle, 0, oval, 4);
-    //Save the PowerPoint Presentation as stream
-    FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
+    //Save the PowerPoint Presentation
+    pptxDoc.Save("Sample.pptx");
 }
 {% endhighlight %}
 
@@ -94,9 +93,8 @@ using (IPresentation pptxDoc = Presentation.Create())
     connector.LineFormat.Fill.FillType = FillType.Solid;
     //Set the connector solid fill as black
     connector.LineFormat.Fill.SolidFill.Color = ColorObject.Black;
-    //Save the PowerPoint Presentation as stream
-    FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
+    //Save the PowerPoint Presentation
+    pptxDoc.Save("Sample.pptx");
 }
 {% endhighlight %}
 
@@ -158,10 +156,8 @@ The following code example demonstrates how to edit an existing connector in a P
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Connectors/Modify-existing-connector/.NET/Modify-existing-connector/Program.cs" %}
-//Loads an PowerPoint file in stream
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-//Opens the loaded PowerPoint file
-using (IPresentation pptxDoc = Presentation.Open(inputStream))
+//Opens the existing PowerPoint file
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
     //Get the first slide of a PowerPoint file
     ISlide slide = pptxDoc.Slides[0];
@@ -181,9 +177,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
     //Reconnect the end point of connector with triangle shape if its connection site count is greater than 4
     if (connectionSiteIndex < triangle.ConnectionSiteCount)
         connector.EndConnect(triangle, connectionSiteIndex);
-    //Save the PowerPoint Presentation as stream
-    FileStream outputStream = new FileStream("Connector.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
+    //Save the PowerPoint Presentation
+    pptxDoc.Save("Connector.pptx");
 }
 {% endhighlight %}
 
@@ -253,10 +248,8 @@ The following code example demonstrates how to update a connector’s position w
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Connectors/Update-connector-position/.NET/Update-connector-position/Program.cs" %}
-//Loads an PowerPoint file in stream
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-//Opens the loaded PowerPoint file
-using (IPresentation pptxDoc = Presentation.Open(inputStream))
+//Opens the existing PowerPoint file
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
     //Get the first slide of a PowerPoint file
     ISlide slide = pptxDoc.Slides[0];
@@ -269,9 +262,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
     rectangle.Top = 200;
     //Update the connector to connect with previously updated shape
     connector.Update();
-   //Save the PowerPoint Presentation as stream
-   FileStream outputStream = new FileStream("Connector.pptx", FileMode.Create);
-   pptxDoc.Save(outputStream);
+   //Save the PowerPoint Presentation
+   pptxDoc.Save("Connector.pptx");
 }
 {% endhighlight %}
 
@@ -325,10 +317,8 @@ The following code example demonstrates how to remove a connector from PowerPoin
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Connectors/Remove-connector-from-shapes/.NET/Remove-connector-from-shapes/Program.cs" %}
-//Loads an PowerPoint file in stream
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-//Opens the loaded PowerPoint file
-using (IPresentation pptxDoc = Presentation.Open(inputStream))
+//Opens the existing PowerPoint file
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
     //Get the first slide of a PowerPoint file
     ISlide slide = pptxDoc.Slides[0];                
@@ -336,9 +326,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
     IConnector connector = slide.Shapes[2] as IConnector;
     //Remove the connector from slide
     slide.Shapes.Remove(connector);
-    //Save the PowerPoint Presentation as stream
-    FileStream outputStream = new FileStream("Connector.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
+    //Save the PowerPoint Presentation
+    pptxDoc.Save("Connector.pptx");
 }
 {% endhighlight %}
 

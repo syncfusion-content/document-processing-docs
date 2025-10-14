@@ -34,9 +34,8 @@ IParagraph paragraph = textboxShape.TextBody.AddParagraph();
 ITextPart textPart = paragraph.AddTextPart();
 //Adds text to the TextPart
 textPart.Text = "AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -122,9 +121,8 @@ IParagraph paragraph = textboxShape.TextBody.AddParagraph();
 ITextPart textPart = paragraph.AddTextPart();
 //Adds text to the TextPart
 textPart.Text = "AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -208,9 +206,8 @@ IParagraph paragraph = textboxShape.TextBody.AddParagraph();
 ITextPart textPart = paragraph.AddTextPart();
 //Adds text to the TextPart
 textPart.Text = "AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -276,9 +273,8 @@ The following code example demonstrates how to add a Footers to the master and l
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Add-footer-in-master-and-layout-slides/.NET/Add-footer-in-master-and-layout-slides/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Footer.pptx");
 //Access the first master slide in PowerPoint file
 IMasterSlide masterSlide = pptxDoc.Masters[0];
 //Sets the visibility of Footer content in the Master slide
@@ -301,9 +297,8 @@ foreach(ILayoutSlide layoutSlide in masterSlide.LayoutSlides)
     //Sets the format of the DateTime Footer in Layout slide
     layoutSlide.HeadersFooters.DateAndTime.Format = DateTimeFormatType.DateTimeMMddyyhmmAMPM;
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -413,9 +408,8 @@ notesSlide.HeadersFooters.DateAndTime.Format = DateTimeFormatType.DateTimeMMMyy;
 notesSlide.HeadersFooters.Footer.Visible = true;
 //Sets the text to be added to the Footer of the Notes slide
 notesSlide.HeadersFooters.Footer.Text = "Notes slide Footer";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -491,16 +485,14 @@ The following code example demonstrates how to edit [Footer](https://help.syncfu
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Edit-footer-text/.NET/Edit-footer-text/Program.cs" %}
-//Load or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Footer.pptx");
 //Gets the first slide from the cloned PowerPoint presentation
 ISlide slide = pptxDoc.Slides[0];
 //Modify the Footer text
 slide.HeadersFooters.Footer.Text = "Footer content modified";     
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -559,9 +551,8 @@ IPresentation pptxDoc = Presentation.Open("Header.pptx");
 INotesSlide notesSlide = pptxDoc.Slides[0].NotesSlide; 
 //Modify the existing content of the header. 
 notesSlide.HeadersFooters.Header.Text = "Header content is modified"; 
-//Save the PowerPoint Presentation as stream.
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation.
+pptxDoc.Save("Sample.pptx");
 //Close the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
@@ -609,16 +600,14 @@ The following code example demonstrates how to modify Date and Time of an existi
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Modify-date-and-time-format/.NET/Modify-date-and-time-format/Program.cs" %}
-//Load or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Footer.pptx");
 //Gets the first slide from the cloned PowerPoint presentation
 ISlide slide = pptxDoc.Slides[0];
 //Modify Date and Time format of the Footer
 slide.HeadersFooters.DateAndTime.Format = DateTimeFormatType.DateTimeddddMMMMddyyyy;    
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation 
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -668,9 +657,8 @@ The following code example demonstrates how to edit font of the [Footer](https:/
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Modify-footer-text-font/.NET/Modify-footer-text-font/Program.cs" %}
-//Load or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Footer.pptx");
 //Gets the first slide from the cloned PowerPoint presentation
 ISlide slide = pptxDoc.Slides[0];
 //Iterate each shape in slide
@@ -685,9 +673,8 @@ foreach(IShape shape in slide.Shapes)
         shape.TextBody.Paragraphs[0].Font.FontSize = 18;
     }
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -755,9 +742,8 @@ The following code example demonstrates how to remove Footers from all the [Titl
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Remove-footers-from-all-title-slides/.NET/Remove-footers-from-all-title-slides/Program.cs" %}
-//Load or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Footer.pptx");
 
 //Iterate each slide in the Presentation
 foreach(ISlide slide in pptxDoc.Slides)
@@ -773,9 +759,8 @@ foreach(ISlide slide in pptxDoc.Slides)
         slide.HeadersFooters.SlideNumber.Visible = false;
     }
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation

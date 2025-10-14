@@ -29,9 +29,8 @@ section.Name = "SectionDemo";
 ISlide slide = section.AddSlide(SlideLayoutType.Blank);
 //Adds a text box to the slide
 slide.AddTextBox(10, 10, 100, 100).TextBody.AddParagraph("Slide in SectionDemo");
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Section.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Section.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -75,16 +74,16 @@ The following code example demonstrates how to add an existing slide to a sectio
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Sections/Add-existing-slide-in-PowerPoint-section/.NET/Add-existing-slide-in-PowerPoint-section/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("PPTXWithSections.PPTX",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("PPTXWithSections.PPTX");
 //Creates a new section in the PowerPoint presentation
 pptxDoc.Sections.Add();
 //Moves the first slide to the created section
 pptxDoc.Slides[0].MoveToSection(0);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Section.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Section.pptx");
+//Close the Presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -96,6 +95,8 @@ pptxDoc.Sections.Add();
 pptxDoc.Slides[0].MoveToSection(0);
 //Saves the PowerPoint presentation
 pptxDoc.Save("Sections.PPTX");
+//Close the Presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -130,9 +131,10 @@ section.Name = "InsertedSection";
 pptxDoc.Sections.Insert(1, section);
 //Remove the unwanted created section.
 pptxDoc.Sections.RemoveAt(pptxDoc.Sections.Count - 1);
-//Save the PowerPoint Presentation as stream.
-FileStream outputStream = new FileStream("Section.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Section.pptx");
+//Close the Presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -148,6 +150,8 @@ pptxDoc.Sections.Insert(1, section);
 pptxDoc.Sections.RemoveAt(pptxDoc.Sections.Count - 1);
 //Save the PowerPoint presentation
 pptxDoc.Save("Sections.PPTX");
+//Close the Presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -176,14 +180,14 @@ You can move the sections within a PowerPoint presentation. The following code e
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Sections/Move-section-positions/.NET/Move-section-positions/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("PPTXWithSections.PPTX",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("PPTXWithSections.PPTX");
 //Moves the second section to third position within the PowerPoint presentation.
 pptxDoc.Sections[2].Move(3);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Section.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Section.pptx");
+//Close the Presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -215,16 +219,16 @@ The following code example demonstrates how to move a slide from one section to 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Sections/Move-slide-within-section/.NET/Move-slide-within-section/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("PPTXWithSections.PPTX",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("PPTXWithSections.PPTX");
 //Gets the first slide of second section in the PowerPoint presentation
 ISlide slide = pptxDoc.Sections[1].Slides[0];
 //Moves the slide to first section
 slide.MoveToSection(0);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Section.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Section.pptx");
+//Close the Presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -236,6 +240,8 @@ ISlide slide = pptxDoc.Sections[1].Slides[0];
 slide.MoveToSection(0);
 //Saves the PowerPoint presentation
 pptxDoc.Save("Sections.PPTX");
+//Close the Presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -260,9 +266,8 @@ The following code example demonstrates how to clone the slide collection of a s
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Sections/Clone-and-merge-section-slides/.NET/Clone-and-merge-section-slides/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("PPTXWithSections.PPTX",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("PPTXWithSections.PPTX");
 //Clones the slides in 3rd section
 ISlides slides = pptxDoc.Sections[2].Clone();
 //Creates a destination PowerPoint presentation instance. Existing presentations can also be used here.
@@ -270,9 +275,10 @@ pptxDoc = Presentation.Create();
 //Iterates the cloned slides and adds the slides to the destination presentation
 foreach (ISlide slide in slides)
     pptxDoc.Slides.Add(slide);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Section.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Section.pptx");
+//Close the Presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -287,6 +293,8 @@ foreach (ISlide slide in slides)
     pptxDoc.Slides.Add(slide);
 //Saves the PowerPoint presentation
 pptxDoc.Save("Sections.PPTX");
+//Close the Presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -315,14 +323,14 @@ The following code example demonstrates how to create remove a particular sectio
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Sections/Remove-section/.NET/Remove-section/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("PPTXWithSections.PPTX",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("PPTXWithSections.PPTX");
 //Removes the second section from the PowerPoint presentation
 pptxDoc.Sections.Remove(pptxDoc.Sections[1]);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Section.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Section.pptx");
+//Close the Presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -332,6 +340,8 @@ IPresentation pptxDoc = Presentation.Open("PPTXWithSections.PPTX");
 pptxDoc.Sections.Remove(pptxDoc.Sections[1]);
 //Saves the PowerPoint presentation
 pptxDoc.Save("Sections.PPTX");
+//Close the Presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -354,14 +364,14 @@ The following code example demonstrates how to remove section collection from an
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Sections/Remove-all-sections/.NET/Remove-all-sections/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("PPTXWithSections.PPTX",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("PPTXWithSections.PPTX");
 //Removes the sections
 pptxDoc.Sections.Clear();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sections.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sections.pptx");
+//Close the Presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -371,6 +381,8 @@ IPresentation pptxDoc = Presentation.Open("PPTXWithSections.PPTX");
 pptxDoc.Sections.Clear();
 //Saves the PowerPoint presentation
 pptxDoc.Save("Sections.PPTX");
+//Close the Presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
