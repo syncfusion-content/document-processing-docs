@@ -243,7 +243,9 @@ N> [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewe
 
 Add the following stylesheet and script to the head section of the **~/Components/App.razor** file.
 
-```html
+{% tabs %}
+{% highlight html hl_lines="3 7" %}
+
 <head>
     <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
@@ -252,7 +254,9 @@ Add the following stylesheet and script to the head section of the **~/Component
     <!-- Syncfusion Blazor PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </body>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Adding Blazor PDF Viewer Component
 
@@ -306,7 +310,7 @@ N> [View the sample on GitHub](https://github.com/SyncfusionExamples/Blazor-Gett
 
 * [Getting Started with Blazor PDF Viewer Component in Blazor WASM App](./web-assembly-application)
 
-* [Getting Started with Blazor PDF Viewer Component in WSL mode](./wsl-application)
+* [Getting Started with Blazor PDF Viewer Component in WSL mode](../deployment/wsl-application)
 
 * [Learn different ways to add script reference in Blazor Application](https://blazor.syncfusion.com/documentation/common/adding-script-references)
 
