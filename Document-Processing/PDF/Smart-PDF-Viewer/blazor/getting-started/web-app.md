@@ -33,7 +33,7 @@ To add the **Blazor Smart PDF Viewer** component, open the NuGet Package Manager
 Alternatively, use the following package manager commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager" %}
+{% highlight c# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.SfSmartPdfViewer -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -67,7 +67,6 @@ For example, in a Blazor Web App with the `Server` interactive render mode, use 
 
 dotnet new blazor -o BlazorWebApp -int Server
 cd BlazorWebApp
-cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -83,10 +82,10 @@ When using the `Server` render mode in a Blazor Web App, install the Syncfusion<
 * Run the following commands to install `Syncfusion.Blazor.SfSmartPdfViewer` and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), then restore the solution.
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager" %}
+{% highlight c# tabtitle="Package Manager" %}
 
-dotnet add package Syncfusion.Blazor.SfSmartPdfViewer -v 31.2.*
-dotnet add package Syncfusion.Blazor.Themes -v 31.2.*
+dotnet add package Syncfusion.Blazor.SfSmartPdfViewer -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
@@ -118,7 +117,7 @@ Import the [Syncfusion.Blazor](https://help.syncfusion.com/cr/blazor/Syncfusion.
 If the **Interactive Render Mode** is set to `Server`, the project contains a single **~/Program.cs** file. Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in that **~/Program.cs** file. The configured SignalR maximum message size and memory cache support large document streaming and caching for better performance. Ensure the Syncfusion license is registered during application startup.
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Server App" hl_lines="5 7 10" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="5 7 10" %}
 
 using Syncfusion.Blazor;
 
@@ -142,7 +141,7 @@ var app = builder.Build();
 In **Visual Studio**, Go to Tools → NuGet Package Manager → Package Manager Console. Run these commands one by one:
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager" %}
+{% highlight c# tabtitle="Package Manager" %}
 
 Install-Package Azure.AI.OpenAI
 Install-Package Microsoft.Extensions.AI
@@ -154,7 +153,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI -Version 9.8.0-preview.1.25412.6
 In **Visual Studio Code**, open the terminal in VS Code and run the following commands:
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Package Manager" %}
 
 dotnet add package Azure.AI.OpenAI
 dotnet add package Microsoft.Extensions.AI
@@ -166,7 +165,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.2541
 To configure the AI service, add the following settings to the **~/Program.cs** file in the Blazor Server app.
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Server App" hl_lines="10 11 12 13 14 15 17" %}
+{% highlight C# tabtitle="~/Program.cs" hl_lines="10 11 12 13 14 15 17" %}
 
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
@@ -238,7 +237,7 @@ dotnet add package OllamaSharp --version 5.3.6
 Add the following settings to the **~/Program.cs** file in the Blazor Server app.
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Server App" hl_lines="11 14 15 16 17 18 21 22 23" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="11 14 15 16 17 18 21 22 23" %}
 
 using Microsoft.Extensions.AI;
 using OllamaSharp;
@@ -286,19 +285,22 @@ curl http://localhost:11434/api/tags
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the ~/Components/App.razor file as shown below.
 
 
-```html
+{% tabs %}
+{% highlight html hl_lines="3 7" %}
+
 <head>
     ....
     <!-- Syncfusion Blazor Smart PDF Viewer control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
-
 <body>
     ....
     <!-- Syncfusion Blazor Smart PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfSmartPdfViewer/scripts/syncfusion-blazor-sfsmartpdfviewer.min.js" type="text/javascript"></script>
 </body>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 N> Review the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in a Blazor application. Also see [Adding script reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) for different approaches to include scripts.
 
