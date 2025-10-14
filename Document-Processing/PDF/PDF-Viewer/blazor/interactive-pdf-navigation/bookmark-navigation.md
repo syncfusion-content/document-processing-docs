@@ -28,3 +28,7 @@ Enable or disable the bookmark panel by setting the [EnableBookmarkPanel](https:
 }
 
 ```
+
+## See Also
+
+* [Page thumbnail navigation in Blazor SfPdfViewer](./page-thumbnail-navigation)

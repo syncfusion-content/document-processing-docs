@@ -41,4 +41,9 @@ Control where external hyperlinks open by using the [HyperlinkOpenState](https:/
 @code{
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
+
 ```
+
+## See Also
+
+* [Modern navigation panel in Blazor SfPdfViewer](./modern-navigation-panel)

@@ -100,3 +100,95 @@ Use the [PdfViewerTextSearchColorSettings](https://help.syncfusion.com/cr/blazor
 ```
 
 ![Blazor SfPdfViewer text search highlight color customization](./images/blazor-pdfviewer-text-search-settings.png)
+
+## Text Search Events
+
+The following events are available for text search in the SfPdfViewer component.
+
+|Name|Description|
+|---|---|
+|OnTextSearchStart|Triggers when a text search starts.|
+|OnTextSearchComplete|Triggers when a text search is completed.|
+|OnTextSearchHighlight|Triggers when searched text is highlighted.|
+
+### OnTextSearchStart Event
+
+The [OnTextSearchStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSearchStart) event triggers when the text search is started.
+
+#### Event Arguments
+
+See [TextSearchStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextSearchStartEventArgs.html) for details such as matchcase, search text.
+
+The following example illustrates how to handle the TextSearchStart event.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer 
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"> 
+    <PdfViewerEvents OnTextSearchStart="@TextSearchStart"></PdfViewerEvents>
+</SfPdfViewer2>
+@code{ 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
+    public async Task TextSearchStart(TextSearchStartEventArgs args) 
+    {
+        Console.WriteLine($"Text search word: {args.SearchText}");
+    }	 
+}
+
+```
+
+### OnTextSearchComplete Event
+
+The [OnTextSearchComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSearchComplete) event triggers when the text search is completed.
+
+#### Event Arguments
+
+[TextSearchCompleteEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextSearchCompleteEventArgs.html) triggers when the text search is completed.
+
+The following example illustrates how to handle the TextSearchComplete event.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer 
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"> 
+    <PdfViewerEvents OnTextSearchComplete="@TextSearchComplete"></PdfViewerEvents>
+</SfPdfViewer2>
+@code{ 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
+    public async Task TextSearchComplete(TextSearchCompleteEventArgs args) 
+    {
+        Console.WriteLine("Text search completed");
+    }	 
+}
+
+```
+
+### OnTextSearchHighlight Event
+
+The [OnTextSearchHighlight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSearchHighlight) event triggers when the text search text is highlighted.
+
+#### Event Arguments
+
+[TextSearchHighlightEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextSearchHighlightEventArgs.html) for details such as bounds, pagenumber of the highlighted text.
+
+The following example illustrates how to handle the TextSearchHighlight event.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer 
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"> 
+    <PdfViewerEvents OnTextSearchHighlight="@TextSearchHighlight"></PdfViewerEvents>
+</SfPdfViewer2>
+@code{ 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
+    public async Task TextSearchHighlight(TextSearchHighlightEventArgs args) 
+    {
+        Console.WriteLine($"Highlighted word pagenumber : {args.PageNumber}");
+    }	 
+}
+
+```
+
+## See Also
+
+* [Extract and Highlight Text in Blazor PDF Viewer Component](./faqs/how-to-extract-particular-text-and-highlight)

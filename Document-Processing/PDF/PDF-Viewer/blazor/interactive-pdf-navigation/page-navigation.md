@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Navigation in Blazor SfPdfViewer Component | Syncfusion
+title: Page Navigation in Blazor SfPdfViewer Component | Syncfusion
 description: Learn how to navigate PDF pages in Blazor SfPdfViewer using toolbar buttons and programmatic APIs—first, previous, next, last, and go to page.
 platform: document-processing
 control: SfPdfViewer
@@ -107,3 +107,9 @@ N> GoToPageAsync expects a 1-based page number.
 }
 
 ```
+
+## See Also
+
+* [Magnification in Blazor SfPdfViewer](../magnification)
+
+* [Bookmark navigation in Blazor SfPdfViewer](./bookmark-navigation)

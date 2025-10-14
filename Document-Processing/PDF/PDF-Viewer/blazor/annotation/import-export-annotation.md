@@ -42,7 +42,7 @@ The SfPdfViewer component supports importing and exporting annotations as a JSON
 
 ## Importing annotation using SfPdfViewer API
 
-Annotations can also be imported from a JSON or XFDF file, or from an in-memory object, in code-behind using the ImportAnnotationAsync method. The following example uses the SfPdfViewer2 component.
+Annotations can also be imported from a JSON or XFDF file, or from an in-memory object, in code-behind using the [ImportAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ImportAnnotationAsync_System_IO_Stream_Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_) method. The following example uses the SfPdfViewer2 component.
 
 Supported formats:
 - [JSON](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationDataFormat.html#Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_Json)
@@ -99,7 +99,7 @@ N> The Export Annotations option is disabled when the loaded PDF document does n
 
 ## Exporting annotation using SfPdfViewer API
 
-Annotations can also be exported as a file or as a stream in code-behind using the ExportAnnotationAsync and ExportAnnotationAsStreamAsync methods. Supported formats:
+Annotations can also be exported as a file or as a stream in code-behind using the [ExportAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_) and [ExportAnnotationAsStreamAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportAnnotationAsStreamAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_) methods. Supported formats:
 
 - [JSON](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationDataFormat.html#Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_Json)
 - [XFDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationDataFormat.html#Syncfusion_Blazor_SfPdfViewer_AnnotationDataFormat_Xfdf)
@@ -153,4 +153,4 @@ Annotations can also be exported as a file or as a stream in code-behind using t
 
 ## See also
 
-* [How to import annotations as objects](../how-to/import-annotations-as-objects)
+* [How to import annotations as objects](../faqs/how-to-import-annotations-as-objects)

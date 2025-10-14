@@ -41,7 +41,7 @@ Below are the key events provided by the Form Designer to handle form field inte
 
 [FormFieldAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldAdding) event is triggered before a form field is added in the SfPdfViewer2 component.
 
-The event exposes the `Cancel` property, which can be set to `true` to conditionally prevent adding the form field.
+The event exposes the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldAddEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldAddEventArgs_Cancel) property, which can be set to `true` to conditionally prevent adding the form field.
 
 #### Event Arguments
 The FormFieldAdding event provides [FormFieldAddEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldAddEventArgs.html), which includes [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldAddEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldAddEventArgs_Field) (form field details), [PageNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldAddEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldAddEventArgs_PageNumber) (target page), and [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldAddEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldAddEventArgs_Cancel) (to prevent addition).
@@ -715,5 +715,6 @@ The event provides [FormFieldsImportFailedEventArgs](https://help.syncfusion.com
 
 ## See also
 
+* [Events in Blazor SfPdfviewer](../events)
 * [Programmatic Support in Form Designer](./create-programmatically)
 * [UI Interactions in Form Designer](./ui-interactions)

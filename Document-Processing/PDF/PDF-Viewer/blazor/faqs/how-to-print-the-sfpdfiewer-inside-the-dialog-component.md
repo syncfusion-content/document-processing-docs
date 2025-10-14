@@ -77,4 +77,4 @@ The following code illustrates how to perform print action once SfPdfViewer is l
 
 * [Print in Blazor SfPdfViewer Component](../print)
 
-* [How to perform print in same window](./perform-print-in-same-window)
+* [How to perform print in same window](./how-to-perform-print-in-same-window)

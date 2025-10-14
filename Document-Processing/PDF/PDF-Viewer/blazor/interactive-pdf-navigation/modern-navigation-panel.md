@@ -39,7 +39,7 @@ The modern navigation panel contains the following built-in items:
 
 ## Rearrange default items in the navigation panel
 
-Use the `BuiltInItems` property, which accepts a list of [NavigationToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarItem.html) enums. The viewer renders the navigation icons in the exact sequence provided.
+Use the [BuiltInItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_NavigationToolbarSettings_BuiltInItems) property, which accepts a list of [NavigationToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarItem.html) enums. The viewer renders the navigation icons in the exact sequence provided.
 
 The following example displays Thumbnails first, followed by Bookmarks and the Comment panel.
 
@@ -101,7 +101,7 @@ The following example toggles the visibility of the second item in the navigatio
 
 ### Add custom items to the navigation panel
 
-You can add custom items to the SfPdfViewer navigation toolbar. Create a list of [CustomNavigationToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CustomNavigationToolbarItem.html) objects and assign it to the `CustomItems` property.
+You can add custom items to the SfPdfViewer navigation toolbar. Create a list of [CustomNavigationToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CustomNavigationToolbarItem.html) objects and assign it to the [CustomItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_NavigationToolbarSettings_CustomItems) property.
 
 Each CustomNavigationToolbarItem object includes:
 - Index: Position of the item in the toolbar.
@@ -243,3 +243,7 @@ The following example sets the loading strategy to Demand.
 On mobile devices, the navigation toolbar collapses into a toggle menu to save space. Any custom items appear at the beginning of this menu.
 
 ![Modern navigation panel in mobile view](../../blazor-classic/images/navigation_panel_mobile.png)
+
+## See Also
+
+* [Page navigation in Blazor SfPdfViewer](./page-navigation)
