@@ -49,12 +49,9 @@ RUN apt-get update && apt-get install -y --allow-unauthenticated libgdiplus libc
 
 RUN ln -s libgdiplus.so gdiplus.dll  
 
- 
 USER root
 
-
 WORKDIR /app
-
 
 EXPOSE 8080
 EXPOSE 8081
