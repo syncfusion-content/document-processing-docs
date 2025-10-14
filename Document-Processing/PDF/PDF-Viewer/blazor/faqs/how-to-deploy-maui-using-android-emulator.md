@@ -81,6 +81,6 @@ N> For emulator issues, see Troubleshooting Android Emulator: https://learn.micr
 
 ## See also
 
-* [Supported features: Desktop vs mobile](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview#supported-features-desktop-vs-mobile).
+* [Supported features: Desktop vs mobile](../overview#supported-features-desktop-vs-mobile).
 
-* [Render a PDF document from a URL in the MAUI app](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/deploy-maui-windows).
+* [Render a PDF document from a URL in the MAUI app](../getting-started/maui-blazor-app).

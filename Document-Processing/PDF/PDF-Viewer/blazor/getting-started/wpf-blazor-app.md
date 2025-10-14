@@ -100,7 +100,7 @@ The WPF project must target Windows and enable WPF. A typical project file looks
 {% endhighlight %} 
 {% endtabs %}
 
-Create an `_Imports.razor` and add the component namespace
+Create an **_Imports.razor** and add the component namespace
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -114,7 +114,7 @@ Create an `_Imports.razor` and add the component namespace
 Register Syncfusion Blazor services and BlazorWebView in **~/MainWindow.xaml.cs** so that the WPF window can host Blazor components.
 
 {% tabs %}
-{% highlight c# tabtitle="MainWindow.xaml.cs (WPF host)" hl_lines="3 4 6 7 8 9 10" %}
+{% highlight c# tabtitle="MainWindow.xaml.cs" hl_lines="3 4 6 7 8 9 10 11" %}
 
 ....
 
@@ -140,7 +140,7 @@ using Syncfusion.Blazor;
 
 
 {% tabs %} 
-{% highlight html tabtitle="wwwroot/index.html" hl_lines="8 13" %}
+{% highlight html tabtitle="index.html" hl_lines="8 13" %}
 
 <!DOCTYPE html>
 <html>
@@ -227,4 +227,4 @@ Run the WPF application. The Syncfusion&reg; Blazor PDF Viewer renders inside th
 
 * [Getting Started with Blazor PDF Viewer Component in MAUI Blazor App](./maui-blazor-app)
 
-* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../faqs/how-to-processing-large-files-without-increasing-maximum-message-size)

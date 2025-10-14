@@ -42,6 +42,6 @@ To unload a PDF and release its resources programmatically, call the [UnloadAsyn
 
 ## See also
 
-* [How to show or hide the Component dynamically](../faqs/how-to-show-or-hide-sfpdfviewer-dynamically)
+* [How to show or hide the Component dynamically](./how-to-show-or-hide-sfpdfviewer-dynamically)
 
-* [How to load PDF documents dynamically](../faqs/how-to-load-pdf-document-dynamically)
+* [How to load PDF documents dynamically](./how-to-load-pdf-document-dynamically)
