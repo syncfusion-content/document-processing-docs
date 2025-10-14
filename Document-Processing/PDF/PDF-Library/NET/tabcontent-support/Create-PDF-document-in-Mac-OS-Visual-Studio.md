@@ -3,8 +3,6 @@
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
 * Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
-
-
 Step 1: Create a new .NET Core console application project.
 ![Mac OS console application](GettingStarted_images/Mac_OS_Console.png)
 
@@ -92,7 +90,8 @@ using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output.pd
 
 Step 6: Build the project.
 
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+To build the project, go to the `Build` menu and select `Build Solution`, or simply press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
 
 Step 7: Run the project.
-   Click the Start button (green arrow) or press F5 to run the app.
+
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.

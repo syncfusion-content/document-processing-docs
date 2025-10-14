@@ -71,6 +71,8 @@ public IActionResult BlinkToPDF()
     MemoryStream stream = new MemoryStream();
     //Save the document to the memory stream.
     document.Save(stream);
+    //Close the document
+    document.Close(true); 
     return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "BlinkLinuxDockerAWSBeanstalk.pdf");
 }
 

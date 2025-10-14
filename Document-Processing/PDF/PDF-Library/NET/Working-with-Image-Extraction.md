@@ -185,3 +185,54 @@ documentExtractor.Dispose()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Image%20Extraction/Extract-images-from-PDF-documents). 
 
 N> To extract images from PDF page in .NET Core application, add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package to your project.
+
+## Troubleshooting and FAQ's
+
+### Missing SkiaSharp Native Assets on Ubuntu ARM64
+
+<table>
+<th style="font-size:14px" width="100px">Issue
+</th>
+<th style="font-size:14px">Image extraction fails on Ubuntu 22.04.5 LTS servers running on ARM64 architecture due to missing SkiaSharp native dependencies.
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>SkiaSharp requires platform-specific native binaries for graphics operations:<br>
+
+1.The default SkiaSharp package doesn't include ARM64 Linux binaries.<br>
+2.Ubuntu ARM64 environments lack these native assets by default.<br>
+3.SkiaSharp fails to initialize without these dependencies.<br>
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>Add the appropriate native assets package based on your environment:<br>
+
+1.For Standard Linux Environments<br>
+(Ubuntu, Alpine, CentOS, Debian, Fedora, RHEL, Azure App Service, Google App Engine)
+<br><br/>
+{% highlight c# tabtitle="C#" %}
+
+dotnet add package SkiaSharp.NativeAssets.Linux --version 3.116.1
+
+{% endhighlight %}
+
+2.For cloud native deployments<br>
+(AWS Lambda, AWS Elastic Beanstalk)
+<br><br/>
+{% highlight c# tabtitle="C#" %}
+
+dotnet add package SkiaSharp.NativeAssets.Linux.NoDependencies --version 3.116.1
+
+{% endhighlight %}
+
+For Ubuntu 22.04.5 LTS on ARM64, use `SkiaSharp.NativeAssets.Linux`<br>
+Check your `.csproj` file for the following entry: `<PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="3.116.1" />`
+
+</td>
+</tr>
+</table>
