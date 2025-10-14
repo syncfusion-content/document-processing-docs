@@ -185,7 +185,7 @@ let paragraphStyles = this.$refs.documenteditor.ej2Instances.documentEditor.getS
 
 ## Modify an existing style
 
-You can modify a existing style with the specified style properties using [`createStyle`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#createStyle) method. If modifyExistingStyle parameter is set to `true` the style properties is updated to the existing style.
+You can modify a existing style with the specified style properties using [`createStyle`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor/#createStyle) method. If modifyExistingStyle parameter is set to `true` the style properties is updated to the existing style.
 
 The following illustrate to modify an existing style.
 

@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Styles
+# Styles in Document Editor Control
 
 Styles are useful for applying a set of formatting consistently throughout the document. In document editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
 
