@@ -1,134 +1,142 @@
 ---
 layout: post
 title: Annotations in Mobile View using SfPdfViewer Component | Syncfusion
-description: Checkout and learn everything about annotations in the mobile view using the Syncfusion Blazor SfPdfViewer component and more.
+description: Learn how to add, edit, and manage annotations in the mobile view of the Syncfusion Blazor SfPdfViewer component
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# To open the annotation toolbar
+# Annotations in mobile view
 
-To Open the annotation toolbar, click on the **Edit Annotation** option in the mobile primary toolbar. The mobile annotation toolbar will open at bottom of the viewer.
+This article explains how to work with annotations in the mobile view of the Blazor SfPdfViewer. It covers opening the annotation toolbar, adding each annotation type, adjusting properties, deleting annotations, and using the comments panel.
+
+## To open the annotation toolbar
+
+To open the annotation toolbar, tap the **Edit Annotation** option in the mobile primary toolbar. The annotation toolbar appears at the bottom of the viewer.
 
 ![Mobile Annotation Toolbar in Blazor SfPdfViewer](../images/open-annotation-toolbar.gif)
 
 ## To add sticky notes annotation
 
-Click the **Sticky Note Annotation** icon and then click anywhere in the viewer to add the sticky notes. 
+Tap the **Sticky Note Annotation** icon, then tap anywhere in the viewer to place the note.
 
-![Click Sticky Note icon in Blazor SfPdfViewer](../images/click-stickynote-annotation.png)
+![Choose Sticky Note Annotation in Blazor SfPdfViewer](../images/click-stickynote-annotation.png)
 
-This action will open the comment panel, allowing you to add the required comment for the added sticky notes.
+The comments panel opens so the comment for the sticky note can be entered.
 
-![Sticky Note Annotation added in Blazor SfPdfViewer](../images/sticky-note-added.png)
+![Sticky note annotation added in Blazor SfPdfViewer](../images/sticky-note-added.png)
 
 ## To add text markup annotation
 
-Long-press to select any text in the PDF, then click on any **Text Markup Annotation** in the annotation toolbar. 
+Long-press to select text in the PDF, then tap a **Text Markup Annotation** in the toolbar (for example, highlight, underline, strikethrough, or squiggly).
 
-![Select Text in Blazor SfPdfViewer](../images/select-text-for-text-markup.png)
+![Select text for text markup in Blazor SfPdfViewer](../images/select-text-for-text-markup.png)
 
-This action will display the required properties for this annotation in the toolbar.
+The toolbar then shows the available properties for the chosen annotation (such as color and opacity).
 
-![Select Text in Blazor SfPdfViewer](../images/text-markup-added-for-selected-text.png)
+![Text markup applied to selected text in Blazor SfPdfViewer](../images/text-markup-added-for-selected-text.png)
 
 ## To add shape annotation
 
-Click the **Shape Annotation** icon in the toolbar. It will display the supported shape annotations.
+Tap the **Shape Annotation** icon in the toolbar to view the available shapes.
 
-![Click Shape Icon in Blazor SfPdfViewer](../images/click-shape-icon.png)
+![Open the shape annotations menu in Blazor SfPdfViewer](../images/click-shape-icon.png)
 
-Choose any annotation type from the list, then click and drag anywhere in the viewer to add the annotation. 
+Choose a shape, then tap and drag in the viewer to draw it.
 
-![Select Particular Shape in Blazor SfPdfViewer](../images/select-required-shape.png)
+![Select a shape type in Blazor SfPdfViewer](../images/select-required-shape.png)
 
-The toolbar will also switch to display the properties that is required for the added annotation.
+After placement, the toolbar switches to the properties toolbar for the added annotation, where options such as fill color, stroke color, thickness, and opacity can be adjusted.
 
-![Draw Shape in Blazor SfPdfViewer](../images/add-selected-shape-annotation.png)
+![Draw a selected shape annotation in Blazor SfPdfViewer](../images/add-selected-shape-annotation.png)
 
 ## To add measure annotation
 
-Click the **Measure Annotation** icon in the toolbar. It will display the supported measure annotations.
+Tap the **Measure Annotation** icon in the toolbar to view supported measurement types.
 
-![Click Measure Icon in Blazor SfPdfViewer](../images/click-measure-icon.png)
+![Open the measure annotations menu in Blazor SfPdfViewer](../images/click-measure-icon.png)
 
-Choose any annotation type from the list, then click and drag anywhere in the viewer to add the annotation.
+Select a measurement type, then tap and drag in the viewer to add it.
 
-![Select Particular Measure in Blazor SfPdfViewer](../images/select-required-measure.png)
+![Select a measurement type in Blazor SfPdfViewer](../images/select-required-measure.png)
 
-The toolbar will also switch to display the properties that is required for the added annotation.
+After placement, the properties toolbar appears with options relevant to the measurement annotation (for example, stroke color, thickness, and opacity).
 
-![Draw Measure in Blazor SfPdfViewer](../images/add-selected-measure-annotation.png)
+![Draw a selected measurement annotation in Blazor SfPdfViewer](../images/add-selected-measure-annotation.png)
 
 ## To add free text annotation
 
-Click the **Free Text Annotation** icon in the toolbar. Which will display the properties that is required for free text.
+Tap the **Free Text Annotation** icon in the toolbar. The properties toolbar appears with options for text formatting (such as font size, color, and opacity).
 
-![Click Free Text Icon in Blazor SfPdfViewer](../images/click-free-text-annotation.png)
+![Open Free Text Annotation in Blazor SfPdfViewer](../images/click-free-text-annotation.png)
 
-Click anyWhere in the viewer to add the free text annotation.
+Tap anywhere in the viewer to insert the free text annotation.
 
-![Add Free Text in Blazor SfPdfViewer](../images/add-free-text-viewer.png)
+![Add free text in the viewer in Blazor SfPdfViewer](../images/add-free-text-viewer.png)
 
 ## To add stamp annotation
 
-Click on the **Stamp Annotation** icon and choose the desired stamp from the various types listed in the menu. 
+Tap the **Stamp Annotation** icon, then choose a stamp from the available list.
 
-![Click Stamp Icon in Blazor SfPdfViewer](../images/open-list-of-stamp.png)
+![Open the list of stamp annotations in Blazor SfPdfViewer](../images/open-list-of-stamp.png)
 
-Afterward, click anywhere in the viewer to add the stamp. The toolbar will then switch to display the properties required for the stamp annotation.
+Tap anywhere in the viewer to place the stamp. The properties toolbar then appears for additional adjustments where applicable.
 
-![Select Required Stamp in Blazor SfPdfViewer](../images/add-selected-stamp.png)
+![Place the selected stamp in Blazor SfPdfViewer](../images/add-selected-stamp.png)
 
 ## To add signature
 
-Click the **Handwritten Signature** icon to open the signature dialog box. 
+Tap the **Handwritten Signature** icon to open the signature dialog.
 
-![Click Signature Icon in Blazor SfPdfViewer](../images/open-signature-dialog.png)
+![Open the signature dialog in Blazor SfPdfViewer](../images/open-signature-dialog.png)
 
-Draw your signature in the signature dialog canvas, then click the ‘Create’ button to add the signature into the viewer. 
+Draw the signature in the dialog’s canvas, then tap Create to add it to the viewer.
 
-![Draw Signature in Blazor SfPdfViewer](../images/draw-signature-in-dialog.png)
+![Draw a signature in the dialog in Blazor SfPdfViewer](../images/draw-signature-in-dialog.png)
 
-Click anywhere in the viewer to place the signature. The toolbar will then switch to display the properties required for the signature.
+Tap anywhere in the viewer to place the signature. The properties toolbar then appears for further adjustments.
 
-![Add Signature in Blazor SfPdfViewer](../images/add-signature-to-viewer.png)
+![Add the signature to the viewer in Blazor SfPdfViewer](../images/add-signature-to-viewer.png)
 
 ## To add ink annotation
 
-Click the **Ink Annotation** icon and draw anywhere in the viewer.
+Tap the **Ink Annotation** icon, then draw directly in the viewer.
 
-![Click ink in Blazor SfPdfViewer](../images/click-ink-annotation.png)
+![Start ink annotation in Blazor SfPdfViewer](../images/click-ink-annotation.png)
 
-Once you’ve finished drawing, click the ink annotation displayed in the toolbar to stop the ink annotation drawing. The toolbar will then switch to display the properties required for the ink annotation.
+When finished, tap the Ink Annotation icon again to exit drawing mode. The properties toolbar then appears with options for ink color, thickness, and opacity.
 
-![Complete Ink Annotation in Blazor SfPdfViewer](../images/complete-ink-annotation.png)
+![Complete an ink annotation in Blazor SfPdfViewer](../images/complete-ink-annotation.png)
 
-## Change annotation properties (Before adding)
+## Change annotation properties before adding
 
-You can modify annotations properties before adding them. Click the rectangle shape annotation, which will display the toolbar with corresponding properties. You can be able to adjust these properties and then add the annotation by clicking and dragging it. The annotation will be added with the modified property.
+Annotation properties can be configured before placement. For example, tap the rectangle shape to show its properties toolbar, adjust the settings, and then tap and drag to place the annotation. The annotation is added using the modified properties.
 
-![Property Change Before Adding in Blazor SfPdfViewer](../images/property-change-before-adding.gif)
+![Change properties before adding an annotation in Blazor SfPdfViewer](../images/property-change-before-adding.gif)
 
-## Change annotation properties (After adding)
+## Change annotation properties after adding
 
-After adding the annotation, you can modify its properties. Select the added annotation, and it will display the corresponding properties. Change the necessary property, and it will reflect in the added annotation.
+After placement, select the annotation to display its properties toolbar. Adjust the required properties; the changes are applied immediately to the selected annotation.
 
-![Property Change After Adding in Blazor SfPdfViewer](../images/property-change-after-adding.gif)
+![Change properties after adding an annotation in Blazor SfPdfViewer](../images/property-change-after-adding.gif)
 
 ## Delete Annotation
 
-To delete an annotation, first, select the annotation you want to remove. The delete icon will appear in the property toolbar. Clicking on the delete icon will remove the annotation from the PDF along with its associated comment.
+Select the annotation to delete. In the properties toolbar, tap the Delete icon. The annotation is removed from the PDF, and any associated comment is also deleted.
 
-![Delete Selected Annotation in Blazor SfPdfViewer](../images/delete-selected-annotation.png)
+![Delete the selected annotation in Blazor SfPdfViewer](../images/delete-selected-annotation.png)
 
 ## Open and Close Comment Panel
 
-You can open the comments through the **more option** located at the right end of the mobile primary toolbar.
+Open the comments panel from the **more option** menu at the right end of the mobile primary toolbar.
 
-![Select CommentPanel in Blazor SfPdfViewer](../images/select-comment-panel-icon.png)
+![Open the comments panel from More options in Blazor SfPdfViewer](../images/select-comment-panel-icon.png)
 
-To close the comment panel, click the close icon located within the comment panel.
+To close the comments panel, tap the Close icon within the panel.
 
-![Open CommentPanel in Blazor SfPdfViewer](../images/open-cooment-panel.png)
+![Comments panel displayed in Blazor SfPdfViewer](../images/open-cooment-panel.png)
+
+## See Also
+
+* [Annotation Toolbar in Mobile mode](../toolbar-customization/mobile-toolbar)
