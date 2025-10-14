@@ -29,11 +29,11 @@ Step 4: A default controller named HomeController.cs gets added to create the AS
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Graphics;
-    using Syncfusion.Pdf.Grid;
-    using Syncfusion.Pdf.Parsing;
-    using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Grid;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Drawing;
 
 {% endhighlight %}
 {% endtabs %}
@@ -43,18 +43,18 @@ Step 5: Add a new button in index.cshtml as follows
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-   @{
-    Html.BeginForm("CreatePDF", "Home", FormMethod.Get);
-    {
-        <div>
-            <input type="submit" value="Create PDF" style="width:150px;height:27px" />
-            <br />
-            <div class="text-danger">
-                @ViewBag.Message
-            </div>
+@{
+Html.BeginForm("CreatePDF", "Home", FormMethod.Get);
+{
+    <div>
+        <input type="submit" value="Create PDF" style="width:150px;height:27px" />
+        <br />
+        <div class="text-danger">
+            @ViewBag.Message
         </div>
-    }
-    Html.EndForm();
+    </div>
+}
+Html.EndForm();
 }
 
 {% endhighlight %}
@@ -65,43 +65,43 @@ Step 6: Add a new action method named CreatePDF in HomeController.cs file and in
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-    public IActionResult CreatePDF()
-    {
-        //Open an existing PDF document.
-        FileStream fileStream = new FileStream("Data/Input.pdf", FileMode.Open, FileAccess.Read);
-        PdfLoadedDocument document = new PdfLoadedDocument(fileStream);
+public IActionResult CreatePDF()
+{
+    //Open an existing PDF document.
+    FileStream fileStream = new FileStream("Data/Input.pdf", FileMode.Open, FileAccess.Read);
+    PdfLoadedDocument document = new PdfLoadedDocument(fileStream);
 
-        //Get the first page from a document.
-        PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
+    //Get the first page from a document.
+    PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
 
-        //Create PDF graphics for the page.
-        PdfGraphics graphics = page.Graphics;
+    //Create PDF graphics for the page.
+    PdfGraphics graphics = page.Graphics;
 
-        //Create a PdfGrid.
-        PdfGrid pdfGrid = new PdfGrid();
-        //Add values to the list.
-        List<object> data = new List<object>();
-        data.Add(new { Product_ID = "1001", Product_Name = "Bicycle", Price = "10,000" });
-        data.Add(new { Product_ID = "1002", Product_Name = "Head Light", Price = "3,000" });
-        data.Add(new { Product_ID = "1003", Product_Name = "Break wire", Price = "1,500" });
+    //Create a PdfGrid.
+    PdfGrid pdfGrid = new PdfGrid();
+    //Add values to the list.
+    List<object> data = new List<object>();
+    data.Add(new { Product_ID = "1001", Product_Name = "Bicycle", Price = "10,000" });
+    data.Add(new { Product_ID = "1002", Product_Name = "Head Light", Price = "3,000" });
+    data.Add(new { Product_ID = "1003", Product_Name = "Break wire", Price = "1,500" });
 
-        //Assign data source.
-        pdfGrid.DataSource = data;
+    //Assign data source.
+    pdfGrid.DataSource = data;
 
-        //Apply built-in table style.
-        pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent3);
+    //Apply built-in table style.
+    pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent3);
 
-        //Draw the grid to the page of PDF document.
-        pdfGrid.Draw(graphics, new RectangleF(40, 400, page.Size.Width - 80, 0));
-        //Create the memory stream.
-        MemoryStream stream = new MemoryStream();
-        //Save the document to the memory stream.
-        document.Save(stream);
-        //Close the documet
-	    document.Close(true); 
-	    //Return the PDF file as a download
-        return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "Output.pdf");
-    }
+    //Draw the grid to the page of PDF document.
+    pdfGrid.Draw(graphics, new RectangleF(40, 400, page.Size.Width - 80, 0));
+    //Create the memory stream.
+    MemoryStream stream = new MemoryStream();
+    //Save the document to the memory stream.
+    document.Save(stream);
+    //Close the documet
+	document.Close(true); 
+	//Return the PDF file as a download
+    return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "Output.pdf");
+}
 
 {% endhighlight %}
 {% endtabs %}

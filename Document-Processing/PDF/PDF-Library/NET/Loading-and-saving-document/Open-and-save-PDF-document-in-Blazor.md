@@ -9,20 +9,12 @@ keywords: blazor save pdf, blazor load pdf, c# save pdf, c# load pdf
 
 # Open and save PDF document in Blazor
 
-The [Syncfusion<sup>&reg;</sup> Blazor PDF library](https://www.syncfusion.com/document-processing/pdf-framework/blazor) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in ASP.NET Core**. 
+The [Syncfusion<sup>&reg;</sup> Blazor PDF library](https://www.syncfusion.com/document-processing/pdf-framework/blazor) creates, reads, and edits PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, **open and save PDF documents in ASP.NET Core**.
 
 **Prerequisites:**
 
-* Visual Studio 2019 Preview
-* Install the [.NET Core SDK 3.1 Preview](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
-
-**Creating a Blazor project**
-
-* Enable Visual Studio to use preview SDKs.
-* Open Tools > Options in the menu bar.
-* Open the Projects and Solutions node. Open the .NET Core tab.
-* Check the box for Use previews of the .NET Core SDK and click OK.
-* Restart the Visual Studio 2019.
+* Visual Studio 2022 or later
+* Install the [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
 
 ## Server app
 
@@ -35,9 +27,9 @@ Step 2: In the **Interactive Render Mode section**, choose `Server` as the rende
 Step 3: To **open and save a PDF document in Blazor Server app**, install [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) to the Blazor project.
 ![Install NuGet package](Images/Blazor_NuGet_package.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if referencing Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, add "Syncfusion.Licensing" assembly reference and include a license key in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion<sup>&reg;</sup> license key in applications to use the components.
 
-Step 4:  Inject ExportService into `FetchData.razor` using the following code.
+Step 4: Inject ExportService into `FetchData.razor` using the following code.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -94,7 +86,7 @@ using System.IO;
 
 {% endtabs %}
 
-Step 8: Register your service in the `ConfigureServices` method available in the `Startup.cs` class as follows.
+Step 8: Register the service in the `ConfigureServices` method available in the `Startup.cs` class as follows.
 
 {% tabs %}
 
@@ -228,9 +220,8 @@ Step 13: Add the following JavaScript function in the `_Host.cshtml` available u
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/Blazor/ServerSideApplication).
-
-By executing the program, you will get the **PDF document** as follows.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/Blazor/ServerSideApplication).A complete working sample is available from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/Blazor/ServerSideApplication).
+The following output appears after executing the program.
 ![Blazor Server output PDF document](Images/Open_and_save_output.png)
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
@@ -243,10 +234,10 @@ Step 1: Create a new C# Blazor server-side application project. Select **Blazor 
 Step 2: In the **Interactive Render Mode section**, choose `WebAssembly` as the render mode. Then, click the `Create` button to generate a new Blazor client-Side Application.
 ![Select Blazor WASM app](Images/Blazor-Web-Assembly.png)
 
-Step 3: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to the Blazor application from [NuGet.org](https://www.nuget.org/).
 ![NuGet package installation](Images/Blazor_NuGet_package.png)  
 
-Step 4: Next, include the following namespaces in that `FetchData.razor` file.
+Step 4: Include the following namespaces in the `FetchData.razor` file.
 
 {% tabs %}
 
@@ -274,7 +265,7 @@ Step 5: Create a button in the `FetchData.razor` using the following code.
 
 {% endtabs %}
 
-Step 6: Create a new async method with name as ``LoadAndSavePDF`` and include the following code snippet to **open an existing PDF document in Blazor** WASM app.
+Step 6: Create a new async method with name as `LoadAndSavePDF` and include the following code snippet to **open an existing PDF document in Blazor** WASM app.
 
 {% tabs %}
 
@@ -391,13 +382,13 @@ Step 10: Add the following JavaScript function in the `index.html` available und
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/Blazor/ClientSideApplication).
+A complete working sample is available from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/Blazor/ClientSideApplication).
 
-By executing the program, you will get the **PDF document** as follows.
-![Blazor WASM output Word document](Images/Open_and_save_output.png)
+The following output appears after executing the program.
+![Blazor WASM output PDF document](Images/Open_and_save_output.png)
 
-N> Even though PDF library works in WASM app, it is recommended to use server deployment. Since the WASM app deployment increases the application payload size.
+N> Even though PDF library works in WASM app, server deployment is recommended. Since the WASM app deployment increases the application payload size.
 
-Kindly explore the [supported and unsupported features of PDF library in Blazor](https://www.syncfusion.com/document-processing/pdf-framework/blazor/pdf-library).
+Explore the [supported and unsupported features of PDF library in Blazor](https://www.syncfusion.com/document-processing/pdf-framework/blazor/pdf-library).
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.

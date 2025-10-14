@@ -5,7 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Open PDF file from Azure Blob storage
+# Open PDF from Azure Blob storage
 
 To load a PDF file from Azure blob storage, you can follow the steps below
 
@@ -25,13 +25,12 @@ Step 4: Include the following namespaces in the Program.cs file.
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-    using Microsoft.Azure.Storage;
-    using Microsoft.Azure.Storage.Blob;
+using Microsoft.Azure.Storage;
+using Microsoft.Azure.Storage.Blob;
 
 {% endhighlight %}
 
 {% endtabs %}
-
 
 Step 5: Add the below code example to load a PDF from Azure blob storage.
 
@@ -39,24 +38,24 @@ Step 5: Add the below code example to load a PDF from Azure blob storage.
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-    // Parse the connection string to your Azure Storage Account.
-    CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);
+// Parse the connection string to your Azure Storage Account.
+CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);
 
-    // Create a client to interact with Blob storage.
-    CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+// Create a client to interact with Blob storage.
+CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
 
-    // Get a reference to the container name.
-    CloudBlobContainer container = blobClient.GetContainerReference(containerName);
+// Get a reference to the container name.
+CloudBlobContainer container = blobClient.GetContainerReference(containerName);
 
-    // Get a reference to the block blob name.
-    CloudBlockBlob blockBlob = container.GetBlockBlobReference(blobName);
+// Get a reference to the block blob name.
+CloudBlockBlob blockBlob = container.GetBlockBlobReference(blobName);
     
-    // Open a file stream to save the downloaded blob content.
-    using (var fileStream = File.OpenWrite("sample.pdf"))
-    {
-        // Download the blob's content to the file stream.
-        blockBlob.DownloadToStream(fileStream);
-    }
+// Open a file stream to save the downloaded blob content.
+using (var fileStream = File.OpenWrite("sample.pdf"))
+{
+    // Download the blob's content to the file stream.
+    blockBlob.DownloadToStream(fileStream);
+}
 
 {% endhighlight %}
 

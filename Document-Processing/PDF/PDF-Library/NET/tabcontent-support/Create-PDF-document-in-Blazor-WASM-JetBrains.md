@@ -3,35 +3,34 @@
 * JetBrains Rider.
 * Install .NET 8 SDK or later.
 
-Step 1. Open JetBrains Rider and create a new Blazor WASM app project.
-* Launch JetBrains Rider.
-* Click new solution on the welcome screen.
+Step 1: Create a new Blazor WebAssembly App project in JetBrains Rider.
 
 ![Launch JetBrains Rider](JetBrains_Images/Launch-JetBrains-Rider.png)
 
-* In the new Solution dialog, select Project Type as Web.
-* Enter a project name and specify the location.
-* Choose template as **Blazor WebAssembly Standalone App**.
-* Select the target framework (e.g., .NET 8.0, .NET 9.0).
-* Click create.
+In the **New Solution** dialog:
+*   Select **Web** as the **Project Type**.
+*   Enter a **Solution name** (e.g., `CreatePdfBlazorWasmApp`) and specify the **Location**.
+*   Choose **Blazor WebAssembly Standalone App** as the template.
+*   Select the target framework (e.g., .NET 8.0).
+*   Click **Create**.
 
 ![Launch JetBrains Rider](JetBrains_Images/create-blazor-wasm-application.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) in the search bar.
-* Ensure that "nuget.org" is selected as the package source.
-* Select the latest Syncfusion.Pdf.Net.Core NuGet package from the list.
-* Click the + (Add) button to add the package.
+* Ensure that `nuget.org` is selected as the package source.
+* Select the latest `Syncfusion.Pdf.Net.Core` NuGet package from the list.
+* Click the **Add** button (or the `+` icon) to add the package.
 
 ![Select the Syncfusion.Pdf.Net.Core package](JetBrains_Images/Core-Package.png)
 
-* Click the Install button to complete the installation.
+* Click the **Install** button to complete the installation.
 
 ![Install the package](JetBrains_Images/Install-Core-BlazorWeb-Package.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if referencing Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, add "Syncfusion.Licensing" assembly reference and include a license key in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion<sup>&reg;</sup> license key in applications to use the components.
 
-Step 5: Next, include the following namespaces in that  ``FetchData.razor`` file.
+Step 3: Include necessary namespaces in `FetchData.razor` file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -46,7 +45,7 @@ Step 5: Next, include the following namespaces in that  ``FetchData.razor`` file
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Create a button in the ``FetchData.razor`` using the following code.
+Step 4: Create a button in `FetchData.razor` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -54,7 +53,7 @@ Step 6: Create a button in the ``FetchData.razor`` using the following code.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Define the ``@ExportToPdf`` click function on ``FetchData.razor`` file.
+Step 5: Define the `@ExportToPdf` click function on `FetchData.razor` file.
 
 The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created and add a [PdfPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPage.html) to it. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
  
@@ -108,7 +107,7 @@ JS.SaveAs("Sample.pdf", memoryStream.ToArray());
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Create a class file with ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 6: Create a class file with ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 
@@ -127,7 +126,7 @@ public static class FileUtil
 
 {% endtabs %}
 
-Step 9: Add the following JavaScript function in the ``index.html`` available under the ``wwwroot`` folder.
+Step 7: Add the following JavaScript function in the ``index.html`` available under the ``wwwroot`` folder.
 
 {% tabs %}
 
@@ -160,10 +159,10 @@ Step 9: Add the following JavaScript function in the ``index.html`` available un
 
 {% endtabs %}
 
-Step 10: Build the project.
+Step 8: Build the project.
 
-Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+To build the project, go to the `Build` menu and select `Build Solution`, or simply press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
 
-Step 11: Run the project.
+Step 9: Run the project.
 
-Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the application.

@@ -20,6 +20,10 @@ The below code example shows how to add Code39 barcode using the [PdfCode39Barco
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/One%20dimensional%20barcode/Add-Code39-barcode-to-the-PDF-document/.NET/Add-Code39-barcode-to-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
+
 //Creating new PDF Document
 PdfDocument doc = new PdfDocument();
 //Adding new page to PDF document
@@ -34,22 +38,18 @@ barcode.Text = "CODE39$";
 //Printing barcode to the PDF document  
 barcode.Draw(page, new PointF(25, 70));
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
-stream.Position = 0;
-//Close the documents.
+//Savethe PDF document
+doc.Save("Output.pdf");
+//Close the document
 doc.Close(true);
-//Defining the ContentType for pdf file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = " CODE39.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
 
 //Creating new PDF Document
 PdfDocument doc = new PdfDocument();
@@ -72,6 +72,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Barcode
 
 'Creating new PDF Document
 Dim doc As New PdfDocument()
@@ -104,6 +108,10 @@ The below code snippet shows how to add PdfEan13 barcode using the [PdfEan13Barc
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/One%20dimensional%20barcode/Add-PdfEan13-barcode-to-a-PDF-document/.NET/Add-PdfEan13-barcode-to-a-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
+
 //Creates a new PdfEan13 Barcode.
 PdfEan13Barcode barcode = new PdfEan13Barcode ();
 //Set height of the barcode.
@@ -114,29 +122,23 @@ barcode.Text = "400638133393";
 //Creating new PDF document.
 PdfDocument document = new PdfDocument();
 //Adding new page to PDF document.
-PdfPage page = document.Pages.Add();
+PdfPage page = document.Pages.Add(); 
 
-//Printing barcode to the PDF document. 
+//Printing barcode to the PDF document.
 barcode.Draw(page, new PointF(25,70));
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-document.Save(stream); 
-//If the position is not set to '0' then the PDF will be empty.
-stream.Position = 0; 
+//Saving the document.
+document.Save("EAN13Barcode.pdf");
 //Close the document.
-document.Close(true); 
-//Defining the ContentType for pdf file. 
-string contentType = "application/pdf"; 
-//Define the file name.
-string fileName = "EAN13Barcode.pdf"; 
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
 
 //Creates a new PdfEan13 Barcode.
 PdfEan13Barcode barcode = new PdfEan13Barcode ();
@@ -161,6 +163,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Barcode
 
 'Creates a new PdfEan13 Barcode.
 Dim barcode As New PdfEan13Barcode () 
@@ -194,39 +200,37 @@ The below code example shows how to add PdfEan8 barcode using the [PdfEan8Barcod
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/One%20dimensional%20barcode/Add-PdfEan8-barcode-to-a-PDF-document/.NET/Add-PdfEan8-barcode-to-a-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
+
 //Creates a new PdfEan8 Barcode.
 PdfEan8Barcode barcode = new PdfEan8Barcode ();
 //Set height of the barcode.
 barcode.BarHeight = 50;
-//Set the barcode text.
+//Set the barcode text
 barcode.Text = "1234567";
 
 //Creating new PDF document.
 PdfDocument document = new PdfDocument();
 //Adding new page to PDF document.
-PdfPage page = document.Pages.Add();
+PdfPage page = document.Pages.Add(); 
 
-//Printing barcode to the PDF document.
+//Printing barcode to the PDF document. 
 barcode.Draw(page, new PointF(25,70));
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-document.Save(stream); 
-//If the position is not set to '0' then the PDF will be empty.
-stream.Position = 0; 
-//Close the document 
-document.Close(true); 
-//Defining the ContentType for PDF file.
-string contentType = "application/pdf";
-//Define the file name. 
-string fileName = "EAN8Barcode.pdf"; 
-//Creates a FileContentResult object by using the file contents, content type, and file name. 
-return File(stream, contentType, fileName);
+//Saving the document.
+document.Save("EAN8Barcode.pdf");
+//Close the document
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
 
 //Creates a new PdfEan8 Barcode.
 PdfEan8Barcode barcode = new PdfEan8Barcode ();
@@ -251,6 +255,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Barcode
 
 'Creates a new PdfEan8 Barcode.
 Dim barcode As New PdfEan8Barcode () 
@@ -286,6 +294,10 @@ The below code snippet shows how to add a QR code using [PdfQRBarcode](https://h
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/Two%20dimensional%20barcode/Add-a-QRBarcode-to-the-PDF-document/.NET/Add-a-QRBarcode-to-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
+
 //Drawing QR Barcode
 PdfQRBarcode barcode = new PdfQRBarcode();
 //Set Error Correction Level
@@ -293,32 +305,26 @@ barcode.ErrorCorrectionLevel = PdfErrorCorrectionLevel.High;
 //Set XDimension
 barcode.XDimension = 3;
 barcode.Text = "http://www.syncfusion.com";
-barcode.Text = "http://www.syncfusion.com";
 
 //Creating new PDF Document
 PdfDocument doc = new PdfDocument();
 //Adding new page to PDF document
 PdfPage page = doc.Pages.Add();
-
-//Printing barcode to the PDF
+//Printing barcode to the PDF document
 barcode.Draw(page, new PointF(25, 70));
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
-stream.Position = 0;
-//Close the documents
+//Saving the document
+doc.Save("QRBarcode.pdf");
+//Close the document
 doc.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = " QRBarcode.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
 
 //Drawing QR Barcode
 PdfQRBarcode barcode = new PdfQRBarcode();
@@ -343,6 +349,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Barcode
 
 'Drawing QR Barcode
 Dim barcode As New PdfQRBarcode()
@@ -377,11 +387,15 @@ The below code example shows how to add a Pdf417 barcode code using [Pdf417Barco
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/Two%20dimensional%20barcode/Add-a-Pdf417-barcode-to-the-PDF-document/.NET/Add-a-Pdf417-barcode-to-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
+
 //Creates a new Pdf417 Barcode.
 Pdf417Barcode barcode = new Pdf417Barcode();
 //Set error correction level.
 barcode.ErrorCorrectionLevel= Pdf417ErrorCorrectionLevel.Auto;
-//Set XDimension.
+//Set XDimension
 barcode.XDimension = 2;
 //Set the barcode text.
 barcode.Text = "http://www.syncfusion.com";
@@ -394,24 +408,18 @@ PdfPage page = document.Pages.Add();
 //Printing barcode on to the PDF.
 barcode.Draw(page, new PointF(25,70));
 
-//Creating the stream object. 
-MemoryStream stream = new MemoryStream(); 
-//Save the document into stream. 
-document.Save(stream); 
-//If the position is not set to '0' then the PDF will be empty. 
-stream.Position = 0; 
+//Saving the document.
+document.Save("417Barcode.pdf");
 //Close the document.
-document.Close(true); 
-//Defining the ContentType for PDF file.
-string contentType = "application/pdf";
-//Define the file name. 
-string fileName = "417Barcode.pdf"; 
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
 
 //Creates a new Pdf417 Barcode.
 Pdf417Barcode barcode = new Pdf417Barcode();
@@ -438,6 +446,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Barcode
 
 'Creates a new Pdf417 Barcode.
 Dim barcode As New Pdf417Barcode()
@@ -475,9 +487,13 @@ The following code snippets show how to set [Size](https://help.syncfusion.com/c
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/Set-location-and-size-to-the-barcode-in-a-PDF-document/.NET/Set-location-and-size-to-the-barcode-in-a-PDF-document/Program.cs" %}
 
-//Creating new PDF document
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
+
+//Creating new PDF document.
 PdfDocument doc = new PdfDocument();
-//Adding new page to PDF document
+//Adding new page to PDF document.
 PdfPage page = doc.Pages.Add();
 
 //Create new instance for Codabar barcode.
@@ -491,22 +507,17 @@ barcode.Text = "123456789$";
 //Printing barcode on to the PDF.
 barcode.Draw(page);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
-stream.Position = 0;
-//Close the documents.
+//Save and close the document.
+doc.Save("CODABAR.pdf");
 doc.Close(true);
-//Defining the ContentType for PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = " CODABAR.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
 
 //Creating new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -531,6 +542,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Barcode
 
 'Creating new PDF document.
 Dim doc As New PdfDocument()
@@ -558,6 +573,136 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Barcode/Set-location-and-size-to-the-barcode-in-a-PDF-document/).
 
+## Adding quiet zones to a barcode
+
+Quiet zones are blank spaces surrounding a barcode that ensure accurate scanning by preventing interference from surrounding content. They serve as critical visual boundaries that help scanners identify the start and end of the barcode symbology. Without sufficient quiet zones, barcode readers may fail to decode the symbol correctly due to visual noise or misalignment.
+
+To add quiet zones to a barcode in a PDF document, you can use the [PdfBarcodeQuietZones](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfBarcodeQuietZones.html) class. The following code sample demonstrates how to implement quiet zones for a barcode.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/Adding-quiet-zones-to-a-barcode/.NET/Adding-quiet-zones-to-a-barcode/Program.cs" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+
+//Create a new page. 
+PdfPage page = document.Pages.Add();
+
+// Create barcode with quiet zones
+PdfCode128Barcode barcode = new PdfCode128Barcode
+{
+    Text = "SYNCFUSION",
+    BarHeight = 40,
+    QuietZone = new PdfBarcodeQuietZones
+    {
+        Left = 15,   // 15 points = ~5.3mm
+        Right = 15,
+        Top = 8,     // 8 points = ~2.8mm
+        Bottom = 8
+    }
+};
+
+//Draw a barcode on the new page.
+barcode.Draw(page, new PointF(10, 10));
+
+//Draw a rectangle based on the barcode size. 
+page.Graphics.DrawRectangle(PdfPens.Red, new RectangleF(10, 10, barcode.Size.Width, barcode.Size.Height));
+
+//Save the document to disk.
+document.Save("PdfBarcode1.pdf");
+
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+
+//Create a new page. 
+PdfPage page = document.Pages.Add();
+
+// Create barcode with quiet zones
+PdfCode128Barcode barcode = new PdfCode128Barcode
+{
+    Text = "SYNCFUSION",
+    BarHeight = 40,
+    QuietZone = new PdfBarcodeQuietZones
+    {
+        Left = 15,   // 15 points = ~5.3mm
+        Right = 15,
+        Top = 8,     // 8 points = ~2.8mm
+        Bottom = 8
+    }
+};
+
+//Draw a barcode on the new page.
+barcode.Draw(page, new PointF(10, 10));
+
+//Draw a rectangle based on the barcode size. 
+page.Graphics.DrawRectangle(PdfPens.Red, new RectangleF(10, 10, barcode.Size.Width, barcode.Size.Height));
+
+//Save the document to disk.
+document.Save("PdfBarcode1.pdf");
+
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Barcode
+
+' Create a new PDF document.
+Dim document As New PdfDocument()
+
+' Add a new page to the PDF document.
+Dim page As PdfPage = document.Pages.Add()
+
+' Create a new Code128 barcode and set its properties.
+Dim barcode As New PdfCode128Barcode() With {
+    .Text = "SYNCFUSION",       ' Set the barcode text.
+    .BarHeight = 40,            ' Set the height of the bars.
+    .QuietZone = New PdfBarcodeQuietZones() With {
+        .Left = 15,             ' Left quiet zone (15 points ≈ 5.3mm).
+        .Right = 15,            ' Right quiet zone.
+        .Top = 8,               ' Top quiet zone (8 points ≈ 28mm).
+        .Bottom = 8             ' Bottom quiet zone.
+    }
+}
+' Draw the barcode on the PDF page at position (10, 10).
+barcode.Draw(page, New PointF(10, 10))
+
+' Draw a red rectangle around the barcode to visualize its size.
+page.Graphics.DrawRectangle(PdfPens.Red, New RectangleF(10, 10, barcode.Size.Width, barcode.Size.Height))
+
+' Save the PDF document to disk.
+document.Save("PdfBarcode1.pdf")
+
+' Close the document and release resources.
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Barcode/Adding-quiet-zones-to-a-barcode/.NET).
+
 ## Adding a barcode to the PDF document without displaying the barcode text
 
 The following code example shows how to add a barcode to the PDF document without displaying the barcode text by specifying the [TextDisplayLocation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfUnidimensionalBarcode_TextDisplayLocation) as **None** through the [TextLocation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.TextLocation.html) Enum.
@@ -566,7 +711,11 @@ The following code example shows how to add a barcode to the PDF document withou
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/Add-a-barcode-to-the-PDF-document-without-displaying-text/.NET/Program.cs" %}
 
-//Creating new PDF document 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
+
+//Creating a new PDF document
 PdfDocument doc = new PdfDocument();
 //Adding a new page to the PDF document 
 PdfPage page = doc.Pages.Add();
@@ -580,27 +729,21 @@ barcode.Text = "123456789";
 //Disable the barcode text  
 barcode.TextDisplayLocation = TextLocation.None;
 
-//Printing barcode on to the Pdf 
+//Printing barcode on to the PDF 
 barcode.Draw(page);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream
-doc.Save(stream);
-//If the position is not set to '0' then the PDF will be empty
-stream.Position = 0;
-//Close the document
+//Save the PDF document
+doc.Save("Output.pdf");
+//Close the PDF document
 doc.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
 
 //Creating a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -627,6 +770,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Barcode
 
 'Creating a new PDF document 
 Dim doc As PdfDocument = New PdfDocument()
@@ -668,6 +815,10 @@ The below code example shows how to convert one dimensional barcode to
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/Export-one-dimensional-barcode-as-image/.NET/Export-one-dimensional-barcode-as-image/Program.cs" %}	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
+
 //Initialize a new PdfCode39Barcode instance
 PdfCode39Barcode barcode = new PdfCode39Barcode();
 //Set the height and text for barcode
@@ -688,6 +839,10 @@ using (FileStream outputFileStream = new FileStream(@"Image.png", FileMode.Creat
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
+
 //Initialize a new PdfCode39Barcode instance
 PdfCode39Barcode barcode = new PdfCode39Barcode();
 //Set the height and text for barcode
@@ -703,6 +858,10 @@ barcodeImage.Save("Image.png", ImageFormat.Png);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Barcode
 
 'Initialize a new PdfCode39Barcode instance
 Dim barcode As PdfCode39Barcode = New PdfCode39Barcode
@@ -728,6 +887,10 @@ Essential<sup>&reg;</sup> PDF supports converting two-dimensional barcodes such 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/Export-two-dimensional-barcode-as-image/.NET/Export-two-dimensional-barcode-as-image/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
+
 //Initialize a new PdfQRBarcode instance 
 PdfQRBarcode barcode = new PdfQRBarcode();
 //Set the XDimension and text for barcode 
@@ -748,6 +911,10 @@ using (FileStream outputFileStream = new FileStream("Output.png", FileMode.Creat
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
+
 //Initialize a new PdfQRBarcode instance
 PdfQRBarcode barcode = new PdfQRBarcode();
 //Set the XDimension and text for barcode
@@ -763,6 +930,10 @@ barcodeImage.Save("Image.png", ImageFormat.Png);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Barcode
 
 'Initialize a new PdfQRBarcode instance
 Dim barcode As PdfQRBarcode = New PdfQRBarcode
@@ -794,6 +965,10 @@ The following code sample explains how to customize the one-dimensional barcode 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Creates a new page.
@@ -809,24 +984,18 @@ code93.BarColor = Color.Blue;
 //Draws a barcode on the new Page.
 code93.Draw(page, new PointF(25, 500));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream
-document.Save(stream);
-//If the position is not set to '0' then the PDF will be empty
-stream.Position = 0;
-//Close the document
+//Save document to disk.
+document.Save("Output.pdf");
+//Close the document. 
 document.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -851,6 +1020,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Barcode
 
 'Create a new PDF document. 
 Dim document As PdfDocument = New PdfDocument()
@@ -882,6 +1055,10 @@ The following code example shows how to customize the two-dimensional barcode su
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
+
 //Drawing QR Barcode
 PdfQRBarcode barcode = new PdfQRBarcode();
 //Set Error Correction Level
@@ -900,22 +1077,18 @@ PdfPage page = document.Pages.Add();
 //Printing barcode on to the PDF. 
 barcode.Draw(page, new PointF(25, 70));
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Close the documents.
+//Saving the document
+document.Save("QRBarcode.pdf");
+//Close the document
 document.Close(true);
-//Defining the ContentType for pdf file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = " CODE39.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
 
 //Drawing QR Barcode
 PdfQRBarcode barcode = new PdfQRBarcode();
@@ -943,6 +1116,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Barcode
 
 'Drawing QR Barcode 
 Dim barcode As PdfQRBarcode = New PdfQRBarcode()
@@ -972,6 +1149,7 @@ document.Close(True)
 {% endtabs %}
 
 ## Create QR code with logo 
+
 The `QRCodeLogo` class serves as a representation of a logo image that can be utilized in a QR code, and the `Logo` property is employed to set the logo image in the QR barcode. By leveraging these functionalities, users gain the capability to generate QR codes that seamlessly incorporate custom logos or images, resulting in a visually appealing and branded QR code experience. 
 
 The following code example demonstrates how to generate a QR barcode with a logo positioned at the center of it. 
@@ -979,6 +1157,10 @@ The following code example demonstrates how to generate a QR barcode with a logo
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}		
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -989,27 +1171,27 @@ PdfPage page = document.Pages.Add();
 PdfQRBarcode qrBarcode = new PdfQRBarcode();
 //Set the barcode text.
 qrBarcode.Text = "https://www.syncfusion.com/";
-//Set the logo image to QR barcode. 
-FileStream imageStream = new FileStream("logo.png", FileMode.Open, FileAccess.Read);
 //Create QR barcode logo.
-QRCodeLogo qRCodeLogo = new QRCodeLogo(imageStream);
+QRCodeLogo qRCodeLogo = new QRCodeLogo("logo.png");
 //Set the QR barcode logo.
 qrBarcode.Logo = qRCodeLogo;
-//Set the dimention of the barcode.
+//Set the dimention of the barcode. 
 qrBarcode.XDimension = 5;
 //Draw the barcode to PDF page.
 qrBarcode.Draw(page);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Barcode;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1037,6 +1219,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Barcode
 
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument()

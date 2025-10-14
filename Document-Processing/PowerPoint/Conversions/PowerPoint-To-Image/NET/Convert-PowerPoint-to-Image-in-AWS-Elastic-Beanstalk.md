@@ -57,7 +57,7 @@ Step 5: Add a new button in the **Index.cshtml** as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in the **Homecontroller.cs** file to **convert a PowerPoint presentation to image** and download it.
+Step 6: Include the below code snippet in the **HomeController.cs** file to **convert a PowerPoint presentation to image** and download it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -132,4 +132,4 @@ By executing the program, you will get the **image** as follows.
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
-An online sample link to [convert PowerPoint Presentation to image](https://ej2.syncfusion.com/aspnetcore/PowerPoint/PPTXToImage#/material3) in ASP.NET Core. 
+An online sample link to [convert PowerPoint Presentation to image](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind) in ASP.NET Core. 

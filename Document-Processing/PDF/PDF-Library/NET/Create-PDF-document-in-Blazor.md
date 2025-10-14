@@ -4,13 +4,14 @@ description: Learn how to create or generate a PDF file in Blazor applications w
 platform: document-processing
 control: PDF
 documentation: UG
+keywords: blazor pdf, pdf generation, document creation, blazor server, blazor wasm, pdf library
 ---
 
 # Create or Generate PDF file in Blazor
 
-The Syncfusion<sup>&reg;</sup> [Blazor PDF library](https://www.syncfusion.com/document-processing/pdf-framework/blazor/pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, forms, and secure PDF files.
+The Syncfusion<sup>&reg;</sup> [Blazor PDF library](https://www.syncfusion.com/document-processing/pdf-framework/blazor/pdf-library) creates, reads, and edits PDF documents. This library also offers functionality to merge, split, stamp, forms, and secure PDF files.
 
-To include the Syncfusion<sup>&reg;</sup> Blazor PDF library into your Blazor application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
+To include the Syncfusion<sup>&reg;</sup> Blazor PDF library into Blazor applications, refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
 To quickly get started with creating a PDF document in Blazor, check this video:
 {% youtube "https://www.youtube.com/watch?v=B5BOBwus0Jc&t=2s" %}
@@ -31,19 +32,17 @@ To quickly get started with creating a PDF document in Blazor, check this video:
 {% endtabcontent %}
 {% endtabcontents %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/ServerSideApplication).
+A complete working sample is available from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/ServerSideApplication).
 
-By executing the program, you will get the following output in the browser.
+The following output appears in the browser after executing the program.
 ![Blazor server side browser window](Create-PDF-Blazor/Blazor_browser_output.png)
 
-Click the Export to PDF button, and you will get the PDF document with the following output.
+Click the Export to PDF button to obtain the PDF document with the following output.
 ![Blazor server side output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)
 
-N> It is recommended to use Blazor Server-Side application to reduce the pay back load which is high in Blazor Client-Side.
+N> Server-Side Blazor applications are recommended to reduce the payload, which is high in Blazor Client-Side applications.
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
-
-An online sample link to [create PDF document](https://blazor.syncfusion.com/demos/pdf/hello-world?theme=fluent) in Blazor.
 
 ## Steps to create PDF document in Blazor WASM application
 
@@ -61,17 +60,15 @@ An online sample link to [create PDF document](https://blazor.syncfusion.com/dem
 {% endtabcontent %}
 {% endtabcontents %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/ClientSideApplication).
+A complete working sample is available from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/ClientSideApplication).
 
-By executing the program, you will get the following output in the browser.
+The following output appears in the browser after executing the program.
 ![Blazor client browser window](Create-PDF-Blazor/Blazor_Client_WebResult.png)
 
-Click the Export to PDF button and you will get the PDF document with the following output.
+Click the Export to PDF button to obtain the PDF document with the following output.
 ![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)    
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
-
-An online sample link to [create PDF document](https://blazor.syncfusion.com/demos/pdf/hello-world?theme=fluent) in Blazor. 
 
 ## Steps to create PDF documents in .NET MAUI Blazor application
 
@@ -89,13 +86,13 @@ An online sample link to [create PDF document](https://blazor.syncfusion.com/dem
 {% endtabcontent %}
 {% endtabcontents %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/BlazorMauiAppCreatePdfSample).
+A complete working sample is available from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/BlazorMauiAppCreatePdfSample).
 
-By running the program, you will see the output in the browser when you click the "Whether" option in the left-side menu.
+The following output appears in the browser when clicking the "Weather" option in the left-side menu.
 ![Blazor client browser window](Create-PDF-Blazor/Maui_Blazor_browser_output.png)
 
-Click the `Export to PDF` button to get the PDF document with the following output.
-![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)   
+Click the `Export to PDF` button to obtain the PDF document with the following output.
+![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)
 
 ### Save the PDF document on different platforms
 
@@ -114,9 +111,9 @@ Create a folder named `Services`, then add a class called `SaveService.cs` withi
 
 {% endtabs %}
 
-Now, we need to implement platform-specific code to save the PDF document.
+Platform-specific code implementation is required to save the PDF document across different platforms.
 
-#### Andriod
+#### Android
 Create a new class file named `SaveAndroid.cs` within the Android folder and add the following code to enable file saving on the Android platform.
 
 {% tabs %}
@@ -187,7 +184,7 @@ Create a new class file named `SaveAndroid.cs` within the Android folder and add
 
 {% endtabs %}
 
-N> Introduced a new runtime permission model for the Android SDK version 23 and above. So, include the following code for enabling the Android file provider to save and view the generated PDF document.
+N> The Android SDK version 23 and above introduced a new runtime permission model. Include the following code for enabling the Android file provider to save and view the generated PDF document.
 
 1.	Create a new XML file with the name of `file_paths.xml` under the Android project Resources/xml folder and add the following code in it.
 
@@ -245,7 +242,7 @@ N> Introduced a new runtime permission model for the Android SDK version 23 and 
 
 {% endtabs %}
 
-#### IOS
+#### iOS
 Create a new class file named `SaveIOS.cs` within the iOS folder and include the following code to enable file saving on the iOS platform.
 
 {% tabs %}
@@ -286,8 +283,8 @@ Create a new class file named `SaveIOS.cs` within the iOS folder and include the
 
 {% endtabs %}
 
-#### MacOS
-Create a new class file named  `SaveMac.cs` within the MacCatalyst folder and include the following code to enable file saving on the MacOS platform.
+#### macOS
+Create a new class file named `SaveMac.cs` within the MacCatalyst folder and include the following code to enable file saving on the macOS platform.
 
 {% tabs %}
 
@@ -452,6 +449,6 @@ Create a new class file named `SaveWindows.cs` within the Windows folder and inc
 
 {% endtabs %}
 
-The helper files mentioned above are available on [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page. You can refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page for more details. 
+The helper files mentioned above are available on [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page for more details. 
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
