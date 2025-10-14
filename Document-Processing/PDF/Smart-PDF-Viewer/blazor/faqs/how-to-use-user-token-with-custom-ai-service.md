@@ -28,7 +28,7 @@ After completing this setup, you can:
 The `UserTokenService` is responsible for generating and managing per-user quotas. These tokens are used to authenticate and throttle requests to the custom Azure OpenAI service based on user identity.
 
 ### Implementation Steps
-1.	Create a new class file named `UserTokenService.cs` in your project
+1.	Create a new class file named **UserTokenService.cs** in your project
 2.	Add the following implementation:
 
 {% tabs %}
@@ -156,7 +156,7 @@ public class UserTokenInfo
 ## Step 2: Implement User Token API Controller
 The `UserTokensController` class exposes endpoints to check and update user tokens. This enables secure and dynamic quota tracking for users interacting with the custom Azure OpenAI service.
 
-1.	Create a new class file named `UserTokensController.cs` in your project
+1.	Create a new class file named **UserTokensController.cs** in your project
 2.	Add the following implementation:
 
 {% tabs %}
@@ -215,7 +215,7 @@ The Syncfusion Smart PDF Viewer is designed to work with different AI backends t
 
 The `IChatInferenceService` interface is the bridge between Syncfusion Smart PDF Viewer and AI services:
 
-1. Create a new file named `AzureAIService.cs`
+1. Create a new file named **AzureAIService.cs**
 2. Add the following implementation:
 
 {% tabs %}
@@ -324,13 +324,13 @@ public class AzureAIService : IChatInferenceService
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add a script file to your application and refer it to the head tag.
+## Step 4: Add a script file to your application and refer it to the body tag.
 
 ```cshtml
 
-<head>
+<body>
     <script src="index.js" type="text/javascript"></script>
-</head>
+</body>
 
 ```
 ## Step 5: Add the following code to render the JS component in the blazor to the newly added JS file.
