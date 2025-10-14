@@ -113,7 +113,7 @@ The SfPdfViewer supports printing the loaded PDF by default. Enable or disable t
 
 ## Print Events
 
-The following events are available in the SfPdfViewer component.
+The following events are available for print in the SfPdfViewer component.
 
 |Name|Description|
 |---|---|
