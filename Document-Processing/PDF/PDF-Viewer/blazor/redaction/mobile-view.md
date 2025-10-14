@@ -201,6 +201,6 @@ N> Once redactions have been applied to the document, they become part of the PD
 
 ## See Also
 
-* [Mobile Toolbar](../toolbar/mobile-toolbar)
+* [Mobile Toolbar](../toolbar-customization/mobile-toolbar)
 * [Annotation in Mobile View](../annotation/annotations-in-mobile-view)
 * [Form Designer in Mobile View](../form-designer/form-designer-in-mobile-view)

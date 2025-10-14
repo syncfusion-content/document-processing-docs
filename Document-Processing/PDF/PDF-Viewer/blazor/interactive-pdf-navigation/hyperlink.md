@@ -20,4 +20,4 @@ If a document does not contain hyperlinks, no link-specific highlighting appears
 
 ## See Also
 
-* [Table of content navigation in Blazor SfPdfViewer](./table-of-content-navigation)
+* [Table of content navigation in Blazor SfPdfViewer](./table-of-content)

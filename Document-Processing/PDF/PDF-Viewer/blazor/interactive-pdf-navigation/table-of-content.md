@@ -46,4 +46,4 @@ Control where external hyperlinks open by using the [HyperlinkOpenState](https:/
 
 ## See Also
 
-* [Modern navigation panel in Blazor SfPdfViewer](./modern-navigation-panel)
+* [Modern navigation panel in Blazor SfPdfViewer](./modern-panel)
