@@ -29,9 +29,8 @@ slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
 FileStream imageStream = new FileStream(imagePath, FileMode.Open);
 //Add picture to the shape collection
 IPicture picture = slide.Shapes.AddPicture(imageStream, 373, 83, 526, 382);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Closes the stream
 imageStream.Close();
 //Closes the Presentation
@@ -87,9 +86,8 @@ You can iterate through the shapes in a PowerPoint slide. The following code exa
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Iterate-through-shapes/.NET/Iterate-through-shapes/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Iterates through shapes in a slide and sets title
 foreach(IShape shape in pptxDoc.Slides[0].Shapes)
 {
@@ -98,9 +96,8 @@ foreach(IShape shape in pptxDoc.Slides[0].Shapes)
     else if (shape is IShape)
         shape.Title = "AutoShape";
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -150,9 +147,8 @@ The shape properties can be used to format and modify the shapes in a slide. The
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Apply-shape-properties/.NET/Apply-shape-properties/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Gets the first slide of the Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Gets the shape of the slide
@@ -173,9 +169,8 @@ shape.Fill.PatternFill.Pattern = PatternFillType.DashedDownwardDiagonal;
 shape.Fill.PatternFill.ForeColor = ColorObject.AliceBlue;
 //Sets the back color
 shape.Fill.PatternFill.BackColor = ColorObject.DarkSalmon;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);         
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");         
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -249,18 +244,16 @@ The shapes can be removed from a slide by its instance or by its index position 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Remove-shape/.NET/Remove-shape/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Retrieves the first slide from Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first shape.
 IShape shape = slide.Shapes[0] as IShape;
 //Removes the shape from the shape collection.
 slide.Shapes.Remove(shape);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
@@ -322,9 +315,8 @@ FileStream pictureStream = new FileStream(imagePath, FileMode.Open);
 groupShape.Shapes.AddPicture(pictureStream, 40, 100, 100, 100);
 //Adds a shape to the group shape
 groupShape.Shapes.AddShape(AutoShapeType.Rectangle, 200, 200, 90, 30);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -382,9 +374,8 @@ You can iterate through the shape collection of a [GroupShape](https://help.sync
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Iterate-groupshape-and-modify-a-shape/.NET/Iterate-groupshape-and-modify-a-shape/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Retrieves the first slide
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first group shape of the slide
@@ -400,9 +391,8 @@ foreach (IShape shape in shapes)
         break;
     }
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -464,18 +454,16 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Remove-groupshape/.NET/Remove-groupshape/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Retrieves the first slide
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first group shape of the slide
 IGroupShape groupShape = slide.GroupShapes[0];
 //Removes the group shape from group shape collection
 slide.GroupShapes.Remove(groupShape);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the presentation
 pptxDoc.Close();
 {% endhighlight %}

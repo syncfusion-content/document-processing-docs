@@ -29,9 +29,8 @@ IParagraph paragraph = textboxShape.TextBody.AddParagraph();
 ITextPart textPart = paragraph.AddTextPart();
 //Adds text to the TextPart
 textPart.Text = "AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -86,9 +85,8 @@ Each paragraph in a slide can have its own formatting types such as alignment, i
 
 {% highlight c# tabtitle="C# [Cross-platform]"
 playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Paragraphs/Apply-paragraph-formatting/.NET/Apply-paragraph-formatting/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Gets the slide from Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Gets the shape in slide
@@ -103,9 +101,8 @@ paragraph.HorizontalAlignment = HorizontalAlignmentType.Left;
 paragraph.LeftIndent = 8;
 //Modify the end paragraph font name
 paragraph.EndParagraphFont.FontName = "Times New Roman";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -196,9 +193,8 @@ IFont font2 = textPartFormatting2.Font;
 font2.Color = ColorObject.BlanchedAlmond;
 //Sets the underline type
 font2.Underline = TextUnderlineType.WavyDouble;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -289,9 +285,8 @@ You can modify a text by accessing the existing paragraphs in a Presentation. Th
 
 {% highlight c# tabtitle="C# [Cross-platform]"
 playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Paragraphs/Modify-existing-text/.NET/Modify-existing-text/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Retrieves the first slide from Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first shape.
@@ -302,9 +297,8 @@ IParagraph paragraph = shape.TextBody.Paragraphs[0];
 ITextPart textPart = paragraph.TextParts[0];
 //Modifies the text content of the TextPart.
 textPart.Text = "Hello Presentation";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
@@ -373,9 +367,8 @@ ITextPart textPart = paragraph.AddTextPart();
 textPart.Text = "AdventureWorks Cycles";
 //Sets a language as "Spanish (Argentina)" for TextPart.
 textPart.Font.LanguageID = (short)LocaleIDs.es_AR;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -480,9 +473,8 @@ The following code example demonstrates how to remove a paragraph from a slide.
 
 {% highlight c# tabtitle="C# [Cross-platform]"
 playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Paragraphs/Remove-paragraph/.NET/Remove-paragraph/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Retrieves the first slide from Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first shape
@@ -491,9 +483,8 @@ IShape shape = slide.Shapes[0] as IShape;
 IParagraph paragraph = shape.TextBody.Paragraphs[0];
 //Removes the first paragraph from the textbody of the shape
 shape.TextBody.Paragraphs.Remove(paragraph);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}

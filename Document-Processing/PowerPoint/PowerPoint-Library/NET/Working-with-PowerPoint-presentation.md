@@ -17,9 +17,8 @@ Cloning a PowerPoint presentation creates a new copy of the PowerPoint presentat
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/Clone-PowerPoint-presentation/.NET/Clone-PowerPoint-presentation/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+// open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open(inputFileName);
 //Clones the Presentation
 IPresentation clonedPresentation = pptxDoc.Clone();
 String ContentType=null;
@@ -31,9 +30,8 @@ IShape textShape = firstSlide.AddTextBox(100, 75, 756, 200);
 IParagraph paragraph = textShape.TextBody.AddParagraph();
 //Adds a textPart in the paragraph
 ITextPart textPart = paragraph.AddTextPart("Essential Presentation");
-//Save the PowerPoint Presentation to stream
-FileStream outputStream = new FileStream(outputFileName, FileMode.Create);
-clonedPresentation.SaveAs(outputStream);
+//Save the PowerPoint Presentation
+clonedPresentation.Save("ClonedPresentation.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -284,15 +282,13 @@ The following code example demonstrates how to modify the existing built in docu
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/Modify-built-in-document-properties/.NET/Modify-built-in-document-properties/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+// open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Modifies the Built-in document properties
 pptxDoc.BuiltInDocumentProperties.Category = "Sales reports";
 pptxDoc.BuiltInDocumentProperties.Company = "Northwind traders";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Close the instance of PowerPoint Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -336,18 +332,16 @@ The following code example demonstrates how to add new custom document property.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/Add-custom-document-properties/.NET/Add-custom-document-properties/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+// open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open(inputFileName);
 //Adds custom document properties 
 ICustomDocumentProperties documentProperty = pptxDoc.CustomDocumentProperties;
 documentProperty.Add("PropertyA");
 documentProperty["PropertyA"].Text = "@!123";
 documentProperty.Add("PropertyB");
 documentProperty["PropertyB"].Text = "B";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the PowerPoint presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -393,16 +387,14 @@ The following code example demonstrates how to access and modify an existing cus
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/Modify-custom-document-properties/.NET/Modify-custom-document-properties/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Accesses an existing custom document property
 IDocumentProperty property = pptxDoc.CustomDocumentProperties["PropertyA"];
 //Modifies the value of DocumentProperty
 property.Value = "Hello world";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -450,9 +442,8 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Mark the presentation as final
 pptxDoc.Final = true;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("MarkAsFinal.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -497,22 +488,16 @@ The following code sample illustrates how to modify the first slide number in th
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/First-slide-number/.NET/First-slide-number/Program.cs" %}
 
 //Open an existing PowerPoint Presentation.
-using (FileStream inputStream = new FileStream("Data/Input.pptx", FileMode.Open))
+using (IPresentation pptxDoc = Presentation.Open("Data/Input.pptx"))
 {
-    using (IPresentation pptxDoc = Presentation.Open(inputStream))
-    {
-        //Get the FirstSlideNumber of Presentation.
-        int firstSlideNumber = pptxDoc.FirstSlideNumber;
-
-        //Modify the value for the FirstSlideNumber.
-        pptxDoc.FirstSlideNumber = 10;
-
-        //Save the PowerPoint Presentation.
-        using (FileStream outputStream = new FileStream("Result.pptx", FileMode.Create))
-        {
-            pptxDoc.Save(outputStream);
-        }                       
-    }
+    //Get the FirstSlideNumber of Presentation.
+    int firstSlideNumber = pptxDoc.FirstSlideNumber;
+	
+	//Modify the value for the FirstSlideNumber.
+    pptxDoc.FirstSlideNumber = 10;
+	
+	//Save the PowerPoint Presentation.
+	pptxDoc.Save("Result.pptx");
 }
 
 {% endhighlight %}

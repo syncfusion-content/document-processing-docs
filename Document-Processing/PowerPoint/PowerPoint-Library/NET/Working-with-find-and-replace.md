@@ -25,8 +25,7 @@ The following code example illustrates how to find all occurrences of a particul
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Find-and-Replace-in-PowerPoint/.NET/Find-and-Replace-in-PowerPoint/Program.cs" %}
 //Opens an existing presentation.           
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-using (IPresentation pptxDoc = Presentation.Open(inputStream))
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
     //Finds all the occurrences of a particular text in the PowerPoint presentation
     ITextSelection[] textSelections = pptxDoc.FindAll("product", false, false);
@@ -37,11 +36,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
         //Replaces the text
         textPart.Text = "Service";
     }
-    //Saves the PowerPoint Presentation as a stream
-    FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
-    //Releases all resources of the stream
-    outputStream.Dispose();
+    //Saves the PowerPoint Presentation
+    pptxDoc.Save("Output.pptx");
     //Closes the Presentation instance
     pptxDoc.Close();
 }
@@ -94,9 +90,8 @@ The following code example illustrates how to find all occurrences of a particul
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Match-case/.NET/Match-case/Program.cs" %}
-//Opens an existing presentation.           
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-using (IPresentation pptxDoc = Presentation.Open(inputStream))
+//Opens an existing presentation.
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
     bool matchCase = true;
     bool wholeWord = false;
@@ -109,11 +104,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
         //Replaces the text
         textPart.Text = "Service";
     }
-    //Saves the PowerPoint Presentation as a stream
-    FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
-    //Releases all resources of the stream
-    outputStream.Dispose();
+    //Saves the PowerPoint Presentation
+    pptxDoc.Save("Output.pptx");
     //Closes the Presentation instance
     pptxDoc.Close();
 }
@@ -171,8 +163,7 @@ The following code example illustrates how to find all occurrences of a particul
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Whole-word-only/.NET/Whole-word-only/Program.cs" %}
 //Opens an existing presentation.           
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-using (IPresentation pptxDoc = Presentation.Open(inputStream))
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
     bool matchCase = false;
     bool wholeWord = true;
@@ -185,11 +176,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
         //Replaces the text
         textPart.Text = "Service";
     }
-    //Saves the PowerPoint Presentation as a stream
-    FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
-    //Releases all resources of the stream
-    outputStream.Dispose();
+    //Saves the PowerPoint Presentation
+    pptxDoc.Save("Output.pptx");
     //Closes the Presentation instance
     pptxDoc.Close();
 }
@@ -247,8 +235,7 @@ The following code example illustrates how to find the first occurrence of parti
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Find-first-occurance/.NET/Find-first-occurance/Program.cs" %}
 //Opens an existing presentation.           
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-using (IPresentation pptxDoc = Presentation.Open(inputStream))
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
     //Finds the first occurrence of a particular text in the PowerPoint presentation
     ITextSelection textSelection = pptxDoc.Find("product", false, false);
@@ -256,11 +243,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
     ITextPart textPart = textSelection.GetAsOneTextPart();
     //Replaces the text
     textPart.Text = "Service";
-    //Saves the PowerPoint Presentation as a stream
-    FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
-    //Releases all resources of the stream
-    outputStream.Dispose();
+    //Saves the PowerPoint Presentation
+    pptxDoc.Save("Output.pptx");
     //Closes the Presentation instance
     pptxDoc.Close();
 }
@@ -309,27 +293,20 @@ The following code example illustrates how to find all the occurrences of a patt
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Find-and-Replace-in-Powerpoint-using-Regex/.NET/Find-and-Replace-in-PowerPoint-using-regex/Program.cs" %}
 
-//Load or open a PowerPoint Presentation.
-using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+//Open a existing PowerPoint Presentation.
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
-    //Open an existing PowerPoint presentation.
-    using (IPresentation pptxDoc = Presentation.Open(inputStream))
+    //Find all the occurrences of a given pattern of text in the PowerPoint presentation using Regex.
+    ITextSelection[] textSelections = pptxDoc.FindAll(new Regex("{[A-Za-z]+}"));
+    foreach (ITextSelection textSelection in textSelections)
     {
-        //Find all the occurrences of a given pattern of text in the PowerPoint presentation using Regex.
-        ITextSelection[] textSelections = pptxDoc.FindAll(new Regex("{[A-Za-z]+}"));
-        foreach (ITextSelection textSelection in textSelections)
-        {
-            //Get the found text as a single text part.
-            ITextPart textPart = textSelection.GetAsOneTextPart();
-            //Replace the text.
-            textPart.Text = "Service";
-        }
-        //Saves the Presentation.
-        using (FileStream outputStream = new FileStream("Output.pptx", FileMode.Create, FileAccess.ReadWrite))
-        {
-            pptxDoc.Save(outputStream);
-        }      
+        //Get the found text as a single text part.
+        ITextPart textPart = textSelection.GetAsOneTextPart();
+        //Replace the text.
+        textPart.Text = "Service";
     }
+    //Saves the Presentation.
+	pptxDoc.Save("Output.pptx");
 }
 {% endhighlight %}
 
@@ -386,8 +363,7 @@ The following code example illustrates how to find all occurrences of a particul
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Find-and-replace-in-slide/.NET/Find-and-replace-in-slide/Program.cs" %}
  //Opens an existing presentation.           
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-using (IPresentation pptxDoc = Presentation.Open(inputStream))
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
     ISlide slide = pptxDoc.Slides[0];
     //Finds all the occurrences of a particular text in the specific slide
@@ -399,11 +375,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
         //Replaces the text
         textPart.Text = "Service";
     }
-    //Saves the PowerPoint Presentation as a stream
-    FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
-    //Releases all resources of the stream
-    outputStream.Dispose();
+    //Saves the PowerPoint Presentation
+    pptxDoc.Save("Output.pptx");
     //Closes the Presentation instance
     pptxDoc.Close();
 }
@@ -459,8 +432,7 @@ The following code example illustrates how to find all the occurrences of a part
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Find-and-highlight-in-PowerPoint/.NET/Find-and-highlight-in-PowerPoint/Program.cs" %}
 //Opens an existing presentation.           
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-using (IPresentation pptxDoc = Presentation.Open(inputStream))
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
     //Finds all the occurrences of a particular text in the PowerPoint presentation
     ITextSelection[] textSelections = pptxDoc.FindAll("product", false, false);
@@ -473,11 +445,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
             textPart.Font.HighlightColor = ColorObject.Yellow;
         }
     }
-    //Saves the PowerPoint Presentation as a stream
-    FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
-    //Releases all resources of the stream
-    outputStream.Dispose();
+    //Saves the PowerPoint Presentation
+    pptxDoc.Save("Output.pptx");
     //Closes the Presentation instance
     pptxDoc.Close();
 }
@@ -534,29 +503,22 @@ The following code example illustrates how to find all the occurrences of a patt
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Find-and-highlight-in-Powerpoint-using-Regex/.NET/Find-and-highlight-in-Powerpoint-using-regex/Program.cs" %}
 
-//Load or open a PowerPoint Presentation.
-using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+//Open an existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
-    //Open an existing PowerPoint presentation.
-    using (IPresentation pptxDoc = Presentation.Open(inputStream))
+    //Find all the occurrences of a given pattern of text in the PowerPoint presentation using Regex.
+    ITextSelection[] textSelections = pptxDoc.FindAll(new Regex("{[A-Za-z]+}"));
+    foreach (ITextSelection textSelection in textSelections)
     {
-        //Find all the occurrences of a given pattern of text in the PowerPoint presentation using Regex.
-        ITextSelection[] textSelections = pptxDoc.FindAll(new Regex("{[A-Za-z]+}"));
-        foreach (ITextSelection textSelection in textSelections)
+        //Gets the found text containing text parts.
+        foreach (ITextPart textPart in textSelection.GetTextParts())
         {
-            //Get the found text containing text parts.
-            foreach (ITextPart textPart in textSelection.GetTextParts())
-            {
-                //Set highlight color.
-                textPart.Font.HighlightColor = ColorObject.Yellow;
-            }
+            //Sets highlight color.
+            textPart.Font.HighlightColor = ColorObject.Yellow;
         }
-        //Saves the Presentation.
-        using (FileStream outputStream = new FileStream("Output.pptx", FileMode.Create, FileAccess.ReadWrite))
-        {
-            pptxDoc.Save(outputStream);
-        }    
     }
+    //Saves the Presentation.	
+    pptxDoc.Save("Output.pptx");
 }
 
 {% endhighlight %}
@@ -615,8 +577,7 @@ The following code example illustrates how to find all the occurrences of a part
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Find-and-highlight-in-slide/.NET/Find-and-highlight-in-slide/Program.cs" %}
 //Opens an existing presentation.           
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-using (IPresentation pptxDoc = Presentation.Open(inputStream))
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
     ISlide slide = pptxDoc.Slides[0];
     //Finds all the occurrences of a particular text in the specific slide
@@ -630,11 +591,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
             textPart.Font.HighlightColor = ColorObject.Yellow;
         }
     }
-    //Saves the PowerPoint Presentation as a stream
-    FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
-    //Releases all resources of the stream
-    outputStream.Dispose();
+    //Saves the PowerPoint Presentation
+    pptxDoc.Save("Output.pptx");
     //Closes the Presentation instance
     pptxDoc.Close();
 }

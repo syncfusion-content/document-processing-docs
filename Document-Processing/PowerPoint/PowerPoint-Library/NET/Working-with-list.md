@@ -66,9 +66,8 @@ paragraph.IndentLevelNumber = 1;
 paragraph.FirstLineIndent = -20;
 // Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -236,9 +235,8 @@ paragraph.IndentLevelNumber = 1;
 paragraph.ListFormat.FontName = "Symbol";
 //Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -396,9 +394,8 @@ paragraph.ListFormat.Size = 150;
 paragraph.IndentLevelNumber = 1;
 //Sets the hanging value
 paragraph.FirstLineIndent = -20;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -537,9 +534,8 @@ paragraph.ListFormat.NumberStyle = NumberedListStyle.ArabicPeriod;
 paragraph.IndentLevelNumber = 1;
 //Sets the hanging value
 paragraph.FirstLineIndent = -20;         
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("MultiLevelList.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("MultiLevelList.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}

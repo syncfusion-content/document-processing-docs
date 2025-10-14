@@ -23,11 +23,8 @@ The following code example demonstrates how to add a blank slide to the Presenta
 IPresentation pptxDoc = Presentation.Create();
 //Adds a slide to the PowerPoint presentation
 ISlide slide = pptxDoc.Slides.Add();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Closes the Presentation instance
 pptxDoc.Close();
 {% endhighlight %}
@@ -85,11 +82,8 @@ The following example demonstrates how to access a slide from the predefined bla
 IPresentation pptxDoc = Presentation.Create();
 //Add a slide of blank layout type
 ISlide slide1 = pptxDoc.Slides.Add(SlideLayoutType.Blank);    
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Close the PowerPoint presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -149,11 +143,8 @@ ISlide slide9 = pptxDoc.Slides.Add(SlideLayoutType.TitleOnly);
 ISlide slide10 = pptxDoc.Slides.Add(SlideLayoutType.TwoContent);
 //Add a slide of VerticalTitleAndText type
 ISlide slide11 = pptxDoc.Slides.Add(SlideLayoutType.VerticalTitleAndText);    
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Close the PowerPoint presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -233,9 +224,8 @@ The following code example demonstrates how to create and use a customized slide
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Create-and-use-custom-layout-slide/.NET/Create-and-use-custom-layout-slide/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Add a new custom layout slide to the master collection with a specific layout type and name
 ILayoutSlide layoutSlide = pptxDoc.Masters[0].LayoutSlides.Add(SlideLayoutType.Blank, "CustomLayout");
 //Set background of the layout slide
@@ -246,11 +236,8 @@ FileStream pictureStream = new FileStream(inputImagePath, FileMode.Open);
 layoutSlide.Shapes.AddPicture(pictureStream, 100, 100, 100, 100);
 //Add a slide of new designed custom layout to the presentation
 ISlide slide = pptxDoc.Slides.Add(layoutSlide);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -302,9 +289,8 @@ The following code example demonstrates how to add a slide with an existing slid
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Add-slide-with-existing-slide-layout/.NET/Add-slide-with-existing-slide-layout/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Get the layout slide collection of the master
 ILayoutSlides layoutSlides = pptxDoc.Masters[0].LayoutSlides;
 ILayoutSlide slideLayout = null;
@@ -320,11 +306,8 @@ foreach (ILayoutSlide layout in layoutSlides)
 }
 //Add slide with the desired layout.
 ISlide slide = pptxDoc.Slides.Add(slideLayout);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -386,9 +369,8 @@ The following code example shows how to iterate through all slide elements in a 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Iterate-slide-elements/.NET/Iterate-slide-elements/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Template.pptx");
 // Iterate through each slide in the presentation
 foreach (ISlide slide in presentation.Slides)
 {
@@ -411,11 +393,8 @@ foreach (ISlide slide in presentation.Slides)
         ModifySlideElements(shape);
     }
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -812,9 +791,8 @@ You can create a deep copy of a slide by cloning the slide. The cloned slide is 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Clone-PowerPoint-slide/.NET/Clone-PowerPoint-slide/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Presentation.pptx");
 //Retrieves the slide instance.
 ISlide slide = pptxDoc.Slides[0];
 //Creates a cloned copy of slide.
@@ -825,11 +803,8 @@ IShape textboxShape = slideClone.AddTextBox(0, 0, 250, 250);
 textboxShape.TextBody.AddParagraph("Hello Presentation");
 //Adds the slide to the Presentation.
 pptxDoc.Slides.Add(slideClone);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -889,18 +864,15 @@ The following code sample explains how to merge slide with the destination forma
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Merge-PowerPoint-slide/.NET/Merge-PowerPoint-slide/Program.cs" %}
 //Opens the source Presentation
-IPresentation sourcePresentation = Presentation.Open(SourcePresentationStream);
+IPresentation sourcePresentation = Presentation.Open("SourcePresentation.pptx");
 //Opens the destination Presentation
-IPresentation destinationPresentation = Presentation.Open(destinationPresentationStream);
+IPresentation destinationPresentation = Presentation.Open("DestinationPresentation.pptx");
 //Clones the first slide of the source Presentation
 ISlide clonedSlide = sourcePresentation.Slides[0].Clone();
 //Merges the cloned slide to the destination Presentation with paste option - Destination Theme
 destinationPresentation.Slides.Add(clonedSlide, PasteOptions.UseDestinationTheme);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-destinationPresentation.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+destinationPresentation.Save("Output.pptx");
 //Closes the source presentation
 sourcePresentation.Close();
 //Closes the destination Presentation
@@ -954,18 +926,15 @@ The following code sample explains how to merge slide with the source formatting
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Merge-PowerPoint-slide-with-Source-formatting/.NET/Merge-PowerPoint-slide-with-Source-formatting/Program.cs" %}
 //Opens the source Presentation
-IPresentation sourcePresentation = Presentation.Open(SourcePresentationStream);
+IPresentation sourcePresentation = Presentation.Open("SourcePresentation.pptx");
 //Opens the destination Presentation
-IPresentation destinationPresentation = Presentation.Open(destinationPresentationStream);
+IPresentation destinationPresentation = Presentation.Open("DestinationPresentation.pptx");
 //Clones the first slide of the source Presentation
 ISlide clonedSlide = sourcePresentation.Slides[0].Clone();
 //Merges the cloned slide to the destination Presentation with paste option - Source formatting
 destinationPresentation.Slides.Add(clonedSlide, PasteOptions.SourceFormatting);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-destinationPresentation.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation 
+destinationPresentation.Save("Output.pptx");
 //Closes the source presentation
 sourcePresentation.Close();
 //Closes the destination Presentation
@@ -1017,20 +986,16 @@ The Essential<sup>&reg;</sup> Presentation provides the ability to delete a slid
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Remove-PowerPoint-slide/.NET/Remove-PowerPoint-slide/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Presentation1.pptx");
 //Retrieves the slide instance.
 ISlide slide = pptxDoc.Slides[0];
 //Removes the specified slide from the Presentation.
 pptxDoc.Slides.Remove(slide);
 // Removes the slide from the specified index.
 pptxDoc.Slides.RemoveAt(1);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation instance
 pptxDoc.Close();
 {% endhighlight %}
@@ -1118,9 +1083,8 @@ The following code example demonstrates setting the background for a slide.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Change-PowerPoint-slide-background/.NET/Change-PowerPoint-slide-background/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Presentation1.pptx");
 //Retrieves the slide instance.
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the background instance.
@@ -1133,11 +1097,8 @@ IGradientFill gradient = background.Fill.GradientFill;
 gradient.GradientStops.Add(ColorObject.Green, 20);
 //Adds the second gradient stop of the gradient fill.
 gradient.GradientStops.Add(ColorObject.Yellow, 50);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation 
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}

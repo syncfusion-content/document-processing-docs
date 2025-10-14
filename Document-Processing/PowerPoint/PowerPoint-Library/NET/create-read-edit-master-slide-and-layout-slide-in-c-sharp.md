@@ -77,9 +77,8 @@ using (IPresentation pptxDoc = Presentation.Create())
     ISolidFill solidFill = background.Fill.SolidFill;
     //Set the color for solid fill object.
     solidFill.Color = ColorObject.Green;
-    //Save the PowerPoint Presentation to MemoryStream.
-    MemoryStream outputStream = new MemoryStream();
-    pptxDoc.Save(outputStream);
+    //Save the PowerPoint Presentation.
+    pptxDoc.Save("Sample.pptx");
 }
 {% endhighlight %}
 
