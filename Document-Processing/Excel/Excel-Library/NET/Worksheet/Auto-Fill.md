@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# Auto Fill
+# Auto Fill Feature in Excel Document
 
  The **Auto Fill** enables users to programmatically populate a range of Excel cells based on defined patterns, sequences, or trends. This helps reduce manual data entry by automatically generating values using built-in logic.
 

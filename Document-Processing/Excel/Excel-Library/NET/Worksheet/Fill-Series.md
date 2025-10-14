@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# Fill Series 
+# Fill Series Feature in Excel Document
 
 The **Fill Series** feature in the XlsIO library allows users to programmatically fill a range with a sequence of values based on the specified direction (row or column), series type, step value, and stop value.
 
