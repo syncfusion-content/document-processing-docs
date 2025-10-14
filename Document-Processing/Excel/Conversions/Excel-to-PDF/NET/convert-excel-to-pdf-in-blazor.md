@@ -1,6 +1,7 @@
+
 ---
 title: Convert an Excel document to PDF in Blazor | Syncfusion
-description: Convert an Excel document to PDF in blazor using Sycfusion Blazor Excel library (XlsIO) without Microsoft Excel or interop dependencies.
+description: Convert an Excel document to PDF in blazor using Syncfusion Blazor Excel library (XlsIO) without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,7 +9,7 @@ documentation: UG
 
 # Convert an Excel document to PDF in Blazor
 
-Syncfusion<sup>&reg;</sup> XlsIO is a [Blazor Excel library](https://www.syncfusion.com/document-processing/excel-framework/blazor/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in Blazor**.
+Syncfusion XlsIO is a [Blazor Excel library](https://www.syncfusion.com/document-processing/excel-framework/blazor/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in Blazor**.
 
 ## Excel to PDF in Blazor Server App
 
@@ -32,9 +33,9 @@ Step 4: Install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/pa
 
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Blazor_images\Blazor_images_Server_App_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components.
 
-Step 5: Create a razor file with name as **XlsIO** under **Pages** folder and include the following namespaces in the file.
+Step 5: Create a Razor file named **XlsIO** under the **Pages** folder and include the following namespaces in the file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 @page "/xlsio"
@@ -47,7 +48,7 @@ Step 5: Create a razor file with name as **XlsIO** under **Pages** folder and in
 Step 6: Add the following code in **XlsIO.razor** file to create a new button.
 {% tabs %}
 {% highlight CSHTML %}
-<h2>Syncfusion XlsIO library </h2>
+<h2>Syncfusion XlsIO library</h2>
 <p>Syncfusion Blazor XlsIO library is used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@ConvertExceltoPDF">Convert Excel to PDF</button>
 {% endhighlight %}
@@ -70,7 +71,7 @@ Step 7: Add the following code in **XlsIO.razor** file to create and download th
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Create a new cs file with name as **ExcelService** under Data folder and include the following namespaces in the file.
+Step 8: Create a new C# file named **ExcelService** under the Data folder and include the following namespaces in the file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.XlsIO;
@@ -79,7 +80,10 @@ using Syncfusion.XlsIORenderer;
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Create a new MemoryStream method with name as **ConvertExceltoPDF** in **ExcelService** class and include the following code snippet to **convert an Excel document to Pdf** in Server app.
+Step 9: Create a new `MemoryStream` method named **ConvertExceltoPDF** in the **ExcelService** class and include the following code snippet to **convert an Excel document to PDF** in a Server app.
+
+N> Ensure that `InputTemplate.xlsx` is placed in the `wwwroot` folder of your project. You might need to set its "Copy to Output Directory" property to "Copy if newer" or "Copy always."
+
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -111,7 +115,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}
 
-Step 10: Create a new class file in the project, with name as **FileUtils** and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 10: Create a new class file named **FileUtils** in the project, and add the following code to invoke the JavaScript action to download the file in the browser.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 public static class FileUtils
@@ -125,7 +129,7 @@ public static class FileUtils
 {% endhighlight %}
 {% endtabs %}
 
-Step 11: Add the following JavaScript function in the **_Host.cshtml** in the Pages folder.
+Step 11: Add the following JavaScript function in the **_Host.cshtml** file in the Pages folder.
 {% tabs %}
 {% highlight HTML %}
 <script type="text/javascript">
@@ -153,7 +157,7 @@ Step 11: Add the following JavaScript function in the **_Host.cshtml** in the Pa
 {% endhighlight %}
 {% endtabs %}
 
-Step 12: Add the following code snippet in the **NavMenu.razor** in the Shared folder.
+Step 12: Add the following code snippet in the **NavMenu.razor** file in the Shared folder.
 {% tabs %}
 {% highlight HTML %}
 <li class="nav-item px-3">
@@ -183,16 +187,16 @@ dotnet new blazorserver -o Convert-Excel-to-PDF
 cd Convert-Excel-to-PDF
 ```
 
-Step 3: To **convert an Excel document to PDF in Blazor**,run the following command to  install [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) package.
+Step 3: To **convert an Excel document to PDF in Blazor**, run the following command to install [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) package.
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Blazor_images\Blazor_VSimages_Server_App_Nuget.png)
 
 ```
 dotnet add package Syncfusion.XlsIORenderer.Net.Core
 ```
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components.
 
-Step 4: Create a razor file with name as **XlsIO** under **Pages** folder and include the following namespaces in the file.
+Step 4: Create a Razor file named **XlsIO** under the **Pages** folder and include the following namespaces in the file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 @page "/xlsio"
@@ -205,7 +209,7 @@ Step 4: Create a razor file with name as **XlsIO** under **Pages** folder and in
 Step 5: Add the following code in **XlsIO.razor** file to create a new button.
 {% tabs %}
 {% highlight CSHTML %}
-<h2>Syncfusion XlsIO library </h2>
+<h2>Syncfusion XlsIO library</h2>
 <p>Syncfusion Blazor XlsIO library is used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@ConvertExceltoPDF">Convert Excel to PDF</button>
 {% endhighlight %}
@@ -228,7 +232,7 @@ Step 6: Add the following code in **XlsIO.razor** file to create and download th
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Create a new cs file with name as **ExcelService** under Data folder and include the following namespaces in the file.
+Step 7: Create a new C# file named **ExcelService** under the Data folder and include the following namespaces in the file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.XlsIO;
@@ -237,7 +241,10 @@ using Syncfusion.XlsIORenderer;
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Create a new MemoryStream method with name as **ConvertExceltoPDF** in **ExcelService** class and include the following code snippet to **convert an Excel document to Pdf** in Server app.
+Step 8: Create a new `MemoryStream` method named **ConvertExceltoPDF** in the **ExcelService** class and include the following code snippet to **convert an Excel document to PDF** in a Server app.
+
+N> Ensure that `InputTemplate.xlsx` is placed in the `wwwroot` folder of your project.
+
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -269,7 +276,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Create a new class file in the project, with name as **FileUtils** and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 9: Create a new class file in the project, named **FileUtils**, and add the following code to invoke the JavaScript action to download the file in the browser.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 public static class FileUtils
@@ -283,7 +290,7 @@ public static class FileUtils
 {% endhighlight %}
 {% endtabs %}
 
-Step 10: Add the following JavaScript function in the **_Host.cshtml** in the Pages folder.
+Step 10: Add the following JavaScript function in the **_Host.cshtml** file in the Pages folder.
 {% tabs %}
 {% highlight HTML %}
 <script type="text/javascript">
@@ -311,7 +318,7 @@ Step 10: Add the following JavaScript function in the **_Host.cshtml** in the Pa
 {% endhighlight %}
 {% endtabs %}
 
-Step 11: Add the following code snippet in the **NavMenu.razor** in the Shared folder.
+Step 11: Add the following code snippet in the **NavMenu.razor** file in the Shared folder.
 {% tabs %}
 {% highlight HTML %}
 <li class="nav-item px-3">
@@ -332,11 +339,13 @@ By executing the program, you will get the **PDF document** as follows.
 
 ![Output File in Blazor Server App](Blazor_images\Blazor_images_Server_and_Client_App_Output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion Excel library (XlsIO) features.
 
 An online sample link to [convert an Excel document to PDF](https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent) in Blazor.
 
-## Excel to PDF in Blazor WASM app
+## Excel to PDF in Blazor WASM App
+
+N> **Important Note:** To convert Excel to PDF, it is necessary to access the font stream internally. This cannot be done automatically in a Blazor WASM application. Therefore, we generally recommend using a Blazor Server App for Excel to PDF conversion, even though it is technically possible in a WASM app with additional setup.
 
 {% tabcontents %}
 
@@ -353,14 +362,14 @@ Step 3: Select the framework and click **Create** button.
 
 ![Framework version](Blazor_images\Blazor_images_Client_Framework.png)
 
-Step 4: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
+Step 4: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 * [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
 * [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor)
 
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Blazor_images\Blazor_images_Client_Nuget1.png)
 ![Install SkiaSharp.NativeAssets.WebAssembly NuGet Package](Blazor_images\Blazor_images_Client_Nuget2.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
 Step 5: Add the following ItemGroup tag in the **Blazor WASM csproj** file.
 {% tabs %}
@@ -371,7 +380,7 @@ Step 5: Add the following ItemGroup tag in the **Blazor WASM csproj** file.
 {% endhighlight %}
 {% endtabs %}
 
-N> Install this wasm-tools and wasm-tools-net6 by using the "dotnet workload install wasm-tools" and "dotnet workload install wasm-tools-net6" commands in your command prompt respectively if you are facing issues related to Skiasharp during runtime.
+N> Install `wasm-tools` and `wasm-tools-net6` by using the "dotnet workload install wasm-tools" and "dotnet workload install wasm-tools-net6" commands in your command prompt respectively if you are facing issues related to Skiasharp during runtime.
 
 Step 6: Enable the following property in the Blazor WASM csproj file.
 
@@ -383,7 +392,7 @@ Step 6: Enable the following property in the Blazor WASM csproj file.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Create a razor file with name as **XlsIO** under **Pages** folder and include the following namespaces in the file.
+Step 7: Create a Razor file named **XlsIO** under the **Pages** folder and include the following namespaces in the file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 @page "/xlsio"
@@ -404,7 +413,7 @@ Step 8: Add the following code to create a new button.
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Create a new async method with name as **ExcelToPDF** and include the following code snippet to **create an Excel document in Blazor** WASM app.
+Step 9: Create a new async method named **ExcelToPDF** and include the following code snippet to **create an Excel document in Blazor** WASM app.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -438,7 +447,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}
 
-Step 10: Create a class file with **FileUtils** name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 10: Create a class file named **FileUtils** and add the following code to invoke the JavaScript action to download the file in the browser.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 public static class FileUtils
@@ -480,7 +489,7 @@ Step 11: Add the following JavaScript function in the **Index.html** file presen
 {% endhighlight %}
 {% endtabs %}
 
-Step 12: Add the following code snippet in the **NavMenu.razor** in the Shared folder
+Step 12: Add the following code snippet in the **NavMenu.razor** file in the Shared folder.
 {% tabs %}
 {% highlight CSHTML %}
 <li class="nav-item px-3">
@@ -510,7 +519,7 @@ dotnet new blazorwasm -o Convert-Excel-to-PDF
 cd Convert-Excel-to-PDF
 ```
 
-Step 3. To **convert an Excel document to PDF in Blazor**,run the following command to  install [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core).
+Step 3: To **convert an Excel document to PDF in Blazor**, run the following command to install [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core).
 ![Install SkiaSharp.NativeAssets.WebAssembly NuGet Package](Blazor_images\Blazor_VSimages_Client_Nuget1.png)
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Blazor_images\Blazor_VSimages_Client_Nuget2.png)
 
@@ -519,7 +528,7 @@ dotnet add package SkiaSharp.Views.Blazor
 dotnet add package Syncfusion.XlsIORenderer.Net.Core
 ```
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
 Step 4: Add the following ItemGroup tag in the **Blazor WASM csproj** file.
 {% tabs %}
@@ -530,7 +539,7 @@ Step 4: Add the following ItemGroup tag in the **Blazor WASM csproj** file.
 {% endhighlight %}
 {% endtabs %}
 
-N> Install this wasm-tools and wasm-tools-net6 by using the "dotnet workload install wasm-tools" and "dotnet workload install wasm-tools-net6" commands in your command prompt respectively if you are facing issues related to Skiasharp during runtime.
+N> Install `wasm-tools` and `wasm-tools-net6` by using the "dotnet workload install wasm-tools" and "dotnet workload install wasm-tools-net6" commands in your command prompt respectively if you are facing issues related to Skiasharp during runtime.
 
 Step 5: Enable the following property in the Blazor WASM csproj file.
 
@@ -542,7 +551,7 @@ Step 5: Enable the following property in the Blazor WASM csproj file.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Create a razor file with name as **XlsIO** under **Pages** folder and include the following namespaces in the file.
+Step 6: Create a Razor file named **XlsIO** under the **Pages** folder and include the following namespaces in the file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 @page "/xlsio"
@@ -563,7 +572,7 @@ Step 7: Add the following code to create a new button.
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Create a new async method with name as **ExcelToPDF** and include the following code snippet to **create an Excel document in Blazor** WASM app.
+Step 8: Create a new async method named **ExcelToPDF** and include the following code snippet to **create an Excel document in Blazor** WASM app.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -597,7 +606,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Create a class file with **FileUtils** name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 9: Create a class file named **FileUtils** and add the following code to invoke the JavaScript action to download the file in the browser.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 public static class FileUtils
@@ -639,7 +648,7 @@ Step 10: Add the following JavaScript function in the **Index.html** file presen
 {% endhighlight %}
 {% endtabs %}
 
-Step 11: Add the following code snippet in the **NavMenu.razor** in the Shared folder
+Step 11: Add the following code snippet in the **NavMenu.razor** file in the Shared folder.
 {% tabs %}
 {% highlight CSHTML %}
 <li class="nav-item px-3">
@@ -660,9 +669,7 @@ By executing the program, you will get the **PDF document** as follows.
 
 ![Output File in Blazor Client App](Blazor_images\Blazor_images_Server_and_Client_App_Output.png)
 
-N> To convert Excel to PDF, it is necessary to access the font stream internally. However, this cannot be done automatically in a Blazor WASM application. Therefore, we recommend using a Server app, even though Excel to PDF conversion works in a WASM app.
-
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion Excel library (XlsIO) features.
 
 An online sample link to [convert an Excel document to PDF](https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent) in Blazor.
 
@@ -683,14 +690,14 @@ Step 3: Select the framework and click **Create** button.
 
 ![Framework version](Blazor_images\Blazor_images_Hybrid_App_Framework.png)
 
-Step 4: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
+Step 4: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 * [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
 
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Blazor_images\Blazor_images_Hybrid_App_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
-Step 5: Add a new button in **Pages/Home.razor**
+Step 5: Add a new button in **Pages/Home.razor**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -714,6 +721,8 @@ Step 6: Include the following namespaces in the **Pages/Home.razor** file.
 {% endtabs %}
 
 Step 7: Include the following code in the **Pages/Home.razor** file.
+
+N> Ensure that `InputTemplate.xlsx` is placed in the `wwwroot/data` folder of your project and its "Build Action" property is set to "Content" and "Copy to Output Directory" is set to "Copy if newer" or "Copy always."
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -784,16 +793,16 @@ dotnet new maui-blazor -n ConvertExcelToPdf
 cd ConvertExcelToPdf
 ```
 
-Step 3. To **convert an Excel document to PDF in Blazor**,run the following command to install [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core).
+Step 3: To **convert an Excel document to PDF in Blazor**, run the following command to install [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core).
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Blazor_images\Blazor_images_Hybrid_App_Nuget_VSC.png)
 
 ```
 dotnet add package Syncfusion.XlsIORenderer.Net.Core
 ```
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
-Step 4: Add a new button in **Pages/Home.razor**
+Step 4: Add a new button in **Pages/Home.razor**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -818,6 +827,9 @@ Step 5: Include the following namespaces in the **Pages/Home.razor** file.
 {% endtabs %}
 
 Step 6: Include the following code in the **Pages/Home.razor** file.
+
+N> Ensure that `InputTemplate.xlsx` is placed in the `wwwroot/data` folder of your project.
+
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
@@ -884,6 +896,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 ![Output File in Blazor Client App](Blazor_images\Blazor_images_Server_and_Client_App_Output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion Excel library (XlsIO) features.
 
 An online sample link to [convert an Excel document to PDF](https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent) in Blazor.
