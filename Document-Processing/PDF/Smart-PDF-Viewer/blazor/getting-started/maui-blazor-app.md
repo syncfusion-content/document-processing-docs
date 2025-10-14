@@ -9,7 +9,7 @@ documentation: ug
 
 # Using Smart PDF Viewer Component in the Blazor MAUI app 
 
-This section describes how to add the Syncfusion&reg; Blazor Smart PDF Viewer component to a .NET MAUI Blazor app and run it on Windows and Android.
+This article describes how to add the Syncfusion&reg; Blazor Smart PDF Viewer component to a .NET MAUI Blazor app and run it on Windows and Android.
 
 ## Prerequisites
 
@@ -92,7 +92,7 @@ Note: Ensure the Syncfusion license is registered in the application before usin
 
 ## To Configure Azure OpenAI Service
 
-This section is required only when enabling AI-powered features in Smart PDF Viewer (such as document summarization, smart redaction, or smart fill). It is not required for basic PDF rendering.
+This article is required only when enabling AI-powered features in Smart PDF Viewer (such as document summarization, smart redaction, or smart fill). It is not required for basic PDF rendering.
 
 In **Visual Studio**, Go to Tools → NuGet Package Manager → Package Manager Console. Run these commands one by one:
 
@@ -255,7 +255,7 @@ N> If any errors occur while using the Android Emulator, see [Troubleshooting th
 
 ![Blazor Smart PDF Viewer rendered on Android emulator](gettingstarted-images/android-emulator.png)
 
->[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/GettingStartedMAUI).
+>[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Getting%20Started/MAUI%20Blazor%20App).
 
 ## See also
 

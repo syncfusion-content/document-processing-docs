@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Smart PDF Viewer using Groq AI Service
 
-This guide provides step-by-step instructions for integrating and using Syncfusion Smart PDF Viewer with the Groq AI service in a Blazor app.
+This article provides step-by-step instructions for integrating and using Syncfusion Smart PDF Viewer with the Groq AI service in a Blazor app.
 
 ## Prerequisites
 

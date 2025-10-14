@@ -476,12 +476,18 @@
 						<ul>
 							<li><a href="/document-processing/pdf/pdf-viewer/blazor/migration">Migration from PDF Viewer (Classic) to PDF Viewer</a></li>
 							<li>Getting Started
-									<ul>
-										<li><a href="/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app">Blazor Web App</a></li>
-									    <li><a href="/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application">Blazor WASM App</a></li>
-									    <li><a href="/document-processing/pdf/pdf-viewer/blazor/getting-started/deploy-maui-windows">Blazor MAUI App</a></li>
-								    </ul>
-							</li>
+								<ul>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app">Blazor Web App</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application">Blazor WASM App</a></li>
+									<li>Blazor Hybrid
+										<ul>
+											<li><a href="/document-processing/pdf/pdf-viewer/blazor/getting-started/maui-blazor-app">.NET MAUI Blazor App</a></li>
+											<li><a href="/document-processing/pdf/pdf-viewer/blazor/getting-started/wpf-blazor-app">WPF Blazor App</a></li>
+											<li><a href="/document-processing/pdf/pdf-viewer/blazor/getting-started/winforms-blazor-app">WinForms Blazor App</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>	
 							<li>Deployment
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/getting-started/wsl-application">Windows Subsystem for Linux</a></li>
@@ -507,9 +513,26 @@
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/save-pdf-file/to-box-cloud-file-storage">To Box cloud file storage</a></li>
 								</ul>
 							</li>
-							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/toolbar-customization">Toolbar Customization</a></li>
+							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/toolbar">Toolbar</a>
+								<ul>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/primary-toolbar-customization">Primary Toolbar Customization</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/annotation-toolbar-customization">Annotation Toolbar Customization</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/form-designer-toolbar-customization">Form Designer Toolbar Customization</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/redaction-toolbar-customization">Redaction Toolbar Customization</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/mobile-toolbar">Mobile Toolbar</a></li>
+								</ul>
+							</li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/command-manager">Command Manager</a></li>
-							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/navigation">Navigation</a></li>
+							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/interactive-pdf-navigation">Interactive PDF Navigation</a>
+								<ul>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/interactive-pdf-navigation/page-navigation">Page Navigation</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/interactive-pdf-navigation/bookmark-navigation">Bookmark Navigation</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/interactive-pdf-navigation/page-thumbnail-navigation">Page Thumbnail Navigation</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/interactive-pdf-navigation/hyperlink-navigation">Hyperlink Navigation</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/interactive-pdf-navigation/table-of-content-navigation">Table of Content Navigation</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/interactive-pdf-navigation/modern-navigation-panel">Modern Navigation Panel</a></li>
+								</ul>
+							</li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/magnification">Magnification</a></li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/text-search">Text Search</a></li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/interaction">Interaction Mode</a></li>
@@ -523,10 +546,18 @@
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/measurement-annotation">Measurement Annotations</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/free-text-annotation">Free Text Annotations</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/ink-annotation">Ink Annotation</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/redaction-annotation">Redaction Annotations</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/comments">Comments</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/import-export-annotation">Import and Export Annotations</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/annotations-in-mobile-view">Annotations in Mobile View</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/events">Events in Annotations</a></li>
+								</ul>
+							</li>
+							<li>Redaction
+								<ul>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/redaction/overview">Overview</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/redaction/create-programmatically">Programmatic Support for Redaction</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/redaction/ui-interactions">UI Interaction in Redaction</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/redaction/redaction-in-mobile-view">Redaction in Mobile View</a></li>
 								</ul>
 							</li>
 							<li>Form Designer
@@ -534,53 +565,62 @@
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/form-designer/overview">Overview</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/form-designer/create-programmatically">Programmatic Support for Form Designer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/form-designer/ui-interactions">UI Interactions in Form Designer</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/form-designer/form-designer-in-mobile-view">Form Designer in Mobile View</a></li>\
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/form-designer/custom-font">Custom Font</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/form-designer/events">Events in Form Designer</a></li>
 								</ul>
 							</li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/form-filling">Form Filling</a></li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/print">Print</a></li>
+							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/document-security">Document security</a>
+								<ul>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/document-security/password-protected">Password Protected</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/document-security/permission">Permission</a></li>
+								</ul>
+							</li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/events">Events</a></li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/globalization">Globalization and RTL</a></li>
-							<li>How To
+							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faq">FAQ</a> 
 								<ul>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/how-to-load-PDF-from-URL-to-server-side-PDF-viewer">Load PDF from URL to server-side PDF viewer</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/create-sfpdfviewer-in-a-popup-window">Create a SfPdfViewer within a popup window in Blazor</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/load-pdf-document-dynamically">Load PDF documents dynamically in Blazor SfPdfViewer Component</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/load-office-files">Load Office files in Blazor SfPdfViewer</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/view-docx-file-in-blazor-application">View DOCX file in Blazor application</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/unload-the-pdf-document-from-viewer">Unload the PDF document from Viewer in Blazor SfPdfViewer Component</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/import-annotations-as-objects">Import annotations as objects in Blazor SfPdfViewer Component</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/suppress-error-message">Suppress the error dialog</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/move-scrollbar">Move the scrollbar to the exact location of annotations</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/create-sfpdfviewer">View the created PDF document</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/check-status-of-annotations-or-comments">Check the status of annotations or comments in Blazor SfPdfViewer Component</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/customize-arrow-annotation-heads">Customize arrow annotation heads in Blazor SfPdfViewer</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/show-or-hide-sfpdfviewer-dynamically">Show or hide the SfPdfViewer Component dynamically in Blazor</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/increase-connection-buffer-size">Increase the connection buffer size in Blazor SfPdfViewer Component</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/print-the-sfpdfiewer-inside-the-dialog-component">Print the SfPdfViewer component inside the Dialog component in Blazor</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/change-the-highlighted-color-of-the-text">Change the highlight color of the text in Blazor SfPdfViewer Component</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/check-whether-the-loaded-PDF-document-is-edited-or-not">Check the document's editing status in Blazor SfPdfViewer Component</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/create-pdf-document-in-the-created-event-of-sfpdfviewer">Create PDF document in the created event of Blazor SfPdfViewer Component</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/create-sfpdfviewer-in-a-splitter-component">Create SfPdfViewer Component in a Splitter Component in Blazor</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/get-data-from-sfpdfviewer">Get PDF document's data from Blazor SfPdfViewer Component</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/load-desired-pdf-for-initial-loading-in-hosted-sample">Load desired PDF for initial loading in Blazor SfPdfViewer Component</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/stretch-the-sfpdfviewer-size-to-its-container">Update the viewer size at run-time in Blazor SfPdfViewer Component</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/update-form-field-using-context-menu">Update form field using context menu in Blazor SfPdfViewer</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/identify-the-values-in-the-undo-redo-collections">Identify if the SfPdfViewer has values in the Undo, Redo collections</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/render-ej2-pdf-viewer-in-blazor">Render JS PDF Viewer inside Blazor SfPdfViewer Component</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/prevent-scrolling">Prevent the PDF from scrolling and remove the vertical scrollbar</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/perform-print-in-same-window">Perform print in same window in Blazor SfPdfViewer Component</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/print-large-page-document">Print large page document in SfPdfViewer Component</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/refer-sfpdfviewer-script-in-application">Refer the SfPdfViewer script file in Blazor application</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/deploy-maui-using-android-emulator">Render PDF document from embedded source in the MAUI Android app</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/improve-performance-using-CDN">Improve the performance using CDN in Blazor SfPdfViewer Component</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/processing-large-files-without-increasing-maximum-message-size">Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/load-custom-font-pdfium">Load Custom Fonts in a PDF Viewer</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/render-n-pages-scrolling">Render N number pages on scrolling</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/load-font-collection">Load Font Collection in a PDF Viewer</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/reduce-slowness-while-running-the-wasm-sample-in-Visual-Studio">Reduce slowness while running the WASM sample in Visual Studio</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/coordinate-conversion-between-page-and-client-points">Coordinate Conversion Between Page and Client Points</a></li>
-									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/how-to/content-security-policy">Use strict CSP in Blazor SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-load-PDF-from-URL-to-server-side-PDF-viewer">How to Load PDF from URL to server-side PDF viewer</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-create-sfpdfviewer-in-a-popup-window">How to Create a SfPdfViewer within a popup window in Blazor</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-load-pdf-document-dynamically">How to Load PDF documents dynamically in Blazor SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-load-office-files">How to Load Office files in Blazor SfPdfViewer</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-view-docx-file-in-blazor-application">How to View DOCX file in Blazor application</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-unload-the-pdf-document-from-viewer">How to Unload the PDF document from Viewer in Blazor SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-import-annotations-as-objects">How to Import annotations as objects in Blazor SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-suppress-error-message">How to Suppress the error dialog</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-move-scrollbar">How to Move the scrollbar to the exact location of annotations</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-create-sfpdfviewer">How to View the created PDF document</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-check-status-of-annotations-or-comments">How to Check the status of annotations or comments in Blazor SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-customize-arrow-annotation-heads">How to Customize arrow annotation heads in Blazor SfPdfViewer</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-show-or-hide-sfpdfviewer-dynamically">How to Show or hide the SfPdfViewer Component dynamically in Blazor</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-increase-connection-buffer-size">How to Increase the connection buffer size in Blazor SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-print-the-sfpdfiewer-inside-the-dialog-component">How to Print the SfPdfViewer component inside the Dialog component in Blazor</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-change-the-highlighted-color-of-the-text">How to Change the highlight color of the text in Blazor SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-check-whether-the-loaded-PDF-document-is-edited-or-not">How to Check the document's editing status in Blazor SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-create-pdf-document-in-the-created-event-of-sfpdfviewer">How to Create PDF document in the created event of Blazor SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-create-sfpdfviewer-in-a-splitter-component">How to Create SfPdfViewer Component in a Splitter Component in Blazor</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-get-data-from-sfpdfviewer">How to Get PDF document's data from Blazor SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-load-desired-pdf-for-initial-loading-in-hosted-sample">How to Load desired PDF for initial loading in Blazor SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-stretch-the-sfpdfviewer-size-to-its-container">How to Update the viewer size at run-time in Blazor SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-update-form-field-using-context-menu">How to Update form field using context menu in Blazor SfPdfViewer</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-identify-the-values-in-the-undo-redo-collections">How to Identify if the SfPdfViewer has values in the Undo, Redo collections</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-render-ej2-pdf-viewer-in-blazor">How to Render JS PDF Viewer inside Blazor SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-prevent-scrolling">How to Prevent the PDF from scrolling and remove the vertical scrollbar</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-perform-print-in-same-window">How to Perform print in same window in Blazor SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-print-large-page-document">How to Print large page document in SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-refer-sfpdfviewer-script-in-application">How to Refer the SfPdfViewer script file in Blazor application</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-deploy-maui-using-android-emulator">How to Render PDF document from embedded source in the MAUI Android app</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-improve-performance-using-CDN">How to Improve the performance using CDN in Blazor SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-processing-large-files-without-increasing-maximum-message-size">How to Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-load-custom-font-pdfium">How to Load Custom Fonts in a PDF Viewer</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-render-n-pages-scrolling">How to Render N number pages on scrolling</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-load-font-collection">How to Load Font Collection in a PDF Viewer</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-reduce-slowness-while-running-the-wasm-sample-in-Visual-Studio">How to Reduce slowness while running the WASM sample in Visual Studio</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-coordinate-conversion-between-page-and-client-points">How to Coordinate Conversion Between Page and Client Points</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-configure-content-security-policy">How to Configure CSP in Blazor SfPdfViewer Component</a></li>
+									<li> <a href="/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-extract-particular-text-and-highlight">How to Extract Particular Text and Highlight</a></li>
 								</ul>
 							</li>
 							<li>
@@ -1636,16 +1676,18 @@
 							<li>Getting Started
 								<ul>
 									<li><a href="/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/web-app">Blazor Web App</a></li>
+									<li>Blazor Hybrid
+										<ul>
+											<li><a href="/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/maui-blazor-app">.NET MAUI Blazor App</a></li>
+											<li><a href="/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/wpf-blazor-app">WPF Blazor App</a></li>
+											<li><a href="/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/winforms-blazor-app">WinForms Blazor App</a></li>
+										</ul>	
+									</li>
 								</ul>
-								<li>Blazor Hybrid
-								<ul>
-									<li><a href="/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/maui-blazor-app">Blazor MAUI App</a></li>
-								</ul>
-							</li>
-							</li>
+							</li>	
 							<li>Deployment
 								<ul>
-									<li> <a href="/document-processing/pdf/smart-pdf-viewer/blazor/how-to/dockerImage-hosting-guide">Docker Image Hosting Guide for Blazor Web App</a></li>
+									<li> <a href="/document-processing/pdf/smart-pdf-viewer/blazor/deployment/dockerImage-hosting-guide">Docker Image Hosting Guide for Blazor Web App</a></li>
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/smart-pdf-viewer/blazor/document-summarizer">Document Summarizer</a></li>
@@ -1660,10 +1702,10 @@
 									<li> <a href="/document-processing/pdf/smart-pdf-viewer/blazor/groq-service">Groq AI Service</a></li>
 								</ul>
 							</li>
-							<li>How To
+							<li> <a href="/document-processing/pdf/smart-pdf-viewer/blazor/faq">FAQ</a> 
 								<ul>
-									<li> <a href="/document-processing/pdf/smart-pdf-viewer/blazor/how-to/user-token-with-custom-ai-service">User Token with Custom AI service</a></li>
-									<li> <a href="/document-processing/pdf/smart-pdf-viewer/blazor/how-to/refer-SfSmartPdfViewer-script-in-application">Refer the SfSmartPdfViewer script file in application</a></li>
+									<li> <a href="/document-processing/pdf/smart-pdf-viewer/blazor/faqs/how-to-use-user-token-with-custom-ai-service">How to use user token with Custom AI service</a></li>
+									<li> <a href="/document-processing/pdf/smart-pdf-viewer/blazor/faqs/how-to-refer-sfsmartpdfviewer-script-in-application">How to refer the SfSmartPdfViewer script file in application</a></li>
 								</ul>
 							</li>
 							<li>
@@ -2563,7 +2605,7 @@
 							<li><a href="/document-processing/word/word-processor/angular/right-to-left">RTL</a></li>
 							<li><a href="/document-processing/word/word-processor/angular/chart">Chart</a></li>
 							<li><a href="/document-processing/word/word-processor/angular/content-control">Content Control</a></li>
-							<li><a href="/document-processing/word/word-processor/angular/document-management">Document Management</a></li>
+							<li><a href="/document-processing/word/word-processor/angular/restrict-editing">Restrict Editing</a></li>
 							<li><a href="/document-processing/word/word-processor/angular/spell-check">SpellCheck</a></li>
 							<li><a href="/document-processing/word/word-processor/angular/global-local">Globalization</a></li>
 							<li><a href="/document-processing/word/word-processor/angular/notes">Footnotes and Endnotes</a></li>
@@ -6531,7 +6573,21 @@
 	</li>
 	<li>
         Release Notes
-        <ul><li>2025 Volume 3 - v31.*<ul><li> Weekly Nuget Release <ul><li><a href="/document-processing/release-notes/v31.1.19">v31.1.19</a></li><li><a href="/document-processing/release-notes/v31.1.18">v31.1.18</a></li></ul></li><li><a href="/document-processing/release-notes/v31.1.17">v31.1.17 Main Release</a></li></ul></li>
+        <ul>
+		<li>
+		2025 Volume 3 - v31.*
+		<ul>
+		    <li>
+				Weekly Nuget Release
+				<ul><li><a href="/document-processing/release-notes/v31.1.23">v31.1.23</a></li><li><a href="/document-processing/release-notes/v31.1.22">v31.1.22</a></li>
+					<li><a href="/document-processing/release-notes/v31.1.21">v31.1.21</a></li>
+					<li><a href="/document-processing/release-notes/v31.1.20">v31.1.20</a></li>
+					<li><a href="/document-processing/release-notes/v31.1.19">v31.1.19</a></li>
+					<li><a href="/document-processing/release-notes/v31.1.18">v31.1.18</a></li>
+				</ul>
+			</li>
+			<li><a href="/document-processing/release-notes/v31.2.2">v31.2.2 Service Pack Release</a></li>
+			<li><a href="/document-processing/release-notes/v31.1.17">v31.1.17 Main Release</a></li></ul></li>
 		<li>2025 Volume 2 - v30.*<ul><li> Weekly Nuget Release <ul><li><a href="/document-processing/release-notes/v30.2.7">v30.2.7</a></li><li><a href="/document-processing/release-notes/v30.2.6">v30.2.6</a></li><li><a href="/document-processing/release-notes/v30.2.5">v30.2.5</a></li><li><a href="/document-processing/release-notes/v30.1.42">v30.1.42</a></li><li><a href="/document-processing/release-notes/v30.1.41">v30.1.41</a></li><li><a href="/document-processing/release-notes/v30.1.40">v30.1.40</a></li><li><a href="/document-processing/release-notes/v30.1.39">v30.1.39</a></li><li><a href="/document-processing/release-notes/v30.1.38">v30.1.38</a></li></ul></li><li><a href="/document-processing/release-notes/v30.2.4">v30.2.4 Service Pack Release</a></li><li><a href="/document-processing/release-notes/v30.1.37">v30.1.37 Main Release</a></li></ul></li>
 		<li>2025 Volume 1 - v29.*<ul><li> Weekly Nuget Release <ul><li><a href="/document-processing/release-notes/v29.1.41">v29.1.41</a></li><li><a href="/document-processing/release-notes/v29.1.40">v29.1.40</a></li><li><a href="/document-processing/release-notes/v29.1.39">v29.1.39</a></li><li><a href="/document-processing/release-notes/v29.1.38">v29.1.38</a></li><li><a href="/document-processing/release-notes/v29.1.37">v29.1.37</a></li><li><a href="/document-processing/release-notes/v29.1.35">v29.1.35</a></li></ul></li><li><a href="/document-processing/release-notes/v29.2.4">v29.2.4 Service Pack Release</a></li><li><a href="/document-processing/release-notes/v29.1.33">v29.1.33 Main Release</a></li></ul></li>
 		<li>2024 Volume 4 - v28.*<ul><li>Weekly Release<ul><li><a href="/document-processing/release-notes/v28.2.12">v28.2.12</a></li><li><a href="/document-processing/release-notes/v28.2.11">v28.2.11</a></li><li><a href="/document-processing/release-notes/v28.2.9">v28.2.9</a></li><li><a href="/document-processing/release-notes/v28.2.7">v28.2.7</a></li><li><a href="/document-processing/release-notes/v28.2.6">v28.2.6</a></li><li><a href="/document-processing/release-notes/v28.2.5">v28.2.5</a></li><li><a href="/document-processing/release-notes/v28.2.4">v28.2.4</a></li><li><a href="/document-processing/release-notes/v28.1.41">v28.1.41</a></li><li><a href="/document-processing/release-notes/v28.1.39">v28.1.39</a></li><li><a href="/document-processing/release-notes/v28.1.38">v28.1.38</a></li><li><a href="/document-processing/release-notes/v28.1.37">v28.1.37</a></li><li><a href="/document-processing/release-notes/v28.1.36">v28.1.36</a></li><li><a href="/document-processing/release-notes/v28.1.35">v28.1.35</a></li></ul></li><li><a href="/document-processing/release-notes/v28.2.3">v28.2.3 Service Pack Release</a></li><li><a href="/document-processing/release-notes/v28.1.33">v28.1.33 Main Release</a></li></ul></li>
