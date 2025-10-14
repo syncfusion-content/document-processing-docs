@@ -13,7 +13,7 @@ Use the following steps to run the Syncfusion<sup style="font-size:70%">&reg;</s
 
 **Step 1:** Enable Windows Subsystem for Linux and Virtual Machine Platform.
 
-![Windows Features dialog with WSL and Virtual Machine Platform enabled](gettingstarted-images/turn-features.png)
+![Windows Features dialog with WSL and Virtual Machine Platform enabled](wsl-application-images/turn-features.png)
 
 To enable Windows Subsystem for Linux (WSL) and Virtual Machine Platform on Windows:
 
@@ -23,7 +23,7 @@ After restart, install a Linux distribution such as Ubuntu from the Microsoft St
 
 **Step 2:** Install Ubuntu
 
-![Ubuntu install page in Microsoft Store](gettingstarted-images/ubuntu-install.png)
+![Ubuntu install page in Microsoft Store](wsl-application-images/ubuntu-install.png)
 
 To install Ubuntu from the Microsoft Store:
 
@@ -31,7 +31,7 @@ Open the Microsoft Store and search for Ubuntu. Select Ubuntu, then choose Get t
 
 On first launch, create a new Ubuntu user by providing a username and password.
 
-![Ubuntu first-run prompt for username and password](gettingstarted-images/username-password.png)
+![Ubuntu first-run prompt for username and password](wsl-application-images/username-password.png)
 
 **Step 3:** Install the .NET SDK for WSL by running the following commands one by one.
 
@@ -49,7 +49,7 @@ On first launch, create a new Ubuntu user by providing a username and password.
 
 Run dotnet --info. The output should resemble the following:
 
-![Create-new-blazor-wsl-app](gettingstarted-images/dotnet-info.png)
+![Create-new-blazor-wsl-app](wsl-application-images/dotnet-info.png)
 
 If the expected result is not shown, run the following commands:
 
@@ -68,13 +68,13 @@ If the expected result is not shown, run the following commands:
 ```
 **Step 4:** Run the server or WebAssembly sample in WSL mode; the Blazor PDF Viewer component should load.
 
-![Blazor app running in WSL mode](gettingstarted-images/WSL-Mode.png)
+![Blazor app running in WSL mode](wsl-application-images/WSL-Mode.png)
 
 N> If any issues occur while running in WSL mode, use the following instructions to resolve them.
 
 If the sample does not load the PDF file and an exception is thrown:
 
-![Exception shown when PDF fails to load](gettingstarted-images/exception.png)
+![Exception shown when PDF fails to load](wsl-application-images/exception.png)
 
 In the Ubuntu terminal, run the following commands one by one to install the required Blazor PDF Viewer dependencies for Linux:
 
@@ -88,10 +88,12 @@ In the Ubuntu terminal, run the following commands one by one to install the req
 
 Close the project, reopen it, and run it in WSL mode. It should run properly.
 
-![Blazor PDF Viewer running successfully in WSL mode](gettingstarted-images/final.png)
+![Blazor PDF Viewer running successfully in WSL mode](wsl-application-images/final.png)
 
 ## See also
 
-* [Getting started with the Blazor PDF Viewer in a Blazor Web app Server app](./web-app)
+* [Getting started with the Blazor PDF Viewer in a Blazor Web app Server app](../getting-started/web-app)
 
-* [Getting started with the Blazor PDF Viewer in a Blazor WebAssembly app](./web-assembly-application)
+* [Getting started with the Blazor PDF Viewer in a Blazor WebAssembly app](../getting-started/web-assembly-application)
+
+* [Getting started with the Blazor PDF Viewer in AWS Beanstalk mode](./aws-beanstalk-deployment)

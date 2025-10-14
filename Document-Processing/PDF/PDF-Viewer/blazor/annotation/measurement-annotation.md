@@ -93,7 +93,7 @@ The properties of line-based annotations such as Distance and Perimeter can be e
 
 ## Setting default properties during control initialization
 
-Set default properties for measurement annotations before initializing the control using DistanceSettings, PerimeterSettings, AreaSettings, RadiusSettings, and VolumeSettings.
+Set default properties for measurement annotations before initializing the control using [DistanceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DistanceSettings), [PerimeterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PerimeterSettings), [AreaSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AreaSettings), [RadiusSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_RadiusSettings), and [VolumeSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_VolumeSettings).
 
 ```cshtml
 
@@ -169,7 +169,7 @@ The supported units of measurement for measurement annotations are:
 
 ## Setting default scale ratio settings during control initialization
 
-Set default scale ratio settings for measurement annotations before initializing the control using ScaleRatioSettings, as shown below.
+Set default scale ratio settings for measurement annotations before initializing the control using [ScaleRatioSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerMeasurementSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerMeasurementSettings_ScaleRatio), as shown below.
 
 ```cshtml
 
@@ -193,6 +193,7 @@ Set default scale ratio settings for measurement annotations before initializing
         ConversionUnit = CalibrationUnit.Cm 
     };
 }
+
 ```
 
 ## Add measurement annotation programmatically

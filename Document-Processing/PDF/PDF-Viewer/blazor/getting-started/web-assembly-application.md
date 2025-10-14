@@ -138,7 +138,7 @@ await builder.Build().RunAsync();
 Add the following stylesheet and script to the head section of the **wwwroot/index.html** file.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight html hl_lines="3 7" %}
 
 <head>
     <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
@@ -181,6 +181,6 @@ Run the application to display the PDF file in the Syncfusion&reg; Blazor PDF Vi
 
 * [Getting started with the Blazor PDF Viewer in a Blazor Web app Server app](./web-app)
 
-* [Getting started with the Blazor PDF Viewer in WSL mode](./wsl-application)
+* [Getting started with the Blazor PDF Viewer in WSL mode](../deployment/wsl-application)
 
 * [.NET 9 Native Linking Issues with SkiaSharp and Emscripten 3.1.56](https://help.syncfusion.com/document-processing/faq/how-to-fix-skiasharp-native-reference-issue-in-blazor-net90-app)

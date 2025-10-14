@@ -28,7 +28,6 @@ The SfPdfViewer supports printing the loaded PDF by default. Enable or disable t
 
 ![Print a PDF using the SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-print.png)
 
-
 ```cshtml
 
 @using Syncfusion.Blazor.SfPdfViewer
@@ -52,7 +51,7 @@ The SfPdfViewer supports printing the loaded PDF by default. Enable or disable t
 
 ```
 
-## EnablePrintRotation in the Blazor SfPdfViewer
+## EnablePrintRotation
 
 [EnablePrintRotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrintRotation) controls whether landscape pages are auto-rotated to best fit when printing. Default: true. Set to false to preserve the original page orientation and suppress automatic rotation during print.
 
@@ -71,12 +70,12 @@ The SfPdfViewer supports printing the loaded PDF by default. Enable or disable t
 
 ```
 
-## Print modes in the Blazor SfPdfViewer
+## Print modes
 
 [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PrintMode) specifies how the print dialog is opened. Default: PrintMode.Default (prints from the same window). Supported values:
 
-- [PrintMode.Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintMode.html#Syncfusion_Blazor_SfPdfViewer_PrintMode_Default) — Opens the print dialog in the same window.
-- [PrintMode.NewWindow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintMode.html#Syncfusion_Blazor_SfPdfViewer_PrintMode_NewWindow) — Opens the print dialog from a new browser window/tab, which can be useful depending on browser popup policies.
+- [PrintMode.Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintMode.html#Syncfusion_Blazor_SfPdfViewer_PrintMode_Default): Opens the print dialog in the same window.
+- [PrintMode.NewWindow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintMode.html#Syncfusion_Blazor_SfPdfViewer_PrintMode_NewWindow): Opens the print dialog from a new browser window/tab, which can be useful depending on browser popup policies.
 
 ```cshtml
 
@@ -93,7 +92,7 @@ The SfPdfViewer supports printing the loaded PDF by default. Enable or disable t
 
 ```
 
-## PrintScaleFactor in the Blazor SfPdfViewer
+## PrintScaleFactor
 
 [PrintScaleFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PrintScaleFactor) sets the scale used when rendering pages for printing. By default the scale factor set as 1.0 (prints at the on-screen scale). Valid range from 0.5 to 5.0. Higher values can improve output clarity for documents with smaller page dimensions and may increase print processing time.
 
@@ -112,9 +111,9 @@ The SfPdfViewer supports printing the loaded PDF by default. Enable or disable t
 
 ```
 
-## Print Events in Blazor SfPdfViewer
+## Print Events
 
-The following events are available in the SfPdfViewer component.
+The following events are available for print in the SfPdfViewer component.
 
 |Name|Description|
 |---|---|
@@ -128,6 +127,9 @@ The [PrintStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfVi
 #### Event Arguments
 
 See [PrintStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html) for details such as Filename, Cancel option.
+
+- If the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html#Syncfusion_Blazor_SfPdfViewer_PrintStartEventArgs_Cancel) property is set to true in the PrintStart event, the print operation is canceled and the print dialog will not open.
+- By default, Cancel is false. Set it to true to prevent printing.
 
 The following example illustrates how to handle the PrintStart event.
 
