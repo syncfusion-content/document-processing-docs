@@ -218,7 +218,7 @@ Change the annotation opacity using the range slider in the **Edit Opacity** too
 
 ## Text markup annotation settings
 
-Set default properties for text markup annotations before rendering the component using the `HighlightSettings`, `UnderlineSettings`, `StrikethroughSettings`, and `SquigglySettings` parameters.
+Set default properties for text markup annotations before rendering the component using the [HighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_HighlightSettings), [UnderlineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UnderlineSettings), [StrikethroughSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_StrikethroughSettings), and [SquigglySettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SquigglySettings) parameters.
 
 N> After changing the default color and opacity using the **Edit Color** and **Edit Opacity** tools, those values become the new defaults for subsequent annotations.
 
@@ -398,4 +398,4 @@ N> Alternatively, the annotation can be deleted using its annotation ID with the
 
 ## See also
 
-* [How to change the highlight color of the text](../how-to/change-the-highlighted-color-of-the-text)
+* [How to change the highlight color of the text](../faqs/how-to-change-the-highlighted-color-of-the-text)

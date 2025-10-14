@@ -7,9 +7,11 @@ control: SfPdfViewer
 documentation: ug
 ---
 
+# Annotations in mobile view
+
 This article explains how to work with annotations in the mobile view of the Blazor SfPdfViewer. It covers opening the annotation toolbar, adding each annotation type, adjusting properties, deleting annotations, and using the comments panel.
 
-# To open the annotation toolbar
+## To open the annotation toolbar
 
 To open the annotation toolbar, tap the **Edit Annotation** option in the mobile primary toolbar. The annotation toolbar appears at the bottom of the viewer.
 
@@ -107,13 +109,13 @@ When finished, tap the Ink Annotation icon again to exit drawing mode. The prope
 
 ![Complete an ink annotation in Blazor SfPdfViewer](../images/complete-ink-annotation.png)
 
-## Change annotation properties (Before adding)
+## Change annotation properties before adding
 
 Annotation properties can be configured before placement. For example, tap the rectangle shape to show its properties toolbar, adjust the settings, and then tap and drag to place the annotation. The annotation is added using the modified properties.
 
 ![Change properties before adding an annotation in Blazor SfPdfViewer](../images/property-change-before-adding.gif)
 
-## Change annotation properties (After adding)
+## Change annotation properties after adding
 
 After placement, select the annotation to display its properties toolbar. Adjust the required properties; the changes are applied immediately to the selected annotation.
 
@@ -134,3 +136,7 @@ Open the comments panel from the **more option** menu at the right end of the mo
 To close the comments panel, tap the Close icon within the panel.
 
 ![Comments panel displayed in Blazor SfPdfViewer](../images/open-cooment-panel.png)
+
+## See Also
+
+* [Annotation Toolbar in Mobile mode](../annotation/annotations-in-mobile-view)
