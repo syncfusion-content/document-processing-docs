@@ -1,23 +1,23 @@
 ---
 layout: post
 title:  Open PDF files from AWS S3 in SfPdfViewer Component | Syncfusion
-description: Learn here all about how to Open PDF files from AWS S3 in Syncfusion Blazor SfPdfViewer component and much more details.
+description: Learn how to open PDF files from AWS S3 in the Syncfusion Blazor SfPdfViewer component, including steps and configuration guidance.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Open PDF file from AWS S3
+# Open PDF file from AWS S3 in SfPdfViewer
 
-To load a PDF file from AWS S3 in a SfPdfViewer, you can follow the steps below
+To load a PDF file from AWS S3 in the SfPdfViewer component, follow the steps below.
 
 **Step 1:** Create AWS S3 account 
 
- Set up an AWS S3 account by following the instructions on the official AWS site: [AWS Management Console](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html). Create an S3 bucket and generate access keys while ensuring secure storage of 
+Set up an AWS account by following the official guide: [AWS Management Console](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html). Create an S3 bucket, upload a PDF file, and create an IAM user with permissions to read objects (for example, s3:GetObject). Generate access keys and store them securely.
 
-**Step 2:** Create a Simple SfPdfViewer Sample in blazor
+**Step 2:** Create a simple SfPdfViewer sample in Blazor
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/server-side-application) to create a simple SfPdfViewer sample in blazor. This will give you a basic setup of the SfPdfViewer component.
+Follow the steps in the Blazor Server [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) guide for PDF Viewer to create a basic sample. This provides the required project setup and SfPdfViewer configuration.
 
 **Step 3:** Include the following namespaces in the **Index.razor** file.
 
@@ -30,7 +30,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 @using Syncfusion.Blazor.SfPdfViewer;
 ```
 
-**Step 4:** Add the below code example to 
+**Step 4:** Add the following code example to the Index.razor file.
 
 ```csharp
 
@@ -70,14 +70,16 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 }
 ```
 
-Replace the file name with the actual document name that you want to load from Box cloud file storage. Make sure to pass the document name from the box folder to the [documentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property of the SfPdfViewer component
+Replace the fileName value with the actual S3 object key for the PDF to load. Pass the document name to the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property of the SfPdfViewer component.
 
-N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
+N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with valid values for your environment. Do not expose credentials in client-side code; store secrets securely using app settings, environment variables, or IAM roles.
 
-N> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.
+N> The **AWSSDK.S3** NuGet package must be installed in the application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20AWS%20S3)
 
+N> Ensure that the RegionEndpoint in the code matches the region of the target S3 bucket to avoid authorization or not-found errors.
+
 ## See also
 
-* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../faqs/how-to-processing-large-files-without-increasing-maximum-message-size)

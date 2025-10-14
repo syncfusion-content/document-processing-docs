@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Blazor SfPdfViewer deployment in AWS BeanStalk | Syncfusion
-description: AWS Elastic Beanstalk simplifies the deployment and management of scalable web applications and services on Linux-based infrastructure
+title: Deploy Blazor SfPdfViewer to AWS Elastic Beanstalk | Syncfusion
+description: Add the Syncfusion Blazor PDF Viewer to a Blazor Server app and deploy it to AWS Elastic Beanstalk on Linux.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Deploy Blazor Server App on AWS Elastic Beanstalk Linux
+# Deploy a Blazor Server app to AWS Elastic Beanstalk (Linux)
 
-In this section, we'll guide you through the process of adding Syncfusion&reg; Blazor PDF Viewer component to your Blazor Server app and deploy it on AWS Elastic Beanstalk. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/AWS/AWS_Elastic_Beanstalk/SfPdfViewerApp).
+This article describes how to add the Syncfusion&reg; Blazor PDF Viewer component to a Blazor Server app and deploy the app to AWS Elastic Beanstalk (Linux). A fully functional sample is available in the [GitHub repository](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/AWS/AWS_Elastic_Beanstalk/SfPdfViewerApp).
 
 ## Prerequisites
 
@@ -19,11 +19,11 @@ In this section, we'll guide you through the process of adding Syncfusion&reg; B
 
 Create a new Blazor Server app and name it **PDFViewerGettingStarted**.
 
-N> The PDF Viewer component is supported from .NET 6.0 onwards.
+N> The PDF Viewer component is supported on .NET 8.0 and later.
 
 ## Install Blazor PDF Viewer NuGet package in Blazor Server App
 
-Add the following NuGet packages into the Blazor Server app.
+Add the following NuGet packages to the Blazor Server app.
 
 * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
@@ -69,21 +69,23 @@ var app = builder.Build();
 Add the following stylesheet and script to the head section of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight cshtml hl_lines="3 7" %}
 
 <head>
     <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+<body>
     <!-- Syncfusion Blazor PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
-</head>
+</body>
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Adding Blazor PDF Viewer Component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -98,42 +100,42 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) c
 {% endhighlight %}
 {% endtabs %}
 
-N> If you don't provide the `DocumentPath` property value, the PDF Viewer component will be rendered without loading the PDF document. Users can then use the **open** option from the toolbar to browse and open the PDF as required.
+N> If the `DocumentPath` property is not set, the PDF Viewer renders without loading a PDF document. Users can use the **Open** option in the toolbar to browse and open a PDF as needed.
 
 ## Run the application
 
-Run the application, and the PDF file will be displayed using Syncfusion&reg; Blazor PDF Viewer component in your browser.
+Run the application to display the PDF file in the Syncfusion&reg; Blazor PDF Viewer component in the browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVzNWqXLSZpnuzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor SfPdfViewer Component](aws-benstalk-deployment-images/blazor-pdfviewer.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVzNWqXLSZpnuzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Server SfPdfViewer rendering in browser](aws-benstalk-deployment-images/blazor-pdfviewer.png)" %}
 
 
 ## Steps to publish as AWS Elastic Beanstalk
 
-1. Right-click the project and select Publish to AWS Elastic Beanstalk (Legacy) option.
-![beanstalk-publish](aws-benstalk-deployment-images/beanstalk-publish.png)
-2. Select the Deployment Target as Create a new application environment and click Next button.
-![deployment-target](aws-benstalk-deployment-images/beanstalk-instance.png)
-3. Choose the Environment Name in the dropdown list and the URL will be automatically assign and check the URL is available, if available click next otherwise change the URL
-![beanstalk-environment-name](aws-benstalk-deployment-images/beanstalk-environment.png)
-4. Select the instance type in t3a.micro from the dropdown list and click next.
-![beanstalk-instance-type](aws-benstalk-deployment-images/beanstalk-aws-options.png)
-5. Click the Next button to proceed further.
-![beanstalk-roles](aws-benstalk-deployment-images/beanstalk-permissions.png)
-6. Click the Next button
-![beanstalk-review](aws-benstalk-deployment-images/beanstalk-review.png)
-7. Click the Deploy button to deploy the sample on AWS Elastic Beanstalk.
-![beanstalk-deploy](aws-benstalk-deployment-images/beanstalk-deploy.png)
-8. After changing the status from Updating to Environment is healthy, click the URL.
-![beanstalk-success-message](aws-benstalk-deployment-images/beanstalk-success.png)
-9. After opening the provided URL the provided PDF document will be displayed in PDF Viewer.
-![beanstalk-output](aws-benstalk-deployment-images/beanstalk-output.png)
+1. Right-click the project and select Publish to AWS Elastic Beanstalk (Legacy).
+![Publish to AWS Elastic Beanstalk in Visual Studio](aws-benstalk-deployment-images/beanstalk-publish.png)
+2. Select the deployment target Create a new application environment, and then click Next.
+![Create a new application environment selection](aws-benstalk-deployment-images/beanstalk-instance.png)
+3. Choose an environment name. The URL is assigned automatically—verify availability. If the URL is available, click Next; otherwise, change the URL and retry.
+![Configure Elastic Beanstalk environment name and URL](aws-benstalk-deployment-images/beanstalk-environment.png)
+4. Select the instance type t3a.micro from the drop-down list, and then click Next.
+![Select t3a.micro instance type](aws-benstalk-deployment-images/beanstalk-aws-options.png)
+5. Click Next to proceed.
+![Review required roles and permissions](aws-benstalk-deployment-images/beanstalk-permissions.png)
+6. Click Next.
+![Review configuration summary](aws-benstalk-deployment-images/beanstalk-review.png)
+7. Click Deploy to publish the application to AWS Elastic Beanstalk.
+![Deploy the application to Elastic Beanstalk](aws-benstalk-deployment-images/beanstalk-deploy.png)
+8. When the environment status changes from Updating to Environment is healthy, click the provided URL.
+![Elastic Beanstalk environment health and application URL](aws-benstalk-deployment-images/beanstalk-success.png)
+9. Open the URL to view the application. The specified PDF document is displayed in the PDF Viewer.
+![Application running with PDF rendered in the viewer](aws-benstalk-deployment-images/beanstalk-output.png)
 
 ## See also
 
-* [Getting Started with Blazor PDF Viewer Component in Blazor WASM App](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application)
+* [Getting started with the Blazor PDF Viewer in a Blazor Web app Server app](../getting-started/web-app)
 
-* [Getting Started with Blazor PDF Viewer Component in WSL mode](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/wsl-application)
+* [Getting started with the Blazor PDF Viewer in a Blazor WebAssembly app](../getting-started/web-assembly-application)
 
-* [Learn different ways to add script reference in Blazor Application](https://blazor.syncfusion.com/documentation/common/adding-script-references)
+* [Getting started with the Blazor PDF Viewer in WSL mode](./wsl-application)
 
-
+* [Ways to add script references in a Blazor application](https://blazor.syncfusion.com/documentation/common/adding-script-references)
