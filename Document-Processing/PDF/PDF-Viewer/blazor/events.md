@@ -165,3 +165,5 @@ The following example illustrates how to handle the DocumentEdited event. In thi
 
 * [Annotation Events in Blazor PDF Viewer](./annotation/events)
 * [Form Designer Events in Blazor PDF Viewer](./form-designer/events)
+* [Text Search Events in Blazor PDF Viewer](./text-search#text-search-events)
+* [Print Events in Blazor PDF Viewer](./print#print-events)

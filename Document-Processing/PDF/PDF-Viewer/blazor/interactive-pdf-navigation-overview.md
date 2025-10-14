@@ -21,4 +21,5 @@ Page navigation in the Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfVie
 ## See also
 
 * [Magnification in Blazor SfPdfViewer Component](./magnification)
+
 * [Getting Started with SmartPdfViewer in Blazor Web App](../../Smart-PDF-Viewer/blazor/getting-started/web-app)

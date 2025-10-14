@@ -73,13 +73,11 @@ To enable redaction functionality in your Blazor application, configure the PDF 
 }
 ```
 
-
-
 ## Understanding Mobile Redaction Toolbar Tools
 
 When you enter redaction mode in mobile view, a specialized redaction toolbar appears with multiple tools optimized for touch interaction. Each tool serves a specific purpose in the redaction workflow.
 
-### 1. Redaction Annotation Tool (First Tool)
+### Redaction Annotation Tool
 
 The **Redaction Annotation** tool is the primary redaction feature that allows you to draw redaction rectangles on specific content:
 
@@ -94,7 +92,7 @@ Touch and drag to draw rectangular redaction overlays on any content area.
 
 ![Redaction Annotation Tool](./redaction-annotations-images/redaction-annotation-annot.png)
 
-### 2. Page Redaction Tool (Second Tool)
+### Page Redaction Tool
 
 The **Page Redaction** tool enables batch redaction of entire pages based on specific patterns.
 
@@ -112,7 +110,7 @@ Select desired pattern → Review affected pages in the viewer → Confirm redac
 
 ![Page Redaction Tool Dialog](./redaction-annotations-images/page-redaction-dialog-annot.png)
 
-### 3. Redaction Properties Tool (Third Tool)
+### Redaction Properties Tool
 
 The **Redaction Properties** tool allows customization of redaction appearance before application.
 
@@ -185,13 +183,14 @@ The selected content will be permanently removed and replaced according to your 
 
 ![Applied Redaction](./redaction-annotations-images/applied-redaction-annot.png)
 
-## Removing Redaction Annotations (Before Applying)
+## Removing Redaction Annotations
 
 To remove existing redaction annotations before they are applied:
 
-**Step 1:** Tap the **Redaction Edit** button in the mobile toolbar to enter annotation editing mode
-**Step 2:** Tap on any existing redaction annotation you wish to remove
-**Step 3:** Select **Delete** from the context menu that appears
+- **Step 1:** Tap the **Redaction Edit** button in the mobile toolbar to enter annotation editing mode
+- **Step 2:** Tap on any existing redaction annotation you wish to remove
+- **Step 3:** Select **Delete** from the context menu that appears
+
 **Alternative**: Tap redaction annotation → Use delete button in annotation properties panel
 
 ![Delete Redaction Annotation](./redaction-annotations-images/delete-redaction-annotation-annot.png)
@@ -202,6 +201,6 @@ N> Once redactions have been applied to the document, they become part of the PD
 
 ## See Also
 
-* [Mobile Toolbar](../mobile-toolbar)
+* [Mobile Toolbar](../toolbar-customization/mobile-toolbar)
 * [Annotation in Mobile View](../annotation/annotations-in-mobile-view)
-* [Form Designer in Mobile View](../form-designer/formdesigner-in-mobile-view)
+* [Form Designer in Mobile View](../form-designer/form-designer-in-mobile-view)

@@ -65,7 +65,7 @@ Control the transparency using the range slider in the Edit Opacity tool.
 
 ## Setting default properties during the control initialization
 
-Default properties for ink annotations can be configured before rendering the component using InkAnnotationSettings. After interacting with the toolbar, subsequent annotations will use the most recently selected values.
+Default properties for ink annotations can be configured before rendering the component using [InkAnnotationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_InkAnnotationSettings). After interacting with the toolbar, subsequent annotations will use the most recently selected values.
 
 ```cshtml
 

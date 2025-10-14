@@ -19,7 +19,7 @@ Rendering, scrolling, zooming, panning, and printing have been optimized for fas
 
 ## Elimination of Service Dependency
 
-The classic PDF Viewer required a separate [service URL](../blazor/getting-started/web-assembly-application) to load documents. In the [Blazor SfPdfViewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application), documents can be loaded directly without a service URL, enabling offline scenarios and reducing network overhead. Server-side hosting remains supported when needed.
+The classic PDF Viewer required a separate [service URL](./getting-started/web-assembly-application) to load documents. In the [Blazor SfPdfViewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application), documents can be loaded directly without a service URL, enabling offline scenarios and reducing network overhead. Server-side hosting remains supported when needed.
 
 ## Common Package
 
