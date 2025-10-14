@@ -27,22 +27,18 @@ The following software requirements are necessary to run document processing API
 - Web browser: Microsoft Edge, Mozilla Firefox, or Google Chrome
 
 ## Steps to configure and run docker container
-### Step1:
-Install the Rancher desktop application from the official release page: [Rancher Desktop](https://github.com/rancher-sandbox/rancher-desktop/releases)
 
-### Step2:
-Open the Rancher Desktop application and select the displayed option.
+- **Step 1**: Install the Rancher desktop application from the official release page: [Rancher Desktop](https://github.com/rancher-sandbox/rancher-desktop/releases)
+
+- **Step 2**: Open the Rancher Desktop application and select the displayed option.
 ![Docker engine selection in Rancher Desktop](../images/docker-moby.png)
 
-### Step3:
-Create a Smart Pdf Viewer web app sample by following the [documentation](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/web-app).
+- **Step 3**: Create a Smart Pdf Viewer web app sample by following the [documentation](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/web-app).
 
-### Step4:
-Right-click the Smart PDF Viewer web app sample to add Docker support with Linux.
+- **Step 4**: Right-click the Smart PDF Viewer web app sample to add Docker support with Linux.
 ![Add Docker support in project](../images/add-docker-support.png)
 
-### Step5:
-Once the Docker file is added, open the Docker file and add the following line.
+- **Step 5**: Once the Docker file is added, open the Docker file and add the following line.
 
 {% tabs %}
 {% highlight c# tabtitle="Dockerfile" hl_lines="2 4 6" %}
@@ -67,14 +63,13 @@ EXPOSE 8081
 {% endtabs %}
 
 ![Line to add in Dockerfile](../images/line-to-add-docker.png)
+
 N> Remove the `User` if not needed or change the User type to `root` to provide elevated privileges.
 
-### Step6:
-Publish the image by building the DockerFile.
+- **Step 6**: Publish the image by building the DockerFile.
 ![Build Dockerfile in IDE](../images/build-docker.png)
 
-### Step7:
-Open the command prompt or PowerShell and enter the following command to list the published Docker images.
+- **Step 7**: Open the command prompt or PowerShell and enter the following command to list the published Docker images.
 
 {% tabs %}
 {% highlight c# tabtitle="Docker Image" %}
@@ -84,8 +79,7 @@ docker image ls
 {% endhighlight %}
 {% endtabs %}
 
-### Step8:
-To check the published images locally, run the below command which is in the format docker run -d -p 6001:{exposed Port} {Image ID}.
+- **Step 8**: To check the published images locally, run the below command which is in the format docker run -d -p 6001:{exposed Port} {Image ID}.
 
 {% tabs %}
 {% highlight c# tabtitle="Docker Run" %}
@@ -95,8 +89,7 @@ docker run -d -p 6001:8080 4eead1aaf7a5
 {% endhighlight %}
 {% endtabs %}
 
-### Step9:
-Ensure the published image runs as expected by navigating to the hosted link `http://localhost:6001/`.
+- **Step 9**: Ensure the published image runs as expected by navigating to the hosted link `http://localhost:6001/`.
 
 ## See also
 
