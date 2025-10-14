@@ -77,7 +77,7 @@ N> For emulator issues, see Troubleshooting Android Emulator: https://learn.micr
 
 ![Blazor SfPdfViewer rendering in the Android emulator](../getting-started/gettingstarted-images/emulator.png)
 
->[View sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorAndroid).
+>[View sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/MAUI%20Blazor%20App/MauiBlazorAndroid).
 
 ## See also
 
