@@ -14,7 +14,7 @@ The PDF Viewer library allows you to open the thumbnail pane programmatically us
 
 The following steps are used to open the thumbnail.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code snippet to open thumbnail.
 

@@ -2,7 +2,7 @@
 layout: post
 title: Disable thumbnail view in Syncfusion Essential UWP PDF viewer.
 description: Learn here about Disable thumbnail view support in UWP PDF viewer control and how to enable or disable thumbnail view, and more.
-platform: uwp
+platform: document-processing
 control: PDF viewer
 documentation: ug
 ---

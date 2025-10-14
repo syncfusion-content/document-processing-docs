@@ -2,7 +2,7 @@
 layout: post
 title: Load a specific page| PDF Viewer | Wpf | Syncfusion<sup>&reg;</sup>;
 description: Load a specific page in Syncfusion<sup>&reg;</sup>;Essential Studio<sup>&reg;</sup>; WPF PdfViewer Control, its elements, features, and more.
-platform: wpf
+platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---

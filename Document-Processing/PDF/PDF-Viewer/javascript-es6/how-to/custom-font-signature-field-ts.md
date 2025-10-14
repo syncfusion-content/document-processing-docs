@@ -14,7 +14,7 @@ Change the Font Family in Type Signature of the Syncfusion PDF Viewer by adding 
 ### Signature Field property
 The Syncfusion PDF Viewer provides the ability to change the font family for Signature and Initial Field using `typeSignatureFonts` and `typeInitialFonts` property.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Insert the following code snippet to implement the functionality for using custom fonts in Signature field.
 

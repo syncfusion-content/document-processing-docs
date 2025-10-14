@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Retrieving Base64 Value in TypeScript PdfViewer | Syncfusion
-description: Learn how to retrieve the Base64 value of a loaded PDF document in the Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+description: Learn how to retrieve the Base64 value of a loaded PDF document in the Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -17,7 +17,7 @@ This guide demonstrates how to fetch the base64-encoded value of a PDF document 
 
 ### How to Retrieve Base64 Value
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample.
 
 
 **Step 2:** Create a Button in Your HTML File

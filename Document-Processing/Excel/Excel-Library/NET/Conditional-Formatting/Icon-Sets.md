@@ -33,7 +33,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	iconSet.IconCriteria[1].Type = ConditionValueType.Percent;
 	iconSet.IconCriteria[1].Value = "50";
 	iconSet.IconCriteria[2].Type = ConditionValueType.Percent;
-	iconSet.IconCriteria[2].Value = "50";
+	iconSet.IconCriteria[2].Value = "75";
 	iconSet.ShowIconOnly = true;
 
 	#region Save
@@ -67,7 +67,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     iconSet.IconCriteria[1].Type = ConditionValueType.Percent;
     iconSet.IconCriteria[1].Value = "50";
     iconSet.IconCriteria[2].Type = ConditionValueType.Percent;
-    iconSet.IconCriteria[2].Value = "50";
+    iconSet.IconCriteria[2].Value = "75";
     iconSet.ShowIconOnly = true;
 
     //Saving the workbook
@@ -93,7 +93,7 @@ Using excelEngine As New ExcelEngine()
     iconSet.IconCriteria(1).Type = ConditionValueType.Percent
     iconSet.IconCriteria(1).Value = "50"
     iconSet.IconCriteria(2).Type = ConditionValueType.Percent
-    iconSet.IconCriteria(2).Value = "50"
+    iconSet.IconCriteria(2).Value = "75"
     iconSet.ShowIconOnly = True
 
     ' Saving the workbook

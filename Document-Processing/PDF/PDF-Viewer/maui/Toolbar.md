@@ -2,7 +2,7 @@
 layout: post
 title: Working with Toolbar in .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here all about the toolbar in .NET MAUI PDF Viewer (SfPdfViewer) control, its functionalites and more.
-platform: MAUI
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords : .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view

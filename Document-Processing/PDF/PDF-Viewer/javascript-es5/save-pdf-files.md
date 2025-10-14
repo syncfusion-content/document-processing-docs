@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Saving PDF files ##Platform_Name## Pdfviewer control | Syncfusion
-description: This page helps you to learn here all about saving PDF files in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Saving PDF files Javascript Pdfviewer control | Syncfusion
+description: This page helps you to learn here all about saving PDF files in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Saving PDF files
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -19,7 +19,7 @@ Need to save the modified PDF back to a server. To achieve this, proceed with th
 
 **Step 1:** Create a Simple PDF Viewer Sample in JavaScript
 
-Start by following the steps provided in this [link](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in JavaScript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF viewer sample in JavaScript. This will give you a basic setup of the PDF viewer component.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -27,7 +27,7 @@ Start by following the steps provided in this [link](https://ej2.syncfusion.com/
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
-3. Modify the [Download()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#download) method to open it in the viewer using URL
+3. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to open it in the viewer using URL
 
 ```csharp
 public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
@@ -58,7 +58,7 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 
 **Step 3:**  Set the PDF Viewer Properties in React PDF viewer component
 
-Modify the [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load.
+Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load.
 
 ```javascript
 
@@ -102,7 +102,7 @@ If you have plenty of PDF files stored in database and you want to save the upda
 
 **Step 1:** Create a Simple PDF Viewer Sample in JavaScript
 
-Start by following the steps provided in this [link](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in JavaScript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF viewer sample in JavaScript. This will give you a basic setup of the PDF viewer component.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -132,7 +132,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#download) method to open it in the viewer using URL
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to open it in the viewer using URL
 
 ```csharp
 

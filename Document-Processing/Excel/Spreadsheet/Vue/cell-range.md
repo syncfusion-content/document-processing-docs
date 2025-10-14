@@ -25,14 +25,14 @@ The following code example shows the wrap text functionality in spreadsheet.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/wrap-text-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/wrap-text-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/wrap-text-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/wrap-text-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/wrap-text-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/wrap-text-cs1" %}
 
 ### Limitations of Wrap text
 
@@ -64,14 +64,14 @@ The following code example shows the merge cells operation in spreadsheet.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/merge-cells-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/merge-cells-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/merge-cells-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/merge-cells-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/merge-cells-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/merge-cells-cs1" %}
 
 ### Limitations of Merge
 
@@ -124,14 +124,14 @@ You can clear the highlighted invalid data by using the following ways,
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/number-format-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/number-format-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/number-format-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/number-format-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/number-format-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/number-format-cs1" %}
 
 ### Custom Data validation
 
@@ -152,14 +152,14 @@ The following code example demonstrates how to add custom data validation with a
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/data-validation-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/data-validation-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/data-validation-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/data-validation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/data-validation-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/data-validation-cs1" %}
 
 ### Limitations of Data validation
 
@@ -196,18 +196,18 @@ Clear the cell contents and formats in the Spreadsheet document by using the [cl
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/clear-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/clear-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/clear-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/clear-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/clear-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/clear-cs1" %}
 
 ## Note
 
-You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/vue-ui-components/vue-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://ej2.syncfusion.com/vue/demos/#/material/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
 
 ## See Also
 

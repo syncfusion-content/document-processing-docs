@@ -183,7 +183,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 export class AppComponent implements OnInit {
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-  public service: string = "https://services.syncfusion.com/angular/production/api/pdfviewer";
+  public service: string = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
   ngOnInit(): void {
   }
   public documentLoaded(e: LoadEventArgs): void {

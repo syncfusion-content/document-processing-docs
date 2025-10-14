@@ -25,15 +25,15 @@ The following code example shows the wrap text functionality in spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/wrap-text-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/wrap-text-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/wrap-text-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/wrap-text-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/wrap-text-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/wrap-text-cs1" %}
 
 ### Limitations of Wrap text
 
@@ -65,15 +65,15 @@ The following code example shows the merge cells operation in spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/merge-cells-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/merge-cells-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/merge-cells-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/merge-cells-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/merge-cells-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/merge-cells-cs1" %}
 
 ### Limitations of Merge
 
@@ -126,15 +126,15 @@ You can clear the highlighted invalid data by using the following ways,
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/data-validation-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/data-validation-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/data-validation-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/data-validation-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/data-validation-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/data-validation-cs1" %}
 
 ### Custom Data validation
 
@@ -155,15 +155,15 @@ The following code example demonstrates how to add custom data validation with a
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/data-validation-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/data-validation-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/data-validation-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/data-validation-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/data-validation-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/data-validation-cs2" %}
 
 ### Limitations of Data validation
 
@@ -239,15 +239,15 @@ In the following sample, you can enable/disable the fill option on the button cl
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/autofill-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/autofill-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/autofill-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/autofill-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/autofill-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/autofill-cs1" %}
 
 ### Limitations of Autofill
 
@@ -282,19 +282,19 @@ Clear the cell contents and formats in the Spreadsheet document by using the [cl
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/clear-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/clear-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/clear-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/clear-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/clear-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/clear-cs1" %}
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/angular-ui-components/angular-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://ej2.syncfusion.com/angular/demos/#/material/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 

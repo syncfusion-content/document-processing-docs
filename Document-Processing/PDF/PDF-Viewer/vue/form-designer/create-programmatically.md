@@ -146,10 +146,10 @@ export default {
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
+**serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/addformfield-cs1/index.html" %}
 
 ## Edit or update form field programmatically
 
@@ -279,10 +279,10 @@ export default {
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
+**serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/updateformfield-cs1/index.html" %}
 
 ## Delete form field programmatically
 
@@ -411,10 +411,10 @@ export default {
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
+**serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/deleteformfield-cs1/index.html" %}
 
 ## Saving the form fields
 
@@ -516,7 +516,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -554,7 +554,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -676,7 +676,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -715,7 +715,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -878,7 +878,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/form-designer.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -935,7 +935,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
@@ -1012,7 +1012,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/form-designer.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
@@ -1059,7 +1059,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
@@ -1114,7 +1114,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/form-designer.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
@@ -1162,7 +1162,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
@@ -1217,7 +1217,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/form-designer.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
@@ -1264,7 +1264,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
@@ -1330,7 +1330,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
@@ -1390,7 +1390,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/form-designer.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
@@ -1438,7 +1438,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
@@ -1600,7 +1600,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
@@ -1647,7 +1647,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -1896,7 +1896,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
@@ -1954,7 +1954,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -2159,7 +2159,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
@@ -2232,7 +2232,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
     };
   },
   provide: {
@@ -2427,7 +2427,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
@@ -2484,7 +2484,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -2690,7 +2690,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
@@ -2763,7 +2763,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
     };
   },
   provide: {
@@ -2947,7 +2947,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
@@ -2999,7 +2999,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -3177,7 +3177,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
@@ -3239,7 +3239,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
     };
   },
   provide: {
@@ -3412,7 +3412,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
@@ -3464,7 +3464,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -3642,7 +3642,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
@@ -3704,7 +3704,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
     };
   },
   provide: {
@@ -3896,7 +3896,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
@@ -3957,7 +3957,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -4172,7 +4172,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
@@ -4247,7 +4247,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
     };
   },
   provide: {
@@ -4453,7 +4453,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
@@ -4515,7 +4515,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -4731,7 +4731,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
@@ -4807,7 +4807,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
     };
   },
   provide: {

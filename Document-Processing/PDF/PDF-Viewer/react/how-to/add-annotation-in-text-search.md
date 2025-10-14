@@ -16,7 +16,7 @@ This guide demonstrates how to add rectangle annotations based on the bounds of 
 
 ## Steps to Add Rectangle Annotations on Search Result Highlight
 
-**Step 1:** Follow the steps provided in the [Syncfusion<sup style="font-size:70%">&reg;</sup> Getting Started Guide](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started) to set up a basic PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [Syncfusion<sup style="font-size:70%">&reg;</sup> Getting Started Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to set up a basic PDF Viewer sample.
 
 **Step 2:** Set Up the PdfViewer Component to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer.
 

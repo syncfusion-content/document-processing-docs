@@ -7,6 +7,94 @@ documentation: UG
 ---
 # Working with PDF Conformance in File Formats PDF
 
+Essential<sup>&reg;</sup> PDF enables working with PDF Conformance standards such as PDF/A, PDF/X, and PDF/UA to ensure compliance with archival and accessibility requirements.
+
+To quickly get started, work with PDF Conformance standards in .NET using the PDF Library. Please, check this video:
+{% youtube "https://youtu.be/jgvYqQlfs5Q?si=R8RE_KKenGVoFgzX" %}
+
+<b>PDF/A Standards & Conformance Levels Comparison</b>
+
+<table>
+  <thead>
+    <tr>
+      <th>PDF/A Version</th>
+      <th>Based On</th>
+      <th>Conformance Levels</th>
+      <th>Key Features</th>
+      <th>Restrictions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PDF/A-1</td>
+      <td>PDF 1.4</td>
+      <td>a, b</td>
+      <td>Basic archiving, embedded fonts, color profiles</td>
+      <td> No JPEG2000, transparency, layers, or attachments</td>
+    </tr>
+    <tr>
+      <td>PDF/A-2</td>
+      <td>PDF 1.7</td>
+      <td>a, b, u</td>
+      <td>JPEG2000, transparency, layers, PDF/A attachments, digital signatures</td>
+      <td> Only PDF/A files can be attached</td>
+    </tr>
+    <tr>
+      <td>PDF/A-3</td>
+      <td>PDF 1.7</td>
+      <td>a, b, u</td>
+      <td>Same as PDF/A-2 + arbitrary file attachments (e.g., XML, CSV)</td>
+      <td>Risk of compromising archival integrity due to unsupported attachments</td>
+    </tr>
+    <tr>
+      <td>PDF/A-4</td>
+      <td>PDF 2.0</td>
+      <td>e, f</td>
+      <td>RichMedia, 3D annotations, modern engineering workflows</td>
+      <td> No a, b, u levels; encryption and JavaScript still forbidden</td>
+    </tr>
+  </tbody>
+</table>
+
+<b>Conformance Level Details</b>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Name</th>
+      <th>Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>b</td>
+      <td>Basic</td>
+      <td>Ensures visual reproducibility only. Fonts must be embedded.</td>
+    </tr>
+    <tr>
+      <td>a</td>
+      <td>Accessible</td>
+      <td>Includes b + logical structure, tagged content, language metadata, alt text.</td>
+    </tr>
+    <tr>
+      <td>u</td>
+      <td>Unicode</td>
+      <td>Includes b + Unicode mapping for searchable and copyable text.</td>
+    </tr>
+    <tr>
+      <td>e</td>
+      <td>Engineering</td>
+      <td>PDF/A-4 only. Supports RichMedia, 3D, and embedded files for engineering use.</td>
+    </tr>
+    <tr>
+      <td>f</td>
+      <td>File Embedding</td>
+      <td>PDF/A-4 only. Allows embedding of arbitrary file formats.</td>
+    </tr>
+  </tbody>
+</table>
+
 The Essential<sup>&reg;</sup> PDF currently supports the following PDF conformances:
 
 * PDF/A-1a conformance
@@ -1200,10 +1288,20 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## PDF to PDF/A conversion
 
-An existing PDF document can be converted to PDF/A conformance document, by setting the [Conformance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Conformance) value in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) to ```Pdf_A1B```,```Pdf_A2B```,```Pdf_A3B```, and ```Pdf_A4``` of  [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html). Refer to the following code sample to achieve the same.
+An existing PDF document can be converted to a PDF/A conformance document by setting the [Conformance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Conformance) property of the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class to one of the following values from the [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) enumeration:
+
+<b>Available PDF/A Conformance Options:</b>
+* Pdf_A1B
+* Pdf_A2B
+* Pdf_A3B 
+* Pdf_A4
+* Pdf_A4E
+* Pdf_A4F
 
 N> 1.To convert the existing PDF to PDF/A conformance document in .NET Core, you need to add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package from [NuGet.org](https://www.nuget.org/) as a reference in your project.
 N> 2.For Linux environments, refer to the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) for detailed information on the additional NuGet packages required.
+
+Refer to the following code sample to implement this conversion.
 
 {% tabs %}  
 
@@ -1656,3 +1754,76 @@ document.Close(True)
 {% endtabs %}  
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Conformance/Convert-PDFA-to-PDF-document).
+
+<b>Supported PDF standards for creation and conversion</b>
+<table>
+  <thead>
+    <tr>
+      <th>Conformance Level</th>
+      <th>Creation Support</th>
+      <th>Conversion Support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PDF/A-1a</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>PDF/A-1b</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>PDF/X-1a</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>PDF/A-2a</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>PDF/A-2b</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>PDF/A-2u</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>PDF/A-3a</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>PDF/A-3b</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>PDF/A-3u</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>PDF/A-4</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>PDF/A-4e</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>PDF/A-4f</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>

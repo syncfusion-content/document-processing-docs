@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Navigation in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Navigation in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Navigation in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Navigation
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigation in ##Platform_Name## Pdfviewer control
+# Navigation in Javascript Pdfviewer control
 
 The ASP.NET Core PDF Viewer supports different internal and external navigations.
 
@@ -62,7 +62,7 @@ pdfviewer.appendTo('#PdfViewer');
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableNavigation: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -70,7 +70,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/navigation.png)
+![Alt text](./images/navigation.png)
 
 Also, you can programmatically perform page navigation options as follows.
 
@@ -146,7 +146,7 @@ document.getElementById('goToPreviousPage').addEventListener('click', () => {
 
 var viewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  serviceUrl:'https://services.syncfusion.com/js/production/api/pdfviewer'
+  serviceUrl:'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
 });
 ej.pdfviewer.PdfViewer.Inject(
   ej.pdfviewer.Toolbar,
@@ -208,7 +208,7 @@ pdfviewer.appendTo('#PdfViewer');
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableBookmark: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -216,7 +216,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/bookmark.png)
+![Alt text](./images/bookmark.png)
 
 To perform bookmark navigation, you can use the **goToBookmark** method. It's important to note that the **goToBookmark** method will throw an error if the specified bookmark does not exist in the PDF document.
 
@@ -272,7 +272,7 @@ pdfviewer.appendTo('#PdfViewer');
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableThumbnail: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -280,13 +280,13 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/thumbnail.png)
+![Alt text](./images/thumbnail.png)
 
 ## Hyperlink navigation
 
 Hyperlink navigation features enables navigation to the URLs (website links) in a PDF file.
 
-![Alt text](../images/link.png)
+![Alt text](./images/link.png)
 
 ## Table of content navigation
 
@@ -310,7 +310,7 @@ pdfviewer.appendTo('#PdfViewer');
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableHyperlink: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -338,7 +338,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableHyperlink: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
                     hyperlinkOpenState:'NewTab',
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -347,9 +347,9 @@ pdfviewer.appendTo('#PdfViewer');
 {% endtabs %}
 ```
 
-![Alt text](../images/toc.png)
+![Alt text](./images/toc.png)
 
 ## See also
 
-* [Toolbar items](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/toolbar/)
-* [Feature Modules](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/feature-module/)
+* [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/toolbar/)
+* [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/feature-module/)

@@ -66,7 +66,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-    public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   }
 
@@ -148,7 +148,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-    public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
     public printMode: string = "NewWindow";
   }
@@ -224,7 +224,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-    public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 
     ngOnInit(): void {
@@ -308,7 +308,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-    public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
     //pdf with low quality. By changing values you can change the quality of the pdf.
   public printScaleFactor = 0.5;

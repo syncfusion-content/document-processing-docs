@@ -3,7 +3,7 @@ layout: post
 title: Text markup annotation in React Pdfviewer component | Syncfusion
 description: Learn here all about Text markup annotation in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Text markup annotation
-platform: ej2-react
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -97,7 +97,7 @@ function App() {
         <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
           style={{ 'height': '640px' }}>
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
                                   Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
@@ -185,7 +185,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -274,7 +274,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -371,7 +371,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -458,7 +458,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
                                   Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
@@ -547,7 +547,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -645,7 +645,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -735,7 +735,7 @@ function App() {
         <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
           style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -825,7 +825,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -923,7 +923,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -1013,7 +1013,7 @@ function App() {
         <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
           style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -1103,7 +1103,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -1212,7 +1212,7 @@ function App() {
         <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
           style={{ 'height': '640px' }}
           highlightSettings = {{author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: ''}}
           underlineSettings = {{author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9,modifiedDate: ''}}
@@ -1321,7 +1321,7 @@ function App() {
         <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
           style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -1404,7 +1404,7 @@ function App() {
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
           enableTextMarkupAnnotation = {false}
-          serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
           style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,

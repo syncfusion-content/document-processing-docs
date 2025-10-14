@@ -4,7 +4,6 @@ title: Auto Save Document in Document Editor Component | Syncfusion
 description: Learn here all about Auto save document in document editor in Syncfusion Document Editor component of syncfusion and more.
 platform: document-processing
 control: Auto Save Document In Document Editor
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -20,10 +19,10 @@ The following example illustrates how to auto save the document in server.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/auto-save-server/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/auto-save-server/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/auto-save-server/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/auto-save-server/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -48,4 +47,4 @@ public string AutoSave()
 ```
 
 ## See Also
-* [AutoSave document in DocumentEditor](../../asp-net-core/how-to/auto-save-document-in-document-editor)
+* [AutoSave document in DocumentEditor](./auto-save-document-in-document-editor)

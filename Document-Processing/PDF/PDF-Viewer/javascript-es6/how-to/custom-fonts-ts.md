@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Add Custom fonts in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about how to add custom fonts using the PDF document in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Add Custom fonts in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about how to add custom fonts using the PDF document in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -38,7 +38,7 @@ pdfviewer.appendTo('#PdfViewer');
 let viewer: PdfViewer = new PdfViewer();
 PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields);
 viewer.documentPath= 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-viewer.serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer';
+viewer.serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 viewer.customFonts: ["arialbd.ttf", "arial.ttf", "BKANT.TTF", "calibri.ttf", "GARA.TTF", "GARAIT.TTF", "msgothic.ttc", "trebuc.ttf", "wingding.ttf"];
 
 

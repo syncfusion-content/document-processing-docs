@@ -27,14 +27,14 @@ Using addFormField method, the form fields can be added to the PDF document prog
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/pdfviewer/addformfield-cs2/app-composition.vue %}
+{% include code-snippet/pdfviewer/vue/addformfield-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/pdfviewer/addformfield-cs2/app.vue %}
+{% include code-snippet/pdfviewer/vue/addformfield-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs2" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/addformfield-cs2/index.html" %}
 
 ## Edit/Update form field programmatically
 
@@ -42,14 +42,14 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/pdfviewer/updateformfield-cs2/app-composition.vue %}
+{% include code-snippet/pdfviewer/vue/updateformfield-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/pdfviewer/updateformfield-cs2/app.vue %}
+{% include code-snippet/pdfviewer/vue/updateformfield-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs2" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/updateformfield-cs2/index.html" %}
 
 ## Delete form field programmatically
 
@@ -57,14 +57,14 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/pdfviewer/deleteformfield-cs2/app-composition.vue %}
+{% include code-snippet/pdfviewer/vue/deleteformfield-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/pdfviewer/deleteformfield-cs2/app.vue %}
+{% include code-snippet/pdfviewer/vue/deleteformfield-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs2" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/deleteformfield-cs2/index.html" %}
 
 ## Saving the form fields
 
@@ -96,7 +96,7 @@ import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "PDF_Succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -135,7 +135,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "PDF_Succinctly.pdf"
     };
   },
@@ -184,7 +184,7 @@ import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "PDF_Succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
@@ -223,7 +223,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "PDF_Succinctly.pdf"
     };
   },

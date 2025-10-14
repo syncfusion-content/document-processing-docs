@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Shape annotation in ##Platform_Name## PDF Viewer control | Syncfusion
-description: Learn here all about Shape annotation in Syncfusion ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Shape annotation in Javascript PDF Viewer control | Syncfusion
+description: Learn here all about Shape annotation in Syncfusion Javascript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shape annotation in ##Platform_Name## PDF Viewer control
+# Shape annotation in Javascript PDF Viewer control
 
 The PDF Viewer control provides the options to add, edit, and delete the shape annotations. The shape annotation types supported in the PDF Viewer control are:
 
@@ -65,7 +65,7 @@ if (circleAnnotationButton) {
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -85,7 +85,7 @@ if (circleAnnotationButton) {
 
 ## Adding a Shape annotation to the PDF document Programmatically
 
-With the PDF Viewer library, you can add a Shape annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
+With the PDF Viewer library, you can add a Shape annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
 
 Here's a example of how you can utilize the **addAnnotation()** method to include a Shape annotation programmatically:
 
@@ -179,7 +179,7 @@ if (addPolygonAnnotation) {
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl : "https://services.syncfusion.com/js/production/api/pdfviewer",
+                    serviceUrl : "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -367,7 +367,7 @@ if (editPolygonAnnotation) {
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl : "https://services.syncfusion.com/js/production/api/pdfviewer",
+                    serviceUrl : "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -520,7 +520,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
                     lineSettings : {fillColor: 'blue', opacity: 0.6, strokeColor: 'green'},
                     arrowSettings : {fillColor: 'green', opacity: 0.6, strokeColor: 'blue'},
                     rectangleSettings : {fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'},

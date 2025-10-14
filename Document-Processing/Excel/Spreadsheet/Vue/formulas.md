@@ -32,18 +32,18 @@ In the example below, the Spreadsheet component is rendered with the `German cul
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/formula-cs3/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/formula-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/formula-cs3/app.vue %}
+{% include code-snippet/spreadsheet/vue/formula-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/formula-cs3" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/formula-cs3" %}
 
 ## Create User Defined Functions / Custom Functions
 
-The Spreadsheet includes a number of built-in formulas. For your convenience, a list of supported formulas can be found [here](https://ej2.syncfusion.com/vue/documentation/spreadsheet/formulas#supported-formulas).
+The Spreadsheet includes a number of built-in formulas. For your convenience, a list of supported formulas can be found [here](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/formulas#supported-formulas).
 
 You can define and use an unsupported formula, i.e. a user defined/custom formula, in the spreadsheet by using the [addCustomFunction](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#addcustomfunction) function. Meanwhile, remember that you should define a user defined/custom formula whose results should only return a single value. If a user-defined/custom formula returns an array, it will be time-consuming to update adjacent cell values.
 
@@ -51,14 +51,14 @@ The following code example shows an unsupported formula in the spreadsheet.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/formula-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/formula-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/formula-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/formula-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/formula-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/formula-cs1" %}
 
 Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
 
@@ -66,14 +66,14 @@ The following code example shows how to use `computeExpression` method in the sp
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/formula-cs2/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/formula-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/formula-cs2/app.vue %}
+{% include code-snippet/spreadsheet/vue/formula-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/formula-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/formula-cs2" %}
 
 ## Formula bar
 
@@ -92,14 +92,14 @@ The following code example shows the usage of named ranges support.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/defined-name-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/defined-name-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/defined-name-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/defined-name-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/defined-name-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/defined-name-cs1" %}
 
 ## Calculation Mode
 
@@ -120,14 +120,14 @@ The following code example demonstrates how to set the Automatic calculation mod
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/calculation-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/calculation-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/calculation-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/calculation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/calculation-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/calculation-cs1" %}
 
 ### Manual Mode
 
@@ -142,18 +142,18 @@ The following code example demonstrates how to set the Manual calculation mode i
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/calculation-cs2/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/calculation-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/calculation-cs2/app.vue %}
+{% include code-snippet/spreadsheet/vue/calculation-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/calculation-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/calculation-cs2" %}
 
 ## Supported Formulas
 
-The list of supported formulas can be find in following [`link`](https://ej2.syncfusion.com/documentation/spreadsheet/formulas#supported-formulas).
+The list of supported formulas can be find in following [`link`](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/formulas#supported-formulas).
 
 ## Formula Error Dialog
 
@@ -175,7 +175,7 @@ If you enter an invalid formula in a cell, an error dialog with an error message
 
 ## Note
 
-You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/vue-ui-components/vue-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://ej2.syncfusion.com/vue/demos/#/material/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
 
 ## See Also
 

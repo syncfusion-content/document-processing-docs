@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Content Security Policy in  ##Platform_Name## Common control | Syncfusion
-description: Learn here all about Content Security Policy in Syncfusion  ##Platform_Name##  Common control of Syncfusion Essential JS 2 and more.
+title: Content Security Policy in  Javascript Common control | Syncfusion
+description: Learn here all about Content Security Policy in Syncfusion  Javascript  Common control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 ---
 

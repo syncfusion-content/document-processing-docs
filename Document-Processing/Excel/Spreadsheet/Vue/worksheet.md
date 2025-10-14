@@ -23,14 +23,14 @@ The following code example shows the insert sheet operation in spreadsheet.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/insert-sheet-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/insert-sheet-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/insert-sheet-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/insert-sheet-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/insert-sheet-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/insert-sheet-cs1" %}
 
 ### Insert a sheet programmatically and make it active sheet
 
@@ -40,14 +40,14 @@ The following code example shows how to insert a sheet programmatically and make
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/insert-sheet-change-active-sheet-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/insert-sheet-change-active-sheet-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/insert-sheet-change-active-sheet-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/insert-sheet-change-active-sheet-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/insert-sheet-change-active-sheet-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/insert-sheet-change-active-sheet-cs1" %}
 
 ## Delete sheet
 
@@ -80,14 +80,14 @@ The following code example shows the headers and gridlines operation in spreadsh
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/header-gridlines-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/header-gridlines-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/header-gridlines-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/header-gridlines-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/header-gridlines-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/header-gridlines-cs1" %}
 
 ## Sheet visibility
 
@@ -105,18 +105,18 @@ The following code example shows the three types of sheet visibility state.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/sheet-visiblity-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/sheet-visiblity-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/sheet-visiblity-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/sheet-visiblity-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/sheet-visiblity-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/sheet-visiblity-cs1" %}
 
 ## Note
 
-You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/vue-ui-components/vue-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://ej2.syncfusion.com/vue/demos/#/material/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
 
 ## See Also
 

@@ -2,7 +2,7 @@
 layout: post
 title: Magnification in .NET MAUI PDF Viewer control | Syncfusion
 description: Learn to use magnification in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer including zoom factor control and zoom mode options.
-platform: MAUI
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view.

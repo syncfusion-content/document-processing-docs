@@ -4,7 +4,6 @@ title: Scrolling Zooming in Document Editor Component
 description: Learn here all about scrolling zooming in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Scrolling Zooming
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -16,10 +15,10 @@ The Document editor renders the document page by page. You can scroll through th
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/scrolling-page/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/scrolling-page/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/scrolling-page/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/scrolling-page/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -31,10 +30,10 @@ In case, if you wish to move the selection to any page in document editor and br
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/scrolling-goto-page/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/scrolling-goto-page/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/scrolling-goto-page/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/scrolling-goto-page/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -47,7 +46,7 @@ You can scale the contents in document editor ranging from 10% to 500% of the ac
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/scrolling-zooming/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/scrolling-zooming/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Scrolling-zooming.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -60,7 +59,7 @@ Apart from specifying the zoom factor as value, the Document editor provides opt
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/scrolling-page-fit/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/scrolling-page-fit/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Scrolling-page-fit.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -71,10 +70,10 @@ Apart from specifying the zoom factor as value, the Document editor provides opt
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/scrolling-status-bar/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/scrolling-status-bar/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/scrolling-status-bar/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/scrolling-status-bar/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

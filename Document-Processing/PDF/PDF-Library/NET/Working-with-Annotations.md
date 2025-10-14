@@ -2887,6 +2887,125 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Get-annotation-creation-date-from-PDF/.NET).
 
+### Retrieving custom values from PDF annotations
+
+The Essential&reg; PDF supports retrieving custom values from annotations using the [TryGetValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_TryGetValue_System_String_System_Object__) method available in the [PdfLoadedAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html) class. This method allows developers to safely access custom properties embedded within a PDF annotation without throwing exceptions if the specified key is missing. 
+
+Refer to the code snippet below to retrieve a custom value from an annotation using the TryGetValue method.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the PDF document using a file stream
+FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+
+// Get the first page of the document
+PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
+
+// Get the annotation collection from the page
+PdfLoadedAnnotationCollection annotations = page.Annotations;
+
+// Get the first annotation (assumed to be a rectangle annotation)
+PdfLoadedRectangleAnnotation annot = annotations[0] as PdfLoadedRectangleAnnotation;
+
+// Try to get the custom value "Subtype" from the annotation
+object values;
+bool foundValue = annot.TryGetValue("Subtype", out values);
+
+// Check and print the values if found
+if (foundValue && values is List<string> stringValues)
+{
+    foreach (string value in stringValues)
+    {
+        // Print the custom value to the console
+        Console.WriteLine($"Found Subtype value: {value}");
+    }
+}
+else
+{
+    Console.WriteLine("Subtype value not found.");
+}
+// Close the document and release resources
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the PDF document using a file stream
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+// Get the first page of the document
+PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
+
+// Get the annotation collection from the page
+PdfLoadedAnnotationCollection annotations = page.Annotations;
+
+// Get the first annotation (assumed to be a rectangle annotation)
+PdfLoadedRectangleAnnotation annot = annotations[0] as PdfLoadedRectangleAnnotation;
+
+// Try to get the custom value "Subtype" from the annotation
+object values;
+bool foundValue = annot.TryGetValue("Subtype", out values);
+
+// Check and print the values if found
+if (foundValue && values is List<string> stringValues)
+{
+    foreach (string value in stringValues)
+    {
+        // Print the custom value to the console
+        Console.WriteLine($"Found Subtype value: {value}");
+    }
+}
+else
+{
+    Console.WriteLine("Subtype value not found.");
+}
+// Close the document and release resources
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document using a file stream
+Dim docStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+Dim loadedDocument As New PdfLoadedDocument(docStream)
+
+' Get the first page of the document
+Dim page As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
+
+' Get the annotation collection from the page
+Dim annotations As PdfLoadedAnnotationCollection = page.Annotations
+
+' Get the first annotation (assumed to be a rectangle annotation)
+Dim annot As PdfLoadedRectangleAnnotation = TryCast(annotations(0), PdfLoadedRectangleAnnotation)
+
+' Try to get the custom value "Subtype" from the annotation
+Dim values As Object = Nothing
+Dim foundValue As Boolean = annot.TryGetValue("Subtype", values)
+
+' Check and print the values if found
+If foundValue AndAlso TypeOf values Is List(Of String) Then
+    Dim stringValues As List(Of String) = CType(values, List(Of String))
+    For Each value As String In stringValues
+        ' Print the custom value to the console
+        Console.WriteLine($"Found Subtype value: {value}")
+    Next
+Else
+    Console.WriteLine("Subtype value not found.")
+End If
+
+' Close the document and release resources
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Removing annotations from an existing PDF 
 
 You can remove the annotation from the annotation collection, represented by the [PdfLoadedAnnotationCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html) of the loaded page. The following code illustrates this.
@@ -5670,6 +5789,253 @@ ldoc.Close(True)
 {% endhighlight %}
 {% endtabs %}
 
+## Multi-line text redaction
+
+The Essential&reg; PDF provides support for Quad Points, allowing users to select and redact multiple lines of text within a PDF document. This is achieved by setting the BoundsCollection property through the [PdfRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html) class.
+
+Refer to the following code example to achieve the same.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document. 
+PdfDocument document = new PdfDocument(); 
+//Create a new page. 
+PdfPage page = document.Pages.Add(); 
+//Creates a new Redaction annotation. 
+PdfRedactionAnnotation annot = new PdfRedactionAnnotation(); 
+
+//set the bounds collection of redaction annotation. 
+List<RectangleF> bounds = new List<RectangleF>(); 
+bounds.Add(new RectangleF(100, 100, 50, 20)); 
+bounds.Add(new RectangleF(200, 150, 60, 25)); 
+annot.BoundsCollection = bounds; 
+
+//set the innercolor 
+annot.InnerColor = Color.Black; 
+//set the bordercolor 
+annot.BorderColor = Color.Green; 
+//set the textcolor 
+annot.TextColor = Color.Yellow; 
+//set the font 
+annot.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 10); 
+//set overlaytext 
+annot.OverlayText = "Redact"; 
+//set text alignment 
+annot.TextAlignment = PdfTextAlignment.Right; 
+//Assign the RepeatText 
+annot.RepeatText = true; 
+
+//Add the annotation to the page. 
+page.Annotations.Add(annot);
+
+//Save the document into stream.		 
+MemoryStream stream = new MemoryStream();		 
+document.Save(stream); 
+//Close the document. 	 
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document. 
+PdfDocument document = new PdfDocument(); 
+//Create a new page. 
+PdfPage page = document.Pages.Add(); 
+//Creates a new Redaction annotation. 
+PdfRedactionAnnotation annot = new PdfRedactionAnnotation(); 
+
+//set the bounds collection of redaction annotation. 
+List<RectangleF> bounds = new List<RectangleF>(); 
+bounds.Add(new RectangleF(100, 100, 50, 20)); 
+bounds.Add(new RectangleF(200, 150, 60, 25)); 
+annot.BoundsCollection = bounds; 
+
+//set the innercolor 
+annot.InnerColor = Color.Black; 
+//set the bordercolor 
+annot.BorderColor = Color.Green; 
+//set the textcolor 
+annot.TextColor = Color.Yellow; 
+//set the font 
+annot.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 10); 
+//set overlaytext 
+annot.OverlayText = "Redact"; 
+//set text alignment 
+annot.TextAlignment = PdfTextAlignment.Right; 
+//Assign the RepeatText 
+annot.RepeatText = true; 
+
+//Add the annotation to the page. 
+page.Annotations.Add(annot);
+
+//Save the document		 
+document.Save("Output.pdf"); 
+//Close the document. 	 
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document.
+Dim document As New PdfDocument()
+' Create a new page.
+Dim page As PdfPage = document.Pages.Add()
+' Create a new Redaction annotation.
+Dim annot As New PdfRedactionAnnotation()
+
+' Set the bounds collection of redaction annotation.
+Dim bounds As New List(Of RectangleF)()
+bounds.Add(New RectangleF(100, 100, 50, 20))
+bounds.Add(New RectangleF(200, 150, 60, 25))
+annot.BoundsCollection = bounds
+
+' Set the inner color.
+annot.InnerColor = Color.Black
+' Set the border color.
+annot.BorderColor = Color.Green
+' Set the text color.
+annot.TextColor = Color.Yellow
+' Set the font.
+annot.Font = New PdfStandardFont(PdfFontFamily.Helvetica, 10)
+' Set overlay text.
+annot.OverlayText = "Redact"
+' Set text alignment.
+annot.TextAlignment = PdfTextAlignment.Right
+' Assign the RepeatText.
+annot.RepeatText = True
+
+' Add the annotation to the page.
+page.Annotations.Add(annot)
+
+' Save the document.
+document.Save("Output.pdf")
+' Close the document.
+document.Close(True)
+
+{% endhighlight %}
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
+## Adding quad points to existing redaction annotations
+
+The Essential&reg; PDF allows users to enhance redaction annotations in existing PDF documents by adding Quad Point support. This is done by setting the BoundsCollection property in the [PdfLoadedRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedRedactionAnnotation.html) class, enabling more precise redaction across multiple lines of text. 
+
+Refer to the following code example to apply the BoundsCollection property to a loaded redaction annotation.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read); 
+PdfLoadedDocument document = new PdfLoadedDocument(docStream); 
+//Load the existing PdfLoadedRedactionAnnotation 
+PdfLoadedRedactionAnnotation annot = document.Pages[0].Annotations[0] as PdfLoadedRedactionAnnotation; 
+
+//set the bounds 
+List<RectangleF> bounds = new List<RectangleF>(); 
+bounds.Add(new RectangleF(100, 100, 50, 20)); 
+bounds.Add(new RectangleF(200, 150, 60, 25)); 
+annot.BoundsCollection = bounds; 
+
+//set the inner color 
+annot.InnerColor = Color.Black; 
+//set the border color 
+annot.BorderColor = Color.Green; 
+//set the text color 
+annot.TextColor = Color.Yellow; 
+//set the font 
+annot.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 10); 
+//set overlay text 
+annot.OverlayText = "Redact"; 
+//set text alignment 
+annot.TextAlignment = PdfTextAlignment.Center; 
+annot.RepeatText = true; 
+  
+//Save the document into stream  
+MemoryStream stream = new MemoryStream();  
+document.Save(stream);  
+//Close the document  
+document.Close(true);  
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load an existing document. 
+PdfLoadedDocument document = new PdfLoadedDocument(@"Input.pdf"); 
+//Load the existing PdfLoadedRedactionAnnotation 
+PdfLoadedRedactionAnnotation annot = document.Pages[0].Annotations[0] as PdfLoadedRedactionAnnotation; 
+
+//set the bounds 
+List<RectangleF> bounds = new List<RectangleF>(); 
+bounds.Add(new RectangleF(100, 100, 50, 20)); 
+bounds.Add(new RectangleF(200, 150, 60, 25)); 
+annot.BoundsCollection = bounds; 
+
+//set the inner color 
+annot.InnerColor = Color.Black; 
+//set the border color 
+annot.BorderColor = Color.Green; 
+//set the text color 
+annot.TextColor = Color.Yellow; 
+//set the font 
+annot.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 10); 
+//set overlay text 
+annot.OverlayText = "Redact"; 
+//set text alignment 
+annot.TextAlignment = PdfTextAlignment.Center; 
+annot.RepeatText = true; 
+  
+//Save the document into stream  
+document.Save("Output.pdf");  
+//Close the document  
+document.Close(true);  
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load an existing document.
+Dim document As New PdfLoadedDocument("Input.pdf")
+' Load the existing PdfLoadedRedactionAnnotation.
+Dim annot As PdfLoadedRedactionAnnotation = TryCast(document.Pages(0).Annotations(0), PdfLoadedRedactionAnnotation)
+
+' Set the bounds.
+Dim bounds As New List(Of RectangleF)()
+bounds.Add(New RectangleF(100, 100, 50, 20))
+bounds.Add(New RectangleF(200, 150, 60, 25))
+annot.BoundsCollection = bounds
+
+' Set the inner color.
+annot.InnerColor = Color.Black
+' Set the border color.
+annot.BorderColor = Color.Green
+' Set the text color.
+annot.TextColor = Color.Yellow
+' Set the font.
+annot.Font = New PdfStandardFont(PdfFontFamily.Helvetica, 10)
+' Set overlay text.
+annot.OverlayText = "Redact"
+' Set text alignment.
+annot.TextAlignment = PdfTextAlignment.Center
+' Repeat the overlay text.
+annot.RepeatText = True
+
+' Save the document.
+document.Save("Output.pdf")
+' Close the document.
+document.Close(True)
+
+{% endhighlight %}
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Printing Annotations
 
 The Essential&reg; PDF supports printing the annotation in a PDF document by setting the annotation flag to ```Print``` using the [AnnotationFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedStyledAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedStyledAnnotation_AnnotationFlags) property.
@@ -5832,8 +6198,7 @@ freeText.SetAppearance(true);
 </tr>
 </table>
 
-
-## Missing annotation after importing the data into the PDF document
+<b> Missing annotation after importing the data into the PDF document</b>
 
 <table>
 <th style="font-size:14px" width="100px">Issue</th>

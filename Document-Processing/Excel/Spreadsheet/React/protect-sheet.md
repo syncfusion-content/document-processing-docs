@@ -46,20 +46,20 @@ The following example shows `Protect Sheet` functionality in the Spreadsheet con
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/protect-sheet-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/protect-sheet-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/protect-sheet-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/protect-sheet-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/protect-sheet-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/protect-sheet-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/protect-sheet-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/protect-sheet-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/protect-sheet-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/protect-sheet-cs1" %}
 
 ### Limitations of Protect sheet
 
@@ -83,20 +83,20 @@ In protected spreadsheet, to make some particular cell or range of cells are edi
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/unlock-cells-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/unlock-cells-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/unlock-cells-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/unlock-cells-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/unlock-cells-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/unlock-cells-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/unlock-cells-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/unlock-cells-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/unlock-cells-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/unlock-cells-cs1" %}
 
 ## Make cells read-only without protecting worksheet
 
@@ -152,20 +152,20 @@ The following example demonstrates how to make rows, columns, and cells read-onl
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/readonly-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/readonly-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/readonly-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/readonly-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/readonly-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/readonly-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/readonly-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/readonly-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/readonly-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/readonly-cs1" %}
 
 ## Protect Workbook
 
@@ -181,39 +181,39 @@ The following example shows `Protect Workbook` by using the [`isProtected`](http
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs3/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/local-data-binding-cs3/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs3/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/local-data-binding-cs3/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs3/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/local-data-binding-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs3/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/local-data-binding-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/local-data-binding-cs3" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/local-data-binding-cs3" %}
 
 The following example shows `Protect Workbook` by using the [`password`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#password) property in the Spreadsheet control. To unprotect the workbook, click the unprotect workbook button in the data tab and provide the password as syncfusion<sup style="font-size:70%">&reg;</sup> in the dialog box.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs4/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/local-data-binding-cs4/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs4/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/local-data-binding-cs4/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs4/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/local-data-binding-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs4/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/local-data-binding-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/local-data-binding-cs4" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/local-data-binding-cs4" %}
 
 ## Unprotect Workbook
 
@@ -227,7 +227,7 @@ In the active Spreadsheet, the workbook Unprotection can be done in any of the f
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-ui-components/react-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://ej2.syncfusion.com/react/demos/#/material/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 

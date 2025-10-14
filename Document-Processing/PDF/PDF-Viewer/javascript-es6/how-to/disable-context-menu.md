@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Disable context menu in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Disable context menu in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Disable context menu in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Disable context menu in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Disable context menu
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable context menu in ##Platform_Name## Pdfviewer control
+# Disable context menu in Typescript Pdfviewer control
 
-To disable the context menu in the Syncfusion PDF viewer control, you can use the [**ContextMenuOption**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#contextmenuoption) property as `'None'` to hide all context menu options. Default value of the **ContextMenuOption** is `'RightClick'`.
+To disable the context menu in the Syncfusion PDF viewer control, you can use the [**ContextMenuOption**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#contextmenuoption) property as `'None'` to hide all context menu options. Default value of the **ContextMenuOption** is `'RightClick'`.
 
 Here is an example of how you can use the **ContextMenuOption** to disable context menu in the PDF Viewer:
 

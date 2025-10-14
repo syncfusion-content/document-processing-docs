@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Extract Text in Syncfusion ##Platform_Name## Pdfviewer Control | Syncfusion
+title: Extract Text in Syncfusion Javascript Pdfviewer Control | Syncfusion
 description: Learn about the Extract Text in Syncfusion #Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Extract Text
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---

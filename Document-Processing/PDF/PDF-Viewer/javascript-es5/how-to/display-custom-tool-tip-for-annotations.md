@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Display custom tool tip for annotations in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Display custom tool tip for annotations in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Display custom tool tip for annotations in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Display custom tool tip for annotations in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Display custom tool tip for annotations
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Display custom tool tip for annotations in ##Platform_Name## Pdfviewer control
+# Display custom tool tip for annotations in Javascript Pdfviewer control
 
-To display a custom tooltip for annotations using the mouseover event in the Syncfusion PDF Viewer, you can use the [**annotationMouseOver**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#annotationmouseover) and **annotationMouseLeave** events .
+To display a custom tooltip for annotations using the mouseover event in the Syncfusion PDF Viewer, you can use the [**annotationMouseOver**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationmouseover) and **annotationMouseLeave** events .
 
 Here is an example that demonstrates how to display a custom tooltip for annotations using the mouseover event in the Syncfusion PDF Viewer:
 

@@ -2,7 +2,7 @@
 layout: post
 title:  Working with magnification in PDF Viewer Xamarin.Android | Syncfusion
 description: The PDF Viewer allows the users to magnify the PDF documents in multiple ways like setting maximum, minimum and custom zoom percentage.
-platform: Xamarin.Android
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

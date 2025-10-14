@@ -14,7 +14,7 @@ The PDF Viewer library allows you to extract the text from a page along with the
 
 The following steps are used to extract the text from the page.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** The following code snippet explains how to extract the text from a page .
 

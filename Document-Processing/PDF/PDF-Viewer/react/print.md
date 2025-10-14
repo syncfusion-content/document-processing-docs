@@ -60,7 +60,7 @@ function App() {
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enablePrint={true}
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -137,7 +137,7 @@ function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
             <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -216,7 +216,7 @@ function App() {
         enablePrint={true}
         {/* pdf with low quality. By changing values you can change the quality of the pdf. */}
         printScaleFactor= {0.5};
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,

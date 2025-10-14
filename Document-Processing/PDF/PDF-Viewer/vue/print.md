@@ -46,7 +46,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, Annotati
 PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation, Annotation, ThumbnailView,BookmarkView, TextSelection);
 
 let pdfviewer: PdfViewer = new PdfViewer({enablePrint: true, documentPath:'PDF_Succinctly.pdf'});
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/vue/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
 pdfviewer.appendTo('#PdfViewer');
 
 ```
@@ -150,7 +150,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
@@ -187,7 +187,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -324,7 +324,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
@@ -363,7 +363,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       //By Changing the printScaleFactor value we can adjust the quality of the PDF file.
       printScaleFactor: 0.5,

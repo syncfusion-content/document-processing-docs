@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Open PDF files from Box cloud file storage in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Open PDF files from Box cloud file storage in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Open PDF files from Box cloud file storage in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Open PDF files from Box cloud file storage in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open PDF files from Box cloud file storage
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -19,7 +19,7 @@ To access Box storage programmatically, you'll need a developer account with Box
 
 **Step 2:** Create a Simple PDF Viewer Sample in Typescript
 
-Start by following the steps provided in this [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
 
 **Step 3:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -57,7 +57,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from Box cloud file storage.
+5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from Box cloud file storage.
 
 ```csharp
 [HttpPost("Load")]

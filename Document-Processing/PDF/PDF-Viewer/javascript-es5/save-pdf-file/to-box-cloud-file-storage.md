@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Save PDF files to Box cloud file storage in ##Platform_Name## Pdfviewer control | Syncfusion
-description:  Learn about how to Save PDF files to Box cloud file storage in ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more details.
+title: Save PDF files to Box cloud file storage in Javascript Pdfviewer control | Syncfusion
+description:  Learn about how to Save PDF files to Box cloud file storage in Javascript Pdfviewer control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save PDF files to Box cloud file storage
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -19,7 +19,7 @@ To access Box storage programmatically, you'll need a developer account with Box
 
 **Step 2:** Create a PDF Viewer sample in JavaScript
 
-Follow the instructions provided in this [link](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample in JavaScript. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF Viewer sample in JavaScript. This will set up the basic structure of your PDF Viewer application.
 
 **Step 3:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -57,7 +57,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF files to Box cloud file storage bucket
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF files to Box cloud file storage bucket
 
 ```csharp
 [HttpPost("Download")]
@@ -118,7 +118,7 @@ N> replace **Your_Box_Storage_Access_Token** with your actual box access token, 
 
 **Step 4:**  Set the PDF Viewer Properties in JavaScript PDF viewer component
 
-Modify the [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Box cloud file storage. Ensure that you correctly pass the document name from the files available in your box folder to the documentPath property.
+Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Box cloud file storage. Ensure that you correctly pass the document name from the files available in your box folder to the documentPath property.
 
 ```javascript
 
@@ -138,6 +138,6 @@ viewer.load('PDF_Succinctly.pdf', null);
 
 N> The **Box.V2.Core** NuGet package must be installed in your application to use the previous code example.
 
-N> Replace `PDF_Succinctly.pdf` with the actual document name that you want to load from Box cloud file storage. Make sure to pass the document name from the box folder to the [documentPath](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#documentpath) property of the PDF viewer component
+N> Replace `PDF_Succinctly.pdf` with the actual document name that you want to load from Box cloud file storage. Make sure to pass the document name from the box folder to the [documentPath](https://ej2.syncfusion.com/documentation/api/pdfviewer/#documentpath) property of the PDF viewer component
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-box-cloud-file-storage)

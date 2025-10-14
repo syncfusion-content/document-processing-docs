@@ -4,7 +4,6 @@ title: Hide the default tool bar and properties pane in Document Editor Componen
 description: Learn how to hide the default tool bar properties pane from the Syncfusion Document Editor Component
 platform: document-processing
 control: Hide The Default Tool Bar And Properties Pane
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -48,4 +47,4 @@ The following example code illustrates how to hide the existing toolbar.
 
 ## See Also
 
-* [How to customize the toolbar](../../asp-net-core/how-to/customize-tool-bar)
+* [How to customize the toolbar](./customize-tool-bar)

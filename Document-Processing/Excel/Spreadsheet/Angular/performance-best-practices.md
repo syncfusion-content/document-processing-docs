@@ -9,7 +9,7 @@ documentation: ug
 
 # Performance Best Practices in Angular Spreadsheet Component
 
-Performance optimization is crucial when working with large datasets in the [Syncfusion® Angular Spreadsheet](https://www.syncfusion.com/angular-components/angular-spreadsheet). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
+Performance optimization is crucial when working with large datasets in the [Syncfusion® Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
 
 ## How to improve performance when opening Excel files in the Spreadsheet?
 
@@ -19,7 +19,7 @@ Virtual scrolling is an essential performance feature in the Angular Spreadsheet
 
 This approach significantly reduces initial load time, DOM size, and memory usage — resulting in smoother rendering and interaction, especially when working with thousands of rows or columns.
 
-For more details, refer to the [virtual scrolling documentation](https://ej2.syncfusion.com/angular/documentation/spreadsheet/scrolling#virtual-scrolling).
+For more details, refer to the [virtual scrolling documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/scrolling#virtual-scrolling).
 
 ### Chunk response processing
 
@@ -28,7 +28,7 @@ When opening large Excel files with extensive data and features, server response
 These chunks are combined on the client side to load the Excel data smoothly into the Spreadsheet. This approach avoids transmission failures due to memory constraints and ensures reliable and efficient loading of large files.
 
 To enable the chunk response processing feature, you can refer to the following UG section:
-* [Chunk Response Processing](https://ej2.syncfusion.com/angular/documentation/spreadsheet/open-save#chunk-response-processing)
+* [Chunk Response Processing](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/open-save#chunk-response-processing)
 
 ### Configure JSON serialization options during open
 
@@ -41,7 +41,7 @@ This is particularly useful when:
 
 Refer to the following UG section to learn how to configure these options:
 
-* [Configure JSON serialization options during open](https://ej2.syncfusion.com/angular/documentation/spreadsheet/open-save#configure-json-deserialization-options)
+* [Configure JSON serialization options during open](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/open-save#configure-json-deserialization-options)
 
 ### Configuring threshold limits
 
@@ -96,7 +96,7 @@ Enabling manual mode is highly beneficial when:
 * Applying formulas dynamically to a large number of cells.
 * You want to postpone calculations until all content or changes are finalized.
 
-To learn more about Manual Calculation Mode and how to enable it, you can refer to the following [UG link](https://ej2.syncfusion.com/angular/documentation/spreadsheet/formulas#manual-mode).
+To learn more about Manual Calculation Mode and how to enable it, you can refer to the following [UG link](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/formulas#manual-mode).
 
 ## How to improve save performance in the Spreadsheet?
 
@@ -134,8 +134,8 @@ export class AppComponent {
     }
     @ViewChild('default')
     public spreadsheetObj: SpreadsheetComponent;
-    public openUrl = 'https://services.syncfusion.com/angular/production/api/spreadsheet/open';
-    public saveUrl = 'https://services.syncfusion.com/angular/production/api/spreadsheet/save';
+    public openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
+    public saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
     
     beforeSave(args: BeforeSaveEventArgs) {
         args.isFullPost = false;
@@ -157,7 +157,7 @@ Proper use of serialization options during save improves performance and reduces
 
 Refer to the following UG section to learn how to configure these options:
 
-* [Configure JSON serialization options during save](https://ej2.syncfusion.com/angular/documentation/spreadsheet/open-save#configure-json-serialization-options)
+* [Configure JSON serialization options during save](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/open-save#configure-json-serialization-options)
 
 ## How to improve cell selection performance in Spreadsheet?
 
@@ -183,6 +183,6 @@ You can disable aggregate calculation using the following code example:
 
 ## See Also
 
-* [Open and Save](https://ej2.syncfusion.com/angular/documentation/spreadsheet/open-save)
-* [Docker Deployment](https://ej2.syncfusion.com/angular/documentation/spreadsheet/docker-deployment)
-* [Scrolling](https://ej2.syncfusion.com/angular/documentation/spreadsheet/scrolling)
+* [Open and Save](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/open-save)
+* [Docker Deployment](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/docker-deployment)
+* [Scrolling](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/scrolling)

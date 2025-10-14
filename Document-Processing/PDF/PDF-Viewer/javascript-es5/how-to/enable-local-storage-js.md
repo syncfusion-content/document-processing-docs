@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Managing Local Storage in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn how to manage local storage in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Managing Local Storage in Javascript Pdfviewer control | Syncfusion
+description: Learn how to manage local storage in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---

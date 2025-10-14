@@ -5,7 +5,7 @@ platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# NuGet Packages Required
+# NuGet Packages Required for XlsIO
 
 ## Installing Syncfusion<sup>&reg;</sup> XlsIO through NuGet Packages 
 
@@ -883,3 +883,19 @@ AWS Elastic Beanstalk
 </td>
 </tr>
 </table>
+
+## Internal Syncfusion Dependencies
+
+Some Syncfusion components such as Syncfusion.Compression.Net.Core and Syncfusion.SkiaSharpHelper.Net.Core are internal dependency packages used by XlsIO and other Syncfusion libraries. These packages are not visible in [nuget.org](https://www.nuget.org/) search results but are still available for direct access.
+
+You can download the package directly using the following link by replacing version with the required version:
+
+~~~
+https://www.nuget.org/packages/Syncfusion.Compression.Net.Core/version
+~~~
+
+**Example:**
+
+To download version **30.2.5**, use https://www.nuget.org/packages/Syncfusion.Compression.Net.Core/30.2.5
+
+When installing Syncfusion products that depend on these packages, Visual Studio automatically fetches them. Alternatively, you can manually download and reference them in your project if needed.

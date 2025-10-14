@@ -62,10 +62,10 @@ N> If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`)
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/clipboard/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/clipboard/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ClipboardController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/clipboard/clipboardController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/clipboard/clipboardController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -77,10 +77,10 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/prevent-paste/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/prevent-paste/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ClipboardController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/prevent-paste/clipboardController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/prevent-paste/clipboardController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

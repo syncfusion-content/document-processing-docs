@@ -14,7 +14,7 @@ The PDF Viewer library allows you to import annotations from objects or streams 
 
 The following steps are used to import and export annotations in various formats such as objects, JSON, and XFDF.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code snippet to perform import and export annotation.
 

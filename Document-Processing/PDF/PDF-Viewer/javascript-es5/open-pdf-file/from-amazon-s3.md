@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Open PDF files from AWS S3 in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn about how to Open PDF files from AWS S3 in ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more details.
+title: Open PDF files from AWS S3 in Javascript Pdfviewer control | Syncfusion
+description: Learn about how to Open PDF files from AWS S3 in Javascript Pdfviewer control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open PDF files from AWS S3
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -19,7 +19,7 @@ To load a PDF file from AWS S3 in a PDF Viewer, you can follow the steps below
 
 **Step 1:** Create a Simple PDF Viewer Sample in JavaScript
 
-Start by following the steps provided in this [link](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in JavaScript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF viewer sample in JavaScript. This will give you a basic setup of the PDF viewer component.
 
 **Step 2:** Modify the `index.html` File in the JavaScript Project
 
@@ -79,7 +79,7 @@ To load a PDF file from AWS S3 in a PDF Viewer, you can follow the steps below
 
 **Step 1:** Create a Simple PDF Viewer Sample in JavaScript
 
-Start by following the steps provided in this [link](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in JavaScript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF viewer sample in JavaScript. This will give you a basic setup of the PDF viewer component.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -115,7 +115,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from AWS S3.
+5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from AWS S3.
 
 ```csharp
 
@@ -183,7 +183,7 @@ N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and
 
 **Step 3:**  Set the PDF Viewer Properties in JavaScript PDF viewer component
 
-Modify the [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from AWS S3. Ensure that you correctly pass the document name from the files available in your AWS S3 bucket to the documentPath property.
+Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from AWS S3. Ensure that you correctly pass the document name from the files available in your AWS S3 bucket to the documentPath property.
 
 ```javascript
 

@@ -65,7 +65,7 @@ function App() {
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
           enableMagnification={true}
-          serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer" style={{ 'height': '640px' }}>
+          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer" style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
                                   ThumbnailView, Print, TextSelection, TextSearch]} />

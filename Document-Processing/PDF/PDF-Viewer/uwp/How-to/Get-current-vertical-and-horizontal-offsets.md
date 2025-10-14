@@ -2,7 +2,7 @@
 layout: post
 title: Current vertical and horizontal offsets of UWP PDF viewer | Syncfusion
 description: Learn here all about Get current vertical and horizontal offsets support of UWP PDF viewer control and more.
-platform: uwp
+platform: document-processing
 control: PDF viewer
 documentation: ug
 ---

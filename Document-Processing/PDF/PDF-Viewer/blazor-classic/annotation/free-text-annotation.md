@@ -123,4 +123,4 @@ After editing the default values, they will be changed to the selected values.
 }
 ```
 
-N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations.
+N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations.

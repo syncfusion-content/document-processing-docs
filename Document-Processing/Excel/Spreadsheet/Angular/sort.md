@@ -37,15 +37,15 @@ The following code example shows `sort` functionality in the Spreadsheet control
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/sort-by-cell-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/sort-by-cell-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/sort-by-cell-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/sort-by-cell-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/sort-by-cell-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/sort-by-cell-cs1" %}
 
 ## Data contains header
 
@@ -113,15 +113,15 @@ The multi-column sorting can also be performed manually by passing sort options 
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/passing-sort-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/passing-sort-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/passing-sort-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/passing-sort-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/passing-sort-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/passing-sort-cs1" %}
 
 ## Custom sort comparer
 
@@ -141,15 +141,15 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/custom-sort-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/custom-sort-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/custom-sort-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/custom-sort-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/custom-sort-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/custom-sort-cs1" %}
 
 
 ## Known error validations
@@ -167,7 +167,7 @@ The following errors have been handled for sorting,
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/angular-components/angular-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://ej2.syncfusion.com/angular/demos/#/bootstrap5/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/bootstrap5/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 

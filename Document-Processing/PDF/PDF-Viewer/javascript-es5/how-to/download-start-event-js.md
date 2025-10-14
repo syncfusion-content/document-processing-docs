@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Controlling File Downloads in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Controlling File Downloads in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Controlling File Downloads in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Controlling File Downloads in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -28,4 +28,4 @@ By default, the cancel argument is set to `false`, indicating that the download 
 
 ### Enhanced Flexibility
 
-By leveraging the [downloadStart](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#downloadstart) event and its cancel argument, you gain the ability to implement custom logic to control and potentially prevent download actions based on your application's specific requirements. This enhancement provides greater flexibility in managing user interactions with PDF documents, empowering you to tailor the experience according to your needs.
+By leveraging the [downloadStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadstart) event and its cancel argument, you gain the ability to implement custom logic to control and potentially prevent download actions based on your application's specific requirements. This enhancement provides greater flexibility in managing user interactions with PDF documents, empowering you to tailor the experience according to your needs.

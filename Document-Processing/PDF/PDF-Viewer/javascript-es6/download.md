@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Download in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Download in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Download in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Download in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Download
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in ##Platform_Name## Pdfviewer control
+# Download in Typescript Pdfviewer control
 
 The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
 
@@ -64,7 +64,7 @@ PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,Th
 TextSelection, TextSearch, Print);
 
 let pdfviewer: PdfViewer = new PdfViewer({enableDownload: true});
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 pdfviewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
 
@@ -96,7 +96,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 pdfviewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
 pdfviewer.download();
@@ -106,7 +106,7 @@ pdfviewer.download();
 
 ## How to get the base64 string while downloading the PDF document
 
-The [downloadEnd](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#downloadend) event of the PDF viewer allows you to get the downloaded document as a base64 string.
+The [downloadEnd](https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadend) event of the PDF viewer allows you to get the downloaded document as a base64 string.
 
 The following code illustrates how to get the downloaded document as a base64 string.
 

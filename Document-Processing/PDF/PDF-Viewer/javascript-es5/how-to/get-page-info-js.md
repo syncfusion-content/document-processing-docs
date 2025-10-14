@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Get Page Info in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Get Page Info in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Get Page Info in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Get Page Info in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get Page Info ##Platform_Name## Pdfviewer control
+# Get Page Info Javascript Pdfviewer control
 
 The PDF Viewer library allows you to retrieves the information of a specified page in the viewer using the **getPageInfo()** method.This provides essential information such as the height, width and rotation.
 
 The following steps are used to getPageInfo.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** The following code snippet to implement the functionality for retrieving height, width and rotation of a specified page in the viewer.
 

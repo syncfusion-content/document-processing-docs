@@ -220,7 +220,7 @@ function App() {
           ref={(scope) => { pdfviewer = scope; }}
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
           commandManager = {commandManager}
           style={{ 'height': '640px' }}>
 
@@ -253,10 +253,6 @@ This setup allows users to perform custom actions within the PDF viewer by press
 ## Ensuring accessibility
 
 The PDF Viewer component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
-
-The accessibility compliance of the PDF Viewer component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/pdf-viewer.html) in a new window to evaluate the accessibility of the PDF Viewer component with accessibility tools.
-
-{% previewsample "https://ej2.syncfusion.com/accessibility/pdf-viewer.html" %}
 
 ## See also
 

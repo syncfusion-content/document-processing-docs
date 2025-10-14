@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Add new page to the pdf document in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Add new page to the pdf document in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Add new page to the pdf document in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Add new page to the pdf document in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Add new page to the pdf document
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add new page to the pdf document in ##Platform_Name## Pdfviewer control
+# Add new page to the pdf document in Javascript Pdfviewer control
 
 The PDF Viewer library allows you to add a new page to the PDF document using the PDF library.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create a simple PDF Viewer sample.
 
-**Step 2:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/how-to/create-pdfviewer-service/) to create the PDF Viewer web service.
+**Step 2:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/how-to/create-pdfviewer-service/) to create the PDF Viewer web service.
 
 **Step 3:** Add the following code sample in the PDF Viewer controller code to add a new page in the PDF document using the PDF library.
 

@@ -53,7 +53,7 @@ export default {
   },
   data() {
     return {
-        serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+        serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
         documentPath:"PDF_Succinctly.pdf"
     };
   },

@@ -18,7 +18,7 @@ To save a PDF file to Azure Blob Storage, you can follow the steps below
 
 **Step 1:** Create a PDF Viewer sample in Vue
 
-Follow the instructions provided in this [link](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample in Vue. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample in Vue. This will set up the basic structure of your PDF Viewer application.
 
 **Step 2:** Modify the `src/App.vue` File in the Vue Project
 
@@ -124,7 +124,7 @@ To save a PDF file to Azure Blob Storage, you can follow the steps below
 
 **Step 1:** Create a PDF Viewer sample in Vue
 
-Follow the instructions provided in this [link](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample in Vue. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample in Vue. This will set up the basic structure of your PDF Viewer application.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 

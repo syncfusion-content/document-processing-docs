@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Custom context menu in ##Platform_Name## PDF Viewer control | Syncfusion
-description: Learn here all about Custom context menu in Syncfusion ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Custom context menu in Typescript PDF Viewer control | Syncfusion
+description: Learn here all about Custom context menu in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom context menu in ##Platform_Name## Pdfviewer control
+# Custom context menu in Typescript Pdfviewer control
 
-PDF Viewer allows you to add custom option in context menu. It can be achieved by using the [addCustomMenu()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#addcustommenu) method and custom action is defined using the [customContextMenuSelect()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#customcontextMenuselect)method.
+PDF Viewer allows you to add custom option in context menu. It can be achieved by using the [addCustomMenu()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#addcustommenu) method and custom action is defined using the [customContextMenuSelect()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#customcontextMenuselect)method.
 
 ### Add Custom Option
 
@@ -128,7 +128,7 @@ The PDF Viewer feature enables customization of custom options and the ability t
 
 #### Customize added context menu items
 
-The following code shows how to hide/show added custom option in context menu using the [customContextMenuBeforeOpen()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#customcontextMenubeforeopen) method.
+The following code shows how to hide/show added custom option in context menu using the [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#customcontextMenubeforeopen) method.
 
 ```ts
 
@@ -282,15 +282,15 @@ The following is the output of custom context menu with customization.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/custom-context-menu/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/custom-context-menu/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/custom-context-menu/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/custom-context-menu/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
-Add the below [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.ts` file
-`viewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.ts` file
+`viewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/custom-context-menu" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/custom-context-menu/index.html" %}

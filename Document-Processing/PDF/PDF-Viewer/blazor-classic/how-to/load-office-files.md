@@ -18,6 +18,7 @@ In the below code, word document is converted in to pdf document and return that
 @page "/"
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.PdfViewer
+@using Syncfusion.Blazor.Buttons
 @using Syncfusion.Pdf;
 @using Syncfusion.Pdf.Graphics;
 @using Syncfusion.Pdf.Interactive;
@@ -36,7 +37,7 @@ In the below code, word document is converted in to pdf document and return that
 <SfUploader AllowedExtensions=".doc, .docx, .rtf, .docm, .dotm, .dotx, .dot, .xls, .xlsx, .pptx, .pptm, .potx, .potm .jpeg, .png, .bmp">
     <UploaderEvents OnUploadStart="OnSuccess"></UploaderEvents>
     <UploaderAsyncSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save"
-                           RemoveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove"></UploaderAsyncSettings>
+        RemoveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove"></UploaderAsyncSettings>
 </SfUploader>
 <SfPdfViewerServer @ref="viewerInstance" Height="500px" Width="1060px" ToolbarSettings="@ToolbarSettings"></SfPdfViewerServer>
 
@@ -113,12 +114,12 @@ In the below code, word document is converted in to pdf document and return that
                 case "jpg":
                 case "png":
                 case "bmp":
-                    //Add a page to the document.
+                    //Add a page to the document
                     PdfPage page = pdfDocument.Pages.Add();
-                    //Create PDF graphics for the page.
+                    //Create PDF graphics for the page
                     PdfGraphics graphics = page.Graphics;
                     PdfBitmap image = new PdfBitmap(stream);
-                    //Draw the image.
+                    //Draw the image
                     graphics.DrawImage(image, 0, 0);
                     break;
             }
@@ -130,13 +131,39 @@ In the below code, word document is converted in to pdf document and return that
         }
     }
 
-    public void loadPDFdocument(byte[] bytes)
+    public async void loadPDFdocument(byte[] bytes)
     {
         // Convert a PDF document into a base64 string.
         string base64String = Convert.ToBase64String(bytes);
         // Load the base64 string in the PDF Viewer.
         viewerInstance.LoadAsync("data:application/pdf;base64," + base64String, null);
     }
+
+    public static WFormatType GetWFormatType(string format)
+    {
+        if (string.IsNullOrEmpty(format))
+            throw new NotSupportedException("EJ2 DocumentEditor does not support this file format.");
+        switch (format.ToLower())
+        {
+            case "dotx":
+                return WFormatType.Dotx;
+            case "docx":
+                return WFormatType.Docx;
+            case "docm":
+                return WFormatType.Docm;
+            case "dotm":
+                return WFormatType.Dotm;
+            case "dot":
+                return WFormatType.Dot;
+            case "doc":
+                return WFormatType.Doc;
+            case "rtf":
+                return WFormatType.Rtf;
+            default:
+                throw new NotSupportedException("EJ2 DocumentEditor does not support this file format.");
+        }
+    }
+
 }
 ```
 

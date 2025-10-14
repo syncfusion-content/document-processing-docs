@@ -22,7 +22,7 @@ To create a Dropbox API App, you should follow the official documentation provid
 
 **Step 2:** Create a PDF Viewer sample in Angular
 
-Follow the instructions provided in this [link](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample in Angular. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will set up the basic structure of your PDF Viewer application.
 
 **Step 3:** Modify the `src/app/app.component.ts` File in the Angular Project
 
@@ -115,7 +115,7 @@ To create a Dropbox API App, you should follow the official documentation provid
 
 **Step 2:** Create a PDF Viewer sample in Angular
 
-Follow the instructions provided in this [link](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample in Angular. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will set up the basic structure of your PDF Viewer application.
 
 **Step 3:** Modify the `PdfViewerController.cs` File in the Web Service Project
 

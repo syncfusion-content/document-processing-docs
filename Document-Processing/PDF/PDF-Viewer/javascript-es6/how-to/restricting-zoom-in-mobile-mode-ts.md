@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Restrict Zoom Percentage in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all how to restrict zoom percentage in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Restrict Zoom Percentage in Typescript Pdfviewer control | Syncfusion
+description: Learn here all how to restrict zoom percentage in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -49,7 +49,7 @@ PdfViewer.Inject( Toolbar, Magnification, Navigation, Annotation, LinkAnnotation
                   BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.appendTo('#PdfViewer');
 

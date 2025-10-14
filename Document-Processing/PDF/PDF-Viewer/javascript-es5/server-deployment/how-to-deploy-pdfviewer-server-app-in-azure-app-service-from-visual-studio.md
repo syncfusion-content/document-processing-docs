@@ -1,15 +1,15 @@
 ---
 layout: post
-title: How to deploy pdfviewer server app in azure app service from visual studio in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about How to deploy pdfviewer server app in azure app service from visual studio in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: How to deploy pdfviewer server app in azure app service from visual studio in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about How to deploy pdfviewer server app in azure app service from visual studio in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: How to deploy pdfviewer server app in azure app service from visual studio
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to deploy pdfviewer server app in azure app service from visual studio in ##Platform_Name## Pdfviewer control
+# How to deploy pdfviewer server app in azure app service from visual studio in Javascript Pdfviewer control
 
 ## Prerequisites
 
@@ -38,6 +38,6 @@ domainurl: ##DomainURL##
 
 **Step 6:** Navigate to the PDF Viewer Web API control `http://ej2-pdfviewer-server20200513053326.azurewebsites.net/api/pdfviewer`. It returns the default get method response.
 
-Append the app service running the URL `http://ej2-pdfviewer-server20200513053326.azurewebsites.net./api/pdfviewer` to the service URL in the client-side PDF Viewer control. For more information about how to get started with the PDF Viewer control, refer to this [`getting started page`](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started/?).
+Append the app service running the URL `http://ej2-pdfviewer-server20200513053326.azurewebsites.net./api/pdfviewer` to the service URL in the client-side PDF Viewer control. For more information about how to get started with the PDF Viewer control, refer to this [`getting started page`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/?).
 
 For more information about the app container service, please look deeper into the [`Microsoft Azure App Service`](https://docs.microsoft.com/en-us/visualstudio/deployment/) for a production-ready setup.

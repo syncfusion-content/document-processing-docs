@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Open PDF files ##Platform_Name## Pdfviewer control | Syncfusion
-description: This page helps you to learn about how to load PDF files from various locations in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Open PDF files Typescript Pdfviewer control | Syncfusion
+description: This page helps you to learn about how to load PDF files from various locations in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open PDF files
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -19,7 +19,7 @@ If you have your PDF files in the web, you can open it in the viewer using URL.
 
 **Step 1:** Create a Simple PDF Viewer Sample in Typescript
 
-Start by following the steps provided in this [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -27,7 +27,7 @@ Start by following the steps provided in this [link](https://ej2.syncfusion.com/
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
-3. Modify the [Load()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#load) method to open it in the viewer using URL
+3. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to open it in the viewer using URL
 
 ```csharp
 
@@ -77,7 +77,7 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
 
 **Step 3:**  Set the PDF Viewer Properties in React PDF viewer component
 
-Modify the [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load.
+Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load.
 
 ```typescript
 
@@ -104,7 +104,7 @@ The following code steps how the PDF file can be loaded in PDF Viewer as base64 
 
 **Step 1:** Create a Simple PDF Viewer Sample in Angular
 
-Start by following the steps provided in this [link](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
 
 **Step 2:** Use the following code snippet to load PDF document using base64 string.
 
@@ -128,7 +128,7 @@ To load a PDF file from SQL Server database in a PDF Viewer, you can follow the 
 
 **Step 1:** Create a Simple PDF Viewer Sample in Typescript
 
-Start by following the steps provided in this [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -158,7 +158,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#load) method to open it in the viewer using URL
+5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to open it in the viewer using URL
 
 ```csharp
 

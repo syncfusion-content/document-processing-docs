@@ -2,7 +2,7 @@
 layout: post
 title: Get mouse position to page in WinForms PDF Viewer | Syncfusion&reg;
 description: The PDF Viewer notifies, you when performing the mouse click and mouse move operations in the PDF pages.
-platform: windowsforms
+platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---

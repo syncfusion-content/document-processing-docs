@@ -85,7 +85,7 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the [Vue PDF Viewer component](https://www.syncfusion.com/vue-components/vue-pdf-viewer) as an example. To use the Vue PDF Viewer component in the project, the `@syncfusion/ej2-vue-pdfviewer` package needs to be installed using the following command:
+This article uses the [Vue PDF Viewer component](https://www.syncfusion.com/pdf-viewer-sdk) as an example. To use the Vue PDF Viewer component in the project, the `@syncfusion/ej2-vue-pdfviewer` package needs to be installed using the following command:
 
 ```bash
   npm install @syncfusion/ej2-vue-pdfviewer --save
@@ -180,7 +180,7 @@ import { provide } from 'vue';
 import { PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 
-const serviceUrl = 'https://services.syncfusion.com/vue/production/api/pdfviewer';
+const serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
 const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 const pdfViewer = null;
 
@@ -207,7 +207,7 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
 
     data () {
       return {
-        serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
+        serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
         documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       };
     },
@@ -242,7 +242,7 @@ import { provide } from 'vue';
 import { PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
   ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 
-const serviceUrl = 'https://services.syncfusion.com/vue/production/api/pdfviewer';
+const serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
 const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 const pdfViewer = null;
 
@@ -289,7 +289,7 @@ provide('PdfViewer', [ Toolbar, Magnification, Navigation, LinkAnnotation, Bookm
 
     data() {
       return {
-        serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+        serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       };
     },

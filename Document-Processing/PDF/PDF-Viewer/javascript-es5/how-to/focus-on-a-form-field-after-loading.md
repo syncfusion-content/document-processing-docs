@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Focus on a form field after loading in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Focus on a form field after loading in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Focus on a form field after loading in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Focus on a form field after loading in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Focus on a form field after loading
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Focus on a form field after loading in ##Platform_Name## Pdfviewer control
+# Focus on a form field after loading in Javascript Pdfviewer control
 
-The PDF Viewer library allows you to focus to the respective form field using the [`focusFormField()`](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#focusformfield) API.
+The PDF Viewer library allows you to focus to the respective form field using the [`focusFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#focusformfield) API.
 
 The following steps are used to focus to the respective form field.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code sample to focus to the respective form field while loading as well as in a button click.
 

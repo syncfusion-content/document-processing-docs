@@ -18,7 +18,7 @@ To load a PDF file from AWS S3 in a PDF Viewer, you can follow the steps below.
 
 **Step 1:** Create a PDF Viewer sample in Vue
 
-Follow the instructions provided in this [link](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample in Vue. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample in Vue. This will set up the basic structure of your PDF Viewer application.
 
 **Step 2:** Modify the `src/App.vue` File in the Vue Project
 
@@ -103,7 +103,7 @@ To load a PDF file from AWS S3 in a PDF Viewer, you can follow the steps below
 
 **Step 1:** Create a Simple PDF Viewer Sample in Vue
 
-Start by following the steps provided in this [link](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in Vue. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF viewer sample in Vue. This will give you a basic setup of the PDF viewer component.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 

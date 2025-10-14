@@ -16,7 +16,7 @@ Change the Font Family in Type Signature of the Syncfusion<sup style="font-size:
 
 The following steps are used to include custom fonts for signature and initial field using `typeSignatureFonts` property.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Insert the following code snippet to implement the functionality for using custom fonts in Signature field.
 

@@ -4,7 +4,6 @@ title: Overview in Document Editor Component | Syncfusion
 description: Learn here all about overview in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Index
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -35,12 +34,12 @@ The Document Editor component is used to create, edit, view, and print Word docu
 * Provides a server-side helper library to open the Word documents like DOCX, DOC, WordML, RTF, and Text, by converting it to SFDT file format.
 
 ## Supported Web platforms
-
-* [Javascript(ES5)](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es5/getting-started)
-* [Javascript(ES6)](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/getting-started)
-* [Angular](https://help.syncfusion.com/document-processing/word/word-processor/angular/getting-started)
-* [React](https://help.syncfusion.com/document-processing/word/word-processor/react/getting-started)
-* [Vue](https://help.syncfusion.com/document-processing/word/word-processor/vue/getting-started)
-* [ASP.NET Core](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-core/getting-started-core)
-* [ASP.NET MVC](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-mvc/getting-started)
-* [Blazor](https://help.syncfusion.com/document-processing/word/word-processor/blazor/getting-started/server-side-application)
+ 
+* [Javascript(ES5)](../javascript-es5/getting-started)
+* [Javascript(ES6)](../javascript-es6/getting-started)
+* [Angular](../angular/getting-started)
+* [React](../react/getting-started)
+* [Vue](../vue/getting-started)
+* [ASP.NET Core](../asp-net-core/getting-started-core)
+* [ASP.NET MVC](../asp-net-mvc/getting-started)
+* [Blazor](../blazor/getting-started/server-side-application)

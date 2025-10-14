@@ -16,7 +16,7 @@ This guide demonstrates how to fetch the base64-encoded value of a PDF document 
 
 ### How to Retrieve Base64 Value
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
 
 
 **Step 2:** Set Up Your Angular Component
@@ -139,7 +139,7 @@ import {
 })
 export class AppComponent implements OnInit {
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+  public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
 
   ngOnInit(): void { }
 

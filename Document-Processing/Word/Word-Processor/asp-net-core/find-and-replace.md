@@ -4,7 +4,6 @@ title: Find And Replace in Document Editor Component | Syncfusion
 description: Learn here all about find and replace in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Find And Replace
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -20,10 +19,10 @@ This provides the options to search for a portion of text in the document. After
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/options-pane/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/options-pane/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Options-pane.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/options-pane/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/options-pane/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -126,10 +125,10 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/find-replace/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/find-replace/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Find-replace.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/find-replace/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/find-replace/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

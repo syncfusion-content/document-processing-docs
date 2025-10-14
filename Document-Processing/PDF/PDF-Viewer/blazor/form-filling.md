@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form filling in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about form filling in Syncfusion Blazor SfPdfViewer component and much more.
+description: Learn how to view, fill, export, and import PDF form fields in the Syncfusion Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Form filling in Blazor SfPdfViewer Component
 
-SfPdfViewer component allows to display the form fields available in the PDF document. By using this, you can edit and download the form fields.
+The SfPdfViewer component displays existing form fields in a PDF document and enables filling and downloading filled data.
 
 The form fields displayed in the SfPdfViewer are:
 
@@ -17,15 +17,15 @@ The form fields displayed in the SfPdfViewer are:
 * Password box
 * Combo box
 * Check box
-* Radio Button
-* Signature Field
+* Radio button
+* Signature field
 * List box
 
-![Form Filling in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-form-filling.png)
+![Form filling in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-form-filling.png)
 
 ## Disabling form fields
 
-The SfPdfViewer control provides an option to disable the form fields feature. The code snippet for disabling the feature is as follows.
+The SfPdfViewer control provides an option to disable interaction with form fields. Use the following configuration to disable form fields in the viewer.
 
 ```cshtml
 
@@ -44,40 +44,40 @@ The SfPdfViewer control provides an option to disable the form fields feature. T
 
 ## How to draw handwritten signature in the signature field
 
-Signature can be added to the Signature field by using the following steps:
+Add a handwritten signature to a Signature field by following these steps:
 
-* Click the Signature Field in the PDF document. The signature panel will appear.
+* Click the signature field in the PDF document to open the signature panel.
 
-![Signature Field in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-signature-field.png)
+![Signature field in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-signature-field.png)
 
 * Draw the signature in the signature panel.
 
-![Displaying Signature Panel in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-signature-panel.png)
+![Displaying signature panel in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-signature-panel.png)
 
-* Click the **CREATE** button, the drawn signature will be added in the signature field.
+* Click the **CREATE** button. The drawn signature is added to the signature field.
 
-![Displaying Signature in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-signature.png)
+![Displaying signature in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-signature.png)
 
 ## Delete the signature inside the signature field
 
-You can also delete the signature in the signature field by using Delete Option in the annotation toolbar.
+Delete a signature placed in a signature field by using the Delete option in the annotation toolbar.
 
-![Deleting Signature in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-delete-signature.png)
+![Deleting signature in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-delete-signature.png)
 
 ## Export and import form fields
 
-The SfPdfViewer control supports exporting and importing the form field data in the following formats using the `ImportFormFieldsAsync` and `ExportFormFieldsAsync` methods.
+The SfPdfViewer control supports exporting and importing form field data in the following formats using the [ImportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ImportFormFieldsAsync_System_Collections_Generic_Dictionary_System_String_System_String__) and [ExportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportFormFieldsAsync_Syncfusion_Blazor_SfPdfViewer_FormFieldDataFormat_) methods:
 
 * XML
 * FDF
 * XFDF
 * JSON
 
-> N The form field data will be exported as stream, and that data from the stream will be imported into the current PDF document.
+N> Form field data is exported as a stream, and that stream can be imported back into the current PDF document.
 
 ### Export and import as XML
 
-The following code shows how to export the form fields as an XML data stream and import that data from the stream into the current PDF document via a button click.
+The following example exports the form fields as an XML data stream and imports that data from the stream into the current PDF document via button clicks.
 
 ```cshtml
 
@@ -117,7 +117,7 @@ The following code shows how to export the form fields as an XML data stream and
 
 ### Export and import as FDF
 
-The following code shows how to export the form fields as an FDF data stream and import that data from the stream into the current PDF document via a button click.
+The following example exports the form fields as an FDF data stream and imports that data from the stream into the current PDF document via button clicks.
 
 ```cshtml
 
@@ -157,7 +157,7 @@ The following code shows how to export the form fields as an FDF data stream and
 
 ###  Export and import as XFDF
 
-The following code shows how to export the form fields as an XFDF data stream and import that data from the stream into the current PDF document via a button click.
+The following example exports the form fields as an XFDF data stream and imports that data from the stream into the current PDF document via button clicks.
 
 ```cshtml
 
@@ -197,7 +197,7 @@ The following code shows how to export the form fields as an XFDF data stream an
 
 ### Export and import as JSON
 
-The following code shows how to export the form fields as a JSON data stream and import that data from the stream into the current PDF document via a button click.
+The following example exports the form fields as a JSON data stream and imports that data from the stream into the current PDF document via button clicks.
 
 ```cshtml
 
@@ -221,7 +221,7 @@ The following code shows how to export the form fields as a JSON data stream and
     // Event triggers on Export JSON button click.
     public async void ExportAsStream()
     {
-        // Export the form field data to an JSON format stream.
+        // Export the form field data to a JSON format stream.
         stream = await Viewer.ExportFormFieldsAsync(FormFieldDataFormat.Json);
     }
 
@@ -257,7 +257,7 @@ The following code shows how to export the form fields as a JSON data stream and
     // Event triggers on Export JSON button click.
     public async void OnExportFormFieldsClick(MouseEventArgs args)
     {
-        // Exports to a JSON file in the existing document name.
+        // Exports the form field data to a JSON file using the current document name.
         await Viewer.ExportFormFieldsAsync("");
     }
 }

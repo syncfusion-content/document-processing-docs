@@ -4,7 +4,6 @@ title: Table Format in Document Editor Component
 description: Learn here all about table format in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table Format
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -86,7 +85,7 @@ Set the desired width of table cells that will be considered when the table is l
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/cell-width/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/cell-width/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Cell-width.cs" %}
 {% endhighlight %}
@@ -101,7 +100,7 @@ You can set the desired width of a table in `Point` or `Percent` type.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-width/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/table-width/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Table-width.cs" %}
 {% endhighlight %}
@@ -115,7 +114,7 @@ Document editor exposes API to customize the borders for table cells by specifyi
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/apply-borders/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/apply-borders/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Apply-borders.cs" %}
 {% endhighlight %}
@@ -133,7 +132,7 @@ You can customize the height of a table row as `Auto`, `AtLeast`, or `Exactly`.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/row-height/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/row-height/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Row-height.cs" %}
 {% endhighlight %}{% endtabs %}

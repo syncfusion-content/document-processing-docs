@@ -21,15 +21,15 @@ Refer to the following code example for local data binding.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/local-data-binding-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/local-data-binding-cs1" %}
 
 > The local data source can also be provided as an instance of the [`DataManager`](https://helpej2.syncfusion.com/angular/documentation/data/). By default, [`DataManager`](https://helpej2.syncfusion.com/angular/documentation/data/) uses [`JsonAdaptor`](https://ej2.syncfusion.com/angular/documentation/data/adaptors#json-adaptor) for local data-binding.
 
@@ -43,15 +43,15 @@ The following code example demonstrates how to customize the mapping of column d
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/field-mapping-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/field-mapping-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/field-mapping-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/field-mapping-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/field-mapping-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/field-mapping-cs1" %}
 
 ## Remote data
 
@@ -61,15 +61,15 @@ Refer to the following code example for remote data binding.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/remote-data-binding-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/remote-data-binding-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/remote-data-binding-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/remote-data-binding-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/remote-data-binding-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/remote-data-binding-cs1" %}
 
 > By default, `DataManager` uses **ODataAdaptor** for remote data-binding.
 
@@ -79,15 +79,15 @@ Refer to the following code example for remote data binding.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/remote-data-binding-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/remote-data-binding-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/remote-data-binding-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/remote-data-binding-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/remote-data-binding-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/remote-data-binding-cs2" %}
 
 ### Web API
 
@@ -95,15 +95,15 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/remote-data-binding-cs3/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/remote-data-binding-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/remote-data-binding-cs3/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/remote-data-binding-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/remote-data-binding-cs3" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/remote-data-binding-cs3" %}
 
 ## Cell data binding
 
@@ -113,15 +113,15 @@ Refer to the following code example for cell data binding.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/cell-data-binding-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/cell-data-binding-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/cell-data-binding-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/cell-data-binding-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/cell-data-binding-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/cell-data-binding-cs1" %}
 
 > The cell data binding also supports formula, style, number format, and more.
 
@@ -143,15 +143,15 @@ The following table defines the arguments of the `dataSourceChanged` event.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/dynamic-data-binding-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/dynamic-data-binding-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/dynamic-data-binding-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/dynamic-data-binding-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/dynamic-data-binding-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/dynamic-data-binding-cs1" %}
 
 ## Dynamic data binding using updateRange method
 
@@ -163,19 +163,19 @@ The following code example demonstrates how to dynamically update data using the
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/dynamic-data-binding-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/dynamic-data-binding-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/dynamic-data-binding-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/dynamic-data-binding-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/dynamic-data-binding-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/dynamic-data-binding-cs2" %}
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/angular-ui-components/angular-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://ej2.syncfusion.com/angular/demos/#/material/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 

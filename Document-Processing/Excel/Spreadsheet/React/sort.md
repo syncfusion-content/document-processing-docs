@@ -37,20 +37,20 @@ The following code example shows `sort` functionality in the Spreadsheet control
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/sort-by-cell-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/sort-by-cell-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/sort-by-cell-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/sort-by-cell-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/sort-by-cell-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/sort-by-cell-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/sort-by-cell-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/sort-by-cell-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/sort-by-cell-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/sort-by-cell-cs1" %}
 
 ## Data contains header
 
@@ -117,20 +117,20 @@ The multi-column sorting can also be performed manually by passing sort options 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/passing-sort-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/passing-sort-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/passing-sort-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/passing-sort-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/passing-sort-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/passing-sort-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/passing-sort-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/passing-sort-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/passing-sort-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/passing-sort-cs1" %}
 
 ## Custom sort comparer
 
@@ -150,20 +150,20 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/custom-sort-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/custom-sort-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/custom-sort-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/custom-sort-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/custom-sort-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/custom-sort-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/custom-sort-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/custom-sort-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/custom-sort-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/custom-sort-cs1" %}
 
 ## Known error validations
 
@@ -180,7 +180,7 @@ The following errors have been handled for sorting,
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-ui-components/react-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://ej2.syncfusion.com/react/demos/#/material/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 

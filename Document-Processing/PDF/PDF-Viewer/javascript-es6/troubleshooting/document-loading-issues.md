@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Document Loading Issues in Version 23.1 or Newer ##Platform_Name## Pdfviewer Component
-description: Learn here all about troubleshooting Document Loading Issues in Version 23.1 or newer in ##Platform_Name## Pdfviewer of Syncfusion Essential JS 2 and more.
+title: Document Loading Issues in Version 23.1 or Newer Typescript Pdfviewer Component
+description: Learn here all about troubleshooting Document Loading Issues in Version 23.1 or newer in Typescript Pdfviewer of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 ---
 
@@ -22,7 +22,7 @@ PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,Th
 TextSelection, TextSearch, Print);
 
 let pdfviewer: PdfViewer = new PdfViewer({enableDownload: true});
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 pdfviewer.dataBind();
 pdfviewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);

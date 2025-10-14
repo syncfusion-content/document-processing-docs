@@ -2,7 +2,7 @@
 layout: post
 title: Printing in PDF Viewer Xamarin.iOS | Syncfusion
 description: PDF Viewer in Xamarin.iOS supports printing the PDF documents loaded in it. It allows printing of document with/without file names.
-platform: Xamarin.iOS
+platform: document-processing
 control: SfPdfViewer
 documentation: UG
 ---

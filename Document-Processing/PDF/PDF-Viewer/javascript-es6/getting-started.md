@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting started with ##Platform_Name## PDF Viewer control | Syncfusion
-description:  Checkout and learn about Getting started with ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more details.
+title: Getting started with Typescript PDF Viewer control | Syncfusion
+description:  Checkout and learn about Getting started with Typescript PDF Viewer control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in ##Platform_Name## PDF Viewer control
+# Getting started in Standalone PDF Viewer control
 
 This section briefly explains how to create **PDF Viewer** component and configure its available functionalities in TypeScript using the Essential JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository.
 
@@ -197,7 +197,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/getting-started-cs2" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/getting-started-cs2/index.html" %}
 
 ## Module injection
 
@@ -218,4 +218,4 @@ To create PDF Viewer with additional features, inject the required modules. The 
 
 These modules should be injected into the PDF Viewer using `PdfViewer.Inject` method.
 
-> You can refer to our [JavaScript PDF Viewer](https://www.syncfusion.com/javascript-ui-controls/js-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [JavaScript PDF Viewer example](https://ej2.syncfusion.com/demos/#/material/pdfviewer/default.html) to understand how to explains core features of PDF Viewer.
+> You can refer to our [JavaScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) feature tour page for its groundbreaking feature representations. You can also explore our [JavaScript PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/default.html) to understand how to explains core features of PDF Viewer.

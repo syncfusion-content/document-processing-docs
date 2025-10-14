@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Manually Copy Files from node_modules in ##Platform_Name## PDF Viewer control | Syncfusion
+title: Manually Copy Files from node_modules in Typescript PDF Viewer control | Syncfusion
 description: Learn here all about why do i have to manually copy files from node_modules in Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

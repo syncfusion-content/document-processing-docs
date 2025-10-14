@@ -2,7 +2,7 @@
 layout: post
 title: Change Loading Indicator color in WPF Pdf Viewer | Syncfusion&reg;
 description: Learn about Change the color of the Loading Indicator support in Syncfusion<sup>&reg;</sup>; WPF Pdf Viewer control and more.
-platform: wpf
+platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---

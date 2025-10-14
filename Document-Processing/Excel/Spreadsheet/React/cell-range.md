@@ -29,20 +29,20 @@ The following code example shows the wrap text functionality in spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/wrap-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/wrap-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/wrap-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/wrap-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/wrap-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/wrap-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/wrap-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/wrap-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/wrap-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/wrap-cs1" %}
 
 ### Limitations of Wrap text
 
@@ -74,20 +74,20 @@ The following code example shows the merge cells operation in spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/merge-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/merge-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/merge-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/merge-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/merge-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/merge-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/merge-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/merge-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/merge-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/merge-cs1" %}
 
 ### Limitations of Merge
 
@@ -140,14 +140,14 @@ You can clear the highlighted invalid data by using the following ways,
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/data-validation-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/data-validation-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/data-validation-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/data-validation-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/data-validation-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/data-validation-cs1" %}
 
 ### Custom Data validation
 
@@ -168,14 +168,14 @@ The following code example demonstrates how to add custom data validation with a
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/data-validation-cs2/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/data-validation-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/data-validation-cs2/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/data-validation-cs2/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/data-validation-cs2" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/data-validation-cs2" %}
 
 ### Limitations of Data validation
 
@@ -251,20 +251,20 @@ In the following sample, you can enable/disable the fill option on the button cl
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/autofill-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/autofill-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/autofill-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/autofill-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/autofill-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/autofill-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/autofill-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/autofill-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/autofill-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/autofill-cs1" %}
 
 ### Limitations of Autofill
 
@@ -299,24 +299,24 @@ Clear the cell contents and formats in the Spreadsheet document by using the [cl
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/clear-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/clear-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/clear-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/clear-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/clear-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/clear-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/clear-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/clear-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/clear-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/clear-cs1" %}
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-components/react-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://ej2.syncfusion.com/react/demos/#/material/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 

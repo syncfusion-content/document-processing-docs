@@ -103,7 +103,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     addAnnotation() {
@@ -188,7 +188,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     addAnnotation() {
@@ -277,7 +277,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     addAnnotation() {
@@ -380,7 +380,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     addAnnotation() {
@@ -466,7 +466,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     addAnnotation() {
@@ -555,7 +555,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     addAnnotation() {
@@ -658,7 +658,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     addAnnotation() {
@@ -744,7 +744,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     addAnnotation() {
@@ -833,7 +833,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     addAnnotation() {
@@ -936,7 +936,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     addAnnotation() {
@@ -1022,7 +1022,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     addAnnotation() {
@@ -1111,7 +1111,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     addAnnotation() {
@@ -1237,7 +1237,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public highlightSettings = { author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: '' };
     public underlineSettings = { author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9, modifiedDate: '' };
     public strikethroughSettings = { author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: '' };
@@ -1338,7 +1338,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     Undo() {
@@ -1427,7 +1427,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
 }

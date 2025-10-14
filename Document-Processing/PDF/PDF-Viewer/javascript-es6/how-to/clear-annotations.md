@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Clear annotations in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Clear annotations in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Clear annotations in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Clear annotations in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Clear annotations
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clear annotations in ##Platform_Name## Pdfviewer control
+# Clear annotations in Typescript Pdfviewer control
 
-To clear all the annotations in a PDF document using the Syncfusion PDF Viewer, you can use the [**deleteAnnotations**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#deleteannotations) method. This method is used to clear all the annotations present in the currently loaded document.
+To clear all the annotations in a PDF document using the Syncfusion PDF Viewer, you can use the [**deleteAnnotations**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#deleteannotations) method. This method is used to clear all the annotations present in the currently loaded document.
 
 Here is an example of how you can clear all the annotations present in the currently loaded document:
 

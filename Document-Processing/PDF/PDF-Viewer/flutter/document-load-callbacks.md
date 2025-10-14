@@ -2,7 +2,7 @@
 layout: post
 title: Document Load Callbacks in Flutter PDF Viewer widget | Syncfusion
 description: Learn here all about the document load callbacks in Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget
-platform: flutter
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Open PDF files from Google Drive in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn about how to Open PDF files from Google Drive in ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more details.
+title: Open PDF files from Google Drive in Javascript Pdfviewer control | Syncfusion
+description: Learn about how to Open PDF files from Google Drive in Javascript Pdfviewer control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open PDF files from Google Drive
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -19,7 +19,7 @@ You must set up a project in the Google Developers Console and enable the Google
 
 **Step 2:** Create a Simple PDF Viewer Sample in JavaScript
 
-Start by following the steps provided in this [link](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in JavaScript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF viewer sample in JavaScript. This will give you a basic setup of the PDF viewer component.
 
 **Step 3:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -55,7 +55,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF file from Google Drive.
+5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF file from Google Drive.
 
 ```csharp
 [HttpPost("Load")]
@@ -149,7 +149,7 @@ N> The **FolderId** part is the unique identifier for the folder. For example, i
 
 **Step 4:**  Set the PDF Viewer Properties in JavaScript PDF viewer component
 
-Modify the [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Google Drive. Ensure that you correctly pass the document name from the files available in your drive folder to the documentPath property.
+Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Google Drive. Ensure that you correctly pass the document name from the files available in your drive folder to the documentPath property.
 
 ```javascript
 

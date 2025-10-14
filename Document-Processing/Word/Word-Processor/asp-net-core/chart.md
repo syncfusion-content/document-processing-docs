@@ -4,7 +4,6 @@ title: Chart in Document Editor Component | Syncfusion
 description: Learn here all about chart in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Chart
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -16,10 +15,10 @@ Document Editor provides chart preservation support. Using Document Editor, you 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/chart/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/chart/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/chart/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/chart/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

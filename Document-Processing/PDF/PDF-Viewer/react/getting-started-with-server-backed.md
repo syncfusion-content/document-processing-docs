@@ -110,7 +110,7 @@ function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
          <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
@@ -138,7 +138,7 @@ return (<div>
      <PdfViewerComponent
       id="container"
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+      serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
       style={{ 'height': '640px' }}>
          <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
                              ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
@@ -154,7 +154,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-N> The Web API hosted link https://services.syncfusion.com/react/production/api/pdfviewer utilized in the PDF viewer's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service and use for the serviceUrl property. **We strongly recommend using the standalone mode.**
+N> The Web API hosted link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer utilized in the PDF viewer's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service and use for the serviceUrl property. **We strongly recommend using the standalone mode.**
 
 ## Run the application
 
@@ -174,19 +174,19 @@ Output will be appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pdfviewer/base-cs1/app/index.jsx %}
+{% include code-snippet/pdfviewer/react/base-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pdfviewer/base-cs1/app/index.tsx %}
+{% include code-snippet/pdfviewer/react/base-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/base-cs1/index.html %}
+{% include code-snippet/pdfviewer/react/base-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/react/base-cs1/index.html" %}
 
-> For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/how-to/create-pdfviewer-service)
+> For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service)
 
 ## How to run the PDF Viewer web service
 
@@ -230,7 +230,7 @@ N> When configuring the server-backed PDF viewer, it's Essential<sup style="font
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Getting%20Started).
 
-> You can refer to our [React PDF Viewer](https://www.syncfusion.com/react-components/react-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [React PDF Viewer example](https://ej2.syncfusion.com/react/demos/#/material/pdfviewer/default) to understand how to explains core features of PDF Viewer.
+> You can refer to our [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) feature tour page for its groundbreaking feature representations. You can also explore our [React PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/default) to understand how to explains core features of PDF Viewer.
 
 N> For hosting the web service on the Linux platform, ensure to include the [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1). Additionally, for AWS environments, utilize the following packages:
 

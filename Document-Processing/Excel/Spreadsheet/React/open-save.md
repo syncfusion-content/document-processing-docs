@@ -27,14 +27,14 @@ The following sample shows the `Open` option by using the [`openUrl`](https://ej
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/open-save-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs1" %}
 
 Please find the below table for the beforeOpen event arguments.
 
@@ -55,14 +55,14 @@ The following code example shows how to import an Excel document using file uplo
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs9/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs9/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs9/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs9/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/open-save-cs9" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs9" %}
 
 ### Open an external URL excel file while initial load
 
@@ -70,14 +70,14 @@ You can achieve to access the remote Excel file by using the [`created`](https:/
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs2/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs2/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs2/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/open-save-cs2" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs2" %}
 
 ### Open an excel file from blob data
 
@@ -87,14 +87,14 @@ Please find the code to fetch the blob data and load it into the Spreadsheet com
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-from-blobdata-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/open-from-blobdata-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-from-blobdata-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/open-from-blobdata-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/open-from-blobdata-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-from-blobdata-cs1" %}
 
 ### Open an Excel file located on a server
 
@@ -246,14 +246,14 @@ The following code example shows how to open the spreadsheet data as base64 stri
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/base-64-string/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/base-64-string/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/base-64-string/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/base-64-string/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/base-64-string" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/base-64-string" %}
 
 ### Open excel file into a read-only mode
 
@@ -261,14 +261,14 @@ You can open Excel file into a read-only mode by using the [`openComplete`](http
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs4/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs4/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs4/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs4/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/open-save-cs4" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs4" %}
 
 ### Configure JSON deserialization options
 
@@ -298,14 +298,14 @@ The following code snippet demonstrates how to configure the deserialization opt
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-from-json/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/open-from-json/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-from-json/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/open-from-json/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/open-from-json" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-from-json" %}
 
 ### Improving Excel file open performance with parsing options
 
@@ -416,14 +416,14 @@ You can add your own custom header to the open action in the Spreadsheet. For pr
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs3/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs3/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs3/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs3/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/open-save-cs3" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs3" %}
 
 ### External workbook confirmation dialog
 
@@ -465,20 +465,20 @@ The following sample shows the `Save` option by using the [`saveUrl`](https://ej
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs5/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs5/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs5/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs5/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs5/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs5/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/open-save-cs5" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs5" %}
 
 Please find the below table for the beforeSave event arguments.
 
@@ -504,14 +504,14 @@ Please find below the code to retrieve blob data from the Spreadsheet component 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/save-as-blobdata-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/save-as-blobdata-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/save-as-blobdata-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/save-as-blobdata-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/save-as-blobdata-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/save-as-blobdata-cs1" %}
 
 ### Save an Excel file to a server
 
@@ -679,14 +679,14 @@ The following code example shows how to save the spreadsheet data as base64 stri
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/base-64-string/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/base-64-string/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/base-64-string/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/base-64-string/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/base-64-string" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/base-64-string" %}
 
 ### Configure JSON serialization options
 
@@ -716,14 +716,14 @@ The following code snippet demonstrates how to configure the serialization optio
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/save-as-json/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/save-as-json/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/save-as-json/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/save-as-json/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/save-as-json" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/save-as-json" %}
 
 ### Send and receive custom params from client to server
 
@@ -731,20 +731,20 @@ Passing the custom parameters from client to server by using [`beforeSave`](http
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs6/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs6/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs6/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs6/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs6/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs6/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/open-save-cs6" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs6" %}
 Server side code snippets:
 
 ```csharp
@@ -761,20 +761,20 @@ You can add your own custom header to the save action in the Spreadsheet. For pr
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs7/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs7/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs7/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs7/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs7/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs7/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/open-save-cs7" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs7" %}
 
 ### Change the PDF orientation
 
@@ -787,20 +787,20 @@ The possible values are:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs8/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs8/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs8/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs8/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs8/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/open-save-cs8/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/open-save-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/open-save-cs8" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs8" %}
 
 ### Supported file formats
 
@@ -817,20 +817,20 @@ To save the Spreadsheet document as an `xlsx, xls, csv, or pdf` file, by using [
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/save-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/save-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/save-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/save-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/save-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/save-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/save-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/save-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/save-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/save-cs1" %}
 
 ## Server Configuration
 
@@ -880,11 +880,11 @@ Open and save helper functions are shipped in the Syncfusion.EJ2.Spreadsheet pac
 * Syncfusion.Compression.Base
 * Syncfusion.XlsIO.Base
 
-And also refer [this](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/open-save#server-dependencies) for more information.
+And also refer [this](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/open-save#server-dependencies) for more information.
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-ui-components/react-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://ej2.syncfusion.com/react/demos/#/material/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 

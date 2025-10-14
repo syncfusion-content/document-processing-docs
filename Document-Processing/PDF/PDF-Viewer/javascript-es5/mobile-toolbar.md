@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Mobile Toolbar Interface in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn All About the Mobile Toolbar Interface in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Mobile Toolbar Interface in Javascript Pdfviewer control | Syncfusion
+description: Learn All About the Mobile Toolbar Interface in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Mobile Toolbar Interface
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Mobile Toolbar Interface in ##Platform_Name## Pdfviewer control
+# Mobile Toolbar Interface in Javascript Pdfviewer control
 
 The Mobile PDF Viewer offers a variety of features for viewing, searching, annotating, and managing PDF documents on mobile devices. It includes essential tools like search, download, bookmarking, annotation, and page organization. Users also have the option to enable desktop toolbar features in mobile mode, providing a more extensive set of actions.
 
 ## Mobile Mode Toolbar Configuration
 In mobile mode, the toolbar is optimized for ease of use on small screens, presenting users with the most common actions for interacting with a PDF document. Below are the key features available in mobile mode:
 
-![Mobile toolbar with primary PDF interaction options](../images/mobileToolbar.png)
+![Mobile toolbar with primary PDF interaction options](./images/mobileToolbar.png)
 
 ### Main Toolbar Options:
 
@@ -23,17 +23,17 @@ In mobile mode, the toolbar is optimized for ease of use on small screens, prese
 
 **SearchOption:** Access the search bar to find text within the document.
 
-![Search bar displayed for finding text within a PDF](../images/searchOption.png)
+![Search bar displayed for finding text within a PDF](./images/searchOption.png)
 
 **UndoRedoTool:** Quickly undo or redo any annotations made.
 
 **OrganizePagesTool:** Enable or disable page organization features to modify document pages.
 
-![Page organization interface for modifying PDF pages](../images/organizePages.png)
+![Page organization interface for modifying PDF pages](./images/organizePages.png)
 
 **AnnotationEditTool:** Activate or deactivate annotation editing to add or modify annotations.
 
-![Annotation editing toolbar allowing users to add, edit, or delete annotations on a PDF](../images/editAnnotation.png)
+![Annotation editing toolbar allowing users to add, edit, or delete annotations on a PDF](./images/editAnnotation.png)
 
 
 N> In mobile mode, the annotation toolbar is conveniently displayed at the bottom of the viewer.
@@ -45,7 +45,7 @@ When you open the "more options" menu, you will see additional actions such as:
 
 **BookmarkOption:** Allows you to view bookmarks within the document.
 
-![More options menu showing additional actions like download and bookmark](../images/more-options.png)
+![More options menu showing additional actions like download and bookmark](./images/more-options.png)
 
 ## Enabling Desktop Mode in Mobile
 
@@ -74,7 +74,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
                     enableDesktopMode : true
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
@@ -106,7 +106,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
                     enableDesktopMode : true,
                     enableTextSelection : false
                 });

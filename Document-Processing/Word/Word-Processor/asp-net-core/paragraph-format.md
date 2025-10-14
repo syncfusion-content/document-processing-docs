@@ -4,7 +4,6 @@ title: Paragraph Format in Document Editor Control | Syncfusion
 description: Learn here all about paragraph format in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Paragraph Format
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -147,7 +146,7 @@ documenteditor.documentEditorSettings.showHiddenMarks = true;
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/paragraph-format/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/paragraph-format/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Paragraph-format.cs" %}
 {% endhighlight %}{% endtabs %}

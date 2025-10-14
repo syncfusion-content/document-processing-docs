@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Open PDF From AAD in ##Platform_Name## Pdfviewer | Syncfusion
-description: Learn how to Open PDF From AAD in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Open PDF From AAD in Javascript Pdfviewer | Syncfusion
+description: Learn how to Open PDF From AAD in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---

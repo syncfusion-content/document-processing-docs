@@ -59,7 +59,7 @@ function App() {
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enableTextSearch={true}
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -185,7 +185,7 @@ export function App() {
       <PdfViewerComponent
       id="container"
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+      serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
       style={{ 'height': '680px' }}
       >
         <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -272,7 +272,7 @@ export function App() {
       <PdfViewerComponent
       id="container"
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+      serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
       style={{ 'height': '680px' }}
       >
         <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,

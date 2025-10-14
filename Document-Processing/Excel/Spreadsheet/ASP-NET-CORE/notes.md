@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Notes in EJ2 ASP.NET CORE Syncfusion Spreadsheet Control
+title: Notes in EJ2 ASP.NET Core Syncfusion Spreadsheet Control
 description: Learn here all about the notes feature in EJ2 ASP.NET CORE Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Notes
@@ -20,10 +20,10 @@ In the below example, you can add, edit, save, and delete notes.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs1/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/note-cs1/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="NotesController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs1/notesController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/note-cs1/notesController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -70,10 +70,10 @@ In the below example, the note functionality is disabled in the Spreadsheet.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs2/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/note-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="NotesController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs2/notesController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/note-cs2/notesController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -83,10 +83,10 @@ The notes can be added initially when the Spreadsheet loads using cell data bind
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs3/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/note-cs3/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="NotesController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs3/notesController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/note-cs3/notesController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

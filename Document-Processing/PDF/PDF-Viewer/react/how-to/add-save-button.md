@@ -108,7 +108,7 @@ return (<div>
         <PdfViewerComponent
             id="container"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+            serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
             toolbarSettings={{ showTooltip : true, toolbarItems: ['OpenOption', toolItem1,  'PageNavigationTool', 'MagnificationTool', toolItem3, 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']}}
             toolbarClick={toolbarClick}
             style={{ 'height': '640px' }}>

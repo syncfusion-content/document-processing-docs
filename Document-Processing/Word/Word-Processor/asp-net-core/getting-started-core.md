@@ -4,7 +4,6 @@ title: Getting Started with Syncfusion Document Editor Control
 description: Checkout and learn about getting started with Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting Started Core
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -91,7 +90,7 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Docum
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/getting-started/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/getting-started/tagHelper %}
 {% endhighlight %}
 {% endtabs %}
 

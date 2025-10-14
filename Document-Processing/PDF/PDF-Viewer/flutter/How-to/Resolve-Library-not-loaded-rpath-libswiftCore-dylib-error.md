@@ -2,7 +2,7 @@
 layout: post
 title: Library not loaded error | Syncfusion
 description: Learn here all about how to resolve Library not loaded error faced when using Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget.
-platform: flutter
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

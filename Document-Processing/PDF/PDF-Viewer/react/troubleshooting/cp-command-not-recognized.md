@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Troubleshoot 'cp' is not recognized as a command in ##Platform_Name## PDF Viewer control | Syncfusion
+title: Troubleshoot 'cp' is not recognized as a command in React PDF Viewer control | Syncfusion
 description: Learn here all about how to solve 'cp' is not recognized as a command in Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: React
 documentation: ug
 domainurl: ##DomainURL##
 ---

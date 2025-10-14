@@ -1582,11 +1582,17 @@ The following chart types are supported in DocIO.
 * [Surface_NoColor_3D](https://support.syncfusion.com/kb/article/12247/how-to-create-wireframe-3d-surface-chart-in-word-document-using-c)
 * [Surface_NoColor_Contour](https://support.syncfusion.com/kb/article/12245/how-to-create-wireframe-contour-surface-chart-in-word-document-using-c)
 * [WaterFall](https://support.syncfusion.com/kb/article/12243/how-to-create-waterfall-chart-in-word-document-using-c)
+* Pareto
+* Histogram
+* Funnel
+* Box_And_Whisker
+* Treemap
+* Sunburst
 
 ## Online Demo
 
-* Explore how to insert a bar chart into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/barchart#/bootstrap5). 
-* See how to insert a pie chart into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/piechart#/bootstrap5). 
+* Explore how to insert a bar chart into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/barchart#/tailwind). 
+* See how to insert a pie chart into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/piechart#/tailwind). 
 
 ## See Also
 

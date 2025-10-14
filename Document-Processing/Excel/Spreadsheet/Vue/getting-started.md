@@ -58,7 +58,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Spreadsheet component](https://www.syncfusion.com/vue-components/vue-spreadsheet) as an example. Install the `@syncfusion/ej2-vue-spreadsheet` package by running the following command:
+This article uses the [Vue Spreadsheet component](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) as an example. Install the `@syncfusion/ej2-vue-spreadsheet` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-spreadsheet --save
@@ -141,10 +141,10 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/getting-started-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/getting-started-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/getting-started-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -162,9 +162,9 @@ or
 yarn run serve
 ```
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/getting-started-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/getting-started-cs1" %}
 
-> You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/vue-ui-components/vue-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://ej2.syncfusion.com/vue/demos/#/material/spreadsheet/default.html) that shows you how to present and manipulate data.
+> You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) that shows you how to present and manipulate data.
 
 ## See Also
 

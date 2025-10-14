@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open Save in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+title: Open Save in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
 description: Learn here all about Open Save in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open Save
@@ -24,10 +24,10 @@ The following sample shows the `Open` option by using the [`openUrl`](https://he
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/open/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/open/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Opencontroller.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/open/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/open/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -53,10 +53,10 @@ The following code example shows how to import an excel document using file uplo
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/open-uploader/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/open-uploader/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Opencontroller.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/open-uploader/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/open-uploader/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -66,10 +66,10 @@ You can achieve to access the remote excel file by using the [`created`](https:/
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/open-url/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/open-url/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Opencontroller.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/open-url/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/open-url/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -81,10 +81,10 @@ Please find the code to fetch the blob data and load it into the Spreadsheet con
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/open-from-blob/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/open-from-blob/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="OpenController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/open-from-blob/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/open-from-blob/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -206,10 +206,10 @@ The following code example shows how to open the spreadsheet data as base64 stri
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/base-64-string/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/base-64-string/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="OpenController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/base-64-string/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/base-64-string/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -219,10 +219,10 @@ You can open excel file into a read-only mode by using the [`openComplete`](http
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/open-readonly/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/open-readonly/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Opencontroller.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/open-readonly/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/open-readonly/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -254,10 +254,10 @@ The following code snippet demonstrates how to configure the deserialization opt
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/open-from-json/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/open-from-json/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="OpenController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/open-from-json/openController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/open-from-json/openController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -416,10 +416,10 @@ You can add your own custom header to the open action in the Spreadsheet. For pr
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/open-header/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/open-header/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Opencontroller.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/open-header/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/open-header/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -463,10 +463,10 @@ The following sample shows the `Save` option by using the [`saveUrl`](https://he
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/save/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/save/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Savecontroller.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/save/savecontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/save/savecontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -496,10 +496,10 @@ Please find below the code to retrieve blob data from the Spreadsheet control be
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/save-as-blob/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/save-as-blob/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SaveController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/save-as-blob/savecontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/save-as-blob/savecontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -649,10 +649,10 @@ The following code example shows how to save the spreadsheet data as base64 stri
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/base-64-string/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/base-64-string/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="OpenController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/base-64-string/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/base-64-string/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -684,10 +684,10 @@ The following code snippet demonstrates how to configure the serialization optio
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/save-as-json/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/save-as-json/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SaveController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/save-as-json/saveController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/save-as-json/saveController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -697,10 +697,10 @@ Passing the custom parameters from client to server by using [`beforeSave`](http
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/custom-params/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/custom-params/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CustomParamsController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/custom-params/customParamsController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/custom-params/customParamsController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -710,10 +710,10 @@ You can add your own custom header to the save action in the Spreadsheet. For pr
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/save-header/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/save-header/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CustomHeaderController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/save-header/CustomHeaderController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/save-header/CustomHeaderController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -728,10 +728,10 @@ The possible values are:
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/pdf-orientation/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/pdf-orientation/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="pdfOrientationController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/pdf-orientation/pdfOrientationController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/pdf-orientation/pdfOrientationController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -750,10 +750,10 @@ To save the Spreadsheet document as an `xlsx, xls, csv, or pdf` file, by using `
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/open-save/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/open-save/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="OpenSaveController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/open-save/openSaveController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/open-save/openSaveController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

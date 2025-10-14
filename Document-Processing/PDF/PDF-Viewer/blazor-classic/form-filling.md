@@ -69,7 +69,7 @@ The PDF Viewer control supports exporting and importing the form field data in t
 * XFDF
 * JSON
 
-> N The form field data will be exported as stream, and that data from the stream will be imported into the current PDF document.
+N> The form field data will be exported as stream, and that data from the stream will be imported into the current PDF document.
 
 ### Export and import as XML
 
@@ -254,4 +254,4 @@ The following code shows how to export the form fields as a JSON data stream and
 }
 ```
 
-N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations.
+N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations.

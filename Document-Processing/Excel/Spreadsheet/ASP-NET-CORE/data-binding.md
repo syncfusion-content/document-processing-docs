@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Data Binding in Spreadsheet Control
+# Data Binding in ASP.NET Core Spreadsheet Control
 
 The Spreadsheet uses `DataManager`, which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of `DataManager` or JavaScript object array collection.
 
@@ -20,29 +20,14 @@ To bind local data to the Spreadsheet, you can assign a JavaScript object array 
 
 Refer to the following code example for local data binding.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/local-data-binding/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/local-data-binding/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="LocalDataController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/local-data-binding/localDataController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/local-data-binding/localDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/local-data-binding/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="LocalDataController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/local-data-binding/MVC/localDataController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 
 
 
@@ -56,28 +41,15 @@ By default, when a data source is bound to a sheet, columns are auto-assigned fr
 
 The following code example demonstrates how to customize the mapping of column data:
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/field-mapping/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/field-mapping/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="FieldMappingController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/field-mapping/fieldMappingController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/field-mapping/fieldMappingController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/field-mapping/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="FieldMappingController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/field-mapping/MVC/fieldMappingController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Remote data
 
@@ -85,28 +57,14 @@ To bind remote data to the Spreadsheet control, assign service data as an instan
 
 Refer to the following code example for remote data binding.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/remote-data-binding/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/remote-data-binding/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="RemoteDataController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/remote-data-binding/remoteDataController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/remote-data-binding/remoteDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/remote-data-binding/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="RemoteDataController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/remote-data-binding/MVC/remoteDataController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
@@ -116,28 +74,14 @@ N> By default, `DataManager` uses **ODataAdaptor** for remote data-binding.
 
 `OData` is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the DataManager. Refer to the following code example for remote Data binding using OData service.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/odata-adaptor/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/odata-adaptor/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ODataController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/odata-adaptor/oDataController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/odata-adaptor/oDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/odata-adaptor/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="ODataController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/odata-adaptor/MVC/oDataController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
@@ -145,59 +89,31 @@ N> By default, `DataManager` uses **ODataAdaptor** for remote data-binding.
 
 You can use WebApiAdaptor to bind spreadsheet with Web API created using OData endpoint.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/webapi-adaptor/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/webapi-adaptor/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="WebApiController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/webapi-adaptor/webApiController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/webapi-adaptor/webApiController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/webapi-adaptor/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="WebApiController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/webapi-adaptor/MVC/webApiController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
 ## Cell data binding
 
-The Spreadsheet control can bind the data to individual cell in a sheet . To achive this you can use the `value` property.
+The Spreadsheet control can bind the data to individual cell in a sheet . To achieve this you can use the `value` property.
 
 Refer to the following code example for cell data binding.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/cell-data-binding/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/cell-data-binding/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CellDataController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/cell-data-binding/cellDataController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/cell-data-binding/cellDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/cell-data-binding/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="CellDataController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/cell-data-binding/MVC/cellDataController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
@@ -219,28 +135,14 @@ The following table defines the arguments of the `dataSourceChanged` event.
 N> For `add` action, the value for all the fields will be `null` in the data. In the case that you do not want the primary key field to be null which needs to be updated in the backend service, you can use `edit` action after updating the primary key field to update in the backend service. <br><br>
 <br/> For inserting a row at the end of the datasource range, you should insert a row below at the end of the range to trigger the `dataSourceChanged` event with action `add`.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/dynamic-data-binding/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/dynamic-data-binding/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="DynamicDataController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/dynamic-data-binding/dynamicDataController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/dynamic-data-binding/dynamicDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/dynamic-data-binding/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="DynamicDataController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/dynamic-data-binding/MVC/dynamicDataController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Dynamic data binding using updateRange method
 
@@ -250,28 +152,14 @@ To use the `updateRange` method, provide the new `dataSource` and specify the st
 
 The following code example demonstrates how to dynamically update data using the `updateRange` method.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/dynamic-data-binding-cs2/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/dynamic-data-binding-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="UpdateRangeController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/dynamic-data-binding-cs2/updateRangeController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/dynamic-data-binding-cs2/updateRangeController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/dynamic-data-binding-cs2/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="UpdateRangeController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/dynamic-data-binding-cs2/MVC/updateRangeController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## See Also
 

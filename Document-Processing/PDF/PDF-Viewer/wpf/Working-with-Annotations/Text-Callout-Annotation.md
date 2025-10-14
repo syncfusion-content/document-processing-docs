@@ -2,7 +2,7 @@
 layout: post
 title: Text Callout Annotation in WPF Pdf Viewer control | Syncfusion&reg;
 description: Learn about Text Annotation support in Syncfusion&reg; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
-platform: wpf
+platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---

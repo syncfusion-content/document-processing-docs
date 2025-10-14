@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Searching in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+title: Searching in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
 description: Learn here all about Searching in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Searching
@@ -65,10 +65,10 @@ In the following sample, searching can be done by following ways:
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/search/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/search/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SearchController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/search/searchController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/search/searchController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Toolbar in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Toolbar in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Toolbar in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Toolbar in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Toolbar
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Built-In Toolbar in ##Platform_Name## Pdfviewer control
+# Built-In Toolbar in Typescript Pdfviewer control
 
 The PDF Viewer comes with a powerful built-in toolbar to execute important actions such as page navigation, text search,view mode,download,print,bookmark, and thumbnails.
 
@@ -117,9 +117,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-hide-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/toolbar/toolbar-hide-cs1/index.html" %}
 
 * **Show/Hide toolbar using showToolbar as in the following code snippet**
 
@@ -178,10 +178,10 @@ document.getElementById('set').addEventListener('click', ()=> {
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
-Add the below [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.ts` file
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-method-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/toolbar/toolbar-method-cs1/index.html" %}
 
 ## Show/Hide the default toolbaritem
 
@@ -242,9 +242,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-items-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/toolbar/toolbar-items-cs1/index.html" %}
 
 * **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
 
@@ -304,9 +304,9 @@ document.getElementById('set').addEventListener('click', ()=> {
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-items-method-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/toolbar/toolbar-items-method-cs1/index.html" %}
 
 ## Customize Built-In Toolbar
 
@@ -408,7 +408,7 @@ let toolItem4: CustomToolbarItemModel = {
 }
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.toolbarSettings = { toolbarItems: [toolItem1, toolItem2, 'OpenOption', 'PageNavigationTool', 'MagnificationTool', toolItem3, 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', toolItem4, 'CommentTool', 'SubmitForm']}
 pdfviewer.appendTo('#PdfViewer');
 //To handle custom toolbar click event.
@@ -462,7 +462,7 @@ N> When customizing toolbar items, you have the flexibility to include either ic
 
 The PDF Viewer provides API for user interactions options provided in it's built-in toolbar. Using this we can create our own User Interface for toolbar actions in application level by hiding the default toolbar. The following steps are used to create the custom toolbar for PDF Viewer,
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create simple PDF Viewer sample.
 
 **Step 2:** Now, add an HTML div element to act as the custom toolbar PDF Viewer using the following code.
 
@@ -549,7 +549,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkVie
         enableToolbar: false,
         enableThumbnail: false,
         documentPath: 'https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf',
-        serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+        serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
     });
     viewer.appendTo('#pdfViewer');
 
@@ -1461,7 +1461,7 @@ function updateSearchInputIcon(isEnable: boolean): void {
         enableToolbar: false,
         enableThumbnail: false,
         documentPath: 'https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf',
-        serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+        serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
     });
     viewer.appendTo('#pdfViewer');
     document.getElementById('fileUpload').addEventListener('change', readFile, false);
@@ -1524,11 +1524,11 @@ function updateSearchInputIcon(isEnable: boolean): void {
 {% endtabs %}
 
 Sample :
-[https://ej2.syncfusion.com/demos/#/material/pdfviewer/custom-toolbar.html](https://ej2.syncfusion.com/demos/#/material/pdfviewer/custom-toolbar.html)
+[https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/custom-toolbar.html](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/custom-toolbar.html)
 
 ## How to customize the default toolbar with desired tools
 
-Customize the default toolbar with the required tools by using the [toolbarSettings](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#toolbarsettings) class of the PDF viewer.
+Customize the default toolbar with the required tools by using the [toolbarSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/#toolbarsettings) class of the PDF viewer.
 
 The following code illustrates how to render the default toolbar with specific tools.
 
@@ -1574,7 +1574,7 @@ The following code illustrates how to render the default toolbar with specific t
     var viewer = new ej.pdfviewer.PdfViewer({
         //Set the document path for initial loading.
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+        serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
     });
     //Inject the required dependencies to load the PDF Viewer.
     ej.pdfviewer.PdfViewer.Inject(

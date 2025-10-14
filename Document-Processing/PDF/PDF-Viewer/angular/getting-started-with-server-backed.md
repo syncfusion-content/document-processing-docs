@@ -112,13 +112,13 @@ import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
                AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
 })
 export class AppComponent implements OnInit {
-  public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+  public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   ngOnInit(): void {
   }
 }
 ```
-N> The Web API hosted link https://services.syncfusion.com/angular/production/api/pdfviewer utilized in the PDF viewer's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service and use for the serviceUrl property. **We strongly recommend using the standalone mode.**
+N> The Web API hosted link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer utilized in the PDF viewer's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service and use for the serviceUrl property. **We strongly recommend using the standalone mode.**
 
 ## Run the application
 
@@ -132,11 +132,11 @@ The output will appear as follows.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/getting-started-cs1/src/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/getting-started-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/getting-started-cs1/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/getting-started-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -154,9 +154,9 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 ```
 
-{% previewsample "page.domainurl/samples/pdfviewer/getting-started-cs1" %}
+{% previewsample "Document-Processing/samples/pdfviewer/angular/getting-started-cs1/index.html" %}
 
-> For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/how-to/create-pdfviewer-service)
+> For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service)
 
 ## How to run the PDF Viewer web service
 

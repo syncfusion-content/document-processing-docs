@@ -1,34 +1,40 @@
 ---
 layout: post
-title: Overview of Blazor Smart PDF Viewer | Syncfusion
-description: Checkout and learn about overview of the Syncfusion Blazor Smart PDF Viewer and much more details.
+title: Blazor Smart PDF Viewer overview | Syncfusion
+description: Learn about the AI-powered Syncfusion Blazor Smart PDF Viewer, including document summarization with Q&A, smart redaction, and smart fill.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 ---
 # Overview of Blazor Smart PDF Viewer
 
-The **Blazor Smart PDF Viewer** is an advanced component in Syncfusion’s Blazor suite that integrates artificial intelligence to enhance document interaction. It builds upon the core capabilities of the traditional PDF Viewer by introducing intelligent features such as **Document Summarization**, **Smart Redact**, and **Smart Fill**, enabling users to manage documents more efficiently and securely.
+The **[Blazor Smart PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-smart-pdf-viewer)** is an AI-powered component in Syncfusion’s Blazor suite that enhances document interaction. Key capabilities include [**Document Summarization with Q&A**](./document-summarizer), [**Smart Redaction**](./smart-redaction), and [**Smart Fill**](./smart-fill), enabling efficient and secure document workflows.
 
 ## Document Summarization
 
-* Uses AI to analyze PDF content and generate concise summaries.
-* Helps users quickly understand key points without reading the entire document.
-* Useful for legal contracts, research papers, business reports, and other lengthy documents.
+* Analyzes PDF content and produces concise summaries using AI.
+* Supports natural-language Q&A with user-entered and AI-suggested questions.
+* Accelerates understanding without reading the entire document.
+* Applicable to legal contracts, research papers, business reports, and other lengthy documents.
 
-## Smart Redact
+[View the Document Summarization demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/smart-pdf-viewer/summarizer?theme=fluent2)
 
-* Automatically detects and removes sensitive or confidential information.
+## Smart Redaction
+
+* Detects and removes sensitive or confidential information.
 * Identifies patterns such as personal identifiers and financial data.
-* Ensures consistent and secure redaction across documents.
-* Supports privacy compliance and reduces manual effort.
+* Ensures consistent redaction across documents.
+* Supports privacy and compliance requirements while reducing manual effort.
+
+[View the Smart Redaction demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/smart-pdf-viewer/smartredact?theme=fluent2)
 
 ## Smart Fill
 
 * Intelligently populates form fields based on context.
 * Understands the structure and expected input of PDF forms.
 * Reduces manual data entry and improves accuracy.
-* Streamlines workflows in applications like onboarding, surveys, and registrations.
+
+[View the Smart Fill demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/smart-pdf-viewer/smartfill?theme=fluent2)
 
 ## Benefits
 
@@ -39,6 +45,13 @@ The **Blazor Smart PDF Viewer** is an advanced component in Syncfusion’s Blazo
 
 ## Integration
 
-* Powered by AI services such as [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI), Syncfusion.AI.PdfViewer, [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal).
-* Features can be selectively enabled based on application needs.
-* Compatible with Blazor Server Application
+* Powered by AI services such as [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI), [Syncfusion.AI.PdfViewer](https://www.nuget.org/packages/Syncfusion.AI.PdfViewer), and [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal).
+* Features are optional and can be enabled individually based on application needs.
+* Compatible with Blazor Server applications.
+
+## See also
+
+* [Getting Started with Blazor Smart PDF Viewer in Web App Server](./getting-started/web-app)
+* [Document Summarizer in Blazor Smart PDF Viewer](./document-summarizer)
+* [Smart Redaction in Blazor Smart PDF Viewer](./smart-redaction)
+* [Smart Fill in Blazor Smart PDF Viewer](./smart-fill)

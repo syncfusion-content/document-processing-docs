@@ -2,7 +2,7 @@
 layout: post
 title: Printing PDF in WinForms PDF Viewer | Syncfusion&reg;
 description: Learn about Printing PDF Files support in Syncfusion&reg; Windows Forms PDF Viewer (PdfViewerControl) control and more details.
-platform: windowsforms
+platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---

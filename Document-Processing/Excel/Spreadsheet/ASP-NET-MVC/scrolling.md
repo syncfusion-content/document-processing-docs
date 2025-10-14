@@ -53,10 +53,10 @@ The following code example shows the finite scrolling with defined rows and colu
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/scrolling/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/scrolling/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ScrollingController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/scrolling/scrollingController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/scrolling/scrollingController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

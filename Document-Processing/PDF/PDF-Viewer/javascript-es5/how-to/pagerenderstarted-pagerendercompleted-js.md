@@ -4,14 +4,14 @@ title: Rendering events in | Syncfusion
 description: Learn here all about the pageRenderInitiate and pageRenderComplete event in Syncfusion Javascript PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # PageRenderInitiate and PageRenderComplete event
 
-In Syncfusion PDF Viewer, [pageRenderInitiate](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) actions are events that occur during the rendering process of PDF documents.
+In Syncfusion PDF Viewer, [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) actions are events that occur during the rendering process of PDF documents.
 
 **pageRenderInitiate**
 
@@ -35,6 +35,6 @@ pdfviewer.pageRenderComplete = args => {
 };
 ```
 
-The provided code demonstrates how to subscribe to the [pageRenderInitiate](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events in the Syncfusion PDF Viewer component.
+The provided code demonstrates how to subscribe to the [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events in the Syncfusion PDF Viewer component.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/PageRenderStarted%20and%20PageRenderCompleted%20event)

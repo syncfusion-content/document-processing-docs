@@ -25,7 +25,7 @@ The following steps are used to customize the selection border.
 <PdfViewerComponent
     id="container"
     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-    serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+    serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
     customFonts = {["arialbd.ttf", "arial.ttf", "BKANT.TTF", "calibri.ttf", "GARA.TTF", "GARAIT.TTF", "msgothic.ttc", "trebuc.ttf", "wingding.ttf"]}
     style={{ height: '640px' }}>
 </PdfViewerComponent>

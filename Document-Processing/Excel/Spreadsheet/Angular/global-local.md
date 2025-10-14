@@ -382,15 +382,15 @@ The following example demonstrates the Spreadsheet in `French` culture. In the b
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/local-data-binding-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/local-data-binding-cs2" %}
 
 ## Internationalization
 
@@ -411,15 +411,15 @@ The following example demonstrates the Spreadsheet in French [ `fr-CH`] culture.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/internationalization-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/internationalization-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/internationalization-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/internationalization-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/internationalization-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/internationalization-cs1" %}
 
 ## Right to left (RTL)
 
@@ -427,19 +427,19 @@ RTL provides an option to switch the text direction and layout of the Spreadshee
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs3/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs3/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/local-data-binding-cs3" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/local-data-binding-cs3" %}
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/angular-ui-components/angular-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://ej2.syncfusion.com/angular/demos/#/material/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 

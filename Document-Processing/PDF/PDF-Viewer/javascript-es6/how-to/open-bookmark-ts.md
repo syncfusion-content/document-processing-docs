@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Open Bookmark in ##Platform_Name## PDF Viewer control | Syncfusion
-description: Learn here all about Open Bookmark in Syncfusion ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Open Bookmark in Typescript PDF Viewer control | Syncfusion
+description: Learn here all about Open Bookmark in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -15,7 +15,7 @@ The PDF Viewer library allows you to open the Bookmark pane programmatically usi
 
 The following steps are used to open the Bookmark.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Insert the following code snippet to implement the functionality for opening the Bookmark pane:
 

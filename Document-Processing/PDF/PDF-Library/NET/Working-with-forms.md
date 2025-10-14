@@ -3470,6 +3470,106 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Get-widget-annotation-in-PDF/.NET).
 
+## Retrieving Custom Values from PDF Form Fields 
+
+Essential&reg; PDF supports retrieving custom values from form fields using the [TryGetValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_TryGetValue_System_String_System_Object__) method available in the PdfField class. This method enables developers to safely access custom properties embedded within a PDF form field without throwing exceptions if the specified key is missing. 
+
+Refer to the code snippet below to retrieve a custom value from a form field using the TryGetValue method.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the PDF document using a file stream 
+FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read); 
+ PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream); 
+
+//Gets the first page of the document 
+ PdfField field = loadedDocument.Form.Fields[0] as PdfField; 
+
+// Get the custom value from the annotation 
+ object values; 
+ bool foundValue = field.TryGetValue("T", out values); 
+
+// Check the values 
+ if (foundValue && values is List<string> stringValues) 
+ { 
+     foreach (string value in stringValues) 
+     { 
+        // Print the custom value to the console 
+         Console.WriteLine($"Found value: {value}"); 
+     } 
+ } 
+ else 
+ { 
+     Console.WriteLine("not found "); 
+ } 
+// Close the document and release resources 
+loadedDocument.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the PDF document using a file stream 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"); 
+
+//Gets the first page of the document 
+ PdfField field = loadedDocument.Form.Fields[0] as PdfField; 
+
+// Get the custom value from the annotation 
+ object values; 
+ bool foundValue = field.TryGetValue("T", out values); 
+
+// Check the values 
+ if (foundValue && values is List<string> stringValues) 
+ { 
+     foreach (string value in stringValues) 
+     { 
+
+        // Print the custom value to the console 
+         Console.WriteLine($"Found value: {value}"); 
+     } 
+ } 
+ else 
+ { 
+     Console.WriteLine("not found "); 
+ } 
+// Close the document and release resources 
+loadedDocument.Close(true); 
+ 
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+
+' Get the first form field from the document
+Dim field As PdfField = TryCast(loadedDocument.Form.Fields(0), PdfField)
+
+' Try to get the custom value "T" from the field
+Dim values As Object = Nothing
+Dim foundValue As Boolean = field.TryGetValue("T", values)
+
+' Check and print the values if found
+If foundValue AndAlso TypeOf values Is List(Of String) Then
+    Dim stringValues As List(Of String) = CType(values, List(Of String))
+    For Each value As String In stringValues
+        ' Print the custom value to the console
+        Console.WriteLine($"Found value: {value}")
+    Next
+Else
+    Console.WriteLine("Value not found.")
+End If
+' Close the document and release resources
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %} 
+
+You can download a complete working sample from GitHub.
 
 ## Auto resizing text box field text
 
@@ -4083,6 +4183,99 @@ loadedDocument.Close(True)
 {% endtabs %}  
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Remove-the-form-fields-form-the-existing-PDF-document).
+
+## Disable Auto Formatting
+
+When [DisableAutoFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_DisableAutoFormat) property is set to true, the form field will preserve the original input exactly as entered, offering greater control over data integrity.
+
+The following code example illustrates this.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the existing PDF document from file stream with read-write access
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(new FileStream(@"Input.pdf", FileMode.Open, FileAccess.ReadWrite));
+
+// Access the form field named "email" from the PDF form
+PdfLoadedField field = loadedDocument.Form.Fields["email"] as PdfLoadedField;
+
+// Disable automatic formatting to prevent behaviors like JavaScript execution or auto-formatting of input
+loadedDocument.Form.DisableAutoFormat = true;
+
+// Check if the field is a text box and assign a plain string value
+if (field is PdfLoadedTextBoxField textBoxField)
+{
+    // Set the text box value to a raw email string without formatting
+    textBoxField.Text = "12345@gmail.com";
+}
+
+// Save the modified PDF document to a new file using a file stream
+using (FileStream outputStream = new FileStream(@"Output.pdf", FileMode.Create, FileAccess.Write))
+{
+    loadedDocument.Save(outputStream);
+}
+
+// Close and dispose the document to release resources
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+// Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(@"Input.pdf");
+
+// Access the form field named "email"
+PdfLoadedField field = loadedDocument.Form.Fields["email"] as PdfLoadedField;
+
+// Disable automatic formatting to prevent unwanted behaviors like JavaScript execution or auto-formatting of input
+loadedDocument.Form.DisableAutoFormat = true;
+
+// Check if the field is a text box and set its value
+if (field is PdfLoadedTextBoxField textBoxField)
+{
+    // Assign a plain string value to the text box field
+    textBoxField.Text = "12345@gmail.com";
+}
+
+// Save the modified PDF document to a new file
+loadedDocument.Save("Output.pdf");
+
+// Close and dispose the document to release resources
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+
+' Load the existing PDF document
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+
+' Access the form field named "email"
+Dim field As PdfLoadedField = TryCast(loadedDocument.Form.Fields("email"), PdfLoadedField)
+
+' Disable automatic formatting to prevent unwanted behaviors like JavaScript execution or auto-formatting
+loadedDocument.Form.DisableAutoFormat = True
+
+' Check if the field is a text box and set its value
+If TypeOf field Is PdfLoadedTextBoxField Then
+    Dim textBoxField As PdfLoadedTextBoxField = CType(field, PdfLoadedTextBoxField)
+    ' Assign a plain string value to the text box field
+    textBoxField.Text = "12345@gmail.com"
+End If
+
+' Save the modified PDF document to a new file
+loadedDocument.Save("Output.pdf")
+
+' Close and dispose the document to release resources
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Disable-Auto-Formatting-in-FormFields/.NET).
 
 ## Importing form fields
 ### Importing FDF file to PDF

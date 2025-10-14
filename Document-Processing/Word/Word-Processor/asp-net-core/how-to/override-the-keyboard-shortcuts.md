@@ -4,7 +4,6 @@ title: Override The Keyboard Shortcuts in Document Editor Component
 description: Learn here all about override the keyboard shortcuts in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Override The Keyboard Shortcuts
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -20,7 +19,7 @@ The following code shows how to prevent the `CTRL + C` keyboard shortcut for cop
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/asp-net-core/document-editor/asp-net-core/document-editor/prevent-default/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/prevent-default/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Prevent-default.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -35,7 +34,7 @@ For example, `Ctrl + S` keyboard shortcut saves the document in SFDT format by d
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/asp-net-core/document-editor/asp-net-core/document-editor/override/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/override/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Override.cs" %}
 {% endhighlight %}{% endtabs %}

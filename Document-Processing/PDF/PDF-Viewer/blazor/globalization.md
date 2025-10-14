@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization and RTL in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about globalization and RTL in Syncfusion Blazor SfPdfViewer component and more.
+description: Learn how to localize UI text and enable RTL layout in the Syncfusion Blazor SfPdfViewer, including culture setup and API references.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -11,11 +11,16 @@ documentation: ug
 
 ## Localization
 
-[Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The [Blazor SfPdfViewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) component can be localized to display culture-specific text. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) guide for steps to add culture resource files, register localization services, and set the current culture.
+
+N>
+* Provide localized string resources for the viewer’s UI texts (such as toolbar tooltips, dialog messages).
+* Ensure the app culture (CurrentCulture and CurrentUICulture) is set before the component renders for correct resource lookup.
+* Localization applies to the viewer UI; it does not translate the PDF document content.
 
 ## Right to Left
 
-To enable right-to-left (RTL) rendering for the user interface, you can set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableRtl) property of the desired control to `true`. This will ensure that the control is rendered appropriately for users who use RTL languages such as Arabic, Hebrew, Azerbaijani, Persian, and Urdu. The following code snippet demonstrates how to enable RTL rendering.
+To enable right-to-left (RTL) rendering for the viewer UI, set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableRtl) property to true. This mirrors the layout and aligns UI elements for RTL languages such as Arabic, Hebrew, Azerbaijani, Persian, and Urdu. The following code snippet demonstrates how to enable RTL rendering.
 
 By setting EnableRtl to `true`, the control will adjust its layout and appearance to align text, icons, and other elements from right to left, providing an optimized user experience for RTL language users.
 

@@ -4,7 +4,6 @@ title: Export PDF Document in Document Editor Component |Syncfusion
 description: Learn here all about export document as PDF in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Export Document As PDF
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -15,7 +14,7 @@ This article explains how to export the document as PDF format. You can export t
 
 ## Export the document as PDF in client-side
 
-Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as PDF using `exportasimage` API. Here, all pages will be converted to image and inserted as PDF pages (works like print as PDF). There is one limitation, the text can't be searched because the PDF is exported as image.
+Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as PDF using `exportAsImage` API. Here, all pages will be converted to image and inserted as PDF pages (works like print as PDF). There is one limitation, the text can't be searched because the PDF is exported as image.
 
 N> You can install the PDF export packages from this [`link`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export).
 

@@ -476,7 +476,7 @@ import { provide, ref } from "vue";
 
 const pdfviewer = ref(null);
 const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const menuItems = [
   {
     text: 'Search In Google',
@@ -669,7 +669,7 @@ export default {
   data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       menuItems: [
         {
           text: 'Search In Google',
@@ -838,17 +838,17 @@ The following is the output of custom context menu with customization.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/pdfviewer/custom-context-menu/app-composition.vue %}
+{% include code-snippet/pdfviewer/vue/custom-context-menu/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/pdfviewer/custom-context-menu/app.vue %}
+{% include code-snippet/pdfviewer/vue/custom-context-menu/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer** in the app.Vue file, include the following `serviceUrl`:
-**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
+**serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/custom-context-menu" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/custom-context-menu/index.html" %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to/Customize%20context%20menu)

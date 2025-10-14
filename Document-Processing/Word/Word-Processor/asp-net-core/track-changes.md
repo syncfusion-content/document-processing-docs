@@ -4,7 +4,6 @@ title: Track Changes in Document Editor Control | Syncfusion
 description: Learn here all about track changes in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Track Changes
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -149,7 +148,7 @@ The following example code illustrates how to enforce and stop protection in Doc
 {% endtabs %}
 
 
-Tracked changes only protection can be enabled in UI by using [Restrict Editing pane](../document-editor/document-management#restrict-editing-pane/)
+Tracked changes only protection can be enabled in UI by using [Restrict Editing pane](https://ej2.syncfusion.com/aspnetcore/documentation/document-editor/document-management#restrict-editing-pane)
 
 ![Enable track changes only protection](images/tracked-changes.png)
 

@@ -4,7 +4,6 @@ title: Import in Document Editor Component | Syncfusion
 description: Learn here all about import in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Import
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -16,10 +15,10 @@ In Document Editor, the documents are stored in its own format called **Syncfusi
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/import/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/import/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/import/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/import/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -29,10 +28,10 @@ In Document Editor, the documents are stored in its own format called **Syncfusi
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/import-sfdt/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/import-sfdt/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/import-sfdt/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/import-sfdt/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -45,10 +44,10 @@ You can convert word documents into SFDT format using the .NET Standard library 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/import-docx/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/import-docx/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/import-docx/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/import-docx/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

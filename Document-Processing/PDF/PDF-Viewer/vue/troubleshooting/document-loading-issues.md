@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Document Loading Issues in Version 23.1 or Newer ##Platform_Name## Pdfviewer Component
-description: Learn here all about troubleshooting Document Loading Issues in Version 23.1 or newer in ##Platform_Name## Pdfviewer of Syncfusion Essential JS 2 and more.
+title: Document Loading Issues in Version 23.1 or Newer Vue Pdfviewer Component
+description: Learn here all about troubleshooting Document Loading Issues in Version 23.1 or newer in Vue Pdfviewer of Syncfusion Essential JS 2 and more.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -22,7 +22,7 @@ If you're experiencing problems with your document not rendering in the viewer, 
 </ejs-pdfviewer>
 
 documentLoad: function (args) {
-       pdfViewer.serviceUrl = "https://ej2services.syncfusion.com/angular/development/api/pdfviewer";
+       pdfViewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
        pdfViewer.dataBind();
        pdfViewer.load("https://cdn.syncfusion.com/content/pdf/annotations.pdf");
     }

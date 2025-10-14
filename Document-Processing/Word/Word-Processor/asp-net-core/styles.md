@@ -4,7 +4,6 @@ title: Styles in Document Editor Component | Syncfusion
 description: Learn here all about styles in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Styles
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -76,7 +75,7 @@ New Styles are defined and added to the style collection of the document. In thi
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/character-style/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/character-style/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Character-style.cs" %}
 {% endhighlight %}
@@ -89,7 +88,7 @@ New Styles are defined and added to the style collection of the document. In thi
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/paragraph-style/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/paragraph-style/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Paragraph-style.cs" %}
 {% endhighlight %}
@@ -101,7 +100,7 @@ New Styles are defined and added to the style collection of the document. In thi
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/linked-style/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/linked-style/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Linked-style.cs" %}
 {% endhighlight %}

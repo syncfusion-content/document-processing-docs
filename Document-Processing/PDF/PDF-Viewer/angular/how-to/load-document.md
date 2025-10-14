@@ -14,7 +14,7 @@ The PDF Viewer library allows to switch or load the PDF documents dynamically af
 
 The following steps are used to load the PDF document dynamically.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample in Angular.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular.
 
 **Step 2:** Use the following code snippet to load the document from Base64 string.
 

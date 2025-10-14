@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Create programmatically in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Create programmatically in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Create programmatically in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Create programmatically in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Create programmatically
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create programmatically in ##Platform_Name## Pdfviewer control
+# Create programmatically in Typescript Pdfviewer control
 
 The PDF Viewer control provides the option to add, edit and delete the Form Fields. The Form Fields type supported by the PDF Viewer Control are:
 
@@ -102,9 +102,9 @@ pdfviewer.documentLoad = function (args) {
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs3" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/addformfield-cs3/index.html" %}
 
 ## Edit/Update form field programmatically
 
@@ -187,9 +187,9 @@ pdfviewer.formDesignerModule.updateFormField(pdfviewer.formFieldCollections[0], 
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs3" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/updateformfield-cs3/index.html" %}
 
 ## Delete form field programmatically
 
@@ -272,9 +272,9 @@ pdfviewer.documentLoad = function (args) {
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs3" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/deleteformfield-cs3/index.html" %}
 
 ## Saving the form fields
 
@@ -304,7 +304,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 pdfviewer.load('https://cdn.syncfusion.com/content/pdf/form-designer.pdf', null);
 pdfviewer.download();
@@ -350,7 +350,7 @@ PdfViewer.Inject( Toolbar, Magnification, Navigation, Annotation, LinkAnnotation
                   BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 pdfviewer.load('https://cdn.syncfusion.com/content/pdf/form-designer.pdf', null);
 pdfviewer.print.print();
@@ -395,7 +395,7 @@ PdfViewer.Inject( Toolbar, Magnification, Navigation, Annotation, LinkAnnotation
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 
 document.getElementById('addPasswordField').addEventListener('click', function () {
@@ -442,7 +442,7 @@ PdfViewer.Inject(Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView
 TextSelection, Annotation, FormDesigner, FormFields);
 
 let pdfviewer: PdfViewer = new PdfViewer({ documentPath:'https://cdn.syncfusion.com/content/pdf/form-designer.pdf' });
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 pdfviewer.enableFormFieldsValidation = true;
 viewer.validateFormFields= function (args) {

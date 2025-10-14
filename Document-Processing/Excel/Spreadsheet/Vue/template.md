@@ -157,11 +157,11 @@ export default {
  @import "../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css";
 </style>
 ``` -->
-Sample link: [`Cell template`](https://ej2.syncfusion.com/vue/demos/#/material/spreadsheet/cell-template)
+Sample link: [`Cell template`](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/cell-template.html)
 
 ## Note
 
-You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/vue-ui-components/vue-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://ej2.syncfusion.com/vue/demos/#/material/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
 
 ## See Also
 

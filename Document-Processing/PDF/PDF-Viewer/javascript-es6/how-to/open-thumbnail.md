@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Open thumbnail in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Open thumbnail in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Open thumbnail in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Open thumbnail in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open thumbnail
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open thumbnail in ##Platform_Name## Pdfviewer control
+# Open thumbnail in Typescript Pdfviewer control
 
 The PDF Viewer library allows you to open the thumbnail pane programmatically using the [**openThumbnailPane()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/thumbnailView/#openthumbnailpane) method.
 
 The following steps are used to open the thumbnail.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code snippet to open thumbnail.
 

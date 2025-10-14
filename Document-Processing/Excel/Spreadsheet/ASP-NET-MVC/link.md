@@ -54,10 +54,10 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/link/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/link/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="HyperlinkController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/link/hyperlinkController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/link/hyperlinkController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -85,7 +85,7 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-This article uses the [React PDF Viewer component](https://www.syncfusion.com/react-components/react-pdf-viewer) as an example. To use the React PDF Viewer component in the project, the `@syncfusion/ej2-react-pdfviewer` package needs to be installed using the following command:
+This article uses the [React PDF Viewer component](https://www.syncfusion.com/pdf-viewer-sdk) as an example. To use the React PDF Viewer component in the project, the `@syncfusion/ej2-react-pdfviewer` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-pdfviewer --save
@@ -155,7 +155,7 @@ export function App() {
             <PdfViewerComponent
                 id="container"
                 documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+                serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
                 style={{ 'height': '640px' }}>
 
                 <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,

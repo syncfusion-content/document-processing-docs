@@ -25,7 +25,7 @@ To set the retry timeout, use the `retryTimeout` property in the PDF Viewer conf
 <PdfViewerComponent
     id="container"
     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-    serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+    serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
     retryTimeout={10}
     retryCount={5}
     style={{ height: '640px' }}>

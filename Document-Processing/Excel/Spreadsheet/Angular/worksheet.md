@@ -23,15 +23,15 @@ The following code example shows the insert sheet operation in spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/insert/sheet-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/insert/sheet-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/insert/sheet-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/insert/sheet-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/insert/sheet-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/insert/sheet-cs1" %}
 
 ### Insert a sheet programmatically and make it active sheet
 
@@ -41,15 +41,15 @@ The following code example shows how to insert a sheet programmatically and make
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/insert-sheet-change-active-sheet-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/insert-sheet-change-active-sheet-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/insert-sheet-change-active-sheet-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/insert-sheet-change-active-sheet-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/insert-sheet-change-active-sheet-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/insert-sheet-change-active-sheet-cs1" %}
 
 ## Delete sheet
 
@@ -82,15 +82,15 @@ The following code example shows the headers and gridlines operation in spreadsh
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/headers-gridlines-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/headers-gridlines-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/headers-gridlines-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/headers-gridlines-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/headers-gridlines-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/headers-gridlines-cs1" %}
 
 ## Sheet visibility
 
@@ -108,19 +108,19 @@ The following code example shows the three types of sheet visibility state.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/sheet-visibility-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/sheet-visibility-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/sheet-visibility-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/sheet-visibility-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/sheet-visibility-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/sheet-visibility-cs1" %}
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/angular-ui-components/angular-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://ej2.syncfusion.com/angular/demos/#/material/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 

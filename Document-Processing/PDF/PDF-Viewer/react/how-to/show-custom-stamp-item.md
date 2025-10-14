@@ -17,7 +17,7 @@ This guide explains how to add and display custom items in the custom stamp drop
 
 ### Steps to Show Custom Items in Custom Stamp Dropdown
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample.
 
 
 **Step 2:** Configure Custom Stamp Settings
@@ -152,7 +152,7 @@ class App extends React.Component {
                         ref={this.viewerRef}
                         id="PdfViewer"
                         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                        serviceUrl= "https://services.syncfusion.com/react/production/api/pdfviewer"
+                        serviceUrl= "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
                         customStampSettings={customStampSettings}
                         style={{ height: '640px' }}
                     >

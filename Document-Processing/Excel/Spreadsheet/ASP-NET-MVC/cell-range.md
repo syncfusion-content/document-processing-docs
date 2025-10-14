@@ -26,10 +26,10 @@ The following code example shows the wrap text functionality in spreadsheet.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/wrap-text/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/wrap-text/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="WrapTextController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/wrap-text/wrapTextController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/wrap-text/wrapTextController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -63,10 +63,10 @@ The following code example shows the merge cells operation in spreadsheet.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/merge-cells/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/merge-cells/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="MergeCellController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/merge-cells/mergeCellController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/merge-cells/mergeCellController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -122,10 +122,10 @@ You can clear the highlighted invalid data by using the following ways,
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/data-validation/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/data-validation/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="DataValidation.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/data-validation/dataValidation.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/data-validation/dataValidation.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -148,10 +148,10 @@ The following code example demonstrates how to add custom data validation with a
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/data-validation-cs2/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/data-validation-cs2/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="DataValidation.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/data-validation-cs2/dataValidation.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/data-validation-cs2/dataValidation.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -229,10 +229,10 @@ In the following sample, you can enable/disable the fill option on the button cl
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/autofill/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/autofill/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="AutofillController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/autofill/autofillController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/autofill/autofillController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -264,10 +264,10 @@ Clear the cell contents and formats in the Spreadsheet document by using the `cl
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/clear/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/clear/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ClearController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/clear/clearController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/clear/clearController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

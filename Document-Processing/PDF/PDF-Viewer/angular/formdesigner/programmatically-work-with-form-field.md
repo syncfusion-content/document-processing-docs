@@ -27,15 +27,15 @@ Using addFormField method, the form fields can be added to the PDF document prog
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/addformfield-cs2/src/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/addformfield-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/addformfield-cs2/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/addformfield-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/pdfviewer/addformfield-cs2" %}
+{% previewsample "Document-Processing/samples/pdfviewer/angular/addformfield-cs2/index.html" %}
 
 ## Edit/Update form field programmatically
 
@@ -43,15 +43,15 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/updateformfield-cs2/src/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/updateformfield-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/updateformfield-cs2/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/updateformfield-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/pdfviewer/updateformfield-cs2" %}
+{% previewsample "Document-Processing/samples/pdfviewer/angular/updateformfield-cs2/index.html" %}
 
 ## Delete form field programmatically
 
@@ -59,15 +59,15 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/deleteformfield-cs2/src/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/deleteformfield-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/deleteformfield-cs2/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/deleteformfield-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/pdfviewer/deleteformfield-cs2" %}
+{% previewsample "Document-Processing/samples/pdfviewer/angular/deleteformfield-cs2/index.html" %}
 
 ## Saving the form fields
 

@@ -2,7 +2,7 @@
 layout: post
 title: Enable and disable text selection in UWP PDF viewer | Syncfusion
 description: Learn here all about Enable and disable text selection support in UWP PDF viewer control with text selection features, and more.
-platform: uwp
+platform: document-processing
 control: PDF viewer
 documentation: ug
 ---

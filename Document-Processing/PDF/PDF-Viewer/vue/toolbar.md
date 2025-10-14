@@ -99,10 +99,10 @@ export default {
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
+**serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-hide-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/toolbar/toolbar-hide-cs1/index.html" %}
 
 * **Show/Hide toolbar using showToolbar as in the following code snippet**
 
@@ -185,10 +185,10 @@ export default {
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
+**serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-method-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/toolbar/toolbar-method-cs1/index.html" %}
 
 ## Show/Hide the built-in toolbaritem
 
@@ -265,10 +265,10 @@ export default {
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
+**serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-items-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/toolbar/toolbar-items-cs1/index.html" %}
 
 * **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
 
@@ -350,10 +350,10 @@ export default {
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
+**serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-  {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-items-method-cs1" %}
+  {% previewsample "Document-Processing/code-snippet/pdfviewer/vue/toolbar/toolbar-items-method-cs1/index.html" %}
 
 
 ## Customize Built-In Toolbar
@@ -576,7 +576,7 @@ let toolItem4 = {
 }
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const toolbarSettings = {
   toolbarItems: [toolItem1, toolItem2, 'OpenOption', 'PageNavigationTool', 'MagnificationTool', toolItem3, 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', toolItem4, 'CommentTool', 'SubmitForm']
 }
@@ -652,7 +652,7 @@ export default {
     }
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       toolbarSettings: {
         toolbarItems: [toolItem1, toolItem2, 'OpenOption', 'PageNavigationTool', 'MagnificationTool', toolItem3, 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', toolItem4, 'CommentTool', 'SubmitForm']
       }
@@ -714,7 +714,7 @@ N> When customizing toolbar items, you have the flexibility to include either ic
 
 The PDF Viewer provides API for user interactions options provided in it's built-in toolbar. Using this we can create our own User Interface for toolbar actions in application level by hiding the built-in toolbar. The following steps are used to create the custom toolbar for PDF Viewer,
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create simple PDF Viewer sample.
 
 **Step 2:** Now, add an HTML div element in template to act as the custom toolbar PDF Viewer using the following code.
 
@@ -841,7 +841,7 @@ export default Vue.extend({
 export default Vue.extend({
     data: function () {
         return {
-            serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+            serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
             documentPath: "https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf",
             enableToolbar: false,
             pageNoTemplate: '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>',
@@ -1209,7 +1209,7 @@ export default Vue.extend({
     export default Vue.extend({
         data: function () {
             return {
-                serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+                serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
                 documentPath: "https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf",
                 enableToolbar: false,
                 pageNoTemplate: '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>',
@@ -1268,7 +1268,7 @@ export default Vue.extend({
 {% endtabs %}
 
 Sample :
-[https://ej2.syncfusion.com/vue/demos/#/material/pdfviewer/custom-toolbar.html](https://ej2.syncfusion.com/vue/demos/#/material/pdfviewer/custom-toolbar.html)
+[https://document.syncfusion.com/demos/pdf-viewer/vue/#/tailwind3/pdfviewer/custom-toolbar.html](https://document.syncfusion.com/demos/pdf-viewer/vue/#/tailwind3/pdfviewer/custom-toolbar.html)
 
 ## See also
 

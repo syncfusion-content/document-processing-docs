@@ -14,7 +14,7 @@ This guide demonstrates how to toggle the visibility of annotations in the Syncf
 
 ## Implementation Steps
 
-**Step 1:** Follow the steps provided in the [Vue PDF Viewer Getting Started documentation](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started) to create a simple PDF Viewer application.
+**Step 1:** Follow the steps provided in the [Vue PDF Viewer Getting Started documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer application.
 
 **Step 2:** Set up your Vue component with a toggle button to control the visibility of annotations:
 

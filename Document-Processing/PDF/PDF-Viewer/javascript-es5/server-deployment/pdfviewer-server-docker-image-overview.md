@@ -1,14 +1,14 @@
 ---
 layout: post
-title: PDF Viewer Server Docker Image in ##Platform_Name## | Syncfusion
-description: Learn here all about Pdfviewer server docker image overview in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: PDF Viewer Server Docker Image in Javascript | Syncfusion
+description: Learn here all about Pdfviewer server docker image overview in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Pdfviewer server docker image overview
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Pdfviewer server docker image overview in ##Platform_Name## Pdfviewer control
+# Pdfviewer server docker image overview in Javascript Pdfviewer control
 
 The Syncfusion PDF Viewer control allows you to view, print, form-fill, and annotate PDF files in your web applications. This PDF Viewer control requires a server-side backend Web API service to render PDF contents.
 
@@ -63,7 +63,7 @@ docker run -d -p 6001:80 –e SYNCFUSION_LICENSE_KEY= YOUR_LICENSE_KEY syncfusio
 
 Now the PDF Viewer server Docker instance runs in the localhost with the provided port number `http://localhost:6001`. Open this link in the browser and navigate to the PDF Viewer Web API control `http://localhost:6001/api/pdfviewer`. It returns the default get method response.
 
-**Step 4:** Append the Docker instance running the URL `(http://localhost:6001/api/pdfviewer)` to the service URL in the client-side PDF Viewer control. For more information about how to get started with PDF Viewer control, refer to this [`getting started page`](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started/?).
+**Step 4:** Append the Docker instance running the URL `(http://localhost:6001/api/pdfviewer)` to the service URL in the client-side PDF Viewer control. For more information about how to get started with PDF Viewer control, refer to this [`getting started page`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/?).
 
 ```html
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
@@ -135,4 +135,4 @@ services:
     - "6001:80"
 ```
 
-Refer to these getting started pages to create a PDF Viewer in [`Angular`](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started), [`React`](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started), [`Vue`](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started), [`ASP.NET MVC`](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started), [`ASP.NET Core`](https://ej2.syncfusion.com/aspnetcore/documentation/pdfviewer/getting-started), and [`Blazor`](https://blazor.syncfusion.com/documentation/pdfviewer/getting-started/server-side-application).
+Refer to these getting started pages to create a PDF Viewer in [`Angular`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started), [`React`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started), [`Vue`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started), [`ASP.NET MVC`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started), [`ASP.NET Core`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started), and [`Blazor`](https://blazor.syncfusion.com/documentation/pdfviewer/getting-started/server-side-application).

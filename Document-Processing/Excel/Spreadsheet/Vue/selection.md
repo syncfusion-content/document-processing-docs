@@ -48,14 +48,14 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/selection-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/selection-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/selection-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/selection-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/selection-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/selection-cs1" %}
 
 ## Column selection
 
@@ -74,14 +74,14 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/selection-cs2/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/selection-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/selection-cs2/app.vue %}
+{% include code-snippet/spreadsheet/vue/selection-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/selection-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/selection-cs2" %}
 
 ## Get selected cell values
 
@@ -91,14 +91,14 @@ Below is a code example demonstrating how to retrieve the selected cell values a
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/selected-cell-values/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/selected-cell-values/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/selected-cell-values/app.vue %}
+{% include code-snippet/spreadsheet/vue/selected-cell-values/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/selected-cell-values" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/selected-cell-values" %}
 
 ## Remove Selection
 
@@ -106,14 +106,14 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/selection-cs3/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/selection-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/selection-cs3/app.vue %}
+{% include code-snippet/spreadsheet/vue/selection-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/selection-cs3" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/selection-cs3" %}
 
 ## Limitations
 
@@ -121,4 +121,4 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 
 ## Note
 
-You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/vue-ui-components/vue-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://ej2.syncfusion.com/vue/demos/#/material/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.

@@ -4,7 +4,6 @@ title: Retrieve the whole document and bookmark content as text in Document Edit
 description: Learn how to retrieve the whole document and bookmark content as text from the Syncfusion Document Editor Component
 platform: document-processing
 control: Retrieve The Whole Document And Bookmark Content As Text
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Save PDF files to Box cloud file storage ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about how to Save PDF files to Box cloud file storage in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Save PDF files to Box cloud file storage Typescript Pdfviewer control | Syncfusion
+description: Learn here all about how to Save PDF files to Box cloud file storage in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Save PDF files to Box cloud file storage
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -19,7 +19,7 @@ To access Box storage programmatically, you'll need a developer account with Box
 
 **Step 2:** Create a PDF Viewer sample in TypeScript
 
-Follow the instructions provided in this [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample in typescript. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in typescript. This will set up the basic structure of your PDF Viewer application.
 
 **Step 3:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -57,7 +57,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF files to Box cloud file storage bucket
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF files to Box cloud file storage bucket
 
 ```csharp
 [HttpPost("Download")]

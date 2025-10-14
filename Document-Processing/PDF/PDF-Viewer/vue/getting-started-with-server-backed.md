@@ -46,7 +46,7 @@ Install Syncfusion<sup style="font-size:70%">&reg;</sup> `PDF Viewer` packages u
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue PDF Viewer component](https://www.syncfusion.com/vue-components/vue-pdf-viewer) as an example. Install the `@syncfusion/ej2-vue-pdfviewer` package by running the following command:
+This article uses the [Vue PDF Viewer component](https://www.syncfusion.com/pdf-viewer-sdk) as an example. Install the `@syncfusion/ej2-vue-pdfviewer` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-pdfviewer --save
@@ -145,7 +145,7 @@ import {
   Annotation, FormDesigner, FormFields, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -169,7 +169,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -201,7 +201,7 @@ import {
   ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -242,7 +242,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -272,14 +272,14 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/pdfviewer/getting-started-cs1/app-composition.vue %}
+{% include code-snippet/pdfviewer/vue/getting-started-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/pdfviewer/getting-started-cs1/app.vue %}
+{% include code-snippet/pdfviewer/vue/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-N> The Web API hosted link https://services.syncfusion.com/vue/production/api/pdfviewer utilized in the PDF viewer's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service and use for the serviceUrl property. **We strongly recommend using the standalone mode.**
+N> The Web API hosted link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer utilized in the PDF viewer's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service and use for the serviceUrl property. **We strongly recommend using the standalone mode.**
 
 ## Run the project
 
@@ -295,9 +295,9 @@ or
 yarn run serve
 ```
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/getting-started-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/getting-started-cs1/index.html" %}
 
-> For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/how-to/create-pdfviewer-service)
+> For PDF Viewer serviceUrl creation, follow the steps provided in the [link]https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service)
 
 ## How to run the PDF Viewer web service
 
@@ -339,7 +339,7 @@ N> When configuring the server-backed PDF viewer, it's Essential<sup style="font
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20-%20server-back).
 
-> You can refer to our [Vue PDF Viewer](https://www.syncfusion.com/vue-ui-components/vue-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Vue PDF Viewer example](https://ej2.syncfusion.com/vue/demos/#/material/pdfviewer/default.html) to understand how to explains core features of PDF Viewer.
+> You can refer to our [Vue PDF Viewer](https://www.syncfusion.com/vue-ui-components/vue-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Vue PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/vue/#/tailwind3/pdfviewer/default.html) to understand how to explains core features of PDF Viewer.
 
 N> For hosting the web service on the Linux platform, ensure to include the [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1). Additionally, for AWS environments, utilize the following packages:
 

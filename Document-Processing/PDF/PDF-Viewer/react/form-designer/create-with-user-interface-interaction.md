@@ -77,7 +77,7 @@ function App() {
         id="container"
         ref={(scope) => { pdfviewer = scope; }}
         documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         enableFormDesignerToolbar={true}
         style={{ 'height': '640px' }}>
 
@@ -203,7 +203,7 @@ function App() {
       id="container"
       ref={(scope) => { pdfviewer = scope; }}
       documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-      serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+      serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
       style={{ 'height': '640px' }}>
 
             <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,

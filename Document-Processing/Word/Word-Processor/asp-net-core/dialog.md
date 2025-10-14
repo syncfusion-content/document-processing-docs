@@ -4,7 +4,6 @@ title: Dialog in Document Editor Component | Syncfusion
 description: Learn here all about dialog in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Dialog
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -22,10 +21,10 @@ N>To enable font dialog for a document editor instance, set â€˜enableFontDialogâ
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,10 +36,10 @@ This dialog allows modifying the paragraph formatting for selection at once such
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/paragraph-dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/paragraph-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/paragraph-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/paragraph-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,10 +51,10 @@ This dialog allows creating and inserting a table at cursor position by specifyi
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/table-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/table-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -72,10 +71,10 @@ This dialog allows to perform the following operations:
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/bookmark-dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/bookmark-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/bookmark-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/bookmark-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,10 +86,10 @@ This dialog allows editing or inserting a hyperlink at cursor position.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink-dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/hyperlink-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/hyperlink-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -102,10 +101,10 @@ This dialog allows creating and inserting table of contents at cursor position. 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-of-contents-dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/table-of-contents-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-of-contents-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/table-of-contents-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -117,10 +116,10 @@ This dialog allows managing the styles in a document. It will display all the st
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/styles-dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/styles-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/styles-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/styles-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -132,10 +131,10 @@ You can directly use this dialog for modifying any existing style or add new sty
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/style-dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/style-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/style-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/style-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -147,10 +146,10 @@ This dialog allows creating a new list or modifying existing lists in the docume
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/list-dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/list-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/list-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/list-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -162,10 +161,10 @@ This dialog allows customizing the border style, border width, and background co
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/borders-shading-dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/borders-shading-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/borders-shading-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/borders-shading-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -177,10 +176,10 @@ This dialog allows customizing the default cell margins and spacing between each
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-options-dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/table-options-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-options-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/table-options-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -191,10 +190,10 @@ This dialog allows customizing the table, row, and cell properties of the select
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-properties-dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/table-properties-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-properties-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/table-properties-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -206,10 +205,10 @@ This dialog allows customizing margins, size, and layout options for pages of th
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/page-setup-dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/page-setup-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/page-setup-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/page-setup-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

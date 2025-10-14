@@ -16,7 +16,7 @@ This guide explains how to add and display custom items in the custom stamp drop
 
 ### Steps to Show Custom Items in Custom Stamp Dropdown
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
 
 
 **Step 2:** Configure Custom Stamp Settings
@@ -144,7 +144,7 @@ import {
 })
 export class AppComponent implements OnInit {
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public serviceUrl: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+  public serviceUrl: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
 
   public customStampSettings = {
     isAddToMenu: true,

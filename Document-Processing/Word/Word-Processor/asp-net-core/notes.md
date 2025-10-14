@@ -4,7 +4,6 @@ title: Notes in Document Editor Component
 description: Learn here all about notes in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Notes
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -24,10 +23,10 @@ Document editor exposes an API to insert footnotes at cursor position programmat
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/footnote/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/footnote/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/footnote/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/footnote/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -39,10 +38,10 @@ Document editor exposes an API to insert endnotes at cursor position programmati
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/endnote/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/endnote/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/endnote/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/endnote/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

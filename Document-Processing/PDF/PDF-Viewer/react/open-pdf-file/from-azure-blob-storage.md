@@ -18,7 +18,7 @@ To load a PDF file from Azure Blob Storage in a PDF Viewer, you can follow the s
 
 **Step 1:** Create a Simple PDF Viewer Sample in React
 
-Start by following the steps provided in this [link](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in React. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF viewer sample in React. This will give you a basic setup of the PDF viewer component.
 
 **Step 2:** Modify the `src/index.js` File in the React Project
 
@@ -99,7 +99,7 @@ To load a PDF file from Azure Blob Storage in a PDF Viewer, you can follow the s
 
 **Step 1:** Create a Simple PDF Viewer Sample in React
 
-Start by following the steps provided in this [link](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in React. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF viewer sample in React. This will give you a basic setup of the PDF viewer component.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 

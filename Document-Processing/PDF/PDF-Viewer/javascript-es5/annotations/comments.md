@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Comments in ##Platform_Name## PDF Viewer control | Syncfusion
-description: Learn here all about Comments in Syncfusion ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Comments in Javascript PDF Viewer control | Syncfusion
+description: Learn here all about Comments in Syncfusion Javascript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comments in ##Platform_Name## PDF Viewer control
+# Comments in Javascript PDF Viewer control
 
 The PDF Viewer control provides options to add, edit, and delete the comments to the following annotation in the PDF documents:
 
@@ -112,7 +112,7 @@ The annotation comment and comment replies can be edited in the following ways:
 
 ## How to check the comments added by the user
 
-The comments added to the PDF document can be viewed by using the [comments](https://helpej2.syncfusion.com/documentation/api/pdfviewer/commentEventArgs/) property of the annotation.
+The comments added to the PDF document can be viewed by using the [comments](https://ej2.syncfusion.com/documentation/api/pdfviewer/commentEventArgs/) property of the annotation.
 
 Refer to the following code to check the comments added in the PDF document using a button click event.
 
@@ -136,7 +136,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);

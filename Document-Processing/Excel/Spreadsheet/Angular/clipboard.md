@@ -61,15 +61,15 @@ Paste can be done in one of the following ways.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/clipboard-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/clipboard-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/clipboard-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/clipboard-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/clipboard-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/clipboard-cs1" %}
 
 ## Prevent the paste functionality
 
@@ -77,15 +77,15 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/clipboard-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/clipboard-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/clipboard-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/clipboard-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/clipboard-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/clipboard-cs2" %}
 
 ## Limitations
 
@@ -96,4 +96,4 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/angular-ui-components/angular-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://ej2.syncfusion.com/angular/demos/#/material/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.

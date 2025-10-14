@@ -214,6 +214,6 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/pdfviewer/getting-started-cs1-standalone" %}
+{% previewsample "Document-Processing/samples/pdfviewer/angular/getting-started-cs1-standalone/index.html" %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Getting%20started%20-%20Standalone).

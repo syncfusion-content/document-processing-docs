@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Save pdf document to url in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Save pdf document to url in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Save pdf document to url in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Save pdf document to url in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Save pdf document to url
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save pdf document to url in ##Platform_Name## Pdfviewer control
+# Save pdf document to url in Typescript Pdfviewer control
 
 The PDF Viewer library allows you to save the PDF document to specific URL.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) to create simple PDF Viewer sample.
 
-**Step 2:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/how-to/create-pdfviewer-service/) to create the PDF Viewer web service.
+**Step 2:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service/) to create the PDF Viewer web service.
 
 **Step 3:** Add the below code snippet in the PDF Viewer controller code to save the PDF document to the URL.
 

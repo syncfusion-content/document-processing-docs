@@ -4,7 +4,6 @@ title: Link in Document Editor Component
 description: Learn here all about Link in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Link
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -24,10 +23,10 @@ The following example illustrates how to add requestNavigate event for DocumentE
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/hyperlink/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/hyperlink/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -39,10 +38,10 @@ The following example illustrates how to add requestNavigate event for DocumentE
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/link/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/link/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/link/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/link/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -74,10 +73,10 @@ N> `<http://>`<br>
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink-edit/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/hyperlink-edit/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink-edit/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/hyperlink-edit/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -90,7 +89,7 @@ You can customize the screen tip text for the hyperlink by using below sample co
 documenteditor.insertHyperlink('https://www.google.com', 'Google', '<<Screen tip text>>');
 ```
 
-Screen tip text can be modified through UI by using the [Hyperlink dialog](../asp-net-core/dialog#hyperlink-dialog/)
+Screen tip text can be modified through UI by using the [Hyperlink dialog](../asp-net-core/dialog#hyperlink-dialog)
 
 ![Add or modify the screen tip text for hyperlinks in a Word document.](images/screentip.png)
 
@@ -109,10 +108,10 @@ Document editor provides dialog support to insert or edit a hyperlink.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink-dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/hyperlink-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/hyperlink-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Annotation Selector Setting in Javascript Pdfviewer|Syncfusion.
-description: Learn here all about Annotation Selector Settings in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Annotation Selector Settings in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -14,11 +14,11 @@ domainurl: ##DomainURL##
 
 ### Annotation Selector Settings
 
-The [**annotationSelectorSettings**](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationSelectorSettings/) property allows you to customize the appearance and behavior of the annotation selector in the UI.
+The [**annotationSelectorSettings**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationSelectorSettings/) property allows you to customize the appearance and behavior of the annotation selector in the UI.
 
 ### AnnotationSelectorSettingsModel
 
-The [**AnnotationSelectorSettingsModel**](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationSelectorSettingsModel/) defines the settings for the annotation selector, including border colors, sizes, and shapes. It provides fine-grained control over how annotations are displayed and interacted with.
+The [**AnnotationSelectorSettingsModel**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationSelectorSettingsModel/) defines the settings for the annotation selector, including border colors, sizes, and shapes. It provides fine-grained control over how annotations are displayed and interacted with.
 
 ### How to Configure Annotation Selector Settings
 

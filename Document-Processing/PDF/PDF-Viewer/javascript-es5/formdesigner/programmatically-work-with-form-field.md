@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Programmatically work with form field in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Programmatically work with form field in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Programmatically work with form field in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Programmatically work with form field in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Programmatically work with form field
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Programmatically work with form field in ##Platform_Name## Pdfviewer control
+# Programmatically work with form field in Javascript Pdfviewer control
 
 The PDF Viewer control provides the option to add, edit and delete the Form Fields. The Form Fields type supported by the PDF Viewer Control are:
 
@@ -28,14 +28,14 @@ Using addFormField method, the form fields can be added to the PDF document prog
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/pdfviewer/addformfield-cs2/index.js %}
+{% include code-snippet/pdfviewer/javascript-es5/addformfield-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/addformfield-cs2/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/addformfield-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs2" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/addformfield-cs2/index.html" %}
 
 ## Edit/Update form field programmatically
 
@@ -43,14 +43,14 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/pdfviewer/updateformfield-cs2/index.js %}
+{% include code-snippet/pdfviewer/javascript-es5/updateformfield-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/updateformfield-cs2/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/updateformfield-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs2" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/updateformfield-cs2/index.html" %}
 
 ## Delete form field programmatically
 
@@ -58,14 +58,14 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/pdfviewer/deleteformfield-cs2/index.js %}
+{% include code-snippet/pdfviewer/javascript-es5/deleteformfield-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/deleteformfield-cs2/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/deleteformfield-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs2" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/deleteformfield-cs2/index.html" %}
 
 ## Saving the form fields
 
@@ -79,7 +79,7 @@ You can invoke download action using following code snippet.
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableDownload: true,
                     documentPath: "PDF_Succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.Annotation, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation,ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -100,7 +100,7 @@ You can invoke print action using the following code snippet.,
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enablePrint: true,
                     documentPath: "PDF_Succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation,ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');

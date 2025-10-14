@@ -1,15 +1,15 @@
 ---
 layout: post
-title: User interaction with form fields in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about User interaction with form fields in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: User interaction with form fields in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about User interaction with form fields in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: User interaction with form fields
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# User interaction with form fields in ##Platform_Name## Pdfviewer control
+# User interaction with form fields in Javascript Pdfviewer control
 
 The PDF viewer control provides the option for interaction with Form Fields such as Drag and resize. you can draw a Form Field dynamically by clicking the Form Field icon on the toolbar and draw it in the PDF document. The Form Fields type supported by the PDF Viewer Control are:
 
@@ -29,7 +29,7 @@ We should inject FormDesigner module and set enableFormDesignerToolbar as true t
 ```javascript
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: "FormDesigner.pdf",
-    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
     enableFormDesignerToolbar: true
 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.FormDesigner);
@@ -77,7 +77,7 @@ We provided support to undo/redo the Form Field actions that are performed at ru
 ```javascript
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: "FormDesigner.pdf",
-    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.FormDesigner);
 pdfviewer.appendTo('#PdfViewer');

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: User interaction with form fields in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about User interaction with form fields in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: User interaction with form fields in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about User interaction with form fields in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: User interaction with form fields
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# User interaction with form fields in ##Platform_Name## Pdfviewer control
+# User interaction with form fields in Typescript Pdfviewer control
 
 The PDF viewer control provides the option for interaction with Form Fields such as Drag and resize. you can draw a Form Field dynamically by clicking the Form Field icon on the toolbar and draw it in the PDF document. The Form Fields type supported by the PDF Viewer Control are:
 

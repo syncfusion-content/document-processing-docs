@@ -2,7 +2,7 @@
 layout: post
 title: Working with ErrorOccured Event in WinForm PDFViewer | Syncfusion&reg;
 description: Learn about Working with ErrorOccured Event in Syncfusion&reg; Windows Forms PDF Viewer (PdfViewerControl) control and more details.
-platform: windowsforms
+platform: document-processing
 control: PdfViewerControl
 documentation: ug
 ---

@@ -75,7 +75,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService, FormDesignerService, FormFieldsService]
 })
 export class AppComponent implements OnInit {
-  public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+  public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
   public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   public initialRender = 10;
   ngOnInit(): void {

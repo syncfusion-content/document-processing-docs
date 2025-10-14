@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Accessibility in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about accessibility in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Accessibility in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about accessibility in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -222,7 +222,7 @@ PdfViewer.Inject(
 
 let pdfviewer: PdfViewer = new PdfViewer({
 documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.commandManager = {
 	keyboardCommand: [{
 	  name: 'customCopy',
@@ -275,10 +275,6 @@ This setup allows users to perform custom actions within the PDF viewer by press
 ## Ensuring accessibility
 
 The PDF Viewer component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
-
-The accessibility compliance of the PDF Viewer component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/pdf-viewer.html) in a new window to evaluate the accessibility of the PDF Viewer component with accessibility tools.
-
-{% previewsample "https://ej2.syncfusion.com/accessibility/pdf-viewer.html" %}
 
 ## See also
 

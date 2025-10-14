@@ -7,8 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Creating a Next.js Application Using Syncfusion<sup style="font-size:70%">&reg;</sup> React Components 
-
+# Creating a Spreadsheet Application in Next.js
 This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Spreadsheet component.
 
 ## What is Next.js?
@@ -42,12 +41,12 @@ yarn create next-app
 
 Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-1.Define the project name: Users can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-spreadsheet`.
+1.Define the project name: Users can specify the name of the project directly. Let's specify the name of the project as `ej2-next-js-spreadsheet`.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
-√ What is your project named? » ej2-nextjs-spreadsheet
+√ What is your project named? » ej2-next-js-spreadsheet
 
 {% endhighlight %}
 {% endtabs %}
@@ -57,24 +56,24 @@ Using one of the above commands will lead you to set up additional configuration
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
-√ What is your project named? ... ej2-nextjs-spreadsheet
+√ What is your project named? ... ej2-next-js-spreadsheet
 √ Would you like to use TypeScript? ... No / `Yes`
 √ Would you like to use ESLint? ... No / `Yes`
 √ Would you like to use Tailwind CSS? ... `No` / Yes
 √ Would you like to use `src/` directory? ... No / `Yes`
 √ Would you like to use App Router? (recommended) ... No / `Yes`
 √ Would you like to customize the default import alias? ... `No`/ Yes
-Creating a new Next.js app in D:\ej2-nextjs-spreadsheet.
+Creating a new Next.js app in D:\ej2-next-js-spreadsheet.
 
 {% endhighlight %}
 {% endtabs %}
 
-3.Once complete the above mentioned steps to create `ej2-nextjs-spreadsheet`, navigate to the directory using the below command:
+3.Once complete the above mentioned steps to create `ej2-next-js-spreadsheet`, navigate to the directory using the below command:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
-cd ej2-nextjs-spreadsheet
+cd ej2-next-js-spreadsheet
 
 {% endhighlight %}
 {% endtabs %}
@@ -83,9 +82,9 @@ The application is ready to run with default settings. Now, let's add Syncfusion
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npm js](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-Here, the [React Spreadsheet component](https://www.syncfusion.com/react-components/react-spreadsheet) is used in the project. To install the React Spreadsheet component, use the following command:
+Here, the [React Spreadsheet component](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) is used in the project. To install the React Spreadsheet component, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -102,7 +101,7 @@ yarn add @syncfusion/ej2-react-spreadsheet
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
 
 Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
 
@@ -123,7 +122,7 @@ Import the `Material` theme into the **src/app/globals.css** file and removed th
 {% endhighlight %}
 {% endtabs %}
 
-> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/) section.
+> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
@@ -394,8 +393,8 @@ export default function Home(this: any) {
   return (
     <>
       <h2>Syncfusion React Spreadsheet Component</h2>
-      <SpreadsheetComponent openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open'
-        saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save'
+      <SpreadsheetComponent openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
+        saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
         ref={(Obj) => { spreadsheet = Obj as SpreadsheetComponent }} created={onCreated.bind(this)} >
         <SheetsDirective>
           <SheetDirective name="Car Sales Report">
@@ -445,6 +444,4 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-To learn more about the functionality of the Spreadsheet component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/spreadsheet/feature-list).
-
-> [View the NEXT.js Spreadsheet sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-spreadsheet).
+To learn more about the functionality of the Spreadsheet component, refer to the [documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/feature-list).

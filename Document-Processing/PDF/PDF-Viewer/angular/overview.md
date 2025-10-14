@@ -8,7 +8,7 @@ documentation: UG
 
 # Overview of Angular PDF Viewer Component
 
-The [`angular PDF Viewer`](https://www.syncfusion.com/angular-components/angular-pdf-viewer) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
+The [`angular PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
 
 
 ## Setup
@@ -55,7 +55,7 @@ Add CSS references needed for a PDF Viewer in `src/styles.css` from the `../node
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-angular-pdfviewer/styles/material.css";
 ```
 ### Add PDF Viewer component
@@ -76,7 +76,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   template: `<div class="content-wrapper">
                 <ejs-pdfviewer id="pdfViewer"
                     [documentPath]='document'
-                    [resourceUrl]='resource' 
+                    [resourceUrl]='resource'
                     style="height:640px;display:block">
                 </ejs-pdfviewer>
              </div>`,
@@ -93,26 +93,26 @@ export class AppComponent implements OnInit {
 }
 ```
 
-## Key Features 
+## Key Features
 
-*[`View PDF Document`](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started) - Open and display both the normal and the protected PDF files with AES and RC4 encryption.
-*[`Annotations`](https://ej2.syncfusion.com/angular/documentation/pdfviewer/annotation/text-markup-annotation) - Annotate with text markup, shapes, stamps, ink, and sticky notes.Form filling and form designing can be done.
-*[`Form Fields`](https://ej2.syncfusion.com/angular/documentation/pdfviewer/form-designer/create-fillable-pdf-forms/create-programmatically) - Form filling and form designing can be done.
-*[`Signature`](https://ej2.syncfusion.com/angular/documentation/pdfviewer/handwritten-signature) - Hand-written and digital signatures are allowed.
-*[`Toolbar`](https://ej2.syncfusion.com/angular/documentation/pdfviewer/toolbar) - Built-in-toolbar and custom toolbars to perform user interaction of PDF Viewer functionalities.
-*[`Navigation`](https://ej2.syncfusion.com/angular/documentation/pdfviewer/navigation) - Easy navigation with the help of bookmarks, thumbnails, hyperlinks, and table of contents.
-*[`Magnification`](https://ej2.syncfusion.com/angular/documentation/pdfviewer/magnification) - Fit to page, fit to width, and automatic (fits to the visible area).
-*[`Search`](https://ej2.syncfusion.com/angular/documentation/pdfviewer/text-search) - Search a text easily across the PDF document.
-*[`Core Interactions`](https://ej2.syncfusion.com/angular/documentation/pdfviewer/interaction-mode) - Allows scrolling, zooming, panning, selection, and page navigation.
-*[`Print`](https://ej2.syncfusion.com/angular/documentation/pdfviewer/print) - Print the entire document or a specific page directly from the browser.
-*[`Globalization`](https://ej2.syncfusion.com/angular/documentation/pdfviewer/globalization) - Provides inherent support to localize the UI.
+*[`View PDF Document`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) - Open and display both the normal and the protected PDF files with AES and RC4 encryption.
+*[`Annotations`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/text-markup-annotation) - Annotate with text markup, shapes, stamps, ink, and sticky notes.Form filling and form designing can be done.
+*[`Form Fields`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/form-designer/create-programmatically) - Form filling and form designing can be done.
+*[`Signature`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/signature-annotation) - Hand-written and digital signatures are allowed.
+*[`Toolbar`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/toolbar) - Built-in-toolbar and custom toolbars to perform user interaction of PDF Viewer functionalities.
+*[`Navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/navigation) - Easy navigation with the help of bookmarks, thumbnails, hyperlinks, and table of contents.
+*[`Magnification`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/magnification) - Fit to page, fit to width, and automatic (fits to the visible area).
+*[`Search`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/text-search) - Search a text easily across the PDF document.
+*[`Core Interactions`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/interaction-mode) - Allows scrolling, zooming, panning, selection, and page navigation.
+*[`Print`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/print) - Print the entire document or a specific page directly from the browser.
+*[`Globalization`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/globalization) - Provides inherent support to localize the UI.
 
 ## Supported Web platforms
 
-* [Javascript(ES5)](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started)
-* [Javascript](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started)
-* [React](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started)
-* [Vue](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started)
-* [ASP.NET Core](https://ej2.syncfusion.com/aspnetcore/documentation/pdfviewer/getting-started)
-* [ASP.NET MVC](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started)
+* [Javascript(ES5)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started)
+* [Javascript](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started)
+* [React](hhttps://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
+* [Vue](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started)
+* [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started)
+* [ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started)
 * [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview)

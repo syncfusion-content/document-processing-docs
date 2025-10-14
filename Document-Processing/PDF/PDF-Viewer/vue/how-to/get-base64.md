@@ -16,7 +16,7 @@ This guide demonstrates how to fetch the base64-encoded value of a PDF document 
 
 ### How to Retrieve Base64 Value
 
-**Step 1:** Follow the steps provided in the [Vue PDF Viewer Getting Started documentation](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [Vue PDF Viewer Getting Started documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Set Up Your Vue Component
 
@@ -137,7 +137,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
     };
   },
   provide: {

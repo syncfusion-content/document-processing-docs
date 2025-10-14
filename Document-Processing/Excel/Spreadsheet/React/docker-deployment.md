@@ -9,7 +9,7 @@ documentation: ug
 
 # Docker Image Overview in React Spreadsheet component
 
-The [**Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet (also known as Excel Viewer)**](https://www.syncfusion.com/react-components/react-spreadsheet) is a feature-rich control for organizing and analyzing data in a tabular format. It provides all the common Excel features, including data binding, selection, editing, formatting, resizing, sorting, filtering, importing, and exporting Excel documents.
+The [**Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet (also known as Excel Viewer)**](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) is a feature-rich control for organizing and analyzing data in a tabular format. It provides all the common Excel features, including data binding, selection, editing, formatting, resizing, sorting, filtering, importing, and exporting Excel documents.
 
 This Docker image is the pre-defined Docker container for Syncfusion's Spreadsheet backend functionalities. This server-side Web API project targets ASP.NET Core 8.0.
 
@@ -57,7 +57,7 @@ docker-compose up
 
 Now the Spreadsheet server Docker instance runs on localhost with the provided port number `http://localhost:6002`. Open this link in a browser and navigate to the Spreadsheet Web API open and save service at `http://localhost:6002/api/spreadsheet/open` and `http://localhost:6002/api/spreadsheet/save`.
 
-**Step 4:** Append the URLs of the Docker instance running services to the [`openUrl`](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#openurl) property as `http://localhost:6002/api/spreadsheet/open` and the [`saveUrl`](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#saveurl) property as `http://localhost:6002/api/spreadsheet/save` in the client-side Spreadsheet component. For more information on how to get started with the Spreadsheet component, refer to this [`getting started page.`](https://ej2.syncfusion.com/react/documentation/spreadsheet/getting-started)
+**Step 4:** Append the URLs of the Docker instance running services to the [`openUrl`](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#openurl) property as `http://localhost:6002/api/spreadsheet/open` and the [`saveUrl`](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#saveurl) property as `http://localhost:6002/api/spreadsheet/save` in the client-side Spreadsheet component. For more information on how to get started with the Spreadsheet component, refer to this [`getting started page.`](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started)
 
 ```js
 import * as React from 'react';
@@ -98,4 +98,4 @@ services:
       - "6002:8080"
 ```
 
-Please refer to these getting started pages to create a Spreadsheet in [`Javascript`](https://ej2.syncfusion.com/javascript/documentation/spreadsheet/getting-started), [`Angular`](https://ej2.syncfusion.com/angular/documentation/spreadsheet/getting-started), [`Vue`](https://ej2.syncfusion.com/vue/documentation/spreadsheet/getting-started), [`ASP.NET Core`](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/getting-started-core), and [`ASP.NET MVC`](https://ej2.syncfusion.com/aspnetmvc/documentation/spreadsheet/getting-started-mvc).
+Please refer to these getting started pages to create a Spreadsheet in [`Javascript`](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es5/getting-started), [`Angular`](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/getting-started), [`Vue`](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/getting-started), [`ASP.NET Core`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/getting-started-core), and [`ASP.NET MVC`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/getting-started-mvc).

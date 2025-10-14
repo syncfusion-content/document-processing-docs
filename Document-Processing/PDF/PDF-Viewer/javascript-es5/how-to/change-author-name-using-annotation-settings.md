@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Change author name using annotation settings in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Change author name using annotation settings in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Change author name using annotation settings in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Change author name using annotation settings in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Change author name using annotation settings
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change author name using annotation settings in ##Platform_Name## Pdfviewer control
+# Change author name using annotation settings in Javascript Pdfviewer control
 
 The Essential JavaScript PDF Viewer supports to customize a single property of the annotation settings by exposing an API for the properties common to all the annotations.
 
@@ -49,7 +49,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, Thumbnai
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields);
 let viewer: PdfViewer = new PdfViewer();
-viewer.serviceUrl = "https://services.syncfusion.com/js/production/api/pdfviewer";
+viewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
 viewer.annotationSettings = { author: 'syncfusion', minHeight: 30, maxHeight: 500, minWidth: 30, maxWidth: 500, isLock: false, isPrint: true, isDownload: true  };
 viewer.freeTextSettings = { allowTextOnly : true };

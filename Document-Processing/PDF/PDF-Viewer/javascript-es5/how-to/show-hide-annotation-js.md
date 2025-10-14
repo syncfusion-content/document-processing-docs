@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Show and Hide Annotations in JavaScript PdfViewer | Syncfusion
-description: Learn how to show or hide annotations in the Syncfusion ##Platform_Name## PdfViewer control of Syncfusion Essential JS 2 and more.
+description: Learn how to show or hide annotations in the Syncfusion Javascript PdfViewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -17,7 +17,7 @@ This guide demonstrates how to show or hide annotations in the Syncfusion PDF Vi
 
 ## How to Show/Hide Annotations
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Create a Button in Your HTML File
 

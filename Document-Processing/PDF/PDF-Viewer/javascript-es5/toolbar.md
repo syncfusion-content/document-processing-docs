@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Toolbar in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Toolbar in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Toolbar in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Toolbar in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Toolbar
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Built-In Toolbar in ##Platform_Name## Pdfviewer control
+# Built-In Toolbar in Javascript Pdfviewer control
 
 The PDF Viewer comes with a powerful built-in toolbar to execute important actions such as page navigation, text search,view mode,download,print,bookmark, and thumbnails.
 
@@ -59,29 +59,29 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-toolbar/toolbar-hide-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-hide-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
-Add the below [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.html` file
-`serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
+Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.html` file
+`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-toolbar/toolbar-hide-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-hide-cs1/index.html" %}
 
 * **Show/Hide toolbar using showToolbar as in the following code snippet**
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-toolbar/toolbar-method-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
+`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-toolbar/toolbar-method-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-method-cs1/index.html" %}
 
 ## Show/Hide the default toolbaritem
 
@@ -91,29 +91,29 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-toolbar/toolbar-items-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
+`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-toolbar/toolbar-items-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-cs1/index.html" %}
 
 * **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-toolbar/toolbar-items-method-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
+`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-toolbar/toolbar-items-method-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-method-cs1/index.html" %}
 
 ## Customize Built-In Toolbar
 
@@ -208,7 +208,7 @@ var toolItem4 = {
 }
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
                     toolbarSettings : { toolbarItems: [toolItem1, toolItem2, 'OpenOption', 'PageNavigationTool', 'MagnificationTool', toolItem3, 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', toolItem4, 'CommentTool', 'SubmitForm'] }
                });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields);
@@ -266,7 +266,7 @@ N> When customizing toolbar items, you have the flexibility to include either ic
 
 The PDF Viewer provides API for user interactions options provided in it's built-in toolbar. Using this we can create our own User Interface for toolbar actions in application level by hiding the default toolbar. The following steps are used to create the custom toolbar for PDF Viewer,
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create simple PDF Viewer sample.
 
 **Step 2:** Now, add an HTML div element to render the PDF Viewer with custom toolbar using the following code.
 
@@ -336,7 +336,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableToolbar: false,
                     enableThumbnail: false,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation,ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -1188,7 +1188,7 @@ this.default = function () {
         enableToolbar: true,
         enableThumbnail: true,
         documentPath: 'https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf',
-        serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer/'
+        serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
     });
    ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
     viewer.appendTo('#pdfViewer');
@@ -1249,7 +1249,7 @@ this.default = function () {
 {% endtabs %}
 
 Sample :
-[https://ej2.syncfusion.com/javascript/demos/#/material/pdfviewer/custom-toolbar.html](https://ej2.syncfusion.com/javascript/demos/#/material/pdfviewer/custom-toolbar.html)
+[https://document.syncfusion.com/demos/pdf-viewer/javascript-es5/#/tailwind3/pdfviewer/custom-toolbar.html](https://document.syncfusion.com/demos/pdf-viewer/javascript-es5/#/tailwind3/pdfviewer/custom-toolbar.html)
 
 ## See also
 

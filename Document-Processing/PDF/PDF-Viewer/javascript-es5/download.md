@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Download in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Download in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Download in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Download in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Download
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in ##Platform_Name## Pdfviewer control
+# Download in Javascript Pdfviewer control
 
 The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
 
@@ -51,7 +51,7 @@ pdfviewer.appendTo('#PdfViewer');
 var pdfviewer = new ej.pdfviewer.PdfViewer({
         enableDownload: true,
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+        serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
 });
 
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
@@ -88,7 +88,7 @@ document.getElementById('download').addEventListener('click', function () {
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableDownload: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -102,7 +102,7 @@ document.getElementById('download').addEventListener('click', function () {
 
 ## How to get the base64 string while downloading the PDF document
 
-The [downloadEnd](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#downloadend) event of the PDF viewer allows you to get the downloaded document as a base64 string.
+The [downloadEnd](https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadend) event of the PDF viewer allows you to get the downloaded document as a base64 string.
 
 The following code illustrates how to get the invoke the download action in a button click to get the downloaded document as a base64 string. And load the document from base64 string in another button click.
 

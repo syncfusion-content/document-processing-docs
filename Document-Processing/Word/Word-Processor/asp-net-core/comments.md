@@ -4,7 +4,6 @@ title: Comments in Document Editor Control | Syncfusion
 description: Learn here all about comments in Syncfusion Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Comments
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

@@ -53,14 +53,14 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/link-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/link-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/link-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/link-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/link-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/link-cs1" %}
 
 ## Limitations
 
@@ -68,7 +68,7 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-ui-components/react-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://ej2.syncfusion.com/react/demos/#/material/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 

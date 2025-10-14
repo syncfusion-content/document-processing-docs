@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Enable or Disable Text Selection in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn how to enable text selection in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Enable or Disable Text Selection in Typescript Pdfviewer control | Syncfusion
+description: Learn how to enable text selection in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

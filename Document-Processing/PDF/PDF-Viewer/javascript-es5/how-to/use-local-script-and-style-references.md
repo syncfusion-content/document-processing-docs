@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Use local script and style references in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Use local script and style references in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Use local script and style references in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Use local script and style references in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Use local script and style references
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Use local script and style references in ##Platform_Name## Pdfviewer control
+# Use local script and style references in Javascript Pdfviewer control
 
 **Step 1:** Create an app folder `myapp` for Essential JS 2 JavaScript components.
 
@@ -58,7 +58,7 @@ npm install
                //Initialize PDF Viewer component
                var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                });
                //PDF Viewer control rendering starts
                pdfviewer.appendTo('#PdfViewer');

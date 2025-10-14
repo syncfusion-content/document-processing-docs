@@ -70,14 +70,14 @@ In this demo, Custom Item is added after the Paste item in the context menu.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/context-menu-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/context-menu-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/context-menu-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/context-menu-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/context-menu-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/context-menu-cs1" %}
 
 ### Remove Context Menu Items
 
@@ -87,14 +87,14 @@ In this demo, Insert Column item has been removed from the row/column header con
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/context-menu-cs2/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/context-menu-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/context-menu-cs2/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/context-menu-cs2/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/context-menu-cs2" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/context-menu-cs2" %}
 
 ### Enable/Disable Context Menu Items
 
@@ -104,18 +104,18 @@ In this demo, Rename item is disabled in the pager context menu.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/context-menu-cs3/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/context-menu-cs3/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/context-menu-cs3/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/context-menu-cs3/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/context-menu-cs3" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/context-menu-cs3" %}
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-ui-components/react-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://ej2.syncfusion.com/react/demos/#/material/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 

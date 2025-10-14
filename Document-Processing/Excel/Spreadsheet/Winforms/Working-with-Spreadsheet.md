@@ -159,7 +159,7 @@ var cell4 = spreadsheet.Workbook.Worksheets[0].Range[15, 1, 15, 3];
 
 For more reference regarding accessing the range, refer [XlsIO](https://help.syncfusion.com/file-formats/xlsio/worksheet-cells-manipulation#accessing-a-cell-or-a-range) UG.
 
-N>  If the user has made any modifications with XlsIO range in Spreadsheet, then they should [refresh the view](https://help.syncfusion.com/windowsforms/spreadsheet/working-with-spreadsheet#refreshing-the-view) to update the modifications in `SpreadsheetGrid`.
+N>  If the user has made any modifications with XlsIO range in Spreadsheet, then they should [refresh the view](https://help.syncfusion.com/document-processing/excel/spreadsheet/winforms/working-with-spreadsheet#refreshing-the-view) to update the modifications in `SpreadsheetGrid`.
 
 ## Accessing the value of a cell
 

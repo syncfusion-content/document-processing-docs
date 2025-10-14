@@ -14,7 +14,7 @@ The PDF Viewer library allows you to delete a specific annotation from a PDF doc
 
 The following steps are used to delete a specific annotation from PDF Document.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code snippet to delete a specific annotation using `deleteAnnotationById()` method.
 

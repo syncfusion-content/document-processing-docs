@@ -4,7 +4,6 @@ title: Unsupported file in Document Editor Component | Syncfusion
 description: Learn here all about Unsupported file in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Unsupported file
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

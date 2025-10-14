@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Disable tile renderings in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Disable tile renderings in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Disable tile renderings in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Disable tile renderings in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Disable tile renderings
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable tile renderings in ##Platform_Name## Pdfviewer control
+# Disable tile renderings in Javascript Pdfviewer control
 
 To disable the tile rendering feature in the Syncfusion PDF viewer control, you can use the **enableTileRendering** property. This property allows you to enable or disable the tile rendering feature, which is used to improve the performance of the PDF viewer when displaying large documents.
 

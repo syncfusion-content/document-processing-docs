@@ -13,7 +13,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF
 
 ## Localization
 
-[Blazor PDFViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+[Blazor PDFViewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 ## Right to Left
 
@@ -39,4 +39,4 @@ The following code snippet shows how to localize the component for Arabic langua
 }
 ```
 
-N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer-2/default-functionalities?theme=bootstrap5) to understand how to explain core features of PDF Viewer.
+N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/default-functionalities?theme=bootstrap5) to understand how to explain core features of PDF Viewer.

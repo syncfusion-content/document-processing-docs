@@ -1,15 +1,15 @@
 ---
 layout: post
-title: How to deploy docker image in azure kubernetes service in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about How to deploy docker image in azure kubernetes service in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: How to deploy docker image in azure kubernetes service in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about How to deploy docker image in azure kubernetes service in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: How to deploy docker image in azure kubernetes service
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to deploy docker image in azure kubernetes service in ##Platform_Name## Pdfviewer control
+# How to deploy docker image in azure kubernetes service in Javascript Pdfviewer control
 
 ## Prerequisites
 
@@ -113,6 +113,6 @@ kubectl get all
 
 Browse the copied external IP address and navigate to the PDF Viewer Web API control `http://<external-ip>/api/pdfviewer`. It returns the default get method response.
 
-**Step 6:** Append the Kubernetes service running the URL `http://<external-ip>/api/pdfviewer` to the service URL in the client-side PDF Viewer control. For more information about how to get started with the PDF Viewer control, refer to this [`getting started page`](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started/?).
+**Step 6:** Append the Kubernetes service running the URL `http://<external-ip>/api/pdfviewer` to the service URL in the client-side PDF Viewer control. For more information about how to get started with the PDF Viewer control, refer to this [`getting started page`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/?).
 
 For more details about the Azure Kubernetes service, please look deeper into [`Microsoft Azure Kubernetes Service`](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) for a production-ready setup.

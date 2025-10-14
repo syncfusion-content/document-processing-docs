@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ribbon in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+title: Ribbon in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
 description: Learn here all about Ribbon in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Ribbon
@@ -37,10 +37,10 @@ The following code example shows the usage of ribbon customization.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/ribbon/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/ribbon/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="RibbonController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/ribbon/ribbonController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/ribbon/ribbonController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

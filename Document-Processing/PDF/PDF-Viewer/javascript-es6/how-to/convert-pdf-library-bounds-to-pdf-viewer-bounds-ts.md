@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Converting Library Bounds in JavaScript PdfViewer | Syncfusion
-description: Learn how to convert Library bounds into Viewer bounds in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+description: Learn how to convert Library bounds into Viewer bounds in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -29,7 +29,7 @@ PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnific
 
 const pdfviewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
 });
 
 // Append the PdfViewer to the DOM

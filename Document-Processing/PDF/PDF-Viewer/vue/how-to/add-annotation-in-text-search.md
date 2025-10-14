@@ -16,7 +16,7 @@ This guide demonstrates how to add rectangle annotations based on the bounds of 
 
 ## Steps to Add Rectangle Annotations on Search Result Highlight
 
-**Step 1:** Follow the steps provided in the [Vue PDF Viewer Getting Started documentation](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [Vue PDF Viewer Getting Started documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Set Up the PdfViewer Component to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer.
 

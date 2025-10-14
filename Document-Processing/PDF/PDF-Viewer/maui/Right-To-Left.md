@@ -2,7 +2,7 @@
 layout: post
 title: Right to Left in .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here all about the layouting Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control in right-to-left.
-platform: MAUI
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view

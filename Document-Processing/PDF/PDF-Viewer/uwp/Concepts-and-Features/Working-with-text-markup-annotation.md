@@ -2,7 +2,7 @@
 layout: post
 title: Text markup annotations in UWP Pdf Viewer Control | Syncfusion
 description: Learn here all about Working with text markup annotations support in Syncfusion<sup>®</sup> UWP Pdf Viewer (SfPdfViewer) control and more.
-platform: uwp
+platform: document-processing
 control: PDF viewer
 documentation: ug
 ---

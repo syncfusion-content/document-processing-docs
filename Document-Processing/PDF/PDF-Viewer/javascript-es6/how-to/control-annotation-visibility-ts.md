@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Control Annotations Visibility in TypeScript PdfViewer | Syncfusion
-description: Learn how to control Annotations Visibility in the Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+description: Learn how to control Annotations Visibility in the Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -17,7 +17,7 @@ This guide demonstrates how to control the visibility of PDF annotations in docu
 
 ### How to Control Annotation Visibility
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Add Buttons for Annotation Modification and Downloading
 

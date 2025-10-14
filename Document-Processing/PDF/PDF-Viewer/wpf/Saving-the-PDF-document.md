@@ -2,7 +2,7 @@
 layout: post
 title: Saving PDF Files in WPF Pdf Viewer control | Syncfusion<sup>&reg;</sup>;
 description: Learn about Saving PDF Files support in Syncfusion<sup>&reg;</sup>; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
-platform: wpf
+platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---

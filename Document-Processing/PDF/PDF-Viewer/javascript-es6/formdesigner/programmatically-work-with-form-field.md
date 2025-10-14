@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Programmatically work with form field in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Programmatically work with form field in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Programmatically work with form field in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Programmatically work with form field in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Programmatically work with form field
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Programmatically work with form field in ##Platform_Name## Pdfviewer control
+# Programmatically work with form field in Typescript Pdfviewer control
 
 The PDF Viewer control provides the option to add, edit and delete the Form Fields. The Form Fields type supported by the PDF Viewer Control are:
 
@@ -28,14 +28,14 @@ Using addFormField method, the form fields can be added to the PDF document prog
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/addformfield-cs4/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/addformfield-cs4/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/addformfield-cs4/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/addformfield-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs4" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/addformfield-cs4/index.html" %}
 
 ## Edit/Update form field programmatically
 
@@ -43,14 +43,14 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/updateformfield-cs4/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/updateformfield-cs4/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/updateformfield-cs4/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/updateformfield-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs4" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/updateformfield-cs4/index.html" %}
 
 ## Delete form field programmatically
 
@@ -58,14 +58,14 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/deleteformfield-cs4/index.ts %}
+{% include code-snippet/pdfviewer/javascript-es6/deleteformfield-cs4/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/deleteformfield-cs4/index.html %}
+{% include code-snippet/pdfviewer/javascript-es6/deleteformfield-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs4" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/deleteformfield-cs4/index.html" %}
 
 ## Saving the form fields
 
@@ -81,7 +81,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 pdfviewer.load('PDF_Succinctly.pdf', null);
 pdfviewer.download();
@@ -102,7 +102,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 pdfviewer.load('PDF_Succinctly.pdf', null);
 pdfviewer.print.print();

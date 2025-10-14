@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Rendering events in ##Platform_Name## PDF Viewer control | Syncfusion
-description: Learn here all about pageRenderInitiate and pageRenderComplete event in Syncfusion ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Rendering events in Typescript PDF Viewer control | Syncfusion
+description: Learn here all about pageRenderInitiate and pageRenderComplete event in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # PageRenderInitiate and pageRenderComplete event
 
-In Syncfusion PDF Viewer, [pageRenderInitiate](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) actions are events that occur during the rendering process of PDF documents.
+In Syncfusion PDF Viewer, [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) actions are events that occur during the rendering process of PDF documents.
 
 **PageRenderInitiate**
 
@@ -38,4 +38,4 @@ pdfviewer.pageRenderComplete = (args: any) => {
 
 ```
 
-The provided code demonstrates how to subscribe to the [pageRenderInitiate](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events in the Syncfusion PDF Viewer component.
+The provided code demonstrates how to subscribe to the [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events in the Syncfusion PDF Viewer component.

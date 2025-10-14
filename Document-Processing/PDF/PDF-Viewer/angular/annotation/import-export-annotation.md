@@ -285,7 +285,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
     public pdfviewerControl: PdfViewerComponent;
     //The service must be running in the local
     public service: string =
-      'https://services.syncfusion.com/angular/production/api/pdfviewer';
+      'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     //Local file path
     public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
     OnImportAnnotationsClick() {
@@ -763,7 +763,7 @@ export class AppComponent implements OnInit {
   public document: string = 'https://cdn.syncfusion.com/content/pdf/handwritten-signature.pdf';
 
   // Syncfusion PDF viewer resource URL
-  public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+  public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
 
   ngOnInit(): void {}
 
@@ -905,7 +905,7 @@ import { PdfViewerComponent,LinkAnnotationService, BookmarkViewService,
   export class AppComponent implements OnInit {
     @ViewChild('pdfviewer')
     public pdfviewerControl: PdfViewerComponent;
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
     public exportAnnotationFileName: string = 'ExportedAnnotations.json';
     OnExportAnnotationsClick() {
@@ -988,7 +988,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 export class AppComponent implements OnInit {
     @ViewChild('pdfviewer')
     public pdfviewerControl: PdfViewerComponent;
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
     public exportAnnotationFileName: string = 'ExportedAnnotations.xfdf';
     OnExportAnnotationsClick() {

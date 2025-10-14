@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Form Field  ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn all about style and appearance in the Form Field module in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Form Field  Javascript Pdfviewer control | Syncfusion
+description: Learn all about style and appearance in the Form Field module in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and Appearance in Form Field module ##Platform_Name## Pdfviewer control
+# Style and Appearance in Form Field module Javascript Pdfviewer control
 
 ## Customizing the Textbox field
 

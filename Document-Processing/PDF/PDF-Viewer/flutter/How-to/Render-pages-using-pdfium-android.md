@@ -2,7 +2,7 @@
 layout: post
 title: Rendering PDF pages using PDFium on Android| Syncfusion
 description: You can learn all about rendering PDF pages using the PDFium library on Android devices running API levels below 35 with the SfPdfViewer widget.
-platform: flutter
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: flutter pdf viewer, flutter view pdf, pdf viewer in flutter, flutter open pdf, flutter pdf view

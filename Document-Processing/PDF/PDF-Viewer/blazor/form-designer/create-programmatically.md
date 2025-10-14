@@ -9,14 +9,15 @@ documentation: ug
 
 # Programmatic Support for Form Designer in Blazor PDF Viewer
 
-The Blazor SfPdfViewer component provides programmatic control over form fields in a PDF document. This enables seamless form handling and enhances user interaction through code.  
+The Blazor SfPdfViewer component provides programmatic control over PDF form fields, enabling creation, update, and management entirely through code for automated and reliable form workflows.
+
+N> Programmatic operations do not require enabling the Form Designer UI. Ensure a document is loaded and an instance reference (for example, SfPdfViewer2 via @ref) is available before invoking API methods.
 
 ## Adding Form Fields Programmatically
 
-The Blazor SfPdfViewer offers a way to add form fields programmatically using the [`AddFormFieldsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__) method.
-This method accepts a list of [`FormFieldInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html) objects, where each object represents a form field with specific properties.  
+The Blazor SfPdfViewer offers a way to add form fields programmatically using the [AddFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__) method. This method accepts a list of [FormFieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html) objects, where each object represents a form field (for example, ButtonField, TextBoxField, PasswordField, CheckBoxField, RadioButtonField, DropDownField, ListBoxField, SignatureField) with specific properties and [Bound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.Bound.html) coordinates.
 
-The example below demonstrates how to add form fields in the PdfViewer component:
+The example below demonstrates how to add form fields in the SfPdfViewer2 component:
 
 ```cshtml
 @page "/"
@@ -58,18 +59,18 @@ The example below demonstrates how to add form fields in the PdfViewer component
 ```
 The following image illustrates the programmatic addition of form fields in Blazor SfPdfViewer:
 
-![Programmatical Add Form Fields in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-add.png)
+![Programmatic addition of form fields in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-add.png)
 
-N> Users can also add form fields through the UI in SfPdfViewer, allowing for an intuitive and interactive customization experience.  
+N> Form fields can also be added interactively using the Form Designer UI for an intuitive, point-and-click experience.  
 [Interactively Add Form Fields](./ui-interactions)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/AddFormField.razor).
 
 ## Form Field Settings  
 
-The Blazor SfPdfViewer provides [`FormFieldSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html) to configure the appearance of form fields in a PDF document. These settings allow defining the border, background, text styles, and other properties.
+The Blazor SfPdfViewer provides [FormFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html) to configure form field appearance, including borders, background, text styles, and related properties.
 
-This code below is for [thickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_Thickness). You can also configure **[background color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_BackgroundColor), [border color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_BorderColor), [text color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_Color), [font family](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_FontFamily), [font size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_FontSize), and [font style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_FontStyle)**.
+The example below demonstrates configuring [thickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_Thickness). Additional options include [background color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_BackgroundColor), [border color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_BorderColor), [text color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_Color), [font family](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_FontFamily), [font size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_FontSize), and [font style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_FontStyle).
 
 ```cshtml
 @page "/"
@@ -116,10 +117,10 @@ The following image illustrates the listbox field thickness customization in Bla
 
 ## Activating and Deactivating Form Field Mode
 
-The [`SetFormDrawingModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetFormDrawingModeAsync_System_Nullable_Syncfusion_Blazor_SfPdfViewer_FormFieldType__) method allows defining the type of form field that can be drawn in the PDF Viewer. This enables users to add form fields interactively.
+The [SetFormDrawingModeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetFormDrawingModeAsync_System_Nullable_Syncfusion_Blazor_SfPdfViewer_FormFieldType__) method defines the type of form field that can be drawn interactively in the viewer. This controls the UI drawing behavior and is independent of programmatic creation via `AddFormFieldsAsync`.
 
-- **Setting Form Field Mode:** Specify a [`FormFieldType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldType.html) to allow adding a specific form field.
-- **Clearing Form Field Mode:** Reset the form field selection by calling [`SetFormDrawingModeAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetFormDrawingModeAsync_System_Nullable_Syncfusion_Blazor_SfPdfViewer_FormFieldType__) without parameters.
+- **Setting Form Field Mode:** Specify a [FormFieldType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldType.html) to allow adding a specific form field.
+- **Clearing Form Field Mode:** Reset the form field selection by calling [SetFormDrawingModeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetFormDrawingModeAsync_System_Nullable_Syncfusion_Blazor_SfPdfViewer_FormFieldType__) without parameters.
 
 ### Example
 
@@ -167,10 +168,10 @@ The following image illustrates setting and clearing the form field mode in Blaz
 
 ## Update Form Fields
 
-The Update functionality enables dynamic modification of form field properties in a PDF document by retrieving fields via [`GetFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetFormFieldsAsync) and updating their values, appearance, or behavior. These changes are applied using [`UpdateFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_Syncfusion_Blazor_SfPdfViewer_FormField_), ensuring they reflect in the viewer.
+Form fields can be modified dynamically by retrieving them with [GetFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetFormFieldsAsync) and applying changes using [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_Syncfusion_Blazor_SfPdfViewer_FormField_). Use null/empty checks and batch updates to efficiently apply multiple changes.
 
 ### Appearance Properties
-Controls the visual aspects of form fields, including [background color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_BackgroundColor), [border color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_BorderColor), [text color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_Color), [thickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_Thickness), [maxLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextBoxField.html#Syncfusion_Blazor_SfPdfViewer_TextBoxField_MaxLength), [visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_Visibility), [font size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_FontSize), [font family](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_FontFamily), [font style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_FontStyle) and [text alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_TextAlignment). These properties help customize the look and feel of form fields in the document.
+Controls the visual aspects of form fields, including [background color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_BackgroundColor), [border color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_BorderColor), [text color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_Color), [thickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_Thickness), [maxLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextBoxField.html#Syncfusion_Blazor_SfPdfViewer_TextBoxField_MaxLength), [visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_Visibility), [font size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_FontSize), [font family](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_FontFamily), [font style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_FontStyle), and [text alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_TextAlignment). These properties customize the visual presentation of fields.
 
 ```cshtml
 @page "/"
@@ -210,12 +211,12 @@ Controls the visual aspects of form fields, including [background color](https:/
 ```
 The following image illustrates updating the appearance of a button form field in Blazor SfPdfViewer:  
 
-![Update Form Field Appearance in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-apperance.png)
+![Update form field appearance in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-apperance.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/UpdateApperanceProperties.razor).
 
 ### Identification & Metadata Properties
-Includes properties like [name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ListItem.html#Syncfusion_Blazor_SfPdfViewer_ListItem_Name) (unique identifier) and [value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ListItem.html#Syncfusion_Blazor_SfPdfViewer_ListItem_Value) (storing user input or assigned data). These attributes help distinguish and manage form fields efficiently.
+Use [name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ListItem.html#Syncfusion_Blazor_SfPdfViewer_ListItem_Name) (identifier) and [value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ListItem.html#Syncfusion_Blazor_SfPdfViewer_ListItem_Value) (display/value data) on dropdown [ListItem] entries to define item metadata. These properties help organize options and manage related form fields effectively.
 
 ```cshtml
 @page "/"
@@ -249,7 +250,7 @@ Includes properties like [name](https://help.syncfusion.com/cr/blazor/Syncfusion
     }
 }
 ```
-The following image illustrates updating the metadata of dropdown field in Blazor SfPdfViewer:  
+The following image illustrates updating the metadata of a dropdown field in Blazor SfPdfViewer:  
 
 ![Update Form Field Metadata in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-value.png)
 
@@ -257,7 +258,7 @@ The following image illustrates updating the metadata of dropdown field in Blazo
 
 ### Grouping and Synchronizing Form Fields Properties
 
-When multiple fields share the same name, changes apply to all linked fields. Updates to **[Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextBoxField.html#Syncfusion_Blazor_SfPdfViewer_TextBoxField_Value), [Required](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_IsRequired), [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_IsReadOnly), [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextBoxField.html#Syncfusion_Blazor_SfPdfViewer_TextBoxField_IsMultiline), and [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_TooltipText)** reflect instantly. This ensures consistency across the document.
+When multiple fields share the same name, changes apply to all linked fields. Updates to [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextBoxField.html#Syncfusion_Blazor_SfPdfViewer_TextBoxField_Value), [Required](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_IsRequired), [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_IsReadOnly), [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextBoxField.html#Syncfusion_Blazor_SfPdfViewer_TextBoxField_IsMultiline), and [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_TooltipText) reflect instantly. This ensures consistency across the document.
 
 ```cshtml
 @page "/"
@@ -288,15 +289,15 @@ The following image illustrates updating linked properties of a radio button for
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/UpdateLinkedProperties.razor).
 
-N> Users can also Update form fields through the UI in SfPdfViewer, allowing for an intuitive and interactive customization experience.  
+N> Users can also update form fields through the UI in SfPdfViewer for an intuitive, interactive experience.  
 [Interactively Update Form Fields](./ui-interactions)
 
 ## Delete Form Fields
 
-The [`DeleteFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Boolean_) method enables the removal of form fields from the document, allowing users to manage and modify form structures efficiently.  
+The [DeleteFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Boolean_) method enables the removal of form fields from the document, allowing users to manage and modify form structures efficiently.  
 
 ### Delete All Form Fields  
-Removes all form fields from the document using [`DeleteFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Boolean_) , clearing all interactive elements at once.
+Removes all form fields from the document using [DeleteFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Boolean_) , clearing all interactive elements at once.
 
 ```cshtml
 @page "/"
@@ -330,7 +331,7 @@ The following image illustrates deleting all form fields in Blazor SfPdfViewer:
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteAllFields.razor).
 
 ### Delete Selected Form Fields  
-Deletes only the currently selected form field using [`DeleteFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Boolean_), enabling users to modify the document while keeping the rest of the form structure intact.
+Deletes only the currently selected form field using [DeleteFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Boolean_), enabling users to modify the document while keeping the rest of the form structure intact.
 
 ```cshtml
 @page "/"
@@ -364,7 +365,7 @@ The following image illustrates deleting a selected password field in Blazor SfP
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteSelectedField.razor).
 
 ### Delete Form Fields by IDs  
-Removes specific form fields using [`DeleteFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Collections_Generic_List_System_String__) based on their unique identifiers, allowing precise control over which fields are deleted without affecting others.  
+Removes specific form fields using [DeleteFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Collections_Generic_List_System_String__) based on their unique identifiers, allowing precise control over which fields are deleted without affecting others. The example below deletes a single field by ID; pass multiple IDs to delete several fields at once.  
 
 ```cshtml
 @page "/"
@@ -398,16 +399,16 @@ The following image illustrates deleting form fields by their IDs in Blazor SfPd
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteById.razor).
 
-N> Users can also Delete form fields through the UI in SfPdfViewer, allowing for an intuitive and interactive customization experience.  
+N> Users can also delete form fields through the UI in SfPdfViewer for an intuitive, interactive experience.  
 [Interactively Delete Form Fields](./ui-interactions)
 
 ## Select Form Field
 
-Form field can be programmatically selected using the [`SelectFormFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SelectFormFieldAsync_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_) method. This allows users to highlight specific form field based on either their unique identifier or their object reference.
+Form fields can be programmatically selected using the [SelectFormFieldAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SelectFormFieldAsync_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_) method. Selection is supported either by unique ID or by passing the form field object reference.
 
 ### Select Form Field by ID
 
-To select a form field using its unique identifier, pass the field's ID to the [`SelectFormFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SelectFormFieldAsync_System_String_) method.
+The following example demonstrates selecting a form field by passing the form field object reference to [SelectFormFieldAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SelectFormFieldAsync_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_). To select by unique ID instead, use the string overload of [SelectFormFieldAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SelectFormFieldAsync_System_String_).
 
 ```cshtml
 @page "/"
@@ -438,7 +439,7 @@ To select a form field using its unique identifier, pass the field's ID to the [
     }
 }
 ```
-The following image illustrates selecting a button field by its ID in Blazor SfPdfViewer:  
+The following image illustrates selecting a button field in Blazor SfPdfViewer:  
 
 ![Select Button Field by ID in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-id.png)
 
@@ -446,7 +447,7 @@ The following image illustrates selecting a button field by its ID in Blazor SfP
 
 ### Select Form Field by Object Reference
 
-Alternatively, you can retrieve all available form fields using [`GetFormFieldsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetFormFieldsAsync), then select a specific field by passing its object reference to [`SelectFormFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SelectFormFieldAsync_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_).
+Optionally, retrieve all available form fields using [GetFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetFormFieldsAsync), and then select a specific field by passing its object reference to [SelectFormFieldAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SelectFormFieldAsync_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_).
 
 ```cshtml
 @page "/"
@@ -478,115 +479,14 @@ Alternatively, you can retrieve all available form fields using [`GetFormFieldsA
     }
 }
 ```
-The following image illustrates selecting a checkbox field in Blazor SfPdfViewer:  
+The following image shows selecting a checkbox field in the Blazor PDF Viewer (SfPdfViewer):  
 
 ![Select CheckBox Field in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-field.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/SelectByField.razor).
 
-N> Ensure form field interaction mode is enabled before selecting a field.
-Refer to the documentation for enabling form field toolbar [Interaction mode](./overview).
-
-## Custom Font Support for Form Fields
-
-The Blazor SfPdfViewer allows you to load, edit, and save custom fonts in Form Fields like {Text Box, List Box, Drop Down} using the [FallbackFontCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FallbackFontCollection) and [FontFamilies](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FontFamilies) properties
-
-### Integrating Custom Font Collections into Form Fields in SfPdfViewer
-
-To ensure proper rendering and saving of form fields with custom fonts in SfPdfViewer, especially when the fonts are not installed on the system, the FallbackFontCollection property must be set; additionally, custom fonts like Arial Black and Courier New can be loaded as TTF files, added to the Font Family dropdown of the property dialog using the FontFamilies property or a string array, and used seamlessly in Form Fields for loading, editing, and saving.
-
-```cshtml
-@using Syncfusion.Blazor;
-@using Syncfusion.Blazor.SfPdfViewer;
-
-<SfPdfViewer2 @ref="pdfViewer" Height="100%" Width="100%" DocumentPath="@DocumentPath" FontFamilies="@FontFamilies">
-    <PdfViewerEvents Created="@Created"></PdfViewerEvents>
-</SfPdfViewer2>
-
-@code {
-    SfPdfViewer2? pdfViewer;
-    internal string[] FontFamilies { get; set; } = { "Helvetica", "Courier", "Symbol", "Times New Roman", "Allura", "Playwrite CA", "Ojuju" };
-    private string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/form-designer.pdf";
-    public void Created()
-    {
-        pdfViewer!.FallbackFontCollection.Add("Allura", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Allura-Regular.ttf")));
-        pdfViewer!.FallbackFontCollection.Add("Playwrite CA", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/PlaywriteCA-Regular.ttf")));
-        pdfViewer!.FallbackFontCollection.Add("Ojuju", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Ojuju-Regular.ttf")));
-    }
-}
-```
-![Custom Font Support for Form Fields in Blazor SfPdfViewer](../form-designer/form-designer-images/custom_font_support_for_form_fields.png)
-
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Custom%20Font%20Support%20For%20FormFields).
-
-## Custom Font Support for Signature Fields
-
-The Blazor SfPdfViewer allows you to load, edit, and save custom fonts in Signature Fields using the [FallbackFontCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FallbackFontCollection) and [SignatureFonts](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer. PdfViewerSignatureDialogSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerSignatureDialogSettings_SignatureFonts) properties
-
-### Integrating Custom Font Collections into Signature Fields in SfPdfViewer
-
-To ensure proper rendering and saving of signature with custom fonts in SfPdfViewer, especially when the fonts are not installed on the system, the FallbackFontCollection property must be set; additionally, custom fonts like Arial Black and Courier New can be loaded as TTF files, added to the signature dialog using the SignatureFonts property or a string array, and used seamlessly in Signature Fields for loading, editing, and saving.
-
-```cshtml
-@using Syncfusion.Blazor;
-@using Syncfusion.Blazor.SfPdfViewer;
-
-<SfPdfViewer2 @ref="Viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">
-	<PdfViewerEvents Created="@Created"></PdfViewerEvents>
-	<PdfViewerSignatureDialogSettings SignatureFonts="signatureFonts" />
-</SfPdfViewer2>
-
-@code {
-	SfPdfViewer2? Viewer;
-	private string DocumentPath { get; set; } = "wwwroot/Data/With_Four_Signature_Fields.pdf";
-
-	public void Created()
-	{
-		Stream font = new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Allura-Regular.ttf"));
-		Viewer!.FallbackFontCollection.Add("allura", font);
-		font = new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Tangerine-Regular.ttf"));
-		Viewer!.FallbackFontCollection.Add("tangerine", font);
-		font = new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Sacramento-Regular.ttf"));
-		Viewer!.FallbackFontCollection.Add("sacramento", font);
-		font = new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Inspiration-Regular.ttf"));
-		Viewer!.FallbackFontCollection.Add("inspiration", font);
-	}
-	string[] signatureFonts =
-	{
-		"Allura",
-		"Tangerine",
-		"Sacramento",
-		"Inspiration"
-	};
-}
-```
-![Custom Font Support for Signature Field in Blazor SfPdfViewer](../form-designer/form-designer-images/custom_font_support_signature_fields.png)
-
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Custom%20Font%20Support%20For%20Signature%20Field).
-
-To ensure proper and seamless execution when using Google API fonts in the PDF Viewer component, it's essential to load these fonts into the sample application as well. This is particularly important because FreeText annotations are rendered directly onto the canvas, making it mandatory to have the fonts available in the sample for accurate rendering.
-
-The following example illustrates how to load custom fonts in FreeText annotations using fonts from Google Fonts or other external sources.
-
-```cshtml
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        var fontFamily = ["Allura, Tangerine, Sacramento, Inspiration"];
-        for (var fontIndex=0; fontIndex<fontFamily.length; fontIndex++)
-        {
-            document.fonts.load(`16px ${fontFamily[fontIndex]}`).then(() => {
-                console.log(`Font "${fontFamily[fontIndex]}" loaded successfully.`);
-            }).catch(err => {
-                console.error(`Failed to load font "${font}":`, err);
-            });
-        }
-    });
-</script>
-```
-
->**Note:** If external fonts are not properly loaded in the environment, it may lead to slight inconsistencies when importing and rendering free text annotations using those custom fonts. This issue typically occurs only with fonts that are referenced externally, such as those loaded from web-based sources.
-
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/FreeText/Load%20Custom%20Font%20From%20External%20Links).
+N> Enable the form field interaction mode before selecting a field.
+For details, see [Interaction mode](./overview).
 
 ## See also
 

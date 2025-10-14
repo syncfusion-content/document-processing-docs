@@ -4,7 +4,6 @@ title: Optimize the SFDT file in Document Editor Component
 description: Learn here all about optimize the SFDT file in Document Editor in Syncfusion Document Editor component of syncfusion and more.
 platform: document-processing
 control: Optimize the SFDT file
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -31,7 +30,7 @@ As a backward compatibility to create older format SFDT files, refer the followi
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/optimize-sfdt/tagHelperOld %}
+{% include code-snippet/document-editor/asp-net-core/optimize-sfdt/tagHelperOld %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,7 +40,7 @@ As a backward compatibility to create older format SFDT files, refer the followi
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/optimize-sfdt/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/optimize-sfdt/tagHelper %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -84,7 +83,7 @@ To convert from older format SFDT from a new optimized SFDT file, refer the foll
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/optimize-sfdt/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/optimize-sfdt/tagHelper %}
 {% endhighlight %}
 {% endtabs %}
 

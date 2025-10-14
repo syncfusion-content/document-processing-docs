@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Protection in Spreadsheet Control
+# Protection in ASP.NET MVC Spreadsheet Control
 
 Sheet protection helps you to prevent the users from modifying the data in the spreadsheet.
 
@@ -46,13 +46,12 @@ The following example shows `Protect Sheet` functionality with password in the S
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/protect-sheet/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/protect-sheet/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ProtectSheetController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/protect-sheet/protectSheetController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/protect-sheet/protectSheetController.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 
 
 
@@ -66,7 +65,7 @@ Unprotect sheet is used to enable all the functionalities that are already disab
 
 **User Interface**:
 
-In the active Spreadsheet, the sheet Unprotection can be done by any of the following ways:
+In the active Spreadsheet, the sheet can be unprotected by any of the following ways:
 
 * Select the `Unprotect Sheet` item in the Ribbon toolbar under the Data Tab.
 * Right-click the sheet tab, select the `Unprotect Sheet` item in the context menu.
@@ -78,10 +77,10 @@ In protected spreadsheet, to make some particular cell or range of cells are edi
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/lock-cells/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/lock-cells/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="LockCellController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/lock-cells/lockCellController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/lock-cells/lockCellController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -116,10 +115,10 @@ The following example demonstrates how to make rows, columns, and cells read-onl
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/read-only/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/read-only/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ReadOnlyController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/read-only/readOnlyController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/read-only/readOnlyController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -141,10 +140,10 @@ The following example shows `Protect Workbook` by using the [`isProtected`](http
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/protect-workbook/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/protect-workbook/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ProtectWorkbookController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/protect-workbook/protectWorkbookController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/protect-workbook/protectWorkbookController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -154,10 +153,10 @@ The following example shows `Protect Workbook` by using the [`password`](https:/
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/password/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/password/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="PasswordController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/password/passwordController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/password/passwordController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -169,7 +168,7 @@ Unprotect Workbook is used to enable the insert, delete, rename, move, copy, hid
 
 **User Interface**:
 
-In the active Spreadsheet, the workbook Unprotection can be done in any of the following ways:
+In the active Spreadsheet, the workbook can be unprotected in any of the following ways:
 
 * Select the `Unprotect Workbook` item in the Ribbon toolbar under the Data Tab and provide the valid password in the dialog box.
 

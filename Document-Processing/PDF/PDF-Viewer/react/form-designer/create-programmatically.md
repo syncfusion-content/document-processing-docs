@@ -134,9 +134,9 @@ root.render(<App />);
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.TSX` or `index.JSX` file:
-**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
+**serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/react/addformfield-cs1/index.html" %}
 
 ## Edit/Update form field programmatically
 
@@ -252,9 +252,9 @@ root.render(<App />);
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.TSX` or `index.JSX` file:
-**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
+**serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/react/updateformfield-cs1/index.html" %}
 
 ## Delete form field programmatically
 
@@ -370,9 +370,9 @@ root.render(<App />);
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.TSX` or `index.JSX` file:
-**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
+**serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/react/deleteformfield-cs1/index.html" %}
 
 ## setFormFieldMode programmatically
 
@@ -433,7 +433,7 @@ function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
@@ -514,7 +514,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
@@ -585,7 +585,7 @@ function App() {
         id="container"
          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enablePrint={true}
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -679,7 +679,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         documentLoad={documentLoaded}
         enableFormFieldsValidation={true}
         ValidateFormFields= {validateFormFields}
@@ -988,7 +988,7 @@ return (<div>
         <PdfViewerComponent
             id="container"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+            serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
             style={{ 'height': '640px' }}
             documentLoad={documentLoad}>
                {/* Inject the required services */}
@@ -1108,7 +1108,7 @@ return (<div>
       <PdfViewerComponent
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
           style={{ 'height': '640px' }}
           documentLoad={documentLoad}>
               {/* Inject the required services */}
@@ -1295,7 +1295,7 @@ return (<div>
         <PdfViewerComponent
             id="container"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+            serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
             style={{ 'height': '640px' }}
             documentLoad={documentLoad}>
                {/* Inject the required services */}
@@ -1477,7 +1477,7 @@ return (<div>
         <PdfViewerComponent
             id="container"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+            serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
             style={{ 'height': '640px' }}
             documentLoad={documentLoad}>
                {/* Inject the required services */}
@@ -1635,7 +1635,7 @@ return (<div>
         <PdfViewerComponent
             id="container"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+            serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
             style={{ 'height': '640px' }}
             documentLoad={documentLoad}
             >
@@ -1800,7 +1800,7 @@ return (<div>
         <PdfViewerComponent
             id="container"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+            serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
             style={{ 'height': '640px' }}
             documentLoad={documentLoad}
             >
@@ -1986,7 +1986,7 @@ return (<div>
         <PdfViewerComponent
             id="container"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+            serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
             style={{ 'height': '640px' }}
             documentLoad={documentLoad}
             >
@@ -2168,7 +2168,7 @@ return (<div>
         <PdfViewerComponent
             id="container"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+            serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
             style={{ 'height': '640px' }}
             documentLoad={documentLoad}
             >

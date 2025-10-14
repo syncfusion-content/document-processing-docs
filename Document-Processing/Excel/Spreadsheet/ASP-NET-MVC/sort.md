@@ -38,10 +38,10 @@ The following code example shows `sort` functionality in the Spreadsheet control
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/sort-by-cell/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/sort-by-cell/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="SortController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/sort-by-cell/sortController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/sort-by-cell/sortController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -112,10 +112,10 @@ N> * All the arguments are optional.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/passing-sort/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/passing-sort/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="PassingSortController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/passing-sort/passingSortController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/passing-sort/passingSortController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -139,10 +139,10 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/custom-sort/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/custom-sort/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="CustomSortController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/custom-sort/customSortController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/custom-sort/customSortController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

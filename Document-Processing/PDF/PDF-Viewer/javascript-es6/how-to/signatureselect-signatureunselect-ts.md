@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Selection events in ##Platform_Name## PDF Viewer control | Syncfusion
-description: Learn here all about SignatureSelect and SignatureUnselect event in Syncfusion ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Selection events in Typescript PDF Viewer control | Syncfusion
+description: Learn here all about SignatureSelect and SignatureUnselect event in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # SignatureSelect and SignatureUnselect event
 
-The Syncfusion PDF Viewer provides event-handling capabilities for various actions, including selecting and unselecting handwritten signatures. The [signatureSelect](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#signatureselect) and [signatureUnselect](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#signatureunselect) events enable developers to programmatically manage the selection state of signatures within the PDF Viewer component.
+The Syncfusion PDF Viewer provides event-handling capabilities for various actions, including selecting and unselecting handwritten signatures. The [signatureSelect](https://ej2.syncfusion.com/documentation/api/pdfviewer/#signatureselect) and [signatureUnselect](https://ej2.syncfusion.com/documentation/api/pdfviewer/#signatureunselect) events enable developers to programmatically manage the selection state of signatures within the PDF Viewer component.
 
 **signatureSelect**
 
-The [signatureSelect](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#signatureselect) event triggers when a handwritten signature annotation is selected. This event allows developers to capture the signature selection and handle it programmatically, such as updating the UI or storing the selection data for further processing.
+The [signatureSelect](https://ej2.syncfusion.com/documentation/api/pdfviewer/#signatureselect) event triggers when a handwritten signature annotation is selected. This event allows developers to capture the signature selection and handle it programmatically, such as updating the UI or storing the selection data for further processing.
 
 **signatureUnselect**
 
-The [signatureUnselect](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#signatureunselect) event triggers when a handwritten signature annotation is unselected. This event enables developers to manage the unselection programmatically, which can be useful for tasks like cleanup operations or updating the application's state to reflect that a signature is no longer selected.
+The [signatureUnselect](https://ej2.syncfusion.com/documentation/api/pdfviewer/#signatureunselect) event triggers when a handwritten signature annotation is unselected. This event enables developers to manage the unselection programmatically, which can be useful for tasks like cleanup operations or updating the application's state to reflect that a signature is no longer selected.
 
-The code snippet demonstrates how to subscribe to the [signatureSelect](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#signatureselect) and [signatureUnselect](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#signatureunselect) events in the Syncfusion PDF Viewer component.
+The code snippet demonstrates how to subscribe to the [signatureSelect](https://ej2.syncfusion.com/documentation/api/pdfviewer/#signatureselect) and [signatureUnselect](https://ej2.syncfusion.com/documentation/api/pdfviewer/#signatureunselect) events in the Syncfusion PDF Viewer component.
 
 ```ts
 

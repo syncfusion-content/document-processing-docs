@@ -28,10 +28,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	conditionalFormat.FormatType = ExcelCFType.DataBar;
 	IDataBar dataBar = conditionalFormat.DataBar;
 
-	//Set the constraints
-	dataBar.MinPoint.Type = ConditionValueType.LowestValue;
-	dataBar.MaxPoint.Type = ConditionValueType.HighestValue;
-
 	//Set color for Bar
 	dataBar.BarColor = Color.Aqua;
 
@@ -64,10 +60,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     conditionalFormat.FormatType = ExcelCFType.DataBar;
     IDataBar dataBar = conditionalFormat.DataBar;
 
-    //Set the constraints
-    dataBar.MinPoint.Type = ConditionValueType.LowestValue;
-    dataBar.MaxPoint.Type = ConditionValueType.HighestValue;
-
     //Set color for Bar
     dataBar.BarColor = Color.Aqua;
 
@@ -91,10 +83,6 @@ Using excelEngine As New ExcelEngine()
     Dim conditionalFormat As IConditionalFormat = conditionalFormats.AddCondition()
     conditionalFormat.FormatType = ExcelCFType.DataBar
     Dim dataBar As IDataBar = conditionalFormat.DataBar
-
-    ' Set the constraints
-    dataBar.MinPoint.Type = ConditionValueType.LowestValue
-    dataBar.MaxPoint.Type = ConditionValueType.HighestValue
 
     ' Set color for Bar
     dataBar.BarColor = Color.Aqua

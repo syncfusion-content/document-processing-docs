@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Import annotations in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Import annotations in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Import annotations in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Import annotations in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Import annotations
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import annotations in ##Platform_Name## Pdfviewer control
+# Import annotations in Typescript Pdfviewer control
 
-To import annotations into a Syncfusion PDF Viewer when loading a PDF document, you can use the [**importAnnotations()**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#importannotation) method of the PDF Viewer. This method allows you to import annotations from a file or a string in the PDF Viewer.
+To import annotations into a Syncfusion PDF Viewer when loading a PDF document, you can use the [**importAnnotations()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#importannotation) method of the PDF Viewer. This method allows you to import annotations from a file or a string in the PDF Viewer.
 
-Here is an example of how you can use the [**importAnnotations()**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#importannotation) method to import annotations when loading a PDF document:
+Here is an example of how you can use the [**importAnnotations()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#importannotation) method to import annotations when loading a PDF document:
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) to create simple PDF Viewer sample.
 
 **Step 2:** Add the following code snippet to import annotations on load PDF document.
 

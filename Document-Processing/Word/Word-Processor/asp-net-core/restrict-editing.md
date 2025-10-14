@@ -4,7 +4,6 @@ title: Restrict Editing in Document Editor Component| Syncfusion
 description: Learn here all about Restrict Editing in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Restrict Editing
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

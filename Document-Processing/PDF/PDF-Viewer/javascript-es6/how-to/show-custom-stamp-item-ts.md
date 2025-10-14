@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Displaying Custom Items in ##Platform_Name## PDF Viewer control | Syncfusion
-description: Learn how to display custom items in the custom stamp in Syncfusion ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Displaying Custom Items in Typescript PDF Viewer control | Syncfusion
+description: Learn how to display custom items in the custom stamp in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -17,7 +17,7 @@ This guide explains how to add and display custom items in the custom stamp drop
 
 ### Steps to Show Custom Items in Custom Stamp Dropdown
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Configure Custom Stamp Settings
 

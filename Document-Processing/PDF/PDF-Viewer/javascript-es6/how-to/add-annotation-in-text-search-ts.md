@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Add Annotation in Text Search in TypeScript PdfViewer | Syncfusion
-description: Learn how to add rectangle annotations using search text bounds in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+description: Learn how to add rectangle annotations using search text bounds in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -17,7 +17,7 @@ This guide demonstrates how to add rectangle annotations based on the bounds of 
 
 ## Steps to Add Rectangle Annotations on Search Result Highlight
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Initialize the PDF Viewer with Required Modules
 

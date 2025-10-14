@@ -100,7 +100,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
                  AnnotationService]
      })
   export class AppComponent implements OnInit {
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
     ngOnInit(): void {
     }
@@ -235,7 +235,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
   addLineAnnotation() {
@@ -595,7 +595,7 @@ The properties of the shape annotations can be set before creating the control u
                  AnnotationService]
     })
   export class AppComponent implements OnInit {
-      public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+      public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
       public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
       public lineSettings = { fillColor: 'blue', opacity: 0.6, strokeColor: 'green' };
       public arrowSettings = { fillColor: 'green', opacity: 0.6, strokeColor: 'blue' };

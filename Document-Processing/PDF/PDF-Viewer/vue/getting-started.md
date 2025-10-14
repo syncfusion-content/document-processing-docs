@@ -46,7 +46,7 @@ Install Syncfusion<sup style="font-size:70%">&reg;</sup> `PDF Viewer` packages u
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue PDF Viewer component](https://www.syncfusion.com/vue-components/vue-pdf-viewer) as an example. Install the `@syncfusion/ej2-vue-pdfviewer` package by running the following command:
+This article uses the [Vue PDF Viewer component](https://www.syncfusion.com/pdf-viewer-sdk) as an example. Install the `@syncfusion/ej2-vue-pdfviewer` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-pdfviewer --save
@@ -292,8 +292,8 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/getting-started-cs2" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/getting-started-cs2/index.html" %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20-%20Standalone)
 
-> You can refer to our [Vue PDF Viewer](https://www.syncfusion.com/vue-components/vue-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Vue PDF Viewer example](https://ej2.syncfusion.com/vue/demos/#/material/pdfviewer/default.html) to understand how to explains core features of PDF Viewer.
+> You can refer to our [Vue PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) feature tour page for its groundbreaking feature representations. You can also explore our [Vue PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/vue/#/tailwind3/pdfviewer/default.html) to understand how to explains core features of PDF Viewer.

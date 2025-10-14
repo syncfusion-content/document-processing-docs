@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Text markup annotation in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Text markup annotation in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Text markup annotation in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Text markup annotation in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Text markup annotation
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text markup annotation in ##Platform_Name## Pdfviewer control
+# Text markup annotation in Javascript Pdfviewer control
 
 The PDF Viewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline, strikethrough and squiggly annotations in the PDF document.
 
@@ -40,33 +40,33 @@ Refer to the following code snippet to switch to highlight mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/highlight-mode-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/highlight-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
-Add the below [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.html` file
-`serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
+Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.html` file
+`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/highlight-mode-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/highlight-mode-cs1/index.html" %}
 
 Refer to the following code snippet to switch back to normal mode from highlight mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/highlight-normal-mode-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/highlight-normal-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
+`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/highlight-normal-mode-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/highlight-normal-mode-cs1/index.html" %}
 
 ## Highlight a text programmatically
 
-The PDF Viewer library enables you to programmatically highlight text within the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library enables you to programmatically highlight text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation/#addannotation) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply highlighting programmatically:
 
@@ -101,7 +101,7 @@ if (highlight) {
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl : "https://services.syncfusion.com/js/production/api/pdfviewer",
+                    serviceUrl : "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -144,34 +144,34 @@ Refer to the following code snippet to switch to underline mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/underline-mode-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/underline-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
+`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/underline-mode-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/underline-mode-cs1/index.html" %}
 
 
 Refer to the following code snippet to switch back to normal mode from underline mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/underline-normal-mode-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/underline-normal-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
+`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/underline-normal-mode-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/underline-normal-mode-cs1/index.html" %}
 
 ## Underline a text programmatically
 
-The PDF Viewer library enables you to programmatically Underline text within the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library enables you to programmatically Underline text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation/#addannotation) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply Underline programmatically:
 
@@ -206,7 +206,7 @@ if (underline) {
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl : "https://services.syncfusion.com/js/production/api/pdfviewer",
+                    serviceUrl : "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -250,33 +250,33 @@ Refer to the following code snippet to switch to strikethrough mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/strikethrough-mode-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/strikethrough-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
+`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/strikethrough-mode-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/strikethrough-mode-cs1/index.html" %}
 
 Refer to the following code snippet to switch back to normal mode from underline mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/strikethrough-normal-mode-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/strikethrough-normal-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
+`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/strikethrough-normal-mode-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/strikethrough-normal-mode-cs1/index.html" %}
 
 ## Strikethrough a text programmatically
 
-The PDF Viewer library enables you to programmatically Strikethrough text within the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library enables you to programmatically Strikethrough text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation/#addannotation) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply Strikethrough programmatically:
 
@@ -311,7 +311,7 @@ if (strikethrough) {
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl : "https://services.syncfusion.com/js/production/api/pdfviewer",
+                    serviceUrl : "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -354,33 +354,33 @@ Refer to the following code snippet to switch to squiggly mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/squiggly-mode-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/squiggly-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
+`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/squiggly-mode-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/squiggly-mode-cs1/index.html" %}
 
 Refer to the following code snippet to switch back to normal mode from squiggly mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/squiggly-normal-mode-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/squiggly-normal-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
+`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/squiggly-normal-mode-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/squiggly-normal-mode-cs1/index.html" %}
 
 ## Squiggly a text programmatically
 
-The PDF Viewer library enables you to programmatically add squiggly to text within the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library enables you to programmatically add squiggly to text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation/#addannotation) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply squiggly programmatically:
 
@@ -416,7 +416,7 @@ if (squiggly) {
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl : "https://services.syncfusion.com/js/production/api/pdfviewer",
+                    serviceUrl : "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -491,7 +491,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"",
-    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
     highlightSettings: {author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: ''},
     underlineSettings: {author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9, modifiedDate: ''},
     strikethroughSettings: {author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: ''},
@@ -522,11 +522,11 @@ Refer to the following code snippet for calling undo and redo actions from the c
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/undo-redo-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/undo-redo-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/undo-redo-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/undo-redo-cs1/index.html" %}
 
 ## Saving the text markup annotation
 
@@ -556,7 +556,7 @@ pdfviewer.appendTo('#PdfViewer');
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableTextMarkupAnnotation: false,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');

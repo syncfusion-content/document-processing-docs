@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Enable resize in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Enable resize in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Enable resize in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Enable resize in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Enable resize
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable resize in ##Platform_Name## Pdfviewer control
+# Enable resize in Typescript Pdfviewer control
 
-To enable the resizer for the text markup annotation in Syncfusion PDF viewer, you can use the [**enableTextMarkupResizer**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#enabletextmarkupresizer) property. Default value of the property is false.
+To enable the resizer for the text markup annotation in Syncfusion PDF viewer, you can use the [**enableTextMarkupResizer**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enabletextmarkupresizer) property. Default value of the property is false.
 
 Here is an example of how you can enable the resizer for the text markup annotation:
 

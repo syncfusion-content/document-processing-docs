@@ -2,7 +2,7 @@
 layout: post
 title: Undo and Redo actions in .NET MAUI PDF Viewer | Syncfusion
 description: Learn here all about Undo and Redo actions on the annotations using Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
-platform: MAUI
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
