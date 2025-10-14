@@ -218,6 +218,8 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
+>API reference: For more information about stickyNotesSettings, see [stickyNotesSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#stickynotessettings)
+
 ## Disable sticky note annotations
 
 The PDF Viewer control provides an option to disable sticky note annotations. The following example disables the feature.
@@ -250,3 +252,5 @@ pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
+
+>API reference: For more information about enableStickyNotesAnnotation, see [enableStickyNotesAnnotation API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablestickynotesannotation)
