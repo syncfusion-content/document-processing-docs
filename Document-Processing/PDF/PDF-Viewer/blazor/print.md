@@ -126,7 +126,10 @@ The [PrintStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfVi
 
 #### Event Arguments
 
-See [PrintStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html) for details such as Filename, Cancel option. If [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html#Syncfusion_Blazor_SfPdfViewer_PrintStartEventArgs_Cancel) is true then the print operation will not work.
+See [PrintStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html) for details such as Filename, Cancel option.
+
+- If the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html#Syncfusion_Blazor_SfPdfViewer_PrintStartEventArgs_Cancel) property is set to true in the PrintStart event, the print operation is canceled and the print dialog will not open.
+- By default, Cancel is false. Set it to true to prevent printing.
 
 The following example illustrates how to handle the PrintStart event.
 
