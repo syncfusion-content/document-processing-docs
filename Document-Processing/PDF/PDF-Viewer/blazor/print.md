@@ -28,7 +28,6 @@ The SfPdfViewer supports printing the loaded PDF by default. Enable or disable t
 
 ![Print a PDF using the SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-print.png)
 
-
 ```cshtml
 
 @using Syncfusion.Blazor.SfPdfViewer
@@ -127,7 +126,7 @@ The [PrintStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfVi
 
 #### Event Arguments
 
-See [PrintStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html) for details such as Filename, Cancel option.
+See [PrintStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html) for details such as Filename, Cancel option. If [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html#Syncfusion_Blazor_SfPdfViewer_PrintStartEventArgs_Cancel) is true then the print operation will not work.
 
 The following example illustrates how to handle the PrintStart event.
 
