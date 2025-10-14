@@ -86,7 +86,7 @@ npm run dev
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmJs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 You can choose the component that you want to install.
 
 To install Document Editor component, use the following command
