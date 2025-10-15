@@ -18,7 +18,7 @@ A Style in Document Editor should have the following properties:
 
 * **name**: Name of the style. All styles in a document have a unique name, which is used as an identifier when applying the style.
 * **type**: Specifies the document elements that the style will target. For example, paragraph or character.
-* **next**: Specifies that the current style inherits the style set to this property. This is how hierarchical styles are defined.
+* **next**: Specifies the style that should be automatically applied to a new paragraph created after the current one.
 * **link**: Provides a relation between the paragraph and character style.
 * **characterFormat**: Specifies the properties of paragraph and character style.
 * **paragraphFormat**: Specifies the properties of paragraph style.
@@ -187,7 +187,7 @@ let paragraphStyles = documentEditor.getStyles('Character');
 
 ## Modify an existing style
 
-You can modify a existing style with the specified style properties using [`createStyle`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#createStyle) method. If modifyExistingStyle parameter is set to `true` the style properties is updated to the existing style.
+You can modify a existing style with the specified style properties using [`createStyle`](https://ej2.syncfusion.com/documentation/api/document-editor/editor/#createStyle) method. If modifyExistingStyle parameter is set to `true` the style properties is updated to the existing style.
 
 The following illustrate to modify an existing style.
 
