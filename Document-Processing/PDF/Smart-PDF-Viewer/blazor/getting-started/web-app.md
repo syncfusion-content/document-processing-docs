@@ -321,7 +321,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer
 
 ![Blazor Smart PDF Viewer rendering a PDF document](gettingstarted-images/smart-pdf-viewer.png)
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/GettingStarted).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Getting%20Started/Blazor%20Web%20App).
 
 ## See also
 

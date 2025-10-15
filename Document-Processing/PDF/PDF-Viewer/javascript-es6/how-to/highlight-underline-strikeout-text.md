@@ -1,18 +1,17 @@
 ---
 layout: post
-title: Highlight underline strikeout text in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Highlight underline strikeout text in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Highlight, underline, and strikeout text in TypeScript PDF Viewer | Syncfusion
+description: Learn how to programmatically highlight, underline, and strikeout text in the Syncfusion TypeScript PDF Viewer using setAnnotationMode.
 platform: document-processing
-control: Highlight underline strikeout text
+control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Highlight underline strikeout text in Typescript Pdfviewer control
+# Highlight, underline, and strikeout text in TypeScript PDF Viewer
 
-The PDF Viewer library allows you to highlight, underline and strikeout text in the loaded PDF document programmatically using the [**setAnnotationMode()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#setannotationmode) method.
+Use the [setAnnotationMode()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#setannotationmode) method to programmatically highlight, underline, and strike through text in a loaded PDF document.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps in the [Get started with JavaScript ES6 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) guide to create a sample.
 
 **Step 2:** Add the following code snippet to highlight, underline, and strikeout text in index.ts file with button click events.
 
@@ -33,4 +32,4 @@ The PDF Viewer library allows you to highlight, underline and strikeout text in 
 
 ```
 
-Find the Sample [how to highlight, underline and strikeout text programmatically](https://stackblitz.com/edit/rmfrlw-jgx99q?devtoolsheight=33&file=index.ts)
+Find the sample: [Highlight, underline, and strikeout text programmatically](https://stackblitz.com/edit/rmfrlw-jgx99q?devtoolsheight=33&file=index.ts)

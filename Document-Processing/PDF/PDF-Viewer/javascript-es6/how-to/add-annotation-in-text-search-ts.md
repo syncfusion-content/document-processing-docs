@@ -9,15 +9,13 @@ documentation: ug
 
 # Add rectangle annotations using text search bounds in PDF Viewer
 
-## Overview
+A concise guide to adding rectangle annotations at highlighted text search results in the TypeScript PDF Viewer to visually emphasize matches and improve readability.
 
-This guide explains how to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer. This approach visually emphasizes search results in annotation-enabled applications.
-
-## Steps to Add Rectangle Annotations on Search Result Highlight
+## Steps to add rectangle annotations on search result highlight
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample.
 
-**Step 2:** Initialize the PDF Viewer with required modules
+**Step 2:** Initialize the PDF Viewer with the required modules
 
 ```ts
 import { pdf } from '@syncfusion/ej2';
@@ -56,7 +54,7 @@ pdfviewer.textSearchHighlight = function(args: TextSearchHighlightEventArgs): vo
 
 **Step 4:** Add search controls
 
-Ensure you have the appropriate HTML buttons for text search operations
+Ensure that the HTML includes buttons for text search operations.
 
 ```html
 <button id="searchText">Search Text</button>
@@ -92,6 +90,6 @@ if (searchCancelButton) {
 }
 ```
 
-Following these steps enables the PDF Viewer to add rectangle annotations at search result locations, increasing the visibility of matches.
+Following these steps enables the PDF Viewer to add rectangle annotations at search result locations, improving the visibility of matches.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to/)

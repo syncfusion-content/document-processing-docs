@@ -255,7 +255,7 @@ N> If any errors occur while using the Android Emulator, see [Troubleshooting th
 
 ![Blazor Smart PDF Viewer rendered on Android emulator](gettingstarted-images/android-emulator.png)
 
->[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/GettingStartedMAUI).
+>[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Getting%20Started/MAUI%20Blazor%20App).
 
 ## See also
 

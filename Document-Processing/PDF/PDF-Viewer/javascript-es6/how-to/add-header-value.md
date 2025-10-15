@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Add header values to AJAX requests in TypeScript PDF Viewer | Syncfusion
-description: Learn how to add custom header values to PDF Viewer AJAX requests using ajaxRequestSettings and ajaxHeaders in the TypeScript PDF Viewer component.
+description: Learn how to include custom headers in PDF Viewer AJAX requests using ajaxRequestSettings and ajaxHeaders in the TypeScript PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Add header values in TypeScript PDF Viewer
+# Add header values in the TypeScript PDF Viewer
 
-To add header values to AJAX requests, use the ajaxHeaders property in the PDF Viewer’s [ajaxRequestSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/#ajaxrequestsettings). This property specifies custom headers for each outgoing request.
+Use the ajaxHeaders property in the PDF Viewer’s [ajaxRequestSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/#ajaxrequestsettings) to include custom headers with each AJAX request.
 
 Example: Add a custom Authorization header using ajaxRequestSettings
 
