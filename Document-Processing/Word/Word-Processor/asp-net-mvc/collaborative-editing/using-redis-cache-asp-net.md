@@ -2,7 +2,7 @@
 layout: post
 title: Collaborative Editing in ASP.NET MVC Document Editor | Syncfusion
 component: DocumentEditor
-description: Learn how to enable and perform collaborative editing in Syncfusion ASP.NET MVC Document editor.
+description: Learn about collaborative editing in Syncfusion ASP.NET MVC Document editor control With Redis in ASP.NET Core of Syncfusion Essential JS 2 and more
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
