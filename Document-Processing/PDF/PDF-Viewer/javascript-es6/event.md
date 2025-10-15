@@ -83,6 +83,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     bookmarkClick: function (args: any) {
         console.log(`Bookmark clicked: ${args.name}`);
     }
@@ -106,6 +107,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     toolbarClick: function (args: any) {
         console.log(`Toolbar item clicked: ${args.name}`);
     }
@@ -115,26 +117,45 @@ viewer.appendTo('#pdfViewer');
 
 ## validateFormFields
 
-The [validateFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#validateformfieldsevent) event triggers when form field validation fails.
+The [validateFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#validateformfieldsevent) event is raised when form validation fails, typically before a download or submit action proceeds. Use this event to inspect which required fields are empty and show custom messages or block your app logic if needed.
 
-- Event arguments: [ValidateFormFieldsArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/validateFormFieldsArgs/).
+- Event arguments: [ValidateFormFieldsArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/validateFormFieldsArgs/)
+  - name: Event name
+  - documentName: Current document name
+  - formField: The last interacted field’s data (if applicable)
+  - nonFillableFields: Array detailing required/invalid fields
+
+How to trigger
+- Add a form field and mark it Required (UI: right‑click field > Properties > Required).
+- Leave the field empty and click Download. The event fires and provides the list of fields that failed validation.
 
 Example:
 
 ```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
+  TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
+  BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer);
+
 const viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
+  resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib'
 });
- viewer.validateFormFields = function (args) {
-console.log(args);console.log("Form field validation triggered:", args);
-}
+
+viewer.enableFormFieldsValidation = true;
+viewer.validateFormFields = function (args) {
+  console.log('form field event name:', args.name);
+  console.log('form field document name:', args.documentName);
+  console.log('form field data:', args.formField);
+  console.log('non fillable form field details:', args.nonFillableFields);
+};
+
 viewer.appendTo('#pdfViewer');
 ```
+
+Tip
+- To require a field programmatically, set isRequired: true when creating/editing the field via Form Designer APIs.
 
 ## zoomChange
 
@@ -152,8 +173,9 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     zoomChange: function (args: any) {
-        console.log(`Zoom changed to: ${args.newValue}%`);
+        console.log(`Zoom changed to: ${args.zoomValue}%`);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -175,6 +197,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     buttonFieldClick: function (args: any) {
         console.log(`Button field clicked. Name: ${args.name}`);
     }
@@ -198,6 +221,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     commentAdd: function (args: any) {
         console.log(`Comment added. Id: ${args.id}`);
     }
@@ -221,6 +245,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     commentDelete: function (args: any) {
         console.log(`Comment deleted. Id: ${args.id}`);
     }
@@ -244,6 +269,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     commentEdit: function (args: any) {
         console.log(`Comment edited. Id: ${args.id}`);
     }
@@ -267,6 +293,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     commentSelect: function (args: any) {
         console.log(`Comment selected. Id: ${args.id}`);
     }
@@ -290,6 +317,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     commentStatusChanged: function (args: any) {
         console.log(`Comment status changed. Id: ${args.id}, Status: ${args.status}`);
     }
@@ -311,13 +339,11 @@ import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,Thumbnail
 
 PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation);
 
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    created: () => {
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    created: function (args: any) {
         console.log('PDF Viewer created');
     }
 });
@@ -326,9 +352,11 @@ viewer.appendTo('#pdfViewer');
 
 ## customContextMenuBeforeOpen
 
-The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#customcontextmenubeforeopenevent) event fires before the custom context menu is opened.
+The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#customcontextmenubeforeopenevent) event fires just before the context menu is shown. Use it to show/hide items based on current state (for example, only show search items when text is selected).
 
-- Event arguments: [CustomContextMenuBeforeOpenEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/customContextMenuBeforeOpenEventArgs/).
+- Event arguments: [CustomContextMenuBeforeOpenEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/customContextMenuBeforeOpenEventArgs/)
+  - name: Event name
+  - ids: Array of menu item ids that will be shown; you can remove ids to hide items for this open
 
 Example:
 
@@ -340,19 +368,55 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     customContextMenuBeforeOpen: function (args: any) {
-        // args.cancel = true; // prevent opening
-        console.log(`Before open context menu at page ${args.pageIndex}`);
+        console.log(`Before open context menu at page ${args.name}`);
     }
 });
-viewer.appendTo('#pdfViewer');
+const menuItems: any[] = [
+    {
+        text: 'SEARCH_ON_WEB',
+        id: 'web_search',
+        iconCss: 'e-icons e-search',
+        items: [
+            {
+                text: 'SEARCH_IN_GOOGLE_IMAGE',
+                id: 'web_search_images',
+            },
+            {
+                text: 'SEARCH_IN_WIKIPEDIA',
+                id: 'web_search_wikipedia',
+            },
+            {
+                text: 'SEARCH_IN_YOUTUBE',
+                id: 'web_search_youtube',
+            },
+            {
+                text: 'SEARCH_GOOGLE',
+                id: 'web_search_google',
+            },
+        ],
+    },
+    {
+        id: 'web_search_separator',
+        separator: true,
+    },
+];
+
+   viewer.appendTo("#pdfViewer");
+   viewer.documentLoad = function (args) {
+       viewer.addCustomMenu(menuItems, false, false);
+   };
 ```
 
 ## customContextMenuSelect
 
-The [customContextMenuSelect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#customcontextmenuselectevent) event fires when a custom context menu item is selected.
+The [customContextMenuSelect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#customcontextmenuselectevent) event fires when a custom menu item is clicked. Use it to branch logic by the clicked item id.
 
 - Event arguments: [CustomContextMenuSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/customContextMenuSelectEventArgs/).
+
+- name: Event name
+- id: The id of the clicked menu item
 
 Example:
 
@@ -364,11 +428,46 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     customContextMenuSelect: function (args: any) {
-        console.log(`Context menu item selected: ${args.item.text}`);
+        console.log(`Context menu item selected: ${args.name}`);
     }
 });
-viewer.appendTo('#pdfViewer');
+const menuItems: any[] = [
+    {
+        text: 'SEARCH_ON_WEB',
+        id: 'web_search',
+        iconCss: 'e-icons e-search',
+        items: [
+            {
+                text: 'SEARCH_IN_GOOGLE_IMAGE',
+                id: 'web_search_images',
+            },
+            {
+                text: 'SEARCH_IN_WIKIPEDIA',
+                id: 'web_search_wikipedia',
+            },
+            {
+                text: 'SEARCH_IN_YOUTUBE',
+                id: 'web_search_youtube',
+            },
+            {
+                text: 'SEARCH_GOOGLE',
+                id: 'web_search_google',
+            },
+        ],
+    },
+    {
+        id: 'web_search_separator',
+        separator: true,
+    },
+];
+
+viewer.appendTo("#pdfViewer");
+viewer.documentLoad = function (args) {
+    viewer.addCustomMenu(menuItems, false, false);
+};
+
 ```
 
 ## documentLoad
@@ -387,11 +486,12 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    documentLoad: function (args: any) {
-        console.log(`Document loaded: page count = ${args.pageData}`);
-    }
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
 });
 viewer.appendTo('#pdfViewer');
+viewer.documentLoad = function (args) {
+  console.log(`Document loaded: page count = ${args.pageData}`);
+};
 ```
 
 ## documentLoadFailed
@@ -410,11 +510,11 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/invalid.pdf',
-    documentLoadFailed: function (args: any) {
-        console.log(`Load failed. Error: ${args.documentName}`);
-    }
 });
 viewer.appendTo('#pdfViewer');
+viewer.documentLoadFailed = function (args) {
+    console.log(`Load failed. Error: ${args.documentName}`);
+}
 ```
 
 ## documentUnload
@@ -433,11 +533,13 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    documentUnload: () => {
-        console.log('Document unloaded');
-    }
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+
 });
 viewer.appendTo('#pdfViewer');
+viewer.documentUnload = function (args) {
+    console.log('Document unloaded');
+}
 ```
 
 ## downloadEnd
@@ -456,6 +558,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     downloadEnd: function (args: any) {
         console.log(`Download finished. File name: ${args.fileName}`);
     }
@@ -479,7 +582,8 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    downloadStart: () => {
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    downloadStart: function (args: any) {
         console.log('Download started');
     }
 });
@@ -502,8 +606,9 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     exportFailed: function (args: any) {
-        console.log(`Export failed: ${args.message}`);
+        console.log(`Export failed: ${args.name}`);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -525,7 +630,8 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    exportStart: () => {
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    exportStart: function (args: any) {
         console.log('Export started');
     }
 });
@@ -548,7 +654,8 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    exportSuccess: () => {
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    exportSuccess: function (args: any) {
         console.log('Export success');
     }
 });
@@ -571,6 +678,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     extractTextCompleted: function (args: any) {
         console.log(`Extracted text length: ${(args.documentTextCollection || '').length}`);
     }
@@ -594,6 +702,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     hyperlinkClick: function (args: any) {
         console.log(`Hyperlink clicked: ${args.hyperlink}`);
     }
@@ -617,8 +726,9 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     hyperlinkMouseOver: function (args: any) {
-        console.log(`Hyperlink hover at page: ${args.pageIndex}`);
+        console.log(`Hyperlink hover at page: ${args.name}`);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -640,8 +750,9 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     importFailed: function (args: any) {
-        console.log(`Import failed: ${args.message}`);
+        console.log(`Import failed: ${args.name}`);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -663,7 +774,8 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    importStart: () => {
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    importStart: function (args: any) {
         console.log('Import started');
     }
 });
@@ -686,7 +798,8 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    importSuccess: () => {
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    importSuccess: function (args: any) {
         console.log('Import success');
     }
 });
@@ -699,6 +812,13 @@ The [keyboardCustomCommands](https://ej2.syncfusion.com/javascript/documentation
 
 - Event arguments: [KeyboardCustomCommandsEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/keyboardCustomCommandsEventArgs/).
 
+  - name: Event name
+  - keyboardCommand: The command metadata raised by Command Manager
+  
+When it triggers
+- After you register gestures in commandManager.keyboardCommand. For example, when you press Shift + Alt + G or Shift + Alt + H, the event gets triggered. Just like this, you can handle custom keyboard shortcuts.
+
+Refer here for additional details about adding your own shortcut keys and handling them: see [Keyboard interaction](./accessibility.md#keyboard-interaction).
 Example:
 
 ```typescript
@@ -709,11 +829,44 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    keyboardCustomCommands: function (args: any) {
-        console.log(`Key command: ${args.command}`);
-    }
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
 });
+viewer.commandManager = {
+  keyboardCommand: [
+    {
+      name: 'customCopy',
+      gesture: {
+        pdfKeys: PdfKeys.G,
+        modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt,
+      },
+    },
+    {
+      name: 'customPaste',
+      gesture: {
+        pdfKeys: PdfKeys.H,
+        modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt,
+      },
+    },
+    {
+      name: 'customCut',
+      gesture: {
+        pdfKeys: PdfKeys.Z,
+        modifierKeys: ModifierKeys.Control,
+      },
+    },
+    {
+      name: 'customSelectAll',
+      gesture: {
+        pdfKeys: PdfKeys.E,
+        modifierKeys: ModifierKeys.Control,
+      },
+    },
+  ],
+};
 viewer.appendTo('#pdfViewer');
+viewer.keyboardCustomCommands = (args: any): void => {
+  console.log('Custom command triggered:', args);
+};
 ```
 
 ## moveSignature
@@ -732,8 +885,9 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     moveSignature: function (args: any) {
-        console.log(`Signature moved on page ${args.pageIndex}`);
+        console.log(`Signature moved on page ${args.id}`);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -755,6 +909,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     pageChange: function (args: any) {
         console.log(`Page changed from ${args.previousPageNumber} to ${args.currentPageNumber}`);
     }
@@ -778,8 +933,9 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     pageClick: function (args: any) {
-        console.log(`Page ${args.pageIndex} clicked at (${args.position.x}, ${args.position.y})`);
+        console.log(`Page ${args.pageNumber} clicked at (${args.x}, ${args.y})`);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -801,8 +957,9 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     pageMouseover: function (args: any) {
-        console.log(`Mouse over page ${args.pageIndex}`);
+        console.log(`Mouse over page ${args.name}`);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -824,8 +981,9 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     pageOrganizerSaveAs: function (args: any) {
-        console.log(`Page organizer save triggered. File name: ${args.fileName}`);
+        console.log(`Page organizer save triggered. File name: ${args.downloadDocument}`);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -847,8 +1005,9 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     pageRenderComplete: function (args: any) {
-        console.log(`Page ${args.pageIndex} rendering completed.`);
+        console.log(`Page ${args.data} rendering completed.`);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -870,8 +1029,9 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     pageRenderInitiate: function (args: any) {
-        console.log(`Page ${args.pageIndex} rendering initiated.`);
+        console.log(`Page ${args.jsonData} rendering initiated.`);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -893,7 +1053,8 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    printEnd: () => {
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    printEnd: function (args: any) {
         console.log('Print action completed.');
     }
 });
@@ -916,6 +1077,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     printStart: () => {
         console.log('Print action initiated.');
     }
@@ -939,8 +1101,9 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     removeSignature: function (args: any) {
-        console.log(`Signature removed from page ${args.pageIndex}`);
+        console.log(`Signature removed from page ${args.bounds}`);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -962,8 +1125,9 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     resizeSignature: function (args: any) {
-        console.log(`Signature resized on page ${args.pageIndex}`);
+        console.log(`Signature resized on page ${args.currentPosition}`);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -985,7 +1149,8 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourcesLoaded: () => {
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourcesLoaded: function (args: any) {
         console.log('PDFium resources loaded.');
     }
 });
@@ -1008,8 +1173,9 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     signaturePropertiesChange: function (args: any) {
-        console.log(`Signature properties changed on page ${args.pageIndex}`);
+        console.log(`Signature properties changed on page ${args.type}`);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -1031,8 +1197,9 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     signatureSelect: function (args: any) {
-        console.log(`Signature selected on page ${args.pageIndex}`);
+        console.log(`Signature selected on page ${args.signature}`);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -1054,8 +1221,9 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    signatureUnselect: () => {
-        console.log('Signature unselected.');
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    signatureUnselect: function (args: any) {
+        console.log(`Signature unselected ${args.signature}`);
     }
 });
 viewer.appendTo('#pdfViewer');
@@ -1077,7 +1245,8 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    textSearchComplete: () => {
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    textSearchComplete: function (args: any) {
         console.log('Text search completed.');
     }
 });
@@ -1100,6 +1269,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     textSearchHighlight: function (args: any) {
         console.log(`Search result ${args.bounds} highlighted.`);
     }
@@ -1123,6 +1293,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     textSearchStart: function (args: any) {
         console.log(`Text search started for: "${args.searchText}"`);
     }
@@ -1146,6 +1317,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     textSelectionEnd: function (args: any) {
         console.log(`Text selection ended on page ${args.pageIndex}.`);
     }
@@ -1169,6 +1341,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     textSelectionStart: function (args: any) {
         console.log(`Text selection started on page ${args.pageIndex}.`);
     }
@@ -1192,8 +1365,9 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
              BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     thumbnailClick: function (args: any) {
-        console.log(`Thumbnail clicked for page index ${args.pageIndex}.`);
+        console.log(`Thumbnail clicked for page index ${args.pageNumber}.`);
     }
 });
 viewer.appendTo('#pdfViewer');
