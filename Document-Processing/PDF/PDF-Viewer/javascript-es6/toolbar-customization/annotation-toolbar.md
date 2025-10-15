@@ -69,6 +69,24 @@ document.getElementById('set').addEventListener('click', ()=> {
 {% endhighlight %}
 {% endtabs %}
 
+## Show annotation toolbar on initial load
+
+The `isAnnotationToolbarOpen` property gets or sets a boolean value to open the annotation toolbar when the PDF Viewer control loads a document initially. Defaults to false. See [isAnnotationToolbarOpen API documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#isannotationtoolbaropen) for details.
+
+```ts
+// Show annotation toolbar on initial load
+viewer.isAnnotationToolbarOpen = true;
+```
+
+## Show annotation toolbar on initial load and retrieve visible status
+
+The `isAnnotationToolbarVisible` property gets or sets a boolean value to open the annotation toolbar when the PDF Viewer control loads a document initially and retrieve its visible status. Defaults to false. See [isAnnotationToolbarVisible API documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#isannotationtoolbarvisible) for details.
+
+```ts
+// Show annotation toolbar on initial load and check visibility
+viewer.isAnnotationToolbarVisible = true;
+```
+
 ## How to customize the annotation toolbar
 
 Choose which tools appear and control their order in the annotation toolbar.
