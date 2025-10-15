@@ -111,12 +111,14 @@ The redaction toolbar provides tools to mark and permanently remove sensitive co
 Enable the desktop toolbar on mobile devices with the [EnableDesktopMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDesktopMode) API. This replaces the mobile toolbar with the desktop layout and provides access to additional actions and controls.
 
 ```cshtml
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%" EnableDesktopMode="true">
 </SfPdfViewer2>
+
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar)
@@ -130,27 +132,33 @@ On mobile devices, the navigation toolbar collapses into a toggle menu to save s
 Enable the modern navigation panel by setting [EnableNavigationPanel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigationPanel) to true.
 
 ```cshtml
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%" EnableNavigationPanel="true">
 </SfPdfViewer2>
+
 ```
+
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar)
 
 ## Enable scrolling in desktop mode with touch gestures
 
-For smooth scrolling of PDF documents on mobile while in desktop mode, disable text selection (set [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSelection) to false) to allow touch panning.
+To enable smooth scrolling of PDF documents on mobile while in desktop mode, disable text selection by setting [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSelection) to false to allow touch panning.
 
 ```cshtml
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%" EnableDesktopMode="true" EnableTextSelection="false">
 </SfPdfViewer2>
+
 ```
+
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar)
 
 ## Print option availability

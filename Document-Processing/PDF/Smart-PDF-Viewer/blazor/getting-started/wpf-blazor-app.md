@@ -142,7 +142,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.2541
 Register Syncfusion Blazor services, AI services and BlazorWebView in **~/MainWindow.xaml.cs** so that the WPF window can host Blazor components.
 
 {% tabs %}
-{% highlight c# tabtitle="MainWindow.xaml.cs (WPF host)" hl_lines="2 3 4 5 6 7 10 11 12 13 14 15 16 17 18 19 20 21 22" %}
+{% highlight c# tabtitle="MainWindow.xaml.cs (WPF host)" hl_lines="2 3 4 5 6 7 10 11 12 13 14 15 16 17 18 19 20 21" %}
 
 ....
 using Microsoft.Extensions.DependencyInjection;
@@ -184,7 +184,7 @@ For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](
 * Inside wwwroot, create an index.html host page for the Blazor UI. This host page is required by BlazorWebView to initialize the Blazor runtime and load static assets (themes and scripts). A basic index.html might look like the following:
 
 {% tabs %} 
-{% highlight html tabtitle="wwwroot/index.html" hl_lines="8 13" %}
+{% highlight html tabtitle="index.html" hl_lines="8 13" %}
 
 <!DOCTYPE html>
 <html>

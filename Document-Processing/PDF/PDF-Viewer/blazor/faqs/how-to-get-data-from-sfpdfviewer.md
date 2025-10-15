@@ -56,6 +56,6 @@ The following example retrieves the current document data and then reloads the s
 
 ## See also
 
-* [How to create SfPdfViewer Component in a Splitter Component](./create-sfpdfviewer-in-a-splitter-component)
+* [How to create SfPdfViewer Component in a Splitter Component](./how-to-create-sfpdfviewer-in-a-splitter-component)
 
-* [How to create a SfPdfViewer within a popup window in Blazor](./create-sfpdfviewer-in-a-popup-window)
+* [How to create a SfPdfViewer within a popup window in Blazor](./how-to-create-sfpdfviewer-in-a-popup-window)

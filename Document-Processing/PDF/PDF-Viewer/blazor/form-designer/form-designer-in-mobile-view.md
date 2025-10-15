@@ -93,7 +93,7 @@ To delete a form field, select the field to remove. The Delete icon appears in t
 
 ## See also
 
-* [Mobile Toolbar](../mobile-toolbar)
+* [Mobile Toolbar](../toolbar-customization/mobile-toolbar)
 * [Annotations in Mobile View](../annotation/annotations-in-mobile-view)
 * [Form designer overview](../form-designer/overview)
 * [UI interactions](../form-designer/ui-interactions)

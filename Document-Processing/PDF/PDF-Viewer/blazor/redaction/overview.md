@@ -28,7 +28,7 @@ Click the Redaction tool on the toolbar and draw over the content to redact. Aft
 Redaction annotations can be removed through the UI or programmatically.
 
 * Click the Delete button on the toolbar, or
-* Press the `Delete` key after selecting the annotation.
+* Press the **Delete** key after selecting the annotation.
 
 ![Toolbar showing the Delete command for redaction](redaction-annotations-images/redaction-delete-icon.png)
 
@@ -73,4 +73,4 @@ For details, see the [Export and import annotations documentation](../annotation
 
 * [UI Interaction in Redaction Annotation](./ui-interactions)
 * [Programmatic Support in Redaction](./create-programmatically)
-* [Redaction in Mobile View](./redaction-in-mobile-view)
+* [Redaction in Mobile View](./mobile-view)
