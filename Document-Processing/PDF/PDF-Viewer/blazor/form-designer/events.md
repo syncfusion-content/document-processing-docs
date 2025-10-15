@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Form Designer events in Blazor PDF Viewer | Syncfusion
-description: Learn about Form Designer events in the Syncfusion Blazor PDF Viewer (SfPdfViewer2), including add, delete, select, resize, validate, import, and export.
-platform: blazor
-control: PdfViewer
+description: Learn about Form Designer events in the Syncfusion Blazor SfPdfViewer, including add, delete, select, resize, validate, import, and export.
+platform: document-processing
+control: SfPdfViewer
 documentation: ug
 ---
 
