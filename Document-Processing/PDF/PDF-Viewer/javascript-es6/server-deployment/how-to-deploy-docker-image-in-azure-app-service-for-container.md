@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Deploy Docker image to Azure App Service for Containers
-description: Step-by-step guide to deploy the Syncfusion PDF Viewer server Docker image to Azure App Service for Containers and connect it to a TypeScript (JavaScript ES6) client.
+title: Deploy TypeScript PDF Viewer server to Azure App Service for Containers
+description: Deploy the Syncfusion PDF Viewer server Docker image to Azure App Service for Containers and connect it to the TypeScript PDF Viewer client.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,14 +9,22 @@ documentation: ug
 
 # Deploy Docker image to Azure App Service for Containers
 
+Deploy the Syncfusion PDF Viewer server container to Azure App Service for Containers to host the backend for the TypeScript PDF Viewer client without managing infrastructure. The steps below provision platform resources, configure the Docker image, and expose the service endpoint required for the component’s `serviceUrl`.
+
 ## Prerequisites
 
-- Azure account and Azure CLI installed: https://docs.microsoft.com/cli/azure
-- Sign in to Azure:
+- Azure subscription and Azure CLI installed. See the [Install the Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) article.
+- Sign in to Azure before you create resources.
 
 ```console
 az login
 ```
+
+Ensure the web app can pull the `syncfusion/pdfviewerserver:latest` image from Docker Hub. Mirror the image to a private registry if outbound internet access is restricted.
+
+## Deploy the PDF Viewer server
+
+Follow these steps to provision the App Service plan and multi-container web app that hosts the PDF Viewer server container.
 
 **Step 1:** Create a resource group.
 
@@ -32,7 +40,7 @@ az appservice plan create --name pdfviewerappservice --resource-group pdfviewerr
 
 **Step 3:** Create a Docker Compose app.
 
-Create a multi-container web app in the plan using your docker-compose file (ensure it references syncfusion/pdfviewer-server:latest and sets SYNCFUSION_LICENSE_KEY).
+Create a multi-container web app in the plan by using your Docker Compose file. Ensure it references `syncfusion/pdfviewerserver:latest` and sets the `SYNCFUSION_LICENSE_KEY` environment variable via App Service application settings or Azure Key Vault secrets.
 
 ```console
 az webapp create --resource-group pdfviewerresourcegroup --plan pdfviewerappservice --name pdfviewer-server --multicontainer-config-type compose --multicontainer-config-file pdfviewer-server-compose.yml
@@ -40,8 +48,8 @@ az webapp create --resource-group pdfviewerresourcegroup --plan pdfviewerappserv
 
 **Step 4:** Browse to the app.
 
-Open the app at http://<app_name>.azurewebsites.net (for example, http://pdfviewerappservice.azurewebsites.net). Verify the API at http://pdfviewerappservice.azurewebsites.net/api/pdfviewer to confirm a default GET response.
+Open the app at `https://<app_name>.azurewebsites.net` (for example, `https://pdfviewerappservice.azurewebsites.net`). Verify the API at `https://pdfviewerappservice.azurewebsites.net/api/pdfviewer` to confirm a default GET response. Configure a custom domain and certificate for production deployments.
 
-Append the service endpoint (for example, http://pdfviewerappservice.azurewebsites.net/api/pdfviewer) to the PDF Viewer client’s serviceUrl. Getting started guide: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/
+Append the service endpoint (for example, `https://pdfviewerappservice.azurewebsites.net/api/pdfviewer`) to the PDF Viewer client’s `serviceUrl`. See the [Getting started with the TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) guide for client configuration steps.
 
-For production guidance, see Microsoft Azure App Service for containers: https://docs.microsoft.com/azure/app-service/containers/quickstart-multi-container
+For production guidance, review the [Azure App Service for Containers documentation](https://learn.microsoft.com/azure/app-service/containers/quickstart-multi-container). Consider adding an architecture diagram that illustrates how the hosted PDF Viewer server communicates with the TypeScript PDF Viewer client.

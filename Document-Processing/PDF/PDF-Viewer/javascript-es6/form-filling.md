@@ -1,33 +1,33 @@
 ---
 layout: post
-title: Form filling in Typescript PDF Viewer control | Syncfusion
-description:  Learn how to view, fill, export, and import PDF form fields with Typescript PDF Viewer control of Syncfusion Essential JS 2 and more details.
+title: Form filling in TypeScript PDF Viewer | Syncfusion
+description: Learn how to view, fill, export, and import PDF form fields using the Syncfusion TypeScript PDF Viewer, including disabling interaction and working with signatures.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form filling in TypeScript PDF Viewer Component
+# Form filling in TypeScript PDF Viewer
 
-The PDF Viewer component displays existing form fields in a PDF document and enables filling and downloading filled data.
+The PDF Viewer displays existing form fields in a PDF and enables users to fill, validate, and download the filled data.
 
-The form fields displayed in the Pdf Viewer are:
+The PDF Viewer supports the following form field types:
 
-* Textbox
+* Text box
 * Password
-* CheckBox
-* RadioButton
-* ListBox
-* DropDown
-* SignatureField
-* InitialField
+* Check box
+* Radio button
+* List box
+* Dropdown
+* Signature field
+* Initial field
 
-![Form filling in Typescript](./images/form-filling.png)
+![Form filling in TypeScript PDF Viewer](./images/form-filling.png)
 
 ## Disabling form fields
 
-The PDF Viewer control provides an option to disable interaction with form fields. Use the following configuration to disable form fields in the viewer.
+The PDF Viewer provides an option to disable interaction with form fields. Use the following configuration to disable form fields in the viewer.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -45,39 +45,39 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-## How to draw handwritten signature in the signature field
+## Add a handwritten signature to a signature field
 
-Add a handwritten signature to a Signature field by following these steps:
+Add a handwritten signature to a signature field by following these steps:
 
 * Click the signature field in the PDF document to open the signature panel.
 
-![Signature field in TypeScript PdfViewer](./images/form-filling-signature.png)
+![Signature field in TypeScript PDF Viewer](./images/form-filling-signature.png)
 
 * Draw the signature in the signature panel.
 
-![Displaying signature panel in TypeScript PdfViewer](./images/form-filling-signature-dialog.png)
+![Signature panel in TypeScript PDF Viewer](./images/form-filling-signature-dialog.png)
 
-* Click the **CREATE** button. The drawn signature is added to the signature field.
+* Select **CREATE**. The drawn signature is added to the signature field.
 
-![Displaying signature in TypeScript PdfViewer](./images/form-filling-signature-signed.png)
+![Signature added in TypeScript PDF Viewer](./images/form-filling-signature-signed.png)
 
-## Delete the signature inside the signature field
+## Delete a signature from a signature field
 
 Delete a signature placed in a signature field by using the Delete option in the annotation toolbar.
 
-![Deleting signature in TypeScript PdfViewer](./images/form-filling-signature-del.png)
+![Deleting a signature in TypeScript PDF Viewer](./images/form-filling-signature-del.png)
 
 ## Export and import form fields
 
-The PDF Viewer control provides the support to export and import the form field data in the following formats using the `importFormFields`, `exportFormFields`, and `exportFormFieldsAsObject` methods.
+The PDF Viewer supports exporting and importing form field data using the `importFormFields`, `exportFormFields`, and `exportFormFieldsAsObject` methods. The following formats are supported:
 
 * FDF
 * XFDF
 * JSON
 
-For detailed information about exporting and importing form fields, please refer to the [Form Fields documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/form-designer/create-programmatically#export-and-import-form-fields).
+For more information, see the [Form fields documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/form-designer/create-programmatically#export-and-import-form-fields).
 
 ## See also
 
-* [Handwritten Signature in TypeScript PDF Viewer Component](./annotations/signature-annotation)
-* [Form Designer](./form-designer/form-field-events)
+* [Handwritten signature in TypeScript PDF Viewer](./annotations/signature-annotation)
+* [Form Designer events](./form-designer/form-field-events)

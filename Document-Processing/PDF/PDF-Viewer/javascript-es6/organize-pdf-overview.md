@@ -1,27 +1,28 @@
 ---
 layout: post
-title: Organize Pages in Typescript PDF Viewer control | Syncfusion
-description: Learn here all about Organize Pages in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Organize pages in TypeScript PDF Viewer | Syncfusion
+description: Learn how to reorder, rotate, insert, delete, and save pages with the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Pages in Typescript PDF Viewer control
+# Organize pages in TypeScript PDF Viewer
 
-The PDF Viewer allows you to manage your PDF documents efficiently by organizing pages seamlessly. Whether you need to add new pages, remove unnecessary ones, rotate pages, move pages within the document, and copy or duplicate pages, the PDF Viewer facilitates these tasks effortlessly.
+The TypeScript PDF Viewer component provides an Organize Pages panel that helps you prepare documents before sharing them. Use it to tidy scanned files, move pages into the right order, and duplicate important content without leaving the viewer.
 
-The Organize Pages feature provides the following options:
+To open the Organize Pages panel, load a document, ensure that the Organize Pages toolbar item is enabled, and choose **Organize Pages** from the left vertical toolbar. The document must allow page-level edits; otherwise, the toolbar item is hidden.
 
-* **Rotate pages**: You can adjust the orientation of PDF pages to ensure proper alignment.
-* **Rearrange pages**: You can easily change the sequence of pages within your document.
-* **Insert new pages**: Effortlessly add new blank pages to your document.
-* **Delete pages**: Removing unwanted pages from your document is straightforward.
-* **Copy pages**: Duplicate the pages within your PDF document effortlessly.
-* **Import a PDF Document**: Seamlessly import a PDF document into your existing document.
-* **Select all pages**: Make comprehensive adjustments by selecting all pages simultaneously.
-* **Real-time updates**: Witness instant changes in page organization reflected within the PDF Viewer. Simply click the **Save** button to preserve your modifications.
-* **SaveAs functionality**: Safeguard your edits by utilizing the **Save As** feature. This enables you to download the modified version of the PDF document for future reference, ensuring that your changes are securely stored.
+The Organize Pages panel supports the following actions:
 
-To access the organize pages feature, simply open the PDF document in the PDF Viewer and navigate to the left vertical toolbar. Look for the `Organize Pages` option to begin utilizing these capabilities.
+* **Rotate pages**: Fix page orientation in 90-degree increments to correct scanned pages.
+* **Rearrange pages**: Drag and drop thumbnails to update the reading order.
+* **Insert new pages**: Add blank pages at the required position.
+* **Delete pages**: Remove pages that are no longer needed.
+* **Copy pages**: Duplicate selected pages to reuse content elsewhere in the document.
+* **Import a PDF document**: Merge the current document with pages from another PDF file.
+* **Select all pages**: Apply bulk actions, such as rotation or deletion, to every page.
+* **Save updates**: Review changes in real time and use **Save** or **Save As** to download the revised document.
+
+After completing the changes, apply them by selecting **Save** to overwrite the current document or **Save As** to download a new copy that retains the updated page order.

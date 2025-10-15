@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Deploy Docker image to Azure Kubernetes Service (AKS)
-description: Deploy the Syncfusion PDF Viewer server Docker image to Azure Kubernetes Service (AKS), expose it with a LoadBalancer, and connect it to a TypeScript (JavaScript ES6) client.
+title: Deploy TypeScript PDF Viewer server to Azure Kubernetes Service (AKS)
+description: Deploy the Syncfusion PDF Viewer server Docker image to Azure Kubernetes Service (AKS), expose it securely, and connect it to the TypeScript PDF Viewer client.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,22 +9,30 @@ documentation: ug
 
 # Deploy Docker image to Azure Kubernetes Service (AKS)
 
+Host the Syncfusion PDF Viewer server container on Azure Kubernetes Service (AKS) to deliver PDFs to the TypeScript PDF Viewer client at scale. The following workflow provisions the infrastructure, deploys the published image from Docker Hub, and exposes a public endpoint for the component’s `serviceUrl`.
+
 ## Prerequisites
 
-- Azure account and Azure CLI installed: https://docs.microsoft.com/cli/azure
-- Sign in to Azure:
+- Azure subscription and Azure CLI installed. See the [Install the Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) guide.
+- Sign in to Azure before you create resources.
 
 ```console
 az login
 ```
 
-**Step 1:** Create a resource group.
+Ensure the AKS nodes can pull the `syncfusion/pdfviewerserver:latest` image from Docker Hub or from a private registry mirror if outbound internet access is restricted.
+
+## Deploy the PDF Viewer server
+
+The following steps create the resource group, cluster, and networking assets used by the PDF Viewer server. Replace resource names if you deploy to an existing namespace or use regional naming conventions.
+
+**Step 1:** Create a resource group for AKS resources.
 
 ```console
 az group create --name pdfviewerresourcegroup --location "East US"
 ```
 
-**Step 2:** Create an AKS cluster.
+**Step 2:** Create an AKS cluster in the default namespace.
 
 ```console
 az aks create --resource-group pdfviewerresourcegroup --name pdfviewercluster --node-count 1
@@ -32,7 +40,7 @@ az aks create --resource-group pdfviewerresourcegroup --name pdfviewercluster --
 
 **Step 3:** Connect to the cluster.
 
-Install kubectl and configure access.
+Install kubectl and download the credentials for the resource group. If you use a custom namespace, append `--namespace <name>` to subsequent `kubectl` commands.
 
 ```console
 az aks install-cli
@@ -41,7 +49,7 @@ az aks get-credentials --resource-group pdfviewerresourcegroup --name pdfviewerc
 
 **Step 4:** Create services and deployments.
 
-Create a pdfviewer-server.yaml file with a Deployment and a Service.
+Create a `pdfviewer-server.yaml` file that defines the Deployment and Service required to expose the container by using a public LoadBalancer.
 
 ```yaml
 apiVersion: apps/v1
@@ -84,6 +92,8 @@ spec:
   type: LoadBalancer
 ```
 
+> **Security note:** Store `SYNCFUSION_LICENSE_KEY` in an Azure Key Vault secret or Kubernetes Secret and reference it from the pod manifest instead of hard-coding the value in source control.
+
 **Step 5:** Apply the configuration and get the external IP.
 
 ```console
@@ -91,8 +101,10 @@ kubectl apply -f ./pdfviewer-server.yaml
 kubectl get all
 ```
 
-Browse to http://<external-ip>/api/pdfviewer to verify the default GET response.
+It can take several minutes for Azure to provision the LoadBalancer  IP. When the external IP is available, browse to `http://<external-ip>/api/pdfviewer` to verify the default GET response. Enable HTTPS with an ingress controller or Azure Front Door for production workloads.
 
-**Step 6:** Use the service endpoint (for example, http://<external-ip>/api/pdfviewer) as the client’s serviceUrl. Getting started guide: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/
+**Step 6:** Connect the client to the server endpoint.
 
-For production guidance, see Azure Kubernetes Service documentation: https://docs.microsoft.com/azure/aks/kubernetes-walkthrough
+Update the TypeScript PDF Viewer client configuration with the service endpoint (for example, `https://<external-ip-or-dns>/api/pdfviewer`). See the [Getting started with the TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) guide for client configuration steps.
+
+For production guidance, review the [Azure Kubernetes Service documentation](https://learn.microsoft.com/azure/aks/kubernetes-walkthrough). Consider including an architecture diagram illustrating the AKS cluster, LoadBalancer, and PDF Viewer client communication path to help onboarding teams.

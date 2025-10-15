@@ -1,17 +1,18 @@
 ---
-title: Events in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Events in Syncfusion Typescript Pdfviewer component of Syncfusion Essential JS 2 and more.
+layout: post
+title: Events in TypeScript PDF Viewer | Syncfusion
+description: Comprehensive list of events in the Syncfusion TypeScript PDF Viewer with descriptions, event arguments, and usage examples to integrate custom logic.
 platform: document-processing
 control: PDF Viewer 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in Typescript Pdf viewer control
+# Events in TypeScript PDF Viewer
 
-The PDF Viewer component triggers events for creation, page navigation, document life cycle, context menu interactions, comments, bookmarks, downloads/exports, hyperlinks, import/export of annotations, keyboard commands, printing, signatures, text search, and text selection. Use these events to integrate custom logic into your application workflows.
+The PDF Viewer component triggers events for creation, page navigation, document lifecycle, context menu interactions, comments, bookmarks, download and export, hyperlinks, annotation import/export, custom keyboard commands, printing, signatures, text search, and text selection. Use these events to integrate custom logic into application workflows.
 
-The following table lists the commonly used events supported by the PDF Viewer control:
+The following table lists commonly used events supported by the PDF Viewer component:
 
 | Event | Description |
 | ----- | ----------- |
@@ -93,7 +94,7 @@ viewer.appendTo('#pdfViewer');
 
 ## toolbarClick
 
-The [toolbarClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#toolbarclickevent) event triggers when a toolbar item is clicked.
+The [toolbarClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#toolbarclickevent) event triggers when a toolbar item is clicked. Use it to handle actions based on the clicked item's id or name.
 
 - Event arguments: `ClickEventArgs`.
 
@@ -117,7 +118,7 @@ viewer.appendTo('#pdfViewer');
 
 ## validateFormFields
 
-The [validateFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#validateformfieldsevent) event is raised when form validation fails, typically before a download or submit action proceeds. Use this event to inspect which required fields are empty and show custom messages or block your app logic if needed.
+The [validateFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#validateformfieldsevent) event triggers when form field validation fails, typically before a download or submit action proceeds. Use this event to inspect which required fields are empty and show custom messages or block application logic if needed.
 
 - Event arguments: [ValidateFormFieldsArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/validateFormFieldsArgs/)
   - name: Event name
@@ -125,7 +126,7 @@ The [validateFormFields](https://ej2.syncfusion.com/javascript/documentation/api
   - formField: The last interacted field’s data (if applicable)
   - nonFillableFields: Array detailing required/invalid fields
 
-How to trigger
+When it triggers
 - Add a form field and mark it Required (UI: right‑click field > Properties > Required).
 - Leave the field empty and click Download. The event fires and provides the list of fields that failed validation.
 
@@ -155,7 +156,7 @@ viewer.appendTo('#pdfViewer');
 ```
 
 Tip
-- To require a field programmatically, set isRequired: true when creating/editing the field via Form Designer APIs.
+- To require a field programmatically, set isRequired: true when creating or editing the field via Form Designer APIs.
 
 ## zoomChange
 
@@ -352,11 +353,11 @@ viewer.appendTo('#pdfViewer');
 
 ## customContextMenuBeforeOpen
 
-The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#customcontextmenubeforeopenevent) event fires just before the context menu is shown. Use it to show/hide items based on current state (for example, only show search items when text is selected).
+The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#customcontextmenubeforeopenevent) event fires just before the context menu is shown. Use it to show or hide items based on the current state (for example, only show search items when text is selected).
 
 - Event arguments: [CustomContextMenuBeforeOpenEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/customContextMenuBeforeOpenEventArgs/)
   - name: Event name
-  - ids: Array of menu item ids that will be shown; you can remove ids to hide items for this open
+  - ids: Array of menu item ids that will be shown; remove ids to hide items for this open
 
 Example:
 
@@ -411,7 +412,7 @@ const menuItems: any[] = [
 
 ## customContextMenuSelect
 
-The [customContextMenuSelect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#customcontextmenuselectevent) event fires when a custom menu item is clicked. Use it to branch logic by the clicked item id.
+The [customContextMenuSelect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#customcontextmenuselectevent) event fires when a custom menu item is clicked. Use it to branch logic by the clicked item's id.
 
 - Event arguments: [CustomContextMenuSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/customContextMenuSelectEventArgs/).
 
@@ -472,7 +473,7 @@ viewer.documentLoad = function (args) {
 
 ## documentLoad
 
-The [documentLoad](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#documentloadevent) event occurs when a document is successfully loaded.
+The [documentLoad](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#documentloadevent) event occurs after a document is successfully loaded and parsed.
 
 - Event arguments: [LoadEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/loadEventArgs/).
 
@@ -496,7 +497,7 @@ viewer.documentLoad = function (args) {
 
 ## documentLoadFailed
 
-The [documentLoadFailed](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#documentloadfailedevent) event is triggered when loading a document fails.
+The [documentLoadFailed](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#documentloadfailedevent) event triggers when loading a document fails.
 
 - Event arguments: [LoadFailedEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/loadFailedEventArgs/).
 
@@ -519,7 +520,7 @@ viewer.documentLoadFailed = function (args) {
 
 ## documentUnload
 
-The [documentUnload](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#documentunloadevent) event is triggered when closing the current document.
+The [documentUnload](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#documentunloadevent) event triggers when closing the current document.
 
 - Event arguments: [UnloadEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/unloadEventArgs/).
 
@@ -544,7 +545,7 @@ viewer.documentUnload = function (args) {
 
 ## downloadEnd
 
-The [downloadEnd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#downloadendevent) event is triggered after a document download completes.
+The [downloadEnd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#downloadendevent) event triggers after a document download completes.
 
 - Event arguments: [DownloadEndEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/downloadEndEventArgs/).
 
@@ -568,7 +569,7 @@ viewer.appendTo('#pdfViewer');
 
 ## downloadStart
 
-The [downloadStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#downloadstartevent) event is triggered when the download operation is initiated.
+The [downloadStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#downloadstartevent) event triggers when the download operation is initiated.
 
 - Event arguments: [DownloadStartEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/downloadStartEventArgs/).
 
@@ -592,7 +593,7 @@ viewer.appendTo('#pdfViewer');
 
 ## exportFailed
 
-The [exportFailed](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#exportfailedevent) event is triggered when exporting annotations fails.
+The [exportFailed](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#exportfailedevent) event triggers when exporting annotations fails.
 
 - Event arguments: [ExportFailureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/exportFailureEventArgs/).
 
@@ -616,7 +617,7 @@ viewer.appendTo('#pdfViewer');
 
 ## exportStart
 
-The [exportStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#exportstartevent) event is triggered when exporting annotations starts.
+The [exportStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#exportstartevent) event triggers when exporting annotations starts.
 
 - Event arguments: [ExportStartEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/exportStartEventArgs/).
 
@@ -640,7 +641,7 @@ viewer.appendTo('#pdfViewer');
 
 ## exportSuccess
 
-The [exportSuccess](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#exportsuccessevent) event is triggered when annotations are exported successfully.
+The [exportSuccess](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#exportsuccessevent) event triggers when annotations are exported successfully.
 
 - Event arguments: [ExportSuccessEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/exportSuccessEventArgs/).
 
@@ -664,7 +665,7 @@ viewer.appendTo('#pdfViewer');
 
 ## extractTextCompleted
 
-The [extractTextCompleted](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#extracttextcompletedevent) event is triggered when text extraction completes.
+The [extractTextCompleted](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#extracttextcompletedevent) event triggers when text extraction completes.
 
 - Event arguments: [ExtractTextCompletedEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/extractTextCompletedEventArgs/).
 
@@ -688,7 +689,7 @@ viewer.appendTo('#pdfViewer');
 
 ## hyperlinkClick
 
-The [hyperlinkClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#hyperlinkclickevent) event is triggered when a hyperlink is clicked.
+The [hyperlinkClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#hyperlinkclickevent) event triggers when a hyperlink is clicked.
 
 - Event arguments: [HyperlinkClickEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/hyperlinkClickEventArgs/).
 
@@ -712,7 +713,7 @@ viewer.appendTo('#pdfViewer');
 
 ## hyperlinkMouseOver
 
-The [hyperlinkMouseOver](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#hyperlinkmouseoverevent) event is triggered when hovering over a hyperlink.
+The [hyperlinkMouseOver](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#hyperlinkmouseoverevent) event triggers when hovering over a hyperlink.
 
 - Event arguments: HyperlinkMouseOverArgs.
 
@@ -736,7 +737,7 @@ viewer.appendTo('#pdfViewer');
 
 ## importFailed
 
-The [importFailed](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#importfailedevent) event is triggered when importing annotations fails.
+The [importFailed](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#importfailedevent) event triggers when importing annotations fails.
 
 - Event arguments: [ImportFailureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/importFailureEventArgs/).
 
@@ -760,7 +761,7 @@ viewer.appendTo('#pdfViewer');
 
 ## importStart
 
-The [importStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#importstartevent) event is triggered when importing annotations starts.
+The [importStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#importstartevent) event triggers when importing annotations starts.
 
 - Event arguments: [ImportStartEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/importStartEventArgs/).
 
@@ -784,7 +785,7 @@ viewer.appendTo('#pdfViewer');
 
 ## importSuccess
 
-The [importSuccess](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#importsuccessevent) event is triggered when annotations are imported successfully.
+The [importSuccess](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#importsuccessevent) event triggers when annotations are imported successfully.
 
 - Event arguments: [ImportSuccessEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/importSuccessEventArgs/).
 
@@ -808,7 +809,7 @@ viewer.appendTo('#pdfViewer');
 
 ## keyboardCustomCommands
 
-The [keyboardCustomCommands](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#keyboardcustomcommandsevent) event is triggered when customized keyboard command keys are pressed.
+The [keyboardCustomCommands](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#keyboardcustomcommandsevent) event triggers when customized keyboard command keys are pressed.
 
 - Event arguments: [KeyboardCustomCommandsEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/keyboardCustomCommandsEventArgs/).
 
@@ -816,9 +817,9 @@ The [keyboardCustomCommands](https://ej2.syncfusion.com/javascript/documentation
   - keyboardCommand: The command metadata raised by Command Manager
   
 When it triggers
-- After you register gestures in commandManager.keyboardCommand. For example, when you press Shift + Alt + G or Shift + Alt + H, the event gets triggered. Just like this, you can handle custom keyboard shortcuts.
+- After registering gestures in commandManager.keyboardCommand. For example, pressing Shift + Alt + G or Shift + Alt + H triggers the event. Use this to handle custom keyboard shortcuts.
 
-Refer here for additional details about adding your own shortcut keys and handling them: see [Keyboard interaction](./accessibility.md#keyboard-interaction).
+Refer to [Keyboard interaction](./accessibility.md#keyboard-interaction) for details about adding and handling custom shortcut keys.
 Example:
 
 ```typescript
@@ -871,7 +872,7 @@ viewer.keyboardCustomCommands = (args: any): void => {
 
 ## moveSignature
 
-The [moveSignature](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#movesignatureevent) event triggers when a signature is moved across a page.
+The [moveSignature](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#movesignatureevent) event triggers when a signature is moved across the page.
 
 - Event arguments: `MoveSignatureEventArgs`.
 
@@ -895,7 +896,7 @@ viewer.appendTo('#pdfViewer');
 
 ## pageChange
 
-The [pageChange](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#pagechangeevent) event triggers when the current page number changes.
+The [pageChange](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#pagechangeevent) event triggers when the current page number changes (for example, via scrolling or navigation controls).
 
 - Event arguments: [PageChangeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/pageChangeEventArgs/).
 
@@ -943,7 +944,7 @@ viewer.appendTo('#pdfViewer');
 
 ## pageMouseover
 
-The [pageMouseover](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#pagemouseoverevent) event triggers when moving the mouse over a page.
+The [pageMouseover](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#pagemouseoverevent) event triggers when the mouse moves over a page.
 
 - Event arguments: `PageMouseoverEventArgs`.
 
@@ -967,7 +968,7 @@ viewer.appendTo('#pdfViewer');
 
 ## pageOrganizerSaveAs
 
-The [pageOrganizerSaveAs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#pageorganizersaveasevent) event triggers when a `save as` action is performed in the page organizer.
+The [pageOrganizerSaveAs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#pageorganizersaveasevent) event triggers when a Save As action is performed in the page organizer.
 
 - Event arguments: `PageOrganizerSaveAsEventArgs`.
 
@@ -1039,7 +1040,7 @@ viewer.appendTo('#pdfViewer');
 
 ## printEnd
 
-The [printEnd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#printendevent) event triggers when a print action is completed.
+The [printEnd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#printendevent) event triggers when a print action completes.
 
 - Event arguments: [PrintEndEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/printEndEventArgs/).
 
@@ -1135,7 +1136,7 @@ viewer.appendTo('#pdfViewer');
 
 ## resourcesLoaded
 
-The [resourcesLoaded](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#resourcesloadedevent) event triggers after PDFium resources are loaded.
+The [resourcesLoaded](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#resourcesloadedevent) event triggers after the viewer's required resources are loaded.
 
 - Event arguments: `void`.
 
@@ -1159,7 +1160,7 @@ viewer.appendTo('#pdfViewer');
 
 ## signaturePropertiesChange
 
-The [signaturePropertiesChange](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#signaturepropertieschangeevent) event triggers when signature properties are changed.
+The [signaturePropertiesChange](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#signaturepropertieschangeevent) event triggers when signature properties change.
 
 - Event arguments: [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs/).
 
@@ -1231,7 +1232,7 @@ viewer.appendTo('#pdfViewer');
 
 ## textSearchComplete
 
-The [textSearchComplete](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchcompleteevent) event triggers when a text search is completed.
+The [textSearchComplete](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchcompleteevent) event triggers when a text search completes.
 
 - Event arguments: [TextSearchCompleteEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchCompleteEventArgs/).
 
@@ -1255,7 +1256,7 @@ viewer.appendTo('#pdfViewer');
 
 ## textSearchHighlight
 
-The [textSearchHighlight](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchhighlightevent) event triggers when the searched text is highlighted.
+The [textSearchHighlight](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchhighlightevent) event triggers when searched text is highlighted.
 
 - Event arguments: [TextSearchHighlightEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchHighlightEventArgs/).
 
@@ -1373,4 +1374,4 @@ const viewer: PdfViewer = new PdfViewer({
 viewer.appendTo('#pdfViewer');
 ```
 
-> Tip: For annotation and signature events, see the dedicated Annotations Events topic.
+> Tip: For annotation and signature-specific events and arguments, see the dedicated Annotations Events topic.

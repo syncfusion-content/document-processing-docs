@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Download in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Download in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Download in TypeScript PDF Viewer | Syncfusion
+description: Learn how to enable, disable, and programmatically trigger download in the Syncfusion TypeScript PDF Viewer, including download events and base64 handling.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in Typescript Pdf viewer control
+# Download in TypeScript PDF Viewer
 
-The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
+The PDF Viewer supports downloading the loaded PDF document. Use the enableDownload property to enable or disable the download option, as shown below.
 
 ```html
 <!DOCTYPE html>
@@ -70,9 +70,11 @@ pdfviewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/download.png)
+> Note: When loading documents from other origins, ensure that CORS is correctly configured on the server. In server-backed mode, the document is streamed through the serviceUrl endpoint, which must allow download requests.
 
-You can invoke download action using following code snippet.,
+![PDF Viewer toolbar showing the download button](./images/download.png)
+
+You can invoke the download action using the following code snippet:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -105,9 +107,9 @@ pdfviewer.download();
 
 ## How to get the base64 string while downloading the PDF document
 
-The [downloadEnd](https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadend) event of the PDF viewer allows you to get the downloaded document as a base64 string.
+The [downloadEnd](https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadend) event of the PDF Viewer is raised after the file is prepared for download and provides the document as a base64 string.
 
-The following code illustrates how to get the downloaded document as a base64 string.
+The following example illustrates how to access the downloaded document as a base64 string. Note: Handling very large base64 strings may impact memory usage; consider using a stream when possible.
 
 ```
 
@@ -138,4 +140,4 @@ document.getElementById('load').addEventListener('click', function () {
 ## See also
 
 * [Toolbar items](./toolbar)
-* [Feature Modules](./feature-module)
+* [Feature modules](./feature-module)

@@ -1,39 +1,40 @@
 ---
-title: Overview of TypeScript PDF Viewer Component | Syncfusion
-description: Checkout and learn about overview of the Syncfusion TypeScript PDF Viewer component and much more details.
+layout: post
+title: Overview of TypeScript PDF Viewer component | Syncfusion
+description: Learn about the Syncfusion TypeScript PDF Viewer component, its key capabilities, and supported platforms.
 platform: document-processing
 control: PDF Viewer
-documentation: UG
+documentation: ug
 ---
 
-# Overview of JavaScript PDF Viewer Component
+# Overview of TypeScript PDF Viewer component
 
-The Syncfusion [`TypeScript PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) control enables you to view, annotate, prepare and fill forms, and print PDF files from your web applications.
+The Syncfusion TypeScript PDF Viewer component enables users to view, annotate, prepare and fill forms, and print PDF files directly in web applications.
 
 ## Setup
 
-To install PDF Viewer and its dependent packages, use the following command.
+Install the PDF Viewer and its dependent packages with the following command.
 
 ```
 npm install @syncfusion/ej2-pdfviewer
 ```
-## Key Features
+## Key features
 
-*[`View PDF Document`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) - Open and display both the normal and the protected PDF files with AES and RC4 encryption.
-*[`Annotations`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/annotations/text-markup-annotation) - Annotate with text markup, shapes, stamps, ink, and sticky notes.Form filling and form designing can be done.
-*[`Form Fields`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/form-designer/create-programmatically) - Form filling and form designing can be done.
-*[`Signature`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/annotations/signature-annotation) - Hand-written and digital signatures are allowed.
-*[`Toolbar`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/toolbar) - Built-in-toolbar and custom toolbars to perform user interaction of PDF Viewer functionalities.
-*[`Navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/navigation) - Easy navigation with the help of bookmarks, thumbnails, hyperlinks, and table of contents.
-*[`Magnification`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/magnification) - Fit to page, fit to width, and automatic (fits to the visible area).
-*[`Search`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/text-search) - Search a text easily across the PDF document.
-*[`Core Interactions`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interaction-mode) - Allows scrolling, zooming, panning, selection, and page navigation.
-*[`Print`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/print) - Print the entire document or a specific page directly from the browser.
-*[`Globalization`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/globalization) - Provides inherent support to localize the UI.
+* [`View PDF document`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) – Open encrypted and standard PDF files with AES or RC4 protection.
+* [`Annotations`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/annotations/text-markup-annotation) – Add text markup, shapes, stamps, ink, and sticky notes.
+* [`Form fields`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/form-designer/create-programmatically) – Design and fill interactive forms.
+* [`Signature`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/annotations/signature-annotation) – Capture handwritten or digital signatures in the document.
+* [`Toolbar`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/toolbar) – Use the built-in toolbar or create custom toolbars for common interactions.
+* [`Navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/navigation) – Navigate using bookmarks, thumbnails, hyperlinks, and the table of contents.
+* [`Magnification`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/magnification) – Adjust zoom with fit-to-page, fit-to-width, or automatic options.
+* [`Search`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/text-search) – Find text anywhere in the PDF document.
+* [`Core interactions`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interaction-mode) – Scroll, zoom, pan, select, and navigate between pages.
+* [`Print`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/print) – Print the entire PDF or selected pages from the browser.
+* [`Globalization`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/globalization) – Localize the user interface for different languages and cultures.
 
-## Supported Web platforms
+## Supported web platforms
 
-* [Javascript (ES5)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started)
+* [JavaScript (ES5)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started)
 * [Angular](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
 * [React](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
 * [Vue](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started)

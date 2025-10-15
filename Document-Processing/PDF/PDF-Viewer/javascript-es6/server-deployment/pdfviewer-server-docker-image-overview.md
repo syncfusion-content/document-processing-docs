@@ -1,7 +1,7 @@
 ---
 layout: post
-title: PDF Viewer server Docker image overview
-description: Learn how to run and connect to the Syncfusion PDF Viewer server Docker image, set the license key, and configure Redis cache in a TypeScript (JavaScript ES6) application.
+title: TypeScript PDF Viewer server Docker image overview
+description: Run the Syncfusion PDF Viewer server Docker image, configure licensing and Redis cache, and connect it to the TypeScript PDF Viewer client.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,28 +10,32 @@ documentation: ug
 
 The Syncfusion PDF Viewer component enables viewing, printing, form filling, and annotating PDF files in web applications. The client component requires a server-side Web API to process and render PDF content.
 
-This Docker image provides a preconfigured container for the PDF Viewer server backend and can be deployed quickly in most environments.
+Use the PDF Viewer server Docker image to host this backend quickly in containerized environments. The container exposes a REST API that the TypeScript PDF Viewer client calls through its `serviceUrl` value.
 
-PDF Viewer is a commercial product and requires a valid license in production environments. Request a license or trial key from the Syncfusion licensing portal: https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key
+PDF Viewer is a commercial product and requires a valid license in production environments. Request a license or trial key from the [Syncfusion licensing portal](https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key).
 
-PDF Viewer is available for JavaScript, Angular, React, Vue, ASP.NET Core, ASP.NET MVC, and Blazor.
+PDF Viewer is available for JavaScript, Angular, React, Vue, ASP.NET Core, ASP.NET MVC, and Blazor. Choose the Docker image when you need a lightweight deployment option or when multiple clients share the same backend.
 
 ## Prerequisites
 
-Install Docker in the target environment:
+Install Docker in the target environment so the host can run containers.
 
-- On Windows, install Docker Desktop for Windows: https://hub.docker.com/editions/community/docker-ce-desktop-windows
-- On macOS, install Docker Desktop for Mac: https://hub.docker.com/editions/community/docker-ce-desktop-mac
+- On Windows, install [Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+- On macOS, install [Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
+
+Ensure the host can pull the `syncfusion/pdfviewer-server:latest` image from Docker Hub or from a private registry mirror if outbound connectivity is restricted.
 
 ## How to use this PDF Viewer Docker image
 
-**Step 1:** Pull the pdfviewer-server image from Docker Hub.
+The following steps pull the image, run the container, and connect the TypeScript PDF Viewer client.
+
+**Step 1:** Pull the `pdfviewer-server` image from Docker Hub.
 
 ```console
 docker pull syncfusion/pdfviewer-server
 ```
 
-**Step 2:** Create a docker-compose.yml file in the desired folder.
+**Step 2:** Create a `docker-compose.yml` file in the desired folder. Adjust the mapped port if another service uses `6001`.
 
 ```yaml
 version: '3.4'
@@ -46,7 +50,9 @@ services:
       - "6001:80"
 ```
 
-**Step 3:** In a terminal, navigate to the folder containing docker-compose.yml and run:
+> **Security note:** Store `SYNCFUSION_LICENSE_KEY` in Docker secrets, environment variables, or orchestration-specific secret stores instead of saving it in source control.
+
+**Step 3:** In a terminal, navigate to the folder containing `docker-compose.yml` and run:
 
 ```console
 docker-compose up
@@ -58,9 +64,9 @@ Alternatively, run the container directly with the license key:
 docker run -d -p 6001:80 –e SYNCFUSION_LICENSE_KEY= YOUR_LICENSE_KEY syncfusion/pdfviewer-server:latest
 ```
 
-When the container starts, the server is available at http://localhost:6001. Open the API endpoint at http://localhost:6001/api/pdfviewer to verify the default GET response.
+When the container starts, the server listens on `http://localhost:6001`. Open the API endpoint at `http://localhost:6001/api/pdfviewer` to verify the default GET response. Update firewalls or inbound rules to allow traffic through the published port.
 
-**Step 4:** Set the PDF Viewer client’s serviceUrl to the server endpoint (for example, http://localhost:6001/api/pdfviewer). For details on creating a client application, see the getting started guide: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/
+**Step 4:** Set the PDF Viewer client’s `serviceUrl` to the server endpoint (for example, `https://localhost:6001/api/pdfviewer`). For details on creating a client application, see the [Getting started with the TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) guide. Configure HTTPS and trusted certificates before exposing the service publicly.
 
 ```html
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
@@ -112,11 +118,11 @@ if(ele) {
 
 ## How to configure the distributed Redis cache in this Docker image
 
-The PDF Viewer server caches loaded document instances. To use a distributed cache, configure Azure Cache for Redis with docker-compose as follows.
+The PDF Viewer server caches loaded document instances. To use a distributed cache, configure Azure Cache for Redis with Docker Compose as follows.
 
-**Step 1:** Create an Azure Cache for Redis instance and copy the connection string: https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-core-quickstart
+**Step 1:** Create an Azure Cache for Redis instance and copy the connection string. Follow the [Azure Cache for Redis quickstart](https://learn.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-core-quickstart).
 
-**Step 2:** Provide the connection string with the REDIS_CACHE_CONNECTION_STRING variable in docker-compose. The default sliding expiration is 10 minutes. To change it, set DOCUMENT_SLIDING_EXPIRATION_TIME.
+**Step 2:** Provide the connection string with the `REDIS_CACHE_CONNECTION_STRING` variable in `docker-compose.yml`. The default sliding expiration is 10 minutes. To change it, set `DOCUMENT_SLIDING_EXPIRATION_TIME`.
 
 ```yaml
 version: '3.4'
@@ -132,7 +138,7 @@ services:
       - "6001:80"
 ```
 
-Refer to the getting started guides:
+Review the platform-specific getting started guides:
 - Angular: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started
 - React: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started
 - Vue: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started

@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Text selection in Typescript Pdfviewer control | Syncfusion
-description: Learn how to enable or disable text selection, programmatically select regions, copy selected text, and handle selection events in the Syncfusion Typescript PDF Viewer.
+title: Text selection in TypeScript PDF Viewer control | Syncfusion
+description: Learn how to configure text selection, react to selection events, and manage copy workflows in the Syncfusion TypeScript PDF Viewer.
 platform: document-processing
 control: Text selection
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Text selection in Typescript Pdfviewer control
+# Text selection in TypeScript PDF Viewer control
 
-The TextSelection module enables users to select and copy text from the loaded PDF document. Text selection is enabled by default and can be configured, controlled programmatically, and monitored through events.
+The TextSelection module lets users highlight and copy text from the loaded PDF. Selection is enabled by default and can be configured or monitored programmatically to match application workflows.
 
 ## Enable or disable text selection
 
-Use the enableTextSelection property to enable or disable selecting text in the PDF Viewer.
+Use the `enableTextSelection` property to enable or disable choosing text in the PDF Viewer.
 
 ```html
 <!DOCTYPE html>
@@ -82,11 +82,13 @@ pdfviewer.enableTextSelection = false;
 
 ## Text selection events
 
-Monitor user interaction with text using events.
+Monitor user interaction with selection events to coordinate downstream actions such as showing tooltips, enabling context menus, or storing analytics.
 
 ### textSelectionStart
 
-The textSelectionStart event triggers when selection is initiated. Typical use cases include disabling conflicting UI, logging, or customizing selection behavior.
+The [textSelectionStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textselectionstartevent) event fires when a user begins selecting text. Use it to reset temporary UI, pause conflicting shortcuts, or capture the starting context.
+
+- Event arguments: `TextSelectionStartEventArgs` supplies details such as `pageNumber`, `bounds`, and `selectionBehavior`.
 
 ```ts
 import { PdfViewer } from '@syncfusion/ej2-pdfviewer';
@@ -103,7 +105,9 @@ viewer.appendTo('#PdfViewer');
 
 ### textSelectionEnd
 
-The textSelectionEnd event triggers when selection is completed. It is useful to read the selected content, enable context actions, or persist analytics.
+The [textSelectionEnd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textselectionendevent) event triggers after the selection is finalized. Use it to access the selected text, toggle contextual commands, or store telemetry.
+
+- Event arguments: `TextSelectionEndEventArgs` includes `pageNumber`, `bounds`, `selectedText`, and `isSelectionCopied`.
 
 ```ts
 import { PdfViewer } from '@syncfusion/ej2-pdfviewer';
@@ -121,6 +125,6 @@ viewer.appendTo('#PdfViewer');
 
 ## See also
 
-- Text search
-- Interaction modes
-- Toolbar items
+- [Text search](./text-search)
+- [Interaction modes](./interaction-mode)
+- [Toolbar items](./toolbar)
