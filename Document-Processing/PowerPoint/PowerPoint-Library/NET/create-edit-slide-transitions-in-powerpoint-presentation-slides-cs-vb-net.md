@@ -89,8 +89,9 @@ You can edit the transition effects that already applied to the PowerPoint slide
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slide-transitions/Modify-transition-effect/.NET/Modify-transition-effect/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Retrieve the first slide from the presentation
 ISlide slide = pptxDoc.Slides[0];
 //Modify the transition effect applied to the slide

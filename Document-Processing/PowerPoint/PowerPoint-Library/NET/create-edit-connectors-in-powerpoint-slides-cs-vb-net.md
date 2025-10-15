@@ -156,8 +156,10 @@ The following code example demonstrates how to edit an existing connector in a P
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Connectors/Modify-existing-connector/.NET/Modify-existing-connector/Program.cs" %}
-//Opens the existing PowerPoint file
-using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
+//Loads an PowerPoint file in stream
+FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
+//Opens the loaded PowerPoint file
+using (IPresentation pptxDoc = Presentation.Open(inputStream))
 {
     //Get the first slide of a PowerPoint file
     ISlide slide = pptxDoc.Slides[0];
@@ -248,8 +250,10 @@ The following code example demonstrates how to update a connector’s position w
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Connectors/Update-connector-position/.NET/Update-connector-position/Program.cs" %}
-//Opens the existing PowerPoint file
-using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
+//Loads an PowerPoint file in stream
+FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
+//Opens the loaded PowerPoint file
+using (IPresentation pptxDoc = Presentation.Open(inputStream))
 {
     //Get the first slide of a PowerPoint file
     ISlide slide = pptxDoc.Slides[0];
@@ -317,8 +321,10 @@ The following code example demonstrates how to remove a connector from PowerPoin
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Connectors/Remove-connector-from-shapes/.NET/Remove-connector-from-shapes/Program.cs" %}
-//Opens the existing PowerPoint file
-using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
+//Loads an PowerPoint file in stream
+FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
+//Opens the loaded PowerPoint file
+using (IPresentation pptxDoc = Presentation.Open(inputStream))
 {
     //Get the first slide of a PowerPoint file
     ISlide slide = pptxDoc.Slides[0];                

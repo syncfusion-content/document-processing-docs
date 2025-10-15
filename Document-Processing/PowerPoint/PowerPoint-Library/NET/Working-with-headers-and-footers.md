@@ -273,8 +273,9 @@ The following code example demonstrates how to add a Footers to the master and l
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Add-footer-in-master-and-layout-slides/.NET/Add-footer-in-master-and-layout-slides/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Footer.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Access the first master slide in PowerPoint file
 IMasterSlide masterSlide = pptxDoc.Masters[0];
 //Sets the visibility of Footer content in the Master slide
@@ -485,8 +486,9 @@ The following code example demonstrates how to edit [Footer](https://help.syncfu
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Edit-footer-text/.NET/Edit-footer-text/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Footer.pptx");
+//Load or open an PowerPoint Presentation
+FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Gets the first slide from the cloned PowerPoint presentation
 ISlide slide = pptxDoc.Slides[0];
 //Modify the Footer text
@@ -600,8 +602,9 @@ The following code example demonstrates how to modify Date and Time of an existi
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Modify-date-and-time-format/.NET/Modify-date-and-time-format/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Footer.pptx");
+//Load or open an PowerPoint Presentation
+FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Gets the first slide from the cloned PowerPoint presentation
 ISlide slide = pptxDoc.Slides[0];
 //Modify Date and Time format of the Footer
@@ -657,8 +660,9 @@ The following code example demonstrates how to edit font of the [Footer](https:/
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Modify-footer-text-font/.NET/Modify-footer-text-font/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Footer.pptx");
+//Load or open an PowerPoint Presentation
+FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Gets the first slide from the cloned PowerPoint presentation
 ISlide slide = pptxDoc.Slides[0];
 //Iterate each shape in slide
@@ -742,8 +746,9 @@ The following code example demonstrates how to remove Footers from all the [Titl
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Remove-footers-from-all-title-slides/.NET/Remove-footers-from-all-title-slides/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Footer.pptx");
+//Load or open an PowerPoint Presentation
+FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 
 //Iterate each slide in the Presentation
 foreach(ISlide slide in pptxDoc.Slides)

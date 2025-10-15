@@ -281,8 +281,9 @@ The following code example demonstrates how to get the details about the hyperli
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Get-hyperlink-from-shape/.NET/Get-hyperlink-from-shape/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Retrieves the first slide from the Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first shape from the slide
@@ -356,8 +357,9 @@ The following code example demonstrates how to get the details about the hyperli
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Get-hyperlink-from-text/.NET/Get-hyperlink-from-text/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Retrieves the first slide from the Presentation.
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first shape from the slide
@@ -447,8 +449,9 @@ The following code example demonstrates how to remove a hyperlink from the shape
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Remove-hyperlink-from-shape/.NET/Remove-hyperlink-from-shape/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Retrieves the first slide from the Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first shape from the slide
@@ -498,8 +501,9 @@ The following code example demonstrates how to remove a hyperlink from the text 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Remove-hyperlink-from-text/.NET/Remove-hyperlink-from-text/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Retrieves the first slide from the Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first shape from the slide

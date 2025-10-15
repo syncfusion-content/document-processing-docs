@@ -75,8 +75,9 @@ The following code example demonstrates how to replace an existing image in a sl
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Images/Replace-existing-image/.NET/Replace-existing-image/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Retrieves the first slide from the Presentation.
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first picture from the slide.
@@ -224,8 +225,9 @@ The following code example demonstrates how to replace an existing SVG image in 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Images/Replace-SVG-Image/.NET/Replace-SVG-Image/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Retrieves the first slide from the Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the icon object from the slide
@@ -303,28 +305,30 @@ The following code example demonstrates how to crop an image in a PowerPoint sli
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Images/Crop_image/.NET/Crop_image/Program.cs" %}
 
 //Open an existing PowerPoint Presentation.
-//Open an existing PowerPoint Presentation.
-using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
+using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read))
 {
-    //Retrieve the first slide from the Presentation.
-    ISlide slide = pptxDoc.Slides[0];
-    //Retrieve the first picture from the slide.
-    IPicture picture = slide.Pictures[0];
+    using (IPresentation pptxDoc = Presentation.Open(inputStream))
+    {
+        //Retrieve the first slide from the Presentation.
+        ISlide slide = pptxDoc.Slides[0];
+        //Retrieve the first picture from the slide.
+        IPicture picture = slide.Pictures[0];
 
-    //Apply bounding box size and position.
-    picture.Crop.ContainerWidth = 114.48f;
-    picture.Crop.ContainerHeight = 56.88f;
-    picture.Crop.ContainerLeft = 94.32f;
-    picture.Crop.ContainerTop = 128.16f;
+        //Apply bounding box size and position.
+        picture.Crop.ContainerWidth = 114.48f;
+        picture.Crop.ContainerHeight = 56.88f;
+        picture.Crop.ContainerLeft = 94.32f;
+        picture.Crop.ContainerTop = 128.16f;
 
-    //Apply cropping size and offsets.
-    picture.Crop.Width = 900.72f;
-    picture.Crop.Height = 74.88f;
-    picture.Crop.OffsetX = 329.04f;
-    picture.Crop.OffsetY = -9.36f;
+        //Apply cropping size and offsets.
+        picture.Crop.Width = 900.72f;
+        picture.Crop.Height = 74.88f;
+        picture.Crop.OffsetX = 329.04f;
+        picture.Crop.OffsetY = -9.36f;
 
-    // Save the PowerPoint Presentation.
-    pptxDoc.Save("Output.pptx");
+        // Save the PowerPoint Presentation.
+        pptxDoc.Save("Output.pptx");                           
+    }                       
 }
 
 {% endhighlight %}
@@ -394,8 +398,9 @@ The following code example demonstrates how to remove an existing image in a Pow
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Images/Remove-all-images/.NET/Remove-all-images/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Retrieves the first slide from Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Iterates through the pictures collection and remove the picture named "Image".

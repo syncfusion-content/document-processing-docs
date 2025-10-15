@@ -317,15 +317,16 @@ The below code example demonstrates how to remove a Notes from a PowerPoint Slid
 
 {% highlight c# tabtitle="C# [Cross-platform]"
 playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Notes/Remove-notes-from-slide/.NET/Remove-notes-from-slide/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Gets instance of the first slide from the Presentation.
 ISlide slide = pptxDoc.Slides[0] as ISlide;
 //Removes Notes Slide from a corresponding slide.
 slide.RemoveNotesSlide();
 //Save the PowerPoint Presentation
 pptxDoc.Save("PresentationWithNotesSlide.pptx");
-//Closes the Presentation 
+//Close the Presentation 
 pptxDoc.Close();
 {% endhighlight %}
 

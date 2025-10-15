@@ -86,8 +86,9 @@ You can iterate through the shapes in a PowerPoint slide. The following code exa
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Iterate-through-shapes/.NET/Iterate-through-shapes/Program.cs" %}
-//open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Iterates through shapes in a slide and sets title
 foreach(IShape shape in pptxDoc.Slides[0].Shapes)
 {
@@ -147,8 +148,9 @@ The shape properties can be used to format and modify the shapes in a slide. The
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Apply-shape-properties/.NET/Apply-shape-properties/Program.cs" %}
-//open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Gets the first slide of the Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Gets the shape of the slide
@@ -244,8 +246,9 @@ The shapes can be removed from a slide by its instance or by its index position 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Remove-shape/.NET/Remove-shape/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Retrieves the first slide from Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first shape.
@@ -374,8 +377,9 @@ You can iterate through the shape collection of a [GroupShape](https://help.sync
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Iterate-groupshape-and-modify-a-shape/.NET/Iterate-groupshape-and-modify-a-shape/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Retrieves the first slide
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first group shape of the slide
@@ -454,8 +458,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Remove-groupshape/.NET/Remove-groupshape/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Retrieves the first slide
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first group shape of the slide

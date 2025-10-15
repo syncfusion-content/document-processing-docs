@@ -20,12 +20,15 @@ The following code example demonstrates how to encrypt a PowerPoint Presentation
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Security/Encrypt-PowerPoint-with-password/.NET/Encrypt-PowerPoint-with-password/Program.cs" %}
 //Open an existing presentation.
-using (IPresentation presentation = Presentation.Open("Template.pptx"))
+using (FileStream inputStream = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
 {
-    //Encrypt the presentation with a password.
-    presentation.Encrypt("syncfusion");
-    //Saves the Presentation.
-    presentation.Save("Sample.pptx");
+    using (IPresentation presentation = Presentation.Open(inputStream))
+	{
+		//Encrypt the presentation with a password.
+		presentation.Encrypt("syncfusion");
+		//Saves the Presentation.
+        presentation.Save("Sample.pptx");
+	}
 }
 {% endhighlight %}
 
@@ -66,10 +69,13 @@ The following code example demonstrates opening the encrypted PowerPoint Present
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Opens an existing Presentation from file system and it can be decrypted by using the provided password.
-using (IPresentation presentation = Presentation.Open("Sample.pptx", "PASSWORD!@1#$"))
+using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open))
 {
-    //Saves the Presentation.
-    presentation.Save("Output.pptx");
+    using (IPresentation presentation = Presentation.Open(inputStream, "PASSWORD!@1#$"))
+    {
+        //Save the PowerPoint Presentation.
+        presentation.Save("Output.pptx");
+    }
 }
 {% endhighlight %}
 
@@ -100,12 +106,16 @@ The following code example demonstrates removing the encryption from a PowerPoin
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Security/Remove-encryption/.NET/Remove-encryption/Program.cs" %}
 //Opens an existing Presentation from file system and it can be decrypted by using the provided password.
-using (IPresentation presentation = Presentation.Open("Sample.pptx", "syncfusion"))
+using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open))
 {
-    //Decrypts the document.
-    presentation.RemoveEncryption();
-    //Saves the presentation.
-    presentation.Save("Output.pptx");
+    //Opens an existing Presentation from file system and it can be decrypted by using the provided password.
+    using (IPresentation presentation = Presentation.Open(inputStream, "syncfusion"))
+    {
+        //Decrypts the document.
+        presentation.RemoveEncryption();
+        //Save the PowerPoint Presentation.
+        presentation.Save("Output.pptx");
+    }
 }
 {% endhighlight %}
 
@@ -216,8 +226,9 @@ The following code example shows how to remove restriction protection from the w
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Security/Remove-write-protection/.NET/Remove-write-protection/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Gets whether the presentation is write Protected. Read - only.
 bool writeProtected = pptxDoc.IsWriteProtected;
 //Checks whether the presentation is write protected

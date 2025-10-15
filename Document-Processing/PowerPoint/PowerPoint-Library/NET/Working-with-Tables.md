@@ -191,8 +191,9 @@ You can append new rows at the end of an existing PowerPoint table. Refer to the
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Add-new-row-to-the-table-end/.NET/Add-new-row-to-the-table-end/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Get a table in the slide
 ITable table = pptxDoc.Slides[0].Shapes[0] as ITable;
 //Add or append a new row at the end of table
@@ -203,7 +204,7 @@ foreach (ICell cell in row.Cells)
     cell.TextBody.AddParagraph(table.Rows.IndexOf(row).ToString());
 }
 //Save the PowerPoint Presentation
-pptxDoc.Save("Sample.pptx");
+pptxDoc.Save("Table.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -252,14 +253,15 @@ You can copy an existing row to the end of a table. Refer to the following code 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Copy-existing-row-to-the-table-end/.NET/Copy-existing-row-to-the-table-end/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Table.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Get a table in the slide
 ITable table = pptxDoc.Slides[0].Shapes[0] as ITable;
 //Copy the first row to the end of table
 table.Rows.Add(table.Rows[0].Clone());
 //Save the PowerPoint Presentation
-pptxDoc.Save("Sample.pptx");
+pptxDoc.Save("Table.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -301,14 +303,15 @@ You can insert a row at the specified index position of a table. Refer to the fo
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Insert-row-in-table/.NET/Insert-row-in-table/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Table.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Get a table in the slide
 ITable table = pptxDoc.Slides[0].Shapes[0] as ITable;
 //Insert a row at the specified index. Here, the existing first row at index 0 is copied and inserted at row index 1
 table.Rows.Insert(1, table.Rows[0].Clone());
 //Save the PowerPoint Presentation
-pptxDoc.Save("Sample.pptx");
+pptxDoc.Save("Table.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -350,8 +353,9 @@ You can append new column to a table. Refer to the following code example.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Add-new-column-to-the-table-end/.NET/Add-new-column-to-the-table-end/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Table.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Get a table in the slide
 ITable table = pptxDoc.Slides[0].Shapes[0] as ITable;
 //Add or append a new column at the end of table
@@ -362,7 +366,7 @@ foreach (ICell cell in column.Cells)
     cell.TextBody.AddParagraph(table.Columns.IndexOf(column).ToString());
 }
 //Save the PowerPoint Presentation
-pptxDoc.Save("Sample.pptx");
+pptxDoc.Save("Table.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -413,14 +417,15 @@ You can copy an existing column and append it to the end of table. Refer to the 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Copy-existing-column-to-the-table-end/.NET/Copy-existing-column-to-the-table-end/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Table.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Get a table in the slide
 ITable table = pptxDoc.Slides[0].Shapes[0] as ITable;
 //Copy the column and append it to the end of table
 table.Columns.Add(table.Columns[0].Clone());
 //Save the PowerPoint Presentation
-pptxDoc.Save("Sample.pptx");
+pptxDoc.Save("Table.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -462,14 +467,15 @@ You can insert a column at the specified index position of a table. Refer to the
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Insert-column-in-table/.NET/Insert-column-in-table/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Table.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Get a table in the slide
 ITable table = pptxDoc.Slides[0].Shapes[0] as ITable;
 //Insert a column at the specified index. Here, the existing first column at index 0 is copied and inserted at column index 1
 table.Columns.Insert(1, table.Columns[0].Clone());
 //Save the PowerPoint Presentation
-pptxDoc.Save("Sample.pptx");
+pptxDoc.Save("Table.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -513,8 +519,9 @@ The following code example demonstrates how to get the actual height of a PowerP
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Get-actual-table-height/.NET/Get-actual-table-height/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Table.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Initialize Presentation renderer
 pptxDoc.PresentationRenderer = new PresentationRenderer();
 //Get a table in the slide
@@ -524,7 +531,7 @@ table.Rows[0].Cells[0].TextBody.AddParagraph("Hello World");
 //Get the dynamic height of the table
 float height=table.GetActualHeight();
 //Save the PowerPoint Presentation
-pptxDoc.Save("Sample.pptx");
+pptxDoc.Save("Table.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -901,8 +908,9 @@ The following code example demonstrates how to modify the table in existing Powe
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Modify-existing-table/.NET/Modify-existing-table/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Table.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Gets slide from the Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Gets table from slide
@@ -1074,8 +1082,9 @@ You can remove a table from a slide by its instance or by its index position in 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Remove-table/.NET/Remove-table/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Table.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Gets slide from the Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Gets the table from slide
@@ -1129,8 +1138,9 @@ The following code example demonstrates how to edit the content in a table.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Edit-table-contents/.NET/Edit-table-contents/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Table.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Table.pptx", FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Get a table in the slide
 ITable table = pptxDoc.Slides[0].Shapes[0] as ITable;
 //Iterates through the rows of the table

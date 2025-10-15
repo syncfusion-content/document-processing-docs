@@ -195,8 +195,9 @@ You can modify the [SmartArt](https://help.syncfusion.com/cr/document-processing
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/SmartArts/Modify-SmartArt-appearance/.NET/Modify-SmartArt-appearance/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Get the Slide from Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Get the SmartArt from Slide.
@@ -274,8 +275,9 @@ You can iterate through the child nodes and access the properties of each node i
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/SmartArts/Iterate-child-nodes-of-existing-SmartArt/.NET/Iterate-child-nodes-of-existing-SmartArt/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Traverse through shape in the first slide.
 foreach (IShape shape in pptxDoc.Slides[0].Shapes)
 {
@@ -351,8 +353,9 @@ You can remove a node from the [SmartArt](https://help.syncfusion.com/cr/documen
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/SmartArts/Remove-child-node-from-existing-SmartArt/.NET/Remove-child-node-from-existing-SmartArt/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Get the first slide from the Presentation.
 ISlide slide = pptxDoc.Slides[0];
 //Get the SmartArt from slide.

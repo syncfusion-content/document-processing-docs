@@ -19,7 +19,8 @@ The following code illustrates how to load and save a macro enabled presentation
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Macros/Load-and-save-macro-PowerPoint/.NET/Load-and-save-macro-PowerPoint/Program.cs" %}
 //Opens an existing macro enabled PowerPoint presentation
-IPresentation pptxDoc = Presentation.Open("Sample.PPTM");
+FileStream inputStream = new FileStream("Sample.PPTM",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Adds a blank slide to the presentation
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Adds a text box to the slide
@@ -68,7 +69,8 @@ The following code example illustrates how to remove the macros present in the p
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Macros/Remove-macros/.NET/Remove-macros/Program.cs" %}
 //Opens an existing macro enabled PowerPoint presentation
-IPresentation pptxDoc = Presentation.Open("Sample.PPTM");
+FileStream inputStream = new FileStream("Sample.PPTM",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Checks whether the presentation has macros and then removes them
 if (pptxDoc.HasMacros)
     pptxDoc.RemoveMacros();

@@ -224,8 +224,9 @@ The following code example demonstrates how to create and use a customized slide
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Create-and-use-custom-layout-slide/.NET/Create-and-use-custom-layout-slide/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Add a new custom layout slide to the master collection with a specific layout type and name
 ILayoutSlide layoutSlide = pptxDoc.Masters[0].LayoutSlides.Add(SlideLayoutType.Blank, "CustomLayout");
 //Set background of the layout slide
@@ -289,8 +290,9 @@ The following code example demonstrates how to add a slide with an existing slid
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Add-slide-with-existing-slide-layout/.NET/Add-slide-with-existing-slide-layout/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Get the layout slide collection of the master
 ILayoutSlides layoutSlides = pptxDoc.Masters[0].LayoutSlides;
 ILayoutSlide slideLayout = null;
@@ -369,8 +371,9 @@ The following code example shows how to iterate through all slide elements in a 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Iterate-slide-elements/.NET/Iterate-slide-elements/Program.cs" %}
-//open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Template.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 // Iterate through each slide in the presentation
 foreach (ISlide slide in presentation.Slides)
 {
@@ -791,8 +794,9 @@ You can create a deep copy of a slide by cloning the slide. The cloned slide is 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Clone-PowerPoint-slide/.NET/Clone-PowerPoint-slide/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Presentation.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Retrieves the slide instance.
 ISlide slide = pptxDoc.Slides[0];
 //Creates a cloned copy of slide.
@@ -864,9 +868,9 @@ The following code sample explains how to merge slide with the destination forma
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Merge-PowerPoint-slide/.NET/Merge-PowerPoint-slide/Program.cs" %}
 //Opens the source Presentation
-IPresentation sourcePresentation = Presentation.Open("SourcePresentation.pptx");
+IPresentation sourcePresentation = Presentation.Open(SourcePresentationStream);
 //Opens the destination Presentation
-IPresentation destinationPresentation = Presentation.Open("DestinationPresentation.pptx");
+IPresentation destinationPresentation = Presentation.Open(destinationPresentationStream);
 //Clones the first slide of the source Presentation
 ISlide clonedSlide = sourcePresentation.Slides[0].Clone();
 //Merges the cloned slide to the destination Presentation with paste option - Destination Theme
@@ -926,9 +930,9 @@ The following code sample explains how to merge slide with the source formatting
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Merge-PowerPoint-slide-with-Source-formatting/.NET/Merge-PowerPoint-slide-with-Source-formatting/Program.cs" %}
 //Opens the source Presentation
-IPresentation sourcePresentation = Presentation.Open("SourcePresentation.pptx");
+IPresentation sourcePresentation = Presentation.Open(SourcePresentationStream);
 //Opens the destination Presentation
-IPresentation destinationPresentation = Presentation.Open("DestinationPresentation.pptx");
+IPresentation destinationPresentation = Presentation.Open(destinationPresentationStream);
 //Clones the first slide of the source Presentation
 ISlide clonedSlide = sourcePresentation.Slides[0].Clone();
 //Merges the cloned slide to the destination Presentation with paste option - Source formatting
@@ -986,8 +990,9 @@ The Essential<sup>&reg;</sup> Presentation provides the ability to delete a slid
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Remove-PowerPoint-slide/.NET/Remove-PowerPoint-slide/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Presentation1.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Retrieves the slide instance.
 ISlide slide = pptxDoc.Slides[0];
 //Removes the specified slide from the Presentation.
@@ -1083,8 +1088,9 @@ The following code example demonstrates setting the background for a slide.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Change-PowerPoint-slide-background/.NET/Change-PowerPoint-slide-background/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Presentation1.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Retrieves the slide instance.
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the background instance.

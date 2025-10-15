@@ -85,8 +85,9 @@ Each paragraph in a slide can have its own formatting types such as alignment, i
 
 {% highlight c# tabtitle="C# [Cross-platform]"
 playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Paragraphs/Apply-paragraph-formatting/.NET/Apply-paragraph-formatting/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Gets the slide from Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Gets the shape in slide
@@ -285,8 +286,9 @@ You can modify a text by accessing the existing paragraphs in a Presentation. Th
 
 {% highlight c# tabtitle="C# [Cross-platform]"
 playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Paragraphs/Modify-existing-text/.NET/Modify-existing-text/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Retrieves the first slide from Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first shape.
@@ -473,8 +475,9 @@ The following code example demonstrates how to remove a paragraph from a slide.
 
 {% highlight c# tabtitle="C# [Cross-platform]"
 playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Paragraphs/Remove-paragraph/.NET/Remove-paragraph/Program.cs" %}
-//Open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //Retrieves the first slide from Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the first shape
