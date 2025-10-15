@@ -74,8 +74,8 @@ N> You can refer to our [Blazor SfPdfViewer](https://www.syncfusion.com/pdf-view
 
 ## See also
 
-* [How to load Microsoft Office files in Blazor SfPdfViewer Component](./load-office-files)
+* [How to load Microsoft Office files in Blazor SfPdfViewer Component](./how-to-load-office-files)
 
-* [How to unload the PDF document from Viewer](./unload-the-pdf-document-from-viewer)
+* [How to unload the PDF document from Viewer](./how-to-unload-the-pdf-document-from-viewer)
 
-* [How to show or hide the Component dynamically](../faqs/how-to-show-or-hide-sfpdfviewer-dynamically)
+* [How to show or hide the Component dynamically](./how-to-show-or-hide-sfpdfviewer-dynamically)

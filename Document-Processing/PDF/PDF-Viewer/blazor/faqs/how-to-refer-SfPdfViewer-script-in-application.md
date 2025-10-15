@@ -1,5 +1,5 @@
 ---
-layout: pos
+layout: post
 title: Reference SfPdfViewer scripts in a Blazor application | Syncfusion
 description: Learn how to reference Syncfusion Blazor SfPdfViewer scripts using a CDN, static web assets, or custom resources, including deploying pdfium files.
 platform: document-processing

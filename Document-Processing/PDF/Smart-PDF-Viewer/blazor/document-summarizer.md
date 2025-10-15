@@ -371,7 +371,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pd
 
 ## Integration Notes
 
-To apply these templates, include them within the [`AssistViewSettings`]((https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.AssistViewSettings.html)) of the [`SfSmartPdfViewer`](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.SfSmartPdfViewer.html). 
+To apply these templates, include them within the [AssistViewSettings]((https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.AssistViewSettings.html)) of the [SfSmartPdfViewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.SfSmartPdfViewer.html). 
 
 ## See also
 
