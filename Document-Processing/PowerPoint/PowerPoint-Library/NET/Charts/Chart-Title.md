@@ -142,12 +142,9 @@ The complete code snippet illustrating the above options is shown below.
      //Enable legend.
      chart.HasLegend = true;
      chart.Legend.Position = OfficeLegendPosition.Right;
-
-     using (FileStream outputStream = new FileStream("Result.pptx", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-     {
-         //Save the PowerPoint Presentation.
-         pptxDoc.Save(outputStream);
-     }
+	 
+	 //Save the PowerPoint Presentation.
+     pptxDoc.Save("Result.pptx");
  }
 
 {% endhighlight %}

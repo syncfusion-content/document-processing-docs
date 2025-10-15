@@ -496,11 +496,8 @@ using (IPresentation pptxDoc = Presentation.Open(fileStreamPath))
     //Showing minor gridlines.
     chart.PrimaryValueAxis.HasMinorGridLines = false;
 
-    using (FileStream outputStream = new FileStream("Result.pptx", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-    {
-        //Save the PowerPoint Presentation.
-        pptxDoc.Save(outputStream);
-    }
+	//Save the PowerPoint Presentation.
+    pptxDoc.Save("Result.pptx");
 }
 
 {% endhighlight %}

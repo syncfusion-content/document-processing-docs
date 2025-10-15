@@ -23,7 +23,7 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Adds textbox to the slide
 IShape textboxShape = slide.AddTextBox(0, 0, 500, 500);
-//Adds paragraph to the textbody of textbox
+//Adds paragraph to the TextBody of textbox
 IParagraph paragraph = textboxShape.TextBody.AddParagraph();
 //Adds a TextPart to the paragraph
 ITextPart textPart = paragraph.AddTextPart();
@@ -42,7 +42,7 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Adds textbox to the slide
 IShape textboxShape = slide.AddTextBox(0, 0, 500, 500);
-//Adds paragraph to the textbody of textbox
+//Adds paragraph to the TextBody of textbox
 IParagraph paragraph = textboxShape.TextBody.AddParagraph();
 //Adds a TextPart to the paragraph
 ITextPart textPart = paragraph.AddTextPart();
@@ -61,7 +61,7 @@ Dim pptxDoc As IPresentation = Presentation.Create()
 Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
 'Adds textbox to the slide
 Dim textboxShape As IShape = slide.AddTextBox(0, 0, 500, 500)
-'Adds paragraph to the textbody of textbox
+'Adds paragraph to the TextBody of textbox
 Dim paragraph As IParagraph = textboxShape.TextBody.AddParagraph()
 'Adds a TextPart to the paragraph
 Dim textPart As ITextPart = paragraph.AddTextPart()
@@ -169,7 +169,7 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Adds textbox to the slide
 IShape textboxShape2 = slide.AddTextBox(500, 0, 400, 500);
-//Adds paragraph to the textbody of textbox
+//Adds paragraph to the TextBody of textbox
 IParagraph paragraph2 = textboxShape2.TextBody.AddParagraph();
 //Adds a TextPart to the paragraph
 ITextPart textPartFormatting = paragraph2.AddTextPart();
@@ -206,7 +206,7 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Adds textbox to the slide
 IShape textboxShape2 = slide.AddTextBox(500, 0, 400, 500);
-//Adds paragraph to the textbody of textbox
+//Adds paragraph to the TextBody of textbox
 IParagraph paragraph2 = textboxShape2.TextBody.AddParagraph();
 //Adds a TextPart to the paragraph
 ITextPart textPartFormatting = paragraph2.AddTextPart();
@@ -243,7 +243,7 @@ Dim pptxDoc As IPresentation = Presentation.Create()
 Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
 'Adds textbox to the slide
 Dim textboxShape2 As IShape = slide.AddTextBox(500, 0, 400, 500)
-'Adds paragraph to the textbody of textbox
+'Adds paragraph to the TextBody of textbox
 Dim paragraph2 As IParagraph = textboxShape2.TextBody.AddParagraph()
 'Adds a TextPart to the paragraph
 Dim textPartFormatting As ITextPart = paragraph2.AddTextPart()
@@ -359,7 +359,7 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Adds textbox to the slide
 IShape textboxShape = slide.AddTextBox(500, 0, 400, 500);
-//Adds paragraph to the textbody of textbox
+//Adds paragraph to the TextBody of textbox
 IParagraph paragraph = textboxShape.TextBody.AddParagraph();
 //Adds a TextPart to the paragraph
 ITextPart textPart = paragraph.AddTextPart();
@@ -380,7 +380,7 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Adds textbox to the slide
 IShape textboxShape = slide.AddTextBox(500, 0, 400, 500);
-//Adds paragraph to the textbody of textbox
+//Adds paragraph to the TextBody of textbox
 IParagraph paragraph = textboxShape.TextBody.AddParagraph();
 //Adds a TextPart to the paragraph
 ITextPart textPart = paragraph.AddTextPart();
@@ -401,7 +401,7 @@ Dim pptxDoc As IPresentation = Presentation.Create
 Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
 'Adds textbox to the slide
 Dim textboxShape As IShape = slide.AddTextBox(500, 0, 400, 500)
-'Adds paragraph to the textbody of textbox
+'Adds paragraph to the TextBody of textbox
 Dim paragraph As IParagraph = textboxShape.TextBody.AddParagraph
 'Adds a TextPart to the paragraph
 Dim textPart As ITextPart = paragraph.AddTextPart
@@ -449,7 +449,7 @@ Dim pptxDoc As IPresentation = Presentation.Create()
 Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
 'Adds textbox to the slide
 Dim textboxShape As IShape = slide.AddTextBox(0, 0, 500, 500)
-'Adds paragraph to the textbody of textbox
+'Adds paragraph to the TextBody of textbox
 Dim paragraph As IParagraph = textboxShape.TextBody.AddParagraph("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.")
 'Set the property to shrink text on overflow.
 textboxShape.TextBody.FitTextOption = FitTextOption.ShrinkTextOnOverFlow

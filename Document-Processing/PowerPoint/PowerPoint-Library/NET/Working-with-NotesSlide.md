@@ -17,8 +17,7 @@ The below code example demonstrates how to create a Notes in a PowerPoint Slide.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Notes/Add-notes-to-PowerPoint-slide/.NET/Add-notes-to-PowerPoint-slide/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Notes/Add-notes-to-PowerPoint-slide/.NET/Add-notes-to-PowerPoint-slide/Program.cs" %}
 //Creates a Presentation without slides.
 IPresentation pptxDoc = Presentation.Create();
 //Adds new slide with blank slide layout type.
