@@ -9,7 +9,18 @@ domainurl: ##DomainURL##
 ---
 # Print in Typescript Pdfviewer control
 
-The PDF Viewer supports printing the loaded PDF file. You can enable/disable the print using the following code snippet.
+The PDF Viewer supports printing the loaded PDF file.
+
+## Enable or disable print option.
+
+The `enablePrint` property enables or disables the print option of the PDF Viewer. The default value is `true`. For more details, see the [enablePrint](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enableprint) API documentation.
+
+```ts
+   // Enable or disable print.
+    viewer.enablePrint = false;
+```
+
+You can enable/disable the print using the following code snippet.
 
 ```html
 <!DOCTYPE html>
@@ -137,7 +148,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## EnablePrintRotation in the PDF Viewer
 
-The `EnablePrintRotation` property controls whether landscape pages are auto-rotated to best fit when printing. The default value is `true`. Set to `false` to preserve the original page orientation and suppress automatic rotation during print.
+The `EnablePrintRotation` property controls whether landscape pages are auto-rotated to best fit when printing. The default value is `true`. Set to `false` to preserve the original page orientation and suppress automatic rotation during print. You can refer to [EnablePrintRotation API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enableprintrotation) for more information. 
+
+You can enable/disable the print rotation using the following code snippet.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

@@ -12,6 +12,26 @@ domainurl: ##DomainURL##
 
 The PDF Viewer control provides options to add, edit, and delete free text annotations.
 
+## Enable or Disbale Free Text annotation
+
+Enables or disables the free text annotation feature in the PDF Viewer. For more details, see [enableFreeText API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablefreetext).
+
+```html
+<div id="pdfViewer" style="height: 100%;width: 100%;"></div>
+```
+
+```ts
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner);
+
+let viewer: PdfViewer = new PdfViewer({
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib',
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    enableFreeText: false
+});
+viewer.appendTo('#pdfViewer');
+```
+
 ## Add a free text annotation to the PDF document
 
 Free text annotations can be added to the PDF document using the annotation toolbar.
@@ -309,3 +329,27 @@ pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
+
+N> To know more about FreeTextSettings, you can refer [FreeTextSettings API documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#freetextsettings)
+
+## Set default free text placeholder
+
+The `isValidFreeText` property specifies whether newly added free text annotations display a placeholder. By default, `isValidFreeText` is `true`.  
+- `true`: Displays **Type here** as placeholder text.  
+- `false`: Leaves the annotation blank so that user-entered text remains visible.
+
+For more information, see [isValidFreeText API documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#isvalidfreetext).
+
+```ts
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner);
+
+let viewer: PdfViewer = new PdfViewer({
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib',
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    // Set to true to display "Type here" as default text
+    // Set to false to retain user-entered text
+    isValidFreeText: true
+});
+viewer.appendTo('#pdfViewer');
+```
