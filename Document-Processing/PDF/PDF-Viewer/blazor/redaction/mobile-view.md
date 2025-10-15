@@ -3,7 +3,7 @@ layout: post
 title: Redaction in mobile view in Blazor PDF Viewer | Syncfusion
 description: Learn how to add, customize, and apply redactions in mobile view using the Syncfusion Blazor PDF Viewer with a complete toolbar setup and redaction workflow.
 platform: document-processing
-control: SfPdfViewer2
+control: SfPdfViewer
 documentation: ug
 ---
 
