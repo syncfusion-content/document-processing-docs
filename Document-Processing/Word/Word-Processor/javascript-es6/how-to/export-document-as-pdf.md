@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Export document as pdf in JavaScript (ES6) Document editor | Syncfusion
+title: Export PDF in JavaScript (ES6) Document editor | Syncfusion
 description: Learn here all about Export document as pdf in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Export document as pdf 
