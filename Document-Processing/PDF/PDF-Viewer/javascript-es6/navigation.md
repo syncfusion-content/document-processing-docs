@@ -12,6 +12,24 @@ domainurl: ##DomainURL##
 
 The TypeScript PDF Viewer supports multiple navigation options, including toolbar controls, programmatic commands, bookmarks, thumbnails, hyperlinks, and table of contents.
 
+## Enable or disable navigation features
+
+The following properties allow you to toggle navigation:
+
+**enableNavigation** (boolean)  
+  Enables or disables the Navigation module of PDF Viewer. Defaults to true. [API reference](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablenavigation)  
+  ```ts
+  // Enable or disable navigation
+  viewer.enableNavigation = false;
+  ```
+
+**enableNavigationToolbar** (boolean)  
+  Enables or disables the Navigation toolbar of PDF Viewer. Defaults to true. [API reference](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablenavigationtoolbar)  
+  ```ts
+  // Enable or disable navigation toolbar
+  viewer.enableNavigationToolbar = true;
+  ```  
+
 ## Toolbar page navigation option
 
 The default toolbar includes the following navigation options:

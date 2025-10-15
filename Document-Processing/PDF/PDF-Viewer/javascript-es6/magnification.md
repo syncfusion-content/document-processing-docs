@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Magnification in TypeScript PDF Viewer
 
-The PDF Viewer includes magnification tools in the default toolbar: Zoom In, Zoom Out, Zoom (to a specific value), Fit to Page, and Fit to Width. The toolbar can be configured to show or hide these tools.
+The magnification tools of the PDF Viewer contains ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth tools in the default toolbar. The PDF Viewer also has an option to show or hide the magnification tools in the default toolbar. You can refer to [enableMagnification API Documention](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablemagnification) for more information.
 
 Use the following configuration to enable magnification in the PDF Viewer:
 

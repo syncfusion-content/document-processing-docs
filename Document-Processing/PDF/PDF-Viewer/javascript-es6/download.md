@@ -9,7 +9,12 @@ domainurl: ##DomainURL##
 ---
 # Download in TypeScript PDF Viewer
 
-The PDF Viewer supports downloading the loaded PDF document. Use the enableDownload property to enable or disable the download option, as shown below.
+The PDF Viewer supports downloading the loaded PDF file.
+
+## Enable or disable download option
+Use the [enableDownload](https://ej2.syncfusion.com/documentation/api/pdfviewer/pdfViewerModel/#enableDownload) property to enable or disable the download option when the PDF Viewer is loaded. It accepts a boolean value and defaults to true.
+
+You can enable/disable the download using the following code snippet.
 
 ```html
 <!DOCTYPE html>
@@ -104,6 +109,13 @@ pdfviewer.download();
 
 {% endhighlight %}
 {% endtabs %}
+
+## Customize download file name
+Use the [downloadFileName](https://ej2.syncfusion.com/documentation/api/pdfviewer/pdfViewerModel/#downloadFileName) property to set the download file name for the PDF Viewer. It accepts a string value. For example:
+
+```ts
+viewer.downloadFileName = 'Document_Downloaded';
+```
 
 ## How to get the base64 string while downloading the PDF document
 

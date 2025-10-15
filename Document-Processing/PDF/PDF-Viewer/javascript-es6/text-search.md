@@ -9,7 +9,13 @@ domainurl: ##DomainURL##
 ---
 # Text search in TypeScript PDF Viewer control
 
-The text search feature in the PDF Viewer locates and highlights matching content within a document. Enable or disable this capability with the following configuration.
+The Text Search option in PDF Viewer is used to find and highlight the text content from the document. 
+
+## Enable or disable text search option.
+
+Use [enableTextSearch](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enabletextsearch) to enable or disable the text search in the PDF Viewer.
+
+You can enable/disable the text search using the following code snippet.
 
 ```html
 <!DOCTYPE html>
@@ -61,6 +67,47 @@ PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,Th
 
 let pdfviewer: PdfViewer = new PdfViewer({enableTextSearch: true, documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
 pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
+## Customize text search highlight colors
+
+Use [textSearchColorSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/#textsearchcolorsettings) property to customize the color of the text search highlight and search term.
+
+You can customize the highlight and search colors using the following code snippet.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection);
+
+let pdfviewer: PdfViewer = new PdfViewer({ 
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib' });
+pdfviewer.textSearchColorSettings = {
+    searchHighlightColor: '#4070ff',
+    searchColor: '#FF4081'
+};
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection);
+
+let pdfviewer: PdfViewer = new PdfViewer({ 
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
+    });
+
+pdfviewer.textSearchColorSettings = {
+    searchHighlightColor: '#4070ff',
+    searchColor: '#FF4081'
+};
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
