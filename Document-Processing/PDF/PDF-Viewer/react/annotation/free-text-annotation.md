@@ -1,30 +1,30 @@
 ---
 layout: post
-title: Free text annotation in React Pdfviewer component | Syncfusion
-description: Learn here all about Free text annotation in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Free text annotation
+title: Free text annotation in React PDF Viewer control | Syncfusion
+description: Learn about free text annotations in the Syncfusion React PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Free text annotation in React Pdfviewer component
+# Free text annotation in React PDF Viewer
 
-The PDF Viewer control provides the options to add, edit, and delete the free text annotations.
+The PDF Viewer control provides options to add, edit, and delete free text annotations.
 
-## Adding a free text annotation to the PDF document
+## Add a free text annotation to the PDF document
 
-The Free text annotations can be added to the PDF document using the annotation toolbar.
+The PDF Viewer control provides options to add, edit, and delete free text annotations.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Select the **Free Text Annotation** button in the annotation toolbar. It enables the Free Text annotation mode.
-* You can add the text over the pages of the PDF document.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar. The annotation toolbar appears below it.
+* Select the **Free Text Annotation** button to enable free text annotation mode.
+* Add text anywhere on the pages of the PDF document.
 
-In the pan mode, if the free text annotation mode is entered, the PDF Viewer control will switch to text select mode.
+When in pan mode, selecting free text annotation switches the PDF Viewer to text select mode.
 
-![FreeTextAnnotation](../images/freetext_tool.png)
+![Free text tool in the annotation toolbar](../images/freetext_tool.png)
 
-Refer to the following code sample to switch to the Free Text annotation mode.
+The following example switches to free text annotation mode using a button click.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -101,11 +101,11 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Adding a Free Text annotation to the PDF document Programmatically
+## Add a Free Text annotation to the PDF document Programmatically
 
-With the PDF Viewer library, you can add a Free Text annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
+The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#annotation) method.
 
-Here's a example of how you can utilize the **addAnnotation()** method to include a Free Text annotation programmatically
+Here is an example of adding a free text annotation programmatically using addAnnotation():
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -212,11 +212,11 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Change the content of an existing Free text annotation programmatically
+## Change the content of an existing free text annotation programmatically
 
-To change the content of an existing free text annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer programmatically, you can use the **editAnnotation()** method.
+To change the content of an existing free text annotation programmatically, use the editAnnotation() method.
 
-Here is an example of how you can use the **editAnnotation()** method to change the content of a free text annotation:
+Here is an example of changing the content of a free text annotation using editAnnotation():
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -311,69 +311,71 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Editing the properties of free text annotation
+N> The current version of the PDF Viewer does not edit existing document text. New free text annotations can be added and modified within the document.
 
-The font family, font size, font styles, font color, text alignment, fill color, the border stroke color, border thickness, and opacity of the free text annotation can be edited using the Font Family tool, Font Size tool, Font Color tool, Text Align tool, Font Style tool  Edit Color tool, Edit Stroke Color tool, Edit Thickness tool, and Edit Opacity tool in the annotation toolbar.
+## Edit the properties of free text annotations
 
-### Editing font family
+Font family, font size, styles, font color, text alignment, fill color, stroke color, border thickness, and opacity can be edited using the Font Family, Font Size, Font Color, Text Align, Font Style, Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
-The font family of the annotation can be edited by selecting the desired font in the Font Family tool.
+### Edit font family
 
-![FontFamily](../images/fontfamily.png)
+Edit the font family by selecting a font in the Font Family tool.
 
-### Editing font size
+![Change font family](../images/fontfamily.png)
 
-The font size of the annotation can be edited by selecting the desired size in the Font Size tool.
+### Edit font size
 
-![FontSize](../images/fontsize.png)
+Edit the font size by selecting a size in the Font Size tool.
 
-### Editing font color
+![Change font size](../images/fontsize.png)
 
-The font color of the annotation can be edited using the color palette provided in the Font Color tool.
+### Edit font color
 
-![FontColor](../images/fontcolor.png)
+Edit the font color using the color palette in the Font Color tool.
 
-### Editing the text alignment
+![Change font color](../images/fontcolor.png)
 
-The text in the annotation can be aligned by selecting the desired styles in the drop-down pop-up in the Text Align tool.
+### Edit the text alignment
 
-![FreeTextAnnotation](../images/textalign.png)
+Align text by selecting an option from the Text Align tool.
 
-### Editing text styles
+![Set text alignment](../images/textalign.png)
 
-The style of the text in the annotation can be edited by selecting the desired styles in the drop-down pop-up in the Font Style tool.
+### Edit text styles
 
-![FontStyle](../images/fontstyle.png)
+Edit text styles by selecting options in the Font Style tool.
 
-### Editing fill color
+![Change text styles](../images/fontstyle.png)
 
-The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
+### Edit fill color
 
-![FillColor](../images/fillcolor.png)
+Edit the fill color using the color palette in the Edit Color tool.
 
-### Editing stroke color
+![Change fill color](../images/fillcolor.png)
 
-The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
+### Edit stroke color
 
-![StrokeColor](../images/fontstroke.png)
+Edit the stroke color using the color palette in the Edit Stroke Color tool.
 
-### Editing thickness
+![Change stroke color](../images/fontstroke.png)
 
-The border thickness of the annotation can be edited using the range slider provided in the Edit Thickness tool.
+### Edit thickness
 
-![FontThickness](../images/fontthickness.png)
+Edit border thickness using the range slider in the Edit Thickness tool.
 
-### Editing opacity
+![Change border thickness](../images/fontthickness.png)
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+### Edit opacity
 
-![FontOpacity](../images/fontopacity.png)
+Edit opacity using the range slider in the Edit Opacity tool.
 
-## Setting default properties during control initialization
+![Change opacity](../images/fontopacity.png)
 
-The properties of the free text annotation can be set before creating the control using the FreeTextSettings.
+## Set default properties during control initialization
 
-After editing the default values, they will be changed to the selected values. Refer to the following code sample to set the default free text annotation settings.
+Default properties for free text annotations can be set before creating the control using FreeTextSettings.
+
+After changing default values, the selected values are applied. The following example sets default free text annotation settings.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
