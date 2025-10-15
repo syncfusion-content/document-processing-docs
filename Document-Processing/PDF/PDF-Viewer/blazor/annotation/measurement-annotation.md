@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Measurement annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about measurement annotations in Syncfusion Blazor SfPdfViewer component and more.
+description: Learn all about measurement annotations in the Syncfusion Blazor SfPdfViewer component, including adding, editing, default settings.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Measurement annotations in Blazor SfPdfViewer Component
 
-The SfPdfViewer provides the options to add measurement annotations. The page annotations can be measured with the help of measurement annotation. The supported measurement annotations in the SfPdfViewer control are:
+The SfPdfViewer provides options to add and work with measurement annotations. Use these annotations to measure content within a PDF page. The supported measurement annotations are:
 
 * Distance
 * Perimeter
@@ -21,14 +21,14 @@ The SfPdfViewer provides the options to add measurement annotations. The page an
 
 ## Adding measurement annotations to the PDF document
 
-The measurement annotations can be added to the PDF document using the annotation toolbar.
+Measurement annotations can be added using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-* Click the **measurement Annotation** dropdown button. A dropdown pop-up will appear and shows the measurement annotations to be added.
-* Select the measurement type to be added to the page in the dropdown pop-up. It enables the selected measurement annotation mode.
-* You can measure and add the annotation over the pages of the PDF document.
+* Click the **measurement Annotation** dropdown button. A dropdown pop-up appears with the available measurement annotation types.
+* Select a measurement type to enable that annotation mode.
+* Click on the page to add and measure using the selected annotation.
 
-In the pan mode, if the measurement annotation mode is entered, the SfPdfViewer control will switch to text select mode.
+When a measurement mode is enabled while in Pan mode, the SfPdfViewer switches to Text Select mode.
 
 ![Adding Calibrate in Blazor SfPdfViewer Toolbar](../../blazor-classic/images/blazor-pdfviewer-add-calibrate-in-toolbar.png)
 
@@ -59,41 +59,41 @@ In the pan mode, if the measurement annotation mode is entered, the SfPdfViewer 
 
 ## Editing the properties of measurement annotation
 
-The fill color, stroke color, thickness, and opacity of the measurement annotation can be edited using the Edit Color tool, Edit Stroke Color tool, Edit Thickness tool, and Edit Opacity tool in the annotation toolbar.
+The fill color, stroke color, thickness, and opacity of a measurement annotation can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
 ### Editing fill color
 
-The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
+Edit the fill color of the annotation using the color palette in the Edit Color tool.
 
 ![Editing Calibrate FillColor in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-calibrate-fillcolor.png)
 
 ### Editing stroke color
 
-The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
+Edit the stroke color of the annotation using the color palette in the Edit Stroke Color tool.
 
 ![Editing Calibrate StrokeColor in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-calibrate-stroke-color.png)
 
 ### Editing thickness
 
-The thickness of the border of the annotation can be edited using the range slider provided in the Edit thickness tool.
+Edit the border thickness of the annotation using the range slider in the Edit Thickness tool.
 
 ![Editing Calibrate Thickness in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-calibrate-thickness.png)
 
 ### Editing opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+Edit the opacity of the annotation using the range slider in the Edit Opacity tool.
 
 ![Editing Calibrate Opacity in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-calibrate-opacity.png)
 
 ### Editing the line properties
 
-The properties of the line shapes such as distance and perimeter annotations can be edited using the Line properties window. It can be opened by selecting the Properties option in the context menu that appears on right-clicking the distance and perimeter annotations.
+The properties of line-based annotations such as Distance and Perimeter can be edited using the Line Properties window. Open it by selecting the Properties option from the context menu when right-clicking a distance or perimeter annotation.
 
 ![Editing Calibrate Property in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-calibrate-property.png)
 
 ## Setting default properties during control initialization
 
-The properties of the shape annotations can be set before creating the control using distanceSettings, perimeterSettings, areaSettings, radiusSettings and volumeSettings.
+Set default properties for measurement annotations before initializing the control using [DistanceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DistanceSettings), [PerimeterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PerimeterSettings), [AreaSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AreaSettings), [RadiusSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_RadiusSettings), and [VolumeSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_VolumeSettings).
 
 ```cshtml
 
@@ -152,11 +152,11 @@ The properties of the shape annotations can be set before creating the control u
 
 ## Editing scale ratio and unit of the measurement annotation
 
-The scale ratio and unit of measurement can be modified using the scale ratio option provided in the context menu of the PDF Viewer control.
+Modify the scale ratio and unit of measurement using the Scale Ratio option in the context menu of the SfPdfViewer.
 
 ![Editing Calibrate Scale Ratio in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-calibrate-scaleratio.png)
 
-The Units of measurements support for the measurement annotations in the PDF Viewer are
+The supported units of measurement for measurement annotations are:
 
 * Inch
 * Millimeter
@@ -169,7 +169,7 @@ The Units of measurements support for the measurement annotations in the PDF Vie
 
 ## Setting default scale ratio settings during control initialization
 
-The properties of scale ratio for measurement annotation can be set before creating the control using ScaleRatioSettings as shown in the following code snippet,
+Set default scale ratio settings for measurement annotations before initializing the control using [ScaleRatioSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerMeasurementSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerMeasurementSettings_ScaleRatio), as shown below.
 
 ```cshtml
 
@@ -193,13 +193,14 @@ The properties of scale ratio for measurement annotation can be set before creat
         ConversionUnit = CalibrationUnit.Cm 
     };
 }
+
 ```
 
 ## Add measurement annotation programmatically
 
-The Blazor SfPdfViewer offers the capability to programmatically add the measurement annotation within the SfPdfViewer control using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+The Blazor SfPdfViewer provides the capability to programmatically add measurement annotations using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
-Below is an example demonstrating how you can use this method to add measurement annotation to a PDF document:
+The following example demonstrates adding a measurement annotation to a PDF document:
 
 ```cshtml
 
@@ -234,7 +235,7 @@ Below is an example demonstrating how you can use this method to add measurement
 
 ```
 
-This code will add a measurement annotation to the first page of the PDF document.
+This adds a measurement annotation to the first page of the PDF document (page numbers are zero-based).
 
 ![Programmatically Added Measurement Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-measurement-annotation.png)
 
@@ -242,9 +243,9 @@ This code will add a measurement annotation to the first page of the PDF documen
 
 ## Edit measurement annotation programmatically
 
-The Blazor SfPdfViewer offers the capability to programmatically edit the measure annotation within the SfPdfViewer control using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+The Blazor SfPdfViewer provides the capability to programmatically edit a measurement annotation using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
-Below is an example demonstrating how you can utilize this method to edit the measure annotation programmatically:
+The following example demonstrates editing a measurement annotation programmatically:
 
 ```cshtml
 
@@ -285,7 +286,7 @@ Below is an example demonstrating how you can utilize this method to edit the me
 
 ```
 
-This code snippet will edit the measurement annotation programmatically within the SfPdfViewer control.
+This edits a measurement annotation programmatically within the SfPdfViewer control.
 
 ![Programmatically Edit Measurement Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-measurement-annotation.png)
 

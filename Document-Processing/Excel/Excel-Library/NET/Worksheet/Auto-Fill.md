@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# Auto Fill
+# Auto Fill Feature in Excel Document
 
  The **Auto Fill** enables users to programmatically populate a range of Excel cells based on defined patterns, sequences, or trends. This helps reduce manual data entry by automatically generating values using built-in logic.
 
@@ -323,12 +323,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Auto fill using the series option
     source.AutoFill(destinationRange, ExcelAutoFillType.FillSeries);
 
-    //Saving the workbook 
-    FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
-
-    //Dispose streams
-    outputStream.Dispose();
+    //Saving the workbook
+    workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
