@@ -31,10 +31,10 @@ The following code example shows the options for inserting rows in the spreadshe
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/insert-row/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/insert-row/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="InsertRowController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/insert-row/insertRowController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/insert-row/insertRowController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -51,10 +51,10 @@ The following code example shows the options for inserting columns in the spread
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/insert-column/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/insert-column/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="InsertColumnController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/insert-column/insertColumnController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/insert-column/insertColumnController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,10 +73,10 @@ The following code example shows the delete operation of rows and columns in the
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/delete-row/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/delete-row/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="DeleteRowController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/delete-row/deleteRowController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/delete-row/deleteRowController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -106,10 +106,10 @@ The following code example shows the hide/show rows and columns operation in the
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/show-hide/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/show-hide/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ShowHideController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/show-hide/showHideController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/show-hide/showHideController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -134,10 +134,10 @@ The following code example shows how to change the height for single/multiple ro
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/row-height/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/row-height/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="RowHeightController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/row-height/rowHeightController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/row-height/rowHeightController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -156,10 +156,10 @@ The following code example shows how to change the width for single/multiple col
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/column-width/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/column-width/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ColumnWidthController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/column-width/columnWidthController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/column-width/columnWidthController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -171,7 +171,7 @@ The following code example shows how to change the text in the column headers.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/column-header-change/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/column-header-change/tagHelper %}
 {% endhighlight %}
 {% endtabs %}
 

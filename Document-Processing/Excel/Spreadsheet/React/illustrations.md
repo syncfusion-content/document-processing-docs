@@ -70,20 +70,20 @@ Image feature allows you to view and insert an image in a spreadsheet, and you c
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/image-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/image-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/image-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/image-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/image-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/image-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/image-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/image-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/image-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/image-cs1" %}
 
 ### Limitations of Image
 
@@ -133,20 +133,20 @@ The available arguments in the `ChartModel` are:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/chart-cs2/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/chart-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/chart-cs2/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/chart-cs2/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/chart-cs2/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/chart-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/chart-cs2/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/chart-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/chart-cs2" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/chart-cs2" %}
 
 ### Delete Chart
 
@@ -169,20 +169,20 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/chart-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/chart-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/chart-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/chart-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/chart-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/chart-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/chart-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/chart-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/chart-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/chart-cs1" %}
 
 #### Customization of line chart markers
 
@@ -190,20 +190,20 @@ Using the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/spr
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/chart-cs3/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/chart-cs3/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/chart-cs3/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/chart-cs3/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/chart-cs3/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/chart-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/chart-cs3/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/chart-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/chart-cs3" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/chart-cs3" %}
 
 ### Limitations of Chart
 

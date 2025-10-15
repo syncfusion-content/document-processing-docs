@@ -29,9 +29,6 @@ The following code sample illustrates how to create a simple table from a data s
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-table-from-data-source-in-a-PDF/.NET/Create-table-from-data-source-in-a-PDF/Program.cs" %} 
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
 //Add a page.
@@ -52,17 +49,16 @@ pdfGrid.DataSource = dataTable;
 //Draw the grid to the page of PDF document.
 pdfGrid.Draw(page, new Syncfusion.Drawing.PointF(10, 10));
 
-//Save the PDF document.
-doc.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the PDF document to stream.
+doc.Save(stream);
 //Close the document.
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -92,9 +88,6 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document. 
 Dim doc As PdfDocument = New PdfDocument()
@@ -137,10 +130,6 @@ The below code sample illustrates how to create the simple table directly using 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-the-data-directly-to-the-table-in-a-PDF/.NET/Add-the-data-directly-to-the-table-in-a-PDF/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
 //Add page. 
@@ -163,20 +152,18 @@ pdfGridRow.Cells[0].Value = "E01";
 pdfGridRow.Cells[1].Value = "Clay";
 pdfGridRow.Cells[2].Value = "$10,000";
 //Draw the PdfGrid.
-pdfGrid.Draw(pdfPage, PointF.Empty);
+pdfGrid.Draw(pdfPage, Syncfusion.Drawing.PointF.Empty);
 
-//Save the PDF document.
-pdfDocument.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the PDF document to stream.
+pdfDocument.Save(stream);
 //Close the document.
 pdfDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -210,10 +197,6 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()
@@ -257,10 +240,6 @@ Refer to the following code sample to create a table using [PdfGrid](https://hel
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-table-from-list-in-a-PDF-document/.NET/Create-table-from-list-in-a-PDF-document/Program.cs" %} 
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
 //Add a page.
@@ -283,18 +262,16 @@ pdfGrid.DataSource = tableData;
 //Draw the grid to the page of PDF document.
 pdfGrid.Draw(page, new Syncfusion.Drawing.PointF(10, 10));
 
-//Save the PDF document.
-doc.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the PDF document to stream.
+doc.Save(stream);
 //Close the document.
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -326,10 +303,6 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -372,13 +345,9 @@ You can create a table from a [DataSource](https://help.syncfusion.com/cr/docume
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-table-in-an-existing-document/.NET/Create-table-in-an-existing-document/Program.cs" %} 
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document.
-PdfLoadedDocument doc = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument doc = new PdfLoadedDocument(docStream);
 //Get the first page from a document.
 PdfLoadedPage page = doc.Pages[0] as PdfLoadedPage;
 //Create PDF graphics for the page.
@@ -399,19 +368,16 @@ pdfGrid.DataSource = dataTable;
 //Draw the grid to the page of PDF document.
 pdfGrid.Draw(graphics, new Syncfusion.Drawing.PointF(10, 10));
 
-//Save the PDF document.
-doc.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the PDF document to stream.
+doc.Save(stream);
 //Close the document.
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf.Parsing;
 
 //Load a PDF document.
 PdfLoadedDocument doc = new PdfLoadedDocument("input.pdf");
@@ -443,11 +409,6 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
-Imports Syncfusion.Pdf.Parsing
 
 'Load a PDF document.
 Dim doc As New PdfLoadedDocument("input.pdf")
@@ -491,10 +452,6 @@ The following code example illustrates how to customize the cell in the [PdfGrid
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Cell-customization-in-PdfGrid/.NET/Cell-customization-in-PdfGrid/Program.cs" %} 
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -543,18 +500,16 @@ pdfGridCell.ImagePosition = PdfGridImagePosition.Fit;
 //Draw the PdfGrid.
 parentPdfGrid.Draw(pdfPage, Syncfusion.Drawing.PointF.Empty);
 
-//Save the PDF document.
-pdfDocument.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the PDF document to stream.
+pdfDocument.Save(stream);
 //Close the document.
 pdfDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -610,10 +565,6 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()
@@ -678,11 +629,7 @@ The following code sample illustrates how to customize the row in ``PdfGrid``.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Row-customization-of-PdfGrid-in-a-PDF/.NET/Row-customization-of-PdfGrid-in-a-PDF/Program.cs" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Row-customization-of-PdfGrid-in-a-PDF/.NET/Row-customization-of-PdfGrid-in-a-PDF/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -717,18 +664,16 @@ pdfGrid.Rows[0].Style = pdfGridRowStyle;
 //Draw the PdfGrid.
 PdfGridLayoutResult result = pdfGrid.Draw(pdfPage, Syncfusion.Drawing.PointF.Empty);
 
-//Save the PDF document.
-pdfDocument.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the PDF document to stream.
+pdfDocument.Save(stream);
 //Close the document.
 pdfDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -770,10 +715,6 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()
@@ -828,11 +769,6 @@ The following code snippet illustrates how to customize the column in ``PdfGrid`
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Column-customization-of-PdfGrid-in-a-PDF/.NET/Column-customization-of-PdfGrid-in-a-PDF/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
 //Add a page. 
@@ -864,19 +800,16 @@ pdfGrid.Columns[0].Format = format;
 //Draw the PdfGrid.
 PdfGridLayoutResult result = pdfGrid.Draw(pdfPage, Syncfusion.Drawing.PointF.Empty);
 
-//Save the PDF document.
-pdfDocument.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the PDF document to stream.
+pdfDocument.Save(stream);
 //Close the document.
 pdfDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -916,11 +849,6 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()
@@ -976,10 +904,6 @@ The following code snippet illustrates how to customize the table using [PdfGrid
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Customize-the-table-in-a-PDF-document/.NET/Customize-the-table-in-a-PDF-document/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page.
@@ -1011,18 +935,16 @@ pdfGrid.Style = gridStyle;
 //Draw the grid to the page of a PDF document.
 pdfGrid.Draw(page, new PointF(10, 10));
 
-//Save the PDF document.
-document.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the document as a stream.
+document.Save(stream);
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1063,10 +985,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -1125,10 +1043,7 @@ The below code example illustrates how to apply built-in table style using [Appl
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-table-with-built-in-style/.NET/Create-table-with-built-in-style/Program.cs" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Grid;
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-table-with-built-in-style/.NET/Create-table-with-built-in-style/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -1159,16 +1074,15 @@ pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent1);
 //Draw the grid to the page of PDF document.
 pdfGrid.Draw(page, new Syncfusion.Drawing.PointF(10, 10));
 
-//Save the PDF document.
-doc.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the document as a stream.
+doc.Save(stream);
 //Close the document.
 doc.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -1204,9 +1118,6 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -1256,9 +1167,6 @@ The below code example illustrates how to apply built-in table styles with table
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Apply-built-in-style-to-table-with-table-option/.NET/Apply-built-in-style-to-table-with-table-option/Program.cs" %} 
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
 //Add a page.
@@ -1292,17 +1200,16 @@ pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent4, tableStyleOptio
 //Draw the grid to the page of PDF document.
 pdfGrid.Draw(page, new Syncfusion.Drawing.PointF(10, 10));
 
-//Save the PDF document.
-doc.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the document as a stream.
+doc.Save(stream);
 //Close the document.
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -1342,9 +1249,6 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -1400,10 +1304,6 @@ The below sample illustrates how to allow the ``PdfGrid`` to flow across pages.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Paginate-the-table-in-PDF-document/.NET/Paginate-the-table-in-PDF-document/Program.cs" %} 
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page.
@@ -1430,18 +1330,16 @@ layoutFormat.Layout = PdfLayoutType.Paginate;
 //Draw the grid to the page of PDF document.
 pdfGrid.Draw(page, new Syncfusion.Drawing.PointF(10, 10), layoutFormat);
 
-//Save the PDF document.
-document.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the document as a stream.
+document.Save(stream);
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1476,10 +1374,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -1525,10 +1419,6 @@ The following code sample illustrates how to automatically adjust the width of t
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Automatically-adjust-the-table-width-in-a-PDF/.NET/Automatically-adjust-the-table-width-in-a-PDF/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a new section to the document.
@@ -1560,18 +1450,15 @@ grid.Style.AllowHorizontalOverflow = true;
 //Draw the PdfGrid on the page.
 grid.Draw(page, PointF.Empty);
 
-//Save the PDF document.
-document.Save("Output.pdf");
+//Saving the PDF to the MemoryStream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Close the instance of PdfDocument.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1612,10 +1499,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
@@ -1665,10 +1548,6 @@ The Essential<sup>&reg;</sup> PDF supports maintaining the position of a PDF gri
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-multiple-tables-in-a-PDF-document/.NET/Add-multiple-tables-in-a-PDF-document/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page.
@@ -1709,18 +1588,15 @@ pdfGrid.DataSource = dataTable;
 //Draw the grid on the page using previous result.
 pdfGrid.Draw(page, new PointF(10, pdfGridLayoutResult.Bounds.Bottom + 20));
 
-//Save the PDF document.
-document.Save("Output.pdf");
+//Saving the PDF to the MemoryStream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1769,10 +1645,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
@@ -1835,11 +1707,6 @@ The following code snippet explains how to apply string formatting for the whole
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Apply-string-formatting-for-whole-table-in-a-PDF/.NET/Apply-string-formatting-for-whole-table-in-a-PDF/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add page to the document.
@@ -1873,18 +1740,14 @@ for (int i = 0; i < grid.Columns.Count; i++)
 //Draw the PdfGrid on the page.
 grid.Draw(page, new PointF(10, 10));
 
-//Save the PDF document.
-document.Save("Output.pdf");
+//Saving the PDF to the MemoryStream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1926,11 +1789,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
@@ -1984,11 +1842,6 @@ The following code snippet explains how to add string formatting to a particular
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-string-formatting-to-a-column-in-table/.NET/Add-string-formatting-to-a-column-in-table/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add page to the document.
@@ -2019,18 +1872,14 @@ grid.Columns[1].Format = stringFormat;
 //Draw the PdfGrid on the page.
 grid.Draw(page, new PointF(10, 10));
 
-//Save the PDF document.
-document.Save("Output.pdf");
+//Saving the PDF to the MemoryStream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2070,10 +1919,6 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
@@ -2120,11 +1965,6 @@ The following code sample illustrates how to add the string formatting for a par
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-string-formatting-for-a-cell-in-table/.NET/Add-string-formatting-for-a-cell-in-table/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add page to the PdfDocument.
@@ -2155,17 +1995,13 @@ grid.Rows[2].Cells[1].StringFormat = stringFormat;
 //Draw the PdfGrid on a page.
 grid.Draw(page, new PointF(10, 10));
 
-//Save the PDF document.
-document.Save("Output.pdf");
+//Save the PDF to the MemoryStream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 document.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2204,12 +2040,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
-
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
 'Add page to the PdfDocument.
@@ -2256,11 +2086,6 @@ The following code sample illustrates how to add the string formatting for a par
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-string-formatting-for-a-row-in-table/.NET/Add-string-formatting-for-a-row-in-table/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add page to the PdfDocument.
@@ -2294,17 +2119,14 @@ for (int i = 0; i < grid.Columns.Count; i++)
 //Draw the PdfGrid on the page.
 grid.Draw(page, new PointF(10, 10));
 
-//Save the PDF document.
-document.Save("Output.pdf");
+//Save a PDF to the MemoryStream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2346,11 +2168,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
@@ -2407,11 +2224,6 @@ The following code sample illustrates how to span a row in the [PdfGrid](https:/
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-row-spanning-in-a-PDF-table/.NET/Add-row-spanning-in-a-PDF-table/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Create the page.
@@ -2440,19 +2252,15 @@ gridCell.Style.BackgroundBrush = PdfBrushes.Yellow;
 //Draw the PdfGrid.
 pdfGrid.Draw(page, new PointF(10, 10));
 
-//Save the PDF document.
-document.Save("Output.pdf");
+//Saving the PDF to the MemoryStream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2490,11 +2298,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
@@ -2539,12 +2342,7 @@ The following code sample illustrates how to span a column in the [PdfGrid](http
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-column-spanning-in-a-PDF-table/.NET/Add-column-spanning-in-a-PDF-table/Program.cs" %}
-
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-column-spanning-in-a-PDF-table/.NET/Add-column-spanning-in-a-PDF-table/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2574,18 +2372,14 @@ gridCell.Style.BackgroundBrush = PdfBrushes.Yellow;
 //Draw the PdfGrid.
 pdfGrid.Draw(page, new PointF(10, 10));
 
-//Save the PDF document.
-document.Save("Output.pdf");
+//Save a PDF to the MemoryStream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Close the document.
 document.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2623,11 +2417,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
@@ -2676,11 +2465,6 @@ The following code sample explains how to add different cell styles to a cell in
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-different-cell-styles-to-a-cell-in-a-PDF-table/.NET/Add-different-cell-styles-to-a-cell-in-a-PDF-table/Program.cs" %} 
-
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -2748,19 +2532,15 @@ gridCell.StringFormat = stringFormat;
 //Draw the table on the PDF page.
 pdfGrid.Draw(pdfPage, new PointF(10, 10));
 
-//Save the PDF document.
-pdfDocument.Save("Output.pdf");
+//Save a PDF to the MemoryStream.
+MemoryStream stream = new MemoryStream();
+pdfDocument.Save(stream);
 //Close the instance of the PdfDocument.
 pdfDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -2834,11 +2614,6 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim pdfDocument As PdfDocument = New PdfDocument
@@ -2922,11 +2697,6 @@ The Syncfusion<sup>&reg;</sup> .NET PDF library supports applying different styl
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-different-styles-to-a-row-in-PDF-table/.NET/Add-different-styles-to-a-row-in-PDF-table/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
 //Add a page. 
@@ -2981,19 +2751,15 @@ gridRow.ApplyStyle(gridCellStyle);
 //Draw the table on the PDF page.
 pdfGrid.Draw(pdfPage, new PointF(10, 10));
 
-//Save the PDF document.
-pdfDocument.Save("Output.pdf");
+//Save a PDF to the Memory Stream.
+MemoryStream stream = new MemoryStream();
+pdfDocument.Save(stream);
 //Close the instance of the PdfDocument.
 pdfDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -3055,11 +2821,6 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim pdfDocument As PdfDocument = New PdfDocument
@@ -3133,11 +2894,6 @@ The following code sample explains how to use the ``ApplyStyle`` method to apply
 
 {% highlight c# tabtitle="C# [Cross-platform]"  playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Applying-Customizing-Styles-in-PDF-Grid/.NET/Applying-Customizing-Styles-in-PDF-Grid/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page.
@@ -3171,19 +2927,17 @@ pdfGrid.Rows[0].ApplyStyle(rowStyle);
 
 //Draw grid to the page of PDF document.
 pdfGrid.Draw(page, new PointF(10, 10));
-//Save the PDF document.
-document.Save("Output.pdf");
+//Save the PDF document to stream.
+using(FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite ))
+{
+    document.Save(outputStream);
+}
 //Close the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -3226,11 +2980,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
 
 ' Create a new PDF document.
 Dim document As New PdfDocument()
@@ -3296,11 +3045,6 @@ The following code sample explains how to apply word wrap in the PDF table cell.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Apply-word-wrap-in-the-PDF-table-cell/.NET/Apply-word-wrap-in-the-PDF-table-cell/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page.
@@ -3336,19 +3080,15 @@ foreach (PdfGridRow row in grid.Headers)
 //Draw a grid to the resultant page of the first grid.
 grid.Draw(page, new PointF(10, 20));
 
-//Save the PDF document.
-document.Save("Output.pdf");
+//Save the document into the stream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -3396,11 +3136,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document. 
 Dim document As PdfDocument = New PdfDocument()
@@ -3458,11 +3193,6 @@ The following code sample illustrates how to rotate the [PdfGrid](https://help.s
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Draw-rotated-table-in-PDF-document/.NET/Draw-rotated-table-in-PDF-document/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page.
@@ -3489,8 +3219,9 @@ pdfGrid.RepeatHeader = true;
 //Draw a grid to the page of a PDF document.
 pdfGrid.Draw(page, new RectangleF(100, 20, 0, page.GetClientSize().Width));
 
-//Save the PDF document.
-document.Save("Output.pdf");
+//Save the document into the stream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Close the document.
 document.Close(true);
 
@@ -3509,11 +3240,6 @@ private void PdfGrid_BeginPageLayout(object sender, BeginPageLayoutEventArgs e)
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -3563,11 +3289,6 @@ private void PdfGrid_BeginPageLayout(object sender, Syncfusion.Pdf.Graphics.Begi
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
 
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument()
@@ -3641,12 +3362,6 @@ The following code example illustrates how to render the HTML string in a [PdfGr
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Draw-HTML-styled-text-in-a-PDF-table-cell/.NET/Draw-HTML-styled-text-in-a-PDF-table-cell/Program.cs" %} 
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Drawing;
-using System.Reflection.Metadata;
-
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
 //Create the page.
@@ -3672,20 +3387,15 @@ row2.Cells[1].Value = richTextElement;
 //Draw the PdfGrid.
 pdfGrid.Draw(pdfPage, PointF.Empty);
 
-//Save the PDF document.
-pdfDocument.Save("Output.pdf");
+//Save the document into the stream.
+MemoryStream stream = new MemoryStream();
+pdfDocument.Save(stream);
 //Close the document.
 pdfDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using System.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -3720,12 +3430,6 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
-Imports Syncfusion.Drawing
-Imports System.Reflection.Metadata
 
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()
@@ -3773,12 +3477,6 @@ The following code illustrates adding the background image into a table cell.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-the-background-image-in-a-PDF-table-cell/.NET/Add-the-background-image-in-a-PDF-table-cell/Program.cs" %} 
 
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf;
-using Syncfusion.Drawing;
-using System.Reflection.Metadata;
-
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
 //Add a page to the PDF document.
@@ -3819,20 +3517,15 @@ pdfGridCell.ImagePosition = PdfGridImagePosition.Stretch;
 //Draw the PdfGrid.
 pdfGrid.Draw(pdfPage, PointF.Empty);
 
-//Save the PDF document.
-pdfDocument.Save("Output.pdf");
+//Save the document into the stream.
+MemoryStream stream = new MemoryStream();
+pdfDocument.Save(stream);
 //Close the document.
 pdfDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf;
-using System.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -3881,12 +3574,6 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
-Imports Syncfusion.Drawing
-Imports System.Reflection.Metadata
 
 'Create a new PDF document.
 Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -3943,13 +3630,6 @@ The following code illustrates how to create a table with different font styles 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-different-font-style-for-particular-table-cell/.NET/Add-different-font-style-for-particular-table-cell/Program.cs" %} 
-
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf;
-using Syncfusion.Drawing;
-using System.Reflection.Metadata;
-
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
 //Create the page.
@@ -3985,8 +3665,9 @@ pdfGrid.Rows[0].Cells[0].StringFormat = format;
 //Draw the PdfGrid.
 pdfGrid.Draw(pdfPage, PointF.Empty);
 
-//Save the PDF document.
-pdfDocument.Save("Output.pdf");
+//Save the document into the stream.
+MemoryStream stream = new MemoryStream();
+pdfDocument.Save(stream);
 //Close the document.
 pdfDocument.Close(true);
 
@@ -4007,12 +3688,6 @@ private static void PdfGrid_BeginCellLayout(object sender, PdfGridBeginCellLayou
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf;
-using System.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -4073,12 +3748,6 @@ private static void PdfGrid_BeginCellLayout(object sender, PdfGridBeginCellLayou
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
-Imports Syncfusion.Drawing
-Imports System.Reflection.Metadata
 
 'Create a new PDF document.
 Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -4151,12 +3820,6 @@ The following code sample shows how to insert the image in a particular [PdfGrid
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Insert-image-in-a-particular-table-cell/.NET/Insert-image-in-a-particular-table-cell/Program.cs" %} 
 
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf;
-using Syncfusion.Drawing;
-using System.Reflection.Metadata;
-
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
 //Create the page.
@@ -4180,8 +3843,9 @@ pdfGrid.BeginCellLayout += PdfGrid_BeginCellLayout;
 //Draw a grid to the page of a PDF document.
 pdfGrid.Draw(pdfPage, new PointF(10, 10));
 
-//Save the PDF document.
-pdfDocument.Save("Output.pdf");
+//Save the document into the stream.
+MemoryStream stream = new MemoryStream();
+pdfDocument.Save(stream);
 //Close the document.
 pdfDocument.Close(true);
 
@@ -4201,12 +3865,6 @@ private static void PdfGrid_BeginCellLayout(object sender, PdfGridBeginCellLayou
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf;
-using System.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -4252,12 +3910,6 @@ private static void PdfGrid_BeginCellLayout(object sender, PdfGridBeginCellLayou
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
-Imports Syncfusion.Drawing
-Imports System.Reflection.Metadata
 
 'Create a new PDF document. 
 Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -4316,12 +3968,6 @@ The following code sample illustrates how to draw a border less table in a PDF d
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Draw-borderless-table-in-PDF-document/.NET/Draw-borderless-table-in-PDF-document/Program.cs" %} 
 
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf;
-using Syncfusion.Drawing;
-using System.Reflection.Metadata;
-
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
 //Create the page.
@@ -4376,20 +4022,15 @@ for (int i = 0; i < pdfGrid.Rows.Count; i++)
 //Draw a grid to the page of a PDF document.
 pdfGrid.Draw(pdfPage, new PointF(10, 10));
 
-//Save the PDF document.
-pdfDocument.Save("Output.pdf");
+//Save the document into the stream.
+MemoryStream stream = new MemoryStream();
+pdfDocument.Save(stream);
 //Close the document.
 pdfDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf;
-using System.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -4454,12 +4095,6 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
-Imports Syncfusion.Drawing
-Imports System.Reflection.Metadata
 
 'Create a new PDF document.
 Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -4532,11 +4167,6 @@ The following code illustrates how to create the nested table in a PDF document 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-nested-table-in-a-PDF-document/.NET/Create-nested-table-in-a-PDF-document/Program.cs" %} 
 
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf;
-using Syncfusion.Drawing;
-using System.Reflection.Metadata;
-
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
 //Create the page.
@@ -4578,19 +4208,15 @@ parentPdfGrid.Rows[1].Cells[2].Style.CellPadding = new PdfPaddings(5, 5, 5, 5);
 //Draw the parent PdfGrid
 parentPdfGrid.Draw(pdfPage, PointF.Empty);
 
-//Save the PDF document.
-pdfDocument.Save("Output.pdf");
+//Save the document into the stream.
+MemoryStream stream = new MemoryStream();
+pdfDocument.Save(stream);
 //Close the document.
 pdfDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf;
-using System.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -4641,11 +4267,6 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Grid
-Imports Syncfusion.Drawing
-Imports System.Reflection.Metadata
 
 'Create a new PDF document.
 Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -4709,12 +4330,6 @@ The following code sample illustrates how to add a hyperlink in a table cell.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-a-hyperlink-in-a-table-cell/.NET/Add-a-hyperlink-in-a-table-cell/Program.cs" %} 
 
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf;
-using Syncfusion.Drawing;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a new page.
@@ -4744,20 +4359,15 @@ row.Cells[1].Style = cellStyle;
 //Draw the grid.
 grid.Draw(page, new PointF(0, 0));
 
-//Save the PDF document.
-document.Save("Output.pdf");
+//Save the document into the stream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf;
-using System.Drawing;
 
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -4795,12 +4405,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf
-Imports Syncfusion.Drawing
 
 'Creates a new PDF document.
 Dim document As PdfDocument = New PdfDocument()
@@ -4851,9 +4455,6 @@ The following code sample demonstrates how to prevent row breaks across pages in
 
 {% highlight c# tabtitle="C# [Cross-platform]" %} 
 
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf;
-
 // Create a new PDF document
 using (PdfDocument document = new PdfDocument())
 {
@@ -4884,16 +4485,17 @@ using (PdfDocument document = new PdfDocument())
     // Draw the grid on the page
     pdfGrid.Draw(page, new Syncfusion.Drawing.PointF(0, 0));
 
-    //Save the PDF document.
-    document.Save("Output.pdf");
+    //Create file stream.
+    using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
+    {
+        //Save the PDF document to file stream.
+        document.Save(outputFileStream);
+    }
 }
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf;
 
 // Create a new PDF document
 using (PdfDocument document = new PdfDocument())
@@ -4932,9 +4534,6 @@ using (PdfDocument document = new PdfDocument())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Grid
-Imports Syncfusion.Pdf
 
 ' Create a new PDF document
 Using document As New PdfDocument()
@@ -4984,10 +4583,6 @@ The following code sample demonstrates how to change the page margins beginning 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %} 
 
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf;
-using Syncfusion.Drawing;
-
 // Create PDF document with default settings
 PdfDocument document = new PdfDocument();
 
@@ -5027,8 +4622,11 @@ pdfGrid.Draw(page, new RectangleF(0, 0,
     page.GetClientSize().Width,
     page.GetClientSize().Height), format);
 
-//Save the PDF document.
-document.Save("Output.pdf");
+// Generate output file
+using (FileStream stream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
+{
+    document.Save(stream);
+}
 
 // Proper document cleanup
 document.Close(true);
@@ -5036,10 +4634,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Pdf;
-using System.Drawing;
 
 // Create PDF document with default settings
 PdfDocument document = new PdfDocument();
@@ -5090,10 +4684,6 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Pdf.Grid
-Imports Syncfusion.Pdf
-Imports System.Drawing
-
 ' Create PDF document with default settings
 Dim document As New PdfDocument()
 
@@ -5141,4 +4731,4 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Table/PdfGrid/Changing-Margins-from-the-Second-Page-onwards/.NET).
+You can download a complete working sample from GitHub.

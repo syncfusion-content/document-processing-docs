@@ -19,14 +19,14 @@ In the below example, you can add, edit, save, and delete notes.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/note-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/note-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/note-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/note-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/note-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/note-cs1" %}
 
 ## Adding a note
 
@@ -71,14 +71,14 @@ In the below example, the note functionality is disabled in the Spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/note-cs2/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/note-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/note-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/note-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/note-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/note-cs2" %}
 
 ## Integrating notes during initial loading and using cell data binding
 
@@ -86,14 +86,14 @@ The notes can be added initially when the Spreadsheet loads using cell data bind
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/note-cs3/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/note-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/note-cs3/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/note-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/note-cs3" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/note-cs3" %}
 
 ## Limitations
 

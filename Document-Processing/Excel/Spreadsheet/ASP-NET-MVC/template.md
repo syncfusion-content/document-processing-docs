@@ -16,10 +16,10 @@ The following code example describes the above behavior.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/template/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/template/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Template.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/template/template.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/template/template.cs %}
 {% endhighlight %}
 {% endtabs %}
 

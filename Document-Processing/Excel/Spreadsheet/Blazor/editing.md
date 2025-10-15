@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cell Editing in the Blazor Spreadsheet component | Syncfusion
+title: Cell Editing in Blazor Spreadsheet component | Syncfusion
 description: Checkout and learn here about the cell editing features in the Syncfusion Blazor Spreadsheet component and more.
 platform: document-processing
 control: Spreadsheet
@@ -9,7 +9,7 @@ documentation: ug
 
 # Cell editing in the Blazor Spreadsheet component
 
-Cell editing in the Blazor Spreadsheet component enables modification of cell content either directly within the spreadsheet or through the formula bar. This feature is enabled by default and can be controlled using the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowEditing) property. To disable or enable cell editing, set the value of this property accordingly.
+Cell editing in the Blazor Spreadsheet component enables modification of cell content either directly within the spreadsheet or through the formula bar. This feature is enabled by default  but can be disabled by setting the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowEditing) property. To disable or enable cell editing, set the value of this property accordingly.
 
 ## Edit cell
 
@@ -20,7 +20,7 @@ Cell editing can be initiated directly through the UI using any of the following
 - Use the **formula bar** to modify the cell's contents.  
 - Press **BACKSPACE** or **SPACE** to clear the cell and begin editing.
 
-> For additional keyboard shortcuts related to cell editing, refer [here](./accessibility#keyboard-shortcuts).
+> For additional keyboard shortcuts related to cell editing, refer to the [Keyboard Shortcuts](./accessibility#keyboard-shortcuts) documentation.
 
 ## Update cell
 
@@ -44,7 +44,7 @@ If a cell address is incorrectly formatted, refers to a non-existent sheet, or l
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Spreadsheet
-
+@inject HttpClient Http
 <button @onclick="UpdateCell">Update Cell</button>
 
 <SfSpreadsheet @ref=SpreadsheetRef DataSource="DataSourceBytes">
@@ -82,12 +82,12 @@ If a cell address is incorrectly formatted, refers to a non-existent sheet, or l
 
 To exit edit mode without saving changes, press the **ESCAPE** key. This action restores the original content of the cell and cancels any modifications made during editing.
 
-![Cancel Editing](./images/cell-editing.gif)
+![Animation showing a user canceling a cell edit in the Blazor Spreadsheet component.](./images/cell-editing.gif)
 
 ## Cell editing in protected sheet
 
-In a protected sheet, only the unlocked ranges can be edited based on the sheet's protection settings. Attempting to modify a locked range triggers an error message, as shown below:
+In a protected sheet, only unlocked ranges can be edited based on the sheet's protection settings. Attempting to modify a locked range triggers an error message, as shown below:
 
-![Protection Error Dialog](./images/protection-error-dialog.png)
+![Error dialog indicating that a cell is protected and cannot be modified in the Blazor Spreadsheet.](./images/protection-error-dialog.png)
 
-N> For more information on worksheet protection, refer [here](./protection).
+N> For more information on worksheet protection, refer to the [Worksheet Protection](./protection) documentation.

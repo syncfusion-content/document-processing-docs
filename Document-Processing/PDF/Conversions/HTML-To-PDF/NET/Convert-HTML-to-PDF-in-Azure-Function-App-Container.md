@@ -64,7 +64,7 @@ public IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post
         ms = new MemoryStream();
         // Save and close the PDF document  
         document.Save(ms);
-        document.Close(true);
+        document.Close();
     }
     catch (Exception ex)
     {

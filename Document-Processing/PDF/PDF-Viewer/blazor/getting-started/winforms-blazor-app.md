@@ -145,7 +145,7 @@ N> Ensure that the PDF Viewer static assets (themes and scripts) are loaded prop
 Register Syncfusion Blazor services and BlazorWebView in **~/Form1.cs** so that the WinForms window can host Blazor components.
 
 {% tabs %}
-{% highlight c# tabtitle="Form1.cs (WinForms host)" hl_lines="2 3 4 5 8 9 10 11 12 13 14 15 16 17 18 20" %}
+{% highlight c# tabtitle="Form1.cs (WinForms host)" hl_lines="2 3 4 5 9 10 11 12 13 14 15 16 17 18 19 21" %}
 
 namespace WinFormsBlazorHybridApp;
 using Microsoft.AspNetCore.Components.WebView.WindowsForms;

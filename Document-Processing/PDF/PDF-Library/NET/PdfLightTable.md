@@ -24,10 +24,6 @@ The following code sample illustrates how to create a simple table from a data s
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Create-simple-table-from-data-source/.NET/Create-simple-table-from-data-source/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Tables;
-
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
 //Add a page.
@@ -44,20 +40,18 @@ IEnumerable<object> table = data;
 //Assign data source.
 pdfLightTable.DataSource = table;
 //Draw PdfLightTable.
-pdfLightTable.Draw(page, new PointF(0, 0));
+pdfLightTable.Draw(page, new Syncfusion.Drawing.PointF(0, 0));
 
-//Save the PDF document.
-doc.Save("Output.pdf");
+//Create the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the PDF document to stream.
+doc.Save(stream);
 //Close the document.
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Tables;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -87,10 +81,6 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Tables
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -133,10 +123,6 @@ The following code illustrates how to add the data directly into the [PdfLightTa
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Add-the-data-directly-into-the-PDF-table/.NET/Add-the-data-directly-into-the-PDF-table/Program.cs" %} 
 
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Tables;
-using Syncfusion.Pdf;
-
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
 //Add a page.
@@ -158,18 +144,16 @@ pdfLightTable.Rows.Add(new object[] { "111", "Maxim", "III" });
 //Draw the PdfLightTable.
 pdfLightTable.Draw(page, Syncfusion.Drawing.PointF.Empty);
 
-//Save the PDF document.
-doc.Save("Output.pdf");
+//Creating the stream object
+MemoryStream stream = new MemoryStream();
+//Save the PDF document to stream.
+doc.Save(stream);
 //Close the document.
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Tables;
-using Syncfusion.Pdf;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -200,10 +184,6 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Tables
-Imports Syncfusion.Pdf
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -245,13 +225,10 @@ Create a table using the [PdfLightTable](https://help.syncfusion.com/cr/document
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Creating-the-table-in-an-existing-PDF-document/.NET/Creating-the-table-in-an-existing-PDF-document/Program.cs" %} 
 
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Parsing;
-using Syncfusion.Pdf.Tables;
-using Syncfusion.Pdf;
-
+//Get stream from an existing PDF document. 
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
 //Load the PDF document. 
-PdfLoadedDocument doc = new PdfLoadedDocument("Input.pdf");
+PdfLoadedDocument doc = new PdfLoadedDocument(docStream);
 //Get the first page from the document
 PdfLoadedPage page = doc.Pages[0] as PdfLoadedPage;
 //Create PDF graphics for the page
@@ -271,19 +248,16 @@ pdfLightTable.DataSource = table;
 //Draw PdfLightTable.
 pdfLightTable.Draw(graphics, new Syncfusion.Drawing.PointF(0, 0));
 
-//Save the PDF document.
-doc.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the PDF document to stream.
+doc.Save(stream);
 //Close the document.
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Parsing;
-using Syncfusion.Pdf.Tables;
-using Syncfusion.Pdf;
 
 //Load a PDF document.
 PdfLoadedDocument doc = new PdfLoadedDocument("input.pdf");
@@ -315,11 +289,6 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
-Imports Syncfusion.Pdf.Tables
-Imports Syncfusion.Pdf
 
 'Load a PDF document.
 Dim doc As New PdfLoadedDocument("input.pdf")
@@ -363,10 +332,6 @@ The following code sample illustrates how to customize the cell properties in ``
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Customize-the-table-cell-in-PDF-document/.NET/Customize-the-table-cell-in-PDF-document/Program.cs" %} 
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Tables;
-
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
 //Add a page.
@@ -400,18 +365,16 @@ pdfLightTable.Style.ShowHeader = true;
 //Draw the PdfLightTable.
 pdfLightTable.Draw(page, Syncfusion.Drawing.PointF.Empty);
 
-//Save the PDF document.
-doc.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the PDF document to stream.
+doc.Save(stream);
 //Close the document.
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Tables;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -455,10 +418,6 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Graphics
-Imports System.Data.Common
-Imports Syncfusion.Pdf.Tables
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -514,10 +473,6 @@ The following code example illustrates how to draw the graphics elements in the 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Draw-graphics-element-in-particular-cell/.NET/Draw-graphics-element-in-particular-cell/Program.cs" %} 
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Tables;
-
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
 //Add a page.
@@ -543,8 +498,10 @@ pdfLightTable.Style.ShowHeader = true;
 //Draw the PdfLightTable.
 pdfLightTable.Draw(page, Syncfusion.Drawing.PointF.Empty);
 
-//Save the PDF document.
-doc.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the PDF document to stream.
+doc.Save(stream);
 //Close the document.
 doc.Close(true);
 
@@ -568,10 +525,6 @@ private void pdfLightTable_BeginCellLayout(object sender, BeginCellLayoutEventAr
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Tables;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -621,10 +574,6 @@ private void pdfLightTable_BeginCellLayout(object sender, BeginCellLayoutEventAr
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Tables
-Imports Syncfusion.Pdf
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -683,9 +632,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Row-customization-of-the-table-in-PDF-document/.NET/Row-customization-of-the-table-in-PDF-document/Program.cs" %} 
 
-using Syncfusion.Pdf.Tables;
-using Syncfusion.Pdf;
-
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
 //Add a page.
@@ -711,8 +657,10 @@ pdfLightTable.EndRowLayout += pdfLightTable_EndRowLayout;
 //Draw the PdfLightTable.
 pdfLightTable.Draw(page, Syncfusion.Drawing.PointF.Empty);
 
-//Save the PDF document.
-doc.Save("Output.pdf");
+//Create the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the PDF document to the stream.
+doc.Save(stream);
 //Close the document.
 doc.Close(true);
 
@@ -741,9 +689,6 @@ private void pdfLightTable_BeginRowLayout(object sender, BeginRowLayoutEventArgs
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Tables;
-using Syncfusion.Pdf;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -806,9 +751,6 @@ private void pdfLightTable_BeginRowLayout(object sender, BeginRowLayoutEventArgs
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Tables
-Imports Syncfusion.Pdf
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -873,10 +815,6 @@ The following code sample illustrates how to customize the column in [PdfLightTa
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Column-customization-of-the-table-in-PDF-document/.NET/Column-customization-of-the-table-in-PDF-document/Program.cs" %} 
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Tables;
-
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
 //Add a page
@@ -909,18 +847,16 @@ pdfLightTable.Style.ShowHeader = true;
 //Draw the PdfLightTable.
 pdfLightTable.Draw(page, Syncfusion.Drawing.PointF.Empty);
 
-//Save the PDF document.
-doc.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the PDF document to the stream.
+doc.Save(stream);
 //Close the document.
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Tables;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -962,10 +898,6 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Tables
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -1020,10 +952,6 @@ The following code sample illustrates how to customize the table using [PdfLight
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Customize-the-table-in-a-PDF-document/.NET/Customize-the-table-in-a-PDF-document/Program.cs" %} 
 
-using Syncfusion.Pdf.Tables;
-using Syncfusion.Pdf;
-using Syncfusion.Drawing;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page.
@@ -1055,17 +983,15 @@ pdfLightTable.Style = lightTableStyle;
 //Draw PdfLightTable.
 pdfLightTable.Draw(page, new PointF(0, 0));
 
-//Save the PDF document.
-document.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the document as a stream.
+document.Save(stream);
 //Close the document.
 document.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Tables;
-using Syncfusion.Pdf;
-using Syncfusion.Drawing;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1108,10 +1034,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Tables
-Imports Syncfusion.Pdf
-Imports Syncfusion.Drawing
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -1174,11 +1096,6 @@ The following code example illustrates how to apply built-in table style using [
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Create-table-with-built-in-style/.NET/Create-table-with-built-in-style/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Tables;
-using System.Data;
-
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
 //Add a page.
@@ -1208,19 +1125,16 @@ pdfLightTable.ApplyBuiltinStyle(PdfLightTableBuiltinStyle.GridTable4Accent2);
 //Draw the grid to the page of a PDF document.
 pdfLightTable.Draw(page, new Syncfusion.Drawing.PointF(10, 10));
 
-//Save the PDF document.
-doc.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the document as a stream.
+doc.Save(stream);
 //Close the document.
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Tables;
-using System.Data;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -1255,11 +1169,6 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Tables
-Imports System.Data
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -1310,10 +1219,6 @@ The following sample illustrates how to allow the ``PdfLightTable`` to flow acro
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Paginate-table-in-a-PDF-document/.NET/Paginate-table-in-a-PDF-document/Program.cs" %} 
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Tables;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page.
@@ -1338,17 +1243,15 @@ layoutFormat.Layout = PdfLayoutType.Paginate;
 //Draw PdfLightTable.
 pdfLightTable.Draw(page, new Syncfusion.Drawing.PointF(0, 0), layoutFormat);
 
-//Save the PDF document.
-doc.Save("Output.pdf");
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the document as a stream.
+document.Save(stream);
 //Close the document.
 document.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Tables;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1384,10 +1287,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
-Imports Syncfusion.Pdf.Tables
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -1437,11 +1336,6 @@ The following code sample explains how to add string formatting for the whole ta
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Add-string-formatting-for-whole-table-in-a-PDF/.NET/Add-string-formatting-for-whole-table-in-a-PDF/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Tables;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add page to the document.
@@ -1475,19 +1369,14 @@ for (int i = 0; i < lightTable.Columns.Count; i++)
 //Draw the PdfLightTable on the page.
 lightTable.Draw(page, new PointF(10, 10));
 
-//Save the PDF document.
-document.Save("Output.pdf");
-//Close the document
+//Save a PDF to the MemoryStream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Tables;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1529,11 +1418,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
-Imports Syncfusion.Pdf.Tables
-Imports System.Drawing
 
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument
@@ -1586,11 +1470,6 @@ The following code sample explains how to add string formatting to a column in t
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Add-string-formatting-to-a-column-in-table/.NET/Add-string-formatting-to-a-column-in-table/Program.cs" %} 
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Tables;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add page to the document.
@@ -1621,19 +1500,14 @@ lightTable.Columns[1].StringFormat = stringFormat;
 //Draw the PdfLightTable on the page.
 lightTable.Draw(page, new PointF(10, 10));
 
-//Save the PDF document.
-document.Save("Output.pdf");
-//Close the PDF document
+//Save the PDF to the MemoryStream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Tables;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1672,11 +1546,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
-Imports Syncfusion.Pdf.Tables
-Imports System.Drawing
 
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument

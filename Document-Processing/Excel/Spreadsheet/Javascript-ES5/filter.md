@@ -39,14 +39,14 @@ The following code example shows `filter` functionality in the Spreadsheet contr
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/filter-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/filter-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/filter-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/filter-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/filter-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/filter-cs1" %}
 
 ## Filter by cell value
 
@@ -89,14 +89,14 @@ The following code example shows how to get the filtered rows.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/filter-cs2/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/filter-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/filter-cs2/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/filter-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/filter-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/filter-cs2" %}
 
 ## Limitations
 

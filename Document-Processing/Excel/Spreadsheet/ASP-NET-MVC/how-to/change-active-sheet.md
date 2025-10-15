@@ -15,9 +15,9 @@ The following code example shows how to set the active sheet when importing an E
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/change-active-sheet/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/change-active-sheet/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="OpenController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/change-active-sheet/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/change-active-sheet/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}

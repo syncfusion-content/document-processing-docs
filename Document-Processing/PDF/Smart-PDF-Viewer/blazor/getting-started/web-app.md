@@ -79,7 +79,7 @@ When using the `Server` render mode in a Blazor Web App, install the Syncfusion<
 
 * Press Ctrl+` to open the integrated terminal in Visual Studio Code.
 * Ensure the current directory contains the project `.csproj` file.
-* Run the following commands to install `Syncfusion.Blazor.SfSmartPdfViewer` and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), then restore the solution.
+* Run the following commands to install [Syncfusion.Blazor.SfSmartPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfSmartPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), then restore the solution.
 
 {% tabs %}
 {% highlight c# tabtitle="Package Manager" %}
@@ -286,7 +286,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 
 {% tabs %}
-{% highlight html hl_lines="3 7" %}
+{% highlight html hl_lines="4 9" %}
 
 <head>
     ....

@@ -25,20 +25,20 @@ Refer to the following code example for local data binding.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/local-data-binding-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/local-data-binding-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/local-data-binding-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/local-data-binding-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/local-data-binding-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/local-data-binding-cs1" %}
 
 > The local data source can also be provided as an instance of the [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started). By default, [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) uses **JsonAdaptor** for local data-binding.
 
@@ -52,14 +52,14 @@ The following code example demonstrates how to customize the mapping of column d
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/field-mapping-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/field-mapping-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/field-mapping-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/field-mapping-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/field-mapping-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/field-mapping-cs1" %}
 
 ## Remote data
 
@@ -69,20 +69,20 @@ Refer to the following code example for remote data binding.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/remote-data-binding-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/remote-data-binding-cs1" %}
 
 > By default, `DataManager` uses **ODataAdaptor** for remote data-binding.
 
@@ -92,20 +92,20 @@ Refer to the following code example for remote data binding.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs2/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs2/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs2/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs2/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs2/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/remote-data-binding-cs2" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/remote-data-binding-cs2" %}
 
 ### Web API
 
@@ -113,20 +113,20 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs3/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs3/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs3/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs3/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs3/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/remote-data-binding-cs3/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/remote-data-binding-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/remote-data-binding-cs3" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/remote-data-binding-cs3" %}
 
 ## Cell data binding
 
@@ -136,20 +136,20 @@ Refer to the following code example for cell data binding.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/cell-data-binding-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/cell-data-binding-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/cell-data-binding-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/cell-data-binding-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/cell-data-binding-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/cell-data-binding-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/cell-data-binding-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/cell-data-binding-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/cell-data-binding-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/cell-data-binding-cs1" %}
 
 > The cell data binding also supports formula, style, number format, and more.
 
@@ -171,20 +171,20 @@ The following table defines the arguments of the `dataSourceChanged` event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/dynamic-data-binding-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/dynamic-data-binding-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/dynamic-data-binding-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/dynamic-data-binding-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/dynamic-data-binding-cs1" %}
 
 ## Dynamic data binding using updateRange method
 
@@ -196,20 +196,20 @@ The following code example demonstrates how to dynamically update data using the
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs2/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/dynamic-data-binding-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs2/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/dynamic-data-binding-cs2/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs2/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/dynamic-data-binding-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs2/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/dynamic-data-binding-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/dynamic-data-binding-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/dynamic-data-binding-cs2" %}
 
 ## Note
 

@@ -21,10 +21,6 @@ You can add a popup annotation to the page using [PdfPopupAnnotation](https://he
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-popup-annotation-to-the-PDF-document/.NET/Add-a-popup-annotation-to-the-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
 //Creates a new page .
@@ -42,18 +38,15 @@ popupAnnotation.Icon = PdfPopupIcon.NewParagraph;
 //Adds this annotation to the created page.
 page.Annotations.Add(popupAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Closes the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -79,10 +72,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
 
 'Creates a new PDF document.
 Dim document As New PdfDocument()
@@ -116,13 +105,9 @@ To add [PdfPopupAnnotation](https://help.syncfusion.com/cr/document-processing/S
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-popup-annotation-to-an-existing-PDF-document/.NET/Add-a-popup-annotation-to-an-existing-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument document = new PdfLoadedDocument(docStream);
 //Creates a rectangle
 RectangleF rectangle = new RectangleF(10, 40, 30, 30);
 
@@ -136,19 +121,15 @@ popupAnnotation.Icon = PdfPopupIcon.NewParagraph;
 //Adds the annotation to loaded page
 document.Pages[0].Annotations.Add(popupAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Closes the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
 
 //Creates a new PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("input.pdf");
@@ -172,11 +153,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.
-Imports Syncfusion.Pdf.Parsing
 
 'Creates a new PDF document.
 Dim document As New PdfLoadedDocument("input.pdf")
@@ -212,17 +188,14 @@ You can add a 3D annotation in PDF document using [Pdf3DAnnotation](https://help
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-3D-annotation-in-PDF-document/.NET/Add-a-3D-annotation-in-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
 //Creates a new page
 PdfPage page = document.Pages.Add();
+FileStream inputStream = new FileStream("3DAnnotation.U3D", FileMode.Open, FileAccess.Read);
 
 //Creates a new pdf 3d annotation.
-Pdf3DAnnotation pdf3dAnnotation = new Pdf3DAnnotation(new RectangleF(10, 50, 300, 150), "3DAnnotation.U3D");
+Pdf3DAnnotation pdf3dAnnotation = new Pdf3DAnnotation(new RectangleF(10, 50, 300, 150), inputStream);
 //Handles the activation of the 3d annotation
 Pdf3DActivation activation = new Pdf3DActivation();
 activation.ActivationMode = Pdf3DActivationMode.ExplicitActivation;
@@ -231,18 +204,15 @@ pdf3dAnnotation.Activation = activation;
 //Adds annotation to page
 page.Annotations.Add(pdf3dAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Closes the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -266,10 +236,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
 
 'Creates a new PDF document.
 Dim document As New PdfDocument()
@@ -302,34 +268,28 @@ You can add the JavaScript script to the 3D annotation using the [OnInstantiate]
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-the-JavaScript-script-to-the-3D-annotation-in-a-PDF/.NET/Add-the-JavaScript-script-to-the-3D-annotation-in-a-PDF/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
 //Creates a new page
 PdfPage page = document.Pages.Add();
+FileStream inputStream = new FileStream("3DAnnotation.U3D", FileMode.Open, FileAccess.Read);
 
 //Creates a new PDF 3D annotation
-Pdf3DAnnotation pdf3dAnnotation = new Pdf3DAnnotation(new RectangleF(10, 50, 300, 150), "3DAnnotation.U3D");
+Pdf3DAnnotation pdf3dAnnotation = new Pdf3DAnnotation(new RectangleF(10, 50, 300, 150), inputStream);
 //Assign JavaScript script
 pdf3dAnnotation.OnInstantiate = "host.getURL(\"http://www.google.com\")";
 //Adds annotation to page
 page.Annotations.Add(pdf3dAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Closes the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -351,10 +311,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
 
 'Creates a new PDF document
 Dim document As New PdfDocument()
@@ -393,10 +349,6 @@ The following code example explains how to add a file link annotation in PDF.
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -416,10 +368,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
 
 'Creates a new PDF document
 Dim document As New PdfDocument()
@@ -458,14 +406,9 @@ The following code examples explain how to add a rich media annotation in a PDF 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-rich-media-annotation-to-PDF-document/.NET/Add-rich-media-annotation-to-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
-//Load the PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Load the PDF document.
+FileStream inputStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream);
 //Get the page. 
 PdfLoadedPage lpage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -483,20 +426,15 @@ richMediaAnnotation.Appearance.Normal.Graphics.DrawString("Click here to play vi
 //Add the annotation to the page. 
 lpage.Annotations.Add(richMediaAnnotation);
 
-//Save the document
-loadedDocument.Save("Output.pdf");
+//Save the document into the stream.
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
 //Close the document. 
 loadedDocument.Close(true); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -523,12 +461,6 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document.
  Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -565,11 +497,6 @@ The following code example explains how to add a free text annotation in the PDF
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-free-text-annotation-in-the-PDF-document/.NET/Add-a-free-text-annotation-in-the-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Creates a new pdf document
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -593,19 +520,15 @@ freeText.CalloutLines = points;
 //Adds the annotation to page
 page.Annotations.Add(freeText);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Closes the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Creates a new pdf document
 PdfDocument document = new PdfDocument();
@@ -637,11 +560,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Creates a new pdf document
 Dim document As New PdfDocument()
@@ -684,11 +602,6 @@ Line annotation displays a single straight line on the page. When you open it, i
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-line-annotation-to-the-PDF-document/.NET/Add-line-annotation-to-the-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -720,19 +633,15 @@ lineAnnotation.CaptionType = PdfLineCaptionType.Inline;
 //Adds this annotation to a new page.
 page.Annotations.Add(lineAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Closes the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -772,11 +681,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Creates a new PDF document.
 Dim document As New PdfDocument()
@@ -830,11 +734,6 @@ When opened, it displays a pop-up window containing the text of the associated n
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-rubberstamp-annotation-to-the-PDF-document/.NET/Add-rubberstamp-annotation-to-the-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -848,19 +747,15 @@ rubberStampAnnotation.Text = "Text Properties Rubber Stamp Annotation";
 //Adds annotation to the page
 page.Annotations.Add(rubberStampAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Closes the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -882,11 +777,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Creates a new PDF document.
 Dim document As New PdfDocument()
@@ -922,11 +812,6 @@ When you open it, it displays a pop-up window containing text of the associated 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-ink-annotation-to-the-PDF-document/.NET/Add-ink-annotation-to-the-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -940,19 +825,15 @@ inkAnnotation.Color = new PdfColor(Color.Red);
 //Adds annotation to the page
 page.Annotations.Add(inkAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Closes the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -974,11 +855,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Creates a new PDF document.
 Dim document As New PdfDocument()
@@ -1009,14 +885,9 @@ You can get ink list points from the [PdfLoadedInkAnnotation](https://help.syncf
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Get-the-ink-list-points-from-the-existing-PDF-document/.NET/Get-the-ink-list-points-from-the-existing-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
 //Gets the first page from the document
 PdfLoadedPage page = lDoc.Pages[0] as PdfLoadedPage;
 //Gets the annotation collection
@@ -1027,20 +898,16 @@ PdfLoadedInkAnnotation inkAnnotation = annotations[0] as PdfLoadedInkAnnotation;
 //Gets the ink points collection
 List<List<float>> points = inkAnnotation.InkPointsCollection;
 
-//Save the document
-lDoc.Save("Output.pdf");
+//Creating the stream object
+MemoryStream stream = new MemoryStream();
+//Save the document as stream
+lDoc.Save(stream);
 //Close the document
 lDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
 
 //Loads the document
 PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
@@ -1062,12 +929,6 @@ lDoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
 
 'Loads the document
 Dim lDoc As New PdfLoadedDocument("Input.pdf")
@@ -1103,11 +964,6 @@ It typically does not appear alone, but is associated with markup annotation, it
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-popup-annotation-to-the-PDF-document/.NET/Add-a-popup-annotation-to-the-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Create new PDF document
 PdfDocument document = new PdfDocument();
 //Create a new PDF page
@@ -1125,19 +981,15 @@ popupAnnotation.Icon = PdfPopupIcon.NewParagraph;
 //Adds this annotation to a new page.
 page.Annotations.Add(popupAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Closes the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Create new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1163,11 +1015,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Creates a new PDF document.
 Dim document As New PdfDocument()
@@ -1204,11 +1051,6 @@ File attachment annotation contains reference to a file that typically is embedd
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-file-attachment-annotation-in-a-PDF-document/.NET/Add-file-attachment-annotation-in-a-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Creates a new PDF Document.
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -1225,19 +1067,15 @@ attachmentAnnotation.Icon = PdfAttachmentIcon.PushPin;
 //Adds this annotation to a new page.
 page.Annotations.Add(attachmentAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Closes the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF Document.
 PdfDocument document = new PdfDocument();
@@ -1260,11 +1098,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Creates a new PDF Document.
 Dim document As New PdfDocument()
@@ -1298,11 +1131,6 @@ The following code example explains how to add a sound annotation in a PDF docum
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-sound-annotation-in-a-PDF-document/.NET/Add-a-sound-annotation-in-a-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -1322,19 +1150,15 @@ soundAnnotation.Icon = PdfSoundIcon.Speaker;
 //Adds this annotation to a new page.
 page.Annotations.Add(soundAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Closes the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1360,11 +1184,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Creates a new PDF document
 Dim document As New PdfDocument()
@@ -1402,11 +1221,6 @@ The following code example explains how to add URI annotation in a PDF document 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-URI-annotation-in-a-PDF-document/.NET/Add-URI-annotation-in-a-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -1421,19 +1235,15 @@ uriAnnotation.Text = "Uri Annotation";
 //Adds this annotation to a new page
 page.Annotations.Add(uriAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Closes the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1456,11 +1266,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Creates a new PDF document
 Dim document As New PdfDocument()
@@ -1494,11 +1299,6 @@ This annotation is used to navigate to a specific destination within the documen
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-document-link-annotation-in-PDF-document/.NET/Add-a-document-link-annotation-in-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -1520,19 +1320,15 @@ documentLinkAnnotation.Destination.Zoom = 5;
 //Adds this annotation to a new page.
 page.Annotations.Add(documentLinkAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Closes the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1562,11 +1358,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Creates a new PDF document
 Dim document As New PdfDocument()
@@ -1606,11 +1397,6 @@ The essential<sup>&reg;</sup> PDF supports removing or redacting the sensitive t
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Removing-the-sensitive-text-and-images-from-PDF-document/.NET/Removing-the-sensitive-text-and-images-from-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();			
 //Create a new page.		
@@ -1638,19 +1424,15 @@ annot.SetAppearance(true);
 //Add the annotation to the page.
 page.Annotations.Add(annot);
 			
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream.		
+MemoryStream stream = new MemoryStream();		
+document.Save(stream);
 //Close the document. 	
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1688,11 +1470,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document.     
 Dim document As PdfDocument = New PdfDocument()
@@ -1742,14 +1519,9 @@ The following code example explains how to add a watermark annotation in the PDF
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-watermark-annotation-in-the-PDF-document/.NET/Add-watermark-annotation-in-the-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 //Get the page 
 PdfLoadedPage lpage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -1762,20 +1534,15 @@ watermark.Appearance.Normal.Graphics.DrawString("Watermark Text", new PdfStandar
 //Adds the annotation to page 
 lpage.Annotations.Add(watermark);
 
-//Save the document
-loadedDocument.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
 //Close the document 
 loadedDocument.Close(true); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -1798,12 +1565,6 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
  Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -1836,11 +1597,6 @@ You can highlight the Markup Text using the [PdfTextMarkupAnnotationType](https:
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Highlight-text-in-the-newly-created-PDF-document/.NET/Highlight-text-in-the-newly-created-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Create a new page.
@@ -1863,19 +1619,14 @@ markupAnnotation.TextMarkupAnnotationType = PdfTextMarkupAnnotationType.Highligh
 //Add this annotation to a new page.
 page.Annotations.Add(markupAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document to disk.
+Save(document, "Output.pdf");
 //close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1908,12 +1659,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
-
 'Create a new PDF document.
 Dim document As New PdfDocument()
 'Create a new page.
@@ -1958,11 +1703,6 @@ The following code sample explains how to add cloud border styled rectangle anno
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-cloud-border-styled-rectangle-annotation-in-the-PDF/.NET/Add-cloud-border-styled-rectangle-annotation-in-the-PDF/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Create a new page
@@ -1987,19 +1727,15 @@ annotation.BorderEffect = bordereffect;
 // Adds the annotation to the page.
 page.Annotations.Add(annotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream 
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Close the document 
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument ();
@@ -2033,11 +1769,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document.
 Dim document As PdfDocument = New PdfDocument()
@@ -2081,11 +1812,6 @@ The following code sample explains how to add cloud border styled polygon annota
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-cloud-border-styled-polygon-annotation-in-the-PDF/.NET/Add-a-cloud-border-styled-polygon-annotation-in-the-PDF/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Create a new page
@@ -2112,19 +1838,15 @@ annotation.BorderEffect = bordereffect;
 //Add the annotation to the page.
 page.Annotations.Add(annotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream 
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Close the document 
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2160,11 +1882,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Create a New PDF document.
 Dim document As PdfDocument = New PdfDocument()
@@ -2210,11 +1927,6 @@ Cloud border style can be added to the [PdfCircleAnnotation](https://help.syncfu
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Annotation/Add-cloud-border-styled-circle-annotation-in-the-PDF/.NET/Add-cloud-border-styled-circle-annotation-in-the-PDF/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Add a new page
@@ -2239,19 +1951,15 @@ annotation.BorderEffect = bordereffect;
 annotation.SetAppearance(true);
 //Adds the annotation to the page
 page.Annotations.Add(annotation);
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream 
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Close the document 
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2285,11 +1993,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument()
@@ -2333,11 +2036,6 @@ Cloud border style can be added to the [PdfEllipseAnnotation](https://help.syncf
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Annotation/Add-cloud-border-styled-ellipse-annotation-in-the-PDF/.NET/Add-cloud-border-styled-ellipse-annotation-in-the-PDF/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Add a new page
@@ -2362,19 +2060,15 @@ annotation.BorderEffect = bordereffect;
 annotation.SetAppearance(true);
 // Adds the annotation to the page.
 page.Annotations.Add(annotation);
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream 
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Close the document 
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2408,11 +2102,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument()
@@ -2464,11 +2153,6 @@ The line measurement annotation is displayed as the straight line in the page. T
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-line-measurement-annotation-to-the-PDF-document/.NET/Add-a-line-measurement-annotation-to-the-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -2493,19 +2177,17 @@ lineMeasureAnnotation.Font = font;
 lineMeasureAnnotation.Color = new PdfColor(Syncfusion.Drawing.Color.Red);
 //Adds the line measurement annotation to a new page
 page.Annotations.Add(lineMeasureAnnotation);
-//Save the document
-document.Save("Output.pdf");
+MemoryStream stream = new MemoryStream();
+
+//Save the PDF document to stream
+document.Save(stream);
+stream.Position=0;
 //Close the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF document.
 PdfDocument document= new PdfDocument();
@@ -2540,11 +2222,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 //Creates a new PDF document
 Dim document As PdfDocument = New PdfDocument
@@ -2592,11 +2269,6 @@ The square measurement annotation is displayed as square shape in the page. The 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-square-measurement-annotation-to-PDF-document/.NET/Add-a-square-measurement-annotation-to-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -2616,19 +2288,16 @@ squareMeasureAnnotation.Unit = PdfMeasurementUnit.Centimeter;
 //Adds the square measurement annotation to a page
 page.Annotations.Add(squareMeasureAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+stream.Position=0;
 //Close the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF document
 PdfDocument document= new PdfDocument();
@@ -2657,11 +2326,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Creates a new PDF document
 Dim document As New PdfDocument()
@@ -2703,11 +2367,6 @@ The circle measurement annotation is displayed as circle shape in the page. The 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-circle-measurement-annotation-to-the-PDF-document/.NET/Add-a-circle-measurement-annotation-to-the-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -2729,19 +2388,15 @@ circleMeasureAnnotation.MeasurementType = PdfCircleMeasurementType.Diameter;
 //Adds the circle measurement annotation to a page
 page.Annotations.Add(circleMeasureAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Close the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2772,11 +2427,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Creates a new PDF document
 Dim document As New PdfDocument()
@@ -2826,11 +2476,6 @@ The angle measurement annotation calculates the angle between three points and d
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -2853,11 +2498,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 'Creates a new PDF document
 Dim document As New PdfDocument()
@@ -2891,14 +2531,9 @@ Essential<sup>&reg;</sup> PDF allows you to modify the annotation of existing do
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Modifying-annotation-of-existing-PDF-document/.NET/Modifying-annotation-of-existing-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("inputAnnotation.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
 //Gets the first page from the document
 PdfLoadedPage page = lDoc.Pages[0] as PdfLoadedPage;
 //Gets the annotation collection
@@ -2913,20 +2548,15 @@ popUp.Text = "Modified annotation";
 // Update the appearance so the new content is visible
 popUp.SetAppearance(true);  
 
-//Save the document
-lDoc.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+lDoc.Save(stream);
 //Closes the document
 lDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
 
 //Loads the document
 PdfLoadedDocument lDoc = new PdfLoadedDocument("inputAnnotation.pdf");
@@ -2951,12 +2581,6 @@ lDoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
 
 'Loads the document
 Dim lDoc As New PdfLoadedDocument("inputAnnotation.pdf")
@@ -2995,14 +2619,9 @@ The following code sample explains this.
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Modify-the-redaction-annotation-in-PDF-document/.NET/Modify-the-redaction-annotation-in-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document 
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("input.pdf", FileMode.Open,FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 foreach (PdfAnnotation annot in loadedDocument.Pages[0].Annotations)
 {
 //Check for the Redaction annotation
@@ -3029,20 +2648,15 @@ redactAnnot.Flatten = true;
 }
 loadedDocument.Redact();
 
-//Save the document
-loadedDocument.Save("Output.pdf"); 
+//Save the document into stream 
+MemoryStream stream = new MemoryStream(); 
+loadedDocument.Save(stream); 
 //Close the document 
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document
 PdfLoadedDocument ldoc = new PdfLoadedDocument("input.pdf");
@@ -3079,12 +2693,6 @@ ldoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
 Dim ldoc As PdfLoadedDocument = New PdfLoadedDocument("output.pdf")	
@@ -3136,25 +2744,22 @@ The following code example demonstrates how to retrieve the annotation type from
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Get-annotation-type-from-pdf/.NET/Get-annotation-type-from-pdf/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 // Load the PDF document using a file stream
-using (PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf"))
+using (FileStream inputStream = new FileStream(@"Data/Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Get the pages of the PDF file
-    for (int i = 0; i < document.PageCount; i++)
+    using (PdfLoadedDocument document = new PdfLoadedDocument(inputStream))
     {
-        Console.WriteLine("Page Number: " + i);
-        PdfLoadedPage page = document.Pages[i] as PdfLoadedPage;
-
-        //Get the annotation type.
-        foreach (PdfLoadedAnnotation annotation in page.Annotations)
+        //Get the pages of the PDF file
+        for (int i = 0; i < document.PageCount; i++)
         {
-            Console.WriteLine("Annotation Type: " + annotation.Type.ToString());
+            Console.WriteLine("Page Number: " + i);
+            PdfLoadedPage page = document.Pages[i] as PdfLoadedPage;
+
+            //Get the annotation type.
+            foreach (PdfLoadedAnnotation annotation in page.Annotations)
+            {
+                Console.WriteLine("Annotation Type: " + annotation.Type.ToString());
+            }
         }
     }
 }
@@ -3162,39 +2767,27 @@ using (PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf"))
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
-// Load the PDF document using a file stream
-using (PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf"))
-{
-    //Get the pages of the PDF file
-    for (int i = 0; i < document.PageCount; i++)
+     
+    //Load the PDF document
+    using (PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf"))
     {
-        Console.WriteLine("Page Number: " + i);
-        PdfLoadedPage page = document.Pages[i] as PdfLoadedPage;
-
-        //Get the annotation type.
-        foreach (PdfLoadedAnnotation annotation in page.Annotations)
+        //Get the pages of the PDF file
+        for (int i = 0; i < document.PageCount; i++)
         {
-            Console.WriteLine("Annotation Type: " + annotation.Type.ToString());
+            Console.WriteLine("Page Number: " + i);
+            PdfLoadedPage page = document.Pages[i] as PdfLoadedPage;
+
+            //Get the annotation type.
+            foreach (PdfLoadedAnnotation annotation in page.Annotations)
+            {
+                Console.WriteLine("Annotation Type: " + annotation.Type.ToString());
+            }
         }
     }
-}
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
 
 Using document As New PdfLoadedDocument("Input.pdf")
     ' Iterate through the pages of the PDF file
@@ -3226,61 +2819,45 @@ The [CreationDate](https://help.syncfusion.com/cr/document-processing/Syncfusion
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Get-annotation-creation-date-from-PDF/.NET/Get-annotation-creation-date-from-pdf/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 // Load the PDF document
-using (PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf"))
+using (FileStream inputStream = new FileStream(@"Data/Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Get the first page from the document
-    PdfLoadedPage firstPage = document.Pages[0] as PdfLoadedPage;
+    using (PdfLoadedDocument document = new PdfLoadedDocument(inputStream))
+    {
+        //Get the first page from the document
+        PdfLoadedPage firstPage = document.Pages[0] as PdfLoadedPage;
 
-    //Get the annotation on that page
-    PdfLoadedAnnotation annotation = firstPage.Annotations[0] as PdfLoadedAnnotation;
+        //Get the annotation on that page
+        PdfLoadedAnnotation annotation = firstPage.Annotations[0] as PdfLoadedAnnotation;
 
-    //Get the annotation creation date.
-    DateTime creationDate = annotation.CreationDate;
+        //Get the annotation creation date.
+        DateTime creationDate = annotation.CreationDate;
 
-    Console.WriteLine("Annotation Creation Date: " + creationDate);
+        Console.WriteLine("Annotation Creation Date: " + creationDate);
+    }
 }
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
+    using (PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf"))
+    {
+        //Get the first page from the document
+        PdfLoadedPage firstPage = document.Pages[0] as PdfLoadedPage;
 
-// Load the PDF document
-using (PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf"))
-{
-    //Get the first page from the document
-    PdfLoadedPage firstPage = document.Pages[0] as PdfLoadedPage;
+        //Get the annotation on that page
+        PdfLoadedAnnotation annotation = firstPage.Annotations[0] as PdfLoadedAnnotation;
 
-    //Get the annotation on that page
-    PdfLoadedAnnotation annotation = firstPage.Annotations[0] as PdfLoadedAnnotation;
+        //Get the annotation creation date.
+        DateTime creationDate = annotation.CreationDate;
 
-    //Get the annotation creation date.
-    DateTime creationDate = annotation.CreationDate;
-
-    Console.WriteLine("Annotation Creation Date: " + creationDate);
-}
+        Console.WriteLine("Annotation Creation Date: " + creationDate);
+    }
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
 
 ' Load the PDF document
 Using document As New PdfLoadedDocument("Input.pdf")
@@ -3319,14 +2896,9 @@ Refer to the code snippet below to retrieve a custom value from an annotation us
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
-// Load the PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+// Load the PDF document using a file stream
+FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 
 // Get the first page of the document
 PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
@@ -3360,12 +2932,6 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
 
 // Load the PDF document using a file stream
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -3403,14 +2969,9 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
-
-' Load the PDF document
-Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+' Load the PDF document using a file stream
+Dim docStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+Dim loadedDocument As New PdfLoadedDocument(docStream)
 
 ' Get the first page of the document
 Dim page As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
@@ -3452,11 +3013,9 @@ You can remove the annotation from the annotation collection, represented by the
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Removing-annotations-from-an-existing-PDF-document/.NET/Removing-annotations-from-an-existing-PDF-document/Program.cs" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("inputAnnotation.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
 //Gets the first page of the document
 PdfLoadedPage page = lDoc.Pages[0] as PdfLoadedPage;
 //Gets the annotation collection
@@ -3464,17 +3023,15 @@ PdfLoadedAnnotationCollection annotations = page.Annotations;
 //Removes the first annotation
 annotations.RemoveAt(0);
 
-//Save the document
-lDoc.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+lDoc.Save(stream);
 //Closes the document
 lDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
 
 //Loads the document
 PdfLoadedDocument lDoc = new PdfLoadedDocument("inputAnnotation.pdf");
@@ -3491,9 +3048,6 @@ lDoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
 
 'Loads the document
 Dim lDoc As New PdfLoadedDocument("inputAnnotation.pdf")
@@ -3522,11 +3076,9 @@ This can be achieved by enabling the [Flatten](https://help.syncfusion.com/cr/do
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-the-annotations-in-an-existing-PDF-document/.NET/Flatten-the-annotations-in-an-existing-PDF-document/Program.cs" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 //Get all the pages
 foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
 {
@@ -3534,17 +3086,15 @@ foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
     loadedPage.Annotations.Flatten = true;
 }
 
-//Save the document
-loadedDocument.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
 //Closes the document
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -3562,10 +3112,6 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -3590,11 +3136,9 @@ To flatten the specific annotation in the PDF document, use the below code examp
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-the-specific-annotaiton-in-the-PDF-document/.NET/Flatten-the-specific-annotaiton-in-the-PDF-document/Program.cs" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 //Get all the pages
 foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
 {
@@ -3610,17 +3154,15 @@ foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
     }
 }
 
-//Save the document
-loadedDocument.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
 //Closes the document
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -3645,10 +3187,6 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -3679,11 +3217,9 @@ To flatten pop-up annotation [Flatten](https://help.syncfusion.com/cr/document-p
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-popup-annotation-in-the-PDF-document/.NET/Flatten-popup-annotation-in-the-PDF-document/Program.cs" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("PopupAnnotation.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 //Get all the pages
 foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
 {
@@ -3699,16 +3235,15 @@ foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
     }
 }
 
-//Save the document
-loadedDocument.Save("Output.pdf");
+//Creating the stream object
+MemoryStream stream = new MemoryStream();
+//Save the document as stream
+loadedDocument.Save(stream);
 //Close the document
 loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("PopupAnnotation.pdf");
@@ -3735,10 +3270,6 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("PopupAnnotation.pdf")
@@ -3772,11 +3303,10 @@ To flatten the redaction annotation in PDF document, use the following code exam
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
-
+//Get stream from an existing PDF document. 
+FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
 //Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 
 //Get the annotation from annotation collection. 
 foreach (PdfAnnotation annot in loadedDocument.Pages[0].Annotations)
@@ -3793,16 +3323,14 @@ foreach (PdfAnnotation annot in loadedDocument.Pages[0].Annotations)
 }
 loadedDocument.Redact();
 
-//Save the document
-loadedDocument.Save("Output.pdf");
+//Save the document into stream.
+MemoryStream stream = new MemoryStream(); 
+loadedDocument.Save(stream); 
 //Close the document.
 loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -3830,10 +3358,6 @@ loadedDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document. 
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("../../Data/Input.pdf")
@@ -3876,26 +3400,22 @@ To flatten the annotation without pop-ups [FlattenAnnotations](https://help.sync
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flattening-annotations-without-calling-save-method/.NET/Flattening-annotations-without-calling-save-method/Program.cs" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 
 //Flatten all the annotations without popups in the document
 loadedDocument.FlattenAnnotations();
 
-//Save the document
-loadedDocument.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
 //Closes the document
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -3910,10 +3430,6 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -3936,25 +3452,21 @@ To flatten the annotation with pop-ups [FlattenAnnotations](https://help.syncfus
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flattening-annotations-with-popups-in-PDF/.NET/Flattening-annotations-with-popups-in-PDF/Program.cs" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 //Flatten all the annotations without popups in the document
 loadedDocument.FlattenAnnotations(true);
 
-//Save the document
-loadedDocument.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
 //Closes the document
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -3967,10 +3479,6 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -3994,55 +3502,53 @@ To flatten specific types of annotations in a PDF document, use the [FlattenAnno
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-specific-types-of-annotations/.NET/Flatten-specific-types-of-annotations/Program.cs" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
-
-// Load the PDF document
-using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
-{
-    // Specify the annotation types to flatten
-    PdfLoadedAnnotationType[] pdfLoadedAnnotationTypes = new PdfLoadedAnnotationType[]
+    // Load the PDF document
+    using (FileStream docStream = new FileStream(@"input.pdf", FileMode.Open, FileAccess.Read))
     {
+        using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream))
+        {
+            // Specify the annotation types to flatten
+            PdfLoadedAnnotationType[] pdfLoadedAnnotationTypes = new PdfLoadedAnnotationType[]
+            {
                 PdfLoadedAnnotationType.PolygonAnnotation
-    };
+            };
 
-    // Flatten the selected annotations
-    loadedDocument.FlattenAnnotations(pdfLoadedAnnotationTypes);
+            // Flatten the selected annotations
+            loadedDocument.FlattenAnnotations(pdfLoadedAnnotationTypes);
 
-    //Save the document
-    loadedDocument.Save("Output.pdf");
-}
+            // Save the flattened document
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                loadedDocument.Save(memoryStream);
+                // MemoryStream can be used further as needed
+            }
+        }
+    }
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
+    // Load the PDF document from a file path
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
-// Load the PDF document
-using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
-{
     // Specify the annotation types to flatten
     PdfLoadedAnnotationType[] pdfLoadedAnnotationTypes = new PdfLoadedAnnotationType[]
     {
-                PdfLoadedAnnotationType.PolygonAnnotation
+        PdfLoadedAnnotationType.PolygonAnnotation
     };
 
     // Flatten the selected annotations
     loadedDocument.FlattenAnnotations(pdfLoadedAnnotationTypes);
 
-    //Save the document
-    loadedDocument.Save("Output.pdf");
-}
+    // Save the flattened PDF document to a file path
+    loadedDocument.Save(@"C:\path\to\output.pdf");
+    // Close the document instance
+    loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Parsing
 
     ' Load the PDF document from a file path
     Dim loadedDocument As New PdfLoadedDocument("C:\path\to\input.pdf")
@@ -4077,23 +3583,21 @@ FDF stands for Forms Data Format. FDF is a file format for representing annotati
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Importing-annotations-from-FDF-file-to-PDF-document/.NET/Importing-annotations-from-FDF-file-to-PDF-document/Program.cs" %}
 
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
 //Import annotation data from FDF stream
 FileStream fdfStream = new FileStream("Annotations.fdf", FileMode.Open, FileAccess.Read);
 lDoc.ImportAnnotations(fdfStream, AnnotationDataFormat.Fdf)
 
-//Save the document
-lDoc.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+lDoc.Save(stream);
 //Closes the document
 lDoc.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Parsing;
 
 //Loads the document
 PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf");
@@ -4106,8 +3610,6 @@ lDoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Parsing;
 
 'Loads the document
 Dim lDoc As New PdfLoadedDocument("input.pdf")
@@ -4131,24 +3633,22 @@ XFDF stands for XML Forms Data Format. XFDF is the XML version of FDF for repres
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Importing-annotations-from-XFDF-file-to-PDF-document/.NET/Importing-annotations-from-XFDF-file-to-PDF-document/Program.cs" %}
 
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
 //Import annotation data from XFDF stream
 FileStream xfdfStream = new FileStream("Annotations.xfdf", FileMode.Open, FileAccess.Read);
 lDoc.ImportAnnotations(xfdfStream, AnnotationDataFormat.XFdf);
 
-//Save the document
-lDoc.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+lDoc.Save(stream);
 //Closes the document
 lDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Parsing;
 
 //Loads the document
 PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf");
@@ -4161,8 +3661,6 @@ lDoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Parsing;
 
 'Loads the document
 Dim lDoc As New PdfLoadedDocument("input.pdf")
@@ -4186,24 +3684,22 @@ JSON stands for JavaScript Object Notation. It is a collection of key or value p
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Importing-annotations-from-JSON-file-to-PDF-document/.NET/Importing-annotations-from-JSON-file-to-PDF-document/Program.cs" %}
 
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document 
-PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf"); 
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read); 
+PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream); 
 //Import the annotation data from the JSON stream 
 FileStream jsonStream = new FileStream("Annotations.Json", FileMode.Open, FileAccess.Read); 
 lDoc.ImportAnnotations(jsonStream, AnnotationDataFormat.Json); 
 
-//Save the document
-lDoc.Save("Output.pdf");
+//Save the document into the stream 
+MemoryStream stream = new MemoryStream(); 
+lDoc.Save(stream); 
 //Closes the document 
 lDoc.Close(true); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Parsing;
 
 //Loads the document 
 PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf"); 
@@ -4216,8 +3712,6 @@ lDoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Parsing
 
 'Loads the document 
 Dim lDoc As New PdfLoadedDocument("input.pdf") 
@@ -4244,20 +3738,18 @@ To export annotation data to the FDF file from PDF document, you can use the [Ex
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Exporting-annotation-to-FDF-file-from-PDF-document/.NET/Exporting-annotation-to-FDF-file-from-PDF-document/Program.cs" %}
 
-using Syncfusion.Pdf.Parsing;
-
-//Loads the document
-PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf");
-//Export annotation data to FDF file
-lDoc.ExportAnnotations("Annotations.fdf", AnnotationDataFormat.Fdf);
+//Load the PDF document
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
+//Export annotation data from FDF stream
+Stream fdfStream = new MemoryStream();
+lDoc.ExportAnnotations(fdfStream, AnnotationDataFormat.Fdf)
 //Close the document
 lDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Parsing;
 
 //Loads the document
 PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf");
@@ -4269,8 +3761,6 @@ lDoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Parsing
 
 'Loads the document
 Dim lDoc As New PdfLoadedDocument("input.pdf")
@@ -4293,20 +3783,18 @@ To export annotation data to the XFDF file from PDF document, you can use the [E
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Exporting-annotations-to-XFDF-file-from-PDF-document/.NET/Exporting-annotations-to-XFDF-file-from-PDF-document/Program.cs" %}
 
-using Syncfusion.Pdf.Parsing;
-
-//Loads the document
-PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf");
-//Export annotation data to XFDF file
-lDoc.ExportAnnotations("Annotations.xfdf", AnnotationDataFormat.XFdf);
+//Load the PDF document
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
+//Export annotation data from XFDF stream
+Stream xfdfStream = new MemoryStream();
+lDoc.ExportAnnotations(xfdfStream, AnnotationDataFormat.XFdf);
 //Close the document
 lDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Parsing;
 
 //Loads the document
 PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf");
@@ -4318,8 +3806,6 @@ lDoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Parsing
 
 'Loads the document
 Dim lDoc As New PdfLoadedDocument("input.pdf")
@@ -4342,20 +3828,18 @@ To export annotation data to the JSON file from PDF document, you can use the [E
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Exporting-annotations-to-JSON-file-from-PDF-document/.NET/Exporting-annotations-to-JSON-file-from-PDF-document/Program.cs" %}
 
-using Syncfusion.Pdf.Parsing;
-
-//Loads the document 
-PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf"); 
-//Export the annotation data to the JSON file 
-lDoc.ExportAnnotations("Annotations.Json", AnnotationDataFormat.Json); 
+//Load the PDF document 
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read); 
+PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream); 
+//Export the annotation data from the JSON stream 
+Stream jsonStream = new MemoryStream(); 
+lDoc.ExportAnnotations(jsonStream, AnnotationDataFormat.Json) 
 //Close the document 
-lDoc.Close(true);
+lDoc.Close(true); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Parsing;
 
 //Loads the document 
 PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf"); 
@@ -4367,8 +3851,6 @@ lDoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Parsing
 
 'Loads the document 
 Dim lDoc As New PdfLoadedDocument("input.pdf") 
@@ -4391,13 +3873,9 @@ To export newly added annotation data from a PDF document to a JSON file, use th
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Exporting-Newly-Added-Annotations-JSON-File/.NET/Exporting-Newly-Added-Annotations-JSON-File/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 // Load the PDF document from a file stream 
-PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(docStream);
 // Create a PDF free text annotation 
 PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
 
@@ -4418,23 +3896,22 @@ freeText.Border = new PdfAnnotationBorder(.5f);
 // Add the annotation to the first page of the PDF
 pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
 
-// Export annotations to the JSON format 
-pdfLoadedDocument.ExportAnnotations("Annotation.json", AnnotationDataFormat.Json); 
+// Create a memory stream to hold the exported annotations in JSON format 
+Stream jsonStream = new MemoryStream(); 
+// Export annotations to the JSON format
+pdfLoadedDocument.ExportAnnotations(jsonStream, AnnotationDataFormat.Json);
 
-// Close the loaded PDF document
+// Close the loaded PDF document 
 pdfLoadedDocument.Close(true); 
+// Dispose of the memory stream 
+jsonStream.Dispose(); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.Drawing;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 // Load the PDF document from a file stream 
-PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(“Input.pdf”);
 // Create a PDF free text annotation 
 PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
 
@@ -4456,7 +3933,7 @@ freeText.Border = new PdfAnnotationBorder(.5f);
 pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
 
 // Export annotations to the JSON format 
-pdfLoadedDocument.ExportAnnotations("Annotation.json", AnnotationDataFormat.Json); 
+pdfLoadedDocument.ExportAnnotations(“Annotation.json”, AnnotationDataFormat.Json); 
 
 // Close the loaded PDF document
 pdfLoadedDocument.Close(true); 
@@ -4464,11 +3941,6 @@ pdfLoadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Parsing
 
 ' Load the PDF document from a file stream 
 Dim pdfLoadedDocument As New PdfLoadedDocument("Input.pdf") 
@@ -4512,13 +3984,9 @@ To export newly added annotation data from a PDF document to an FDF (Forms Data 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Exporting-Newly-Added-Annotations-FDF-File/.NET/Exporting-Newly-Added-Annotations-FDF-File/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 // Load the PDF document from a file stream 
-PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(docStream);
 // Create a PDF free text annotation 
 PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
 
@@ -4536,26 +4004,25 @@ freeText.BorderColor = new PdfColor(Color.Red);
 // Set border thickness
 freeText.Border = new PdfAnnotationBorder(.5f); 
 
-// Add the annotation to the first page of the PDF 
+// Add the annotation to the first page of the PDF
 pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
 
-// Export annotations to the FDF format 
-pdfLoadedDocument.ExportAnnotations("Annotation.fdf", AnnotationDataFormat.Fdf); 
+// Create a memory stream to hold the exported annotations in FDF format 
+Stream fdfStream = new MemoryStream(); 
+// Export annotations to the FDF format
+pdfLoadedDocument.ExportAnnotations(fdfStream, AnnotationDataFormat.Fdf); 
 
-// Close the loaded PDF document
+// Close the loaded PDF document 
 pdfLoadedDocument.Close(true); 
+// Dispose of the memory stream 
+fdfStream.Dispose(); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.Drawing;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 // Load the PDF document from a file stream 
-PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(“Input.pdf”);
 // Create a PDF free text annotation 
 PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
 
@@ -4577,7 +4044,7 @@ freeText.Border = new PdfAnnotationBorder(.5f);
 pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
 
 // Export annotations to the FDF format 
-pdfLoadedDocument.ExportAnnotations("Annotation.fdf", AnnotationDataFormat.Fdf); 
+pdfLoadedDocument.ExportAnnotations(“Annotation.fdf”, AnnotationDataFormat.Fdf); 
 
 // Close the loaded PDF document
 pdfLoadedDocument.Close(true); 
@@ -4585,11 +4052,6 @@ pdfLoadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Parsing
 
 ' Load the PDF document from a file stream 
 Dim pdfLoadedDocument As New PdfLoadedDocument("Input.pdf") 
@@ -4633,13 +4095,9 @@ To export newly added annotation data from a PDF document to an XFDF (XML Forms 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Exporting-Newly-Added-Annotations-XFDF-File/.NET/Exporting-Newly-Added-Annotations-XFDF-File/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 // Load the PDF document from a file stream 
-PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(docStream);
 // Create a PDF free text annotation 
 PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
 
@@ -4660,23 +4118,22 @@ freeText.Border = new PdfAnnotationBorder(.5f);
 // Add the annotation to the first page of the PDF 
 pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
 
-// Export annotations to the XFDF format 
-pdfLoadedDocument.ExportAnnotations("Annotation.xfdf", AnnotationDataFormat.XFdf); 
+// Create a memory stream to hold the exported annotations in JSON format 
+Stream xfdfStream = new MemoryStream(); 
+// Export annotations to the XFDF format
+pdfLoadedDocument.ExportAnnotations(xfdfStream, AnnotationDataFormat.XFdf); 
 
-// Close the loaded PDF document
+// Close the loaded PDF document 
 pdfLoadedDocument.Close(true); 
+// Dispose of the memory stream 
+xfdfStream.Dispose(); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.Drawing;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 // Load the PDF document from a file stream 
-PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(“Input.pdf”);
 // Create a PDF free text annotation 
 PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
 
@@ -4698,7 +4155,7 @@ freeText.Border = new PdfAnnotationBorder(.5f);
 pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
 
 // Export annotations to the XFDF format 
-pdfLoadedDocument.ExportAnnotations("Annotation.xfdf", AnnotationDataFormat.XFdf); 
+pdfLoadedDocument.ExportAnnotations(“Annotation.xfdf”, AnnotationDataFormat.XFdf); 
 
 // Close the loaded PDF document
 pdfLoadedDocument.Close(true); 
@@ -4707,11 +4164,6 @@ pdfLoadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Parsing
 
 ' Load the PDF document from a file stream 
 Dim pdfLoadedDocument As New PdfLoadedDocument("Input.pdf") 
@@ -4751,84 +4203,82 @@ N> In our PDF library, font resources are embedded into the document during the 
 
 ## Get and set custom values for PDF annotations
 
-The Syncfusion<sup>&reg;</sup> PDF library provides robust functionality to manipulate PDF documents, including annotations. This document focuses on using the [GetValues](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_GetValues_System_String_) and [SetValues](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_SetValues_System_String_System_String_) methods with PDF annotations to retrieve and set annotation-specific values.
+The Syncfusion<sup>®</sup> PDF library provides robust functionality to manipulate PDF documents, including annotations. This document focuses on using the [GetValues](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_GetValues_System_String_) and [SetValues](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_SetValues_System_String_System_String_) methods with PDF annotations to retrieve and set annotation-specific values.
 
 The following code example demonstrates how to get values from a PDF annotation.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Get-value-from-PDF-annotation/.NET/Get-value-from-PDF-annotation/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-using Syncfusion.Pdf;
-
-// Load the PDF document from the input stream
-using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
+// Load the existing PDF document using FileStream
+using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Access the first page of the document
-    PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
-    // Get the collection of annotations from the page
-    PdfLoadedAnnotationCollection annotations = page.Annotations;
-
-    // Check if at least one annotation exists and it's a popup annotation
-    if (annotations.Count > 0 && annotations[0] is PdfLoadedPopupAnnotation annotation)
+    // Load the PDF document from the input stream
+    using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream))
     {
-        // Get the custom value from the annotation
-        List<string> customValue = annotation.GetValues("custom");
+        // Access the first page of the document
+        PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
+        // Get the collection of annotations from the page
+        PdfLoadedAnnotationCollection annotations = page.Annotations;
 
-        foreach (string value in customValue)
+        // Check if at least one annotation exists and it's a popup annotation
+        if (annotations.Count > 0 && annotations[0] is PdfLoadedPopupAnnotation annotation)
         {
-            // Print the custom value to the console
-            Console.WriteLine("Custom value from annotation: " + value);
+            // Get the custom value from the annotation
+            List<string> customValue = annotation.GetValues("custom");
+
+            foreach (string value in customValue)
+            {
+                // Print the custom value to the console
+                Console.WriteLine("Custom value from annotation: " + value);
+            } 
         }
+        // Close the document and release resources
+        loadedDocument.Close(true);
     }
-    // Close the document and release resources
-    loadedDocument.Close(true);
 }
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-using Syncfusion.Pdf;
-
-// Load the PDF document from the input stream
-using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
+// Load the existing PDF document using FileStream
+using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Access the first page of the document
-    PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
-    // Get the collection of annotations from the page
-    PdfLoadedAnnotationCollection annotations = page.Annotations;
-
-    // Check if at least one annotation exists and it's a popup annotation
-    if (annotations.Count > 0 && annotations[0] is PdfLoadedPopupAnnotation annotation)
+    // Load the PDF document from the input stream
+    using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream))
     {
-        // Get the custom value from the annotation
-        List<string> customValue = annotation.GetValues("custom");
+        // Access the first page of the document
+        PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
+        // Get the collection of annotations from the page
+        PdfLoadedAnnotationCollection annotations = page.Annotations;
 
-        foreach (string value in customValue)
+        // Check if at least one annotation exists and it's a popup annotation
+        if (annotations.Count > 0 && annotations[0] is PdfLoadedPopupAnnotation annotation)
         {
-            // Print the custom value to the console
-            Console.WriteLine("Custom value from annotation: " + value);
+            // Get the custom value from the annotation
+            List<string> customValue = annotation.GetValues("custom");
+
+            foreach (string value in customValue)
+            {
+                // Print the custom value to the console
+                Console.WriteLine("Custom value from annotation: " + value);
+            } 
         }
+        // Close the document and release resources
+        loadedDocument.Close(true);
     }
-    // Close the document and release resources
-    loadedDocument.Close(true);
 }
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Parsing
-
+' Load the existing PDF document using FileStream
+Using inputStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
 ' Load the PDF document from the input stream
-Using loadedDocument As New PdfLoadedDocument("Input.pdf")
+Using loadedDocument As New PdfLoadedDocument(inputStream)
 ' Access the first page of the document
 Dim page As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
 
@@ -4851,125 +4301,123 @@ End If
 ' Close the document and release resources
 loadedDocument.Close(True)
 End Using
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Get-value-from-PDF-annotation/.NET).
-
-The following code example demonstrates how to set values from a PDF annotation.
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Set-value-from-PDF-annotation/.NET/Set-value-from-PDF-annotation/Program.cs" %}
-
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-using Syncfusion.Pdf;
-
-// Load the PDF document from the input stream
-using (PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf"))
-{
-    // Access the first page of the document
-    PdfLoadedPage page = ldoc.Pages[0] as PdfLoadedPage;
-
-    // Get the collection of annotations from the page
-    PdfLoadedAnnotationCollection annotations = page.Annotations;
-
-    // Check if at least one annotation exists and it's a popup annotation
-    if (annotations.Count > 0 && annotations[0] is PdfLoadedPopupAnnotation annotation)
-    {
-        // Set a custom key-value pair in the annotation's metadata
-        annotation.SetValues("custom", "This is the custom data for the annotation");
-    }
-    // Save changes to a new PDF file
-    ldoc.Save("Output.pdf");
-
-    // Close the document and release resources
-    ldoc.Close(true);
-}
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-using Syncfusion.Pdf;
-
-// Load the PDF document from the input stream
-using (PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf"))
-{
-    // Access the first page of the document
-    PdfLoadedPage page = ldoc.Pages[0] as PdfLoadedPage;
-
-    // Get the collection of annotations from the page
-    PdfLoadedAnnotationCollection annotations = page.Annotations;
-
-    // Check if at least one annotation exists and it's a popup annotation
-    if (annotations.Count > 0 && annotations[0] is PdfLoadedPopupAnnotation annotation)
-    {
-        // Set a custom key-value pair in the annotation's metadata
-        annotation.SetValues("custom", "This is the custom data for the annotation");
-    }
-    // Save changes to a new PDF file
-    ldoc.Save("Output.pdf");
-
-    // Close the document and release resources
-    ldoc.Close(true);
-}
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Parsing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-
-Load the PDF document from the file
-Using ldoc As New PdfLoadedDocument("Input.pdf")
-
-' Access the first page of the document
-Dim page As PdfLoadedPage = TryCast(ldoc.Pages(0), PdfLoadedPage)
-
-' Get the collection of annotations from the page
-Dim annotations As PdfLoadedAnnotationCollection = page.Annotations
-
-' Check if at least one annotation exists and it's a popup annotation
-If annotations.Count > 0 AndAlso TypeOf annotations(0) Is PdfLoadedPopupAnnotation Then
-    Dim annotation As PdfLoadedPopupAnnotation = CType(annotations(0), PdfLoadedPopupAnnotation)
-
-    ' Set a custom key-value pair in the annotation's metadata
-    annotation.SetValues("custom", "This is the custom data for the annotation")
-End If
-
-' Save changes to a new PDF file
-ldoc.Save("Output.pdf")
-
-' Close the document and release resources
-ldoc.Close(True)
 End Using
 
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Set-value-from-PDF-annotation/.NET).
+You can download a complete working sample from GitHub.
+
+The following code example demonstrates how to set values from a PDF annotation.
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the existing PDF document using FileStream
+using (FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Load the PDF document from the input stream
+    using (PdfLoadedDocument ldoc = new PdfLoadedDocument(inputStream))
+    {
+        // Access the first page of the document
+        PdfLoadedPage page = ldoc.Pages[0] as PdfLoadedPage;
+
+        // Get the collection of annotations from the page
+        PdfLoadedAnnotationCollection annotations = page.Annotations;
+
+        // Check if at least one annotation exists and it's a popup annotation
+        if (annotations.Count > 0 && annotations[0] is PdfLoadedPopupAnnotation annotation)
+        {
+            // Set a custom key-value pair in the annotation's metadata
+            annotation.SetValues("custom", "This is the custom data for the annotation");
+        }
+
+        // Save the modified document using a new FileStream
+        using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+        {
+            // Save changes to a new PDF file
+            ldoc.Save(outputStream); 
+        }
+        // Close the document and release resources
+        ldoc.Close(true);
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the existing PDF document using FileStream
+using (FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Load the PDF document from the input stream
+    using (PdfLoadedDocument ldoc = new PdfLoadedDocument(inputStream))
+    {
+        // Access the first page of the document
+        PdfLoadedPage page = ldoc.Pages[0] as PdfLoadedPage;
+
+        // Get the collection of annotations from the page
+        PdfLoadedAnnotationCollection annotations = page.Annotations;
+
+        // Check if at least one annotation exists and it's a popup annotation
+        if (annotations.Count > 0 && annotations[0] is PdfLoadedPopupAnnotation annotation)
+        {
+            // Set a custom key-value pair in the annotation's metadata
+            annotation.SetValues("custom", "This is the custom data for the annotation");
+        }
+        // Save changes to a new PDF file
+        ldoc.Save("Output.pdf"); 
+
+        // Close the document and release resources
+        ldoc.Close(true);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+        ' Load the existing PDF document using FileStream
+        Using inputStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+            ' Load the PDF document from the input stream
+            Using ldoc As New PdfLoadedDocument(inputStream)
+                ' Access the first page of the document
+                Dim page As PdfLoadedPage = TryCast(ldoc.Pages(0), PdfLoadedPage)
+
+                ' Get the collection of annotations from the page
+                Dim annotations As PdfLoadedAnnotationCollection = page.Annotations
+
+                ' Check if at least one annotation exists and it's a popup annotation
+                If annotations.Count > 0 AndAlso TypeOf annotations(0) Is PdfLoadedPopupAnnotation Then
+                    Dim annotation As PdfLoadedPopupAnnotation = TryCast(annotations(0), PdfLoadedPopupAnnotation)
+
+                    ' Set a custom key-value pair in the annotation's metadata
+                    annotation.SetValues("custom", "This is the custom data for the annotation")
+                End If
+
+                ' Save the modified document to a new file
+                ldoc.Save("Output.pdf")
+
+                ' Close the document and release resources
+                ldoc.Close(True)
+            End Using
+        End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
 
 ## Setting transparency for annotations 
 
-The Syncfusion<sup>&reg;</sup> PDF Library enables you to adjust the transparency of annotations using the [Opacity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html#Syncfusion_Pdf_Interactive_PdfAnnotation_Opacity) property. This property defines the annotation's transparency level, where a value of 0 makes it fully transparent, and 1 makes it completely opaque.
+The Syncfusion<sup>®</sup> PDF Library enables you to adjust the transparency of annotations using the [Opacity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html#Syncfusion_Pdf_Interactive_PdfAnnotation_Opacity) property. This property defines the annotation's transparency level, where a value of 0 makes it fully transparent, and 1 makes it completely opaque.
 
 The following code example how to add transparency to the PDF annotation.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Adding-transparency-for-annotations/.NET/Adding-transparency-for-annotations/Program.cs" %}
-
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf;
-using Syncfusion.Drawing;
 
 // Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -4990,20 +4438,18 @@ textAnnotation.Opacity = 0.5F;
 textAnnotation.AnnotationIntent = PdfAnnotationIntent.FreeTextCallout;
 //Add this annotation to the PDF page.
 page.Annotations.Add(textAnnotation);
-
-//Save the document
-document.Save("Output.pdf");
+ //Create file stream.
+ using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
+ {
+     //Save the PDF document to file stream.
+     document.Save(outputFileStream);
+ }
  //Close the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf;
-using System.Drawing;
 
 // Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -5032,11 +4478,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
 
 ' Create a new PDF document.
 Dim document As New PdfDocument()
@@ -5082,10 +4523,6 @@ The following code example explains how to add comments to the PDF annotation.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-comments-to-the-PDF-annotation/.NET/Add-comments-to-the-PDF-annotation/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Create a new page
@@ -5114,18 +4551,15 @@ rectangleAnnotation.Comments.Add(comment);
 //Add the annotation to the PDF page
 page.Annotations.Add(rectangleAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Closes the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -5163,10 +4597,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument
@@ -5213,13 +4643,9 @@ To add comments [PdfPopupAnnotation](https://help.syncfusion.com/cr/document-pro
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-comments-to-the-existing-PDF-annotation/.NET/Add-comments-to-the-existing-PDF-annotation/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("inputAnnotation.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
 //Get the existing PDF page
 PdfLoadedPage lpage = lDoc.Pages[0] as PdfLoadedPage;
 //Get the existing annotations
@@ -5240,19 +4666,15 @@ comment.Subject = "Annotation Comments";
 //Add the comments to the annotation
 loadedRectangleAnnotation.Comments.Add(comment);
 
-//Save the document
-lDoc.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+lDoc.Save(stream);
 //Closes the document
 lDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf");
@@ -5284,11 +4706,6 @@ ldoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document
 Dim ldoc As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -5372,10 +4789,6 @@ You can add a review status in a newly created PDF annotation using [PdfAnnotati
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-review-status-in-a-newly-created-PDF-annotation/.NET/Add-a-review-status-in-a-newly-created-PDF-annotation/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Create a new page
@@ -5404,18 +4817,15 @@ rectangleAnnotation.ReviewHistory.Add(review);
 //Add the annotation to the PDF page
 page.Annotations.Add(rectangleAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Closes the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -5453,10 +4863,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument
@@ -5502,13 +4908,9 @@ To add the review status  [PdfAnnotationState](https://help.syncfusion.com/cr/do
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-the-review-status-to-the-existing-PDF-annotation/.NET/Add-the-review-status-to-the-existing-PDF-annotation/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("inputAnnotation.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
 //Get the existing PDF page
 PdfLoadedPage lpage = lDoc.Pages[0] as PdfLoadedPage;
 //Get the existing annotations
@@ -5529,19 +4931,15 @@ review.ModifiedDate = DateTime.Now;
 //Add the review to the annotation
 loadedRectangleAnnotation.ReviewHistory.Add(review);
 
-//Save the document
-lDoc.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+lDoc.Save(stream);
 //Closes the document
 lDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-Using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf");
@@ -5573,11 +4971,6 @@ ldoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document
 Dim ldoc As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -5622,12 +5015,9 @@ The following code example explains how to remove comments using [RemoveAt](http
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Remove-commets-from-the-existing-PDF-annotation/.NET/Remove-commets-from-the-existing-PDF-annotation/Program.cs" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("inputAnnotation.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument ldoc = new PdfLoadedDocument(docStream);
 //Get the existing PDF page
 PdfLoadedPage lpage = ldoc.Pages[0] as PdfLoadedPage;
 //Get the existing annotations
@@ -5639,17 +5029,14 @@ PdfLoadedPopupAnnotationCollection commentsCollection = loadedRectangleAnnotatio
 // Remove comments by index 
 commentsCollection.RemoveAt(0);
 
-//Save the document
-lDoc.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+ldoc.Save(stream);
 //Closes the document
 ldoc.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf");
@@ -5672,10 +5059,6 @@ ldoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Parsing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
 
 'Load the PDF document
 Dim ldoc As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")'Load the PDF page
@@ -5706,12 +5089,9 @@ To remove review status [RemoveAt](https://help.syncfusion.com/cr/document-proce
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Remove-review-status-to-the-existing-PDF-document/.NET/Remove-review-status-to-the-existing-PDF-document/Program.cs" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("inputAnnotation.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument ldoc = new PdfLoadedDocument(docStream);
 //Get the existing PDF page
 PdfLoadedPage lpage = ldoc.Pages[0] as PdfLoadedPage;
 //Get the existing annotations
@@ -5723,18 +5103,15 @@ PdfLoadedPopupAnnotationCollection reviewCollection = loadedRectangleAnnotation.
 //Remove review status by index 
 reviewCollection.RemoveAt(0);
 
-//Save the document
-lDoc.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+lDoc.Save(stream);
 //Closes the document
 ldoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf");
@@ -5757,10 +5134,6 @@ ldoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Parsing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
 
 'Loaded the PDF document
 Dim ldoc As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -5794,12 +5167,9 @@ The following code example explains how to modify comments in the existing PDF a
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Modify-comments-in-the-existing-PDF-annotation/.NET/Modify-comments-in-the-existing-PDF-annotation/Program.cs" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("inputAnnotation.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument ldoc = new PdfLoadedDocument(docStream);
 //Load the PDF document page
 PdfLoadedPage lpage = ldoc.Pages[0] as PdfLoadedPage;
 PdfLoadedAnnotationCollection annots = lpage.Annotations;
@@ -5812,17 +5182,14 @@ PdfLoadedPopupAnnotation loadedComments = commentsCollection[0];
 //Modify the comment Text
 loadedComments.Text = "This is the modified comments";
 
-//Save the document
-lDoc.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+ldoc.Save(stream);
 //Closes the document
 ldoc.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf");
@@ -5847,10 +5214,6 @@ ldoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Parsing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
 
 'Load the PDF document
 Dim ldoc As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -5883,12 +5246,9 @@ To modify review status [PdfAnnotationState](https://help.syncfusion.com/cr/docu
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Modify-review-status-to-the-existing-PDF-annotation/.NET/Modify-review-status-to-the-existing-PDF-annotation/Program.cs" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
 //Load the PDF document
-PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream("inputAnnotation.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument ldoc = new PdfLoadedDocument(docStream);
 //Get the existing PDF page
 PdfLoadedPage lpage = ldoc.Pages[0] as PdfLoadedPage;
 //Get the existing annotations
@@ -5902,17 +5262,14 @@ PdfLoadedPopupAnnotation loadedReview = reviewCollection[0];
 // Modify the review State
 loadedReview.State = PdfAnnotationState.Rejected;
 
-//Save the document
-lDoc.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+lDoc.Save(stream);
 //Closes the document
 ldoc.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf");
@@ -5937,10 +5294,6 @@ ldoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Parsing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
 
 'Loaded the PDF document
 Dim ldoc As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -5981,12 +5334,11 @@ You can retrieve the annotation review history from the existing PDF document an
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Retrieve-review-status-from-the-existing-PDF-annotations/.NET/Program.cs" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
+//Get stream from an existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
 
 //Load the PDF document. 
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 
 //Get the existing PDF page.
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
@@ -6017,12 +5369,11 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
+//Get stream from an existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
 
 //Load the PDF document. 
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 
 //Get the existing PDF page.
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
@@ -6052,12 +5403,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Pdf.Parsing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
+'Get stream from an existing PDF document.
+Dim docStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
 
 'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+Dim loadedDocument As New PdfLoadedDocument(docStream)
 
 'Get the existing PDF page.
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
@@ -6098,12 +5448,11 @@ The following code example explains how to retrieve the annotation comments from
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Retrieve-the-annotation-comments-from-the-existing-PDF/.NET/Program.cs" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
+//Get stream from the existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
 
 //Load the PDF document. 
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 
 //Get the existing PDF page.
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
@@ -6132,12 +5481,11 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
+//Get stream from the existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
 
 //Load the PDF document. 
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 
 //Get the existing PDF page.
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
@@ -6166,12 +5514,11 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Pdf.Parsing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
+'Get stream from the existing PDF document.
+Dim docStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
 
 'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+Dim loadedDocument As New PdfLoadedDocument(docStream)
 
 'Get the existing PDF page.
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
@@ -6213,14 +5560,9 @@ The following code snippet explains how to add custom stamp in an existing PDF d
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-custom-stamp-in-an-existing-PDF-document/.NET/Add-custom-stamp-in-an-existing-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
-//Load the PDF document. 
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Load an existing PDF document
+FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream);
 //Get the page from loaded PDF document
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -6240,8 +5582,9 @@ rubberStampAnnotation.Text = "Text Properties Rubber Stamp Annotation";
 //Add annotation to the page
 loadedPage.Annotations.Add(rubberStampAnnotation);
 
-//Save the document
-loadedDocument.Save("Output.pdf");
+//Saving the PDF to the MemoryStream
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
 //Close the instance of PdfLoadedDocument
 loadedDocument.Close(true);
 
@@ -6276,12 +5619,6 @@ public static PdfPath RoundedRect(RectangleF bounds, int radius)
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -6341,14 +5678,6 @@ public static PdfPath RoundedRect(RectangleF bounds, int radius)
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
-
-
 'Load an existing PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
 'Get the page from loaded PDF document
@@ -6415,14 +5744,9 @@ You can get the images from the custom rubber stamp annotation appearance using 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
-//Load the PDF document. 
-PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf");
+//Load the existing PDF file.
+FileStream fileStream = new FileStream("input.pdf", FileMode.Open);
+PdfLoadedDocument ldoc = new PdfLoadedDocument(fileStream);
 //Get the existing PDF page.
 PdfLoadedPage lpage = ldoc.Pages[0] as PdfLoadedPage;
 //Get the rubber stamp annotation.
@@ -6435,12 +5759,6 @@ ldoc.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document.
 PdfLoadedDocument ldoc = new PdfLoadedDocument("input.pdf");
@@ -6456,13 +5774,6 @@ ldoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
-
 
 ' Load an existing document.
 Dim ldoc As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -6480,18 +5791,13 @@ ldoc.Close(True)
 
 ## Multi-line text redaction
 
-The Essential&reg; PDF provides support for Quad Points, allowing users to select and redact multiple lines of text within a PDF document. This is achieved by setting the [BoundsCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html#Syncfusion_Pdf_Interactive_PdfRedactionAnnotation_BoundsCollection) property through the [PdfRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html) class.
+The Essential&reg; PDF provides support for Quad Points, allowing users to select and redact multiple lines of text within a PDF document. This is achieved by setting the BoundsCollection property through the [PdfRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html) class.
 
 Refer to the following code example to achieve the same.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Multi-line-text-redaction-using-quad-points/.NET/Multi-line-text-redaction-using-quad-points/Program.cs"  %}
-
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Create a new PDF document. 
 PdfDocument document = new PdfDocument(); 
@@ -6524,19 +5830,15 @@ annot.RepeatText = true;
 //Add the annotation to the page. 
 page.Annotations.Add(annot);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream.		 
+MemoryStream stream = new MemoryStream();		 
+document.Save(stream); 
 //Close the document. 	 
 document.Close(true); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document. 
 PdfDocument document = new PdfDocument(); 
@@ -6578,11 +5880,6 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
-
 ' Create a new PDF document.
 Dim document As New PdfDocument()
 ' Create a new page.
@@ -6622,7 +5919,7 @@ document.Close(True)
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Multi-line-text-redaction-using-quad-points/.NET).
+You can download a complete working sample from GitHub.
 
 ## Adding quad points to existing redaction annotations
 
@@ -6632,15 +5929,10 @@ Refer to the following code example to apply the BoundsCollection property to a 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Adding-quad-points-to-existing-redaction-annotations/.NET/Adding-quad-points-to-existing-redaction-annotations/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-
-//Load the PDF document
-PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read); 
+PdfLoadedDocument document = new PdfLoadedDocument(docStream); 
 //Load the existing PdfLoadedRedactionAnnotation 
 PdfLoadedRedactionAnnotation annot = document.Pages[0].Annotations[0] as PdfLoadedRedactionAnnotation; 
 
@@ -6664,19 +5956,15 @@ annot.OverlayText = "Redact";
 annot.TextAlignment = PdfTextAlignment.Center; 
 annot.RepeatText = true; 
   
-//Save the document
-document.Save("Output.pdf"); 
+//Save the document into stream  
+MemoryStream stream = new MemoryStream();  
+document.Save(stream);  
 //Close the document  
 document.Close(true);  
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
 
 //Load an existing document. 
 PdfLoadedDocument document = new PdfLoadedDocument(@"Input.pdf"); 
@@ -6712,12 +6000,6 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
-
 ' Load an existing document.
 Dim document As New PdfLoadedDocument("Input.pdf")
 ' Load the existing PdfLoadedRedactionAnnotation.
@@ -6752,7 +6034,7 @@ document.Close(True)
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Adding-quad-points-to-existing-redaction-annotations/.NET).
+You can download a complete working sample from GitHub.
 
 ## Printing Annotations
 
@@ -6763,10 +6045,6 @@ The following code example illustrates how to print annotation in the PDF docume
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Print-annotation-in-the-PDF-document/.NET/Print-annotation-in-the-PDF-document/Program.cs" %}
-
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -6782,17 +6060,14 @@ rubberStampAnnotation.AnnotationFlags = PdfAnnotationFlags.Print;
 //Adds annotation to the page 
 page.Annotations.Add(rubberStampAnnotation);
 
-//Save the document
-document.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
 //Closes the document
 document.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -6816,10 +6091,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
 
 'Creates a new PDF document
 Dim document As PdfDocument = New PdfDocument()
@@ -6950,16 +6221,13 @@ Please refer to the below code example to achieve this on your end.
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
+//Load the PDF document
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
+//Import annotation data from XFDF stream
+FileStream xfdfStream = new FileStream("Annotations.xfdf", FileMode.Open, FileAccess.Read);
+lDoc.ImportAnnotations(xfdfStream, AnnotationDataFormat.XFdf);
 
-//Loads the document
-PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf");
-//Import the annotation data from the JSON file
-lDoc.ImportAnnotations("Annotations.xfdf", AnnotationDataFormat.XFdf);
 //Set appearance for all the annotations
 foreach (PdfLoadedPage page in lDoc.Pages)
 {
@@ -6968,20 +6236,18 @@ foreach (PdfLoadedPage page in lDoc.Pages)
         annotation.SetAppearance(true);
     }
 }
-
-//Saves the document
-lDoc.Save("Annotation.pdf");
+//Create file stream.
+using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
+{
+    //Save the PDF document to file stream.
+    lDoc.Save(outputFileStream);
+}
+//Closes the document
 lDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
 
 //Loads the document
 PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf");
@@ -7004,12 +6270,6 @@ lDoc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
-
 ' Load the PDF document from the file
 Dim lDoc As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
 
@@ -7024,6 +6284,7 @@ For Each pages As PdfLoadedPage In lDoc.Pages
         annot.SetAppearance(True)
     Next
 Next
+
 
 'Save the updated document
 lDoc.Save("Annotation.pdf")

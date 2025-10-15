@@ -294,7 +294,7 @@ sudo apt-get install libleptonica-dev
 {% endhighlight %}
 {% endtabs %}
 <br><br>
-<img alt="OCR Install leptonica logo" src="OCR-Images/Install-leptonica.png">
+<img src="OCR-Images/Install-leptonica.png">
 <br><br>
 2.Install the tesseract.
 <br>
@@ -306,7 +306,7 @@ sudo apt-get install tesseract-ocr-eng
 {% endhighlight %}
 {% endtabs %}
 <br><br>
-<img alt="OCR Install tesseract logo" src="OCR-Images/Install-tesseract.png">
+<img src="OCR-Images/Install-tesseract.png">
 <br><br>
 3. Copy the binaries (liblept.so and libtesseract.so) to the missing files exception folder in the project location.
 <br>
@@ -351,17 +351,17 @@ Step 1: Execute the following command in terminal window to check dependencies a
 {% tabs %}
 {% highlight C# %}
 
-ldd  liblept1753.so
-ldd  libSyncfusionTesseract.so
+        ldd  liblept1753.so
+        ldd  libSyncfusionTesseract.so
 
 {% endhighlight %}
 {% endtabs %}
-Run the following commands in terminal<br>
+Run the following commands in terminal
 Step 1:
 {% tabs %}
 {% highlight C# %}
 
-sudo apt-get install libleptonica-dev libjpeg62
+        sudo apt-get install libleptonica-dev libjpeg62
 
 {% endhighlight %}
 {% endtabs %}
@@ -369,7 +369,7 @@ Step 2:
 {% tabs %}
 {% highlight C# %}
 
-ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5
+        ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5
 
 {% endhighlight %}
 {% endtabs %}
@@ -377,7 +377,7 @@ Step 3:
 {% tabs %}
 {% highlight C# %}
 
-ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
+        ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
 
 {% endhighlight %}
 {% endtabs %}

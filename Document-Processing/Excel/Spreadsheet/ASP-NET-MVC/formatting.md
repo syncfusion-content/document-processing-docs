@@ -91,10 +91,10 @@ The following code example shows the number formatting in cell data.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/number-format/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/number-format/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="NumberFormatController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/number-format/numberFormatController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/number-format/numberFormatController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -146,10 +146,10 @@ The following code example demonstrates how to configure culture-based formats f
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/globalization-cs1/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/globalization-cs1/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="CultureController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/globalization-cs1/cultureController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/globalization-cs1/cultureController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -214,10 +214,10 @@ The following code example shows the style formatting in text and cells of the s
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/cell-format/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/cell-format/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="CellFormatController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/cell-format/cellFormatController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/cell-format/cellFormatController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -311,10 +311,10 @@ You can clear the defined rules by using one of the following ways,
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/conditional-formatting/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/conditional-formatting/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ConditionalFormattingController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/conditional-formatting/conditionalFormattingController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/conditional-formatting/conditionalFormattingController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

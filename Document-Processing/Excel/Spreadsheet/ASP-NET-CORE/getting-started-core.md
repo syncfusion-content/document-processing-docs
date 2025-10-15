@@ -91,7 +91,7 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Sprea
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/getting-started-core/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/getting-started-core/tagHelper %}
 {% endhighlight %}
 {% endtabs %}
 

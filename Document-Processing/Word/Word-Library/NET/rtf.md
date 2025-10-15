@@ -105,8 +105,8 @@ The supported and unsupported features of DocIO based on file formats can be ref
 
 ## Online Demo
 
-* Explore how to convert the RTF file to Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/rtftodoc#/tailwind).
-* See how to convert a Word document to an RTF file using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtortf#/tailwind).
+* Explore how to convert the RTF file to Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/rtftodoc#/bootstrap5).
+* See how to convert a Word document to an RTF file using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/wordtortf#/bootstrap5).
 
 ## See Also
 

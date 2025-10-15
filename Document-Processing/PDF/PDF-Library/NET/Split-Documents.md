@@ -23,24 +23,30 @@ Refer to the following code example to split a PDF into individual pages.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Splitting-PDF-file-into-individual-pages/.NET/Splitting-PDF-file-into-individual-pages/Program.cs" %} 
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
+//Due to platform limitations, Essential<sup>&reg;</sup> PDF supports splitting a PDF file into individual pages only in Windows Forms, WPF, ASP.NET, and ASP.NET MVC platforms. However this can be achieved by using the following code snippet. 
 
 //Load the PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Set a output path
-const string destinationFilePattern = "Output" + "{0}.pdf";
-//Split the pages into separate documents
-loadedDocument.Split(destinationFilePattern);
-//Close the document
-loadedDocument.Close(true);
+FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream, true);
+for (int i = 0; i < loadedDocument.Pages.Count; i++)
+{
+    //Creates a new document.
+    PdfDocument document = new PdfDocument();
+    //Imports the pages from the loaded document.
+    document.ImportPage(loadedDocument, i);
+
+    //Create a File stream. 
+    using (var outputFileStream = new FileStream("Output" + i + ".pdf", FileMode.Create, FileAccess.Write)) {
+        //Save the document to stream.
+        document.Save(outputFileStream);
+    }
+    //Close the document.
+    document.Close(true);
+}
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -54,9 +60,6 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -82,24 +85,30 @@ Refer to the following code example to split a range of pages.
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Split%20PDFs/Split-a-Range-of-Pages/.NET/Split-a-Range-of-Pages/Program.cs" %} 
 
-using Syncfusion.Pdf.Parsing;
+{% raw %}
 
-//Create the values.
-int[,] values = new int[,] { { 2, 5 }, { 8, 10 } };
-//Load the PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Set a output path
-const string destinationFilePattern = "Output" + "{0}.pdf";
-//Split the pages into fixed number
-loadedDocument.SplitByRanges(destinationFilePattern, values);
-//close the document
-loadedDocument.Close(true);
+//Load the existing PDF file.
+PdfLoadedDocument loadDocument = new PdfLoadedDocument(new FileStream("Input.pdf", FileMode.Open));
+//Subscribe to the document split event.
+loadDocument.DocumentSplitEvent += LoadDocument_DocumentSplitEvent;
+void LoadDocument_DocumentSplitEvent(object sender, PdfDocumentSplitEventArgs args)
+{
+    //Save the resulting document.
+    FileStream outputStream = new FileStream(Guid.NewGuid().ToString() + ".pdf", FileMode.CreateNew);
+    args.PdfDocumentData.CopyTo(outputStream);
+    outputStream.Close();
+}
+//Spit the document by ranges.
+loadDocument.SplitByRanges(new int[,] { { 0, 5 }, { 5, 10 } });
 
+//Close the document.
+loadDocument.Close(true);
+
+{% endraw %}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Parsing;
+{% raw %}
 
 //Create the values.
 int[,] values = new int[,] { { 2, 5 }, { 8, 10 } };
@@ -112,11 +121,11 @@ loadedDocument.SplitByRanges(destinationFilePattern, values);
 //close the document
 loadedDocument.Close(true);
 
+{% endraw %}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Parsing
+{% raw %}
 
 'Create the values.
 Dim values As Integer(,) = New Integer(,) {{2, 5},{8, 10}}
@@ -129,6 +138,7 @@ loadedDocument.SplitByRanges(destinationFilePattern, values)
 'Close the document.
 loadedDocument.Close(True)
 
+{% endraw %}
 {% endhighlight %}
 
 {% endtabs %}  
@@ -144,23 +154,26 @@ Refer to the following code example to split by a fixed number of pages.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Split%20PDFs/Split-by-FixedNumber/.NET/Split-by-FixedNumber/Program.cs" %} 
 
-using Syncfusion.Pdf.Parsing;
+//Load the existing PDF file.
+PdfLoadedDocument loadDocument = new PdfLoadedDocument(new FileStream("Input.pdf", FileMode.Open));
+//Subscribe to the document split event.
+loadDocument.DocumentSplitEvent += LoadDocument_DocumentSplitEvent;
+void LoadDocument_DocumentSplitEvent(object sender, PdfDocumentSplitEventArgs args)
+{
+    //Save the resulting document.
+    FileStream outputStream = new FileStream(Guid.NewGuid().ToString() + ".pdf", FileMode.CreateNew);
+    args.PdfDocumentData.CopyTo(outputStream);
+    outputStream.Close();
+}
+//Spit the document by a fixed number.
+loadDocument.SplitByFixedNumber(2);
 
-//Load the PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Set a output path
-const string destinationFilePattern = "Output" + "{0}.pdf";
-//Split the pages into fixed number
-loadedDocument.SplitByFixedNumber(destinationFilePattern, 4);
-
-//close the document
-loadedDocument.Close(true);
+//Close the document.
+loadDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -175,8 +188,6 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document.
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -203,12 +214,9 @@ Refer to the following code example to split a PDF using bookmarks.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Split%20PDFs/Split-PDF-based-Bookmarks/.NET/Split-PDF-based-Bookmarks/Program.cs" %} 
 
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-using Syncfusion.Pdf;
-
 // Load the PDF document 
-using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf")) 
+using (FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read)) 
+using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileStream)) 
 { 
     PdfBookmarkBase bookmarks = loadedDocument.Bookmarks; 
     // Iterate all the bookmarks and their page ranges 
@@ -228,8 +236,11 @@ using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
                     } 
                     // Import the pages to the new PDF document 
                     document.ImportPageRange(loadedDocument, bookmark.Destination.PageIndex, endIndex); 
-                    //Save the document
-                    document.Save("Output.pdf");
+                    //Save the document as stream
+                    using (MemoryStream stream = new MemoryStream()) 
+                    { 
+                        document.Save(stream); 
+                    } 
                 } 
             } 
         } 
@@ -239,10 +250,6 @@ using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Parsing;
-using Syncfusion.Pdf;
 
 // Load the PDF document 
 using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
@@ -265,7 +272,7 @@ using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
                     }
                     // Import the pages to the new PDF document 
                     document.ImportPageRange(loadedDocument, bookmark.Destination.PageIndex, endIndex);
-                    //Save the document
+                    //Save the document as stream
                     document.Save("Output.pdf");
                 }
             }
@@ -276,10 +283,6 @@ using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Parsing
-Imports Syncfusion.Pdf.Interactive
 
 Using loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
 Dim bookmarks As PdfBookmarkBase = loadedDocument.Bookmarks
@@ -312,31 +315,33 @@ The Syncfusion<sup>&reg;</sup> PDF library enables the splitting of PDF document
 {% tabs %}  
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Split%20PDFs/Remove-Unused-Resources-when-Splitting-PDF-Documents/.NET/Remove-Unused-Resources-when-Splitting-PDF-Documents/Program.cs" %} 
+{% raw %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
-
-//Create the values.
-int[,] values = new int[,] { { 2, 5 }, { 8, 10 } };
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Set an output file pattern.
-const string destinationFilePattern = "Output{0}.pdf";
+//Load the existing PDF file.
+PdfLoadedDocument loadDocument = new PdfLoadedDocument(new FileStream("Input.pdf", FileMode.Open));
+//Subscribe to the document split event.
+loadDocument.DocumentSplitEvent += LoadDocument_DocumentSplitEvent;
+void LoadDocument_DocumentSplitEvent(object sender, PdfDocumentSplitEventArgs args)
+{
+    //Save the resulting document.
+    FileStream outputStream = new FileStream(Guid.NewGuid().ToString() + ".pdf", FileMode.CreateNew);
+    args.PdfDocumentData.CopyTo(outputStream);
+    outputStream.Close();
+}
 //Create the split options object.
 PdfSplitOptions splitOptions = new PdfSplitOptions();
 //Enable the removal of unused resources property.
 splitOptions.RemoveUnusedResources = true;
 //Split the document by ranges.
-loadedDocument.SplitByRanges(destinationFilePattern, values, splitOptions);
+loadDocument.SplitByRanges(new int[,] { { 0, 5 }, { 5, 10 } }, splitOptions);
 //Close the document.
-loadedDocument.Close(true);
+loadDocument.Close(true);
 
+{% endraw %}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
+{% raw %}
 
 //Create the values.
 int[,] values = new int[,] { { 2, 5 }, { 8, 10 } };
@@ -353,12 +358,11 @@ loadedDocument.SplitByRanges(destinationFilePattern, values, splitOptions);
 //Close the document.
 loadedDocument.Close(true);
 
+{% endraw %}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Parsing
+{% raw %}
 
 'Create the values.
 Dim values As Integer(,) = New Integer(,) {{2, 5},{8, 10}}
@@ -376,6 +380,7 @@ loadedDocument.SplitByRanges(destinationFilePattern, values, splitOptions)
 'Close the document.
 loadedDocument.Close(True)
 
+{% endraw %}
 {% endhighlight %}
 
 {% endtabs %}
@@ -390,32 +395,34 @@ The Syncfusion<sup>&reg;</sup> PDF library enables the splitting of PDF document
 {% tabs %} 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Split%20PDFs/Import-tagged-structure-when-splitting-PDF-documents/.NET/Import-tagged-structure-when-splitting-PDF-documents/Program.cs" %} 
+{% raw %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
-
-//Create the values.
-int[,] values = new int[,] { { 0, 1 }, { 1, 2 } };
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Set an output file pattern.
-const string destinationFilePattern = "Output{0}.pdf";
+//Load an existing PDF file.
+PdfLoadedDocument loadDocument = new PdfLoadedDocument(new FileStream("Input.pdf", FileMode.Open));
+//Subscribe to the document split event.
+loadDocument.DocumentSplitEvent += LoadDocument_DocumentSplitEvent;
+void LoadDocument_DocumentSplitEvent(object sender, PdfDocumentSplitEventArgs args)
+{
+    //Save the resulting document.
+    FileStream outputStream = new FileStream(Guid.NewGuid().ToString() + ".pdf", FileMode.CreateNew);
+    args.PdfDocumentData.CopyTo(outputStream);
+    outputStream.Close();
+}
 //Create the split options object.
 PdfSplitOptions splitOptions = new PdfSplitOptions();
 //Enable the Split tags property.
 splitOptions.SplitTags = true;
 //Split the document by ranges.
-loadedDocument.SplitByRanges(destinationFilePattern, values, splitOptions);
+loadDocument.SplitByRanges(new int[,] { { 0, 1 }, { 1, 2 } }, splitOptions);
 
 //Close the document.
-loadedDocument.Close(true);
+loadDocument.Close(true);
 
+{% endraw %}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
+{% raw %}
 
 //Create the values.
 int[,] values = new int[,] { { 0, 1 }, { 1, 2 } };
@@ -433,12 +440,11 @@ loadedDocument.SplitByRanges(destinationFilePattern, values, splitOptions);
 //Close the document.
 loadedDocument.Close(true);
 
+{% endraw %}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Parsing
+{% raw %}
 
 'Create the values.
 Dim values As Integer(,) = New Integer(,) {{0, 1},{1, 2}}
@@ -456,6 +462,7 @@ loadedDocument.SplitByRanges(destinationFilePattern, values, splitOptions)
 'Close the document.
 loadedDocument.Close(True)
 
+{% endraw %}
 {% endhighlight %}
 
 {% endtabs %}
