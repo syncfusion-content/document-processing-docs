@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Free text annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about free text annotations in Syncfusion Blazor SfPdfViewer component and more.
+description: Learn how to add, edit, and delete free text annotations in the Syncfusion Blazor SfPdfViewer component, including default settings, APIs, and custom font.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,17 +9,17 @@ documentation: ug
 
 # Free text annotations in Blazor SfPdfViewer Component
 
-The SfPdfViewer control provides the options to add, edit and delete the free text annotations.
+The SfPdfViewer component provides options to add, edit, and delete free text annotations.
 
 ## Adding a free text annotation to the PDF document
 
-The free text annotations can be added to the PDF document using the annotation toolbar.
+Free text annotations can be added using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it. 
-* Select the **Free Text Annotation** button in the annotation toolbar. It enables the Free Text Annotation mode.
-* You can add the text over the pages of the PDF document.
+* Click the **Edit Annotation** button in the SfPdfViewer toolbar. The annotation toolbar appears.
+* Select the **Free Text Annotation** button to enable Free Text Annotation mode.
+* Click anywhere on the page to add text to the PDF document.
 
-In the pan mode, if the free text annotation mode is entered, the SfPdfViewer control will switch to text select mode.
+When Free Text Annotation mode is enabled from Pan, the viewer automatically switches to Text Select mode.
 
 ![Free Text Annotation in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-free-text-annotation.png)
 
@@ -45,67 +45,65 @@ In the pan mode, if the free text annotation mode is entered, the SfPdfViewer co
 
 ## Editing the properties of free text annotation
 
-The font family, font size, font styles, font color, text alignment, fill color, the border stroke color, border thickness, and opacity of the free text annotation can be edited using the Font Family tool, Font Size tool, Font Color tool, Text Align tool, Font Style tool  Edit Color tool, Edit Stroke Color tool, Edit Thickness tool, and Edit Opacity tool in the annotation toolbar.
+The following properties of a free text annotation can be modified from the annotation toolbar: font family, font size, font style, font color, text alignment, fill color, border (stroke) color, border thickness, and opacity. Use the Font Family, Font Size, Font Color, Text Align, Font Style, Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools to change these settings.
 
 ### Editing font family
 
-The font family of the annotation can be edited by selecting the desired font in the Font Family tool.
+Change the font family by selecting a font from the Font Family tool.
 
 ![Editing Font Family of Blazor SfPdfViewer Text](../../blazor-classic/images/blazor-pdfviewer-edit-font-family.png)
 
 ### Editing font size
 
-The font size of the annotation can be edited by selecting the desired size in the Font Size tool.
+Change the font size by selecting a value from the Font Size tool.
 
 ![Editing Font Size of Blazor SfPdfViewer Text](../../blazor-classic/images/blazor-pdfviewer-edit-font-size.png)
 
 ### Editing font color
 
-The font color of the annotation can be edited using the color palette provided in the Font Color tool.
+Change the font color using the color palette in the Font Color tool.
 
 ![Editing Font Color of Blazor SfPdfViewer Text](../../blazor-classic/images/fontcolor.png)
 
 ### Editing the text alignment
 
-The text in the annotation can be aligned by selecting the desired styles in the dropdown pop-up in the Text Align tool.
+Align the text by choosing an option from the Text Align tool dropdown.
 
 ![Editing Free Text Annotation in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-text-alignment.png)
 
 ### Editing text styles
 
-The style of the text in the annotation can be edited by selecting the desired styles in the dropdown pop-up in the Font Style tool.
+Apply bold, italic, underline, or strikethrough from the Font Style tool dropdown.
 
 ![Editing Font Style in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-edit-font-style.png)
 
 ### Editing fill color
 
-The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
+Change the fill color using the color palette in the Edit Color tool.
 
 ![Editing Fill Color in Blazor SfPdfViewer Text](../../blazor-classic/images/blazor-pdfviewer-text-fill-color.png)
 
 ### Editing stroke color
 
-The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
+Change the border (stroke) color using the color palette in the Edit Stroke Color tool.
 
 ![Editing Stroke Color of Blazor SfPdfViewer Text](../../blazor-classic/images/blazor-pdfviewer-font-stroke.png)
 
 ### Editing thickness
 
-The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
+Adjust the border thickness using the range slider in the Edit Thickness tool.
 
 ![Editing Font Border Thickness of Blazor SfPdfViewer Text](../../blazor-classic/images/blazor-pdfviewer-font-border-thickness.png)
 
 ### Editing opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+Adjust the annotation opacity using the range slider in the Edit Opacity tool.
 
 ![Editing Font Opacity in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-font-opacity.png)
 
 ## Setting default properties during control initialization
 
-The properties of the free text annotation can be set before creating the control using FreeTextSettings.
-
-After editing the default values, they will be changed to the selected values.
+Default properties for free text annotations can be set during component initialization using [FreeTextSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FreeTextSettings). These values apply to newly created annotations. Any subsequent changes made from the annotation toolbar affect only annotations created afterward.
 
 ```cshtml
 
@@ -128,7 +126,7 @@ FreeTextSettings=@FreeTextSettings></SfPdfViewer2>
 
 ```
 
-You can also enable the autofit support for free text annotation by using the [AutoFit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerFreeTextSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerFreeTextSettings_AutoFit) boolean property in PdfViewerFreeTextSettings as below. The width of the free text rectangle box will be increased based on the text added to it.
+Autofit support for free text annotations can be enabled using the [AutoFit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerFreeTextSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerFreeTextSettings_AutoFit) property in PdfViewerFreeTextSettings. When enabled, the width of the free text rectangle expands based on the entered text.
 
 ```cshtml
 
@@ -149,9 +147,9 @@ You can also enable the autofit support for free text annotation by using the [A
 
 ## Add free text annotation programmatically
 
-The Blazor SfPdfViewer offers the capability to programmatically add the free text annotation within the SfPdfViewer control using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+Blazor SfPdfViewer supports programmatically adding free text annotations using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
-Below is an example demonstrating how you can use this method to add free text annotation to a PDF document:
+The following example demonstrates adding a free text annotation to a PDF document:
 
 ```cshtml
 
@@ -186,7 +184,7 @@ Below is an example demonstrating how you can use this method to add free text a
 
 ```
 
-This code will add a free text annotation to the first page of the PDF document.
+This example adds a free text annotation to the first page of the document.
 
 ![Programmatically Added Free Text Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-freetext-annotation.png)
 
@@ -194,9 +192,9 @@ This code will add a free text annotation to the first page of the PDF document.
 
 ## Edit free text annotation programmatically
 
-The Blazor SfPdfViewer offers the capability to programmatically edit the free text annotation within the SfPdfViewer control using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+Blazor SfPdfViewer supports programmatically editing free text annotations using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
-Below is an example demonstrating how you can utilize this method to edit the free text annotation programmatically:
+The following example demonstrates editing a free text annotation programmatically:
 
 ```cshtml
 
@@ -249,7 +247,7 @@ Below is an example demonstrating how you can utilize this method to edit the fr
 
 ```
 
-This code snippet will edit the free text annotation programmatically within the SfPdfViewer control.
+This example updates the position, size, appearance, and content of a free text annotation.
 
 ![Programmatically Edit Free Text Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-freetext-annotation.png)
 
@@ -257,12 +255,10 @@ This code snippet will edit the free text annotation programmatically within the
 
 ## Custom Font Support for FreeText Annotation
 
-The Blazor SfPdfViewer allows you to load, edit, and save custom fonts in FreeText annotations using the [FallbackFontCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FallbackFontCollection) and [FontFamilies](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FontFamilies) properties
+The Blazor SfPdfViewer supports loading, editing, and saving custom fonts in FreeText annotations using the [FallbackFontCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FallbackFontCollection) and [FontFamilies](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FontFamilies) properties.
 
 ### Loading Custom Font Collection in SfPdfViewer
-If the custom font is not installed on the system, the FallbackFontCollection property is required to save the FreeText annotation with the custom font.
-
-The following example demonstrates how to load custom font collections, such as Arial Black and Courier New, as TTF files in SfPdfViewer.
+If a custom font is not installed on the system, use FallbackFontCollection to ensure FreeText annotations are saved with the desired font. The following example loads Arial Black and Courier New as TTF files.
 
 ```cshtml
 @using Syncfusion.Blazor;
@@ -285,11 +281,11 @@ The following example demonstrates how to load custom font collections, such as 
         pdfViewer.FallbackFontCollection.Add("Courier New", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Fonts/COUR.ttf")));
     }
 }
+
 ```
 ### Adding Custom Font Families to the Annotation Toolbar Dropdown
-The FontFamilies property is used to add custom font families to the Font Family dropdown in the annotation toolbar.
 
-The following example demonstrates how to add custom font families as a string array to the Font Family dropdown in the annotation toolbar:
+Use the FontFamilies property to add custom font families to the Font Family dropdown in the annotation toolbar.
 
 ```cshtml
 @using Syncfusion.Blazor;
@@ -310,7 +306,7 @@ The following example demonstrates how to add custom font families as a string a
 ![FontFamilies Property in Blazor SfPdfViewer](../images/FontFamilies_API_SfPdfViewer.png)
 
 
-The following example demonstrates how to load, edit, and save custom fonts in FreeText annotations
+The following example demonstrates loading, editing, and saving custom fonts in FreeText annotations:
 
 ```cshtml
 @using Syncfusion.Blazor;
@@ -343,9 +339,9 @@ The following example demonstrates how to load, edit, and save custom fonts in F
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/FreeText/Custom%20Font%20Support%20For%20FreeText%20Annotation).
 
-To ensure proper and seamless execution when using Google API fonts in the PDF Viewer component, it's essential to load these fonts into the sample application as well. This is particularly important because FreeText annotations are rendered directly onto the canvas, making it mandatory to have the fonts available in the sample for accurate rendering.
+To ensure accurate rendering when using Google API fonts in the PDF Viewer component, load these fonts in the application as well. FreeText annotations render directly on the canvas, so the fonts must be available at runtime.
 
-The following example illustrates how to load custom fonts in FreeText annotations using fonts from Google Fonts or other external sources.
+The following example illustrates loading custom fonts in FreeText annotations using fonts from Google Fonts or other external sources.
 
 ```cshtml
 <script>
@@ -363,11 +359,12 @@ The following example illustrates how to load custom fonts in FreeText annotatio
 </script>
 ```
 
->**Note:** If external fonts are not properly loaded in the environment, it may lead to slight inconsistencies when importing and rendering free text annotations using those custom fonts. This issue typically occurs only with fonts that are referenced externally, such as those loaded from web-based sources.
+>**Note:** If external fonts are not properly loaded in the environment, slight inconsistencies may occur when importing and rendering free text annotations that use those fonts. This typically affects fonts referenced from web-based sources.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/FreeText/Load%20Custom%20Font%20From%20External%20Links).
 
 ## See also
 
 * [How to delete the annotation programmatically](./text-markup-annotation#delete-annotation-programmatically)
-* [How to Load the Font Collection in SfPdfViewer](../how-to/load-font-collection)
+
+* [How to Load the Font Collection in SfPdfViewer](../faqs/how-to-load-font-collection)
