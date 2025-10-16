@@ -1,37 +1,37 @@
 ---
 layout: post
-title: Toolbar in ASP.NET Core Pdfviewer Component|Syncfusion
-description: Learn here all about Toolbar in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Toolbar in ASP.NET Core PDF Viewer component | Syncfusion
+description: Learn all about the toolbar in the Syncfusion ASP.NET Core PDF Viewer component, including showing or hiding items and customizing the built-in toolbar.
 platform: document-processing
-control: Toolbar
+control: PDF Viewer
 publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Built-in toolbar in ASP.NET Core PDF Viewer control
+# Built-in toolbar in ASP.NET Core PDF Viewer
 
-The PDF Viewer comes with a powerful built-in toolbar to execute important actions such as page navigation, text search,view mode,download,print,bookmark, and thumbnails.
+The PDF Viewer includes a built-in toolbar for common actions such as page navigation, text search, view mode, download, print, bookmarks, and thumbnails.
 
-The following table shows built-in toolbar items and its actions:-
+The following table lists the built-in toolbar items and their actions:
 
 | Option | Description |
 |---|---|
 | OpenOption | This option provides an action to load the PDF documents to the PDF Viewer.|
-| PageNavigationTool |This option provides an action to navigate the pages in the PDF Viewer. It contains GoToFirstPage,GoToLastPage,GotoPage,GoToNext, and GoToLast tools.|
-| MagnificationTool | This option provides an action to magnify the pages either with predefined or user defined zoom factors in the PDF Viewer. Contains ZoomIn, ZoomOut, Zoom, FitPage and FitWidth tools|
+| PageNavigationTool | This option provides an action to navigate pages in the PDF Viewer. It contains GoToFirstPage, GoToLastPage, GotoPage, GoToNext, and GoToLast tools.|
+| MagnificationTool | This option provides an action to magnify pages with predefined or user-defined zoom factors in the PDF Viewer. Contains ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth tools.|
 | PanTool | This option provides an action for panning the pages in the PDF Viewer.|
-| SelectionTool |This option provides an action to enable/disable the text selection in the PDF Viewer.|
-| SearchOption |This option provides an action to search a word in the PDF documents.|
-| PrintOption |This option provides an action to print the PDF document being loaded in the PDF Viewer.|
-| DownloadOption |This Download option provides an action to download the PDF document that has been loaded in the PDF Viewer.|
+| SelectionTool | This option provides an action to enable or disable text selection in the PDF Viewer.|
+| SearchOption | This option provides an action to search for text in PDF documents.|
+| PrintOption | This option provides an action to print the PDF document loaded in the PDF Viewer.|
+| DownloadOption | This option provides an action to download the PDF document loaded in the PDF Viewer.|
 | UndoRedoTool | This tool provides options to undo and redo the annotation actions performed in the PDF Viewer.|
 | AnnotationEditTool | This tool provides options to enable or disable the edit mode of annotation in the PDF Viewer.|
 
-## Show/Hide the built-in toolbar
+## Show or hide the built-in toolbar
 
-The PDF Viewer has an option to show or hide the complete built-in toolbar. You can achieve this by using following two ways.,
+The PDF Viewer provides options to show or hide the complete built-in toolbar. You can do this in two ways:
 
-* **Show/Hide toolbar using enableToolbar API as in the following code snippet**
+* Show or hide the toolbar using the enableToolbar API:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -59,7 +59,7 @@ The PDF Viewer has an option to show or hide the complete built-in toolbar. You 
 {% endhighlight %}
 {% endtabs %}
 
-* **Show/Hide toolbar using showToolbar as in the following code snippet**
+* Show or hide the toolbar using showToolbar:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -101,11 +101,11 @@ The PDF Viewer has an option to show or hide the complete built-in toolbar. You 
 {% endhighlight %}
 {% endtabs %}
 
-## Show/Hide the built-in toolbaritem
+## Show or hide toolbar items
 
 The PDF Viewer has an option to show or hide these grouped items in the built-in toolbar.
 
-* **Show/Hide toolbaritem using toolbarSettings as in the following code snippet.**
+* Show or hide toolbar items using toolbarSettings:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -135,7 +135,7 @@ The PDF Viewer has an option to show or hide these grouped items in the built-in
 {% endhighlight %}
 {% endtabs %}
 
-* **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
+* Show or hide toolbar items using showToolbarItem:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -177,15 +177,15 @@ The PDF Viewer has an option to show or hide these grouped items in the built-in
 {% endhighlight %}
 {% endtabs %}
 
-## Customize Built-In Toolbar
+## Customize the built-in toolbar
 
-PDF Viewer allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
+The PDF Viewer allows you to customize (add, show, hide, enable, and disable) existing items in the toolbar.
 
-* Add - New items can defined by **CustomToolbarItemModel** and with existing items in [**ToolbarSettings**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) property. Newly added item click action can be defined in `toolbarclick`.
+- Add: Define new items using **CustomToolbarItemModel** and include them with existing items via the [**ToolbarSettings**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) property. Handle clicks in the toolbarClick event.
 
-* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_ToolbarItems).
+- Show/Hide: Show or hide existing items using the [**ToolbarSettings**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) property. Predefined toolbar items are available via [`ToolbarItem`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_ToolbarItems).
 
-* Enable, Disable - Toolbar items can be enabled or disable using `enabletoolbaritem`.
+- Enable/Disable: Toolbar items can be enabled or disabled using enableToolbarItem.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -306,45 +306,45 @@ PDF Viewer allows you to customize(add, show, hide, enable, and disable) existin
 {% endhighlight %}
 {% endtabs %}
 
-N> Default value of toolbar items is ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
+N> Default toolbar items: ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
 
-### Align Property
+### Align property
 
-The align property is used to specify the alignment of a toolbar item within the toolbar.
+The Align property specifies the alignment of a toolbar item within the toolbar.
 
 `Left`: Aligns the item to the left side of the toolbar.
 `Right`: Aligns the item to the right side of the toolbar.
 
-### Tooltip Property
+### Tooltip property
 
-The tooltip property is used to set the tooltip text for a toolbar item. Tooltip provides additional information when a user hovers over the item.
+The Tooltip property sets the tooltip text for a toolbar item. Tooltips provide additional information when a user hovers over the item.
 
-### CssClass Property
+### CssClass property
 
-The cssClass property is used to apply custom CSS classes to a toolbar item. It allows custom styling of the toolbar item.
+The CssClass property applies custom CSS classes to a toolbar item for custom styling.
 
-### Prefix Property
+### Prefix property
 
-The prefix property is used to set the CSS class or icon that should be added as a prefix to the existing content of the toolbar item.
+The Prefix property sets the CSS class or icon added as a prefix to the existing content of the toolbar item.
 
-### ID Property
+### ID property
 
-The id property within a CustomToolbarItemModel is a compulsory attribute that plays a vital role in toolbar customization. It serves as a unique identifier for each toolbar item, facilitating distinct references and interactions.
+The Id property of a CustomToolbarItemModel uniquely identifies a toolbar item and is required for customization.
 
-When defining or customizing toolbar items, it is mandatory to assign a specific and descriptive id to each item.
-These properties are commonly used when defining custom toolbar items with the `CustomToolbarItemModel`` in the context of Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. When configuring the toolbar using the `ToolbarSettings`` property, you can include these properties to customize the appearance and behavior of each toolbar item.
+When defining or customizing toolbar items, assign a specific and descriptive Id to each item.
+These properties are commonly used when defining custom toolbar items with the CustomToolbarItemModel in the context of the Syncfusion PDF Viewer. When configuring the toolbar using the ToolbarSettings property, you can include these properties to customize the appearance and behavior of each toolbar item.
 
 N> When customizing toolbar items, you have the flexibility to include either icons or text based on your design preference.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Customize%20existing%20toolbar)
 
-## Custom Toolbar
+## Custom toolbar
 
-The PDF Viewer provides API for user interactions options provided in its built-in toolbar. Using this, you can create your own User Interface for toolbar actions in application level by hiding the built-in toolbar. The following steps are used to create the custom toolbar for PDF Viewer:-
+The PDF Viewer exposes APIs for the interactions available in the built-in toolbar. Using these, you can build your own UI for toolbar actions at the application level by hiding the built-in toolbar. Follow these steps to create a custom toolbar for the PDF Viewer:
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started/) to create simple PDF Viewer sample.
 
-**Step 2:** Add EJ2 toolbar for performing primary actions like Open,Previous page,Next page,Go to page,Print and Download using the following code snippet.,
+**Step 2:** Add an EJ2 Toolbar to perform primary actions like Open, Previous page, Next page, Go to page, Print, and Download using the following code snippet:
 
 ```html
 @{
@@ -368,7 +368,7 @@ The PDF Viewer provides API for user interactions options provided in its built-
 
 ```
 
-**Step 3:** Add EJ2 toolbar for performing magnification actions in PDF Viewer using the following code snippet.,
+**Step 3:** Add an EJ2 Toolbar to perform magnification actions in the PDF Viewer using the following code snippet:
 
 ```html
 <div id="magnificationToolbarItems">
@@ -383,7 +383,7 @@ The PDF Viewer provides API for user interactions options provided in its built-
 
 ```
 
-**Step 4:** Add the following style to achieve the custom toolbar styling.,
+**Step 4:** Add the following styles to achieve the custom toolbar styling:
 
 ```html
 <style>
@@ -489,9 +489,9 @@ The PDF Viewer provides API for user interactions options provided in its built-
 </style>
 ```
 
-N>The icons are embedded in the font file used in the previous code snippet.
+N> The icons are embedded in the font file used in the previous code snippet.
 
-**Step 5:** Add the following scripts for performing user interaction in PDF Viewer in code behind.
+**Step 5:** Add the following scripts to perform user interactions in the PDF Viewer:
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
