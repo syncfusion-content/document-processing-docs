@@ -25,9 +25,8 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Add a BasicBlockList SmartArt to the slide at the specified size and position.
 ISmartArt smartArt = slide.Shapes.AddSmartArt(SmartArtType.BasicBlockList, 0, 0, 640, 426); 
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("SmartArt.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("SmartArt.pptx");
 //Close the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -79,9 +78,8 @@ ISmartArt smartArt = slide.Shapes.AddSmartArt(SmartArtType.AlternatingHexagons, 
 ISmartArtNode newNode = smartArt.Nodes.Add();
 // Set the text to the newly added node.
 newNode.TextBody.AddParagraph("New main node added.");
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("SmartArt.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("SmartArt.pptx");
 //Close the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
@@ -142,9 +140,8 @@ ISmartArtNode newNode = smartArt.Nodes.Add();
 ISmartArtNode childNode = newNode.ChildNodes.Add();
 // Set a text to newly added child node.
 childNode.TextBody.AddParagraph("Child node of the existing node.");
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("SmartArt.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("SmartArt.pptx");
 //Close the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
@@ -215,9 +212,8 @@ firstNode.Shapes[0].Fill.FillType = FillType.Solid;
 firstNode.Shapes[0].Fill.SolidFill.Color = ColorObject.GreenYellow;
 //Set  transparency value of fill
 firstNode.Shapes[0].Fill.SolidFill.Transparency = 30;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("SmartArt.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("SmartArt.pptx");
 //Close the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
@@ -296,9 +292,8 @@ foreach (IShape shape in pptxDoc.Slides[0].Shapes)
         }
     }
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("SmartArt.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("SmartArt.pptx");
 //Close the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
@@ -367,9 +362,8 @@ ISlide slide = pptxDoc.Slides[0];
 ISmartArt smartArt = slide.Shapes[0] as ISmartArt;
 //Remove a node at the specified index.
 smartArt.Nodes.RemoveAt(4);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("SmartArt.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("SmartArt.pptx");
 //Close the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
@@ -429,9 +423,8 @@ foreach (ISmartArtNode node in smartArt.Nodes)
         //Set the assistant node to false.
         node.IsAssistant = false;
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("SmartArt.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("SmartArt.pptx");
 //Close the Presentation.
 pptxDoc.Close();
 {% endhighlight %}

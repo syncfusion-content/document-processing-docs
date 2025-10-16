@@ -36,9 +36,8 @@ IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
 ISequence sequence = slide.Timeline.MainSequence;
 //Add bounce effect to the shape
 IEffect bounceEffect = sequence.AddEffect(cubeShape, EffectType.Bounce, EffectSubtype.None, EffectTriggerType.OnClick);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -97,9 +96,8 @@ IShape buttonShape = slide.Shapes.AddShape(AutoShapeType.Oval, 100,100,50,50);
 ISequence interactiveSequence = slide.Timeline.InteractiveSequences.Add(buttonShape);
 //Add Fly effect with top subtype to animate the shape as fly from top
 IEffect bounceEffect = interactiveSequence.AddEffect(cubeShape, EffectType.Fly, EffectSubtype.Top, EffectTriggerType.OnClick);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -162,9 +160,10 @@ IShape shape = slide.Shapes[0] as IShape;
 ISequence sequence = slide.Timeline.MainSequence;
 //Add swivel effect with vertical subtype to the shape, build type is used to represent the animate level of the paragraph
 IEffect bounceEffect = sequence.AddEffect(shape, EffectType.Swivel, EffectSubtype.Vertical, EffectTriggerType.OnClick, BuildType.ByLevelParagraphs1);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(""Result.pptx, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Result.pptx");
+//Close the presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -223,9 +222,10 @@ ISequence sequence = slide.Timeline.MainSequence;
 IEffect effect = sequence.AddEffect(cubeShape, EffectType.RandomBars, EffectSubtype.None, EffectTriggerType.OnClick);
 //Change the preset class type of the effect from default entrance to exit
 effect.PresetClassType = EffectPresetClassType.Exit;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
+//Close the presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -291,9 +291,10 @@ IEffect[] animationEffects = sequence.GetEffectsByShape(shape);
 IEffect animationEffect = animationEffects[0];
 //Change the animation effect type from swivel to GrowAndTurn
 animationEffect.Type = EffectType.GrowAndTurn;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Animation.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Animation.pptx");
+//Close the presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -361,9 +362,10 @@ ISequence sequence = slide.Timeline.MainSequence;
 IEffect wheelEffect = sequence[0] as IEffect;
 //Change the wheel animation effect sub type from 2 spoke to 4 spoke
 wheelEffect.Subtype = EffectSubtype.Wheel4;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Animation.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Animation.pptx");
+//Close the presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -427,9 +429,10 @@ ISequence sequence = slide.Timeline.MainSequence;
 IEffect pathEffect = sequence[0] as IEffect;
 //Increase the duration of the animation effect
 pathEffect.Behaviors[0].Timing.Duration = 5;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Animation.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Animation.pptx");
+//Close the presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -497,9 +500,10 @@ IEffect effect = shapeAnimationEffects[1];
 sequence.Remove(effect);
 //Insert the removed animation effect as first
 sequence.Insert(0, effect);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Animation.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Animation.pptx");
+//Close the presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -581,9 +585,10 @@ points[0] = new PointF(0, 0.25f);
 motionBehavior.Path.Add(MotionCommandPathType.LineTo, points, MotionPathPointsType.Auto, false);
 //Add the end command to finish the path animation
 motionBehavior.Path.Add(MotionCommandPathType.End, null, MotionPathPointsType.Auto, false);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
+//Close the presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -669,9 +674,10 @@ foreach (IEffect effect in animationEffects)
 {
     sequence.Remove(effect);
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Animation.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Animation.pptx");
+//Close the presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
