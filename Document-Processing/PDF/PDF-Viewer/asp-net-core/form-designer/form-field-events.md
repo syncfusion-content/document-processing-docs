@@ -1,36 +1,36 @@
 ---
 layout: post
-title: Form Field Events in EJ2 ASP.NET CORE PDF Viewer | Syncfusion
-description: Learn here all about form field event in ASP.NET CORE PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Form field events in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn about form field events supported in the Syncfusion ASP.NET Core PDF Viewer component and how to handle them.
 platform: document-processing
-control: Form Field Events
+control: PDF Viewer
 publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# PDF Viewer Form Field events
+# Form field events in ASP.NET Core PDF Viewer
 
-The PDF Viewer control provides the support to different Form Field events. The Form Field events supported by the PDF Viewer Control are:
+The PDF Viewer component provides support for various form field events. The following events are available:
 
-| Form Field events | Description |
+| Form field events | Description |
 |---|---|
-| formFieldAdd | Event trigger when a form field is added.|
-| formFieldClick | Events trigger when the form field is selected.|
-| formFieldDoubleClick | Events trigger when the form field is double-clicked.|
-| formFieldFocusOut | Events trigger when focus out from the form fields.|
-| formFieldMouseLeave | Events trigger when the mouse cursor leaves the form field.|
-| formFieldMouseOver | Events trigger when the mouse cursor is over a form field.|
-| formFieldMove | Events trigger when a form field is moved.|
-| formFieldPropertiesChange | Events trigger when a property of form field is changed.|
-| formFieldRemove | Events trigger when a form field is removed.|
-| formFieldResize | Events trigger when a form field is resized.|
-| formFieldSelect | Events trigger when a form field is selected.|
-| formFieldUnselect | Events trigger when a form field is unselected.|
-| validateFormFields | Events trigger when validation is failed.|
+| formFieldAdd | Triggered when a form field is added. |
+| formFieldClick | Triggered when a form field is clicked. |
+| formFieldDoubleClick | Triggered when a form field is double-clicked. |
+| formFieldFocusOut | Triggered when focus moves out of a form field. |
+| formFieldMouseLeave | Triggered when the mouse cursor leaves a form field. |
+| formFieldMouseOver | Triggered when the mouse cursor is over a form field. |
+| formFieldMove | Triggered when a form field is moved. |
+| formFieldPropertiesChange | Triggered when a form field property changes. |
+| formFieldRemove | Triggered when a form field is removed. |
+| formFieldResize | Triggered when a form field is resized. |
+| formFieldSelect | Triggered when a form field is selected. |
+| formFieldUnselect | Triggered when a form field is unselected. |
+| validateFormFields | Triggered when validation fails. |
 
 ## formFieldAdd event
 
-The [formFieldAdd](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldAdd) event is triggered when a new form field is added, either programmatically or through user interaction. The event arguments provide the necessary information about the form field addition.
+The [formFieldAdd](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldAdd) event is triggered when a new form field is added, either programmatically or through user interaction. The event arguments provide details about the added form field.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -72,7 +72,7 @@ The [formFieldAdd](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.
 
 ## formFieldClick event
 
-The [formFieldClick](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldClick) event is triggered when a form field is clicked. The event arguments provide the necessary information about the form field click event.
+The [formFieldClick](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldClick) event is triggered when a form field is clicked. The event arguments provide details about the clicked form field.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -114,7 +114,7 @@ The [formFieldClick](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej
 
 ## formFieldDoubleClick event
 
-The [formFieldDoubleClick](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldDoubleClick/) event is triggered when a form field is double-clicked. The event arguments provide the necessary information about the form field double-click event.
+The [formFieldDoubleClick](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldDoubleClick/) event is triggered when a form field is double-clicked. The event arguments provide details about the double-clicked form field.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -156,7 +156,7 @@ The [formFieldDoubleClick](https://help.syncfusion.com/cr/aspnetcore-js2/syncfus
 
 ## formFieldFocusOut event
 
-The [formFieldFocusOut](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldFocusOut/) event is triggered when a form field loses focus. The event arguments provide the necessary information about the form field focus out event.
+The [formFieldFocusOut](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldFocusOut/) event is triggered when a form field loses focus. The event arguments provide details about the field that lost focus.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -198,7 +198,7 @@ The [formFieldFocusOut](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion
 
 ## formFieldMouseLeave event
 
-The [formFieldMouseLeave](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldMouseLeave/) event is triggered when the mouse leaves a form field. The event arguments provide the necessary information about the form field mouse leave event.
+The [formFieldMouseLeave](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldMouseLeave/) event is triggered when the mouse leaves a form field. The event arguments provide details about the mouse leave action.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -240,7 +240,7 @@ The [formFieldMouseLeave](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusi
 
 ## formFieldMouseOver event
 
-The [formFieldMouseOver](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldMouseover/) event is triggered when the mouse hovers over a form field. The event arguments provide the necessary information about the form field mouse over event.
+The [formFieldMouseOver](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldMouseover/) event is triggered when the mouse hovers over a form field. The event arguments provide details about the mouse over action.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -286,7 +286,7 @@ The [formFieldMouseOver](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusio
 
 ## formFieldMove event
 
-The [formFieldMove](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldMove/) event is triggered when the mouse moves inside a form field. The event arguments provide the necessary information about the form field mouse move event.
+The [formFieldMove](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldMove/) event is triggered when a form field is moved. The event arguments provide details about the movement.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -332,7 +332,7 @@ The [formFieldMove](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2
 
 ## formFieldPropertiesChange event
 
-The [formFieldPropertiesChange](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldPropertiesChange/)  event is triggered when the properties of a form field are changed. The event arguments provide the necessary information about which property of the form field has been changed.
+The [formFieldPropertiesChange](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldPropertiesChange/) event is triggered when form field properties change. The event arguments indicate which property changed.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -393,7 +393,7 @@ The [formFieldPropertiesChange](https://help.syncfusion.com/cr/aspnetcore-js2/sy
 
 ## formFieldRemove event
 
-The [formFieldRemove](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldRemove/) event is triggered when a form field is removed from the PDF. The event arguments provide the necessary information about which form field has been removed.
+The [formFieldRemove](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldRemove/) event is triggered when a form field is removed from the PDF. The event arguments provide details about the removed field.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -435,7 +435,7 @@ The [formFieldRemove](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.e
 
 ## formFieldResize event
 
-The [formFieldResize](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldResize/) events are triggered when a form field in a PDF is resized. These events provide the relevant details about the specific form field that has been resized.
+The [formFieldResize](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldResize/) event is triggered when a form field is resized. The event arguments include current and previous positions.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -481,7 +481,7 @@ The [formFieldResize](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.e
 
 ## formFieldSelect event
 
-The [formFieldSelect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldSelect/) events are triggered when a form field in a PDF is selected. These events provide the necessary details about the specific form field that has been selected.
+The [formFieldSelect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldSelect/) event is triggered when a form field is selected. The event arguments provide details about the selected field.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -523,7 +523,7 @@ The [formFieldSelect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.e
 
 ## formFieldUnselect event
 
-The [formFieldUnselect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldUnselect/) events are triggered when a form field in a PDF is unselected. These events provide the necessary details about the specific form field that has been unselected.
+The [formFieldUnselect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldUnselect/) event is triggered when a form field is unselected. The event arguments provide details about the unselected field.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -565,7 +565,7 @@ The [formFieldUnselect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion
 
 ## validateFormFields event
 
-The [ValidateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields/) events are triggered when a required form field is left unfilled before downloading the PDF. These events provide the necessary information for validating which form fields are incomplete.
+The [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields/) event is triggered when required form fields are left unfilled before downloading or printing the PDF. The event arguments include details about the incomplete fields.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
