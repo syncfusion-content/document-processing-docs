@@ -169,3 +169,4 @@ The Print option is not available in mobile mode by default. To use printing on 
 
 - [Annotations in mobile view](../annotation/annotations-in-mobile-view)
 - [Form designer in mobile view](../form-designer/form-designer-in-mobile-view)
+- [Redaction in mobile view](../redaction/mobile-view)
