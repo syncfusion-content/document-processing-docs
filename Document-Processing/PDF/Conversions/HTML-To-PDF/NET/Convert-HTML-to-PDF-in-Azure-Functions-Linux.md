@@ -35,7 +35,7 @@ Step 5: Create a shell file with the below commands in the project and name it a
 
 echo "Starting dependencies installation script..."
 
-# Ensure rsync is installed
+
 if ! command -v rsync &> /dev/null; then
     echo "rsync could not be found, installing..."
     apt-get update && apt-get install -yq rsync
@@ -369,5 +369,6 @@ Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-co
 An online sample link to [convert HTML to PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HtmltoPDF#/material3) in ASP.NET Core. 
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core/html-to-pdf) to explore the rich set of Syncfusion<sup>&reg;</sup> HTML to PDF converter library features. 
+
 
 An online sample link to [convert HTML to PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HtmltoPDF#/material3) in ASP.NET Core. 
