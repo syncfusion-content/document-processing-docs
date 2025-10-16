@@ -1,11 +1,11 @@
 ---
-title: Working with Hyperlinks | Syncfusion
+title: Working with Hyperlinks in PowerPoint Presentation | Syncfusion
 description: This section explains how to add hyperlink in the PowerPoint slide using Essential<sup>&reg;</sup> Presentation library
 platform: document-processing
 control: Presentation
 documentation: UG
 ---
-# Working with Hyperlinks
+# Working with Hyperlinks in PowerPoint Library
 
 The Hyperlink is a reference to data that can link to external contents like images, files, webpage, and more. In PowerPoint slide, a hyperlink may target to any one of the following sources:
 

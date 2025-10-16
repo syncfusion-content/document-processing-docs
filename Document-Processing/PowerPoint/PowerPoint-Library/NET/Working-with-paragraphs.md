@@ -5,7 +5,7 @@ platform: document-processing
 control: Presentation
 documentation: UG
 ---
-# Working with Paragraph
+# Working with Paragraph in PowerPoint Library
 
 ## Adding Paragraph to slide
 

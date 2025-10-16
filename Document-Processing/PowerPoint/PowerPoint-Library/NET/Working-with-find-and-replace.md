@@ -6,7 +6,7 @@ control: Presentation
 documentation: UG
 keywords: 
 ---
-# Working with Find and Replace
+# Working with Find and Replace in PowerPoint Library
 
 .NET PowerPoint library allows you to search for a particular text that you want to change and replace it with another text in the PowerPoint presentation.
 

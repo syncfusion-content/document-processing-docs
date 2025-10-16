@@ -1,6 +1,6 @@
 ---
 title: Working with PowerPoint presentation | Syncfusion
-description: Working with PowerPoint presentation. Cloning the Presentation. Printing the Presentation. Essential<sup>&reg;</sup> Presentation use Points to add slide elements.
+description: Working with PowerPoint presentation. Cloning the Presentation. Printing the Presentation. Essential® Presentation use Points to add slide elements.
 platform: document-processing
 control: Presentation
 documentation: UG

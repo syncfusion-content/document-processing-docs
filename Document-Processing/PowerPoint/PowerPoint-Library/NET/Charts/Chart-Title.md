@@ -1,5 +1,5 @@
 ---
-title: Modify the Appearance of Chart Title | Syncfusion
+title: Modify the Appearance of Chart Title | PowerPoint library | Syncfusion
 description: Learn how to modify the appearance of chart title in a chart in a PowerPoint using .NET PowerPoint library (Presentation) without Microsoft PowerPoint.
 platform: document-processing
 control: PowerPoint

@@ -1,6 +1,6 @@
 ---
 title: Working with Notes in PowerPoint Presentation | Syncfusion |
-description: Code examples to create, edit, and format notes in C# using Syncfusion<sup>&reg;</sup> .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
+description: Code examples to create, edit, and format notes in C# using Syncfusion® .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: Presentation
 documentation: UG
