@@ -720,7 +720,7 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features. 
 
-An online sample link to [create a PowerPoint Presentation](https://blazor.syncfusion.com/demos/powerpoint/getting-started?theme=fluent) in Blazor. 
+An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core.
 
 ## WASM app
 
@@ -1304,4 +1304,4 @@ Kindly explore the [supported and unsupported features of PowerPoint library in 
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
-An online sample link to [create a PowerPoint Presentation](https://blazor.syncfusion.com/demos/powerpoint/getting-started?theme=fluent) in Blazor. 
+An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core.

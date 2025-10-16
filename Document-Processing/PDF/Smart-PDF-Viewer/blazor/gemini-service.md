@@ -9,19 +9,19 @@ documentation: ug
 
 # Getting Started with Smart PDF Viewer using Gemini AI Service
 
-This guide provides step-by-step instructions for integrating and using Syncfusion's Smart PDF Viewer with Gemini AI services in your Blazor App.
+This article provides step-by-step instructions for integrating and using the Syncfusion Blazor Smart PDF Viewer with Gemini AI services in a Blazor app.
 
 ## Prerequisites
 
 Before you begin, ensure you have:
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-* [Gemini API Key](https://ai.google.dev/gemini-api/docs/api-key) - Obtain an API key from Google AI Studio
-
+* [Gemini API key](https://ai.google.dev/gemini-api/docs/api-key) — obtain an API key from Google AI Studio
+* Syncfusion Blazor packages installed and a valid license key registered.
 
 ## Models
 
-For a complete list of models and their capabilities, visit the [Gemini Models Documentation](https://ai.google.dev/gemini-api/docs/models).
+For a complete list of models and their capabilities, see the [Gemini models documentation](https://ai.google.dev/gemini-api/docs/models).
 
 ## Getting Started for Gemini AI with Smart PDF Viewer
 
@@ -32,21 +32,21 @@ After completing this setup, you can:
 ---
 ## Install the following NuGet packages to your project:
 
-open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install the following packages
+Open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search for and install the following packages:
 
-1.[Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI).
-2.[Microsoft.SemanticKernel](https://www.nuget.org/packages/Microsoft.SemanticKernel).
-3.[Microsoft.SemanticKernel.Connectors.Google](https://www.nuget.org/packages/Microsoft.SemanticKernel.Connectors.Google/).
+1. [Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI).
+2. [Microsoft.SemanticKernel](https://www.nuget.org/packages/Microsoft.SemanticKernel).
+3. [Microsoft.SemanticKernel.Connectors.Google](https://www.nuget.org/packages/Microsoft.SemanticKernel.Connectors.Google/).
 
 ## Step 1: Create a Custom AI Service
 
-The Syncfusion Smart PDF Viewer are designed to work with different AI backends through the `IChatInferenceService` interface. This section shows you how to create a custom implementation that connects the Smart PDF Viewer to the Gemini AI service.
+The Syncfusion Smart PDF Viewer is designed to work with different AI backends through the `IChatInferenceService` interface. This section explains how to create a custom implementation that connects the Smart PDF Viewer to the Gemini AI service.
 
 ### Understanding the Interface
 
-The `IChatInferenceService` interface is the bridge between Syncfusion Smart PDF Viewer and AI services:
+The `IChatInferenceService` interface acts as the bridge between the Syncfusion Blazor Smart PDF Viewer and AI services.
 
-1. Create a new file named `MyCustomService.cs`
+1. Create a new file named `MyCustomService.cs`.
 2. Add the following implementation:
 
 {% tabs %}
@@ -104,7 +104,7 @@ public class MyCustomService : IChatInferenceService
 
 ## Step 2: Configure the Blazor App
 
-Configure your Blazor application to use the Gemini AI service with Syncfusion Smart PDF Viewer. This involves registering necessary services and setting up the dependency injection container.
+Configure the Blazor app to use the Gemini AI service with the Syncfusion Blazor Smart PDF Viewer. This involves registering the necessary services and setting up dependency injection.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines="10 11 12 13 14 15 16 17 18 19 20 21" %}

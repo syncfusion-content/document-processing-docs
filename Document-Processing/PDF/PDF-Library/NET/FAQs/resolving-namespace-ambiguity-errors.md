@@ -5,7 +5,7 @@ platform: document-processing
 documentation: UG
 ---
 
-# Resolving Namespace Conflicts in Syncfusion® PDF Packages
+# Resolving PDF Namespace Conflicts
 
 ## Conflict Scenario
 

@@ -84,6 +84,7 @@ public ActionResult ExportToPDF()
     MemoryStream stream = new MemoryStream();
     //Save and close a PDF document. 
     document.Save(stream);
+    document.Close(true); 
     return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "URL_to_PDF.pdf");
 }
 

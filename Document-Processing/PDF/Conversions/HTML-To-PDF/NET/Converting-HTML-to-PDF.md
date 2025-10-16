@@ -5,7 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Converting HTML to PDF
+# Converting HTML to a PDF Document
 
 The HTML to PDF converter is a .NET library for converting webpages, SVG, MHTML, and HTML files to PDF using C#. It uses popular rendering engines such as Blink (Google Chrome) and is reliable and accurate. The result preserves all graphics, images, text, fonts, and the layout of the original HTML document or webpage.
 
@@ -16,14 +16,14 @@ Syncfusion<sup>&reg;</sup> HTML-to-PDF converter will work seamlessly in various
 * Converts any [webpage to PDF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#url-to-pdf).
 * Converts any raw [HTML string to PDF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#html-string-to-pdf).
 * Converts [HTML form to fillable PDF form](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#html-form-to-pdf-form).
-* Automatically creates [Table of Contents](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#table-of-contents).
+* Automatically creates [Table of Contents](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#table-of-contents-with-custom-style).
 * Automatically creates [bookmark hierarchy](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#bookmarks).
 * Converts only a [part of the web page to PDF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#partial-webpage-to-pdf).
-* Supports PDF header and PDF footer.
+* Supports PDF [header and PDF footer](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#header-and-footer).
 * Repeats HTML table header and footer in PDF.
 * Supports HTML5, CSS3, SVG, and Web fonts.
 * Converts any [HTML to an image](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#url-to-image).
-* Converts any [SVG to image](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#url-to-image).
+* Converts any [SVG to image](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#svg-file-to-image).
 * Supports accessing HTML pages using both [HTTP POST and GET](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#http-get-and-post).
 * Supports [cookies-based form authentication](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#form-authentication).
 * Thread safe.
@@ -32,146 +32,6 @@ Syncfusion<sup>&reg;</sup> HTML-to-PDF converter will work seamlessly in various
 * Protects PDF document with password and permission.
 * Compatible with .NET Framework 4.5 and above. 
 * Compatible with .NET Core 2.0 and above. 
-
-## Install HTML to PDF .NET library to your project
-
-Include the HTML to PDF converter in your project using two approaches. 
-* NuGet packages (Recommended)
-* Assemblies.  
-
-### NuGet Packages Required (Recommended)
-
-Directly install the NuGet packages to your .NET application from [nuget.org](https://www.nuget.org/).  
-
-N> The HTML to PDF converter library internally uses the Blink rendering engine for the conversion. The binaries will differ for Windows, Linux, Mac, and AWS. So, separate packages are provided based on OS. Include the packages based on your requirement. 
-
-<table>
-<tr>
-<thead>
-<th><b>Platform(s)</b></th>
-<th><b>NuGet Package</b></th>
-</thead>
-</tr>
-<tr>
-<td>
-(.NET Core, .NET 8, .NET 9) Windows
-</td>
-<td>
-{{'[Syncfusion.HtmlToPdfConverter.Net.Windows.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-(.NET Core, .NET 8, .NET 9) Linux
-</td>
-<td>
-{{'[Syncfusion.HtmlToPdfConverter.Net.Linux.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Linux/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-(.NET Core, .NET 8, .NET 9) Mac
-</td>
-<td>
-{{'[Syncfusion.HtmlToPdfConverter.Net.Mac.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Mac/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-(.NET Core, .NET 8, .NET 9) AWS
-</td>
-<td>
-{{'[Syncfusion.HtmlToPdfConverter.Net.Aws.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Aws/)'| markdownify }}
-</td>
-</tr>
-</table>
-
-Use the following packages for .NET Framework targeted applications. If you are using other Syncfusion libraries or components, use the HTML to PDF converter library with the same platform packages.
-
-<table>
-<tr>
-<thead>
-<th><b>Platform(s)</b></th>
-<th><b>NuGet Package</b></th>
-</thead>
-</tr>
-<tr>
-<td>
-Windows Forms
-</td>
-<td>
-{{'[Syncfusion.HtmlToPdfConverter.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.WinForms/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-WPF
-</td>
-<td>
-{{'[Syncfusion.HtmlToPdfConverter.Wpf.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Wpf/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET
-</td>
-<td>
-{{'[Syncfusion.HtmlToPdfConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.AspNet/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET MVC
-</td>
-<td>
-{{'[Syncfusion.HtmlToPdfConverter.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.AspNet.Mvc5/)'| markdownify }}
-</td>
-</tr>
-</table>
-
-### Assemblies Required
-
-Get the following required assemblies by downloading the HTML converter installer. Download and install the HTML converter for [Windows](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#windows), [Linux](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#linux), and [Mac](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#mac), respectively. Please refer to the [advanced installation](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation) steps for more details. 
-
-<table>
-<tr>
-<thead>
-<th>
-Platforms</th>
-<th>
-Assemblies
-</th>
-</thead>
-</tr>
-<tr>
-<td> 
-WinForms
-WPF
-ASP.NET
-ASP.NET MVC
-</td>
-<td>
-<ul>
-<li>Syncfusion.Compression.Base.dll</li>
-<li>Syncfusion.Pdf.Base.dll</li>
-<li>Syncfusion.HtmlConverter.Base.dll</li>
-<li>Newtonsoft.Json package (v13.0.1 or above)</li>
-</ul>
-</td></tr>
-<tr>
-<td>
-.NET/.NET Core
-Blazor 
-</td>
-<td>
-<ul>
-<li>Syncfusion.Compression.Portable.dll</li>
-<li>Syncfusion.Pdf.Portable.dll</li>
-<li>Syncfusion.HtmlConverter.Portable.dll</li>
-<li>Newtonsoft.Json package (v13.0.1 or above)</li>
-</ul>
-</td></tr>
-</table>
 
 ## Get Started with HTML to PDF conversion
 
@@ -213,10 +73,9 @@ blinkConverterSettings.ViewPortSize = new Syncfusion.Drawing.Size(1280, 0);
 htmlConverter.ConverterSettings = blinkConverterSettings;
 //Convert URL to PDF document.
 PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
-//Create a filestream.
-FileStream fileStream = new FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
+
 //Save and close the PDF document.
-document.Save(fileStream);
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
