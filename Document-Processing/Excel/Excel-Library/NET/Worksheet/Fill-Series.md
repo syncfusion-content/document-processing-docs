@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# Fill Series 
+# Fill Series Feature in Excel Document
 
 The **Fill Series** feature in the XlsIO library allows users to programmatically fill a range with a sequence of values based on the specified direction (row or column), series type, step value, and stop value.
 
@@ -163,11 +163,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     range.FillSeries(ExcelSeriesBy.Columns, ExcelFillSeries.Years, 2, new DateTime(2100, 1, 1));
 
     //Saving the workbook 
-    FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
-
-    //Dispose streams
-    outputStream.Dispose();
+    workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
@@ -244,11 +240,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     range.FillSeries(ExcelSeriesBy.Columns, ExcelFillSeries.Linear, 5, 1000);
 
     //Saving the workbook 
-    FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
-
-    //Dispose streams
-    outputStream.Dispose();
+    workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
@@ -327,11 +319,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     range.FillSeries(ExcelSeriesBy.Columns, ExcelFillSeries.Linear, true);
 
     //Saving the workbook 
-    FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
-
-    //Dispose streams
-    outputStream.Dispose();
+    workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 

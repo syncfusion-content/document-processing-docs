@@ -22,22 +22,14 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream sourceStream = new FileStream(Path.GetFullPath(@"Data/SourceWorkbookTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook sourceWorkbook = application.Workbooks.Open(sourceStream);
-	FileStream destinationStream = new FileStream(Path.GetFullPath(@"Data/DestinationWorkbookTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook destinationWorkbook = application.Workbooks.Open(destinationStream);
+	IWorkbook sourceWorkbook = application.Workbooks.Open(Path.GetFullPath(@"Data/SourceWorkbookTemplate.xlsx"));
+	IWorkbook destinationWorkbook = application.Workbooks.Open(Path.GetFullPath(@"Data/DestinationWorkbookTemplate.xlsx"));
 
 	//Clone the workbook
 	destinationWorkbook = sourceWorkbook.Clone();
    
-	//Saving the workbook as stream
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
-	destinationWorkbook.SaveAs(outputStream);
-
-	//Dispose streams
-	outputStream.Dispose();
-	destinationStream.Dispose();
-	sourceStream.Dispose();
+	//Saving the workbook
+	destinationWorkbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
@@ -87,11 +79,9 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
-	FileStream sourceStream = new FileStream(Path.GetFullPath(@"Data/SourceTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook sourceWorkbook = application.Workbooks.Open(sourceStream);
+	IWorkbook sourceWorkbook = application.Workbooks.Open(Path.GetFullPath(@"Data/SourceTemplate.xlsx"));
 
-	FileStream destinationStream = new FileStream(Path.GetFullPath(@"Data/DestinationTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook destinationWorkbook = application.Workbooks.Open(destinationStream);
+	IWorkbook destinationWorkbook = application.Workbooks.Open(Path.GetFullPath(@"Data/DestinationTemplate.xlsx"));
 
 	#region Copy Worksheet
 	//Copy first worksheet from the source workbook to the destination workbook
@@ -101,14 +91,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CopyWorksheet.xlsx"), FileMode.Create, FileAccess.Write);
-	destinationWorkbook.SaveAs(outputStream);
+	destinationWorkbook.SaveAs(Path.GetFullPath("Output/CopyWorksheet.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	destinationStream.Dispose();
-	sourceStream.Dispose();
 }
 {% endhighlight %}
 
@@ -159,8 +143,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	IWorksheet sourceWorksheet = workbook.Worksheets[0];
 	IWorksheet destinationWorksheet = workbook.Worksheets[1];
@@ -171,13 +154,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Copy the entire row to the next sheet
 	sourceRow.EntireRow.CopyTo(destinationRow);
 
-	//Saving the workbook as stream
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
+	//Saving the workbook
+	workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
@@ -236,8 +214,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	IWorksheet sourceWorksheet = workbook.Worksheets[0];
 	IWorksheet destinationWorksheet = workbook.Worksheets[1];
@@ -248,13 +225,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Copy the entire column to the next sheet
 	sourceColumn.EntireColumn.CopyTo(destinationColumn);
 
-	//Saving the workbook as stream
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
+	//Saving the workbook
+	workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
@@ -314,8 +286,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
-	FileStream sourceStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(sourceStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	IWorksheet sourceWorksheet = workbook.Worksheets[0];
 	IWorksheet destinationWorksheet = workbook.Worksheets[1];
@@ -326,13 +297,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Copy the cell range to the next sheet
 	source.CopyTo(destination);
 	
-	//Saving the workbook as stream
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
-
-	//Dispose streams
-	outputStream.Dispose();
-	sourceStream.Dispose();
+	//Saving the workbook
+	workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
@@ -392,8 +358,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
     IWorksheet sourceWorksheet = workbook.Worksheets[0];
     IWorksheet destinationWorksheet = workbook.Worksheets[1];
@@ -404,13 +369,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Copy the cell range with options
     source.CopyTo(destination, ExcelCopyRangeOptions.CopyStyles);
     
-    //Saving the workbook as stream
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
-
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream.Dispose();
+    //Saving the workbook
+    workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
@@ -476,10 +436,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Move the Sheet
   sheet.Move(1);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook
+  workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
@@ -527,8 +485,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream sourceStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(sourceStream);
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
     IWorksheet sourceWorksheet = workbook.Worksheets[0];
     IWorksheet destinationWorksheet = workbook.Worksheets[1];
@@ -539,13 +496,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Move the entire row to the next sheet
     sourceRow.EntireRow.MoveTo(destinationRow);
 
-    //Saving the workbook as stream
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
-
-    //Dispose streams
-    outputStream.Dispose();
-    sourceStream.Dispose();
+    //Saving the workbook
+    workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
@@ -603,8 +555,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream );
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
     IWorksheet sourceWorksheet = workbook.Worksheets[0];
     IWorksheet destinationWorksheet = workbook.Worksheets[1];
@@ -615,13 +566,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Move the entire column to the next sheet
     source.EntireColumn.MoveTo(destination);
 
-    //Saving the workbook as stream
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
-
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream .Dispose();
+    //Saving the workbook
+    workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
@@ -679,8 +625,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
     IWorksheet sourceWorksheet = workbook.Worksheets[0];
     IWorksheet destinationWorksheet = workbook.Worksheets[1];
@@ -691,13 +636,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Move the cell range to the next sheet
     source.MoveTo(destination);
 
-    //Saving the workbook as stream
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
-
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream.Dispose();
+    //Saving the workbook
+    workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
