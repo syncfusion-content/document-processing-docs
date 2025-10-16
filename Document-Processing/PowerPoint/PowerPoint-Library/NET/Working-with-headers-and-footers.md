@@ -34,9 +34,8 @@ IParagraph paragraph = textboxShape.TextBody.AddParagraph();
 ITextPart textPart = paragraph.AddTextPart();
 //Adds text to the TextPart
 textPart.Text = "AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -122,9 +121,8 @@ IParagraph paragraph = textboxShape.TextBody.AddParagraph();
 ITextPart textPart = paragraph.AddTextPart();
 //Adds text to the TextPart
 textPart.Text = "AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -208,9 +206,8 @@ IParagraph paragraph = textboxShape.TextBody.AddParagraph();
 ITextPart textPart = paragraph.AddTextPart();
 //Adds text to the TextPart
 textPart.Text = "AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -301,9 +298,8 @@ foreach(ILayoutSlide layoutSlide in masterSlide.LayoutSlides)
     //Sets the format of the DateTime Footer in Layout slide
     layoutSlide.HeadersFooters.DateAndTime.Format = DateTimeFormatType.DateTimeMMddyyhmmAMPM;
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -413,9 +409,8 @@ notesSlide.HeadersFooters.DateAndTime.Format = DateTimeFormatType.DateTimeMMMyy;
 notesSlide.HeadersFooters.Footer.Visible = true;
 //Sets the text to be added to the Footer of the Notes slide
 notesSlide.HeadersFooters.Footer.Text = "Notes slide Footer";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -498,9 +493,8 @@ IPresentation pptxDoc = Presentation.Open(inputStream);
 ISlide slide = pptxDoc.Slides[0];
 //Modify the Footer text
 slide.HeadersFooters.Footer.Text = "Footer content modified";     
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -559,9 +553,8 @@ IPresentation pptxDoc = Presentation.Open("Header.pptx");
 INotesSlide notesSlide = pptxDoc.Slides[0].NotesSlide; 
 //Modify the existing content of the header. 
 notesSlide.HeadersFooters.Header.Text = "Header content is modified"; 
-//Save the PowerPoint Presentation as stream.
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation.
+pptxDoc.Save("Sample.pptx");
 //Close the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
@@ -616,9 +609,8 @@ IPresentation pptxDoc = Presentation.Open(inputStream);
 ISlide slide = pptxDoc.Slides[0];
 //Modify Date and Time format of the Footer
 slide.HeadersFooters.DateAndTime.Format = DateTimeFormatType.DateTimeddddMMMMddyyyy;    
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation 
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -685,9 +677,8 @@ foreach(IShape shape in slide.Shapes)
         shape.TextBody.Paragraphs[0].Font.FontSize = 18;
     }
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -773,9 +764,8 @@ foreach(ISlide slide in pptxDoc.Slides)
         slide.HeadersFooters.SlideNumber.Visible = false;
     }
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation

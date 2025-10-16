@@ -65,9 +65,8 @@ seriesMarch.Values = chart.ChartData[2, 4, 4, 4];
 chart.PrimaryCategoryAxis.CategoryLabels = chart.ChartData[2, 1, 4, 1];
 //Specifies the chart type
 chart.ChartType = OfficeChartType.Column_Clustered;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -201,9 +200,8 @@ ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 FileStream excelStream = new FileStream("Book1.xlsx",FileMode.Open);
 //Adds a chart to the slide with a data range from excel worksheet – excel workbook, worksheet number, Data range, position, and size.
 IPresentationChart chart = slide.Charts.AddChart(excelStream, 1, "A1:D4", new RectangleF(100, 10, 700, 500));
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -304,9 +302,8 @@ IOfficeChartSerie serie2014 = chart.Series.Add("2014");
 serie2014.Values = chart.ChartData[2, 3, 7, 3];
 serie2014.SerieType = OfficeChartType.Scatter_Line_Markers;
 
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output_1.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output_1.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -454,9 +451,8 @@ IPresentationChart chart = slide.Shapes[0] as IPresentationChart;
 //Refreshes the chart data. Set true to evaluate Excel formulas before refreshing,
 //or false to refresh only the data without evaluating formulas.
 chart.Refresh(false);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -525,9 +521,8 @@ chart.ChartData.SetValue(2, 4, 80);
 
 //Refreshes the chart
 chart.Refresh();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -647,13 +642,12 @@ chart.Rotation = 80;
 chart.SideWall.Shadow.Angle = 60;
 //Sets the back wall border weight
 chart.BackWall.Border.LineWeight = OfficeChartLineWeight.Narrow;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
 //Set the right angle axes property of the chart
 chart.RightAngleAxes = true;
 //Set the auto scaling of chart
 chart.AutoScaling = true;
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -912,9 +906,8 @@ ISlide slide = pptxDoc.Slides[0];
 IPresentationChart chart = slide.Shapes[0] as IPresentationChart;
 //Removes the chart from slide
 slide.Shapes.Remove(chart as IShape);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -989,9 +982,8 @@ chart.HasLegend = false;
 IOfficeChartSerie serie = chart.Series[0];  
 serie.DataPoints.DefaultDataPoint.DataLabels.IsValue = true;  
 serie.DataPoints.DefaultDataPoint.DataLabels.IsCategoryName = true; 
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -1653,9 +1645,8 @@ chart.ChartTitle = "Company Profit (in USD)";
 chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.IsValue = true;
 chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.Size = 8;
 chart.Legend.Position = OfficeLegendPosition.Right;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("WaterFall.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("WaterFall.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
