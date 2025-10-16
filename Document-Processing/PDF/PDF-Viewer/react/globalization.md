@@ -2,7 +2,7 @@
 layout: post
 title: Globalization in React Pdfviewer component | Syncfusion
 description: Learn here all about Globalization in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Globalization
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##

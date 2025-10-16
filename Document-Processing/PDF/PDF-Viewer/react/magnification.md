@@ -2,7 +2,7 @@
 layout: post
 title: Magnification in React Pdfviewer component | Syncfusion
 description: Learn here all about Magnification in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Magnification
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##

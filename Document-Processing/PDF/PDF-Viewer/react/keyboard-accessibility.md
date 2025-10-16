@@ -2,7 +2,7 @@
 layout: post
 title: Keyboard accessibility in React Pdfviewer component | Syncfusion
 description: Learn here all about Keyboard accessibility in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Keyboard accessibility
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##

@@ -2,12 +2,12 @@
 layout: post
 title: Download in React Pdfviewer component | Syncfusion
 description: Learn here all about Download in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Download
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in React Pdfviewer component
+# Download in Typescript Pdf viewer control
 
 The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
 
