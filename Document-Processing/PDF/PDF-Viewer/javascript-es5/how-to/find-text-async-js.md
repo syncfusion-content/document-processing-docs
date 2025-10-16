@@ -1,22 +1,20 @@
 ---
 layout: post
-title: Find Text Async in Syncfusion Javascript Pdfviewer Control | Syncfusion
-description: Learn about the `findTextAsync` in Syncfusion #Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Use findTextAsync in JavaScript PDF Viewer | Syncfusion
+description: Learn how to search text asynchronously with findTextAsync in the Syncfusion JavaScript PDF Viewer and retrieve match bounds.
 platform: document-processing
-control: Find Text Async
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
+# Find text with findTextAsync in JavaScript PDF Viewer
 
-# Find Text using findTextAsync Method in Syncfusion Javascript PdfViewer Control
+The `findTextAsync` method searches for a string or array of strings asynchronously and returns bounding rectangles for each match. Use it to locate text positions across the document or on a specific page.
 
-The findTextAsync method in the Syncfusion PdfViewer control allows you to search for specific text or an array of strings asynchronously within a PDF document. The method returns the bounding rectangles for each occurrence of the search term, allowing you to find and work with text positions in the document.
+Here is an example of how to use `findTextAsync`:
 
-Here is an example of how you can use the **findTextAsync** method:
-
-Example 1: Search for a single string ('pdf') with a case-insensitive search across all pages
+Example 1: Search for a single string ('pdf') case-insensitively across all pages
 
 ```html
  <button id="findText">Find Text</button>
@@ -37,7 +35,7 @@ document.getElementById('findText').addEventListener('click', function () {
   });
 });
 ```
-Example 2: Search for multiple strings (['pdf', 'the']) with a case-insensitive search across all pages
+Example 2: Search for multiple strings (['pdf', 'the']) case-insensitively across all pages
 ```js
 document.getElementById('findTexts').addEventListener('click', function () {
   pdfviewer.textSearchModule.findTextAsync(['pdf', 'the'], false).then(res => {
@@ -46,29 +44,19 @@ document.getElementById('findTexts').addEventListener('click', function () {
 });
 ```
 
-### Description:
+### Description
 
 The `findTextAsync` method is designed for performing an asynchronous text search within a PDF document. You can use it to search for a single string or multiple strings, with the ability to control case sensitivity. By default, the search is applied to all pages of the document. However, you can adjust this behavior by specifying the page number (pageIndex), which allows you to search only a specific page if needed.
 
-### Parameters:
+### Parameters
 
-**text (string | string[]):**
+**text (string | string[]):** The text or array of texts to search for in the document.
 
-The text or an array of texts you want to search for in the document.
+**matchCase (boolean):** Whether the search is case-sensitive. `true` matches exact case; `false` ignores case.
 
-**matchCase (boolean):**
+**pageIndex (optional, number):** Zero-based page index to search. If omitted, searches all pages.
 
-Indicates whether the search should be case-sensitive.
-When set to true, the search will match the exact case.
-When set to false, the search will ignore case differences.
-
-**pageIndex (optional, number):**
-
-Specifies the page number (zero-based index) to search within the document.
-If not provided, the search will be performed across all pages in the document.
-For example, passing 0 would search only the first page of the document.
-
-### Example Workflow:
+### Example workflow
 
 **findTextAsync('pdf', false):**
 This will search for the term "pdf" in a case-insensitive manner across all pages of the document.
@@ -82,4 +70,4 @@ This will search for the term "pdf" in a case-insensitive manner only on the fir
 **findTextAsync(['pdf', 'the'], false, 1):**
 This will search for the terms "pdf" and "the" in a case-insensitive manner only on the second page (page 1).
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to)
+[View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to)

@@ -1,23 +1,22 @@
 ---
 layout: post
-title: Add new page to the pdf document in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Add new page to the pdf document in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Add a new page to a PDF document in JavaScript PDF Viewer control | Syncfusion
+description: Learn how to append a new page to a loaded PDF document in the Syncfusion JavaScript PDF Viewer control using the PDF library service.
 platform: document-processing
-control: Add new page to the pdf document
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add new page to the pdf document in Javascript Pdfviewer control
+# Add a new page to a PDF document in JavaScript PDF Viewer control
 
-The PDF Viewer library allows you to add a new page to the PDF document using the PDF library.
+The JavaScript PDF Viewer library can append a blank page to any loaded PDF document through the accompanying PDF library service.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the guidance in the [Getting started with the JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) article to configure a working sample.
 
-**Step 2:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/how-to/create-pdfviewer-service/) to create the PDF Viewer web service.
+**Step 2:** Complete the web service setup by using this [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/how-to/create-pdfviewer-service/).
 
-**Step 3:** Add the following code sample in the PDF Viewer controller code to add a new page in the PDF document using the PDF library.
+**Step 3:** Add the following controller action to insert a new page into the loaded PDF document before returning it to the viewer.
 
 ```javascript
 
@@ -64,4 +63,4 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Add%20new%20page%20to%20the%20PDF%20document%20using%20PDF%20library)
+[View the sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Add%20new%20page%20to%20the%20PDF%20document%20using%20PDF%20library)

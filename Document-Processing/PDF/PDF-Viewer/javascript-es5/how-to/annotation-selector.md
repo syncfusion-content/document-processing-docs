@@ -1,19 +1,18 @@
 ---
 layout: post
-title: Annotation selector in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Annotation selector in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Customize annotation selectors in JavaScript PDF Viewer
+description: Learn how to customize annotation selectors in the JavaScript PDF Viewer component using annotationSelectorSettings with examples.
 platform: document-processing
-control: Annotation selector
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation selector in Javascript Pdfviewer control
+# Customize annotation selectors in JavaScript PDF Viewer
 
-To customize the annotation selector in Syncfusion PDF Viewer, you can use the [**annotationSelectorSettings**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselectorsettings) property of the PdfViewer control.
+Customize the annotation selector using the [annotationSelectorSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselectorsettings) property of the PDF Viewer.
 
-Here is an example of how you can customize the selector of the shape annotation:
+Example: Customize the selector of a shape annotation
 
 ```
 
@@ -30,4 +29,5 @@ document.getElementById('annotationSelector').addEventListener('click', () => {
 
 ```
 
-Find the sample [how to customize the annotation selector](https://stackblitz.com/edit/js-5p3ae6?file=index.js)
+Sample: [How to customize the annotation selector]
+(https://stackblitz.com/edit/js-5p3ae6?file=index.js)
