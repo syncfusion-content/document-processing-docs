@@ -15,6 +15,13 @@ Lists are a fundamental feature for organizing content in a document, making it 
 
 Bulleted (unordered) lists are ideal for items that do not need to be in a specific sequence. Use the `ApplyBulletAsync` method to apply a bullet format to the selected paragraphs. The method accepts a bullet character and its font family.
 
+|Parameter|Type|Description|
+|---------|----|-----------|
+|Bullet|string|Bullet character.|
+|fontFamily|string|Bullet font family.|
+
+Refer to the following sample code.
+
 ```csharp
 @* The following code example demonstrates how to apply a standard circular bullet. *@
 await container.DocumentEditor.Editor.ApplyBulletAsync("\u00B7", "Symbol");
