@@ -11,14 +11,6 @@ documentation: ug
 
 Lists are a fundamental feature for organizing content in a document, making it easier for readers to follow step-by-step instructions or grasp key points. The [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) (Document Editor) provides comprehensive support for single-level and multilevel lists, which can be either ordered (numbered) or unordered (bulleted).
 
-## Creating Lists via the UI
-
-The simplest way to create a list is by using the **Bullets** and **Numbering** buttons in the toolbar. To format paragraphs as a list, select them and click the corresponding button to apply the default list style.
-
-## Managing Lists Programmatically
-
-The Document Editor also provides a complete set of APIs for creating and manipulating lists in code.
-
 ### Create a Bulleted List
 
 Bulleted (unordered) lists are ideal for items that do not need to be in a specific sequence. Use the `ApplyBulletAsync` method to apply a bullet format to the selected paragraphs. The method accepts a bullet character and its font family.
@@ -44,21 +36,7 @@ The `numberFormat` parameter uses placeholders like `%1`, `%2`, etc., which corr
 await container.DocumentEditor.Editor.ApplyNumberingAsync("%1.", ListLevelPattern.UpRoman);
 ```
 
-### Create a Multilevel List
-
-To create a multilevel list, you can increase or decrease the indent of list items. This is typically done by applying a base list format and then promoting or demoting specific items.
-
-Use the `IncreaseIndentAsync` and `DecreaseIndentAsync` methods to change the level of a list item.
-
-```csharp
-@* First, apply a list format to a selection. *@
-await container.DocumentEditor.Editor.ApplyNumberingAsync("%1.", ListLevelPattern.Arabic);
-
-@* Then, select a specific list item and increase its indent to make it a sub-item. *@
-await container.DocumentEditor.Editor.IncreaseIndentAsync();
-```
-
-### Clear List Formatting
+## Clear list
 
 To remove all list formatting from a selection of paragraphs and revert them to normal text, use the `ClearListAsync` method.
 
