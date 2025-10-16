@@ -3,7 +3,7 @@ layout: post
 title: SyncfusionDocumentSDKAssistant MCP Server Overview and Setup – Syncfusion
 description: Explore the SyncfusionDocumentSDKAssistant MCP server, its key benefits, prerequisites, and integration guidance for enhancing Syncfusion DocumentSDK development workflows.
 platform: document-processing
-control: Installation and Deployment
+control: AI coding assistant
 documentation: ug
 ---
 
@@ -45,11 +45,11 @@ This ensures users can fully leverage Syncfusion<sup>&reg;</sup> components to e
 
 ## Installation and setup
 
-Before you can invoke the SyncfusionDocumentSDKAssistant MCP server, you need to configure your MCP client with these core settings. The **Generic MCP Server Settings** shown below are identical across all clients:
+Before you can invoke the ```SyncfusionDocumentSDKAssistant``` MCP server, you need to configure your MCP client with these core settings. The **Generic MCP Server Settings** shown below are identical across all clients:
 
 ### Generic MCP Server Settings
 
-  *	**npm package name**: @syncfusion/documentsdk-assistant
+  *	**npm package name**: ```@syncfusion/documentsdk-assistant```
   *	**Type**: stdio (standard input/output transport)
   *	**Command**: npx
   *	**Arguments**: -y
@@ -67,18 +67,18 @@ You need to add your [Syncfusion API key](https://syncfusion.com/account/api-key
 
 ### Syncfusion<sup>&reg;</sup> Code Studio
 
-  *	In [Code Studio](https://www.syncfusion.com/code-studio/), open MCP Marketplace and navigate to the Custom Servers tab.
-  *	Enter the Server Name as documentsdk-mcp, choose Server Type as npm package, and set the NPM Package name to @syncfusion/documentsdk-assistant.
-  *	Add an environment variable as Syncfusion_API_Key and value as your [Syncfusion API key](https://syncfusion.com/account/api-key), then click **Install Server**.
+  *	In [Code Studio](https://www.syncfusion.com/code-studio/), open MCP Marketplace and navigate to the ```Custom Servers``` tab.
+  *	Enter the Server Name as ```documentsdk-mcp```, choose Server Type as npm package, and set the NPM Package name to ```@syncfusion/documentsdk-assistant```.
+  *	Add an environment variable as ```Syncfusion_API_Key``` and value as your [Syncfusion API key](https://syncfusion.com/account/api-key), then click **Install Server**.
   *	Once installed, the server will appear in the User Installed Server list and will be added to the **config.yaml** file.
   *	The server is now ready for use in Code Studio. For more details, refer to the Code Studio [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/customservers).
 
 For additional details, see the Code Studio [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/customservers).
 
 ### VS Code (GitHub Copilot MCP)
-  1. To configure an MCP server for a specific workspace, you can create a .vscode/mcp.json file in your workspace folder.
+  1. To configure an MCP server for a specific workspace, you can create a ```.vscode/mcp.json``` file in your workspace folder.
 
-~~~
+~~~json
   {
   "servers": {
    "syncfusion-documentsdk-assistant": {   
@@ -100,13 +100,13 @@ For additional details, see the Code Studio [documentation](https://help.syncfus
 
   3. Confirm that [SyncfusionDocumentSDKAssistant](https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server) is being used (this does not happen automatically). Look for a statement in the output, which is similar to:
 
-      * SyncfusionDocumentSDKAssistant is running... (in VS Code)
+      * ```SyncfusionDocumentSDKAssistant is running...``` (in VS Code)
 
 ### Cursor
 
 To configure an MCP server for a specific workspace, you can create a .cursor/mcp.json file in your workspace folder.
 
-~~~ 
+~~~json 
   {
    "mcpServers": {
     "syncfusion-documentsdk-assistant": {
@@ -128,9 +128,9 @@ To configure an MCP server for a specific workspace, you can create a .cursor/mc
 
   1. Go to Settings -> Tools -> AI Assistant -> Model Context Protocol (MCP).
   2. Click + Add to add a new MCP server configuration.
-  3. In the New MCP Server dialog, switch the dropdown as As JSON and add the following config:
+  3. In the New MCP Server dialog, switch the dropdown as ```As JSON``` and add the following config:
 
-~~~
+~~~json
   {
    "mcpServers": {
     "syncfusion-documentsdk-assistant": {
@@ -176,10 +176,10 @@ Syncfusion® MCP Servers provide full access to all AI interaction modes — Ask
 
 ### Best Practices for Effective Usage
 
-  1. Be specific : Mention both platform and component (e.g., "How to digitally sign a PDF document using Syncfusion PDF library in .NET Core app?").
-  2. Provide context : Include details about your use case for more targeted solutions.
-  3. Use descriptive queries : Avoid vague questions that lack necessary context.
-  4. Start fresh for new topics : Begin a new chat session when switching components or topics
+  1. ```Be specific```: Mention both platform and component (e.g., "How to digitally sign a PDF document using Syncfusion PDF library in .NET Core app?").
+  2. ```Provide context:``` Include details about your use case for more targeted solutions.
+  3. ```Use descriptive queries```: Avoid vague questions that lack necessary context.
+  4. ```Start fresh for new topics```: Begin a new chat session when switching components or topics
 
 ### Example Queries
 

@@ -3,7 +3,7 @@ layout: post
 title : Overview of the AI Coding Assistants for Document Processing - Syncfusion
 description: Get a quick overview of Syncfusion’s AI Coding Assistants that simplify document processing and deliver query results efficiently
 platform: document-processing
-control: Installation and Deployment
+control: AI coding assistant
 documentation: ug
 ---
 
