@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open PDF files from Box storage SfPdfViewer Component | Syncfusion
-description: Learn here all about how to Open PDF files from Box cloud file storage in Syncfusion Blazor SfPdfViewer component and much more details.
+title: Open PDF files from cloud storage in Blazor SfPdfViewer | Syncfusion
+description: Learn how to open PDF files from Box cloud storage in the Syncfusion Blazor SfPdfViewer component and the Box .NET SDK.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,19 +9,24 @@ documentation: ug
 
 # Open PDF file from Box cloud file storage in Blazor SfPdfViewer
 
-To load a PDF file from Box cloud file storage in a SfPdfViewer, you can follow the steps below
+To load a PDF file from Box cloud file storage in the Blazor SfPdfViewer, follow the steps below.
 
-**Step 1** Set up a Box developer account and create a Box application
+## Prerequisites
 
-To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials Client ID and Client Secret to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
+**1. Box Developer Setup:**
+* Create or sign in to a Box developer account at the [Box Developer Console](https://developer.box.com/).
+* Create a new Box application and obtain the Client ID and Client Secret for `OAuth 2.0 authentication`.
+* Ensure the application has the necessary scopes and permissions to access the target Box folder.
 
-**Step 2:** Create a Simple SfPdfViewer Sample in blazor
+**2. Blazor SfPdfViewer Initialization:**
+* Follow the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) to set up a basic Blazor Server-Side SfPdfViewer component.
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/server-side-application) to create a simple SfPdfViewer sample in blazor. This will give you a basic setup of the SfPdfViewer component.
+**3. NuGet Package Installation:**
+* Install the **Box.V2** and **Box.V2.Core** NuGet packages in your Blazor application to use the Box SDK.
 
-**Step 3:** Include the following namespaces in the **Index.razor** file.
+### Step 1: Include Namespaces
 
-1. Import the required namespaces at the top of the file:
+Import the required namespaces at the top of your `Index.razor` file:
 
 ```csharp
 @using Box.V2;
@@ -31,7 +36,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 @using Syncfusion.Blazor.SfPdfViewer;
 ```
 
-**Step 4:** Add the below code example to load a PDF from `Box cloud storage` 
+### Step 2: Add Code to Load a PDF from Box Storage
 
 ```csharp
 
@@ -92,12 +97,10 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 N> replace **Your_Box_Storage_Access_Token** with your actual box access token, and **Your_Folder_ID** with the ID of the folder in your box storage where you want to perform specific operations. Remember to use your valid box API credentials, as **Your_Box_Storage_ClientID** and **Your_Box_Storage_ClientSecret"** are placeholders for your application's API key and secret.
 
-N> The **Box.V2.Core** NuGet package must be installed in your application to use the previous code example.
-
-N> Replace `PDF_Succinctly.pdf` with the actual document name that you want to load from Box cloud file storage. Make sure to pass the document name from the box folder to the [documentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property of the SfPdfViewer component
+N> Ensure that the specified document name exists in the Box folder. Pass the resulting data URI to the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) of the SfPdfViewer component.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20box%20cloud%20storage)
 
 ## See also
 
-* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../faqs/how-to-processing-large-files-without-increasing-maximum-message-size)
