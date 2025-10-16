@@ -58,13 +58,12 @@ The following example illustrates how to add OnRequestNavigate event for Documen
     }
 }
 ```
-
 You can also programmatically trigger navigation for the hyperlink at the current selection by calling the `NavigateHyperlinkAsync` method.
 
 ```csharp
 await container.DocumentEditor.Selection.NavigateHyperlinkAsync();
 ```
-### Copy Hyperlink
+## Copy Hyperlink
 
 To copy the destination URL of a hyperlink to the clipboard, use the `CopyHyperlinkAsync` method.
 
@@ -72,7 +71,7 @@ To copy the destination URL of a hyperlink to the clipboard, use the `CopyHyperl
 await container.DocumentEditor.Selection.CopyHyperlinkAsync();
 ```
 
-### Add Hyperlink
+## Add Hyperlink
 
 The Document Editor can automatically format a URL as a hyperlink. Simply type an address and press `ENTER`, `SPACEBAR`, or `TAB`. The text will be converted to a functional hyperlink if it begins with one of the following prefixes:
 
@@ -88,7 +87,7 @@ Use the `InsertHyperlinkAsync` method to create a hyperlink at the current selec
 await container.DocumentEditor.Editor.InsertHyperlinkAsync("https://www.google.com", "Google");
 ```
 
-### Remove Hyperlink
+## Remove Hyperlink
 
 To remove a hyperlink and convert it back to plain text, use the `RemoveHyperlinkAsync` method. This can also be done by pressing the `Backspace` key at the end of the hyperlinked text.
 
@@ -96,15 +95,13 @@ To remove a hyperlink and convert it back to plain text, use the `RemoveHyperlin
 await container.DocumentEditor.Editor.RemoveHyperlinkAsync();
 ```
 
-### Hyperlink Dialog
+## Hyperlink Dialog
 
 For more control, the component includes a built-in dialog for inserting and editing hyperlinks. To open it, place the cursor on the desired text and press `Ctrl+K`.
-
 The dialog allows you to:
 *   Link to an existing web page or file by entering its URL.
 *   Link to an email address.
 *   Link to a bookmark within the current document.
-
 You can also open the dialog programmatically:
 
 ```csharp

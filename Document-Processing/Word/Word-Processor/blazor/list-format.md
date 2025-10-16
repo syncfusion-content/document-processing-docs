@@ -11,7 +11,7 @@ documentation: ug
 
 Lists are a fundamental feature for organizing content in a document, making it easier for readers to follow step-by-step instructions or grasp key points. The [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) (Document Editor) provides comprehensive support for single-level and multilevel lists, which can be either ordered (numbered) or unordered (bulleted).
 
-### Create a Bulleted List
+## Create a Bulleted List
 
 Bulleted (unordered) lists are ideal for items that do not need to be in a specific sequence. Use the `ApplyBulletAsync` method to apply a bullet format to the selected paragraphs. The method accepts a bullet character and its font family.
 
@@ -27,7 +27,7 @@ Refer to the following sample code.
 await container.DocumentEditor.Editor.ApplyBulletAsync("\u00B7", "Symbol");
 ```
 
-### Create a Numbered List
+## Create a Numbered List
 
 Numbered (ordered) lists are used for sequential items. Use the `ApplyNumberingAsync` method to apply a numbering format. This method allows you to define the number format and the character style for the list level.
 
