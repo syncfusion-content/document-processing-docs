@@ -31,9 +31,8 @@ IShape textShape = firstSlide.AddTextBox(100, 75, 756, 200);
 IParagraph paragraph = textShape.TextBody.AddParagraph();
 //Adds a textPart in the paragraph
 ITextPart textPart = paragraph.AddTextPart("Essential Presentation");
-//Save the PowerPoint Presentation to stream
-FileStream outputStream = new FileStream(outputFileName, FileMode.Create);
-clonedPresentation.SaveAs(outputStream);
+//Save the PowerPoint Presentation
+clonedPresentation.Save("ClonedPresentation.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -290,9 +289,8 @@ IPresentation pptxDoc = Presentation.Open(inputStream);
 //Modifies the Built-in document properties
 pptxDoc.BuiltInDocumentProperties.Category = "Sales reports";
 pptxDoc.BuiltInDocumentProperties.Company = "Northwind traders";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Close the instance of PowerPoint Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -345,9 +343,8 @@ documentProperty.Add("PropertyA");
 documentProperty["PropertyA"].Text = "@!123";
 documentProperty.Add("PropertyB");
 documentProperty["PropertyB"].Text = "B";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the PowerPoint presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -400,9 +397,8 @@ IPresentation pptxDoc = Presentation.Open(inputStream);
 IDocumentProperty property = pptxDoc.CustomDocumentProperties["PropertyA"];
 //Modifies the value of DocumentProperty
 property.Value = "Hello world";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -450,9 +446,8 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Mark the presentation as final
 pptxDoc.Final = true;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("MarkAsFinal.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -508,10 +503,7 @@ using (FileStream inputStream = new FileStream("Data/Input.pptx", FileMode.Open)
         pptxDoc.FirstSlideNumber = 10;
 
         //Save the PowerPoint Presentation.
-        using (FileStream outputStream = new FileStream("Result.pptx", FileMode.Create))
-        {
-            pptxDoc.Save(outputStream);
-        }                       
+        pptxDoc.Save("Result.pptx");                      
     }
 }
 

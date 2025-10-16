@@ -27,10 +27,7 @@ using (FileStream inputStream = new FileStream("Template.pptx", FileMode.Open, F
 		//Encrypt the presentation with a password.
 		presentation.Encrypt("syncfusion");
 		//Saves the Presentation.
-		using (FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create))
-		{
-			presentation.Save(outputStream);
-		}
+        presentation.Save("Sample.pptx");
 	}
 }
 {% endhighlight %}
@@ -76,11 +73,8 @@ using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open))
 {
     using (IPresentation presentation = Presentation.Open(inputStream, "PASSWORD!@1#$"))
     {
-        //Save the PowerPoint Presentation as stream.
-        using (FileStream outputStream = new FileStream("Output.pptx", FileMode.Create))
-        {
-            presentation.Save(outputStream);
-        }
+        //Save the PowerPoint Presentation.
+        presentation.Save("Output.pptx");
     }
 }
 {% endhighlight %}
@@ -119,11 +113,8 @@ using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open))
     {
         //Decrypts the document.
         presentation.RemoveEncryption();
-        //Save the PowerPoint Presentation as stream.
-        using (FileStream outputStream = new FileStream("Output.pptx", FileMode.Create))
-        {
-            presentation.Save(outputStream);
-        }
+        //Save the PowerPoint Presentation.
+        presentation.Save("Output.pptx");
     }
 }
 {% endhighlight %}
@@ -178,9 +169,8 @@ IParagraph paragraph = shape.TextBody.AddParagraph("welcome");
 pptxDoc.BuiltInDocumentProperties.Author = "Syncfusion";
 //Set the write protection for presentation instance
 pptxDoc.SetWriteProtection("MYPASSWORD");
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -247,9 +237,8 @@ if (writeProtected)
      //Removes the write protection for presentation instance.
      pptxDoc.RemoveWriteProtection();
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the presentation
 pptxDoc.Close();
 {% endhighlight %}

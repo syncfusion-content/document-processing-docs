@@ -29,12 +29,8 @@ using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Create))
         pptxDoc.FontSettings.SubstituteFont += SubstituteFont;
         //Convert the PowerPoint presentation to PDF file
         PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc);
-        //Create new instance of file stream
-        FileStream pdfStream = new FileStream("Output.pdf", FileMode.Create);
-        //Save the generated PDF to file stream
-        pdfDocument.Save(pdfStream);
-        //Release all resources
-        pdfStream.Dispose();
+        //Save the PDF file.
+        pdfDocument.Save("Output.pdf");
         pdfDocument.Close(true);
     }
 }
@@ -135,12 +131,9 @@ using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Create))
         pptxDoc.FontSettings.SubstituteFont += SubstituteFont;
         //Convert the PowerPoint presentation to PDF file
         PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc);
-        //Create new instance of file stream
-        FileStream pdfStream = new FileStream("Output.pdf", FileMode.Create);
-        //Save the generated PDF to file stream
-        pdfDocument.Save(pdfStream);
-        //Release all resources
-        pdfStream.Dispose();
+        //Save the PDF file.
+        pdfDocument.Save("Output.pdf");
+		// Close the PDF Document
         pdfDocument.Close(true);
     }
 }

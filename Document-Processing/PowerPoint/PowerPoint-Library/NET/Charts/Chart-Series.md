@@ -165,11 +165,8 @@ The complete code snippet illustrating the above options is shown below.
      //Sets position of legend.
      chart.Legend.Position = OfficeLegendPosition.Bottom;
 
-     using (FileStream outputStream = new FileStream("Result.pptx", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-     {
-         //Save the PowerPoint Presentation.
-         pptxDoc.Save(outputStream);
-     }
+	 //Save the PowerPoint Presentation.
+     pptxDoc.Save("Result.pptx");
  }
 
 {% endhighlight %}

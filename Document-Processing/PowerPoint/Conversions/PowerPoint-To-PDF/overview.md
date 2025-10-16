@@ -76,10 +76,7 @@ using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Ope
         using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
         {
             //Save the PDF file to file system. 
-            using (FileStream outputStream = new FileStream("PPTXToPDF.pdf", FileMode.Create, FileAccess.ReadWrite))
-            {
-                pdfDocument.Save(outputStream);
-            }
+		    pdfDocument.Save("PPTXToPDF.pdf");
         }
     }
 }
@@ -160,11 +157,7 @@ using (FileStream pptStream = new FileStream("Template.pptx", FileMode.Open, Fil
             if (!PresentationToPdfConverter.IsCanceled)
             {
                 //Saves the PDF file
-                using (FileStream outputStream = new FileStream("Output.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite))
-                {
-                    pdfDocument.Save(outputStream);
-                    outputStream.Position = 0;
-                }
+				pdfDocument.Save("Output.pdf");
             }
             else
             {
@@ -482,11 +475,7 @@ using (FileStream fileStreamInput = new FileStream("Sample.pptx", FileMode.Open,
         using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc, pdfConverterSettings))
         {
             //Save the converted PDF document to the fileStream.
-            using (FileStream fileStreamOutput = File.Create("Sample.pdf"))
-            {
-                pdfDocument.Save(fileStreamOutput);
-                fileStreamOutput.Position = 0;
-            }
+            pdfDocument.Save("Sample.pdf");
         }
     }
 }
