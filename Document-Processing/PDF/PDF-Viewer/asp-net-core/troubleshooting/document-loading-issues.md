@@ -1,215 +1,48 @@
 ---
 layout: post
-title: Save PDF To AAD in EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about How to Save Pdf To AAD in ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Fix document loading issues in v23.1+ for the ASP.NET Core PDF Viewer component
+description: Resolve document rendering failures in v23.1 or newer by calling dataBind before load, verifying source URLs, checking CORS and CSP, and confirming network connectivity in the ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Save PDF To Azure Active Directory in Viewer
+# Document Loading Issues in Version 23.1 or Newer
 
-### **Overview**
+If the document does not render in the viewer when using version 23.1 or newer, follow these steps:
 
-The Syncfusion PDF Viewer allows you to load and save PDF files directly from Azure Active Directory (AAD). Below are the steps to securely load and store PDF documents from and to AAD using the PDF Viewer.
+1. Call `pdfViewer.dataBind()` before `load()`. Starting with v23.1, an explicit dataBind call is required to initialize data binding and render correctly.
 
-### **Steps to Open the PDF File from Azure Active Directory**
-
----
-
-### **Step 1: Register an Application in Azure Active Directory (AAD)**
-
-1. **Go to the Azure Portal**:
-   - Navigate to [Azure Portal](https://portal.azure.com).
-
-2. **Register your Application**:
-   - In the Azure portal, go to **Azure Active Directory** > **App registrations** > **New registration**.
-   - Register your application and note down the **Application (client) ID** and **Directory (tenant) ID**.
-
-   ![app-registration](../images/app-registration.png)
-
-3. **Create a Client Secret**:
-   - In the registered application, go to **Certificates & secrets**.
-   - Click **New client secret**.
-   - Provide a description and set an expiration period.
-   - Click **Add**.
-   - Copy the client secret value immediately, as it will be hidden later. Store it securely.
-
-   ![client-secret](../images/client-secret.png)
-
----
-
-### **Step 2: Create the Azure Storage Account**
-
-1. **Create a Storage Account**:
-   - In the Azure portal, use the search bar to search for **Storage accounts**.
-   - Create a new storage account by filling in the required details (e.g., name, location, resource group, etc.).
-
-    ![storage-account](../images/storage-account.png)
-
----
-
-### **Step 3: Assign Role to the Application**
-
-1. **Go to your Storage Account**:
-   - Navigate to **Access control (IAM)** > **Add role assignment** in your Azure Storage Account.
-
-2. **Assign Role**:
-   - Assign the **Storage Blob Data Contributor** role to your registered application.
-   - In the **Assign access to** dropdown, select **User, group, or service principal**.
-   - Click on **Select members** and search for your registered application by name or client ID.
-   - Select your application and click **Select**.
-   - Click **Review + assign** to finalize the role assignment.
-
-    ![add-role](../images/add-role.png)
----
-
-### **Step 4: Upload the PDF Document to the Azure Storage Account**
-
-1. **Navigate to Data Storage**:
-   - In the Azure portal, go to **Data storage** > **Containers**.
-
-2. **Upload the PDF File**:
-   - Create a new container and upload the PDF document you want to access in the PDF Viewer.
-
-    ![upload-pdf](../images/upload-pdf.png)
----
-
-### **Step 5: ASP.NET Core PDF Viewer Control Configuration**
-1. Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed) to create a simple PDF Viewer sample.
-
-2. Add the following code snippet in `Index.cshtml.cs`.
-
-{% tabs %}
-{% highlight c# tabtitle="~/Index.cshtml.cs" %}
-
-using Azure.Identity;
-using Azure.Storage.Blobs;
-
-string tenantId = "YOUR_TENANT_ID";
-string clientId = "YOUR_CLIENT_ID";
-string clientSecret = "YOUR_CLIENT_SECRET";
-string blobServiceEndpoint = "https://your-storage-account.blob.core.windows.net";
-string containerName = "your-container-name";
-
- public async Task<IActionResult> OnGetLoadFromAAD(string fileName)
- {
-     var clientSecretCredential = new ClientSecretCredential(tenantId, clientId, clientSecret);
-     var blobServiceClient = new BlobServiceClient(new Uri(blobServiceEndpoint), clientSecretCredential);
-     var containerClient = blobServiceClient.GetBlobContainerClient(containerName);
-     var blobClient = containerClient.GetBlobClient(fileName);
-
-     // Download the PDF file to a local stream
-     using MemoryStream pdfStream = new MemoryStream();
-     await blobClient.DownloadToAsync(pdfStream);
-     var base64 = Convert.ToBase64String(pdfStream.ToArray());
-     return Content("data:application/pdf;base64," + base64);
- }
-
- public async Task<IActionResult> OnPostSaveToAAD([FromBody]jsonObjects responseData)
- {
-     var jsonObject = JsonConverterstring(responseData);
-     PdfRenderer pdfviewer = new PdfRenderer(_cache);
-     var fileName = jsonObject.ContainsKey("documentId") ? jsonObject["documentId"] : "Test.pdf";
-     string documentBase = pdfviewer.GetDocumentAsBase64(jsonObject);
-     string convertedBase = documentBase.Substring(documentBase.LastIndexOf(',') + 1);
-     // Decode the Base64 string to a byte array
-     byte[] byteArray = Convert.FromBase64String(convertedBase);
-     // Create a MemoryStream from the byte array
-     MemoryStream stream = new MemoryStream(byteArray);
-     // Create a new BlobServiceClient using the DefaultAzureCredential
-     var clientSecretCredential = new ClientSecretCredential(tenantId, clientId, clientSecret);
-     var blobServiceClient = new BlobServiceClient(new Uri(blobServiceEndpoint), clientSecretCredential);
-     // Get a reference to the container
-     var containerClient = blobServiceClient.GetBlobContainerClient(containerName);
-     // Get a reference to the blob
-     var blobClient = containerClient.GetBlobClient(fileName);
-     //FileStream uploadFileStream = new FileStream();
-     await blobClient.UploadAsync(stream, true);
-     stream.Close();
-     return Content(string.Empty);
- }
-
-{% endhighlight %}
-{% endtabs %}
-
-3. Configure Server-Side Code:
-   - Open the server-side application (e.g., ASP.NET Core) and configure the following details in the `PdfViewerController` file:
-     - `tenantId` (your Azure AD tenant ID),
-     - `clientId` (your registered application client ID),
-     - `clientSecret` (your registered application client secret),
-     - `blobServiceEndpoint` (your storage account blob service URL),
-     - `containerName` (your container name in Azure Blob Storage).
-
-4. Add the following code snippet in `Index.cshtml`.
-
-{% tabs %}
-{% highlight c# tabtitle="~/Index.cshtml" %}
-
-@page "{handler?}"
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
-
-<div>
-
-    <!-- Custom buttons for Load and Save -->
-    <div style="margin-top: 10px;">
-        <button id="loadFromAADButton" class="e-btn" style="margin-right: 10px;">Load From AAD</button>
-        <button id="saveToAADButton" class="e-btn">Save To AAD</button>
-    </div>
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" serviceUrl="/Index" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
+```html
+<button id="viewer" onclick="documentLoad()">Load</button>
+<div class="text-center">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px">
     </ejs-pdfviewer>
-
 </div>
 
-<script type="text/javascript">
-    window.onload = function () {
+<script>
+    function documentLoad() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-
-        // Handle the Load From AAD button click
-        document.getElementById('loadFromAADButton').addEventListener('click', function () {
-            const xhr = new XMLHttpRequest();
-            xhr.open('GET', `/Index/LoadFromAAD?fileName=1Page.pdf`, true);
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    const data = xhr.responseText; // Get the response (assumed to be the PDF data or URL)
-                    console.log(data); // Handle the response (for debugging)
-
-                    // Load the PDF into the viewer (assuming the response contains the PDF data or URL)
-                    pdfViewer.load(data, ''); // Load the document
-                }
-            };
-            xhr.send();
-        });
-
-        // Handle the Save To AAD button click
-        document.getElementById('saveToAADButton').addEventListener('click', function () {
-            // Save PDF to AAD
-            // Set the server action settings to handle the "Save To AAD" action
-            pdfViewer.serverActionSettings.download = "SaveToAAD"; // This triggers a custom server-side save action
-            // Download the file (assuming this will be saved to AAD)
-            pdfViewer.download(); // Trigger the download, which may involve saving it to AAD
-
-        });
+        pdfViewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
+        pdfViewer.dataBind();
+        pdfViewer.load("https://cdn.syncfusion.com/content/pdf/annotations.pdf");
     }
 </script>
+```
 
+2. Verify the document source. Ensure the URL or path is valid and accessible.
 
-{% endhighlight %}
-{% endtabs %}
+3. Check network connectivity. The viewer cannot fetch the document without a stable connection.
 
-5. Run the Application
-    - Build and run your Core application. The PDF Viewer will be displayed with Load from AAD and Save to AAD buttons.
+4. Inspect console errors. Use browser developer tools to identify issues.
 
-6. Load PDF from AAD
-    - Click the Load from AAD button.
-    - The server fetches the PDF from Azure Blob Storage and loads it into the Syncfusion PDF Viewer.
+5. Validate the initialization order. Initialize the viewer, call `dataBind()`, then call `load()`.
 
-7. Save PDF to AAD
-    - Click the Save to AAD button.
-    - The server uploads the modified PDF back to Azure Blob Storage.
+6. Update to the latest viewer version. Issues may be resolved in newer releases.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aad).
+7. Configure CORS correctly for cross-domain documents.
+
+8. Review Content Security Policy (CSP) settings. Ensure external resources are permitted. See the [Content Security Policy troubleshooting guide](https://ej2.syncfusion.com/javascript/documentation/common/troubleshoot/content-security-policy) for details.
+
+Following this checklist typically resolves document loading issues in v23.1 or newer.
