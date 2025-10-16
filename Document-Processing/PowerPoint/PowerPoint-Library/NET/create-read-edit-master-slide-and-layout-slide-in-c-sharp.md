@@ -62,8 +62,7 @@ You can change the background of the master slide, all slides in the presentatio
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Master-and-Layout-slides/Modify-PowerPoint-master-slide-background/.NET/Modify-PowerPoint-master-slide-background/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Master-and-Layout-slides/Modify-PowerPoint-master-slide-background/.NET/Modify-PowerPoint-master-slide-background/Program.cs" %}
 //Create a PowerPoint presentation.
 using (IPresentation pptxDoc = Presentation.Create())
 {
@@ -77,9 +76,8 @@ using (IPresentation pptxDoc = Presentation.Create())
     ISolidFill solidFill = background.Fill.SolidFill;
     //Set the color for solid fill object.
     solidFill.Color = ColorObject.Green;
-    //Save the PowerPoint Presentation to MemoryStream.
-    MemoryStream outputStream = new MemoryStream();
-    pptxDoc.Save(outputStream);
+    //Save the PowerPoint Presentation.
+    pptxDoc.Save("Sample.pptx");
 }
 {% endhighlight %}
 

@@ -33,22 +33,11 @@ using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Ope
     {
         //Use a sets of default FallbackFont collection to IPresentation.
         pptxDoc.FontSettings.FallbackFonts.InitializeDefault();
-        //Create the MemoryStream to save the converted PDF.
-        using (MemoryStream pdfStream = new MemoryStream())
+		//Convert the PowerPoint document to PDF document.
+        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
         {
-            //Convert the PowerPoint document to PDF document.
-            using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
-            {
-                //Save the converted PDF document to MemoryStream.
-                pdfDocument.Save(pdfStream);
-                pdfStream.Position = 0;
-            }
-            //Create the output PDF file stream.
-            using (FileStream fileStreamOutput = File.Create("Output.pdf"))
-            {
-                //Copy the converted PDF stream into created output PDF stream.
-                pdfStream.CopyTo(fileStreamOutput);
-            }
+            //Save the converted PDF document.
+            pdfDocument.Save("Output.pdf");                
         }
     }
 }
@@ -123,22 +112,11 @@ using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Ope
         pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Thai, "Tahoma, Microsoft Sans Serif");
         //Adds fallback font for "Korean" script type.
         pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Korean, "Malgun Gothic, Batang");
-        //Create the MemoryStream to save the converted PDF.
-        using (MemoryStream pdfStream = new MemoryStream())
+        //Convert the PowerPoint document to PDF document.
+        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
         {
-            //Convert the PowerPoint document to PDF document.
-            using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
-            {
-                //Save the converted PDF document to MemoryStream.
-                pdfDocument.Save(pdfStream);
-                pdfStream.Position = 0;
-            }
-            //Create the output PDF file stream.
-            using (FileStream fileStreamOutput = File.Create("Output.pdf"))
-            {
-                //Copy the converted PDF stream into created output PDF stream.
-                pdfStream.CopyTo(fileStreamOutput);
-            }
+            //Save the converted PDF document.
+            pdfDocument.Save("Output.pdf");                
         }
     }
 }
@@ -238,22 +216,11 @@ using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Ope
         pptxDoc.FontSettings.FallbackFonts.Add(new FallbackFont(0x3040, 0x309F, "MS Mincho"));
         // Korean.
         pptxDoc.FontSettings.FallbackFonts.Add(new FallbackFont(0xAC00, 0xD7A3, "Malgun Gothic"));
-        //Create the MemoryStream to save the converted PDF.
-        using (MemoryStream pdfStream = new MemoryStream())
+        //Convert the PowerPoint document to PDF document.
+        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
         {
-            //Convert the PowerPoint document to PDF document.
-            using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
-            {
-                //Save the converted PDF document to MemoryStream.
-                pdfDocument.Save(pdfStream);
-                pdfStream.Position = 0;
-            }
-            //Create the output PDF file stream.
-            using (FileStream fileStreamOutput = File.Create("Output.pdf"))
-            {
-                //Copy the converted PDF stream into created output PDF stream.
-                pdfStream.CopyTo(fileStreamOutput);
-            }
+            //Save the converted PDF document.
+            pdfDocument.Save("Output.pdf");                
         }
     }
 }
@@ -346,22 +313,11 @@ using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Ope
            if (fallbackFont.ScriptType == ScriptType.Hebrew)
               fallbackFont.FontNames = "David";
         }
-        //Create the MemoryStream to save the converted PDF.
-        using (MemoryStream pdfStream = new MemoryStream())
+        //Convert the PowerPoint document to PDF document.
+        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
         {
-            //Convert the PowerPoint document to PDF document.
-            using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
-            {
-                //Save the converted PDF document to MemoryStream.
-                pdfDocument.Save(pdfStream);
-                pdfStream.Position = 0;
-            }
-            //Create the output PDF file stream.
-            using (FileStream fileStreamOutput = File.Create("Output.pdf"))
-            {
-                //Copy the converted PDF stream into created output PDF stream.
-                pdfStream.CopyTo(fileStreamOutput);
-            }
+            //Save the converted PDF document.
+            pdfDocument.Save("Output.pdf");                
         }
     }
 }

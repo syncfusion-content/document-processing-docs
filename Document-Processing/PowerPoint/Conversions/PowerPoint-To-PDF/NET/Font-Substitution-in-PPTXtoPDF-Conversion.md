@@ -17,8 +17,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Apply-substitution-font-name/.NET/Apply-substitution-font-name/Program.cs" %}
+{% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Apply-substitution-font-name/.NET/Apply-substitution-font-name/Program.cs" %}
 //Load the PowerPoint presentation as stream
 using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Create))
 {
@@ -29,12 +28,8 @@ using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Create))
         pptxDoc.FontSettings.SubstituteFont += SubstituteFont;
         //Convert the PowerPoint presentation to PDF file
         PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc);
-        //Create new instance of file stream
-        FileStream pdfStream = new FileStream("Output.pdf", FileMode.Create);
-        //Save the generated PDF to file stream
-        pdfDocument.Save(pdfStream);
-        //Release all resources
-        pdfStream.Dispose();
+        //Save the PDF file.
+        pdfDocument.Save("Output.pdf");
         pdfDocument.Close(true);
     }
 }
@@ -123,8 +118,7 @@ The following code example demonstrates how to upload a font stream for missing 
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Apply-substitution-font-stream/.NET/Apply-substitution-font-stream/Program.cs" %}
+{% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Apply-substitution-font-stream/.NET/Apply-substitution-font-stream/Program.cs" %}
 //Load the PowerPoint presentation as stream
 using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Create))
 {
@@ -135,12 +129,9 @@ using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Create))
         pptxDoc.FontSettings.SubstituteFont += SubstituteFont;
         //Convert the PowerPoint presentation to PDF file
         PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc);
-        //Create new instance of file stream
-        FileStream pdfStream = new FileStream("Output.pdf", FileMode.Create);
-        //Save the generated PDF to file stream
-        pdfDocument.Save(pdfStream);
-        //Release all resources
-        pdfStream.Dispose();
+        //Save the PDF file.
+        pdfDocument.Save("Output.pdf");
+		// Close the PDF Document
         pdfDocument.Close(true);
     }
 }
