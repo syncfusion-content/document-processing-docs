@@ -2,7 +2,7 @@
 layout: post
 title: Mobile Toolbar Interface in React Pdfviewer component | Syncfusion
 description: Learn All About the Mobile Toolbar Interface in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Mobile Toolbar Interface
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##

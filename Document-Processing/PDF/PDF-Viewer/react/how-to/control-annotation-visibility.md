@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Annotations Visibility in React Pdfviewer component | Syncfusion
-description: Learn how to Control PDF Annotations Visibility in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Control annotation visibility in React PDF Viewer | Syncfusion
+description: Learn how to control the visibility of PDF annotations in the React PDF Viewer, ensuring annotations appear only in the viewer as needed.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Control PDF Annotations Visibility in PDF Viewer
+# Control annotation visibility in PDF Viewer
 
-### Overview
+Overview
 
-This guide demonstrates how to control the visibility of PDF annotations in documents loaded and saved using the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. This process allows the annotations to be visible only in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer.
+This guide explains how to control the visibility of PDF annotations in documents loaded and saved using the Syncfusion PDF Viewer in React, so annotations are visible only in the viewer when required.
 
-### How to Control Annotation Visibility
+Steps to control annotation visibility
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) to create a simple PDF Viewer sample.
 
 
 **Step 2:**  Set Up Your React Component
@@ -114,6 +114,6 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, the annotations in a PDF document can be set to be visible in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, providing control over annotation visibility based on different platforms.
+Following these steps ensures annotations are visible in the Syncfusion PDF Viewer while controlling their visibility in the downloaded PDF.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)

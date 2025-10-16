@@ -2,7 +2,7 @@
 layout: post
 title: Interaction mode in React Pdfviewer component | Syncfusion
 description: Learn here all about Interaction mode in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Interaction mode
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##

@@ -3,12 +3,12 @@ layout: post
 title: Form Field Events in React Pdfviewer control | Syncfusion
 description: Learn here all about different form field in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Form Field Events
-platform: document-processing
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF Viewer Form Field events
+# PDF Viewer Form Field events in React
 
 The PDF Viewer control provides the support to different Form Field events. The Form Field events supported by the PDF Viewer Control are:
 

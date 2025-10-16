@@ -1,26 +1,25 @@
 ---
 layout: post
-title: Know the supported conformance PDF documents | Syncfusion
-description: Learn here all about the supported conformance PDF documents in Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more.
-control: Conformance
+title: Supported PDF conformance levels | Syncfusion
+description: Learn about the supported PDF/A and PDF/X conformance levels in the React PDF Viewer component.
 platform: document-processing
+control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Know the supported conformance PDF documents in React PDF Viewer component
+# Supported PDF conformance in React PDF Viewer
 
-The PDF Viewer supports the below conformance documents:
+The PDF Viewer supports the following conformance levels:
 
-* **PDF/A-1a conformance**
-* **PDF/A-1b conformance**
-* **PDF/X-1a conformance**
-* **PDF/A-2a conformance**
-* **PDF/A-2b conformance**
-* **PDF/A-2u conformance**
-* **PDF/A-3a conformance**
-* **PDF/A-3b conformance**
-* **PDF/A-3u conformance**
-* **PDF/A-4 conformance**
-* **PDF/A-4e conformance**
-* **PDF/A-4f conformance**
+* PDF/A-1a
+* PDF/A-1b
+* PDF/X-1a
+* PDF/A-2a
+* PDF/A-2b
+* PDF/A-2u
+* PDF/A-3a
+* PDF/A-3b
+* PDF/A-3u
+* PDF/A-4
+* PDF/A-4e
+* PDF/A-4f

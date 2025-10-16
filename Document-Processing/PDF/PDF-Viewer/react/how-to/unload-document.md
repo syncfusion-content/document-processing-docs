@@ -2,7 +2,7 @@
 layout: post
 title: Unload document in React Pdfviewer component | Syncfusion
 description: Learn here all about Unload document in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Unload document
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##

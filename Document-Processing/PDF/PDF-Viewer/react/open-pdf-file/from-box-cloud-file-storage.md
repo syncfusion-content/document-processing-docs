@@ -1,26 +1,25 @@
 ---
 layout: post
-title: Open PDF files from Box cloud file storage in React Pdfviewer component | Syncfusion
-description: Learn about how to load PDF files from Box cloud file storage in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Open PDF from Box cloud storage in React PDF Viewer | Syncfusion
+description: Learn how to load PDFs from Box cloud storage in the Syncfusion React PDF Viewer component using a server-backed approach.
 control: Open PDF files from Box cloud file storage
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Open PDF file from Box cloud file storage
+# Open PDF from Box cloud storage
 
-To load a PDF file from Box cloud file storage in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from Box cloud storage using the server-backed PDF Viewer.
 
-**Step 1** Set up a Box developer account and create a Box application
+**Step 1:** Set up a Box developer account and create a Box application
 
-To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials Client ID and Client Secret to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
+Create a developer account and Box application in the [Box Developer Console](https://developer.box.com/). Note the Client ID and Client Secret. Use OAuth 2.0 to authenticate the application.
 
-**Step 2:** Create a Simple PDF Viewer Sample in React
+**Step 2:** Create a PDF Viewer sample in React
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF viewer sample in React. This will give you a basic setup of the PDF viewer component.
 
-**Step 3:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 3:** Modify the PdfViewerController.cs file in the web service project
 
 1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
 
@@ -35,7 +34,7 @@ using Box.V2.Config;
 using Box.V2.Models;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to PdfViewerController. In the constructor, assign values from configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -56,7 +55,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the `Load()` method to load the PDF from Box cloud file storage.
+5. Modify the [Load()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#load) method to load PDF files from Box cloud storage.
 
 ```csharp
 
@@ -127,11 +126,11 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-N> replace **Your_Box_Storage_Access_Token** with your actual box access token, and **Your_Folder_ID** with the ID of the folder in your box storage where you want to perform specific operations. Remember to use your valid box API credentials, as **Your_Box_Storage_ClientID** and **Your_Box_Storage_ClientSecret"** are placeholders for your application's API key and secret.
+N> Replace the placeholders with your actual Box values: Access Token, Folder ID, Client ID, and Client Secret.
 
-**Step 4:**  Set the PDF Viewer Properties in React PDF viewer component
+**Step 4:** Configure the PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Box cloud file storage. Ensure that you correctly pass the document name from the files available in your box folder to the documentPath property.
+Set the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Box cloud storage. Ensure the document name exists in your Box folder.
 
 {% raw %}
 

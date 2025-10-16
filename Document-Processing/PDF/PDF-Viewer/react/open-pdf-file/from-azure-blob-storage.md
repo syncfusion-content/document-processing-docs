@@ -5,18 +5,17 @@ description: Learn about how to load PDF files from Azure Blob Storage in Syncfu
 control: Open PDF files from Azure Blob Storage
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Open PDF file from Azure Blob Storage
+# Open PDF from Azure Blob Storage
 
 PDF Viewer allows to load PDF file from Azure Blob Storage using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to open a PDF from Azure Blob Storage.
 
-## Using Standalone PDF Viewer
+## Using the standalone PDF Viewer
 
 To load a PDF file from Azure Blob Storage in a PDF Viewer, you can follow the steps below
 
-**Step 1:** Create a Simple PDF Viewer Sample in React
+**Step 1:** Create a PDF Viewer sample in React
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF viewer sample in React. This will give you a basic setup of the PDF viewer component.
 
@@ -32,7 +31,7 @@ var containerName = "*Your container name in Azure*";
 var blobName = "*Your Blob name in Azure*";
 ```
 
-2. Constructs the URL to the PDF in Azure Blob Storage. Calls fetchAndConvertToBase64 to fetch the PDF and convert it to a base64 string. Then Loads the base64 string into the PDF Viewer.
+2. Construct the URL to the PDF in Azure Blob Storage. Call fetchAndConvertToBase64 to fetch the PDF and convert it to a base64 string. Then load the base64 string into the PDF Viewer.
 
 ```typescript
 function loadDocument() {
@@ -51,7 +50,7 @@ function loadDocument() {
 }
 ```
 
-3. Then it retrieves the PDF file from the given URL and converts the fetched Blob to a base64 string using blobToBase64.
+3. Retrieve the PDF from the URL and convert the fetched Blob to a base64 string using blobToBase64.
 
 ```typescript
 function fetchAndConvertToBase64(url) {
@@ -73,7 +72,7 @@ function fetchAndConvertToBase64(url) {
 }
 ```
 
-4. Uses FileReader to convert a Blob to a base64 string. Resolves the promise with the base64 string or rejects it in case of an error.
+4. Use FileReader to convert a Blob to a base64 string. Resolve the promise with the base64 string or reject it in case of an error.
 
 ```typescript
 function blobToBase64(blob) {
@@ -93,11 +92,11 @@ function blobToBase64(blob) {
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Standalone).
 
-## Using Server-Backed PDF Viewer
+## Using the server-backed PDF Viewer
 
-To load a PDF file from Azure Blob Storage in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from Azure Blob Storage using the server-backed PDF Viewer.
 
-**Step 1:** Create a Simple PDF Viewer Sample in React
+**Step 1:** Create a PDF Viewer sample in React
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF viewer sample in React. This will give you a basic setup of the PDF viewer component.
 
@@ -130,7 +129,7 @@ public PdfViewerController(IConfiguration configuration, ILogger<PdfViewerContro
 }
 ```
 
-5. Modify the `Load()` method to load the PDF files from AWS S3.
+5. Modify the `Load()` method to load PDF files from Azure Blob Storage.
 
 ```csharp
 
@@ -182,9 +181,9 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name
+N> Replace the placeholders with your actual values: Azure storage connection string and container name.
 
-**Step 3:**  Set the PDF Viewer Properties in React PDF viewer component
+**Step 3:** Configure the PDF Viewer component
 
 Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Azure Blob Storage. Ensure that you correctly pass the document name from the files available in your azure contanier to the documentPath property.
 

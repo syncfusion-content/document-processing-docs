@@ -1,26 +1,25 @@
 ---
 layout: post
-title: Save PDF to Azure Blob Storage in React Pdfviewer | Syncfusion
-description: Learn here all about how to save PDF files to Azure Blob Storage in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Save PDF files to Azure Blob Storage
+title: Save PDF files to Azure Blob Storage in React PDF Viewer | Syncfusion
+description: Learn how to save PDF files to Azure Blob Storage using the Syncfusion React PDF Viewer component in standalone and server-backed configurations.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Save PDF file to Azure Blob Storage
+# Save PDF files to Azure Blob Storage
 
-PDF Viewer allows to save PDF file to Azure Blob Storage using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to save PDF to Azure Blob Storage.
+The React PDF Viewer component supports saving PDF files to Azure Blob Storage using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 
 ## Using Standalone PDF Viewer
 
-To save a PDF file to Azure Blob Storage, you can follow the steps below:
+To save a PDF file to Azure Blob Storage, follow these steps:
 
 **Step 1:** Create a PDF Viewer sample in React
 
 Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample in React. This will set up the basic structure of your PDF Viewer application.
 
-**Step 2:** Modify the `src/index.js` File in the Angular Project
+**Step 2:** Modify the `src/app/app.ts` file in the Angular project
 
 1. Import the required namespaces at the top of the file:
 
@@ -28,15 +27,15 @@ Follow the instructions provided in this [link](https://help.syncfusion.com/docu
 import { BlockBlobClient } from "@azure/storage-blob";
 ```
 
-2. Add the following private properties to the `index.js`, and assign the values from the configuration to the corresponding properties
+2. Add the following private property to `app.ts`, and assign the value from the configuration to the corresponding property.
 
-N> Replace **Your SAS Url in Azure** with the actual SAS url for your Azure Blob Storage account.
+N> Replace **Your SAS Url in Azure** with the actual SAS URL for the Azure Blob Storage account.
 
 ```typescript
 var SASUrl = "*Your SAS Url in Azure*";
 ```
 
-3. Configure a custom toolbar item for the download function to save a PDF file in Azure Blob Storage.
+3. Configure a custom toolbar item for the download function to save a PDF file to Azure Blob Storage.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -80,7 +79,7 @@ return (<div>
 {% endhighlight %}
 {% endtabs %}
 
-4. Retrieve the PDF viewer instance and save the current PDF as a Blob. Then, read the Blob as an ArrayBuffer and upload the ArrayBuffer to Azure Blob Storage using 'BlockBlobClient'.
+4. Retrieve the PDF Viewer instance and save the current PDF as a Blob. Then, read the Blob as an ArrayBuffer and upload the ArrayBuffer to Azure Blob Storage using `BlockBlobClient`.
 
 ```typescript
 function saveDocument() {
@@ -100,21 +99,21 @@ function saveDocument() {
 }
 ```
 
-N> The **npm install @azure/storage-blob** package must be installed in your application to use the previous code example.
+N> Install the @azure/storage-blob package in the application to use the previous code example: npm install @azure/storage-blob
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Standalone).
 
-## Using Server-Backed PDF Viewer
+## Using server-backed PDF Viewer
 
 To save a PDF file to Azure Blob Storage, you can follow the steps below:
 
 **Step 1:** Create a PDF Viewer sample in React
 
-Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample in React. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample in React. This sets up the basic structure of the PDF Viewer application.
 
-**Step 2:** Modify the Controller.cs File in the Web Service Project
+**Step 2:** Modify the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or later. For instructions, see this article: https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
@@ -141,7 +140,7 @@ public PdfViewerController(IConfiguration configuration, ILogger<PdfViewerContro
 }
 ```
 
-5. Modify the `Download()` method to save the downloaded PDF files to Azure Blob Storage container
+5. Modify the [Download()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Azure Blob Storage container.
 
 ```csharp
 
@@ -178,7 +177,7 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in the web service project and add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -194,11 +193,11 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name
+N> Replace the placeholders with the actual Azure Storage connection string and container name.
 
-**Step 3:**   Set the PDF Viewer Properties in React PDF viewer component
+**Step 3:** Set the PDF Viewer properties in the React PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Azure Blob Storage. Ensure that you correctly pass the document name from the files available in your azure contanier to the documentPath property.
+Modify the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Azure Blob Storage, and ensure that the document exists in the target container.
 
 {% tabs %}
 {% highlight ts tabtitle="Server-Backed" %}
@@ -233,6 +232,6 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
+N> Install the Azure.Storage.Blobs NuGet package in the web service application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Server-Backend).
