@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Converting Library Bounds in Angular PdfViewer | Syncfusion
-description: Learn how to convert Library bounds into Viewer bounds in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Converting Library Bounds in Angular PDF Viewer | Syncfusion
+description: Learn how to convert library bounds into viewer bounds in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Converting PDF Library Bounds to PDF Viewer Bounds
+# Convert PDF Library Bounds to PDF Viewer Bounds
 
 ### Overview
 
-When exporting annotations from the PDF Library, you may need to convert the bounds values into the PDF Viewer format. This guide will help you achieve that using the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component.
+When exporting annotations from the PDF Library, the bounds values may need to be converted into the PDF Viewer format. This guide helps with performing this conversion using the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component.
 
-### How to Convert Bounds Values
+### How to convert bounds values
 
-**Step 1:** Initialize the PdfViewer Instance
+**Step 1:** Initialize the PDF Viewer instance
 
-Create an instance of the PdfViewer and configure it with the required services.
+Create an instance of the PDF Viewer and configure it with the required services:
 
 ```html
       <ejs-pdfviewer
@@ -30,9 +30,9 @@ Create an instance of the PdfViewer and configure it with the required services.
       </ejs-pdfviewer>
 ```
 
-**Step 2:** Handle Export Success
+**Step 2:** Handle export success
 
-Convert the exported blob URL to an object and then extract and convert the annotation bounds.
+Convert the exported blob URL to an object, and then extract and convert the annotation bounds:
 
 ```typescript
   // Event for export success
@@ -66,9 +66,9 @@ Convert the exported blob URL to an object and then extract and convert the anno
   }
 ```
 
-**Step 3:** Create a Function to Convert Blob URL to Object
+**Step 3:** Create a function to convert the blob URL to an object
 
-This function fetches the blob data and converts it into a JSON object.
+This function fetches the blob data and converts it into a JSON object:
 
 ```typescript
   // Function to convert Blob URL to object
@@ -90,6 +90,6 @@ This function fetches the blob data and converts it into a JSON object.
 
 ### Conclusion
 
-By following these steps, you can successfully convert PDF Library bounds values into PDF Viewer bounds values when exporting annotations as JSON. This will help maintain accuracy in the annotation placement and ensure a seamless user experience.
+By following these steps, PDF Library bounds values can be successfully converted into PDF Viewer bounds values when exporting annotations as JSON. This helps maintain accuracy in annotation placement and ensures a seamless user experience.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)

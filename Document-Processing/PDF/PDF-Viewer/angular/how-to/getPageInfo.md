@@ -1,22 +1,22 @@
 ---
 layout: post
 title: Get Page Info in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Get Page Info in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn about getting page information in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get Page Info in Angular PDF Viewer component
+# Get page info in Angular PDF Viewer component
 
-The PDF Viewer library allows you to retrieves the information of a specified page in the viewer using the **getPageInfo()** method.This provides Essential<sup style="font-size:70%">&reg;</sup> information such as the dimensions, and rotation.
+The PDF Viewer library allows retrieval of information for a specified page in the viewer using the `getPageInfo()` method. This provides essential<sup style="font-size:70%">&reg;</sup> information, such as the dimensions and rotation.
 
-The following steps are used to getPageInfo.
+Follow these steps to get page information:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Create a simple PDF Viewer sample by following the steps in this [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started).
 
-**Step 2:** The following code snippet to implement the functionality for retrieving height, width and roration of a specified page in the viewer.
+**Step 2:** The following code snippet implements the functionality for retrieving the height, width, and rotation of a specified page in the viewer:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -92,6 +92,6 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, you can successfully integrate and use the get page info API in the EJ2 PDF Viewer.
+By following these steps, the get page info API can be successfully integrated and used in the EJ2 PDF Viewer.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)

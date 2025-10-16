@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Add the custom stamp based on the free text bounds | Syncfusion
-description: Learn how to add the custom stamp based on the free text bounds in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Add Custom Stamp Based on Free Text Bounds | Syncfusion
+description: Learn how to add a custom stamp based on free text bounds in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: Add the custom stamp based on the free text bounds
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add the custom stamp based on the free text bounds
+# Add a custom stamp based on free text bounds
 
-To add a custom stamp in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer based on the free text bounds, obtain the value of the bound for the free text in the Pixel in the **annotationAdd** event while adding the free text. However, when a custom stamp is added programmatically, the offset values are set in points. So, you must convert the value of the bound for the free text into a point to add the custom stamp to the free text bounds position.
+To add a custom stamp in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer based on the free text bounds, obtain the value of the bound for the free text in pixels in the `annotationAdd` event while adding the free text. However, when a custom stamp is added programmatically, the offset values are set in points. Therefore, convert the value of the bound for the free text into a point to add the custom stamp to the free text bounds position.
 
-Here is an example of how you can add the custom stamp based on the free text bounds:
+Here is an example of how to add the custom stamp based on the free text bounds::
 
 ```typescript
 

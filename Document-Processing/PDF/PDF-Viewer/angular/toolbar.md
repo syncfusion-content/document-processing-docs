@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Toolbar in Angular Pdfviewer component | Syncfusion
+title: Toolbar in Angular PDF Viewer component | Syncfusion
 description: Learn here all about Toolbar in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Toolbar
@@ -10,29 +10,29 @@ domainurl: ##DomainURL##
 
 # Built-in toolbar in Angular PDF Viewer component
 
-The PDF Viewer comes with a powerful built-in toolbar to execute important actions such as page navigation, text search,view mode,download,print,bookmark, and thumbnails.
+The PDF Viewer includes a built-in toolbar for actions such as page navigation, text search, view mode, download, print, bookmark, and thumbnails.
 
-The following table shows built-in toolbar items and its actions:-
+The following table lists built-in toolbar items and their actions:
 
 | Option | Description |
 |---|---|
-| OpenOption | This option provides an action to load the PDF documents to the PDF Viewer.|
-| PageNavigationTool |This option provides an action to navigate the pages in the PDF Viewer. It contains GoToFirstPage,GoToLastPage,GotoPage,GoToNext, and GoToLast tools.|
-| MagnificationTool |This option provides an action to magnify the pages either with predefined or user defined zoom factors in the PDF Viewer. Contains ZoomIn, ZoomOut, Zoom, FitPage and FitWidth tools|
-| PanTool |This option provides an action for panning the pages in the PDF Viewer.|
-| SelectionTool |This option provides an action to enable/disable the text selection in the PDF Viewer.|
-| SearchOption |This option provides an action to search a word in the PDF documents.|
-| PrintOption |This option provides an action to print the PDF document being loaded in the PDF Viewer.|
-| DownloadOption |This Download option provides an action to download the PDF document that has been loaded in the PDF Viewer.|
-| UndoRedoTool | This tool provides options to undo and redo the annotation actions performed in the PDF Viewer.|
-| AnnotationEditTool | This tool provides options to enable or disable the edit mode of annotation in the PDF Viewer.|
-| CommentTool | This tool facilitates the addition of sticky notes to the pages of PDF documents in the PDF Viewer.|
+| OpenOption | Loads a PDF document in the PDF Viewer.|
+| PageNavigationTool |Navigates pages in the PDF Viewer. Includes GoToFirstPage, GoToLastPage, GotoPage, GoToNext, and GoToLast.|
+| MagnificationTool |Magnifies pages with predefined or user-defined zoom factors. Includes ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth.|
+| PanTool |Enables panning pages in the PDF Viewer.|
+| SelectionTool |Enables or disables text selection in the PDF Viewer.|
+| SearchOption |Searches text in the PDF document.|
+| PrintOption |Prints the loaded PDF document.|
+| DownloadOption |Downloads the loaded PDF document.|
+| UndoRedoTool | Undoes and redoes annotation actions performed in the PDF Viewer.|
+| AnnotationEditTool | Enables or disables annotation edit mode in the PDF Viewer.|
+| CommentTool | Adds sticky notes to pages in the PDF document.|
 
-## Show/Hide the built-in toolbar
+## Show or hide the built-in toolbar
 
-The PDF Viewer has an option to show or hide the complete built-in toolbar. You can achieve this by using following two ways.
+The PDF Viewer can show or hide the complete built-in toolbar in two ways.
 
-* **Show/Hide toolbar using enableToolbar API as in the following code snippet**
+* **Show or hide the toolbar using the enableToolbar API as shown below**
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -96,7 +96,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-* **Show/Hide toolbar using showToolbar as in the following code snippet**
+* **Show or hide the toolbar using showToolbar as shown below**
 
   ```html
   <script>
@@ -107,11 +107,11 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   </script>
   ```
 
-## Show/Hide the built-in toolbaritem
+## Show or hide built-in toolbar items
 
-The PDF Viewer has an option to show or hide these grouped items in the built-in toolbar.
+The PDF Viewer can show or hide grouped items in the built-in toolbar.
 
-* **Show/Hide toolbaritem using toolbarSettings as in the following code snippet.**
+* **Show or hide toolbar items using toolbarSettings as shown below**
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -177,7 +177,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-* **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
+* **Show or hide toolbar items using showToolbarItem as shown below**
 
   ```html
   <script>
@@ -188,9 +188,9 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   </script>
   ```
 
-## Show/Hide the left toolbar with the thumbnails and bookmarks
+## Show or hide the left toolbar with thumbnails and bookmarks
 
-The PDF Viewer has an option to show or hide the left toolbar with the thumbnails and bookmarks using enableNavigationToolbar API as in the following code sample.
+Show or hide the left toolbar with thumbnails and bookmarks using the enableNavigationToolbar API as shown below.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -258,15 +258,15 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-## Customize Built-In Toolbar
+## Customize built-in toolbar
 
-PDF Viewer allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
+The PDF Viewer allows customization of existing toolbar items (add, show, hide, enable, and disable).
 
-* Add - New items can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/customToolbarItemModel/) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/angular/documentation/api/toolbar/clickEventArgs/).
+* Add - Define new items using [**CustomToolbarItemModel**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/customToolbarItemModel/) and include them in the [**ToolbarSettings**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) property. Handle clicks in [`toolbarclick`](https://ej2.syncfusion.com/angular/documentation/api/toolbar/clickEventArgs/).
 
-* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarItem/).
+* Show, hide - Show or hide existing items using [`ToolbarSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/). Predefined items are listed in [`ToolbarItem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarItem/).
 
-* Enable, Disable - Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
+* Enable, disable - Enable or disable toolbar items using [`enabletoolbaritem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar/#enabletoolbaritem).
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -434,45 +434,45 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-N> Default value of toolbar items is ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
+N> Default toolbar items: ['OpenOption', 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
 
 ### Align Property
 
-The align property is used to specify the alignment of a toolbar item within the toolbar.
+The align property specifies the alignment of a toolbar item within the toolbar.
 
 `Left`: Aligns the item to the left side of the toolbar.
 `Right`: Aligns the item to the right side of the toolbar.
 
 ### Tooltip Property
 
-The tooltip property is used to set the tooltip text for a toolbar item. Tooltip provides additional information when a user hovers over the item.
+The tooltip property sets the tooltip text for a toolbar item. The tooltip provides additional information on hover.
 
 ### CssClass Property
 
-The cssClass property is used to apply custom CSS classes to a toolbar item. It allows custom styling of the toolbar item.
+The cssClass property applies custom CSS classes to a toolbar item for custom styling.
 
 ### Prefix Property
 
-The prefix property is used to set the CSS class or icon that should be added as a prefix to the existing content of the toolbar item.
+The prefix property sets the CSS class or icon to add as a prefix to the toolbar item's content.
 
 ### ID Property
 
-The id property within a CustomToolbarItemModel is a compulsory attribute that plays a vital role in toolbar customization. It serves as a unique identifier for each toolbar item, facilitating distinct references and interactions.
+The id property within a CustomToolbarItemModel is required and uniquely identifies each toolbar item for references and interactions.
 
-When defining or customizing toolbar items, it is mandatory to assign a specific and descriptive id to each item.
-These properties are commonly used when defining custom toolbar items with the `CustomToolbarItemModel` in the context of Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. When configuring the toolbar using the `ToolbarSettings` property, you can include these properties to customize the appearance and behavior of each toolbar item.
+Assign a specific and descriptive id to each custom toolbar item.
+These properties are used when defining custom toolbar items with `CustomToolbarItemModel` in the context of Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. When configuring the toolbar using the `ToolbarSettings` property, include these properties to customize appearance and behavior.
 
-N> When customizing toolbar items, you have the flexibility to include either icons or text based on your design preference.
+N> Toolbar items can include icons, text, or both based on design preference.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to/Customize%20existing%20toolbar)
 
 ## Custom Toolbar
 
-The PDF Viewer provides API for user interactions options provided in its built-in toolbar. Using this, you can create your own User Interface for toolbar actions at the application level by hiding the built-in toolbar. The following steps are used to create the custom toolbar for PDF Viewer:
+The PDF Viewer provides APIs for the built-in toolbar's user interaction options. A custom toolbar can be created at the application level by hiding the built-in toolbar. The following steps create a custom toolbar for the PDF Viewer:
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
 
-**Step 2:** Hide the built-in toolbar of PDF Viewer using the following code snippet.,
+**Step 2:** Hide the built-in toolbar of the PDF Viewer using the following code.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -502,7 +502,7 @@ The PDF Viewer provides API for user interactions options provided in its built-
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3:** Add EJ2 toolbar for performing primary actions like Open, Previous page, Next page, Go to page, Print and Download using the following code snippet.
+**Step 3:** Add an EJ2 toolbar for primary actions like Open, Previous page, Next page, Go to page, Print, and Download using the following code.
 
 ```html
 <ejs-toolbar id='topToolbar' #customToolbar>
@@ -528,7 +528,7 @@ The PDF Viewer provides API for user interactions options provided in its built-
 <input type="file" id="fileUpload" accept=".pdf" style="display:block;visibility:hidden;width:0;height:0;">
 ```
 
-**Step 3:** Add EJ2 toolbar for performing magnification actions in PDF Viewer using the following code snippet.
+**Step 3:** Add an EJ2 toolbar for magnification actions in the PDF Viewer using the following code.
 
 ```html
 <ejs-toolbar id='magnificationToolbar' #zoomToolbar>
@@ -540,7 +540,7 @@ The PDF Viewer provides API for user interactions options provided in its built-
 </ejs-toolbar>
 ```
 
-**Step 4:** Add the following style to achieve the custom toolbar styling.
+**Step 4:** Add the following styles for custom toolbar styling.
 
 ```css
 #magnificationToolbar {
@@ -684,7 +684,7 @@ The PDF Viewer provides API for user interactions options provided in its built-
 
 >The icons are embedded in the font file used in the previous code snippet.
 
-**Step 5:** Add the following code snippet in `app.component.ts` file for performing a user interaction in PDF Viewer in code behind.
+**Step 5:** Add the following code in `app.component.ts` to wire user interactions for the PDF Viewer.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -1035,7 +1035,7 @@ private readFile(args: any): void {
 {% endhighlight %}
 {% endtabs %}
 
-Find the sample of [Toolbar Customization](https://stackblitz.com/edit/angular-g94gvs?file=app.component.html)
+Find a sample of [Toolbar customization](https://stackblitz.com/edit/angular-g94gvs?file=app.component.html)
 
 ## See also
 

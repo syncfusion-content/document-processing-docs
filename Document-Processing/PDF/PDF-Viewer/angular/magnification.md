@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Magnification in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Magnification in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Magnification in Angular PDF Viewer component | Syncfusion
+description: Learn here all about Magnification in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Magnification
 documentation: ug
@@ -10,11 +10,9 @@ domainurl: ##DomainURL##
 
 # Magnification in Angular PDF Viewer component
 
-The magnification tools of the PDF Viewer contains ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth tools in the
-default toolbar. The PDF Viewer also has an option to show or hide the magnification tools in the
-default toolbar.
+The PDF Viewer magnification tools include ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth in the default toolbar. The default toolbar can show or hide these tools.
 
-The following code snippet describes how to enable the magnification in PDF Viewer.
+The following code snippet shows how to enable magnification in the PDF Viewer.
 
 
 {% tabs %}
@@ -83,16 +81,16 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 The following magnification options are available in the default toolbar of PDF Viewer,
 
-* **ZoomIn**:- Zoom in from the current zoom value of PDF pages.
-* **ZoomOut**:- Zoom out from the current zoom value of PDF pages.
-* **Zoom**:- Zoom to specific zoom value of PDF pages.
-* **FitPage**:- Fits the page width with in the available view port size.
-* **FitWidth**:- Fits the view port width based on the page content size.
-* **Auto**:- Fits the page content with-in the viewport on resizing action.
+* **ZoomIn**: Zooms in from the current zoom value.
+* **ZoomOut**: Zooms out from the current zoom value.
+* **Zoom**: Zooms to a specific value.
+* **FitPage**: Fits the page within the available viewport.
+* **FitWidth**: Fits the page to the available viewport width.
+* **Auto**: Fits page content within the viewport on resize.
 
-![Alt text ](images/zoom.png)
+![Magnification options in PDF Viewer](images/zoom.png)
 
->PDF Viewer can support the zoom value ranges from 10 to 400.
+> PDF Viewer supports zoom values from 10 to 400.
 
 ## See also
 

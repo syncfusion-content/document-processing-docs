@@ -10,23 +10,23 @@ domainurl: ##DomainURL##
 
 # Open PDF Files in Angular PDF Viewer Component
 
-You might need to open and view the PDF files from various location. In this section, you can find the information about how to open PDF files from URL, database, local file system, and as base64 string.
+Opening and viewing PDF files may be required from various locations. This section explains how to open PDF files from a URL, database, local file system, or a base64 string.
 
-## Opening a PDF from URL
+## Open a PDF from a URL
 
-If you have your PDF files in the web, you can open it in the viewer using URL.
+PDF files hosted on the web can be opened in the viewer using a URL.
 
-**Step 1:** Create a Simple PDF Viewer Sample in Angular
+**Step 1:** Create a simple PDF Viewer sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
+Follow the steps in this [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This provides a basic setup of the component.
 
-**Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 2:** Modify the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://support.syncfusion.com/kb/article/9766/how-to-create-pdf-viewer-web-service-in-net-core-31-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or later. Refer to this [article](https://support.syncfusion.com/kb/article/9766/how-to-create-pdf-viewer-web-service-in-net-core-31-and-above) for instructions.
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
-3. Modify the `Load()` method to open it in the viewer using URL
+3. Modify the `Load()` method to open the document in the viewer using a URL.
 
 ```csharp
 
@@ -74,9 +74,9 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
 
 ```
 
-**Step 3:**  Set the PDF Viewer Properties in React PDF viewer component
+**Step 3:** Set the PDF Viewer properties in the Angular PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load.
+Set the `serviceUrl` property of the PDF Viewer component to the URL of the web service project, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set `documentPath` to the desired PDF document URL.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -109,13 +109,13 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20file%20from%20URL)
 
-## Opening a PDF from base64 data
+## Open a PDF from base64 data
 
-The following steps explains how the PDF file can be loaded in PDF Viewer as base64 string.
+The following steps explain how to load a PDF file in the PDF Viewer as a base64 string.
 
-**Step 1:** Create a Simple PDF Viewer Sample in Angular
+**Step 1:** Create a simple PDF Viewer sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
+Follow the steps in this [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This provides a basic setup of the component.
 
 **Step 2:** Use the following code snippet to load the document from Base64 string.
 

@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Managing Local Storage in Angular PDF Viewer component | Syncfusion
-description: Learn how to manage local storage in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Manage Local Storage in Angular PDF Viewer component | Syncfusion
+description: Learn how to manage local storage in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Managing Local Storage in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer
+# Manage local storage in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer provides the `enableLocalStorage` property, which allows you to control how session-specific data is stored. You can choose to store this data in an internal collection or rely on the default session storage.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer provides the `enableLocalStorage` property, which allows control over how session-specific data is stored. This data can be stored in an internal collection or use the default session storage.
 
 ### Using the enableLocalStorage Property
 
-Set the `enableLocalStorage` property to manage whether the PDF Viewer uses session storage (default) or an internal collection. When set to `true`, session-specific data is kept in memory. Otherwise, session storage is used.
+Set the `enableLocalStorage` property to manage whether the PDF Viewer uses session storage (default) or an internal collection. When set to `true`, session-specific data is kept in memory; otherwise, session storage is used.
 
 {% tabs %}
 {% highlight html tabtitle="Server-Backed" %}
@@ -74,14 +74,14 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-### Impact and Considerations
+### Impact and considerations
 
-- **Increased Memory Usage**: Setting `enableLocalStorage` to `true` can increase memory usage, particularly with larger documents or those containing many interactive elements, such as form fields and annotations.
-- **Avoiding Memory Leaks**: It is crucial to properly dispose of the PDF Viewer instance when it's no longer needed to prevent memory leaks, especially when using in-memory storage.
-- **Default Behavior**: By default, this property is set to `false`, meaning the session storage mechanism is utilized unless explicitly changed.
+- **Increased memory usage**: Setting `enableLocalStorage` to `true` can increase memory usage, particularly with larger documents or those containing many interactive elements, such as form fields and annotations.
+- **Avoiding memory leaks**: Properly disposing of the PDF Viewer instance when it is no longer needed is crucial to prevent memory leaks, especially when using in-memory storage.
+- **Default behavior**: By default, this property is set to `false`, meaning the session storage mechanism is utilized unless explicitly changed.
 
-### Enhanced Control
+### Enhanced control
 
-Leveraging the `enableLocalStorage` property provides greater flexibility in managing how data is stored during a session, allowing you to optimize performance and storage based on your application’s specific requirements.
+Leveraging the `enableLocalStorage` property provides greater flexibility in managing how data is stored during a session, allowing optimization of performance and storage based on the application’s specific requirements.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)

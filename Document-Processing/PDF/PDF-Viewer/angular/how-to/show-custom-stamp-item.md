@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Displaying Custom stamp Items in Angular Pdfviewer|Syncfusion.
-description: Learn how to display custom items in the custom stamp Dropdown in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Display custom stamp items in Angular PDF Viewer | Syncfusion
+description: Learn how to display custom items in the custom stamp dropdown in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Displaying Custom Items in Custom Stamp Dropdown
+# Display Custom Items in the Custom Stamp Dropdown
 
 ### Overview
 
-This guide explains how to add and display custom items in the custom stamp dropdown menu of Syncfusion's PDF Viewer using Angular. This feature allows users to easily access and apply custom stamps to their PDF documents.
+This guide explains how to add and display custom items in the custom stamp dropdown menu of the Syncfusion PDF Viewer for Angular. This feature enables quick access to and application of custom stamps to PDF documents.
 
 ### Steps to Show Custom Items in Custom Stamp Dropdown
 
@@ -21,7 +21,7 @@ This guide explains how to add and display custom items in the custom stamp drop
 
 **Step 2:** Configure Custom Stamp Settings
 
-Within the PDF Viewer setup, utilize `customStampSettings` to specify the custom stamps that should appear in the dropdown menu.
+Within the PDF Viewer setup, use `customStampSettings` to specify the custom stamps that appear in the dropdown menu.
 
 
 {% tabs %}
@@ -169,6 +169,6 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-By following these instructions, you can successfully configure to display custom items in the custom stamp dropdown, allowing users to easily apply personalized stamps to their documents.
+These steps configure the display of custom items in the custom stamp dropdown, enabling easy application of personalized stamps to documents.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)

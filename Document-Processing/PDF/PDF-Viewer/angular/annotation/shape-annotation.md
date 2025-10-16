@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shape Annotation in Angular PDF Viewer component
+# Shape annotation in Angular PDF Viewer component
 
-The PDF Viewer control provides the options to add, edit, and delete the shape annotations. The shape annotation types supported in the PDF Viewer control are:
+The Angular PDF Viewer component provides options to add, edit, and delete shape annotations. The supported shape annotation types are:
 
 * Line
 * Arrow
@@ -20,20 +20,20 @@ The PDF Viewer control provides the options to add, edit, and delete the shape a
 
 ![ShapeAnnotation](../images/shape_annot.png)
 
-## Adding a shape annotation to the PDF document
+## Add a shape annotation to a PDF document
 
 Shape annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the **Shape Annotation** drop-down button. A drop-down pop-up will appear and shows the shape annotations to be added.
-* Select the shape types to be added to the page in the drop-down pop-up. It enables the selected shape annotation mode.
-* You can add the shapes over the pages of the PDF document.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar. The annotation toolbar appears.
+* Click the **Shape Annotation** dropdown. A popup appears showing available shape annotations.
+* Select a shape type to add to the page. The selected shape annotation mode is enabled.
+* Add the shape anywhere on the PDF pages.
 
-In the pan mode, if the shape annotation mode is entered, the PDF Viewer control will switch to text select mode.
+While in pan mode, entering shape annotation mode switches the viewer to text selection mode.
 
 ![ShapeTool](../images/shape_toolbar.png)
 
-Refer to the following code sample to switch to the circle annotation mode.
+The following example shows how to switch to Circle annotation mode.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -114,11 +114,11 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 {% endhighlight %}
 {% endtabs %}
 
-## Adding a shape annotation to the PDF document Programmatically
+## Add a shape annotation to a PDF document programmatically
 
-With the PDF Viewer library, you can add a shape annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+With the PDF Viewer library, a shape annotation can be added programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
 
-Here's a example of how you can utilize the **addAnnotation()** method to include a shape annotation programmatically:
+Here is an example of how to use the **addAnnotation()** method to include a shape annotation programmatically:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -286,11 +286,11 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the existing shape annotation programmatically
+## Edit an existing shape annotation programmatically
 
-To modify existing shape annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer programmatically, you can use the **editAnnotation()** method.
+To modify an existing shape annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer programmatically, use the **editAnnotation()** method.
 
-Here is an example of how you can use the **editAnnotation()** method:
+The following example shows how to use the **editAnnotation()** method:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -486,45 +486,45 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-## Editing the properties of the shape annotation
+## Edit the properties of shape annotations
 
-The fill color, stroke color, thickness, and opacity of the shape annotation can be edited using the Edit color tool, Edit stroke color tool, Edit thickness tool, and Edit opacity tool in the annotation toolbar.
+The fill color, stroke color, thickness, and opacity of shape annotations can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
-### Editing fill color
+### Edit fill color
 
-The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
+The fill color of the annotation can be changed using the color palette in the Edit Color tool.
 
 ![ShapeFillColor](../images/shape_fillColor.png)
 
-### Editing stroke color
+### Edit stroke color
 
-The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
+The stroke color of the annotation can be changed using the color palette in the Edit Stroke Color tool.
 
 ![ShapeStrokeColor](../images/shape_strokecolor.png)
 
-### Editing thickness
+### Edit thickness
 
-The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
+The annotation border thickness can be adjusted using the range slider in the Edit Thickness tool.
 
 ![ShapeThickness](../images/shape_thickness.png)
 
-### Editing opacity
+### Edit opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+The annotation opacity can be adjusted using the range slider in the Edit Opacity tool.
 
 ![ShapeOpacity](../images/shape_opacity.png)
 
-### Editing the line properties
+### Edit line properties
 
-The properties of the line shapes such as line and arrow annotations can be edited using the Line Properties window. It can be opened by selecting the Properties option in the context menu that appears on right-clicking the line and arrow annotations.
+Line shape properties (such as line and arrow) can be edited using the Line Properties window. Open it by selecting the Properties option in the context menu when right‑clicking line or arrow annotations.
 
 Refer to the following code sample to set the default annotation settings.
 
 ![ShapeProperty](../images/shape_lineprty.png)
 
-## Setting default properties during the control initialization
+## Set default properties during control initialization
 
-The properties of the shape annotations can be set before creating the control using LineSettings, ArrowSettings, RectangleSettings, CircleSettings, and PolygonSettings.
+Shape annotation properties can be set before initializing the component using LineSettings, ArrowSettings, RectangleSettings, CircleSettings, and PolygonSettings.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

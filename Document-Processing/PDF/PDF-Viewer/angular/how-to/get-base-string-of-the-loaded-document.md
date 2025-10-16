@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Get base string of the loaded document in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Get base string of the loaded document in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Get Base64 String of Loaded Document in Angular PDF Viewer component | Syncfusion
+description: Learn how to get the Base64 string of the loaded document in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: Get base string of the loaded document
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get the Base 64 string of the loaded PDF document
+# Get the Base64 string of the loaded PDF document
 
-The PDF Viewer library allows you to get the base 64 string of the loaded PDF document by using **saveAsBlob()** method. The entire PDF document will get as blob as like memory stream. So, we can save the blob or convert into stream and we can save it in the database. We can also load the PDF document from base 64 string using the **load()** method.
+The PDF Viewer library allows retrieval of the Base64 string of the loaded PDF document using the `saveAsBlob()` method. The entire PDF document is obtained as a blob, similar to a memory stream, which can then be saved or converted into a stream for database storage. The PDF document can also be loaded from a Base64 string using the `load()` method.
 
-The following steps are used to get the base 64 string of the loaded PDF document in the PDF viewer control.
+Follow these steps to get the Base64 string of the loaded PDF document in the PDF Viewer control:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create simple PDF Viewer sample in Angular.
+**Step 1:** Create a simple PDF Viewer sample in Angular by following the steps in this [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started).
 
-**Step 2:** Add the following code snippet to get the base 64 string with button click event.
+**Step 2:** Add the following code snippet to get the Base64 string with a button click event:
 
 ```html
 
@@ -41,13 +41,13 @@ base64ofloadedDocument() {
 
 ```
 
-**Step 3:** Use the following code snippet inside the **saveAsBlob()** method to load the document from the base 64 string.
+**Step 3:** Use the following code snippet inside the `saveAsBlob()` method to load the document from the Base64 string:
 
 ```typescript
 // load the document from base 64 string.
 viewer.load(base64data, null);
 ```
 
-Find the Sample, [how to get the Base 64 string of the loaded PDF document](https://stackblitz.com/edit/angular-wmpo4g-ts8b1g?file=app.component.ts)
+Find the sample [how to get the Base64 string of the loaded PDF document](https://stackblitz.com/edit/angular-wmpo4g-ts8b1g?file=app.component.ts)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20with%20WebService)

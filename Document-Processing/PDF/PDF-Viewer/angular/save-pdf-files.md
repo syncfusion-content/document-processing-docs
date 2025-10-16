@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Saving PDF files in Angular Pdfviewer component | Syncfusion
-description: This page helps you to learn here all about saving PDF files in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Saving PDF files in Angular PDF Viewer component | Syncfusion
+description: Learn about saving PDF files in the Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Saving PDF files
 documentation: ug
@@ -10,23 +10,23 @@ domainurl: ##DomainURL##
 
 # Saving PDF file in Angular PDF Viewer component
 
-After editing the PDF file with various annotation tools, you will need to save the updated PDF to the server, database, or local file system.
+After editing a PDF file with annotation tools, the updated PDF may need to be saved to a server, database, or local file system.
 
-## Save PDF file to Server
+## Save PDF file to server
 
-Need to save the modified PDF back to a server. To achieve this, proceed with the following steps
+To save the modified PDF back to a server, follow these steps.
 
-**Step 1:** Create a Simple PDF Viewer Sample in Angular
+**Step 1:** Create a simple PDF Viewer sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
+Follow the steps in this [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This provides a basic setup of the component.
 
-**Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 2:** Modify the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or later. Refer to this [article](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions.
 
-2. Open the `PdfViewerController.cs` file in your web service project.
+2. Open the `PdfViewerController.cs` file in the web service project.
 
-3. Modify the [Download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/downloadStartEventArgs/) method to open it in the viewer using URL
+3. Modify the [Download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/downloadStartEventArgs/) method to return the document for download.
 
 ```csharp
 
@@ -57,9 +57,9 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 
 ```
 
-**Step 3:**  Set the PDF Viewer Properties in React PDF viewer component
+**Step 3:** Set the PDF Viewer properties in the Angular PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load.
+Set the `serviceUrl` property of the PDF Viewer component to the URL of the web service project, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set `documentPath` to the desired PDF document URL.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -92,9 +92,9 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Save%20and%20Load/Save%20PDF%20file%20to%20Server)
 
-## Download PDF file as a copy
+## Download a copy of the PDF file
 
-In the built-in toolbar, you have an option to download the updated PDF to the local file system, you can use it to download the PDF file.
+The built-in toolbar includes an option to download the updated PDF to the local file system.
 
 ```html
 <button (click)="downloadClicked()">Download</button>

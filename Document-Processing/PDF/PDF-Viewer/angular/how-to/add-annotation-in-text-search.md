@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add Annotation in Text Search in Angular PdfViewer | Syncfusion
-description: Learn how to add rectangle annotations using search text bounds in Syncfusion Angular PdfViewer component using Essential JS 2.
+title: Add Annotation in Text Search in Angular PDF Viewer | Syncfusion
+description: Learn how to add rectangle annotations using search text bounds in the Syncfusion Angular PDF Viewer component using Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -14,11 +14,11 @@ domainurl: ##DomainURL##
 
 This guide demonstrates how to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer. This technique is useful for emphasizing search results with visual markers in annotation-supported applications.
 
-## Steps to Add Rectangle Annotations on Search Result Highlight
+## Steps to add rectangle annotations on search result highlight
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular.
+**Step 1:** Create a simple PDF Viewer sample in Angular by following the steps in this [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started).
 
-**Step 2:** Set Up the PdfViewer Component to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer.
+**Step 2:** Set up the PDF Viewer component to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -116,6 +116,6 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-By following this guide, you will enable the PDF Viewer to add rectangle annotations at search result locations, thus increasing the visibility of search results in your application.
+By following this guide, the PDF Viewer will add rectangle annotations at search result locations, thereby increasing the visibility of search results in the application.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)

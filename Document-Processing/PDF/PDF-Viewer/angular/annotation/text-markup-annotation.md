@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Text Markup Annotation in the Angular PDF Viewer component
 
-The PDF Viewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline,  strikethrough and squiggly annotations in the PDF document.
+The Angular PDF Viewer component provides options to add, edit, and delete text markup annotations such as highlight, underline, strikethrough, and squiggly in a PDF document.
 
-![Alt text](../images/text_markup_annotation.png)
+![Text markup annotations overview in Angular PDF Viewer](../images/text_markup_annotation.png)
 
 ## Highlight a text
 
@@ -20,9 +20,9 @@ There are two ways to highlight a text in the PDF document:
 
 1. Using the context menu
     * Select a text in the PDF document and right-click it.
-    * Select **Highlight** option in the context menu that appears.
+    * Select the **Highlight** option in the context menu that appears.
 
-![Alt text](../images/highlight_context.png)
+![Context menu option to apply Highlight](../images/highlight_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2. Using the annotation toolbar
@@ -31,9 +31,9 @@ There are two ways to highlight a text in the PDF document:
     * Select the text and the highlight annotation will be added.
     * You can also select the text and apply the highlight annotation using the **Highlight** button.
 
-![Alt text](../images/highlight_button.PNG)
+![Highlight button in the annotation toolbar](../images/highlight_button.PNG)
 
-In the pan mode, if the highlight mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for highlighting the text.
+While in pan mode, entering Highlight switches the viewer to text selection mode to enable selecting text for highlighting.
 
 Refer to the following code sample to switch to the highlight mode.
 
@@ -205,9 +205,9 @@ export class AppComponent implements OnInit {
 
 ## Highlight a text programmatically
 
-The PDF Viewer library enables you to programmatically highlight text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+The PDF Viewer library enables programmatically highlighting text within the PDF Viewer component using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
 
-Here's an example of how you can use the **addAnnotation()** method to apply highlighting programmatically:
+The following example shows how to apply highlighting programmatically using the **addAnnotation()** method:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -300,7 +300,7 @@ There are two ways to underline a text in the PDF document:
     * Select a text in the PDF document and right-click it.
     * Select the **Underline** option in the context menu that appears.
 
-![Alt text](../images/underline_context.png)
+![Context menu option to apply Underline](../images/underline_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2. Using the annotation toolbar
@@ -309,9 +309,9 @@ There are two ways to underline a text in the PDF document:
     * Select the text and the underline annotation will be added.
     * You can also select the text and apply the underline annotation using the **Underline** button.
 
-![Alt text](../images/underline_button.png)
+![Underline button in the annotation toolbar](../images/underline_button.png)
 
-In the pan mode, if the underline mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for underlining the text.
+While in pan mode, entering Underline switches the viewer to text selection mode to enable selecting text for underlining.
 
 Refer to the following code sample to switch to the underline mode.
 
@@ -483,9 +483,9 @@ export class AppComponent implements OnInit {
 
 ## Underline a text programmatically
 
-The PDF Viewer library enables you to programmatically Underline text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+The PDF Viewer library enables programmatically underlining text within the PDF Viewer component using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotation) method.
 
-Here's an example of how you can use the **addAnnotation()** method to apply Underline programmatically:
+The following example shows how to apply underline programmatically using the **addAnnotation()** method:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -578,7 +578,7 @@ There are two ways to strikethrough a text in the PDF document:
     * Select a text in the PDF document and right-click it.
     * Select the **Strikethrough** option in the context menu that appears.
 
-![Alt text](../images/strikethrough_context.png)
+![Context menu option to apply Strikethrough](../images/strikethrough_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2. Using the annotation toolbar
@@ -587,9 +587,9 @@ There are two ways to strikethrough a text in the PDF document:
     * Select the text and the strikethrough annotation will be added.
     * You can also select the text and apply the strikethrough annotation using the **Strikethrough** button.
 
-![Alt text](../images/strikethrough_button.png)
+![Strikethrough button in the annotation toolbar](../images/strikethrough_button.png)
 
-N> While you're in the pan mode, for navigating through the document, and you click on the strikethrough button, the PDF Viewer control will smoothly transition to text select mode. This seamless transition ensures a fluid experience when switching between different interaction modes within the PDF Viewer interface.
+N> While in pan mode, selecting the Strikethrough button switches the viewer to text selection mode, providing a smooth transition when switching between interaction modes.
 
 Refer to the following code sample to switch to strikethrough mode.
 
@@ -761,9 +761,9 @@ export class AppComponent implements OnInit {
 
 ## Strikethrough a text programmatically
 
-The PDF Viewer library enables you to programmatically Strikethrough text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+The PDF Viewer library enables programmatically striking through text within the PDF Viewer component using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotation) method.
 
-Here's an example of how you can use the **addAnnotation()** method to apply Strikethrough programmatically:
+The following example shows how to apply strikethrough programmatically using the **addAnnotation()** method:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -856,7 +856,7 @@ There are two ways to add squiggly to a text in the PDF document:
     * Select a text in the PDF document and right-click it.
     * Select the **Squiggly** option in the context menu that appears.
 
-![Alt text](../images/squiggly_context.png)
+![Context menu option to apply Squiggly](../images/squiggly_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2. Using the annotation toolbar
@@ -865,9 +865,9 @@ There are two ways to add squiggly to a text in the PDF document:
     * Select the text and the squiggly annotation will be added.
     * You can also select the text and apply the squiggly annotation using the **Squiggly** button.
 
-![Alt text](../images/squiggly_button.png)
+![Squiggly button in the annotation toolbar](../images/squiggly_button.png)
 
-N> While you're in the pan mode, for navigating through the document, and you click on the squiggly button, the PDF Viewer control will smoothly transition to text select mode. This seamless transition ensures a fluid experience when switching between different interaction modes within the PDF Viewer interface.
+N> While in pan mode, selecting the Squiggly button switches the viewer to text selection mode, providing a smooth transition when switching between interaction modes.
 
 Refer to the following code sample to switch to squiggly mode.
 
@@ -1039,9 +1039,9 @@ export class AppComponent implements OnInit {
 
 ## Squiggly a text programmatically
 
-The PDF Viewer library enables you to programmatically Squiggly text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+The PDF Viewer library enables programmatically applying squiggly text markup within the PDF Viewer component using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotation) method.
 
-Here's an example of how you can use the **addAnnotation()** method to apply Squiggly programmatically:
+The following example shows how to apply squiggly markup programmatically using the **addAnnotation()** method:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -1132,35 +1132,35 @@ The selected annotation can be deleted in the following ways:
 
 1. Using the Delete key
     * Select the annotation to be deleted.
-    * Click the Delete key in the keyboard. The selected annotation will be deleted.
+    * Press the Delete key on the keyboard. The selected annotation is deleted.
 
 2. Using the annotation toolbar
     * Select the annotation to be deleted.
-    * Click the **Delete Annotation** button in the annotation toolbar. The selected annotation will be deleted.
+    * Click the **Delete Annotation** button in the annotation toolbar. The selected annotation is deleted.
 
-![Alt text](../images/delete_button.png)
+![Delete Annotation button in the annotation toolbar](../images/delete_button.png)
 
 ## Editing the properties of the text markup annotation
 
-The color and the opacity of the text markup annotation can be edited using the Edit Color tool and the Edit Opacity tool in the annotation toolbar.
+Color and opacity of text markup annotations can be edited using the Edit Color and Edit Opacity tools in the annotation toolbar.
 
 ### Editing color
 
-The color of the annotation can be edited using the color palette provided in the Edit Color tool.
+The annotation color can be changed using the color palette in the Edit Color tool.
 
-![Alt text](../images/edit_color.png)
+![Edit Color palette for text markup annotations](../images/edit_color.png)
 
 ### Editing opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+The annotation opacity can be adjusted using the range slider in the Edit Opacity tool.
 
-![Alt text](../images/edit_opacity.png)
+![Edit Opacity slider for text markup annotations](../images/edit_opacity.png)
 
 ## Setting default properties during the control initialization
 
-The properties of the text markup annotation can be set before creating the control using the  highlightSettings, underlineSettings,  strikethroughSettings and squigglySettings.
+Text markup annotation properties can be configured before initializing the component using highlightSettings, underlineSettings, strikethroughSettings, and squigglySettings.
 
->After editing the default color and opacity using the Edit Color tool and Edit Opacity tool, they will be changed to the selected values.
+>After editing the default color and opacity using the Edit Color and Edit Opacity tools, the active defaults change to the selected values.
 
 Refer to the following code sample to set the default annotation settings.
 
@@ -1250,20 +1250,20 @@ export class AppComponent implements OnInit {
 
 ## Performing undo and redo
 
-The PDF Viewer performs undo and redo for the changes made in the PDF document. In the text markup annotation, undo and redo actions are provided for:
+The PDF Viewer supports undo and redo for changes made in the PDF document. In text markup annotations, undo and redo actions are available for:
 
-* Inclusion of the text markup annotations.
-* Deletion of the text markup annotations.
-* Change of either color or opacity of the text markup annotations.
+* Adding text markup annotations.
+* Deleting text markup annotations.
+* Changing the color or opacity of text markup annotations.
 
 The undo and redo actions can be done in the following ways:
 
-1. Using the keyboard shortcuts:
-    After performing a text markup annotation action, you can undo it by using the Ctrl + Z shortcut and redo by using the Ctrl + Y shortcut.
-2. Using toolbar:
-    The Undo and redo can be done using the **Undo** tool and **Redo** tool provided in the toolbar.
+1. Using keyboard shortcuts:
+    After performing a text markup action, press Ctrl + Z to undo and Ctrl + Y to redo.
+2. Using the toolbar:
+    Use the **Undo** and **Redo** tools in the toolbar.
 
-Refer to the following code sample for calling undo and redo actions from the client-side.
+Refer to the following code sample for invoking undo and redo actions from the client side.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -1355,15 +1355,15 @@ export class AppComponent implements OnInit {
 
 ## Saving the text markup annotation
 
-When you click the download tool in the toolbar, the text markup annotations will be saved in the PDF document. This action will not affect the original document.
+When the Download tool in the toolbar is clicked, text markup annotations are saved in the PDF document. This action does not modify the original source file.
 
 ## Printing the text markup annotation
 
-When the print tool is selected in the toolbar, the PDF document will be printed along with the text markup annotations added to the pages. This action will not affect the original document.
+When the Print tool in the toolbar is selected, the PDF document prints along with the text markup annotations added to the pages. This action does not modify the original document.
 
 ## Disabling text markup annotation
 
-The PDF Viewer control provides an option to disable the text markup annotation feature. The code sample for disabling the feature is as follows.
+The Angular PDF Viewer component provides an option to disable the text markup annotation feature. Use the following code to disable the feature.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

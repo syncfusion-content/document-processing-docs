@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Retry Timeout | Syncfusion
-Description:  Learn here all about Retry Timeout in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Retry Timeout in Angular PDF Viewer | Syncfusion
+description: Learn how retryTimeout and retryCount improve request resiliency in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: Retry Timeout
 documentation: ug
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Retry Timeout
 
-The **Retry Timeout** feature allows you to specify a duration for the PDF Viewer to retry failed AJAX requests before considering them permanent failures. It helps in handling temporary failures due to network issues or server unavailability.
+The **Retry Timeout** feature specifies a duration for the PDF Viewer to retry failed AJAX requests before considering them permanent failures. This helps handle temporary failures due to network issues or server unavailability.
 
-The retryTimeout allows developers to specify a duration after which the AJAX request should retry failed requests automatically. Developers can ensure a more resilient and fault-tolerant PDF viewing experience by configuring an appropriate retry timeout value.
+The `retryTimeout` property defines a duration after which failed AJAX requests are retried automatically. Configuring an appropriate value helps ensure a more resilient and fault-tolerant viewing experience.
 
-By default, when an AJAX request fails, the Retry Timeout property is set to `0`, indicating that no timeout is set. In this case, the PDF Viewer will wait indefinitely for a response, potentially leading to a hanging request. However, you can set the Retry Timeout property to a positive number, specifying the maximum number of seconds the PDF Viewer should wait for a response. If the response is not received within the specified time, the request will be aborted, triggering an appropriate error or timeout property.
+By default, when an AJAX request fails, the Retry Timeout property is set to `0`, indicating that no timeout is set. In this case, the PDF Viewer waits indefinitely for a response, which can lead to a hanging request. The Retry Timeout property can be set to a positive number specifying the maximum number of seconds the PDF Viewer should wait for a response. If the response is not received within the specified time, the request is aborted, triggering an appropriate error or timeout state.
 
 To set the retry timeout, use the `retryTimeout` property in the PDF Viewer configuration. This property takes a value in seconds.
 
@@ -35,8 +35,8 @@ In the given example, the `retryTimeout` is set to 10 seconds, and the `retryCou
 
 When an exception occurs during the AJAX request in the context of the PDF Viewer, the request will wait for the specified `retryTimeout` duration. If the timeout duration is exceeded, the PDF Viewer will decrement the [retryCount](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#retrycount) and attempt to load the document again. This retry process continues until the document is successfully loaded or the retryCount limit is reached.
 
-The `retryCount` property of the PDF Viewer allows you to set the number of retries for a specific request. This feature is particularly useful for handling temporary errors such as network timeouts or server issues. By initiating new requests according to the retry count, ensure a smoother user experience and efficiently handle network or server problems.
+The `retryCount` property of the PDF Viewer specifies the number of retries for a request. This is useful for handling temporary errors such as network timeouts or server issues. Initiating new requests according to the retry count helps provide a smoother experience and handle transient problems efficiently.
 
-If the timeout duration specified by `retryTimeout` is exceeded during the AJAX request, the PDF Viewer will decrement the `retryCount` and initiate a new request. This process will continue until the document is successfully loaded or the retry count limit is reached. This functionality helps improve the handling of temporary errors and ensures a more efficient and user-friendly experience.
+If the timeout duration specified by `retryTimeout` is exceeded during an AJAX request, the PDF Viewer decrements `retryCount` and initiates a new request. This continues until the document loads successfully or the retry count limit is reached, improving handling of temporary errors and overall efficiency.
 
-Find the sample [Retry Timeout](https://stackblitz.com/edit/angular-yzgy7n-8mycf4?file=app.component.html)
+For a complete example, see the sample: [Retry Timeout](https://stackblitz.com/edit/angular-yzgy7n-8mycf4?file=app.component.html)

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Open PDF From AAD in Angular Pdfviewer Component | Syncfusion
-description: Learn how to Open PDF From AAD in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Open PDF from AAD in Angular PDF Viewer component | Syncfusion
+description: Learn how to open PDF from AAD in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: Load PDF From AAD
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF From Azure Active Directory in Viewer
+# Open PDF from Azure Active Directory (AAD) in Angular PDF Viewer
 
 ### **Overview**
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer allows you to load and save PDF files directly from Azure Active Directory (AAD). Below are the steps to securely load and store PDF documents from and to AAD using the PDF Viewer.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer allows loading and saving PDF files directly from Azure Active Directory (AAD). The steps below describe how to securely load and store PDF documents from and to AAD using the PDF Viewer.
 
 ### **Steps to Open the PDF File from Azure Active Directory**
 
@@ -52,7 +52,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer allows you to lo
 
 ### **Step 3: Assign Role to the Application**
 
-1. **Go to your Storage Account**:
+1. **Open the storage account**:
    - Navigate to **Access control (IAM)** > **Add role assignment** in your Azure Storage Account.
 
 2. **Assign Role**:
@@ -80,11 +80,11 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer allows you to lo
 
 1. **Configure Server-Side Code**:
    - Open the server-side application (e.g., ASP.NET Core) and configure the following details in the `PdfViewerController` file:
-     - `tenantId` (your Azure AD tenant ID),
-     - `clientId` (your registered application client ID),
-     - `clientSecret` (your registered application client secret),
-     - `blobServiceEndpoint` (your storage account blob service URL),
-     - `containerName` (your container name in Azure Blob Storage).
+     - `tenantId` (Azure AD tenant ID),
+     - `clientId` (registered application client ID),
+     - `clientSecret` (registered application client secret),
+     - `blobServiceEndpoint` (storage account blob service URL),
+     - `containerName` (container name in Azure Blob Storage).
 
 2. **Run the Web Service**:
    - After configuring the necessary details, run the web service to make it accessible.
@@ -97,8 +97,8 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer allows you to lo
    - Start the Angular sample that includes the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer.
 
 2. **Load PDF from AAD**:
-   - When the user clicks the **Load from AAD** button, the Angular client will make an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.
-   - The server will retrieve the PDF from Azure, convert it to a base64 string, and return it to the client.
+   - Clicking the **Load from AAD** button triggers an HTTP request from the Angular client to the server-side API to fetch the PDF from Azure Blob Storage.
+   - The server retrieves the PDF from Azure, converts it to a base64 string, and returns it to the client.
 
 3. **Display PDF in the PDF Viewer**:
    - Once the base64 string is received, the PDF Viewer will load the PDF using the `viewer.load()` method.
@@ -108,8 +108,8 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer allows you to lo
 ### **Step 7: Save the PDF Document to Azure**
 
 1. **Save PDF to AAD**:
-   - The user can click the **Save to AAD** button to upload any modifications to the PDF back to Azure Blob Storage.
-   - This action sends the modified PDF to the server, where it is converted into a byte array and saved to the specified Azure Blob container.
+   - Clicking the **Save to AAD** button uploads modifications to the PDF back to Azure Blob Storage.
+   - The modified PDF is sent to the server, converted into a byte array, and saved to the specified Azure Blob container.
 
 ---
 

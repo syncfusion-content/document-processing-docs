@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Change selection border in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Change selection border in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Change Selection Border in Angular PDF Viewer component | Syncfusion
+description: Learn how to change the selection border in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: Change selection border
 documentation: ug
@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Customize the selection border
 
-The PDF Viewer library allows you to customize the annotations selection borders using the [**annotationSelectorSettings**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectorSettingsModel/#annotationselectorsettingsmodel) Property.
+The PDF Viewer library allows customization of annotation selection borders using the [**annotationSelectorSettings**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectorSettingsModel/#annotationselectorsettingsmodel) property.
 
-The following steps are used to customize the selection border.
+Follow these steps to customize the selection border:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create simple PDF Viewer sample in Angular.
+**Step 1:** Create a simple PDF Viewer sample in Angular by following the steps in this [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started).
 
-**Step 2:** Add the following code snippet in app.component.html and app.component.ts files to customize selection borders.
+**Step 2:** Add the following code snippet in `app.component.html` and `app.component.ts` files to customize selection borders.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}

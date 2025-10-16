@@ -1,22 +1,22 @@
 ---
 layout: post
-title: extractTextCompleted Event in Angular Pdfviewer component | Syncfusion
-description: Learn here all about extractTextCompleted Event in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: extractTextCompleted Event in Angular PDF Viewer component | Syncfusion
+description: Learn about the extractTextCompleted event in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: extractTextCompleted
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract Text using extractTextCompleted Event in the Syncfusion PDF Viewer
+# Extract text using the extractTextCompleted event in the Syncfusion PDF Viewer
 
-The PDF Viewer library allows you to extract the text from a page along with the bounds. Text extraction can be done using the [**isExtractText**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#isextracttext) property and [**extractTextCompleted**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#extracttextcompleted) event.
+The PDF Viewer library allows text extraction from a page along with its bounds. Text extraction can be done using the [**isExtractText**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#isextracttext) property and the [**extractTextCompleted**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#extracttextcompleted) event.
 
-The following steps are used to extract the text from the page.
+Follow these steps to extract text from a page:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Create a simple PDF Viewer sample by following the steps in this [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started).
 
-**Step 2:** The following code snippet explains how to extract the text from a page .
+**Step 2:** The following code snippet explains how to extract text from a page:
 
 ```html
 <ejs-pdfviewer #pdfViewer id="pdfViewer"

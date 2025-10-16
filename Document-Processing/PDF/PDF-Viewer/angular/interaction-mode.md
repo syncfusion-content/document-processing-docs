@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Interaction mode in Angular Pdfviewer component | Syncfusion
+title: Interaction mode in Angular PDF Viewer component | Syncfusion
 description: Learn here all about Interaction mode in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Interaction mode
@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Interaction Mode in Angular PDF Viewer component
+# Interaction mode in Angular PDF Viewer component
 
-The PDF Viewer provides interaction mode for easy interaction with the loaded PDF document.  Selection mode and panning mode are the two interactions modes.
+The PDF Viewer provides interaction modes for working with loaded PDF documents. Two modes are available: selection mode and panning mode.
 
 ## Selection mode
 
-In this mode, the text selection can be performed in the PDF document loaded in PDF Viewer. The panning and scrolling of the pages by touch cannot be performed in this mode. It allows users to select and copy text from the PDF files. This is helpful for copying and sharing text content. You can enable/disable the text selection using the following code snippet.
+In this mode, text selection can be performed in the PDF document loaded in the PDF Viewer. Panning and scrolling by touch are disabled in this mode. Text can be selected and copied from PDF files, which is helpful for copying and sharing content. Text selection can be enabled or disabled using the following code snippet.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -77,15 +77,15 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](images/selection.png)
+![Selection mode in PDF Viewer](images/selection.png)
 
-## Panning Mode
+## Panning mode
 
-In this mode, the panning and scrolling of the pages by touch can be performed in the PDF document loaded in the PDF Viewer, but the text selection cannot be performed.
+In this mode, panning and scrolling of pages by touch can be performed in the PDF document loaded in the PDF Viewer, but text selection is disabled.
 
-![Alt text](images/pan.png)
+![Panning mode in PDF Viewer](images/pan.png)
 
-You can switch the interaction mode of PDF Viewer by using the following code snippet.,
+The interaction mode of the PDF Viewer can be switched using the following code snippet.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

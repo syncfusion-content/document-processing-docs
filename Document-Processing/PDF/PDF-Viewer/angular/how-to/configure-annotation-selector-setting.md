@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation Selector Setting in Angular Pdfviewer|Syncfusion.
-description: Learn here all about Configuring Annotation Selector Settings in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Annotation Selector Setting in Angular PDF Viewer | Syncfusion
+description: Learn about configuring annotation selector settings in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,19 +10,19 @@ domainurl: ##DomainURL##
 
 # How to Configure Annotation Selector Settings
 
-### Annotation Selector Settings
+### Annotation selector settings
 
-The [**annotationSelectorSettings**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectorSettings/) property allows you to customize the appearance and behavior of the annotation selector in the UI.
+The [**annotationSelectorSettings**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectorSettings/) property allows customization of the appearance and behavior of the annotation selector in the UI.
 
 ### AnnotationSelectorSettingsModel
 
 The [**AnnotationSelectorSettingsModel**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectorSettingsModel/) defines the settings for the annotation selector, including border colors, sizes, and shapes. It provides fine-grained control over how annotations are displayed and interacted with.
 
-### How to Configure Annotation Selector Settings
+### How to configure annotation selector settings
 
-**Step 1:**	Create a PdfViewer Instance: Initialize your PdfViewer instance.
+**Step 1:** Create a PDF Viewer instance: Initialize the PDF Viewer instance.
 
-**Step 2:** Set the annotationSelectorSettings Property: Define your settings to customize the annotation selector.
+**Step 2:** Set the `annotationSelectorSettings` property. Define these settings to customize the annotation selector.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

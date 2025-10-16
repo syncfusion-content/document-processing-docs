@@ -1,7 +1,7 @@
 ---
 Layout: post
-title: To change the font family in Syncfusion Angular Pdfviewer component
-description: Learn how to change the font family in Form Field's Type Signature in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Change Font Family in Angular PDF Viewer component | Syncfusion
+description: Learn how to change the font family in form field type signatures in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,16 +9,17 @@ domainurl: ##DomainURL##
 ---
 
 
-# To Change the Font Family
-Change the Font Family in Type Signature of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer by adding a custom css stylesheet to the document , and then apply the desired font family to the type signature element. Include the Google font link in the HTML head section to apply the Google Font.
+# Change the font family
 
-### Signature Field
+Change the font family in a type signature of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer by adding a custom CSS stylesheet to the document. Then, apply the desired font family to the type signature element. Include the Google font link in the HTML head section to apply the Google Font.
 
-The following steps are used to include custom fonts for signature and initial field using `typeSignatureFonts` property.
+### Signature field
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
+Use the following steps to include custom fonts for the signature and initial fields using the `typeSignatureFonts` property.
 
-**Step 2:** Insert the following code snippet to implement the functionality for using custom fonts in Signature field.
+**Step 1:** Create a simple PDF Viewer sample by following the steps in this [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started).
+
+**Step 2:** Insert the following code snippet to implement the functionality for using custom fonts in the signature field:
 
 ```html
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura" >
@@ -39,8 +40,8 @@ changeFontFamily(){
    }
 
 ```
-### Initial Field
-Insert the following code snippet to implement the functionality for using custom fonts in Initial field.
+### Initial field
+Insert the following code snippet to implement the functionality for using custom fonts in the initial field:
 
 ```html
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura" >
@@ -61,4 +62,4 @@ changeFontFamily(){
    }
 ```
 
-By implementing this , you can use custom fonts in form field's signature in both `signature` and `initial` field
+By implementing this, custom fonts can be used in a form field's signature in both the `signature` and `initial` fields.

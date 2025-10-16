@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Save PDF to Azure Blob Storage in Pdfviewer Component | Syncfusion
-description: Learn here all about how to save PDF files to Azure Blob Storage in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Save PDF to Azure Blob Storage in Angular PDF Viewer Component | Syncfusion
+description: Learn how to save PDF files to Azure Blob Storage in the Syncfusion Angular PDF Viewer component of Essential JS 2.
 platform: document-processing
 control: Save PDF files to Azure Blob Storage
 documentation: ug
@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Save PDF file to Azure Blob Storage
 
-PDF Viewer allows to save PDF file to Azure Blob Storage using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to save a PDF to Azure Blob Storage.
+Angular PDF Viewer allows saving PDF files to Azure Blob Storage using either the standalone or server-backed PDF Viewer. The following steps and sample demonstrate how to save a PDF to Azure Blob Storage.
 
-## Using Standalone PDF Viewer
+## Using the standalone PDF Viewer
 
-To save a PDF file to Azure Blob Storage in a PDF Viewer, you can follow the steps below
+To save a PDF file to Azure Blob Storage in the PDF Viewer, follow these steps:
 
-**Step 1:** Create a Simple PDF Viewer Sample in Angular
+**Step 1:** Create a simple PDF Viewer sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
+Follow the instructions in this [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a basic Angular sample with the PDF Viewer component. This provides a baseline setup for the application.
 
 **Step 2:** Modify the `src/app/app.component.ts` File in the Angular Project
 
@@ -30,7 +30,7 @@ import { BlockBlobClient } from "@azure/storage-blob";
 
 2. Add the following private properties to the `AppComponent` class, and assign the values from the configuration to the corresponding properties
 
-N> Replace **Your SAS Url in Azure** with the actual SAS url for your Azure Blob Storage account.
+N> Replace **Your SAS Url in Azure** with the actual SAS URL for the Azure Blob Storage account.
 
 ```typescript
 private SASUrl: string = "*Your SAS Url in Azure*";
@@ -101,23 +101,23 @@ SavePdfToBlob() {
 }
 ```
 
-N> The **npm install @azure/storage-blob** package must be installed in your application to use the previous code example.
+N> The **npm install @azure/storage-blob** package must be installed in the application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Standalone).
 
-## Using Server-Backed PDF Viewer
+## Using the server-backed PDF Viewer
 
-To save a PDF file to Azure Blob Storage, you can follow the steps below
+To save a PDF file to Azure Blob Storage, follow these steps:
 
 **Step 1:** Create a PDF Viewer sample in Angular
 
-Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions in this [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a basic Angular sample with the PDF Viewer component. This provides a baseline setup for the application.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. Refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
 
-2. Open the `PdfViewerController.cs` file in your web service project.
+2. Open the `PdfViewerController.cs` file in the web service project.
 
 3. Import the required namespaces at the top of the file:
 
@@ -127,7 +127,7 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Specialized;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields:
 
 ```csharp
 private readonly string _storageConnectionString;
@@ -142,7 +142,7 @@ public PdfViewerController(IConfiguration configuration, ILogger<PdfViewerContro
 }
 ```
 
-5. Modify the `Download()` method to save the downloaded PDF files to Azure Blob Storage container
+5. Modify the `Download()` method to save the downloaded PDF files to an Azure Blob Storage container.
 
 ```csharp
 
@@ -178,7 +178,7 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in the web service project. Add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {
@@ -194,11 +194,11 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name
+N> Replace **Your Connection string from Azure** with the actual connection string for the Azure Blob Storage account and **Your container name in Azure** with the actual container name.
 
 **Step 2:** Modify the web service project to save the downloaded document to Azure Blob Storage
 
-Create a web service project in .NET Core (version 3.0 and above) by following the steps in this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above). In the controller.cs file of your web service project, add the following code to modify the `Download` method. This code saves the downloaded PDF document to Azure Blob Storage container.
+Create a web service project in .NET Core (version 3.0 and above) by following the steps in this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above). In the `Controller.cs` file of the web service project, add the following code to modify the `Download` method. This code saves the downloaded PDF document to an Azure Blob Storage container.
 
 ```c#
 using System.IO;
@@ -237,9 +237,9 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-**Step 3:**   Set the PDF Viewer Properties in Angular PDF viewer component
+**Step 3:** Set the PDF Viewer properties in the Angular PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Azure Blob Storage. Ensure that you correctly pass the document name from the files available in your azure contanier to the documentPath property.
+Modify the `serviceUrl` property of the PDF Viewer component with the accurate URL of the web service project, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property of the PDF Viewer component to the desired name of the PDF file to be loaded from Azure Blob Storage. Ensure that the document name from the files available in the Azure container is correctly passed to the `documentPath` property.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -269,6 +269,6 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   }
 ```
 
-N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
+N> The **Azure.Storage.Blobs** NuGet package must be installed in the application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Server-Backend).
