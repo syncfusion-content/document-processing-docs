@@ -1,30 +1,30 @@
 ---
 layout: post
-title: Save PDF files to Dropbox in Vue PDF Viewer component | Syncfusion
-description: Learn here how to Save PDF files to  Dropbox cloud file storage in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Save PDF files to  Dropbox cloud file storage
+title: Save PDF files to Dropbox in Vue PDF Viewer | Syncfusion
+description: Learn how to save PDF files to Dropbox using the Syncfusion Vue PDF Viewer component in standalone and server-backed configurations.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF file to  Dropbox cloud file storage
+# Save PDF files to Dropbox cloud storage
 
-PDF Viewer allows to load PDF file from Drop Box using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to open a PDF from Drop Box.
+PDF Viewer component supports saving PDF files to Dropbox using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 
 ## Using Standalone PDF Viewer
 
-To load a PDF file from Dropbox cloud file storage in a PDF Viewer, you can follow the steps below
+To save a PDF file to Dropbox, follow these steps:
 
-**Step 1** Create a Dropbox API
+**Step 1:** Create a Dropbox API app
 
 To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
 
 **Step 2:** Create a Simple PDF Viewer Sample in Vue
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF viewer sample in Vue. This will give you a basic setup of the PDF viewer component.
+Follow the instructions[link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF viewer sample in Vue. This sets up the basic structure of the PDF Viewer application.
 
-**Step 3:** Modify the `src/App.vue` File in the Angular Project
+**Step 3:** Modify the `src/app/app.ts` file in the Angular project
 
 1. Import the required namespaces at the top of the file:
 
@@ -38,7 +38,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 {% endhighlight %}
 {% endtabs %}
 
-2. Configure a custom toolbar item for the download function to save a PDF file in Azure Blob Storage.
+2. Configure a custom toolbar item for the download function to save a PDF file to Dropbox.
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
@@ -84,9 +84,9 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 {% endhighlight %}
 {% endtabs %}
 
-3. Retrieve the PDF viewer instance and save the current PDF as a Blob. Then, read the Blob using a FileReader to convert it into an ArrayBuffer, and upload the ArrayBuffer to Drop Box using the filesUpload method of the Drop Box instance.
+3. Retrieve the PDF Viewer instance and save the current PDF as a Blob. Then, read the Blob using a FileReader to convert it into an ArrayBuffer, and upload the ArrayBuffer to Dropbox using the `filesUpload` method.
 
-N> Replace **Your Access Token** with the actual Access Token of your Drop Box account.
+N> Install the dropbox package in the application to use the previous code example: npm install dropbox
 
 
 {% tabs %}
@@ -126,19 +126,19 @@ N> The **npm install dropbox** package must be installed in your application to 
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage/tree/master/Open%20and%20Save%20PDF%20in%20Drop%20Box%20using%20Standalone)
 
-## Using Server-Backed PDF Viewer
+## Using server-backed PDF Viewer
 
 To save a PDF file to Dropbox cloud file storage, you can follow the steps below
 
-**Step 1** Create a Dropbox API
+**Step 1:** Create a Dropbox API app
 
 To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
 
 **Step 2:** Create a PDF Viewer sample in Vue
 
-Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample in Vue. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample in Vue. This sets up the basic structure of the PDF Viewer application
 
-**Step 3:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
 1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
 
@@ -152,7 +152,7 @@ using Dropbox.Api;
 using Dropbox.Api.Files;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign configuration values to the corresponding fields.
 
 ```csharp
 
@@ -170,7 +170,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the `Download` method to save the downloaded PDF files to Dropbox cloud file storage bucket
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Dropbox folder.
 
 ```csharp
 
@@ -208,7 +208,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in the web service project and add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -224,11 +224,11 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token and **Your_Folder_Name** with your folder name.
+N> Replace the placeholders with the actual Dropbox access token and target folder name.
 
 **Step 4:**  Set the PDF Viewer Properties in Vue PDF viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Dropbox cloud file storage. Ensure that you correctly pass the document name from the files available in your dropbox folder to the documentPath property.
+Modify the `serviceUrl` property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Dropbox, and ensure that the document exists in the target folder.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -294,6 +294,6 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> The **Dropbox.Api** NuGet package must be installed in your application to use the previous code example.
+N> Install the Dropbox.Api NuGet package in the web service application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage/tree/master/Open%20and%20Save%20PDF%20in%20Drop%20Box%20using%20Server-Backed)
