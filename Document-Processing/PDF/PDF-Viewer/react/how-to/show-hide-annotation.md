@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Show and Hide Annotations in React Pdfviewer component | Syncfusion
-description: Learn here all about how to show and hide annotations in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Pdfviewer
+title: Show or hide annotations in React PDF Viewer | Syncfusion
+description: Learn how to toggle annotation visibility in the Syncfusion React PDF Viewer by exporting and importing annotations.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Show and Hide Annotations in PDF Viewer
+# Show or hide annotations in the PDF Viewer
 
 ### Overview
 
-This guide demonstrates how to toggle the visibility of annotations in the Syncfusion PDF Viewer component for React. This functionality is useful when you need to temporarily hide annotations for a cleaner view or show them again for collaborative review.
+Toggle annotation visibility in the Syncfusion PDF Viewer using React. Hide annotations for a cleaner view and show them again as needed.
 
 ### How to Show and Hide Annotations
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in the [Get started with React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide to create a sample.
 
 **Step 2:** Set Up Your React Component with Annotation Toggle Functionality
 
@@ -126,6 +125,6 @@ root.render(<App />);
 
 ### Conclusion
 
-The ability to show and hide annotations provides users with a more flexible viewing experience. By implementing this functionality, you can allow users to focus on the document content without distractions when needed, and bring back annotations for collaborative review.
+These steps add the ability to toggle annotation visibility in a PDF Viewer application for selective viewing.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)

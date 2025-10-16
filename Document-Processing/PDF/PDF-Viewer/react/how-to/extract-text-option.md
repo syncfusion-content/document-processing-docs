@@ -1,16 +1,15 @@
 ---
 layout: post
-title: Extract text Option in React Pdfviewer component | Syncfusion
-description: Learn here all about Extract text Option in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Extract text Option
+title: Configure extractTextOption in React PDF Viewer | Syncfusion
+description: Learn how to use the extractTextOption property in the Syncfusion React PDF Viewer to control text extraction and memory usage.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Extract Text Option in Syncfusion React Pdfviewer Control
+# Configure extractTextOption in React PDF Viewer
 
-The `extractTextOption` property in the Syncfusion PdfViewer control allows you to optimize memory usage by controlling the level of text extraction. This setting influences the data returned in the `extractTextCompleted` event. You can select one of the following options to determine the kind of text extraction and layout information to retrieve.
+The `extractTextOption` property controls how text is extracted and optimizes memory usage. It also affects the data returned in the `extractTextCompleted` event. Choose one of the following options to determine the text and layout data to retrieve.
 
 ### Available Options:
 
@@ -77,6 +76,6 @@ root.render(<App />);
 
 **extractTextOption.None:** This option does not extract or return any text or layout information. It is used to optimize memory usage when no text extraction is necessary. This setting is only relevant for the `extractTextCompleted` event and cannot be used with the `ExtractText` method.
 
-N> Text Search: When using the `ExtractTextOption.TextOnly` and `extractTextOption.None` option, the findText method will not work. Instead, you should use the findTextAsync method to perform text searches asynchronously.
+N> Text search: When using the `extractTextOption.TextOnly` or `extractTextOption.None` options, the `findText` method is unavailable. Use the `findTextAsync` method to perform text searches asynchronously.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)
