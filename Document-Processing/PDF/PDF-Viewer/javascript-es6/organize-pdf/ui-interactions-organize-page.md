@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# UI Interactions for Organizing Pages in Typescript PDF Viewer
+# UI Interactions for Organizing Pages in TypeScript PDF Viewer
 
 The PDF Viewer provides an intuitive user interface for managing and organizing pages within a PDF document. This section covers the various UI interactions available in the `Organize Pages` dialog.
 

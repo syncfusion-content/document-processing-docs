@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Page Toolbar Customization in Typescript PDF Viewer control
+# Organize Page Toolbar Customization in TypeScript PDF Viewer control
 
 The PDF Viewer allows you to customize the toolbar for the organize pages feature, enabling you to show or hide specific tools based on your application's requirements. The `pageOrganizerSettings` API provides properties to control the visibility of each tool in the organize pages dialog.
 

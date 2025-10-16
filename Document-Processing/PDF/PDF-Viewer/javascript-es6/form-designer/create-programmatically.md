@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Create programmatically in Typescript Pdf viewer control
+# Create programmatically in TypeScript PDF Viewer control
 
 The PDF Viewer component provides options to add, edit, and delete form fields. The supported form field types are:
 

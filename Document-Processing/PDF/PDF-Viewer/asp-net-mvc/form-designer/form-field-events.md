@@ -7,7 +7,7 @@ control: Form Field Events
 documentation: ug
 ---
 
-# PDF Viewer Form Field events in EJ2 ASP.NET MVC
+# PDF Viewer Form Field events in ASP.NET MVC
 
 The PDF Viewer control provides the support to different Form Field events. The Form Field events supported by the PDF Viewer Control are:
 

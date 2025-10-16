@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Create with user interface interaction for TS
+# Create with user interface interaction for TypeScript
 
 The PDF Viewer component supports interactive form field design, including drawing, dragging, and resizing fields directly on the page. Click the Form Field icon on the toolbar to add a field and place it on the document. Supported form field types include:
 

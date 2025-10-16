@@ -22,7 +22,7 @@ The text search feature in the PDF Viewer locates and highlights matching conten
     <meta name="description" content="Essential JS 2" />
     <meta name="author" content="Syncfusion" />
     <link rel="shortcut icon" href="resources/favicon.ico" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
 
     <!--style reference from app-->
     <link href="/styles/styles.css" rel="stylesheet" />

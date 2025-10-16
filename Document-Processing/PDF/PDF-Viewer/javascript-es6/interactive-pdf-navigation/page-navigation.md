@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigation in Typescript Pdfviewer control
+# Navigation in TypeScript PDF Viewer control
 
 The ASP.NET Core PDF Viewer supports different internal and external navigations.
 
