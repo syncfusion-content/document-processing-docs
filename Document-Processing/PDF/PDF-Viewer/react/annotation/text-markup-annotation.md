@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text markup annotation in TypeScript PDF Viewer
+# Text markup annotation in React PDF Viewer
 
 The PDF Viewer provides options to add, edit, and delete text markup annotations, including Highlight, Underline, Strikethrough, and Squiggly.
 

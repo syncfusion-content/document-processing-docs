@@ -79,23 +79,36 @@ The following example illustrates how to handle the `annotationAdd` event.
 </html>
 ```
 
-```react
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
+function App() {
+  const annotationAdd = (args) => {
+    console.log('Annotation added with ID: ' + args.annotationId);
+    console.log('Annotation type: ' + args.annotationType);
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    annotationAdd: function (args: any) {
-        console.log('Annotation added with ID: ' + args.annotationId);
-        console.log('Annotation type: ' + args.annotationType);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      annotationAdd={annotationAdd}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### annotationDoubleClick
 
@@ -142,21 +155,35 @@ The following example illustrates how to handle the `annotationDoubleClick` even
 </html>
 ```
 
-```react
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    annotationDoubleClick: function (args: any) {
-        console.log('Annotation double-clicked on page: ' + args.pageIndex);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+function App() {
+  const annotationDoubleClick = (args) => {
+    console.log('Annotation double-clicked on page: ' + args.pageIndex);
+  };
+
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      annotationDoubleClick={annotationDoubleClick}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### annotationMouseLeave
 
@@ -203,21 +230,32 @@ The following example illustrates how to handle the `annotationMouseLeave` event
 </html>
 ```
 
-```react
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+```jsx
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+function App() {
+  const annotationMouseLeave = (args) => {
+    console.log('Annotation mouse leave event is triggered for annotation with ID: ' + args.pageIndex);
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    annotationMouseLeave: function (args: any) {
-        console.log('Annotation mouse leave event is triggered for annotation with ID: ' + args.pageIndex);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      annotationMouseLeave={annotationMouseLeave}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### annotationMouseover
 
@@ -264,21 +302,32 @@ The following example illustrates how to handle the `annotationMouseover` event.
 </html>
 ```
 
-```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+```jsx
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+function App() {
+  const annotationMouseover = (args) => {
+    console.log('Annotation mouse over event is triggered for annotation with ID: ' + args.annotationId);
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    annotationMouseover: function (args: any) {
-        console.log('Annotation mouse over event is triggered for annotation with ID: ' + args.annotationId);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      annotationMouseover={annotationMouseover}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### annotationMove
 
@@ -325,21 +374,32 @@ The following example illustrates how to handle the `annotationMove` event.
 </html>
 ```
 
-```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+```jsx
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+function App() {
+  const annotationMove = (args) => {
+    console.log('Annotation moved. ID: ' + args.annotationId + ' on page ' + args.pageIndex);
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    annotationMove: function (args: any) {
-        console.log('Annotation moved. ID: ' + args.annotationId + ' on page ' + args.pageIndex);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      annotationMove={annotationMove}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### annotationMoving
 
@@ -386,21 +446,32 @@ The following example illustrates how to handle the `annotationMoving` event.
 </html>
 ```
 
-```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+```jsx
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+function App() {
+  const annotationMoving = (args) => {
+    console.log('Annotation is being moved. Current Action: ' + args.currentPosition);
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    annotationMoving: function (args: any) {
-        console.log('Annotation is being moved. Current Action: ' + args.currentPosition);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      annotationMoving={annotationMoving}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### annotationPropertiesChange
 
@@ -447,22 +518,33 @@ The following example illustrates how to handle the `annotationPropertiesChange`
 </html>
 ```
 
-```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+```jsx
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+function App() {
+  const annotationPropertiesChange = (args) => {
+    console.log('Annotation properties changed for ID: ' + args.annotationId);
+    console.log('isThicknessChanged: ' + args.isThicknessChanged);
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    annotationPropertiesChange: function (args: any) {
-        console.log('Annotation properties changed for ID: ' + args.annotationId);
-        console.log('isThicknessChanged: ' + args.isThicknessChanged);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      annotationPropertiesChange={annotationPropertiesChange}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### annotationRemove
 
@@ -509,21 +591,32 @@ The following example illustrates how to handle the `annotationRemove` event.
 </html>
 ```
 
-```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+```jsx
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+function App() {
+  const annotationRemove = (args) => {
+    console.log('Annotation removed with ID: ' + args.annotationId);
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    annotationRemove: function (args: any) {
-        console.log('Annotation removed with ID: ' + args.annotationId);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      annotationRemove={annotationRemove}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### annotationResize
 
@@ -570,21 +663,32 @@ The following example illustrates how to handle the `annotationResize` event.
 </html>
 ```
 
-```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+```jsx
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+function App() {
+  const annotationResize = (args) => {
+    console.log('Annotation resized. ID: ' + args.annotationId);
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    annotationResize: function (args: any) {
-        console.log('Annotation resized. ID: ' + args.annotationId);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      annotationResize={annotationResize}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### annotationSelect
 
@@ -631,21 +735,32 @@ The following example illustrates how to handle the `annotationSelect` event.
 </html>
 ```
 
-```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+```jsx
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+function App() {
+  const annotationSelect = (args) => {
+    console.log('Annotation selected with ID: ' + args.annotationId);
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    annotationSelect: (args: any) => {
-        console.log('Annotation selected with ID: ' + args.annotationId);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      annotationSelect={annotationSelect}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### annotationUnselect
 
@@ -692,21 +807,32 @@ The following example illustrates how to handle the `annotationUnselect` event.
 </html>
 ```
 
-```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+```jsx
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+function App() {
+  const annotationUnselect = (args) => {
+    console.log('Annotation unselected with ID: ' + args.annotationId);
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    annotationUnselect: function (args: any) {
-        console.log('Annotation unselected with ID: ' + args.annotationId);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      annotationUnselect={annotationUnselect}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### beforeAddFreeText
 
@@ -753,23 +879,34 @@ The following example illustrates how to handle the `beforeAddFreeText` event.
 </html>
 ```
 
-```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+```jsx
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+function App() {
+  const beforeAddFreeText = (args) => {
+    console.log('Before adding free text on page: ' + args.pageIndex);
+    // To prevent adding the free text annotation
+    // args.cancel = true;
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    beforeAddFreeText: function (args: any) {
-        console.log('Before adding free text on page: ' + args.pageIndex);
-        // Set args.cancel to true to prevent adding the free text annotation
-        // args.cancel = true;
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      beforeAddFreeText={beforeAddFreeText}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Signature-related events
 
@@ -818,21 +955,32 @@ The following example illustrates how to handle the `addSignature` event.
 </html>
 ```
 
-```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+```jsx
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+function App() {
+  const addSignature = (args) => {
+    console.log('Signature added to page: ' + args.pageIndex);
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    addSignature: function (args: any) {
-        console.log('Signature added to page: ' + args.pageIndex);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      addSignature={addSignature}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### removeSignature
 
@@ -879,21 +1027,32 @@ The following example illustrates how to handle the `removeSignature` event.
 </html>
 ```
 
-```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+```jsx
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+function App() {
+  const removeSignature = (args) => {
+    console.log('Signature removed from page: ' + args.pageIndex);
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    removeSignature: function (args: any) {
-        console.log('Signature removed from page: ' + args.pageIndex);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      removeSignature={removeSignature}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### resizeSignature
 
@@ -940,21 +1099,32 @@ The following example illustrates how to handle the `resizeSignature` event.
 </html>
 ```
 
-```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+```jsx
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+function App() {
+  const resizeSignature = (args) => {
+    console.log('Signature resized on page ' + args.pageIndex);
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resizeSignature: function (args: any) {
-        console.log('Signature resized on page ' + args.pageIndex);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resizeSignature={resizeSignature}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### signaturePropertiesChange
 
@@ -1001,21 +1171,32 @@ The following example illustrates how to handle the `signaturePropertiesChange` 
 </html>
 ```
 
-```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+```jsx
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+function App() {
+  const signaturePropertiesChange = (args) => {
+    console.log('Signature properties changed on page ' + args.pageIndex);
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    signaturePropertiesChange: function (args: any) {
-        console.log('Signature properties changed on page ' + args.pageIndex);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      signaturePropertiesChange={signaturePropertiesChange}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### signatureSelect
 
@@ -1062,21 +1243,32 @@ The following example illustrates how to handle the `signatureSelect` event.
 </html>
 ```
 
-```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+```jsx
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+function App() {
+  const signatureSelect = (args) => {
+    console.log('Signature selected on page ' + args.pageIndex);
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    signatureSelect: function (args: any) {
-        console.log('Signature selected on page ' + args.pageIndex);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      signatureSelect={signatureSelect}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### signatureUnselect
 
@@ -1123,18 +1315,29 @@ The following example illustrates how to handle the `signatureUnselect` event.
 </html>
 ```
 
-```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, FormFieldAddArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+```jsx
+import * as React from 'react';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+function App() {
+  const signatureUnselect = (args) => {
+    console.log('Signature unselected on page ' + args.pageIndex);
+  };
 
-let viewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    signatureUnselect: function (args: any) {
-        console.log('Signature unselected on page ' + args.pageIndex);
-    }
-});
-viewer.appendTo('#pdfViewer');
-```
+  return (
+    <PdfViewerComponent
+      id="pdfViewer"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      signatureUnselect={signatureUnselect}
+      style={{ height: '500px', width: '100%' }}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+    </PdfViewerComponent>
+  );
+}
+
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}

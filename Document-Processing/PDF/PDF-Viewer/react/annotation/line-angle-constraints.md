@@ -114,4 +114,4 @@ When modifying existing line annotations using selectors:
 
 [View a sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)
 
-N> Refer to the TypeScript PDF Viewer [feature tour](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) for feature highlights. Explore the [TypeScript PDF Viewer examples](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples) to learn how to render and configure the PDF Viewer.
+N> Refer to the React PDF Viewer [feature tour](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) for feature highlights. Explore the [React PDF Viewer examples](https://github.com/SyncfusionExamples/react-pdf-viewer-examples) to learn how to render and configure the PDF Viewer.
