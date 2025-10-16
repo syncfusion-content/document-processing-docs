@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Save PDF files to Google Drive in SfPdfViewer Component | Syncfusion
-description: Learn here all about how to save PDF files to Google Drive in Syncfusion Blazor SfPdfViewer component and much more details.
+title: Save PDF files to Google Drive in Blazor SfPdfViewer | Syncfusion
+description: Learn how to save PDF files to Google Drive using the Syncfusion Blazor SfPdfViewer, including required setup, and a working example.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Save PDF file to Google Drive in Blazor SfPdfViewer
+# Save PDF files to Google Drive in Blazor SfPdfViewer
 
-To save a PDF file to Google Drive, you can follow the steps below
+Use the following steps to download the currently loaded PDF from the viewer and upload it to a specified Google Drive folder.
 
-**Step 1** Set up Google Drive API
+**Step 1:** Set up the Google Drive API
 
-You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
+Create a project in Google Cloud Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For detailed instructions, see Enable the [Google Drive API](https://developers.google.com/drive/api/guides/enable-sdk).
 
-**Step 2:** Create a Simple SfPdfViewer Sample in blazor
+**Step 2:** Create a simple SfPdfViewer sample in Blazor
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/server-side-application) to create a simple SfPdfViewer sample in blazor. This will give you a basic setup of the SfPdfViewer component.
+Follow the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) guide to create a basic Blazor application with the SfPdfViewer component.
 
 **Step 3:** Include the following namespaces in the **Index.razor** file.
 
@@ -33,7 +33,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 @using Syncfusion.Blazor.Buttons
 ```
 
-**Step 4:**  Add the below code example to save the downloaded PDF files to `Google drive` file.
+**Step 4:** Add the following example to save the downloaded PDF file to `Google Drive`.
 
 ```csharp
 
@@ -99,14 +99,14 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 ```
 
-N> Replace **Your Google Drive Folder ID** with your actual Google Drive folder ID, **Your Application name** with your actual application name, **File Name to be Loaded into Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer** with the actual file name you want to load from the Azure container to the Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer and **Your Path to the OAuth 2.0 Client IDs JSON file** with the actual path to your OAuth 2.0 Client IDs JSON file
+N> Replace **Your Google Drive Folder ID** your actual Google Drive folder ID, **Your Application name** with the actual application name, **File Name to be loaded into Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer** with the file to load into the viewer, and **Your Path to the OAuth 2.0 Client IDs JSON file** with the path to the downloaded OAuth client credentials JSON file.
 
-N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
+N> The **FolderId** is the unique identifier found in the folder URL. For example, for `https://drive.google.com/drive/folders/abc123xyz456`, the folder ID is `abc123xyz456`.
 
-N> The **Google.Apis.Drive.v3** NuGet package must be installed in your application to use the previous code example.
+N> Install the **Google.Apis.Drive.v3** NuGet package in the application to use the Google Drive client.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20Google%20Drive)
+[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20Google%20Drive)
 
 ## See also
 
-* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../faqs/how-to-processing-large-files-without-increasing-maximum-message-size)
