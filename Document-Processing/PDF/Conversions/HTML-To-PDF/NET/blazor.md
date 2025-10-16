@@ -59,6 +59,8 @@ public MemoryStream CreatePdf(string url)
     MemoryStream stream = new MemoryStream();
     //Save the document to memory stream.
     document.Save(stream);
+    //Close the document
+    document.Close(true); 
     return stream;
 }
 
@@ -233,6 +235,8 @@ public MemoryStream CreatePdf(string url)
     MemoryStream stream = new MemoryStream();
     //Save the document to memory stream.
     document.Save(stream);
+    //Close the document
+    document.Close(true); 
     return stream;
 }
 
@@ -430,6 +434,8 @@ public MemoryStream CreatePdf(string url)
     MemoryStream stream = new MemoryStream();
     //Save the document to memory stream.
     document.Save(stream);
+    //Close the document
+    document.Close(true); 
     return stream;
 }
 

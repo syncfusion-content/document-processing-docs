@@ -1267,43 +1267,60 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 N> To know more about PdfToImageConverter and features it provides, please refer to [PdfToImageConverter](https://help.syncfusion.com/document-processing/pdf/conversions/pdf-to-image/net/convert-pdf-file-to-image-in-asp-net-core)
 
 
-## HTML to MHTML
+## HTML to PDF
 
-The [HTML to PDF converter library](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) supports converting the webpage to an MHTML file. Please refer to the following code example. 
+The [HTML to PDF converter library](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) supports converting web pages and HTML content into high-quality PDF documents.
 
-*HTML to PDF Features:* [https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features) 
-    
-*Troubleshooting:* [https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/troubleshooting](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/troubleshooting)
+**Learn more about the features supported in HTML to PDF conversion here**: [HTML to PDF Features](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features)
+
+**Check out the troubleshooting guide here**: [Troubleshooting](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/troubleshooting)
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-website-URL-to-PDF-document/.NET/Convert-website-URL-to-PDF-document/Program.cs, 300" %}
 
-//PDF doesn't support converting HTML to MHTML C#.NET Cross platforms.
+//Initialize HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+ 
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Initialize HTML to PDF converter
+//Initialize HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-//Convert URL to MHTML
-htmlConverter.ConvertToMhtml("http://www.syncfusion.com", "sample.mhtml");
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+ 
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Initialize HTML to PDF converter
-Dim htmlConverter As New HtmlToPdfConverter()      
-'Convert URL to MHTML
-htmlConverter.ConvertToMhtml("http://www.syncfusion.com", "sample.mhtml")
+' Initialize HTML to PDF converter
+Dim htmlConverter As New HtmlToPdfConverter()
+
+' Convert HTML to PDF
+Dim document As PdfDocument = htmlConverter.Convert("https://www.google.com")
+
+' Save and close the PDF document
+document.Save("Output.pdf")
+document.Close(True)
+
 
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/Convert-HTML-to-MHTML).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Convert-website-URL-to-PDF-document).
 
 ## SVG to PDF 
 

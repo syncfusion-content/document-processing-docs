@@ -9,11 +9,11 @@ documentation: ug
 
 # Saving PDF file in Blazor SfPdfViewer Component
 
-After editing the PDF file with various annotation tools, you will need to save the updated PDF to the server, database, or local file system.
+After editing a PDF with annotations and form fields, the updated document can be saved to a server, a database, or downloaded to the local file system. The examples below illustrate common approaches.
 
 ## Save PDF file to Server
 
-You might need to save the PDF file back to the server.
+Use this approach to persist the modified PDF to a server-side folder. Ensure the application has write permissions to the target directory and consider using framework services (for example, IWebHostEnvironment) to resolve application paths.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -45,9 +45,11 @@ You might need to save the PDF file back to the server.
 }
 ```
 
+N> For production scenarios, prefer using using statements for stream disposal, handle I/O exceptions, and validate input. Avoid writing to wwwroot at runtime unless the behavior is intentional.
+
 ## Save PDF file to Database
 
-If you have plenty of PDF files stored in database and you want to save the updated PDF file back to the database, use the following code example.
+Use this method to update the PDF content stored in a relational database. This is useful when documents are managed centrally and retrieved by name or identifier.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -87,9 +89,11 @@ If you have plenty of PDF files stored in database and you want to save the upda
 }
 ```
 
+N> Use parameterized queries for all user or variable input to prevent SQL injection. Wrap database operations with error handling and transactions as appropriate for your data layer.
+
 ## Download
 
-The SfPdfViewer supports downloading the loaded PDF file from the toolbar by default. You can enable or disable the download option by setting the [EnableDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDownload) API.
+The SfPdfViewer includes a built-in toolbar button to download the loaded or modified PDF. Control this behavior with the [EnableDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDownload) API.
 
 ```cshtml
 
@@ -106,6 +110,7 @@ The SfPdfViewer supports downloading the loaded PDF file from the toolbar by def
 
 ![Blazor SfPdfViewer with Download Option](../blazor-classic/images/blazor-pdfviewer-download-option.png)
 
+Programmatic download can also be triggered from application UI, such as a button click.
 
 ```cshtml
 
@@ -131,9 +136,9 @@ The SfPdfViewer supports downloading the loaded PDF file from the toolbar by def
 
 ### Download Filename
 
-The [DownloadFileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DownloadFileName) property of the SfPdfViewer enables you to sets the name of the file to be downloaded.
+Use the [DownloadFileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DownloadFileName) property to set the default file name for the downloaded PDF.
 
-The following code example shows how to set default filename to the downloaded file.
+The following example shows how to specify a custom file name.
 
 ```cshtml
 
@@ -160,7 +165,7 @@ The following code example shows how to set default filename to the downloaded f
 
 ### Download PDF file as a copy
 
-In the built-in toolbar, you have an option to download the updated PDF to the local file system, you can use it to download the PDF file.
+Use the built-in toolbar option or programmatic API to download the updated PDF as a copy to the local file system.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

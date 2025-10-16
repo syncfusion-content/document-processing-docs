@@ -1585,8 +1585,8 @@ The following chart types are supported in DocIO.
 
 ## Online Demo
 
-* Explore how to insert a bar chart into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/barchart#/bootstrap5). 
-* See how to insert a pie chart into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/piechart#/bootstrap5). 
+* Explore how to insert a bar chart into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/barchart#/tailwind). 
+* See how to insert a pie chart into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/piechart#/tailwind). 
 
 ## See Also
 
