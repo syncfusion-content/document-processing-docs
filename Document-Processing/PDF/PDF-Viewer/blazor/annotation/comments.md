@@ -109,7 +109,7 @@ N> Deleting the root comment from the comment panel also deletes the associated 
 
 ### Show or hide the Comment panel
 
-The SfPdfViewer component provides an option to show or hide the comment panel by using the `CommentPanelVisible` property.
+The SfPdfViewer component provides an option to show or hide the comment panel by using the [CommentPanelVisible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CommentPanelVisible) property.
 
 The following code snippet explains how to show the comment panel.
 

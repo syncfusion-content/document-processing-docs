@@ -18,7 +18,7 @@ PDFs can be secured with an owner password and a set of permissions that restric
 
 The viewer respects these permission flags and disables restricted actions in its UI. It cannot bypass or elevate document permissions. For example, when printing is disallowed, the print action is not available; when copying is restricted, text selection may be limited or copy commands disabled.
 
-UI when a permission-restricted document is loaded
+**UI when a permission-restricted document is loaded:**
 
 ![Blazor PDF Viewer permission-restricted UI](../images/document-security.png)
 

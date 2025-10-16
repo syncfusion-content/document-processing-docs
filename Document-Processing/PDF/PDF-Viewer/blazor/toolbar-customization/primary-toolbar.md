@@ -105,7 +105,7 @@ The following code snippet explains how to show or hide the navigation toolbar u
 
 Display only the required default actions and control their order.
 
-Customize toolbar items by configuring the `PdfViewerToolbarSettings` class. The following example shows how to display only the specified items. The toolbar renders only the items listed in the collection and in the same order.
+Customize toolbar items by configuring the [PdfViewerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html) class. The following example shows how to display only the specified items. The toolbar renders only the items listed in the collection and in the same order.
 
 ```cshtml
 
@@ -183,7 +183,7 @@ Reorder the [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 Replace built-in items entirely with custom buttons rendered via templates at specific indexes.
 
-To replace the default items with custom items, set the [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) property to null and provide a list of [PdfToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_PdfToolbarItem__ctor) objects. Each PdfToolbarItem defines a **RenderFragment** template and an **Index** to position the custom item. Assign the list to [CustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_CustomToolbarItems) to render the custom items at the specified index positions.
+To replace the default items with custom items, set the [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) property to null and provide a list of [PdfToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_PdfToolbarItem) objects. Each PdfToolbarItem defines a [RenderFragment template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_PdfToolbarItem_Template) and an [Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_PdfToolbarItem_Index) to position the custom item. Assign the list to [CustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_CustomToolbarItems) to render the custom items at the specified index positions.
 
 ```cshtml
 
@@ -405,4 +405,4 @@ N> This applies only to a custom toolbar.
 
 ## See also
 
-* [Mobile toolbar](./toolbar/mobile-toolbar)
+* [Mobile toolbar](./mobile-toolbar)
