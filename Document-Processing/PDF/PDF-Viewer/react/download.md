@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in Typescript Pdf viewer control
+# Download in React Pdf viewer control
 
 The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
 
