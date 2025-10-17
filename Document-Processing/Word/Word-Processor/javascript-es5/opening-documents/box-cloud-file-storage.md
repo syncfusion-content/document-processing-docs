@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Opening the document from Box cloud file storage in Syncfusion JavaScript (ES5) Document editor control | Syncfusion
+title: Open Box cloud Files in JavaScript (ES5) Document editor | Syncfusion
 description: Learn here to open a document from Box cloud file storage in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Opening from Box cloud file storage
@@ -8,17 +8,16 @@ documentation: ug
 domainurl: ##DomainURL##
 --- 
 
-# Open document from Box cloud file storage
-
+# Open document from Box cloud file storage in JavaScript (ES5) Document editor
 To load a document from Box cloud file storage in a document Editor, you can follow the steps below
 
 **Step 1:** Set up a Box developer account and create a Box application
 
 To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials Client ID and Client Secret to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
 
-**Step 2:** Create a Simple Document Editor Sample in Javascript
+**Step 2:** Create a Simple Document Editor Sample in JavaScript
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in Javascript. This will give you a basic setup of the Document Editor component.
+Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in JavaScript. This will give you a basic setup of the Document Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -122,11 +121,11 @@ N> replace **Your_Box_Storage_Access_Token** with your actual box access token, 
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#open) method.
+In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#open) method.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/open-box-cloud-file-storage/index.html %}
+{% include code-snippet/document-editor/javascript-es5/open-box-cloud-file-storage/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

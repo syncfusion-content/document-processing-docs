@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open document from Azure Blob Storage in JavaScript (ES5) Document editor control | Syncfusion
+title: Open Azure Blob Files in JavaScript (ES5) Document editor | Syncfusion
 description:  Learn about how to Open document from Azure Blob Storage in JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Azure Blob Storage
@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Azure Blob Storage
+# Open document from Azure Blob Storage in JavaScript (ES5) Document editor
 
 To load document from Azure Blob Storage in a Document Editor, you can follow the steps below
 
-**Step 1:** Create a Simple Document Editor Sample in Javascript
+**Step 1:** Create a Simple Document Editor Sample in JavaScript
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in Javascript. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in JavaScript. This will give you a basic setup of the Document Editor component. 
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -101,7 +101,7 @@ In the client-side, the document is returned from the web service is opening usi
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/open-azure-blob/index.html %}
+{% include code-snippet/document-editor/javascript-es5/open-azure-blob/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

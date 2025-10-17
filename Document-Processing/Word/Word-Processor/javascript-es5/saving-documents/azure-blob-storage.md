@@ -115,7 +115,7 @@ In the client-side, to export the document into blob the document using [`saveAs
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/save-azure-blob/index.html %}
+{% include code-snippet/document-editor/javascript-es5/save-azure-blob/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

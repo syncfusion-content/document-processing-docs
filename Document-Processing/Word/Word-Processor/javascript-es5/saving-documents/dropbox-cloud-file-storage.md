@@ -123,7 +123,7 @@ In the client-side, to export the document into blob the document using [`saveAs
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/save-dropbox-cloud-file-storage/index.html %}
+{% include code-snippet/document-editor/javascript-es5/save-dropbox-cloud-file-storage/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

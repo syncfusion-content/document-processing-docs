@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Paragraph format in JavaScript (ES5) Document editor control | Syncfusion
+title: Paragraph format in JavaScript (ES5) Document editor control
 description: Learn here all about Paragraph format in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Paragraph format 
@@ -158,10 +158,10 @@ The following sample demonstrates the paragraph formatting options using a toolb
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/paragraph-format-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/paragraph-format-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/paragraph-format-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/paragraph-format-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -10,16 +10,16 @@ domainurl: ##DomainURL##
 
 # Print in JavaScript (ES5) Document editor control
 
-To print the document, use the [`print`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#print) method from Document Editor instance.
+To print the document, use the [`print`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#print) method from Document Editor instance.
 
 Refer to the following example for showing a document and print it.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/print-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/print-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/print-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/print-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -29,10 +29,10 @@ Refer to the following example for creating a document and print it.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/print-cs2/index.js %}
+{% include code-snippet/document-editor/javascript-es5/print-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/print-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es5/print-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -101,16 +101,16 @@ documenteditor.appendTo('#DocumentEditor');
 documenteditor.showPageSetupDialog();
 ```
 
-By customizing margins, papers, and layouts, the layout of the document will be changed in Document Editor. To modify these options during print operation, serialize the document as SFDT using the [`serialize`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#serialize) method in Document Editor instance and open the SFDT data in another instance of Document Editor in separate window.
+By customizing margins, papers, and layouts, the layout of the document will be changed in Document Editor. To modify these options during print operation, serialize the document as SFDT using the [`serialize`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#serialize) method in Document Editor instance and open the SFDT data in another instance of Document Editor in separate window.
 
 The following example shows how to customize layout options only for printing.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/print-cs3/index.js %}
+{% include code-snippet/document-editor/javascript-es5/print-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/print-cs3/index.html %}
+{% include code-snippet/document-editor/javascript-es5/print-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

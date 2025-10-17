@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Restrict editing in JavaScript (ES5) Document Editor Control | Syncfusion
+title: Restrict editing in JavaScript (ES5) Document Editor Control
 description: Learn here all about Restrict editing in Syncfusion JavaScript (ES5) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Restrict editing 
@@ -14,7 +14,7 @@ Document Editor provides support to restrict editing. When the protected documen
 
 ## Set current user
 
-You can use the [`currentUser`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#currentuser) property to authorize the current document user by name, email, or user group name.
+You can use the [`currentUser`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#currentuser) property to authorize the current document user by name, email, or user group name.
 
 The following code shows how to set currentUser
 
@@ -24,7 +24,7 @@ documentEditor.currentUser = 'engineer@mycompany.com';
 
 ## Highlighting the text area
 
-You can highlight the editable region of the current user using the [`userColor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#usercolor) property.
+You can highlight the editable region of the current user using the [`userColor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#usercolor) property.
 
 The following code shows how to set userColor.
 
@@ -46,10 +46,10 @@ The following code shows Restrict Editing Pane. To unprotect the document, use p
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/data-protection-cs2/index.js %}
+{% include code-snippet/document-editor/javascript-es5/data-protection-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/data-protection-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es5/data-protection-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

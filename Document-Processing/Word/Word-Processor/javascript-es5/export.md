@@ -25,10 +25,10 @@ The following example shows how to export documents in Document Editor as Syncfu
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/export-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/export-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/export-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/export-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -36,10 +36,10 @@ The following example shows how to export documents in Document Editor as Syncfu
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/export-container-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/export-container-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/export-container-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/export-container-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -53,10 +53,10 @@ The following example shows how to export the document as Word document (.docx).
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/export-cs2/index.js %}
+{% include code-snippet/document-editor/javascript-es5/export-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/export-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es5/export-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,10 +64,10 @@ The following example shows how to export the document as Word document (.docx).
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/export-container-cs2/index.js %}
+{% include code-snippet/document-editor/javascript-es5/export-container-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/export-container-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es5/export-container-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -81,10 +81,10 @@ The following example shows how to export the document as Word Template (.dotx).
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/export-cs4/index.js %}
+{% include code-snippet/document-editor/javascript-es5/export-cs4/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/export-cs4/index.html %}
+{% include code-snippet/document-editor/javascript-es5/export-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -92,10 +92,10 @@ The following example shows how to export the document as Word Template (.dotx).
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/export-container-cs4/index.js %}
+{% include code-snippet/document-editor/javascript-es5/export-container-cs4/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/export-container-cs4/index.html %}
+{% include code-snippet/document-editor/javascript-es5/export-container-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -107,10 +107,10 @@ The following example shows how to export document as text document (.txt).
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/export-cs3/index.js %}
+{% include code-snippet/document-editor/javascript-es5/export-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/export-cs3/index.html %}
+{% include code-snippet/document-editor/javascript-es5/export-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -118,10 +118,10 @@ The following example shows how to export document as text document (.txt).
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/export-container-cs3/index.js %}
+{% include code-snippet/document-editor/javascript-es5/export-container-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/export-container-cs3/index.html %}
+{% include code-snippet/document-editor/javascript-es5/export-container-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
