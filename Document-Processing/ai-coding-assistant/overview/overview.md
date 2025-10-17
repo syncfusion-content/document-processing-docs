@@ -1,6 +1,6 @@
 ---
 layout: post
-title : Overview of the AI Coding Assistants for Document Processing - Syncfusion
+title: Overview of the AI Coding Assistants for Document Processing - Syncfusion
 description: Get a quick overview of Syncfusion’s AI Coding Assistants that simplify document processing and deliver query results efficiently
 platform: document-processing
 control: AI coding assistant
@@ -70,7 +70,7 @@ The Syncfusion<sup>&reg;</sup> AI Coding Assistant is designed with privacy in m
 
 ## See also
 
-  * Add the [SyncfusionDocumentSDKAssistant](https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server) MCP Server to an MCP-enabled client
+  * Add the <a href="https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server">SyncfusionDocumentSDKAssistant MCP Server</a>  to an MCP-enabled client
   *	Syncfusion<sup>&reg;</sup> Document [SDK Documentation](https://help.syncfusion.com/document-processing/introduction)
 
 

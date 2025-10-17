@@ -1,7 +1,7 @@
 ---
 layout: post
-title: SyncfusionDocumentSDKAssistant MCP Server Overview and Setup – Syncfusion
-description: Explore the SyncfusionDocumentSDKAssistant MCP server, its key benefits, prerequisites, and integration guidance for enhancing Syncfusion DocumentSDK development workflows.
+title: SyncfusionDocumentSDKAssistant MCP Server Setup – Syncfusion
+description: Explore the MCP server’s benefits, setup needs, and integration guidance for Syncfusion DocumentSDK.
 platform: document-processing
 control: AI coding assistant
 documentation: ug
@@ -22,7 +22,7 @@ The SyncfusionDocumentSDKAssistant a specialized [Model Context Protocol (MCP)](
 
 ## Prerequisites
 
-Before using SyncfusionDocumentSDKAssistant[SyncfusionDocumentSDKAssistant](https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server), ensure you have:
+Before using <a href="https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server">SyncfusionDocumentSDKAssistant</a>, ensure you have:
 
   * Required [node](https://nodejs.org/en/) version >= 18
   *	A [compatible MCP client](https://modelcontextprotocol.io/clients) (VS Code with GitHub Copilot, [Syncfusion<sup>&reg;</sup> CodeStudio](https://www.syncfusion.com/code-studio/), etc.)
@@ -63,7 +63,7 @@ You need to add your [Syncfusion API key](https://syncfusion.com/account/api-key
   }
 ~~~
 
-[SyncfusionDocumentSDKAssistant](https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server) can be configured in various MCP clients. Below are setup instructions for popular environment:
+<a href="https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server">SyncfusionDocumentSDKAssistant</a> can be configured in various MCP clients. Below are setup instructions for popular environments:
 
 ### Syncfusion<sup>&reg;</sup> Code Studio
 
@@ -96,9 +96,9 @@ For additional details, see the Code Studio [documentation](https://help.syncfus
   }
 ~~~ 
 
-  2. After updating the configuration in settings.json, you’ll notice a “Start” option at the top of the config. This allows you to easily start the [SyncfusionDocumentSDKAssistant](https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server) server directly from the settings interface without additional commands.
+  2. After updating the configuration in settings.json, you’ll notice a “Start” option at the top of the config. This allows you to easily start the <a href ="https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server">SyncfusionDocumentSDKAssistant</a> server directly from the settings interface without additional commands.
 
-  3. Confirm that [SyncfusionDocumentSDKAssistant](https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server) is being used (this does not happen automatically). Look for a statement in the output, which is similar to:
+  3. Confirm that <a href ="https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server">SyncfusionDocumentSDKAssistant</a> is being used (this does not happen automatically). Look for a statement in the output, which is similar to:
 
       * ```SyncfusionDocumentSDKAssistant is running...``` (in VS Code)
 
@@ -152,7 +152,7 @@ To configure an MCP server for a specific workspace, you can create a .cursor/mc
 >  For more detailed information about configuring MCP servers in various clients, refer to the official documentations. 
 >
 > - [VS Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers)
-> - [Cursor](https://docs.cursor.com/en/context/mcp)
+> - <a href ="https://docs.cursor.com/en/context/mcp">Cursor</a>
 > - [JetBrains](https://www.jetbrains.com/help/ai-assistant/mcp.html)
 > - [Windsurf](https://docs.windsurf.com/windsurf/cascade/mcp)
 
