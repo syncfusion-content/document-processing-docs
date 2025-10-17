@@ -6,7 +6,6 @@ platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET Core
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Manage local storage in the ASP.NET Core PDF Viewer

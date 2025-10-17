@@ -56,4 +56,3 @@ Leverage the [`downloadStart`](https://help.syncfusion.com/cr/aspnetcore-js2/syn
 
 {% endhighlight %}
 {% endtabs %}
-

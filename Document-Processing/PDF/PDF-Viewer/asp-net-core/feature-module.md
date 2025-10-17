@@ -24,7 +24,7 @@ The available PdfViewer modules are:
 * [**TextSelection**](./textselection.md):- Select and copy text from a PDF file.
 * [**TextSearch**](./text-search.md):- Search a text easily across the PDF document.
 * [**Print**](./print.md):- Print the entire document or a specific page directly from the browser.
-* [**Annotation**](./annotations/text-markup-annotation.md):- Annotations can be added or edited in the PDF document.
+* [**Annotation**](./annotation/text-markup-annotation.md):- Annotations can be added or edited in the PDF document.
 * [**FormFields**](./form-designer/create-programmatically.md):- Preserve the form fields in the PDF document.
 * [**FormDesigner**](./form-designer/create-programmatically.md):- Form fields can be added or edited in the PDF document.
 

@@ -92,7 +92,7 @@ To perform a case-sensitive search, set the `isMatchCase` parameter to `true`. T
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
     </ejs-pdfviewer>
 </div>
 
@@ -111,7 +111,7 @@ To perform a case-sensitive search, set the `isMatchCase` parameter to `true`. T
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
                    serviceUrl="/api/PdfViewer">
     </ejs-pdfviewer>
 </div>
@@ -138,7 +138,7 @@ You can search for whole words by setting the `isMatchWholeWord` parameter to `t
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
     </ejs-pdfviewer>
 </div>
 
@@ -157,7 +157,7 @@ You can search for whole words by setting the `isMatchWholeWord` parameter to `t
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
                    serviceUrl="/api/PdfViewer">
     </ejs-pdfviewer>
 </div>
@@ -198,7 +198,7 @@ Searches for the specified text within the document and returns the bounding rec
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
     </ejs-pdfviewer>
 </div>
 
@@ -244,7 +244,7 @@ Searches for the specified text within the document and returns the bounding rec
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
     </ejs-pdfviewer>
 </div>
 
@@ -290,7 +290,7 @@ Searches for an array of strings within the document and returns the bounding re
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
     </ejs-pdfviewer>
 </div>
 
@@ -336,7 +336,7 @@ Searches for an array of strings within the document and returns the bounding re
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
     </ejs-pdfviewer>
 </div>
 
@@ -396,7 +396,7 @@ The [textSearchStart](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.e
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
                    textSearchStart="textSearchStarted">
     </ejs-pdfviewer>
 </div>
@@ -416,7 +416,7 @@ The [textSearchStart](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.e
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
                    textSearchStart="textSearchStarted"
                    serviceUrl="/api/PdfViewer">
     </ejs-pdfviewer>
@@ -452,7 +452,7 @@ The [textSearchHighlight](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusi
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
                    textSearchHighlight="textSearchHighlighted">
     </ejs-pdfviewer>
 </div>
@@ -471,7 +471,7 @@ The [textSearchHighlight](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusi
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
                    textSearchHighlight="textSearchHighlighted"
                    serviceUrl="/api/PdfViewer">
     </ejs-pdfviewer>
@@ -510,7 +510,7 @@ The [textSearchComplete](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusio
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
                    textSearchComplete="textSearchCompleted">
     </ejs-pdfviewer>
 </div>
@@ -529,7 +529,7 @@ The [textSearchComplete](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusio
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
                    textSearchComplete="textSearchCompleted"
                    serviceUrl="/api/PdfViewer">
     </ejs-pdfviewer>

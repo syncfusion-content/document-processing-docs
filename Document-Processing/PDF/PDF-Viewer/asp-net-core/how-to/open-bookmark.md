@@ -27,7 +27,7 @@ Follow these steps to add the bookmark toggle buttons:
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
     </ejs-pdfviewer>
 </div>
 
@@ -37,6 +37,7 @@ Follow these steps to add the bookmark toggle buttons:
         viewer.bookmarkViewModule.openBookmarkPane();
     }
 </script>
+
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
 
@@ -71,7 +72,7 @@ To close the bookmark pane with a button click, reuse the same structure and cal
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
     </ejs-pdfviewer>
 </div>
 

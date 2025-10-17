@@ -25,7 +25,7 @@ PDF Viewer supports customizing toolbar items, including adding, showing, hiding
     <ejs-pdfviewer id="pdfviewer"
                    style="width:1350px;height:100%"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl='https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib'
+                   resourceUrl='https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"'
                    toolbarClick="toolbarClick">
     </ejs-pdfviewer>
 </div>
