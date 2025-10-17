@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Rendering events in Vue PDF Viewer component | Syncfusion
-description: Learn here all about PageRenderInitiate and pageRenderComplete in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Handle pageRenderInitiate and pageRenderComplete | Syncfusion
+description: Learn how to use the pageRenderInitiate and pageRenderComplete events in the Syncfusion Vue PDF Viewer during page rendering.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # PageRenderInitiate and pageRenderComplete event
 
-In Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, `PageRenderInitiate` and `pageRenderComplete` actions are events that occur during the rendering process of PDF documents.
+In the Syncfusion PDF Viewer, the [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events occur during page rendering.
 
 **PageRenderInitiate**
 
@@ -199,6 +199,6 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-The provided code demonstrates how to subscribe to the `pageRenderInitiate` and `pageRenderComplete` events in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component.
+The following code demonstrates how to subscribe to these events in the Syncfusion PDF Viewer component.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to/PageRenderStarted%20and%20PageRenderCompleted%20event)
