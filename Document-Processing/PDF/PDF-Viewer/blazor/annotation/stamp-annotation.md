@@ -49,7 +49,7 @@ N> Only JPEG (JPG/JPEG) image formats are supported for custom stamp annotations
 
 ## Setting default properties during control initialization
 
-Default properties for stamp annotations can be configured before the component is created by using `StampSettings`. These defaults apply to newly added stamp annotations.
+Default properties for stamp annotations can be configured before the component is created by using [StampSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_StampSettings). These defaults apply to newly added stamp annotations.
 
 After changing the default opacity using the Edit Opacity tool, the currently selected value is applied to subsequent stamps.
 
@@ -81,7 +81,7 @@ After changing the default opacity using the Edit Opacity tool, the currently se
 
 ## Adding a custom stamp to the PDF document via PdfViewerCustomStampSettings
 
-An image can be added as a custom stamp icon by using the `CustomStamps` property of the `PdfViewerCustomStampSettings` class.
+An image can be added as a custom stamp icon by using the [CustomStamps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCustomStampSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerCustomStampSettings_CustomStamps) property of the [PdfViewerCustomStampSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CustomStampSettings) class.
 
 The following example illustrates how to add an image as a stamp annotation in the SfPdfViewer.
 

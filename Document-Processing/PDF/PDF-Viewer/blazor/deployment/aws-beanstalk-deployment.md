@@ -69,7 +69,7 @@ var app = builder.Build();
 Add the following stylesheet and script to the head section of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight cshtml hl_lines="3 7" %}
 
 <head>
     <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
@@ -79,6 +79,7 @@ Add the following stylesheet and script to the head section of the **~/Pages/_Ho
     <!-- Syncfusion Blazor PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </body>
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -131,10 +132,10 @@ Run the application to display the PDF file in the Syncfusion&reg; Blazor PDF Vi
 
 ## See also
 
-* [Getting started with the Blazor PDF Viewer in a Blazor WebAssembly app](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application)
+* [Getting started with the Blazor PDF Viewer in a Blazor Web app Server app](../getting-started/web-app)
 
-* [Getting started with the Blazor PDF Viewer in WSL mode](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/wsl-application)
+* [Getting started with the Blazor PDF Viewer in a Blazor WebAssembly app](../getting-started/web-assembly-application)
+
+* [Getting started with the Blazor PDF Viewer in WSL mode](./wsl-application)
 
 * [Ways to add script references in a Blazor application](https://blazor.syncfusion.com/documentation/common/adding-script-references)
-
-
