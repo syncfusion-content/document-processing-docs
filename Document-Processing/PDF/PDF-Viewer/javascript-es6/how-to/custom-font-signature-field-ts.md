@@ -1,22 +1,24 @@
 ---
 layout: post
-title: How to change font family in Typescript Pdfviewer|Syncfusion.
-description: Learn how to change the font family in Form Field's Type Signature in Syncfusion Javascript Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Change font family in TypeScript PDF Viewer | Syncfusion
+description: Learn how to change the font family for form field type signatures and initials in the TypeScript PDF Viewer using typeSignatureFonts and typeInitialFonts.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# To Change the Font Family
-Change the Font Family in Type Signature of the Syncfusion PDF Viewer by adding a custom css stylesheet to the document , and then apply the desired font family to the type signature element. Include the Google font link in the HTML head section to apply the Google Font.
+# Change the font family for type signatures
 
-### Signature Field property
-The Syncfusion PDF Viewer provides the ability to change the font family for Signature and Initial Field using `typeSignatureFonts` and `typeInitialFonts` property.
+Change the font family for Type Signature and Initial fields by adding a stylesheet to load fonts and assigning them via the PDF Viewer settings. Include Google Font links in the HTML head to use those fonts.
+
+### Signature field property
+
+The PDF Viewer supports changing fonts for Signature and Initial fields using the `typeSignatureFonts` and `typeInitialFonts` properties.
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample.
 
-**Step 2:** Insert the following code snippet to implement the functionality for using custom fonts in Signature field.
+**Step 2:** Use the following code to apply custom fonts to the Signature field.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -41,8 +43,9 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-### Initial Field property
-Insert the following code snippet to implement the functionality for using custom fonts in Initial field.
+### Initial field property
+
+Use the following code to apply custom fonts to the Initial field.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -66,4 +69,5 @@ pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
-By implementing this , you can use custom fonts in form field's signature in both `signature` and `initial` field.
+
+By implementing this configuration, custom fonts can be used for both Signature and Initial form fields.

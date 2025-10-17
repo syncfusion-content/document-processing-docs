@@ -1,23 +1,20 @@
 ---
 layout: post
-title: Disable tile rendering in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Disable tile rendering in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Disable tile rendering in TypeScript PDF Viewer | Syncfusion
+description: Learn how to disable tile rendering in the TypeScript PDF Viewer using enableTileRendering to adjust performance behavior for different document sizes.
 platform: document-processing
-control: Disable tile rendering
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable tile rendering in Typescript Pdfviewer control
+# Disable tile rendering in PDF Viewer
 
-To disable the tile rendering feature in the Syncfusion PDF viewer control, you can use the **enableTileRendering** property. This property allows you to enable or disable the tile rendering feature, which is used to improve the performance of the PDF viewer when displaying large documents.
+Use the `enableTileRendering` property to enable or disable tile rendering, which affects performance based on document size.
 
-To disable the tile rendering feature, you can set the **enableTileRendering** property to `false`.
+Set `enableTileRendering` to `false` to disable tile rendering. It is enabled by default and typically benefits large documents.
 
-By default, the tile rendering feature is enabled in the PDF viewer. Disabling it may improve the performance of the PDF viewer when displaying small documents, but it may also reduce the performance when displaying large documents.
-
-Here is an example of how you can use the **enableTileRendering** property:
+Example: Disable tile rendering
 
 ```
 
@@ -27,11 +24,12 @@ Here is an example of how you can use the **enableTileRendering** property:
 
 ```ts
 
-// Disable tile rendering.
+// Disable tile rendering
 document.getElementById('disable').addEventListener('click', () => {
   viewer.tileRenderingSettings.enableTileRendering = false;
 });
 
 ```
 
-Find the sample [how to disable the tile rendering](https://stackblitz.com/edit/vj1hf8-q8ayqc?file=index.ts)
+Sample: How to disable tile rendering
+https://stackblitz.com/edit/vj1hf8-q8ayqc?file=index.ts

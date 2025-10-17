@@ -1,16 +1,17 @@
 ---
 layout: post
-title: Print in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Print in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Print in TypeScript PDF Viewer | Syncfusion
+description: Learn how to enable, customize, and monitor printing in the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: Print
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Print in Typescript Pdfviewer control
+# Print in TypeScript PDF Viewer
 
-The PDF Viewer supports printing the loaded PDF file. You can enable/disable the print using the following code snippet.
+The Syncfusion TypeScript PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the `enablePrint` property.
+
+The following HTML and TypeScript examples render the PDF Viewer with printing enabled in standalone and server-backed applications.
 
 ```html
 <!DOCTYPE html>
@@ -65,9 +66,11 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/print.png)
+Select **Print** in the built-in toolbar to open the browser print dialog.
 
-You can invoke print action using the following code snippet.,
+![PDF Viewer print dialog preview](./images/print.png)
+
+To start printing from code, call the `print.print()` method after loading a document. This approach is useful when you need to wire up custom UI or initiate printing automatically.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -98,16 +101,15 @@ pdfviewer.print.print();
 {% endhighlight %}
 {% endtabs %}
 
-## Customizing Print Quality using printScaleFactor API
+## Customize print quality using the printScaleFactor API
 
-The PDF Viewer allows you to adjust the print quality using the [printScaleFactor](https://ej2.syncfusion.com/documentation/api/pdfviewer#printScaleFactor) API. The quality of the print improves as the print quality value increases from 0.5 to 5.
+The PDF Viewer allows you to adjust the print rendering quality by setting the [printScaleFactor](https://ej2.syncfusion.com/documentation/api/pdfviewer#printScaleFactor) property. Valid values range from 0.5 to 5. Higher values produce sharper output but also increase rendering time.
 
-When the value is less than 0.5, the PDF is printed at a standard quality. When the value exceeds 5, the PDF is still printed at the standard quality. In standard quality, printScaleFactor value is set to 1 as default value.
-The effective range for print quality is between 0.5 and 5. Higher values within this range will result in better print quality, but also increase the print time.
+By default, `printScaleFactor` is set to 1.
 
-By default, the printScaleFactor is set to 1.
+N> Values outside the 0.5–5 range revert to the standard print quality (value 1).
 
-* **The following code snippet demonstrates how to customize print quality using the printScaleFactor API in the PDF Viewer.**
+The following example demonstrates how to update the scale factor before printing.
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
@@ -131,12 +133,184 @@ let pdfviewer: PdfViewer = new PdfViewer({enablePrint: true, documentPath:'https
 pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 //pdf with low quality. By changing values you can change the quality of the pdf.
 pdfviewer.printScaleFactor = 0.5;
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
+## Enable print rotation in the PDF Viewer
+
+Set the `enablePrintRotation` property to control whether landscape pages are rotated automatically to fit the paper orientation. Keep it enabled to minimize clipping, or disable it to preserve the original orientation.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
+
+let pdfviewer: PdfViewer = new PdfViewer({
+    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    enablePrintRotation: true
+});
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
+
+let pdfviewer: PdfViewer = new PdfViewer({
+    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
+    enablePrintRotation: true
+});
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
+## Print modes in the PDF Viewer
+
+Use the `printMode` property to choose how the document is printed.
+
+The supported values are:
+*   `Default`: Prints the document from the same window.
+*   `NewWindow`: Prints the document from a new window or tab, which can help with browser pop-up policies.
+
+N> Browser pop-up blockers must allow new windows or tabs when you use `PrintMode.NewWindow`.
+
+The following example shows how to set the print mode.
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, PrintMode} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
+
+let pdfviewer: PdfViewer = new PdfViewer({
+    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    printMode: PrintMode.NewWindow
+});
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, PrintMode} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
+
+let pdfviewer: PdfViewer = new PdfViewer({
+    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
+    printMode: PrintMode.NewWindow
+});
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to/Customization%20%20of%20Print%20Quality)
+
+## Print events
+
+Subscribe to print lifecycle events to track usage and implement custom workflows.
+
+| Name         | Description |
+|--------------|-------------|
+| `printStart` | Raised when a print action begins. Use the event to log activity or cancel printing. |
+| `printEnd`   | Raised after a print action completes. Use the event to notify users or clean up resources. |
+
+### printStart event
+The [`printStart`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#printstart) event runs when printing starts from the toolbar or from code. Use it to validate prerequisites or cancel the action.
+
+#### Event arguments
+Review [`PrintStartEventArgs`](https://ej2.syncfusion.com/documentation/api/pdfviewer/printStartEventArgs/) for details such as `fileName` and the `cancel` option.
+
+The following example logs the file that is being printed and shows how to cancel the operation.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { PdfViewer, PrintStartEventArgs, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
+
+let pdfviewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    printStart: (args: PrintStartEventArgs) => {
+        console.log('Print action has started for file: ' + args.fileName);
+        // To cancel the print action
+        // args.cancel = true;
+    }
+});
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+
+import { PdfViewer, PrintStartEventArgs, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
+
+let pdfviewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
+    printStart: (args: PrintStartEventArgs) => {
+        console.log('Print action has started for file: ' + args.fileName);
+        // To cancel the print action
+        // args.cancel = true;
+    }
+});
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
+### printEnd event
+The [`printEnd`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#printend) event triggers after printing completes. Use it to finalize analytics or inform users that printing finished.
+
+#### Event arguments
+See [`PrintEndEventArgs`](https://ej2.syncfusion.com/documentation/api/pdfviewer/printEndEventArgs/) for available values such as `fileName`.
+
+The following example logs the printed file name.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { PdfViewer, PrintEndEventArgs, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
+
+let pdfviewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    printEnd: (args: PrintEndEventArgs) => {
+        console.log('Printed File Name: ' + args.fileName);
+    }
+});
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+
+import { PdfViewer, PrintEndEventArgs, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
+
+let pdfviewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
+    printEnd: (args: PrintEndEventArgs) => {
+        console.log('Printed File Name: ' + args.fileName);
+    }
+});
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
 
 ## See also
 
