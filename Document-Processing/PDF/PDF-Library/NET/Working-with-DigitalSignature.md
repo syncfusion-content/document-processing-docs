@@ -43,6 +43,7 @@ FileStream imageStream = new FileStream("signature.jpg", FileMode.Open, FileAcce
 PdfBitmap signatureImage = new PdfBitmap(imageStream);
 //Sets signature information.
 signature.Bounds = new RectangleF(new PointF(0, 0), signatureImage.PhysicalDimension);
+signature.SignedName = "Syncfusion";
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
@@ -78,6 +79,7 @@ PdfSignature signature = new PdfSignature(document, page, pdfCert, "Signature");
 PdfBitmap signatureImage = new PdfBitmap(@"signature.jpg");
 //Sets signature information
 signature.Bounds = new RectangleF(new PointF(0, 0), signatureImage.PhysicalDimension);
+signature.SignedName = "Syncfusion";
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
@@ -112,6 +114,7 @@ Dim signature As New PdfSignature(document, page, pdfCert, "Signature")
 Dim signatureImage As New PdfBitmap("signature.jpg")
 'Sets signature information
 signature.Bounds = New RectangleF(New PointF(0, 0), signatureImage.PhysicalDimension)
+signature.SignedName = "Syncfusion"
 signature.ContactInfo = "johndoe@owned.us"
 signature.LocationInfo = "Honolulu, Hawaii"
 signature.Reason = "I am author of this document."
@@ -159,6 +162,7 @@ FileStream imageStream = new FileStream("signature.jpg", FileMode.Open, FileAcce
 PdfBitmap signatureImage = new PdfBitmap(imageStream);
 //Sets signature information
 signature.Bounds = new RectangleF(new PointF(0, 0), signatureImage.PhysicalDimension);
+signature.SignedName = "Syncfusion";
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
@@ -196,6 +200,7 @@ PdfSignature signature = new PdfSignature(document, page, pdfCert, "Signature");
 PdfBitmap signatureImage = new PdfBitmap(@"signature.jpg");
 //Sets signature information
 signature.Bounds = new RectangleF(new PointF(0, 0), signatureImage.PhysicalDimension);
+signature.SignedName = "Syncfusion";
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
@@ -232,6 +237,7 @@ Dim signature As New PdfSignature(document, page, pdfCert, "Signature")
 Dim signatureImage As New PdfBitmap("signature.jpg")
 'Sets signature information
 signature.Bounds = New RectangleF(New PointF(0, 0), signatureImage.PhysicalDimension)
+signature.SignedName = "Syncfusion"
 signature.ContactInfo = "johndoe@owned.us"
 signature.LocationInfo = "Honolulu, Hawaii"
 signature.Reason = "I am author of this document."
@@ -374,6 +380,7 @@ FileStream imageStream = new FileStream("signature.jpg", FileMode.Open, FileAcce
 PdfBitmap signatureImage = new PdfBitmap(imageStream);
 //Sets signature information
 signature.Bounds = new RectangleF(new PointF(0, 0), signatureImage.PhysicalDimension);
+signature.SignedName = "Syncfusion";
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
@@ -411,6 +418,7 @@ PdfSignature signature = new PdfSignature(document, page, pdfCertificate, "Signa
 PdfBitmap signatureImage = new PdfBitmap(@"signature.jpg");
 //Sets signature information
 signature.Bounds = new RectangleF(new PointF(0, 0), signatureImage.PhysicalDimension);
+signature.SignedName = "Syncfusion";
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
@@ -448,6 +456,7 @@ Dim signature As New PdfSignature(document, page, pdfCertificate, "Signature")
 Dim signatureImage As New PdfBitmap("signature.jpg")
 'Sets signature information
 signature.Bounds = New RectangleF(New PointF(0, 0), signatureImage.PhysicalDimension)
+signature.SignedName = "Syncfusion"
 signature.ContactInfo = "johndoe@owned.us"
 signature.LocationInfo = "Honolulu, Hawaii"
 signature.Reason = "I am author of this document."
@@ -1957,6 +1966,7 @@ PdfBitmap signatureImage = new PdfBitmap(imageStream);
 signature.EnableValidationAppearance = true;
 //Sets signature information
 signature.Bounds = new RectangleF(new PointF(0, 0), signatureImage.PhysicalDimension);
+signature.SignedName = "Syncfusion";
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
@@ -1993,6 +2003,7 @@ PdfBitmap signatureImage = new PdfBitmap(@"signature.jpg");
 //Sets enable signature validation appearance
 signature.EnableValidationAppearance = true;
 //Sets signature information
+signature.SignedName = "Syncfusion";
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
@@ -2029,6 +2040,7 @@ Dim signatureImage As New PdfBitmap("signature.jpg")
 signature.EnableValidationAppearance = True
 'Sets signature info
 signature.Bounds = New RectangleF(New PointF(0, 0), signatureImage.PhysicalDimension)
+signature.SignedName = "Syncfusion"
 signature.ContactInfo = "johndoe@owned.us"
 signature.LocationInfo = "Honolulu, Hawaii"
 signature.Reason = "I am author of this document."
@@ -2078,6 +2090,7 @@ PdfBitmap image = new PdfBitmap(imageStream);
 signature.TimeStampServer = new TimeStampServer(new Uri("http://syncfusion.digistamp.com"), "user", "123456");
 //Sets signature info
 signature.Bounds = new RectangleF(new PointF(0, 0), image.PhysicalDimension);
+signature.SignedName = "Syncfusion";
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
@@ -2118,6 +2131,7 @@ PdfBitmap image = new PdfBitmap(@"syncfusion_logo.jpeg");
 signature.TimeStampServer = new TimeStampServer(new Uri("http://syncfusion.digistamp.com"), "user", "123456");
 //Sets signature info
 signature.Bounds = new RectangleF(new PointF(0, 0), image.PhysicalDimension);
+signature.SignedName = "Syncfusion";
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
@@ -2154,6 +2168,7 @@ Dim image As New PdfBitmap("syncfusion_logo.jpeg")
 signature.TimeStampServer = New TimeStampServer(New Uri("http://syncfusion.digistamp.com"), "user", "123456")
 'Sets signature info
 signature.Bounds = New RectangleF(New PointF(0, 0), image.PhysicalDimension)
+signature.SignedName = "Syncfusion"
 signature.ContactInfo = "johndoe@owned.us"
 signature.LocationInfo = "Honolulu, Hawaii"
 signature.Reason = "I am author of this document."
@@ -2637,6 +2652,7 @@ FileStream imageStream = new FileStream("signature.jpg", FileMode.Open, FileAcce
 PdfBitmap signatureImage = new PdfBitmap(imageStream);
 //Sets signature information
 signature.Bounds = new RectangleF(new PointF(0, 0), signatureImage.PhysicalDimension);
+signature.SignedName = "Syncfusion";
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
@@ -2676,6 +2692,7 @@ settings.CryptographicStandard  = CryptographicStandard.CADES;
 PdfBitmap signatureImage = new PdfBitmap(@"signature.jpg");
 //Sets signature information
 signature.Bounds = new RectangleF(new PointF(0, 0), signatureImage.PhysicalDimension);
+signature.SignedName = "Syncfusion";
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
@@ -2714,6 +2731,7 @@ settings.CryptographicStandard  = CryptographicStandard.CADES
 Dim signatureImage As New PdfBitmap("signature.jpg")
 'Sets signature info
 signature.Bounds = New RectangleF(New PointF(0, 0), signatureImage.PhysicalDimension)
+signature.SignedName = "Syncfusion"
 signature.ContactInfo = "johndoe@owned.us"
 signature.LocationInfo = "Honolulu, Hawaii"
 signature.Reason = "I am author of this document."
@@ -2774,6 +2792,7 @@ FileStream imageStream = new FileStream("signature.jpg", FileMode.Open, FileAcce
 PdfBitmap signatureImage = new PdfBitmap(imageStream);
 //Sets signature information
 signature.Bounds = new RectangleF(new PointF(0, 0), signatureImage.PhysicalDimension);
+signature.SignedName = "Syncfusion";
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
@@ -2813,6 +2832,7 @@ settings.DigestAlgorithm = DigestAlgorithm.SHA256;
 PdfBitmap signatureImage = new PdfBitmap(@"signature.jpg");
 //Sets signature information
 signature.Bounds = new RectangleF(new PointF(0, 0), signatureImage.PhysicalDimension);
+signature.SignedName = "Syncfusion";
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
@@ -2851,6 +2871,7 @@ settings.DigestAlgorithm = DigestAlgorithm.SHA256
 Dim signatureImage As New PdfBitmap("signature.jpg")
 'Sets signature info
 signature.Bounds = New RectangleF(New PointF(0, 0), signatureImage.PhysicalDimension)
+signature.SignedName = "Syncfusion"
 signature.ContactInfo = "johndoe@owned.us"
 signature.LocationInfo = "Honolulu, Hawaii"
 signature.Reason = "I am author of this document."
@@ -4370,6 +4391,7 @@ PdfSignature signature = new PdfSignature(document, page, pdfCert, "Signature");
 PdfBitmap signatureImage = new PdfBitmap(@"signature.png");
 //Sets signature information.
 signature.Bounds = new RectangleF(0,0,200,100);
+signature.SignedName = "Syncfusion";
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
@@ -4405,6 +4427,7 @@ PdfSignature signature = new PdfSignature(document, page, pdfCert, "Signature");
 PdfBitmap signatureImage = new PdfBitmap(@"signature.png");
 //Sets signature information.
 signature.Bounds = new RectangleF(0,0,200,100);
+signature.SignedName = "Syncfusion";
 signature.ContactInfo = "johndoe@owned.us";
 signature.LocationInfo = "Honolulu, Hawaii";
 signature.Reason = "I am author of this document.";
@@ -4440,6 +4463,7 @@ Dim signature As New PdfSignature(document, page, pdfCert, "Signature")
 Dim signatureImage As New PdfBitmap("signature.jpg")
 'Set the signature information.
 signature.Bounds = New RectangleF(New PointF(0, 0), signatureImage.PhysicalDimension)
+signature.SignedName = "Syncfusion"
 signature.ContactInfo = "johndoe@owned.us"
 signature.LocationInfo = "Honolulu, Hawaii"
 signature.Reason = "I am author of this document."
