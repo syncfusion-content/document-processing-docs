@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Globalization in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Globalization
+title: Globalization in Vue PDF Viewer | Syncfusion
+description: Learn how to localize the Syncfusion Vue PDF Viewer using culture-specific strings, configure the locale property, and load translations with L10n.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in Vue Pdfviewer component
+# Globalization in Vue PDF Viewer
 
-The text contents provided in the PDF Viewer can be localized using the collection of localized strings for different cultures. By default, the PDF Viewer is localized in “__en-US__”.
+The PDF Viewer supports localization using culture-specific string collections. By default, the component uses the "en-US" culture.
 
-The following table shows the default text values used in PDF Viewer in 'en-US' culture:
+The following table lists the default text values used by the PDF Viewer in the "en-US" culture:
 
 | Keywords                             | Values                                                                                                                           |
 | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -265,7 +265,7 @@ The following table shows the default text values used in PDF Viewer in 'en-US' 
 |Exact Matches                         |EXACT MATCHES                                                                                                                  |
 |Total Matches                         |TOTAL MATCHES                                                                                                                  |
 
-The different locale value for the PDF Viewer can be specified using the locale property.
+Set the locale for the PDF Viewer using the `locale` property.
 
 
 {% tabs %}

@@ -1,19 +1,23 @@
 ---
 layout: post
-title: Download in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Download in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Download in Vue PDF Viewer | Syncfusion
+description: Learn how to enable, disable, and programmatically trigger download in the Syncfusion Vue PDF Viewer, including download events and base64 handling.
 control: Download
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in Vue Pdfviewer component
+# Download in Vue PDF viewer control
 
-The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
+The PDF Viewer supports downloading the loaded PDF document. Use the enableDownload property to enable or disable the download option, as shown below.
 
 ![Alt text](./images/download.png)
 
-You can invoke download action using following code snippet.,
+> Note: When loading documents from other origins, ensure that CORS is correctly configured on the server. In server-backed mode, the document is streamed through the serviceUrl endpoint, which must allow download requests.
+
+![PDF Viewer toolbar showing the download button](./images/download.png)
+
+You can invoke the download action using the following code snippet:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
