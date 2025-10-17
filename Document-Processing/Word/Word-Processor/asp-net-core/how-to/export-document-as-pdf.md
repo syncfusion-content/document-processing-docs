@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Export PDF Document in Document Editor Component |Syncfusion
+title: Export PDF in Document Editor Component |Syncfusion
 description: Learn here all about export document as PDF in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Export Document As PDF
