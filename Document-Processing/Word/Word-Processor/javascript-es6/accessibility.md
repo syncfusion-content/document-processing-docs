@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in JavaScript (ES6) Document editor component | Syncfusion
+title: Accessibility in JavaScript (ES6) Document editor | Syncfusion
 description: Learn here all about Accessibility in Syncfusion JavaScript (ES6) Document editor component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
 platform: document-processing
@@ -16,7 +16,7 @@ The accessibility compliance for the Document editor component is outlined below
 | -- | -- |
 | [WCAG 2.2 Support](https://ej2.syncfusion.com/documentation/common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 | [Section 508 Support](https://ej2.syncfusion.com/documentation/common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
-| [Screen Reader Support](https://ej2.syncfusion.com/documentation/common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> |
+| [Screen Reader Support](https://ej2.syncfusion.com/documentation/common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Right-To-Left Support](https://ej2.syncfusion.com/documentation/common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Color Contrast](https://ej2.syncfusion.com/documentation/common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Mobile Device Support](https://ej2.syncfusion.com/documentation/common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> |
