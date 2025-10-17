@@ -25,6 +25,8 @@ From v16.1.0.24, the entire field code is included in Document Object Model(DOM)
 
 Find more information about migration changes [here](https://help.syncfusion.com/document-processing/release-notes/migratingtov16.1.0.24)
 
+N> The document may contain `IncludePicture` fields. These fields are designed to dynamically insert images by referencing external URLs. Each time such a field is encountered, the corresponding image is downloaded from the specified URL. This process significantly increases the time required to process and save the document. We recommend replacing these dynamic `IncludePicture` fields with standard image insertions. This approach eliminates the need for repeated external image downloads and allows the document to be saved in minimal time, ensuring optimal performance.
+
 ## Adding fields
 
 You can add a field to a Word document by using the [AppendField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendField_System_String_Syncfusion_DocIO_FieldType_) method of [WParagraph](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html) class.
