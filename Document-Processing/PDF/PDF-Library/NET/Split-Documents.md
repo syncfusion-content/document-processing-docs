@@ -82,6 +82,8 @@ Refer to the following code example to split a range of pages.
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Split%20PDFs/Split-a-Range-of-Pages/.NET/Split-a-Range-of-Pages/Program.cs" %} 
 
+{% raw %}
+
 using Syncfusion.Pdf.Parsing;
 
 //Create the values.
@@ -95,10 +97,13 @@ loadedDocument.SplitByRanges(destinationFilePattern, values);
 //close the document
 loadedDocument.Close(true);
 
+{% endraw %}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+{% raw %}
+
 using Syncfusion.Pdf.Parsing;
 
 //Create the values.
@@ -112,9 +117,11 @@ loadedDocument.SplitByRanges(destinationFilePattern, values);
 //close the document
 loadedDocument.Close(true);
 
+{% endraw %}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+{% raw %}
 
 Imports Syncfusion.Pdf.Parsing
 
@@ -128,7 +135,7 @@ Const destinationFilePattern As String = "Output" + "{0}.pdf"
 loadedDocument.SplitByRanges(destinationFilePattern, values)
 'Close the document.
 loadedDocument.Close(True)
-
+{% endraw %}
 {% endhighlight %}
 
 {% endtabs %}  
@@ -313,6 +320,7 @@ The Syncfusion<sup>&reg;</sup> PDF library enables the splitting of PDF document
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Split%20PDFs/Remove-Unused-Resources-when-Splitting-PDF-Documents/.NET/Remove-Unused-Resources-when-Splitting-PDF-Documents/Program.cs" %} 
 
+{% raw %}
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Parsing;
 
@@ -331,9 +339,11 @@ loadedDocument.SplitByRanges(destinationFilePattern, values, splitOptions);
 //Close the document.
 loadedDocument.Close(true);
 
+{% endraw %}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+{% raw %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Parsing;
@@ -353,9 +363,11 @@ loadedDocument.SplitByRanges(destinationFilePattern, values, splitOptions);
 //Close the document.
 loadedDocument.Close(true);
 
+{% endraw %}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+{% raw %}
 
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Parsing
@@ -375,7 +387,7 @@ loadedDocument.SplitByRanges(destinationFilePattern, values, splitOptions)
 
 'Close the document.
 loadedDocument.Close(True)
-
+{% endraw %}
 {% endhighlight %}
 
 {% endtabs %}
@@ -390,7 +402,7 @@ The Syncfusion<sup>&reg;</sup> PDF library enables the splitting of PDF document
 {% tabs %} 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Split%20PDFs/Import-tagged-structure-when-splitting-PDF-documents/.NET/Import-tagged-structure-when-splitting-PDF-documents/Program.cs" %} 
-
+{% raw %}
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Parsing;
 
@@ -409,11 +421,11 @@ loadedDocument.SplitByRanges(destinationFilePattern, values, splitOptions);
 
 //Close the document.
 loadedDocument.Close(true);
-
+{% endraw %}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
+{% raw %}
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Parsing;
 
@@ -432,11 +444,11 @@ loadedDocument.SplitByRanges(destinationFilePattern, values, splitOptions);
 
 //Close the document.
 loadedDocument.Close(true);
-
+{% endraw %}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
+{% raw %}
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Parsing
 
@@ -455,7 +467,7 @@ loadedDocument.SplitByRanges(destinationFilePattern, values, splitOptions)
 
 'Close the document.
 loadedDocument.Close(True)
-
+{% endraw %}
 {% endhighlight %}
 
 {% endtabs %}
