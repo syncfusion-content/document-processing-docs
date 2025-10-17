@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Enable or Disable Text Selection in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable text selection in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Enable or disable text selection in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to enable or disable text selection in the Syncfusion ASP.NET Core PDF Viewer using the enableTextSelection property.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable or Disable Text Selection in Syncfusion PDF Viewer
+# Enable or disable text selection in the ASP.NET Core PDF Viewer
 
-The Syncfusion PDF Viewer provides the `enableTextSelection` property, which allows you to control whether users can select text within the displayed PDF document. This feature can be toggled programmatically during runtime.
+Use the `enableTextSelection` property to control whether users can select text in the displayed PDF. This setting can be configured at initialization and toggled at runtime.
 
-## Configure Text Selection on Initialization
+## Configure on initialization
 
-You can set the initial text selection behavior when initializing the PDF Viewer control by configuring the `enableTextSelection` property. By default, text selection is enabled, but you can disable it as shown in the following example:
+Set initial behavior when instantiating the PDF Viewer. Text selection is enabled by default, but you can disable it as shown below.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -37,9 +37,9 @@ You can set the initial text selection behavior when initializing the PDF Viewer
 {% endhighlight %}
 {% endtabs %}
 
-## Toggle Text Selection Dynamically
+## Toggle dynamically
 
-You can change the text selection behavior at runtime using buttons, menu options, or other UI elements. The following example demonstrates how to toggle text selection with button clicks:
+Change the behavior at runtime using buttons or other UI controls. The following example demonstrates how to toggle text selection with button clicks.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -77,16 +77,16 @@ You can change the text selection behavior at runtime using buttons, menu option
 {% endhighlight %}
 {% endtabs %}
 
-## Use Cases and Considerations
+## Use cases and considerations
 
-- **Document Protection**: Disabling text selection helps prevent unauthorized copying of sensitive content.
-- **Read-only Documents**: In scenarios where documents are meant for viewing only, disabling text selection can provide a cleaner user experience.
-- **Interactive Applications**: Toggle text selection based on user roles or document states in complex applications.
+- **Document protection**: Disable text selection to help prevent copying sensitive content.
+- **Read-only documents**: Provide a cleaner viewing experience by preventing selection.
+- **Interactive apps**: Toggle selection based on user roles or document states.
 - **Controlled Access**: Implement conditional text selection depending on user permissions or document sections.
 
-## Default Behavior
+## Default behavior
 
-By default, text selection is enabled in the PDF Viewer. Set the `enableTextSelection` property to `false` explicitly if you want to disable this functionality.
+Text selection is enabled by default. Set `enableTextSelection` to `false` to disable it.
 
 N> When text selection is disabled, users will not be able to select or copy text from the document, which can be useful for protecting document content in certain scenarios.
 

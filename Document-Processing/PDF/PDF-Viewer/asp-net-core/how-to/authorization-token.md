@@ -3,20 +3,20 @@ layout: post
 title: Authorization Token in ASP.NET Core Pdfviewer Component
 description: Learn here all about Authorization Token in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Authorization Token
+control: PDF Viewer
 publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
 # Include the Authorization token
 
-The PDF Viewer library allows you to include the authorization token in the PDF viewer AJAX request using the properties of the ajaxRequest header available in `AjaxRequestSettings`, and it will be included in every AJAX request send from PDF Viewer.
+The PDF Viewer component enables adding authorization tokens to each AJAX request through the `ajaxHeaders` collection in `AjaxRequestSettings`, ensuring the header is appended to every call initiated by the viewer.
 
-The following steps are used to include the authorization token to the PDF viewer control.
+Use the following steps to configure the authorization token for the PDF Viewer control.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create simple PDF Viewer sample in React.
+**Step 1:** Follow the steps in the [Getting Started with ASP.NET Core PDF Viewer guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to configure a basic ASP.NET Core project with the PDF Viewer component.
 
-**Step 2:** Add the following code snippet to include the authorization token.
+**Step 2:** Add the following script after the PDF Viewer instance is rendered (for example, in the Razor view or layout file) to include the authorization token in subsequent requests.
 
 ```html
 <script>
