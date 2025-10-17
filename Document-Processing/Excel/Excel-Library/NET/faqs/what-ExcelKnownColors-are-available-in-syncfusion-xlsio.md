@@ -6,9 +6,9 @@ control: XlsIO
 documentation: UG
 ---
 
-# ExcelKnownColors Reference
+# What ExcelKnownColors are available in Syncfusion XlsIO?
 
-The following table lists ExcelKnownColors with their names, short descriptions, and color reference images.
+This FAQ lists all ExcelKnownColors available in Syncfusion XlsIO, including names, brief descriptions, and color reference images.
 
 <table>
 <thead>
