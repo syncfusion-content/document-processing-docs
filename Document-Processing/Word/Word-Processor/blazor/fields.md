@@ -32,7 +32,7 @@ Other fields, such as bookmark cross-references, must be updated manually. This 
 
 To update all fields in the document, click the **Update Fields** button in the **Review** tab of the toolbar.
 
-![The Update Fields button in the Blazor Document Editor toolbar.](images/updatefields.png "Update Bookmark Cross-Reference Field")
+![The Update Fields button in the Blazor Document Editor toolbar.](images/updatefields.png)
 
 #### Update Programmatically
 
