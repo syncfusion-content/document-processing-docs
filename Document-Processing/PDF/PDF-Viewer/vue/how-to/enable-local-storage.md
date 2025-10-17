@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Managing Local Storage in Vue PdfViewer | Syncfusion
-description: Learn how to manage local storage in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Manage local storage in Vue PDF Viewer | Syncfusion
+description: Learn how to control session-specific data storage in the Vue PDF Viewer using the enableLocalStorage property.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Managing Local Storage in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer
+# Manage local storage in PDF Viewer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer provides the `enableLocalStorage` property, which allows you to control how session-specific data is stored. You can choose to store this data in an internal collection or rely on the default session storage.
+Use the `enableLocalStorage` property to control whether session-specific data is stored in session storage (default) or an internal in-memory collection.
 
-### Using the enableLocalStorage Property
+### Use enableLocalStorage
 
-Set the `enableLocalStorage` property to manage whether the PDF Viewer uses session storage (default) or an internal collection. When set to `true`, session-specific data is kept in memory. Otherwise, session storage is used.
+Set `enableLocalStorage` to manage storage behavior. When `true`, data is kept in memory; otherwise, session storage is used.
 
 {% tabs %}
 {% highlight html tabtitle="Server-Backed" %}
@@ -78,9 +78,9 @@ export default {
 
 ### Impact and Considerations
 
-- **Increased Memory Usage**: Setting `enableLocalStorage` to `true` can increase memory usage, particularly with larger documents or those containing many interactive elements, such as form fields and annotations.
-- **Avoiding Memory Leaks**: It is crucial to properly dispose of the PDF Viewer instance when it's no longer needed to prevent memory leaks, especially when using in-memory storage.
-- **Default Behavior**: By default, this property is set to `false`, meaning the session storage mechanism is utilized unless explicitly changed.
+- Memory usage can increase when using in-memory storage with large documents or many interactive elements.
+- Dispose of the PDF Viewer instance when no longer needed to avoid memory leaks.
+- Default: `enableLocalStorage` is `false`, so session storage is used unless changed.
 
 ### Enhanced Control
 

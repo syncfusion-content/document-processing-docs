@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Enable Text Selection in Vue PdfViewer | Syncfusion
-description: Learn how to Enable Text Selection in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Enable or disable text selection in Vue PDF Viewer | Syncfusion
+description: Learn how to enable or disable text selection in the Vue PDF Viewer using the enableTextSelection property.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable or Disable Text Selection in Syncfusion PDF Viewer
+# Enable or disable text selection in PDF Viewer
 
-The Syncfusion PDF Viewer provides the `enableTextSelection` property, which allows you to control whether users can select text within the displayed PDF document. This feature can be toggled programmatically during runtime.
+Use the `enableTextSelection` property to control whether users can select text in the displayed PDF. This setting can be configured at initialization and toggled at runtime.
 
-## Configure Text Selection on Initialization
+## Configure on initialization
 
-You can set the initial text selection behavior when initializing the PDF Viewer control by configuring the `enableTextSelection` property.
+Set initial behavior when instantiating the PDF Viewer.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -76,9 +76,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Toggle Text Selection Dynamically
+## Toggle dynamically
 
-You can change the text selection behavior at runtime using buttons, menu options, or other UI elements:
+Change the behavior at runtime using buttons or other UI.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -158,12 +158,12 @@ export default {
 
 ## Use Cases and Considerations
 
-- **Document Protection**: Disabling text selection helps prevent unauthorized copying of sensitive content.
-- **Read-only Documents**: In scenarios where documents are meant for viewing only, disabling text selection can provide a cleaner user experience.
-- **Interactive Applications**: Toggle text selection based on user roles or document states in complex applications.
+- Document protection: Disable text selection to help prevent copying sensitive content.
+- Read-only documents: Provide a cleaner viewing experience by preventing selection.
+- Interactive apps: Toggle selection based on user roles or document states.
 
 ## Default Behavior
 
-By default, text selection is enabled in the PDF Viewer. Set the `enableTextSelection` property to `false` explicitly if you want to disable this functionality.
+Text selection is enabled by default. Set `enableTextSelection` to `false` to disable it.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to)

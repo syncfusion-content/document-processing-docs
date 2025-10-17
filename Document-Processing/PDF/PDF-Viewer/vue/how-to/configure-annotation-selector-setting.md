@@ -1,20 +1,20 @@
 ---
 layout: post
-title: AnnotationSelector Setting in Vue Pdfviewer component | Syncfusion
-description: Learn here all about AnnotationSelector Setting in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Configure annotation selector settings in Vue PDF Viewer | Syncfusion
+description: Learn how to configure annotation selector settings in the Vue PDF Viewer using annotationSelectorSettings and related options.
 control: AnnotationSelector Setting
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Configure Annotation Selector Settings
+# Configure annotation selector settings
 
-### Annotation Selector Settings
+AnnotationSelectorSettingsModel
 
-The [**annotationSelectorSettings**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationSelectorSettings/) property allows you to customize the appearance and behavior of the annotation selector in the UI.
+Use the [**annotationSelectorSettings**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotationSelectorSettings/) property to customize the appearance and behavior of the annotation selector in the UI.
 
-The [**AnnotationSelectorSettingsModel**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationSelectorSettingsModel/) defines the settings for the annotation selector, including border colors, sizes, and shapes. It provides fine-grained control over how annotations are displayed and interacted with.
+The [**AnnotationSelectorSettingsModel**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationSelectorSettingsModel/) defines settings such as border colors, sizes, and shapes, enabling fine-grained control over how annotations are displayed and interacted with.
 
 ### How to Configure Annotation Selector Settings
 
@@ -75,22 +75,14 @@ export default {
 
 #### Key properties include:
 
-* **selectionBorderColor**: Sets the color for the border around selected annotations.
-
-* **resizerBorderColor**: Sets the color for the border of the resizer handles.
-
-* **resizerFillColor**: Defines the fill color for the resizer handles.
-
-* **resizerSize**: Determines the size of the resizer handles.
-
-* **selectionBorderThickness**: Specifies how thick the selection border should be.
-
-* **resizerShape**: Allows you to choose the shape of the resizer handles (e.g., Circle or Square).
-
-* **selectorLineDashArray**: Specifies the dash pattern for the selector line to enhance visual cues.
-
-* **resizerLocation**: Determines where the resizer appear in relation to the annotation (e.g., Corners or Edges).
-
-* **resizerCursorType**: Sets the cursor style when hovering over the resizer, improving user interaction.
+- selectionBorderColor: Sets the color for the border around selected annotations.
+- resizerBorderColor: Sets the color for the border of the resizer handles.
+- resizerFillColor: Defines the fill color for the resizer handles.
+- resizerSize: Determines the size of the resizer handles.
+- selectionBorderThickness: Specifies the thickness of the selection border.
+- resizerShape: Sets the shape of the resizer handles (for example, Circle or Square).
+- selectorLineDashArray: Specifies the dash pattern for the selector line.
+- resizerLocation: Determines where the resizers appear relative to the annotation (for example, Corners or Edges).
+- resizerCursorType: Sets the cursor style when hovering over a resizer.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to)
