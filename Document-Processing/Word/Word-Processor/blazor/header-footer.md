@@ -9,11 +9,13 @@ documentation: ug
 
 # Headers and Footers in Blazor DocumentEditor Component
 
-[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
+Headers and footers are the areas in the top and bottom margins of each page in a document. They are typically used to display content that repeats across multiple pages, such as document titles, company logos, page numbers, and dates.
 
-* First page: Used only on the first page of the section.
-* Even pages: Used on all even numbered pages in the section.
-* Default: Used on all pages of the section, where first or even pages are not applicable or not specified.
+The [Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
+
+*   **First Page**: A unique header and footer that appears only on the first page of the section.
+*   **Even Pages**: A header and footer that appears on all even-numbered pages in the section.
+*   **Default**: A header and footer that appears on all pages of the section, where first or even pages are not applicable or not specified.
 
 This can be defined by setting the format properties of the corresponding section.
 

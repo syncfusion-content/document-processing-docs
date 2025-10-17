@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comments in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about the Comments in Syncfusion Blazor DocumentEditor component and more.
+description: Learn how to add, navigate, reply to, and manage comments in the Syncfusion Blazor Document Editor component, including how to use comments-only protection.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Comments in Blazor DocumentEditor Component
 
-The [`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) (Document Editor) component allows you to add comments to documents. Comments can be added, navigated, and removed using code or through the UI.
+The [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) (Document Editor) provides comprehensive support for adding, navigating, and managing comments within a document. These features facilitate collaborative review and feedback cycles. Operations can be performed both through the built-in user interface and programmatically using APIs.
 
 ## Add a new comment
 
@@ -47,9 +47,9 @@ You can delete all the comments in the document using [`DeleteAllCommentsAsync`]
 await container.DocumentEditor.Editor.DeleteAllCommentsAsync();
 ```
 
-## Protect the document in comments only mode
+## Protect the Document in Comments-Only Mode
 
-Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, user allowed to add or edit comments alone in the document.
+The Document Editor supports a special protection mode that restricts user actions to only adding or editing comments. When `CommentsOnly` protection is active, users cannot make changes to the document's content.
 
 Document editor provides an option to protect and unprotect document using [`EnforceProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_EnforceProtectionAsync_System_String_Syncfusion_Blazor_DocumentEditor_ProtectionType_) and [`StopProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_StopProtectionAsync_System_String_) API.
 
