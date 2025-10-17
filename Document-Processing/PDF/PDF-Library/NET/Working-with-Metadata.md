@@ -24,6 +24,9 @@ You can add XMP metadata in a PDF document using the [XmpMetadata](https://help.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Adding-XMP-metadata-in-PDF-document/.NET/Adding-XMP-metadata-in-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+
 //Create a PDF document
 PdfDocument pdfDoc = new PdfDocument();
 //Create a page
@@ -47,21 +50,15 @@ basic.Nickname = "nickname";
 basic.Rating.Add(-25);
 
 //Save and close the document
-MemoryStream stream = new MemoryStream();
-pdfDoc.Save(stream);
-stream.Position = 0;
-//Close the document
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "DocumentInformation.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
 
 //Create a PDF document
 PdfDocument pdfDoc = new PdfDocument();
@@ -86,12 +83,15 @@ basic.Nickname = "nickname";
 basic.Rating.Add(-25);
 
 //Save and close the document
-pdfDoc.Save("DocumentInformation.pdf");
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Xmp
+Imports Syncfusion.Pdf
 
 'Create a PDF document
 Dim pdfDoc As New PdfDocument()
@@ -133,9 +133,12 @@ You can add metadata in an existing PDF document using the [XmpMetadata](https:/
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Adding-XMP-metadata-to-an-existing-PDF-document/.NET/Adding-XMP-metadata-to-an-existing-PDF-document/Program.cs" %}	
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Xmp;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument pdfDoc = new PdfLoadedDocument(docStream);
+PdfLoadedDocument pdfDoc = new PdfLoadedDocument("Input.pdf");
 
 //Get XMP object
 XmpMetadata metaData = pdfDoc.DocumentInformation.XmpMetadata;
@@ -155,21 +158,17 @@ basic.Nickname = "nickname";
 basic.Rating.Add(-25);
 
 //Save and close the document
-MemoryStream stream = new MemoryStream();
-pdfDoc.Save(stream);
-stream.Position = 0;
-//Close the document
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "DocumentInformation.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
+
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Xmp;
 
 //Load the document
 PdfLoadedDocument pdfDoc = new PdfLoadedDocument("input.pdf");
@@ -192,12 +191,16 @@ basic.Nickname = "nickname";
 basic.Rating.Add(-25);
 
 //Save and close the document
-pdfDoc.Save("DocumentInformation.pdf");
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Xmp
+Imports Syncfusion.Pdf
 
 'Load the document
 Dim pdfDoc As New PdfLoadedDocument("input.pdf")
@@ -260,6 +263,9 @@ The [BasicSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-XMP-basic-schema/.NET/Create-PDF-document-with-XMP-basic-schema/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+
 //Create a PDF document
 PdfDocument pdfDoc = new PdfDocument();
 //Create a page
@@ -283,22 +289,17 @@ basic.Nickname = "nickname";
 basic.Rating.Add(-25);
 
 //Save and close the document
-MemoryStream stream = new MemoryStream();
-pdfDoc.Save(stream);
-stream.Position = 0;
-//Close the document
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "DocumentInformation.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
+
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+
 //Create a PDF document
 PdfDocument pdfDoc = new PdfDocument();
 //Create a page
@@ -322,12 +323,15 @@ basic.Nickname = "nickname";
 basic.Rating.Add(-25);
 
 //Save and close the document
-pdfDoc.Save("DocumentInformation.pdf");
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Xmp
+Imports Syncfusion.Pdf
 
 'Create a PDF document
 Dim pdfDoc As New PdfDocument()
@@ -381,6 +385,9 @@ The [DublinCoreSchema](https://help.syncfusion.com/cr/document-processing/Syncfu
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-dubline-core-schema-properties/.NET/Create-PDF-document-with-dubline-core-schema-properties/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+
 //Create new PDF document
 PdfDocument pdfDoc = new PdfDocument();
 //Add a new page 
@@ -399,22 +406,16 @@ dublin.Type.Add("PDF");
 dublin.Publisher.Add("Essential PDF");
 
 //Save and close the document
-MemoryStream stream = new MemoryStream();
-pdfDoc.Save(stream);
-stream.Position = 0;
-//Close the document
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "DocumentInformation.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+
 //Create new PDF document
 PdfDocument pdfDoc = new PdfDocument();
 //Add a new page 
@@ -433,12 +434,15 @@ dublin.Type.Add("PDF");
 dublin.Publisher.Add("Essential PDF");
 
 //Save and close the document
-pdfDoc.Save("DocumentInformation.pdf");
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Xmp
+Imports Syncfusion.Pdf
 
 'Create new PDF document
 Dim pdfDoc As New PdfDocument()
@@ -483,6 +487,9 @@ The [RightsManagementSchema](https://help.syncfusion.com/cr/document-processing/
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-right-management-schema/.NET/Create-PDF-document-with-right-management-schema/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+
 //Create PDF document
 PdfDocument pdfDoc = new PdfDocument();
 //Add a new page 
@@ -499,22 +506,16 @@ rights.Owner.Add("Syncfusion");
 rights.Marked = true;
 
 //Save and close the document
-MemoryStream stream = new MemoryStream();
-pdfDoc.Save(stream);
-stream.Position = 0;
-//Close the document
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "DocumentInformation.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+
 //Create PDF document
 PdfDocument pdfDoc = new PdfDocument();
 //Add a new page 
@@ -530,12 +531,15 @@ rights.Owner.Add("Syncfusion");
 rights.Marked = true;
 
 //Save and close the document
-pdfDoc.Save("DocumentInformation.pdf");
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Xmp
+Imports Syncfusion.Pdf
 
 'Create PDF document
 Dim pdfDoc As New PdfDocument()
@@ -572,6 +576,9 @@ This schema describes very simple workflow or job information and the [BasicJobT
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-basic-job-ticket-schema/.NET/Create-PDF-document-with-basic-job-ticket-schema/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+
 //Create a document
 PdfDocument pdfDoc = new PdfDocument();
 //Add a page
@@ -586,22 +593,16 @@ BasicJobTicketSchema basicJob = metaData.BasicJobTicketSchema;
 basicJob.JobRef.Add("PDF document creation");
 
 //Save and close the document
-MemoryStream stream = new MemoryStream();
-pdfDoc.Save(stream);
-stream.Position = 0;
-//Close the document.
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "DocumentInformation.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+
 //Create a document
 PdfDocument pdfDoc = new PdfDocument();
 //Add a page
@@ -616,12 +617,15 @@ BasicJobTicketSchema basicJob = metaData.BasicJobTicketSchema;
 basicJob.JobRef.Add("PDF document creation");
 
 //Save and close the document
-pdfDoc.Save("DocumentInformation.pdf");
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Xmp
+Imports Syncfusion.Pdf
 
 'Create a document
 Dim pdfDoc As New PdfDocument()
@@ -661,6 +665,9 @@ The [PagedTextSchema](https://help.syncfusion.com/cr/document-processing/Syncfus
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-pages-text-schema/.NET/Create-PDF-document-with-pages-text-schema/Program.cs" %}	
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+
 //Create a PDF document
 PdfDocument pdfDoc = new PdfDocument();
 //Create a Page
@@ -678,21 +685,15 @@ pagedText.NPages = 1;
 pagedText.PlateNames.Add("Sample page");
 
 //Save and close the document
-MemoryStream stream = new MemoryStream();
-pdfDoc.Save(stream);
-stream.Position = 0;
-//Close the document
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "DocumentInformation.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
 
 //Create a Pdf document
 PdfDocument pdfDoc = new PdfDocument();
@@ -711,12 +712,15 @@ pagedText.NPages = 1;
 pagedText.PlateNames.Add("Sample page");
 
 //Save and close the document
-pdfDoc.Save("DocumentInformation.pdf");
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Xmp
+Imports Syncfusion.Pdf
 
 'Create a PDF document
 Dim pdfDoc As New PdfDocument()
@@ -752,6 +756,9 @@ This schema specifies the properties used with Adobe PDF documents. The [PDFSche
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-PDF-schema/.NET/Create-PDF-document-with-PDF-schema/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+
 //Create a PDF document
 PdfDocument pdfDoc = new PdfDocument();
 //Add a page
@@ -768,22 +775,16 @@ pdfSchema.PDFVersion = "1.5";
 pdfSchema.Keywords = "Essential PDF";
 
 //Save and close the document
-MemoryStream stream = new MemoryStream();
-pdfDoc.Save(stream);
-stream.Position = 0;
-//Close the document
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "DocumentInformation.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+
 //Create a PDF document
 PdfDocument pdfDoc = new PdfDocument();
 //Add a page
@@ -800,12 +801,15 @@ pdfSchema.PDFVersion = "1.5";
 pdfSchema.Keywords = "Essential PDF";
 
 //Save and close the document
-pdfDoc.Save("DocumentInformation.pdf");
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Xmp
+Imports Syncfusion.Pdf
 
 'Create a PDF document
 Dim pdfDoc As New PdfDocument()
@@ -845,6 +849,9 @@ Add the following code sample to define the custom schema in a PDF document.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-custom-schema/.NET/Create-PDF-document-with-custom-schema/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+
 //Create PDF document
 PdfDocument pdfDoc = new PdfDocument();
 //Add a new page 
@@ -860,22 +867,16 @@ customSchema["DOCID"] = "SYNCSAM001";
 customSchema["Encryption"] = "Standard";
 customSchema["Project"] = "Data processing";
 
-//Save the document
-MemoryStream stream = new MemoryStream();
-pdfDoc.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save and close the document
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "DocumentInformation.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
 
 //Create Pdf document
 PdfDocument pdfDoc = new PdfDocument();
@@ -894,12 +895,15 @@ customSchema["Encryption"] = "Standard";
 customSchema["Project"] = "Data processing";
 
 //Save and close the document
-pdfDoc.Save("DocumentInformation.pdf");
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Xmp
+Imports Syncfusion.Pdf
 
 'Create PDF document
 Dim pdfDoc As New PdfDocument()
@@ -935,6 +939,9 @@ Essential<sup>&reg;</sup> PDF allows you to add required metadata (custom schema
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Adding-custom-schema-to-the-PDF-document/.NET/Adding-custom-schema-to-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+
 //Create PDF document
 PdfDocument pdfDoc = new PdfDocument();
 //Add a new page
@@ -950,21 +957,15 @@ customSchema["creationDate"] = DateTime.Now.ToString();
 customSchema["DOCID"] = "SYNCSAM001";
 
 //Save and close the document
-MemoryStream stream = new MemoryStream();
-pdfDoc.Save(stream);
-stream.Position = 0;
-//Close the document
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "CustomMetaField.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
 
 //Create PDF document
 PdfDocument pdfDoc = new PdfDocument();
@@ -987,6 +988,9 @@ pdfDoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Xmp
+Imports Syncfusion.Pdf
 
 'Create PDF document
 Dim pdfDoc As New PdfDocument()
@@ -1020,6 +1024,9 @@ The custom metadata can be added in PDF document by using the [CustomMetadata](h
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Adding-custom-metadata-to-the-PDF-document/.NET/Adding-custom-metadata-to-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+
 //Create PDF document
 PdfDocument pdfDoc = new PdfDocument();
 //Add new PDF page
@@ -1031,21 +1038,15 @@ pdfDoc.DocumentInformation.CustomMetadata["CompanyName"] = "Syncfusion";
 pdfDoc.DocumentInformation.CustomMetadata["Key"] = "DocumentKey";
 
 //Save and close the document
-MemoryStream stream = new MemoryStream();
-pdfDoc.Save(stream);
-stream.Position = 0;
-//Close the document
+pdfDoc.Save("Output.pdf");
 pdfDoc.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "AddCustomField.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
 
 //Create PDF document
 PdfDocument pdfDoc = new PdfDocument();
@@ -1064,6 +1065,9 @@ pdfDoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Xmp
+Imports Syncfusion.Pdf
 
 'Create PDF document
 Dim pdfDoc As New PdfDocument()
@@ -1093,29 +1097,27 @@ Removing the custom metadata from an existing PDF document using the [Remove](ht
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Remove-custom-metadata-from-an-existing-PDF-document/.NET/Remove-custom-metadata-from-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 //Remove custom metadata using key name
 loadedDocument.DocumentInformation.CustomMetadata.Remove("Key");
 
 //Save and close the document
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-stream.Position = 0;
-//Close the document
+loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Xmp;
+using Syncfusion.Pdf.Parsing;
 
 //Load the document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -1130,6 +1132,10 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Xmp
+Imports Syncfusion.Pdf
 
 'Load the document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -1159,6 +1165,10 @@ You can add the XMP metadata along with an image to the PDF document. The [PdfBi
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Adding-XMP-metadata-along-with-an-image-in-PDF/.NET/Adding-XMP-metadata-along-with-an-image-in-PDF/Program.cs" %}
 
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf;
+using System.Reflection.Metadata;
+
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
 //Add a page to the document
@@ -1172,23 +1182,17 @@ PdfBitmap image = new PdfBitmap(imageStream, true);
 //Draw the image
 graphics.DrawImage(image, 0, 0);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-doc.Save(stream);
-stream.Position = 0;
+//Save the document
+doc.Save("Output.pdf");
 //Close the document
 doc.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf;
+using System.Reflection.Metadata;
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -1210,6 +1214,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Reflection.Metadata
 
 'Create a new PDF document
 Dim doc As New PdfDocument()
@@ -1244,9 +1252,12 @@ Refer to the following code example to extract the image metadata from a PDF ima
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Extracting-XMP-metadata-from-PDF-image/.NET/Extracting-XMP-metadata-from-PDF-image/Program.cs" %}
 
-//Load an existing PDF
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Xmp;
+using Syncfusion.Pdf;
+
+//Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the first page
 PdfPageBase pageBase = loadedDocument.Pages[0];
 
@@ -1261,6 +1272,10 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Xmp;
+using Syncfusion.Pdf;
 
 //Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
@@ -1278,6 +1293,10 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Xmp
+Imports Syncfusion.Pdf
 
 'Load an existing PDF
 Dim loadedDocument As New PdfLoadedDocument(fileName)

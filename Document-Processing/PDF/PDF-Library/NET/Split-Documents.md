@@ -126,7 +126,7 @@ loadedDocument.Close(true);
 Imports Syncfusion.Pdf.Parsing
 
 'Create the values.
-Dim values As Integer(,) = New Integer(,) {{2, 5},{8, 10}}
+Dim values As Integer(,) = New Integer(,) {{2, 5}, {8, 10}}
 'Load the PDF document.
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Set a output path
