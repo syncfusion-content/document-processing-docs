@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Export document as pdf in JavaScript (ES6) Document editor control | Syncfusion
+title: Export PDF in JavaScript (ES6) Document editor | Syncfusion
 description: Learn here all about Export document as pdf in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Export document as pdf 
@@ -10,15 +10,16 @@ domainurl: ##DomainURL##
 
 # Export document as pdf in JavaScript (ES6) Document editor control
 
-In this article, we are going to see how to export the document as Pdf format. You can export the document as Pdf in following ways:
+In this article, we are going to see how to export the document as PDF format. You can export the document as PDF in following ways:
 
 ## Export the document as pdf in client-side
 
-Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as pdf using [`exportAsImage`](https://ej2.syncfusion.com/documentation/api/document-editor#exportasimage) API. Here, all pages will be converted to image and inserted as pdf pages(works like print as PDF).
+Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as pdf using [`exportAsImage`](https://ej2.syncfusion.com/documentation/api/document-editor/#exportasimage) API. Here, all pages will be converted to image and inserted as pdf pages(works like print as PDF).
 
 >Note:
-*  You can install the pdf export packages from this [`link`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export).
-*  There is one limitation we can’t search the text because we are exporting the pdf as image. 
+* The Document Editor exports PDFs by converting pages into images on the client side, which may slightly increase file size compared to text-based PDFs.
+* Text search is not supported in the exported PDF, as the content is stored as images.
+*  You can install the pdf export packages from this [`link`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export). 
 
 The following example code illustrates how to export the document as pdf in client-side.
 
@@ -97,11 +98,11 @@ document.getElementById('export').addEventListener('click', function () {
 
 ## Export document as pdf in server-side using Syncfusion<sup style="font-size:70%">&reg;</sup> DocIO
 
-With the help of [`Synfusion DocIO`](https://help.syncfusion.com/file-formats/docio/word-to-pdf), you can export the document as Pdf in server-side. Here, you can search the text.
+With the help of [`Syncfusion DocIO`](https://help.syncfusion.com/file-formats/docio/word-to-pdf), you can export the document as PDF in server-side. Here, you can search the text.
 
-The following way illustrates how to convert the document as Pdf:
+The following way illustrates how to convert the document as PDF:
 
-* Using [`serialize`](https://ej2.syncfusion.com/documentation/api/document-editor#serialize) API, convert the document as Sfdt and send it to server-side.
+* Using [`serialize`](https://ej2.syncfusion.com/documentation/api/document-editor/#serialize) API, convert the document as Sfdt and send it to server-side.
 
 The following example code illustrates how to convert the document to sfdt and pass it to server-side.
 
@@ -133,7 +134,7 @@ document.getElementById('export').addEventListener('click', function () {
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 * Using Save API in server-side, you can convert the sfdt to stream.
-* Finally, convert the stream to Pdf using [`Syncfusion.DocIORenderer.Net.Core`](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) library.
+* Finally, convert the stream to PDF using [`Syncfusion.DocIORenderer.Net.Core`](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) library.
 
 The following example code illustrates how to process the sfdt in server-side.
 

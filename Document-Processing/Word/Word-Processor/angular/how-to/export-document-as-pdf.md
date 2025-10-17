@@ -17,8 +17,9 @@ In this article, we are going to see how to export the document as PDF format. Y
 Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as pdf using [`exportAsImage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#exportasimage) API. Here, all pages will be converted to image and inserted as pdf pages(works like print as PDF).
 
 >Note: 
-* You can install the pdf export packages from this [`link`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export).
-* There is one limitation we can’t search the text because we are exporting the pdf as image. 
+* The Document Editor exports PDFs by converting pages into images on the client side, which may slightly increase file size compared to text-based PDFs.
+* Text search is not supported in the exported PDF, as the content is stored as images.
+* You can install the pdf export packages from this [`link`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export). 
 
 The following example code illustrates how to export the document as pdf in client-side.
 
