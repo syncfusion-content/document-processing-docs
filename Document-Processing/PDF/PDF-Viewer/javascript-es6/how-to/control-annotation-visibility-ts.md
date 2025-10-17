@@ -34,7 +34,7 @@ Add the following code to insert annotations. Additional annotations can be incl
 ```js
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/annotations-v1.pdf',
-    resourceUrl: "https://cdn.syncfusion.com/ej2/28.1.33/dist/ej2-pdfviewer-lib",
+    resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
 });
 
 // Append the PdfViewer to the DOM

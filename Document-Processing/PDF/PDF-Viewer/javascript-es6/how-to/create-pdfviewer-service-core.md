@@ -83,7 +83,7 @@ namespace PdfViewerWebService
         public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
         {
             Console.WriteLine("Load called");
-            //Initialize the PDF viewer object with memory cache object
+            //Initialize the PDF Viewer object with memory cache object
             PdfRenderer pdfviewer = new PdfRenderer(_cache);
             MemoryStream stream = new MemoryStream();
             object jsonResult = new object();

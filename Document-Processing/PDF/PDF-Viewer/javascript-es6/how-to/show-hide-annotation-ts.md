@@ -39,9 +39,9 @@ TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner, PageOrga
 PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
 TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner, PageOrganizer);
 
-// Create the PDF viewer instance
+// Create the PDF Viewer instance
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 // Append the viewer to the container element
 pdfviewer.appendTo('#PdfViewer');

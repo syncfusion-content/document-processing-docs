@@ -19,7 +19,7 @@ To save a PDF file to Dropbox, follow these steps:
 
 To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
 
-**Step 2:** Create a Simple PDF Viewer Sample in Typescript
+**Step 2:** Create a Simple PDF Viewer Sample in TypeScript
 
 Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This sets up the basic structure of the PDF Viewer application.
 

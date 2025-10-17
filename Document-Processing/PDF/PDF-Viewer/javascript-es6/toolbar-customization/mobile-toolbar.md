@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mobile Toolbar Interface in Typescript Pdfviewer control | Syncfusion
-description: Learn All About the Mobile Toolbar Interface in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Mobile Toolbar Interface in TypeScript PDF Viewer control | Syncfusion
+description: Learn All About the Mobile Toolbar Interface in Syncfusion TypeScript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Mobile Toolbar Interface in Typescript PDF Viewer control
+# Mobile Toolbar Interface in TypeScript PDF Viewer control
 
 The Mobile PDF Viewer offers a variety of features for viewing, searching, annotating, and managing PDF documents on mobile devices. It includes essential tools like search, download, bookmarking, annotation, and page organization. Users also have the option to enable desktop toolbar features in mobile mode, providing a more extensive set of actions.
 
@@ -48,7 +48,7 @@ When you open the "more options" menu, you will see additional actions such as:
 
 ## Enabling Desktop Mode in Mobile
 
-The desktop version of the toolbar can be enabled on mobile devices by using the `enableDesktopMode` API. This API allows you to bring desktop-like features to the mobile PDF viewer, providing access to additional toolbar actions that are typically available on desktop platforms.
+The desktop version of the toolbar can be enabled on mobile devices by using the `enableDesktopMode` API. This API allows you to bring desktop-like features to the mobile PDF Viewer, providing access to additional toolbar actions that are typically available on desktop platforms.
 
 ### Steps to Enable Desktop Mode:
 
@@ -65,7 +65,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.enableDesktopMode = true;
 pdfviewer.appendTo('#PdfViewer');
 
@@ -98,7 +98,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.enableDesktopMode = true;
 pdfviewer.enableTextSelection = false;
 pdfviewer.appendTo('#PdfViewer');

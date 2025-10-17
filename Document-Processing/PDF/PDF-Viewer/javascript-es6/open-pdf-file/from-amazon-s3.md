@@ -121,7 +121,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 
 public async Task<IActionResult> Load([FromBody] Dictionary<string, string> jsonObject)
 {
-  // Initialize the PDF viewer object with memory cache object
+  // Initialize the PDF Viewer object with memory cache object
   PdfRenderer pdfviewer = new PdfRenderer(_cache);
   MemoryStream stream = new MemoryStream();
   object jsonResult = new object();

@@ -93,7 +93,7 @@ The TypeScript PDF Viewer component supports loading and saving PDF files with A
 ### Step 6: Client-side configuration
 
 1. Run the TypeScript sample:
-   - Start the TS sample that includes the Syncfusion PDF Viewer.
+   - Start the TypeScript sample that includes the Syncfusion PDF Viewer.
 
 2. Load a PDF from AAD:
    - When the user clicks the **Load from AAD** button, the JS client will make an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.

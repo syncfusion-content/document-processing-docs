@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom Toolbar in Typescript PDF Viewer Component | Syncfusion
-description: Learn here all about custom toolbar in Syncfusion Typescript PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Custom Toolbar in TypeScript PDF Viewer Component | Syncfusion
+description: Learn here all about custom toolbar in Syncfusion TypeScript PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

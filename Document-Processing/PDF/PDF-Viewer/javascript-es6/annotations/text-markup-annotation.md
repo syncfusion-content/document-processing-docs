@@ -47,7 +47,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let pdfviewer: PdfViewer = new PdfViewer({
     documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+    resourceUrl:"https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
 });
 pdfviewer.appendTo('#PdfViewer');
 
@@ -63,19 +63,10 @@ document.getElementById('set').addEventListener('click', ()=> {
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-popups/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-navigations/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-dropdowns/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-inputs/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-notifications/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
  	<script src="systemjs.config.js"></script>
@@ -114,7 +105,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let pdfviewer: PdfViewer = new PdfViewer({
     documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+    resourceUrl:"https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
 });
 pdfviewer.appendTo('#PdfViewer');
 
@@ -134,19 +125,10 @@ document.getElementById('setNone').addEventListener('click', ()=> {
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-popups/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-navigations/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-dropdowns/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-inputs/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-notifications/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
  	<script src="systemjs.config.js"></script>
@@ -192,7 +174,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.appendTo('#PdfViewer');
 
 let highlight = document.getElementById('highlight');
@@ -267,7 +249,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let pdfviewer: PdfViewer = new PdfViewer({
     documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+    resourceUrl:"https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
 });
 pdfviewer.appendTo('#PdfViewer');
 
@@ -283,19 +265,10 @@ document.getElementById('set').addEventListener('click', ()=> {
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-popups/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-navigations/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-dropdowns/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-inputs/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-notifications/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
@@ -332,7 +305,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let pdfviewer: PdfViewer = new PdfViewer({
     documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+    resourceUrl:"https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
 });
 pdfviewer.appendTo('#PdfViewer');
 
@@ -352,19 +325,10 @@ document.getElementById('setNone').addEventListener('click', ()=> {
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-popups/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-navigations/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-dropdowns/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-inputs/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-notifications/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
  	<script src="systemjs.config.js"></script>
@@ -409,7 +373,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.appendTo('#PdfViewer');
 
 let underline = document.getElementById('underline');
@@ -484,7 +448,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let pdfviewer: PdfViewer = new PdfViewer({
     documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+    resourceUrl:"https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
 });
 pdfviewer.appendTo('#PdfViewer');
 
@@ -500,19 +464,10 @@ document.getElementById('set').addEventListener('click', ()=> {
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-popups/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-navigations/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-dropdowns/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-inputs/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-notifications/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
  	<script src="systemjs.config.js"></script>
@@ -548,7 +503,7 @@ TextSelection, Annotation);
 
 let pdfviewer: PdfViewer = new PdfViewer({
     documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+    resourceUrl:"https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
 });
 
 pdfviewer.appendTo('#PdfViewer');
@@ -569,19 +524,10 @@ document.getElementById('setNone').addEventListener('click', ()=> {
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-popups/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-navigations/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-dropdowns/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-inputs/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-notifications/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
  	<script src="systemjs.config.js"></script>
@@ -627,7 +573,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.appendTo('#PdfViewer');
 
 let strikethrough = document.getElementById('strikethrough');
@@ -701,7 +647,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let pdfviewer: PdfViewer = new PdfViewer({
     documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl:"https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib"
+    resourceUrl:"https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
 });
 pdfviewer.appendTo('#PdfViewer');
 
@@ -717,19 +663,10 @@ document.getElementById('set').addEventListener('click', ()=> {
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-popups/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-navigations/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-dropdowns/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-inputs/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-notifications/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
  	<script src="systemjs.config.js"></script>
@@ -765,7 +702,7 @@ TextSelection, Annotation);
 
 let pdfviewer: PdfViewer = new PdfViewer({
     documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl:"https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib"
+    resourceUrl:"https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
 });
 
 pdfviewer.appendTo('#PdfViewer');
@@ -786,19 +723,10 @@ document.getElementById('setNone').addEventListener('click', ()=> {
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-popups/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-navigations/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-dropdowns/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-inputs/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.37/ej2-notifications/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
  	<script src="systemjs.config.js"></script>
@@ -844,7 +772,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.appendTo('#PdfViewer');
 
 let squiggly = document.getElementById('squiggly');
@@ -987,7 +915,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let pdfviewer: PdfViewer = new PdfViewer({
     documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+    resourceUrl:"https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
 });
 pdfviewer.appendTo('#PdfViewer');
 
@@ -1007,19 +935,10 @@ document.getElementById('redo').addEventListener('click', ()=> {
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-popups/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-navigations/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-dropdowns/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-inputs/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-notifications/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
  	<script src="systemjs.config.js"></script>

@@ -15,9 +15,9 @@ Follow these steps to load a PDF from OneDrive using the server-backed PDF Viewe
 
 Create a Microsoft Graph API application and obtain the application ID and tenant ID. Follow this guide: https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive
 
-**Step 2:** Create a Simple PDF Viewer Sample in Typescript
+**Step 2:** Create a Simple PDF Viewer Sample in TypeScript
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This will give you a basic setup of the PDF Viewer component.
 
 **Step 3:** Modify the PdfViewerController.cs file in the web service project
 
@@ -62,7 +62,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 //Post action for Loading the PDF documents 
 public async Task<IActionResult> Load([FromBody] Dictionary<string, string> jsonObject)
 {
-  // Initialize the PDF viewer object with memory cache object
+  // Initialize the PDF Viewer object with memory cache object
   PdfRenderer pdfviewer = new PdfRenderer(_cache);
   MemoryStream stream = new MemoryStream();
   object jsonResult = new object();

@@ -24,7 +24,7 @@ PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnific
 
 const pdfviewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: "https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib",
+    resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
     enableTextSelection: false, // Disable text selection initially
 });
 pdfviewer.appendTo('#PdfViewer');

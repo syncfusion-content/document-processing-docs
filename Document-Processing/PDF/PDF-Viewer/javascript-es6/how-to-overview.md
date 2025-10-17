@@ -1,7 +1,7 @@
 ---
 layout: post
-title: FAQ Section in Pdfviewer control | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of in Pdfviewer control.
+title: FAQ Section in PDF Viewer control | Syncfusion
+description: In this section, you can know about the various questions asked about manipulation of in PDF Viewer control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -21,9 +21,9 @@ The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are liste
 * [How to configure the annotation selector settings?](./how-to/configure-annotationselector-setting-ts.md)
 * [What are the supported conformance or standards of PDF Viewer?](./how-to/conformance.md)
 * [How to control the visibility of the annotation?](./how-to/control-annotation-visibility-ts.md)
-* [How to convert the PDF library bounds to PDF viewer bounds?](./how-to/convert-pdf-library-bounds-to-pdf-viewer-bounds-ts.md)
+* [How to convert the PDF library bounds to PDF Viewer bounds?](./how-to/convert-pdf-library-bounds-to-pdf-viewer-bounds-ts.md)
 * [How to create PDF Viewer service using ASP.NET Core?](./how-to/create-pdfviewer-service-core.md)
-* [How to create PDF viewer web service using ASP.NET MVC?](./how-to/create-pdfviewer-service.md)
+* [How to create PDF Viewer web service using ASP.NET MVC?](./how-to/create-pdfviewer-service.md)
 * [How to customize the context menu in PDF Viewer?](./how-to/custom-context-menu.md)
 * [How to add custom font in handwritten signature?](./how-to/custom-font-signature-field-ts.md)
 * [How to add custom fonts for form fields and free text annotations?](./how-to/custom-fonts-ts.md)

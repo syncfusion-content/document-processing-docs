@@ -11,9 +11,9 @@ documentation: ug
 
 Follow these steps to load a PDF from Google Cloud Storage using the server-backed PDF Viewer.
 
-**Step 1:** Create a Simple PDF Viewer Sample in Typescript
+**Step 1:** Create a Simple PDF Viewer Sample in TypeScript
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This will give you a basic setup of the PDF Viewer component.
 
 **Step 2:** Modify the PdfViewerController.cs file in the web service project
 

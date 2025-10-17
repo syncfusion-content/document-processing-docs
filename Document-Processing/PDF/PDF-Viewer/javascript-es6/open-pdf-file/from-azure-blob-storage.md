@@ -17,7 +17,7 @@ Follow these steps to load a PDF from Azure Blob Storage in the standalone PDF V
 
 **Step 1:** Create a PDF Viewer sample in TypeScript
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This will give you a basic setup of the PDF Viewer component.
 
 **Step 2:** Modify the src/app/app.ts file in the TypeScript project
 
@@ -96,7 +96,7 @@ Follow these steps to load a PDF from Azure Blob Storage using the server-backed
 
 **Step 1:** Create a PDF Viewer sample in TypeScript
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This will give you a basic setup of the PDF Viewer component.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 

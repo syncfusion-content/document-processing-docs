@@ -19,9 +19,9 @@ To load a PDF file from Dropbox cloud file storage in a PDF Viewer, you can foll
 
 Follow the Dropbox documentation to create an API app: https://www.dropbox.com/developers/documentation/dotnet#tutorial. This enables programmatic access with secure credentials.
 
-**Step 2:** Create a Simple PDF Viewer Sample in Typescript
+**Step 2:** Create a Simple PDF Viewer Sample in TypeScript
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This will give you a basic setup of the PDF Viewer component.
 
 **Step 3:** Modify the src/app/app.ts file in the TypeScript project
 
@@ -31,7 +31,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 import { Dropbox } from 'dropbox';
 ```
 
-2. Create an instance of the Dropbox class using an access token for authentication. Next, call the filesDownload method of this Dropbox instance to download the file located at /PDF_Succinctly.pdf. Upon successfully downloading the file, extract the file blob from the response. Convert this file blob to a Base64 string using the blobToBase64 method. Finally, load the Base64 string into a PDF viewer control.
+2. Create an instance of the Dropbox class using an access token for authentication. Next, call the filesDownload method of this Dropbox instance to download the file located at /PDF_Succinctly.pdf. Upon successfully downloading the file, extract the file blob from the response. Convert this file blob to a Base64 string using the blobToBase64 method. Finally, load the Base64 string into a PDF Viewer control.
 
 N> Replace the placeholder with your actual Dropbox access token.
 
@@ -72,7 +72,7 @@ To create a Dropbox API App, you should follow the official documentation provid
 
 **Step 2:** Create a PDF Viewer sample in TypeScript
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This will give you a basic setup of the PDF Viewer component.
 
 **Step 3:** Modify the PdfViewerController.cs file in the web service project
 
@@ -115,7 +115,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 
 public async Task<IActionResult> Load([FromBody] Dictionary<string, string> jsonObject)
 {
-  //Initialize the PDF viewer object with memory cache object
+  //Initialize the PDF Viewer object with memory cache object
   PdfRenderer pdfviewer = new PdfRenderer(_cache);
   MemoryStream stream = new MemoryStream();
   object jsonResult = new object();
@@ -132,7 +132,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
         {
           var byteArray = await response.GetContentAsByteArrayAsync();
 
-          // Load the PDF file into the PDF viewer
+          // Load the PDF file into the PDF Viewer
           stream = new MemoryStream(byteArray);
         }
       }

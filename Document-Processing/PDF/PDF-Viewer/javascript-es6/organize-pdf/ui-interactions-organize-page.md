@@ -1,7 +1,7 @@
 ---
 layout: post
-title: UI Interactions for Organizing Pages in Typescript PDF Viewer | Syncfusion
-description: Learn about the UI interactions for organizing pages in the Syncfusion Typescript PDF Viewer control, including rotating, rearranging, inserting, deleting, and copying pages.
+title: UI Interactions for Organizing Pages in TypeScript PDF Viewer | Syncfusion
+description: Learn about the UI interactions for organizing pages in the Syncfusion TypeScript PDF Viewer control, including rotating, rearranging, inserting, deleting, and copying pages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
