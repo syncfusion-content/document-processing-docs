@@ -1082,7 +1082,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [Merging Word documents](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/merging-word-documents)
 * [Print Word documents](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/print-word-documents)
 * [Split Word documents](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/split-word-documents)
-* [Why it is not possible to access the Word document contents page by page](https://support.syncfusion.com/kb/article/4241/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page-in-winforms-fileformat-libraries-)
+* [Why it is not possible to access the Word document contents page by page?](https://support.syncfusion.com/kb/article/4241/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page-in-winforms-fileformat-libraries-)
 * [How to find list of used fonts in the Word document?](https://support.syncfusion.com/kb/article/11334/how-to-find-list-of-used-fonts-in-the-word-document)
 * [How to modify the formatting for the default format of sections, paragraphs, and tables in a Word document?](https://support.syncfusion.com/kb/article/15884/how-to-modify-the-formatting-for-the-default-format-of-sections-paragraphs-and-tables-in-a-word-document?)
 * [Is it possible to fetch page numbers in a Word document using .NET Core DocIO?](https://support.syncfusion.com/kb/article/15907/is-it-possible-to-fetch-page-numbers-in-a-word-document-using-net-core-docio?)
@@ -1096,6 +1096,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [Why it is not possible to access the Word document contents page by page?](https://support.syncfusion.com/kb/article/18815/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)
 * [How to generate and insert a QR code in a Word Document?](https://support.syncfusion.com/kb/article/19794/how-to-generate-and-insert-a-qr-code-in-a-word-document)
 * [How to Remove Empty Tables from .NET Core Word Document?](https://support.syncfusion.com/kb/article/20090/how-to-remove-empty-tables-from-net-core-word-document)
+* [Is it possible to accurately detect page breaks and line positions in a Word document using DocIO?](https://support.syncfusion.com/kb/article/4241/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)
+* [Is it possible to get line numbers from a Word document using DocIO?](https://support.syncfusion.com/kb/article/4241/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)
+* [Can DocIO determine which line of text appears on which page in a Word file?](https://support.syncfusion.com/kb/article/4241/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)
+* [Is it possible to detect and remove blank pages in a Word document using DocIO?](https://support.syncfusion.com/kb/article/4241/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)
 
 ## Frequently Asked Questions
 
