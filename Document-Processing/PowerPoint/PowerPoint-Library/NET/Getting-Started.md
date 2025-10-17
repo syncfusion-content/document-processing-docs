@@ -291,11 +291,8 @@ Finally, save the Presentation in file system and close its instance.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Getting-started/Create-PowerPoint-with-basic-elements/.NET/Create-PowerPoint-with-basic-elements/Program.cs" %}
-//Saving the PowerPoint Presentation as stream
-FileStream stream = new FileStream("Sample.pptx", FileMode.Create, FileAccess.ReadWrite);
-pptxDoc.Save(stream);
-//Dispose stream
-stream.Dispose();
+//Saves the Presentation in the given name 
+pptxDoc.Save("Output.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -435,10 +432,8 @@ FileStream fileStreamInput = new FileStream(basePath + @"/Presentation/Conversio
 IPresentation pptxDoc = Presentation.Open(fileStreamInput);
 //Convert the PowerPoint document to PDF document.
 PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc);
-//Save the converted PDF document to Memory stream.
-MemoryStream pdfStream = new MemoryStream();
-pdfDocument.Save(pdfStream);
-pdfStream.Position = 0;
+//Save the converted PDF document
+pdfDocument.Save("Result.pdf");
 //Close the PDF document.
 pdfDocument.Close(true);
 //Close the PowerPoint Presentation.
