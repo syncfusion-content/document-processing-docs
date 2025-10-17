@@ -3,8 +3,7 @@ layout: post
 title: Interaction mode in Javascript Pdfviewer control | Syncfusion
 description: Learn here all about Interaction mode in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Interaction mode
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

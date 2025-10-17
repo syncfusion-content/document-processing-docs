@@ -1,24 +1,22 @@
 ---
 layout: post
-title: Add Custom fonts in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about how to add custom fonts using the PDF document in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Add custom fonts in JavaScript PDF Viewer | Syncfusion
+description: Learn how to add and load custom TTF fonts for documents displayed in the JavaScript PDF Viewer using the customFonts property.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to add custom fonts to the PDF viewer used in the PDF document
+# Add custom fonts in PDF Viewer
 
-To use custom fonts in the Syncfusion PDF Viewer within your PDF document, you need to add the custom TTF font files to the resource URL directory and configure the viewer to load these fonts. You can specify the custom font names using the
-**customFonts** property, which accepts an array of font names.
+To use custom fonts in the Syncfusion PDF Viewer, add the custom TTF files to the resource URL directory and configure the viewer to load them. Specify font file names using the `customFonts` property as an array of names.
 
-The following steps are used to customize the selection border.
+### Steps to add custom fonts
 
-**Step 1:** Add the custom TTF font files to the resource URL path referenced in your application. For example, place the custom TTF files in the ej2-pdfviewer-lib folder, which will serve as the resource URL path.
+**Step 1:** Add custom TTF font files to the resource URL path referenced in the application. For example, place the TTF files in the ej2-pdfviewer-lib folder that serves as the resource URL path.
 
-**Step 2:** The following code snippet are how you can add custom fonts to the PDF viewer.
+**Step 2:** Use the following code to configure custom fonts in the PDF Viewer.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -49,4 +47,4 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, you can successfully integrate and use custom fonts in your PDF documents displayed in the EJ2 PDF Viewer.
+These steps integrate custom fonts into PDF documents displayed in the PDF Viewer.

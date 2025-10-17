@@ -1,21 +1,20 @@
 ---
 layout: post
-title: Download document on window closing in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Download document on window closing in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Download document on window closing in JavaScript PDF Viewer control | Syncfusion
+description: Learn how to download a PDF document when the browser window closes or refreshes in the Syncfusion JavaScript PDF Viewer control by handling the onbeforeunload event.
 platform: document-processing
-control: Download document on window closing
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Download document on window closing in Javascript Pdfviewer control
+# Download document on window closing in JavaScript PDF Viewer
 
-The PDF Viewer library allows you to download a PDF document rendered in the viewer while refreshing the window or clicking the close window using the [onbeforeunload](https://ej2.syncfusion.com/documentation/api/pdfviewer/#unload) event.
+The JavaScript PDF Viewer can automatically download the loaded PDF document when the browser window is refreshed or closed by handling the [onbeforeunload](https://ej2.syncfusion.com/documentation/api/pdfviewer/#unload) event.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Configure a working sample by following the instructions in [Getting started with the JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/).
 
-**Step 2:** Add the following code sample to download a PDF document while refreshing or closing the window.
+**Step 2:** Add the following script to prompt the user when the window closes or refreshes and trigger the document download.
 
 ```ts
 
@@ -33,4 +32,4 @@ window.onbeforeunload = function(e){
 
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/Download/Download%20the%20pdf%20document%20before%20closing%20window%20or%20refresh)
+[View the sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/Download/Download%20the%20pdf%20document%20before%20closing%20window%20or%20refresh)

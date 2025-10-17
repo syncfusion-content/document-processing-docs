@@ -1,19 +1,18 @@
 ---
 layout: post
-title: Select multi page annotation in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Select multi page annotation in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Select multi-page annotations in JavaScript PDF Viewer | Syncfusion
+description: Learn how to select multi-page TextMarkup annotations as a single annotation using enableMultiPageAnnotation in the Syncfusion JavaScript PDF Viewer.
 platform: document-processing
-control: Select multi page annotation
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Select multi page annotation in Javascript Pdfviewer control
+# Select multi-page annotations in JavaScript PDF Viewer
 
-To select a multi-page TextMarkup annotation as a single annotation in a Syncfusion PDF viewer, you can use by enabling the [**enableMultiPageAnnotation**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablemultipageannotation) property. By default it is `false`.
+Select a multi-page TextMarkup annotation as a single annotation by enabling the [enableMultiPageAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablemultipageannotation) property (default: `false`).
 
-Here is an example of how you can use the [**enableMultiPageAnnotation**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablemultipageannotation) property to select the multi page TextMarkup annotation as a single annotation, export and import multi page annotation:
+The following example shows how to select, export, and import a multi-page annotation:
 
 ```javascript
 
@@ -32,4 +31,4 @@ document.getElementById('import').addEventListener('click', () => {
 
 ```
 
-Find the sample [how to select multi-page TextMarkup annotation as single annotation](https://stackblitz.com/edit/1epvap-vewcbt?file=index.js)
+Find the sample: [Select a multi-page TextMarkup annotation as a single annotation](https://stackblitz.com/edit/1epvap-vewcbt?file=index.js)

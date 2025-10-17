@@ -1,19 +1,17 @@
 ---
 layout: post
-title: extractTextCompleted Event in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about extractTextCompleted Event in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: extractTextCompleted event in JavaScript PDF Viewer | Syncfusion
+description: Learn how to use the extractTextCompleted event and isExtractText property in the Syncfusion JavaScript PDF Viewer to extract text and bounds.
 platform: document-processing
-control: Extract text
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Extract text in Javascript Pdfviewer control using extractTextCompleted event
+# Use extractTextCompleted to extract text in JavaScript PDF Viewer
 
-To extract text in Syncfusion PDF viewer, you can use the [**isExtractText**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#isextracttext) property and [**extractTextCompleted**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#extracttextcompleted) event.This allows you to extract the text from a page along with the bounds.
+Use the [isExtractText](https://ej2.syncfusion.com/documentation/api/pdfviewer/#isextracttext) property and the [extractTextCompleted](https://ej2.syncfusion.com/documentation/api/pdfviewer/#extracttextcompleted) event to extract page text along with bounds.
 
-Here is an example of how you can use the **isExtractText** property and **extractTextCompleted** event:
+The following example shows how to enable text extraction and handle the completion event:
 
 ```javascript
 
@@ -32,4 +30,4 @@ viewer.extractTextCompleted = args => {
 
 ```
 
-Find the sample [how to extract Text](https://stackblitz.com/edit/kzd4jd-dcser9?file=index.js)
+Find the sample: [How to extract text](https://stackblitz.com/edit/kzd4jd-dcser9?file=index.js)
