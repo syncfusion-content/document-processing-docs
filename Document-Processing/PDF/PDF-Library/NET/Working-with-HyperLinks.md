@@ -1,23 +1,28 @@
 ---
-title: Working with Hyperlinks | Syncfusion
+title: Working with Hyperlinks in PDF | Syncfusion
 description: This section explains how to add hyperlink in a new and existing PDF document using Syncfusion .NET PDF library 
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Hyperlinks
+# Working with Hyperlinks in PDF
 
 In PDF, hyperlinks can be added to allow the users to navigate to another part of PDF file, web page or any other external content. Essential<sup>&reg;</sup> PDF provides support for all these types of hyperlink.
 
 ## Working with Web navigation
                                      
-You can navigate to specified URL from a PDF document by using the [PdfTextWebLink](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextWebLink.html) class.
+You can navigate to specified URL from a PDF document by using the [PdfTextWebLink](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextWebLink.html) class.
 
 Please refer the below code snippet for navigating to the web page.
 
 {% tabs %}  
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Hyperlinks/Navigate-to-specific-URL-from-a-PDF-document/.NET/Navigate-to-specific-URL-from-a-PDF-document/Program.cs" %} 	
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -37,15 +42,19 @@ textLink.Font = font;
 //Draw the hyperlink in PDF page.
 textLink.DrawTextWebLink(page, new PointF(10, 40));
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -73,6 +82,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -109,9 +122,14 @@ To add a web hyperlink to an existing document, please refer the below code snip
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Hyperlinks/Add-a-web-hyperlink-to-an-existing-PDF-document/.NET/Add-a-web-hyperlink-to-an-existing-PDF-document/Program.cs" %} 	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the page.
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 //Create the font.
@@ -128,15 +146,20 @@ textLink.Font = font;
 //Draw the hyperlink in loaded page graphics.
 textLink.DrawTextWebLink(loadedPage.Graphics, new PointF(10, 40));
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(@"Filename.pdf");
@@ -164,6 +187,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document.
 Dim loadedDocument As New PdfLoadedDocument("fileName.pdf")
@@ -202,6 +230,11 @@ To allow the users to navigate to any other part of the same document, [PdfDocum
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Hyperlinks/Add-the-hyperlink-for-internal-document-navigation/.NET/Add-the-hyperlink-for-internal-document-navigation/Program.cs" %} 	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Create a new page. 
@@ -228,15 +261,19 @@ documentLinkAnnotation.Destination.Zoom = 5;
 //Add this annotation to a new page.
 page.Annotations.Add(documentLinkAnnotation);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -272,6 +309,10 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -316,9 +357,14 @@ To add a [PdfDocumentLinkAnnotation](https://help.syncfusion.com/cr/document-pro
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Hyperlinks/Internal-document-navigation-to-an-existing-PDF/.NET/Internal-document-navigation-to-an-existing-PDF/Program.cs" %} 	
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream("fileName.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the page.
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 //Create a new rectangle.
@@ -337,15 +383,20 @@ documentLinkAnnotation.Destination.Location = new PointF(10, 0);
 //Add this annotation to respective page.
 loadedPage.Annotations.Add(documentLinkAnnotation);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(@"fileName.pdf");
@@ -375,6 +426,11 @@ loadedDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Load the existing PDF document.
 Dim loadedDocument As New PdfLoadedDocument("fileName.pdf")
@@ -417,6 +473,9 @@ Please refer the below code snippet for navigating to external documents.
 
 {% highlight c# tabtitle="C# [Cross-platform]" %} 
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create the PDF document.
 PdfDocument document = new PdfDocument();
 //Creates a new page. 
@@ -429,15 +488,17 @@ PdfFileLinkAnnotation fileLinkAnnotation = new PdfFileLinkAnnotation(bounds, fil
 //Add this annotation to a page.
 page.Annotations.Add(fileLinkAnnotation);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create the PDF document.
 PdfDocument document = new PdfDocument();
@@ -459,6 +520,9 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Create the PDF document
 Dim document As New PdfDocument()
@@ -495,7 +559,10 @@ To open a file in relative path, the [PdfLaunchAction](https://help.syncfusion.c
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C#" [Windows-specific] %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -520,7 +587,10 @@ document.Close();
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight vb.net tabtitle="VB.NET" [Windows-specific] %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new PDF document
 Dim document As New PdfDocument()
