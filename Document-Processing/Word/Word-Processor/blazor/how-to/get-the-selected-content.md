@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get selected content in Blazor DocumentEditor Component | Syncfusion
-description: Learn how to get the selected content from the Syncfusion Blazor Document Editor component as plain text or SFDT (rich text) and much more.
+title: Get Selected Content in Blazor DocumentEditor Component | Syncfusion
+description: Learn how to get the selected content from the Syncfusion Blazor DocumentEditor component as plain text or SFDT (rich text) and much more.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
@@ -52,7 +52,7 @@ The following example code illustrates how to add search in google option in con
 }
 ```
 
-You can add the following custom options using this API,
+The following custom options can be added using this API,
 
 * Save or export the selected text as text file.
 * Search the selected text in Google or other search engines.
@@ -93,7 +93,7 @@ The following example code illustrates how to get the content of a bookmark and 
 }
 ```
 
-You can add the following custom options using this API,
+The following custom options can be added using this API,
 
 * Save or export the selected content as SFDT file.
 * Get the content of a bookmark in Word document as SFDT by selecting a bookmark using [`SelectBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectBookmarkAsync_System_String_) API.
