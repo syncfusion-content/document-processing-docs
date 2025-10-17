@@ -699,4 +699,6 @@ End Using
 
 N> Security features are now supported in .NET Standard 1.4 onwards.
 
+N> By default, all cells in an Excel worksheet have the Locked property set to true. This property only takes effect when the worksheet is protected. To allow edits in specific cells, you must explicitly set the Locked property to false before applying protection. Once the sheet is protected, only the unlocked cells remain editable. However, ExcelEngine will allow editing cells programmatically even though the worksheet is protected.
+
 A complete working example to protect a cell in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/XlsIO-Excel-Protect-UnProtect/Locked-Cells/.NET/Locked-Cells).
