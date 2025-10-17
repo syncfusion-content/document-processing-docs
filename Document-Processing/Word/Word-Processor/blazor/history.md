@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Undo and redo in Blazor DocumentEditor Component | Syncfusion
+title: Undo and Redo in Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn here all about Undo and redo in Syncfusion Blazor DocumentEditor component and more.
 platform: document-processing
 control: DocumentEditor
@@ -9,11 +9,13 @@ documentation: ug
 
 # Undo and Redo in Blazor DocumentEditor Component
 
-[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
+The [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) (Document Editor) automatically tracks the history of all editing actions performed in a document. This history allows users to reverse (undo) their recent actions or re-apply (redo) actions that were undone.
+
+This functionality is enabled by default through the integrated `EditorHistoryModule`.
 
 ## Enable or disable history
 
-Inject the [`EditorHistory`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorHistoryModule.html) module in your application to provide history preservation functionality for [`DocumentEditor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html). Refer to the following code example.
+Inject the [`EditorHistory`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorHistoryModule.html) module into the application to enable history preservation functionality for the [`DocumentEditor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html). Refer to the following code example.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
@@ -31,7 +33,7 @@ Inject the [`EditorHistory`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 }
 ```
 
-You can enable or disable history preservation for a document editor instance any time using the `EnableEditorHistory` property. Refer to the following sample code.
+History preservation for a Document Editor instance can be enabled or disabled at any time using the `EnableEditorHistory` property. Refer to the following sample code.
 
 ```csharp
 documentEditor.EnableEditorHistory = true;
@@ -60,4 +62,4 @@ History of editing actions will be maintained in stack, so that the last item wi
 await container.DocumentEditor.EditorHistory.SetRedoLimitAsync(400);
 ```
 
-You can also explore our [Blazor Word Processor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the document editor.
+Explore the [Blazor Word Processor example](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) to understand how to render and configure the Document Editor.
