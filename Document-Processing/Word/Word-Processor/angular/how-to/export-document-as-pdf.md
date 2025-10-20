@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 In this article, we are going to see how to export the document as PDF format. You can export the document as PDF in following ways:
 
-Check out this YouTube guide on exporting documents to PDF with Angular Document Editor.
+To quickly get started with exporting to PDF in Document Editor, please check out the video below.
 
 {% youtube "https://www.youtube.com/watch?v=JVRSc865Pa4" %}
 
