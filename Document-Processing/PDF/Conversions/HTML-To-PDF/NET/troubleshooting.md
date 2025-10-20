@@ -199,7 +199,7 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 <th style="font-size:14px" width="100px">Solution
 </th>
 <td>Ensure all required dependencies for the Chromium are installed on the system. This may include additional libraries or packages.
-Here's how you can modify your Dockerfile:
+Here's how you can modify your Docker file:
 {% highlight dockerfile %}
 FROM your-base-image
 
