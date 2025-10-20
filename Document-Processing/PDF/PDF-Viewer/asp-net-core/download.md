@@ -8,7 +8,7 @@ publishingplatform: document-processing
 documentation: ug
 ---
 
-# Download a PDF document in PDF Viewer component
+# Download PDF document in PDF Viewer component
 
 The PDF Viewer supports downloading the loaded PDF file. You can enable or disable the download using the following example.
 
@@ -34,7 +34,7 @@ The PDF Viewer supports downloading the loaded PDF file. You can enable or disab
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/download.png)
+![Alt text](./images/download.png)
 
 You can also programmatically invoke the download action using the `download()` method, as shown below:
 

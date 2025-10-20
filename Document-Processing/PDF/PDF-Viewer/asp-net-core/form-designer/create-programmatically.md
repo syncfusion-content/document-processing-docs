@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create form fields programmatically in ASP.NET Core PDF Viewer | Syncfusion
+title: Programmatically Add Fields in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to add, update, delete, save, print, validate, and import/export form fields in the Syncfusion ASP.NET Core PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
@@ -677,8 +677,8 @@ The following code shows how to configure default properties for an initial fiel
 
 <script type="text/javascript">
 
-window.onload = function () {
-    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+window.load = function () {
+    var viewer = document.getElementById('viewer').ej2_instances[0];
     viewer.initialFieldSettings  = {
         // Set the name of the form field element.
         name: 'Initial',

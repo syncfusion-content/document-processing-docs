@@ -212,6 +212,9 @@ The following example illustrates how to handle the `annotationMouseover` event.
     }
 </script>
 
+{% endhighlight %}
+{% endtabs %}
+
 ### annotationMove
 
 The [annotationMove](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationMove) event is triggered when an annotation is moved over the page of the PDF document.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Free text annotation in EJ2 ASP.NET Core PDF Viewer control | Syncfusion
+title: Free text annotation in EJ2 ASP.NET Core PDF Viewer | Syncfusion
 description: Learn about free text annotations in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
 platform: document-processing
 control: PDF Viewer
