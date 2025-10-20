@@ -16,7 +16,6 @@ To quickly get started with exporting to PDF in Document Editor, please check ou
 
 {% youtube "https://www.youtube.com/watch?v=JVRSc865Pa4" %}
 
-
 ## Export the document as pdf in client-side
 
 Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as pdf using [`exportAsImage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#exportasimage) API. Here, all pages will be converted to image and inserted as pdf pages(works like print as PDF).
