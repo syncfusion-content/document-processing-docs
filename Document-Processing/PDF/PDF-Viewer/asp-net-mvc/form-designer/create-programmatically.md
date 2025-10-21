@@ -1,29 +1,29 @@
 ---
 layout: post
-title: Create Programmatically in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn here all about Create Programmatically in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Programmatically Add Fields in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to add, update, delete, save, print, validate, and import/export form fields in the Syncfusion ASP.NET MVC PDF Viewer component.
 platform: document-processing
-control: Create Programmatically
+control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Create form fields programmatically
+# Create form fields programmatically in ASP.NET MVC PDF Viewer
 
-The PDF Viewer control provides the option to add, edit and delete the Form Fields. The Form Fields type supported by the PDF Viewer Control are:
+The PDF Viewer component provides options to add, edit, and delete form fields. The supported form field types are:
 
-* Textbox
-* Password
-* CheckBox
-* RadioButton
-* ListBox
-* DropDown
-* SignatureField
-* InitialField
+- Textbox
+- Password
+- CheckBox
+- RadioButton
+- ListBox
+- DropDown
+- Signature field
+- Initial field
 
 ## Add a form field to PDF document programmatically
 
-Using addFormField method, the form fields can be added to the PDF document programmatically. We need to pass two parameters in this method. They are Form Field Type and Properties of Form Field Type. To add form field programmatically, Use the following code.
+Use the addFormField method to add form fields programmatically. Pass the form field type and the corresponding property object as parameters. The following example demonstrates adding a field on document load.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -57,7 +57,7 @@ Using addFormField method, the form fields can be added to the PDF document prog
 
 ## Edit/Update form field programmatically
 
-Using updateFormField method, Form Field can be updated programmatically. We should get the Form Field object/Id from FormFieldCollections property that you would like to edit and pass it as a parameter to updateFormField method. The second parameter should be the properties that you would like to update for Form Field programmatically. We have updated the value and background Color properties of Textbox Form Field.
+Use the updateFormField method to modify a form field programmatically. Retrieve the target field from the formFieldCollections property (by object or ID) and pass it as the first parameter. Provide the properties to update as the second parameter. The following example updates the background color of a Textbox field.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -95,7 +95,7 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 
 ## Delete form field programmatically
 
-Using deleteFormField method, the form field can be deleted programmatically. We should retrieve the Form Field object/Id from FormFieldCollections property that you would like to delete and pass it as a parameter to deleteFormField method. To delete a Form Field programmatically, use the following code.
+Use the deleteFormField method to remove a form field programmatically. Retrieve the target field from the formFieldCollections property (by object or ID) and pass it to deleteFormField. The following example deletes the first form field.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -131,13 +131,13 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 {% endhighlight %}
 {% endtabs %}
 
-## Saving the form fields
+## Save form fields
 
-When the download icon is selected on the toolbar, the Form Fields will be saved in the PDF document and this action will not affect the original document. Refer the below GIF for further reference.
+Selecting the Download icon on the toolbar saves the form fields in the exported PDF without modifying the original document. See the following GIF for reference.
 
-![Alt text](../images/saveformfield.gif)
+![Save form fields from the PDF Viewer](../images/saveformfield.gif)
 
-You can invoke download action using following code snippet.
+You can invoke the download action using the following code snippet.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -156,6 +156,7 @@ You can invoke download action using following code snippet.
 ```
 {% endhighlight %}
 {% highlight html tabtitle="Server-Backed" %}
+
 ```html
     <div style="width:100%;height:600px">
           @Html.EJS().PdfViewer("pdfviewer").DocumentLoad("download").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableDownload(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
@@ -171,13 +172,13 @@ You can invoke download action using following code snippet.
 {% endhighlight %}
 {% endtabs %}
 
-## Printing the form fields
+## Print form fields
 
-When the print icon is selected on the toolbar, the PDF document will be printed along with the Form Fields added to the pages and this action will not affect the original document. Refer the below GIF for further reference.
+Selecting the Print icon on the toolbar prints the PDF with the added form fields. This action does not modify the original document. See the following GIF for reference.
 
-![Alt text](../images/printformfield.gif)
+![Print the PDF with form fields](../images/printformfield.gif)
 
-You can invoke print action using the following code snippet.,
+You can invoke the print action using the following code snippet:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -214,17 +215,17 @@ You can invoke print action using the following code snippet.,
 {% endhighlight %}
 {% endtabs %}
 
-## Open the existing PDF document
+## Open an existing PDF document
 
-We can open the already saved PDF document contains Form Fields in it by clicking the open icon in the toolbar. Refer the below GIF for further reference.
+Open a PDF that already contains form fields by clicking the Open icon on the toolbar. See the following GIF for reference.
 
-![Alt text](../images/openexistingpdf.gif)
+![Open a PDF with existing form fields](../images/openexistingpdf.gif)
 
 ## Validate form fields
 
-The form fields in the PDF Document will be validated when the `enableFormFieldsValidation` is set to true and hook the validateFormFields. The validateFormFields will be triggered when the PDF document is downloaded or printed with the non-filled form fields. The non-filled fields will be obtained in the `nonFillableFields` property of the event arguments of validateFormFields.
+Form fields are validated when `enableFormFieldsValidation` is set to true and the validateFormFields event is handled. The event triggers during download or print if required fields are not filled. The non-filled fields are available in the `nonFillableFields` property of the event arguments.
 
-Add the following code snippet to validate the form fields,
+Add the following code to validate form fields:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -257,20 +258,20 @@ Add the following code snippet to validate the form fields,
 
 ## Export and import form fields
 
-The PDF Viewer control provides the support to export and import the form field data in the following formats using the `importFormFields`, `exportFormFields`, and `exportFormFieldsAsObject` methods.
+The PDF Viewer component supports exporting and importing form field data using the `importFormFields`, `exportFormFields`, and `exportFormFieldsAsObject` methods in the following formats:
 
-* FDF
-* XFDF
-* JSON
+- FDF
+- XFDF
+- JSON
 
 ### Export and import as FDF
 
 Using the `exportFormFields` method, the form field data can be exported in the specified data format. This method accepts two parameters:
 
-* The first one must be the destination path for the exported data. If the path is not specified, it will ask for the location while exporting.
-* The second parameter should be the format type of the form data.
+- The first parameter is the destination path for the exported data. If the path is not specified, a location is requested during export.
+- The second parameter specifies the format type for the form data.
 
-The following code explains how to export the form field data as FDF.
+The following code exports and imports form field data as FDF.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -333,7 +334,7 @@ The following code explains how to export the form field data as FDF.
 
 ### Export and import as XFDF
 
-The following code explains how to export the form field data as XFDF.
+The following code exports and imports form field data as XFDF.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -392,7 +393,7 @@ The following code explains how to export the form field data as XFDF.
 
 ### Export and import as JSON
 
-The following code explains how to export the form field data as JSON.
+The following code exports and imports form field data as JSON.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -453,9 +454,9 @@ The following code explains how to export the form field data as JSON.
 
 ### Export and import as Object
 
-The PDF Viewer control supports exporting the form field data as an object, and the exported data will be imported into the current PDF document from the object.
+The PDF Viewer component supports exporting the form field data as an object and importing that data back into the current PDF document.
 
-The following code shows how to export the form field data as an object and import the form field data from that object into the current PDF document via a button click.
+The following example shows how to export the form field data as an object and import the form field data from that object into the current PDF document via a button click.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -556,22 +557,22 @@ The following code shows how to export the form field data as an object and impo
 {% endhighlight %}
 {% endtabs %}
 
-## Form Field Properties
+## Form field properties
 
-Form field properties in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer allow you to customize and interact with form fields embedded within PDF documents. This documentation provides an overview of the form field properties supported by the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer and explains how to use them effectively.
+Form field properties allow customization and interaction with fields embedded in PDF documents. The following sections outline the supported field types and their configurable settings.
 
-  * Textbox
-  * Password
-  * CheckBox
-  * RadioButton
-  * ListBox
-  * DropDown
-  * SignatureField
-  * InitialField
+- Textbox
+- Password
+- CheckBox
+- RadioButton
+- ListBox
+- DropDown
+- Signature field
+- Initial field
 
 ### Signature and initial fields settings
 
-Using the `updateFormField` method, the form fields can be updated programmatically.
+Use the `updateFormField` method to modify form fields programmatically.
 
 The following code example explains how to update the signature field properties on a button click.
 
@@ -632,7 +633,7 @@ The following code example explains how to update the signature field properties
 {% endhighlight %}
 {% endtabs %}
 
-The following code example explains how to update the properties of the signature field added to the document from the form designer toolbar.
+The following code shows how to configure default properties for a signature field added from the Form Designer toolbar.
 
 <script type="text/javascript">
 
@@ -667,9 +668,9 @@ The following code example explains how to update the properties of the signatur
 
 </script>
 
-![Signature Field Settings](../images/signature_field.png)
+![Signature field settings in the PDF Viewer](../images/signature_field.png)
 
-The following code example explains how to update the properties of the initial field added to the document from the form designer toolbar.
+The following code shows how to configure default properties for an initial field added from the Form Designer toolbar.
 
 <script type="text/javascript">
 
@@ -704,13 +705,13 @@ window.onload = function () {
 
 </script>
 
-![Initial Field Settings](../images/InitialField.png)
+![Initial field settings in the PDF Viewer](../images/initialfield.png)
 
 ### Textbox field settings
 
-Using the `updateFormField` method, the form fields can be updated programmatically.
+Use the `updateFormField` method to modify form fields programmatically.
 
-The following code example explains how to update the Textbox field properties on a button click.
+The following example updates Textbox field properties on a button click.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -793,8 +794,7 @@ The following code example explains how to update the Textbox field properties o
 {% endhighlight %}
 {% endtabs %}
 
-
-The following code example explains how to update the properties of the textbox field added to the document from the form designer toolbar.
+The following code shows how to configure default properties for a Textbox field added from the Form Designer toolbar.
 
 <script type="text/javascript">
 
@@ -840,13 +840,13 @@ window.onload = function () {
 
 </script>
 
-![Textbox Field Settings](../images/Textbox.png)
+![Textbox field settings in the PDF Viewer](../images/Textbox.png)
 
 ### Password field settings
 
-Using the `updateFormField` method, the form fields can be updated programmatically.
+Use the `updateFormField` method to modify form fields programmatically.
 
-The following code example explains how to update the Password field properties on a button click.
+The following example updates Password field properties on a button click.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -927,8 +927,7 @@ The following code example explains how to update the Password field properties 
 {% endhighlight %}
 {% endtabs %}
 
-
-The following code example explains how to update the properties of the password field added to the document from the form designer toolbar.
+The following code shows how to configure default properties for a Password field added from the Form Designer toolbar.
 
 <script type="text/javascript">
 
@@ -972,13 +971,13 @@ window.onload = function () {
 
 </script>
 
-![Password Field Settings](../images/Password.png)
+![Password field settings in the PDF Viewer](../images/Password.png)
 
 ### CheckBox field settings
 
-Using the `updateFormField` method, the form fields can be updated programmatically.
+Use the `updateFormField` method to modify form fields programmatically.
 
-The following code example explains how to update the CheckBox field properties on a button click.
+The following example updates CheckBox field properties on a button click.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -1045,8 +1044,7 @@ The following code example explains how to update the CheckBox field properties 
 {% endhighlight %}
 {% endtabs %}
 
-
-The following code example explains how to update the properties of the checkbox field added to the document from the form designer toolbar.
+The following code shows how to configure default properties for a CheckBox field added from the Form Designer toolbar.
 
 <script type="text/javascript">
 
@@ -1080,13 +1078,13 @@ window.onload = function () {
 
 </script>
 
-![CheckBox Field Settings](../images/Checkbox.png)
+![CheckBox field settings in the PDF Viewer](../images/Checkbox.png)
 
 ### RadioButton field settings
 
-Using the `updateFormField` method, the form fields can be updated programmatically.
+Use the `updateFormField` method to modify form fields programmatically.
 
-The following code example explains how to update the RadioButton field properties on a button click.
+The following example updates RadioButton field properties on a button click.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -1155,8 +1153,7 @@ The following code example explains how to update the RadioButton field properti
 {% endhighlight %}
 {% endtabs %}
 
-
-The following code example explains how to update the properties of the radiobutton field added to the document from the form designer toolbar.
+The following code shows how to configure default properties for a RadioButton field added from the Form Designer toolbar.
 
 <script type="text/javascript">
 
@@ -1190,13 +1187,13 @@ window.onload = function () {
 
 </script>
 
-![RadioButton Field Settings](../images/Radiobutton.png)
+![RadioButton field settings in the PDF Viewer](../images/Radiobutton.png)
 
 ### ListBox field settings
 
-Using the `updateFormField` method, the form fields can be updated programmatically.
+Use the `updateFormField` method to modify form fields programmatically.
 
-The following code example explains how to update the ListBox field properties on a button click.
+The following example updates ListBox field properties on a button click.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -1285,8 +1282,7 @@ The following code example explains how to update the ListBox field properties o
 {% endhighlight %}
 {% endtabs %}
 
-
-The following code example explains how to update the properties of the listbox field added to the document from the form designer toolbar.
+The following code shows how to configure default properties for a ListBox field added from the Form Designer toolbar.
 
 <script type="text/javascript">
 
@@ -1335,13 +1331,13 @@ window.onload = function () {
 
 </script>
 
-![ListBox Field Settings](../images/Listbox.png)
+![ListBox field settings in the PDF Viewer](../images/Listbox.png)
 
 ### DropDown field settings
 
-Using the `updateFormField` method, the form fields can be updated programmatically.
+Use the `updateFormField` method to modify form fields programmatically.
 
-The following code example explains how to update the DropDown field properties on a button click.
+The following example updates DropDown field properties on a button click.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -1430,8 +1426,7 @@ The following code example explains how to update the DropDown field properties 
 {% endhighlight %}
 {% endtabs %}
 
-
-The following code example explains how to update the properties of the dropdown field added to the document from the form designer toolbar.
+The following code shows how to configure default properties for a DropDown field added from the Form Designer toolbar.
 
 <script type="text/javascript">
 
@@ -1480,4 +1475,4 @@ window.onload = function () {
 
 </script>
 
-![DropDownBox Field Settings](../images/Dropdown.png)
+![DropDown field settings in the PDF Viewer](../images/Dropdown.png)
