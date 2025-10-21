@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open PDF files from Google Drive in SfPdfViewer Component | Syncfusion
-description: Learn here all about how to Open PDF files from Google Drive in Syncfusion Blazor SfPdfViewer component and much more details.
+title: Open PDF files from Google Drive in Blazor SfPdfViewer | Syncfusion
+description: Learn how to open PDF files from Google Drive in the Syncfusion Blazor SfPdfViewer component, including setup, and a working example.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,15 +9,15 @@ documentation: ug
 
 # Open PDF file from Google Drive in Blazor SfPdfViewer
 
-To load a PDF file from Google Drive in a SfPdfViewer, you can follow the steps below
+To load a PDF file from Google Drive in the Blazor SfPdfViewer, follow the steps below.
 
 **Step 1** Set up Google Drive API
 
-You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
+Create a project in Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For detailed guidance, see the [Google Drive documentation](https://developers.google.com/drive/api/guides/enable-sdk).
 
-**Step 2:** Create a Simple SfPdfViewer Sample in blazor
+**Step 2:** Create a simple SfPdfViewer sample in Blazor
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/server-side-application) to create a simple SfPdfViewer sample in blazor. This will give you a basic setup of the SfPdfViewer component.
+Follow the [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) guide to create a basic Blazor application with the SfPdfViewer component.
 
 **Step 3:** Include the following namespaces in the **Index.razor** file.
 
@@ -99,14 +99,14 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 ```
 
-N> Replace **Your Google Drive Folder ID** with your actual Google Drive folder ID, **Your Application name** with your actual application name, **File Name to be Loaded into Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer** with the actual file name you want to load from the Azure container to the Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer and **Your Path to the OAuth 2.0 Client IDs JSON file** with the actual path to your OAuth 2.0 Client IDs JSON file
+N> Replace the placeholders with real values: use the actual Google Drive folder ID for **Your Google Drive Folder ID**, the application display name for **Your Application name**, the exact PDF file name for **File Name to be loaded into Syncfusion SfPdfViewer**, and the full path to the OAuth 2.0 Client IDs JSON for **Your Path to the OAuth 2.0 Client IDs JSON file**.
 
-N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
+N> The **FolderId** is the unique identifier of the Drive folder. For example, for `https://drive.google.com/drive/folders/abc123xyz456`, the folder ID is `abc123xyz456`.
 
-N> The **Google.Apis.Drive.v3** NuGet package must be installed in your application to use the previous code example.
+N> Install the **Google.Apis.Drive.v3** NuGet package in the application to use the shown code.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20Google%20Drive)
+[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20Google%20Drive)
 
 ## See also
 
-* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../faqs/how-to-processing-large-files-without-increasing-maximum-message-size)
