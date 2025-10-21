@@ -628,7 +628,6 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 </tr>
 </table>
 
-
 ## Converting the HTML to PDF fails in x32 bit windows system environment
 
 <table>
@@ -652,6 +651,32 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 </tr>
 </table>
 
+## Hyperlinks appearances do not navigate to their referenced URLs when using `CreateTemplate` and `DrawPdfTemplate` methods
+
+<table>
+<th style="font-size:14px" width="100px">Issue
+</th>
+<th style="font-size:14px">Hyperlinks appearances do not navigate to their referenced URLs when using `CreateTemplate` and `DrawPdfTemplate` methods
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The <b>CreateTemplate</b> and <b>DrawPdfTemplate</b> methods generally do not import annotation details, including hyperlink information, from the original PDF document. This means that while the visual appearance of a hyperlink (blue, underlined text) might be preserved, the underlying functionality of navigating to the URL is not transferred.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>A workaround involves manually extracting and re-applying hyperlink annotations. This can be achieved by following these steps:<br>
+1.<b>Extract Annotations</b>: Before creating and drawing the PDF template, extract all annotations, specifically hyperlink annotations, from the original PDF document.<br>
+2.<b>Draw PDF Template</b>: Use the CreateTemplate and DrawPdfTemplate methods to draw the PDF content into a new document.<br>
+3.<b>Incorporate Annotations</b>: After the template has been drawn, programmatically add the extracted hyperlink annotations to the corresponding positions in the new document. This will restore the interactive functionality of the hyperlinks.<br>
+Please refer to the sample project: <a href="https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTMLtoPDF_Hyperlink/.NET">HTML-to-PDF-Hyperlink</a>
+</td>
+</tr>
+</table>
 
 ## ERROR:The specified module could not be found in windows server 2012 R2
 
@@ -1381,7 +1406,7 @@ This issue may occur due to one of the following reasons:<br>
 <tr>
 <th style="font-size:14px" width="100px">Solution</th>
 <td>
-To resolve the issue and ensure successful HTML to PDF conversion in Azure App Service (Linux), follow these steps:
+To resolve the issue and ensure successful HTML to PDF conversion in Azure App Service (Linux), follow these steps:<br>
 
 1: <b>Grant File Access Permissions</b><br>
 
