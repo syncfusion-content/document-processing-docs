@@ -193,7 +193,7 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 <td>The required dependencies for the Chromium are not installed on the system.
 </td>
 </tr>
-</tabl
+</table>
 
 ## Application Crash in Syncfusion 29.X.X Due to Missing `locales` Folder Required by Chromium During HTML Rendering or Conversion
 
