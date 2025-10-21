@@ -186,12 +186,17 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 </th>
 <th style="font-size:14px">Failed to launch chromium: Missing required dependent packages
 </th>
-
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
 <td>The required dependencies for the Chromium are not installed on the system.
 </td>
+</tr>
+<tr>	
+<th style="font-size:14px" width="100px">Solution	
+</th>	
+<td>Ensure all required dependencies for the Chromium are installed on the system. This may include additional libraries or packages.	
+</td>	
 </tr>
 </table>
 
