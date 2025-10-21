@@ -673,7 +673,7 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 1.<b>Extract Annotations</b>: Before creating and drawing the PDF template, extract all annotations, specifically hyperlink annotations, from the original PDF document.<br>
 2.<b>Draw PDF Template</b>: Use the CreateTemplate and DrawPdfTemplate methods to draw the PDF content into a new document.<br>
 3.<b>Incorporate Annotations</b>: After the template has been drawn, programmatically add the extracted hyperlink annotations to the corresponding positions in the new document. This will restore the interactive functionality of the hyperlinks.<br>
-Please refer to the sample project: <a href="">HTML-to-PDF-Hyperlink</a>
+Please refer to the sample project: <a href="https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTMLtoPDF_Hyperlink/.NET">HTML-to-PDF-Hyperlink</a>
 </td>
 </tr>
 </table>
