@@ -9,7 +9,7 @@ documentation: ug
 ---
 
 
-# Handwritten Signature
+# Handwritten Signature Annotation
 
 The PDF Viewer supports adding handwritten signatures to PDF documents. Handwritten signatures reduce paperwork during reviews and provide a simple way to verify documents digitally.
 
