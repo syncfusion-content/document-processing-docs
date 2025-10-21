@@ -1,39 +1,39 @@
 ---
 layout: post
-title: Save PDF to Azure Blob Storage in ASP.NET MVC PdfViewer | Syncfusion
-description: Save PDF files to Azure Blob Storage in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Save PDF files to Azure Blob Storage in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to save PDF files to Azure Blob Storage using the Syncfusion ASP.NET MVC PDF Viewer component in standalone and server-backed configurations.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Save PDF file to Azure Blob Storage
+# Save PDF files to Azure Blob Storage
 
-PDF Viewer allows to save PDF file to Azure Blob Storage using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to save PDF to Azure Blob Storage.
+The ASP.NET MVC PDF Viewer component supports saving PDF files to Azure Blob Storage using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 
 ## Using Standalone PDF Viewer
 
-To save a PDF file to Azure Blob Storage, you can follow the steps below.
+To save a PDF file to Azure Blob Storage, follow these steps:
 
-**Step 1:** Create the Azure Blob Storage account
+**Step 1:** Create the Azure Blob Storage account.
 
 Log in to the Azure Portal. Create a new Storage Account with preferred settings. Note access keys during the setup. Within the Storage Account, create a Blob Container following the steps in this [link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal).
 
-**Step 2:** Create PDF Viewer Sample in ASP.NET MVC
+**Step 2:** Create an ASP.NET MVC PDF Viewer sample
 
-Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/-with-server-backed#integrate-pdf-viewer-into-an-aspnet-mvc-application) to create a simple PDF Viewer sample in ASP.NET MVC.
+Follow the instructions in this Getting Started [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET MVC. This sets up the basic structure of the PDF Viewer application.
 
-**Step 3:** Modify the `HomeController.cs` File in the Project
+**Step 3:** Modify the `HomeController.cs` file in the project
 
-1. Import the required namespaces at the top of the file.
+1. Import the required namespaces at the top of the file:
 
 ```csharp
 using System.IO;
 using Azure.Storage.Blobs;
 ```
 
-2. Add `Upload()` method to save the downloaded PDF files to Azure Blob Storage container.
+2. Add the following private fields to the `HomeController.cs` class, and assign the values to the corresponding fields. Then, add the `Upload()` handler to upload the saved PDF to an Azure Blob Storage container.
 
 ```csharp
 private readonly string ConnectionString = "Your Connection string from Azure";
@@ -75,11 +75,9 @@ public class UploadFileRequest
 }
 ```
 
-N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name.
+N> Replace the placeholders with the actual Azure Storage connection string and container name.
 
-**Step 4:** Set the PDF Viewer Properties in ASP.NET MVC PDF viewer component
-
-1. Configure a custom toolbar item for the download function to save a PDF file in Azure Blob Storage.
+3. Configure a custom toolbar item for the download function to save a PDF file in Azure Blob Storage.
 
 ```csharp
 <div>
@@ -114,7 +112,7 @@ function toolbarClick(args) {
 </script>
 ```
 
-2. Retrieve the PDF viewer instance and save the current PDF as a Blob. Next, read the Blob as an ArrayBuffer and convert it to a Base64 string using arrayBufferToBase64 method. Finally, upload the Base64 string to Azure Blob Storage using the `HomeController`.
+4. Retrieve the PDF Viewer instance and save the current PDF as a Blob. Then, read the Blob as an ArrayBuffer, convert it to a Base64 string using the `arrayBufferToBase64` method, and upload the Base64 string to Azure Blob Storage using the `HomeController.cs` handler.
 
 ```csharp
 function saveDocument() {
@@ -163,25 +161,25 @@ function arrayBufferToBase64(buffer) {
 }
 ```
 
-N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
+N> Install the **Azure.Storage.Blobs** NuGet package in the application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Standalone).
 
-## Using Server-Backed PDF Viewer
+## Using server-backed PDF Viewer
 
-To save a PDF file to Azure Blob Storage, you can follow the steps below
+To save a PDF file to Azure Blob Storage, follow these steps:
 
 **Step 1:** Create the Azure Blob Storage account
 
 Log in to the Azure Portal. Create a new Storage Account with preferred settings. Note access keys during the setup. Within the Storage Account, create a Blob Container following the steps in this [link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal).
 
-**Step 2:** Create PDF Viewer Sample in ASP.NET MVC
+**Step 2:** Create an ASP.NET MVC PDF Viewer sample
 
-Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/-with-server-backed#integrate-pdf-viewer-into-an-aspnet-mvc-application) to create a simple PDF Viewer sample in ASP.NET MVC.
+Follow the instructions in this Getting Started [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET MVC.
 
-**Step 3:** Modify the `HomeController.cs` File in the Project
+**Step 3:** Modify the `HomeController.cs` file in the project
 
-1. Import the required namespaces at the top of the file.
+1. Import the required namespaces at the top of the file:
 
 ```csharp
 using System.IO;
@@ -189,7 +187,7 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Specialized;
 ```
 
-3. Modify the `Download()` method to save the downloaded PDF files to Azure Blob Storage container
+2. Modify the `Download()` method to save the downloaded PDF files to the Azure Blob Storage container.
 
 ```csharp
 
@@ -230,11 +228,11 @@ public ActionResult Download(jsonObjects jsonObject)
 
 ```
 
-N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name
+N> Replace the placeholders with the actual Azure Storage connection string and container name.
 
-**Step 4:** Set the PDF Viewer Properties in ASP.NET MVC PDF viewer component
+**Step 3:** Set the PDF Viewer properties in the ASP.NET MVC PDF Viewer component
 
-Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Azure Blob Storage. Ensure that you correctly pass the document name from the files available in your azure container to the documentPath property.
+Set the `documentPath` property of the PDF Viewer component to the desired PDF file name that you wish to load from Azure Blob Storage. Ensure that the document exists in the target container.
 
 ```csharp
 
@@ -250,6 +248,6 @@ Set the `documentPath` property of the PDF viewer component to the desired name 
 
 ```
 
-N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
+N> Install the **Azure.Storage.Blobs** NuGet package in the application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Server-Backend).
