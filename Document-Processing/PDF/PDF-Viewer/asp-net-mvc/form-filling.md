@@ -1,33 +1,32 @@
 ---
 layout: post
-title: Form Filling in ASP.NET MVC Pdfviewer Component | Syncfusion
-description: Learn here all about Form Filling in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Form filling in ASP.NET MVC PDF Viewer control | Syncfusion
+description:  Learn how to view, fill, export, and import PDF form fields with ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
+# Form filling in ASP.NET MVC PDF Viewer Component
 
-# Form Filling in the ASP.NET MVC PDF Viewer component
+The PDF Viewer component displays existing form fields in a PDF document and enables filling and downloading filled data.
 
-PDF Viewer component allows you to display the form fields available in the PDF document. By using this, you can edit and download the form fields.
+The form fields displayed in the Pdf Viewer are:
 
-The form fields displayed in the PDF Viewer are:
+* TextBox
+* Password
+* CheckBox
+* RadioButton
+* ListBox
+* DropDown
+* SignatureField
+* InitialField
 
-* Text box
-* Password box
-* Combo box
-* Check box
-* Radio Button
-* Signature Field
-* List box
-
-![FormFilling](.../images/formfilling.png)
+![Form filling in ASP.NET MVC](./images/formfilling.png)
 
 ## Disabling form fields
 
-The PDF Viewer control provides an option to disable the form fields feature. The code sample for disabling the form fields is as follows.
+The PDF Viewer control provides an option to disable interaction with form fields. Use the following configuration to disable form fields in the viewer.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -48,29 +47,33 @@ The PDF Viewer control provides an option to disable the form fields feature. Th
 
 ## How to draw handwritten signature in the signature field
 
-Signature can be added to the Signature field by using the following steps:
+Add a handwritten signature to a Signature field by following these steps:
 
-* Click the Signature Field in the PDF document. The signature panel will appear.
+* Click the signature field in the PDF document to open the signature panel.
 
-![SignatureField](../images/signaturefield.png)
+![Signature field in ASP.NET MVC PdfViewer](./images/signaturefield.png)
 
 * Draw the signature in the signature panel.
 
-![SignaturePanel](../images/signature.png)
+![Displaying signature panel in ASP.NET MVC PdfViewer](./images/signature.png)
 
-* Click the **CREATE** button, the drawn signature will be added in the signature field.
+* Click the **CREATE** button. The drawn signature is added to the signature field.
 
-![Signature](../images/sign.png)
+![Displaying signature in ASP.NET MVC PdfViewer](./images/sign.png)
 
 ## Delete the signature inside the signature field
 
-You can also delete the signature in the signature field by using Delete Option in the annotation toolbar.
+Delete a signature placed in a signature field by using the Delete option in the annotation toolbar.
 
-![DeleteSign](../images/deletesign.png)
+![Deleting signature in ASP.NET MVC PdfViewer](./images/deletesign.png)
 
-## Import and export form fields
+## Export and import form fields
 
-The PDF Viewer control provides the support to import and export form fields using a JSON object in the PDF document.
+The PDF Viewer control provides the support to export and import the form field data in the following formats using the `importFormFields`, `exportFormFields`, and `exportFormFieldsAsObject` methods.
+
+* FDF
+* XFDF
+* JSON
 
 ## Importing form fields using PDF Viewer API
 
@@ -126,3 +129,8 @@ You can export the form fields as JSON file in code behind as the following code
 ```
 {% endhighlight %}
 {% endtabs %}
+
+## See also
+
+* [Handwritten Signature in ASP.NET MVC PDF Viewer Component](./annotation/signature-annotation)
+* [Form Designer](./form-designer/form-field-events)

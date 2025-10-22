@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with EJ2 ASP.NET MVC PDF Viewer Control | Syncfusion
-description: Learn how to getting started with PDF Viewer control in ASP.NET MVC application. You can view and comment on PDFs in ease and also can fill form fields.
+title: Getting started with the ASP.NET MVC standalone PDF Viewer | Syncfusion
+description: Get started with the standalone Syncfusion ASP.NET MVC PDF Viewer. Add scripts/styles, configure the view, and load a PDF using documentPath and resourceUrl.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
@@ -10,13 +10,15 @@ documentation: ug
 
 # Getting Started with ASP.NET MVC Standalone PDF Viewer Control
 
-The [ASP.NET MVC PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) control is used to viewing and printing PDF files in any web application. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. Thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
+The [ASP.NET MVC PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) enables viewing and printing PDF files in web applications. It offers core interactions such as zooming, scrolling, text search, text selection, and copy. Thumbnails, bookmarks, hyperlinks, and a table of contents simplify navigation within and across PDF files.
 
-This section briefly explains about how to integrate ASP.NET MVC PDF Viewer control in your ASP.NET MVC application using Visual Studio.
+This guide explains how to integrate the ASP.NET MVC PDF Viewer into an ASP.NET MVC application using Visual Studio.
 
 ## Prerequisites
 
 [System requirements for ASP.NET MVC controls](https://help.syncfusion.com/document-processing/system-requirements)
+
+Before running the application, register a Syncfusion license key as described in the licensing documentation: https://help.syncfusion.com/common/essential-studio/licensing/license-key
 
 ## Integrate PDF Viewer into an ASP.NET MVC application
 
@@ -46,7 +48,7 @@ Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
 
 ## Add style sheet
 
-The theme is referred using CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` file as follows,
+The theme is referenced by using a CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` as follows:
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Layout.cshtml" %}
@@ -60,11 +62,11 @@ The theme is referred using CDN inside the `<head>` of `~/Views/Shared/_Layout.c
 {% endhighlight %}
 {% endtabs %}
 
-N> Checkout the [Themes topic](https://ej2.syncfusion.com/aspnetmvc/documentation/appearance/theme) to learn different ways (CDN, NPM package, and [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator)) to refer styles in ASP.NET MVC application, and to have the expected appearance for Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls.
+N> Check out the [Themes topic](https://ej2.syncfusion.com/aspnetmvc/documentation/appearance/theme) to learn different ways (CDN, NPM package, and [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator)) to reference styles in an ASP.NET MVC application and ensure the expected appearance for Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls.
 
 ## Add script reference
 
-Add the required scripts using CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` file as follows,
+Add the required scripts from the CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` as follows:
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Layout.cshtml" %}
@@ -78,15 +80,15 @@ Add the required scripts using CDN inside the `<head>` of `~/Views/Shared/_Layou
 {% endhighlight %}
 {% endtabs %}
 
-### Steps to Load PDF Viewer with Local script and style
+### Steps to load the PDF Viewer with local script and style
 
-To use local resources with your PDF Viewer, follow these steps:
+To use local resources with the PDF Viewer, follow these steps:
 
-**Step 1:** Place the `ej2.min.js` script and its related styles in `ej2` directory within the `Content` folder of your ASP.NET MVC application.
+**Step 1:** Place the `ej2.min.js` script and its related styles in an `ej2` directory under the `Content` folder of the ASP.NET MVC application.
 
-**Step 2:** Insert the necessary script and style references within the `<head>` section of your _Layout.cshtml file. Make sure these point to your local copies of the files instead of CDN links.
+**Step 2:** Add the local script and style references in the `<head>` section of `_Layout.cshtml`. Ensure these references point to the local files instead of the CDN links.
 
-By following these steps, you will configure your PDF Viewer to load the required script and style locally. See the code snippet below for reference.
+The following example shows how to reference local resources:
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Layout.cshtml" %}
@@ -123,7 +125,7 @@ N> Add the script manager `EJS().ScriptManager()` at the **end of `<body>`**.
 
 ## Add ASP.NET MVC PDF Viewer control
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer control in `~/Views/Home/Index.cshtml` page. You can load a PDF file in the PDF Viewer by specifying the document name in the DocumentPath property as below.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer control in `~/Views/Home/Index.cshtml`. Load a PDF by setting the `DocumentPath` property to a file name or URL, as shown below.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Index.cshtml" %}
@@ -143,15 +145,15 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer 
 
 [DocumentPath](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_DocumentPath) is the property needed to load a PDF file in the PDF Viewer.
 
-### How to Configure PDF Viewer to Use Local Resources
+### How to configure the PDF Viewer to use local resources
 
-To utilize the `resourceUrl` and `documentPath` locally with your PDF Viewer, follow these instructions:
+To load resources locally, configure the `resourceUrl` and `documentPath` properties as follows:
 
-**Step 1:** Ensure that your application includes the `ej2-pdfviewer-lib` folder. This folder must contain the `pdfium.js`, `pdfium.wasm` files, and the PDF file that you intend to display. These should be located in the `Content` folder within your project.
+**Step 1:** Ensure that the application includes the `ej2-pdfviewer-lib` folder under `Content`. This folder must contain `pdfium.js`, `pdfium.wasm`, and the PDF file to display.
 
-**Step 2:** Assign local file paths to the `documentPath` and `resourceUrl` properties within the PDF Viewer setup. The `documentPath` should refer to your PDF file, while the `resourceUrl` should point to the directory containing the supporting resources.
+**Step 2:** Assign local paths to the `documentPath` and `resourceUrl` properties in the PDF Viewer setup. The `documentPath` points to the PDF file, and the `resourceUrl` points to the folder that contains the supporting resources.
 
-By following these steps, you will configure your PDF Viewer to load the required resources locally. See the code snippet below for reference.
+The following example shows how to reference local resources:
 
 {% tabs %}
 {% highlight c# tabtitle="~/Index.cshtml" %}
@@ -172,10 +174,10 @@ By following these steps, you will configure your PDF Viewer to load the require
 
 View the sample in GitHub to [load PDF Viewer with local resources](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally/PdfViewer_MVC)
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer control will be rendered in the default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer will render in the default web browser.
 
 ![ASP.NET MVC PDF Viewer Control](AspNetMVC_Images/pdfviewer-control.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20MVC%20Razor%20Examples).
 
-N> You can refer to our [ASP.NET MVC PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET MVC PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/pdfviewer/default#/tailwind3) to understand the core features of PDF Viewer.
+N> Refer to the [ASP.NET MVC PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) feature tour and explore the [ASP.NET MVC PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/pdfviewer/default#/tailwind3) to learn more about core features.
