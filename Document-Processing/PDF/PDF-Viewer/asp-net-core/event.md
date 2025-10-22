@@ -2,8 +2,7 @@
 title: Events in ASP.NET Core Pdfviewer control | Syncfusion
 description: Learn here all about Events in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: PDF Viewer 
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
 ---
 

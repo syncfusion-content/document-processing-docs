@@ -4,7 +4,6 @@ title: Download in  EJ2 ASP.NET CORE PDF Viewer | Syncfusion
 description: Learn here all about Download in ASP.NET CORE PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Download
-publishingplatform: document-processing
 documentation: ug
 ---
 

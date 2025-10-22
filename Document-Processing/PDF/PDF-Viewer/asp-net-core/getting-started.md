@@ -4,7 +4,6 @@ title: Getting started with the ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to get started with the ASP.NET Core PDF Viewer control. View, print, search, select text, annotate, and fill forms in PDF files.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

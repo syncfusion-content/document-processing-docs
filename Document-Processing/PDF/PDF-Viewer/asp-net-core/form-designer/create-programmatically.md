@@ -4,7 +4,6 @@ title: Programmatically Add Fields in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to add, update, delete, save, print, validate, and import/export form fields in the Syncfusion ASP.NET Core PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

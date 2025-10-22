@@ -4,7 +4,6 @@ title: Globalization in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn about globalization in the Syncfusion ASP.NET Core PDF Viewer component, including localization strings and culture settings.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

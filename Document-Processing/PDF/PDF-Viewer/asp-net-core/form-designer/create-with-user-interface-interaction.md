@@ -4,7 +4,6 @@ title: Design form fields in the ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to add, drag, resize, edit, and manage form fields using the UI in the Syncfusion ASP.NET Core PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

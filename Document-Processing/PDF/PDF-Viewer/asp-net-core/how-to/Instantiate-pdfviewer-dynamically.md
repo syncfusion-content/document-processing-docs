@@ -4,7 +4,6 @@ title: Dynamically instantiate the ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to instantiate the Syncfusion ASP.NET Core PDF Viewer at runtime and load PDF documents on demand.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
