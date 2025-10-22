@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Image in JavaScript (ES5) Document editor control
 
-Document Editor supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertimage) method. Refer to the following sample code.
+Document Editor supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/#insertimage) method. Refer to the following sample code.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/image-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/image-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/image-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/image-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
