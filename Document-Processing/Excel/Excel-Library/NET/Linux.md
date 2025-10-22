@@ -10,6 +10,41 @@ documentation: UG
 
 The frequently asked questions about using XlsIO in Linux environment are listed below.
 
+## How to copy necessary fonts to Linux containers?
+
+Excel to PDF conversion on Linux relies on system fonts available inside the container. By default, only a limited set is installed. Copy the required fonts to "/usr/local/share/fonts/" and refresh the font cache so they are used during conversion. Refer to the steps below to copy fonts.
+
+**Steps:**
+
+Step 1: Create a **Fonts** folder inside your project (or next to the solution).
+Step 2: Place the required TrueType/OpenType font files (.ttf/.otf) in that folder.
+Step 3: Add the following to your Dockerfile to install font support, copy fonts, and refresh the cache.
+
+{% tabs %}
+
+{% highlight Dockerfile %}
+
+# Install native font support 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    fontconfig \
+    libfreetype6 \
+    libpng16-16 \
+    libexpat1 \
+    libuuid1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy fonts from your project into the container
+COPY ["ProjectName/Fonts/*.*", "/usr/local/share/fonts/"]
+
+# Refresh the font cache so the new fonts are recognized
+RUN fc-cache -f -v 
+
+{% endhighlight %}     
+
+{% endtabs %}   
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Linux/Copy%20fonts%20to%20linux%20containers/.NET/Copy_fonts_to_linux_containers).
+
 ## How to set culture/locale in Docker containers (Windows and Linux)?
  
 By default, Culture/Locale that is specified in the container image will be used in Docker containers.
