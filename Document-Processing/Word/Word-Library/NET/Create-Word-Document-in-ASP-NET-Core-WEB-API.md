@@ -18,21 +18,17 @@ Step 1: Create a new C# ASP.NET Core Web API project.
 
 ![Create ASP.NET Core Web API project in Visual Studio](ASP-NET-Core-WEB-API-images/ASP-NET-Core-Web-API-template.png)
 
-Step 2: Add a name for the project.
-
-![Name the project](ASP-NET-Core-WEB-API-images/ASP-NET-Core-Web-API-Project-name.png)
-
-Step 3: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org).
+Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org).
 
 ![Install Syncfusion.DocIO.Net.Core NuGet Package](ASP-NET-Core-WEB-API-images/Nuget-Package-NET-Core.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Add a new API controller empty file in the project.
+Step 3: Add a new API controller empty file in the project.
 
 ![Add empty API controller to the project](ASP-NET-Core-WEB-API-images/Empty-API-Controller.png)
 
-Step 5: Include the following namespaces in the **ValuesController.cs** file.
+Step 4: Include the following namespaces in the **ValuesController.cs** file.
 
 {% tabs %}
 
@@ -46,7 +42,7 @@ using Syncfusion.DocIO.DLS;
 
 {% endtabs %}
 
-Step 6: Add a new action method CreateDocument in **ValuesController.cs** and include the below code snippet to create an Word file and download it.
+Step 5: Add a new action method CreateDocument in **ValuesController.cs** and include the below code snippet to create an Word file and download it.
 
 {% tabs %}
 
@@ -75,7 +71,7 @@ Step 6: Add a new action method CreateDocument in **ValuesController.cs** and in
 
 {% endtabs %}
 
-Step 7: Implement the `GenerateWordDocument` method in `ValuesController.cs`.
+Step 6: Implement the `GenerateWordDocument` method in `ValuesController.cs`.
  
 {% tabs %}
 
@@ -154,11 +150,11 @@ Step 7: Implement the `GenerateWordDocument` method in `ValuesController.cs`.
 
 {% endtabs %}
 
-Step 8: Build the project.
+Step 7: Build the project.
 
 Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 9: Run the project.
+Step 8: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
@@ -169,12 +165,9 @@ A complete working sample is available on [GitHub](https://github.com/Syncfusion
 Step 1: Create a console application.
 ![Create a Console application in Visual Studio](ASP-NET-Core-WEB-API-images/Console-Template-Net-Core.png)
 
-Step 2: Add a name for the application.
-![Name the project](ASP-NET-Core-WEB-API-images/Client-Application-Project-Name.png)
-
 N> Ensure your ASP.NET Core Web API is running on the specified port before running this client. Adjust the port number if your Web API runs on a different port (check the ASP.NET Core app's launch settings).
 
-Step 3: Add the below code snippet in the **Program.cs** file for accessing the Web API using HTTP requests. 
+Step 2: Add the below code snippet in the **Program.cs** file for accessing the Web API using HTTP requests. 
 
 This method sends a GET request to the Web API endpoint to retrieve and save the generated Word document.
 
@@ -213,11 +206,11 @@ This method sends a GET request to the Web API endpoint to retrieve and save the
 
 {% endtabs %}
 
-Step 4: Build the project.
+Step 3: Build the project.
 
 Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 5: Run the project.
+Step 4: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
