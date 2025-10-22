@@ -2,7 +2,7 @@
 layout: post
 title: Print in React Pdfviewer component | Syncfusion
 description: Learn here all about Print in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Print
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
