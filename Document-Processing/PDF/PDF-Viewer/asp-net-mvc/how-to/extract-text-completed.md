@@ -1,18 +1,18 @@
 ---
 layout: post
-title: extractTextCompleted Event in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn here all about extractTextCompleted Event in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Use extractTextCompleted in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to use the extractTextCompleted event and isExtractText property in the Syncfusion ASP.NET MVC PDF Viewer to extract text and bounds.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Extract text using extractTextCompleted Event
+# Use extractTextCompleted to extract text in ASP.NET MVC PDF Viewer
 
-The PDF Viewer library allows you to extract the text from a page along with the bounds. Text extraction can be done using the **isExtractText** property and [**extractTextCompleted**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ExtractTextCompleted) event. `extractTextCompleted` event Triggers when an text extraction is completed in the PDF Viewer.
+Use the **isExtractText** property and the [**extractTextCompleted**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ExtractTextCompleted) event to extract page text along with bounds.
 
-Here is an example of how you can use the extractTextCompleted event:
+The following example shows how to enable text extraction and handle the completion event:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

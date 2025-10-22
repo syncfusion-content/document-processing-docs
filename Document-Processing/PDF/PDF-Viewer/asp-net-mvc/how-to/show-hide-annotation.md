@@ -1,28 +1,22 @@
 ---
 layout: post
-title: Show and Hide Annotations in EJ2 ASP.NET MVC PdfViewer | Syncfusion
-description: Learn how to dynamically show and hide annotations in the Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Toggle annotation visibility in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to toggle annotation visibility in the Syncfusion ASP.NET MVC PDF Viewer by exporting and restoring annotations with custom buttons.
 platform: document-processing
-control: Show and Hide Annotations
+control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Show and Hide Annotations in PDF Viewer
+# Toggle annotation visibility
 
-### Overview
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer lets developers temporarily hide annotations by exporting them, clearing them from the UI, and then importing them back on demand. This workflow is helpful when presenters need to focus on document content or compare marked-up and clean versions of the same file.
 
-This guide demonstrates how to implement functionality to dynamically show and hide annotations in a PDF document loaded in the Syncfusion PDF Viewer using ASP.NET MVC. This feature is particularly useful in scenarios where you need to present a clean view of the document or toggle between annotated and non-annotated views.
+Follow these steps to add annotation toggle controls:
 
-### How to Show and Hide Annotations
+**Step 1:** Create a PDF Viewer sample by following the [ASP.NET MVC getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started). Ensure the viewer scripts, styles, and Razor Page model are registered before wiring annotation logic.
 
-**Step 1:** Set Up the PdfViewer in Your ASP.NET MVC Project
-
-First, follow the steps provided in the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a simple PDF Viewer sample.
-
-**Step 2:** Add Toggle Button and Implementation
-
-Add a button to toggle annotation visibility and implement the necessary JavaScript functions to handle the show/hide functionality:
+**Step 2:** Add buttons that export and delete annotations to hide them, and re-import the cached annotations to show them again. Place the markup and script within the Razor page so the code runs after the viewer is initialized.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -69,6 +63,6 @@ Add a button to toggle annotation visibility and implement the necessary JavaScr
 {% endhighlight %}
 {% endtabs %}
 
-This implementation provides a clean, efficient way to toggle the visibility of annotations in your PDF documents. It's particularly useful for presentation scenarios or when you need to focus on the document content without the distraction of annotations.
+The `exportAnnotationsAsObject` method returns a promise whose resolved value stores the serialized annotations; persist this object securely if it contains sensitive content. The `resourceUrl` must reference a PDF Viewer build that matches your application version, and similar logic can be applied in server-backed samples by replacing the `resourceUrl` with `serviceUrl`.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/How%20to)

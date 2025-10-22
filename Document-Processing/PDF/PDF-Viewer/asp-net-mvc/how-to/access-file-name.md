@@ -1,23 +1,24 @@
 ---
 layout: post
-title: Access File Name in ASP.NET MVC Pdfviewer Component
-description: Learn here all about Access File Name in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Access or Change File Name in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to access the loaded PDF filename and change the download filename using the DocumentLoad and DownloadEnd events in the Syncfusion ASP.NET MVC PDF Viewer.
 platform: document-processing
-control: Access File Name
+control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
+# Access or change the PDF filename
 
-# Access file name
+The Syncfusion ASP.NET MVC PDF Viewer allows you to access the filename of the loaded PDF document, and to customize the filename used when the document is downloaded. This is achieved using the `DocumentLoad` and `DownloadEnd` events.
 
-The PDF Viewer server library allows you to can access the filename of the loaded PDF document using the **documentLoad** and **downloadEnd** event. Using these events, we can access the filename while loading and downloading the PDF document.
+The following steps demonstrate how to access and modify the filename in the PDF Viewer:
 
-The following steps are used to access the file name of loaded PDF document in PDF viewer control,
+**Step 1:** Create an ASP.NET MVC PDF Viewer sample by following the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/).
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create simple PDF Viewer sample.
+**Step 2:** Access and change the filename using the code snippets below.
 
-**Step 2:** Access file name using below code snippet,
+In the `DocumentLoad` or `DownloadEnd` event handler, you can access the original filename from `args.fileName`. To change the filename for download, set the `viewer.downloadFileName` property.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
