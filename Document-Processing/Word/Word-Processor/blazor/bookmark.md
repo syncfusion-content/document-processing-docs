@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bookmarks in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about the Bookmarks in Syncfusion Blazor DocumentEditor component and more.
+description: Learn how to add, navigate, and manage bookmarks in the Syncfusion Blazor Document Editor component both through the UI and programmatically.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
@@ -9,45 +9,46 @@ documentation: ug
 
 # Bookmarks in Blazor DocumentEditor Component
 
-Bookmark is a powerful tool that helps you to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
+A bookmark is a powerful tool that marks a specific place in a document so you can easily find it again. You can insert multiple bookmarks in a document and give each one a unique name for easy identification.
 
-[`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) component provides built-in dialog and using code to add, delete, and navigate bookmarks within the document. To add a bookmark, select a portion of text in the document. After that, jump to the location or add links to it within the document using built-in hyperlink dialog. You can also delete bookmarks from a document.
+The [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) (Document Editor) provides two ways to manage bookmarks: through a built-in dialog or programmatically using API methods. Once a bookmark is added, you can jump to its location or create hyperlinks to it.
 
 N>Bookmark names need to begin with a letter. They can include both numbers and letters, but not spaces. To separate the words, use an underscore. Bookmark names starting with an underscore are called hidden bookmarks. For example, bookmarks generated for table of contents.
 
-You can open the bookmark dialog using Bookmark options in toolbar. You can also explore our [`Blazor Word Processor - Bookmark`](https://blazor.syncfusion.com/demos/document-editor/hyperlinks-and-bookmarks) example to know more about bookmark.
+The bookmark dialog can be opened using the Bookmark option in the toolbar. For more details on bookmark functionality, refer to the [`Blazor Word Processor - Bookmark`](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/hyperlinks-and-bookmarks) example.
 
 
-## Add bookmark
+## Add a bookmark
 
-Using [`InsertBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertBookmarkAsync_System_String_) method, Bookmark can be added to the selected text.
+Use the [`InsertBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertBookmarkAsync_System_String_) method to add a bookmark to the currently selected text.
 
 ```csharp
 await container.DocumentEditor.Editor.InsertBookmarkAsync("Bookmark1");
 ```
 
-## Select Bookmark
+## Navigate to a bookmark
 
-You can select the bookmark in the document using [`SelectBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectBookmarkAsync_System_String_) method by providing Bookmark name to select as shown in the following code snippet.
+Use the [`SelectBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectBookmarkAsync_System_String_) method to navigate to and select a bookmark by its name.
 
 ```csharp
 await container.DocumentEditor.Selection.SelectBookmarkAsync("Bookmark1");
 ```
 
-## Delete Bookmark
+## Delete a Bookmark
 
-You can delete bookmark in the document using [`DeleteBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteBookmarkAsync_System_String_) method as shown in the following code snippet.
+Use the [`DeleteBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteBookmarkAsync_System_String_) method to delete a bookmark by its name.
 
 ```csharp
 await container.DocumentEditor.Editor.DeleteBookmarkAsync("Bookmark1");
 ```
 
-## Get Bookmark
+## Get all bookmarks
 
-You can get all the bookmarks in the document using [`GetBookmarksAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetBookmarksAsync_System_Boolean_) method as shown in the following code snippet.
+Use the [`GetBookmarksAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetBookmarksAsync_System_Boolean_) method to retrieve a list of all bookmarks in the document.
 
 ```csharp
-await container.DocumentEditor.Selection.GetBookmarksAsync(false);
+// Get all bookmarks, including hidden ones.
+await container.DocumentEditor.Selection.GetBookmarksAsync(true);
 ```
 
-N> Parameter denotes is include hidden bookmarks. If false, ignore hidden bookmark.
+N> The boolean parameter of `GetBookmarksAsync` specifies whether to include hidden bookmarks in the result. If `false`, hidden bookmarks are excluded.

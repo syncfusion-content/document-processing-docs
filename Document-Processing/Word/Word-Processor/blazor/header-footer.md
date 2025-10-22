@@ -9,13 +9,15 @@ documentation: ug
 
 # Headers and Footers in Blazor DocumentEditor Component
 
-[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
+Headers and footers are the areas in the top and bottom margins of each page in a document. They are typically used to display content that repeats across multiple pages, such as document titles, company logos, page numbers, and dates.
 
-* First page: Used only on the first page of the section.
-* Even pages: Used on all even numbered pages in the section.
-* Default: Used on all pages of the section, where first or even pages are not applicable or not specified.
+The [Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
 
-You can define this by setting format properties of the corresponding section using the following sample code.
+*   **First Page**: A unique header and footer that appears only on the first page of the section.
+*   **Even Pages**: A header and footer that appears on all even-numbered pages in the section.
+*   **Default**: A header and footer that appears on all pages of the section, where first or even pages are not applicable or not specified.
+
+This can be defined by setting the format properties of the corresponding section.
 
 ```csharp
 //Defines whether different header footer is required for first page of the section
@@ -26,7 +28,7 @@ await container.DocumentEditor.Selection.SectionFormat.SetDifferentOddAndEvenPag
 
 ## Go to header footer region
 
-Double click in header or footer region to move the selection into it. You can also do this by using the following code.
+Double click in header or footer region to move the selection into it. This can also be done using the following code.
 
 ```csharp
 await container.DocumentEditor.Selection.GoToHeaderAsync();
@@ -36,7 +38,7 @@ await container.DocumentEditor.Selection.GoToFooterAsync();
 
 ## Header and footer distance
 
-You can define the distance of header region content from the top of the page. Refer to the following sample code.
+The distance of the header region content from the top of the page can be defined. Refer to the following sample code.
 
 ```csharp
 await container.DocumentEditor.Selection.SectionFormat.SetHeaderDistanceAsync(36);

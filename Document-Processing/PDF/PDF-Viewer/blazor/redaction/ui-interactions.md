@@ -25,11 +25,11 @@ Use the redaction tool on the toolbar to draw over content that should be redact
 
 ![Resizing a redaction annotation](redaction-annotations-images/resizing-redaction-annotation.png)
 
-N> The redaction tool is hidden by default. Customize the toolbar to include it. For instructions, see the [Toolbar customization](../toolbar-customization).
+N> The redaction tool is hidden by default. Customize the toolbar to include it. For instructions, see the [Toolbar customization](../toolbar-customization-overview).
 
 ## Update redaction properties
 
-Update redaction annotations after they are added. Changes can be made using the property panel for the selected redaction or programmatically via the [`EditAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_PdfViewer_SfPdfViewer2_EditAnnotationAsync_Syncfusion_Blazor_PdfViewer_PdfAnnotation_) API.
+Update redaction annotations after they are added. Changes can be made using the property panel for the selected redaction or programmatically via the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) API.
 
 ### Update redaction annotations using the property panel
 
@@ -49,11 +49,11 @@ The property panel can be accessed in multiple ways:
 
 Delete redaction annotations using any of the following:
 
-* **Right-click and select _Delete_** from the context menu.
+* **Right-click and select Delete** from the context menu.
 
 ![Context menu showing Delete for a redaction](redaction-annotations-images/redaction-delete-context-menu.png)
 
-* **Click the _Delete_ button** on the toolbar.
+* **Click the Delete button** on the toolbar.
 
 ![Toolbar delete icon for redaction](redaction-annotations-images/redaction-delete-icon.png)
 
@@ -94,4 +94,4 @@ N> The redaction process is irreversible. Once applied, the original content can
 
 * [Overview of Redaction](./overview)
 * [Programmatic Support in Redaction](./create-programmatically)
-* [Redaction in Mobile View](./redaction-in-mobileView)
+* [Redaction in Mobile View](./mobile-view)

@@ -74,8 +74,8 @@ The following example initializes the PDF Viewer hidden and toggles its visibili
 
 ## See also
 
-* [How to load Microsoft Office files in Blazor SfPdfViewer Component](./load-office-files)
+* [How to load Microsoft Office files in Blazor SfPdfViewer Component](./how-to-load-office-files)
 
-* [How to load PDF documents dynamically in Blazor SfPdfViewer Component](./load-pdf-document-dynamically)
+* [How to load PDF documents dynamically in Blazor SfPdfViewer Component](./how-to-load-pdf-document-dynamically)
 
-* [How to unload the PDF document from Viewer](./unload-the-pdf-document-from-viewer)
+* [How to unload the PDF document from Viewer](./how-to-unload-the-pdf-document-from-viewer)

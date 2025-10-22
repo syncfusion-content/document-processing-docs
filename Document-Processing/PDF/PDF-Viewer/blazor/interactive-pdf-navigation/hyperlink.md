@@ -17,3 +17,7 @@ Use hyperlinks in a PDF to navigate either to external URLs or to destinations w
 If a document does not contain hyperlinks, no link-specific highlighting appears.
 
 ![Hyperlink navigation in Blazor PDF Viewer](../../blazor-classic/images/blazor-pdfviewer-hyperlink-navigation.png)
+
+## See Also
+
+* [Table of content navigation in Blazor SfPdfViewer](./table-of-content)
