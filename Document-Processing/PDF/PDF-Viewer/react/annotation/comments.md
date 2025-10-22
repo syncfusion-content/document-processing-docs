@@ -24,7 +24,8 @@ The PDF Viewer control provides options to add, edit, and delete comments for th
 
 ## Adding a comment to the annotation
 
-Annotation comments replies, and status can be managed to the PDF document using the comment panel.
+
+Annotation comments, replies, and status can be managed to the PDF document using the comment panel.
 
 ### Comment panel
 

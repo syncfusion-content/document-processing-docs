@@ -230,7 +230,10 @@ The following example illustrates how to handle the `annotationMouseLeave` event
 </html>
 ```
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
 import * as React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -302,7 +305,10 @@ The following example illustrates how to handle the `annotationMouseover` event.
 </html>
 ```
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
 import * as React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -374,7 +380,10 @@ The following example illustrates how to handle the `annotationMove` event.
 </html>
 ```
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
 import * as React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -446,7 +455,10 @@ The following example illustrates how to handle the `annotationMoving` event.
 </html>
 ```
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
 import * as React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -518,7 +530,10 @@ The following example illustrates how to handle the `annotationPropertiesChange`
 </html>
 ```
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
 import * as React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -591,7 +606,10 @@ The following example illustrates how to handle the `annotationRemove` event.
 </html>
 ```
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
 import * as React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -663,7 +681,10 @@ The following example illustrates how to handle the `annotationResize` event.
 </html>
 ```
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
 import * as React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -735,7 +756,10 @@ The following example illustrates how to handle the `annotationSelect` event.
 </html>
 ```
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
 import * as React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -807,7 +831,10 @@ The following example illustrates how to handle the `annotationUnselect` event.
 </html>
 ```
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
 import * as React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -879,7 +906,10 @@ The following example illustrates how to handle the `beforeAddFreeText` event.
 </html>
 ```
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
 import * as React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -955,7 +985,10 @@ The following example illustrates how to handle the `addSignature` event.
 </html>
 ```
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
 import * as React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -1027,7 +1060,10 @@ The following example illustrates how to handle the `removeSignature` event.
 </html>
 ```
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
 import * as React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -1099,7 +1135,10 @@ The following example illustrates how to handle the `resizeSignature` event.
 </html>
 ```
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
 import * as React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -1171,7 +1210,10 @@ The following example illustrates how to handle the `signaturePropertiesChange` 
 </html>
 ```
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
 import * as React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -1243,7 +1285,10 @@ The following example illustrates how to handle the `signatureSelect` event.
 </html>
 ```
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
 import * as React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -1315,7 +1360,10 @@ The following example illustrates how to handle the `signatureUnselect` event.
 </html>
 ```
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
 import * as React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
