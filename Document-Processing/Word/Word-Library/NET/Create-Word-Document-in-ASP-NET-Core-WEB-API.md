@@ -25,7 +25,7 @@ Step 1: Create a new C# ASP.NET Core Web API project.
 
 Step 2: Add a name for the project.
 
-![Name the project](ASP-NET-Core-Web-API-images/ASP-NET-Core-Web-API-Project-name.png)
+![Name the project](ASP-NET-Core-WEB-API-images/ASP-NET-Core-Web-API-Project-name.png)
 
 Step 3: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org).
 
@@ -35,7 +35,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 4: Add a new API controller empty file in the project.
 
-![Add empty API controller to the project](ASP-NET-Core-Web-API-images/Empty-API-Controller.png)
+![Add empty API controller to the project](ASP-NET-Core-WEB-API-images/Empty-API-Controller.png)
 
 Step 5: Include the following namespaces in the **ValuesController.cs** file.
 
@@ -63,7 +63,7 @@ Step 6: Add a new action method CreateDocument in **ValuesController.cs** and in
  {
      try
      {
-         var fileDownloadName = $"Output.docx";
+         var fileDownloadName = "Output.docx";
          const string contentType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
          var stream = GenerateWordDocument();
          stream.Position = 0;
@@ -72,7 +72,7 @@ Step 6: Add a new action method CreateDocument in **ValuesController.cs** and in
      catch (Exception ex)
      {
          // Log or handle the exception
-         return BadRequest($"Error occurred while creating Excel file: {ex.Message}");
+         return BadRequest("Error occurred while creating Excel file: " + ex.Message);
      }
  }
  
@@ -175,11 +175,12 @@ Step 1: Create a console application.
 ![Create a Console application in Visual Studio](ASP-NET-Core-WEB-API-images/Console-Template-Net-Core.png)
 
 Step 2: Add a name for the application.
-![Name the project](ASP-NET-Core-Web-API-images/Client-Application-Project-Name.png)
+![Name the project](ASP-NET-Core-WEB-API-images/Client-Application-Project-Name.png)
 
 N> Ensure your ASP.NET Core Web API is running on the specified port before running this client. Adjust the port number if your Web API runs on a different port (check the ASP.NET Core app's launch settings).
 
 Step 3: Add the below code snippet in the **Program.cs** file for accessing the Web API using HTTP requests. 
+
 This method sends a GET request to the Web API endpoint to retrieve and save the generated Word document.
 
 {% tabs %}
@@ -229,4 +230,4 @@ A complete working sample is available on [GitHub](https://github.com/Syncfusion
 
 Upon executing the program, the **Word document** will be generated as follows.
 
-![ASP .NET Core WEB API output Word document](ASP-NET-Core-Web-API-images/ASP-NET-Core-Web-API-Output.png)
+![ASP .NET Core WEB API output Word document](ASP-NET-Core-WEB-API-images/ASP-NET-Core-Web-API-Output.png)
