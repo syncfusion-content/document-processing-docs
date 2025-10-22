@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Save PDF files to Google Cloud Storage in Angular Pdfviewer Component | Syncfusion
-description: Learn here all about how to save PDF files to Google Cloud Storage in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn how to save PDF files to Google Cloud Storage using the Syncfusion Angular PDF Viewer component with a server-backed web service.
 platform: document-processing
-control: Save PDF files to Google Cloud Storage
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF file to Google Cloud Storage
+# Save PDF files to Google Cloud Storage
 
 To save a PDF file to Google Cloud Storage, you can follow the steps below
 
@@ -60,8 +60,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the `Download()` method to save the downloaded PDF files to Google Cloud Storage bucket
-
+5. Modify the `Download()` method to save the downloaded PDF file to the Google Cloud Storage bucket
 ```csharp
 [HttpPost("Download")]
 [Microsoft.AspNetCore.Cors.EnableCors("MyPolicy")]
@@ -107,8 +106,7 @@ N> Replace **Your Bucket name from Google Cloud Storage** with the actual name o
 
 N> Replace **path/to/service-account-key.json** with the actual file path to your service account key JSON file. Make sure to provide the correct path and filename.
 
-**Step 3:**  Set the PDF Viewer Properties in Angular PDF viewer component
-
+**Step 3:**  Set the PDF Viewer properties in the Angular PDF viewer component
 Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Google Cloud Storage. Ensure that you correctly pass the document name from the files available in your bucket to the documentPath property.
 
 ```typescript
@@ -139,6 +137,6 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   }
 ```
 
-N> The **Google.Cloud.Storage.V1** NuGet package must be installed in your application to use the previous code example.
+N> Install the Google.Cloud.Storage.V1 NuGet package in the web service application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-google-cloud-storage)
