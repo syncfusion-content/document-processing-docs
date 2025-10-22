@@ -25,4 +25,4 @@ N> For an overview of capabilities, see the [Blazor SfPdfViewer](https://www.syn
 
 ## See also
 
-* [How to load Microsoft Office files in Blazor SfPdfViewer Component](./load-office-files)
+* [How to load Microsoft Office files in Blazor SfPdfViewer Component](./how-to-load-office-files)

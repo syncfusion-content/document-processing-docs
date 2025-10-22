@@ -159,7 +159,7 @@ For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](
 Add the following stylesheet and script to the head section of the **~/wwwroot/index.html** file.
 
 {% tabs %}
-{% highlight html hl_lines="3 7" %}
+{% highlight html hl_lines="4 9" %}
 
 <head>
     ....

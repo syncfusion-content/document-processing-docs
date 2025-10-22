@@ -42,7 +42,7 @@ The primary toolbar includes the following options:
 
 ![Blazor PDF Viewer primary toolbar with customized items](../blazor-classic/images/blazor-pdfviewer-custom-toolbar.png)
 
-* [Get more info about primary toolbar customization](./toolbar/primary-toolbar-customization)
+* [Get more info about primary toolbar customization](./toolbar-customization/primary-toolbar)
 
 ## Annotation toolbar in Blazor SfPdfViewer Component
 
@@ -60,7 +60,7 @@ The Annotation toolbar appears below the primary toolbar when annotation feature
 
 ![Blazor PDF Viewer annotation toolbar](./images/blazor-annotation-toolbar.png)
 
-* [Get more info about annotation toolbar customization](./toolbar/annotation-toolbar-customization)
+* [Get more info about annotation toolbar customization](./toolbar-customization/annotation-toolbar)
 
 ## Form Designer toolbar in Blazor SfPdfViewer Component
 
@@ -72,7 +72,7 @@ Use the Form Designer toolbar to add and configure interactive form fields in th
 
 ![Blazor PDF Viewer form designer toolbar](./images/blazor-form-deigner-toolbar.png)
 
-* [Get more info about form designer toolbar customization](./toolbar/form-designer-toolbar-customization)
+* [Get more info about form designer toolbar customization](./toolbar-customization/form-designer-toolbar)
 
 ## Redaction toolbar in Blazor SfPdfViewer Component
 
@@ -86,11 +86,11 @@ The Redaction toolbar provides tools to mark and permanently remove sensitive co
 
 ![Blazor PDF Viewer redaction toolbar](./images/blazor-redaction-toolbar.png)
 
-* [Get more info about redaction toolbar customization](./toolbar/redaction-toolbar-customization)
+* [Get more info about redaction toolbar customization](./toolbar-customization/redaction-toolbar)
 
 ## See also
 
-* [Mobile toolbar](./toolbar/mobile-toolbar)
+* [Mobile toolbar](./toolbar-customization/mobile-toolbar)
 * [Adding the shape annotation in PDF viewer](./annotation/shape-annotation)
 * [Adding the redaction annotation in PDF viewer](./annotation/redaction-annotation)
 * [Form designer in PDF viewer](./form-designer/overview)

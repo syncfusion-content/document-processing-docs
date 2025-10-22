@@ -103,7 +103,7 @@ Adjust the annotation opacity using the range slider in the Edit Opacity tool.
 
 ## Setting default properties during control initialization
 
-Default properties for free text annotations can be set during component initialization using FreeTextSettings. These values apply to newly created annotations. Any subsequent changes made from the annotation toolbar affect only annotations created afterward.
+Default properties for free text annotations can be set during component initialization using [FreeTextSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FreeTextSettings). These values apply to newly created annotations. Any subsequent changes made from the annotation toolbar affect only annotations created afterward.
 
 ```cshtml
 
@@ -281,8 +281,10 @@ If a custom font is not installed on the system, use FallbackFontCollection to e
         pdfViewer.FallbackFontCollection.Add("Courier New", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Fonts/COUR.ttf")));
     }
 }
+
 ```
 ### Adding Custom Font Families to the Annotation Toolbar Dropdown
+
 Use the FontFamilies property to add custom font families to the Font Family dropdown in the annotation toolbar.
 
 ```cshtml
@@ -364,4 +366,5 @@ The following example illustrates loading custom fonts in FreeText annotations u
 ## See also
 
 * [How to delete the annotation programmatically](./text-markup-annotation#delete-annotation-programmatically)
-* [How to Load the Font Collection in SfPdfViewer](../how-to/load-font-collection)
+
+* [How to Load the Font Collection in SfPdfViewer](../faqs/how-to-load-font-collection)
