@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Control Annotations Visibility in Angular Pdfviewer|Syncfusion.
-description: Learn how to Control PDF Annotations Visibility in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Control annotation visibility in Angular PDF Viewer | Syncfusion
+description: Learn how to control the visibility of PDF annotations in the Angular PDF Viewer, ensuring annotations appear only in the viewer as needed.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Control PDF Annotations Visibility in PDF Viewer
+# Control annotations visibility in PDF Viewer
 
-### Overview
+Overview
 
-This guide demonstrates how to control the visibility of PDF annotations in documents loaded and saved using the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. This process allows the annotations to be visible only in specific viewers, such as the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer.
+This guide explains how to control the visibility of PDF annotations in documents loaded and saved using the Syncfusion PDF Viewer in TypeScript, so annotations are visible only in the viewer when required.
 
-### How to Control Annotation Visibility
+Steps to control annotation visibility
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
 
 
-**Step 2:**  Set Up Your Angular Component
+**Step 2:** Add buttons for annotation modification and downloading
 
-Create an Angular component and update the template to include a button that triggers the download operation. Additionally, create a function to save the document with the PDF annotation flag set to `noView`.
+Include buttons in the HTML for modifying annotations and downloading the PDF.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -183,6 +183,6 @@ save() {
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, the annotations in a PDF document can be set to be visible in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, providing control over annotation visibility based on different platforms.
+Following these steps ensures annotations are visible in the Syncfusion PDF Viewer while controlling their visibility in the downloaded PDF.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)

@@ -1,28 +1,27 @@
 ---
 layout: post
-title: Annotation Selector Setting in Angular Pdfviewer|Syncfusion.
-description: Learn here all about Configuring Annotation Selector Settings in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Configure annotation selector settings in TypeScript PDF Viewer | Syncfusion
+description: Learn how to configure annotation selector settings in the TypeScript PDF Viewer using annotationSelectorSettings and related options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Configure Annotation Selector Settings
+# Configure Annotation Selector Settings
 
 ### Annotation Selector Settings
 
-The [**annotationSelectorSettings**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectorSettings/) property allows you to customize the appearance and behavior of the annotation selector in the UI.
+Use the [annotationSelectorSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectorSettings/) property to customize the appearance and behavior of the annotation selector in the UI.
 
 ### AnnotationSelectorSettingsModel
 
-The [**AnnotationSelectorSettingsModel**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectorSettingsModel/) defines the settings for the annotation selector, including border colors, sizes, and shapes. It provides fine-grained control over how annotations are displayed and interacted with.
+The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectorSettingsModel/) defines settings such as border colors, sizes, and shapes, enabling fine-grained control over how annotations are displayed and interacted with.
 
-### How to Configure Annotation Selector Settings
+Steps to configure annotation selector settings
 
-**Step 1:**	Create a PdfViewer Instance: Initialize your PdfViewer instance.
-
-**Step 2:** Set the annotationSelectorSettings Property: Define your settings to customize the annotation selector.
+- Step 1: Create a PdfViewer instance and initialize it.
+- Step 2: Set the annotationSelectorSettings property to customize selector behavior.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -153,24 +152,16 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-#### Key properties include:
+#### Key properties
 
-* **selectionBorderColor**: Sets the color for the border around selected annotations.
-
-* **resizerBorderColor**: Sets the color for the border of the resizer handles.
-
-* **resizerFillColor**: Defines the fill color for the resizer handles.
-
-* **resizerSize**: Determines the size of the resizer handles.
-
-* **selectionBorderThickness**: Specifies how thick the selection border should be.
-
-* **resizerShape**: Allows you to choose the shape of the resizer handles (e.g., Circle or Square).
-
-* **selectorLineDashArray**: Specifies the dash pattern for the selector line to enhance visual cues.
-
-* **resizerLocation**: Determines where the resizer appear in relation to the annotation (e.g., Corners or Edges).
-
-* **resizerCursorType**: Sets the cursor style when hovering over the resizer, improving user interaction.
+- selectionBorderColor: Sets the color for the border around selected annotations.
+- resizerBorderColor: Sets the color for the border of the resizer handles.
+- resizerFillColor: Defines the fill color for the resizer handles.
+- resizerSize: Determines the size of the resizer handles.
+- selectionBorderThickness: Specifies the thickness of the selection border.
+- resizerShape: Sets the shape of the resizer handles (for example, Circle or Square).
+- selectorLineDashArray: Specifies the dash pattern for the selector line.
+- resizerLocation: Determines where the resizers appear relative to the annotation (for example, Corners or Edges).
+- resizerCursorType: Sets the cursor style when hovering over a resizer.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)
