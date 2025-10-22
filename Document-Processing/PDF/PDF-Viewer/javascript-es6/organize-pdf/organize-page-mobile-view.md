@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Organize Pages in Mobile PDF Viewer | Syncfusion
-description: Learn how to organize pages in the mobile PDF viewer, including rotating, rearranging, inserting, deleting, and copying pages on mobile devices.
+description: Learn how to organize pages in the mobile PDF Viewer, including rotating, rearranging, inserting, deleting, and copying pages on mobile devices.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

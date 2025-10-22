@@ -29,7 +29,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailVi
 
 let viewer:  PdfViewer = new PdfViewer();
 viewer.documentPath= 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-viewer.resourceUrl= "https://cdn.syncfusion.com/ej2/29.1.33/dist/ej2-pdfviewer-lib";
+viewer.resourceUrl= "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 viewer.appendTo("#PdfViewer");
 
 

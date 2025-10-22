@@ -82,7 +82,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
@@ -158,7 +158,7 @@ PdfViewer.Inject( Toolbar, Magnification, Navigation, Annotation, LinkAnnotation
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl="https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -169,19 +169,10 @@ pdfviewer.appendTo('#PdfViewer');
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-popups/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-navigations/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-dropdowns/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-inputs/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-notifications/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>

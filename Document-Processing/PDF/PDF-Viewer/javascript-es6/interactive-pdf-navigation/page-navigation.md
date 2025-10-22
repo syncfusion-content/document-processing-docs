@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigation in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Navigation in TypeScript PDF Viewer control | Syncfusion
+description: Learn here all about Navigation in Syncfusion TypeScript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

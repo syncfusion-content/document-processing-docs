@@ -1,6 +1,6 @@
 ---
-title: Annotations Events in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Annotations Events in Syncfusion Typescript Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Annotations Events in TypeScript PDF Viewer control | Syncfusion
+description: Learn here all about Annotations Events in Syncfusion TypeScript PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotations Events in Typescript Pdf viewer control
+# Annotations Events in TypeScript PDF Viewer control
 
 The PDF Viewer component triggers various events based on user interactions and changes in the component's state. These events can be used to perform actions when a specific event occurs. This section describes the events available in the PDF Viewer component.
 
@@ -52,7 +52,7 @@ The following example illustrates how to handle the `annotationAdd` event.
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -79,7 +79,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     annotationAdd: function (args: any) {
         console.log('Annotation added with ID: ' + args.annotationId);
         console.log('Annotation type: ' + args.annotationType);
@@ -106,7 +106,7 @@ The following example illustrates how to handle the `annotationDoubleClick` even
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -132,7 +132,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     annotationDoubleClick: function (args: any) {
         console.log('Annotation double-clicked on page: ' + args.pageIndex);
     }
@@ -158,7 +158,7 @@ The following example illustrates how to handle the `annotationMouseLeave` event
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -184,7 +184,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     annotationMouseLeave: function (args: any) {
         console.log('Annotation mouse leave event is triggered for annotation with ID: ' + args.pageIndex);
     }
@@ -210,7 +210,7 @@ The following example illustrates how to handle the `annotationMouseover` event.
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -237,7 +237,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     annotationMouseover: function (args: any) {
         console.log('Annotation mouse over event is triggered for annotation with ID: ' + args.annotationId);
     }
@@ -263,7 +263,7 @@ The following example illustrates how to handle the `annotationMove` event.
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -290,7 +290,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     annotationMove: function (args: any) {
         console.log('Annotation moved. ID: ' + args.annotationId + ' on page ' + args.pageIndex);
     }
@@ -316,7 +316,7 @@ The following example illustrates how to handle the `annotationMoving` event.
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -343,7 +343,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     annotationMoving: function (args: any) {
         console.log('Annotation is being moved. Current Action: ' + args.currentPosition);
     }
@@ -369,7 +369,7 @@ The following example illustrates how to handle the `annotationPropertiesChange`
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -395,7 +395,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     annotationPropertiesChange: function (args: any) {
         console.log('Annotation properties changed for ID: ' + args.annotationId);
         console.log('isThicknessChanged: ' + args.isThicknessChanged);
@@ -422,7 +422,7 @@ The following example illustrates how to handle the `annotationRemove` event.
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -449,7 +449,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     annotationRemove: function (args: any) {
         console.log('Annotation removed with ID: ' + args.annotationId);
     }
@@ -475,7 +475,7 @@ The following example illustrates how to handle the `annotationResize` event.
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -502,7 +502,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     annotationResize: function (args: any) {
         console.log('Annotation resized. ID: ' + args.annotationId);
     }
@@ -528,7 +528,7 @@ The following example illustrates how to handle the `annotationSelect` event.
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -555,7 +555,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     annotationSelect: (args: any) => {
         console.log('Annotation selected with ID: ' + args.annotationId);
     }
@@ -581,7 +581,7 @@ The following example illustrates how to handle the `annotationUnselect` event.
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -608,7 +608,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     annotationUnselect: function (args: any) {
         console.log('Annotation unselected with ID: ' + args.annotationId);
     }
@@ -634,7 +634,7 @@ The following example illustrates how to handle the `beforeAddFreeText` event.
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -661,7 +661,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     beforeAddFreeText: function (args: any) {
         console.log('Before adding free text on page: ' + args.pageIndex);
         // Set args.cancel to true to prevent adding the free text annotation
@@ -691,7 +691,7 @@ The following example illustrates how to handle the `addSignature` event.
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -718,7 +718,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     addSignature: function (args: any) {
         console.log('Signature added to page: ' + args.pageIndex);
     }
@@ -744,7 +744,7 @@ The following example illustrates how to handle the `removeSignature` event.
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -771,7 +771,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     removeSignature: function (args: any) {
         console.log('Signature removed from page: ' + args.pageIndex);
     }
@@ -797,7 +797,7 @@ The following example illustrates how to handle the `resizeSignature` event.
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -824,7 +824,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     resizeSignature: function (args: any) {
         console.log('Signature resized on page ' + args.pageIndex);
     }
@@ -850,7 +850,7 @@ The following example illustrates how to handle the `signaturePropertiesChange` 
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -877,7 +877,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     signaturePropertiesChange: function (args: any) {
         console.log('Signature properties changed on page ' + args.pageIndex);
     }
@@ -903,7 +903,7 @@ The following example illustrates how to handle the `signatureSelect` event.
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -930,7 +930,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     signatureSelect: function (args: any) {
         console.log('Signature selected on page ' + args.pageIndex);
     }
@@ -956,7 +956,7 @@ The following example illustrates how to handle the `signatureUnselect` event.
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
     <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
@@ -983,7 +983,7 @@ PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailVie
 
 let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     signatureUnselect: function (args: any) {
         console.log('Signature unselected on page ' + args.pageIndex);
     }

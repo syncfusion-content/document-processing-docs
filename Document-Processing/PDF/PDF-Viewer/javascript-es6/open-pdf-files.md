@@ -30,7 +30,7 @@ Follow the [TypeScript getting started guide](https://help.syncfusion.com/docume
 
 public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
 {
-  // Initialize the PDF viewer object with memory cache object
+  // Initialize the PDF Viewer object with memory cache object
   PdfRenderer pdfviewer = new PdfRenderer(_cache);
   MemoryStream stream = new MemoryStream();
   object jsonResult = new object();
@@ -159,7 +159,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 
 public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
 {
-  // Initialize the PDF viewer object with memory cache object
+  // Initialize the PDF Viewer object with memory cache object
   PdfRenderer pdfviewer = new PdfRenderer(_cache);
   MemoryStream stream = new MemoryStream();
   object jsonResult = new object();

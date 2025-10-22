@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Organize Page Toolbar Customization in Typescript PDF Viewer control | Syncfusion
-description: Learn here all about Organize Page Toolbar Customization in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Organize Page Toolbar Customization in TypeScript PDF Viewer control | Syncfusion
+description: Learn here all about Organize Page Toolbar Customization in Syncfusion TypeScript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -25,7 +25,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.pageOrganizerSettings = {canInsert: false};
 pdfviewer.appendTo('#PdfViewer');
 
@@ -58,7 +58,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.pageOrganizerSettings = {canDelete: false};
 pdfviewer.appendTo('#PdfViewer');
 
@@ -91,7 +91,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.pageOrganizerSettings = {canRotate: false};
 pdfviewer.appendTo('#PdfViewer');
 

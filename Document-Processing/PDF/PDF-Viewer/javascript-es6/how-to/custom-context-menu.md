@@ -19,7 +19,7 @@ The following example adds custom options to the context menu.
 ```ts
     let viewer: PdfViewer = new PdfViewer();
     viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-    viewer.resourceUrl = "https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib";
+    viewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
     var menuItems: MenuItemModel[] = [
         {
             text: 'Search In Google',
@@ -90,7 +90,7 @@ Toggle the display of the default context menu. When the addCustomMenu parameter
 
     let viewer: PdfViewer = new PdfViewer();
     viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-    viewer.resourceUrl = "https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib";
+    viewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
     var menuItems: MenuItemModel[] = [
         {
             text: 'Search In Google',
@@ -133,7 +133,7 @@ Use [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/documentation/api
 
     let viewer: PdfViewer = new PdfViewer();
     viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-    viewer.resourceUrl = "https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib";
+    viewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
     var menuItems: MenuItemModel[] = [
         {
             text: 'Search In Google',
