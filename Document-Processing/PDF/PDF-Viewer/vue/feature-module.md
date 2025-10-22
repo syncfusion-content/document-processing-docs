@@ -14,7 +14,7 @@ The PDF Viewer features are provided as individual modules, allowing application
 
 Available PDF Viewer modules:
 
-* [**Toolbar**](./toolbar-customization): Built-in toolbar for user interaction.
+* [**Toolbar**](./toolbar-customization/annotation-toolbar-customization.md): Built-in toolbar for user interaction.
 * [**Magnification**](./magnification.md): Perform zoom operations for a better viewing experience.
 * [**Navigation**](./interactive-pdf-navigation/page-navigation.md): Navigate across pages.
 * [**LinkAnnotation**](./interactive-pdf-navigation/table-of-content-navigation.md): Navigate within the document or to external destinations via hyperlinks.
