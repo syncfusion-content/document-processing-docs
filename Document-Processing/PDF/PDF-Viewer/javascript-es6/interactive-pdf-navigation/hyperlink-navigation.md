@@ -1,30 +1,36 @@
 ---
 layout: post
-title: Table of contents navigation in PDF Viewer | Syncfusion
-description: Learn how to navigate PDFs using the table of contents in the Syncfusion PDF Viewer control for TypeScript.
+title: Interactive navigation in PDF Viewer | Syncfusion
+description: Learn how to navigate PDFs using table-of-contents entries and hyperlinks in the Syncfusion PDF Viewer control for TypeScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table of contents navigation in PDF Viewer
+# Interactive navigation in PDF Viewer
 
-The PDF Viewer supports a built-in table of contents (TOC) experience to help users jump to sections defined by the document’s bookmarks or outline.
+The PDF Viewer provides a unified navigation experience that combines the document-defined table of contents (TOC) and in-document hyperlinks. These features surface contextual entry points so users can jump directly to relevant sections without manual scrolling.
+
+> **Note:** The table of contents pane and hyperlink interactions rely on the same navigation infrastructure. When these capabilities are enabled, the PDF Viewer automatically surfaces TOC entries and clickable links defined in the PDF.
+
+## Required modules
+
+Inject the following modules to enable both navigation experiences: `Toolbar`, `Magnification`, `Navigation`, `LinkAnnotation`, `BookmarkView`, `TextSelection`, `ThumbnailView`, and optionally `Annotation`.
 
 ## Table of contents navigation
 
-Use the table of contents to quickly navigate to headings and sections defined in the PDF. When the document contains a bookmarks/outline structure, the viewer exposes those entries in the table of contents (Bookmarks) pane. Selecting an entry navigates directly to the mapped destination. If the PDF does not include a table of contents, the pane will not list any entries.
+Use the table of contents to navigate to headings and sections defined in the PDF. When the document contains a bookmarks or outline structure, the viewer exposes those entries in the table of contents (Bookmarks) pane. Selecting an entry navigates directly to the mapped destination. If the PDF does not include a table of contents, the pane will not list any entries.
 
 ![Table of contents pane in PDF Viewer](../images/toc.png)
 
-## Hyperlink Navigation
+## Hyperlink navigation
 
 The PDF Viewer provides robust support for hyperlink navigation within PDF documents. This allows users to interact with embedded links, which can point to external websites or other locations within the same document. This section covers how to configure hyperlink behavior, including enabling or disabling links, controlling how they open, and responding to hyperlink-related events.
 
 ![Hyperlink Navigation in PDF Viewer](../images/link.png)
 
-### Enabling and Disabling Hyperlinks
+### Enable or disable hyperlinks
 
 By default, the PDF Viewer automatically detects and enables all hyperlinks present in a loaded document. This behavior can be controlled using the `enableHyperlink` property.
 
@@ -62,8 +68,8 @@ viewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-> Note: Disabling hyperlinks only affects the viewer's behavior and does not alter the original PDF document.
-### Controlling Link Behavior
+> **Note:** Disabling hyperlinks only affects the viewer's behavior and does not alter the original PDF document.
+### Control link behavior
 
 The `hyperlinkOpenState` property determines how external URLs are opened when a hyperlink is clicked.
 
@@ -101,7 +107,7 @@ viewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-### Handling Hyperlink Events
+### Handle hyperlink events
 
 The PDF Viewer exposes events that allow for monitoring and customizing hyperlink interactions.
 
