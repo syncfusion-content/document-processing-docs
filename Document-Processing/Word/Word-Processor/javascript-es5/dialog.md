@@ -20,10 +20,10 @@ Refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs2/index.js %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,10 +37,10 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs3/index.js %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs3/index.html %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,10 +54,10 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs4/index.js %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs4/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs4/index.html %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,10 +75,10 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs5/index.js %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs5/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs5/index.html %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -92,10 +92,10 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs6/index.js %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs6/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs6/index.html %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -109,10 +109,10 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs7/index.js %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs7/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs7/index.html %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs7/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -124,10 +124,10 @@ This dialog allows managing the styles in a document. It will display all the st
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs8/index.js %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs8/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs8/index.html %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs8/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -141,10 +141,10 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs9/index.js %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs9/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs9/index.html %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs9/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -158,10 +158,10 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs10/index.js %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs10/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs10/index.html %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs10/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -175,10 +175,10 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs11/index.js %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs11/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs11/index.html %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs11/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -192,10 +192,10 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs12/index.js %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs12/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs12/index.html %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs12/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -209,10 +209,10 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs13/index.js %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs13/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs13/index.html %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs13/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -226,10 +226,10 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs14/index.js %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs14/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs14/index.html %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs14/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -244,10 +244,10 @@ To open this dialog, refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs15/index.js %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs15/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs15/index.html %}
+{% include code-snippet/document-editor/javascript-es5/dialog-cs15/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
