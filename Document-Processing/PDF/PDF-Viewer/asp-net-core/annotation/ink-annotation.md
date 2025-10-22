@@ -4,7 +4,6 @@ title: Ink annotation in ASP.NET Core PDF Viewer control | Syncfusion
 description: Learn about ink annotations in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

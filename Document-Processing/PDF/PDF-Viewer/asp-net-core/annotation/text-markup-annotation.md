@@ -4,7 +4,6 @@ title: Text markup annotation in ASP.NET Core PDF Viewer control | Syncfusion
 description: Learn to add, edit, delete, and customize text markup annotations like highlight, underline, and squiggly in Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

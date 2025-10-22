@@ -4,7 +4,6 @@ title: Measurement annotation in ASP.NET Core PDF Viewer control | Syncfusion
 description: Learn about measurement annotations in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2): distance, perimeter, area, radius, and volume.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

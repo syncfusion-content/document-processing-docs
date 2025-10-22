@@ -4,7 +4,6 @@ title: Handwritten signature in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to enable, add programmatically, and customize handwritten signatures in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
