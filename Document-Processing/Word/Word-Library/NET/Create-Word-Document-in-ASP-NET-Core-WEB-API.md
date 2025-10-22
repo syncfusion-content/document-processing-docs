@@ -1,6 +1,6 @@
 ---
 title: Create Word documents in ASP.NET Core Web API | Syncfusion
-description: Create Word document without Microsoft Word or interop dependencies in ASP.NET Core Web API applications using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
+description: Create Word document without Microsoft Word or interop dependencies in ASP.NET Core Web API applications using Syncfusion® .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -13,11 +13,6 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word libra
 ## Steps to create Word document programmatically:
 
 The below steps illustrate creating a simple Word document in ASP.NET Core Web API.
-
-**Prerequisites:**
-
-* Visual Studio 2022.
-* Install **.NET desktop development** workload with necessary .NET Framework SDK.
 
 Step 1: Create a new C# ASP.NET Core Web API project.
 
@@ -205,12 +200,12 @@ This method sends a GET request to the Web API endpoint to retrieve and save the
          }
          else
          {
-             Console.WriteLine($"HTTP error status code: {response.StatusCode}");
+             Console.WriteLine("HTTP error status code: " + response.StatusCode);
          }
      }
      catch (HttpRequestException e)
      {
-         Console.WriteLine($"Request exception: {e.Message}");
+         Console.WriteLine("Request exception: " + e.Message);
      }
  }
 
@@ -231,3 +226,7 @@ A complete working sample is available on [GitHub](https://github.com/Syncfusion
 Upon executing the program, the **Word document** will be generated as follows.
 
 ![ASP .NET Core WEB API output Word document](ASP-NET-Core-WEB-API-images/ASP-NET-Core-Web-API-Output.png)
+
+Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features.
+
+An online sample link to [create a Word document](https://document.syncfusion.com/demos/word/helloworld#/tailwind) in ASP.NET Core. 
