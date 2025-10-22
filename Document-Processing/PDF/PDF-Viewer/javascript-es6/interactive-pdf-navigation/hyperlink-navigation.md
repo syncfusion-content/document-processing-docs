@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Interactive navigation in PDF Viewer | Syncfusion
-description: Learn how to navigate PDFs using table-of-contents entries and hyperlinks in the Syncfusion PDF Viewer control for TypeScript.
+title: Hyperlink navigation in PDF Viewer | Syncfusion
+description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for TypeScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Interactive navigation in PDF Viewer
+# Hyperlink navigation in PDF Viewer
 
-The PDF Viewer provides a unified navigation experience that combines the document-defined table of contents (TOC) and in-document hyperlinks. These features surface contextual entry points so users can jump directly to relevant sections without manual scrolling.
+The PDF Viewer consolidates hyperlink-driven experiences, including inline links and table-of-contents (TOC) entries that target in-document destinations. These elements surface contextual entry points so users can jump directly to relevant sections without manual scrolling.
 
 > **Note:** The table of contents pane and hyperlink interactions rely on the same navigation infrastructure. When these capabilities are enabled, the PDF Viewer automatically surfaces TOC entries and clickable links defined in the PDF.
 
