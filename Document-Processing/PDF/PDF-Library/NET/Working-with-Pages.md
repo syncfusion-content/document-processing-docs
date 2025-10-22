@@ -944,6 +944,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can remove the pages from the existing PDF document using [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_RemoveAt_System_Int32_) method as shown in the below code example. 
 
+N> 1. Most PDF creators optimize file size by identifying identical images and storing them as shared resources. These shared objects are referenced across multiple pages rather than being duplicated. Therefore, removing a specific page does not automatically remove the shared image resource, as it may still be used on other pages.
+
+This behavior is by design and not considered an issue. If a shared resource is still referenced by other pages, removing it would result in missing content on those pages. In our current implementation, shared resources—such as images, text, and other objects—are only removed when all pages referencing them are deleted.
+
+
 {% tabs %}  
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Remove-pages-from-the-existing-PDF-document/.NET/Remove-pages-from-the-existing-PDF-document/Program.cs" %}
