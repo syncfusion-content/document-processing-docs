@@ -36,7 +36,7 @@ The PDF Viewer control provides an option to disable interaction with form field
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
                    resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"
-                   enableFormDesigner="false">
+                   enableFormFields="false">
     </ejs-pdfviewer>
 </div>
 
@@ -48,7 +48,7 @@ The PDF Viewer control provides an option to disable interaction with form field
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
                    serviceUrl="/api/PdfViewer"
-                   enableFormDesigner="false">
+                   enableFormFields="false">
     </ejs-pdfviewer>
 </div>
 

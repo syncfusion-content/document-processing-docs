@@ -123,8 +123,6 @@ The textSelectionEnd event triggers when selection is completed. It is useful to
 
 {% endhighlight %}
 {% endtabs %}
-```
-
 
 ## See also
 
