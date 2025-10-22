@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize color picker in Blazor DocumentEditor Component | Syncfusion
-description: Learn how to Customize the color picker in Syncfusion Blazor DocumentEditor component and much more.
+title: Customize Color Picker in Blazor DocumentEditor | Syncfusion
+description: Learn how to customize the color picker in Syncfusion Blazor DocumentEditor component and much more.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---
 
-# Customize color picker in Blazor Document Editor Component
+# Customize the Color Picker in Blazor Document Editor Component
 
 ## How to customize color picker in Document Editor Container
 

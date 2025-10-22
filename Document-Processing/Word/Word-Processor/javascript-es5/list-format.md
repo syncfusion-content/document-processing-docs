@@ -60,10 +60,10 @@ The following sample demonstrates how to create bullet and numbering lists in Do
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/list-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/list-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/list-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/list-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
