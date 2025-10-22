@@ -22,10 +22,11 @@ The following code snippet explains how to extract the texts from a page.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Extract-the-texts-from-a-page-in-the-PDF-document/.NET/Extract-the-texts-from-a-page-in-the-PDF-document/Program.cs" %} 
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream("Sample.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the first page.
 PdfPageBase page = loadedDocument.Pages[0];
 
@@ -38,8 +39,11 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing PDF.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the first page.
 PdfPageBase page = loadedDocument.Pages[0];
 
@@ -52,8 +56,11 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+
 'Load an existing PDF.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Load the first page.
 Dim page As PdfPageBase = loadedDocument.Pages(0)
 
@@ -78,10 +85,11 @@ The below code illustrates how to extract the text from entire PDF document:
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Extract-text-from-the-entire-PDF-document/.NET/Extract-text-from-the-entire-PDF-document/Program.cs" %} 
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream("Sample.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 // Loading page collections
 PdfLoadedPageCollection loadedPages = loadedDocument.Pages;
 
@@ -98,8 +106,11 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 // Load an existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 // Loading page collections
 PdfLoadedPageCollection loadedPages = loadedDocument.Pages;
 
@@ -116,8 +127,11 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+
 ' Load an existing PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 ' Loading page collections
 Dim loadedPages As PdfLoadedPageCollection = loadedDocument.Pages
 
@@ -145,10 +159,11 @@ Please refer the following code snippet to extract the text with layout.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Extract-the-text-with-layout-in-a-PDF-document/.NET/Extract-the-text-with-layout-in-a-PDF-document/Program.cs" %} 
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream("Sample.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load first page.
 PdfPageBase page = loadedDocument.Pages[0];
 
@@ -157,9 +172,8 @@ string extractedTexts = page.ExtractText(true);
 //Close the document.
 loadedDocument.Close(true);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the document 
+loadedDocument.Save("Output.pdf");
 //Closes the document
 loadedDocument.Close(true);
 
@@ -167,8 +181,11 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing PDF.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load first page.
 PdfPageBase page = loadedDocument.Pages[0];
 
@@ -181,15 +198,20 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-//Load an existing PDF.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-//Load first page.
-PdfPageBase page = loadedDocument.Pages[0];
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
-//Extract text from first page.
-string extractedTexts = page.ExtractText(true);
-//close the document
-loadedDocument.Close(true);
+' Load an existing PDF
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+
+' Load the first page
+Dim page As PdfPageBase = loadedDocument.Pages(0)
+
+' Extract text from the first page
+Dim extractedTexts As String = page.ExtractText(True)
+
+' Close the document
+loadedDocument.Close(True)
 
 {% endhighlight %}
 
@@ -211,8 +233,11 @@ You can get the line and its properties that contains texts by using [TextLine](
 
 //PDF supports getting the lines and its properties using TextLine only in WinForms, WPF and Xamarin platforms. Instead of TextLine, TextLineCollection can be used in ASP.NET Core.
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 // Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 // Get the first page of the loaded PDF document
 PdfPageBase page = loadedDocument.Pages[0];
 var lineCollection = new TextLineCollection();
@@ -232,8 +257,11 @@ foreach (var line in lineCollection.TextLine)
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 // Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 // Get the first page of the loaded PDF document
 PdfPageBase page = loadedDocument.Pages[0];
 TextLines lineCollection = new TextLines();
@@ -250,8 +278,12 @@ string text = line.Text;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+
 ' Load the existing PDF document
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument(fileName)
+Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
 ' Get the first page of the loaded PDF document
 Dim page As PdfPageBase = loadedDocument.Pages(0)
 Dim lineCollection As TextLines = New TextLines()
@@ -281,8 +313,12 @@ You can get the single word and its properties by using [TextWord](https://help.
 
 //PDF supports getting the word and its properties using TextWord only in WinForms, WPF and Xamarin platforms. Instead of TextLine, TextLineCollection can be used in ASP.NET Core.
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 // Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 // Get the first page of the loaded PDF document
 PdfPageBase page = loadedDocument.Pages[0];
 var lineCollection = new TextLineCollection();
@@ -304,8 +340,12 @@ foreach (var line in lineCollection.TextLine)
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 // Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 // Get the first page of the loaded PDF document
 PdfPageBase page = loadedDocument.Pages[0];
 TextLines lineCollection = new TextLines();
@@ -325,8 +365,12 @@ List<TextWord> textWordCollection = line.WordCollection;
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+Imports System.Drawing
+
 ' Load the existing PDF document
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument(fileName)
+Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
 ' Get the first page of the loaded PDF document
 Dim page As PdfPageBase = loadedDocument.Pages(0)
 Dim lineCollection As TextLines = New TextLines()
@@ -356,8 +400,12 @@ You can retrieve a single character and its properties, including bounds, font n
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Get-text-glyph-details-from-extract-text/.NET/Get-text-glyph-details-from-extract-text/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 // Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 // Get the first page of the loaded PDF document
 PdfPageBase page = loadedDocument.Pages[0];
 TextLineCollection lineCollection = new TextLineCollection();
@@ -393,8 +441,12 @@ Color glyphColor = textGlyph.TextColor;
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+Imports System.Drawing
+
 ' Load the existing PDF document
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument(stream)
+Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
 ' Get the first page of the loaded PDF document
 Dim page As PdfPageBase = loadedDocument.Pages(0)
 Dim lineCollection As New TextLineCollection()
@@ -441,9 +493,11 @@ The code example provided below demonstrates the utilization of the [FindText](h
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Find-text-in-PDF-document/.NET/Find-text-in-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing PDF document. 
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Returns page number and rectangle positions of the text maches. 
 Dictionary<int, List<Syncfusion.Drawing.RectangleF>> matchRects = new Dictionary<int, List<Syncfusion.Drawing.RectangleF>>();
 loadedDocument.FindText("document", out matchRects);
@@ -453,6 +507,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document. 
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -465,6 +522,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load an existing PDF document. 
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")

@@ -145,8 +145,8 @@ Step 8: Add the following JavaScript function to the `index.html` file located i
 
 Step 9: Build the project.
 
-Click on Build > Build Solution or press `Ctrl + Shift + B` to build the project.
+To build the project, go to the `Build` menu and select `Build Solution`, or simply press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
 
 Step 10: Run the project.
 
-Click the `Start` button (green arrow) or press `F5` to run the application.
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the application.

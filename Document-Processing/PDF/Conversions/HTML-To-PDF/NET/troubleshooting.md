@@ -46,10 +46,9 @@ blinkConverterSettings.BlinkPath = @"C:/HtmlConversion/BlinkBinaries/";
 htmlConverter.ConverterSettings = blinkConverterSettings;
 //Convert the URL to PDF document.
 PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
-//Create a file stream to save the PDF document. 
-FileStream fileStream = new FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
+
 //Save and close the PDF document.
-document.Save(fileStream);
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
@@ -477,6 +476,41 @@ Refer to this <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-t
 </tr>
 </table>
 
+## HTML to PDF conversion fails after deploying to Azure Function Linux Flex Consumption Plan
+
+<table>
+<th style="font-size:14px" width="100px">Issue
+</th>
+<th style="font-size:14px">HTML to PDF conversion fails after deploying to Azure Function Linux Flex Consumption Plan
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The Syncfusion HTML-to-PDF converter internally uses the <b>Blink rendering engine</b>, which relies on a <b>headless Chromium browser</b> to render HTML content. On <b>Linux environments</b>, Chromium requires several native dependencies to launch successfully.<br>
+
+In the <b>Azure Function Linux Flex Consumption Plan</b>, these dependencies cannot be installed due to the following limitations:
+
+* No SSH access to manually install packages.<br>
+* Shell script installation attempts fail due to <b>permission restrictions</b>, even when permissions are explicitly set.<br>
+
+As a result, the Blink-based converter cannot initialize Chromium, leading to failure in HTML-to-PDF conversion.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>To enable HTML-to-PDF conversion using Blink in Azure Functions:<br>
+
+* Do not use the Flex Consumption Plan for Linux-based Azure Functions.<br>
+* Instead, use one of the following:<br>
+1.Premium Plan<br>
+2.Standard Consumption Plan<br>
+These plans provide the necessary environment and permissions to support Chromium and its dependencies, allowing the Blink engine to function correctly.<br>
+</td>
+</tr>
+</table>
+
 ## Unable to convert unsecured https URL to PDF using Blink
 
 <table>
@@ -505,6 +539,58 @@ settings.CommandLineArguments.Add("--ignore-certificate-errors");
 
 {% endhighlight %}
 {% endtabs %}
+</td>
+</tr>
+</table>
+
+## Security Alert - Bundled chrome.exe in HTML-to-PDF Conversion
+
+<table>
+<th style="font-size:14px" width="100px">Issue
+</th>
+<th style="font-size:14px">Security alerts are triggered when the Syncfusion HTML-to-PDF converter uses a bundled `chrome.exe` executable to render HTML content in headless mode during PDF generation.
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The HTML-to-PDF conversion relies on Chromium's Blink rendering engine:<br>
+
+1.The NuGet package includes Blink binaries (`chrome.exe`) under `runtimes/win-x64/native`<br
+2.This bundled Chrome instance launches in headless mode to render web content<br>
+3.Security systems flag the execution of embedded binaries as potential risks<br>
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>Use system-installed Chromium instead of bundled binaries:
+<br><br/>
+Step 1: Configure Blink Path
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+BlinkConverterSettings settings = new BlinkConverterSettings();
+
+// Point to system-installed Chrome.
+settings.BlinkPath = @"C:\Program Files\Google\Chrome\Application"; 
+
+//Convert HTML to PDF.
+htmlConverter.ConverterSettings = settings;
+PdfDocument document = htmlConverter.Convert("https://example.com");
+
+//Save and close the document. 
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 2: Verify Installation <br>
+Ensure Chrome exists at the specified path (standard locations): `C:\Program Files\Google\Chrome\Application`
+
 </td>
 </tr>
 </table>
@@ -542,7 +628,6 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 </tr>
 </table>
 
-
 ## Converting the HTML to PDF fails in x32 bit windows system environment
 
 <table>
@@ -566,6 +651,32 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 </tr>
 </table>
 
+## Hyperlinks appearances do not navigate to their referenced URLs when using `CreateTemplate` and `DrawPdfTemplate` methods
+
+<table>
+<th style="font-size:14px" width="100px">Issue
+</th>
+<th style="font-size:14px">Hyperlinks appearances do not navigate to their referenced URLs when using `CreateTemplate` and `DrawPdfTemplate` methods
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The <b>CreateTemplate</b> and <b>DrawPdfTemplate</b> methods generally do not import annotation details, including hyperlink information, from the original PDF document. This means that while the visual appearance of a hyperlink (blue, underlined text) might be preserved, the underlying functionality of navigating to the URL is not transferred.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>A workaround involves manually extracting and re-applying hyperlink annotations. This can be achieved by following these steps:<br>
+1.<b>Extract Annotations</b>: Before creating and drawing the PDF template, extract all annotations, specifically hyperlink annotations, from the original PDF document.<br>
+2.<b>Draw PDF Template</b>: Use the CreateTemplate and DrawPdfTemplate methods to draw the PDF content into a new document.<br>
+3.<b>Incorporate Annotations</b>: After the template has been drawn, programmatically add the extracted hyperlink annotations to the corresponding positions in the new document. This will restore the interactive functionality of the hyperlinks.<br>
+Please refer to the sample project: <a href="https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTMLtoPDF_Hyperlink/.NET">HTML-to-PDF-Hyperlink</a>
+</td>
+</tr>
+</table>
 
 ## ERROR:The specified module could not be found in windows server 2012 R2
 
@@ -658,7 +769,7 @@ Refer to the following package reference:
 <td>
 To resolve this issue, we can install the chromium using the docker file and set the Blink Path to the location where chromium is installed.
 <br><br>
-Docker File:<br><br>
+<b>Docker File:</b><br><br>
 {% tabs %}
 
 {% highlight C# tabtitle="C#" %}
@@ -687,7 +798,7 @@ Docker File:<br><br>
 
 {% endtabs %}
 
-Code snippet:
+<b>Code example</b>:
 {% tabs %}
 
 {% highlight C# tabtitle="C#" %}
@@ -732,28 +843,27 @@ To resolve this issue, we can add inline styles in element. However, we have att
 
 {% highlight C# tabtitle="C#" %}
 
-	HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-	//Initialize blink converter settings. 
-	BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
-	//Set the Blink viewport size.
-	blinkConverterSettings.ViewPortSize = new Size(1280, 0);
-	//Set the html margin-top value based on the html header height and margin-top value.
-	blinkConverterSettings.Margin.Top = 70;
-	//Set the html margin-bottom value based on the html footer height and margin-bottom value.
-	blinkConverterSettings.Margin.Bottom = 40;
-	//Set the custom HTML header to add at the top of each page.
-	blinkConverterSettings.HtmlHeader = " <div style=\"background-color: blue; -webkit-print-color-adjust: exact; margin-left: 40px; font-size: 10px;\">HTML Header</div>";
-	//Set the custom HTML footer to add at the bottom of each page.
-	blinkConverterSettings.HtmlFooter = " <div style=\"background-color: blue; -webkit-print-color-adjust: exact;margin-left: 40px; font-size: 10px;\">HTML Footer</div>";
-	//Assign Blink converter settings to the HTML converter.
-	htmlConverter.ConverterSettings = blinkConverterSettings;
-	//Convert the URL to a PDF document.
-	PdfDocument document = htmlConverter.Convert("<div>Hello World</div>",string.Empty);
-	//Create a filestream.
-	FileStream fileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite);
-	//Save and close a PDF document.
-	document.Save(fileStream);
-	document.Close(true);
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+//Initialize blink converter settings. 
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Set the Blink viewport size.
+blinkConverterSettings.ViewPortSize = new Size(1280, 0);
+//Set the html margin-top value based on the html header height and margin-top value.
+blinkConverterSettings.Margin.Top = 70;
+//Set the html margin-bottom value based on the html footer height and margin-bottom value.
+blinkConverterSettings.Margin.Bottom = 40;
+//Set the custom HTML header to add at the top of each page.
+blinkConverterSettings.HtmlHeader = " <div style=\"background-color: blue; -webkit-print-color-adjust: exact; margin-left: 40px; font-size: 10px;\">HTML Header</div>";
+//Set the custom HTML footer to add at the bottom of each page.
+blinkConverterSettings.HtmlFooter = " <div style=\"background-color: blue; -webkit-print-color-adjust: exact;margin-left: 40px; font-size: 10px;\">HTML Footer</div>";
+//Assign Blink converter settings to the HTML converter.
+htmlConverter.ConverterSettings = blinkConverterSettings;
+//Convert the URL to a PDF document.
+PdfDocument document = htmlConverter.Convert("<div>Hello World</div>",string.Empty);
+
+//Save and close a PDF document.
+document.Save("Output.pdf");
+document.Close(true);
 
 {% endhighlight %}
 
@@ -773,17 +883,12 @@ You can downloaded a complete working sample from <a href="https://github.com/Sy
 
 {% highlight C# %}
 
-		//Set command line arguments to run without the sandbox.
-
-		settings.CommandLineArguments.Add("--no-sandbox");
-
-		settings.CommandLineArguments.Add("--disable-setuid-sandbox");
-
-		settings.CommandLineArguments.Add("--no-zygote");
-
-		settings.CommandLineArguments.Add("--disable-dev-shm-usage");
-
-		settings.CommandLineArguments.Add("--single-process");
+//Set command line arguments to run without the sandbox.
+settings.CommandLineArguments.Add("--no-sandbox");
+settings.CommandLineArguments.Add("--disable-setuid-sandbox");
+settings.CommandLineArguments.Add("--no-zygote");
+settings.CommandLineArguments.Add("--disable-dev-shm-usage");
+settings.CommandLineArguments.Add("--single-process");
 
 {% endhighlight %}
 
@@ -826,7 +931,7 @@ We can install the required dependencies using the dependencies vis shell script
 <br/><br/>
 <img alt="HTML Conversion Dependencies Logo" src="htmlconversion_images/dependencies.png"><br>
 <br/><br/>
-code snippet:
+<b>Code example</b>:
 <br/><br/>
 {% tabs %}
 {% highlight C# %}
@@ -930,10 +1035,10 @@ We can resolve the reported issue by using the FileStream within the "using" blo
 {% tabs %}
 {% highlight C# %}
 
-	using (FileStream fs = new FileStream("path_to_file", FileMode.Open))
-	{
-    	// Use the file here
-	} // File stream is automatically closed and disposed
+using (FileStream fs = new FileStream("path_to_file", FileMode.Open))
+{
+// Use the file here
+} // File stream is automatically closed and disposed
 
 {% endhighlight %}
 {% endtabs %}
@@ -943,21 +1048,15 @@ Or
 Dispose of the FileStream at the end of the process and ensure that the file or document is not already open in another application.
 {% tabs %}
 {% highlight C# %}
-
 	
-	PdfDocument document = htmlConverter.Convert(");
+PdfDocument document = htmlConverter.Convert(");
+FileStream fileStream = new FileStream(baseUrl+ "Bill_PDF_04_16_24.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
+//Save and close the PDF document.
+document.Save(fileStream);
+document.Close(true);
+document.Dispose();
 
-	FileStream fileStream = new FileStream(baseUrl+ "Bill_PDF_04_16_24.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
-
-	//Save and close the PDF document.
-
-	document.Save(fileStream);
-
-	document.Close(true);
-
-	document.Dispose();
-
-	fileStream.Dispose();
+fileStream.Dispose();
 
 {% endhighlight %}
 {% endtabs %}
@@ -1166,9 +1265,9 @@ The reported issue may occur due to missing of crashpad handler configuration in
 <tr>
 <th style="font-size:14px" width="100px">Solution</th>
 <td>
-You can try the below solution steps to overcome the reported issue  'Failed to launch Base! chrome_crashpad_handler: --database is required',
+You can try the below solution steps to overcome the reported issue  'Failed to launch Base! chrome_crashpad_handler: --database is required',<br>
  
-Step 1: Kindly try the below docker file changes in your sample to resolve the chrome_crashpad_handler issue. 
+Step 1: Kindly try the below docker file changes in your sample to resolve the chrome_crashpad_handler issue.<br>
 
 {% tabs %}
 {% highlight C# %}
@@ -1214,11 +1313,11 @@ ENTRYPOINT ["dotnet", "Ops.PDFSearch.Web.dll"]
 {% endhighlight %}
 {% endtabs %}
 
-We have attached the modified docker file for your reference <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/Dockerfile-431990059">Docker file</a>.
+We have attached the modified docker file for your reference <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/Dockerfile-431990059">Docker file</a>.<br>
 
-Step 2: From chromium version 128.x.x.x.x --database flag required for chrome Crashpad handler.  So, it may cause the issue on your end.  So kindly try the below steps and it may resolve the reported issue.
+Step 2: From chromium version 128.x.x.x.x -database flag required for chrome Crashpad handler.  So, it may cause the issue on your end.  So kindly try the below steps and it may resolve the reported issue.<br>
  
-Add below commands in Docker file
+Add below commands in Docker file:<br>
 
 {% tabs %}
 {% highlight C# %}
@@ -1229,7 +1328,7 @@ RUN chown -R www-data:www-data /var/www/.config
 {% endhighlight %}
 {% endtabs %}
 
-Add below command-line arguments in conversion code
+Add below command-line arguments in conversion code<br>
 
 {% tabs %}
 {% highlight C# %}
@@ -1273,14 +1372,14 @@ The Blink rendering engine is not supported for HTML to PDF conversion in <b>Azu
 <th style="font-size:14px" width="100px">Solution</th>
 <td>
 
-<b>Use Blink Rendering Engine in Azure App Service Linux or Azure Functions Linux</b>
+<b>Use Blink Rendering Engine in Azure App Service Linux or Azure Functions Linux</b><br>
 
-To perform HTML to PDF conversion using the Blink rendering engine, you can use the following alternatives:
+To perform HTML to PDF conversion using the Blink rendering engine, you can use the following alternatives:<br>
 
-* <a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux">Azure App Service (Linux)</a>: The Blink rendering engine is compatible with Azure App Service running on Linux.
+* <a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux">Azure App Service (Linux)</a>: The Blink rendering engine is compatible with Azure App Service running on Linux.<br>
 
-* <a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-linux">Azure Functions (Linux)</a>: Linux-based Azure Functions can also utilize the Blink rendering engine for successful conversions.
-* <a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux-with-docker">Azure App Service (Linux Docker)</a>: Deploying the application in a Linux-based Docker container offers another way to use Blink.
+* <a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-linux">Azure Functions (Linux)</a>: Linux-based Azure Functions can also utilize the Blink rendering engine for successful conversions.<br>
+* <a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux-with-docker">Azure App Service (Linux Docker)</a>: Deploying the application in a Linux-based Docker container offers another way to use Blink.<br>
 
 </td>
 </tr>
@@ -1297,19 +1396,19 @@ To perform HTML to PDF conversion using the Blink rendering engine, you can use 
 <th style="font-size:14px" width="100px">Reason
 </th>
 <td>	
-This issue may occur due to one of the following reasons:
-1. Missing required Linux dependencies
-2. Missing Chromium dependency files
-3. Lack of access permissions for the chrome and chrome-wrapper files
+This issue may occur due to one of the following reasons:<br>
+1. Missing required Linux dependencies<br>
+2. Missing Chromium dependency files<br>
+3. Lack of access permissions for the chrome and chrome-wrapper files<br>
 
 </td>
 </tr>
 <tr>
 <th style="font-size:14px" width="100px">Solution</th>
 <td>
-To resolve the issue and ensure successful HTML to PDF conversion in Azure App Service (Linux), follow these steps:
+To resolve the issue and ensure successful HTML to PDF conversion in Azure App Service (Linux), follow these steps:<br>
 
-1: <b>Grant File Access Permissions</b>
+1: <b>Grant File Access Permissions</b><br>
 
 Provide read, write, and execute permissions for the chrome and chrome-wrapper files located in the runtimes/linux/native directory. Use the following commands:
 
@@ -1322,7 +1421,7 @@ chmod +rwx  chrome
 {% endhighlight %}
 {% endtabs %}
 
-2: <b>Verify Chrome Dependency Packages</b>
+2: <b>Verify Chrome Dependency Packages</b><br>
 
 Check if the necessary dependencies for Chromium are installed by running the following command in the runtimes/linux/native directory:
 
@@ -1334,7 +1433,7 @@ ldd chrome
 {% endhighlight %}
 {% endtabs %}
 
-3: <b>Install Required Dependencies</b>
+3: <b>Install Required Dependencies</b><br>
 
 We can also perform HTML to PDF conversion in Azure App Service (Linux) by installing the required dependencies directly through SSH terminal. Use the following command:
 
@@ -1371,20 +1470,18 @@ For more details to install the dependencies through SSH terminal window, refer 
 <th style="font-size:14px" width="100px">Solution</th>
 <td>
 
-1.<b>Script Execution at Startup</b>
-Copy the prerequisites script (dependenciesInstall.sh) into your application directory.
+1.<b>Script Execution at Startup</b><br>
+Copy the prerequisites script (dependenciesInstall.sh) into your application directory.<br>
 
 Ensure it is configured to always be copied to the output directory during build/publish.
-<br/><br/>
+<br>
 <img alt="Runtime folder" src="htmlconversion_images/Azuredirectory.png">
-<br/><br/>
-2.<b>Deploy to Azure App Service (Linux)</b>
-Publish your application to the Azure App Service.
-3.<b>Configure Startup Command</b>
-<br/><br/>
-After deployment, go to the Azure portal configuration for your app service.
-In the Startup Command section, add:
-<br/><br/>
+<br>
+2.<b>Deploy to Azure App Service (Linux)</b><br>
+Publish your application to the Azure App Service.<br>
+3.<b>Configure Startup Command</b><br>
+After deployment, go to the Azure portal configuration for your app service.<br>
+In the Startup Command section, add:<br>
 {% tabs %}
 {% highlight C# %}
 
@@ -1392,19 +1489,19 @@ In the Startup Command section, add:
 
 {% endhighlight %}
 {% endtabs %}
-<br/><br/>
+<br>
 <img alt="Runtime folder" src="htmlconversion_images/Azurepath.png">
-<br/><br/>
+<br>
 This ensures that your script runs to install necessary dependencies before the application launches.
-<br/><br/>
+<br>
 4.<b>Restart the App Service</b>
-<br/><br/>
+<br>
 This will trigger the execution of your startup script, resolving installation and font issues.
-<br/><br/>
+<br>
 5.<b>Verification</b>
-<br/><br/>
+<br>
 After the service restarts, try the conversion or operation again to ensure the issues are resolved.
-<br/><br/>
+<br>
 </td>
 </tr>
 
@@ -1453,26 +1550,47 @@ PdfDocument doc = htmlConverter.Convert(url);
 
 The problem is limited to Azure Functions with premium plans in Net 8.0 version. To fix this, we can either manually install the necessary Chromium dependencies in the SSH portal or include the runtimes folder (Blink binaries) in the project location.
 
-Prerequisites dependencies:
+<b>Prerequisites dependencies</b>:
 
 {% tabs %}
 {% highlight C# %}
 
-	apt-get update && apt-get install -yq --no-install-recommends libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libgbm1
+apt-get update && apt-get install -yq --no-install-recommends libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libgbm1
 
 {% endhighlight %}
 {% endtabs %}
 
-N> Note: We have option to exclude the default Blink binaries from the installation package. This will reduce the size of your deployment package in azure. Please refer to the code snippet below.
+N> We have option to exclude the default Blink binaries from the installation package. This will reduce the size of your deployment package in azure. Please refer to the code example below.
 
 {% tabs %}
 {% highlight C# %}
 
-	<PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Linux" Version="25.1.35" >
+<PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Linux" Version="25.1.35" >
 
-	<ExcludeAssets>native</ExcludeAssets>
+<ExcludeAssets>native</ExcludeAssets>
 
-	</PackageReference>
+</PackageReference>
+
+{% endhighlight %}
+{% endtabs %}
+
+## How to Exclude BlinkBinaries or Runtime Files in Build or Deployment
+
+The runtime files, or blink binaries, will be copied into a bin or published folder while building and publishing the application.
+By including the <ExcludeAssets>native</ExcludeAssets> option in the package reference of the csproj file, you can exclude the runtime files or blink binaries from being copied into the bin or publish folder while building and publishing the application. But you need to place the BlinkBinaries in the server disk and set the BlinkPath in the BlinkConverterSettings to perform the conversion. 
+
+N> Using this approach, you can reduce the deployment size on your own servers. 
+
+Refer to the following package reference:
+
+{% tabs %}
+{% highlight C# %}
+
+<ItemGroup>
+    <PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Windows" Version="31.1.23">
+      <ExcludeAssets>native</ExcludeAssets>
+    </PackageReference>
+</ItemGroup>
 
 {% endhighlight %}
 {% endtabs %}

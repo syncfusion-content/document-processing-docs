@@ -1,30 +1,30 @@
 ---
 layout: post
-title: Migration from PDF Viewer (Classic) to PDF Viewer | Syncfusion
-description: This section explains the features available in the PDF Viewer control compared to PDF Viewer (Classic).
+title: Migrate from (Classic) PDFViewer to SfPdfViewer in Blazor | Syncfusion
+description: Step-by-step migration guide from Blazor PDF Viewer (Classic) to SfPdfViewer, covering packages, scripts, Program.cs, markup, and WebAssembly.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Migration from PDF Viewer (Classic) to PDF Viewer
+# Migration from PDF Viewer (Classic) to SfPdfViewer
 
 ## Why PDF Viewer (Classic) to PDF Viewer control
 
-The migration to the PDF Viewer control brings a host of benefits, including improved performance in scrolling, pagination, and printing. These enhancements result in a smoother and more efficient user experience. Additionally, this migration eliminates the need for a Web assembly service dependency, streamlining the system and enhancing maintainability.
+Migrating to the PDF Viewer control delivers better performance and a simplified deployment model. Scrolling, page navigation, and printing are optimized for a smoother user experience. The newer viewer also removes the WebAssembly server service dependency required by the classic control, reducing app complexity and maintenance.
 
-* **Enhanced Performance**:
-With the PDF Viewer control, users can expect significant improvements in performance. Scrolling through documents, navigating pages, and printing operations are now optimized for efficiency. Users will experience seamless and fluid interactions, ensuring a more productive and satisfying workflow.
+* **Enhanced performance**:
+Experience faster scrolling, more responsive page navigation, and improved printing throughput for large documents.
 
-* **Elimination of Web Assembly Service Dependency**:
-The migration to the PDF Viewer control removes the requirement for a Web assembly service dependency.
+* **No server service dependency**:
+The newer viewer does not require a separate ServiceUrl or server-side WebAssembly service; client-side rendering is handled by the component.
 
-* **Unified Package for Multiple Platforms**:
-The PDF Viewer control is now available as a unified package for Windows, Mac, and Linux platforms. This means that regardless of their operating system, users can effortlessly install and utilize the package.
+* **Unified package across platforms**:
+A single package supports Windows, macOS, and Linux, making installation consistent across environments.
 
 ### Nuget Package
 
-To initialize the PDF Viewer component, need to add the following project references to your **.csproj** file
+To initialize the PDF Viewer component, add the following package references to the project **.csproj** file.
 
 <table>
 <tr>
@@ -69,9 +69,9 @@ To initialize the PDF Viewer component, need to add the following project refere
 
 ### Script File
 
-To utilize the PDF Viewer component in your project, need to add the corresponding script file to the **Host.cshtml** or **Layout.cshtml** file based on your framework version.
+To use the PDF Viewer component, add the corresponding script reference in the app host page (**Host.cshtml** or **Layout.cshtml**) based on the framework version.
 
-N> The script file is same for `Server application` and `Web assembly application` for PDF Viewer component
+N> The same script file is used for both `Server application` and `Web assembly application` for the PDF Viewer component.
 
 <table>
 <tr>
@@ -80,14 +80,16 @@ N> The script file is same for `Server application` and `Web assembly applicatio
 <tr>
 <td>
 {% tabs %}
-{% highlight html tabtitle="(~/Layout.cshtml/Host.cshtml)" hl_lines="5" %}
+{% highlight html tabtitle="(~/Layout.cshtml/Host.cshtml)" hl_lines="7" %}
 
 <head>
     <!-- Syncfusion Blazor PDF Viewer controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+<body>
     <!-- Syncfusion Blazor PDF Viewer controls scripts -->
     <script src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
-</head>
+</body>
 
 {% endhighlight %}
 {% endtabs %}
@@ -99,14 +101,16 @@ N> The script file is same for `Server application` and `Web assembly applicatio
 <tr>
 <td>
 {% tabs %}
-{% highlight html tabtitle="(~/Layout.cshtml/Host.cshtml)" hl_lines="5" %}
+{% highlight html tabtitle="(~/Layout.cshtml/Host.cshtml)" hl_lines="7" %}
 
 <head>
     <!-- Syncfusion Blazor SfPdfViewer controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+<body>
     <!-- Syncfusion Blazor SfPdfViewer controls scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
-</head>
+</body>
 
 {% endhighlight %}
 {% endtabs %}
@@ -116,7 +120,7 @@ N> The script file is same for `Server application` and `Web assembly applicatio
 
 ### Program.cs
 
-Add the following line to the **Program.cs** file to use the PDF Viewer component
+Add the following to the **Program.cs** file to register Syncfusion Blazor services. For WebAssembly apps, enable in-memory caching as shown in the comment.
 
 <table>
 <tr>
@@ -155,7 +159,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ### Index.razor
 
-To render the PDF Viewer component, add the following code in the **Index.razor** file.
+To render the PDF Viewer component, add the following code in the **Index.razor** file. In the newer viewer, a ServiceUrl is not required; specify only the DocumentPath and layout attributes.
 
 <table>
 <tr>
@@ -195,7 +199,7 @@ To render the PDF Viewer component, add the following code in the **Index.razor*
 
 ### Project.cs
 
-When using the PDF Viewer in a WebAssembly application, need to include the following lines in your **.csproj** file to ensure proper functionality and compatibility 
+For WebAssembly applications, include the following properties in the project **.csproj** file to ensure proper functionality and compatibility.
 
 <table>
 <tr>
@@ -219,12 +223,12 @@ When using the PDF Viewer in a WebAssembly application, need to include the foll
 </tr>
 </table>
 
-N> If you are WebAssembly application install [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package.
+N> For WebAssembly applications, install the [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package.
 
-N> If you encounter issues while attempting to host the application in certain environments, such as Azure app services, install [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) instead of [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) Nuget package.
+N> When hosting in certain environments (for example, Azure App Service), use [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) instead of [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly). Align native asset versions in the project file with the installed package version.
 
 ## See also
 
-* [Getting Started with Blazor SfPdfViewer Component in Blazor Server App](./getting-started/server-side-application)
+* [Getting Started with Blazor SfPdfViewer Component in Blazor Web app Server App](./getting-started/web-app)
 
 * [Getting Started with Blazor SfPdfViewer Component in Blazor WASM App](./getting-started/web-assembly-application)
