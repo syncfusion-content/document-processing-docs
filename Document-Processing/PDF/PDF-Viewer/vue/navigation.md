@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigation in Vue Pdfviewer component
+# Navigation in Vue PDF viewer control
 
 The PDF Viewer supports different internal and external navigations.
 

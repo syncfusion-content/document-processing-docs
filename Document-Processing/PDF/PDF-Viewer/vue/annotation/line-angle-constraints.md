@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Line Angle Constraints in Vue PdfViewer | Syncfusion
-description: Line angle constraints in Vue PDF Viewer | Syncfusion
 description: Learn to add, edit, delete, and configure highlight, underline, strikethrough, and squiggly text markup annotations programmatically.
 platform: document-processing
 control: PDF Viewer

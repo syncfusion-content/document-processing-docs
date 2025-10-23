@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Mobile Toolbar Interface in Vue Pdfviewer component
+# Mobile Toolbar Interface in Vue PDF viewer control
 
 The Mobile PDF Viewer offers a variety of features for viewing, searching, annotating, and managing PDF documents on mobile devices. It includes Essential<sup style="font-size:70%">&reg;</sup> tools like search, download, bookmarking, annotation, and page organization. Users also have the option to enable desktop toolbar features in mobile mode, providing a more extensive set of actions.
 

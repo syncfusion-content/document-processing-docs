@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations in mobile view in Vue PDF Viewer component | Syncfusion
-description: Learn how to use annotations in mobile view with the Syncfusion Vue PDF Viewer (Essential JS 2).
+description: Learn how to use annotations in mobile view with the Syncfusion Vue PDF Viewer contol (Essential JS 2).
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 **Step 1:** Tap Edit Annotation on the toolbar to enable the annotation toolbar.
 
-![Enable the annotation toolbar](../images/edit-annotation.png)
+![Enable the annotation toolbar](../images/editAnnotation.png)
 
 **Step 2:** The annotation toolbar appears below the main toolbar.
 
@@ -81,7 +81,7 @@ domainurl: ##DomainURL##
 
 **Step 2:** The ink annotation appears on the page.
 
-![Ink annotation drawn on the page](../how-to/images/ink-annotation.png)
+![Ink annotation drawn on the page](../images/ink-annotation.png)
 
 ## Change annotation properties (before adding)
 

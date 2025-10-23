@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Find Text using findTextAsync Method in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer Control
+# Find Text using findTextAsync Method in Syncfusion Vue PDF Viewer Control
 
 The `findTextAsync` method searches for a string or array of strings asynchronously and returns bounding rectangles for each match. Use it to locate text positions across the document or on a specific page.
 

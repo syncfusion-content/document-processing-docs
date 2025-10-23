@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create programmatically in Vue PDF Viewer component
+# Create programmatically in Vue PDF Viewer control
 
 The PDF Viewer component provides options to add, edit, and delete form fields. The supported form field types are:
 

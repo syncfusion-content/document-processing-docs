@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Text search in Vue Pdfviewer component
+# Text search in Vue PDF viewer control
 
 The text search feature in the PDF Viewer locates and highlights matching content within a document. Enable or disable this capability with the following configuration.
 

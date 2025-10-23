@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add rectangle annotation from textSearch in Vue PDF Viewer | Syncfusion
+title: Add Rectangle Annotation via TextSearch in Vue PDF Viewer | Syncfusion
 description: Learn to add rectangle annotations using text search bounds in the Vue PDF Viewer component, including initialization and search controls.
 control: PDF Viewer
 platform: document-processing

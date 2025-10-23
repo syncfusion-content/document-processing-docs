@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text markup annotation in Vue Pdfviewer component
+# Text markup annotation in Vue PDF viewer component
 
 The PDF Viewer provides options to add, edit, and delete text markup annotations, including Highlight, Underline, Strikethrough, and Squiggly.
 

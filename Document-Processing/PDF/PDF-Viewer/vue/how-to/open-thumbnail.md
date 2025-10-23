@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open thumbnail in Vue Pdfviewer component
+# Open thumbnail in Vue PDF Viewer control
 
 Open the thumbnail pane programmatically using the [openThumbnailPane()](https://ej2.syncfusion.com/documentation/api/pdfviewer/thumbnailView/#openthumbnailpane) method.
 

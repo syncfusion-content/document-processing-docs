@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shape annotation in Vue Pdfviewer component
+# Shape annotation in Vue PDF Viewer control
 
 The PDF Viewer control provides options to add, edit, and delete shape annotations. The supported shape annotation types are:
 

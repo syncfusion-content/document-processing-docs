@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load documents in Vue Pdfviewer component
+# Load documents in Vue PDF Viewer control
 
 Load or switch PDF documents dynamically after the initial load. Use the [load](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load a PDF by Base64 string or file name.
 

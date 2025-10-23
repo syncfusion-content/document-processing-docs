@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract Text Method in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Control
+# Extract Text Method in Syncfusion PDF Viewer control
 
 The `extractText` method extracts text from one or more pages and can return plain text or text with bounds for each element.
 

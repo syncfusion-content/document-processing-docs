@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in Vue PDF Viewer component
+# Getting started in Vue PDF viewer control
 
 This section briefly explains how to create the **PDF Viewer** component and configure its available functionalities in a Vue 2 application using [Vue-CLI](https://cli.vuejs.org/). Ensure that your machine meets the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 

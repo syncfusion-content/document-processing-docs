@@ -19,7 +19,7 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Prerequisites
 
-Install Node.js (version 18 or later recommended) along with npm or Yarn before creating the project. Review the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/) to confirm supported platforms.
+Install Node.js (version 18 or later recommended) along with npm or Yarn before creating the project. Review the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements) to confirm supported platforms.
 
 ## Set up the Vite project
 
@@ -100,7 +100,7 @@ yarn add @syncfusion/ej2-vue-pdfviewer
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion Vue components by using CSS or SASS assets from npm packages, a CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/), or [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) for details about built-in themes and additional options for referencing them in a Vue project.
+You can import themes for the Syncfusion Vue components by using CSS or SASS assets from npm packages, a CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator), or [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) for details about built-in themes and additional options for referencing them in a Vue project.
 
 This tutorial applies the Material theme by importing the required CSS from the installed packages into the `<style>` section of the **src/App.vue** file.
 

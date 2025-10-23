@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stamp annotation in Vue Pdfviewer component
+# Stamp annotation in Vue PDF Viewer control
 
 The PDF Viewer control provides options to add, edit, delete, and rotate the following stamp annotations in PDF documents:
 

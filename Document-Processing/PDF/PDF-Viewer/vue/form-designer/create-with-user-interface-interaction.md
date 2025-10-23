@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create form fields with UI interaction in Vue Pdfviewer component
+# Create form fields with UI interaction in Vue PDF Viewer control
 
 The PDF Viewer component supports interactive form field design, including drawing, dragging, and resizing fields directly on the page. Click the Form Field icon on the toolbar to add a field and place it on the document. Supported form field types include:
 

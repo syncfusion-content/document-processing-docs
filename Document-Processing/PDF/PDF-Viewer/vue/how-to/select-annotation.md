@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Select annotation in Vue Pdfviewer component
+# Select annotation in Vue PDF Viewer control
 
 The PDF Viewer library allows you to select an annotation from a PDF document. Selecting an annotation can be done using the `selectAnnotation()` method. This method is used to select an annotation using its id.
 

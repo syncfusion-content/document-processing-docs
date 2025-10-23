@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Ink annotation in Vue Pdfviewer component | Syncfusion
-description: Ink annotation in Vue PDF Viewer control | Syncfusion
+title: Ink annotation in Vue PDF viewer component | Syncfusion
 description: Learn about ink annotations in the Syncfusion TypeScript PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
 control: PDF Viewer
 platform: document-processing
@@ -9,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ink annotation in Vue Pdfviewer component
+# Ink annotation in Vue PDF viewer component
 
 The PDF Viewer control provides options to add, edit, and delete ink annotations.
 

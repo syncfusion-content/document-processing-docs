@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comments in Vue Pdfviewer component
+# Comments in Vue PDF Viewer control
 
 The PDF Viewer control provides options to add, edit, and delete comments for the following annotations in PDF documents:
 

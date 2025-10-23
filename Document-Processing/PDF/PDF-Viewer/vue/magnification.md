@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Magnification in Vue Pdfviewer component
+# Magnification in Vue PDF viewer control
 
 The PDF Viewer includes magnification tools in the default toolbar: Zoom In, Zoom Out, Zoom (to a specific value), Fit to Page, and Fit to Width. The toolbar can be configured to show or hide these tools.
 

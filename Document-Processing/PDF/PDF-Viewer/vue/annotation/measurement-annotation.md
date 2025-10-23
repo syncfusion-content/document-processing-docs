@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Measurement annotation in Vue Pdfviewer component
+# Measurement annotation in Vue PDF Viewer control
 
 The PDF Viewer provides options to add measurement annotations. The supported measurement annotations are:
 
