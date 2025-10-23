@@ -23,8 +23,7 @@ The `canInsert` property controls the visibility of the insert tool. When set to
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   pageOrganizerSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerPageOrganizerSettings
-                   { CanInsert = false })">
+                   pageOrganizerSettings="@(new {CanDelete= false, CanInsert= false, CanRotate= false, canCopy= false, canRearrange= false, canImport= false, imageZoom= 1, showImageZoomingSlider= true, imageZoomMin= 1, imageZoomMax= 5 })">
     </ejs-pdfviewer>
 </div>
 
@@ -35,8 +34,7 @@ The `canInsert` property controls the visibility of the insert tool. When set to
     <ejs-pdfviewer id="pdfviewer"
                    serviceUrl='/Index'
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   pageOrganizerSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerPageOrganizerSettings
-                   { CanInsert = false })">
+                   pageOrganizerSettings="@(new {CanDelete= false, CanInsert= false, CanRotate= false, canCopy= false, canRearrange= false, canImport= false, imageZoom= 1, showImageZoomingSlider= true, imageZoomMin= 1, imageZoomMax= 5 })">
     </ejs-pdfviewer>
 </div>
 
@@ -54,8 +52,7 @@ The `canDelete` property controls the visibility of the delete tool. When set to
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   pageOrganizerSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerPageOrganizerSettings
-                   { CanDelete = false })">
+                   pageOrganizerSettings="@(new {CanDelete= false, CanInsert= false, CanRotate= false, canCopy= false, canRearrange= false, canImport= false, imageZoom= 1, showImageZoomingSlider= true, imageZoomMin= 1, imageZoomMax= 5 })"">
     </ejs-pdfviewer>
 </div>
 
@@ -66,8 +63,7 @@ The `canDelete` property controls the visibility of the delete tool. When set to
     <ejs-pdfviewer id="pdfviewer"
                    serviceUrl='/Index'
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   pageOrganizerSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerPageOrganizerSettings
-                   { CanDelete = false })">
+                   pageOrganizerSettings="@(new {CanDelete= false, CanInsert= false, CanRotate= false, canCopy= false, canRearrange= false, canImport= false, imageZoom= 1, showImageZoomingSlider= true, imageZoomMin= 1, imageZoomMax= 5 })"">
     </ejs-pdfviewer>
 </div>
 
@@ -85,8 +81,7 @@ The `canRotate` property controls the visibility of the rotate tool. When set to
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   pageOrganizerSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerPageOrganizerSettings
-                   { CanRotate = false })">
+                   pageOrganizerSettings="@(new {CanDelete= false, CanInsert= false, CanRotate= false, canCopy= false, canRearrange= false, canImport= false, imageZoom= 1, showImageZoomingSlider= true, imageZoomMin= 1, imageZoomMax= 5 })">
     </ejs-pdfviewer>
 </div>
 
@@ -97,8 +92,7 @@ The `canRotate` property controls the visibility of the rotate tool. When set to
     <ejs-pdfviewer id="pdfviewer"
                    serviceUrl='/Index'
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   pageOrganizerSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerPageOrganizerSettings
-                   { CanRotate = false })">
+                   pageOrganizerSettings="@(new {CanDelete= false, CanInsert= false, CanRotate= false, canCopy= false, canRearrange= false, canImport= false, imageZoom= 1, showImageZoomingSlider= true, imageZoomMin= 1, imageZoomMax= 5 })">
     </ejs-pdfviewer>
 </div>
 

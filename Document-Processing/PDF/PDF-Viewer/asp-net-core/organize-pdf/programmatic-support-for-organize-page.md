@@ -74,23 +74,21 @@ The `pageOrganizerSettings` API allows you to customize the page management func
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   pageOrganizerSettings= pageOrganizerSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerPageOrganizerSettings
-                   {canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5 })">
+<div class="text-center">
+    <ejs-pdfviewer  id="pdfviewer" 
+                    style="height:600px" 
+                    pageOrganizerSettings="@(new {CanDelete= false, CanInsert= false, CanRotate= false, canCopy= false, canRearrange= false, canImport= false, imageZoom= 1, showImageZoomingSlider= true, imageZoomMin= 1, imageZoomMax= 5 })" 
+                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
     </ejs-pdfviewer>
 </div>
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   pageOrganizerSettings= pageOrganizerSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerPageOrganizerSettings
-                   {canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5 })">
+<div class="text-center">
+    <ejs-pdfviewer  id="pdfviewer" 
+                    style="height:600px" 
+                    serviceUrl="/api/PdfViewer"
+                    pageOrganizerSettings="@(new {CanDelete= false, CanInsert= false, CanRotate= false, canCopy= false, canRearrange= false, canImport= false, imageZoom= 1, showImageZoomingSlider= true, imageZoomMin= 1, imageZoomMax= 5 })" 
+                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
     </ejs-pdfviewer>
 </div>
 {% endhighlight %}

@@ -33,7 +33,7 @@ Use the [`maxZoom`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2
     <ejs-pdfviewer id="pdfviewer" style="height:600px" maxZoom="@MaxZoom" minZoom="@MinZoom" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
     </ejs-pdfviewer>
 </div>
-
+```
 
 #### Restrict zoom percentage on mobile devices
 

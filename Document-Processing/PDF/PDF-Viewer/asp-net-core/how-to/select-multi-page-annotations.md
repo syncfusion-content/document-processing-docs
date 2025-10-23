@@ -37,5 +37,3 @@ Here is an example of how you can use the [**enableMultiPageAnnotation**](https:
 
 {% endhighlight %}
 {% endtabs %}
-
-Find the sample [how to select multi-page TextMarkup annotation as single annotation](https://stackblitz.com/edit/xuyjgt-bjwrbw?file=index.ts)

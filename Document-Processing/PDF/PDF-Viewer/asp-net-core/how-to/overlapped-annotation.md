@@ -48,5 +48,3 @@ Here is an example of how you can use the **annotationSelect** event to get the 
 
 {% endhighlight %}
 {% endtabs %}
-
-Find the sample [how to get the overlapped annotations on mouse click](https://stackblitz.com/edit/9jn6bk-kmzqr5?devtoolsheight=33&file=index.ts)

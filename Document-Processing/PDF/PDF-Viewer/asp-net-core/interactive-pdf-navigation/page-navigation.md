@@ -134,8 +134,6 @@ Also, you can programmatically perform page navigation options as follows.
 {% endhighlight %}
 {% endtabs %}
 
-Find the [here](https://stackblitz.com/edit/5dqbkd?file=index.ts) to perform the page navigation options programmatically.
-
 ## See also
 
 * [Toolbar items](../toolbar-customization/)

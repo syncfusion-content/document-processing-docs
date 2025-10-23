@@ -83,6 +83,7 @@ Event arguments:
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+                   pageOrganizerSettings="@(new {CanDelete= false, CanInsert= false, CanRotate= false, canCopy= false, canRearrange= false, canImport= false, imageZoom= 1, showImageZoomingSlider= true, imageZoomMin= 1, imageZoomMax= 5 })" 
                    pageOrganizerZoomChanged="pageOrganizerZoomChanged">
     </ejs-pdfviewer>
 </div>
@@ -102,6 +103,7 @@ Event arguments:
                    style="height:600px"
                    serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+                   pageOrganizerSettings="@(new {CanDelete= false, CanInsert= false, CanRotate= false, canCopy= false, canRearrange= false, canImport= false, imageZoom= 1, showImageZoomingSlider= true, imageZoomMin= 1, imageZoomMax= 5 })" 
                    pageOrganizerZoomChanged="pageOrganizerZoomChanged">
     </ejs-pdfviewer>
 </div>
