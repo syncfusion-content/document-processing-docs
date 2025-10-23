@@ -24,11 +24,11 @@ import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  const pdfviewer = React.useRef(null);
+  let pdfviewer;
   return (
     <PdfViewerComponent
       id="PdfViewer"
-      ref={pdfviewer}
+      ref={(scope) => { pdfviewer = scope; }}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
       pageOrganizerSettings={{ canInsert: false }}
@@ -50,11 +50,11 @@ import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  const pdfviewer = React.useRef(null);
+  lwt pdfviewer;
   return (
     <PdfViewerComponent
       id="PdfViewer"
-      ref={pdfviewer}
+      ref={(scope) => { pdfviewer = scope; }}
       serviceUrl='https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       pageOrganizerSettings={{ canInsert: false }}
@@ -83,11 +83,11 @@ import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  const pdfviewer = React.useRef(null);
+  let pdfviewer;
   return (
     <PdfViewerComponent
       id="PdfViewer"
-      ref={pdfviewer}
+      ref={(scope) => { pdfviewer = scope; }}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
       pageOrganizerSettings={{ canDelete: false }}
@@ -109,11 +109,11 @@ import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  const pdfviewer = React.useRef(null);
+  let pdfviewer;
   return (
     <PdfViewerComponent
       id="PdfViewer"
-      ref={pdfviewer}
+      ref={(scope) => { pdfviewer = scope; }}
       serviceUrl='https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       pageOrganizerSettings={{ canDelete: false }}
@@ -142,11 +142,11 @@ import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  const pdfviewer = React.useRef(null);
+  let pdfviewer;
   return (
     <PdfViewerComponent
       id="PdfViewer"
-      ref={pdfviewer}
+      ref={(scope) => { pdfviewer = scope; }}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
       pageOrganizerSettings={{ canRotate: false }}
@@ -168,11 +168,11 @@ import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  const pdfviewer = React.useRef(null);
+  let pdfviewer;
   return (
     <PdfViewerComponent
       id="PdfViewer"
-      ref={pdfviewer}
+      ref={(scope) => { pdfviewer = scope; }}
       serviceUrl='https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       pageOrganizerSettings={{ canRotate: false }}

@@ -43,19 +43,15 @@ import {
   Inject
 } from '@syncfusion/ej2-react-pdfviewer';
 
-export class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.pdfviewer = React.createRef();
-  }
-
-  render() {
-    return (
-      <div>
+function App() {
+  let pdfviewer;
+  return (
+    <div>
         <PdfViewerComponent
           id="PdfViewer"
-          ref={this.pdfviewer}
+          ref={(scope) => { pdfviewer = scope; }}
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
           pageOrganizerSaveAs={(args) => {
             console.log('File Name is' + args.fileName);
             console.log('Document data' + args.downloadDocument);
@@ -77,8 +73,7 @@ export class App extends React.Component {
           ]} />
         </PdfViewerComponent>
       </div>
-    );
-  }
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('sample'));
@@ -116,19 +111,15 @@ import {
   Inject
 } from '@syncfusion/ej2-react-pdfviewer';
 
-export class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.pdfviewer = React.createRef();
-  }
-
-  render() {
-    return (
-      <div>
+function App() {
+  let pdfviewer;
+  return (
+    <div>
         <PdfViewerComponent
           id="PdfViewer"
-          ref={this.pdfviewer}
+          ref={(scope) => { pdfviewer = scope; }}
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
           pageOrganizerZoomChanged={(args) => {
             console.log('Previous Zoom Value is' + args.previousZoom);
             console.log('Current Zoom Value is' + args.currentZoom);
@@ -151,8 +142,7 @@ export class App extends React.Component {
           ]} />
         </PdfViewerComponent>
       </div>
-    );
-  }
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('sample'));
