@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open document from Google Cloud Storage in React Document editor control | Syncfusion
+title: Open Google Cloud Files in React Document editor | Syncfusion
 description: Learn about how to Open document from Google Cloud Storage in React Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Google Cloud Storage
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Google Cloud Storage
+# Open document from Google Cloud Storage in React Document editor
 
 To load a document from Google Cloud Storage in a Document editor, you can follow the steps below
 
