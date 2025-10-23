@@ -44,6 +44,10 @@ Cell formatting options include:
 
 *   **Wrap Text** - Displays long content on multiple lines within a single cell, preventing it from overflowing into adjacent cells.
 
+ N> To apply Wrap Text 
+    1. Select the target cell (e.g., C5) or range.
+    2. 2. Go to Home tab -> Wrap Text in the ribbon to toggle wrapping for the selection.
+
 Cell formatting can be applied or removed from a cell or range by using the options available in the component's built-in **Ribbon** under the **Home** tab.
 
 ## Autofill
