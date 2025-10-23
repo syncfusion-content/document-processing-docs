@@ -35,6 +35,7 @@ Step 1: Create a new C# Blazor Web app project.
 ![Select the framework in Blazor Web App Server in Visual Studio](Workingwith-Blazor/Blazor_image_Server_Web_Additional_Information.png)
 
 Step 2: Install the `Syncfusion.PresentationRenderer.Net.Core` NuGet package.
+
 To convert a **PowerPoint presentation to Image in a Web App Server**, Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to the project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
@@ -43,6 +44,7 @@ N> 1. If deploying the application in a Linux environment, refer to the [documen
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder, which is located inside the `Components` folder.
+
 Add the following namespaces in the file.
 
 {% tabs %}
@@ -59,6 +61,7 @@ Add the following namespaces in the file.
 {% endtabs %}
 
 Step 4: Add a button to `Presentation.razor`.
+
 Include the following code to create a new button that triggers the PowerPoint to Image conversion:
 
 {% tabs %}
@@ -72,6 +75,7 @@ Include the following code to create a new button that triggers the PowerPoint t
 {% endtabs %}
 
 Step 5: Implement the method in `Presentation.razor`.
+
 Add the following code to **convert PowerPoint to Image** and download the **image file**.
 
 {% tabs %}
@@ -93,6 +97,7 @@ Add the following code to **convert PowerPoint to Image** and download the **ima
 {% endtabs %}
 
 Step 6: Create a new cs file `PowerPointService` in the `Data` folder.
+
 Include the following namespaces in the file.
 
 {% tabs %}
@@ -105,6 +110,7 @@ using Syncfusion.PresentationRenderer;
 {% endtabs %}
 
 Step 7: Implement the method in `PowerPointService.cs`.
+
 Create a new `MemoryStream` method in the `PowerPointService` and include the following code snippet to **convert a PowerPoint to Image in Blazor Web App Server**.
 
 {% tabs %}
@@ -134,7 +140,8 @@ using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pptx", FileM
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Add the service in `Program.cs`. 
+Step 8: Add the service in `Program.cs`.
+
 Add the following line to the `Program.cs` file to register `PowerPointService` as a scoped service in the Blazor application.
 
 {% tabs %}
@@ -146,6 +153,7 @@ builder.Services.AddScoped<PowerPointService>();
 {% endtabs %}
             
 Step 9: Create `FileUtils.cs` for JavaScript interoperability.
+
 Create a new class file named `FileUtils` in the project and add the following code to invoke the JavaScript action for file download in the browser.
 
 {% tabs %}
@@ -164,6 +172,7 @@ public static class FileUtils
 {% endtabs %}
 
 Step 10: Add the following JavaScript function to `App.razor`.
+
 Add this function in the `App.razor` file located in the `Pages` folder.
 
 {% tabs %}
@@ -199,17 +208,18 @@ Add this function in the `App.razor` file located in the `Pages` folder.
 {% endtabs %}
 
 Step 11: Add the navigation link.
+
 Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
 
 {% tabs %}
 
 {% highlight HTML %}
 
-	 <div class="nav-item px-3">
-		<NavLink class="nav-link" href="presentation">
-			<span class="oi oi-list-rich" aria-hidden="true"></span> Generate Presentation
-		</NavLink>
-	</div>
+ <div class="nav-item px-3">
+    <NavLink class="nav-link" href="presentation">
+        <span class="oi oi-list-rich" aria-hidden="true"></span> Generate Presentation
+    </NavLink>
+</div>
 
 {% endhighlight %}
 
@@ -259,6 +269,7 @@ N> 1. If deploying the application in a Linux environment, refer to the [documen
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder, which is located inside the `Components` folder.
+
 Add the following namespaces in the file.
 
 {% tabs %}
@@ -275,6 +286,7 @@ Add the following namespaces in the file.
 {% endtabs %}
 
 Step 4: Add a button to `Presentation.razor`.
+
 Include the following code to create a new button that triggers the PowerPoint to Image conversion:
 
 {% tabs %}
@@ -288,6 +300,7 @@ Include the following code to create a new button that triggers the PowerPoint t
 {% endtabs %}
 
 Step 5: Implement the method in `Presentation.razor`.
+
 Add the following code to **convert PowerPoint to Image** and download the **image file**.
 
 {% tabs %}
@@ -309,6 +322,7 @@ Add the following code to **convert PowerPoint to Image** and download the **ima
 {% endtabs %}
 
 Step 6: Create a new cs file `PowerPointService` in the `Data` folder.
+
 Include the following namespaces in the file.
 
 {% tabs %}
@@ -321,6 +335,7 @@ using Syncfusion.PresentationRenderer;
 {% endtabs %}
 
 Step 7: Implement the method in `PowerPointService.cs`.
+
 Create a new `MemoryStream` method in the `PowerPointService` and include the following code snippet to **convert a PowerPoint to Image in Blazor Web App Server**.
 
 {% tabs %}
@@ -350,7 +365,8 @@ using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pptx", FileM
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Add the service in `Program.cs`. 
+Step 8: Add the service in `Program.cs`.
+
 Add the following line to the `Program.cs` file to register `PowerPointService` as a scoped service in the Blazor application.
 
 {% tabs %}
@@ -362,6 +378,7 @@ builder.Services.AddScoped<PowerPointService>();
 {% endtabs %}
             
 Step 9: Create `FileUtils.cs` for JavaScript interoperability.
+
 Create a new class file named `FileUtils` in the project and add the following code to invoke the JavaScript action for file download in the browser.
 
 {% tabs %}
@@ -380,6 +397,7 @@ public static class FileUtils
 {% endtabs %}
 
 Step 10: Add the following JavaScript function to `App.razor`.
+
 Add this function in the `App.razor` file located in the `Pages` folder.
 
 {% tabs %}
@@ -415,17 +433,18 @@ Add this function in the `App.razor` file located in the `Pages` folder.
 {% endtabs %}
 
 Step 11: Add the navigation link.
+
 Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
 
 {% tabs %}
 
 {% highlight HTML %}
 
-	 <div class="nav-item px-3">
-		<NavLink class="nav-link" href="presentation">
-			<span class="oi oi-list-rich" aria-hidden="true"></span> Generate Presentation
-		</NavLink>
-	</div>
+ <div class="nav-item px-3">
+    <NavLink class="nav-link" href="presentation">
+        <span class="oi oi-list-rich" aria-hidden="true"></span> Generate Presentation
+    </NavLink>
+</div>
 
 {% endhighlight %}
 
@@ -492,6 +511,7 @@ N> 1. If deploying the application in a Linux environment, refer to the [documen
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder, which is located inside the `Components` folder.
+
 Add the following namespaces in the file.
 
 {% tabs %}
@@ -508,6 +528,7 @@ Add the following namespaces in the file.
 {% endtabs %}
 
 Step 4: Add a button to `Presentation.razor`.
+
 Include the following code to create a new button that triggers the PowerPoint to Image conversion:
 
 {% tabs %}
@@ -521,6 +542,7 @@ Include the following code to create a new button that triggers the PowerPoint t
 {% endtabs %}
 
 Step 5: Implement the method in `Presentation.razor`.
+
 Add the following code to **convert PowerPoint to Image** and download the **image file**.
 
 {% tabs %}
@@ -542,6 +564,7 @@ Add the following code to **convert PowerPoint to Image** and download the **ima
 {% endtabs %}
 
 Step 6: Create a new cs file `PowerPointService` in the `Data` folder.
+
 Include the following namespaces in the file.
 
 {% tabs %}
@@ -554,6 +577,7 @@ using Syncfusion.PresentationRenderer;
 {% endtabs %}
 
 Step 7: Implement the method in `PowerPointService.cs`.
+
 Create a new `MemoryStream` method in the `PowerPointService` and include the following code snippet to **convert a PowerPoint to Image in Blazor Web App Server**.
 
 {% tabs %}
@@ -583,7 +607,8 @@ using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pptx", FileM
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Add the service in `Program.cs`. 
+Step 8: Add the service in `Program.cs`.
+ 
 Add the following line to the `Program.cs` file to register `PowerPointService` as a scoped service in the Blazor application.
 
 {% tabs %}
@@ -595,6 +620,7 @@ builder.Services.AddScoped<PowerPointService>();
 {% endtabs %}
             
 Step 9: Create `FileUtils.cs` for JavaScript interoperability.
+
 Create a new class file named `FileUtils` in the project and add the following code to invoke the JavaScript action for file download in the browser.
 
 {% tabs %}
@@ -613,6 +639,7 @@ public static class FileUtils
 {% endtabs %}
 
 Step 10: Add the following JavaScript function to `App.razor`.
+
 Add this function in the `App.razor` file located in the `Pages` folder.
 
 {% tabs %}
@@ -648,17 +675,18 @@ Add this function in the `App.razor` file located in the `Pages` folder.
 {% endtabs %}
 
 Step 11: Add the navigation link.
+
 Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
 
 {% tabs %}
 
 {% highlight HTML %}
 
-	 <div class="nav-item px-3">
-		<NavLink class="nav-link" href="presentation">
-			<span class="oi oi-list-rich" aria-hidden="true"></span> Generate Presentation
-		</NavLink>
-	</div>
+ <div class="nav-item px-3">
+    <NavLink class="nav-link" href="presentation">
+        <span class="oi oi-list-rich" aria-hidden="true"></span> Generate Presentation
+    </NavLink>
+</div>
 
 {% endhighlight %}
 
@@ -700,6 +728,7 @@ An online sample link to [convert PowerPoint Presentation to image](https://docu
 *   Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
 Step 1: Create a new C# Blazor WASM Standalone app project. 
+
 Select "Blazor WebAssembly Standalone App" from the template and click the Next button.
 
 ![Create Blazor WebAssembly application in Visual Studio for Blazor PowerPoint presentation](Workingwith-Blazor/Blazor_WASM_Standalone.png)
@@ -719,9 +748,10 @@ N> 3. If you face issues related to SkiaSharp during runtime, install the necess
 N> ```
 N> dotnet workload install wasm-tools
 N> ```
-N> After completing the installation, restart Visual Studio Code to ensure proper integration of the tools.
+N> After completing the installation, restart Visual Studio to ensure proper integration of the tools.
 
 Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder.
+
 Add the following namespaces in the file.
 
 {% tabs %}
@@ -738,6 +768,7 @@ Add the following namespaces in the file.
 {% endtabs %}
 
 Step 4: Add a button to `Presentation.razor`.
+
 Include the following code to create a new button that triggers the PowerPoint to Image conversion:
 
 {% tabs %}
@@ -751,6 +782,7 @@ Include the following code to create a new button that triggers the PowerPoint t
 {% endtabs %}
 
 Step 5: Implement `PPTXToImage` method in `Presentation.razor`.
+
 Create a new `async` method named `PPTXToImage` and include the following code snippet to **convert a PowerPoint to image in Blazor WASM Standalone app**.
 
 {% tabs %}
@@ -779,6 +811,7 @@ using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.pptx"
 {% endtabs %}
 
 Step 6: Create `FileUtils.cs` for JavaScript interoperability.
+
 Create a new class file named `FileUtils` in the project and add the following code to invoke the JavaScript action for file download in the browser.
 
 {% tabs %}
@@ -797,6 +830,7 @@ public static class FileUtils
 {% endtabs %}
 
 Step 7: Add the following JavaScript function to `index.html`.
+
 Add this function in the `index.html` file located in `wwwroot`.
 
 {% tabs %}
@@ -829,6 +863,7 @@ Add this function in the `index.html` file located in `wwwroot`.
 {% endtabs %}
 
 Step 8: Add the navigation link.
+
 Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
 
 {% tabs %}
@@ -898,6 +933,7 @@ N> ```
 N> After completing the installation, restart Visual Studio Code to ensure proper integration of the tools.
 
 Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder.
+
 Add the following namespaces in the file.
 
 {% tabs %}
@@ -914,6 +950,7 @@ Add the following namespaces in the file.
 {% endtabs %}
 
 Step 4: Add a button to `Presentation.razor`.
+
 Include the following code to create a new button that triggers the PowerPoint to Image conversion:
 
 {% tabs %}
@@ -927,6 +964,7 @@ Include the following code to create a new button that triggers the PowerPoint t
 {% endtabs %}
 
 Step 5: Implement `PPTXToImage` method in `Presentation.razor`.
+
 Create a new `async` method named `PPTXToImage` and include the following code snippet to **convert a PowerPoint to image in Blazor WASM Standalone app**.
 
 {% tabs %}
@@ -955,6 +993,7 @@ using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.pptx"
 {% endtabs %}
 
 Step 6: Create `FileUtils.cs` for JavaScript interoperability.
+
 Create a new class file named `FileUtils` in the project and add the following code to invoke the JavaScript action for file download in the browser.
 
 {% tabs %}
@@ -973,6 +1012,7 @@ public static class FileUtils
 {% endtabs %}
 
 Step 7: Add the following JavaScript function to `index.html`.
+
 Add this function in the `index.html` file located in `wwwroot`.
 
 {% tabs %}
@@ -1005,6 +1045,7 @@ Add this function in the `index.html` file located in `wwwroot`.
 {% endtabs %}
 
 Step 8: Add the navigation link.
+
 Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
 
 {% tabs %}
@@ -1090,9 +1131,10 @@ N> 3. If you face issues related to SkiaSharp during runtime, install the necess
 N> ```
 N> dotnet workload install wasm-tools
 N> ```
-N> After completing the installation, restart Visual Studio Code to ensure proper integration of the tools.
+N> After completing the installation, restart JetBrains Rider to ensure proper integration of the tools.
 
 Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder.
+
 Add the following namespaces in the file.
 
 {% tabs %}
@@ -1109,6 +1151,7 @@ Add the following namespaces in the file.
 {% endtabs %}
 
 Step 4: Add a button to `Presentation.razor`.
+
 Include the following code to create a new button that triggers the PowerPoint to Image conversion:
 
 {% tabs %}
@@ -1122,6 +1165,7 @@ Include the following code to create a new button that triggers the PowerPoint t
 {% endtabs %}
 
 Step 5: Implement `PPTXToImage` method in `Presentation.razor`.
+
 Create a new `async` method named `PPTXToImage` and include the following code snippet to **convert a PowerPoint to image in Blazor WASM Standalone app**.
 
 {% tabs %}
@@ -1150,6 +1194,7 @@ using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.pptx"
 {% endtabs %}
 
 Step 6: Create `FileUtils.cs` for JavaScript interoperability.
+
 Create a new class file named `FileUtils` in the project and add the following code to invoke the JavaScript action for file download in the browser.
 
 {% tabs %}
@@ -1168,6 +1213,7 @@ public static class FileUtils
 {% endtabs %}
 
 Step 7: Add the following JavaScript function to `index.html`.
+
 Add this function in the `index.html` file located in `wwwroot`.
 
 {% tabs %}
@@ -1200,6 +1246,7 @@ Add this function in the `index.html` file located in `wwwroot`.
 {% endtabs %}
 
 Step 8: Add the navigation link.
+
 Add the following code snippet to the Navigation menu's Razor file in the `Layout` folder.
 
 {% tabs %}
@@ -1234,7 +1281,7 @@ N> To convert PPTX to Image, it is necessary to access the font stream internall
 
 {% endtabcontent %}
 
-{% endtabcontents %}}
+{% endtabcontents %}
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features.  
 
