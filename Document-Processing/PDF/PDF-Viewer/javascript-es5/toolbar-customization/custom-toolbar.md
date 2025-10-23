@@ -3,8 +3,7 @@ layout: post
 title: Toolbar in Javascript Pdfviewer control | Syncfusion
 description: Learn here all about Toolbar in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Toolbar
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -37,20 +36,19 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
 {% raw %}
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>Essential JS 2</title>
-<!-- Essential JS 2 fabric theme -->
-<link href="{{:CDN_LINK}}ej2-pdfviewer/styles/fabric.css" rel="stylesheet" type="text/css"/>
-<!-- Essential JS 2 PDF Viewer's global script -->
-<script src="{{:CDN_LINK}}dist/ej2.min.js" type="text/javascript"></script>
-</head>
-<body>
-<!--element which is going to render-->
-<div id='container'>
-<div id='PdfViewer' style="height:500px;width:100%;">
-</div>
-</div>
-</body>
+    <head>
+        <title>Essential JS 2</title>
+        <!-- Essential JS 2 tailwind3 theme -->
+        <link href="https://cdn.syncfusion.com/ej2/31.2.2/tailwind3.css" rel="stylesheet" type="text/css"/>
+        <!-- Essential JS 2 PDF Viewer's global script -->
+        <script src="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id='container'>
+            <div id='pdfViewer' style="height:500px;width:100%;">
+            </div>
+        </div>
+    </body>
 </html>
 {% endraw %}
 ```
@@ -127,40 +125,64 @@ PDF Viewer allows you to customize(add, show, hide, enable, and disable) existin
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
- var toolItem1 = {
+var toolItem1 = {
     prefixIcon: 'e-icons e-paste',
-    id: 'print',
-    tooltipText: 'Custom toolbar item',
+    id: 'print'
 };
 var toolItem2  = {
     id: 'download',
     text: 'Save',
-    tooltipText: 'Custom toolbar item',
     align: 'right'
 };
 var LanguageList = ['Typescript', 'Javascript', 'Angular', 'C#', 'C', 'Python'];
 var toolItem3 = {
     type: 'Input',
-    tooltipText: 'Language List',
     cssClass: 'percentage',
     align: 'Left',
     id: 'dropdown',
-    template: new ej.dropdowns.ComboBox({ width: 100, value: 'TypeScript', dataSource: LanguageList, popupWidth: 85, showClearButton: false, readonly: false })
+    template: new ej.dropdowns.ComboBox({
+        width: 100,
+        value: 'TypeScript',
+        dataSource: LanguageList,
+        popupWidth: 85,
+        showClearButton: false,
+        readonly: false 
+    })
 };
 var toolItem4 = {
     type: 'Input',
-    tooltipText: 'Text',
     align: 'Right',
     cssClass: 'find',
     id: 'textbox',
-    template: new ej.inputs.TextBox({ width: 125, placeholder: 'Type Here', created: OnCreateSearch })
+    template: new ej.inputs.TextBox({ width: 125, placeholder: 'Type Here', created: OnCreateSearch,  })
 }
 var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-                    resourceUrl:'https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib',
-                    toolbarSettings : { toolbarItems: [toolItem1, toolItem2, 'OpenOption', 'PageNavigationTool', 'MagnificationTool', toolItem3, 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', toolItem4, 'CommentTool', 'SubmitForm'] }
-               });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields);
+    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl:'https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib',
+    toolbarSettings : {
+        toolbarItems: [
+            toolItem1,
+            toolItem2,
+            'OpenOption',
+            'PageNavigationTool',
+            'MagnificationTool',
+            toolItem3,
+            'PanTool',
+            'SelectionTool',
+            'UndoRedoTool',
+            'AnnotationEditTool',
+            'FormDesignerEditTool',
+            'CommentTool',
+            'SubmitForm',
+            'SearchOption'
+        ] 
+    }
+});
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation,
+    ej.pdfviewer.Toolbar,ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.FormFields
+);
 
 //PDF Viewer control rendering starts
 pdfviewer.appendTo('#PdfViewer');
@@ -181,18 +203,15 @@ function OnCreateSearch() {
 var toolItem1 = {
     prefixIcon: 'e-icons e-paste',
     id: 'print',
-    tooltipText: 'Custom toolbar item',
 };
 var toolItem2  = {
     id: 'download',
     text: 'Save',
-    tooltipText: 'Custom toolbar item',
     align: 'right'
 };
 var LanguageList = ['Typescript', 'Javascript', 'Angular', 'C#', 'C', 'Python'];
 var toolItem3 = {
     type: 'Input',
-    tooltipText: 'Language List',
     cssClass: 'percentage',
     align: 'Left',
     id: 'dropdown',
@@ -200,17 +219,33 @@ var toolItem3 = {
 };
 var toolItem4 = {
     type: 'Input',
-    tooltipText: 'Text',
     align: 'Right',
     cssClass: 'find',
     id: 'textbox',
     template: new ej.inputs.TextBox({ width: 125, placeholder: 'Type Here', created: OnCreateSearch })
 }
 var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
-                    toolbarSettings : { toolbarItems: [toolItem1, toolItem2, 'OpenOption', 'PageNavigationTool', 'MagnificationTool', toolItem3, 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', toolItem4, 'CommentTool', 'SubmitForm'] }
-               });
+    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
+    toolbarSettings : {
+        toolbarItems: [
+            toolItem1,
+            toolItem2,
+            'OpenOption',
+            'PageNavigationTool',
+            'MagnificationTool',
+            toolItem3,
+            'PanTool',
+            'SelectionTool',
+            'UndoRedoTool',
+            'AnnotationEditTool',
+            'FormDesignerEditTool',
+            'CommentTool',
+            'SubmitForm',
+            'SearchOption'
+        ] 
+    }
+});
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields);
 
 //PDF Viewer control rendering starts
@@ -276,16 +311,10 @@ The PDF Viewer provides API for user interactions options provided in it's built
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
         <title>Essential JS 2</title>
-        <link href="{{:CDN_LINK}}ej2-base/styles/material.css" rel="stylesheet" />
-        <link href="{{:CDN_LINK}}ej2-pdfviewer/styles/material.css" rel="stylesheet" />
-        <link href="{{:CDN_LINK}}ej2-buttons/styles/material.css" rel="stylesheet" />
-        <link href="{{:CDN_LINK}}ej2-popups/styles/material.css" rel="stylesheet" />
-        <link href="{{:CDN_LINK}}ej2-navigations/styles/material.css" rel="stylesheet" />
-        <link href="{{:CDN_LINK}}ej2-dropdowns/styles/material.css" rel="stylesheet" />
-        <link href="{{:CDN_LINK}}ej2-lists/styles/material.css" rel="stylesheet" />
-        <link href="{{:CDN_LINK}}ej2-inputs/styles/material.css" rel="stylesheet" />
-        <link href="{{:CDN_LINK}}ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-        <link href="{{:CDN_LINK}}ej2-notifications/styles/material.css" rel="stylesheet" />
+        <!-- Essential JS 2 tailwind3 theme -->
+        <link href="https://cdn.syncfusion.com/ej2/31.2.2/tailwind3.css" rel="stylesheet" type="text/css"/>
+        <!-- Essential JS 2 PDF Viewer's global script -->
+        <script src="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2.min.js" type="text/javascript"></script>
         <link href="index.css" rel="stylesheet" />
         <script src="index.js" type="text/javascript"></script>
      </head>
@@ -294,22 +323,22 @@ The PDF Viewer provides API for user interactions options provided in it's built
     <div id="topToolbar" style="top:0px"></div>
     <div id="magnificationToolbar" ></div>
     <div id='viewerParent' style="height:640px; width:100%;">
-    <div id="pdfViewer" style="height:640px; width:100%;"></div>
+        <div id="pdfViewer" style="height:640px; width:100%;"></div>
     </div>
     <input type ="file" id="fileUpload" accept=".pdf" style="display:block;visibility:hidden;width:0;height:0;"/>
     <div id='popup'></div>
     <div id='textSearchBox'>
-    <div id='searchContainer'>
-    <span class="e-input-group e-custom-search-input">
-    <input type="text" id="searchInput" placeholder="Find in document" class="e-input" />
-    <span class="e-input-group-icon e-pv-search-icon" id="searchBtn"></span>
-    </span>
-    <button id="previousSearch" class="search-button" style="margin-left:5px"></button>
-    <button id="nextSearch" class="search-button"></button>
-    </div>
-    <div id="matchCaseContainer" style="margin-top:8px">
-    <input id="matchCase" type="checkbox" />
-    </div>
+        <div id='searchContainer'>
+            <span class="e-input-group e-custom-search-input">
+                <input type="text" id="searchInput" placeholder="Find in document" class="e-input" />
+                <span class="e-input-group-icon e-pv-search-icon" id="searchBtn"></span>
+            </span>
+            <button id="previousSearch" class="search-button" style="margin-left:5px"></button>
+            <button id="nextSearch" class="search-button"></button>
+        </div>
+        <div id="matchCaseContainer" style="margin-top:8px">
+            <input id="matchCase" type="checkbox" />
+        </div>
     </div>
     </body>
 </html>
@@ -322,10 +351,10 @@ The PDF Viewer provides API for user interactions options provided in it's built
 {% highlight ts tabtitle="Standalone" %}
 ```javascript
 var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    enableToolbar: false,
-                    enableThumbnail: false,
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf"
-                });
+    enableToolbar: false,
+    enableThumbnail: false,
+    documentPath: "https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf"
+});
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation,ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
 ```
@@ -333,11 +362,11 @@ pdfviewer.appendTo('#PdfViewer');
 {% highlight ts tabtitle="Server-Backed" %}
 ```javascript
 var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    enableToolbar: false,
-                    enableThumbnail: false,
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
-                });
+    enableToolbar: false,
+    enableThumbnail: false,
+    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+});
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation,ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
 ```
@@ -348,28 +377,28 @@ pdfviewer.appendTo('#PdfViewer');
 
 ```javascript
 
-  var toolbarObj = new ej.navigations.Toolbar({
-        items: [
-            { prefixIcon: 'e-pv-open-document', tooltipText: 'Open', id: 'openButton', click: openClicked },
-            { prefixIcon: 'e-pv-bookmark-icon', tooltipText: 'Bookmark', id: 'bookmarkButton', click: bookmarkClicked },
-            { prefixIcon: 'e-pv-previous-page-navigation-icon', id: 'previousPage', tooltipText: 'Previous Page', align: 'Center', click: previousClicked.bind(this) },
-            { prefixIcon: 'e-pv-next-page-navigation-icon', id: 'nextPage', tooltipText: 'Next Page', align: 'Center', click: nextClicked.bind(this) },
-            { template: inputTemplate, tooltipText: 'Page Number', align: 'Center' },
-            { template: ele, tooltipText: 'Page Number', align: 'Center' },
-            { prefixIcon: 'e-pv-search-icon', tooltipText: 'Text Search', align: 'Right', click: searchClicked.bind(this) },
-            { prefixIcon: 'e-pv-print-document-icon', tooltipText: 'Print', align: 'Right', click: printClicked.bind(this) },
-            { prefixIcon: 'e-pv-download-document-icon', tooltipText: 'Download', align: 'Right', click: downloadClicked.bind(this) }
-        ]
-    });
-    toolbarObj.appendTo('#topToolbar');
-    var magnificationToolbar = new ej.navigations.Toolbar({
-        items: [
-            { prefixIcon: 'e-pv-fit-page-icon', id: 'fitPage', tooltipText: 'Fit to page', click: pageFitClicked.bind(this) },
-            { prefixIcon: 'e-pv-zoom-in-icon', id: 'zoomIn', tooltipText: 'Zoom in', click: zoomInClicked.bind(this) },
-            { prefixIcon: 'e-pv-zoom-out-icon' , id: 'zoomOut', tooltipText: 'Zoom out', click: zoomOutClicked.bind(this) },
-        ]
-    });
-    magnificationToolbar.appendTo('#magnificationToolbar');
+var toolbarObj = new ej.navigations.Toolbar({
+    items: [
+        { prefixIcon: 'e-pv-open-document', tooltipText: 'Open', id: 'openButton', click: openClicked },
+        { prefixIcon: 'e-pv-bookmark-icon', tooltipText: 'Bookmark', id: 'bookmarkButton', click: bookmarkClicked },
+        { prefixIcon: 'e-pv-previous-page-navigation-icon', id: 'previousPage', tooltipText: 'Previous Page', align: 'Center', click: previousClicked.bind(this) },
+        { prefixIcon: 'e-pv-next-page-navigation-icon', id: 'nextPage', tooltipText: 'Next Page', align: 'Center', click: nextClicked.bind(this) },
+        { template: inputTemplate, tooltipText: 'Page Number', align: 'Center' },
+        { template: ele, tooltipText: 'Page Number', align: 'Center' },
+        { prefixIcon: 'e-pv-search-icon', tooltipText: 'Text Search', align: 'Right', click: searchClicked.bind(this) },
+        { prefixIcon: 'e-pv-print-document-icon', tooltipText: 'Print', align: 'Right', click: printClicked.bind(this) },
+        { prefixIcon: 'e-pv-download-document-icon', tooltipText: 'Download', align: 'Right', click: downloadClicked.bind(this) }
+    ]
+});
+toolbarObj.appendTo('#topToolbar');
+var magnificationToolbar = new ej.navigations.Toolbar({
+    items: [
+        { prefixIcon: 'e-pv-fit-page-icon', id: 'fitPage', tooltipText: 'Fit to page', click: pageFitClicked.bind(this) },
+        { prefixIcon: 'e-pv-zoom-in-icon', id: 'zoomIn', tooltipText: 'Zoom in', click: zoomInClicked.bind(this) },
+        { prefixIcon: 'e-pv-zoom-out-icon' , id: 'zoomOut', tooltipText: 'Zoom out', click: zoomOutClicked.bind(this) },
+    ]
+});
+magnificationToolbar.appendTo('#magnificationToolbar');
 
 ```
 
@@ -377,7 +406,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 ```
 <style>
-        #magnificationToolbar {
+    #magnificationToolbar {
         background: transparent;
         height: auto;
         min-height: 56px;
@@ -1190,7 +1219,11 @@ this.default = function () {
         documentPath: 'https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf',
         serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
     });
-   ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
+    ej.pdfviewer.PdfViewer.Inject(
+        ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView,
+        ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation,
+        ej.pdfviewer.Print
+    );
     viewer.appendTo('#pdfViewer');
     document.getElementById('fileUpload').addEventListener('change', readFile, false);
     currentPageBox = document.getElementById('currentPage');
@@ -1253,5 +1286,4 @@ Sample :
 
 ## See also
 
-* [Toolbar customization](./how-to/customization)
-* [Feature Modules](./feature-module)
+* [Feature Modules](../feature-module)
