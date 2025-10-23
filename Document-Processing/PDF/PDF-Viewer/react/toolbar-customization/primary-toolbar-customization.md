@@ -24,12 +24,12 @@ import React, { useRef } from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  const pdfviewer = useRef<PdfViewerComponent>(null);
+  let pdfviewer;
 
   return (
     <PdfViewerComponent
       id="PdfViewer"
-      ref={pdfviewer}
+      ref={(scope) => { pdfviewer = scope; }}
       enableToolbar={false}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
@@ -88,12 +88,12 @@ import React, { useEffect, useRef } from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  const pdfviewer = useRef<PdfViewerComponent>(null);
+  let pdfviewer;
 
   useEffect(() => {
     const btn = document.getElementById('set');
     const handler = () => {
-      pdfviewer.current?.toolbar.showToolbar(false);
+      pdfviewer?.toolbar.showToolbar(false);
     };
     btn?.addEventListener('click', handler);
     return () => btn?.removeEventListener('click', handler);
@@ -102,7 +102,7 @@ function App() {
   return (
     <PdfViewerComponent
       id="PdfViewer"
-      ref={pdfviewer}
+      ref={(scope) => { pdfviewer = scope; }}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
       style={{ height: '500px', width: '100%' }}

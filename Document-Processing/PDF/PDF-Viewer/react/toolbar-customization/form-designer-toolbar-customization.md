@@ -27,14 +27,14 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, Lin
     ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 const App = () => {
-    const pdfviewer = useRef(null);
+    let pdfviewer;
 
     return (
         <PdfViewerComponent
-            ref={pdfviewer}
+            ref={(scope) => { pdfviewer = scope; }}
             id="PdfViewer"
             enableFormDesigner={false}
-            documentPath="https://cdn.syncfusion.com/content/pdf/formdesigner.pdf"
+            documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
             resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
             style={{ height: '500px', width: '100%' }}
         >
@@ -100,13 +100,13 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, Lin
     ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 const App = () => {
-    const pdfviewer = useRef(null);
+    let pdfviewer;
 
     return (
         <PdfViewerComponent
-            ref={pdfviewer}
+            ref={(scope) => { pdfviewer = scope; }}
             id="PdfViewer"
-            documentPath="https://cdn.syncfusion.com/content/pdf/formdesigner.pdf"
+            documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
             resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
             toolbarSettings={{
                 formDesignerToolbarItems: [

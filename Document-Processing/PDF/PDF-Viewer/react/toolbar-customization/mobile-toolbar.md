@@ -63,7 +63,7 @@ import React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  let pdfviewer: PdfViewerComponent | null;
+  let pdfviewer;
   return (
     <div>
       <PdfViewerComponent
@@ -89,7 +89,7 @@ import React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  let pdfviewer: PdfViewerComponent | null;
+  let pdfviewer;
   return (
     <div>
       <PdfViewerComponent
@@ -122,7 +122,7 @@ import React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  let pdfviewer: PdfViewerComponent | null;
+  let pdfviewer;
   return (
     <div>
       <PdfViewerComponent
@@ -149,7 +149,7 @@ import React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  let pdfviewer: PdfViewerComponent | null;
+  let pdfviewer;
   return (
     <div>
       <PdfViewerComponent

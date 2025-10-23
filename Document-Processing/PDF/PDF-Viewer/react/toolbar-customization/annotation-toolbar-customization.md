@@ -32,13 +32,13 @@ PdfViewerComponent.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAn
     BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
 
 const App = () => {
-    const pdfviewer = React.useRef<PdfViewerComponent>(null);
+    let pdfviewer;
 
     React.useEffect(() => {
-        const buttonElement = document.getElementById('set');
+        const buttonElement = document.getElementById('showAnnotationToolbar');
         const handleClick = () => {
-            if (pdfviewer.current) {
-                pdfviewer.current.toolbar.showAnnotationToolbar(false);
+            if (pdfviewer) {
+                pdfviewer.toolbar.showAnnotationToolbar(false);
             }
         };
         buttonElement?.addEventListener('click', handleClick);
@@ -46,14 +46,17 @@ const App = () => {
     }, []);
 
     return (
+        <div>
+        <button id='showAnnotationToolbar'>showAnnotationToolbar</button>
         <PdfViewerComponent
             id="PdfViewer"
-            ref={pdfviewer}
+            ref={(scope) => { pdfviewer = scope; }}
             documentPath='https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
             resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
             height="500px"
             width="100%"
         />
+        </div>
     );
 };
 
@@ -119,8 +122,8 @@ PdfViewerComponent.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAn
     BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
 
 const App = () => {
-    const pdfviewer = React.useRef<PdfViewerComponent>(null);
-    const annotationToolbarItems: AnnotationToolbarItem[] = [
+    let pdfviewer;
+    const annotationToolbarItems = [
         "HighlightTool",
         "UnderlineTool",
         "StrikethroughTool",
@@ -146,7 +149,7 @@ const App = () => {
     return (
         <PdfViewerComponent
             id="PdfViewer"
-            ref={pdfviewer}
+            ref={(scope) => { pdfviewer = scope; }}
             documentPath='https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
             resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
             height="500px"
