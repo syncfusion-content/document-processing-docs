@@ -620,7 +620,7 @@ Syncfusion Essential<sup>&reg;</sup> PDF supports creating a PDF document with f
 The following code snippet explains how to create a PDF document with image, paragraph text, header text, a line below the header text, and a table using flow model.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" [Cross-platform] %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
