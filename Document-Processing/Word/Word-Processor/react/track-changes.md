@@ -78,12 +78,10 @@ import * as React from 'react';
 import {
   DocumentEditorContainerComponent,
   Toolbar,
-  Selection,
-  Editor,
 } from '@syncfusion/ej2-react-documenteditor';
 
 // Inject the required modules
-DocumentEditorContainerComponent.Inject(Toolbar, Selection, Editor);
+DocumentEditorContainerComponent.Inject(Toolbar);
 
 function App() {
   let container = null;
@@ -103,8 +101,6 @@ function App() {
         height={'590px'}
         serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
         enableToolbar={true}
-        enableSelection={true}
-        enableEditor={true}
         enableTrackChanges={true}
       />
     </div>
@@ -197,7 +193,7 @@ In DocumentEditor, we have built-in review panel in which we have provided suppo
 
 Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#stopprotection) API.
+Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor/#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor/#stopprotection) API.
 
 The following example code illustrates how to enforce and stop protection in Document editor container.
 
