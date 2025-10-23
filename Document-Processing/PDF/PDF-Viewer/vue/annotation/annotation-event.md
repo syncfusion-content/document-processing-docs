@@ -822,7 +822,7 @@ The following example illustrates how to handle the `annotationUnselect` event.
 
 <template>
   <div id="app">
-    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :annotationUnselect="annotationUnSelected">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :annotationUnSelect="annotationUnSelected">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -849,7 +849,7 @@ The following example illustrates how to handle the `annotationUnselect` event.
 
 <template>
   <div id="app">
-    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :annotationUnselect="annotationUnSelected">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :annotationUnSelect="annotationUnSelected">
     </ejs-pdfviewer>
   </div>
 </template>
