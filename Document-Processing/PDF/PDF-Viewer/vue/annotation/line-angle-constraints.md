@@ -138,4 +138,4 @@ When modifying existing line annotations using selectors:
 - Constraint snapping during modification is supported for Line and Arrow.
 - Adjustments snap to the configured angle increment.
 
-N> You can refer to our [Vue PDF Viewer](https://www.syncfusion.com/vue-ui-components/vue-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Vue PDF Viewer examples](https://github.com/syncfusion/ej2-Vue-samples/tree/master/src/app/pdfviewer) to learn how to render and configure the PDF Viewer.
+N> You can refer to our [Vue PDF Viewer](https://www.syncfusion.com/vue-ui-components/vue-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Vue PDF Viewer examples](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples) to learn how to render and configure the PDF Viewer.

@@ -32,11 +32,11 @@ vue create quickstart
 cd quickstart
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+When creating a new project, choose the option `Default ([Vue 2] babel, es-lint)` from the menu.
 
 ![Vue 2 project](./images/vue2-terminal.png)
 
-After the `quickstart` project is created with the default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the application.
+After the `quick start` project is created with the default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the application.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 

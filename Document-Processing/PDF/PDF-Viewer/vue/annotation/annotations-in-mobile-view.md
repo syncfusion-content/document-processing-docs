@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Annotations in mobile view in Vue PDF Viewer component | Syncfusion
-description: Learn how to use annotations in mobile view with the Syncfusion Vue PDF Viewer contol (Essential JS 2).
+description: Learn how to use annotations in mobile view with the Syncfusion Vue PDF Viewer control (Essential JS 2).
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Annotations in mobile view in Vue PDF Viewer contol
+# Annotations in mobile view in Vue PDF Viewer control
 
 ## Open the annotation toolbar
 
