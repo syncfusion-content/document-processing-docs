@@ -126,7 +126,7 @@ Example:
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   ToolbarClick="ToolbarClicked">
+                   toolbarClick="ToolbarClicked">
     </ejs-pdfviewer>
 </div>
 
@@ -144,7 +144,7 @@ Example:
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    serviceUrl="/api/PdfViewer"
-                   ToolbarClick="ToolbarClicked">
+                   toolbarClick="ToolbarClicked">
     </ejs-pdfviewer>
 </div>
 

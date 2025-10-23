@@ -53,32 +53,6 @@ Use [`PdfViewerToolbarSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/S
 The following example demonstrates how to customize the form designer toolbar by configuring specific tools using `FormDesignerToolbarItem`.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-    ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, FormDesignerToolbarItem} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject( Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
-             BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner );
-
-let pdfviewer: PdfViewer = new PdfViewer({
-    documentPath:'https://cdn.syncfusion.com/content/pdf/formdesigner.pdf',
-    resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
-});
-pdfviewer.toolbarSettings = {
-     formDesignerToolbarItems: [
-         "TextboxTool",
-         "PasswordTool",
-         "CheckBoxTool",
-         "RadioButtonTool",
-         "DropdownTool",
-         "ListboxTool",
-         "DrawSignatureTool",
-         "DeleteTool"
-     ]
- };
-pdfviewer.appendTo('#PdfViewer');
-
-{% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 
 <div style="width:100%;height:600px">
