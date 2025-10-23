@@ -1,14 +1,14 @@
 ---
-title: XlsIO Behavior | Syncfusion
-description: In this section, you can learn about the various behaviors of Syncfusion Essential XlsIO.
+title: Behaviors of Excel (XlsIO) Library | Syncfusion
+description: In this section, you can learn about the core behaviors, limitations, and tips for working with Syncfusion Essential XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# XlsIO Behavior
+# Behaviors of Excel (XlsIO) Library
 
-This section, provides the details about various behavior of Syncfusion Essential XlsIO.
+This section provides the details about various behaviors of Syncfusion Essential XlsIO.
 
 ## Formula in Named Range
 
