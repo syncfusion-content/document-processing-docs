@@ -32,6 +32,22 @@ COPY ["ProjectName/Fonts/*.*", "/usr/local/share/fonts/"]
 
 You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Linux/Copy%20fonts%20to%20linux%20containers/.NET/Copy_fonts_to_linux_containers">GitHub</a>.
 
+## How to install Microsoft compatible fonts on Linux?
+
+By default, Linux systems include a limited set of fonts located at "/usr/share/fonts/". For document conversion scenarios that require Microsoft-compatible fonts, you can install them using the following command:
+
+{% tabs %}
+
+{% highlight Kconfig %}
+sudo apt-get install ttf-mscorefonts-installer
+{% endhighlight %}
+
+{% endtabs %}
+
+After installation, the fonts will be available at "/usr/share/fonts/truetype/msttcorefonts", and will be used during conversion.
+
+N> Ensure you have obtained the appropriate license clearance from Microsoft before using these fonts in your environment.
+
 ## How to set culture/locale in Docker containers (Windows and Linux)?
  
 By default, Culture/Locale that is specified in the container image will be used in Docker containers.
