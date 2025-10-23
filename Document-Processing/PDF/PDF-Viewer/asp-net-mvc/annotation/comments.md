@@ -4,7 +4,6 @@ title: Comments in ASP.NET MVC PDF Viewer control | Syncfusion
 description: Learn about comments, replies, and status in the Syncfusion ASP.NET MVC PDF Viewer control (Essential JS 2).
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

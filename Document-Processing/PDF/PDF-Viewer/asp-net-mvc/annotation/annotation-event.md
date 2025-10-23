@@ -3,7 +3,6 @@ title: Annotations Events in ASP.NET MVC Pdfviewer control | Syncfusion
 description: Learn here all about Annotations Events in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Access or Change File Name in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to access the loaded PDF filename and change the download filename using the DocumentLoad and DownloadEnd events in the Syncfusion ASP.NET MVC PDF Viewer.
+description: Learn how to access the loaded PDF filename and change the download filename using the events in the Syncfusion ASP.NET MVC PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
@@ -14,7 +14,7 @@ The Syncfusion ASP.NET MVC PDF Viewer allows you to access the filename of the l
 
 The following steps demonstrate how to access and modify the filename in the PDF Viewer:
 
-**Step 1:** Create an ASP.NET MVC PDF Viewer sample by following the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/).
+**Step 1:** Create an ASP.NET MVC PDF Viewer sample by following the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started).
 
 **Step 2:** Access and change the filename using the code snippets below.
 
@@ -29,9 +29,9 @@ In the `DocumentLoad` or `DownloadEnd` event handler, you can access the origina
 <script>
     function documentLoad(args) {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        args.fileName = "pdfsuccintly.pdf";
+        args.fileName = "pdf_succintly.pdf";
         //Sets the name of the file to be downloaded
-        viewer.downloadFileName = "pdfsuccintly.pdf";
+        viewer.downloadFileName = "pdf_succintly.pdf";
         console.log(args);
     }
 </script>
@@ -46,9 +46,9 @@ In the `DocumentLoad` or `DownloadEnd` event handler, you can access the origina
 <script>
     function documentLoad(args) {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        args.fileName = "pdfsuccintly.pdf";
+        args.fileName = "pdf_succintly.pdf";
         //Sets the name of the file to be downloaded
-        viewer.downloadFileName = "pdfsuccintly.pdf";
+        viewer.downloadFileName = "pdf_succintly.pdf";
         console.log(args);
     }
 </script>

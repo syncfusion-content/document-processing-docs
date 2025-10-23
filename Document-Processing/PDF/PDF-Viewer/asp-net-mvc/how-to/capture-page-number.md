@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Capture the current page number being viewed
+# Capture the current page number
 
 The PDF Viewer server library allows you to capture the page number that is currently visible when a PDF document is loaded. Use the [**currentPageNumber**](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_CurrentPageNumber) property to obtain the page that is in view.
 

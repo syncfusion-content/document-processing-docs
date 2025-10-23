@@ -4,7 +4,6 @@ title: Text markup annotation in ASP.NET MVC PDF Viewer control | Syncfusion
 description: Learn to add, edit, delete, and customize text markup annotations like highlight, underline, and squiggly in Syncfusion ASP.NET MVC PDF Viewer.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

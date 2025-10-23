@@ -68,7 +68,7 @@ The frequently asked questions in Essential<sup>&reg;</sup> Pdfviewer are listed
 * [How to Change the default Width of PDF Viewer?](./how-to/default-width-height)
 * [How to Delete an annotation from a PDF in PDF Viewer?](./how-to/delete-annotation)
 * [How to Identify PDF is edited in PDF Viewer?](./how-to/identify-the-loaded-document-is-edited)
-* [How to Load blancing environment in PDF Viewer?](./how-to/load-balancing-environment)
+* [How to Load balancing environment in PDF Viewer?](./how-to/load-balancing-environment)
 * [How to Load the document in PDF Viewer?](./how-to/load-the-document)
 * [How to Redirect to the Home page in PDF Viewer?](./how-to/redirect-to-home-page)
 * [How to set Author name for annotation in PDF Viewer?](./how-to/set-author-name-to-annotation)

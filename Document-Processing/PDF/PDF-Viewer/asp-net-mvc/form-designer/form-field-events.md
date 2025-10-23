@@ -4,7 +4,6 @@ title: Form field events in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn about form field events supported in the Syncfusion ASP.NET MVC PDF Viewer component and how to handle them.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
