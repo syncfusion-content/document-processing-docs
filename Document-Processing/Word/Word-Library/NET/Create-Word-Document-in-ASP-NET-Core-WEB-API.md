@@ -63,7 +63,7 @@ Step 5: Add a new action method CreateDocument in **ValuesController.cs** and in
      catch (Exception ex)
      {
          // Log or handle the exception
-         return BadRequest("Error occurred while creating Excel file: " + ex.Message);
+         return BadRequest("Error occurred while creating Word file: " + ex.Message);
      }
  }
  
@@ -137,7 +137,7 @@ Step 6: Implement the `GenerateWordDocument` method in `ValuesController.cs`.
      textRange = paragraph.AppendText("In 2000, AdventureWorks Cycles bought a small manufacturing plant, Importadores Neptuno, located in Mexico. Importadores Neptuno manufactures several critical subcomponents for the AdventureWorks Cycles product line. These subcomponents are shipped to the Bothell location for final product assembly. In 2001, Importadores Neptuno, became the sole manufacturer and distributor of the touring bicycle product group.") as WTextRange;
      textRange.CharacterFormat.FontSize = 12f;
 
-     //Saving the Excel to the MemoryStream 
+     //Saving the Word Document to the MemoryStream 
      MemoryStream stream = new MemoryStream();
      document.Save(stream, FormatType.Docx);
      document.Close();
