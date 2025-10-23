@@ -71,13 +71,14 @@ import {
 } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  const pdfviewer = React.useRef(null);
+  let pdfviewer;
   return (
     <PdfViewerComponent
       id="PdfViewer"
-      ref={pdfviewer}
+      ref={(scope) => { pdfviewer = scope; }}
       enableNavigation={true}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
       style={{ height: '500px', width: '100%' }}
     >
       <Inject services={[
@@ -114,11 +115,11 @@ import {
 } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  const pdfviewer = React.useRef(null);
+  let pdfviewer;
   return (
     <PdfViewerComponent
       id="PdfViewer"
-      ref={pdfviewer}
+      ref={(scope) => { pdfviewer = scope; }}
       enableNavigation={true}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
@@ -202,18 +203,18 @@ import {
   Inject
 } from '@syncfusion/ej2-react-pdfviewer';
 
-const viewer = React.createRef();
+let pdfviewer;
 
 function App() {
-  const onGoToFirstPage = () => viewer.current && viewer.current.navigation.goToFirstPage();
-  const onGoToLastPage = () => viewer.current && viewer.current.navigation.goToLastPage();
-  const onGoToNextPage = () => viewer.current && viewer.current.navigation.goToNextPage();
-  const onGoToPage = () => viewer.current && viewer.current.navigation.goToPage(4);
-  const onGoToPreviousPage = () => viewer.current && viewer.current.navigation.goToPreviousPage();
+  const onGoToFirstPage = () => pdfviewer && pdfviewer.navigation.goToFirstPage();
+  const onGoToLastPage = () => pdfviewer && pdfviewer.navigation.goToLastPage();
+  const onGoToNextPage = () => pdfviewer && pdfviewer.navigation.goToNextPage();
+  const onGoToPage = () => pdfviewer && pdfviewer.navigation.goToPage(4);
+  const onGoToPreviousPage = () => pdfviewer && pdfviewer.navigation.goToPreviousPage();
 
   React.useEffect(() => {
     // Load document after mount if needed
-    // viewer.current && viewer.current.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
+    // pdfviewer && pdfviewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
   }, []);
 
   return (
@@ -225,8 +226,9 @@ function App() {
       <button id="goToPreviousPage" onClick={onGoToPreviousPage}>Go To Previous Page</button>
       <PdfViewerComponent
         id="pdfViewer"
-        ref={viewer}
+        ref={(scope) => { pdfviewer = scope; }}
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
         style={{ height: '500px', width: '100%' }}
       >
         <Inject services={[
@@ -271,14 +273,14 @@ import {
   Inject
 } from '@syncfusion/ej2-react-pdfviewer';
 
-const viewer = React.createRef();
+let pdfviewer;
 
 function App() {
-  const onGoToFirstPage = () => viewer.current && viewer.current.navigation.goToFirstPage();
-  const onGoToLastPage = () => viewer.current && viewer.current.navigation.goToLastPage();
-  const onGoToNextPage = () => viewer.current && viewer.current.navigation.goToNextPage();
-  const onGoToPage = () => viewer.current && viewer.current.navigation.goToPage(4);
-  const onGoToPreviousPage = () => viewer.current && viewer.current.navigation.goToPreviousPage();
+  const onGoToFirstPage = () => pdfviewer && pdfviewer.navigation.goToFirstPage();
+  const onGoToLastPage = () => pdfviewer && pdfviewer.navigation.goToLastPage();
+  const onGoToNextPage = () => pdfviewer && pdfviewer.navigation.goToNextPage();
+  const onGoToPage = () => pdfviewer && pdfviewer.navigation.goToPage(4);
+  const onGoToPreviousPage = () => pdfviewer && pdfviewer.navigation.goToPreviousPage();
 
   return (
     <div>
@@ -289,7 +291,7 @@ function App() {
       <button id="goToPreviousPage" onClick={onGoToPreviousPage}>Go To Previous Page</button>
       <PdfViewerComponent
         id="pdfViewer"
-        ref={viewer}
+        ref={(scope) => { pdfviewer = scope; }}
         serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         style={{ height: '500px', width: '100%' }}

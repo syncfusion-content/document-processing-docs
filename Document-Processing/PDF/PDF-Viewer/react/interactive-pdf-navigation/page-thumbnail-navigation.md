@@ -32,13 +32,14 @@ import {
 } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  const pdfviewer = React.useRef(null);
+  let pdfviewer;
   return (
     <PdfViewerComponent
       id="PdfViewer"
-      ref={pdfviewer}
+      ref={(scope) => { pdfviewer = scope; }}
       enableThumbnail={true}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
       style={{ height: '500px', width: '100%' }}
     >
       <Inject services={[
@@ -77,11 +78,11 @@ import {
 } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  const pdfviewer = React.useRef(null);
+  let pdfviewer;
   return (
     <PdfViewerComponent
       id="PdfViewer"
-      ref={pdfviewer}
+      ref={(scope) => { pdfviewer = scope; }}
       enableThumbnail={true}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"

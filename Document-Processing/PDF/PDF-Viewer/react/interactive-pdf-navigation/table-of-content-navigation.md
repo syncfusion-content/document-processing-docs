@@ -52,14 +52,15 @@ import {
   Inject
 } from '@syncfusion/ej2-react-pdfviewer';
 
-const viewer = React.createRef();
+let pdfviewer;
 
 function App() {
   return (
     <PdfViewerComponent
       id="PdfViewer"
-      ref={viewer}
+      ref={(scope) => { pdfviewer = scope; }}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
       enableHyperlink={false}
       style={{ height: '500px', width: '100%' }}
     >
@@ -96,13 +97,13 @@ import {
   Inject
 } from '@syncfusion/ej2-react-pdfviewer';
 
-const viewer = React.createRef();
+let pdfviewer;
 
 function App() {
   return (
     <PdfViewerComponent
       id="PdfViewer"
-      ref={viewer}
+      ref={(scope) => { pdfviewer = scope; }}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
       enableHyperlink={false}
@@ -157,14 +158,15 @@ import {
   Inject
 } from '@syncfusion/ej2-react-pdfviewer';
 
-const viewer = React.createRef();
+let pdfviewer;
 
 function App() {
   return (
     <PdfViewerComponent
       id="PdfViewer"
-      ref={viewer}
+      ref={(scope) => { pdfviewer = scope; }}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
       hyperlinkOpenState="NewTab"
       style={{ height: '500px', width: '100%' }}
     >
@@ -201,13 +203,13 @@ import {
   Inject
 } from '@syncfusion/ej2-react-pdfviewer';
 
-const viewer = React.createRef();
+let pdfviewer;
 
 function App() {
   return (
     <PdfViewerComponent
       id="PdfViewer"
-      ref={viewer}
+      ref={(scope) => { pdfviewer = scope; }}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
       hyperlinkOpenState="NewTab"
@@ -274,6 +276,7 @@ function App() {
     <PdfViewerComponent
       id="PdfViewer"
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
       hyperlinkClick={hyperlinkClick}
       hyperlinkMouseOver={hyperlinkMouseOver}
       style={{ height: '500px', width: '100%' }}
