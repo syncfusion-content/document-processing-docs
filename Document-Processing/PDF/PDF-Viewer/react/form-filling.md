@@ -32,15 +32,31 @@ The PDF Viewer provides an option to disable interaction with form fields. Use t
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner} from '@syncfusion/ej2-pdfviewer';
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, Annotation, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+let pdfviewer;
 
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib";
-pdfviewer.enableFormDesigner = false;
-pdfviewer.appendTo('#PdfViewer');
+function App() {
+  return (<div>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+        enableFormDesigner={false}
+                style={{ 'height': '640px' }}>
+              <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation,
+                                  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch]} />
+      </PdfViewerComponent>
+    </div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 {% endhighlight %}
 {% endtabs %}

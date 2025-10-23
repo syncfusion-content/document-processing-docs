@@ -62,21 +62,22 @@ import {
 } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-    const viewerRef = React.useRef(null);
+    let pdfviewer;
 
     React.useEffect(() => {
         // Disable text selection later if required
-        if (viewerRef.current) {
+        if (pdfviewer) {
             // Example toggle; set to false to disable after mount
-            viewerRef.current.enableTextSelection = false;
+            pdfviewer.enableTextSelection = false;
         }
     }, []);
 
     return (
         <PdfViewerComponent
             id="PdfViewer"
-            ref={viewerRef}
+            ref={(scope) => { pdfviewer = scope; }}
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+            resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
             enableTextSelection={true}
             style={{ height: '500px', width: '100%' }}
         >
@@ -114,19 +115,19 @@ import {
 } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-    const viewerRef = React.useRef(null);
+    let pdfviewer;
 
     React.useEffect(() => {
         // Toggle on demand
-        if (viewerRef.current) {
-            viewerRef.current.enableTextSelection = false;
+        if (pdfviewer) {
+            pdfviewer.enableTextSelection = false;
         }
     }, []);
 
     return (
         <PdfViewerComponent
             id="PdfViewer"
-            ref={viewerRef}
+            ref={(scope) => { pdfviewer = scope; }}
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
             serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
             enableTextSelection={true}
@@ -176,6 +177,7 @@ function App() {
         <PdfViewerComponent
             id="PdfViewer"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+            resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
             textSelectionStart={textSelectionStart}
             style={{ height: '500px', width: '100%' }}
         >
@@ -209,10 +211,11 @@ function App() {
         <PdfViewerComponent
             id="PdfViewer"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+            resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
             textSelectionEnd={textSelectionEnd}
             style={{ height: '500px', width: '100%' }}
         >
-            <Inject services={[TextSelection]} />
+            <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
         </PdfViewerComponent>
     );
 }
