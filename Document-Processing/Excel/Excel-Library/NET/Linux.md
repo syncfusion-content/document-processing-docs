@@ -48,6 +48,38 @@ After installation, the fonts will be available at "/usr/share/fonts/truetype/ms
 
 N> Ensure you have obtained the appropriate license clearance from Microsoft before using these fonts in your environment.
 
+## How to install necessary fonts in Linux containers?
+
+In Excel to PDF conversion, Essential<sup>&reg;</sup> XlsIO uses the fonts installed in the production environment to measure and render text. If a required font is missing, an alternate font will be used based on the environment, which may affect layout fidelity.
+
+To ensure proper font preservation, install all fonts used in the Excel document within the container.
+
+Use the following code snippet to install fonts in containers.
+
+{% tabs %}
+
+{% highlight Dockerfile %}
+RUN apt-get update -y && \
+    apt-get install -y fontconfig debconf && \
+    echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections && \
+    apt-get install -y \
+        fonts-arphic-ukai \
+        fonts-arphic-uming \
+        fonts-ipafont-mincho \
+        fonts-ipafont-gothic \
+        fonts-unfonts-core \
+        ttf-wqy-zenhei \
+        ttf-mscorefonts-installer && \
+    fc-cache -fv && \
+    apt-get clean && \
+    apt-get autoremove -y && \
+    rm -rf /var/lib/apt/lists/*
+{% endhighlight %}
+
+{% endtabs %}
+
+If font preservation issues persist after installing the required packages, you can manually copy the necessary font files into the container.
+
 ## How to set culture/locale in Docker containers (Windows and Linux)?
  
 By default, Culture/Locale that is specified in the container image will be used in Docker containers.
