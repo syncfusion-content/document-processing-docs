@@ -31,4 +31,4 @@ Use the SfPdfViewer2 `PrintMode` enum to control whether printing occurs in the 
 
 * [Printing options in Blazor SfPdfViewer](../print)
 
-* [Print the SfPdfViewer inside a Dialog](./print-the-sfpdfiewer-inside-the-dialog-component)
+* [Print the SfPdfViewer inside a Dialog](./how-to-print-the-sfpdfiewer-inside-the-dialog-component)

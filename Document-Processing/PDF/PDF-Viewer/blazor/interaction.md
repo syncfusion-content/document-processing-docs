@@ -61,7 +61,7 @@ The interaction mode of the SfPdfViewer component can be modified using the [Int
 ```
 ## Disable interaction with Annotations
 
-Annotation interactions such as dragging, resizing, and deleting can be disabled by setting the `IsLock` property in the [AnnotationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AnnotationSettings) configuration.
+Annotation interactions such as dragging, resizing, and deleting can be disabled by setting the [IsLock](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_IsLock) property in the [AnnotationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AnnotationSettings) configuration.
 
 The following code illustrates how to disable the annotation interaction.
 
@@ -99,4 +99,4 @@ The following code illustrates how to disable the annotation interaction.
 
 ## See also
 
-* [Navigation in Blazor SfPdfViewer Component](./interactive-pdf-navigation)
+* [Navigation in Blazor SfPdfViewer Component](./interactive-pdf-navigation-overview)

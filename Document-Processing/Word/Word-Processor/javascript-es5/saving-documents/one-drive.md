@@ -141,7 +141,7 @@ In the client-side, to export the document into blob the document using [`saveAs
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/save-one-drive/index.html %}
+{% include code-snippet/document-editor/javascript-es5/save-one-drive/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

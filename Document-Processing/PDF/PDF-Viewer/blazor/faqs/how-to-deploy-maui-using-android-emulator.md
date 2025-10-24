@@ -77,10 +77,10 @@ N> For emulator issues, see Troubleshooting Android Emulator: https://learn.micr
 
 ![Blazor SfPdfViewer rendering in the Android emulator](../getting-started/gettingstarted-images/emulator.png)
 
->[View sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorAndroid).
+>[View sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/MAUI%20Blazor%20App/MauiBlazorAndroid).
 
 ## See also
 
-* [Supported features: Desktop vs mobile](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview#supported-features-desktop-vs-mobile).
+* [Supported features: Desktop vs mobile](../overview#supported-features-desktop-vs-mobile).
 
-* [Render a PDF document from a URL in the MAUI app](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/deploy-maui-windows).
+* [Render a PDF document from a URL in the MAUI app](../getting-started/maui-blazor-app).

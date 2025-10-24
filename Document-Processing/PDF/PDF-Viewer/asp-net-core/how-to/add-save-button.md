@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Add Save Button in Built-In Toolbar | Syncfusion
+title: Add Save Button in Toolbar ASP.NET Core | Syncfusion
 description: Learn here all about adding save button in built-in Toolbar in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Add Save Button in Built-In toolbar
+# Add Save Button in Built-In toolbar in ASP.NET Core
 
 PDF Viewer allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 

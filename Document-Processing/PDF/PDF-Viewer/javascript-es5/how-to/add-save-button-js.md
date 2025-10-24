@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add a Save button to the built-in toolbar
+# Add Save button in Built-In Toolbar in JavaScript
 
 PDF Viewer supports customizing toolbar items, including adding, showing, hiding, enabling, and disabling items.
 

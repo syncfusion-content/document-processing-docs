@@ -53,7 +53,7 @@ Use the menu in the Comment panel to modify or delete comments, replies, and the
 
 ## Setting default properties during control initialization
 
-Set default properties for sticky notes annotations before initializing the control using StickyNotesSettings.
+Set default properties for sticky notes annotations before initializing the control using [StickyNotesSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_StickyNotesSettings).
 
 After changing the default opacity using the Edit Opacity tool, the values are updated to the selected settings.
 
