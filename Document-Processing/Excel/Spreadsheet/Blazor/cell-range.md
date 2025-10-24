@@ -43,7 +43,10 @@ Cell formatting options include:
     * **Middle** – Centers content vertically
     * **Bottom** – Default alignment
 
-* **Wrap Text** - Displays long content on multiple lines within a single cell, preventing it from overflowing into adjacent cells.
+* **Wrap Text** - Displays long content on multiple lines within a single cell, preventing it from overflowing into adjacent cells. To enable text wrapping:
+   1. Select the target cell or range (e.g., C5).
+   2. Go to the Home tab.
+   3. Click Wrap Text in the ribbon to toggle text wrapping for the selected cells.
 
 Cell formatting can be applied to or removed from a cell or range of cells by using the formatting options available in the Ribbon toolbar under the **Home** tab.
 
