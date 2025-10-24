@@ -14,7 +14,7 @@ If the document does not render in the viewer when using version 23.1 or newer, 
 
 1. Call `pdfviewer.dataBind()` before `load()`. Starting with v23.1, an explicit dataBind call is required to initialize data binding and render correctly.
 
-```typescript
+```html
 
 <button v-on:click="documentLoad">Load</button>
 

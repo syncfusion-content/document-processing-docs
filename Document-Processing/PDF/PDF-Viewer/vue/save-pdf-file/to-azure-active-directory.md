@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ### **Overview**
 
-The TypeScript PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps describe how to securely load and store PDF documents using a server-backed web service.
+The Vue PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps describe how to securely load and store PDF documents using a server-backed web service.
 
 ### Steps to open the PDF file from Azure Active Directory
 
@@ -93,7 +93,7 @@ The TypeScript PDF Viewer component supports loading and saving PDF files with A
 
 ### Step 6: Client-side configuration
 
-1. Run the TypeScript sample:
+1. Run the Vue sample:
    - Start the Vue sample that includes the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer.
 
 2. Load a PDF from AAD:

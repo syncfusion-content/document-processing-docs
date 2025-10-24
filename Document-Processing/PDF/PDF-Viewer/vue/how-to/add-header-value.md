@@ -50,5 +50,3 @@ export default {
 </script>
 ```
 
-Sample: How to add custom headers using ajaxRequestSettings
-[StackBlitz example](https://stackblitz.com/edit/typescript-nv1way?file=index.ts)

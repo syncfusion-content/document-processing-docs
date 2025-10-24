@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Show or hide annotations in the PDF Viewer
 
-Toggle annotation visibility in the Syncfusion PDF Viewer using TypeScript. Hide annotations for a cleaner view and show them again as needed.
+Toggle annotation visibility in the Syncfusion PDF Viewer using Vue. Hide annotations for a cleaner view and show them again as needed.
 
 ## Implementation Steps
 

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-A concise guide to adding rectangle annotations at highlighted text search results in the TypeScript PDF Viewer to visually emphasize matches and improve readability.
+A concise guide to adding rectangle annotations at highlighted text search results in the Vue PDF Viewer to visually emphasize matches and improve readability.
 
 ## Steps to add rectangle annotations on search result highlight
 

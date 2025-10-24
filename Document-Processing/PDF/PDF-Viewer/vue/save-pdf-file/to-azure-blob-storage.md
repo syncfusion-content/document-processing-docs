@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Save PDF files to Azure Blob Storage
 
-The TypeScript PDF Viewer component supports saving PDF files to Azure Blob Storage using either the standalone or server-backed configuration. The following steps demonstrate both approaches..
+The Vue PDF Viewer component supports saving PDF files to Azure Blob Storage using either the standalone or server-backed configuration. The following steps demonstrate both approaches..
 
 ## Using Standalone PDF Viewer
 

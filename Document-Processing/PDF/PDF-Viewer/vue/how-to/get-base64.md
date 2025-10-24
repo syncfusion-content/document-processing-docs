@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ### Overview
 
-This guide shows how to get the base64-encoded value of a PDF loaded in the Syncfusion PDF Viewer using TypeScript. This is useful for sending the PDF as a base64 string or processing it on the client.
+This guide shows how to get the base64-encoded value of a PDF loaded in the Syncfusion PDF Viewer using Vue. This is useful for sending the PDF as a base64 string or processing it on the client.
 
 ### How to Retrieve Base64 Value
 

@@ -123,5 +123,3 @@ function onAnnotationSelector() {
 </script>
 ```
 
-Sample: How to customize the annotation selector
-https://stackblitz.com/edit/typescript-u7xjdv?file=index.ts

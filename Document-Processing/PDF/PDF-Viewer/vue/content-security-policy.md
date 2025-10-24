@@ -43,7 +43,7 @@ The resultant meta tag is included within the `<head>` tag and resolves the CSP 
 {% endhighlight %}
 {% endtabs %}
 
-* Syncfusion PDF Viewer control when images are added as **blob** and **base64**, which are blocked on a strict CSP-enabled site.To overcome this restriction, it is necessary to add the imgage-src data: directive in the meta tag. To allow them, add the  [`style-src  'self' blob:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`imgage-src 'self' data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directives as follows.
+* Syncfusion PDF Viewer control when images are added as **blob** and **base64**, which are blocked on a strict CSP-enabled site.To overcome this restriction, it is necessary to add the image-src data: directive in the meta tag. To allow them, add the  [`style-src  'self' blob:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`image-src 'self' data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directives as follows.
 
 {% tabs %}
 {% highlight razor tabtitle="HTML" %}

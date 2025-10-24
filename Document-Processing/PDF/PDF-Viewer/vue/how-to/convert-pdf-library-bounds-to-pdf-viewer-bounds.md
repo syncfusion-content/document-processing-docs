@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Convert PDF Library bounds to PDF Viewer bounds | Syncfusion
-description: Learn how to convert PDF Library bounds into PDF Viewer bounds when exporting annotations, ensuring accurate placement in the TypeScript PDF Viewer.
+description: Learn how to convert PDF Library bounds into PDF Viewer bounds when exporting annotations, ensuring accurate placement in the Vue PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
