@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rows and columns in Blazor Spreadsheet component | Syncfusion
-description: Learn here all about Rows and columns in the Syncfusion Blazor Spreadsheet component and more.
+description: Learn here all about Rows and columns in the Blazor Spreadsheet component and more.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
@@ -133,11 +133,14 @@ The Blazor Spreadsheet component enables you to define the initial number of row
 *   The default `RowCount` is **1000**.
 *   The default `ColumnCount` is **200**.
 
-Rendering Behavior
+**Rendering Behavior**
 
-- Without Data Source: 
- - When no data is bound to the spreadsheet, the sheet renders empty cells up to RowCount × ColCount.
-- With Data Source (e.g., byte array or imported file):
+- **Without Data Source:** 
+
+  - When no data is bound to the spreadsheet, the sheet renders empty cells up to RowCount × ColCount.
+
+- **With Data Source (e.g., byte array or imported file):**
+
   - If the data source has fewer rows/columns than RowCount/ColCount, the spreadsheet renders additional empty rows/columns to meet the specified counts.
   - If the data source has more rows/columns than RowCount/ColCount, the spreadsheet renders enough rows/columns to display all data from the source (i.e., it extends beyond the specified counts to fit the data). Your data is never truncated by these properties.
 
