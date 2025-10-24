@@ -2715,6 +2715,82 @@ document.Close(true)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Customizing-truetype-fonts-in-a-PDF/.NET).
 
+## Disabling Font Caching with EnableCache
+
+The [EnableCache](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#properties) property controls whether font data is cached during PDF rendering. By default, it's set to `true` to improve performance through font caching. However, for precise font rendering or memory control, you can disable caching by setting it to `false`, ensuring fonts are processed freshly for each rendering operation.
+
+The following code example illustrates this.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new document.
+using (PdfDocument document = new PdfDocument())
+{
+    //Diable the font cache
+    PdfDocument.EnableCache = false;
+
+    //Creates a new page and adds it as the last page of the document
+    PdfPage page = document.Pages.Add();
+    //Create Pdf graphics for the page
+    PdfGraphics graphics = page.Graphics;
+    //Create a solid brush
+    PdfBrush brush = new PdfSolidBrush(Color.Black);
+    float fontSize = 20f;
+    //Set the font
+    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, fontSize);
+    //Draw the text
+    graphics.DrawString("Hello world!", font, brush, new PointF(20, 20));
+    //Save the PDF document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new document.
+using (PdfDocument document = new PdfDocument())
+{
+    //Diable the font cache
+    PdfDocument.EnableCache = false;
+
+    //Creates a new page and adds it as the last page of the document
+    PdfPage page = document.Pages.Add();
+    //Create Pdf graphics for the page
+    PdfGraphics graphics = page.Graphics;
+    //Create a solid brush
+    PdfBrush brush = new PdfSolidBrush(Color.Black);
+    float fontSize = 20f;
+    //Set the font
+    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, fontSize);
+    //Draw the text
+    graphics.DrawString("Hello world!", font, brush, new PointF(20, 20));
+    //Save the PDF document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## LineLimit, ClipPath, NoClip properties in PdfStringFormat
 
 **LineLimit:** When LineLimit is enabled, the provided string will be laid out within the specified bounds. If the LineLimit property is disabled, the layout will continue to fill any remaining space. The default value of the LineLimit property is true.
