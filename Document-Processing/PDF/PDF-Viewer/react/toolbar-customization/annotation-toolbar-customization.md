@@ -3,8 +3,7 @@ layout: post
 title: Annotation Toolbar Customization in React Pdfviewer control | Syncfusion
 description: Learn here all about annotation toolbar customization in Syncfusion React Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Annotation Toolbar Customization
-publishingplatform: PDF Viewer
+control: PDF Viewer 
 documentation: ug
 domainurl: ##DomainURL##
 ---
