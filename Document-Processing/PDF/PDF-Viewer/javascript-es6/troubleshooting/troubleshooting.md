@@ -1,18 +1,19 @@
 ---
 layout: post
-title: Manually Copy Files from node_modules in Typescript PDF Viewer control | Syncfusion
-description: Learn here all about why do i have to manually copy files from node_modules in Syncfusion Essential JS 2 and more.
+title: Why manual copy from node_modules is required in the TypeScript PDF Viewer
+description: Understand why certain lazy-loaded assets from ej2-pdfviewer-lib must be copied from node_modules when not using a bundler, how pdfium.js is handled, and when to reference assets directly in the TypeScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Why Do I Have to Manually Copy Files from node_modules into My App?
 
-PDF Viewer offers flexibility across different build systems, remaining both framework-agnostic and independent of bundlers. Even without a bundler, you can seamlessly integrate the PDF Viewer by directly linking its assets through standard HTML tags.
+The PDF Viewer supports multiple build systems and can work without a bundler by referencing assets directly using HTML tags. To keep load times efficient, the library is split into smaller modules and uses lazy loading for certain assets.
 
-Moreover, our codebase is meticulously divided into distinct files, enabling selective loading of components when required. This strategic approach to lazy loading prevents unwieldy file sizes that a single bundle might impose, which is often impractical.
+- The primary entry point, "pdfium.js", is typically included by bundlers automatically.
+- Additional resources under "ej2-pdfviewer-lib" are loaded on demand at runtime. Because the host app does not know about these lazy-loaded files, they are not automatically emitted by bundlers or available to static servers unless they are copied and referenced.
 
-While 'pdfium.js,' the primary entry point, is commonly bundled automatically, the supplementary assets from 'ej2-pdfviewer-lib' need to be manually incorporated due to their on-demand loading. This necessity arises because the host application lacks inherent awareness of these assets' lazy loading behavior.
+When not using a bundler (or when the bundler does not emit these assets), copy the required files from node_modules to a web-accessible path in your app (for example, "src/ej2-pdfviewer-lib") and reference them accordingly. This ensures the viewer can fetch the lazy-loaded assets when needed and prevents runtime 404 errors.
+
+If a bundler is configured to emit static assets from node_modules, verify that the output contains the necessary files from "@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib" and that your app serves them from a public path. Otherwise, perform a manual copy step during your build process.

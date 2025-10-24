@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF Viewer Form Field events
+# PDF Viewer Form Field events in Vue
 
 The PDF Viewer control provides the support to different Form Field events. The Form Field events supported by the PDF Viewer Control are:
 

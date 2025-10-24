@@ -1,21 +1,20 @@
 ---
 layout: post
-title: Enable or Disable Text Selection in Typescript Pdfviewer control | Syncfusion
-description: Learn how to enable text selection in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Enable or disable text selection in TypeScript PDF Viewer | Syncfusion
+description: Learn how to enable or disable text selection in the TypeScript PDF Viewer using the enableTextSelection property.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable or Disable Text Selection in Syncfusion PDF Viewer
+# Enable or disable text selection in PDF Viewer
 
-The Syncfusion PDF Viewer provides the `enableTextSelection` property, which allows you to control whether users can select text within the displayed PDF document. This feature can be toggled programmatically during runtime.
+Use the `enableTextSelection` property to control whether users can select text in the displayed PDF. This setting can be configured at initialization and toggled at runtime.
 
-## Configure Text Selection on Initialization
+## Configure on initialization
 
-You can set the initial text selection behavior when initializing the PDF Viewer control by configuring the `enableTextSelection` property.
+Set initial behavior when instantiating the PDF Viewer.
 
 ```ts
 import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-pdfviewer';
@@ -25,15 +24,15 @@ PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnific
 
 const pdfviewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: "https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib",
+    resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
     enableTextSelection: false, // Disable text selection initially
 });
 pdfviewer.appendTo('#PdfViewer');
 ```
 
-## Toggle Text Selection Dynamically
+## Toggle dynamically
 
-You can change the text selection behavior at runtime using buttons, menu options, or other UI elements:
+Change the behavior at runtime using buttons or other UI.
 
 ```html
 <!-- HTML buttons to control text selection -->
@@ -52,14 +51,14 @@ document.getElementById('disableSelection')?.addEventListener('click', () => {
 });
 ```
 
-## Use Cases and Considerations
+## Use cases and considerations
 
-- **Document Protection**: Disabling text selection helps prevent unauthorized copying of sensitive content.
-- **Read-only Documents**: In scenarios where documents are meant for viewing only, disabling text selection can provide a cleaner user experience.
-- **Interactive Applications**: Toggle text selection based on user roles or document states in complex applications.
+- Document protection: Disable text selection to help prevent copying sensitive content.
+- Read-only documents: Provide a cleaner viewing experience by preventing selection.
+- Interactive apps: Toggle selection based on user roles or document states.
 
-## Default Behavior
+## Default behavior
 
-By default, text selection is enabled in the PDF Viewer. Set the `enableTextSelection` property to `false` explicitly if you want to disable this functionality.
+Text selection is enabled by default. Set `enableTextSelection` to `false` to disable it.
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to)
+[View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to)
