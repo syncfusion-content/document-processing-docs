@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rows and columns in Blazor Spreadsheet component | Syncfusion
-description: Learn here all about Rows and columns in the Blazor Spreadsheet component and more.
+description: Checkout and learn here all about Rows and columns in the Syncfusion Blazor Spreadsheet component and more.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
