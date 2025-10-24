@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add rectangle annotation from textSearch in React PDF Viewer | Syncfusion
+title: Add Rectangle Annotation via Text Search in React PDF Viewer
 description: Learn to add rectangle annotations using text search bounds in the React PDF Viewer component, including initialization and search controls.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Add rectangle annotations using text search bounds in PDF Viewer
+# Programmatically Add Rectangle Annotations Based on Text Search in PDF Viewer
 
 A concise guide to adding rectangle annotations at highlighted text search results in the React PDF Viewer to visually emphasize matches and improve readability.
 
