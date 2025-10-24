@@ -78,51 +78,67 @@ Example:
 
 ```html
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :bookmarkClick="bookmarkClick"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     bookmarkClick: function (args) {
       console.log(`Bookmark clicked: ${args.name}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -142,55 +158,70 @@ Example:
 
 ```html
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :toolbarClick="toolbarClick"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     toolbarClick: function (args) {
       console.log(`Toolbar item clicked: ${args.name}`);
     },
   },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
-  },
 };
 </script>
-
 <style>
 /* Add any necessary styles here */
 </style>
@@ -214,44 +245,62 @@ Example:
 
 ```html
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
-      :enableFormFieldsValidation="enableFormFieldsValidation"
       :validateFormFields="validateFormFields"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
-      enableFormFieldsValidation: true,
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     validateFormFields: function (args) {
@@ -261,16 +310,9 @@ export default {
       console.log('non fillable form field details:', args.nonFillableFields);
     },
   },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
-  },
 };
 </script>
 
-<style>
-/* Add any necessary styles here */
-</style>
 ```
 
 Tip
@@ -286,51 +328,67 @@ Example:
 
 ```html
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :zoomChange="zoomChange"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     zoomChange: function (args) {
       console.log(`Zoom changed to: ${args.zoomValue}%`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -350,51 +408,67 @@ Example:
 
 ```html
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :buttonFieldClick="buttonFieldClick"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     buttonFieldClick: function (args) {
       console.log(`Button field clicked. Name: ${args.name}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -414,51 +488,67 @@ Example:
 
 ```html
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :commentAdd="commentAdd"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     commentAdd: function (args) {
       console.log(`Comment added. Id: ${args.id}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -478,51 +568,67 @@ Example:
 
 ```html
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :commentDelete="commentDelete"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
   },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
+  },
   methods: {
-    commentDelete: function (args) {
+   commentDelete: function (args) {
       console.log(`Comment deleted. Id: ${args.id}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -542,51 +648,67 @@ Example:
 
 ```html
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :commentEdit="commentEdit"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
   },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
+  },
   methods: {
-    commentEdit: function (args) {
+     commentEdit: function (args) {
       console.log(`Comment edited. Id: ${args.id}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -644,7 +766,7 @@ export default {
     };
   },
   methods: {
-    commentSelect: function (args) {
+   commentSelect: function (args) {
       console.log(`Comment selected. Id: ${args.id}`);
     },
   },
@@ -670,54 +792,40 @@ Example:
 
 ```html
 <template>
-  <div id="app">
-    <ejs-pdfviewer
-      id="pdfViewer"
-      :documentPath="documentPath"
-      :resourceUrl="resourceUrl"
-      :commentStatusChanged="commentStatusChanged"
-    ></ejs-pdfviewer>
-  </div>
+    <div>  
+            <ejs-pdfviewer 
+                id="pdfviewer" 
+                ref="pdfviewer" 
+                :documentPath="documentPath"
+                :resourceUrl="resourceUrl"
+                :commentStatusChanged="commentStatusChanged">
+            </ejs-pdfviewer>
+    </div>
 </template>
-
 <script>
-import Vue from 'vue';
-import {
-  PdfViewerPlugin,
-  Toolbar,
-  Magnification,
-  Navigation,
-  LinkAnnotation,
-  ThumbnailView,
-  BookmarkView,
-  TextSelection,
-  Annotation,
-  FormDesigner,
-  FormFields,
-  PageOrganizer,
-} from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner,PageOrganizer } from "@syncfusion/ej2-vue-pdfviewer";
 
-Vue.use(PdfViewerPlugin);
 
 export default {
-  name: 'app',
-  data() {
-    return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
-    };
-  },
-  methods: {
-    commentStatusChanged: function (args) {
+    components: {
+        'ejs-pdfviewer': PdfViewerComponent
+    },
+    data: function() {
+        return {
+			documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+            resourceUrl: 'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib'}
+    },
+	provide: {
+      PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner,PageOrganizer]
+    },
+    methods: {
+       commentStatusChanged: function (args) {
       console.log(`Comment status changed. Id: ${args.id}, Status: ${args.status}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
-  },
+      },
 };
 </script>
+
 
 <style>
 /* Add any necessary styles here */
@@ -733,52 +841,69 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#create
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :created="created"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     created: function () {
       console.log('PDF Viewer created');
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -799,6 +924,7 @@ The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/vue/documentation/a
 Example:
 
 ```html
+
 <template>
   <div id="app">
     <ejs-pdfviewer
@@ -997,51 +1123,67 @@ Example:
 
 ```html
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :documentLoad="documentLoad"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     documentLoad: function (args) {
       console.log(`Document loaded: page count = ${args.pageData}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -1060,52 +1202,69 @@ The [documentLoadFailed](https://ej2.syncfusion.com/vue/documentation/api/pdfvie
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :documentLoadFailed="documentLoadFailed"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/invalid.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     documentLoadFailed: function (args) {
       console.log(`Load failed. Error: ${args.documentName}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -1124,55 +1283,73 @@ The [documentUnload](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :documentUnload="documentUnload"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     documentUnload: function () {
       console.log('Document unloaded');
     },
   },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
-  },
 };
 </script>
+
 
 <style>
 /* Add any necessary styles here */
@@ -1188,55 +1365,73 @@ The [downloadEnd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#do
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :downloadEnd="downloadEnd"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
   },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
+  },
   methods: {
-    downloadEnd: function (args) {
+   downloadEnd: function (args) {
       console.log(`Download finished. File name: ${args.fileName}`);
     },
   },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
-  },
 };
 </script>
+
 
 <style>
 /* Add any necessary styles here */
@@ -1252,52 +1447,69 @@ The [downloadStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :downloadStart="downloadStart"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     downloadStart: function () {
       console.log('Download started');
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -1316,52 +1528,69 @@ The [exportFailed](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#e
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :exportFailed="exportFailed"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     exportFailed: function (args) {
       console.log(`Export failed: ${args.name}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -1380,52 +1609,69 @@ The [exportStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#ex
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :exportStart="exportStart"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     exportStart: function () {
       console.log('Export started');
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -1444,52 +1690,69 @@ The [exportSuccess](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :exportSuccess="exportSuccess"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     exportSuccess: function () {
       console.log('Export success');
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -1508,52 +1771,69 @@ The [extractTextCompleted](https://ej2.syncfusion.com/vue/documentation/api/pdfv
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :extractTextCompleted="extractTextCompleted"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     extractTextCompleted: function (args) {
       console.log(`Extracted text length: ${(args.documentTextCollection || '').length}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -1572,52 +1852,69 @@ The [hyperlinkClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :hyperlinkClick="hyperlinkClick"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     hyperlinkClick: function (args) {
       console.log(`Hyperlink clicked: ${args.hyperlink}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -1636,52 +1933,69 @@ The [hyperlinkMouseOver](https://ej2.syncfusion.com/vue/documentation/api/pdfvie
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :hyperlinkMouseOver="hyperlinkMouseOver"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     hyperlinkMouseOver: function (args) {
       console.log(`Hyperlink hover at page: ${args.name}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -1700,52 +2014,69 @@ The [importFailed](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#i
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :importFailed="importFailed"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     importFailed: function (args) {
       console.log(`Import failed: ${args.name}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -1764,52 +2095,69 @@ The [importStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#im
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :importStart="importStart"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     importStart: function () {
       console.log('Import started');
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -1828,55 +2176,73 @@ The [importSuccess](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :importSuccess="importSuccess"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     importSuccess: function () {
       console.log('Import success');
     },
   },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
-  },
 };
 </script>
+
 
 <style>
 /* Add any necessary styles here */
@@ -1899,45 +2265,47 @@ Refer to [Keyboard interaction](./accessibility.md#keyboard-interaction) for det
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :commandManager="commandManager"
       :keyboardCustomCommands="keyboardCustomCommands"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
-  ModifierKeys,
-  PdfKeys
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
       commandManager: {
         keyboardCommand: [
           {
@@ -1969,17 +2337,30 @@ export default {
             },
           },
         ],
-      },
+      },  
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     keyboardCustomCommands: function (args) {
       console.log('Custom command triggered:', args);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -1998,52 +2379,69 @@ The [moveSignature](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :moveSignature="moveSignature"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     moveSignature: function (args) {
       console.log(`Signature moved on page ${args.id}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -2062,55 +2460,73 @@ The [pageChange](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#pag
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :pageChange="pageChange"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     pageChange: function (args) {
       console.log(`Page changed from ${args.previousPageNumber} to ${args.currentPageNumber}`);
     },
   },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
-  },
 };
 </script>
+
 
 <style>
 /* Add any necessary styles here */
@@ -2126,52 +2542,69 @@ The [pageClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#page
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :pageClick="pageClick"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     pageClick: function (args) {
       console.log(`Page ${args.pageNumber} clicked at (${args.x}, ${args.y})`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -2190,52 +2623,69 @@ The [pageMouseover](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :pageMouseover="pageMouseover"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     pageMouseover: function (args) {
       console.log(`Mouse over page ${args.name}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -2254,52 +2704,69 @@ The [pageOrganizerSaveAs](https://ej2.syncfusion.com/vue/documentation/api/pdfvi
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :pageOrganizerSaveAs="pageOrganizerSaveAs"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     pageOrganizerSaveAs: function (args) {
       console.log(`Page organizer save triggered. File name: ${args.downloadDocument}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -2318,55 +2785,73 @@ The [pageRenderComplete](https://ej2.syncfusion.com/vue/documentation/api/pdfvie
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :pageRenderComplete="pageRenderComplete"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     pageRenderComplete: function (args) {
       console.log(`Page ${args.data} rendering completed.`);
     },
   },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
-  },
 };
 </script>
+
 
 <style>
 /* Add any necessary styles here */
@@ -2382,52 +2867,69 @@ The [pageRenderInitiate](https://ej2.syncfusion.com/vue/documentation/api/pdfvie
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :pageRenderInitiate="pageRenderInitiate"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     pageRenderInitiate: function (args) {
       console.log(`Page ${args.jsonData} rendering initiated.`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -2766,6 +3268,7 @@ The [signaturePropertiesChange](https://ej2.syncfusion.com/vue/documentation/api
 Example:
 
 ```html
+
 <template>
   <div id="app">
     <ejs-pdfviewer
@@ -2894,52 +3397,69 @@ The [signatureUnselect](https://ej2.syncfusion.com/vue/documentation/api/pdfview
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :signatureUnselect="signatureUnselect"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     signatureUnselect: function (args) {
       console.log(`Signature unselected ${args.signature}`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -3022,52 +3542,69 @@ The [textSearchHighlight](https://ej2.syncfusion.com/vue/documentation/api/pdfvi
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :textSearchHighlight="textSearchHighlight"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     textSearchHighlight: function (args) {
       console.log(`Search result ${args.bounds} highlighted.`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
@@ -3086,52 +3623,69 @@ The [textSearchStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer
 Example:
 
 ```html
+
 <template>
-  <div id="app">
+  <div>
     <ejs-pdfviewer
-      id="pdfViewer"
+      id="pdfviewer"
+      ref="pdfviewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :textSearchStart="textSearchStart"
-    ></ejs-pdfviewer>
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
-import Vue from 'vue';
 import {
-  PdfViewerPlugin,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   LinkAnnotation,
-  ThumbnailView,
   BookmarkView,
+  ThumbnailView,
+  Print,
   TextSelection,
+  TextSearch,
   Annotation,
-  FormDesigner,
   FormFields,
+  FormDesigner,
   PageOrganizer,
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
-
 export default {
-  name: 'app',
-  data() {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl:
+        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      Annotation,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
   },
   methods: {
     textSearchStart: function (args) {
       console.log(`Text search started for: "${args.searchText}"`);
     },
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
   },
 };
 </script>
