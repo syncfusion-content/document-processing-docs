@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Authorization token in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Authorization token in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Authorization token in Vue PDF Viewer component | Syncfusion
+description: Learn here all about Authorization token in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Authorization token
 platform: document-processing
 documentation: ug

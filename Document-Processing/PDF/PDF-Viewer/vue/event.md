@@ -115,7 +115,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -195,7 +195,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -282,7 +282,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -365,7 +365,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -445,7 +445,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -525,7 +525,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -605,7 +605,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -685,7 +685,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -762,7 +762,7 @@ export default {
   data() {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   methods: {
@@ -813,7 +813,7 @@ export default {
     data: function() {
         return {
 			documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-            resourceUrl: 'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib'}
+            resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'}
     },
 	provide: {
       PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner,PageOrganizer]
@@ -880,7 +880,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -961,7 +961,7 @@ export default {
   data() {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
       menuItems: [
         {
           text: 'SEARCH_ON_WEB',
@@ -1061,7 +1061,7 @@ export default {
   data() {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
       menuItems: [
         {
           text: 'SEARCH_ON_WEB',
@@ -1160,7 +1160,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -1241,7 +1241,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -1322,7 +1322,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -1404,7 +1404,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -1486,7 +1486,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -1567,7 +1567,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -1648,7 +1648,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -1729,7 +1729,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -1810,7 +1810,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -1891,7 +1891,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -1972,7 +1972,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -2053,7 +2053,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -2134,7 +2134,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -2215,7 +2215,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -2305,7 +2305,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
       commandManager: {
         keyboardCommand: [
           {
@@ -2418,7 +2418,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -2499,7 +2499,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -2581,7 +2581,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -2662,7 +2662,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -2743,7 +2743,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -2824,7 +2824,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -2906,7 +2906,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -2983,7 +2983,7 @@ export default {
   data() {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   methods: {
@@ -3047,7 +3047,7 @@ export default {
   data() {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   methods: {
@@ -3111,7 +3111,7 @@ export default {
   data() {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   methods: {
@@ -3175,7 +3175,7 @@ export default {
   data() {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   methods: {
@@ -3239,7 +3239,7 @@ export default {
   data() {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   methods: {
@@ -3304,7 +3304,7 @@ export default {
   data() {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   methods: {
@@ -3368,7 +3368,7 @@ export default {
   data() {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   methods: {
@@ -3436,7 +3436,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -3513,7 +3513,7 @@ export default {
   data() {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   methods: {
@@ -3581,7 +3581,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -3662,7 +3662,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl:
-        'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -3739,7 +3739,7 @@ export default {
   data() {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   methods: {
@@ -3803,7 +3803,7 @@ export default {
   data() {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   methods: {
@@ -3867,7 +3867,7 @@ export default {
   data() {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   methods: {

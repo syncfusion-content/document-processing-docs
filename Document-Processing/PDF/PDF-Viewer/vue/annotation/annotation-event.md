@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation Events in Vue Pdfviewer control | Syncfusion
-description: Learn here all about Annotation Events in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Annotation Events in Vue PDF Viewer control | Syncfusion
+description: Learn here all about Annotation Events in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Annotation Events
 platform: document-processing
 documentation: ug
@@ -60,7 +60,7 @@ The following example illustrates how to handle the `annotationAdd` event.
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -93,7 +93,7 @@ The following example illustrates how to handle the `annotationAdd` event.
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -139,7 +139,7 @@ The following example illustrates how to handle the `annotationDoubleClick` even
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -171,7 +171,7 @@ The following example illustrates how to handle the `annotationDoubleClick` even
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -216,7 +216,7 @@ The following example illustrates how to handle the `annotationMouseLeave` event
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -248,7 +248,7 @@ The following example illustrates how to handle the `annotationMouseLeave` event
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -293,7 +293,7 @@ The following example illustrates how to handle the `annotationMouseover` event.
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -325,7 +325,7 @@ The following example illustrates how to handle the `annotationMouseover` event.
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -370,7 +370,7 @@ The following example illustrates how to handle the `annotationMove` event.
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -402,7 +402,7 @@ The following example illustrates how to handle the `annotationMove` event.
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -447,7 +447,7 @@ The following example illustrates how to handle the `annotationMoving` event.
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -479,7 +479,7 @@ The following example illustrates how to handle the `annotationMoving` event.
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -524,7 +524,7 @@ The following example illustrates how to handle the `annotationPropertiesChange`
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -557,7 +557,7 @@ The following example illustrates how to handle the `annotationPropertiesChange`
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -603,7 +603,7 @@ The following example illustrates how to handle the `annotationRemove` event.
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -635,7 +635,7 @@ The following example illustrates how to handle the `annotationRemove` event.
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -680,7 +680,7 @@ The following example illustrates how to handle the `annotationResize` event.
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -712,7 +712,7 @@ The following example illustrates how to handle the `annotationResize` event.
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -757,7 +757,7 @@ The following example illustrates how to handle the `annotationSelect` event.
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -789,7 +789,7 @@ The following example illustrates how to handle the `annotationSelect` event.
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -834,7 +834,7 @@ The following example illustrates how to handle the `annotationUnselect` event.
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -866,7 +866,7 @@ The following example illustrates how to handle the `annotationUnselect` event.
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -911,7 +911,7 @@ The following example illustrates how to handle the `beforeAddFreeText` event.
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -945,7 +945,7 @@ The following example illustrates how to handle the `beforeAddFreeText` event.
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -994,7 +994,7 @@ The following example illustrates how to handle the `addSignature` event.
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -1026,7 +1026,7 @@ The following example illustrates how to handle the `addSignature` event.
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -1071,7 +1071,7 @@ The following example illustrates how to handle the `removeSignature` event.
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -1103,7 +1103,7 @@ The following example illustrates how to handle the `removeSignature` event.
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -1148,7 +1148,7 @@ The following example illustrates how to handle the `resizeSignature` event.
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -1180,7 +1180,7 @@ The following example illustrates how to handle the `resizeSignature` event.
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -1225,7 +1225,7 @@ The following example illustrates how to handle the `signaturePropertiesChange` 
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -1257,7 +1257,7 @@ The following example illustrates how to handle the `signaturePropertiesChange` 
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -1302,7 +1302,7 @@ The following example illustrates how to handle the `signatureSelect` event.
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -1334,7 +1334,7 @@ The following example illustrates how to handle the `signatureSelect` event.
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {
@@ -1379,7 +1379,7 @@ The following example illustrates how to handle the `signatureUnselect` event.
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer])
@@ -1411,7 +1411,7 @@ The following example illustrates how to handle the `signatureUnselect` event.
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       };
     },
     provide: {

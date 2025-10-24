@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Mobile Toolbar Interface in Vue Pdfviewer component | Syncfusion
-description: Learn All About the Mobile Toolbar Interface in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Mobile Toolbar Interface in Vue PDF Viewer component | Syncfusion
+description: Learn All About the Mobile Toolbar Interface in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Mobile Toolbar Interface
 platform: document-processing
 documentation: ug
@@ -84,7 +84,7 @@ export default {
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
 
@@ -166,7 +166,7 @@ export default {
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
 

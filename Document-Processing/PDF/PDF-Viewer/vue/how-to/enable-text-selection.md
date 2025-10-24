@@ -53,7 +53,7 @@ export default {
   },
   data() {
     return {
-        resourceUrl: "https://cdn.syncfusion.com/ej2/28.1.33/dist/ej2-pdfviewer-lib",
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },
@@ -123,7 +123,7 @@ export default {
   },
   data() {
     return {
-        resourceUrl: "https://cdn.syncfusion.com/ej2/28.1.33/dist/ej2-pdfviewer-lib",
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },

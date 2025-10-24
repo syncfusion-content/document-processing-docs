@@ -45,7 +45,7 @@ Event arguments:
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]);
@@ -81,7 +81,7 @@ Event arguments:
     data() {
       return {
         documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-        resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib'
+        resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
       };
     },
     provide: {
@@ -134,7 +134,7 @@ Event arguments:
 
   const pdfviewer = ref(null);
   const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-  const resourceUrl = "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib";
+  const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
   const pageOrganizerSettings = { showImageZoomingSlider: true };
 
   provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
@@ -171,7 +171,7 @@ Event arguments:
     data() {
       return {
         documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-        resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+        resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
         pageOrganizerSettings: { showImageZoomingSlider: true }
       };
     },
