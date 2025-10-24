@@ -1,6 +1,6 @@
 ---
 title: Does XlsIO Support Dynamic VBA Code Execution | Syncfusion
-description: Learn whether the Syncfusion .NET Excel library (XlsIO) supports dynamic VBA code execution and its limitations, such as issues with sheet protection in Excel files. 
+description: Learn if the Syncfusion .NET Excel library (XlsIO) supports dynamic VBA code execution, including limitations like sheet protection issues in Excel files. 
 platform: document-processing
 control: XlsIO
 documentation: UG
