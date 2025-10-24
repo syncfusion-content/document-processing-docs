@@ -375,138 +375,234 @@ Add Syncfusion EJ2 Toolbar components to perform magnification actions in the PD
 
 **Step 8: Add scripts for PDF Viewer user interaction.**
 
-   ```ts
+```ts
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
 
-    import * as ReactDOM from 'react-dom';
-    import * as React from 'react';
-    import {
-    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-    ThumbnailView, Print, TextSelection, TextSearch, Inject
-    } from '@syncfusion/ej2-react-pdfviewer';
-    import { ToolbarComponent, ItemsDirective, ItemDirective, ClickEventArgs } from '@syncfusion/ej2-react-navigations';
-    import { RouteComponentProps } from 'react-router';
+import {
+  PdfViewerComponent,
+  Magnification,
+  Navigation,
+  LinkAnnotation,
+  BookmarkView,
+  ThumbnailView,
+  Print,
+  TextSelection,
+  TextSearch,
+  Inject
+} from '@syncfusion/ej2-react-pdfviewer';
 
-     export class CustomToolbar extends SampleBase<{}, {}> {
-    public viewer: PdfViewerComponent;
-    public toolbar: ToolbarComponent;
-    public currentPageNumber: string = '1';
-    public fileName: string = '';
-    rendereComplete() {
-        this.wireEvent();
-    }
-    render() {
-        // template code from step 2
-    }
-    wireEvent() {
-        let inputElement: HTMLInputElement = document.getElementById('currentPage') as HTMLInputElement;
-        inputElement.addEventListener('click', this.currentPageClicked.bind(this));
-        inputElement.addEventListener('keypress', this.onCurrentPageBoxKeypress.bind(this));
-        inputElement.value = this.currentPageNumber;
-    }
-    onPageChange = () => {
-        this.currentPageNumber = this.viewer.currentPageNumber.toString();
-        let inputElement: HTMLInputElement = document.getElementById('currentPage') as HTMLInputElement;
-        inputElement.value = this.currentPageNumber;
-        this.updatePageNavigation();
-    }
-    clickHandler(args: ClickEventArgs) {
-        switch (args.item.id) {
-            case 'file_Open':
-                document.getElementById('fileUpload').click();
-                break;
-            case 'previous_page':
-                this.viewer.navigation.goToPreviousPage();
-                break;
-            case 'next_page':
-                this.viewer.navigation.goToNextPage();
-                break;
-            case 'print':
-                this.viewer.print.print();
-                break;
-            case 'download':
-                this.viewer.download();
-                break;
-            case 'fit_to_page':
-                this.viewer.magnification.fitToPage();
-                break;
-            case 'zoom_in':
-                this.viewer.magnification.zoomIn();
-                break;
-            case 'zoom_out':
-                this.viewer.magnification.zoomOut();
-                break;
-        }
-    }
-    documentLoaded = () => {
-        var pageCount = document.getElementById('totalPage');
-        pageCount.textContent = 'of ' + this.viewer.pageCount;
-        this.updatePageNavigation();
-    }
+import {
+  ToolbarComponent,
+  ItemsDirective,
+  ItemDirective
+} from '@syncfusion/ej2-react-navigations';
 
-    updatePageNavigation() {
-        if (this.viewer.currentPageNumber === 1) {
-            this.toolbar.enableItems(document.getElementById('previous_page').parentElement, false);
-            this.toolbar.enableItems(document.getElementById('next_page').parentElement, true);
-        } else if (this.viewer.currentPageNumber === this.viewer.pageCount) {
-            this.toolbar.enableItems(document.getElementById('previous_page').parentElement, true);
-            this.toolbar.enableItems(document.getElementById('next_page').parentElement, false);
+class CustomToolbar extends React.Component {
+  viewer = null;
+  toolbar = null;
+  currentPageNumber = '1';
+  fileName = '';
+
+  componentDidMount() {
+    this.wireEvent();
+  }
+
+  wireEvent() {
+    const input = document.getElementById('currentPage');
+    if (input) {
+      input.addEventListener('click', this.currentPageClicked);
+      input.addEventListener('keypress', this.onCurrentPageBoxKeypress );
+      input.value = this.currentPageNumber;
+    }
+  }
+
+  documentLoaded = () => {
+    const pageCount = document.getElementById('totalPage');
+    if (pageCount && this.viewer) {
+      pageCount.textContent = 'of ' + this.viewer.pageCount;
+      this.updatePageNavigation();
+    }
+  };
+
+  onPageChange = () => {
+    this.currentPageNumber = this.viewer?.currentPageNumber.toString() || '1';
+    const input = document.getElementById('currentPage');
+    if (input) input.value = this.currentPageNumber;
+    this.updatePageNavigation();
+  };
+
+  updatePageNavigation() {
+    if (!this.viewer) return;
+    const prev = document.getElementById('previous_page')?.parentElement ;
+    const next = document.getElementById('next_page')?.parentElement ;
+    if (!prev || !next) return;
+
+    if (this.viewer.currentPageNumber === 1) {
+      (this.toolbar )?.enableItems(prev, false);
+      (this.toolbar )?.enableItems(next, true);
+    } else if (this.viewer.currentPageNumber === this.viewer.pageCount) {
+      (this.toolbar )?.enableItems(prev, true);
+      (this.toolbar )?.enableItems(next, false);
+    } else {
+      (this.toolbar )?.enableItems(prev, true);
+      (this.toolbar )?.enableItems(next, true);
+    }
+  }
+
+  currentPageClicked = () => {
+    const el = document.getElementById('currentPage') ;
+    el?.select();
+  };
+
+  onCurrentPageBoxKeypress = (event) => {
+    const box = document.getElementById('currentPage') ;
+    if (!box) return;
+    const which = (event ).which;
+    if ((which < 48 || which > 57) && which !== 8 && which !== 13) {
+      event.preventDefault();
+      return false;
+    } else {
+      const n = parseInt(box.value);
+      if (which === 13 && this.viewer) {
+        if (n > 0 && n <= this.viewer.pageCount) {
+          this.viewer.navigation.goToPage(n);
         } else {
-            this.toolbar.enableItems(document.getElementById('previous_page').parentElement, true);
-            this.toolbar.enableItems(document.getElementById('next_page').parentElement, true);
+          box.value = this.viewer.currentPageNumber.toString();
         }
+      }
+      return true;
     }
+  };
 
-    onCurrentPageBoxKeypress(event) {
-        let currentPageBox: HTMLInputElement = document.getElementById('currentPage') as HTMLInputElement;
-        if ((event.which < 48 || event.which > 57) && event.which !== 8 && event.which !== 13) {
-            event.preventDefault();
-            return false;
-        }
-        else {
-            var currentPageNumber = parseInt(currentPageBox.value);
-            if (event.which === 13) {
-                if (currentPageNumber > 0 && currentPageNumber <= this.viewer.pageCount) {
-                    this.viewer.navigation.goToPage(currentPageNumber);
-                }
-                else {
-                    currentPageBox.value = this.viewer.currentPageNumber.toString();
-                }
-            }
-            return true;
-        }
+  readFile = (evt) => {
+    const files = evt.target.files;
+    if (!files || !files.length) return;
+    const file = files[0];
+    this.fileName = file.name;
+    const reader = new FileReader();
+    reader.onload = () => {
+      const url = reader.result ;
+      if (this.viewer) {
+        this.viewer.load(url, null);
+        this.viewer.fileName = this.fileName;
+        const pageCount = document.getElementById('totalPage');
+        if (pageCount) pageCount.textContent = 'of ' + this.viewer.pageCount;
+      }
+    };
+    reader.readAsDataURL(file);
+  };
+
+  // Toolbar item click handler
+  clickHandler = (args) => {
+    switch (args.item.id) {
+      case 'file_Open':
+        (document.getElementById('fileUpload') )?.click();
+        break;
+      case 'previous_page':
+        this.viewer?.navigation.goToPreviousPage();
+        break;
+      case 'next_page':
+        this.viewer?.navigation.goToNextPage();
+        break;
+      case 'print':
+        this.viewer?.print.print();
+        break;
+      case 'download':
+        this.viewer?.download();
+        break;
+      case 'fit_to_page':
+        this.viewer?.magnification.fitToPage();
+        break;
+      case 'zoom_in':
+        this.viewer?.magnification.zoomIn();
+        break;
+      case 'zoom_out':
+        this.viewer?.magnification.zoomOut();
+        break;
     }
-    currentPageClicked() {
-        let currentPage: HTMLInputElement = document.getElementById('currentPage') as HTMLInputElement;
-        currentPage.select();
-    }
+  };
 
-    readFile(evt) {
-        let uploadedFiles = evt.target.files;
-        let uploadedFile = uploadedFiles[0];
-        this.fileName = uploadedFile.name;
-        let reader = new FileReader();
-        reader.readAsDataURL(uploadedFile);
-        let viewer: PdfViewerComponent = this.viewer;
-        let uploadedFileName: string = this.fileName;
-        reader.onload = function () {
-            let uploadedFileUrl: string = this.result as string;
-            viewer.load(uploadedFileUrl, null);
-            viewer.fileName = uploadedFileName;
-            var pageCount = document.getElementById('totalPage');
-            pageCount.textContent = 'of ' + viewer.pageCount;
-        }
-    }
+  // Small templates for toolbar
+  totalTemplate = () => (
+    <div style={{ margin: '0 6px' }}>
+      <span className="e-pv-total-page-number" id="totalPage">
+        of 0
+      </span>
+    </div>
+  );
 
- }
+  inputTemplate = () => (
+    <div>
+      <input
+        type="text"
+        className="e-input-group e-pv-current-page-number"
+        id="currentPage"
+        style={{ width: '42px', textAlign: 'center' }}
+      />
+    </div>
+  );
 
- ```
+  render() {
+    return (
+      <div>
+        <div className="e-pdf-toolbar" style={{ marginBottom: 8 }}>
+          <ToolbarComponent
+            ref={(t) => (this.toolbar = t)}
+            clicked={this.clickHandler}
+          >
+            <ItemsDirective>
+              <ItemDirective prefixIcon="e-icons e-folder" id="file_Open" tooltipText="Open" />
+              <ItemDirective prefixIcon="e-icons e-chevron-left" id="previous_page" tooltipText="Previous Page" align="Center" />
+              <ItemDirective template={this.inputTemplate} type="Input" align="Center" tooltipText="Page Number" />
+              <ItemDirective template={this.totalTemplate} align="Center" tooltipText="Total Pages" />
+              <ItemDirective prefixIcon="e-icons e-chevron-right" id="next_page" tooltipText="Next Page" align="Center" />
+              <ItemDirective type="Separator" align="Center" />
+              <ItemDirective prefixIcon="e-pv-fit-page-icon" id="fit_to_page" tooltipText="Fit to page" />
+              <ItemDirective prefixIcon="e-icons e-circle-add" id="zoom_in" tooltipText="Zoom in" />
+              <ItemDirective prefixIcon="e-icons e-circle-remove" id="zoom_out" tooltipText="Zoom out" />
+              <ItemDirective type="Separator" align="Right" />
+              <ItemDirective prefixIcon="e-icons e-print" id="print" tooltipText="Print" align="Right" />
+              <ItemDirective prefixIcon="e-icons e-download" id="download" tooltipText="Download" align="Right" />
+            </ItemsDirective>
+          </ToolbarComponent>
+        </div>
 
+        <input type="file" id="fileUpload" accept=".pdf" onChange={this.readFile} style={{ display: 'none' }} />
 
+        <PdfViewerComponent
+          id="container"
+          ref={(v) => (this.viewer = v)}
+          enableToolbar={false}
+          resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          documentLoad={this.documentLoaded}
+          pageChange={this.onPageChange}
+          style={{ height: '640px', width: '100%', display: 'block' }}
+        >
+          <Inject
+            services={[
+              Magnification,
+              Navigation,
+              LinkAnnotation,
+              BookmarkView,
+              ThumbnailView,
+              Print,
+              TextSelection,
+              TextSearch
+            ]}
+          />
+        </PdfViewerComponent>
+      </div>
+    );
+  }
+}
+
+```
 
 Sample :
 [https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/custom-toolbar]
 
-
 ## See also
-
 * [Feature Modules](./feature-module)
