@@ -4,7 +4,6 @@ title: Comments in JavaScript PDF Viewer control | Syncfusion
 description: Learn about comments, replies, and status in the Syncfusion JavaScript PDF Viewer control (Essential JS 2).
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---

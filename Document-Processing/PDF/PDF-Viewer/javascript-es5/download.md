@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in Javascript Pdfviewer control
+# Download in JavaScript Pdfviewer control
 
 The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
 

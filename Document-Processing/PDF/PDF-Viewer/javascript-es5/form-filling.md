@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form filling in JavaScript PDF Viewer | Syncfusion
-description: Learn how to view, fill, export, and import PDF form fields using the Syncfusion JavaScript PDF Viewer, including disabling interaction and working with signatures.
+description: View, fill, export, and import PDF form fields in Syncfusion JavaScript PDF Viewer, with signature support and interaction control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
