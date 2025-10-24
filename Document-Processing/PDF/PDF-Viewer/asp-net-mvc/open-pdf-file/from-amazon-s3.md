@@ -1,28 +1,28 @@
 ---
 layout: post
-title: AWS S3 in ASP.NET MVC Syncfusion PDF Viewer Component
-description: Learn here all about how to Open PDF files from AWS S3 in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Open PDF from AWS S3 in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to load PDFs from AWS S3 in the Syncfusion ASP.NET MVC PDF Viewer component using standalone and server-backed approaches.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Open PDF file from AWS S3
+# Open PDF from AWS S3
 
-PDF Viewer allows to load PDF file from AWS S3 using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to open a PDF from AWS S3.
+The ASP.NET MVC PDF Viewer component supports loading PDF files from AWS S3 using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 
-## Using Standalone PDF Viewer
+## Using the standalone PDF Viewer
 
-To load a PDF file from AWS S3 in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from AWS S3 in the standalone PDF Viewer.
 
 **Step 1:** Create AWS S3 account
 
-Set up an AWS S3 account by following the instructions on the official AWS site: [AWS Management Console](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html). Create an S3 bucket and generate access keys while ensuring secure storage of credentials.
+ Set up an AWS S3 account by following the instructions on the official AWS site: [AWS Management Console](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html). Create an S3 bucket and generate access keys while ensuring secure storage of credentials.
 
 **Step 2:** Create PDF Viewer Sample in ASP.NET MVC
 
-Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a simple PDF Viewer sample in ASP.NET MVC.
+Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to create a simple PDF Viewer sample in ASP.NET MVC.
 
 **Step 3:** Modify the `~/Views/Shared/_Layout.cshtml` File in the Project
 
@@ -88,9 +88,9 @@ N> The **AWSSDK.S3** NuGet package must be installed in your application to use 
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3/tree/master/Open%20and%20Save%20PDF%20in%20AWS%20S3%20using%20Standalone).
 
-## Using Server-Backed PDF Viewer
+## Using the server-backed PDF Viewer
 
-To load a PDF file from AWS S3 in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from AWS S3 using the server-backed PDF Viewer.
 
 **Step 1:** Create AWS S3 account
 
@@ -98,7 +98,7 @@ To load a PDF file from AWS S3 in a PDF Viewer, you can follow the steps below
 
 **Step 2:** Create PDF Viewer Sample in ASP.NET MVC
 
-Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/-with-server-backed#integrate-pdf-viewer-into-an-aspnet-mvc-application) to create a simple PDF Viewer sample in ASP.NET MVC.
+Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to create a simple PDF Viewer sample in ASP.NET MVC.
 
 **Step 3:** Modify the `HomeController.cs` File in the Project
 
@@ -158,9 +158,9 @@ using Amazon.S3.Model;
 
 N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
 
-**Step 4:** Set the PDF Viewer Properties in ASP.NET MVC PDF viewer component
+**Step 4:** Configure the PDF Viewer component
 
-Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from AWS S3. Ensure that you correctly pass the document name from the files available in your azure container to the documentPath property.
+Set the `documentPath` property of the PDF Viewer to the PDF file name to load from AWS S3. Ensure the document name matches an object in your bucket.
 
 ```csharp
 

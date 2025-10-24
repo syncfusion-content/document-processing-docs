@@ -1,28 +1,28 @@
 ---
 layout: post
-title: Box cloud file storage in ASP.NET MVC PDF Viewer Component
-description: Learn here all about how to Open PDF files from Box cloud file storage in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Open PDF from Box cloud storage in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to load PDFs from Box cloud storage in the Syncfusion ASP.NET MVC PDF Viewer component using a server-backed approach.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Open PDF file from Box cloud file storage
+# Open PDF from Box cloud storage
 
-To load a PDF file from Box cloud file storage in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from Box cloud storage using the server-backed PDF Viewer.
 
-**Step 1** Set up a Box developer account and create a Box application
+**Step 1:** Set up a Box developer account and create a Box application
 
 To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials Client ID and Client Secret to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
 
-**Step 2:** Create PDF Viewer Sample in ASP.NET MVC
+**Step 2:** Create a PDF Viewer sample in ASP.NET MVC
 
-Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/-with-server-backed#integrate-pdf-viewer-into-an-aspnet-mvc-application) to create a simple PDF Viewer sample in ASP.NET MVC.
+Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET MVC.
 
-**Step 3:** Modify the `HomeController.cs` File in the Project
+**Step 3:** Modify the `HomeController.cs` file in the project
 
-1. Import the required namespaces at the top of the file.
+1. Import the required namespaces at the top of the file:
 
 ```csharp
 using Box.V2;
@@ -87,9 +87,9 @@ using Box.V2.Models;
 
 N> replace **Your_Box_Storage_Access_Token** with your actual box access token, and **Your_Folder_ID** with the ID of the folder in your box storage where you want to perform specific operations. Remember to use your valid box API credentials, as **Your_Box_Storage_ClientID** and **Your_Box_Storage_ClientSecret"** are placeholders for your application's API key and secret.
 
-**Step 4:** Set the PDF Viewer Properties in ASP.NET MVC PDF viewer component
+**Step 4:** Configure the PDF Viewer component
 
-Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Box cloud file storage. Ensure that you correctly pass the document name from the files available in your azure container to the documentPath property.
+Set the [serviceUrl](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ServiceUrl) to your web service endpoint (replace the localhost URL with your server URL). Set `documentPath` to the PDF file name to load from Box cloud storage. Ensure the document name exists in your Box folder.
 
 ```csharp
 

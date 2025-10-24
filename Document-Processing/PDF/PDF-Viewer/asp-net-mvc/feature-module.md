@@ -1,33 +1,33 @@
 ---
 layout: post
-title: Feature Module in ASP.NET MVC Pdfviewer Component
-description: Learn here all about Feature Module in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Feature modules in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about feature modules in the Syncfusion ASP.NET MVC PDF Viewer component and how to enable them.
 platform: document-processing
-control: Feature Module
-publishingplatform: ASP.NET MVC
+control: PDF Viewer
 documentation: ug
 ---
 
 
-# Feature modules
+# Feature modules in ASP.NET MVC PDF Viewer
 
-The PDF Viewer features are segregated into individual feature-wise modules to enable selectively referencing in the application. The required modules should be injected to extend its functionality. The following are the selective modules of PDF Viewer that can be included as required:
+The PDF Viewer features are organized into individual feature modules to enable selective referencing in your application. Inject the required modules to extend functionality. The following modules can be included as needed:
 
 The available PdfViewer modules are:
 
-* **Toolbar**:- Built in toolbar for better user interaction.
-* **Magnification**:- Perform zooming operation for better viewing experience.
-* **Navigation**:- Easy navigation across the PDF pages.
-* **LinkAnnotation**:- Easy navigation within and outside of the PDF document.
-* **ThumbnailView**:- Easy navigation with in the PDF document.
-* **BookmarkView**:- Easy navigation based on the bookmark content of the PDF document.
-* **TextSelection**:- Select and copy text from a PDF file.
-* **TextSearch**:- Search a text easily across the PDF document.
-* **Print**:- Print the entire document or a specific page directly from the browser.
-* **Annotation**:- Annotations can be added or edited in the PDF document.
+* [**Toolbar**](./toolbar-customization):- Built-in toolbar for better user interaction.
+* [**Magnification**](./magnification.md):- Perform zooming operation for better viewing experience.
+* [**Navigation**](./interactive-pdf-navigation/page-navigation.md):- Easy navigation across the PDF pages.
+* [**LinkAnnotation**](./interactive-pdf-navigation/table-of-content-navigation.md):- Easy navigation within and outside of the PDF document.
+* [**ThumbnailView**](./interactive-pdf-navigation/page-thumbnail-navigation.md):- Easy navigation with in the PDF document.
+* [**BookmarkView**](./interactive-pdf-navigation/bookmark-navigation.md):- Easy navigation based on the bookmark content of the PDF document.
+* [**TextSelection**](./textselection.md):- Select and copy text from a PDF file.
+* [**TextSearch**](./text-search.md):- Search a text easily across the PDF document.
+* [**Print**](./print.md):- Print the entire document or a specific page directly from the browser.
+* [**Annotation**](./annotation/text-markup-annotation.md):- Annotations can be added or edited in the PDF document.
+* [**FormFields**](./form-designer/create-programmatically.md):- Preserve the form fields in the PDF document.
+* [**FormDesigner**](./form-designer/create-programmatically.md):- Form fields can be added or edited in the PDF document.
 
-N>In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a PDF Viewer instance.
-Refer to the following table.
+N> In addition to injecting the required modules in your application, enable the corresponding properties to extend the functionality for a PDF Viewer instance. Refer to the following table.
 
 | Module | Property to enable the functionality for a PDF Viewer instance |
 |---|---|
@@ -41,6 +41,8 @@ Refer to the following table.
 |TextSearch|`@Html.EJS().PdfViewer("container").EnableTextSearch(true).Render()`|
 |Print|`@Html.EJS().PdfViewer("container").EnablePrint(true).Render()`|
 |Annotation|`@Html.EJS().PdfViewer("container").EnableAnnotation(true).Render()`|
+|FormFields|`@Html.EJS().PdfViewer("container").EnableFormFields(true).Render()`|
+|FormDesigner|`@Html.EJS().PdfViewer("container").EnableFormDesigner(true).Render()`|
 
 ## See also
 

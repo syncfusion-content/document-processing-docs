@@ -1,23 +1,21 @@
 ---
 layout: post
-title: Include The Authorization Token in ASP.NET MVC Pdfviewer Component
-description: Learn here all about Include The Authorization Token in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Authorization Token in ASP.NET MVC Pdfviewer | Syncfusion
+description: Learn here all about Authorization Token in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Include The Authorization Token
-publishingplatform: ASP.NET MVC
+control: PDF Viewer
 documentation: ug
 ---
 
+# Include Authorization token to header
 
-# Include Authorization token
+The PDF Viewer component enables adding authorization tokens to each AJAX request through the `ajaxHeaders` collection in `AjaxRequestSettings`, ensuring the header is appended to every call initiated by the viewer.
 
-The PDF Viewer server library allows you to include the Authorization token in the PDF Viewer AJAX request using the ajaxRequest headers properties available in AjaxRequestSettings and it will be included in every AJAX request send from PDF Viewer.
+Use the following steps to configure the authorization token for the PDF Viewer control.
 
-The following steps are used to include the Authorization token for PDF viewer control,
+**Step 1:** Follow the steps in the [Getting Started with ASP.NET MVC PDF Viewer guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to configure a basic ASP.NET MVC project with the PDF Viewer component.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create simple PDF Viewer sample.
-
-**Step 2:** Add the following code snippet to include the authorization token,
+**Step 2:** Add the following script after the PDF Viewer instance is rendered to include the authorization token in subsequent requests.
 
 ```html
 
