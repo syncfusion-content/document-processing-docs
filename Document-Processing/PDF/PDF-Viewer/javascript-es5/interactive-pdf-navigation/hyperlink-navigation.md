@@ -1,16 +1,22 @@
 ---
 layout: post
-title: Table of contents navigation in PDF Viewer | Syncfusion
-description: Learn how to navigate PDFs using the table of contents in the Syncfusion PDF Viewer control for JavaScript.
+title: Hyperlink navigation in PDF Viewer | Syncfusion
+description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for JavaScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table of contents navigation in PDF Viewer
+# Hyperlink navigation in PDF Viewer
 
-The PDF Viewer supports a built-in table of contents (TOC) experience to help users jump to sections defined by the document’s bookmarks or outline.
+The PDF Viewer consolidates hyperlink-driven experiences, including inline links and table-of-contents (TOC) entries that target in-document destinations. These elements surface contextual entry points so users can jump directly to relevant sections without manual scrolling.
+
+> **Note:** The table of contents pane and hyperlink interactions rely on the same navigation infrastructure. When these capabilities are enabled, the PDF Viewer automatically surfaces TOC entries and clickable links defined in the PDF.
+
+## Required modules
+
+Inject the following modules to enable both navigation experiences: `Toolbar`, `Magnification`, `Navigation`, `LinkAnnotation`, `BookmarkView`, `TextSelection`, `ThumbnailView`, and optionally `Annotation`.
 
 ## Table of contents navigation
 
