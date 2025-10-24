@@ -26,7 +26,7 @@ To add NuGet packages into the Blazor Maui app, open the NuGet package manager i
 Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager" %}
+{% highlight c# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.SfSmartPdfViewer -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -88,7 +88,7 @@ public static class MauiProgram
 {% endhighlight %}
 {% endtabs %}
 
-Note: Ensure the Syncfusion license is registered in the application before using Syncfusion components.
+N> Ensure the Syncfusion license is registered in the application before using Syncfusion components.
 
 ## To Configure Azure OpenAI Service
 
@@ -97,7 +97,7 @@ This article is required only when enabling AI-powered features in Smart PDF Vie
 In **Visual Studio**, Go to Tools → NuGet Package Manager → Package Manager Console. Run these commands one by one:
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager" %}
+{% highlight c# tabtitle="Package Manager" %}
 
 Install-Package Azure.AI.OpenAI
 Install-Package Microsoft.Extensions.AI
@@ -109,7 +109,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI -Version 9.8.0-preview.1.25412.6
 In **Visual Studio Code**, open the terminal and run these commands:
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager" %}
+{% highlight c# tabtitle="Package Manager" %}
 
 dotnet add package Azure.AI.OpenAI
 dotnet add package Microsoft.Extensions.AI
@@ -121,7 +121,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.2541
 To configure the AI service, add the following settings to the **~/MauiProgram.cs** file in your Blazor Server app. 
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Server App" hl_lines="10 11 12 13 14 15 17" %}
+{% highlight c# tabtitle="Blazor Server App" hl_lines="10 11 12 13 14 15 17" %}
 
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
@@ -159,14 +159,18 @@ For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](
 Add the following stylesheet and script to the head section of the **~/wwwroot/index.html** file.
 
 {% tabs %}
-{% highlight html %}
+{% highlight html hl_lines="4 9" %}
 
 <head>
+    ....
     <!-- Syncfusion Blazor Smart PDF Viewer control's theme style sheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+</head>
+<body>
+    ....
     <!-- Syncfusion Blazor Smart PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfSmartPdfViewer/scripts/syncfusion-blazor-sfsmartpdfviewer.min.js" type="text/javascript"></script>
-</head>
+</body>
 
 {% endhighlight %}
 {% endtabs %}
@@ -255,11 +259,10 @@ N> If any errors occur while using the Android Emulator, see [Troubleshooting th
 
 ![Blazor Smart PDF Viewer rendered on Android emulator](gettingstarted-images/android-emulator.png)
 
->[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/GettingStartedMAUI).
+>[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Getting%20Started/MAUI%20Blazor%20App).
 
 ## See also
 
 * [Document Summarizer in Blazor Smart PDF Viewer](../document-summarizer)
 * [Smart Redaction in Blazor Smart PDF Viewer](../smart-redaction)
-* [Smart Fill in Blazor Smart PDF Viewer](../smart-fill).
-* [Render PDF Document from embedded source in the MAUI Android app](../how-to/deploy-maui-using-android-emulator).
+* [Smart Fill in Blazor Smart PDF Viewer](../smart-fill)

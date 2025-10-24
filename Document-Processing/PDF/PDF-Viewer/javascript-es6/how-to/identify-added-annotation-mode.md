@@ -1,21 +1,19 @@
 ---
 layout: post
-title: Identify added annotation mode in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Identify added annotation mode in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Identify added annotation mode in TypeScript PDF Viewer | Syncfusion
+description: Learn how to determine whether an added annotation was drawn, imported, or existing using the annotationSelect event in the TypeScript PDF Viewer.
 platform: document-processing
-control: Identify added annotation mode
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Identify added annotation mode in Typescript Pdfviewer control
+# Identify added annotation mode in TypeScript PDF Viewer
 
-The PDF Viewer library allows you to identify whether the added annotations in PDF document is UI drawn, imported or existing annotation. Annotation mode can be identified using the [**annotationAddMode**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationadd) property of [**annotationSelect**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselect) event.
+Determine whether an added annotation was UI-drawn, imported, or existing using the [annotationAddMode](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationadd) property of the [annotationSelect](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselect) event.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps in the [Get started with JavaScript ES6 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) guide to create a sample.
 
-**Step 2:** The following code snippet explains how to identify added annotation mode.
+**Step 2:** Use the following code to identify the added annotation mode.
 
 ```ts
 
@@ -25,4 +23,4 @@ console.log(args.annotationAddMode);
 
 ```
 
-Find the Sample [how to identify added annotation mode](https://stackblitz.com/edit/nldhsr?devtoolsheight=33&file=index.ts)
+Find the sample: [Identify added annotation mode](https://stackblitz.com/edit/nldhsr?devtoolsheight=33&file=index.ts)

@@ -86,7 +86,7 @@ public static class MauiProgram
 Add the following stylesheet and script to the head section of the **~/wwwroot/index.html** file.
 
 {% tabs %}
-{% highlight html %}
+{% highlight html hl_lines="3 7" %}
 
 <head>
     <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
@@ -147,9 +147,13 @@ N> If any errors occur while using the Android Emulator, see [Troubleshooting An
 
 ![Blazor SfPdfViewer running in the Android emulator](gettingstarted-images/android-emulator.png)
 
->[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorWindow).
+>[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/MAUI%20Blazor%20App/MauiBlazorWindow).
 
 ## See also
+
+* [Getting Started with Blazor PDF Viewer Component in WinForms Blazor Hybrid App](./winforms-blazor-app)
+
+* [Getting Started with Blazor PDF Viewer Component in WPF Blazor Hybrid App](./wpf-blazor-app)
 
 * [Supported features: desktop vs. mobile](./features#supported-features-desktop-vs-mobile)
 

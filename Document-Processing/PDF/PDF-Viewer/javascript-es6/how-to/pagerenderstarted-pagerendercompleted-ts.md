@@ -1,25 +1,23 @@
 ---
 layout: post
-title: Rendering events in Typescript PDF Viewer control | Syncfusion
-description: Learn here all about pageRenderInitiate and pageRenderComplete event in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Handle pageRenderInitiate and pageRenderComplete | Syncfusion
+description: Learn how to use the pageRenderInitiate and pageRenderComplete events in the Syncfusion TypeScript PDF Viewer during page rendering.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# PageRenderInitiate and pageRenderComplete event
+# Handle pageRenderInitiate and pageRenderComplete events
 
-In Syncfusion PDF Viewer, [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) actions are events that occur during the rendering process of PDF documents.
+In the Syncfusion PDF Viewer, the [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events occur during page rendering.
 
-**PageRenderInitiate**
+**pageRenderInitiate**
 
-The `pageRenderInitiate` event is triggered when the rendering of a page in the PDF document begins. This event provides developers with an opportunity to perform any necessary initialization or setup before the rendering of the page content commences. It can be utilized to prepare resources, set up rendering parameters, or execute any other actions required before the page rendering process starts.
+Triggered when page rendering begins. Use this event to initialize or set up resources before rendering starts.
 
-**PageRenderComplete**
+**pageRenderComplete**
 
-The `pageRenderComplete` event is triggered when the rendering of a page in the PDF document is completed. This event allows developers to perform cleanup tasks or finalize rendering-related processes after the rendering of the page content finishes. It can be used to release resources, finalize rendering settings, or handle any post-rendering tasks necessary for the application.
+Triggered when page rendering completes. Use this event to perform cleanup or finalize rendering-related tasks.
 
 
 ```ts
@@ -38,4 +36,4 @@ pdfviewer.pageRenderComplete = (args: any) => {
 
 ```
 
-The provided code demonstrates how to subscribe to the [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events in the Syncfusion PDF Viewer component.
+The following code demonstrates how to subscribe to these events in the Syncfusion PDF Viewer component.

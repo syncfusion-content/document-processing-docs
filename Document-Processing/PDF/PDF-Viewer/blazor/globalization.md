@@ -13,10 +13,10 @@ documentation: ug
 
 The [Blazor SfPdfViewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) component can be localized to display culture-specific text. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) guide for steps to add culture resource files, register localization services, and set the current culture.
 
-> N:
-- Provide localized string resources for the viewer’s UI texts (such as toolbar tooltips, dialog messages).
-- Ensure the app culture (CurrentCulture and CurrentUICulture) is set before the component renders for correct resource lookup.
-- Localization applies to the viewer UI; it does not translate the PDF document content.
+N>
+* Provide localized string resources for the viewer’s UI texts (such as toolbar tooltips, dialog messages).
+* Ensure the app culture (CurrentCulture and CurrentUICulture) is set before the component renders for correct resource lookup.
+* Localization applies to the viewer UI; it does not translate the PDF document content.
 
 ## Right to Left
 

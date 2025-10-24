@@ -104,7 +104,7 @@ The WinForms project must target Windows and enable WinForms. A typical project 
 Create a `Component` folder, add an `_Imports.razor` file in it, and include the required component namespaces within that folder.
 
 {% tabs %}
-{% highlight razor  tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Microsoft.AspNetCore.Components.Web
 @using Syncfusion.Blazor.SmartPdfViewer
@@ -173,7 +173,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.2541
 Register Syncfusion Blazor services and BlazorWebView in **~/Form1.cs** so that the WinForms window can host Blazor components.
 
 {% tabs %}
-{% highlight c# tabtitle="Form1.cs (WinForms host)" hl_lines="2 3 4 5 6 7 8 9 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 31" %}
+{% highlight c# tabtitle="Form1.cs (WinForms host)" hl_lines="2 3 4 5 6 7 8 9 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 31" %}
 
 namespace WinFormsBlazorHybridApp;
 using Microsoft.AspNetCore.Components.WebView.WindowsForms;
@@ -232,7 +232,7 @@ Run the WinForms application. The Syncfusion&reg; Blazor Smart PDF Viewer render
 
 ![WinForms Blazor HybridApp Smart PDF Viewer rendering in browser](../images/blazor-hybrid-winforms-sfsmartpdfviewer.png)
 
->[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/GettingStartedWinForms).
+>[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Getting%20Started/WinForms%20Blazor%20App).
 
 ## See also
 

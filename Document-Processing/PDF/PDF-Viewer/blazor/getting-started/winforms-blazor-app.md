@@ -101,10 +101,10 @@ The WinForms project must target Windows and enable WinForms. A typical project 
 {% endhighlight %} 
 {% endtabs %}
 
-Create a `Component` folder, add an `_Imports.razor` file in it, and include the required component namespaces within that folder.
+Create a **Component** folder, add an **_Imports.razor** file in it, and include the required component namespaces within that folder.
 
 {% tabs %}
-{% highlight razor  tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Microsoft.AspNetCore.Components.Web
 @using Syncfusion.Blazor.SfPdfViewer
@@ -118,9 +118,8 @@ Create a `Component` folder, add an `_Imports.razor` file in it, and include the
 
 * Inside wwwroot, create an index.html host page for the Blazor UI. This host page is required by BlazorWebView to initialize the Blazor runtime and load static assets (themes and scripts). A basic index.html might look like the following:
 
-
 {% tabs %} 
-{% highlight html tabtitle="wwwroot/index.html" hl_lines="8 13" %}
+{% highlight html tabtitle="index.html" hl_lines="8 13" %}
 
 <!DOCTYPE html>
 <html>
@@ -146,7 +145,7 @@ N> Ensure that the PDF Viewer static assets (themes and scripts) are loaded prop
 Register Syncfusion Blazor services and BlazorWebView in **~/Form1.cs** so that the WinForms window can host Blazor components.
 
 {% tabs %}
-{% highlight c# tabtitle="Form1.cs (WinForms host)" hl_lines="2 3 4 5 11 12 13 14 15 16 17 18 19 20 21" %}
+{% highlight c# tabtitle="Form1.cs (WinForms host)" hl_lines="2 3 4 5 9 10 11 12 13 14 15 16 17 18 19 21" %}
 
 namespace WinFormsBlazorHybridApp;
 using Microsoft.AspNetCore.Components.WebView.WindowsForms;
@@ -176,7 +175,7 @@ using WinFormsBlazorHybridApp.Components;
 
 ## Adding Blazor PDF Viewer component
 
-Create a Razor component (for example, PDFViewer.razor) in the project and add the Syncfusion&reg; PDF Viewer component to it within the `Component` folder
+Create a Razor component (for example, PDFViewer.razor) in the project and add the Syncfusion&reg; PDF Viewer component to it within the **Component** folder
 
 {% tabs %}
 {% highlight razor %}
@@ -199,7 +198,7 @@ Run the WinForms application. The Syncfusion&reg; Blazor PDF Viewer renders insi
 
 ![WinForms Blazor HybridApp SfPdfViewer rendering in browser](../images/blazor-hybrid-winforms-sfpdfviewer.png)
 
->[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/WinForms).
+>[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/WinForms%20Blazor%20App).
 
 ## See also
 
@@ -207,8 +206,8 @@ Run the WinForms application. The Syncfusion&reg; Blazor PDF Viewer renders insi
 
 * [Getting Started with Blazor PDF Viewer Component in Blazor Web App](./web-app)
 
-* [Getting Started with Blazor PDF Viewer Component in WPF Blazor Hybrid App](./deploy-wpf-blazor-app)
+* [Getting Started with Blazor PDF Viewer Component in WPF Blazor Hybrid App](./wpf-blazor-app)
 
-* [Getting Started with Blazor PDF Viewer Component in MAUI Blazor App](./deploy-maui-blazor-app)
+* [Getting Started with Blazor PDF Viewer Component in MAUI Blazor App](./maui-blazor-app)
 
-* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../faqs/how-to-processing-large-files-without-increasing-maximum-message-size)

@@ -66,14 +66,14 @@ Delete a signature placed in a signature field by using the Delete option in the
 
 ## Export and import form fields
 
-The SfPdfViewer control supports exporting and importing form field data in the following formats using the `ImportFormFieldsAsync` and `ExportFormFieldsAsync` methods:
+The SfPdfViewer control supports exporting and importing form field data in the following formats using the [ImportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ImportFormFieldsAsync_System_Collections_Generic_Dictionary_System_String_System_String__) and [ExportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportFormFieldsAsync_Syncfusion_Blazor_SfPdfViewer_FormFieldDataFormat_) methods:
 
 * XML
 * FDF
 * XFDF
 * JSON
 
-> N Form field data is exported as a stream, and that stream can be imported back into the current PDF document.
+N> Form field data is exported as a stream, and that stream can be imported back into the current PDF document.
 
 ### Export and import as XML
 
