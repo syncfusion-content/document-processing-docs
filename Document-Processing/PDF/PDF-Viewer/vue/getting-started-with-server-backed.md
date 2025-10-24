@@ -40,7 +40,7 @@ After the `quick start` project is created with the default settings, proceed to
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/package/@syncfusion/ej2-vue-pdfviewer). To add the PDF Viewer to the project, install the `@syncfusion/ej2-vue-pdfviewer` package using one of the following commands:
+Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To add the PDF Viewer to the project, install the `@syncfusion/ej2-vue-pdfviewer` package using one of the following commands:
 
 ```bash
 npm install @syncfusion/ej2-vue-pdfviewer --save

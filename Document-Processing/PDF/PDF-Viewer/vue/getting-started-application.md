@@ -84,7 +84,7 @@ With the scaffold ready, add the Syncfusion Vue PDF Viewer component to the proj
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/package/@syncfusion/ej2-vue-pdfviewer). Install the Vue PDF Viewer package with one of the following commands.
+Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). Install the Vue PDF Viewer package with one of the following commands.
 
 This tutorial uses the [Vue PDF Viewer component](https://www.syncfusion.com/pdf-viewer-sdk). Install the `@syncfusion/ej2-vue-pdfviewer` package with the following command:
 
