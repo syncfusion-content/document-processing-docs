@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Form Field Events in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about different form field in Syncfusion Javascript Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Form Field Events in JavaScript Pdfviewer control | Syncfusion
+description: Learn here all about different form field in Syncfusion JavaScript Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Form Field Events
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

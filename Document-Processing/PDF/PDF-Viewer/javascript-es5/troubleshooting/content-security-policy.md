@@ -1,20 +1,19 @@
 ---
 layout: post
-title: Content Security Policy in  Javascript Common control | Syncfusion
-description: Learn here all about Content Security Policy in Syncfusion  Javascript  Common control of Syncfusion Essential JS 2 and more.
+title: Content Security Policy in JavaScript PDF Viewer control | Syncfusion
+description: Learn how to configure Content Security Policy directives for the Syncfusion JavaScript PDF Viewer control to allow required resources.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 ---
 
-# Content Security Policy
+# Content Security Policy in JavaScript PDF Viewer
 
-Content Security Policy (CSP) is a security feature implemented by web browsers that helps to protect against attacks such as cross-site scripting (XSS) and data injection. It limits the sources from which content can be loaded on a web page.
+Content Security Policy (CSP) is a browser security feature that helps mitigate attacks such as cross-site scripting (XSS) and data injection by restricting the sources from which content can load.
 
-To enable strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/strict-csp.html), certain browser features are disabled by default. In order to use Syncfusion PDF Viewer control with strict CSP mode, it is essential to include following directives in the CSP meta tag.
+When strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/strict-csp.html) is enabled, several browser capabilities are disabled by default. To run the Syncfusion PDF Viewer control under strict CSP, include the following directives in the CSP meta tag.
 
-* Syncfusion PDF Viewer control are rendered with calculated **inline styles** and **base64** font icons, which are blocked on a strict CSP-enabled site. To allow them, add the [`style-src 'self' 'unsafe-inline';`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src 'self' data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives in the meta tag as follows.
+* The Syncfusion PDF Viewer control renders calculated **inline styles** and **base64** font icons, which strict CSP blocks. Allow these assets by adding the [`style-src 'self' 'unsafe-inline';`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src 'self' data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives, as shown below.
 
 {% tabs %}
 {% highlight razor tabtitle="HTML" %}
@@ -26,9 +25,9 @@ To enable strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs
 {% endhighlight %}
 {% endtabs %}
 
-* Syncfusion **material** and **tailwind** built-in themes contain a reference to the [`Roboto’s external font`](https://fonts.googleapis.com/css?family=Roboto:400,500), which is also blocked. To allow them, add the [`external font`](https://fonts.googleapis.com/css?family=Roboto:400,500) reference to the [`style-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives in the above meta tag.
+* The Syncfusion **material** and **tailwind** built-in themes reference the [`Roboto external font`](https://fonts.googleapis.com/css?family=Roboto:400,500), which strict CSP also blocks. Permit these resources by adding the font URLs to the [`style-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives in the meta tag.
 
-The resultant meta tag is included within the `<head>` tag and resolves the CSP violation on the application's side when utilizing Syncfusion PDF Viewer control with material and tailwind themes.
+The resulting meta tag must be placed within the `<head>` element to resolve CSP violations when using the Syncfusion PDF Viewer control with the material and tailwind themes.
 
 {% tabs %}
 {% highlight razor tabtitle="HTML" %}
@@ -43,7 +42,7 @@ The resultant meta tag is included within the `<head>` tag and resolves the CSP 
 {% endhighlight %}
 {% endtabs %}
 
-* Syncfusion PDF Viewer control when images are added as **blob** and **base64**, which are blocked on a strict CSP-enabled site.To overcome this restriction, it is necessary to add the img-src data: directive in the meta tag. To allow them, add the  [`style-src 'self' 'unsafe-inline';`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`img-src 'self' data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directives as follows.
+* The Syncfusion PDF Viewer control can render images as **blob** and **base64** sources, which strict CSP blocks. To permit these formats, include the [`style-src 'self' 'unsafe-inline';`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`img-src 'self' data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directives in the meta tag, as illustrated below.
 
 {% tabs %}
 {% highlight razor tabtitle="HTML" %}
@@ -57,6 +56,6 @@ The resultant meta tag is included within the `<head>` tag and resolves the CSP 
 {% endhighlight %}
 {% endtabs %}
 
-N> From the release 2023 Vol2 - 22.1 version, the Content Security Policy for Syncfusion PDF Viewer control has been enhanced by implementing a [function template](../template#function-template) approach for template properties to eliminate the usage of the `unsafe-eval` directive in the CSP meta tag.
+N> Starting with the 2023 Vol 2 (v22.1) release, the Content Security Policy for the Syncfusion PDF Viewer control has been improved by using a [function template](../template#function-template) approach for template properties, eliminating the need for the `unsafe-eval` directive in the CSP meta tag.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/Troubleshooting/Content%20Security%20Policy)
+[View the sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/Troubleshooting/Content%20Security%20Policy)

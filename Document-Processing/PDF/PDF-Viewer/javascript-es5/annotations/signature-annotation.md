@@ -1,34 +1,33 @@
 ---
 layout: post
-title: Handwritten signature in Javascript PDF Viewer control | Syncfusion
-description: Learn here all about Handwritten signature in Syncfusion Javascript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Handwritten signature in JavaScript PDF Viewer control | Syncfusion
+description: Learn about handwritten signatures in the Syncfusion JavaScript PDF Viewer (Essential JS 2): add, enable/disable, and edit properties.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Handwritten signature Javascript PDF Viewer control
+# Handwritten signature in JavaScript PDF Viewer control
 
-The PDF Viewer control supports adding handwritten signatures to a PDF document. The handwritten signature reduces the paper work of reviewing the content and verifies it digitally.
+The PDF Viewer control supports adding handwritten signatures to a PDF document. Handwritten signatures reduce paperwork and enable digital verification.
 
 ## Adding a handwritten signature to the PDF document
 
 The handwritten signature can be added to the PDF document using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Select the **HandWritten Signature** button in the annotation toolbar. The signature panel will appear.
+* Select the **HandWritten Signature** button in the annotation toolbar. The signature panel appears.
 
-![HandWritten Signature](../images/select_sign.png)
+![Open the handwritten signature panel](../images/select_sign.png)
 
-* Draw the signature in the signature panel.
+* Draw the signature in the panel.
 
-![HandWritten Signature](../images/add_sign.png)
+![Draw the handwritten signature](../images/add_sign.png)
 
-* Then click **Create** button and move the signature using the mouse and place them in the desired location.
+* Click **Create**, move the signature, and place it at the desired location.
 
-![HandWritten Signature](../images/create_sign.png)
+![Place the handwritten signature on the page](../images/create_sign.png)
 
 Refer to the following code sample to switch to the handwritten signature mode programmatically.
 
@@ -76,9 +75,9 @@ if (handWrittenSignature) {
 {% endtabs %}
 
 
-## How to enable the handwritten signature
+## Enable the handwritten signature
 
-The following code snippet describes how to enable the handwritten signature in PDF Viewer. When the value is set to `false` it disables the handwritten signature.
+The following example enables or disables the handwritten signature in the PDF Viewer. Setting the value to `false` disables the feature.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -107,11 +106,11 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Handwritten signature programatically to the PDF document
+## Add a handwritten signature programmatically to the PDF document
 
 With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
 
-Here is an example of how you can use the **addAnnotation()** method to add the Handwritten signature programmatically
+Here is an example of adding a handwritten signature programmatically using addAnnotation():
 
 ```html
 <button id="addHandwrittenSignature "> Add HandWritten signature Programmatically</button>
@@ -234,24 +233,24 @@ if(addHandwrittenSignature){
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Add%20Handwritten%20Signature%20Programmatically)
 
-## Editing the properties of handwritten signature
+## Edit the properties of handwritten signatures
 
-The stroke color, border thickness, and opacity of the handwritten signature can be edited using the edit stroke color tool, edit thickness tool, and edit opacity tool in the annotation toolbar.
+Stroke color, border thickness, and opacity can be edited using the Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
-### Editing stroke color
+### Edit stroke color
 
-The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
+Edit the stroke color using the color palette in the Edit Stroke Color tool.
 
-![SignatureStrokeColor](../images/change_stroke.png)
+![Change signature stroke color](../images/change_stroke.png)
 
-### Editing thickness
+### Edit thickness
 
-The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
+Edit border thickness using the range slider in the Edit Thickness tool.
 
-![SignatureThickness](../images/change_thickness.png)
+![Change signature border thickness](../images/change_thickness.png)
 
-### Editing opacity
+### Edit opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+Edit opacity using the range slider in the Edit Opacity tool.
 
-![SignatureOpacity](../images/change_opacity.png)
+![Change signature opacity](../images/change_opacity.png)

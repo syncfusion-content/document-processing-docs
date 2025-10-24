@@ -1,30 +1,29 @@
 ---
 layout: post
-title: Style and appearance in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Customize appearance in JavaScript PDF Viewer | Syncfusion
+description: Learn how to override CSS in the Syncfusion JavaScript PDF Viewer to customize icons, containers, and overall appearance.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and Appearance in Javascript Pdfviewer control
+# Customize appearance in JavaScript PDF Viewer
 
-To modify the PDF Viewer appearance, you need to override the default CSS of PDF Viewer. Please find the CSS structure that can be used to modify the PDF Viewer appearance. Also, you have an option to create your own custom theme for all the JavaScript controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
+Override the default CSS classes to tailor the Syncfusion JavaScript PDF Viewer interface. Apply the following snippets to your page or global stylesheet to update borders, backgrounds, and toolbar icons. To create a full custom theme for all JavaScript controls, use the [Syncfusion Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material).
 
-## Customizing the PDF Viewer root element
+## Customize the PDF Viewer root element
 
-Use the below CSS to customize the PDF Viewer root element.
+Use the following CSS to adjust the border of the PDF Viewer root element.
 
 ```
 .e-pdfviewer{
     border: 3px solid rgb(119, 249, 238);
 }
 ```
-## Customizing the PDF Viewer container
+## Customize the PDF Viewer container
 
-Use the following CSS to customize the PDF Viewer container
+Use the following CSS to update the background color of the PDF Viewer container.
 
 ```
 /* To specify background color*/
@@ -32,9 +31,9 @@ Use the following CSS to customize the PDF Viewer container
     background-color: rgb(119, 249, 238);
 }
 ```
-## Customizing the PDF Viewer container
+## Customize the PDF Viewer page container
 
-Use the following CSS to customize the PDF Viewer container
+Use the following CSS to update the page container background within the PDF Viewer.
 
 ```
 /* To specify background color*/
@@ -43,9 +42,9 @@ Use the following CSS to customize the PDF Viewer container
 }
 ```
 
-## Customizing the bookmark of the PDF Viewer
+## Customize the bookmark icon
 
-Use the following CSS to customize the bookmark of the PDF Viewer
+Use the following CSS to adjust the bookmark icon color in the PDF Viewer toolbar.
 
 ```
 /* To specify color of the bookmark */
@@ -57,9 +56,9 @@ Use the following CSS to customize the bookmark of the PDF Viewer
   }
 
 ```
-## Customizing the Thumbnail of the PDF Viewer
+## Customize the thumbnail icon
 
-Use the following CSS to customize the Thumbnail of the PDF Viewer
+Use the following CSS to adjust the thumbnail icon color in the PDF Viewer toolbar.
 
 ```
 /* To specify color of the bookmark */

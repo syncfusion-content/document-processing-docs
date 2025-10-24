@@ -1,21 +1,20 @@
 ---
 layout: post
-title: Open thumbnail js in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Open thumbnail js in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Open the thumbnail pane programmatically in JavaScript PDF Viewer | Syncfusion
+description: Learn how to open the thumbnail pane programmatically in the Syncfusion JavaScript PDF Viewer using openThumbnailPane.
 platform: document-processing
-control: Open thumbnail js
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open thumbnail js in Javascript Pdfviewer control
+# Open the thumbnail pane programmatically
 
-The PDF Viewer library allows you to open the thumbnail pane programmatically using the [**openThumbnailPane()**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/thumbnailView/#openthumbnailpane) method.
+Open the thumbnail pane programmatically using the [openThumbnailPane()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/thumbnailView/#openthumbnailpane) method.
 
 The following steps are used to open the thumbnail.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in the [Get started with JavaScript ES5 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) guide to create a sample.
 
 **Step 2:** Use the following code snippet to open thumbnail.
 
@@ -30,4 +29,4 @@ document.getElementById('openThumbnail').addEventListener('click', () => {
 });
 ```
 
-Find the sample, [how to open the thumbnail pane programmatically](https://stackblitz.com/edit/ejvemx?file=index.js)
+Find the sample: [Open the thumbnail pane programmatically](https://stackblitz.com/edit/ejvemx?file=index.js)

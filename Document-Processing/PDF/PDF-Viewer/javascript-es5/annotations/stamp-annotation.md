@@ -1,17 +1,16 @@
 ---
 layout: post
-title: Stamp annotation in Javascript PDF Viewer control | Syncfusion
-description: Learn here all about Stamp annotation in Syncfusion Javascript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Stamp annotation in JavaScript PDF Viewer control | Syncfusion
+description: Learn about stamp annotations in the Syncfusion JavaScript PDF Viewer (Essential JS 2): dynamic, sign here, standard business, and custom stamps.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stamp annotation in Javascript PDF Viewer control
+# Stamp annotation in JavaScript PDF Viewer control
 
-The PDF Viewer control provides options to add, edit, delete, and rotate the following stamp annotation in the PDF documents:
+The PDF Viewer control provides options to add, edit, delete, and rotate the following stamp annotations in PDF documents:
 
 * Dynamic
 * Sign Here
@@ -20,24 +19,24 @@ The PDF Viewer control provides options to add, edit, delete, and rotate the fol
 
 ![StampAnnotation](../images/stamp_annot.png)
 
-## Adding stamp annotations to the PDF document
+## Add stamp annotations to the PDF document
 
 The stamp annotations can be added to the PDF document using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the **Stamp Annotation** drop-down button. A drop-down pop-up will appear and shows the stamp annotations to be added.
+* Click the **Stamp Annotation** drop-down button. The pop-up lists available stamp annotation types.
 
 ![StampTool](../images/stamp_tool.png)
 
-* Select the annotation type to be added to the page in the pop-up.
+* Select a stamp type to enable its annotation mode.
 
 ![StampPopup](../images/selectstamp_annot.png)
 
-* You can add the annotation over the pages of the PDF document.
+* Place the stamp on the pages of the PDF document.
 
-N> While you're in the pan mode, for navigating through the document, and you click on the stamp annotation button to add the stamp annotation , the PDF Viewer control will smoothly transition to text select mode. This seamless transition ensures a fluid experience when switching between different interaction modes within the PDF Viewer interface.
+N> When in pan mode and a stamp annotation tool is selected, the PDF Viewer switches to text select mode automatically for a smooth interaction experience.
 
-Refer to the following code sample to switch to the stamp annotation mode.
+The following examples switch to stamp annotation modes.
 
 ```html
 <button id="dynamicStamp">Sign Stamp</button>
@@ -120,23 +119,23 @@ if (standardBusinessStamp) {
 {% endhighlight %}
 {% endtabs %}
 
-## Adding custom stamp to the PDF document
+## Add a custom stamp to the PDF document
 
 * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the **Stamp Annotation** drop-down button. A drop-down pop-up will appear and shows the stamp annotations to be added.
+* Click the **Stamp Annotation** drop-down button. The pop-up lists available stamp annotation types.
 * Click the Custom Stamp button.
 
 ![CustomStamp](../images/customStamp.png)
 
-* The file explorer dialog will appear, choose the image and then add the image to the PDF page.
+* In the file explorer dialog, choose an image and add it to the PDF page.
 
->The JPG and JPEG image format is only supported in the custom stamp annotations.
+>Only JPG and JPEG image formats are supported for custom stamp annotations.
 
-## Adding a Stamp annotation to the PDF document Programmatically
+## Add a stamp annotation to the PDF document programmatically
 
-With the PDF Viewer library, you can add a Stamp annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library allows adding a stamp annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation/#annotation) method.
 
-Here's a example of how you can utilize the **addAnnotation()** method to include a Stamp annotation programmatically:
+Here are examples showing how to add stamp annotations programmatically using addAnnotation():
 
 ```html
     <button id="dynamicStamp">Add Sign Stamp Programmatically</button>
@@ -283,11 +282,11 @@ if (customStamp) {
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the existing sticky note annotation programmatically
+## Edit an existing stamp annotation programmatically
 
-To modify existing sticky note annotation in the Syncfusion PDF viewer programmatically, you can use the **editAnnotation()** method.
+To modify an existing stamp annotation programmatically, use the editAnnotation() method.
 
-Here is an example of how you can use the **editAnnotation()** method:
+Here is an example of using editAnnotation():
 
 ```html
 <button id="editAnnotation">Edit Stamp annotation</button>
@@ -348,12 +347,11 @@ if (editAnnotation) {
 {% endhighlight %}
 {% endtabs %}
 
-## Setting default properties during control initialization
+## Set default properties during control initialization
 
-The properties of the stamp annotation can be set before creating the control using the StampSettings.
+Default properties for stamp annotations can be set before creating the control using StampSettings.
 
-After editing the default opacity using the Edit Opacity tool, they will be changed to the selected values.
-Refer to the following code sample to set the default sticky note annotation settings.
+After changing default opacity using the Edit Opacity tool, the selected value is applied. The following example sets default stamp annotation settings.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

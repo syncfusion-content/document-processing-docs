@@ -1,27 +1,26 @@
 ---
 layout: post
-title: Save PDF files to One Drive in Javascript Pdfviewer control | Syncfusion
-description:  Learn about how to Save PDF files to One Drive in Javascript Pdfviewer control of Syncfusion Essential JS 2 and more details.
+title: Save PDF files to OneDrive in JavaScript PDF Viewer | Syncfusion
+description: Learn how to save PDF files to OneDrive using the Syncfusion JavaScript PDF Viewer component with a server-backed web service.
 platform: document-processing
-control: Save PDF files to One Drive
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF file to One Drive
+# Save PDF files to OneDrive
 
-To save a PDF file to One Drive, you can follow the steps below
+To save a PDF file to One Drive, you can follow the steps below:
 
-**Step 1** Create the Microsoft graph API.
+**Step 1:** Create a Microsoft Graph API application
 
 Need to create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs.
 
 **Step 2:** Create a PDF Viewer sample in JavaScript
 
-Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF Viewer sample in JavaScript. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF Viewer sample in JavaScript. This sets up the basic structure of the PDF Viewer application.
 
-**Step 3:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
 1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
 
@@ -36,7 +35,7 @@ using Microsoft.Identity.Client;
 using Helpers;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign configuration values to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -55,7 +54,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF files to One Drive bucket
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the OneDrive folder.
 
 ```csharp
 [HttpPost("Download")]
@@ -102,7 +101,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in the web service project and add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -120,11 +119,11 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 
 ```
 
-N> Replace **Your_Tenent_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
+N> Replace the placeholders with the actual tenant ID, application ID, and OneDrive folder name.
 
-**Step 4:**  Set the PDF Viewer Properties in JavaScript PDF viewer component
+**Step 4:** Set the PDF Viewer properties in the JavaScript PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from One Drive. Ensure that you correctly pass the document name from the files available in your drive folder to the documentPath property.
+Modify the `serviceUrl` property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from OneDrive, and ensure that the document exists in the target folder.
 
 ```javascript
 
@@ -142,13 +141,11 @@ viewer.load('PDF_Succinctly.pdf', null);
 
 ```
 
-N> The following NuGet packages are required to use the previous code example
-* **Microsoft.Identity.Client**
-* **Microsoft.Graph**
-* **Microsoft.Extensions.Configuration**
-* **Microsoft.Extensions.Configuration.FileExtensions**
-* **Microsoft.Extensions.Configuration.Json**
-
-You can install these packages using the NuGet Package Manager in Visual Studio or Visual Studio Code.
+N> Install the following NuGet packages in the web service application:
+- Microsoft.Identity.Client
+- Microsoft.Graph
+- Microsoft.Extensions.Configuration
+- Microsoft.Extensions.Configuration.FileExtensions
+- Microsoft.Extensions.Configuration.Json
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-one-drive)

@@ -1,19 +1,20 @@
 ---
 layout: post
-title: Style and appearance in Javascript Pdfviewer control | Syncfusion
-description: Learn all about style and appearance in the Annotation module in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Customize annotation toolbar icons in JavaScript PDF Viewer | Syncfusion
+description: Learn how to customize annotation toolbar icons in the Syncfusion JavaScript PDF Viewer by applying targeted CSS styles.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and Appearance in Annotation module Javascript Pdfviewer control
+# Customize annotation toolbar icons in JavaScript PDF Viewer
 
-## Customizing the Highlight icon
+Apply custom CSS to modify the annotation toolbar icons in the JavaScript PDF Viewer. Add these snippets to the page or global stylesheet that hosts the component to adjust icon color, size, or visibility.
 
-Use the following CSS to customize the Highlight icon.
+## Customize the Highlight icon
+
+Use the following CSS to adjust the Highlight annotation toolbar icon.
 
 ```
 /* To specify font size and color */
@@ -24,9 +25,9 @@ Use the following CSS to customize the Highlight icon.
   }
 ```
 
-## Customizing the Underline  icon
+## Customize the Underline icon
 
-Use the following CSS to customize the Underline  icon.
+Use the following CSS to update the Underline annotation toolbar icon.
 
 ```
 /* To specify font size and color */
@@ -37,9 +38,9 @@ Use the following CSS to customize the Underline  icon.
   }
 ```
 
-## Customizing the Strikethrough icon
+## Customize the Strikethrough icon
 
-Use the following CSS to customize the Strikethrough icon.
+Use the following CSS to update the Strikethrough annotation toolbar icon.
 
 ```
 /* To specify font size and color */
@@ -50,9 +51,9 @@ Use the following CSS to customize the Strikethrough icon.
   }
 ```
 
-## Customizing the Shape Annotation icon
+## Customize the shape annotation icon
 
-Use the following CSS to customize the Shape Annotation icon.
+Use the following CSS to update the Shape Annotation toolbar icon.
 
 ```
 /* To specify font size and color */
@@ -63,9 +64,9 @@ Use the following CSS to customize the Shape Annotation icon.
   }
 ```
 
-## Customizing the Calibration icon
+## Customize the calibration icon
 
-Use the following CSS to customize the Calibration icon.
+Use the following CSS to update the Calibration annotation toolbar icon.
 
 ```
 /* To specify font size and color */
@@ -76,9 +77,9 @@ Use the following CSS to customize the Calibration icon.
   }
 ```
 
-## Customizing the FreeText icon
+## Customize the Free Text icon
 
-Use the following CSS to customize the Handwritten signature icon.
+Use the following CSS to update the Free Text annotation toolbar icon.
 
 ```
 /* To specify font size and color */
@@ -89,9 +90,9 @@ Use the following CSS to customize the Handwritten signature icon.
   }
 ```
 
-## Customizing the Handwritten signature icon
+## Customize the handwritten signature icon
 
-Use the following CSS to customize the Handwritten signature icon.
+Use the following CSS to update the Handwritten signature annotation toolbar icon.
 
 ```
 /* To specify font size and color */
@@ -102,9 +103,9 @@ Use the following CSS to customize the Handwritten signature icon.
   }
 ```
 
-## Customizing the Ink Annotation icon
+## Customize the ink annotation icon
 
-Use the following CSS to customize the Ink Annotation icon.
+Use the following CSS to update the Ink annotation toolbar icon.
 
 ```
 /* To specify font size and color */
@@ -114,9 +115,9 @@ Use the following CSS to customize the Ink Annotation icon.
     font-size: 20px;
   }
 ```
-## Customizing the Close icon
+## Customize the Close icon
 
-Use the following CSS to customize the Close icon.
+Use the following CSS to hide the Close icon.
 
 ```
  #pdfViewer_annotation_closeIcon{

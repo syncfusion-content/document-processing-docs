@@ -1,23 +1,22 @@
 ---
 layout: post
-title: Load documents in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Load documents in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Load documents dynamically in JavaScript PDF Viewer | Syncfusion
+description: Learn how to load or switch PDF documents dynamically in the Syncfusion JavaScript PDF Viewer using the load method.
 platform: document-processing
-control: Load documents
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load documents in Javascript Pdfviewer control
+# Load documents dynamically in JavaScript PDF Viewer
 
-The PDF Viewer library allows to switch or load the PDF documents dynamically after the initial load operation. To achieve this, load the PDF document as a base64 string or file name in PDF Viewer control using the [**Load()**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#load) method dynamically.
+Load or switch PDF documents dynamically after the initial load. Use the [load](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#load) method to load a PDF by Base64 string or file name.
 
-The following steps are used to load the PDF document dynamically.
+The following steps show how to load a PDF dynamically.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in the [Get started with JavaScript ES5 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) guide to create a sample.
 
-**Step 2:** Use the following code snippet to load PDF document using base64 string.
+**Step 2:** Use the following code to load a PDF using a Base64 string.
 
 ```
 <button id='load1'>LoadDocumentFromBase64</button>
@@ -31,7 +30,7 @@ document.getElementById('load1').addEventListener('click', () => {
 }
 ```
 
-**Step 3:** Use the following code snippet to load PDF document using document name.
+**Step 3:** Use the following code to load a PDF by document name.
 
 ```
 <button id='load2'>LoadDocument</button>
@@ -45,4 +44,4 @@ document.getElementById('load2').addEventListener('click', () => {
 
 ```
 
-Find the sample, [how to load PDF documents dynamically](https://stackblitz.com/edit/w82pgd?devtoolsheight=33&file=index.js)
+Find the sample: [Load PDF documents dynamically](https://stackblitz.com/edit/w82pgd?devtoolsheight=33&file=index.js)

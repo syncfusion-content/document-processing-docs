@@ -1,35 +1,34 @@
 ---
 layout: post
-title: Save PDF files to AWS S3 in Javascript Pdfviewer control | Syncfusion
-description:  Learn about how to Save PDF files to AWS S3 in Javascript Pdfviewer control of Syncfusion Essential JS 2 and more details.
+title: Save PDF files to AWS S3 in JavaScript PDF Viewer | Syncfusion
+description: Learn how to save PDF files to AWS S3 using the Syncfusion JavaScript PDF Viewer component in standalone and server-backed configurations.
 platform: document-processing
-control: Save PDF files to AWS S3
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF file to AWS S3
+# Save PDF files to AWS S3
 
-PDF Viewer allows to save PDF file to AWS S3 using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to save PDF to AWS S3.
+The JavaScript PDF Viewer component supports saving PDF files to AWS S3 using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 
 ## Using Standalone PDF Viewer
 
-To save a PDF file to AWS S3, you can follow the steps below
+To save a PDF file to AWS S3, you can follow the steps below:
 
-**Step 1:** Create a Simple PDF Viewer Sample in JavaScript
+**Step 1:** Create a PDF Viewer sample in JavaScript
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF viewer sample in JavaScript. This will give you a basic setup of the PDF viewer component.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF Viewer sample in JavaScript. This will set up the basic structure of your PDF Viewer application.
 
-**Step 2:** Modify the `index.html` File in the JavaScript Project
+**Step 2:** Modify the `index.html` file in the JavaScript project
 
-1.  AWS SDK for JavaScript, used for interacting with AWS services like S3:
+1. Include the AWS SDK for JavaScript using this script
 
 ```javascript
 <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1654.0.min.js"></script>
 ```
 
-2. Configures AWS SDK with the region, access key, and secret access key. This configuration allows the application to interact with AWS services like S3.
+2. Configure the AWS SDK with the region, access key, and secret access key. This enables the application to interact with AWS services such as S3.
 
 N> Replace **Your Region** with the actual Region of your AWS S3 account and **Your Access Key** with the actual Access Key of your AWS S3 account and **Your Security Access Key** with the actual Security Access Key of your AWS S3 account.
 
@@ -41,7 +40,7 @@ AWS.config.update({
 });
 ```
 
-3. Configure a custom toolbar item for the download function to save a PDF file in Azure Blob Storage.
+3. Configure a custom toolbar item for the download function to save a PDF file to AWS S3.
 
 ```javascript
 var toolItem1 = {
@@ -64,7 +63,7 @@ pdfviewer.toolbarClick = function (args) {
 };
 ```
 
-4. Retrieve the PDF viewer instance and save the current PDF as a Blob. Then, read the Blob using a FileReader to convert it into an ArrayBuffer, and upload the ArrayBuffer to AWS S3 using the putObject method of the S3 instance.
+4. Retrieve the PDF Viewer instance, save the current PDF as a Blob, read it using FileReader to get an ArrayBuffer, and upload the ArrayBuffer to AWS S3 using the `putObject` method.
 
 N> Replace **Your Bucket Name** with the actual Bucket name of your AWS S3 account and **Your Key** with the actual File Key of your AWS S3 account.
 
@@ -95,19 +94,21 @@ function saveDocument() {
 };
 ```
 
+N> Install the aws-sdk package in the application to use the previous code example using this command: `npm install aws-sdk`
+
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3/tree/master/Open%20and%20Save%20PDF%20in%20AWS%20S3%20using%20Standalone).
 
-## Using Server-Backed PDF Viewer
+## Using server-backed PDF Viewer
 
-To save a PDF file to AWS S3, you can follow the steps below
+To save a PDF file to AWS S3, you can follow the steps below:
 
 **Step 1:** Create a PDF Viewer sample in JavaScript
 
 Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF Viewer sample in JavaScript. This will set up the basic structure of your PDF Viewer application.
 
-**Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 2:** Modify the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or later. For instructions, see this [article](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above).
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
@@ -139,7 +140,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF files to AWS S3 bucket
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the AWS S3 bucket.
 
 ```csharp
 
@@ -176,7 +177,7 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in the web service project and add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -193,11 +194,11 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
+N> Replace the placeholders with the actual AWS access key, secret key, and bucket name.
 
-**Step 3:**  Set the PDF Viewer Properties in JavaScript PDF viewer component
+**Step 3:** Set the PDF Viewer properties in the JavaScript PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the [documentPath](https://ej2.syncfusion.com/documentation/api/pdfviewer/#documentpath) property of the PDF viewer component to the desired name of the PDF file you wish to load from AWS S3. Ensure that you correctly pass the document name from the files available in your AWS S3 bucket to the documentPath property.
+Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from AWS S3, and ensure that the document exists in the target bucket.
 
 ```javascript
 
@@ -215,6 +216,6 @@ viewer.load('PDF_Succinctly.pdf', null);
 
 ```
 
-N> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.
+N> Install the AWSSDK.S3 NuGet package in the web service application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3/tree/master/Open%20and%20Save%20PDF%20in%20AWS%20S3%20using%20Server-Backend)

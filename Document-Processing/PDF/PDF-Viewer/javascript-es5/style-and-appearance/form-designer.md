@@ -1,19 +1,20 @@
 ---
 layout: post
-title: Form Field  Javascript Pdfviewer control | Syncfusion
-description: Learn all about style and appearance in the Form Field module in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Customize form designer icons in JavaScript PDF Viewer | Syncfusion
+description: Learn how to customize form designer toolbar icons and property window styles in the Syncfusion JavaScript PDF Viewer by applying targeted CSS.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and Appearance in Form Field module Javascript Pdfviewer control
+# Customize form designer icons in JavaScript PDF Viewer
 
-## Customizing the Textbox field
+Apply the following CSS rules to tailor the form designer toolbar icons and property dialog appearance in the JavaScript PDF Viewer. Add the styles to the page or global stylesheet that hosts the control to adjust color, size, or visibility.
 
-Use the following CSS to customize the Textbox field icon.
+## Customize the text box field icon
+
+Use the following CSS to adjust the text box form field icon.
 
 ```
 /* To specify color of the textbox*/
@@ -25,9 +26,9 @@ Use the following CSS to customize the Textbox field icon.
 
 ```
 
-## Customizing the Password field
+## Customize the password field icon
 
-Use the following CSS to customize the Password field  icon.
+Because the password field shares the text box icon styling, apply the following CSS to update its appearance.
 
 ```
 /* To specify color of the Password*/
@@ -39,9 +40,9 @@ Use the following CSS to customize the Password field  icon.
 
 ```
 
-## Customizing the CheckBox field
+## Customize the checkbox field icon
 
-Use the following CSS to customize the CheckBox field  icon.
+Use the following CSS to update the checkbox form field icon.
 
 ```
 /* To specify color of the CheckBox*/
@@ -53,9 +54,9 @@ Use the following CSS to customize the CheckBox field  icon.
 
 ```
 
-## Customizing the RadioButton field
+## Customize the radio button field icon
 
-Use the following CSS to customize the RadioButton field  icon.
+Use the following CSS to update the radio button form field icon.
 
 ```
 /* To specify color of the RadioButton*/
@@ -66,9 +67,9 @@ Use the following CSS to customize the RadioButton field  icon.
   }
 
 ```
-## Customizing the ListBox field
+## Customize the list box field icon
 
-Use the following CSS to customize the ListBox field  icon.
+Use the following CSS to update the list box form field icon.
 
 ```
 /* To specify color of the ListBox*/
@@ -80,9 +81,9 @@ Use the following CSS to customize the ListBox field  icon.
 
 ```
 
-## Customizing the DropDown field
+## Customize the drop-down field icon
 
-Use the following CSS to customize the DropDown field  icon.
+Use the following CSS to update the drop-down form field icon.
 
 ```
 /* To specify color of the DropDown*/
@@ -94,9 +95,9 @@ Use the following CSS to customize the DropDown field  icon.
 
 ```
 
-## Customizing the Signature and initial field
+## Customize the signature and initial field icon
 
-Use the following CSS to customize the Signature and initial fields  icon.
+Use the following CSS to update the signature and initial field icon.
 
 ```
 /* To specify color of the Signature and initial fields*/
@@ -108,9 +109,9 @@ Use the following CSS to customize the Signature and initial fields  icon.
 
 ```
 
-## Customizing the Close icon
+## Customize the Close icon
 
-Use the following CSS to customize the Close icon.
+Use the following CSS to hide the Close icon.
 
 ```
  #pdfViewer_formdesigner_closeIcon{
@@ -118,13 +119,13 @@ Use the following CSS to customize the Close icon.
   }
 ```
 
-## Customizing the Property window
+## Customize the property window
 
-Use the following CSS to customize the property window
+Use the following CSS rules to restyle the property window dialog elements.
 
-### Customizing the dialog header
+### Customize the dialog header
 
-Use the following CSS to customize the dialog header properties.
+Use the following CSS to adjust the dialog header text style.
 
 ```
   .e-pv-form-field-property-header {
@@ -146,9 +147,9 @@ Use the following CSS to customize the dialog header properties.
 ```
 
 
-### Customizing the dialog check box
+### Customize the dialog checkbox
 
-Use the following CSS to customize the checkbox in the dialog.
+Use the following CSS to adjust the checkbox appearance in the dialog.
 
 ```
   .e-pdfviewer .e-checkbox-wrapper .e-frame + .e-label, .e-pdfviewer .e-css.e-checkbox-wrapper .e-frame + .e-label{
@@ -159,9 +160,9 @@ Use the following CSS to customize the checkbox in the dialog.
   }
 ```
 
-### Customizing the dialog close button
+### Customize the dialog close button
 
-Use the following CSS to customize the dialog close button.
+Use the following CSS to update the dialog close button style.
 
 ```
  .e-dialog .e-btn .e-btn-icon.e-icon-dlg-close {
@@ -170,9 +171,9 @@ Use the following CSS to customize the dialog close button.
   }
 ```
 
-### Customizing the dialog footer button
+### Customize the dialog footer button
 
-Use the following CSS to customize the dialog footer button.
+Use the following CSS to adjust the dialog footer button style.
 
 ```
 .e-dialog .e-footer-content .e-btn {
