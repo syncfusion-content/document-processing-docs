@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: User interaction in Angular Pdfviewer component | Syncfusion
