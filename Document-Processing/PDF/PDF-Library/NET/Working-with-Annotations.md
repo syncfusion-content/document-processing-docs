@@ -5108,9 +5108,6 @@ using (PdfDocument document = new PdfDocument())
 
     // Save the document
     document.Save("Output.pdf");
-
-    // Close the document
-    document.Close(true);
 }
 
 {% endhighlight %}
@@ -5149,9 +5146,6 @@ using (PdfDocument document = new PdfDocument())
 
     // Save the document
     document.Save("Output.pdf");
-
-    // Close the document
-    document.Close(true);
 }
 
 {% endhighlight %}
@@ -5192,9 +5186,6 @@ Using document As New PdfDocument()
 
     ' Save the document
     document.Save("Output.pdf")
-
-    ' Close the document
-    document.Close(True)
 End Using
 
 {% endhighlight %}
