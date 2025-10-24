@@ -4,12 +4,11 @@ title: User interaction in Javascript Pdfviewer control | Syncfusion
 description: Learn here all about Create with user interface interaction in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Create with user interface interaction
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create with user interface interaction
+# Create with user interface interaction for JavaScript
 
 The PDF viewer control provides the option for interaction with Form Fields such as Drag and resize. you can draw a Form Field dynamically by clicking the Form Field icon on the toolbar and draw it in the PDF document. The Form Fields type supported by the PDF Viewer Control are:
 
