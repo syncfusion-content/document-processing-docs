@@ -92,7 +92,7 @@ PdfTiffImage <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExample
 </tr>
 <tr>
 <td>
-{{'[XPSToPdfConverter](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Base~Syncfusion.XPS.XPSToPdfConverter.html)'| markdownify }}   
+{{'[XPSToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XPS.XPSToPdfConverter.html)'| markdownify }}   
 </td>
 <td> 
 XPSToPdfConverter <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/Converting-XPS-to-PDF-document](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/Converting-XPS-to-PDF-document)'| markdownify }}
@@ -124,7 +124,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[PdfJavaScriptAction](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html)'| markdownify }} - Add/modify JavaScript actions on existing PDF document 
+{{'[PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html)'| markdownify }} - Add/modify JavaScript actions on existing PDF document 
 </td>
 <td> 
 Not supported 
@@ -132,10 +132,10 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[PdfDocumentAnalyzer(String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentAnalyzer.html#Syncfusion_Pdf_Parsing_PdfDocumentAnalyzer__ctor_System_String_)'| markdownify }}
+{{'[PdfDocumentAnalyzer(String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentAnalyzer.html)'| markdownify }}
 </td>
 <td> 
-You can check whether the existing PDF document is corrupted or not using {{'[PdfDocumentAnalyzer(Stream)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentAnalyzer.html#Syncfusion_Pdf_Parsing_PdfDocumentAnalyzer__ctor_System_IO_Stream_)'| markdownify }}.  
+You can check whether the existing PDF document is corrupted or not using {{'[PdfDocumentAnalyzer(Stream)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentAnalyzer.html)'| markdownify }}.  
 </td>
 </tr>
 <tr>
@@ -411,7 +411,7 @@ PdfSoundAnnotation(RectangleF, Stream)
 </tr>
 <tr>
 <td>
-{{'[PdfTrueTypeFont(Font)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html#Syncfusion_Pdf_Graphics_PdfTrueTypeFont__ctor_System_Drawing_Font_)'| markdownify }}
+{{'[PdfTrueTypeFont(Font)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html)'| markdownify }}
 </td>
 <td> 
 PdfTrueTypeFont(Stream) 
@@ -419,7 +419,7 @@ PdfTrueTypeFont(Stream)
 </tr>
 <tr>
 <td>
-{{'[PdfTrueTypeFont(Font, int)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html#Syncfusion_Pdf_Graphics_PdfTrueTypeFont__ctor_System_Drawing_Font_)'| markdownify }}
+{{'[PdfTrueTypeFont(Font, int)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html)'| markdownify }}
 </td>
 <td> 
 PdfTrueTypeFont(Stream, int)  
@@ -661,7 +661,7 @@ PdfLoadedDocument.Compress(PdfCompressionOptions) <br/> *Sample link:* <br/> {{'
 </tr>
 <tr>
 <td>
-{{'[EncodingType](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.EncodingType.html)'| markdownify }} - Enum  
+{{'[EncodingType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.EncodingType.html)'| markdownify }} - Enum  
 </td>
 <td> 
 Not supported  
