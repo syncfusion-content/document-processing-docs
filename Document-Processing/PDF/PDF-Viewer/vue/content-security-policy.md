@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Content Security Policy with Vue Pdfviewer component | Syncfusion
-description: Learn here all about Content Security Policy with Vue Pdfviewer component of Syncfusion Essential JS 2 and more details.
+title: Content Security Policy with Vue PDF Viewer component | Syncfusion
+description: Learn here all about Content Security Policy with Vue PDF Viewer component of Syncfusion Essential JS 2 and more details.
 control: CSP
 platform: document-processing
 documentation: ug

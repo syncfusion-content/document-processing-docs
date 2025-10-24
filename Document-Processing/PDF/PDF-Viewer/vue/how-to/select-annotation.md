@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Select annotation in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Select annotation in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Select annotation in Vue PDF Viewer component | Syncfusion
+description: Learn here all about Select annotation in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Select annotation
 platform: document-processing
 documentation: ug

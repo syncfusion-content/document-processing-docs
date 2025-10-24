@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open PDF from Azure Blob Storage using Vue Pdfviewer | Syncfusion
-description: Learn about how to load PDF file from Azure Blob Storage in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Open PDF from Azure Blob Storage using Vue PDF Viewer | Syncfusion
+description: Learn about how to load PDF file from Azure Blob Storage in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Open PDF files from Azure Blob Storage
 platform: document-processing
 documentation: ug

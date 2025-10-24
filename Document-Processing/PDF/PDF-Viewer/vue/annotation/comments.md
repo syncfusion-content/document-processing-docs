@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Comments in Vue Pdfviewer component | Syncfusion
-description: Learn about comments, replies, and status in the Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Comments in Vue PDF Viewer component | Syncfusion
+description: Learn about comments, replies, and status in the Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Comments
 platform: document-processing
 documentation: ug
@@ -137,7 +137,7 @@ import { provide, ref } from 'vue';
 const pdfviewer = ref(null);
 
 const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-const resourceUrl  = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl  = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [
   Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,

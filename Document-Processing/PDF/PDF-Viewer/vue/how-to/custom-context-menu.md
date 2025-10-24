@@ -33,7 +33,7 @@ export default {
     data: function() {
         return {
 			documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-            resourceUrl: 'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+            resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
             menuItems : [
             {
                 text: 'Search In Google',
@@ -88,7 +88,7 @@ import { provide, ref } from "vue";
 
 const pdfviewer = ref(null);
 const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 const menuItems = [
   {
     text: 'Search In Google',
@@ -145,7 +145,7 @@ import { provide, ref } from "vue";
 
 const pdfviewer = ref(null);
 const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 const menuItems = [
   {
     text: 'Search In Google',
@@ -201,7 +201,7 @@ export default {
     data: function() {
         return {
 			documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-            resourceUrl: 'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+            resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
             menuItems : [
             {
                 text: 'Search In Google',
@@ -286,7 +286,7 @@ export default {
   data: function () {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
       menuItems: [
         {
           text: 'Search In Google',
