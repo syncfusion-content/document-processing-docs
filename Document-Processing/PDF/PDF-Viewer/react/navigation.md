@@ -2,7 +2,7 @@
 layout: post
 title: Navigation in React Pdfviewer component | Syncfusion
 description: Learn here all about Navigation in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Navigation
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##

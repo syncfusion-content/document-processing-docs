@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Clear annotation in React Pdfviewer component | Syncfusion
-description: Learn here all about Clear annotation in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Clear annotation
+title: Clear annotations in React PDF Viewer | Syncfusion
+description: Learn how to clear all annotations or delete specific annotations in the React PDF Viewer using deleteAnnotations and deleteAnnotationById.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clear annotation in React Pdfviewer component
+# Clear annotations in React PDF Viewer
 
-To clear all the annotations in a PDF document using the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, you can use the **deleteAnnotations()** method. This method is used to clear all the annotations present in the currently loaded document.
+Use the [deleteAnnotations](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#deleteannotations) method to clear all annotations in the currently loaded document.
 
-Here is an example of how you can clear all the annotations present in the currently loaded document:
+Example: Clear all annotations in the loaded document
 
 ```html
 <button onclick="deleteAnnotations()">Delete Annotations</button>
 
 <script>
-// clear Annotations.
+// Clear all annotations
 function deleteAnnotations() {
     var viewer = document.getElementById("container").ej2_instances[0];
     viewer.deleteAnnotations();
@@ -26,15 +26,15 @@ function deleteAnnotations() {
 </script>
 ```
 
-We can also delete specific annotation with the **deleteAnnotationById()** method. This method is used to delete a specific annotation using its id.
+To remove a specific annotation, use the deleteAnnotationById method to target an annotation by its id.
 
-Here is an example of how you can delete specific annotation with the **deleteAnnotationById()** method:
+Example: Delete a specific annotation by id
 
 ```html
 <button onclick="deleteAnnotationbyId()">Delete Annotation by ID</button>
 
 <script>
-// Delete Annotation by ID.
+// Delete an annotation by id
 function deleteAnnotationbyId() {
     var viewer = document.getElementById("container").ej2_instances[0];
     viewer.annotationModule.deleteAnnotationById(viewer.annotationCollection[0].annotationId);
@@ -42,4 +42,5 @@ function deleteAnnotationbyId() {
 </script>
 ```
 
-Find the sample [how to clear annotations using deleteAnnotations](https://stackblitz.com/edit/react-xlvqkm?file=public%2Findex.html)
+Sample: How to clear annotations using deleteAnnotations
+(https://stackblitz.com/edit/react-xlvqkm?file=public%2Findex.html)

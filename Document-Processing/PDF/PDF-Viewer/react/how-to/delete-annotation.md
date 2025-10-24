@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Delete annotation in React Pdfviewer component | Syncfusion
-description: Learn here all about Delete annotation in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Delete annotation
+title: Delete an annotation in React PDF Viewer | Syncfusion
+description: Learn how to delete a specific annotation in the React PDF Viewer using the deleteAnnotationById method.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Delete annotation in React Pdfviewer component
+# Delete an annotation in PDF Viewer
 
-The PDF Viewer library allows you to delete a specific annotation from a PDF document. Deleting a specific annotation can be done using the **deleteAnnotationById()** method. This method is used to delete a specific annotation using its id.
+Use the `deleteAnnotationById()` method to remove a specific annotation from a PDF document by its id.
 
-The following steps are used to delete a specific annotation from PDF Document.
+Steps to delete a specific annotation
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) to create a simple PDF Viewer sample.
 
-**Step 2:** Use the following code snippet to delete a specific annotation using `deleteAnnotationById()` method.
+**Step 2:** Use the following code to delete a specific annotation using `deleteAnnotationById()`.
 
   ```
    <button onclick="deleteAnnotationbyId()">Delete Annotation by ID</button>
@@ -30,4 +30,5 @@ The following steps are used to delete a specific annotation from PDF Document.
    </script>
  ```
 
-Find the sample [how to delete a specific annotation using deleteAnnotationById](https://stackblitz.com/edit/react-svdb9y?file=src%2Findex.js)
+Sample: How to delete a specific annotation using deleteAnnotationById
+(https://stackblitz.com/edit/react-svdb9y?file=src%2Findex.js)

@@ -2,7 +2,7 @@
 layout: post
 title: Saving PDF files in React Pdfviewer component | Syncfusion
 description: This page helps you to learn here all about saving PDF files in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Saving PDF files
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
