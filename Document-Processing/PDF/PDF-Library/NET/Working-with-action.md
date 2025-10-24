@@ -17,6 +17,9 @@ The below code example illustrates how to add the action to the PDF document usi
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-action-to-the-PDF-document/.NET/Add-action-to-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 
@@ -24,22 +27,17 @@ PdfDocument document = new PdfDocument();
 PdfLaunchAction action = new PdfLaunchAction("logo.png");
 document.Actions.AfterOpen = action;
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -56,6 +54,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new PDF document
 Dim document As New PdfDocument()
@@ -95,14 +96,16 @@ The [PdfSoundAction](https://help.syncfusion.com/cr/document-processing/Syncfusi
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-the-sound-action-to-PDF-document/.NET/Add-the-sound-action-to-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new document
 PdfDocument document = new PdfDocument();
 //Add a page
 PdfPage page = document.Pages.Add();
 
 //Create a sound action
-FileStream fileStream = new FileStream("Startup.wav", FileMode.Open, FileAccess.Read);
-PdfSoundAction soundAction = new PdfSoundAction(fileStream);
+PdfSoundAction soundAction = new PdfSoundAction("Startup.wav");
 soundAction.Sound.Bits = 16;
 soundAction.Sound.Channels = PdfSoundChannels.Stereo;
 soundAction.Sound.Encoding = PdfSoundEncoding.Signed;
@@ -111,22 +114,17 @@ soundAction.Volume = 0.9f;
 //Set the sound action
 document.Actions.AfterOpen = soundAction;
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new document
 PdfDocument document = new PdfDocument();
@@ -150,6 +148,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new document
 Dim document As New PdfDocument()
@@ -184,6 +185,9 @@ The [PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syn
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-JavaScript-action-to-the-PDF-document/.NET/Add-JavaScript-action-to-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new document
 PdfDocument document = new PdfDocument();
 //Add a page
@@ -195,22 +199,17 @@ PdfJavaScriptAction scriptAction = new PdfJavaScriptAction("app.alert(\"Hello Wo
 //Add the JavaScript action
 document.Actions.AfterOpen = scriptAction;
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new document
 PdfDocument document = new PdfDocument();
@@ -230,6 +229,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new document
 Dim document As New PdfDocument()
@@ -263,6 +265,9 @@ The [PdfUriAction](https://help.syncfusion.com/cr/document-processing/Syncfusion
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-URI-action-to-the-PDF-document/.NET/Add-URI-action-to-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new document with PDF/A standard
 PdfDocument document = new PdfDocument();
 
@@ -272,22 +277,16 @@ PdfUriAction uriAction = new PdfUriAction("http://www.google.com");
 //Add the action to the document
 document.Actions.AfterOpen = uriAction;
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new document with PDF/A standard
 PdfDocument document = new PdfDocument();
@@ -305,6 +304,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new document with PDF/A standard
 Dim document As New PdfDocument()
@@ -333,6 +335,10 @@ The [PdfGoToAction](https://help.syncfusion.com/cr/document-processing/Syncfusio
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-GoTo-action-to-the-PDF-document/.NET/Add-GoTo-action-to-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new document
 PdfDocument document = new PdfDocument();
 //Add first page
@@ -348,22 +354,17 @@ gotoAction.Destination = new PdfDestination(secondPage, new PointF(0, 100));
 //Add the action to the document
 document.Actions.AfterOpen = gotoAction;
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new document
 PdfDocument document = new PdfDocument();
@@ -387,6 +388,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new document
 Dim document As New PdfDocument()
@@ -421,6 +426,9 @@ The [PdfLaunchAction](https://help.syncfusion.com/cr/document-processing/Syncfus
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-lauch-action-to-PDF-document/.NET/Add-lauch-action-to-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 
@@ -428,22 +436,17 @@ PdfDocument document = new PdfDocument();
 PdfLaunchAction action = new PdfLaunchAction("logo.png");
 document.Actions.AfterOpen = action;
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -461,6 +464,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new PDF document
 Dim document As New PdfDocument()
@@ -494,6 +500,9 @@ The [PdfNamedAction](https://help.syncfusion.com/cr/document-processing/Syncfusi
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-named-action-to-PDF-document/.NET/Add-named-action-to-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new document
 PdfDocument document = new PdfDocument();
 //Add the page
@@ -506,22 +515,17 @@ PdfNamedAction namedAction = new PdfNamedAction(PdfActionDestination.LastPage);
 //Add the named action
 document.Actions.AfterOpen = namedAction;
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
-//Defining the ContentType for PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new document
 PdfDocument document = new PdfDocument();
@@ -542,6 +546,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new document
 Dim document As New PdfDocument()
@@ -573,6 +580,10 @@ The [PdfSubmitAction](https://help.syncfusion.com/cr/document-processing/Syncfus
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-submit-action-to-the-PDF-document/.NET/Add-submit-action-to-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a PDF document
 PdfDocument document = new PdfDocument();
 //Add a new page
@@ -590,22 +601,18 @@ PdfSubmitAction submitAction = new PdfSubmitAction("http://www.syncfusionforms.c
 submitAction.DataFormat = SubmitDataFormat.Html;
 submitButton.Actions.GotFocus = submitAction;
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a PDF document
 PdfDocument document = new PdfDocument();
@@ -631,6 +638,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Create a PDF document
 Dim document As New PdfDocument()
@@ -667,6 +678,11 @@ The [PdfResetAction](https://help.syncfusion.com/cr/document-processing/Syncfusi
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Reset-form-fields-in-the-PDF-document/.NET/Reset-form-fields-in-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
 //Create a PDF document
 PdfDocument document = new PdfDocument();
 //Add a new page
@@ -690,22 +706,19 @@ clearButton.ToolTip = "Clear";
 //Add button field to the form
 document.Form.Fields.Add(clearButton);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Create a PDF document
 PdfDocument document = new PdfDocument();
@@ -741,6 +754,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
 
 'Create a PDF document
 Dim document As New PdfDocument()
@@ -787,6 +805,11 @@ The PdfRemoteGoToAction in a PDF document enables users to navigate to a specifi
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Create a new page
@@ -811,22 +834,19 @@ goToAction.IsNewWindow = true;
 submitButton.Actions.GotFocus = goToAction;
 //Add the submit button to a new document
 document.Form.Fields.Add(submitButton);
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
-// Defining the ContentType for the PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Create a FileContentResult object by using the file contents, content type, and file name
-return File(stream,  contentType,  fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -852,16 +872,19 @@ goToAction.IsNewWindow = true;
 submitButton.Actions.GotFocus = goToAction;
 //Add the submit button to a new document
 document.Form.Fields.Add(submitButton);
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new document
 Dim document As PdfDocument = New PdfDocument
@@ -887,9 +910,9 @@ goToAction.IsNewWindow = true
 submitButton.Actions.GotFocus = goToAction
 'Add the submit button to a new document
 document.Form.Fields.Add(submitButton)
-Dim stream As MemoryStream = New MemoryStream
-document.Save(stream)
-stream.Position = 0
+
+'Save the document
+document.Save("Output.pdf")
 'Close the document
 document.Close(true)
 
@@ -906,6 +929,11 @@ Essential<sup>&reg;</sup> PDF provides support to add various actions to the for
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Adding-an-action-to-the-form-fields-in-PDF-document/.NET/Adding-an-action-to-the-form-fields-in-PDF-document/Program.cs" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -926,22 +954,19 @@ submitButton.Actions.MouseDown = scriptAction;
 //Add the submit button to the new document
 document.Form.Fields.Add(submitButton);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -970,6 +995,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new PDF document
 Dim document As New PdfDocument()
@@ -1010,6 +1040,10 @@ Essential<sup>&reg;</sup> PDF provides support to add the various actions to the
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Adding-an-action-to-the-bookmark-in-the-PDF-document/.NET/Adding-an-action-to-the-bookmark-in-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new document
 PdfDocument document = new PdfDocument();
 //Add a page
@@ -1026,22 +1060,18 @@ PdfUriAction uriAction = new PdfUriAction("http://www.google.com");
 //Set the Uri action to the bookmark 
 bookmark.Action = uriAction;
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
+//Save the document
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new document
 PdfDocument document = new PdfDocument();
@@ -1066,6 +1096,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new document
 Dim document As New PdfDocument()
@@ -1101,8 +1135,11 @@ To add actions to an existing PDF document, use the following code example.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-actions-to-the-existing-PDF-document/.NET/Add-actions-to-the-existing-PDF-document/Program.cs" %}
 
-//Load the PDF document.
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read); PdfLoadedDocument document = new PdfLoadedDocument(docStream); 
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load an existing PDF document.
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 //Create JavaScript action
 PdfJavaScriptAction scriptAction = new PdfJavaScriptAction("app.alert(\"Hello World!!!\")"); 
@@ -1110,21 +1147,17 @@ PdfJavaScriptAction scriptAction = new PdfJavaScriptAction("app.alert(\"Hello Wo
 //Add the JavaScript action
 document.Actions.AfterOpen = scriptAction;
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream(); 
-document.Save(stream); stream.Position = 0;
+//Save the document
+document.Save("Output.pdf"); 
 //Close the document.
 document.Close(true);
-//Define the ContentType for a pdf file
-string contentType = "application/pdf"; 
-//Define the file name.
-string fileName = "output.pdf"; 
-//Create a FileContentResult object by using the file contents, content type, and file name. 
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load a document from the disk.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -1142,6 +1175,9 @@ loadedDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new PDF document. 
 Dim document As New PdfLoadedDocument("input.pdf")
@@ -1176,6 +1212,9 @@ The following example demonstrates how to add document-level JavaScript actions 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Adding-Document-Level%20JavaScript-Actions/.NET/Adding-Document-Level%20JavaScript-Actions/Program.cs" %}
 
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 // Create a new PDF document instance.
 PdfDocument document = new PdfDocument();
 // Retrieve the JavaScript collection from the document.
@@ -1189,11 +1228,8 @@ javaScriptAction.Name = "Test";
 // Add the JavaScript action to the document's JavaScript collection.
 javaScriptCollection.Add(javaScriptAction);
 
-//Save the document into stream
-using(MemoryStream stream = new MemoryStream())
-{
-    document.Save(stream);
-}
+//Save the document
+document.Save("Output.pdf");
 
 //Close the document.
 document.Close(true);
@@ -1201,6 +1237,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 // Create a new PDF document instance.
 PdfDocument document = new PdfDocument();
@@ -1224,6 +1263,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 ' Create a new PDF document instance.
 Dim document As New PdfDocument()
@@ -1258,9 +1300,12 @@ The following example demonstrates how to retrieve document-level JavaScript act
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Retrieve-Document-Level-JavaScript-Actions/.NET/Retrieve-Document-Level-JavaScript-Actions/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 // Retrieve the JavaScript collection from the loaded document.
 PdfDocumentJavaScriptCollection javaScriptCollection = document.DocumentJavaScripts;
@@ -1281,6 +1326,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 // Load an existing PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -1304,6 +1353,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 ' Load an existing PDF document.
 Dim document As New PdfLoadedDocument("Input.pdf")
@@ -1337,9 +1390,12 @@ The following example demonstrates how to remove document-level JavaScript actio
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Remove-Document-Level-JavaScript-Actions/.NET/Remove-Document-Level-JavaScript-Actions/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 // Retrieve the JavaScript collection from the document.
 PdfDocumentJavaScriptCollection javaScriptCollection = document.DocumentJavaScripts;
@@ -1356,6 +1412,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 // Load an existing PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
@@ -1375,6 +1435,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 ' Load an existing PDF document.
 Dim document As New PdfLoadedDocument("Input.pdf")

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Magnification in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about magnification in Syncfusion Blazor SfPdfViewer component and much more.
+description: Learn how to use magnification in Blazor SfPdfViewer zoom options, programmatic zoom, zoom limits, and performance via RestrictZoomRequest.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,20 +9,20 @@ documentation: ug
 
 # Magnification in Blazor SfPdfViewer Component
 
-The built-in toolbar of SfPdfViewer contains the following zooming options:
+The built-in toolbar of SfPdfViewer includes the following zoom options:
 
-* **Zoom** **In**: Increases the zoom value (document magnification) from the current value by preset levels.
-* **Zoom** **Out**: Decreases the zoom value from the current value by preset levels.
-* **Zoom** **To**: Magnifies the pages to the specified zoom value.
-* **Fit** **Page**: Fits the page entirely in the available document view port size.
-* **Fit** **Width**: Fits the page to the width of the view port size.
-* **Fit** **Height**: Fits the page to the height of the view port size.
+* **Zoom** **In**: Increases the zoom level (document magnification) by preset steps.
+* **Zoom** **Out**: Decreases the zoom level by preset steps.
+* **Zoom** **To**: Sets the zoom level to a specified value.
+* **Fit** **Page**: Fits the entire page within the available viewport.
+* **Fit** **Width**: Fits the page to the viewport width.
+* **Fit** **Height**: Fits the page to the viewport height.
 
-![Magnification in Blazor SfPdfViewer](./images/magnification.png)
+![Zoom options in the Blazor SfPdfViewer](./images/magnification.png)
 
 ## Enable or Disable Magnification in Blazor SfPdfViewer Component
 
-You can enable or disable the magnification option in SfPdfViewer default toolbar by setting the [EnableMagnification](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableMagnification) property.
+Enable or disable magnification in the default toolbar by setting the [EnableMagnification](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableMagnification) property.
 
 ```cshtml
 
@@ -40,7 +40,7 @@ You can enable or disable the magnification option in SfPdfViewer default toolba
 ```
 ## Programmatic Zoom Operations
 
-Also, you can programmatically perform zooming operations as follows.
+Zoom operations can also be performed programmatically using APIs such as [ZoomInAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ZoomInAsync), [ZoomOutAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ZoomOutAsync), [ZoomAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ZoomAsync_System_Int32_), [FitToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FitToPageAsync), [FitToWidthAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FitToWidthAsync), and [FitToHeightAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FitToHeightAsync).
 
 ```cshtml
 
@@ -104,7 +104,7 @@ Also, you can programmatically perform zooming operations as follows.
     public async void OnZoomClick(MouseEventArgs args)
     {
         int zoomValue = int.Parse(TextBox.Value.ToString());
-        await Viewer.ZoomToAsync(zoomValue);
+        await Viewer.ZoomAsync(zoomValue);
     }
 
     public async void OnFitWidthClick(MouseEventArgs args)
@@ -120,22 +120,22 @@ Also, you can programmatically perform zooming operations as follows.
 
 ```
 
-N> SfPdfViewer can support zoom value ranges from 10% to 400%.
+N> SfPdfViewer supports zoom values from 10% to 400%.
 
 ## Minimum and Maximum Zoom Values in Blazor SfPdfViewer Component
 
-The SfPdfViewer control provides the options to configure minimum and maximum zoom levels using the [MinZoomValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_MinZoomValue) and [MaxZoomValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_MaxZoomValue) properties. These properties allow developers to define and control the zoom range, enhancing customization and user experience by:
+Configure minimum and maximum zoom levels using the [MinZoomValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_MinZoomValue) and [MaxZoomValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_MaxZoomValue) properties. These settings help:
 
-* Defining a specific zoom range for better usability
-* Preventing excessive zooming that may distort content or impact performance
-* Ensuring readability on smaller screens
-* Maintaining consistent zoom behavior across different devices
+* Define a zoom range for better usability
+* Prevent excessive zooming that can distort content or impact performance
+* Ensure readability on smaller screens
+* Maintain consistent zoom behavior across devices
 
 ### Setting minimum and maximum zoom values
 
-The zoom limits can be configured using the [MinZoomValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_MinZoomValue) and [MaxZoomValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_MaxZoomValue) properties during component initialization. These properties accept integer values representing the zoom percentage.
+Specify the zoom limits during component initialization with integer values representing percentages.
 
-N> SfPdfViewer  can support zoom value ranges from 10% to 400%.
+N> SfPdfViewer supports zoom values from 10% to 400%.
 
 ### Basic usage of Minimum and Maximum Zoom Values
 
@@ -156,29 +156,27 @@ N> SfPdfViewer  can support zoom value ranges from 10% to 400%.
 
 ```
 
-Refer to the Image below for details.
+See the following image.
 
-![Minimum and Maximum Zoom Values](./images/minimum-and-maximum-zoom-values.png)
+![Viewer with minimum and maximum zoom](./images/minimum-and-maximum-zoom-values.png)
 
 
 ### Zoom range scenarios
 
-* Limit zoom functionality to a specific range for better readability and usability.
-
-* Prevent excessive zooming to avoid distortion or performance issues.
-
-* Ensure readability on smaller screens by setting a minimum zoom limit.
+* Limit zoom to a specific range for readability and usability.
+* Prevent distortion or performance issues due to excessive zooming.
+* Ensure readability on smaller screens by setting a minimum zoom.
 
 ### Invalid input handling
 
-The SfPdfViewer automatically handles invalid input values:
+SfPdfViewer handles invalid input values as follows:
 
-* **Values below 1**: Automatically fallback to default minimum (10)
-* **MinZoomValue > MaxZoomValue**: MaxZoomValue will be adjusted to match MinZoomValue
+* **Values below 1**: Automatically fall back to the default minimum (10)
+* **MinZoomValue > MaxZoomValue**: MaxZoomValue is adjusted to match MinZoomValue
 
 ### Dynamic zoom value configuration
 
-You can dynamically change the minimum and maximum zoom values during runtime.
+Minimum and maximum zoom values can be changed dynamically at runtime.
 
 ```cshtml
 
@@ -225,13 +223,13 @@ You can dynamically change the minimum and maximum zoom values during runtime.
 
 ```
 
-Refer to the Image below for details.
+See the following image.
 
-![Dynamic Zoom Value Configuration](./images/dynamic-zoom-value-configuration.png)
+![Dynamic runtime configuration of minimum and maximum zoom values](./images/dynamic-zoom-value-configuration.png)
 
 ### Integration with zoom operations
 
-The zoom limits work seamlessly with all zoom operations including programmatic zoom methods.
+The configured zoom limits apply to all zoom operations, including programmatic methods.
 
 ```cshtml
 
@@ -284,13 +282,13 @@ The zoom limits work seamlessly with all zoom operations including programmatic 
 
 ```
 
-Refer to the Image below for details.
+See the following image.
 
 ![Integration with Zoom Operations](./images/integration-with-zoom-operations.png)
 
 ### Integration with tile rendering
 
-The zoom limits work seamlessly with tile rendering for enhanced performance at high zoom levels.
+Zoom limits work with tile rendering to improve performance at higher zoom levels. The example demonstrates broader limits for illustration; apply appropriate bounds for production scenarios. The viewer supports 10%–400% by default unless otherwise configured.
 
 ```cshtml
 
@@ -327,14 +325,14 @@ The zoom limits work seamlessly with tile rendering for enhanced performance at 
 
 ## Optimizing Zoom Performance with RestrictZoomRequest
 
-The SfPdfViewer provides the [RestrictZoomRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_RestrictZoomRequest) property to optimize performance during zoom operations. This property controls how page images are regenerated on the client-side during zoom changes.
+Use the [RestrictZoomRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_RestrictZoomRequest) property to optimize performance during zoom operations. This property controls how page images are regenerated on the client during zoom changes.
 
 ### RestrictZoomRequest Property
 
-**Property Value**: A boolean value that controls how images are regenerated during zoom operations. The default value is false.
+**Property Value**: A boolean value that controls how images are regenerated during zoom operations. By default it is false.
 
-* When set to `true`: A single image is generated at 100% zoom and reused across all zoom levels. This eliminates the need for image regeneration during zoom interactions, thereby reducing client-side processing and enhancing overall performance, particularly on devices with limited resources. However, this may result in a slight reduction in image clarity at zoom levels other than 100%.
-* When set to `false` (default): Page images are regenerated for each zoom level, providing a smoother and more visually accurate zooming experience at the cost of increased client-side processing.
+* When set to `true`: A single image is generated at 100% zoom and reused across all zoom levels. This reduces client-side processing and improves performance on resource-constrained devices, with potential clarity reduction at zoom levels other than 100%.
+* When set to `false` (default): Page images are regenerated for each zoom level, providing a more visually accurate experience at the cost of increased client-side processing.
 
 ### Basic Usage of RestrictZoomRequest in Blazor SfPdfViewer Component
 
@@ -354,10 +352,10 @@ The SfPdfViewer provides the [RestrictZoomRequest](https://help.syncfusion.com/c
 
 ```
 
-Refer to the Image below for details.
+See the following image.
 
-![Restrict Zoom Request API method in Blazor PDF Viewer](./images/RestrictZoomRequest-API.png)
+![RestrictZoomRequest enabled for performance-optimized zooming](./images/RestrictZoomRequest-API.png)
 
 ## See also
 
-* [Navigation in Blazor SfPdfViewer Component](./navigation)
+* [Navigation in Blazor SfPdfViewer Component](./interactive-pdf-navigation-overview)

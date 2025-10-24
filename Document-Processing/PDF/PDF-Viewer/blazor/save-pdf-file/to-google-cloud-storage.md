@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Save PDF files to GCS in Blazor SfPdfViewer Component | Syncfusion
-description: Learn here all about how to Save PDF files to Google Cloud Storage in Syncfusion Blazor SfPdfViewer component and much more details.
+title: Save PDF files to Google Cloud Storage in SfPdfViewer | Syncfusion
+description: Learn how to save PDF files to Google Cloud Storage from the Syncfusion Blazor SfPdfViewer component with a secure, step-by-step workflow.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -9,15 +9,15 @@ documentation: ug
 
 # Save PDF file to Google Cloud Storage in Blazor SfPdfViewer
 
-To save a PDF file to Google Cloud Storage in a SfPdfViewer, you can follow the steps below
+To save a PDF file to Google Cloud Storage from the SfPdfViewer, follow the steps below.
 
-**Step 1** Create a Service Account
+**Step 1** Create a service account
 
-Open the Google Cloud Console. Navigate to `IAM & Admin` > `Service accounts`. Click `Create Service Account`.` Enter a name, assign roles (e.g., Storage Object Admin), and create a key in JSON format. Download the key file securely. Utilize the downloaded key file in your applications or services for authentication and access to the Google Cloud Storage bucket. For additional details, refer to the [official documentation](https://cloud.google.com/iam/docs/service-accounts-create).
+Open the Google Cloud Console. Navigate to `IAM & Admin` > `Service accounts`. Click `Create service account`, enter a name, assign only the required role (for uploads, Storage Object Creator; use broader roles such as Storage Object Admin only if necessary), and create a key in JSON format. Download the key file securely. Use the downloaded key file in the application for authentication and access to the Google Cloud Storage bucket. For details, refer to the [official documentation](https://cloud.google.com/iam/docs/service-accounts-create).
 
-**Step 2:** Create a Simple SfPdfViewer Sample in blazor
+**Step 2:** Create a simple SfPdfViewer sample in Blazor
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/server-side-application) to create a simple SfPdfViewer sample in blazor. This will give you a basic setup of the SfPdfViewer component.
+Start by following the steps in this guide to create a [basic SfPdfViewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) sample in Blazor. This provides the initial setup of the SfPdfViewer component.
 
 **Step 3:** Include the following namespaces in the **Index.razor** file.
 
@@ -30,7 +30,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 @using Syncfusion.Blazor.Buttons
 ```
 
-**Step 4:** Add the below code example to
+**Step 4:** Add the below code example to the Index.razor file to upload the currently loaded document to GCS.
 
 ```csharp
 
@@ -70,14 +70,14 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 }
 ```
 
-N> Replace **Your Bucket name from Google Cloud Storage** with the actual name of your Google Cloud Storage bucket and **File Name to be Loaded into Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer** with the actual file name you want to load from the cloud bucket
+N> Replace **Your Bucket name from Google Cloud Storage** with the actual name of your Google Cloud Storage bucket and **File Name to be Loaded into Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer** with the actual file name you want to load from the cloud bucket.
 
-N> Replace **path/to/service-account-key.json** with the actual file path to your service account key JSON file. Make sure to provide the correct path and filename.
+N> Replace **path/to/service-account-key.json** with the actual file path to the service account key JSON file. Make sure to provide the correct path and filename.
 
-N> The **Google.Cloud.Storage.V1** NuGet package must be installed in your application to use the previous code example.
+N> The **Google.Cloud.Storage.V1** NuGet package is required. Install it in the application before running the sample.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20GCS)
+[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20GCS)
 
 ## See also
 
-* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../faqs/how-to-processing-large-files-without-increasing-maximum-message-size)

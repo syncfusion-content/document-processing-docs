@@ -543,6 +543,58 @@ settings.CommandLineArguments.Add("--ignore-certificate-errors");
 </tr>
 </table>
 
+## Security Alert - Bundled chrome.exe in HTML-to-PDF Conversion
+
+<table>
+<th style="font-size:14px" width="100px">Issue
+</th>
+<th style="font-size:14px">Security alerts are triggered when the Syncfusion HTML-to-PDF converter uses a bundled `chrome.exe` executable to render HTML content in headless mode during PDF generation.
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The HTML-to-PDF conversion relies on Chromium's Blink rendering engine:<br>
+
+1.The NuGet package includes Blink binaries (`chrome.exe`) under `runtimes/win-x64/native`<br
+2.This bundled Chrome instance launches in headless mode to render web content<br>
+3.Security systems flag the execution of embedded binaries as potential risks<br>
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>Use system-installed Chromium instead of bundled binaries:
+<br><br/>
+Step 1: Configure Blink Path
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+BlinkConverterSettings settings = new BlinkConverterSettings();
+
+// Point to system-installed Chrome.
+settings.BlinkPath = @"C:\Program Files\Google\Chrome\Application"; 
+
+//Convert HTML to PDF.
+htmlConverter.ConverterSettings = settings;
+PdfDocument document = htmlConverter.Convert("https://example.com");
+
+//Save and close the document. 
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 2: Verify Installation <br>
+Ensure Chrome exists at the specified path (standard locations): `C:\Program Files\Google\Chrome\Application`
+
+</td>
+</tr>
+</table>
+
 ## Conversion failure in windows server 2012 R2
 
 <table>
