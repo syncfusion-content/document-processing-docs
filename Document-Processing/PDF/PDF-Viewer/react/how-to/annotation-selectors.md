@@ -28,5 +28,4 @@ document.getElementById('annotationSelector').addEventListener('click', () => {
 
 ```
 
-Sample: How to customize the annotation selector
-https://stackblitz.com/edit/react-dnkbqh66-tsqcqdcx?file=index.js,index.html
+Sample: [How to customize the annotation selector](https://stackblitz.com/edit/react-dnkbqh66-tsqcqdcx?file=index.js,index.html)

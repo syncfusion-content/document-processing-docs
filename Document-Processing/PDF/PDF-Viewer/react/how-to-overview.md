@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Frequently Asked Questions Section in PDF Viewer control
+# How to Use the Frequently Asked Questions Section in the PDF Viewer
 
 The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are listed below.
 

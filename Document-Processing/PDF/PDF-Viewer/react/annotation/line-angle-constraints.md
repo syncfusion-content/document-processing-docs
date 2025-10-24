@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Line angle constraints in React PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and configure highlight, underline, strikethrough, and squiggly text markup annotations programmatically.
+description: Explore how to add, edit, delete, and configure text markup annotations like highlight, underline, and squiggly in JavaScript (ES6) using the PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
