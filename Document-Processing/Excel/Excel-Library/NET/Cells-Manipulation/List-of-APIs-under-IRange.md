@@ -36,17 +36,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Local R1C1 Address
   string address_R1C1_Local = worksheet.Range[3, 4].AddressR1C1Local;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -125,17 +115,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["B4"].Boolean = false;
   bool b4 = worksheet.Range["B4"].Boolean;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -206,17 +186,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   borders[ExcelBordersIndex.EdgeTop].LineStyle = ExcelLineStyle.Thick;
   borders[ExcelBordersIndex.EdgeBottom].LineStyle = ExcelLineStyle.Thick;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -291,17 +261,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Set built in style
   worksheet.Range["C2"].BuiltInStyle = BuiltInStyles.Accent3;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -372,17 +332,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Disable sheet calculations
   worksheet.DisableSheetCalculations();
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -464,17 +414,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     cell.Text = cell.AddressLocal;
   }
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -544,17 +484,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Get the cell style name
   string cellStyleName = worksheet.Range["C2"].CellStyleName;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -622,17 +552,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Get first column in the range
   int firstColumn = worksheet.Range["E1:R3"].Column;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -688,17 +608,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     column.Text = column.AddressLocal;
   }
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -767,17 +677,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Number of cells
   int count = worksheet.Range["A1:E5"].Count;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -831,17 +731,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Last cell in the range
   IRange lastCell = worksheet.Range["A1:E5"].End;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -891,17 +781,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Last cell in the entire column
   IRange lastCell = worksheet.Range["A1"].EntireColumn.End;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -953,17 +833,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Last cell in the entire row
   IRange lastCell = worksheet.Range["A1"].EntireRow.End;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -1023,17 +893,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Get the claculated value of formula
   string value = worksheet.Range["C1"].CalculatedValue;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -1124,17 +984,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   bool value_C1 = worksheet.Range["C1"].FormulaBoolValue;
   bool value_E1 = worksheet.Range["E1"].FormulaBoolValue;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -1225,17 +1075,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   bool hasBoolean_A2 = worksheet.Range["A2"].HasBoolean;
   bool hasBoolean_A3 = worksheet.Range["A3"].HasBoolean;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -1308,17 +1148,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   bool validation_A1 = worksheet.Range["A1"].HasDataValidation;
   bool validation_A3 = worksheet.Range["A3"].HasDataValidation;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -1397,17 +1227,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   bool dateTime_B3 = worksheet.Range["B3"].HasDateTime;
   bool dateTime_B4 = worksheet.Range["B4"].HasDateTime;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -1493,17 +1313,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   bool extFormula_C1 = worksheet.Range["C1"].HasExternalFormula;
   bool extFormula_C2 = worksheet.Range["C2"].HasExternalFormula;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -1576,17 +1386,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   bool formula_A2 = worksheet.Range["A2"].HasFormula;
   bool formula_C2 = worksheet.Range["C2"].HasFormula;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -1658,17 +1458,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   bool formulaArray = worksheet.Range["A1"].HasFormulaArray;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -1746,17 +1536,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Has formula boolean value
   bool hasValue_E1 = worksheet.Range["E1"].HasFormulaBoolValue;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -1835,17 +1615,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   bool hasNumber_A1 = worksheet.Range["A1"].HasNumber;
   bool hasNumber_A2 = worksheet.Range["A2"].HasNumber;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -1925,17 +1695,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   bool hasRichText = worksheet.Range["A1"].HasRichText;
   bool hasNumber_A2 = worksheet.Range["A2"].HasNumber;
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");
-  fileStreamResult.FileDownloadName = "Output.xlsx";
-  return fileStreamResult;
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 

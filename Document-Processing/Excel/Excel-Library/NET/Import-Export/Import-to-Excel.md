@@ -32,12 +32,8 @@ N> XlsIO supports importing of data from data table to worksheet in Windows Form
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ImportDataTable.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ImportDataTable.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -104,12 +100,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ImportDataColumn.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ImportDataColumn.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -176,12 +168,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ImportDataView.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ImportDataView.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -242,12 +230,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ImportCollectionObjects.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ImportCollectionObjects.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -444,12 +428,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ImportDataOptions.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ImportDataOptions.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -690,12 +670,8 @@ namespace Layout_Options
 
             #region Save
             //Saving the workbook
-            FileStream outputStream = new FileStream(Path.GetFullPath("Output/ImportData.xlsx"), FileMode.Create, FileAccess.Write);
-            workbook.SaveAs(outputStream);
+            workbook.SaveAs(Path.GetFullPath("Output/ImportData.xlsx"));
             #endregion
-
-            //Dispose streams
-            outputStream.Dispose();
         }
         //Helper method to load data from XML file and add them in collections. 
         private static IList<Brand> GetVehicleDetails()
@@ -703,8 +679,7 @@ namespace Layout_Options
             XmlSerializer deserializer = new XmlSerializer(typeof(BrandObjects));
 
             //Read data from XML file. 
-            FileStream stream = new FileStream(Path.GetFullPath(@"Data/ExportData.xml"), FileMode.Open, FileAccess.Read);
-            TextReader textReader = new StreamReader(stream);
+            TextReader textReader = new StreamReader(Path.GetFullPath(@"Data/ExportData.xml"));
             BrandObjects brands = (BrandObjects)deserializer.Deserialize(textReader);
 
             //Initialize parent collection to add data from XML file. 
@@ -1370,21 +1345,16 @@ namespace Grouping_Options
 
             #region Save
             //Saving the workbook
-            FileStream outputStream = new FileStream(Path.GetFullPath("Output/ImportData.xlsx"), FileMode.Create, FileAccess.Write);
-            workbook.SaveAs(outputStream);
+            workbook.SaveAs(Path.GetFullPath("Output/ImportData.xlsx"));
             #endregion
-
-            //Dispose streams
-            outputStream.Dispose();
         }
         //Helper method to load data from XML file and add them in collections. 
         private static IList<Brand> GetVehicleDetails()
         {
             XmlSerializer deserializer = new XmlSerializer(typeof(BrandObjects));
 
-            //Read data from XML file. 
-            FileStream stream = new FileStream(Path.GetFullPath(@"Data/ExportData.xml"), FileMode.Open, FileAccess.Read);
-            TextReader textReader = new StreamReader(stream);
+            //Read data from XML file.
+            TextReader textReader = new StreamReader(Path.GetFullPath(@"Data/ExportData.xml"));
             BrandObjects brands = (BrandObjects)deserializer.Deserialize(textReader);
 
             //Initialize parent collection to add data from XML file. 
@@ -1967,12 +1937,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ImportData.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ImportData.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -2206,12 +2172,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ArrayToWorksheet.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ArrayToWorksheet.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -2440,18 +2402,12 @@ namespace ImportHtml
 			IWorksheet worksheet = workbook.Worksheets[0];
 
 			//Imports HTML table into the worksheet from first row and first column
-			FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.html"), FileMode.Open, FileAccess.ReadWrite);
-			worksheet.ImportHtmlTable(inputStream, 1, 1);
+			worksheet.ImportHtmlTable(Path.GetFullPath(@"Data/InputTemplate.html"), 1, 1);
 
 			#region Save
 			//Saving the workbook
-			FileStream outputStream = new FileStream(Path.GetFullPath("Output/HTMLTabletoWorksheet.xlsx"), FileMode.Create, FileAccess.Write);
-			workbook.SaveAs(outputStream);
+			workbook.SaveAs(Path.GetFullPath("Output/HTMLTabletoWorksheet.xlsx"));
 			#endregion
-
-			//Dispose streams
-			outputStream.Dispose();
-			inputStream.Dispose();
 		}
     }
   }
@@ -2556,13 +2512,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   FileStream inputStream = new FileStream("../../../Data/XmlFile.xml", FileMode.Open, FileAccess.Read);
   worksheet.ImportXml(inputStream, 1, 6);
 
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(outputStream);
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
 
   //Dispose stream
   inputStream.Dispose();
-  outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -2617,13 +2571,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   FileStream inputStream = new FileStream("../../../Data/XmlFile.xml", FileMode.Open, FileAccess.Read);
   workbook.XmlMaps.Add(inputStream);
 
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(outputStream);
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
 
   //Dispose stream
   inputStream.Dispose();
-  outputStream.Dispose();
 }
 {% endhighlight %}
 
