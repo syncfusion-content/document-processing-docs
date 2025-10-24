@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in JavaScript PDF Viewer | Syncfusion
-Description: Learn about accessibility in Syncfusion JavaScript PDF Viewer - WCAG 2.2, Section 508, ADA, and keyboard navigation support.
+description: Learn about accessibility in Syncfusion JavaScript PDF Viewer - WCAG 2.2, Section 508, ADA, and keyboard navigation support.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
