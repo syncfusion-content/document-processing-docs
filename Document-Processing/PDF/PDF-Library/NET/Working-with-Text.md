@@ -2783,7 +2783,39 @@ using (PdfDocument document = new PdfDocument())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
+' Create a new PDF document
+Dim document As New PdfDocument()
+
+' Disable the font cache
+PdfDocument.EnableCache = False
+
+' Create a new page and add it to the document
+Dim page As PdfPage = document.Pages.Add()
+
+' Create graphics object for the page
+Dim graphics As PdfGraphics = page.Graphics
+
+' Create a solid brush
+Dim brush As PdfBrush = New PdfSolidBrush(Color.Black)
+
+' Set the font size
+Dim fontSize As Single = 20.0F
+
+' Set the font
+Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, fontSize)
+
+' Draw the text
+graphics.DrawString("Hello world!", font, brush, New PointF(20, 20))
+
+' Save the PDF document
+document.Save("Output.pdf")
+
+' Close the document
+document.Close(True)
 
 {% endhighlight %}
 
