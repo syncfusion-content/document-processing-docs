@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Import Export Annotation in ASP.NET Core Pdfviewer Component | Syncfusion
-description: Learn here all about Import Export Annotation Object in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Import and export annotations in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to import and export annotations as objects, JSON, or XFDF in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
-control: Import Export Annotation Object
+control: PDF Viewer
 publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Import and Export annotation
+# Import and export annotations in the ASP.NET Core PDF Viewer
 
-The PDF Viewer library allows you to import annotations from objects or streams instead of loading it as a file. To import such annotation objects, the PDF Viewer control must export the PDF annotations as objects using the [**ExportAnnotationsAsObject()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#exportannotationsasobject) method. Only the annotations objects that are exported from the PDF Viewer can be imported.
+Import annotations from objects or streams instead of files. To import such objects, first export annotations as objects using the [**exportAnnotationsAsObject()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#exportannotationsasobject) method. Only objects exported from the PDF Viewer can be imported.
 
-The following steps are used to import and export annotations in various formats such as objects, JSON, and XFDF.
+Use the following steps to import and export annotations as objects, JSON, or XFDF.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in the [Syncfusion ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a sample.
 
-**Step 2:** Use the following code snippet to perform import and export annotation.
+**Step 2:** Use the following code to perform import and export operations.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -26,10 +26,10 @@ The following steps are used to import and export annotations in various formats
     ViewData["Title"] = "Home page";
 }
 
-<button type="button" onclick="exportAsJson()">Export Annoatation As Json</button>
-<button type="button" onclick="exportAsXfdf()">Export Annoatation As Xfdf</button>
-<button type="button" onclick="exportAnnotation()">Export Annoatation</button>
-<button type="button" onclick="importAnnotation()">Import Annoatation</button>
+<button type="button" onclick="exportAsJson()">Export Annotation As Json</button>
+<button type="button" onclick="exportAsXfdf()">Export Annotation As Xfdf</button>
+<button type="button" onclick="exportAnnotation()">Export Annotation</button>
+<button type="button" onclick="importAnnotation()">Import Annotation</button>
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"

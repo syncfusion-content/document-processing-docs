@@ -4,13 +4,12 @@ title: Download in  EJ2 ASP.NET CORE PDF Viewer | Syncfusion
 description: Learn here all about Download in ASP.NET CORE PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Download
-publishingplatform: document-processing
 documentation: ug
 ---
 
-# Download a PDF document in PDF Viewer component
+# Download PDF document in PDF Viewer component
 
-The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
+The PDF Viewer supports downloading the loaded PDF file. You can enable or disable the download using the following example.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -34,9 +33,9 @@ The PDF Viewer supports downloading the loaded PDF file. You can enable/disable 
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/download.png)
+![Alt text](./images/download.png)
 
-You can invoke download action using following code snippet.,
+You can also programmatically invoke the download action using the `download()` method, as shown below:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -75,6 +74,10 @@ You can invoke download action using following code snippet.,
 
 {% endhighlight %}
 {% endtabs %}
+
+## Get the base64 string while downloading the PDF document
+
+You can use the [downloadEnd](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_DownloadEnd) event of the PDF Viewer to retrieve the downloaded document as a base64 string.
 
 ## See also
 

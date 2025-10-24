@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Get Page Info with EJ2 ASP.NET Core PDF Viewer Control | Syncfusion
-description: Learn here all about Get Page Info in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Get page info in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to retrieve page height, width, and rotation using getPageInfo in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Get Page Info in ASP.NET Core PDF Viewer control
+# Get page info in the ASP.NET Core PDF Viewer
 
-The PDF Viewer library allows you to retrieves the information of a specified page in the viewer using the **getPageInfo()** method.This provides essential information such as the height, width and rotation.
+Use the `getPageInfo()` method to retrieve information for a specified page, including height, width, and rotation.
 
-The following steps are used to getPageInfo.
+The following steps show how to use `getPageInfo`.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in the [Syncfusion ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a sample.
 
-**Step 2:** The following code snippet to implement the functionality for retrieving height, width and rotation of a specified page in the viewer.
+**Step 2:** Use the following code to get the height, width, and rotation for a specified page.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -37,36 +37,29 @@ The following steps are used to getPageInfo.
 document.addEventListener('DOMContentLoaded', function () {
     var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
 
-    // Add event listener for retrieving page information
     document.getElementById('getPageInfo').addEventListener('click', function () {
-        retrievePageInfo();
-    });
+        // Set the page index for which info is required
+        const pageIndex = 0;
 
-    function retrievePageInfo() {
-        if (pdfViewer) {
-             // Set the page index for which info is required
-            const pageIndex = 0;
+        // Retrieve and log the page information
+        console.log(pdfViewer.getPageInfo(pageIndex));
 
-            // To Retrieve and log the page information
-            console.log(pdfViewer.getPageInfo(pageIndex));
+        // Log the specific page information details to the console
+        var pageInfo = pdfViewer.getPageInfo(pageIndex);
 
-            // To Log the specific page information details to the console
-            var pageInfo = pdfViewer.getPageInfo(pageIndex);
-
-            if (pageInfo) {
-                console.log(`Page Info for Page Index ${pageIndex}:`);
-                console.log(`Height: ${pageInfo.height}`);
-                console.log(`Width: ${pageInfo.width}`);
-                console.log(`Rotation: ${pageInfo.rotation}`);
-            }
+        if (pageInfo) {
+            console.log(`Page Info for Page Index ${pageIndex}:`);
+            console.log(`Height: ${pageInfo.height}`);
+            console.log(`Width: ${pageInfo.width}`);
+            console.log(`Rotation: ${pageInfo.rotation}`);
         }
-    }
+    });
 });
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, you can successfully integrate and use the get page info API in the EJ2 PDF Viewer.
+By following these steps, the page info API can be integrated and used in the ASP.NET Core PDF Viewer.
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)
+[View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: AnnotationSelector Setting in EJ2 ASP.NET CORE PDF Viewer | Syncfusion
-description: Learn here all about Configuring AnnotationSelector setting in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Configure annotation selector settings in Syncfusion ASP.NET Core PDF Viewer
+description: Learn how to customize annotation selector settings in the Syncfusion ASP.NET Core PDF Viewer component for Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET Core
@@ -12,11 +12,11 @@ documentation: ug
 
 ### Annotation Selector Settings
 
-The [**annotationSelectorSettings**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerAnnotationSelectorSettings.html) property allows you to customize the appearance and behavior of the annotation selector in the UI. The AnnotationSelectorSettings defines the settings for the annotation selector, including border colors, sizes, and shapes. It provides fine-grained control over how annotations are displayed and interacted with.
+The [**annotationSelectorSettings**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerAnnotationSelectorSettings.html) property customizes the appearance and behavior of the annotation selector in the UI. These settings control border colors, sizes, and handle styles so users can differentiate selected annotations and adjust them precisely during review workflows.
 
 ### How to Configure Annotation Selector Settings
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create simple PDF Viewer sample and include the required EJ2 script and style assets in the layout or view.
 
 **Step 2:** Set Up PDF Viewer in Your View: Add the following code snippet to your view (e.g., Index.cshtml)
 
@@ -31,7 +31,7 @@ The [**annotationSelectorSettings**](https://help.syncfusion.com/cr/aspnetcore-j
 </div>
 ```
 
-**Step 3:**	 Add JavaScript for Annotation Selector Settings: Below the PDF Viewer in your view, include the following script to configure the annotationSelectorSettings
+**Step 3:**	 Add JavaScript for Annotation Selector Settings: Below the PDF Viewer in your view, include the following script to configure the annotationSelectorSettings. Ensure the script runs after the viewer instance is created, such as at the end of the Razor view or within a DOM-ready handler.
 
 ```
  <script type="text/javascript" >
@@ -51,6 +51,7 @@ window.onload = function () {
 }
 </script>
 ```
+
 #### Key properties include:
 
 * **selectionBorderColor**: Sets the color for the border around selected annotations.

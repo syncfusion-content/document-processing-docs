@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Open PDF from Azure Blob Storage in ASP.NET Core PdfViewer | Syncfusion
-description: Learn here all about how to Open PDF files from Azure Blob Storage in ASP.NET CORE PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Open PDF from Azure Blob Storage in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to load PDFs from Azure Blob Storage in the Syncfusion ASP.NET Core PDF Viewer component using standalone and server-backed approaches.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Open PDF file from Azure Blob Storage
+# Open PDF from Azure Blob Storage
 
-PDF Viewer allows to load PDF file from Azure Blob Storage using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to open a PDF from Azure Blob Storage.
+The ASP.NET Core PDF Viewer component supports loading PDF files from Azure Blob Storage using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 
-## Using Standalone PDF Viewer
+## Using the standalone PDF Viewer
 
-To load a PDF file from Azure Blob Storage in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from Azure Blob Storage in the standalone PDF Viewer.
 
 **Step 1:** Create the Azure Blob Storage account
 
@@ -97,9 +97,9 @@ function blobToBase64(blob) {
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Standalone).
 
-## Using Server-Backed PDF Viewer
+## Using the server-backed PDF Viewer
 
-To load a PDF file from Azure Blob Storage in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from Azure Blob Storage using the server-backed PDF Viewer.
 
 **Step 1:** Create the Azure Blob Storage account
 
@@ -187,9 +187,9 @@ public IActionResult OnPostLoad([FromBody] jsonObjects responseData)
 
 N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name
 
-**Step 4:** Set the PDF Viewer Properties in ASP.NET Core PDF viewer component
+**Step 4:** Configure the PDF Viewer component
 
-Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Azure Blob Storage. Ensure that you correctly pass the document name from the files available in your azure container to the documentPath property.
+Set the `documentPath` property of the PDF Viewer to the PDF file name to load from Azure Blob Storage. Ensure the document name exists in your Azure container.
 
 ```csharp
 

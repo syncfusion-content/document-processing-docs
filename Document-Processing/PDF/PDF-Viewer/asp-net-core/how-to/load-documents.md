@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Load Documents in ASP.NET Core Pdfviewer Component
-description: Learn here all about Load Documents in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Load documents dynamically in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to load or switch PDF documents dynamically in the Syncfusion ASP.NET Core PDF Viewer using the load method.
 platform: document-processing
-control: Load Documents
+control: PDF Viewer
 publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Load PDF documents dynamically
+# Load documents dynamically in the ASP.NET Core PDF Viewer
 
-The PDF Viewer server library allows to switch or load the PDF documents dynamically after the initial load operation. To achieve this, load the PDF document as a base64 string or file name in PDF Viewer control using the **Load()** method dynamically.
+Load or switch PDF documents dynamically after the initial load. Use the **load()** method to load a PDF by Base64 string or file name.
 
-The following steps are used to load the PDF document dynamically.
+## Steps to load PDF documents dynamically
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in the [Syncfusion ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a sample.
 
-**Step 2:** Use the following code snippet to load PDF document using base64 string.
+**Step 2:** Use the following code to load a PDF using a Base64 string.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -32,10 +32,10 @@ The following steps are used to load the PDF document dynamically.
 
 <script type ="text/javascript">
 
-    // Load a Base64 String
+    // Load a Base64 string
     function load1() {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-
+        viewer.load("data:application/pdf;base64," + addBase64String, null);
     }
 </script>
 
@@ -82,15 +82,15 @@ The following steps are used to load the PDF document dynamically.
 
 <script type ="text/javascript">
 
-    // load document using file path.
+    // Load document using a file path
     function load2() {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.load("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf",null)
+        viewer.load("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf", null);
     }
 </script>
 
 {% endhighlight %}
-{% highlight cs tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
 <button type="button" onclick="load2()">LoadDocument</button>
 
@@ -104,7 +104,7 @@ The following steps are used to load the PDF document dynamically.
 
 <script type ="text/javascript">
 
-    // load document using file path.
+    // Load document using a file path
     function load2() {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         viewer.load("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf",null)
@@ -114,5 +114,6 @@ The following steps are used to load the PDF document dynamically.
 {% endhighlight %}
 {% endtabs %}
 
+By following these steps, the load API can be used to switch documents dynamically in the ASP.NET Core PDF Viewer.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Load%20PDF%20documents%20dynamically)

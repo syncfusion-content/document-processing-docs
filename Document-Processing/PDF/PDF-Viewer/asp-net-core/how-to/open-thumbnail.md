@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Open Thumbnail in ASP.NET Core Pdfviewer Component
-description: Learn here all about Open Thumbnail in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Open the thumbnail pane programmatically in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to open the thumbnail pane programmatically in the Syncfusion ASP.NET Core PDF Viewer by calling the openThumbnailPane method after the document loads.
 platform: document-processing
-control: Open Thumbnail
+control: PDF Viewer
 publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Open Thumbnail pane programmatically
+# Open thumbnail pane programmatically
 
-The PDF Viewer library allows you to open the thumbnail pane programmatically using the [**openThumbnailPane()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/thumbnailView/#openthumbnailpane) method.
+The Syncfusion<sup style="font-size:70%">®</sup> ASP.NET Core PDF Viewer lets you open the thumbnail pane programmatically by calling the [**openThumbnailPane()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/thumbnailView/#openthumbnailpane) method after the document loads. This approach helps highlight page navigation immediately or in response to user actions.
 
-The following steps are used to open the thumbnail.
+The following steps explain how to open the thumbnail pane.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Create an ASP.NET Core PDF Viewer sample by following the [ASP.NET Core getting started guide for the PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started). The tutorial shows how to configure Razor Pages, reference the required Syncfusion scripts and styles, and register the PDF Viewer service endpoint.
 
-**Step 2:** Use the following code snippet to open thumbnail.
+**Step 2:** Add the following markup and script to open the thumbnail pane automatically or on demand.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -60,6 +60,5 @@ The following steps are used to open the thumbnail.
 
 {% endhighlight %}
 {% endtabs %}
-
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Open%20Thumbnail%20pane%20programmatically)

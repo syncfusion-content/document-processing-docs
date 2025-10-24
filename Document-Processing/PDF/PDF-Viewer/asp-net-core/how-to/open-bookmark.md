@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Open and Close Bookmark in EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about Open and Close Bookmark in ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Open or close the bookmark pane in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to open or close the bookmark pane programmatically in the Syncfusion ASP.NET Core PDF Viewer by calling the bookmarkViewModule APIs.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Open and Close Bookmark pane programmatically
+# Open or close the bookmark pane programmatically
 
-The PDF Viewer library allows you to open the Bookmark pane programmatically using the **openBookmarkPane()** method.
+The PDF Viewer exposes methods to toggle the bookmark pane at runtime. Call **openBookmarkPane()** to display the pane and **closeBookmarkPane()** to hide it. These APIs enable workflows where bookmarks are revealed only when users request them.
 
-The following steps are used to open the Bookmark.
+Follow these steps to add the bookmark toggle buttons:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Create an ASP.NET Core PDF Viewer sample by following the [getting started instructions](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started). Ensure that the Razor page includes the required Syncfusion EJ2 script and style references.
 
-**Step 2:** Insert the following code snippet to implement the functionality for opening the Bookmark pane:
+**Step 2:** Place a button and the PDF Viewer Tag Helper in the same Razor page. Add a script block after the viewer markup so the handler can retrieve the viewer instance and call the bookmark module when the button is clicked. If the button is disabled or the bookmark tree is empty, confirm that the loaded document contains bookmarks before invoking the API.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -27,7 +27,7 @@ The following steps are used to open the Bookmark.
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
     </ejs-pdfviewer>
 </div>
 
@@ -37,6 +37,7 @@ The following steps are used to open the Bookmark.
         viewer.bookmarkViewModule.openBookmarkPane();
     }
 </script>
+
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
 
@@ -60,7 +61,7 @@ The following steps are used to open the Bookmark.
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, to close the Bookmark pane programmatically, employ the following code snippet:
+To close the bookmark pane with a button click, reuse the same structure and call the close method in the handler.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -71,7 +72,7 @@ Similarly, to close the Bookmark pane programmatically, employ the following cod
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
     </ejs-pdfviewer>
 </div>
 
