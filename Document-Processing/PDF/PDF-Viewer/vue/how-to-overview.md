@@ -1,14 +1,13 @@
 ---
 layout: post
-title: FAQ Section in PDF Viewer control | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of in PDF Viewer control.
-platform: document-processing
+title: FAQs for Vue PDF Viewer Control | Syncfusion
+description: Find answers to common questions related to using and customizing the Syncfusion Vue PDF Viewer control.
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Frequently Asked Questions Section in PDF Viewer control
+# Frequently Asked Questions Section in Vue PDF Viewer control
 
 The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are listed below.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Line Angle Constraints in Vue PdfViewer | Syncfusion
-description: Learn to add, edit, delete, and configure highlight, underline, strikethrough, and squiggly text markup annotations programmatically.
+description: Discover how to manage text markup annotations like highlight, underline, strikethrough, and squiggly in the Syncfusion Vue PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

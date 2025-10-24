@@ -44,7 +44,7 @@ Once the `quick start` project is set up with default settings, proceed to add S
 
 Install the Syncfusion<sup style="font-size:70%">&reg;</sup> `PDF Viewer` package using the following command.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use the Vue components, install the required npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/package/@vue-pdf-viewer/viewer). To use the Vue components, install the required npm package.
 
 This article uses the [Vue PDF Viewer component](https://www.syncfusion.com/pdf-viewer-sdk) as an example. Install the `@syncfusion/ej2-vue-pdfviewer` package by running the following command:
 
@@ -104,7 +104,7 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
 {% endhighlight %}
 {% endtabs %}
 
-2. In the `template` section, define the PDF Viewer component with the [documentPath](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#documentpath) and [resourceUrl](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/#resourceurl) properties.
+2. In the `template` section, define the PDF Viewer component with the `documentPath` and `resourceUrl` properties.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
