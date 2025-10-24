@@ -587,7 +587,7 @@ This event is applicable in scenarios that require control over paste operations
  
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet DataSource="DataSourceBytes"  Pasting="OnPasting">
+<SfSpreadsheet DataSource="DataSourceBytes"Pasting="OnPasting">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
  

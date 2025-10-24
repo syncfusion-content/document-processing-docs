@@ -59,6 +59,6 @@ For a quick preview experience, the PDF viewer can be hosted inside a dialog (po
 
 ## See also
 
-* [How to create SfPdfViewer Component in a Splitter Component](./create-sfpdfviewer-in-a-splitter-component)
+* [How to create SfPdfViewer Component in a Splitter Component](./how-to-create-sfpdfviewer-in-a-splitter-component)
 
-* [How to view the created PDF document](./create-sfpdfviewer)
+* [How to view the created PDF document](./how-to-create-sfpdfviewer)

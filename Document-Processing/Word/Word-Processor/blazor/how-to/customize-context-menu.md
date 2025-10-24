@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Customize context menu in Blazor DocumentEditor Component | Syncfusion
+title: Customize Context Menu in Blazor DocumentEditor | Syncfusion
 description: Learn how to customize context menu with document editor in real time scenarios like create simple word processor in Syncfusion Blazor DocumentEditor component.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---
 
-# Context menu customization in Blazor DocumentEditor Component
+# Context Menu Customization in Blazor DocumentEditor Component
 
 ## How to customize context menu in Document Editor
 
-[`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) allows you to add custom option in context menu. It can be achieved by using the [`AddCustomMenu()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.ContextMenuModule.html#Syncfusion_Blazor_DocumentEditor_ContextMenuModule_AddCustomMenu_System_Collections_Generic_List_Syncfusion_Blazor_DocumentEditor_MenuItemModel__System_Boolean_System_Boolean_) method and custom action is defined using the [`ContextMenuItemSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorEvents.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorEvents_ContextMenuItemSelected)
+The [`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (Document Editor) for customizing the added custom options and hiding/showing the default context menu. It can be achieved by using the [`AddCustomMenu()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.ContextMenuModule.html#Syncfusion_Blazor_DocumentEditor_ContextMenuModule_AddCustomMenu_System_Collections_Generic_List_Syncfusion_Blazor_DocumentEditor_MenuItemModel__System_Boolean_System_Boolean_) method and custom action is defined using the [`ContextMenuItemSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorEvents.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorEvents_ContextMenuItemSelected)
 
 ### Add Custom Option
 
@@ -53,7 +53,7 @@ The following code shows how to add custom option in context menu.
 
 ### Customize custom option in context menu
 
-[`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) allows you to customize the added custom option and also to hide/show default context menu.
+The [`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (Document Editor) allows for customizing the added custom options and hiding/showing the default context menu.
 
 #### Hide default context menu items
 
@@ -79,4 +79,4 @@ The following code shows how to hide default context menu and add custom option 
 }
 ```
 
-You can also explore our [Blazor Word Processor - Context Menu](https://blazor.syncfusion.com/demos/document-editor/custom-context-menu?theme=bootstrap5) example to know how to render and configure the document editor.
+Explore the [Blazor Word Processor - Context Menu](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/custom-context-menu?theme=bootstrap5) example to learn how to render and configure the document editor.

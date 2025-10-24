@@ -50,11 +50,11 @@ The following code snippet explains how to show or hide the annotation toolbar u
 
 Choose which tools appear and control their order in the annotation toolbar.
 
-Use [`PdfViewerToolbarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html) with the [`AnnotationToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_AnnotationToolbarItems) property to choose which tools are displayed in the annotation toolbar. The property accepts a list of [`AnnotationToolbarItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationToolbarItem.html) values. Only the items included in this list are shown; any item not listed is hidden. The rendered order follows the sequence of items in the list.
+Use [PdfViewerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html) with the [AnnotationToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_AnnotationToolbarItems) property to choose which tools are displayed in the annotation toolbar. The property accepts a list of [AnnotationToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationToolbarItem.html) values. Only the items included in this list are shown; any item not listed is hidden. The rendered order follows the sequence of items in the list.
 
 The annotation toolbar is presented when entering annotation mode in SfPdfViewer2 and adapts responsively based on the available width. Include the Close tool to allow users to exit the annotation toolbar when needed.
 
-The following example demonstrates how to customize the annotation toolbar by specifying a selected set of tools using [`AnnotationToolbarItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationToolbarItem.html).
+The following example demonstrates how to customize the annotation toolbar by specifying a selected set of tools using `AnnotationToolbarItem`.
 
 ```cshtml
 
@@ -99,4 +99,4 @@ Refer to the image below for the mobile view (responsive layout adapts to width)
 
 ## See also
 
-* [Adding the shape annotation in PDF viewer](./annotation/shape-annotation)
+* [Adding the shape annotation in PDF viewer](../annotation/shape-annotation)

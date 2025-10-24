@@ -56,8 +56,8 @@ The following example demonstrates generating a PDF in memory and rendering it a
 
 ## See also
 
-* [How to create SfPdfViewer Component in a Splitter Component](./create-sfpdfviewer-in-a-splitter-component)
+* [How to create SfPdfViewer Component in a Splitter Component](./how-to-create-sfpdfviewer-in-a-splitter-component)
 
-* [How to create a SfPdfViewer within a popup window in Blazor](./create-sfpdfviewer-in-a-popup-window)
+* [How to create a SfPdfViewer within a popup window in Blazor](./how-to-create-sfpdfviewer-in-a-popup-window)
 
-* [How to get PDF document's data](./get-data-from-sfpdfviewer)
+* [How to get PDF document's data](./how-to-get-data-from-sfpdfviewer)
