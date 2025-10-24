@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Frequently Asked Questions Section in PDF Viewer control
+# Frequently Asked Questions Section in JavaScript PDF Viewer control
 
 The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are listed below.
 
