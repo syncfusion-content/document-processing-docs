@@ -15,7 +15,7 @@ String platform='file-formats';
 	    { 
 	    dir('Spell-Checker') 
            {
-			
+			 echo '0';
 		     checkout scm
 			 echo '1';
 			 def branchCommit = 'https://api.github.com/repos/syncfusion-content/'+env.githubSourceRepoHttpUrl.split('/')[env.githubSourceRepoHttpUrl.split('/').size() - 1]+'/pulls/' + env.pullRequestId + '/files'
