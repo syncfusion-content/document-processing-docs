@@ -9,7 +9,7 @@ documentation: ug
 ---
 
 
-# User interaction with form fields
+# Working with Form Fields in ASP.NET MVC PDF Viewer
 
 The PDF viewer control provides the option for interaction with Form Fields such as Drag and resize. you can draw a Form Field dynamically by clicking the Form Field icon on the toolbar and draw it in the PDF document. The Form Fields type supported by the PDF Viewer Control are:
 

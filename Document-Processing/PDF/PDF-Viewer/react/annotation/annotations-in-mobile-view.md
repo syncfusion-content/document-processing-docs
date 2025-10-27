@@ -81,7 +81,7 @@ domainurl: ##DomainURL##
 
 **Step 2:** The ink annotation appears on the page.
 
-![Ink annotation drawn on the page](../how-to/images/ink-annotation.png)
+![Ink annotation drawn on the page](../images/ink-annotation.png)
 
 ## Change annotation properties (before adding)
 
