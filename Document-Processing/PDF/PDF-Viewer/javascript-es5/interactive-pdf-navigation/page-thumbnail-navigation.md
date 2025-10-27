@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigation in JavaScript Pdfviewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion JavaScript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Thumbnail Navigation in JavaScript PDF Viewer control | Syncfusion
+description: Discover how to navigate PDF pages using thumbnails in the Syncfusion JavaScript PDF Viewer control for a visual and intuitive experience.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

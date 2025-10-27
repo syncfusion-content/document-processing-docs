@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Download in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Download in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Download in Javascript PDF Viewer control | Syncfusion
+description: Learn here all about Download in Syncfusion Javascript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in JavaScript Pdfviewer control
+# Download in JavaScript PDF Viewer control
 
 The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
 

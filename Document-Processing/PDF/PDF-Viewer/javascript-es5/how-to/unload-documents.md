@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unload document in JavaScript PDF Viewer | Syncfusion
-description: Learn here all about Unload document in Syncfusion JavaScript Pdfviewer control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Unload document in Syncfusion JavaScript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

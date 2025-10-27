@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Mobile Toolbar Interface in Javascript Pdfviewer control | Syncfusion
-description: Learn All About the Mobile Toolbar Interface in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Mobile Toolbar Interface in Javascript PDF Viewer control | Syncfusion
+description: Learn All About the Mobile Toolbar Interface in Syncfusion Javascript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Mobile Toolbar Interface
 publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Mobile Toolbar Interface in Javascript Pdfviewer control
+# Mobile Toolbar Interface in Javascript PDF Viewer control
 
 The Mobile PDF Viewer offers a variety of features for viewing, searching, annotating, and managing PDF documents on mobile devices. It includes essential tools like search, download, bookmarking, annotation, and page organization. Users also have the option to enable desktop toolbar features in mobile mode, providing a more extensive set of actions.
 

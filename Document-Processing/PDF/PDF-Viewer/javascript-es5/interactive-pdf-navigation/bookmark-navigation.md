@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigation in JavaScript Pdfviewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion JavaScript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Bookmark Navigation in JavaScript PDF Viewer control | Syncfusion
+description: Learn how to use bookmarks for quick navigation in the Syncfusion JavaScript PDF Viewer control, enhancing user experience and accessibility.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

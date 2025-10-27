@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Feature module in JavaScript Pdfviewer Control | Syncfusion
-description: Learn here all about Feature module in Syncfusion Essential JavaScript Pdfviewer control, its elements and more.
+title: Feature module in JavaScript PDF Viewer Control | Syncfusion
+description: Learn here all about Feature module in Syncfusion Essential JavaScript PDF Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

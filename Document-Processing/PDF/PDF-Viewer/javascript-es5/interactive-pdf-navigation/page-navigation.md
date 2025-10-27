@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigation in JavaScript Pdfviewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion JavaScript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Page Navigation in JavaScript PDF Viewer control | Syncfusion
+description: Explore how to navigate pages in the Syncfusion JavaScript PDF Viewer control using built-in options for seamless document viewing.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
