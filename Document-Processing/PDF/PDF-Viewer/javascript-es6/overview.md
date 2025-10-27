@@ -25,7 +25,7 @@ npm install @syncfusion/ej2-pdfviewer
 * [`Form fields`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/form-designer/create-programmatically) – Design and fill interactive forms.
 * [`Signature`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/annotations/signature-annotation) – Capture handwritten or digital signatures in the document.
 * [`Toolbar`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/toolbar) – Use the built-in toolbar or create custom toolbars for common interactions.
-* [`Navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/page-navigation) – Navigate using bookmarks, thumbnails, hyperlinks, and the table of contents.
+* [`Navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/navigation) – Navigate using bookmarks, thumbnails, hyperlinks, and the table of contents.
 * [`Magnification`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/magnification) – Adjust zoom with fit-to-page, fit-to-width, or automatic options.
 * [`Search`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/text-search) – Find text anywhere in the PDF document.
 * [`Core interactions`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interaction-mode) – Scroll, zoom, pan, select, and navigate between pages.

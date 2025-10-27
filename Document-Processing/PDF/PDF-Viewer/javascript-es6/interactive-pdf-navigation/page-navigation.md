@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigation in TypeScript PDF Viewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion TypeScript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Page Navigation in TypeScript PDF Viewer | Syncfusion
+description: Explore how to navigate pages in the Syncfusion TypeScript PDF Viewer control using built-in options for seamless document viewing.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -190,5 +190,5 @@ Find the [here](https://stackblitz.com/edit/5dqbkd?file=index.ts) to perform the
 
 ## See also
 
-* [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/toolbar/)
-* [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/feature-module/)
+* [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/toolbar)
+* [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/feature-module)
