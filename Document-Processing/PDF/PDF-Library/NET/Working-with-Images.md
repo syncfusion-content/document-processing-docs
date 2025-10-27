@@ -723,6 +723,160 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Add-transparancy-and-rotation-to-the-image/). 
 
+## Unit conversion in image position
+
+The [PdfUnitConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfUnitConvertor.html) class provides precise measurement conversion capabilities for PDF layouts. When positioning images in a PDF document, the converter translates pixel dimensions to PDF points, enabling millimeter-perfect placement and sizing. This ensures images maintain their aspect ratio while rendering at exact locations and filling designated spaces like rectangles.
+
+The code snippet to illustrate the same is given below.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess.Read))
+    {
+        //Load the image from the disk
+        PdfBitmap image = new PdfBitmap(stream);
+
+        //Add the first section to the PDF document
+        PdfSection section = document.Sections.Add();
+
+        //Initialize unit converter
+        PdfUnitConvertor converter = new PdfUnitConvertor();
+
+        //Convert the image size from pixel to points
+        SizeF size = converter.ConvertFromPixels(image.PhysicalDimension, PdfGraphicsUnit.Pixel);
+
+        //Set section size based on the image size
+        section.PageSettings.Size = size;
+
+        // Set section orientation based on the image size (by default Portrait) 
+        if (image.Width > image.Height)
+            section.PageSettings.Orientation = PdfPageOrientation.Landscape;
+
+        //Set a margin for the section
+        section.PageSettings.Margins.All = 0;
+
+        //Add a page to the section
+        PdfPage page = section.Pages.Add();
+
+        //Draw image
+        page.Graphics.DrawImage(image, 0, 0);
+
+        //Save the document
+        document.Save("Output.pdf");
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess.Read))
+    {
+        //Load the image from the disk
+        PdfBitmap image = new PdfBitmap(stream);
+
+        //Add the first section to the PDF document
+        PdfSection section = document.Sections.Add();
+
+        //Initialize unit converter
+        PdfUnitConvertor converter = new PdfUnitConvertor();
+
+        //Convert the image size from pixel to points
+        SizeF size = converter.ConvertFromPixels(image.PhysicalDimension, PdfGraphicsUnit.Pixel);
+
+        //Set section size based on the image size
+        section.PageSettings.Size = size;
+
+        // Set section orientation based on the image size (by default Portrait) 
+        if (image.Width > image.Height)
+            section.PageSettings.Orientation = PdfPageOrientation.Landscape;
+
+        //Set a margin for the section
+        section.PageSettings.Margins.All = 0;
+
+        //Add a page to the section
+        PdfPage page = section.Pages.Add();
+
+        //Draw image
+        page.Graphics.DrawImage(image, 0, 0);
+
+        //Save the document
+        document.Save("Output.pdf");
+    }
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
+
+Module Program
+    Sub Main()
+        ' Create a new PDF document
+        Using document As New PdfDocument()
+
+            ' Load the image from disk
+            Using stream As New FileStream("Image.png", FileMode.Open, FileAccess.Read)
+                Dim image As New PdfBitmap(stream)
+
+                ' Add a section to the PDF document
+                Dim section As PdfSection = document.Sections.Add()
+
+                ' Initialize unit converter
+                Dim converter As New PdfUnitConvertor()
+
+                ' Convert image size from pixels to points
+                Dim size As SizeF = converter.ConvertFromPixels(image.PhysicalDimension, PdfGraphicsUnit.Pixel)
+
+                ' Set section size based on image size
+                section.PageSettings.Size = size
+
+                ' Set orientation to landscape if image is wider than tall
+                If image.Width > image.Height Then
+                    section.PageSettings.Orientation = PdfPageOrientation.Landscape
+                End If
+
+                ' Remove margins
+                section.PageSettings.Margins.All = 0
+
+                ' Add a page to the section
+                Dim page As PdfPage = section.Pages.Add()
+
+                ' Draw the image at position (0, 0)
+                page.Graphics.DrawImage(image, 0, 0)
+
+                ' Save the document
+                document.Save("Output.pdf")
+            End Using
+        End Using
+    End Sub
+End Module
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Converting multi page TIFF to PDF
 
 Multi frame TIFF image can be converted to PDF document. This can be done by accessing each frame of the multi frame TIFF image and rendering it in each page of the PDF document using [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) class.
