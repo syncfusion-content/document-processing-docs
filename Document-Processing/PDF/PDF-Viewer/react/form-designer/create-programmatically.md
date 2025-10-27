@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Create programmatically in React Pdf viewer control
+# Create programmatically in React PDF Viewer control
 
 The PDF Viewer component provides options to add, edit, and delete form fields. The supported form field types are:
 
