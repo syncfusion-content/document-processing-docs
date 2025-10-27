@@ -9,14 +9,14 @@ documentation: ug
 
 # Smart Redaction in Blazor Smart PDF Viewer
 
-The [Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.html) enables intelligent redaction of sensitive information in PDF documents by incorporating AI-assisted functionalities. The Smart Redaction feature automatically detects and allows users to redact sensitive data such as personally identifiable information (PII), financial data, and other confidential content.
+The [Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.html) enables intelligent redaction of sensitive information in PDF documents with AI-assisted capabilities. The Smart Redaction feature detects and enables redaction of personally identifiable information (PII), financial data, and other confidential content.
 
 ![Smart Redaction](images/smart-redaction.gif)
 
-The AI-powered Smart Redaction provides users with the ability to select specific patterns (emails, names, phone numbers, etc.) and automatically identify sensitive information throughout the document. Users can activate the smart redaction feature by clicking the **Smart Redaction** button in the side toolbar. The system can detect various types of sensitive content and allows users to review and selectively redact identified information.
+Smart Redaction allows selecting detection patterns (emails, names, phone numbers, and more) and automatically identifies matching content throughout the document. Users can activate the Smart Redaction feature by selecting the **Smart Redaction** button in the side toolbar, review detected items, and apply redaction selectively.
 
 ## Component Usage
-Add the following code in your **~Pages/Home.razor** file to check or utilize the Smart Redaction feature in Smart PDF Viewer.
+Add the following code to the **~Pages/Home.razor** file to enable and evaluate Smart Redaction in the Smart PDF Viewer. Ensure the SfSmartPdfViewer package is installed and the component is added to the page.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}
@@ -31,7 +31,7 @@ Add the following code in your **~Pages/Home.razor** file to check or utilize th
 ## SmartRedactSettings Parameters
 
 ### Enable
-This [Enable](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.SmartRedactSettings.html#Syncfusion_Blazor_SmartPdfViewer_SmartRedactSettings_Enable) property controls whether the Smart Redaction feature is enabled in the PDF viewer. When set to `false`, the Smart Redact button in the side toolbar will be hidden and all redaction functionalities will be inaccessible to users. This setting is helpful when you want to restrict or disable access to advanced redaction tools based on context, role, or compliance requirements. The default value is `true`.
+This [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SmartPdfViewer.SmartRedactSettings.html#Syncfusion_Blazor_SmartPdfViewer_SmartRedactSettings_Enable) property controls whether Smart Redaction is available in the PDF viewer. When set to `false`, the Smart Redaction button in the side toolbar is hidden and all related functionality is disabled. Use this setting to restrict access based on context, role, or compliance requirements. The default value is `true`.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}
@@ -80,25 +80,25 @@ The output shows the Smart Redaction feature in action, where AI automatically d
 
 ![Redact Patterns in Smart Redaction](images/redact-patterns.gif)
 
-To apply these settings, include them within the [SmartRedactSettings](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.SmartRedactSettings.html) of the [SfSmartPdfViewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.SfSmartPdfViewer.html) component. The Smart Redaction feature combines the power of AI with user control to ensure accurate and compliant redaction of sensitive information in PDF documents.
+To apply these settings, include them within the [SmartRedactSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SmartPdfViewer.SmartRedactSettings.html) of the [SfSmartPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SmartPdfViewer.SfSmartPdfViewer.html) component. Smart Redaction combines AI-assisted detection with user control to ensure accurate, compliant removal of sensitive information.
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Smart%20Redaction)
 
 ## Important Redaction Behaviors and Limitations
 
-Smart Redaction is an irreversible process where once redaction is applied, the original content cannot be recovered through any means. The redaction process does not support undo or redo operations, and all original text, images, and metadata are permanently removed from the document. Users must carefully review AI-detected content before applying permanent redaction as the process cannot be reversed.
+Smart Redaction is irreversible. After applying redaction, the original content cannot be recovered. Undo and redo are not supported for redaction, and the underlying text, images, and metadata are permanently removed. Review all detected content before applying redaction.
 
-N> For detailed information about redaction annotations in the Blazor PDF Viewer, refer to the [Redaction Annotations documentation](./../../../PDF/PDF-Viewer/blazor/annotation/redaction-annotation).
+N> For details about redaction annotations in the Blazor PDF Viewer, refer to the [Redaction annotations documentation](./../../../PDF/PDF-Viewer/blazor/annotation/redaction-annotation).
 
 ## Security and Compliance Considerations
 
-Smart Redaction ensures complete removal of sensitive content from the PDF document, and redacted content cannot be recovered through text selection, search, or any other method. Organizations should maintain backup copies of original documents when required by policy and thoroughly test redaction patterns on sample documents before using in environments.
+Smart Redaction ensures complete removal of sensitive content from the PDF document, and redacted content cannot be recovered through text selection, search, or other methods. Maintain backup copies of original documents when required by policy, and test redaction patterns on sample documents before using them in production environments.
 
-N> A confirmation dialog is displayed before applying redaction to ensure users are aware that the redaction process is permanent and irreversible.
+N> A confirmation dialog appears before applying redaction to confirm awareness that the process is permanent and irreversible.
 
 ## AI Detection Accuracy and Manual Review Requirements
 
-The Smart Redaction feature uses AI to detect sensitive information, but manual review is essential. AI detection may not be 100% accurate, and users should verify all detected items before applying permanent redaction. Once applied, the redaction process cannot be reversed. Users should review AI-detected sensitive content carefully, test custom redaction patterns thoroughly before use.
+Smart Redaction uses AI to detect sensitive information, and manual review is required. Detection may not be 100% accurate. Verify all detected items before applying permanent redaction. Test custom redaction patterns thoroughly before use.
 
 ## See also
 

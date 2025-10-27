@@ -26,8 +26,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(@Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Applying freeze rows to the sheet by specifying a cell
@@ -36,13 +35,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Set first visible row in the bottom pane
 	worksheet.FirstVisibleRow = 3;
 
-	//Saving the workbook as stream
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
+	//Saving the workbook
+	workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
@@ -96,8 +90,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(@Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Applying freeze columns to the sheet by specifying a cell
@@ -106,13 +99,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Set first visible column in the right pane
 	worksheet.FirstVisibleColumn = 4;
 
-	//Saving the workbook as stream
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
+	//Saving the workbook
+	workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
@@ -168,20 +156,14 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Unfreeze panes in the worksheet
 	worksheet.RemovePanes();
 
-	//Saving the workbook as stream
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.ReadWrite);
-	workbook.SaveAs(outputStream);
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
+	//Saving the workbook
+	workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
@@ -246,12 +228,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/SplitPanes.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/SplitPanes.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
