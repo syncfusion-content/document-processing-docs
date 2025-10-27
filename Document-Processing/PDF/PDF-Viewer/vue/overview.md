@@ -6,7 +6,7 @@ control: PDF Viewer
 documentation: UG
 ---
 
-# Overview of vue PDF Viewer Component
+# Overview of vue PDF viewer control
 
 The [`Vue PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
 
@@ -87,7 +87,7 @@ export default {
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib",
+      resourceUrl:"https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
     };
   },
 
