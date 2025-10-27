@@ -195,8 +195,8 @@ export default function WholeWordExample() {
 The following text search methods are available in the PDF Viewer,
 
 * [**Search text**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch/#searchtext):- Searches the target text in the PDF document and highlights the occurrences in the pages.
-* [**Search next**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch/#searchnext):- Searches the next occurrence of the searched text from the current occurrence of the PdfViewer.
-* [**Search previous**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch/#searchprevious):- Searches the previous occurrence of the searched text from the current occurrence of the PdfViewer.
+* [**Search next**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch/#searchnext):- Searches the next occurrence of the searched text from the current occurrence of the PDF Viewer.
+* [**Search previous**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch/#searchprevious):- Searches the previous occurrence of the searched text from the current occurrence of the PDF Viewer.
 * [**Cancel text search**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch/#canceltextsearch):- The text search can be canceled and the highlighted occurrences from the PDF Viewer can be removed .
 
 ![Alt text](./images/search.png)

@@ -58,7 +58,7 @@ The following example adds custom options to the context menu.
                 <PdfViewerComponent
                     id="container"
                     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                    resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+                    resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                     documentLoad={documentLoad}
                     customContextMenuSelect={customContextMenuSelect}
                     customContextMenuBeforeOpen={customContextMenuBeforeOpen}
@@ -120,7 +120,7 @@ Use [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/react/documentati
                 <PdfViewerComponent
                     id="container"
                     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                    resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+                    resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                     documentLoad={documentLoad}
                     customContextMenuSelect={customContextMenuSelect}
                     customContextMenuBeforeOpen={customContextMenuBeforeOpen}
@@ -291,7 +291,7 @@ export function App() {
                 <PdfViewerComponent
                     id="container"
                     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                    resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+                    resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                     documentLoad={documentLoad}
                     customContextMenuSelect={customContextMenuSelect}
                     customContextMenuBeforeOpen={customContextMenuBeforeOpen}

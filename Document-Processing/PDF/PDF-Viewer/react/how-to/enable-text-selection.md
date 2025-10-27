@@ -33,7 +33,7 @@ export function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/29.1.33/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         enableTextSelection={false}
         style={{ 'height': '680px' }}
       >
@@ -97,7 +97,7 @@ export class App extends React.Component {
           id="pdfViewer"
           ref={this.pdfViewer}
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          resourceUrl="https://cdn.syncfusion.com/ej2/28.1.33/dist/ej2-pdfviewer-lib"
+          resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
           enableTextSelection={false}
           style={{ height: '640px' }}
         >

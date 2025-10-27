@@ -70,7 +70,7 @@ function App() {
         id="PdfViewer"
         ref={(scope) => { pdfviewer = scope; }}
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         enableDesktopMode={true}
         height="640px"
       >
@@ -129,7 +129,7 @@ function App() {
         id="PdfViewer"
         ref={(scope) => { pdfviewer = scope; }}
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         enableDesktopMode={true}
         enableTextSelection={false}
         height="640px"

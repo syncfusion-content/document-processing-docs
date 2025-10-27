@@ -35,7 +35,7 @@ const App = () => {
             id="PdfViewer"
             enableFormDesigner={false}
             documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-            resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+            resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
             style={{ height: '500px', width: '100%' }}
         >
             <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
@@ -107,7 +107,7 @@ const App = () => {
             ref={(scope) => { pdfviewer = scope; }}
             id="PdfViewer"
             documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-            resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+            resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
             toolbarSettings={{
                 formDesignerToolbarItems: [
                     'TextboxTool',

@@ -17,14 +17,14 @@ AnnotationSelectorSettingsModel
 The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationAnnotationSettingsModel/) defines settings such as border colors, sizes, and shapes, enabling fine-grained control over how annotations are displayed and interacted with.
 
 Steps to configure annotation selector settings
-- Step 1: Create a PdfViewer instance and initialize it.
+- Step 1: Create a PDF Viewer instance and initialize it.
 - Step 2: Set the annotationSelectorSettings property to customize selector behavior.
 
 {% raw %}
 
 ```javascript
 <PdfViewerComponent id="container" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-    resourceUrl="https://cdn.syncfusion.com/ej2/27.1.48/dist/ej2-pdfviewer-lib" style={{ 'height': '640px' }}
+    resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" style={{ 'height': '640px' }}
     annotationSelectorSettings={{
     selectionBorderColor: 'blue',
     resizerBorderColor: 'red',

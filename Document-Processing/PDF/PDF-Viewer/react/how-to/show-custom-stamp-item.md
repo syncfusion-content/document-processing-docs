@@ -74,7 +74,7 @@ class App extends React.Component {
                         ref={this.viewerRef}
                         id="PdfViewer"
                         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                        resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+                        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                         customStampSettings={customStampSettings}
                         style={{ height: '640px' }}
                     >

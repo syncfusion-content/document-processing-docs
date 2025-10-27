@@ -59,7 +59,7 @@ Follow the steps provided in the [getting started](https://ej2.syncfusion.com/ja
                         documentLoad={this.documentLoaded}
                         pageChange={this.onPageChange}
                         documentPath="https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf"
-                        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+                        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                         style={{ 'display': 'block', 'height': '640px' }}>
 
                                 <Inject services={[ Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -190,7 +190,7 @@ enableToolbar={false}
 documentLoad={this.documentLoaded}
 pageChange={this.onPageChange}
 documentPath="https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf"
-resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
 style={{ 'display': 'block', 'height': '640px' }}>
 
         <Inject services={[ Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -575,7 +575,7 @@ class CustomToolbar extends React.Component {
           id="container"
           ref={(v) => (this.viewer = v)}
           enableToolbar={false}
-          resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+          resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
           documentLoad={this.documentLoaded}
           pageChange={this.onPageChange}

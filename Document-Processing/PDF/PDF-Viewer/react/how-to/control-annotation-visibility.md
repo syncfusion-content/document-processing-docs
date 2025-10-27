@@ -41,7 +41,7 @@ function App() {
     <div className='control-section' style={{marginTop: '50px'}} >
     <button onClick={Save}>Download</button>
         <PdfViewerComponent id="container" documentPath="https://cdn.syncfusion.com/content/pdf/annotations-v1.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/28.1.33/dist/ej2-pdfviewer-lib" documentLoad={documentLoaded} style={{ 'height': '640px' }}>
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentLoad={documentLoaded} style={{ 'height': '640px' }}>
             <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner,PageOrganizer]}/>
         </PdfViewerComponent>
     </div>

@@ -60,7 +60,7 @@ function App() {
       id="PdfViewer"
       ref={(scope) => { pdfviewer = scope; }}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       enableHyperlink={false}
       style={{ height: '500px', width: '100%' }}
     >
@@ -166,7 +166,7 @@ function App() {
       id="PdfViewer"
       ref={(scope) => { pdfviewer = scope; }}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       hyperlinkOpenState="NewTab"
       style={{ height: '500px', width: '100%' }}
     >
@@ -276,7 +276,7 @@ function App() {
     <PdfViewerComponent
       id="PdfViewer"
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       hyperlinkClick={hyperlinkClick}
       hyperlinkMouseOver={hyperlinkMouseOver}
       style={{ height: '500px', width: '100%' }}

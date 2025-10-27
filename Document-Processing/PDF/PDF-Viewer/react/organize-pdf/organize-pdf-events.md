@@ -51,7 +51,7 @@ function App() {
           id="PdfViewer"
           ref={(scope) => { pdfviewer = scope; }}
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+          resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
           pageOrganizerSaveAs={(args) => {
             console.log('File Name is' + args.fileName);
             console.log('Document data' + args.downloadDocument);
@@ -119,7 +119,7 @@ function App() {
           id="PdfViewer"
           ref={(scope) => { pdfviewer = scope; }}
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+          resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
           pageOrganizerZoomChanged={(args) => {
             console.log('Previous Zoom Value is' + args.previousZoom);
             console.log('Current Zoom Value is' + args.currentZoom);

@@ -77,7 +77,7 @@ function App() {
             id="PdfViewer"
             ref={(scope) => { pdfviewer = scope; }}
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+            resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
             enableTextSelection={true}
             style={{ height: '500px', width: '100%' }}
         >
@@ -177,7 +177,7 @@ function App() {
         <PdfViewerComponent
             id="PdfViewer"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+            resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
             textSelectionStart={textSelectionStart}
             style={{ height: '500px', width: '100%' }}
         >
@@ -211,7 +211,7 @@ function App() {
         <PdfViewerComponent
             id="PdfViewer"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+            resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
             textSelectionEnd={textSelectionEnd}
             style={{ height: '500px', width: '100%' }}
         >

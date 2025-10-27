@@ -33,7 +33,7 @@ Returns a Promise with:
 
 **pageText:** A concatenated string of plain text extracted from the specified page(s).
 
-### Usage of extractText in Syncfusion PdfViewer Control
+### Usage of extractText in Syncfusion PDF Viewer Control
 Here is an example that demonstrates how to use the extractText method along with event handling:
 
 ```html
@@ -79,7 +79,7 @@ export function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/29.1.33/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ height: '680px' }}
       >
         <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,

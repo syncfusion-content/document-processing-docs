@@ -88,7 +88,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       bookmarkClick={(args) => {
         console.log(`Bookmark clicked: ${args.name}`);
       }}
@@ -123,7 +123,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       toolbarClick={(args) => {
         console.log(`Toolbar item clicked: ${args.name}`);
       }}
@@ -166,7 +166,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       enableFormFieldsValidation={true}
       validateFormFields={(args) => {
         console.log('form field event name:', args.name);
@@ -208,7 +208,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       zoomChange={(args) => {
         console.log(`Zoom changed to: ${args.zoomValue}%`);
       }}
@@ -243,7 +243,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       buttonFieldClick={(args) => {
         console.log(`Button field clicked. Name: ${args.name}`);
       }}
@@ -278,7 +278,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       commentAdd={(args) => {
         console.log(`Comment added. Id: ${args.id}`);
       }}
@@ -313,7 +313,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       commentDelete={(args) => {
         console.log(`Comment deleted. Id: ${args.id}`);
       }}
@@ -348,7 +348,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       commentEdit={(args) => {
         console.log(`Comment edited. Id: ${args.id}`);
       }}
@@ -383,7 +383,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       commentSelect={(args) => {
         console.log(`Comment selected. Id: ${args.id}`);
       }}
@@ -418,7 +418,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       commentStatusChanged={(args) => {
         console.log(`Comment status changed. Id: ${args.id}, Status: ${args.status}`);
       }}
@@ -453,7 +453,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       created={() => {
         console.log('PDF Viewer created');
       }}
@@ -505,7 +505,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       customContextMenuBeforeOpen={(args) => {
         console.log(`Before open context menu at page ${args.name}`);
       }}
@@ -561,7 +561,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       customContextMenuSelect={(args) => {
         console.log(`Context menu item selected: ${args.name}`);
       }}
@@ -599,7 +599,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       documentLoad={(args) => {
         console.log(`Document loaded: page count = ${args.pageData}`);
       }}
@@ -668,7 +668,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       documentUnload={() => {
         console.log('Document unloaded');
       }}
@@ -703,7 +703,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       downloadEnd={(args) => {
         console.log(`Download finished. File name: ${args.fileName}`);
       }}
@@ -738,7 +738,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       downloadStart={() => {
         console.log('Download started');
       }}
@@ -773,7 +773,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       exportFailed={(args) => {
         console.log(`Export failed: ${args.name}`);
       }}
@@ -808,7 +808,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       exportStart={() => {
         console.log('Export started');
       }}
@@ -843,7 +843,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       exportSuccess={() => {
         console.log('Export success');
       }}
@@ -878,7 +878,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       extractTextCompleted={(args) => {
         console.log(`Extracted text length: ${(args.documentTextCollection || '').length}`);
       }}
@@ -913,7 +913,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       hyperlinkClick={(args) => {
         console.log(`Hyperlink clicked: ${args.hyperlink}`);
       }}
@@ -948,7 +948,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       hyperlinkMouseOver={(args) => {
         console.log(`Hyperlink hover at page: ${args.name}`);
       }}
@@ -983,7 +983,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       importFailed={(args) => {
         console.log(`Import failed: ${args.name}`);
       }}
@@ -1018,7 +1018,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       importStart={() => {
         console.log('Import started');
       }}
@@ -1053,7 +1053,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       importSuccess={() => {
         console.log('Import success');
       }}
@@ -1109,7 +1109,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       created={onCreated}
       keyboardCustomCommands={(args) => {
         console.log('Custom command triggered:', args);
@@ -1145,7 +1145,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       moveSignature={(args) => {
         console.log(`Signature moved on page ${args.id}`);
       }}
@@ -1180,7 +1180,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       pageChange={(args) => {
         console.log(`Page changed from ${args.previousPageNumber} to ${args.currentPageNumber}`);
       }}
@@ -1215,7 +1215,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       pageClick={(args) => {
         console.log(`Page ${args.pageNumber} clicked at (${args.x}, ${args.y})`);
       }}
@@ -1250,7 +1250,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       pageMouseover={(args) => {
         console.log(`Mouse over page ${args.name}`);
       }}
@@ -1285,7 +1285,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       pageOrganizerSaveAs={(args) => {
         console.log(`Page organizer save triggered. File name: ${args.downloadDocument}`);
       }}
@@ -1320,7 +1320,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       pageRenderComplete={(args) => {
         console.log(`Page ${args.data} rendering completed.`);
       }}
@@ -1355,7 +1355,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       pageRenderInitiate={(args) => {
         console.log(`Page ${args.jsonData} rendering initiated.`);
       }}
@@ -1390,7 +1390,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       printEnd={() => {
         console.log('Print action completed.');
       }}
@@ -1425,7 +1425,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       printStart={() => {
         console.log('Print action initiated.');
       }}
@@ -1460,7 +1460,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       removeSignature={(args) => {
         console.log(`Signature removed from page ${args.bounds}`);
       }}
@@ -1495,7 +1495,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       resizeSignature={(args) => {
         console.log(`Signature resized on page ${args.currentPosition}`);
       }}
@@ -1530,7 +1530,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       resourcesLoaded={() => {
         console.log('PDFium resources loaded.');
       }}
@@ -1565,7 +1565,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       signaturePropertiesChange={(args) => {
         console.log(`Signature properties changed on page ${args.type}`);
       }}
@@ -1600,7 +1600,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       signatureSelect={(args) => {
         console.log(`Signature selected on page ${args.signature}`);
       }}
@@ -1635,7 +1635,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       signatureUnselect={(args) => {
         console.log(`Signature unselected ${args.signature}`);
       }}
@@ -1670,7 +1670,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       textSearchComplete={() => {
         console.log('Text search completed.');
       }}
@@ -1705,7 +1705,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       textSearchHighlight={(args) => {
         console.log(`Search result ${args.bounds} highlighted.`);
       }}
@@ -1740,7 +1740,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       textSearchStart={(args) => {
         console.log(`Text search started for: "${args.searchText}"`);
       }}
@@ -1775,7 +1775,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       textSelectionEnd={(args) => {
         console.log(`Text selection ended on page ${args.pageIndex}.`);
       }}
@@ -1810,7 +1810,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       textSelectionStart={(args) => {
         console.log(`Text selection started on page ${args.pageIndex}.`);
       }}
@@ -1845,7 +1845,7 @@ function App() {
       id="pdfViewer"
       ref={viewer}
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       thumbnailClick={(args) => {
         console.log(`Thumbnail clicked for page index ${args.pageNumber}.`);
       }}
