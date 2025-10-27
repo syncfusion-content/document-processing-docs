@@ -1,14 +1,14 @@
 ---
-title: How to Import DataTable with Data Types in XlsIO | Syncfusion
-description: Learn how to import a DataTable while preserving data types in the Syncfusion .NET Excel library (XlsIO) with code examples.
+title: How to preserve Leading Zeros in XlsIO Import | Syncfusion
+description: Learn how to preserve leading zeros in string columns when importing a DataTable in Syncfusion's .NET Excel library (XlsIO). Includes code examples for maintaining data types.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to Import DataTable with Data Types in XlsIO?
+# How to preserve Leading Zeros in XlsIO Import?
 
-You can import a DataTable with its data types preserved by setting the final parameter (preserveTypes) to true. This ensures that the native data types (such as integers, dates, and strings) are maintained during import into the Excel worksheet.
+Preserve leading zeros in string columns while importing a DataTable using Syncfusion's .NET Excel library (XlsIO). Excel often treats numeric-looking strings as numbers, removing zeros. To maintain text integrity, set the preserveTypes parameter to true.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
