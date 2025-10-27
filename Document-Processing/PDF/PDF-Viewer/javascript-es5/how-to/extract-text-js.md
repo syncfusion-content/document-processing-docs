@@ -29,7 +29,7 @@ Returns a Promise with:
 - textData: An array of TextDataSettingsModel with details including bounds and page text.
 - pageText: A concatenated string of plain text from the specified page(s).
 
-### Usage of extractText in Syncfusion PdfViewer Control
+### Usage of extractText in Syncfusion PDF Viewer Control
 Here is an example that demonstrates how to use the extractText method along with event handling:
 
 ```html
@@ -41,7 +41,7 @@ Here is an example that demonstrates how to use the extractText method along wit
 
 var viewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  resourceUrl: "https://cdn.syncfusion.com/ej2/29.1.33/dist/ej2-pdfviewer-lib",
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
 });
 viewer.appendTo("#pdfViewer");
 

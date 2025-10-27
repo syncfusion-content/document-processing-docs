@@ -35,7 +35,7 @@ In your JavaScript file, initialize the PDF Viewer with necessary modules includ
 ```js
 let exportObject = null;
 var pdfviewer = new ej.pdfviewer.PdfViewer({
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print,

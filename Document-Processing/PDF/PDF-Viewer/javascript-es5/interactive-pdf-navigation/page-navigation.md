@@ -100,7 +100,7 @@ Also, you can programmatically perform page navigation options as follows.
 
 var viewer = new ej.pdfviewer.PdfViewer ({
   documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-  resourceUrl:'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib'
+  resourceUrl:'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
 });
 
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView,
@@ -137,7 +137,7 @@ document.getElementById('goToPreviousPage').addEventListener('click', () => {
 
 var viewer = new ej.pdfviewer.PdfViewer ({
     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-    resourceUrl:'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib'
+    resourceUrl:'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
 });
 
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView,

@@ -131,7 +131,7 @@ The PDF Viewer supports custom keyboard commands through a `commandManager`, whi
         var viewer = new ej.pdfviewer.PdfViewer({
         //Sets the document path for initial loading
         documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-        resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
 });
 //Inject the dependencies required to render the PDF Viewer
 ej.pdfviewer.PdfViewer.Inject(

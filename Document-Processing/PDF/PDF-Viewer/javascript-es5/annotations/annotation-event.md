@@ -166,7 +166,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     annotationMouseLeave: function (args) {
         console.log('Annotation mouse leave event is triggered for annotation with ID: ' + args.pageIndex);
     }
@@ -214,7 +214,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     annotationMouseover: function (args) {
         console.log('Annotation mouse over event is triggered for annotation with ID: ' + args.annotationId);
     }
@@ -262,7 +262,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     annotationMove: function (args) {
         console.log('Annotation moved. ID: ' + args.annotationId + ' on page ' + args.pageIndex);
     }
@@ -310,7 +310,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     annotationMoving: function (args) {
         console.log('Annotation is being moved. Current Action: ' + args.currentPosition);
     }
@@ -358,7 +358,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     annotationPropertiesChange: function (args) {
         console.log('Annotation properties changed for ID: ' + args.annotationId);
         console.log('isThicknessChanged: ' + args.isThicknessChanged);
@@ -407,7 +407,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     annotationRemove: function (args) {
         console.log('Annotation removed with ID: ' + args.annotationId);
     }
@@ -455,7 +455,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     annotationResize: function (args) {
         console.log('Annotation resized. ID: ' + args.annotationId);
     }
@@ -503,7 +503,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     annotationSelect: function (args) {
         console.log('Annotation selected with ID: ' + args.annotationId);
     }
@@ -551,7 +551,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     annotationUnSelect: function (args) {
         console.log('Annotation unselected with ID: ' + args.annotationId);
     }
@@ -599,7 +599,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     beforeAddFreeText: function (args) {
         console.log('Before adding free text on page: ' + args.pageIndex);
         // Set args.cancel to true to prevent adding the free text annotation
@@ -651,7 +651,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     addSignature: function (args) {
         console.log('Signature added to page: ' + args.pageIndex);
     }
@@ -699,7 +699,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     removeSignature: function (args) {
         console.log('Signature removed from page: ' + args.pageIndex);
     }
@@ -747,7 +747,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     resizeSignature: function (args) {
         console.log('Signature resized on page ' + args.pageIndex);
     }
@@ -795,7 +795,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     signaturePropertiesChange: function (args) {
         console.log('Signature properties changed on page ' + args.pageIndex);
     }
@@ -843,7 +843,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     signatureSelect: function (args) {
         console.log('Signature selected on page ' + args.pageIndex);
     }
@@ -891,7 +891,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     signatureUnselect: function (args) {
         console.log('Signature unselected on page ' + args.pageIndex);
     }

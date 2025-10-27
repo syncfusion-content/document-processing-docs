@@ -31,7 +31,7 @@ ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     enableFormDesigner: false,
     documentPath: 'https://cdn.syncfusion.com/content/pdf/formdesigner.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib'
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
 });
 
 pdfviewer.appendTo('#PdfViewer');
@@ -77,7 +77,7 @@ ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, 
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/formdesigner.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib'
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
 });
 
 pdfviewer.toolbarSettings = {

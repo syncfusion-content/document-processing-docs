@@ -83,7 +83,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     bookmarkClick: function (args) {
         console.log('Bookmark clicked: ' + args.name);
     }
@@ -106,7 +106,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     toolbarClick: function (args) {
         console.log('Toolbar item clicked: ' + args.name);
     }
@@ -138,7 +138,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib'
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
 });
 
 viewer.enableFormFieldsValidation = true;
@@ -170,7 +170,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     zoomChange: function (args) {
         console.log('Zoom changed to: ' + args.zoomValue + '%');
     }
@@ -193,7 +193,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     buttonFieldClick: function (args) {
         console.log('Button field clicked. Name: ' + args.name);
     }
@@ -216,7 +216,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     commentAdd: function (args) {
         console.log('Comment added. Id: ' + args.id);
     }
@@ -239,7 +239,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     commentDelete: function (args) {
         console.log('Comment deleted. Id: ' + args.id);
     }
@@ -262,7 +262,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     commentEdit: function (args) {
         console.log('Comment edited. Id: ' + args.id);
     }
@@ -285,7 +285,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     commentSelect: function (args) {
         console.log('Comment selected. Id: ' + args.id );
     }
@@ -308,7 +308,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     commentStatusChanged: function (args) {
         console.log('Comment status changed. Id: ' + args.id + ', Status: ' + args.status );
     }
@@ -331,7 +331,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     created: function (args) {
         console.log('PDF Viewer created');
     }
@@ -356,7 +356,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     customContextMenuBeforeOpen: function (args) {
         console.log('Before open context menu at page ' + args.name);
     }
@@ -415,7 +415,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     customContextMenuSelect: function (args) {
         console.log('Context menu item selected: ' + args.name);
     }
@@ -457,7 +457,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     textSelectionStart: function (args) {
         console.log('Text selection started on page ' + args.pageIndex + '.');
     }
@@ -502,7 +502,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib'
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
 });
 viewer.appendTo('#pdfViewer');
 viewer.documentUnload = function (args) {
@@ -525,7 +525,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     downloadEnd: function (args) {
         console.log('Download finished. File name: ' + args.fileName);
     }
@@ -548,7 +548,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     downloadStart: function (args) {
         console.log('Download started');
     }
@@ -571,7 +571,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     exportFailed: function (args) {
         console.log('Export failed: ' + args.name);
     }
@@ -595,7 +595,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     exportStart: function (args) {
         console.log('Export started');
     }
@@ -618,7 +618,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     exportSuccess: function (args) {
         console.log('Export success');
     }
@@ -641,7 +641,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     extractTextCompleted: function (args) {
         var text = (args.documentTextCollection || '');
         console.log('Extracted text length: ' + text.length);
@@ -665,7 +665,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     hyperlinkClick: function (args) {
         console.log('Hyperlink clicked: ' + args.hyperlink);
     }
@@ -688,7 +688,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     hyperlinkMouseOver: function (args) {
         console.log('Hyperlink hover at page: ' + args.name);
     }
@@ -712,7 +712,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     importFailed: function (args) {
         console.log('Import failed: ' + args.name);
     }
@@ -736,7 +736,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     importStart: function (args) {
         console.log('Import started');
     }
@@ -760,7 +760,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     importSuccess: function (args) {
         console.log('Import success');
     }
@@ -790,7 +790,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
         documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-        resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib'
+        resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
 });
 viewer.commandManager = {
     keyboardCommand: [
@@ -821,7 +821,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     moveSignature: function (args) {
         console.log('Signature moved on page ' + args.id);
     }
@@ -844,7 +844,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     pageChange: function (args) {
         console.log('Page changed from ' + args.previousPageNumber + ' to ' + args.currentPageNumber);
     }
@@ -867,7 +867,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     pageClick: function (args) {
         console.log('Page ' + args.pageNumber + ' clicked at (' + args.x + ', ' + args.y + ')');
     }
@@ -890,7 +890,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     pageMouseover: function (args) {
         console.log('Mouse over page ' + args.name);
     }
@@ -913,7 +913,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     pageOrganizerSaveAs: function (args) {
         console.log('Page organizer save triggered. File name: ' + args.downloadDocument);
     }
@@ -936,7 +936,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     pageRenderComplete: function (args) {
         console.log('Page ' + args.data + ' rendering completed.');
     }
@@ -959,7 +959,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     pageRenderInitiate: function (args) {
         console.log('Page ' + args.jsonData + ' rendering initiated.');
     }
@@ -982,7 +982,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     printEnd: function (args) {
         console.log('Print action completed.');
     }
@@ -1005,7 +1005,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     printStart: function () {
         console.log('Print action initiated.');
     }
@@ -1028,7 +1028,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     removeSignature: function (args) {
         console.log('Signature removed from page ' + args.bounds);
     }
@@ -1051,7 +1051,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     resizeSignature: function (args) {
         console.log('Signature resized on page ' + args.currentPosition );
     }
@@ -1074,7 +1074,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     resourcesLoaded: function (args) {
         console.log('PDFium resources loaded.');
     }
@@ -1097,7 +1097,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     signaturePropertiesChange: function (args) {
         console.log('Signature properties changed on page ' + args.type );
     }
@@ -1120,7 +1120,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     signatureSelect: function (args) {
         console.log('Signature selected on page ' + args.signature );
     }
@@ -1143,7 +1143,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     signatureUnselect: function (args) {
         console.log('Signature unselected ' + args.signature );
     }
@@ -1166,7 +1166,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     textSearchComplete: function (args) {
         console.log('Text search completed.');
     }
@@ -1189,7 +1189,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     textSearchHighlight: function (args) {
         console.log('Search result ' + args.bounds + ' highlighted.');
     }
@@ -1212,7 +1212,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     textSearchStart: function (args) {
         console.log('Text search started for: "' + args.searchText + '"');
     }
@@ -1235,7 +1235,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     textSelectionEnd: function (args) {
         console.log('Text selection ended on page ' + args.pageIndex );
     }
@@ -1258,7 +1258,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     textSelectionStart: function (args) {
         console.log('Text selection started on page ' + args.pageIndex);
     }
@@ -1281,7 +1281,7 @@ ej.pdfviewer.PdfViewer.Inject(
 );
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     thumbnailClick: function (args) {
         console.log('Thumbnail clicked for page index ' + args.pageNumber + '.');
     }

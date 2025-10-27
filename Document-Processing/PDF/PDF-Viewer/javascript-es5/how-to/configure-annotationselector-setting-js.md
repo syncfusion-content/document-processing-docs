@@ -18,7 +18,7 @@ The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/documentation/a
 
 Steps to configure annotation selector settings
 
-- Step 1: Create a PdfViewer instance and initialize it.
+- Step 1: Create a PDF Viewer instance and initialize it.
 - Step 2: Set the annotationSelectorSettings property to customize selector behavior.
 
 ```js
