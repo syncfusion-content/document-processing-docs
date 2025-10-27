@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Identify the context menu opened in ASP.NET CORE Spreadsheet | Syncfusion
+title: Identify context menu opened in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn here all about how to identify the context menu opened in Syncfusion EJ2 ASP.NET CORE Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Spreadsheet
