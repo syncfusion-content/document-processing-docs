@@ -5068,6 +5068,132 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Adding-transparency-for-annotations/.NET).
 
+## Setting Annotation Intent in PdfFreeTextAnnotation
+
+The [PdfAnnotationIntent.FreeTextTypeWriter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotationIntent.html#fields) value specifies that a `free text annotation` in a PDF should behave like a `typewriter-style input field`. This intent is especially useful for simulating manual typing on forms or documents, enabling users to add clear, typed comments or responses.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page
+    PdfPage page = document.Pages.Add();
+
+    // Define the bounds for the annotation
+    RectangleF bounds = new RectangleF(100, 100, 200, 50);
+
+    // Create a FreeText annotation
+    PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(bounds);
+    // Add content.
+    freeText.Text = "Add Free Text Annotation with Intent";
+    // Set the annotation intent to TypeWriter
+    freeText.AnnotationIntent = PdfAnnotationIntent.FreeTextTypeWriter;
+
+    // Customize appearance
+    freeText.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+    freeText.TextMarkupColor = Color.Black;
+    freeText.BorderColor = Color.Gray;
+    freeText.Color = Color.LightYellow;
+
+    // Add the annotation to the page
+    page.Annotations.Add(freeText);
+
+    // Save the document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page
+    PdfPage page = document.Pages.Add();
+
+    // Define the bounds for the annotation
+    RectangleF bounds = new RectangleF(100, 100, 200, 50);
+
+    // Create a FreeText annotation
+    PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(bounds);
+    // Add content.
+    freeText.Text = "Add Free Text Annotation with Intent";
+    // Set the annotation intent to TypeWriter
+    freeText.AnnotationIntent = PdfAnnotationIntent.FreeTextTypeWriter;
+
+    // Customize appearance
+    freeText.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+    freeText.TextMarkupColor = Color.Black;
+    freeText.BorderColor = Color.Gray;
+    freeText.Color = Color.LightYellow;
+
+    // Add the annotation to the page
+    page.Annotations.Add(freeText);
+
+    // Save the document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
+
+' Create a new PDF document
+Using document As New PdfDocument()
+
+    ' Add a page
+    Dim page As PdfPage = document.Pages.Add()
+
+    ' Define the bounds for the annotation
+    Dim bounds As New RectangleF(100, 100, 200, 50)
+
+    ' Create a FreeText annotation
+    Dim freeText As New PdfFreeTextAnnotation(bounds)
+
+    ' Add content
+    freeText.Text = "Add Free Text Annotation with Intent"
+
+    ' Set the annotation intent to TypeWriter
+    freeText.AnnotationIntent = PdfAnnotationIntent.FreeTextTypeWriter
+
+    ' Customize appearance
+    freeText.Font = New PdfStandardFont(PdfFontFamily.Helvetica, 12)
+    freeText.TextMarkupColor = Color.Black
+    freeText.BorderColor = Color.Gray
+    freeText.Color = Color.LightYellow
+
+    ' Add the annotation to the page
+    page.Annotations.Add(freeText)
+
+    ' Save the document
+    document.Save("Output.pdf")
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Adding comments and review status to the PDF annotation
 
 The PDF annotations may have an author-specific state associated with them. The state is not specified in the annotation itself, but it represents a separate text annotation ([Popup Annotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfPopupAnnotation.html)).
