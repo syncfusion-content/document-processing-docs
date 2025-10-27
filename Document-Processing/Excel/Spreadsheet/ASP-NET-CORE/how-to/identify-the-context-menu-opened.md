@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Identify the context menu opened in EJ2 ASP.NET CORE Spreadsheet control | Syncfusion
+title: Identify the context menu opened in ASP.NET CORE Spreadsheet | Syncfusion
 description: Learn here all about how to identify the context menu opened in Syncfusion EJ2 ASP.NET CORE Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-## Identify the context menu opened in ASP.NET Core Spreadsheet control
+# Identify the context menu opened in ASP.NET Core Spreadsheet control
 
 The Spreadsheet includes several context menus that will open and display depending on the action. When you right-click on a cell, for example, a context menu with options related to the cell element appears.
 

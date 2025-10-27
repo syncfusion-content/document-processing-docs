@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Keyboard Shortcuts And Navigation in ASP.NET Core Spreadsheet Control
+# Keyboard Shortcuts And Navigation in ASP.NET MVC Spreadsheet Control
 
 The keyboard shortcuts supported in the spreadsheet are,
 
