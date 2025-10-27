@@ -193,5 +193,5 @@ Event arguments:
 
 ## Related event documentation
 
-- Annotation events: [Annotation events](../annotation/annotation-event.md)
-- Form designer events: [Form field events](../form-designer/form-field-events.md)
+- Annotation events: [Annotation events](../annotation/annotation-event)
+- Form designer events: [Form field events](../form-designer/form-field-events)

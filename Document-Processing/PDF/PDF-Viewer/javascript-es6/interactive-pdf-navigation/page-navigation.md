@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Navigation in TypeScript PDF Viewer control
 
-The ASP.NET Core PDF Viewer supports different internal and external navigations.
+The TypeScript PDF Viewer supports different internal and external navigations.
 
 ## Toolbar page navigation option
 

@@ -108,7 +108,7 @@ Refer the [Getting Started with Vue3](https://help.syncfusion.com/document-proce
 *[`Form Fields`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/form-designer/create-fillable-pdf-forms/create-programmatically) - Form filling and form designing can be done.
 *[`Signature`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/signature-annotation) - Hand-written and digital signatures are allowed.
 *[`Toolbar`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/toolbar) - Built-in-toolbar and custom toolbars to perform user interaction of PDF Viewer functionalities.
-*[`Navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/navigation) - Easy navigation with the help of bookmarks, thumbnails, hyperlinks, and table of contents.
+*[`Navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interactive-pdf-navigation/page-navigation) - Easy navigation with the help of bookmarks, thumbnails, hyperlinks, and table of contents.
 *[`Magnification`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/magnification) - Fit to page, fit to width, and automatic (fits to the visible area).
 *[`Search`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/text-search) - Search a text easily across the PDF document.
 *[`Core Interactions`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interaction-mode) - Allows scrolling, zooming, panning, selection, and page navigation.
