@@ -1,12 +1,12 @@
 ---
-title: How to preserve Leading Zeros in XlsIO Import | Syncfusion
+title: How to preserve leading zeros when importing data to Excel | Syncfusion
 description: Learn how to preserve leading zeros in string columns when importing a DataTable in Syncfusion's .NET Excel library (XlsIO). Includes code examples for maintaining data types.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to preserve Leading Zeros in XlsIO Import?
+# How to preserve leading zeros when importing data to Excel?
 
 Preserve leading zeros in string columns while importing a DataTable using Syncfusion's .NET Excel library (XlsIO). Excel often treats numeric-looking strings as numbers, removing zeros. To maintain text integrity, set the preserveTypes parameter to true.
 
