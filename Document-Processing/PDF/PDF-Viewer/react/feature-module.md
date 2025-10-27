@@ -14,18 +14,18 @@ The PDF Viewer features are segregated into individual feature-wise modules to e
 
 The available PDF Viewer modules are:
 
-* [**Toolbar**](./toolbar-customization):- Built-in toolbar for better user interaction.
-* [**Magnification**](./magnification.md):- Perform zooming operation for better viewing experience.
-* [**Navigation**](./interactive-pdf-navigation/page-navigation.md):- Easy navigation across the PDF pages.
-* [**LinkAnnotation**](./interactive-pdf-navigation/table-of-content-navigation.md):- Easy navigation within and outside of the PDF document.
-* [**ThumbnailView**](./interactive-pdf-navigation/page-thumbnail-navigation.md):- Easy navigation with in the PDF document.
-* [**BookmarkView**](./interactive-pdf-navigation/bookmark-navigation.md):- Easy navigation based on the bookmark content of the PDF document.
-* [**TextSelection**](./textselection.md):- Select and copy text from a PDF file.
-* [**TextSearch**](./text-search.md):- Search a text easily across the PDF document.
-* [**Print**](./print.md):- Print the entire document or a specific page directly from the browser.
-* [**Annotation**](./annotations/text-markup-annotation.md):- Annotations can be added or edited in the PDF document.
-* [**FormFields**](./form-designer/create-programmatically.md):- Preserve the form fields in the PDF document.
-* [**FormDesigner**](./form-designer/create-programmatically.md):- Form fields can be added or edited in the PDF document.
+* [**Toolbar**](./toolbar-customization/annotation-toolbar-customization): Built-in toolbar for user interaction.
+* [**Magnification**](./magnification): Perform zoom operations for a better viewing experience.
+* [**Navigation**](./interactive-pdf-navigation/page-navigation): Navigate across pages.
+* [**LinkAnnotation**](./interactive-pdf-navigation/table-of-content-navigation): Navigate within the document or to external destinations via hyperlinks.
+* [**ThumbnailView**](./interactive-pdf-navigation/page-thumbnail-navigation): Navigate within the document using page thumbnails.
+* [**BookmarkView**](./interactive-pdf-navigation/bookmark-navigation): Navigate using document bookmarks (table of contents).
+* [**TextSelection**](./textselection): Select and copy text from the document.
+* [**TextSearch**](./text-search): Search for text across the document.
+* [**Print**](./print): Print the entire document or specific pages directly from the browser.
+* [**Annotation**](./annotations/text-markup-annotation): Add and edit annotations.
+* [**FormFields**](./form-designer/create-programmatically): Work with form fields in the document.
+* [**FormDesigner**](./form-designer/create-programmatically): Add or edit form fields in the document.
 
 >In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a PDF Viewer instance.
 Refer to the following table.

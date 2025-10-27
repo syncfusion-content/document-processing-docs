@@ -26,3 +26,14 @@ The Organize Pages panel supports the following actions:
 * **Save updates**: Review changes in real time and use **Save** or **Save As** to download the revised document.
 
 After completing the changes, apply them by selecting **Save** to overwrite the current document or **Save As** to download a new copy that retains the updated page order.
+
+For a full guide to Organize Pages in React, see the feature landing page: [Organize pages in React PDF Viewer](./organize-pdf).
+
+See also:
+
+- [UI interactions for Organize Pages](./organize-pdf/ui-interactions-organize-page)
+- [Toolbar items for Organize Pages](./organize-pdf/toolbar-organize-page)
+- [Programmatic support for Organize Pages](./organize-pdf/programmatic-support-for-organize-page)
+- [Organize Pages events](./organize-pdf/organize-pdf-events)
+- [Organize Pages in mobile view](./organize-pdf/organize-page-mobile-view)
+

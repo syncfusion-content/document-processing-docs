@@ -151,6 +151,6 @@ root.render(<App />);
 
 ## Related event documentation
 
-- Overall Viewer events: [Event](../event.md)
-- Annotation events: [Annotation events](../annotations/annotation-event.md)
-- Form designer events: [Form field events](../form-designer/form-field-events.md)
+- Overall Viewer events: [Event](../events)
+- Annotation events: [Annotation events](../annotations/annotation-event)
+- Form designer events: [Form field events](../form-designer/form-field-events)
