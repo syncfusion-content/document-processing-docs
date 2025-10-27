@@ -63,7 +63,7 @@ Add CSS references needed for PDF Viewer in `style` section of the `App.vue` fil
 ```
 ### Add PDF Viewer component
 
-Add the Vue PDF Viewer by using `ej-pdfviewer` selector in template section of the `App.vue` file.
+Add the Vue PDF Viewer by using `ejs-pdfviewer` selector in template section of the `App.vue` file.
 
 ```
 <template>
