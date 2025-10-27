@@ -1,4 +1,4 @@
-node('content')
+node('Maui')
 { 
 timestamps
   {
