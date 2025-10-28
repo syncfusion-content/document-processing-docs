@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with TypeScript PDF Viewer (server-backed) | Syncfusion
-description: Learn how to set up and use the Syncfusion TypeScript PDF Viewer in server-backed mode using the EJ2 quickstart, including module injection and web service configuration.
+title: Getting Started with PDF Viewer in TypeScript | Syncfusion
+description: Set up and use Syncfusion's TypeScript PDF Viewer in server-backed mode with EJ2 quickstart, module injection, and web service configuration.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
