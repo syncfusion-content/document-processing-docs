@@ -17,7 +17,7 @@ The available PDF Viewer modules are:
 * [**Toolbar**](./toolbar-customization/annotation-toolbar-customization): Built-in toolbar for user interaction.
 * [**Magnification**](./magnification): Perform zoom operations for a better viewing experience.
 * [**Navigation**](./interactive-pdf-navigation/page-navigation): Navigate across pages.
-* [**LinkAnnotation**](./interactive-pdf-navigation/table-of-content-navigation): Navigate within the document or to external destinations via hyperlinks.
+* [**LinkAnnotation**](./interactive-pdf-navigation/hyperlink-navigation): Navigate within the document or to external destinations via hyperlinks.
 * [**ThumbnailView**](./interactive-pdf-navigation/page-thumbnail-navigation): Navigate within the document using page thumbnails.
 * [**BookmarkView**](./interactive-pdf-navigation/bookmark-navigation): Navigate using document bookmarks (table of contents).
 * [**TextSelection**](./textselection): Select and copy text from the document.
