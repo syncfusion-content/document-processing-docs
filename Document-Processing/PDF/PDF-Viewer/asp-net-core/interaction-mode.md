@@ -43,13 +43,13 @@ In this mode, users can select and copy text in the loaded PDF document. Panning
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/selection.png)
+![Alt text](./images/selection.png)
 
 ## Panning mode
 
 In this mode, panning and touch-based scrolling are enabled, while text selection is disabled.
 
-![Alt text](../images/pan.png)
+![Alt text](./images/pan.png)
 
 Switch the interaction mode of the PDF Viewer using the following example:
 

@@ -188,6 +188,6 @@ The following example demonstrates how to use these events:
 
 ## See also
 
-- [Bookmark navigation](./bookmark-navigation.md)
-- [Page navigation](./page-navigation.md)
-- [Page thumbnail navigation](./page-thumbnail-navigation.md)
+- [Bookmark navigation](./bookmark-navigation)
+- [Page navigation](./page-navigation)
+- [Page thumbnail navigation](./page-thumbnail-navigation)

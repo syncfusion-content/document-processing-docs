@@ -137,4 +137,4 @@ Also, you can programmatically perform page navigation options as follows.
 ## See also
 
 * [Toolbar items](../toolbar-customization/)
-* [Feature Modules](../feature-module.md)
+* [Feature Modules](../feature-module)

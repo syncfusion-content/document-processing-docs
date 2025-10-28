@@ -1343,7 +1343,7 @@ The [keyboardCustomCommands](https://help.syncfusion.com/cr/aspnetcore-js2/syncf
 When it triggers
 - After you register gestures in commandManager.keyboardCommand. For example, when you press Shift + Alt + G or Shift + Alt + H, the event gets triggered. Just like this, you can handle custom keyboard shortcuts.
 
-Refer here for additional details about adding your own shortcut keys and handling them: see [Keyboard interaction](./accessibility.md#keyboard-interaction).
+Refer here for additional details about adding your own shortcut keys and handling them: see [Keyboard interaction](./accessibility#keyboard-interaction).
 Example:
 
 {% tabs %}

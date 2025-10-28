@@ -51,7 +51,7 @@ Enable or disable page navigation using the following example:
 {% endtabs %}
 
 
-![Toolbar navigation options in the PDF Viewer](../images/navigation.png)
+![Toolbar navigation options in the PDF Viewer](./images/navigation.png)
 
 ## Bookmark navigation
 
@@ -84,7 +84,7 @@ Enable or disable bookmark navigation using the following example:
 {% endhighlight %}
 {% endtabs %}
 
-![Bookmark panel in the PDF Viewer](../images/bookmark.png)
+![Bookmark panel in the PDF Viewer](./images/bookmark.png)
 
 ## Thumbnail navigation
 
@@ -117,13 +117,13 @@ Enable or disable thumbnail navigation using the following example:
 {% endhighlight %}
 {% endtabs %}
 
-![Thumbnail panel in the PDF Viewer](../images/thumbnail.png)
+![Thumbnail panel in the PDF Viewer](./images/thumbnail.png)
 
 ## Hyperlink navigation
 
 Hyperlink navigation enables navigation to URLs (website links) within a PDF file.
 
-![Hyperlink navigation in the PDF Viewer](../images/link.png)
+![Hyperlink navigation in the PDF Viewer](./images/link.png)
 
 ## Table of contents navigation
 
@@ -185,7 +185,7 @@ Change the hyperlink open state using the following example:
 {% endhighlight %}
 {% endtabs %}
 
-![Table of contents panel in the PDF Viewer](../images/toc.png)
+![Table of contents panel in the PDF Viewer](./images/toc.png)
 
 ## See also
 
