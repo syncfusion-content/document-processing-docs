@@ -1,4 +1,3 @@
-
 ---
 title: Convert an Excel document to PDF in Blazor | Syncfusion
 description: Convert an Excel document to PDF in blazor using Syncfusion Blazor Excel library (XlsIO) without Microsoft Excel or interop dependencies.
@@ -180,7 +179,8 @@ By executing the program, you will get the **PDF document** as follows.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion Excel library (XlsIO) features.
 
-An online sample link to [convert an Excel document to PDF](https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent) in Blazor.
+An online sample link to <a href="https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent">convert an Excel document to PDF</a> in Blazor.
+
 
 ## Excel to PDF in Blazor Standalone App
 
@@ -351,7 +351,9 @@ By executing the program, you will get the **PDF document** as follows.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion Excel library (XlsIO) features.
 
-An online sample link to [convert an Excel document to PDF](https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent) in Blazor.
+An online sample link to <a href="https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent">convert an Excel document to PDF</a> in Blazor.
+
+
 
 ## Excel to PDF in .NET MAUI Blazor Hybrid App
 
@@ -467,4 +469,5 @@ By executing the program, you will get the **PDF document** as follows.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion Excel library (XlsIO) features.
 
-An online sample link to [convert an Excel document to PDF](https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent) in Blazor.
+An online sample link to <a href="https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent">convert an Excel document to PDF</a> in Blazor.
+

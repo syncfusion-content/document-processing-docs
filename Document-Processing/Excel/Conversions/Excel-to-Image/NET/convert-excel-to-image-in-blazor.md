@@ -1,4 +1,3 @@
-
 ---
 title: Convert Excel to Image in Blazor Server Web application | Syncfusion
 description: Learn how to convert Excel to Image in Blazor Server Web application using .NET Core Excel library (XlsIO) without Microsoft Excel or interop dependencies.
