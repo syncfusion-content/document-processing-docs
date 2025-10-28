@@ -1,19 +1,18 @@
 ---
 layout: post
-title: Overlapped annotations in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Overlapped annotations in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Get overlapped annotations on click in JavaScript PDF Viewer | Syncfusion
+description: Learn how to get overlapped annotations on click using the annotationSelect event in the Syncfusion JavaScript PDF Viewer.
 platform: document-processing
-control: Overlapped annotations
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overlapped annotations in Javascript Pdfviewer control
+# Get overlapped annotations on click in JavaScript PDF Viewer
 
-To get the overlapped annotations on a mouse click in a Syncfusion PDF Viewer, you can use the [**annotationCollection**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationcollection) property of [**annotationSelect**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselect) event.This event is triggered when the user clicks on an annotation in the PDF document.
+Use the [annotationCollection](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationcollection) property of the [annotationSelect](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselect) event to get overlapped annotations when the user clicks an annotation.
 
-Here is an example of how you can use the [**annotationSelect**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselect) event to get the overlapped annotations on a mouse click in a Syncfusion PDF Viewer:
+The following example shows how to access overlapped annotations on click:
 
 ```javascript
 
@@ -24,4 +23,4 @@ viewer.annotationSelect =(args) =>{
 
 ```
 
-Find the sample [how to get the overlapped annotations on mouse click](https://stackblitz.com/edit/a93cem-lprlap?devtoolsheight=33&file=index.js)
+Find the sample: [Get overlapped annotations on click](https://stackblitz.com/edit/a93cem-lprlap?devtoolsheight=33&file=index.js)
