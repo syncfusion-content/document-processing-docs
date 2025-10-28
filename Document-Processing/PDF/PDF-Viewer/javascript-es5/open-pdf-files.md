@@ -1,33 +1,30 @@
 ---
 layout: post
-title: Open PDF files Javascript Pdfviewer control | Syncfusion
-description: This page helps you to learn about how to load PDF files from various locations in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Open PDF files in JavaScript PDF Viewer | Syncfusion
+description: Learn how to load PDF files in the Syncfusion JavaScript PDF Viewer from URLs, base64 strings, and databases by configuring the required server-backed services.
 platform: document-processing
-control: Open PDF files
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF files
+# Open PDF files in JavaScript PDF Viewer
 
-You might need to open and view the PDF files from various location. In this section, you can find the information about how to open PDF files from URL, database and as base64 string.
+Load documents into the PDF Viewer from hosted URLs, base64 strings, or database storage. The following sections outline each scenario and the configuration required for server-backed viewing.
 
-## Opening a PDF from URL
+## Open a PDF from a URL
 
-If you have your PDF files in the web, you can open it in the viewer using URL.
+Use this approach when the PDF file is hosted on a web server.
 
-**Step 1:** Create a Simple PDF Viewer Sample in JavaScript
+**Step 1:** Create a JavaScript PDF Viewer sample
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF viewer sample in JavaScript. This will give you a basic setup of the PDF viewer component.
+Follow the [JavaScript getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to scaffold a basic PDF Viewer application.
 
-**Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 2:** Update the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
-
-2. Open the `PdfViewerController.cs` file in your web service project.
-
-3. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to open it in the viewer using URL
+1. Create a web service project in .NET Core 3.0 or later. Refer to [How to create a PDF Viewer web service in .NET Core](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for guidance.
+2. Open the `PdfViewerController.cs` file.
+3. Modify the [Load](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to resolve remote URLs when `isFileName` is `true`.
 
 ```csharp
 
@@ -75,9 +72,9 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
 
 ```
 
-**Step 3:**  Set the PDF Viewer Properties in React PDF viewer component
+**Step 3:** Configure the PDF Viewer in the JavaScript application
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load.
+Update the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) with the hosted web service endpoint (replace `https://localhost:44396/pdfviewer` with your server URL) and set `documentPath` to the PDF file to load.
 
 ```javascript
 
@@ -98,15 +95,15 @@ viewer.appendTo('#pdfViewer');
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20file%20from%20URL)
 
-## Opening a PDF from base64 data
+## Open a PDF from base64 data
 
-The following steps explains how the PDF file can be loaded in PDF Viewer as base64 string.
+Convert PDFs to base64 strings when you need to stream content directly from an API response or store it inline.
 
-**Step 1:** Create a Simple PDF Viewer Sample in Angular
+**Step 1:** Create a JavaScript PDF Viewer sample
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
+Use the [JavaScript getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to initialize the PDF Viewer project.
 
-**Step 2:** Use the following code snippet to load PDF document using base64 string.
+**Step 2:** Load the document by passing a base64 string to the `load` method.
 
 ```
 <button id='load'>LoadDocumentFromBase64</button>
@@ -121,20 +118,18 @@ document.getElementById('load').addEventListener('click', () => {
 ```
 [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20file%20from%20base64%20string/Web%20Service)
 
-## Opening a PDF from database
+## Open a PDF from a database
 
-To load a PDF file from SQL Server database in a PDF Viewer, you can follow the steps below
+Retrieve PDF files stored in SQL Server by extending the server-backed web service.
 
-**Step 1:** Create a Simple PDF Viewer Sample in JavaScript
+**Step 1:** Create a JavaScript PDF Viewer sample
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF viewer sample in JavaScript. This will give you a basic setup of the PDF viewer component.
+Follow the [JavaScript getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to configure the client application.
 
-**Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 2:** Update the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
-
-2. Open the `PdfViewerController.cs` file in your web service project.
-
+1. Create a web service project in .NET Core 3.0 or later. Refer to [How to create a PDF Viewer web service in .NET Core](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for detailed steps.
+2. Open the `PdfViewerController.cs` file.
 3. Import the required namespaces at the top of the file:
 
 ```csharp
@@ -142,7 +137,7 @@ using System.IO;
 using System.Data.SqlClient;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign configuration values to these fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -157,7 +152,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to open it in the viewer using URL
+5. Modify the [Load](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to stream the PDF from SQL Server when `isFileName` is `true`.
 
 ```csharp
 
@@ -224,8 +219,8 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
 }
 ```
 
-N> Replace **Your Connection string from SQL server** with the actual connection string for your SQL Server database
+N> Replace **Your connection string for SQL server** with the actual connection string for your SQL Server database.
 
-N> The **System.Data.SqlClient** package must be installed in your application to use the previous code example. You need to modify the connectionString variable in the previous code example as per the connection string of your database.
+N> Install the **System.Data.SqlClient** package and update the `connectionString` value to match your environment before running the sample.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-database)
