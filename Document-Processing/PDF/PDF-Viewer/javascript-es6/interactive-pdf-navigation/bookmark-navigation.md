@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigation in TypeScript PDF Viewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion TypeScript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Bookmark Navigation in TypeScript PDF Viewer | Syncfusion
+description: Learn how to use bookmarks for quick navigation in the Syncfusion TypeScript PDF Viewer control, enhancing user experience and accessibility.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -75,5 +75,5 @@ document.getElementById('getBookmarks').addEventListener('click', () => {
 
 ## See also
 
-* [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/toolbar/)
-* [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/feature-module/)
+* [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/toolbar)
+* [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/feature-module)

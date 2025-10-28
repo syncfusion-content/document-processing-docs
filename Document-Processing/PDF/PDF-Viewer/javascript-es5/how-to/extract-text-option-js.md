@@ -1,18 +1,15 @@
 ---
 layout: post
-title: Extract Text Option in Syncfusion Javascript Pdfviewer Control | Syncfusion
-description: Learn about the `extractTextOption` in Syncfusion #Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Configure extractTextOption in JavaScript PDF Viewer | Syncfusion
+description: Learn how to use the extractTextOption property in the Syncfusion JavaScript PDF Viewer to control text extraction and memory usage.
 platform: document-processing
-control: Extract Text Option
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
+# Configure extractTextOption in JavaScript PDF Viewer
 
-# Extract Text Option in Syncfusion Javascript Pdfviewer Control
-
-The `extractTextOption` property in the Syncfusion PdfViewer control allows you to optimize memory usage by controlling the level of text extraction. This setting influences the data returned in the `extractTextCompleted` event. You can select one of the following options to determine the kind of text extraction and layout information to retrieve.
+The `extractTextOption` property controls how text is extracted and optimizes memory usage. It also affects the data returned in the `extractTextCompleted` event. Choose one of the following options to determine the text and layout data to retrieve.
 
 ### Available Options:
 
@@ -30,7 +27,7 @@ The following example demonstrates how to configure the `extractTextOption` prop
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  resourceUrl: "https://cdn.syncfusion.com/ej2/29.1.33/dist/ej2-pdfviewer-lib",
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
   ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -48,6 +45,6 @@ ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearc
 
 **extractTextOption.None:** This option does not extract or return any text or layout information. It is used to optimize memory usage when no text extraction is necessary. This setting is only relevant for the `extractTextCompleted` event and cannot be used with the `ExtractText` method.
 
-N> Text Search: When using the ` extractTextOption.None` and `extractTextOption.TextOnly` option, the findText method will not work. Instead, you should use the findTextAsync method to perform text searches asynchronously.
+N> Text search: When using the `extractTextOption.TextOnly` or `extractTextOption.None` options, the `findText` method is unavailable. Use the `findTextAsync` method to perform text searches asynchronously.
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to)
+[View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to)
