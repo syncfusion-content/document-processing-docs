@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Customize context menu in | Syncfusion
-description: Learn here all about Customize context menu in Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Customize the context menu in React PDF Viewer | Syncfusion
+description: Learn how to add and customize custom context menu options in the React PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-#  Customize context menu in React Pdfviewer component
+# Customize the context menu in PDF Viewer
 
-PDF Viewer allows you to add custom option in context menu. It can be achieved by using the `addCustomMenu()` method and custom action is defined using the `customContextMenuSelect()`method.
+PDF Viewer supports adding custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#addcustommenu) method. Define actions for custom items with the [customContextMenuSelect()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#customcontextMenuselect) method.
 
-### Add Custom Option
+### Add a custom option
 
-The following code shows how to add custom option in context menu.
+The following example adds custom options to the context menu.
 
 ```js
    export function App() {
@@ -58,7 +58,7 @@ The following code shows how to add custom option in context menu.
                 <PdfViewerComponent
                     id="container"
                     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                    resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+                    resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                     documentLoad={documentLoad}
                     customContextMenuSelect={customContextMenuSelect}
                     customContextMenuBeforeOpen={customContextMenuBeforeOpen}
@@ -74,9 +74,9 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 ```
 
-### Customize custom option in context menu
+#### Show or hide custom items before opening
 
-The PDF Viewer feature enables customization of custom options and the ability to toggle the display of the default context menu. When the addCustomMenu parameter is set to `true`, the default menu is hidden; conversely, when it is set to `false`, the default menu items are displayed.
+Use [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#customcontextMenubeforeopen) to hide or show custom options dynamically.
 
 ```js
  export function App() {
@@ -120,7 +120,7 @@ The PDF Viewer feature enables customization of custom options and the ability t
                 <PdfViewerComponent
                     id="container"
                     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                    resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+                    resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                     documentLoad={documentLoad}
                     customContextMenuSelect={customContextMenuSelect}
                     customContextMenuBeforeOpen={customContextMenuBeforeOpen}
@@ -181,7 +181,7 @@ export function App() {
             case 'search_in_google':
                 for (var i = 0; i < viewer.textSelectionModule.selectionRangeArray.length; i++) {
                     var content = viewer.textSelectionModule.selectionRangeArray[i].textContent;
-                    if ((viewer.textSelectionModule.isTextSelection) && (/\S/.test(content))) {
+                    if ((viewer.textSelectionModule.isTextSelection) && (\/\S\/.test(content))) {
                         window.open('http://google.com/search?q=' + content);
                     }
                 }
@@ -291,7 +291,7 @@ export function App() {
                 <PdfViewerComponent
                     id="container"
                     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                    resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+                    resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                     documentLoad={documentLoad}
                     customContextMenuSelect={customContextMenuSelect}
                     customContextMenuBeforeOpen={customContextMenuBeforeOpen}
@@ -306,7 +306,7 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 ```
-The following is the output of custom context menu with customization.
+The following is the output of the custom context menu with customization.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

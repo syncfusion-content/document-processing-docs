@@ -31,15 +31,15 @@ The `printOptions` contain three properties, as described below.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/print-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/print-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/print-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/print-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/print-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/print-cs2" %}
 
 ## Disable printing
 
@@ -49,15 +49,15 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/print-cs3/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/print-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/print-cs3/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/print-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/print-cs3" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/print-cs3" %}
 
 ## Limitations
 

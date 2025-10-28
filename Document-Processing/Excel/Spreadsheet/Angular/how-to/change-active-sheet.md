@@ -15,12 +15,12 @@ The following code example shows how to set the active sheet when importing an E
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/change-active-sheet-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/change-active-sheet-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/change-active-sheet-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/change-active-sheet-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/change-active-sheet-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/change-active-sheet-cs1" %}
