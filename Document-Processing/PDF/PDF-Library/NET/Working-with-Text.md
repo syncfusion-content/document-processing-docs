@@ -798,6 +798,166 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Measure-tilting-space-in-PDF/.NET).
 
+## Unit conversion in text layout
+
+The [PdfUnitConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfUnitConvertor.html) class is used to accurately position and layout paragraph text within a PDF document. By converting measurements from inches to points, it ensures consistent margins and precise placement of content.
+
+This example demonstrates how to use converted units to accurately position and format paragraph text within a PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page
+    PdfPage page = document.Pages.Add();
+
+    // Initialize unit converter
+    PdfUnitConverter converter = new PdfUnitConverter();
+
+    // Convert margins from inches to points
+    float margin = converter.ConvertUnits(1f, PdfGraphicsUnit.Inch, PdfGraphicsUnit.Point);
+
+    // Define text bounds to fill the page with margins
+    RectangleF textBounds = new RectangleF(
+        margin,
+        margin,
+        page.Graphics.ClientSize.Width - 2 * margin,
+        page.Graphics.ClientSize.Height - 2 * margin
+    );
+
+    // Define font and paragraph text
+    PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 14);
+
+    string paragraphText = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
+
+    // Create text element and layout format
+    PdfTextElement textElement = new PdfTextElement(paragraphText, font, PdfBrushes.Black);
+
+    PdfLayoutFormat layoutFormat = new PdfLayoutFormat
+    {
+        Break = PdfLayoutBreakType.FitPage,
+        Layout = PdfLayoutType.Paginate
+    };
+
+    // Draw the paragraph text within the bounds
+    textElement.Draw(page, textBounds, layoutFormat);
+
+    //Save the document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Drawing;
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page
+    PdfPage page = document.Pages.Add();
+
+    // Initialize unit converter
+    PdfUnitConverter converter = new PdfUnitConverter();
+
+    // Convert margins from inches to points
+    float margin = converter.ConvertUnits(1f, PdfGraphicsUnit.Inch, PdfGraphicsUnit.Point);
+
+    // Define text bounds to fill the page with margins
+    RectangleF textBounds = new RectangleF(
+        margin,
+        margin,
+        page.Graphics.ClientSize.Width - 2 * margin,
+        page.Graphics.ClientSize.Height - 2 * margin
+    );
+
+    // Define font and paragraph text
+    PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 14);
+
+    string paragraphText = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
+
+    // Create text element and layout format
+    PdfTextElement textElement = new PdfTextElement(paragraphText, font, PdfBrushes.Black);
+
+    PdfLayoutFormat layoutFormat = new PdfLayoutFormat
+    {
+        Break = PdfLayoutBreakType.FitPage,
+        Layout = PdfLayoutType.Paginate
+    };
+
+    // Draw the paragraph text within the bounds
+    textElement.Draw(page, textBounds, layoutFormat);
+
+    //Save the document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
+
+Module Program
+    Sub Main()
+        ' Create a new PDF document
+        Using document As New PdfDocument()
+
+            ' Add a page
+            Dim page As PdfPage = document.Pages.Add()
+
+            ' Initialize unit converter
+            Dim converter As New PdfUnitConverter()
+
+            ' Convert 1 inch margin to points
+            Dim margin As Single = converter.ConvertUnits(1.0F, PdfGraphicsUnit.Inch, PdfGraphicsUnit.Point)
+
+            ' Define text bounds to fill the page with margins
+            Dim textBounds As New RectangleF(
+                margin,
+                margin,
+                page.Graphics.ClientSize.Width - 2 * margin,
+                page.Graphics.ClientSize.Height - 2 * margin
+            )
+
+            ' Define font and paragraph text
+            Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.TimesRoman, 14)
+            Dim paragraphText As String = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."
+
+            ' Create text element and layout format
+            Dim textElement As New PdfTextElement(paragraphText, font, PdfBrushes.Black)
+            Dim layoutFormat As New PdfLayoutFormat With {
+                .Break = PdfLayoutBreakType.FitPage,
+                .Layout = PdfLayoutType.Paginate
+            }
+
+            text within the bounds
+            textElement.Draw(page, textBounds, layoutFormat)
+
+            ' Save the document
+            document.Save("Output.pdf")
+        End Using
+    End Sub
+End Module
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Embedding fonts and working with Unicode text
 
 To embed a font or display Unicode text in the document, the ‘Unicode’ Boolean parameter of the [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html#Syncfusion_Pdf_Base__ctor) constructor has to be set to true. The following code illustrates the same.
