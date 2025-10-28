@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Add rectangle annotations using text search bounds in PDF Viewer
+# Add Rectangles to Search Highlights in ASP.NET MVC PDF Viewer
 
 A concise guide to adding rectangle annotations at highlighted text search results in the ASP.NET MVC PDF Viewer to visually emphasize matches and improve readability.
 

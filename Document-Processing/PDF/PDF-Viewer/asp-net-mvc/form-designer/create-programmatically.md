@@ -634,6 +634,7 @@ The following code example explains how to update the signature field properties
 
 The following code shows how to configure default properties for a signature field added from the Form Designer toolbar.
 
+```html
 <script type="text/javascript">
 
     window.onload = function () {
@@ -666,11 +667,13 @@ The following code shows how to configure default properties for a signature fie
     }
 
 </script>
+```
 
 ![Signature field settings in the PDF Viewer](../images/signature_field.png)
 
 The following code shows how to configure default properties for an initial field added from the Form Designer toolbar.
 
+```html
 <script type="text/javascript">
 
 window.onload = function () {
@@ -703,6 +706,7 @@ window.onload = function () {
 }
 
 </script>
+```
 
 ![Initial field settings in the PDF Viewer](../images/initialfield.png)
 
@@ -795,6 +799,7 @@ The following example updates Textbox field properties on a button click.
 
 The following code shows how to configure default properties for a Textbox field added from the Form Designer toolbar.
 
+```html
 <script type="text/javascript">
 
 window.onload = function () {
@@ -838,6 +843,7 @@ window.onload = function () {
 }
 
 </script>
+```
 
 ![Textbox field settings in the PDF Viewer](../images/Textbox.png)
 
@@ -928,6 +934,7 @@ The following example updates Password field properties on a button click.
 
 The following code shows how to configure default properties for a Password field added from the Form Designer toolbar.
 
+```html
 <script type="text/javascript">
 
 window.onload = function () {
@@ -969,6 +976,7 @@ window.onload = function () {
 }
 
 </script>
+```
 
 ![Password field settings in the PDF Viewer](../images/Password.png)
 
@@ -1045,6 +1053,7 @@ The following example updates CheckBox field properties on a button click.
 
 The following code shows how to configure default properties for a CheckBox field added from the Form Designer toolbar.
 
+```html
 <script type="text/javascript">
 
 window.onload = function () {
@@ -1076,6 +1085,7 @@ window.onload = function () {
 }
 
 </script>
+```
 
 ![CheckBox field settings in the PDF Viewer](../images/Checkbox.png)
 
@@ -1154,6 +1164,7 @@ The following example updates RadioButton field properties on a button click.
 
 The following code shows how to configure default properties for a RadioButton field added from the Form Designer toolbar.
 
+```html
 <script type="text/javascript">
 
 window.onload = function () {
@@ -1185,6 +1196,7 @@ window.onload = function () {
 }
 
 </script>
+```
 
 ![RadioButton field settings in the PDF Viewer](../images/Radiobutton.png)
 
@@ -1283,6 +1295,7 @@ The following example updates ListBox field properties on a button click.
 
 The following code shows how to configure default properties for a ListBox field added from the Form Designer toolbar.
 
+```html
 <script type="text/javascript">
 
 window.onload = function () {
@@ -1329,6 +1342,7 @@ window.onload = function () {
 }
 
 </script>
+```
 
 ![ListBox field settings in the PDF Viewer](../images/Listbox.png)
 
@@ -1427,6 +1441,7 @@ The following example updates DropDown field properties on a button click.
 
 The following code shows how to configure default properties for a DropDown field added from the Form Designer toolbar.
 
+```html
 <script type="text/javascript">
 
 window.onload = function () {
@@ -1473,5 +1488,6 @@ window.onload = function () {
 };
 
 </script>
+```
 
 ![DropDown field settings in the PDF Viewer](../images/Dropdown.png)
