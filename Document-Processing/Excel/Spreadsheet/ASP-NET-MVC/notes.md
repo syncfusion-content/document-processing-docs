@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Notes in Spreadsheet control
+# Notes in ASP.NET MVC Spreadsheet Control
 
 The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [`enableNotes`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableNotes) property, which defaults to **true**.
 
@@ -20,10 +20,10 @@ In the below example, you can add, edit, save, and delete notes.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/note-cs1/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/note-cs1/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="NotesController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/note-cs1/notesController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/note-cs1/notesController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -70,10 +70,10 @@ In the below example, the note functionality is disabled in the Spreadsheet.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/note-cs2/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/note-cs2/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="NotesController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/note-cs2/notesController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/note-cs2/notesController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -83,10 +83,10 @@ The notes can be added initially when the Spreadsheet loads using cell data bind
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/note-cs3/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/note-cs3/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="NotesController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/note-cs3/notesController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/note-cs3/notesController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

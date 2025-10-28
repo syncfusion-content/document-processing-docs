@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Worksheet in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+title: Worksheet in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
 description: Learn here all about Worksheet in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Worksheet
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Worksheet in Spreadsheet control
+# Worksheet in ASP.NET Core Spreadsheet control
 
 Worksheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data.
 
@@ -24,10 +24,10 @@ The following code example shows the insert sheet operation in spreadsheet.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/insert-sheet/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/insert-sheet/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="InsertSheetController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/insert-sheet/insertSheetController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/insert-sheet/insertSheetController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -39,10 +39,10 @@ The following code example shows how to insert a sheet programmatically and make
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/insert-sheet-change-active-sheet/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/insert-sheet-change-active-sheet/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="InsertSheetController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/insert-sheet-change-active-sheet/insertSheetController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/insert-sheet-change-active-sheet/insertSheetController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -78,10 +78,10 @@ The following code example shows the headers and gridlines operation in spreadsh
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/header-gridlines/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/header-gridlines/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="HeaderController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/header-gridlines/headerController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/header-gridlines/headerController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -103,10 +103,10 @@ The following code example shows the three types of sheet visibility state.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/sheet-visiblity/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/sheet-visiblity/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SheetVisiblityController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/sheet-visiblity/sheetVisiblityController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/sheet-visiblity/sheetVisiblityController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
