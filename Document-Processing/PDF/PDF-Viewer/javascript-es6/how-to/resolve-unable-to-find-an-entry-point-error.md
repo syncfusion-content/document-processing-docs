@@ -1,27 +1,25 @@
 ---
 layout: post
-title: Resolve unable to find an entry point error in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Resolve unable to find an entry point error in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Resolve “unable to find an entry point” error | Syncfusion
+description: Learn how to resolve the “unable to find an entry point” error after upgrading the Pdfium package in the Syncfusion TypeScript PDF Viewer.
 platform: document-processing
-control: Resolve unable to find an entry point error
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Resolve unable to find an entry point error in Typescript Pdfviewer control
+# Resolve “unable to find an entry point” error
 
-From the release of version **21.1.0.35 (2023 Volume 1)** of Essential Studio, the Pdfium package has been upgraded to improve various functionalities like text search, text selection, rendering, and even performance. If you are updating your project to this version of the Syncfusion PDF Viewer, you may encounter the **"Web-Service is not listening"** error. The Network tab can help you identify the root cause of the issue, which is typically caused by an old version of pdfium assembly being referenced in the local web service project. Below are the assemblies to be referred to in the respective operating systems.
+Starting with **21.1.0.35 (2023 Volume 1)**, the Pdfium package was upgraded to improve text search, selection, rendering, and performance. After upgrading, the PDF Viewer may display a **“Web-Service is not listening”** error. In most cases, the Network tab reveals that an outdated Pdfium assembly is referenced in the local web service project. Ensure the correct native assembly is deployed for the target OS:
 
-* Windows – pdfium.dll
-* Linux – libpdfium.so
-* OSX – libpdfium.dylib
+- Windows: pdfium.dll
+- Linux: libpdfium.so
+- macOS: libpdfium.dylib
 
 ![Error information in the Network tab](../how-to/images/ErrorinformationuintheNetworkTab.png)
 
-## To solve this issue, you should follow the below steps
+## Resolution steps
 
-1. Clear the bin and object files of the web-service project.
-2. Re-publish the web-service project.
+1. Delete the bin and obj folders in the web service project.
+2. Rebuild and republish the web service.
 
-N>Note: If you are hosting your application in Azure, AWS, or in Linux environments, delete the older published files and republish the application.
+N> If hosting in Azure, AWS, or Linux environments, remove old published files on the server before republishing.

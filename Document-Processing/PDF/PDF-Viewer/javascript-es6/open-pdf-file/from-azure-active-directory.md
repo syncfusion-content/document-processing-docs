@@ -1,25 +1,23 @@
 ---
 layout: post
-title: Open PDF From AAD in Typescript Pdfviewer control | Syncfusion
-description: Learn how to Open PDF From AAD in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Open PDF from Azure Active Directory in TypeScript PDF Viewer | Syncfusion
+description: Learn how to load and save PDFs using Azure Active Directory (AAD) with the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Open PDF From Azure Active Directory in Viewer
+# Open PDF from Azure Active Directory
 
-### **Overview**
+### Overview
 
-The Syncfusion PDF Viewer allows you to load and save PDF files directly from Azure Active Directory (AAD). Below are the steps to securely load and store PDF documents from and to AAD using the PDF Viewer.
+The TypeScript PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps explain how to securely load and store PDFs using AAD.
 
-### **Steps to Open the PDF File from Azure Active Directory**
+### Steps to open a PDF from Azure Active Directory
 
 ---
 
-### **Step 1: Register an Application in Azure Active Directory (AAD)**
+### Step 1: Register an application in Azure Active Directory (AAD)
 
 1. **Go to the Azure Portal**:
    - Navigate to [Azure Portal](https://portal.azure.com).
@@ -41,7 +39,7 @@ The Syncfusion PDF Viewer allows you to load and save PDF files directly from Az
 
 ---
 
-### **Step 2: Create the Azure Storage Account**
+### Step 2: Create the Azure Storage account
 
 1. **Create a Storage Account**:
    - In the Azure portal, use the search bar to search for **Storage accounts**.
@@ -51,7 +49,7 @@ The Syncfusion PDF Viewer allows you to load and save PDF files directly from Az
 
 ---
 
-### **Step 3: Assign Role to the Application**
+### Step 3: Assign a role to the application
 
 1. **Go to your Storage Account**:
    - Navigate to **Access control (IAM)** > **Add role assignment** in your Azure Storage Account.
@@ -66,7 +64,7 @@ The Syncfusion PDF Viewer allows you to load and save PDF files directly from Az
     ![add-role](../images/add-role.png)
 ---
 
-### **Step 4: Upload the PDF Document to the Azure Storage Account**
+### Step 4: Upload the PDF to Azure Storage
 
 1. **Navigate to Data Storage**:
    - In the Azure portal, go to **Data storage** > **Containers**.
@@ -77,7 +75,7 @@ The Syncfusion PDF Viewer allows you to load and save PDF files directly from Az
     ![upload-pdf](../images/upload-pdf.png)
 ---
 
-### **Step 5: Server-Side Configuration**
+### Step 5: Server-side configuration
 
 1. **Configure Server-Side Code**:
    - Open the server-side application (e.g., ASP.NET Core) and configure the following details in the `PdfViewerController` file:
@@ -92,10 +90,10 @@ The Syncfusion PDF Viewer allows you to load and save PDF files directly from Az
 
 ---
 
-### **Step 6: Client-Side Configuration**
+### Step 6: Client-side configuration
 
-1. **Run the TS Sample**:
-   - Start the TS sample that includes the Syncfusion PDF Viewer.
+1. **Run the TypeScript Sample**:
+   - Start the TypeScript sample that includes the Syncfusion PDF Viewer.
 
 2. **Load PDF from AAD**:
    - When the user clicks the **Load from AAD** button, the JS client will make an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.
@@ -106,7 +104,7 @@ The Syncfusion PDF Viewer allows you to load and save PDF files directly from Az
 
 ---
 
-### **Step 7: Save the PDF Document to Azure**
+### Step 7: Save the PDF to Azure
 
 1. **Save PDF to AAD**:
    - The user can click the **Save to AAD** button to upload any modifications to the PDF back to Azure Blob Storage.
@@ -114,7 +112,7 @@ The Syncfusion PDF Viewer allows you to load and save PDF files directly from Az
 
 ---
 
-### **Server-Side Code Snippets**
+### Server-side code
 ```cs
 string tenantId = "Provide the tenant id here";
 string clientId = "Provide the clientid here";
@@ -170,7 +168,7 @@ public async Task<IActionResult> SaveToAAD([FromBody] Dictionary<string, string>
 
 
 
-### **Client-side Code Snippets**
+### Client-side code
 
 ```ts
 import { PdfViewer, Toolbar, TextSelection, TextSearch, Print, Navigation, Magnification, Annotation, FormDesigner, FormFields, CustomToolbarItemModel } from '@syncfusion/ej2-pdfviewer';

@@ -1,19 +1,17 @@
 ---
 layout: post
-title: extractTextCompleted Event in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about extractTextCompleted Event in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: extractTextCompleted event in TypeScript PDF Viewer | Syncfusion
+description: Learn how to use the extractTextCompleted event and isExtractText property in the Syncfusion TypeScript PDF Viewer to extract text and bounds.
 platform: document-processing
-control: Extract text
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Extract text in Typescript Pdfviewer control using extractTextCompleted event
+# Use extractTextCompleted to extract text in TypeScript PDF Viewer
 
-To extract text in Syncfusion PDF viewer, you can use the [**isExtractText**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#isextracttext) property and [**extractTextCompleted**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#extracttextcompleted) event.This allows you to extract the text from a page along with the bounds.
+Use the [isExtractText](https://ej2.syncfusion.com/documentation/api/pdfviewer/#isextracttext) property and the [extractTextCompleted](https://ej2.syncfusion.com/documentation/api/pdfviewer/#extracttextcompleted) event to extract page text along with bounds.
 
-Here is an example of how you can use the **isExtractText** property and **extractTextCompleted** event:
+The following example shows how to enable text extraction and handle the completion event:
 
 ```ts
 
@@ -32,4 +30,4 @@ viewer.extractTextCompleted = args => {
 
 ```
 
-Find the sample [how to extract Text](https://stackblitz.com/edit/3xmbg6-m3ff47?devtoolsheight=33&file=index.ts)
+Find the sample: [How to extract text](https://stackblitz.com/edit/3xmbg6-m3ff47?devtoolsheight=33&file=index.ts)
