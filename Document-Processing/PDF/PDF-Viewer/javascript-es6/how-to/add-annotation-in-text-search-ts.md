@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Rectangle Annotation via TextSearch in TypeScript PDFViewer | Syncfusion
+title: Add Rectangle Annotation TextSearch in TypeScript PDFViewer | Syncfusion
 description: Learn to add rectangle annotations using text search bounds in the TypeScript PDF Viewer component, including initialization and search controls.
 platform: document-processing
 control: PDF Viewer
