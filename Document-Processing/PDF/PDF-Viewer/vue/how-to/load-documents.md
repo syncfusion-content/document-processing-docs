@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Load documents in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Load documents in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Load documents dynamically in Vue PDF Viewer | Syncfusion
+description: Learn how to load or switch PDF documents dynamically in the Syncfusion Vue PDF Viewer using the load method.
 control: Load documents
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load documents in Vue Pdfviewer component
+# Load documents in Vue PDF Viewer control
 
-The PDF Viewer library allows you to switch or load  PDF documents dynamically after the initial load operation. To achieve this, load the PDF document as a base64 string or file name into the PDF Viewer control using the [**Load()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#load) method dynamically.
+Load or switch PDF documents dynamically after the initial load. Use the [load](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load a PDF by Base64 string or file name.
 
-The following steps are used to load the PDF document dynamically.
+The following steps show how to load a PDF dynamically.
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) to create a simple PDF Viewer sample.
 
-**Step 2:** Use the following code snippet to load the PDF document using a base64 string.
+**Step 2:** Use the following code to load a PDF using a Base64 string.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -181,7 +181,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3:** Use the following code snippet to load the PDF document using the document name.
+**Step 3:** Use the following code to load a PDF by document name.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
