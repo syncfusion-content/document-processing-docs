@@ -1,12 +1,12 @@
 ---
-title: Annotations Events in ASP.NET Core Pdfviewer control | Syncfusion
-description: Learn here all about Annotations Events in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Annotations Events in ASP.NET Core PDF Viewer control | Syncfusion
+description: Learn here all about Annotations Events in Syncfusion ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Annotations Events in ASP.NET Core Pdf viewer control
+# Annotations Events in ASP.NET Core PDF Viewer control
 
 The PDF Viewer component triggers various events based on user interactions and changes in the component's state. These events can be used to perform actions when a specific event occurs. This section describes the events available in the PDF Viewer component.
 

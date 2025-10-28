@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Annotations in mobile view in ASP.NET Core Pdf viewer | Syncfusion
-description: Learn here all about Annotations in mobile view in Syncfusion ASP.NET Core Pdf viewer control of Syncfusion Essential JS 2 and more.
+title: Annotations in mobile view in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn here all about Annotations in mobile view in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
-# Annotations in mobile view in ASP.NET Core Pdf viewer control
+# Annotations in mobile view in ASP.NET Core PDF Viewer control
 
 ## To Open the Annotation Toolbar
 

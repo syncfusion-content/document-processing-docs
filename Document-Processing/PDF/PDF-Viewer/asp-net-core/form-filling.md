@@ -11,7 +11,7 @@ documentation: ug
 
 The PDF Viewer component displays existing form fields in a PDF document and enables filling and downloading filled data.
 
-The form fields displayed in the Pdf Viewer are:
+The form fields displayed in the PDF Viewer are:
 
 * Textbox
 * Password
