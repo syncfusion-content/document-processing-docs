@@ -6,6 +6,6 @@ control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO support autofit for merged cells?  
+# Does XlsIO support autofit for merged cells? 
 
-No, XlsIO does not support autofit for merged cells. To adjust row height for merged cells, set it manually using the RowHeight property.
+No, XlsIO does not support autofit for merged cells. To adjust row height for merged cells, set it manually using the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_RowHeight">RowHeight</a> property.
