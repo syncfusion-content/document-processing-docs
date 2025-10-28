@@ -1,125 +1,152 @@
 ---
+layout: post
 title: Loading and saving workbook in Blazor | Syncfusion
-description: Explains how to load and save Excel files in Blazor applications using Syncfusion XlsIO.
-platform: document-processing
+description: Explain about how to load and save Excel files in Blazor applications using Syncfusion XlsIO library.
+platform: blazor
 control: XlsIO
 documentation: UG
 ---
 # Loading and saving workbook in Blazor
 
+The Syncfusion XlsIO library allows you to open existing Excel workbooks from a stream and save manipulated workbooks back to a stream in both Blazor Server-Side and Blazor WebAssembly (Client-Side) applications.
+
 ## Opening an existing workbook from Stream
 
-You can open an existing workbook from stream by using the overloads of [Open](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_Open_System_IO_Stream_) methods of [IWorkbooks](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbooks.html) interface. 
+You can open an existing workbook from a stream by using the overloads of the [`Open`](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_Open_System_IO_Stream_) methods of the [`IWorkbooks`](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbooks.html) interface.
 
-The code snippet for this process in Blazor Server-Side application is given below.
+### Blazor Server-Side Application
 
-{% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-//Creates a new instance for ExcelEngine
-ExcelEngine excelEngine = new ExcelEngine();
-
-//Initialize IApplication
-IApplication application = excelEngine.Excel;
-
-//Load the file into stream
-FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-
-//Loads or open an existing workbook through Open method of IWorkbooks
-IWorkbook workbook = application.Workbooks.Open(inputStream);
-{% endhighlight %}
-{% endtabs %}  
-
-The code snippet for this process in Blazor Client-Side application is given below.
-
-{% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-//Creates a new instance for ExcelEngine
-ExcelEngine excelEngine = new ExcelEngine();
-
-//Initialize IApplication
-IApplication application = excelEngine.Excel;
-
-//Load the file into stream
-Stream inputStream = await client.GetStreamAsync("sample-data/Sample.xlsx");
-
-//Loads or open an existing workbook through Open method of IWorkbooks
-IWorkbook workbook = application.Workbooks.Open(inputStream);
-{% endhighlight %}
-{% endtabs %}  
-
-## Saving an Excel workbook to stream
-
-You can also save the created or manipulated workbook to stream using overloads of [SaveAs](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SaveAs_System_IO_Stream_) methods.
-
-The code snippet for this process in Blazor Server-Side application is given below.
+In a Blazor Server-Side application, you can access files directly from the server's file system or from uploaded streams.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Creates a new instance for ExcelEngine
+// Creates a new instance for ExcelEngine
 ExcelEngine excelEngine = new ExcelEngine();
 
-//Initialize IApplication
+// Initialize IApplication
 IApplication application = excelEngine.Excel;
 
-//Load the file into stream
-FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
+// Load the file into a stream from the server's file system
+FileStream inputStream = new FileStream("Data/Sample.xlsx", FileMode.Open, FileAccess.Read);
 
-//Loads or open an existing workbook through Open method of IWorkbooks
+// Loads an existing workbook through the Open method of IWorkbooks
 IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-//To-Do some manipulation
-//To-Do some manipulation
-
-//Set the version of the workbook
-workbook.Version = ExcelVersion.Xlsx;
-
-//Save the document as a stream and retrun the stream.
-using (MemoryStream outputStream = new MemoryStream())
-{
-  //Save the created Excel document to MemoryStream.
-  workbook.SaveAs(outputStream);
-
-  return outputStream;
-}
-{% endhighlight %}
-{% endtabs %} 
-
-The code snippet for this process in Blazor Client-Side application is given below.
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-//Creates a new instance for ExcelEngine
-ExcelEngine excelEngine = new ExcelEngine();
-
-//Initialize IApplication
-IApplication application = excelEngine.Excel;
-
-//Load the file into stream
-Stream inputStream = await client.GetStreamAsync("sample-data/Sample.xlsx");
-
-//Loads or open an existing workbook through Open method of IWorkbooks
-IWorkbook workbook = application.Workbooks.Open(inputStream);
-
-//To-Do some manipulation
-//To-Do some manipulation
-
-//Set the version of the workbook
-workbook.Version = ExcelVersion.Xlsx;
-
-//Save the document as a stream and retrun the stream.
-using (MemoryStream outputStream = new MemoryStream())
-{
-  //Save the created Excel document to MemoryStream.
-  workbook.SaveAs(outputStream);
-
-  return outputStream;
-}
+// Close the input stream after opening the workbook
+inputStream.Dispose(); // Or use a 'using' statement for automatic disposal
 {% endhighlight %}
 {% endtabs %}
 
-## Helper Code Snippets
+### Blazor WebAssembly (Client-Side) Application
 
-Create a class file with name as ``FileUtils`` and add the following code to invoke the JavaScript action for downloading the file in browser.
+In a Blazor WebAssembly application, file operations typically involve fetching files via HTTP or handling user-uploaded files. For this example, we assume `HttpClient` is injected to fetch a sample file.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+@using System.Net.Http
+@inject HttpClient HttpClient // Ensure HttpClient is injected in your component
+
+// Creates a new instance for ExcelEngine
+ExcelEngine excelEngine = new ExcelEngine();
+
+// Initialize IApplication
+IApplication application = excelEngine.Excel;
+
+// Load the file into a stream using HttpClient
+Stream inputStream = await client.GetStreamAsync("sample-data/Sample.xlsx");
+
+// Loads an existing workbook through the Open method of IWorkbooks
+IWorkbook workbook = application.Workbooks.Open(inputStream);
+
+// Close the input stream after opening the workbook
+inputStream.Dispose(); // Or use a 'using' statement for automatic disposal
+{% endhighlight %}
+{% endtabs %}
+
+## Saving an Excel workbook to stream
+
+You can save the created or manipulated workbook to a stream using overloads of the [`SaveAs`](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SaveAs_System_IO_Stream_) methods. After saving to a stream, you typically need to facilitate download in the browser.
+
+### Blazor Server-Side Application
+
+In a Blazor Server-Side application, you can save the workbook to a `MemoryStream` and then pass its content to a JavaScript interop function for client-side download.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Creates a new instance for ExcelEngine
+ExcelEngine excelEngine = new ExcelEngine();
+
+// Initialize IApplication
+IApplication application = excelEngine.Excel;
+
+// Load the file into a stream from the server's file system (for demonstration)
+FileStream inputStream = new FileStream("Data/Sample.xlsx", FileMode.Open, FileAccess.Read);
+
+// Loads an existing workbook through the Open method of IWorkbooks
+IWorkbook workbook = application.Workbooks.Open(inputStream);
+
+
+// Set the version of the workbook
+workbook.Version = ExcelVersion.Xlsx;
+
+// Save the document as a stream.
+using (MemoryStream outputStream = new MemoryStream())
+{
+  // Save the created Excel document to MemoryStream.
+  workbook.SaveAs(outputStream);
+  return outputStream;
+}
+// Dispose the workbook and ExcelEngine
+workbook.Close();
+excelEngine.Dispose();
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor WebAssembly (Client-Side) Application
+
+In a Blazor WebAssembly application, you save the workbook to a `MemoryStream` and use JavaScript interop for client-side download.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+
+// Creates a new instance for ExcelEngine
+ExcelEngine excelEngine = new ExcelEngine();
+
+// Initialize IApplication
+IApplication application = excelEngine.Excel;
+
+// Load the file into a stream using HttpClient (for demonstration)
+Stream inputStream = await client.GetStreamAsync("sample-data/Sample.xlsx");
+
+// Loads an existing workbook through the Open method of IWorkbooks
+IWorkbook workbook = application.Workbooks.Open(inputStream);
+
+
+// Set the version of the workbook
+workbook.Version = ExcelVersion.Xlsx;
+
+// Save the document as a stream.
+using (MemoryStream outputStream = new MemoryStream())
+{
+  //Save the created Excel document to MemoryStream.
+  workbook.SaveAs(outputStream);
+
+  return outputStream;
+}
+// Dispose the workbook and ExcelEngine
+workbook.Close();
+excelEngine.Dispose();
+{% endhighlight %}
+{% endtabs %}
+
+## Client-side File Download Helper
+
+To enable file downloads in both Blazor Server-Side and Blazor WebAssembly applications, you need a JavaScript interop mechanism.
+
+### `FileUtils` Class
+
+Create a static class named `FileUtils` (e.g., in `Shared/FileUtils.cs` or in the component's code-behind) to encapsulate JavaScript interop calls for file saving.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -134,7 +161,9 @@ public static class FileUtils
 {% endhighlight %}
 {% endtabs %}
 
-Add the following JavaScript function in the ``index.html`` file present under ``wwwroot``.
+### JavaScript `saveAsFile` Function
+
+Add the following JavaScript function in your `index.html` (for Blazor WebAssembly) or `_Host.cshtml` (for Blazor Server-Side) file, typically inside the `<head>` or before the closing `</body>` tag.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -167,10 +196,12 @@ Add the following JavaScript function in the ``index.html`` file present under `
 {% endhighlight %}
 {% endtabs %}
 
-Add the following code under ``NavMenu.razor`` file present under ``Shared`` folder.
+### Navigation Menu Integration
+
+To provide a navigation link to your Excel-related page, add the following code under your `NavMenu.razor` file (located in the `Shared` folder). This assumes you have a Blazor page or component named "Excel".
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 <li class="nav-item px-3">
   <NavLink class="nav-link" href="Excel">
     <span class="oi oi-list-rich" aria-hidden="true"></span> Create Excel
@@ -179,7 +210,9 @@ Add the following code under ``NavMenu.razor`` file present under ``Shared`` fol
 {% endhighlight %}
 {% endtabs %}
 
-Add the service to services collection in ``ConfigureServices`` method of ``Startup.cs`` file.
+## Registering Services
+
+To make `ExcelService` available via dependency injection, add it to your services collection in the `ConfigureServices` method of your `Startup.cs` (Blazor Server-Side) or `Program.cs` (Blazor WebAssembly) file.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

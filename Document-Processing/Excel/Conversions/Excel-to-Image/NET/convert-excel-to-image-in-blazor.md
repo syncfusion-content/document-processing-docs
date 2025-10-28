@@ -30,7 +30,7 @@ Step 4: Install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/pa
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
 
-Step 5: Create a razor file with name as ``Excel`` under ``Pages`` folder, which is located inside the ``Components`` folder and include the following namespaces in the file.
+Step 5: Create a new Razor component named ``Excel.razor`` in the ``Components/Pages`` folder and include the following namespaces in the file.
 
 {% capture codesnippet1 %}
 {% tabs %}
@@ -71,7 +71,7 @@ Step 7: Add the following code in ``Excel.razor`` file to convert Excel document
     /// </summary>
     private async Task ConvertExceltoImage()
     {
-        excelStream = service.ExceltoImage();
+        service.ExceltoImage(); // Updated method name
         await JS.SaveAs("Sample.jpeg", excelStream.ToArray());
     }
 }
@@ -80,7 +80,7 @@ Step 7: Add the following code in ``Excel.razor`` file to convert Excel document
 {% endcapture %}
 {{ codesnippet3 | OrderList_Indent_Level_1 }}
 
-Step 8: Create a new cs file with name as ``ExcelService`` under ``Data`` folder and include the following namespaces in the file.
+Step 8: Create a new class file named ``ExcelService.cs`` in the ``Components/Data`` folder and include the following namespaces in the file. Make sure this class is declared as `public`.
 
 {% capture codesnippet4 %}
 {% tabs %}
@@ -88,12 +88,16 @@ Step 8: Create a new cs file with name as ``ExcelService`` under ``Data`` folder
 using Syncfusion.XlsIO;
 using Syncfusion.XlsIORenderer;
 using System.IO;
+using System; // Required for FileStream and Exception handling
 {% endhighlight %}
 {% endtabs %}
 {% endcapture %}
 {{ codesnippet4 | OrderList_Indent_Level_1 }}
 
-Step 9: Create a new MemoryStream method with name as <code>Excel&#8203;toImage</code> and include the following code snippet to convert Excel document to Image in Blazor Server web application.
+Step 9: Inside the `ExcelService.cs` file, declare the `public class ExcelService` and then create a new public method `ExcelToImage` within it. Include the following code snippet to convert Excel document to Image in Blazor Server web application.
+
+N> Place your `InputTemplate.xlsx` file in the `wwwroot` folder of your Blazor project for the application to access it.
+
 {% capture codesnippet5 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -124,7 +128,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endcapture %}
 {{ codesnippet5 | OrderList_Indent_Level_1 }}
 
-Step 10: Create a new class file in the project, with name as ``FileUtils`` and add the following code to invoke the JavaScript action for downloading the file in browser.
+Step 10: Create a new class file in the project, with name as ``FileUtils.cs``, and add the following code to invoke the JavaScript action for downloading the file in browser. Place this file, for example, in the root of your project or in a `Utilities` folder.
 
 {% capture codesnippet6 %}
 {% tabs %}
@@ -142,7 +146,14 @@ public static class FileUtils
 {% endcapture %}
 {{ codesnippet6 | OrderList_Indent_Level_1 }}
 
-Step 11: Add the following JavaScript function in the ``App.razor``.
+Step 11: Create a `wwwroot/js` folder and add a new JavaScript file (e.g., `download.js`). Move the JavaScript function for `saveAsFile` into this file. Reference this file in your `Components/App.razor` file, or `Pages/_Layout.cshtml` (for Blazor Server App on .NET 6/7) / `index.html` (for Blazor WebAssembly). For a Blazor Server project, add the script reference in `Components/App.razor` (for .NET 8) or `Pages/_Layout.cshtml` (for .NET 6/7) as shown below.
+
+```html
+<script src="~/js/download.js"></script>
+```
+
+The content of `wwwroot/js/download.js` should be:
+
 {% capture codesnippet7 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -186,11 +197,13 @@ Step 12: Add the following code in <code>Na&#8203;vMenu.razor</code> file presen
 {% endhighlight %}
 {% endtabs %}
 
-Step 13: Add the service in the ``Program.cs`` file.
+Step 13: Add the service in the ``Program.cs`` file. Ensure the `using` directive for the namespace containing `ExcelService` is present.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-builder.Services.AddScoped<ConvertExceltoImage.Components.Data.ExcelService>();
+using ConvertExceltoImage.Components.Data; // Add this line if not already present
+
+builder.Services.AddScoped<ExcelService>();
 {% endhighlight %}
 {% endtabs %}     
 
