@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigation in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Thumbnail Navigation in ASP.NET Core PDF Viewer control | Syncfusion
+description: Discover how to navigate PDF pages using thumbnails in the Syncfusion ASP.NET MVC PDF Viewer control for a visual and intuitive experience.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET Core
@@ -35,4 +35,4 @@ You can enable/disable thumbnail navigation by using the following code snippet.
 ## See also
 
 * [Toolbar items](../toolbar-customization/)
-* [Feature Modules](../feature-module.md)
+* [Feature Modules](../feature-module)

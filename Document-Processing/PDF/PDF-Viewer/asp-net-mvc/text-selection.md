@@ -109,5 +109,5 @@ The textSelectionEnd event triggers when selection is completed. It is useful to
 
 ## See also
 
-* [Text search](./text-search.md)
-* [Interaction modes](./interaction-mode.md)
+* [Text search](./text-search)
+* [Interaction modes](./interaction-mode)

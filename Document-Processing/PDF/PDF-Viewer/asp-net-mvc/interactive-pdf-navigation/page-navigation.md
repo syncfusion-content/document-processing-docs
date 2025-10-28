@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigation in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Page Navigation in ASP.NET MVC PDF Viewer control | Syncfusion
+description: Explore how to navigate pages in the Syncfusion ASP.NET MVC PDF Viewer control using built-in options for seamless document viewing.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
@@ -123,4 +123,4 @@ Also, you can programmatically perform page navigation options as follows.
 ## See also
 
 * [Toolbar items](../toolbar-customization/)
-* [Feature Modules](../feature-module.md)
+* [Feature Modules](../feature-module)
