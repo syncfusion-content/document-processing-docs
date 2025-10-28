@@ -92,7 +92,7 @@ Properties for line-based shapes (Line and Arrow) can be adjusted in the Line Pr
 
 ## Setting default properties during control initialization
 
-Default properties for shape annotations can be configured during initialization using LineSettings, ArrowSettings, RectangleSettings, CircleSettings, and PolygonSettings. These apply when the corresponding shape is created from the toolbar or programmatically.
+Default properties for shape annotations can be configured during initialization using [LineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_LineSettings), [ArrowSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AreaSettings), [RectangleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_RectangleSettings), [CircleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CircleSettings), and [PolygonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PolygonSettings). These apply when the corresponding shape is created from the toolbar or programmatically.
 
 ```cshtml
 
@@ -190,7 +190,7 @@ The appearance of an annotation’s selector can be customized using [Annotation
 
 ## Add shape annotation Programmatically
 
-The Blazor SfPdfViewer supports programmatic creation of shape annotations—Rectangle, Line, Arrow, Circle, and Polygon—using [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_). Ensure the document is loaded and the component reference is available before invoking API calls.
+The Blazor SfPdfViewer supports programmatic creation of shape annotations Rectangle, Line, Arrow, Circle, and Polygon using [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_). Ensure the document is loaded and the component reference is available before invoking API calls.
 
 Below is an example demonstrating how to use this method to add a shape annotation to a PDF document:
 
@@ -320,7 +320,7 @@ The following code demonstrates how to delete multiple annotations at once in PD
 
 ## Edit shape annotation Programmatically
 
-Shape annotations—Rectangle, Line, Arrow, Circle, and Polygon—can be edited programmatically using [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_). Retrieve the target annotation from [GetAnnotationsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetAnnotationsAsync) and update the desired properties before submitting the edit.
+Shape annotations Rectangle, Line, Arrow, Circle, and Polygon can be edited programmatically using [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_). Retrieve the target annotation from [GetAnnotationsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetAnnotationsAsync) and update the desired properties before submitting the edit.
 
 Below is an example demonstrating how to edit a shape annotation programmatically:
 

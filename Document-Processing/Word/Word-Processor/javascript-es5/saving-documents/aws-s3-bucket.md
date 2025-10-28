@@ -122,7 +122,7 @@ In the client-side, to export the document into blob the document using [`saveAs
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/save-aws-s3/index.html %}
+{% include code-snippet/document-editor/javascript-es5/save-aws-s3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -177,6 +177,6 @@ In the following example, a Word document is converted to a PDF and then loaded 
 
 ## See also
 
-* [How to load PDF documents dynamically in Blazor SfPdfViewer Component](./load-pdf-document-dynamically)
+* [How to load PDF documents dynamically in Blazor SfPdfViewer Component](./how-to-load-pdf-document-dynamically)
 
-* [How to unload the PDF document from Viewer](./unload-the-pdf-document-from-viewer)
+* [How to unload the PDF document from Viewer](./how-to-unload-the-pdf-document-from-viewer)

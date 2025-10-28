@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Opening a document in Blazor DocumentEditor Component | Syncfusion
+title: Opening a Document in the Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn here all about Opening a document in Syncfusion Blazor DocumentEditor component and more.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---
 
-# Opening a document in Blazor DocumentEditor Component
+# Opening a Document in Blazor DocumentEditor Component
 
 You might need to open and view Word documents from various location. In this section, you can find the information about how to open Word documents from URL, cloud, database, and local file system and also how to load a document during control initialization.
 
@@ -296,7 +296,7 @@ You can also explore our [Blazor Word Processor](https://document.syncfusion.com
 
 The web browsers do not support to display metafile images like EMF and WMF and also TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side Document editor component.
 
->Note: In `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using `MetafileStream` property and you can get the `IsMetafile` boolean value to determine whether the image  is meta file images(WMF,EMF) or Tiff format images. In below example, we have converted the TIFF to raster image in `ConvertTiffToRasterImage()` method using `Bitmiracle https://www.nuget.org/packages/BitMiracle.LibTiff.NET`.
+>Note: In `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using `MetafileStream` property and you can get the `IsMetafile` boolean value to determine whether the image  is meta file images(WMF,EMF) or TIFF format images. In below example, we have converted the TIFF to raster image in `ConvertTiffToRasterImage()` method using `BitMiracle https://www.nuget.org/packages/BitMiracle.LibTiff.NET`.
 
 The following example code illustrates how to use `MetafileImageParsed` event for creating fallback raster image for metafile present in a Word document.
 

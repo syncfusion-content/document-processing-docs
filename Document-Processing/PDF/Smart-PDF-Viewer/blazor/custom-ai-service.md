@@ -43,7 +43,7 @@ The following examples demonstrate AI services integrated using the `IChatInfere
 
 ## Service Registration
 
-Register the custom implementation in `Program.cs`:
+Register the custom implementation in **Program.cs**:
 
 ```csharp
 using Syncfusion.Blazor.AI;

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Auto save document in Blazor DocumentEditor Component | Syncfusion
+title: Auto-Save a Document in Blazor DocumentEditor Component | Syncfusion
 description: Learn here all about Auto save document in document editor in Syncfusion Blazor DocumentEditor component and much more.
 platform: document-processing
 control: DocumentEditor
@@ -12,7 +12,7 @@ In this article, we are going to see how to auto save the document to server. Yo
 
 The following example illustrates how to auto save the document in server.
 
-* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as Docx format to server-side using [`SaveAsBlobAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_SaveAsBlobAsync_System_Nullable_Syncfusion_Blazor_DocumentEditor_FormatType__) method.
+* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as DOCX format to server-side using [`SaveAsBlobAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_SaveAsBlobAsync_System_Nullable_Syncfusion_Blazor_DocumentEditor_FormatType__) method.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor

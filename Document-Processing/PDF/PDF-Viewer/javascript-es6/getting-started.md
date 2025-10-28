@@ -1,23 +1,22 @@
 ---
 layout: post
-title: Getting started with Typescript PDF Viewer control | Syncfusion
-description:  Checkout and learn about Getting started with Typescript PDF Viewer control of Syncfusion Essential JS 2 and more details.
+title: Getting started with TypeScript PDF Viewer (standalone) | Syncfusion
+description: Learn how to set up and use the Syncfusion TypeScript PDF Viewer in standalone mode using the EJ2 quickstart, including local resource configuration and module injection.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in Standalone PDF Viewer control
+# Getting started with TypeScript PDF Viewer (standalone)
 
-This section briefly explains how to create **PDF Viewer** component and configure its available functionalities in TypeScript using the Essential JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository.
+This guide explains how to create the PDF Viewer component and configure its features in TypeScript using the Essential JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository.
 
-> This application is integrated with the `webpack.config.js` configuration and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli/#commands). It requires node `v14.15.0` or higher. For more information about webpack and its features, refer to the [webpack documentation](https://webpack.js.org/guides/getting-started/).
+> This application is integrated with a webpack configuration (`webpack.config.js`) and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli/#commands). It requires Node.js `v14.15.0` or higher. For more information, refer to the [webpack getting started guide](https://webpack.js.org/guides/getting-started/).
 
-## Set up development environment
+## Set up the development environment
 
-Open the command prompt from the required directory, and run the following command to clone the Syncfusion JavaScript (Essential JS 2) quickstart project from [GitHub](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-).
+Open a command prompt in the target directory and run the following command to clone the Syncfusion JavaScript (Essential JS 2) quickstart project from [GitHub](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-).
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -27,7 +26,7 @@ git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack- ej2-quic
 {% endhighlight %}
 {% endtabs %}
 
-After cloning the application in the `ej2-quickstart` folder, run the following command line to navigate to the `ej2-quickstart` folder.
+After cloning, run the following command to navigate to the `ej2-quickstart` folder.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -39,9 +38,9 @@ cd ej2-quickstart
 
 ## Add Syncfusion JavaScript packages
 
-Syncfusion JavaScript (Essential JS 2) packages are available on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. You can install all Syncfusion JavaScript (Essential JS 2) controls in a single [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package or individual packages for each control.
+Syncfusion JavaScript (Essential JS 2) packages are available on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. Install all EJ2 controls with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) meta package or install individual control packages.
 
-The quickstart application is preconfigured with the dependent [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in the `~/package.json` file. Use the following command to install the dependent npm packages from the command prompt.
+The quickstart application is preconfigured with [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) in `~/package.json`. Use the following command to install dependencies:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -51,9 +50,9 @@ npm install
 {% endhighlight %}
 {% endtabs %}
 
-## Import the Syncfusion CSS styles
+## Import Syncfusion CSS styles
 
-Add the components CSS in the `~/src/styles/styles.css` file, as shown below:
+Add the component CSS in the `~/src/styles/styles.css` file, as shown below:
 
 {% tabs %}
 {% highlight css tabtitle="style.css" %}
@@ -71,9 +70,9 @@ Add the components CSS in the `~/src/styles/styles.css` file, as shown below:
 {% endhighlight %}
 {% endtabs %}
 
-## Adding PDF Viewer component
+## Add the PDF Viewer component
 
-* Add the PDF Viewer component following code in the `app.ts`
+* Add the PDF Viewer component in `app.ts`:
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -83,20 +82,20 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-### Steps to Load PDF Viewer with Local Resources
+### Load PDF Viewer with local resources
 
-To configure the PDF Viewer to use local files for `documentPath` and `resourceUrl` instead of files hosted on a CDN, follow these steps:
+To configure the PDF Viewer to use local files for `documentPath` and `resourceUrl` instead of CDN-hosted files, follow these steps:
 
-**Step 1:** Ensure that your application includes the `ej2-pdfviewer-lib` folder. This folder must contain the `pdfium.js`, `pdfium.wasm` files, and the PDF file that you intend to display. Place these files in your project's `dist` directory.
+**Step 1:** Ensure the application includes the `ej2-pdfviewer-lib` folder. This folder must contain the `pdfium.js`, `pdfium.wasm` files, and the PDF file to display. Place these files in the project's `dist` directory.
 
-**Step 2:** Assign local file paths to the `documentPath` and `resourceUrl` properties within the PDF Viewer setup. The `documentPath` should refer to your PDF file, while the `resourceUrl` should point to the directory containing the supporting resources.
+**Step 2:** Assign local file paths to the `documentPath` and `resourceUrl` properties. The `documentPath` should refer to the PDF file, and the `resourceUrl` should point to the directory containing the supporting resources.
 
-By following these steps, you will configure your PDF Viewer to load the required resources locally. See the code snippet below for reference.
+The following example shows how to load resources locally:
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -109,7 +108,7 @@ pdfviewer.resourceUrl = window.location.origin + "/ej2-pdfviewer-lib";
 
 View the sample in GitHub to [load PDF Viewer with local resources](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally)
 
-* Add an HTML div element to act as the PDF Viewer element `index.html` using the following code.
+* Add an HTML div element to act as the PDF Viewer element in `index.html`:
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -137,7 +136,7 @@ View the sample in GitHub to [load PDF Viewer with local resources](https://gith
 
 ## Run the application
 
-The quickstart project is configured to compile and run the application in the browser. Use the following command to run the application.
+The quickstart project is configured to compile and run in the browser. Use the following command to start the application:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -147,7 +146,7 @@ npm start
 {% endhighlight %}
 {% endtabs %}
 
-Output will be displayed as follows.
+Output:
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -159,7 +158,7 @@ PdfViewer.Inject( Toolbar, Magnification, Navigation, Annotation, LinkAnnotation
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl="https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -170,19 +169,10 @@ pdfviewer.appendTo('#PdfViewer');
     <title>EJ2 PDF Viewer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Typescript PDF Viewer Control" />
+    <meta name="description" content="TypeScript PDF Viewer Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-popups/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-navigations/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-dropdowns/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-inputs/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/26.2.11/ej2-notifications/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
@@ -201,21 +191,21 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Module injection
 
-To create PDF Viewer with additional features, inject the required modules. The following modules are used to extend PDF Viewer's basic functionality:-
+To enable additional features, inject the required modules. The following modules extend the PDF Viewer's functionality:
 
-* `LinkAnnotation`:-  Inject this module to use PDF Viewer link annotation.
-* `BookmarkView`:-  Inject this module to use bookmark view of the PDF Viewer.
-* `Magnification`:-  Inject this module to magnify the PDF Document.
-* `Navigation`:-  Inject this module to use page navigation on PDF Document.
-* `TextSelection`:-  Inject this module to use text selection with the PDF Document.
-* `ThumbnailView`:-  Inject this module to use thumbnail view of the PDF Viewer
-* `Toolbar`:-  Inject this module to enable the user interface for toolbar option in PDF Viewer.
-* `Print`:-  Inject this module to use pdfviewer print feature.
-* `Annotation`:-  Inject this module to use pdfviewer annotation feature.
-* `TextSearch`:-  Inject this module to use pdfviewer text search feature.
-* `FormFields`:-  Inject this module to use pdfviewer form fields feature.
-* `FormDesigner`:-  Inject this module to use pdfviewer form designer feature.
+* `LinkAnnotation`: Enables hyperlink navigation.
+* `BookmarkView`: Displays and navigates document bookmarks.
+* `Magnification`: Provides zoom in/out operations.
+* `Navigation`: Enables page navigation.
+* `TextSelection`: Enables text selection.
+* `ThumbnailView`: Displays page thumbnails for navigation.
+* `Toolbar`: Enables the built-in toolbar UI.
+* `Print`: Enables printing.
+* `Annotation`: Enables annotation features.
+* `TextSearch`: Enables text search.
+* `FormFields`: Enables form field support.
+* `FormDesigner`: Enables designing and editing of form fields.
 
-These modules should be injected into the PDF Viewer using `PdfViewer.Inject` method.
+Inject modules using the `PdfViewer.Inject` method.
 
-> You can refer to our [JavaScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) feature tour page for its groundbreaking feature representations. You can also explore our [JavaScript PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/default.html) to understand how to explains core features of PDF Viewer.
+> Refer to the [JavaScript PDF Viewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk) for an overview of capabilities. Explore the [JavaScript PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/default.html) to see core features in action.
