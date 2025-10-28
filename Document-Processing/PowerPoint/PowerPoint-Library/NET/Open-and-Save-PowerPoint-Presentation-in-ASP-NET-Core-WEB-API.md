@@ -12,7 +12,7 @@ Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www
 
 ## Steps to Open and save a Presentation programmatically:
 
-The below steps illustrate creating a simple PowerPoint Presentation in ASP.NET Core Web API.
+The below steps illustrate Open and save a simple PowerPoint Presentation in ASP.NET Core Web API.
 
 Step 1: Create a new C# ASP.NET Core Web API project.
 
@@ -20,7 +20,7 @@ Step 1: Create a new C# ASP.NET Core Web API project.
 
 Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org).
 
-![Install Syncfusion.Presentation.Net.Core NuGet Package](ASP-NET-Core-WEB-API-images/Nuget-Package-NET-Core.png)
+![Install Syncfusion.Presentation.Net.Core NuGet Package](ASP-NET-Core-WEB-API-images/ASP-NET-Core-Web-API-template-Open-Save.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -41,7 +41,7 @@ using Syncfusion.Presentation;
 
 {% endtabs %}
 
-Step 5: Add a new action method DownloadPresentation in **ValuesController.cs** and include the below code snippet to create an PowerPoint Presentation and download it.
+Step 5: Add a new action method DownloadPresentation in **ValuesController.cs** and include the below code snippet to Open and save an PowerPoint Presentation and download it.
 
 {% tabs %}
 
@@ -105,7 +105,7 @@ Step 8: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
-A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/ASP.NET-Core-Web-API/Create-PowerPoint-presentation).
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/ASP.NET-Core-Web-API/Read-and-edit-PowerPoint-presentation).
 
 ## Steps for accessing the Web API using HTTP requests
 
@@ -129,7 +129,6 @@ using (HttpClient client = new HttpClient())
     {
         // Send a GET request to a URL
         HttpResponseMessage response = await client.GetAsync("https://localhost:7055/api/Values/api/PowerPoint");
-
         // Check if the response is successful
         if (response.IsSuccessStatusCode)
         {
@@ -162,7 +161,7 @@ Step 4: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
-A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/ASP.NET-Core-Web-API/Client-Application).
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/ASP.NET-Core-Web-API/Client-Application).
 
 Upon executing the program, the **PowerPoint Presentation** will be generated as follows.
 

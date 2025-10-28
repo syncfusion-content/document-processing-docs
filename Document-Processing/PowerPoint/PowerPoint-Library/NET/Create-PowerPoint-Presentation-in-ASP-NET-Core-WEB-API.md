@@ -153,7 +153,6 @@ using (HttpClient client = new HttpClient())
     {
         // Send a GET request to a URL
         HttpResponseMessage response = await client.GetAsync("https://localhost:7073/api/Values/api/PowerPoint");
-
         // Check if the response is successful
         if (response.IsSuccessStatusCode)
         {

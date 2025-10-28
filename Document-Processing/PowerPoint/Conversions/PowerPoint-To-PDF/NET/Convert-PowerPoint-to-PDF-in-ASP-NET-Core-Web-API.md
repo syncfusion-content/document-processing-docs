@@ -39,7 +39,7 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Add a new action method ConvertPPTXToPdf in **ValuesController.cs** and include the below code snippet to convert an PowerPoint Presentation to image and download it.
+Step 5: Add a new action method ConvertPPTXToPdf in **ValuesController.cs** and include the below code snippet to convert an PowerPoint Presentation to PDF and download it.
 
 {% tabs %}
 
@@ -102,7 +102,7 @@ Step 8: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
-A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/ASP.NET-Core-Web-API/Create-PowerPoint-presentation).
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/ASP.NET-Core-Web-API/Convert-PowerPoint-Presentation-to-PDF).
 
 ## Steps for accessing the Web API using HTTP requests
 
@@ -113,7 +113,7 @@ N> Ensure your ASP.NET Core Web API is running on the specified port before runn
 
 Step 2: Add the below code snippet in the **Program.cs** file for accessing the Web API using HTTP requests. 
 
-This method sends a GET request to the Web API endpoint to retrieve and save the converted Image.
+This method sends a GET request to the Web API endpoint to retrieve and save the converted PDF.
 
 {% tabs %}
 
@@ -158,7 +158,7 @@ Step 4: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
-A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/ASP.NET-Core-Web-API/Client-Application).
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/ASP.NET-Core-Web-API/Client%20Application).
 
 Upon executing the program, the **PDF** will be generated as follows.
 
