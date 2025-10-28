@@ -7,7 +7,7 @@ control: Form Field Events
 documentation: ug
 ---
 
-# User Interaction with Form Fields in ASP.NET Core
+# PDF Viewer Form Field events in ASP.NET CORE
 
 The PDF Viewer control provides the support to different Form Field events. The Form Field events supported by the PDF Viewer Control are:
 
