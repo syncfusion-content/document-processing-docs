@@ -46,10 +46,10 @@ The following example shows `Protect Sheet` functionality with password in the S
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/protect-sheet/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/protect-sheet/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ProtectSheetController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/protect-sheet/protectSheetController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/protect-sheet/protectSheetController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -77,10 +77,10 @@ In protected spreadsheet, to make some particular cell or range of cells are edi
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/lock-cells/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/lock-cells/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="LockCellController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/lock-cells/lockCellController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/lock-cells/lockCellController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -115,10 +115,10 @@ The following example demonstrates how to make rows, columns, and cells read-onl
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/read-only/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/read-only/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ReadOnlyController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/read-only/readOnlyController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/read-only/readOnlyController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -140,10 +140,10 @@ The following example shows `Protect Workbook` by using the [`isProtected`](http
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/protect-workbook/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/protect-workbook/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ProtectWorkbookController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/protect-workbook/protectWorkbookController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/protect-workbook/protectWorkbookController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -153,10 +153,10 @@ The following example shows `Protect Workbook` by using the [`password`](https:/
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/password/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/password/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="PasswordController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/password/passwordController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/password/passwordController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
