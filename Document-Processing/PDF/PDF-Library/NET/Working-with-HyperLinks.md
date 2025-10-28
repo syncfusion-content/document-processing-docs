@@ -559,7 +559,7 @@ To open a file in relative path, the [PdfLaunchAction](https://help.syncfusion.c
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" [Windows-specific] %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
@@ -587,7 +587,7 @@ document.Close();
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" [Windows-specific] %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
