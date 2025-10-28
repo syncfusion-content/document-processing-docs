@@ -800,7 +800,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Unit conversion in text layout
 
-The [PdfUnitConvertor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfUnitConvertor.html) class is used to accurately position and layout paragraph text within a PDF document. By converting measurements from inches to points, it ensures consistent margins and precise placement of content.
+The [PdfUnitConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfUnitConvertor.html) class is used to accurately position and layout paragraph text within a PDF document. By converting measurements from inches to points, it ensures consistent margins and precise placement of content.
 
 This example demonstrates how to use converted units to accurately position and format paragraph text within a PDF document.
 
@@ -819,7 +819,7 @@ using (PdfDocument document = new PdfDocument())
     PdfPage page = document.Pages.Add();
 
     // Initialize unit converter
-    PdfUnitConvertor converter = new PdfUnitConvertor();
+    PdfUnitConverter converter = new PdfUnitConverter();
 
     // Convert margins from inches to points
     float margin = converter.ConvertUnits(1f, PdfGraphicsUnit.Inch, PdfGraphicsUnit.Point);
@@ -868,7 +868,7 @@ using (PdfDocument document = new PdfDocument())
     PdfPage page = document.Pages.Add();
 
     // Initialize unit converter
-    PdfUnitConvertor converter = new PdfUnitConvertor();
+    PdfUnitConverter converter = new PdfUnitConverter();
 
     // Convert margins from inches to points
     float margin = converter.ConvertUnits(1f, PdfGraphicsUnit.Inch, PdfGraphicsUnit.Point);
@@ -919,7 +919,7 @@ Module Program
             Dim page As PdfPage = document.Pages.Add()
 
             ' Initialize unit converter
-            Dim converter As New PdfUnitConvertor()
+            Dim converter As New PdfUnitConverter()
 
             ' Convert 1 inch margin to points
             Dim margin As Single = converter.ConvertUnits(1.0F, PdfGraphicsUnit.Inch, PdfGraphicsUnit.Point)
