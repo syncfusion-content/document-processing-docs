@@ -31,15 +31,15 @@ The following code example shows the usage of ribbon customization.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/ribbon/cutomization-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/ribbon/cutomization-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/ribbon/cutomization-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/ribbon/cutomization-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/ribbon/cutomization-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/ribbon/cutomization-cs1" %}
 
 ## Note
 

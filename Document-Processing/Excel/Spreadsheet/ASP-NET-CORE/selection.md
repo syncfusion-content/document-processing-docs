@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Selection in Spreadsheet Control
+# Selection in ASP.NET Core Spreadsheet Control
 
 Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` or `Multiple` in [`selectionSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SelectionSettings). If you set `mode` to `None`, it disables the UI selection.
 
@@ -49,10 +49,10 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/row-selection/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/row-selection/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/row-selection/selectionController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/row-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,10 +75,10 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/column-selection/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/column-selection/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/column-selection/selectionController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/column-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -90,10 +90,10 @@ Below is a code example demonstrating how to retrieve the selected cell values a
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/selected-cell-values/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/selected-cell-values/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectedCellValuesController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/selected-cell-values/selectedCellValuesController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/selected-cell-values/selectedCellValuesController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -103,10 +103,10 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/disable-selection/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/disable-selection/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/disable-selection/selectionController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/disable-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

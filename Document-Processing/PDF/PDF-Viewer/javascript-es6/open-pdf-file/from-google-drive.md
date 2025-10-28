@@ -1,27 +1,25 @@
 ---
 layout: post
-title: Open PDF files from Google Drive in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Open PDF files from Google Drive in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Open PDF from Google Drive in TypeScript PDF Viewer | Syncfusion
+description: Learn how to load PDFs from Google Drive in the Syncfusion TypeScript PDF Viewer component using a server-backed approach.
 platform: document-processing
-control: Open PDF files from Google Drive
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Open PDF file from Google Drive
+# Open PDF from Google Drive
 
-To load a PDF file from Google Drive in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from Google Drive using the server-backed PDF Viewer.
 
 **Step 1** Set up Google Drive API
 
 You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
 
-**Step 2:** Create a Simple PDF Viewer Sample in Typescript
+**Step 2:** Create a Simple PDF Viewer Sample in TypeScript
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This will give you a basic setup of the PDF Viewer component.
 
-**Step 3:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 3:** Modify the PdfViewerController.cs file in the web service project
 
 1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
 
@@ -35,7 +33,7 @@ using Google.Apis.Drive.v3;
 using Google.Apis.Util.Store;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to PdfViewerController. In the constructor, assign values from configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -64,7 +62,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 //Post action for Loading the PDF documents 
 public async Task<IActionResult> Load([FromBody] Dictionary<string, string> jsonObject)
 {
-  //Initialize the PDF viewer object with memory cache object
+  //Initialize the PDF Viewer object with memory cache object
   PdfRenderer pdfviewer = new PdfRenderer(_cache);
   MemoryStream stream = new MemoryStream();
   object jsonResult = new object();
@@ -126,7 +124,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open appsettings.json in the web service project and add the following keys below the existing AllowedHosts configuration
 
 ```json
 {
@@ -143,13 +141,13 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google drive folder ID , Your name for your application and the path for the JSON file.
+N> Replace the placeholders with your actual values: Google Drive Folder ID, Application name, and the path to the OAuth 2.0 client IDs JSON file.
 
 N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
 
-**Step 4:**  Set the PDF Viewer Properties in Typescript PDF viewer component
+**Step 4:** Configure the PDF Viewer component
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Google Drive. Ensure that you correctly pass the document name from the files available in your drive folder to the documentPath property.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Google Drive. Ensure the document name exists in your Drive folder.
 
 ```typescript
 

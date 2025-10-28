@@ -90,15 +90,15 @@ The following code example shows the number formatting in cell data.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/format/number-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/format/number-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/format/number-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/format/number-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/format/number-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/format/number-cs1" %}
 
 ## Configure culture-based custom format
 
@@ -145,15 +145,15 @@ The following code example demonstrates how to configure culture-based formats f
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/format/globalization-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/format/globalization-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/format/globalization-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/format/globalization-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/format/globalization-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/format/globalization-cs1" %}
 
 ## Text and cell formatting
 
@@ -216,15 +216,15 @@ The following code example shows the style formatting in text and cells of the s
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/format/number-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/format/number-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/format/number-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/format/number-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/format/number-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/format/number-cs2" %}
 
 ### Limitations of Formatting
 
@@ -314,15 +314,15 @@ You can clear the defined rules by using one of the following ways,
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/conditional-formatting-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/conditional-formatting-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/conditional-formatting-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/conditional-formatting-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/conditional-formatting-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/conditional-formatting-cs1" %}
 
 ### Limitations of Conditional formatting
 
