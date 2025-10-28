@@ -20,15 +20,10 @@ You can insert rows or columns anywhere in a spreadsheet.
 
 ### Row
 
-The rows can be inserted in the following ways:
+The rows can be inserted in the following ways,
 
-**Using the context menu**
-
- Insert rows in the desired position by right-clicking on a row header.
-
-**Using InsertRowAsync method**
-
-Using [`InsertRowAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertRowAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_RowPosition_) method, you can insert the rows once the component is loaded.
+* Using [`InsertRowAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertRowAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_RowPosition_) method, you can insert the rows once the component is loaded.
+* Using context menu, insert the rows in the desired position.
 
 The following code example shows the options for inserting rows in the spreadsheet.
 
@@ -74,15 +69,10 @@ The following code example shows the options for inserting rows in the spreadshe
 
 ### Column
 
-The columns can be inserted in the following ways:
+The columns can be inserted in the following ways,
 
-**Using the context menu**
-
-Insert columns in the desired position by right-clicking on a column header.
-
-**Using InsertColumnAsync method**
-
-Using [`InsertColumnAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertColumnAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_ColumnPosition_) method, you can insert the columns once the component is loaded.
+* Using [`InsertColumnAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertColumnAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_ColumnPosition_) method, you can insert the columns once the component is loaded.
+* Using context menu, insert the columns in the desired position.
 
 The following code example shows the options for inserting columns in the spreadsheet.
 
@@ -141,8 +131,8 @@ The Blazor Spreadsheet component enables you to define the initial number of row
 
 - **With Data Source (e.g., byte array or imported file):**
 
-  - If the data source has fewer rows/columns than RowCount/ColCount, the spreadsheet renders additional empty rows/columns to meet the specified counts.
-  - If the data source has more rows/columns than RowCount/ColCount, the spreadsheet renders enough rows/columns to display all data from the source (i.e., it extends beyond the specified counts to fit the data). Your data is never truncated by these properties.
+  - If the data source has fewer rows and columns than the specified row and column counts, the spreadsheet renders additional empty rows and columns to meet those counts.
+  - If the data source has more rows and columns than the specified row and column counts, the spreadsheet renders enough rows and columns to display all data from the source (i.e., it extends beyond those counts to fit the data). Your data is never truncated by these properties.
 
 
 You can set these properties as follows:
