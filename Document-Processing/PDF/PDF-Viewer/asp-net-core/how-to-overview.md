@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FAQ Section in ASP.NET Core PDF Viewer control | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of in PDF Viewer control.
+description: In this section, you can know about the various questions asked about manipulation of in ASP.NET Core PDF Viewer control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
