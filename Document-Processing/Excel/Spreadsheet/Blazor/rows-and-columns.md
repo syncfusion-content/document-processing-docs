@@ -127,7 +127,7 @@ The Blazor Spreadsheet component enables you to define the initial number of row
 
 - **Without Data Source:** 
 
-  - When no data is bound to the spreadsheet, the sheet renders empty cells up to RowCount × ColCount.
+  - When no data is bound to the spreadsheet, the sheet renders empty cells up to the specified row and column counts.
 
 - **With Data Source (e.g., byte array or imported file):**
 
