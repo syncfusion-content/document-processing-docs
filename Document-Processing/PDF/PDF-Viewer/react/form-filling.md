@@ -95,5 +95,5 @@ For more information, see the [Form fields documentation](https://help.syncfusio
 
 ## See also
 
-* [Handwritten signature in React PDF Viewer](./annotations/signature-annotation)
+* [Handwritten signature in React PDF Viewer](./annotation/signature-annotation)
 * [Form Designer events](./form-designer/form-field-events)

@@ -17,13 +17,13 @@ The available PDF Viewer modules are:
 * [**Toolbar**](./toolbar-customization/annotation-toolbar-customization): Built-in toolbar for user interaction.
 * [**Magnification**](./magnification): Perform zoom operations for a better viewing experience.
 * [**Navigation**](./interactive-pdf-navigation/page-navigation): Navigate across pages.
-* [**LinkAnnotation**](./interactive-pdf-navigation/table-of-content-navigation): Navigate within the document or to external destinations via hyperlinks.
+* [**LinkAnnotation**](./interactive-pdf-navigation/hyperlink-navigation): Navigate within the document or to external destinations via hyperlinks.
 * [**ThumbnailView**](./interactive-pdf-navigation/page-thumbnail-navigation): Navigate within the document using page thumbnails.
 * [**BookmarkView**](./interactive-pdf-navigation/bookmark-navigation): Navigate using document bookmarks (table of contents).
 * [**TextSelection**](./textselection): Select and copy text from the document.
 * [**TextSearch**](./text-search): Search for text across the document.
 * [**Print**](./print): Print the entire document or specific pages directly from the browser.
-* [**Annotation**](./annotations/text-markup-annotation): Add and edit annotations.
+* [**Annotation**](./annotation/text-markup-annotation): Add and edit annotations.
 * [**FormFields**](./form-designer/create-programmatically): Work with form fields in the document.
 * [**FormDesigner**](./form-designer/create-programmatically): Add or edit form fields in the document.
 
