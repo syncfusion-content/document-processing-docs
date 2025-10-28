@@ -5074,7 +5074,7 @@ The [PdfAnnotationIntent.FreeTextTypeWriter](https://help.syncfusion.com/cr/docu
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Setting-Annotation-Intent/.NET/Setting-Annotation-Intent/Program.cs" %}
 
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
@@ -5192,7 +5192,7 @@ End Using
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/260329/Annotation/Setting-Annotation-Intent/.NET).
 
 ## Adding comments and review status to the PDF annotation
 
