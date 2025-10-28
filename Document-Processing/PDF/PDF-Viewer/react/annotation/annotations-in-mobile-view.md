@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations mobileView in React PDF Viewer control | Syncfusion
-description: Learn how to use annotations in mobile view with the Syncfusion React PDF Viewer (Essential JS 2).
+description: Learn to add rectangle annotations via text search in Syncfusion React PDF Viewer for enhanced mobile usability.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
