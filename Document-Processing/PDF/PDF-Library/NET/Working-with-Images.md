@@ -749,7 +749,7 @@ using (PdfDocument document = new PdfDocument())
         PdfSection section = document.Sections.Add();
 
         //Initialize unit converter
-        PdfUnitConvertor converter = new PdfUnitConvertor();
+        PdfUnitConverter converter = new PdfUnitConverter();
 
         //Convert the image size from pixel to points
         SizeF size = converter.ConvertFromPixels(image.PhysicalDimension, PdfGraphicsUnit.Pixel);
@@ -795,7 +795,7 @@ using (PdfDocument document = new PdfDocument())
         PdfSection section = document.Sections.Add();
 
         //Initialize unit converter
-        PdfUnitConvertor converter = new PdfUnitConvertor();
+        PdfUnitConverter converter = new PdfUnitConverter();
 
         //Convert the image size from pixel to points
         SizeF size = converter.ConvertFromPixels(image.PhysicalDimension, PdfGraphicsUnit.Pixel);
@@ -842,7 +842,7 @@ Module Program
                 Dim section As PdfSection = document.Sections.Add()
 
                 ' Initialize unit converter
-                Dim converter As New PdfUnitConvertor()
+                Dim converter As New PdfUnitConverter()
 
                 ' Convert image size from pixels to points
                 Dim size As SizeF = converter.ConvertFromPixels(image.PhysicalDimension, PdfGraphicsUnit.Pixel)
