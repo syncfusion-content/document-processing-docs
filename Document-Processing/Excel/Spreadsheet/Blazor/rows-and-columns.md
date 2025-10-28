@@ -26,7 +26,7 @@ The rows can be inserted in the following ways:
 
  Insert rows in the desired position by right-clicking on a row header.
 
-**Using `InsertRowAsync` method**
+**Using InsertRowAsync method**
 
 Using [`InsertRowAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertRowAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_RowPosition_) method, you can insert the rows once the component is loaded.
 
@@ -80,7 +80,7 @@ The columns can be inserted in the following ways:
 
 Insert columns in the desired position by right-clicking on a column header.
 
-**Using `InsertColumnAsync` method**
+**Using InsertColumnAsync method**
 
 Using [`InsertColumnAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_InsertColumnAsync_System_Int32_System_Int32_System_Object_Syncfusion_Blazor_Spreadsheet_ColumnPosition_) method, you can insert the columns once the component is loaded.
 
@@ -133,7 +133,7 @@ The Blazor Spreadsheet component enables you to define the initial number of row
 *   The default `RowCount` is **1000**.
 *   The default `ColumnCount` is **200**.
 
-**Rendering Behavior**
+### Rendering Behavior
 
 - **Without Data Source:** 
 
