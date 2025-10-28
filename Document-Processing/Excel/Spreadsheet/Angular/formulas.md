@@ -32,15 +32,15 @@ In the example below, the Spreadsheet component is rendered with the `German cul
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/formula-cs3/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/formula-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/formula-cs3/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/formula-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/formula-cs3" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/formula-cs3" %}
 
 ## Create User Defined Functions / Custom Functions
 
@@ -52,15 +52,15 @@ The following code example shows an unsupported formula in the spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/formula-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/formula-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/formula-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/formula-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/formula-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/formula-cs1" %}
 
 Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
 
@@ -68,15 +68,15 @@ The following code example shows how to use `computeExpression` method in the sp
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/formula-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/formula-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/formula-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/formula-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/formula-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/formula-cs2" %}
 
 ## Formula bar
 
@@ -95,15 +95,15 @@ The following code example shows the usage of named ranges support.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/defined-name-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/defined-name-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/defined-name-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/defined-name-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/defined-name-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/defined-name-cs1" %}
 
 ## Calculation Mode
 
@@ -124,15 +124,15 @@ The following code example demonstrates how to set the Automatic calculation mod
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/calculation-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/calculation-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/calculation-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/calculation-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/calculation-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/calculation-cs1" %}
 
 ### Manual Mode
 
@@ -147,15 +147,15 @@ The following code example demonstrates how to set the Manual calculation mode i
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/calculation-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/calculation-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/calculation-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/calculation-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/calculation-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/calculation-cs2" %}
 
 ## Supported Formulas
 
