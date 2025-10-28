@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open PDF from Azure Blob Storage using Vue Pdfviewer | Syncfusion
-description: Learn about how to load PDF file from Azure Blob Storage in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Open PDF from Azure Blob Storage using Vue PDF Viewer | Syncfusion
+description: Learn about how to load PDF file from Azure Blob Storage in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Open PDF files from Azure Blob Storage
 platform: document-processing
 documentation: ug
@@ -10,19 +10,19 @@ domainurl: ##DomainURL##
 
 # Open PDF file from Azure Blob Storage
 
-PDF Viewer allows to load PDF file from Azure Blob Storage using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to open a PDF from Azure Blob Storage.
+The Vue PDF Viewer component supports loading PDF files from Azure Blob Storage using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 
-## Using Standalone PDF Viewer
+## Using the standalone PDF Viewer
 
-To load a PDF file from Azure Blob Storage in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from Azure Blob Storage in the standalone PDF Viewer.
 
 **Step 1:** Create a Simple PDF Viewer Sample in Vue
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF viewer sample in Vue. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample in Vue. This will give you a basic setup of the PDF Viewer component.
 
-**Step 2:** Modify the `src/App.vue` File in the Vue Project
+**Step 2:** Modify the `src/App.vue` file in the Vue project
 
-1. Import the required namespaces at the top of the file:
+1. Import the required modules at the top of the file:
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
@@ -34,9 +34,9 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 {% endhighlight %}
 {% endtabs %}
 
-2. Use the `SASUrl` to fetch the file details and convert the response object into an `ArrayBuffer`. Convert the `ArrayBuffer` into a `Uint8Array` for easier manipulation of the binary data. Then, convert the `Uint8Array` into a Base64 string and load this Base64 string into the PDF viewer.
+2. Use the `SASUrl` to fetch the PDF file, convert the response to an `ArrayBuffer`, and then transform it into a `Uint8Array`. Convert the `Uint8Array` into a Base64 string and load it into the PDF Viewer.
 
-N> Replace **Your SAS Url in Azure** with the actual SAS url for your Azure Blob Storage account.
+N> Replace **Your SAS Url in Azure** with the actual SAS URL for your Azure Blob Storage account.
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
@@ -68,13 +68,13 @@ N> The **npm install @azure/storage-blob** package must be installed in your app
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Standalone).
 
-## Using Server-Backed PDF Viewer
+## Using the server-backed PDF Viewer
 
-To load a PDF file from Azure Blob Storage in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from Azure Blob Storage using the server-backed PDF Viewer.
 
 **Step 1:** Create a Simple PDF Viewer Sample in Vue
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF viewer sample in Vue. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample in Vue. This will give you a basic setup of the PDF Viewer component.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -90,7 +90,7 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Specialized;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields:
 
 ```csharp
 private readonly string _storageConnectionString;
@@ -105,7 +105,7 @@ public PdfViewerController(IConfiguration configuration, ILogger<PdfViewerContro
 }
 ```
 
-5. Modify the `Load` method to load the PDF files from  Azure Blob Storage
+5. Modify the `Load` method to load PDF files from Azure Blob Storage.
 
 ```csharp
 
@@ -141,7 +141,7 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-6. Open the `app settings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project and add the following lines below the existing `"AllowedHosts"` configuration:
 
 ```json
 {
@@ -157,11 +157,11 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name
+N> Replace the placeholders with your actual values: Azure storage connection string and container name.
 
-**Step 3:**  Set the PDF Viewer Properties in Vue PDF viewer component
+**Step 3:** Configure the PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Azure Blob Storage. Ensure that you correctly pass the document name from the files available in your azure container to the documentPath property.
+Set the `serviceUrl` property of the PDF Viewer component to your web service endpoint (replace `https://localhost:44396/pdfviewer` with the actual URL of your server). Set the `documentPath` property to the PDF file name to load from Azure Blob Storage. Ensure the document name exists in your Azure container.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Server-Backed)" %}
