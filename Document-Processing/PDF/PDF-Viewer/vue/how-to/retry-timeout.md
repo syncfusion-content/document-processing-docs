@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Retry Timeout in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Retry Timeout in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Retry Timeout in Vue PDF Viewer component | Syncfusion
+description: Learn here all about Retry Timeout in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Retry Timeout
 platform: document-processing
 documentation: ug
