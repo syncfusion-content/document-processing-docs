@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Open PDF files from One Drive in Vue Pdfviewer component | Syncfusion
-description: Learn about how to load PDF files from One Drive in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Open PDF files from One Drive
+title: Open PDF from OneDrive in Vue PDF Viewer | Syncfusion
+description: Learn how to load PDFs from OneDrive in the Syncfusion Vue PDF Viewer component using a server-backed approach.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF file from One Drive
+# Open PDF from OneDrive
 
-To load a PDF file from One Drive in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from OneDrive using the server-backed PDF Viewer.
 
-**Step 1** Create the Microsoft graph API.
+**Step 1:** Create a Microsoft Graph API application
 
-Need to create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs.
+Create a Microsoft Graph API application and obtain the application ID and tenant ID. Follow this guide: https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive
 
 **Step 2:** Create a Simple PDF Viewer Sample in Vue
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF viewer sample in Vue. This will give you a basic setup of the PDF viewer component.
 
-**Step 3:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
 1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
 
@@ -35,7 +35,7 @@ using Microsoft.Identity.Client;
 using Helpers;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to `PdfViewerController`. In the constructor, assign values from configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -139,11 +139,11 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 
 ```
 
-N> Replace **Your_Tenent_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
+N> Replace the placeholders with your actual values: Tenant ID, Application ID, and OneDrive folder name.
 
-**Step 4:**  Set the PDF Viewer Properties in Vue PDF viewer component
+**Step 4:** Configure the PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from One Drive. Ensure that you correctly pass the document name from the files available in your drive folder to the documentPath property.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from OneDrive. Ensure the document name exists in your OneDrive folder.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
