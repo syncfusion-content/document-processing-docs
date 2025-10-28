@@ -27,12 +27,12 @@ The Organize Pages panel supports the following actions:
 
 After completing the changes, apply them by selecting **Save** to overwrite the current document or **Save As** to download a new copy that retains the updated page order.
 
-For a full guide to Organize Pages in Vue, see the feature landing page: [Organize pages in Vue PDF Viewer](./organize-pdf.md).
+For a full guide to Organize Pages in Vue, see the feature landing page: [Organize pages in Vue PDF Viewer](./organize-pdf).
 
 See also
 
-- [UI interactions for Organize Pages](./organize-pdf/ui-interactions-organize-page.md)
-- [Toolbar items for Organize Pages](./organize-pdf/toolbar-organize-page.md)
-- [Programmatic support for Organize Pages](./organize-pdf/programmatic-support-for-organize-page.md)
-- [Organize Pages events](./organize-pdf/organize-pdf-events.md)
-- [Organize Pages in mobile view](./organize-pdf/organize-page-mobile-view.md)
+- [UI interactions for Organize Pages](./organize-pdf/ui-interactions-organize-page)
+- [Toolbar items for Organize Pages](./organize-pdf/toolbar-organize-page)
+- [Programmatic support for Organize Pages](./organize-pdf/programmatic-support-for-organize-page)
+- [Organize Pages events](./organize-pdf/organize-pdf-events)
+- [Organize Pages in mobile view](./organize-pdf/organize-page-mobile-view)
