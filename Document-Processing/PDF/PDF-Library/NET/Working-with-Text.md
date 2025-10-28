@@ -806,7 +806,7 @@ This example demonstrates how to use converted units to accurately position and 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Unit-conversion-in-text-layout/.NET/Unit-conversion-in-text-layout/Program.cs" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -956,7 +956,7 @@ End Module
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Unit-conversion-in-text-layout/.NET).
 
 ## Embedding fonts and working with Unicode text
 
