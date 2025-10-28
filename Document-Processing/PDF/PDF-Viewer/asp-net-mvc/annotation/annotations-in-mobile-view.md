@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Annotations in mobile view in ASP.NET MVC Pdf viewer | Syncfusion
-description: Learn here all about Annotations in mobile view in Syncfusion ASP.NET MVC Pdf viewer control of Syncfusion Essential JS 2 and more.
+title: Annotations in mobile view in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn here all about Annotations in mobile view in Syncfusion ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Annotations in mobile view
 documentation: ug
 ---
-# Annotations in mobile view in ASP.NET MVC Pdf viewer control
+# Annotations in mobile view in ASP.NET MVC PDF Viewer control
 
 ## To Open the Annotation Toolbar
 
