@@ -198,31 +198,21 @@ document.getElementById('openPageOrganizer').addEventListener('click', function 
   viewer.pageOrganizer.openPageOrganizer();
 }
 ```
-
 **closePageOrganizer:** This API closes the currently open page organizer dialog within the PDF Viewer, if it is present. It allows users to dismiss the dialog when done with page organization tasks.
-
 ```html
 <button id="closePageOrganizer">Close PageOrganizer Pane</button>
 ```
-
 ```ts
 document.getElementById('closePageOrganizer').addEventListener('click', function () {
   viewer.pageOrganizer.openPageOrganizer();
 }
 ```
-
 ## Keyboard shortcuts
-
 The following keyboard shortcuts are available at the organize pages dialog.
-
 * **Ctrl+Z** : Undo the last action performed.
 * **Ctrl+Y** : Redo the action that was undone
 * **Ctrl+Scroll** : Zoom in and zoom out page thumbnails for better visibility.
-
 ![Alt text](./images/undo-redo.png)
-
 #### Conclusion
-
 With the Organize Pages feature in the PDF Viewer, managing your PDF documents has never been easier. Whether you are adding new content, adjusting page orientation, moving the pages, duplicating the pages, or removing unnecessary pages, this feature provides the tools you need to streamline your document management workflow. Explore these capabilities today and take control of your PDF documents with ease!
-
 [View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to/Organize%20pdf)

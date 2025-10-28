@@ -1,66 +1,63 @@
 ---
 layout: post
-title: Open PDF from Dropbox cloud storage in Vue Pdfviewer | Syncfusion
-description: Learn about how to load PDF files from Dropbox cloud file storage in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Open PDF files from Dropbox cloud file storage
+ttitle: Open PDF from Dropbox cloud storage in Vue PDF Viewer | Syncfusion
+description: Learn how to load PDFs from Dropbox cloud storage in the Syncfusion Vue PDF Viewer component using standalone and server-backed approaches.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF file from Dropbox cloud file storage
+# Open PDF from Dropbox cloud storage
 
-PDF Viewer allows to load PDF file from Drop Box using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to open a PDF from Drop Box.
+The Vue PDF Viewer component supports loading PDF files from Dropbox using either the standalone or the server-backed PDF Viewer. The following sections walk through both approaches.
 
-## Using Standalone PDF Viewer
+## Using the standalone PDF Viewer
 
-To load a PDF file from Dropbox cloud file storage in a PDF Viewer, you can follow the steps below
+To load a PDF file from Dropbox cloud storage in the standalone PDF Viewer, follow these steps:
 
-**Step 1** Create a Dropbox API
+**Step 1:** Create a Dropbox API app
 
-To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
+Follow the Dropbox documentation to create an API app: https://www.dropbox.com/developers/documentation/dotnet#tutorial. This enables programmatic access with secure credentials.
 
-**Step 2:** Create a Simple PDF Viewer Sample in Vue
+**Step 2:** Create a PDF Viewer sample in Vue
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF viewer sample in Vue. This will give you a basic setup of the PDF viewer component.
+Follow the steps in this [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to set up a basic Vue PDF Viewer application.
 
-**Step 3:** Modify the `src/App.vue` File in the Angular Project
+**Step 3:** Modify the `src/App.vue` file in the Vue project
 
-1. Import the required namespaces at the top of the file:
+1. Import the required module at the top of the file:
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
 <script>
-  import { Dropbox } from 'dropbox';
+import { Dropbox } from 'dropbox';
 </script>
-
 {% endhighlight %}
 {% endtabs %}
 
-2. Create an instance of the Dropbox class using an access token for authentication. Next, call the filesDownload method of this Dropbox instance to download the file located at /PDF_Succinctly.pdf. Upon successfully downloading the file, extract the file blob from the response. Convert this file blob to a Base64 string using the blobToBase64 method. Finally, load the Base64 string into a PDF viewer control.
+2. Create an instance of the `Dropbox` class with an access token, download the target PDF file, convert it to Base64, and then load it into the PDF Viewer component.
 
-N> Replace **Your Access Token** with the actual Access Token of your Drop Box account.
+N> Replace the placeholder with your actual Dropbox access token.
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
 <script>
   export default {
     methods: {
-      loadPdfDocument: async function () {
-        const dbx = new Dropbox({ accessToken: 'Your Access Token'});
+      async loadPdfDocument() {
+        const dbx = new Dropbox({ accessToken: 'Your Access Token' });
         dbx.filesDownload({ path: '/PDF_Succinctly.pdf' }).then(async (response) => {
           const blob = await response.result.fileBlob;
-          var base64String = await this.blobToBase64(blob);
-          var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+          const base64String = await this.blobToBase64(blob);
+          const viewer = document.getElementById('pdfViewer').ej2_instances[0];
           setTimeout(() => {
             viewer.load(base64String, "");
           }, 2000);
         });
       },
 
-      blobToBase64: function (blob){
+      blobToBase64(blob) {
         return new Promise((resolve, reject) => {
           const reader = new FileReader();
           reader.onloadend = () => resolve(reader.result);
@@ -68,32 +65,31 @@ N> Replace **Your Access Token** with the actual Access Token of your Drop Box a
           reader.readAsDataURL(blob);
         });
       },
-    }
-  }
+    },
+  };
 </script>
-
 {% endhighlight %}
 {% endtabs %}
 
-N> The **npm install dropbox** package must be installed in your application to use the previous code example.
+N> Install the **dropbox** package (`npm install dropbox`) in your application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage/tree/master/Open%20and%20Save%20PDF%20in%20Drop%20Box%20using%20Standalone)
 
-## Using Server-Backed PDF Viewer
+## Using the server-backed PDF Viewer
 
-To load a PDF file from Dropbox cloud file storage in a PDF Viewer, you can follow the steps below
+To load a PDF file from Dropbox cloud storage in the server-backed PDF Viewer, follow these steps:
 
-**Step 1** Create a Dropbox API
+**Step 1:** Create a Dropbox API app
 
-To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
+Follow the Dropbox documentation to create an API app: https://www.dropbox.com/developers/documentation/dotnet#tutorial. This enables programmatic access with secure credentials.
 
-**Step 2:** Create a Simple PDF Viewer Sample in Vue
+**Step 2:** Create a PDF Viewer sample in Vue
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF viewer sample in Vue. This will give you a basic setup of the PDF viewer component.
+Follow the steps in this [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to set up a basic Vue PDF Viewer application.
 
-**Step 3:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. You can refer to this [article](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for guidance on creating the web service project.
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
@@ -105,10 +101,9 @@ using Dropbox.Api;
 using Dropbox.Api.Files;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
-
 private IConfiguration _configuration;
 public readonly string _accessToken;
 public readonly string _folderName;
@@ -117,24 +112,22 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 {
   _hostingEnvironment = hostingEnvironment;
   _cache = cache;
-   _configuration = configuration;
+  _configuration = configuration;
   _accessToken = _configuration.GetValue<string>("AccessToken");
   _folderName = _configuration.GetValue<string>("FolderName");
 }
 ```
 
-5. Modify the `Load()` method to load the PDF files from Dropbox cloud file storage.
+5. Modify the `Load()` method to load the PDF files from Dropbox cloud storage.
 
 ```csharp
-
 [HttpPost("Load")]
 [Microsoft.AspNetCore.Cors.EnableCors("MyPolicy")]
 [Route("[controller]/Load")]
-//Post action for Loading the PDF documents \
-
+// Post action for loading the PDF documents
 public async Task<IActionResult> Load([FromBody] Dictionary<string, string> jsonObject)
 {
-  //Initialize the PDF viewer object with memory cache object
+  // Initialize the PDF viewer object with memory cache object
   PdfRenderer pdfviewer = new PdfRenderer(_cache);
   MemoryStream stream = new MemoryStream();
   object jsonResult = new object();
@@ -146,7 +139,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
       string fileName = jsonObject["document"];
 
       using (var dropBox = new DropboxClient(_accessToken))
-     {
+      {
         using (var response = await dropBox.Files.DownloadAsync(_folderName + "/" + fileName))
         {
           var byteArray = await response.GetContentAsByteArrayAsync();
@@ -165,10 +158,9 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
   jsonResult = pdfviewer.Load(stream, jsonObject);
   return Content(JsonConvert.SerializeObject(jsonResult));
 }
-
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project and add the following lines below the existing `"AllowedHosts"` configuration:
 
 ```json
 {
@@ -184,15 +176,14 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token and **Your_Folder_Name** with your folder name.
+N> Replace the placeholders with your actual Dropbox access token and folder name.
 
-**Step 4:**  Set the PDF Viewer Properties in Vue PDF viewer component
+**Step 4:** Configure the PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Dropbox cloud file storage. Ensure that you correctly pass the document name from the files available in your dropbox folder to the documentPath property.
+Set the `serviceUrl` property of the PDF Viewer component to the URL of your web service project (replace `https://localhost:44396/pdfviewer` with the actual server URL). Set the `documentPath` property to the name of the PDF file you want to load from Dropbox. Ensure the document name matches a file in your Dropbox folder.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
 <template>
   <div id="app">
     <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
@@ -213,12 +204,9 @@ const documentPath = "PDF_Succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]);
-
 </script>
-
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
 <template>
   <div id="app">
     <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
@@ -248,12 +236,11 @@ export default {
     PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
       Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
   }
-}
+};
 </script>
-
 {% endhighlight %}
 {% endtabs %}
 
-N> The **Dropbox.Api** NuGet package must be installed in your application to use the previous code example.
+N> Install the **Dropbox.Api** NuGet package in your application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage/tree/master/Open%20and%20Save%20PDF%20in%20Drop%20Box%20using%20Server-Backed)
