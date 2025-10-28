@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation Toolbar Customization in ASP.NET MVC Pdfviewer control | Syncfusion
-description: Learn here all about annotation toolbar customization in Syncfusion ASP.NET MVC Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Annotation Toolbar Customization in ASP.NET MVC PDF Viewer control | Syncfusion
+description: Learn here all about annotation toolbar customization in Syncfusion ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Annotation Toolbar Customization
 publishingplatform: PDF Viewer

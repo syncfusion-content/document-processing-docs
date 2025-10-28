@@ -219,7 +219,7 @@ The following sample illustrates the customized context menu.
 
 <div>
     <div style="height:500px;width:100%;">
-        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib").CustomContextMenuSelect("customContextMenuSelect").CustomContextMenuBeforeOpen("customContextMenuBeforeOpen").DocumentLoad("documentLoaded").Render()
+        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").CustomContextMenuSelect("customContextMenuSelect").CustomContextMenuBeforeOpen("customContextMenuBeforeOpen").DocumentLoad("documentLoaded").Render()
     </div>
 </div>
 <script type="text/javascript">

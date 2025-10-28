@@ -182,7 +182,7 @@ The following example illustrates how to handle the `printStart` event.
 {% highlight cshtml tabtitle="Standalone" %}
 
 <div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnablePrint(true).PrintStart("printStarted").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnablePrint(true).PrintStart("printStarted").Render()
 </div>
 
 <script>
@@ -223,7 +223,7 @@ The following example illustrates how to handle the `printEnd` event.
 {% highlight cshtml tabtitle="Standalone" %}
 
 <div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnablePrint(true).PrintEnd("printEnded").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnablePrint(true).PrintEnd("printEnded").Render()
 </div>
 
 <script>

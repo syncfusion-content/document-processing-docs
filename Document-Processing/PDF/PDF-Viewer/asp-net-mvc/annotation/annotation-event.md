@@ -1,6 +1,6 @@
 ---
-title: Annotations Events in ASP.NET MVC Pdfviewer control | Syncfusion
-description: Learn here all about Annotations Events in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Annotations Events in ASP.NET MVC PDF Viewer control | Syncfusion
+description: Learn here all about Annotations Events in Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -47,7 +47,7 @@ The following example illustrates how to handle the `annotationAdd` event.
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationAdd("annotationAdd").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationAdd("annotationAdd").Render()
 </div>
 
 <script type="text/javascript">
@@ -90,7 +90,7 @@ The following example illustrates how to handle the `annotationDoubleClick` even
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationDoubleClick("annotationDoubleClicked").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationDoubleClick("annotationDoubleClicked").Render()
 </div>
 
 <script>
@@ -130,7 +130,7 @@ The following example illustrates how to handle the `annotationMouseLeave` event
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationMouseLeave("AnnotationMouseLeaved").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationMouseLeave("AnnotationMouseLeaved").Render()
 </div>
 
 <script>
@@ -171,7 +171,7 @@ The following example illustrates how to handle the `annotationMouseover` event.
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationMouseover("AnnotationMouseovered").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationMouseover("AnnotationMouseovered").Render()
 </div>
 
 <script>
@@ -212,7 +212,7 @@ The following example illustrates how to handle the `annotationMove` event.
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationMove("annotationMoved").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationMove("annotationMoved").Render()
 </div>
 
 <script>
@@ -253,7 +253,7 @@ The following example illustrates how to handle the `annotationMoving` event.
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationMoving("annotationMoving").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationMoving("annotationMoving").Render()
 </div>
 
 <script>
@@ -294,7 +294,7 @@ The following example illustrates how to handle the `annotationPropertiesChange`
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationPropertiesChange("annotationPropertiesChanged").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationPropertiesChange("annotationPropertiesChanged").Render()
 </div>
 
 <script>
@@ -337,7 +337,7 @@ The following example illustrates how to handle the `annotationRemove` event.
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationRemove("annotationRemoved").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationRemove("annotationRemoved").Render()
 </div>
 
 <script>
@@ -378,7 +378,7 @@ The following example illustrates how to handle the `annotationResize` event.
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationResize("annotationResized").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationResize("annotationResized").Render()
 </div>
 
 <script>
@@ -419,7 +419,7 @@ The following example illustrates how to handle the `annotationSelect` event.
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationSelect("annotationSelected").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationSelect("annotationSelected").Render()
 </div>
 
 <script>
@@ -460,7 +460,7 @@ The following example illustrates how to handle the `annotationUnselect` event.
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationUnSelect("annotationUnselected").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationUnSelect("annotationUnselected").Render()
 </div>
 
 <script>
@@ -501,7 +501,7 @@ The following example illustrates how to handle the `beforeAddFreeText` event.
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").BeforeAddFreeText("beforeAddedFreeText").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").BeforeAddFreeText("beforeAddedFreeText").Render()
 </div>
 
 <script>
@@ -548,7 +548,7 @@ The following example illustrates how to handle the `addSignature` event.
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AddSignature("addSignature").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AddSignature("addSignature").Render()
 </div>
 
 <script>
@@ -589,7 +589,7 @@ The following example illustrates how to handle the `removeSignature` event.
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").RemoveSignature("removeSignature").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").RemoveSignature("removeSignature").Render()
 </div>
 
 <script>
@@ -630,7 +630,7 @@ The following example illustrates how to handle the `resizeSignature` event.
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResizeSignature("resizeSignature").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResizeSignature("resizeSignature").Render()
 </div>
 
 <script>
@@ -671,7 +671,7 @@ The following example illustrates how to handle the `signaturePropertiesChange` 
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignaturePropertiesChange("signaturePropertiesChanged").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignaturePropertiesChange("signaturePropertiesChanged").Render()
 </div>
 
 <script>
@@ -712,7 +712,7 @@ The following example illustrates how to handle the `signatureSelect` event.
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignatureSelect("signatureSelected").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignatureSelect("signatureSelected").Render()
 </div>
 
 <script>
@@ -753,7 +753,7 @@ The following example illustrates how to handle the `signatureUnselect` event.
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignatureUnselect("signatureUnselected").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignatureUnselect("signatureUnselected").Render()
 </div>
 
 <script>

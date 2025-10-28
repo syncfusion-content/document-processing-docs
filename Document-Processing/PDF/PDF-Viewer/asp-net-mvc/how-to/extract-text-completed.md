@@ -28,7 +28,7 @@ The following example shows how to enable text extraction and handle the complet
 </div>
 
 <!-- Ensure necessary Syncfusion scripts and styles are included -->
-<script src="https://cdn.syncfusion.com/ej2/29.1.33/dist/ej2.min.js"></script>
+<script src="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2.min.js"></script>
 <script type="text/javascript">
     window.onload = function () {
         // Initialize PDF viewer instance

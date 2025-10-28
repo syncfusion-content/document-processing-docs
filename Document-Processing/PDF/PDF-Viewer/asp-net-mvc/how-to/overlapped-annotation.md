@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Overlapped annotation in  Pdfviewer control | Syncfusion
-description: Learn here all about Overlapped annotation in Syncfusion  Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Overlapped annotation in  PDF Viewer control | Syncfusion
+description: Learn here all about Overlapped annotation in Syncfusion  PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Overlapped annotation in  Pdfviewer control
+# Overlapped annotation in  PDF Viewer control
 
 To get the overlapped annotations on a mouse click in a Syncfusion PDF Viewer, you can use the **annotationCollection** property of [**annotationSelect**](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationSelect) event.This event is triggered when the user clicks on an annotation in the PDF document.
 

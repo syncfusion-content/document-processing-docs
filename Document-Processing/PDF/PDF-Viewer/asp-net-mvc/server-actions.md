@@ -344,7 +344,7 @@ private HttpResponseMessage GetPlainText(string pageImage)
 
 ## jsonObjects class
 
-The `jsonObjects` parameter represents the request payload sent by the PDF Viewer. It groups properties used across different actions; each action reads only the fields it requires. Define this class in the PdfViewer controller so all actions can bind to it.
+The `jsonObjects` parameter represents the request payload sent by the PDF Viewer. It groups properties used across different actions; each action reads only the fields it requires. Define this class in the PDF Viewer controller so all actions can bind to it.
 
 ```cs
  public class jsonObjects

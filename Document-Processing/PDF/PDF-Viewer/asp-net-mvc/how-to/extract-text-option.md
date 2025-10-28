@@ -38,7 +38,7 @@ The following example demonstrates how to configure the `extractTextOption` prop
 </div>
 
 <!-- Ensure necessary Syncfusion scripts and styles are included -->
-<script src="https://cdn.syncfusion.com/ej2/29.1.33/dist/ej2.min.js"></script>
+<script src="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2.min.js"></script>
 <script type="text/javascript">
     window.onload = function () {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];

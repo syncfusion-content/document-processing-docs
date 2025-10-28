@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print document in ASP.NET MVC Pdfviewer control | Syncfusion
-description: Learn here all about Print document in Syncfusion ASP.NET MVC Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Print document in ASP.NET MVC PDF Viewer control | Syncfusion
+description: Learn here all about Print document in Syncfusion ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Print document in ASP.NET MVC Pdfviewer control
+# Print document in ASP.NET MVC PDF Viewer control
 
 The PDF Viewer library allows you to print the PDF document programmatically using the **print()** method in the **PrintModule**.
 

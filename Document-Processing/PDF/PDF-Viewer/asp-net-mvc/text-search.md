@@ -148,8 +148,8 @@ You can search for whole words by setting the `isMatchWholeWord` parameter to `t
 The following text search methods are available in the PDF Viewer,
 
 * **Search text** - Searches the target text in the PDF document and highlights the occurrences in the pages.
-* **Search next** - Searches the next occurrence of the searched text from the current occurrence of the PdfViewer.
-* **Search previous** - Searches the previous occurrence of the searched text from the current occurrence of the PdfViewer.
+* **Search next** - Searches the next occurrence of the searched text from the current occurrence of the PDF Viewer.
+* **Search previous** - Searches the previous occurrence of the searched text from the current occurrence of the PDF Viewer.
 * **Cancel text search** - The text search can be canceled and the highlighted occurrences from the PDF Viewer can be removed .
 
 ![Alt text](./images/search.png)

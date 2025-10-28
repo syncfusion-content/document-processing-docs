@@ -11,7 +11,7 @@ documentation: ug
 
 The PDF Viewer component displays existing form fields in a PDF document and enables filling and downloading filled data.
 
-The form fields displayed in the Pdf Viewer are:
+The form fields displayed in the PDF Viewer are:
 
 * TextBox
 * Password
@@ -51,21 +51,21 @@ Add a handwritten signature to a Signature field by following these steps:
 
 * Click the signature field in the PDF document to open the signature panel.
 
-![Signature field in ASP.NET MVC PdfViewer](./images/signaturefield.png)
+![Signature field in ASP.NET MVC PDF Viewer](./images/signaturefield.png)
 
 * Draw the signature in the signature panel.
 
-![Displaying signature panel in ASP.NET MVC PdfViewer](./images/signature.png)
+![Displaying signature panel in ASP.NET MVC PDF Viewer](./images/signature.png)
 
 * Click the **CREATE** button. The drawn signature is added to the signature field.
 
-![Displaying signature in ASP.NET MVC PdfViewer](./images/sign.png)
+![Displaying signature in ASP.NET MVC PDF Viewer](./images/sign.png)
 
 ## Delete the signature inside the signature field
 
 Delete a signature placed in a signature field by using the Delete option in the annotation toolbar.
 
-![Deleting signature in ASP.NET MVC PdfViewer](./images/deletesign.png)
+![Deleting signature in ASP.NET MVC PDF Viewer](./images/deletesign.png)
 
 ## Export and import form fields
 

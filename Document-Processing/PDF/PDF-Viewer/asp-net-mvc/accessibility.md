@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility with EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn here all about accessibility in ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about accessibility in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

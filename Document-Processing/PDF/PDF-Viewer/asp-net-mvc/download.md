@@ -15,7 +15,7 @@ The PDF Viewer supports downloading the loaded PDF file. You can enable or disab
 {% highlight cshtml tabtitle="Standalone" %}
 
 <div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnableDownload(true).Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnableDownload(true).Render()
 </div>
 
 {% endhighlight %}

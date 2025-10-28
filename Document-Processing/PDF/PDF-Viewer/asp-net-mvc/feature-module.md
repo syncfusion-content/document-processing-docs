@@ -12,7 +12,7 @@ documentation: ug
 
 The PDF Viewer features are organized into individual feature modules to enable selective referencing in your application. Inject the required modules to extend functionality. The following modules can be included as needed:
 
-The available PdfViewer modules are:
+The available PDF Viewer modules are:
 
 * [**Toolbar**](./toolbar-customization):- Built-in toolbar for better user interaction.
 * [**Magnification**](./magnification.md):- Perform zooming operation for better viewing experience.

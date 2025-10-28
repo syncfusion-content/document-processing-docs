@@ -28,7 +28,7 @@ Follow these steps to load a PDF from Base64 data:
 <div>
     <div style="height:500px;width:100%;">
         <button type="button" onclick="LoadFromBase64()">Load From Base64</button>
-        @Html.EJS().PdfViewer("pdfViewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/28.1.33/dist/ej2-pdfviewer-lib").Render()
+        @Html.EJS().PdfViewer("pdfViewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").Render()
     </div>
 </div>
 

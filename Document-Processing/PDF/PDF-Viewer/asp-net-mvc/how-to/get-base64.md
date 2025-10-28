@@ -30,7 +30,7 @@ This guide shows how to get the base64-encoded value of a PDF loaded in the Sync
 </div>
 
 <!-- Ensure necessary Syncfusion scripts and styles are included -->
-<script src="https://cdn.syncfusion.com/ej2/27.2.4/dist/ej2.min.js"></script>
+<script src="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2.min.js"></script>
 
 <script type="text/javascript">
     window.onload = function () {

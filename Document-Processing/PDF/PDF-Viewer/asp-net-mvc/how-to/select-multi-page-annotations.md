@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Select multi page annotations in ASP.NET MVC Pdfviewer control | Syncfusion
-description: Learn here all about Select multi page annotations in Syncfusion ASP.NET MVC Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Select multi page annotations in ASP.NET MVC PDF Viewer control | Syncfusion
+description: Learn here all about Select multi page annotations in Syncfusion ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Select multi page annotations in ASP.NET MVC Pdfviewer control
+# Select multi page annotations in ASP.NET MVC PDF Viewer control
 
 To select a multi-page TextMarkup annotation as a single annotation in a Syncfusion PDF viewer, you can use by enabling the [**EnableMultiPageAnnotation**](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableMultiPageAnnotation) property. By default it is `false`.
 

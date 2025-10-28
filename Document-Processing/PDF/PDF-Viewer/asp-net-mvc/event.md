@@ -1,6 +1,6 @@
 ---
-title: Events in ASP.NET MVC Pdfviewer control | Syncfusion
-description: Learn here all about Events in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Events in ASP.NET MVC PDF Viewer control | Syncfusion
+description: Learn here all about Events in Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -1401,7 +1401,7 @@ Example:
 {% highlight cshtml tabtitle="Standalone" %}
 
 <div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnablePrint(true).PrintEnd("printEnded").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnablePrint(true).PrintEnd("printEnded").Render()
 </div>
 
 <script>
@@ -1438,7 +1438,7 @@ Example:
 {% highlight cshtml tabtitle="Standalone" %}
 
 <div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnablePrint(true).PrintStart("printStarted").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnablePrint(true).PrintStart("printStarted").Render()
 </div>
 
 <script>
@@ -1517,7 +1517,7 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResizeSignature("resizeSignature").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResizeSignature("resizeSignature").Render()
 </div>
 
 <script>
@@ -1593,7 +1593,7 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignaturePropertiesChange("signaturePropertiesChanged").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignaturePropertiesChange("signaturePropertiesChanged").Render()
 </div>
 
 <script>
@@ -1632,7 +1632,7 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignatureSelect("signatureSelected").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignatureSelect("signatureSelected").Render()
 </div>
 
 <script>
@@ -1671,7 +1671,7 @@ Example:
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignatureUnselect("signatureUnselected").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignatureUnselect("signatureUnselected").Render()
 </div>
 
 <script>

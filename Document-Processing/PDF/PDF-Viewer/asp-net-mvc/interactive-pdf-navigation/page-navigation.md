@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Navigation in ASP.NET MVC Pdfviewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion ASP.NET MVC Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Navigation in ASP.NET MVC PDF Viewer control | Syncfusion
+description: Learn here all about Navigation in Syncfusion ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Navigation in ASP.NET MVC Pdfviewer control
+# Navigation in ASP.NET MVC PDF Viewer control
 
 The ASP.NET MVC PDF Viewer supports different internal and external navigations.
 

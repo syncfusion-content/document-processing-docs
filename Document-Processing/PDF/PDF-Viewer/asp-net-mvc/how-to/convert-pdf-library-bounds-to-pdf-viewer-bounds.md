@@ -14,9 +14,9 @@ When exporting annotations from the PDF Library, convert the bounds values into 
 
 ## Steps to convert bounds values
 
-**Step 1:** Initialize the PdfViewer instance.
+**Step 1:** Initialize the PDF Viewer instance.
 
-Create an instance of the PdfViewer and configure it with the required services.
+Create an instance of the PDF Viewer and configure it with the required services.
 
 **Step 2:** Handle export success.
 

@@ -31,7 +31,7 @@ Follow these steps to add annotation toggle controls:
         <button id="unhideBtn" class="e-btn e-primary">Show Annotations</button>
     </div>
     <div style="height:500px;width:100%;">
-        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib").Render()
+        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").Render()
     </div>
 </div>
 

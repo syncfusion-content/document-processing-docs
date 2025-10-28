@@ -156,7 +156,7 @@ The PDF Viewer allows you to customize (add, show, hide, enable, and disable) ex
 <div>
     <div style="height:500px;width:1350px;">
         <br /><br />
-        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/29.1.33/dist/ej2-pdfviewer-lib").ToolbarClick("toolbarClick").Render()
+        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").ToolbarClick("toolbarClick").Render()
     </div>
 </div>
 

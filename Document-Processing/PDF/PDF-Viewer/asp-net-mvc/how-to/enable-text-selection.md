@@ -28,7 +28,7 @@ Set initial behavior when instantiating the PDF Viewer. Text selection is enable
     <div style="height:500px;width:100%;">
         @Html.EJS().PdfViewer("pdfviewer")
             .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
-            .ResourceUrl("https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib")
+            .ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib")
             .EnableTextSelection(false)
             .Render()
     </div>
@@ -55,7 +55,7 @@ Change the behavior at runtime using buttons or other UI controls. The following
         <button onclick="disableTextSelection()">DisableTextSelection</button>
         @Html.EJS().PdfViewer("pdfviewer")
             .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
-            .ResourceUrl("https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib")
+            .ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib")
             .EnableTextSelection(false)
             .Render()
     </div>

@@ -28,7 +28,7 @@ The [**annotationSelectorSettings**](https://help.syncfusion.com/cr/aspnetmvc-js
         <br /><br />
         @Html.EJS().PdfViewer("pdfviewer")
             .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
-            .ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib")
+            .ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib")
             .Render()
     </div>
 </div>

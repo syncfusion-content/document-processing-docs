@@ -82,7 +82,7 @@ N> Replace the placeholders with the actual Azure Storage connection string and 
 ```csharp
 <div>
     <div style="height:500px;width:100%;">
-        @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").Created("loadDocument").ToolbarClick("toolbarClick").Render()
+        @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").Created("loadDocument").ToolbarClick("toolbarClick").Render()
     </div>
 </div>
 

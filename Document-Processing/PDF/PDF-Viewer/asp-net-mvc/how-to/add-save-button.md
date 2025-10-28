@@ -23,7 +23,7 @@ PDF Viewer supports customizing toolbar items, including adding, showing, hiding
 <div>
     <div style="height:500px;width:1350px;">
         <br /><br />
-        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib").ToolbarClick("toolbarClick").Render()
+        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").ToolbarClick("toolbarClick").Render()
     </div>
 </div>
 
