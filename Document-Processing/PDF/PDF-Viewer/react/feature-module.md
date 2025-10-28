@@ -23,7 +23,7 @@ The available PDF Viewer modules are:
 * [**TextSelection**](./textselection): Select and copy text from the document.
 * [**TextSearch**](./text-search): Search for text across the document.
 * [**Print**](./print): Print the entire document or specific pages directly from the browser.
-* [**Annotation**](./annotations/text-markup-annotation): Add and edit annotations.
+* [**Annotation**](./annotation/text-markup-annotation): Add and edit annotations.
 * [**FormFields**](./form-designer/create-programmatically): Work with form fields in the document.
 * [**FormDesigner**](./form-designer/create-programmatically): Add or edit form fields in the document.
 

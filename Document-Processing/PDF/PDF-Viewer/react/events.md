@@ -1864,6 +1864,6 @@ root.render(<App />);
 
 See also:
 
-- [Annotation events](./annotations/annotation-event)
+- [Annotation events](./annotation/annotation-event)
 - [Form field events](./form-designer/form-field-events)
 - [Organize PDF events](./organize-pdf/organize-pdf-events)
