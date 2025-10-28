@@ -1,13 +1,13 @@
 ---
 layout: post
-title: FAQ Section in PDF Viewer control | Syncfusion
+title: FAQ Section in ASP.NET Core PDF Viewer control | Syncfusion
 description: In this section, you can know about the various questions asked about manipulation of in PDF Viewer control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Frequently Asked Questions Section in PdfViewer Component
+# Frequently Asked Questions Section in ASP.NET Core PDF Viewer
 
 The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are listed below.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Line angle constraints in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and configure highlight, underline, strikethrough, and squiggly text markup annotations programmatically.
+description: Explore how to apply and manage text markup annotations such as highlight, underline, and strikethrough in ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

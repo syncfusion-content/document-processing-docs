@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Add rectangle annotations using text search bounds in PDF Viewer
+# Add rectangle annotations using text search in ASP.NET Core
 
 A concise guide to adding rectangle annotations at highlighted text search results in the ASP.NET Core PDF Viewer to visually emphasize matches and improve readability.
 
