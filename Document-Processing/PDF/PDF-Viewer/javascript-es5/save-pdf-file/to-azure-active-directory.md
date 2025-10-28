@@ -1,36 +1,35 @@
 ---
 layout: post
-title: Save PDF To AAD in Javascript Pdfviewer | Syncfusion
-description: Learn how to Save PDF To AAD in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Save PDF files to Azure Active Directory (AAD) in JavaScript PDF Viewer | Syncfusion
+description: Learn how to load and save PDF files with Azure Active Directory (AAD) using the Syncfusion JavaScript PDF Viewer component and a server-backed web service.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF To Azure Active Directory in Viewer
+# Save PDF files to Azure Active Directory (AAD)
 
-### **Overview**
+### Overview
 
-The Syncfusion PDF Viewer allows you to load and save PDF files directly from Azure Active Directory (AAD). Below are the steps to securely load and store PDF documents from and to AAD using the PDF Viewer.
+The JavaScript PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps describe how to securely load and store PDF documents using a server-backed web service.
 
-### **Steps to Open the PDF File from Azure Active Directory**
+### Steps to open the PDF file from Azure Active Directory
 
 ---
 
-### **Step 1: Register an Application in Azure Active Directory (AAD)**
+### Step 1: Register an application in Azure Active Directory (AAD)
 
-1. **Go to the Azure Portal**:
+1. Go to the Azure portal:
    - Navigate to [Azure Portal](https://portal.azure.com).
 
-2. **Register your Application**:
+2. Register the application:
    - In the Azure portal, go to **Azure Active Directory** > **App registrations** > **New registration**.
    - Register your application and note down the **Application (client) ID** and **Directory (tenant) ID**.
 
    ![app-registration](../images/app-registration.png)
 
-3. **Create a Client Secret**:
+3. Create a client secret:
    - In the registered application, go to **Certificates & secrets**.
    - Click **New client secret**.
    - Provide a description and set an expiration period.
@@ -41,9 +40,9 @@ The Syncfusion PDF Viewer allows you to load and save PDF files directly from Az
 
 ---
 
-### **Step 2: Create the Azure Storage Account**
+### Step 2: Create the Azure Storage account
 
-1. **Create a Storage Account**:
+1. Create a storage account:
    - In the Azure portal, use the search bar to search for **Storage accounts**.
    - Create a new storage account by filling in the required details (e.g., name, location, resource group, etc.).
 
@@ -51,12 +50,12 @@ The Syncfusion PDF Viewer allows you to load and save PDF files directly from Az
 
 ---
 
-### **Step 3: Assign Role to the Application**
+### Step 3: Assign a role to the application
 
-1. **Go to your Storage Account**:
+1. Go to the storage account:
    - Navigate to **Access control (IAM)** > **Add role assignment** in your Azure Storage Account.
 
-2. **Assign Role**:
+2. Assign a role:
    - Assign the **Storage Blob Data Contributor** role to your registered application.
    - In the **Assign access to** dropdown, select **User, group, or service principal**.
    - Click on **Select members** and search for your registered application by name or client ID.
@@ -66,20 +65,20 @@ The Syncfusion PDF Viewer allows you to load and save PDF files directly from Az
     ![add-role](../images/add-role.png)
 ---
 
-### **Step 4: Upload the PDF Document to the Azure Storage Account**
+### Step 4: Upload the PDF document to Azure Storage
 
-1. **Navigate to Data Storage**:
+1. Navigate to Data storage:
    - In the Azure portal, go to **Data storage** > **Containers**.
 
-2. **Upload the PDF File**:
+2. Upload the PDF file:
    - Create a new container and upload the PDF document you want to access in the PDF Viewer.
 
     ![upload-pdf](../images/upload-pdf.png)
 ---
 
-### **Step 5: Server-Side Configuration**
+### Step 5: Server-side configuration
 
-1. **Configure Server-Side Code**:
+1. Configure server-side code:
    - Open the server-side application (e.g., ASP.NET Core) and configure the following details in the `PdfViewerController` file:
      - `tenantId` (your Azure AD tenant ID),
      - `clientId` (your registered application client ID),
@@ -87,34 +86,34 @@ The Syncfusion PDF Viewer allows you to load and save PDF files directly from Az
      - `blobServiceEndpoint` (your storage account blob service URL),
      - `containerName` (your container name in Azure Blob Storage).
 
-2. **Run the Web Service**:
+2. Run the web service:
    - After configuring the necessary details, run the web service to make it accessible.
 
 ---
 
-### **Step 6: Client-Side Configuration**
+### Step 6: Client-side configuration
 
-1. **Run the JS Sample**:
+1. Run the JavaScript sample:
    - Start the JS sample that includes the Syncfusion PDF Viewer.
 
-2. **Load PDF from AAD**:
+2. Load a PDF from AAD:
    - When the user clicks the **Load from AAD** button, the JS client will make an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.
    - The server will retrieve the PDF from Azure, convert it to a base64 string, and return it to the client.
 
-3. **Display PDF in the PDF Viewer**:
+3. Display the PDF in the PDF Viewer:
    - Once the base64 string is received, the PDF Viewer will load the PDF using the `viewer.load()` method.
 
 ---
 
-### **Step 7: Save the PDF Document to Azure**
+### Step 7: Save the PDF document to Azure
 
-1. **Save PDF to AAD**:
+1. Save PDF to AAD:
    - The user can click the **Save to AAD** button to upload any modifications to the PDF back to Azure Blob Storage.
    - This action sends the modified PDF to the server, where it is converted into a byte array and saved to the specified Azure Blob container.
 
 ---
 
-### **Server-Side Code Snippets**
+### Server-side code snippets
 ```cs
 string tenantId = "Provide the tenant id here";
 string clientId = "Provide the clientid here";
@@ -170,7 +169,7 @@ public async Task<IActionResult> SaveToAAD([FromBody] Dictionary<string, string>
 
 
 
-### **Client-side Code Snippets**
+### Client-side code snippets
 
 ```js
 import { PdfViewer, Toolbar, TextSelection, TextSearch, Print, Navigation, Magnification, Annotation, FormDesigner, FormFields, CustomToolbarItemModel } from '@syncfusion/ej2-pdfviewer';
