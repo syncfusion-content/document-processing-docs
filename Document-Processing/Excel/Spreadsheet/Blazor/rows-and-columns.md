@@ -131,8 +131,8 @@ The Blazor Spreadsheet component enables you to define the initial number of row
 
 - **With Data Source (e.g., byte array or imported file):**
 
-  - If the data source has fewer rows and columns than the specified row and column counts, the spreadsheet renders additional empty rows and columns to meet those counts.
-  - If the data source has more rows and columns than the specified row and column counts, the spreadsheet renders enough rows and columns to display all data from the source (i.e., it extends beyond those counts to fit the data). Your data is never truncated by these properties.
+  - If the data source contains fewer rows and columns than the specified row and column counts, the spreadsheet renders additional empty rows and columns to meet those counts.
+  - If the data source contains more rows and columns than the specified row and column counts, the spreadsheet renders enough rows and columns to display all the data (i.e., it extends beyond those counts to fit the data). Your data is never truncated by these properties.
 
 
 You can set these properties as follows:
