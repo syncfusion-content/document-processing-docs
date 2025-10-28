@@ -1,6 +1,6 @@
 ---
 title: Overview of Vue PDF Viewer Component | Syncfusion
-description: Checkout and learn about overview of the Syncfusion Vue PDF Viewer component and much more details.
+description: Learn about the Syncfusion Vue PDF Viewer component, its features, supported interactions, and how it helps in viewing PDF documents.
 platform: document-processing
 control: PDF Viewer
 documentation: UG
@@ -26,7 +26,7 @@ npm install
 
 ### Adding Syncfusion PDF Viewer package
 
-All Syncfusion Vue packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg)registry. To install Vue PDF Viewer package, use the following command.
+All Syncfusion Vue packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install Vue PDF Viewer package, use the following command.
 
 ```
 npm install @syncfusion/ej2-vue-pdfviewer --save
@@ -63,7 +63,7 @@ Add CSS references needed for PDF Viewer in `style` section of the `App.vue` fil
 ```
 ### Add PDF Viewer component
 
-Add the Vue PDF Viewer by using `ejs-pdfviewer` selector in template section of the `App.vue` file.
+Add the Vue PDF Viewer by using `ej-pdfviewer` selector in template section of the `App.vue` file.
 
 ```
 <template>
@@ -105,7 +105,7 @@ Refer the [Getting Started with Vue3](https://help.syncfusion.com/document-proce
 
 *[`View PDF Document`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) - Open and display both the normal and the protected PDF files with AES and RC4 encryption.
 *[`Annotations`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/text-markup-annotation) - Annotate with text markup, shapes, stamps, ink, and sticky notes.Form filling and form designing can be done.
-*[`Form Fields`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/form-designer/create-fillable-pdf-forms/create-programmatically) - Form filling and form designing can be done.
+*[`Form Fields`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/form-designer/create-programmatically) - Form filling and form designing can be done.
 *[`Signature`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/signature-annotation) - Hand-written and digital signatures are allowed.
 *[`Toolbar`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/toolbar) - Built-in-toolbar and custom toolbars to perform user interaction of PDF Viewer functionalities.
 *[`Navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/navigation) - Easy navigation with the help of bookmarks, thumbnails, hyperlinks, and table of contents.
