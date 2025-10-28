@@ -52,7 +52,7 @@ The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are liste
 * [How to Enable Bookmark pane in PDF Viewer?](./how-to/show-bookmark)
 * [How to Save original document at the server side?](./how-to/save-original-document-at-the-server-side)
 * [How to Configure retry timeout in PDF Viewer?](./how-to/retry-timeout)
-* [How to Resolve the Pdfium issue in PDF Viewer?](./how-to/resolve-pdfium-issue
+* [How to Resolve the Pdfium issue in PDF Viewer?](./how-to/resolve-pdfium-issue)
 * [How to Load N number of pages on initial loading in PDF Viewer?](./how-to/load-n-number-page)
 * [How to Instantiate the PDF Viewer component dynamically in PDF Viewer?](./how-to/Instantiate-pdfviewer-dynamically)
 * [How to Install packages based on OS in PDF Viewer?](./how-to/install-packages)
