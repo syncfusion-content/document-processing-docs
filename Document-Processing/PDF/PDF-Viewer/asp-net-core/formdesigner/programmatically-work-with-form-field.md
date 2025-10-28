@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Programmatically Work With Form Field in ASP.NET Core Pdfviewer Component
-description: Learn here all about Programmatically Work With Form Field in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Programmatically Work With Form Field in ASP.NET Core PDF Viewer Component
+description: Learn here all about Programmatically Work With Form Field in Syncfusion ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Programmatically Work With Form Field
 publishingplatform: ASP.NET Core

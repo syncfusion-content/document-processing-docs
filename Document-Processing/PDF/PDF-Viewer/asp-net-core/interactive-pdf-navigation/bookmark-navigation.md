@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigation in ASP.NET Core Pdfviewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion ASP.NET Core Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Navigation in ASP.NET Core PDF Viewer control | Syncfusion
+description: Learn here all about Navigation in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET Core

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print document in ASP.NET Core Pdfviewer control | Syncfusion
-description: Learn here all about Print document in Syncfusion ASP.NET Core Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Print document in ASP.NET Core PDF Viewer control | Syncfusion
+description: Learn here all about Print document in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Print document
 publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Print document in ASP.NET Core Pdfviewer control
+# Print document in ASP.NET Core PDF Viewer control
 
 The PDF Viewer library allows you to print the PDF document programmatically using the **print()** method in the **PrintModule**.
 

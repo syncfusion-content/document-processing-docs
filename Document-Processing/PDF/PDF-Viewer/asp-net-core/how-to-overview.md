@@ -1,7 +1,7 @@
 ---
 layout: post
-title: FAQ Section in Pdfviewer control | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of in Pdfviewer control.
+title: FAQ Section in PDF Viewer control | Syncfusion
+description: In this section, you can know about the various questions asked about manipulation of in PDF Viewer control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Frequently Asked Questions Section in PdfViewer Component
 
-The frequently asked questions in Essential<sup>&reg;</sup> Pdfviewer are listed below.
+The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are listed below.
 
 * [How to add annotation in text search in ASP.NET Core ?](./how-to/add-annotation-in-text-search.md)
 * [How to add custom header to the PDF Viewer ajax request?](./how-to/authorization-token.md)
