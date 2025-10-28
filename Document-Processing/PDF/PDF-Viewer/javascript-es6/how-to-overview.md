@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Frequently Asked Questions in TypeScript PDF Viewer
+title: Frequently Asked Questions in TypeScript PDF Viewer | Syncfusion
 description: In this section, you can know about the various questions asked about manipulation of in TypeScript PDF Viewer control.
 platform: document-processing
 control: PDF Viewer
