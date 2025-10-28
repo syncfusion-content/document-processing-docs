@@ -1,10 +1,8 @@
 ---
 layout: post
-title: User Interaction With Form Fields in ASP.NET Core Pdfviewer Component
+title: User Interaction With Form Fields in Syncfusion ASP.NET Core PDF Viewer Component
 description: Learn here all about User Interaction With Form Fields in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: User Interaction With Form Fields
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
