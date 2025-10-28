@@ -814,7 +814,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% endtabcontents %}
 
-A complete working example of how to convert an Excel worksheet to image in Blazor Standalone application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/ExcelToImage).
+A complete working example of how to convert an Excel worksheet to image in Blazor Standalone application in C# is present on [this GitHub page]([https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/ExcelToImage](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/Convert%20Excel%20to%20Image)).
 
 ## Convert Excel to PDF in Blazor Standalone application
 
@@ -867,7 +867,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% endtabcontents %}
 
-A complete working example of how to convert an Excel file to PDF in Blazor Standalone application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/ExcelToPDF).
+A complete working example of how to convert an Excel file to PDF in Blazor Standalone application in C# is present on [this GitHub page]([https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/ExcelToPDF](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/Convert%20Excel%20to%20PDF)).
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this <a href="https://help.syncfusion.com/common/essential-studio/licensing/overview">link</a> to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. You can also explore our <a href="https://blazor.syncfusion.com/demos/excel/create-excel?theme=bootstrap5">Blazor Excel library demo</a> that shows how to create and modify Excel files from C# with just five lines of code.
 
