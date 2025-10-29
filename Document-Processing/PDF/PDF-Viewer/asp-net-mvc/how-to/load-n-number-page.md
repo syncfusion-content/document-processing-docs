@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Load a specific number of pages on initial load in ASP.NET MVC PDF Viewer
+title: Load N number of pages on initial Load in ASP.NET MVC | Syncfusion
 description: Learn how to configure the Syncfusion ASP.NET MVC PDF Viewer to load a defined number of pages during the initial render by using the initialRenderPages property.
 platform: document-processing
 control: PDF Viewer
@@ -8,7 +8,7 @@ publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Load N number of pages on initial loading
+# Load N number of pages on initial loading in ASP.NET MVC
 
 The initial rendering in a PDF Viewer allows users to control how many pages appear when opening a PDF document. Loading only a subset of pages can improve responsiveness because the viewer fetches additional pages on demand as the user scrolls, reducing initial download time for large files.
 

@@ -4,7 +4,6 @@ title: Set min and max zoom levels in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to limit the minimum and maximum zoom percentages in the Syncfusion ASP.NET Core PDF Viewer by using the minZoom and maxZoom properties for responsive, consistent viewing.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

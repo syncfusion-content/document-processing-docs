@@ -4,7 +4,6 @@ title: Text selection in ASP.NET Core PDF Viewer control | Syncfusion
 description: Learn how to enable or disable text selection, programmatically select regions, copy selected text, and handle selection events in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: Text selection
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 # Text selection in ASP.NET Core PDF Viewer control
