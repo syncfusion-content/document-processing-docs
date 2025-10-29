@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Paragraph format in JavaScript (ES6) Document editor control | Syncfusion
+title: Paragraph format in JavaScript (ES6) Document editor | Syncfusion
 description: Learn here all about Paragraph format in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Paragraph format 
