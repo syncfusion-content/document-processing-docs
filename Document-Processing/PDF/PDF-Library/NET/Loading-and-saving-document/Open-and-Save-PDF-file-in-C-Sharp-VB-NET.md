@@ -1,11 +1,11 @@
 ---
-title: Open and Save PDF file in C# and VB.NET | Syncfusion
-description: This page describes how to open and save PDF file from or to file system, and stream in C# and VB.NET using Syncfusion .NET PDF library.
+title: Load and Save PDF file in C# and VB.NET | Syncfusion
+description: This page describes how to Load and save PDF file from or to file system, and stream in C# and VB.NET using Syncfusion .NET PDF library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Open and save PDF file in C# and VB.NET
+# Load and save PDF files using C# and VB.NET.
 
 ## Namespace required 
 The following namespaces of Essential<sup>&reg;</sup> PDF need to be included in your application to load and save the PDF document. 
@@ -32,45 +32,44 @@ Imports Syncfusion.Pdf.Parsing
 
 {% endtabs %}
 
-## Opening an existing PDF document
+## Loading an existing PDF document
 
-You can open an existing PDF document by using the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The following example shows how to load an existing document from physical path.
+Load an existing PDF document by using the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The following example shows how to load an existing document from physical path.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Open an existing PDF document from stream through constructor of `PdfLoadedDocument` class. 
-FileStream inputPDFStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream);
+// Load an existing document from file system 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Open an existing document from file system. 
+// Load an existing document from file system
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Open an existing document from file system. 
+' Load an existing document from file system
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Opening an existing PDF document from Stream
+## LOading an existing PDF document from Stream
 
-You can open an existing document from stream by using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class as shown below.
+Load an existing document from stream by using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class as shown below.
 
 {% tabs %} 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Open an existing PDF document from stream through constructor of `PdfLoadedDocument` class. 
+// Load an existing PDF document from a stream
 FileStream inputPDFStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream);
 
@@ -78,73 +77,77 @@ PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %} 
 
-//Opens an existing document from stream. 
+// Load an existing PDF document from a stream
+FileStream inputPDFStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Opens an existing document from stream. 
+' Load an existing PDF document from a stream
+Dim inputPDFStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
 Dim loadedDocument As New PdfLoadedDocument(inputPDFStream)
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Opening an existing PDF document from byte array
+## Loading an existing PDF document from byte array
 
-You can open an existing document from byte array by using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class as shown in the below code example.
+Load an existing document from byte array by using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class as shown in the below code example.
 
 {% tabs %} 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Open an existing document from byte array. 
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFByteArray); 
+// Load an existing PDF document from byte array
+byte[] inputPDFByteArray = File.ReadAllBytes("Input.pdf");
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFByteArray);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Open an existing document from byte array. 
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFByteArray); 
+// Load an existing PDF document from byte array
+byte[] inputPDFByteArray = File.ReadAllBytes("Input.pdf");
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFByteArray);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Opens an existing document from byte array.
+' Load an existing PDF document from a byte array
+Dim inputPDFByteArray As Byte() = File.ReadAllBytes("Input.pdf")
 Dim loadedDocument As New PdfLoadedDocument(inputPDFByteArray)
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Opening an Encrypted PDF document
+## Loading an Encrypted PDF document
 
-You can open an existing encrypted PDF document from either the file system or the stream or the byte array using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_String_) class as shows in the below code example. 
+Load an existing encrypted PDF document from either the file system or the stream or the byte array using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_String_) class as shows in the below code example. 
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Open an encrypted PDF document from stream through constructor of `PdfLoadedDocument` class. 
-FileStream inputPDFStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream, "password");
+// Load an existing encrypted PDF document from disk
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "password");
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Open an existing encrypted document from disk.
+// Load an existing encrypted PDF document from disk
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "password");
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Open an existing encrypted document from disk. 
+' Load an existing encrypted document from disk 
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf","password")
 
 {% endhighlight %}
@@ -155,7 +158,7 @@ Dim loadedDocument As New PdfLoadedDocument("Input.pdf","password")
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}	
 
-//Open an encrypted PDF document from stream through constructor of `PdfLoadedDocument` class. 
+// Load an encrypted PDF document from stream
 FileStream inputPDFStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream, "password");
 
@@ -163,14 +166,16 @@ PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream, "passwo
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Open an existing encrypted document from byte array. 
+// Load an encrypted PDF document from stream
+FileStream inputPDFStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream, "password");
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Open an existing encrypted document from stream.
+' Load an existing PDF document from a stream
+Dim inputPDFStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
 Dim loadedDocument As New PdfLoadedDocument(inputPDFStream,"password")
 
 {% endhighlight %}
@@ -181,51 +186,53 @@ Dim loadedDocument As New PdfLoadedDocument(inputPDFStream,"password")
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Open an existing encrypted document from byte array. 
+// Load an existing PDF document from byte array
+byte[] inputPDFByteArray = File.ReadAllBytes("Input.pdf"); 
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFByteArray, "password");
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Open an existing encrypted document from byte array. 
+// Load an existing PDF document from byte array
+byte[] inputPDFByteArray = File.ReadAllBytes("Input.pdf");
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFByteArray, "password");
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Open an existing encrypted document from byte array. 
+' Load an existing PDF document from a byte array
+Dim inputPDFByteArray As Byte() = File.ReadAllBytes("Input.pdf") 
 Dim loadedDocument As New PdfLoadedDocument(inputPDFByteArray,"password")
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Opening a corrupted PDF document
+## Loading a corrupted PDF document
 
-You can open a corrupted PDF document from either the file system or the stream or the byte array using the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_String_System_Boolean_) as shown below.
+Load a corrupted PDF document from either the file system or the stream or the byte array using the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_String_System_Boolean_) as shown below.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Open an existing corrupted PDF document from stream through constructor of `PdfLoadedDocument` class. 
-FileStream inputPDFStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream, true);
+// Load an existing corrupted PDF document from disk
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Open an existing corrupted document from disk. 
+// Load an existing corrupted PDF document from disk
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Open an existing corrupted document from disk. 
+' Load an existing corrupted PDF document from disk
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf", True)
 
 {% endhighlight %}
@@ -236,7 +243,7 @@ Dim loadedDocument As New PdfLoadedDocument("Input.pdf", True)
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}	
 
-//Open an existing corrupted PDF document from stream through constructor of `PdfLoadedDocument` class. 
+// Load an existing corrupted PDF document from stream
 FileStream inputPDFStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream, true);
 
@@ -244,14 +251,16 @@ PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream, true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Open an existing corrupted document from stream. 
+// Load an existing corrupted PDF document from stream
+FileStream inputPDFStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream, true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Open an existing corrupted document from stream. 
+' Load an existing corrupted PDF document from stream
+Dim inputPDFStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
 Dim loadedDocument As New PdfLoadedDocument(inputPDFStream, True)
 
 {% endhighlight %}
@@ -262,21 +271,24 @@ Dim loadedDocument As New PdfLoadedDocument(inputPDFStream, True)
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Open an existing corrupted document from byte array. 
+//Load an existing PDF document from byte array
+byte[] inputPDFByteArray = File.ReadAllBytes("Input.pdf"); 
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFByteArray, true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Open an existing corrupted document from byte array. 
+//Load an existing PDF document from byte array
+byte[] inputPDFByteArray = File.ReadAllBytes("Input.pdf");
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFByteArray, true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Open an existing corrupted document from byte array. 
+' Load an existing PDF document from a byte array
+Dim inputPDFByteArray As Byte() = File.ReadAllBytes("Input.pdf")  
 Dim loadedDocument As New PdfLoadedDocument(inputPDFByteArray, True)
 
 {% endhighlight %}
@@ -294,45 +306,33 @@ You can save the manipulated PDF document to file system using [Save](https://he
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Load an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//To-Do some manipulation
-//To-Do some manipulation
-//Save the PDF document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//If the position is not set to '0' then the PDF will be empty.
-stream.Position = 0;
-//Close the document.
-loadedDocument.Close(true);
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
+// Load an existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+// To-Do some manipulation
+// To-Do some manipulation
+// Save the PDF document in file system
+loadedDocument.Save("Output.pdf"); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load an existing PDF document.
+// Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//To-Do some manipulation
-//To-Do some manipulation
-//Save the document in file system.
+// To-Do some manipulation
+// To-Do some manipulation
+// Save the PDF document in file system
 loadedDocument.Save("Output.pdf"); 
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load an existing PDF document.
+'Load an existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'To-Do some manipulation
 'To-Do some manipulation
-'Save the document in file system.
+'Save the document in file system
 loadedDocument.Save("Output.pdf")
 
 {% endhighlight %}
@@ -347,12 +347,11 @@ You can also save the manipulated PDF document to stream using overloads of [Sav
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}	
 
-//Load an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//To-Do some manipulation
-//To-Do some manipulation
-//Save the document into stream.
+// Load an existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+// To-Do some manipulation
+// To-Do some manipulation
+// Save the document into stream
 MemoryStream stream = new MemoryStream();
 loadedDocument.Save(stream);
 
@@ -360,14 +359,13 @@ loadedDocument.Save(stream);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load an existing PDF document.
+// Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//To-Do some manipulation
-//To-Do some manipulation
-//Creates an instance of memory stream.
+// To-Do some manipulation
+// To-Do some manipulation
+// Save the document into stream
 MemoryStream stream = new MemoryStream();
-//Save the document stream.
-loadedDocument.Save(stream) ;
+loadedDocument.Save(stream);
 
 {% endhighlight %}
 
@@ -386,7 +384,7 @@ loadedDocument.Save(stream)
 
 {% endtabs %}
 
-## Saving a PDF document into the same file or stream
+## Saving a PDF document into the same file
 
 You can also resave the manipulated PDF document to the same file using overloads of [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Save) method.
 
@@ -394,28 +392,33 @@ You can also resave the manipulated PDF document to the same file using overload
 
 {% highlight c# tabtitle="ASP.NET Core" %}
 
-//PDF doesn't supports saving a PDF document into the same file on the C#/.NET Cross platforms. 
+// Load an existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+// To-Do some manipulation
+// To-Do some manipulation
+// Resave the document to the same file
+loadedDocument.Save(); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
-//Load an existing PDF document.
+// Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//To-Do some manipulation
-//To-Do some manipulation
-//Resave the document to the same file.
-loadedDocument.Save() ;
+// To-Do some manipulation
+// To-Do some manipulation
+// Resave the document to the same file
+loadedDocument.Save();
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load an existing PDF document.
+'Load an existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'To-Do some manipulation
 'To-Do some manipulation
-'Resave the document to the same file.
+'Resave the document to the same file
 loadedDocument.Save()
 
 {% endhighlight %}
@@ -423,36 +426,6 @@ loadedDocument.Save()
 {% endtabs %}
 
 {% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
-
-//PDF doesn't supports saving a PDF document into the same file on the C#/.NET Cross platforms. 
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load an existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
-//To-Do some manipulation
-//To-Do some manipulation
-//Resave the document to the same stream.
-loadedDocument.Save();
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load an existing PDF document.
-Dim loadedDocument As New PdfLoadedDocument(stream)
-'To-Do some manipulation
-'To-Do some manipulation
-'Resave the document to the same stream.
-loadedDocument.Save()
-
-{% endhighlight %}
-
-{% endtabs %}
 
 ## Closing a document
 
@@ -462,28 +435,26 @@ After the document manipulation and save operation are completed, you should clo
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Load an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//To-Do some manipulation
-//To-Do some manipulation
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document.
+// Load an existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+// To-Do some manipulation
+// To-Do some manipulation
+// Save the document in file system
+loadedDocument.Save("Output.pdf"); 
+// Close the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load an existing PDF document.
+// Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//To-Do some manipulation
-//To-Do some manipulation
-//Save the document in file system.
+// To-Do some manipulation
+// To-Do some manipulation
+// Save the document in file system
 loadedDocument.Save("Output.pdf"); 
-//Close the document.
+// Close the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
@@ -514,21 +485,19 @@ You can catch the secured document exception by opening an existing encrypted PD
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Load an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
 PdfLoadedDocument document = null;
 try
 {
-    //Open an existing PDF document from a stream.
-    document = new PdfLoadedDocument(docStream, "password");
+    //Load an existing PDF document
+    document = new PdfLoadedDocument("Input.pdf", "password");
 }
 catch (Syncfusion.Pdf.PdfInvalidPasswordException exception)
 {
     //Secured PDF document password is invalid or opened without a password.
 }
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Close the document.
+//Save the document
+document.Save("Output.pdf");
+//Close the document
 document.Close(true);
 
 {% endhighlight %}
@@ -538,18 +507,17 @@ document.Close(true);
 PdfLoadedDocument document = null;
 try
 {
-    //Load an existing PDF document.
+    //Load an existing PDF document
     document = new PdfLoadedDocument("Input.pdf", "password");
 }
 catch (Syncfusion.Pdf.PdfInvalidPasswordException exception)
 {
     //Secured PDF document password is invalid or opened without a password.
 }
-//Save the document.
+//Save the document
 document.Save("Output.pdf");
-//Close the document.
+//Close the document
 document.Close(true);
-
 
 {% endhighlight %}
 
@@ -557,12 +525,12 @@ document.Close(true);
 
 Dim document As PdfLoadedDocument = Nothing
 Try
-  'Load an existing PDF document.
+  'Load an existing PDF document
   document = New PdfLoadedDocument("Input.pdf", "password")
 Catch exception As Syncfusion.Pdf.PdfInvalidPasswordException
   'Secured PDF document password is invalid or opened without a password.
 End Try
-'Save the document.
+'Save the document
 document.Save("Output.pdf")
 'Close the document.
 document.Close(True)
@@ -572,6 +540,7 @@ document.Close(True)
 {% endtabs %}
 
 ## Possible error messages of invalid PDF documents while loading
+
 The following are the possible error messages of invalid PDF documents while loading:
 I.	Please find some of the following corrupted error messages that cannot be repaired:
 1.    Could not find a valid signature (%PDF-).
@@ -582,48 +551,17 @@ I.	Please find some of the following corrupted error messages that cannot be rep
 6.    Error: Bad input stream initializer.
 7.    Fatal Error occurred.
 II.	Please find  some of the possible offset error messages that may be repairable:
-     1.Invalid cross-reference table with offset position.
-     2.Trailer Prev offset is located in the same cross table section.
+1.    Invalid cross-reference table with offset position.
+2.    Trailer Prev offset is located in the same cross table section.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}	
 
-//Load a PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
 PdfLoadedDocument document = null;
 try
 {
-    //Open an existing PDF document from the stream.
-    document = new PdfLoadedDocument(docStream, true);
-}
-catch (PdfException exception)
-{
-    //Invalid cross-reference table with offset position
-    //Trailer Prev offset is located in the same cross table section
-    //Could not find a valid signature (%PDF-).
-    //Bad Format error
-    //Lexical error: Unmatched input
-    //The document does not contain EOF
-    //The document has corrupted cross reference table
-    //Error: Bad input stream initializer
-    //Fatal error occured
-    //Unexpected token name before 257
-}
-//Save the document.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Close the document.
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-PdfLoadedDocument document = null;
-try
-{
-    //Open an existing PDF document from the disk.
+    //Load an existing PDF document from the disk
     document = new PdfLoadedDocument("Input.pdf", true);
 }
 catch (Exception message)
@@ -638,9 +576,36 @@ catch (Exception message)
     //Error: Bad input stream initializer
     //Fatal error occured
 }
-//Save the document. 
+//Save the document
 document.Save("Output.pdf");
-//Close the document. 
+//Close the document
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+PdfLoadedDocument document = null;
+try
+{
+    //Load an existing PDF document from the disk
+    document = new PdfLoadedDocument("Input.pdf", true);
+}
+catch (Exception message)
+{
+    //Invalid cross-reference table with offset position
+    //Trailer Prev offset is located in the same cross table section
+    //Could not find a valid signature (%PDF-).
+    //Bad Format error
+    //Lexical error: Unmatched input
+    //The document does not contain EOF
+    //The document has corrupted cross reference tables
+    //Error: Bad input stream initializer
+    //Fatal error occured
+}
+//Save the document
+document.Save("Output.pdf");
+//Close the document 
 document.Close(true);
 
 {% endhighlight %}
@@ -649,7 +614,7 @@ document.Close(true);
 
 Dim document As PdfLoadedDocument = Nothing
 Try
-    'Load an existing document.
+    'Load an existing document
     document = New PdfLoadedDocument("Input.pdf",true)
 Catch exception As Exception
     'Invalid cross-reference table with offset position
@@ -662,9 +627,9 @@ Catch exception As Exception
     'Error: Bad input stream initializer
     'Fatal error occured
 End Try
-'Save the document.
+'Save the document
 document.Save("Output.pdf")
-'Close the document.
+'Close the document
 document.Close(True)
 
 {% endhighlight %}
