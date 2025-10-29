@@ -30,22 +30,22 @@ The following system configurations were used for benchmarking:
 </tr>
 <tr>
     <td>2</td>
-    <td>{{'[Word-2.docx]()'| markdownify }}</td>
+    <td>{{'[Word-2.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Open-and-save/.NET/Open-and-Save-Word-document/Open-and-Save-Word-document/Data/Document-2.docx)'| markdownify }}</td>
     <td>0.52</td>
 </tr>
 <tr>
     <td>50</td>
-    <td>{{'[Word-50.docx]()'| markdownify }}</td>
+    <td>{{'[Word-50.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Open-and-save/.NET/Open-and-Save-Word-document/Open-and-Save-Word-document/Data/Document-50.docx)'| markdownify }}</td>
     <td>1.3</td>
 </tr>
 <tr>
     <td>100</td>
-    <td>{{'[Word-100.docx]()'| markdownify }}</td>
+    <td>{{'[Word-100.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Open-and-save/.NET/Open-and-Save-Word-document/Open-and-Save-Word-document/Data/Document-100.docx)'| markdownify }}</td>
     <td>2.4</td>
 </tr>
 <tr>
     <td>500</td>
-    <td>{{'[Word-500.docx]()'| markdownify }}</td>
+    <td>{{'[Word-500.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Open-and-save/.NET/Open-and-Save-Word-document/Open-and-Save-Word-document/Data/Document-500.docx)'| markdownify }}</td>
     <td>4.7</td>
 </tr>
 </table>
@@ -62,22 +62,22 @@ You can find the sample used for this performance evaluation on [GitHub](https:/
 </tr>
 <tr>
     <td>2</td>
-    <td>{{'[Word-2.docx]()'| markdownify }}</td>
+    <td>{{'[Word-2.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Clone-and-merge/.NET/Clone-and-merge-word-document/Clone-and-merge-word-document/Data/SourceDocument/Document-2.docx)'| markdownify }}</td>
     <td>0.46</td>
 </tr>
 <tr>
     <td>50</td>
-    <td>{{'[Word-50.docx]()'| markdownify }}</td>
+    <td>{{'[Word-50.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Clone-and-merge/.NET/Clone-and-merge-word-document/Clone-and-merge-word-document/Data/SourceDocument/Document-50.docx)'| markdownify }}</td>
     <td>3.2</td>
 </tr>
 <tr>
     <td>100</td>
-    <td>{{'[Word-100.docx]()'| markdownify }}</td>
+    <td>{{'[Word-100.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Clone-and-merge/.NET/Clone-and-merge-word-document/Clone-and-merge-word-document/Data/SourceDocument/Document-100.docx)'| markdownify }}</td>
     <td>5.3</td>
 </tr>
 <tr>
     <td>500</td>
-    <td>{{'[Word-500.docx]()'| markdownify }}</td>
+    <td>{{'[Word-500.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Clone-and-merge/.NET/Clone-and-merge-word-document/Clone-and-merge-word-document/Data/SourceDocument/Document-500.docx)'| markdownify }}</td>
     <td>19.5</td>
 </tr>
 </table>

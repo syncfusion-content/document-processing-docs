@@ -30,22 +30,22 @@ The following system configurations were used for benchmarking:
 </tr>
 <tr>
     <td>2</td>
-    <td>{{'[Word-2.docx]()'| markdownify }}</td>
+    <td>{{'[Word-2.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-PDF/.NET/Word-to-PDF/Word-to-PDF/Data/Document-2.docx)'| markdownify }}</td>
     <td>1.3</td>
 </tr>
 <tr>
     <td>50</td>
-    <td>{{'[Word-50.docx]()'| markdownify }}</td>
+    <td>{{'[Word-50.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-PDF/.NET/Word-to-PDF/Word-to-PDF/Data/Document-50.docx)'| markdownify }}</td>
     <td>8.6</td>
 </tr>
 <tr>
     <td>100</td>
-    <td>{{'[Word-100.docx]()'| markdownify }}</td>
+    <td>{{'[Word-100.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-PDF/.NET/Word-to-PDF/Word-to-PDF/Data/Document-100.docx)'| markdownify }}</td>
     <td>14.2</td>
 </tr>
 <tr>
     <td>500</td>
-    <td>{{'[Word-500.docx]()'| markdownify }}</td>
+    <td>{{'[Word-500.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-PDF/.NET/Word-to-PDF/Word-to-PDF/Data/Document-500.docx)'| markdownify }}</td>
     <td>31.6</td>
 </tr>
 </table>
