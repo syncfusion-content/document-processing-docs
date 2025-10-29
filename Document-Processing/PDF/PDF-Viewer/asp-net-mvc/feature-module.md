@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Feature modules in ASP.NET MVC Pdfviewer Component
+# Feature modules in ASP.NET MVC PDF Viewer
 
 The PDF Viewer features are organized into individual feature modules to enable selective referencing in your application. Inject the required modules to extend functionality. The following modules can be included as needed:
 
