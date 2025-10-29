@@ -46,7 +46,7 @@ The following system configurations were used for benchmarking:
 <tr>
     <td>500</td>
     <td>{{'[Word-500.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-Image/.NET/Word-document-to-image/Word-document-to-image/Data/Document-500.docx)'| markdownify }}</td>
-    <td><49.8/td>
+    <td>49.8</td>
 </tr>
 </table>
 
