@@ -2219,6 +2219,8 @@ htmlConverter.Close()
 
 {% endtabs %}
 
+N> Our HTML to PDF converter is thread-safe and suitable for multi-threaded environments without synchronization conflicts or data corruption. However, when the [ReuseBrowserProcess](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_ReuseBrowserProcess) property is `enabled`, the same HtmlToPdfConverter instance must be reused across threads, which involves sharing a single browser process. This makes it not thread-safe unless proper synchronization mechanisms, such as locks, are used to serialize access. `Disabling ReuseBrowserProcess` allows true parallelism with isolated browser instances per thread.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Optimize-HTML-to-PDF-performance).
 
 ## Temporary path

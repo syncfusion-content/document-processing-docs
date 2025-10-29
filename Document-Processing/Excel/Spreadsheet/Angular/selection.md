@@ -48,15 +48,15 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/selection-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/selection-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/selection-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/selection-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/selection-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/selection-cs1" %}
 
 ## Column selection
 
@@ -75,15 +75,15 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/selection-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/selection-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/selection-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/selection-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/selection-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/selection-cs2" %}
 
 ## Get selected cell values
 
@@ -91,15 +91,15 @@ You can select single or multiple cells, rows, or columns using mouse and keyboa
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/selected-cell-values/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/selected-cell-values/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/selected-cell-values/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/selected-cell-values/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/selected-cell-values" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/selected-cell-values" %}
 
 ## Remove Selection
 
@@ -107,15 +107,15 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/selection-cs3/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/selection-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/selection-cs3/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/selection-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/selection-cs3" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/selection-cs3" %}
 
 ## Limitations
 

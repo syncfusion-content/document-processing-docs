@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Filter in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+title: Filter in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
 description: Learn here all about Filter in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Filter
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Filtering in Spreadsheet control
+# Filtering in ASP.NET Core Spreadsheet control
 
 Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowFiltering) property to enable or disable filtering functionality.
 
@@ -38,10 +38,10 @@ The following code example shows `filter` functionality in the Spreadsheet contr
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/filter/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/filter/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="FilterController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/filter/filterController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/filter/filterController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,10 +87,10 @@ The following code example shows how to get the filtered rows.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/filter-cs1/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/filter-cs1/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="InsertSheetController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/filter-cs1/filterController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/filter-cs1/filterController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
