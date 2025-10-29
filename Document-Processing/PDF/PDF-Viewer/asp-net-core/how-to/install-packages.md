@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Install EJ2 PDF Viewer packages automatically
+# Install EJ2 PDF Viewer packages in ASP.NET Core PDF Viewer
 
 Install the Syncfusion ASP.NET Core PDF Viewer dependencies by adding the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core/) package to the project file. When the project is built or a `dotnet restore` runs, NuGet downloads the package and its dependencies.
 

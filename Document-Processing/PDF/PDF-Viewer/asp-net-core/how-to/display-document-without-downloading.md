@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Display document without downloading
+# Display document without downloading in Core PDF Viewer
 
 The PDF Viewer server library allows the control to reload a PDF from memory so users can view the file without downloading it to the local device by calling the **load** method.
 

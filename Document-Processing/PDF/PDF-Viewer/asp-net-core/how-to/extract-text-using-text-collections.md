@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Extract text using TextLineCollection
+# Extract text using TextLineCollection in Core PDF Viewer
 
 The PDF Viewer server library can extract text and its bounding information from a PDF page by using the **ExtractText()** method. The `TextLineCollection` output contains each line of text along with coordinates that help map the content back to the page.
 
