@@ -152,7 +152,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 {% previewsample "Document-Processing/samples/pdfviewer/angular/getting-started-cs1/index.html" %}
 
-> For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/how-to/create-pdfviewer-service)
+> For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service)
 
 ## Module injection
 
@@ -174,7 +174,7 @@ To enable additional features, inject the required modules. The following module
 
 Inject modules using the `providers` property in `@NgModule`.
 
-> To create a PDF Viewer `serviceUrl`, follow the steps in [Create PDF Viewer service](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/how-to/create-pdfviewer-service).
+> To create a PDF Viewer `serviceUrl`, follow the steps in [Create PDF Viewer service](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service).
 
 ## Run the PDF Viewer web service
 

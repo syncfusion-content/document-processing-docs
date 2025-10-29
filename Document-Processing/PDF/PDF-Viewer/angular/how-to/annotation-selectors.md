@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize annotation selectors in Angular PDF Viewer
+title: Customize Annotation Selectors | Syncfusion Angular PDF Viewer
 description: Learn how to customize annotation selectors in the Angular PDF Viewer component using annotationSelectorSettings with examples.
 platform: document-processing
 control: PDF Viewer

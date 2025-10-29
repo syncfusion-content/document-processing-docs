@@ -542,7 +542,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 {% endhighlight %}
 {% endtabs %}
 
->Run the [web service](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_3.0) and then the angular code. Also note that, the JSON file for importing the annotation should be placed in the location as specified in the GetDocumentPath method of the PdfViewerController.
+>Run the [web service](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_8.0) and then the angular code. Also note that, the JSON file for importing the annotation should be placed in the location as specified in the GetDocumentPath method of the PdfViewerController.
 
 Refer to the following code snippet to import annotations from an XFDF file.
 
@@ -623,7 +623,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 {% endhighlight %}
 {% endtabs %}
 
->Run the [web service](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_3.0) and then the angular code. Also note that, the XFDF file for importing the annotation should be placed in the location as specified in the GetDocumentPath method of the PdfViewerController.
+>Run the [web service](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_8.0) and then the angular code. Also note that, the XFDF file for importing the annotation should be placed in the location as specified in the GetDocumentPath method of the PdfViewerController.
 
 ## Importing Annotation Using Base64 Data
 

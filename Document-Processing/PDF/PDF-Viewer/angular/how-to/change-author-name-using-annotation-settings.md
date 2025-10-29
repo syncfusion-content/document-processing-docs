@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change author name using annotation settings in Angular PDF Viewer | Syncfusion
+title: Change Author Name via Annotation Settings | Syncfusion
 description: Learn how to change the author name and related annotation settings using the annotationSettings API in the Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
