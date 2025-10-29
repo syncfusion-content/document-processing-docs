@@ -425,8 +425,6 @@ loadedDocument.Save()
 
 {% endtabs %}
 
-{% tabs %}
-
 ## Closing a document
 
 After the document manipulation and save operation are completed, you should close the instance of [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html), in order to release all the memory consumed by PDF DOM. The following code snippet illustrates how to [Close](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Close_System_Boolean_) a ```PdfLoadedDocument``` instance.
