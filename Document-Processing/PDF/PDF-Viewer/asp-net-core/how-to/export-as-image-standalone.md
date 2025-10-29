@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Export PDF pages as images
+# Export PDF pages as images in ASP.NET Core PDF Viewer
 
 The PDF Viewer library enables exporting individual pages as Base64-encoded image strings by using the **exportAsImage()** method and exporting page ranges as Base64-encoded image strings by using the **exportAsImages()** method.
 

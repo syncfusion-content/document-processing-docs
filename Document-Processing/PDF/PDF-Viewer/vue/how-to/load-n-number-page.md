@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Load N number of pages on initial loading in Vue PDF Viewer component | Syncfusion
+title: Load N number of pages on initial loading in Vue PDFViewer | Syncfusion
 description: Learn here all about Load N number of pages on initial loading in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Load N number of pages on initial loading
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load N number of pages on initial loading
+# Load N number of pages on initial loading in Vue
 
 The initial rendering in a PDF viewer allows users to control the number of pages displayed when opening a PDF document. This improves the user experience by providing flexibility in loading a specific number of pages initially, while additional pages are dynamically rendered as the user scrolls through the document. This approach enhances the responsiveness of the PDF viewer and minimizes delays as users can access specific pages without waiting for the entire document to load.
 
