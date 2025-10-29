@@ -1,11 +1,11 @@
 ---
-title: Load and Save PDF file in C# and VB.NET | Syncfusion
-description: This page describes how to Load and save PDF file from or to file system, and stream in C# and VB.NET using Syncfusion .NET PDF library.
+title: Open and Save PDF file in C# and VB.NET | Syncfusion
+description: This page describes how to open and save PDF file from or to file system, and stream in C# and VB.NET using Syncfusion .NET PDF library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Load and save PDF files using C# and VB.NET.
+# Open and save PDF file in C# and VB.NET
 
 ## Namespace required 
 The following namespaces of Essential<sup>&reg;</sup> PDF need to be included in your application to load and save the PDF document. 
@@ -32,9 +32,9 @@ Imports Syncfusion.Pdf.Parsing
 
 {% endtabs %}
 
-## Loading an existing PDF document
+## Opening an existing PDF document
 
-Load an existing PDF document by using the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The following example shows how to load an existing document from physical path.
+Open an existing PDF document by using the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The following example shows how to load an existing document from physical path.
 
 {% tabs %}
 
@@ -61,9 +61,9 @@ Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 
 {% endtabs %}
 
-## LOading an existing PDF document from Stream
+## Opening an existing PDF document from Stream
 
-Load an existing document from stream by using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class as shown below.
+Open an existing document from stream by using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class as shown below.
 
 {% tabs %} 
 
@@ -93,9 +93,9 @@ Dim loadedDocument As New PdfLoadedDocument(inputPDFStream)
 
 {% endtabs %}
 
-## Loading an existing PDF document from byte array
+## Opening an existing PDF document from byte array
 
-Load an existing document from byte array by using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class as shown in the below code example.
+Open an existing document from byte array by using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class as shown in the below code example.
 
 {% tabs %} 
 
@@ -125,9 +125,9 @@ Dim loadedDocument As New PdfLoadedDocument(inputPDFByteArray)
 
 {% endtabs %}
 
-## Loading an Encrypted PDF document
+## Opening an Encrypted PDF document
 
-Load an existing encrypted PDF document from either the file system or the stream or the byte array using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_String_) class as shows in the below code example. 
+Open an existing encrypted PDF document from either the file system or the stream or the byte array using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_String_) class as shows in the below code example. 
 
 {% tabs %}
 
@@ -210,9 +210,9 @@ Dim loadedDocument As New PdfLoadedDocument(inputPDFByteArray,"password")
 
 {% endtabs %}
 
-## Loading a corrupted PDF document
+## Opening a corrupted PDF document
 
-Load a corrupted PDF document from either the file system or the stream or the byte array using the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_String_System_Boolean_) as shown below.
+Open a corrupted PDF document from either the file system or the stream or the byte array using the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_String_System_Boolean_) as shown below.
 
 {% tabs %}
 
