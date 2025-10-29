@@ -74,8 +74,12 @@ documenteditor.editor.toggleTextAlignment('Center' | 'Left' | 'Right' | 'Justify
 You can define the line spacing and its type for selected paragraphs using the following sample code.
 
 ```ts
+// Set line spacing type
 documenteditor.selection.paragraphFormat.lineSpacingType = 'AtLeast';
-documenteditor.selection.paragraphFormat.lineSpacing = 6;
+// Set line spacing value (supports both integer and float)
+documenteditor.selection.paragraphFormat.lineSpacing = 6; // Integer value
+documenteditor.selection.paragraphFormat.lineSpacing = 6.5; // Float value
+
 ```
 
 ## Paragraph spacing
