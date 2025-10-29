@@ -1,5 +1,5 @@
 ---
-title: Performance benchmark results | Syncfusion
+title: Word to image Performance benchmark results | Syncfusion
 description: Explore the performance benchmark results of Word to image conversion using the .NET Word Library with different page counts
 platform: document-processing
 control: DocIO
@@ -31,22 +31,22 @@ The following system configurations were used for benchmarking:
 <tr>
     <td>2</td>
     <td>{{'[Word-2.docx]()'| markdownify }}</td>
-    <td></td>
+    <td>0.77</td>
 </tr>
 <tr>
     <td>50</td>
     <td>{{'[Word-50.docx]()'| markdownify }}</td>
-    <td></td>
+    <td>9.6</td>
 </tr>
 <tr>
     <td>100</td>
     <td>{{'[Word-100.docx]()'| markdownify }}</td>
-    <td></td>
+    <td>13.9</td>
 </tr>
 <tr>
     <td>500</td>
     <td>{{'[Word-500.docx]()'| markdownify }}</td>
-    <td></td>
+    <td><49.8/td>
 </tr>
 </table>
 

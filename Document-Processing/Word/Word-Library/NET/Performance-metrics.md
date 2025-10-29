@@ -1,5 +1,5 @@
 ---
-title: Performance benchmark results | Syncfusion
+title: Word library Performance benchmark results | Syncfusion
 description: Know about the performance benchmark results of Syncfusion® .NET Word library with different document sizes
 platform: document-processing
 control: DocIO
@@ -31,22 +31,22 @@ The following system configurations were used for benchmarking:
 <tr>
     <td>2</td>
     <td>{{'[Word-2.docx]()'| markdownify }}</td>
-    <td></td>
+    <td>0.52</td>
 </tr>
 <tr>
     <td>50</td>
     <td>{{'[Word-50.docx]()'| markdownify }}</td>
-    <td></td>
+    <td>1.3</td>
 </tr>
 <tr>
     <td>100</td>
     <td>{{'[Word-100.docx]()'| markdownify }}</td>
-    <td></td>
+    <td>2.4</td>
 </tr>
 <tr>
     <td>500</td>
     <td>{{'[Word-500.docx]()'| markdownify }}</td>
-    <td></td>
+    <td>4.7</td>
 </tr>
 </table>
 
@@ -63,25 +63,24 @@ You can find the sample used for this performance evaluation on [GitHub]().
 <tr>
     <td>2</td>
     <td>{{'[Word-2.docx]()'| markdownify }}</td>
-    <td></td>
+    <td>0.46</td>
 </tr>
 <tr>
     <td>50</td>
     <td>{{'[Word-50.docx]()'| markdownify }}</td>
-    <td></td>
+    <td>3.2</td>
 </tr>
 <tr>
     <td>100</td>
     <td>{{'[Word-100.docx]()'| markdownify }}</td>
-    <td></td>
+    <td>5.3</td>
 </tr>
 <tr>
     <td>500</td>
     <td>{{'[Word-500.docx]()'| markdownify }}</td>
-    <td></td>
+    <td>19.5</td>
 </tr>
 </table>
 
 You can find the sample used for this performance evaluation on [GitHub]().
 
-You can also explore performance benchmarks for [Word to PDF](https://help.syncfusion.com/document-processing/word-framework/conversions/word-to-pdf/net/performance-metrics) and [Word to Image](https://help.syncfusion.com/document-processing/word-framework/conversions/word-to-image/net/performance-metrics) conversions.

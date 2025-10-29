@@ -1,5 +1,5 @@
 ---
-title: Performance benchmark results | Syncfusion
+title: Word to PDF Performance benchmark results | Syncfusion
 description: Explore the performance benchmark results of Word to PDF conversion using the .NET Word Library with different page counts
 platform: document-processing
 control: DocIO
@@ -31,22 +31,22 @@ The following system configurations were used for benchmarking:
 <tr>
     <td>2</td>
     <td>{{'[Word-2.docx]()'| markdownify }}</td>
-    <td>0.02</td>
+    <td>1.3</td>
 </tr>
 <tr>
     <td>50</td>
     <td>{{'[Word-50.docx]()'| markdownify }}</td>
-    <td>0.08</td>
+    <td>8.6</td>
 </tr>
 <tr>
     <td>100</td>
     <td>{{'[Word-100.docx]()'| markdownify }}</td>
-    <td>1.1</td>
+    <td>14.2</td>
 </tr>
 <tr>
     <td>500</td>
     <td>{{'[Word-500.docx]()'| markdownify }}</td>
-    <td>14.5</td>
+    <td>31.6</td>
 </tr>
 </table>
 
