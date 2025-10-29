@@ -50,4 +50,4 @@ The following system configurations were used for benchmarking:
 </tr>
 </table>
 
-You can find the sample used for this performance evaluation on [GitHub]().
+You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Word-to-PDF).
