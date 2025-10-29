@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Organize Pages in ASP.NET Core Mobile PDF Viewer
+# Organize Pages in Mobile PDF Viewer ASP.NET Core
 
 The PDF Viewer offers a mobile-responsive layout for the `Organize Pages` feature, ensuring a seamless experience on smaller devices. When viewed on a mobile device, the toolbar and navigation elements adapt to the screen size, providing easy access to all page management tools.
 

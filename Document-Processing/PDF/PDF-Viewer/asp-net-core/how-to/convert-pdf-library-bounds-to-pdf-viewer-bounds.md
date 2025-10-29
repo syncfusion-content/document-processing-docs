@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Convert PDF Library bounds to PDF Viewer bounds  in ASP.NET Core
+# Convert PDF Library bounds to PDF Viewer bounds in ASP.NET Core
 
 When exporting annotations from the PDF Library, convert the bounds values into the PDF Viewer format to ensure accurate placement.
 
