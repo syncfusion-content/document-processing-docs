@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Load N number of pages on initial loading in Vue PDFViewer | Syncfusion
+title: Load N number of pages on initial load in Vue | Syncfusion
 description: Learn here all about Load N number of pages on initial loading in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Load N number of pages on initial loading
 platform: document-processing
