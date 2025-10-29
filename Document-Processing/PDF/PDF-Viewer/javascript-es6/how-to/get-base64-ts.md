@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Get Base64 value from a loaded PDF
+# Get Base64 value from a loaded PDF in TypeScript
 
 ### Overview
 

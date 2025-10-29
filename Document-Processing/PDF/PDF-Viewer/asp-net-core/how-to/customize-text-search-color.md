@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Customize text search color in ASP.NET Core PDF Viewer control | Syncfusion
+title: Customize text search color in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn here all about Customize text search color in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize text search color
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Customize text search color in ASP.NET Core PDF Viewer control
+# Customize text search color in ASP.NET Core PDF Viewer
 
 To change the text search color in the Syncfusion PDF viewer, you can use the **searchColor** property of the searchModule object. This property accepts a string value that represents the color in hexadecimal format.
 

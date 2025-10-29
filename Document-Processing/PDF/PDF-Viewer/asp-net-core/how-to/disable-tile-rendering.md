@@ -4,7 +4,6 @@ title: Disable tile rendering in ASP.NET Core PDF Viewer control | Syncfusion
 description: Learn here all about Disable tile rendering in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Disable tile rendering
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

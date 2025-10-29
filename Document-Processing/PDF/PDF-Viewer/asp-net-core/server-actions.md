@@ -4,7 +4,6 @@ title: Server actions for Syncfusion ASP.NET Core PDF Viewer
 description: Review the ASP.NET Core server actions used by the Syncfusion PDF Viewer to manage loading, caching, annotations, and document interactions.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
