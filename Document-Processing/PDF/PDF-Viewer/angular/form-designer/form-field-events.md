@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Field Events | Syncfusion
-description: Learn here all about different form field in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about different form field in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

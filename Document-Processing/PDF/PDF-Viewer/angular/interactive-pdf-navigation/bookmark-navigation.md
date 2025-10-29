@@ -15,25 +15,160 @@ You can enable/disable bookmark navigation by using the following code snippet.,
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
+import { Component, ViewEncapsulation, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import {
+  PdfViewerComponent,
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  AnnotationService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService,
+  PdfViewerModule,
+} from '@syncfusion/ej2-angular-pdfviewer';
 
+/**
+ * Default PdfViewer Controller
+ */
+@Component({
+  selector: 'app-root',
+  // templateUrl: 'app.component.html',
+    template: `
+    <div class="control-section">
+      <div class="content-wrapper">
+        <button ejs-button cssClass="e-primary" id="getBookmarks">annotationSelector</button>
+      </div>
+    </div>
+    <ejs-pdfviewer
+      #pdfviewer
+      id="pdfViewer"
+      [documentPath]="document"
+      [resourceUrl] = "resource"
+      [enableBookmark]='true'
+      >
+      style="height:640px;display:block"
+    </ejs-pdfviewer>
+    `,
+  encapsulation: ViewEncapsulation.None,
+  // tslint:disable-next-line:max-line-length
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    AnnotationService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService,
+  ],
+  styleUrls: ['app.component.css'],
+  standalone: true,
+  imports: [PdfViewerModule],
+    
+})
+export class AppComponent {
+  @ViewChild('pdfviewer')
+  public viewer: PdfViewerComponent;
+  public document: string =
+    'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resource: string =
+    'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib';
 
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
-
-let pdfviewer: PdfViewer = new PdfViewer({enableBookmark: true, documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
-pdfviewer.appendTo('#PdfViewer');
+  ngOnInit(): void {
+    // ngOnInit function
+  }
+}
 
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
 
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
+import { Component, ViewEncapsulation, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import {
+  PdfViewerComponent,
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  AnnotationService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService,
+  PdfViewerModule,
+} from '@syncfusion/ej2-angular-pdfviewer';
 
-PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
+/**
+ * Default PdfViewer Controller
+ */
+@Component({
+  selector: 'app-root',
+  // templateUrl: 'app.component.html',
+    template: `
+    <div class="control-section">
+      <div class="content-wrapper">
+        <button ejs-button cssClass="e-primary" id="getBookmarks">annotationSelector</button>
+      </div>
+    </div>
+    <ejs-pdfviewer
+      #pdfviewer
+      id="pdfViewer"
+      [documentPath]="document"
+      [resourceUrl] = "resource"
+      [enableBookmark]='true'
+      >
+      style="height:640px;display:block"
+    </ejs-pdfviewer>
+    `,
+  encapsulation: ViewEncapsulation.None,
+  // tslint:disable-next-line:max-line-length
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    AnnotationService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService,
+  ],
+  styleUrls: ['app.component.css'],
+  standalone: true,
+  imports: [PdfViewerModule],
+    
+})
 
-let pdfviewer: PdfViewer = new PdfViewer({enableBookmark: true, documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.appendTo('#PdfViewer');
+export class AppComponent {
+  @ViewChild('pdfviewer')
+  public viewer: PdfViewerComponent;
+  public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
+  public document: string =
+    'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+
+  ngOnInit(): void {
+    // ngOnInit function
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -49,9 +184,27 @@ Here is an example of how to use the **goToBookmark** method:
 ```
 
 ```ts
-document.getElementById('gotobookmark').addEventListener('click', () => {
-  viewer.bookmark.goToBookmark(x, y);
-});
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { PdfViewerComponent } from '@syncfusion/ej2-angular-pdfviewer';
+
+@Component({
+  selector: 'app-container',
+  template: `<ejs-pdfviewer id="pdfViewer" #pdfViewer style="height:640px;display:block"></ejs-pdfviewer>`
+})
+export class AppComponent implements AfterViewInit {
+  @ViewChild('pdfViewer', { static: false }) public viewer: PdfViewerComponent;
+
+  ngAfterViewInit(): void {
+    const btn = document.getElementById('gotobookmark');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const x = 0; // page index
+        const y = 0; // Y coordinate
+        this.viewer.bookmark.goToBookmark(x, y);
+      });
+    }
+  }
+}
 ```
 
 x - Specifies the pageIndex for Navigate.
@@ -67,10 +220,27 @@ Here is an example of how to use the getBookmarks method:
 ```
 
 ```ts
-document.getElementById('getBookmarks').addEventListener('click', () => {
-  var getBookmarks = viewer.bookmark.getBookmarks();
-  console.log(getBookmarks)
-});
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { PdfViewerComponent } from '@syncfusion/ej2-angular-pdfviewer';
+
+@Component({
+  selector: 'app-container',
+  template: `<ejs-pdfviewer id="pdfViewer" #pdfViewer style="height:640px;display:block"></ejs-pdfviewer>`
+})
+export class AppComponent implements AfterViewInit {
+  @ViewChild('pdfViewer', { static: false }) 
+  public viewer: PdfViewerComponent;
+
+  ngAfterViewInit(): void {
+    const btn = document.getElementById('getBookmarks');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const getBookmarks = this.viewer.bookmark.getBookmarks();
+        console.log(getBookmarks);
+      });
+    }
+  }
+}
 ```
 
 ## See also

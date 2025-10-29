@@ -132,7 +132,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   })
   export class AppComponent implements OnInit {
       public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-      public resourceUrl = 'https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib';
+      public resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
     ngOnInit(): void {
     }

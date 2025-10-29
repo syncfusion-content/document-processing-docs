@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Comments in Angular Pdfviewer component | Syncfusion
-description: Learn about comments, replies, and status in the Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2.
+title: Comments in Angular PDF Viewer component | Syncfusion
+description: Learn about comments, replies, and status in the Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2.
 platform: document-processing
 control: Comments
 documentation: ug

@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Add rectangle annotations using text search bounds in PDF Viewer
 
-A concise guide to adding rectangle annotations at highlighted text search results in the TypeScript PDF Viewer to visually emphasize matches and improve readability.
+A concise guide to adding rectangle annotations at highlighted text search results in the Angular PDF Viewer to visually emphasize matches and improve readability.
 
 ## Steps to add rectangle annotations on search result highlight
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular.
 
-**Step 2:** Set Up the PdfViewer Component to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer.
+**Step 2:** Set Up the PDF Viewer Component to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

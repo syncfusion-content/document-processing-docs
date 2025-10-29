@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Page Navigation in TypeScript PDF Viewer | Syncfusion
-description: Explore how to navigate pages in the Syncfusion TypeScript PDF Viewer control using built-in options for seamless document viewing.
+title: Page Navigation in Angular PDF Viewer | Syncfusion
+description: Explore how to navigate pages in the Syncfusion Angular PDF Viewer control using built-in options for seamless document viewing.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigation in TypeScript PDF Viewer control
+# Navigation in Angular PDF Viewer control
 
-The TypeScript PDF Viewer supports different internal and external navigations.
+The Angular PDF Viewer supports different internal and external navigations.
 
 ## Toolbar page navigation option
 
 The default toolbar of PDF Viewer contains the following navigation options
 
-* [**Go to page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to the specific page of a PDF document.
-* [**Show next page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page of PDF a document.
-* [**Show previous page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopreviouspage):- Navigates to the previous page of a PDF document.
-* [**Show first page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotofirstpage):-  Navigates to the first page of a PDF document.
-* [**Show last page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of a PDF document.
+* [**Go to page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to the specific page of a PDF document.
+* [**Show next page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page of PDF a document.
+* [**Show previous page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotopreviouspage):- Navigates to the previous page of a PDF document.
+* [**Show first page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotofirstpage):-  Navigates to the first page of a PDF document.
+* [**Show last page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of a PDF document.
 
 ```html
 <!DOCTYPE html>
@@ -56,25 +56,62 @@ You can enable/disable page navigation option in PDF Viewer using the following 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
-
-let pdfviewer: PdfViewer = new PdfViewer({enableNavigation: true, documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
-pdfviewer.appendTo('#PdfViewer');
+import { Component, OnInit } from '@angular/core';
+import { LinkAnnotationService, BookmarkViewService, MagnificationService,
+         ThumbnailViewService, ToolbarService, NavigationService,
+         TextSearchService, AnnotationService, TextSelectionService,
+         PrintService
+       } from '@syncfusion/ej2-angular-pdfviewer';
+@Component({
+  selector: 'app-container',
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
+               <ejs-pdfviewer id="pdfViewer"
+                        [enableNavigation]='true'
+                        [documentPath]='document'
+                        [resourceUrl]="resource"
+                        style="height:640px;display:block">
+               </ejs-pdfviewer>
+            </div>`,
+  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
+               ThumbnailViewService, ToolbarService, NavigationService,
+               AnnotationService, TextSearchService, TextSelectionService,
+               PrintService]
+  })
+  export class AppComponent {
+      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+      public resource: string = 'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib';
+  }
 
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
 
-
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
-
-let pdfviewer: PdfViewer = new PdfViewer({enableNavigation: true, documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.appendTo('#PdfViewer');
+import { Component, OnInit } from '@angular/core';
+import { LinkAnnotationService, BookmarkViewService, MagnificationService,
+         ThumbnailViewService, ToolbarService, NavigationService,
+         TextSearchService, AnnotationService, TextSelectionService,
+         PrintService
+       } from '@syncfusion/ej2-angular-pdfviewer';
+@Component({
+  selector: 'app-container',
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
+               <ejs-pdfviewer id="pdfViewer"
+                        [serviceUrl]='service'
+                        [enableNavigation]='true'
+                        [documentPath]='document'
+                        style="height:640px;display:block">
+               </ejs-pdfviewer>
+            </div>`,
+  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
+               ThumbnailViewService, ToolbarService, NavigationService,
+               AnnotationService, TextSearchService, TextSelectionService,
+               PrintService]
+  })
+  export class AppComponent {
+      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
+      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -120,75 +157,105 @@ Also, you can programmatically perform page navigation options as follows.
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import {PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print TextSelection, TextSearch, Annotation, FormFields } from '@syncfusion/ej2-pdfviewer';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService, MagnificationService,
+         ThumbnailViewService, ToolbarService, NavigationService,
+         TextSearchService, AnnotationService, TextSelectionService,
+         PrintService
+       } from '@syncfusion/ej2-angular-pdfviewer';
+@Component({
+  selector: 'app-container',
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
+               <div class="btn-group" style="margin-bottom:8px; display:flex; gap:8px; flex-wrap:wrap;">
+                 <button (click)="goToFirstPage()">Go To First Page</button>
+                 <button (click)="goToLastPage()">Go To Last Page</button>
+                 <button (click)="goToNextPage()">Go To Next Page</button>
+                 <button (click)="goToPage()">Go To Page</button>
+                 <button (click)="goToPreviousPage()">Go To Previous Page</button>
+               </div>
+               <ejs-pdfviewer #pdfViewer id="pdfViewer"
+                        [documentPath]='document'
+                        [resoourceUrl]="resource"
+                        style="height:640px;display:block">
+               </ejs-pdfviewer>
+            </div>`,
+  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
+               ThumbnailViewService, ToolbarService, NavigationService,
+               AnnotationService, TextSearchService, TextSelectionService,
+               PrintService]
+  })
+  export class AppComponent {
+      @ViewChild('pdfViewer') public pdfViewer: PdfViewerComponent;
+      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+      public resource: string = 'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib';
 
-PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, TextSearch, Annotation, FormFields );
-
-let viewer: PdfViewer = new PdfViewer();
-viewer.appendTo('#pdfViewer');
-viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
-
-// Go To First Page
-document.getElementById('goToFirstPage').addEventListener('click', () => {
-  viewer.navigation.goToFirstPage();
-});
-// Go To Last Page
-document.getElementById('goToLastPage').addEventListener('click', () => {
-  viewer.navigation.goToLastPage();
-});
-// Go To Next Page
-document.getElementById('goToNextPage').addEventListener('click', () => {
-  viewer.navigation.goToNextPage();
-});
-// Go To Page
-document.getElementById('goToPage').addEventListener('click', () => {
-  viewer.navigation.goToPage(4);
-});
-// Go To Previous Page
-document.getElementById('goToPreviousPage').addEventListener('click', () => {
-  viewer.navigation.goToPreviousPage();
-});
+      public goToFirstPage(): void { this.pdfViewer.navigation.goToFirstPage(); }
+      public goToLastPage(): void { this.pdfViewer.navigation.goToLastPage(); }
+      public goToNextPage(): void { this.pdfViewer.navigation.goToNextPage(); }
+      public goToPage(): void { this.pdfViewer.navigation.goToPage(4); }
+      public goToPreviousPage(): void { this.pdfViewer.navigation.goToPreviousPage(); }
+}
 
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
 
-import {PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print TextSelection, TextSearch, Annotation, FormFields } from '@syncfusion/ej2-pdfviewer';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService, MagnificationService,
+         ThumbnailViewService, ToolbarService, NavigationService,
+         TextSearchService, AnnotationService, TextSelectionService,
+         PrintService
+       } from '@syncfusion/ej2-angular-pdfviewer';
+@Component({
+  selector: 'app-container',
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
+               <div class="btn-group" style="margin-bottom:8px; display:flex; gap:8px; flex-wrap:wrap;">
+                 <button (click)="goToFirstPage()">Go To First Page</button>
+                 <button (click)="goToLastPage()">Go To Last Page</button>
+                 <button (click)="goToNextPage()">Go To Next Page</button>
+                 <button (click)="goToPage()">Go To Page</button>
+                 <button (click)="goToPreviousPage()">Go To Previous Page</button>
+               </div>
+               <ejs-pdfviewer #pdfViewer id="pdfViewer"
+                        [serviceUrl]='service'
+                        [documentPath]='document'                        
+                        style="height:640px;display:block">
+               </ejs-pdfviewer>
+            </div>`,
+  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
+               ThumbnailViewService, ToolbarService, NavigationService,
+               AnnotationService, TextSearchService, TextSelectionService,
+               PrintService]
+  })
+  export class AppComponent {
+      @ViewChild('pdfViewer') public pdfViewer: PdfViewerComponent;
+      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
+      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 
-PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, TextSearch, Annotation, FormFields );
-
-let viewer: PdfViewer = new PdfViewer();
-viewer.serviceUrl =
-  'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-viewer.appendTo('#pdfViewer');
-viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
-
-// Go To First Page
-document.getElementById('goToFirstPage').addEventListener('click', () => {
-  viewer.navigation.goToFirstPage();
-});
-// Go To Last Page
-document.getElementById('goToLastPage').addEventListener('click', () => {
-  viewer.navigation.goToLastPage();
-});
-// Go To Next Page
-document.getElementById('goToNextPage').addEventListener('click', () => {
-  viewer.navigation.goToNextPage();
-});
-// Go To Page
-document.getElementById('goToPage').addEventListener('click', () => {
-  viewer.navigation.goToPage(4);
-});
-// Go To Previous Page
-document.getElementById('goToPreviousPage').addEventListener('click', () => {
-  viewer.navigation.goToPreviousPage();
-});
+      public goToFirstPage(): void {
+        this.pdfViewer.navigation.goToFirstPage();
+      }
+      public goToLastPage(): void {
+        this.pdfViewer.navigation.goToLastPage();
+      }
+      public goToNextPage(): void {
+        this.pdfViewer.navigation.goToNextPage();
+      }
+      public goToPage(): void {
+        this.pdfViewer.navigation.goToPage(4);
+      }
+      public goToPreviousPage(): void {
+        this.pdfViewer.navigation.goToPreviousPage();
+      }
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-Find the [here](https://stackblitz.com/edit/5dqbkd?file=index.ts) to perform the page navigation options programmatically.
+Find the [here](https://stackblitz.com/edit/angular-pfdpfdzq-aowymqw8?file=src%2Fapp.component.ts,src%2Fapp.component.html) to perform the page navigation options programmatically.
 
 ## See also
 
-* [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/toolbar)
-* [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/feature-module)
+* [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/toolbar)
+* [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/feature-module)

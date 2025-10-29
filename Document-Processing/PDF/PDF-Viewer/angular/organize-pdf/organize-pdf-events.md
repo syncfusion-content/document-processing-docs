@@ -25,20 +25,31 @@ The event arguments provide the necessary information about the save event:
 - `cancel`: A boolean that, when set to `true`, prevents the default save action from proceeding.
 
 ```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+import { Component, ViewChild } from '@angular/core';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-angular-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+PdfViewerComponent.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer);
 
-let pdfviewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    pageOrganizerSaveAs: function (args) {
-        console.log('File Name is' + args.fileName);
-        console.log('Document data' + args.downloadDocument);
+@Component({
+  selector: 'app-root',
+  template: `<div class="content-wrapper">
+            <ejs-pdfviewer #pdfViewer id="pdfViewer"
+                  [documentPath]='document'
+                  [resourceUrl]="resource"
+                  (pageOrganizerSaveAs)="onPageOrganizerSaveAs($event)">
+                  style="height:640px;display:block">
+            </ejs-pdfviewer>
+          </div>`
+})
+export class AppComponent {
+    @ViewChild('pdfViewer') public pdfViewer: PdfViewerComponent;
+    public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+    public resource: string = 'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib';
+    onPageOrganizerSaveAs(args: any): void {
+      console.log('File Name is' + args.fileName);
+      console.log('Document data' + args.downloadDocument);
     }
-});
-pdfviewer.appendTo('#PdfViewer');
+}
 ```
 
 ## pageOrganizerZoomChanged
@@ -54,25 +65,35 @@ Event arguments:
 - `currentZoomValue`: The current zoom value.
 
 ```typescript
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields, ValidateFormFieldsArgs, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+import { Component, ViewChild } from '@angular/core';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-angular-pdfviewer';
 
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer );
+PdfViewerComponent.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer);
 
-let pdfviewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    pageOrganizerZoomChanged: function (args) {
-        console.log('Previous Zoom Value is' + args.previousZoom);
-        console.log('Current Zoom Value is' + args.currentZoom);
-    }
-});
-pdfviewer.pageOrganizerSettings = { showImageZoomingSlider: true };
-pdfviewer.appendTo('#PdfViewer');
+@Component({
+  selector: 'app-root',
+  template: `<div class="content-wrapper">
+              <ejs-pdfviewer #pdfViewer id="pdfViewer"
+                    [documentPath]='document'
+                    [resourceUrl]="resource"
+                    [pageOrganizerSettings]="{ showImageZoomingSlider: true }"
+                    (pageOrganizerZoomChanged)="onPageOrganizerZoomChanged($event)">
+                    style="height:640px;display:block">
+              </ejs-pdfviewer>
+            </div>`
+})
+export class AppComponent {
+  @ViewChild('pdfviewer', { static: true }) pdfviewer?: PdfViewerComponent;
+
+  onPageOrganizerZoomChanged(args: any): void {
+    console.log('Previous Zoom Value is' + args.previousZoom);
+    console.log('Current Zoom Value is' + args.currentZoom);
+  }
+}
 ```
 
 ## Related event documentation
 
 - Overall Viewer events: [Event](../event)
-- Annotation events: [Annotation events](../annotations/annotation-event)
+- Annotation events: [Annotation events](../annotation/annotation-event)
 - Form designer events: [Form field events](../form-designer/form-field-events)

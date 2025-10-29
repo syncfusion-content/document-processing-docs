@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Delete annotation in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Delete annotation in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Delete annotation in Angular PDF Viewer component | Syncfusion
+description: Learn here all about Delete annotation in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Delete annotation
 documentation: ug

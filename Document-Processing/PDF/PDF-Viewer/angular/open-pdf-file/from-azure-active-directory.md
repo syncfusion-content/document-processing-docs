@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open PDF From AAD in Angular Pdfviewer Component | Syncfusion
-description: Learn how to Open PDF From AAD in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Open PDF From AAD in Angular PDF Viewer Component | Syncfusion
+description: Learn how to Open PDF From AAD in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Load PDF From AAD
 documentation: ug

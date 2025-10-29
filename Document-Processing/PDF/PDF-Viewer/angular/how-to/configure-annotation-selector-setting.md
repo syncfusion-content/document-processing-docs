@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Configure annotation selector settings in TypeScript PDF Viewer | Syncfusion
-description: Learn how to configure annotation selector settings in the TypeScript PDF Viewer using annotationSelectorSettings and related options.
+title: Configure annotation selector settings in Angular PDF Viewer | Syncfusion
+description: Learn how to configure annotation selector settings in the Angular PDF Viewer using annotationSelectorSettings and related options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -20,7 +20,7 @@ The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/angular/documen
 
 Steps to configure annotation selector settings
 
-- Step 1: Create a PdfViewer instance and initialize it.
+- Step 1: Create a PDF Viewer instance and initialize it.
 - Step 2: Set the annotationSelectorSettings property to customize selector behavior.
 
 {% tabs %}

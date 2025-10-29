@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mobile Toolbar Interface in TypeScript PDF Viewer control | Syncfusion
-description: Learn All About the Mobile Toolbar Interface in Syncfusion TypeScript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Mobile Toolbar Interface in Angular PDF Viewer control | Syncfusion
+description: Learn All About the Mobile Toolbar Interface in Syncfusion Angular PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Mobile Toolbar Interface in TypeScript PDF Viewer control
+# Mobile Toolbar Interface in Angular PDF Viewer control
 
 The Mobile PDF Viewer offers a variety of features for viewing, searching, annotating, and managing PDF documents on mobile devices. It includes essential tools like search, download, bookmarking, annotation, and page organization. Users also have the option to enable desktop toolbar features in mobile mode, providing a more extensive set of actions.
 
@@ -59,29 +59,73 @@ The desktop version of the toolbar can be enabled on mobile devices by using the
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
+import { Component, OnInit } from '@angular/core';
+import { LinkAnnotationService, BookmarkViewService,
+         MagnificationService, ThumbnailViewService, ToolbarService,
+         NavigationService, TextSearchService, TextSelectionService,
+         PrintService, FormDesignerService, FormFieldsService,
+         AnnotationService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
+@Component({
+  selector: 'app-root',
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
 
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.enableDesktopMode = true;
-pdfviewer.appendTo('#PdfViewer');
+  <ejs-pdfviewer
+    id="pdfViewer"
+    [documentPath]="document"
+    [resourceUrl]="resource"
+    [enableDesktopMode]="true"
+    style="height:640px;display:block">
+  </ejs-pdfviewer>
+</div>`,
+  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
+               ThumbnailViewService, ToolbarService, NavigationService,
+               TextSearchService, TextSelectionService, PrintService,
+               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
+})
+export class AppComponent implements OnInit {
+    public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+    public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+    ngOnInit(): void {
+    }
+}
 
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
 
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
+import { Component, OnInit } from '@angular/core';
+import { LinkAnnotationService, BookmarkViewService,
+         MagnificationService, ThumbnailViewService, ToolbarService,
+         NavigationService, TextSearchService, TextSelectionService,
+         PrintService, FormDesignerService, FormFieldsService,
+         AnnotationService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
+@Component({
+  selector: 'app-root',
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
 
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.enableDesktopMode = true;
-pdfviewer.appendTo('#PdfViewer');
-
+  <ejs-pdfviewer
+    id="pdfViewer"
+    [documentPath]="document"
+    [serviceUrl]="service"
+    [enableDesktopMode]="true"
+    style="height:640px;display:block">
+  </ejs-pdfviewer>
+</div>`,
+  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
+               ThumbnailViewService, ToolbarService, NavigationService,
+               TextSearchService, TextSelectionService, PrintService,
+               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
+})
+export class AppComponent implements OnInit {
+    public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+    ngOnInit(): void {
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -92,31 +136,74 @@ To ensure smooth scrolling of PDF documents on a mobile device in desktop mode, 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
+import { Component, OnInit } from '@angular/core';
+import { LinkAnnotationService, BookmarkViewService,
+         MagnificationService, ThumbnailViewService, ToolbarService,
+         NavigationService, TextSearchService, TextSelectionService,
+         PrintService, FormDesignerService, FormFieldsService,
+         AnnotationService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
+@Component({
+  selector: 'app-root',
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
 
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.enableDesktopMode = true;
-pdfviewer.enableTextSelection = false;
-pdfviewer.appendTo('#PdfViewer');
+  <ejs-pdfviewer
+    id="pdfViewer"
+    [documentPath]="document"
+    [resourceUrl]="resource"
+    [enableDesktopMode]="true"
+    [enableTextSelection]="false"
+    style="height:640px;display:block">
+  </ejs-pdfviewer>
+</div>`,
+  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
+               ThumbnailViewService, ToolbarService, NavigationService,
+               TextSearchService, TextSelectionService, PrintService,
+               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
+})
+export class AppComponent implements OnInit {
+    public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+    public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
+    ngOnInit(): void {
+    }
+}
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
 
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
+import { Component, OnInit } from '@angular/core';
+import { LinkAnnotationService, BookmarkViewService,
+         MagnificationService, ThumbnailViewService, ToolbarService,
+         NavigationService, TextSearchService, TextSelectionService,
+         PrintService, FormDesignerService, FormFieldsService,
+         AnnotationService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
+@Component({
+  selector: 'app-root',
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
 
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.enableDesktopMode = true;
-pdfviewer.enableTextSelection = false;
-pdfviewer.appendTo('#PdfViewer');
-
+  <ejs-pdfviewer
+    id="pdfViewer"
+    [documentPath]="document"
+    [serviceUrl]="service"
+    [enableDesktopMode]="true"
+    [enableTextSelection]="false"
+    style="height:640px;display:block">
+  </ejs-pdfviewer>
+</div>`,
+  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
+               ThumbnailViewService, ToolbarService, NavigationService,
+               TextSearchService, TextSelectionService, PrintService,
+               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
+})
+export class AppComponent implements OnInit {
+    public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+    ngOnInit(): void {
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 

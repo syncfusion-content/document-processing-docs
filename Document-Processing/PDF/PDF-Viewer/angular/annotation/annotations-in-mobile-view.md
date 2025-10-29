@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Annotations mobileView in TypeScript PDF Viewer control | Syncfusion
-description: Learn how to use annotations in mobile view with the Syncfusion TypeScript PDF Viewer (Essential JS 2).
+title: Annotations mobileView in Angular PDF Viewer control | Syncfusion
+description: Learn how to use annotations in mobile view with the Syncfusion Angular PDF Viewer (Essential JS 2).
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Annotations in mobile view in TypeScript PDF Viewer control
+# Annotations in mobile view in Angular PDF Viewer control
 
 ## Open the annotation toolbar
 
 **Step 1:** Click Edit Annotation on the toolbar to enable the annotation toolbar.
 
-![Enable the annotation toolbar](./images/edit-annotation.png)
+![Enable the annotation toolbar](../images/edit-annotation.png)
 
 **Step 2:** The annotation toolbar appears below the main toolbar.
 
@@ -81,7 +81,7 @@ domainurl: ##DomainURL##
 
 **Step 2:** The ink annotation appears on the page.
 
-![Ink annotation drawn on the page](../how-to/images/ink-annotation.png)
+![Ink annotation drawn on the page](../images/ink-annotation.png)
 
 ## Change annotation properties (before adding)
 

@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Create form fields in the Angular PDF Viewer component | Syncfusion
-description: Learn here all about Create programmatically in Syncfusion Angular Pdfviewer control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Create programmatically in Syncfusion Angular PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Create programmatically
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create programmatically in Typescript Pdf viewer control
+# Create programmatically in Angular Pdf viewer control
 
 The PDF Viewer component provides options to add, edit, and delete form fields. The supported form field types are:
 

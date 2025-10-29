@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Save PDF to Azure Blob Storage in Pdfviewer Component | Syncfusion
-description: Learn here all about how to save PDF files to Azure Blob Storage in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Save PDF to Azure Blob Storage in PDF Viewer Component | Syncfusion
+description: Learn here all about how to save PDF files to Azure Blob Storage in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Save PDF files to Azure Blob Storage
 documentation: ug

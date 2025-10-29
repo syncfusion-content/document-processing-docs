@@ -107,7 +107,7 @@ export class AppComponent {
   public document: string =
     'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   public resource: string =
-    'https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib';
+    'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   annotationAdd(args: any): void {
     console.log('Annotation added with ID: ' + args.annotationId);
@@ -196,7 +196,7 @@ export class AppComponent {
   public document: string =
     'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   public resource: string =
-    'https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib';
+    'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   annotationDoubleClick(args: any): void {
     console.log('Annotation double-clicked on page: ' + args.pageIndex);
@@ -294,7 +294,7 @@ export class AppComponent {
   public document: string =
     'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   public resource: string =
-    'https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib';
+    'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   annotationMouseLeave(args: any): void {
     console.log(
@@ -378,7 +378,7 @@ export class AppComponent implements OnInit {
   public pdfViewerControl!: PdfViewerComponent;
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   ngOnInit(): void {
     // Initialization logic if needed
@@ -461,7 +461,7 @@ export class AppComponent implements OnInit {
   public pdfViewerControl!: PdfViewerComponent;
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   ngOnInit(): void {
     // Initialization logic if needed
@@ -544,7 +544,7 @@ export class AppComponent implements OnInit {
   public pdfViewerControl!: PdfViewerComponent;
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   ngOnInit(): void {
     // Initialization logic if needed
@@ -627,7 +627,7 @@ export class AppComponent implements OnInit {
   public pdfViewerControl!: PdfViewerComponent;
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   ngOnInit(): void {
     // Initialization logic if needed
@@ -712,7 +712,7 @@ export class AppComponent implements OnInit {
   public pdfViewerControl!: PdfViewerComponent;
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   ngOnInit(): void {
     // Initialization logic if needed
@@ -795,7 +795,7 @@ export class AppComponent implements OnInit {
   public pdfViewerControl!: PdfViewerComponent;
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   ngOnInit(): void {
     // Initialization logic if needed
@@ -878,7 +878,7 @@ export class AppComponent implements OnInit {
   public pdfViewerControl!: PdfViewerComponent;
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   ngOnInit(): void {
     // Initialization logic if needed
@@ -960,7 +960,7 @@ export class AppComponent implements OnInit {
   public pdfViewerControl!: PdfViewerComponent;
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   ngOnInit(): void {
     // Initialization logic if needed
@@ -1041,7 +1041,7 @@ export class AppComponent implements OnInit {
   public pdfViewerControl!: PdfViewerComponent;
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   ngOnInit(): void {
     // Initialization logic if needed
@@ -1127,7 +1127,7 @@ export class AppComponent implements OnInit {
   public pdfViewerControl!: PdfViewerComponent;
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   ngOnInit(): void {
     // Initialization logic if needed
@@ -1207,7 +1207,7 @@ export class AppComponent implements OnInit {
   public pdfViewerControl!: PdfViewerComponent;
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   ngOnInit(): void {
     // Initialization logic if needed
@@ -1288,7 +1288,7 @@ export class AppComponent implements OnInit {
   public pdfViewerControl!: PdfViewerComponent;
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   ngOnInit(): void {
     // Initialization logic if needed
@@ -1368,7 +1368,7 @@ export class AppComponent implements OnInit {
   public pdfViewerControl!: PdfViewerComponent;
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   ngOnInit(): void {
     // Initialization logic if needed
@@ -1449,7 +1449,7 @@ export class AppComponent implements OnInit {
   public pdfViewerControl!: PdfViewerComponent;
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   ngOnInit(): void {
     // Initialization logic if needed
@@ -1531,7 +1531,7 @@ export class AppComponent implements OnInit {
   public pdfViewerControl!: PdfViewerComponent;
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   ngOnInit(): void {
     // Initialization logic if needed
