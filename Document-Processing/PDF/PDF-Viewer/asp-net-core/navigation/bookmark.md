@@ -4,11 +4,10 @@ title: Navigation in ASP.NET Core PDF Viewer control | Syncfusion
 description: Learn here all about Navigation in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Bookmark navigation
+# Bookmark navigation in ASP.NET Core PDF Viewer control
 
 The Bookmarks saved in PDF files are loaded and made ready for easy navigation.
 You can enable/disable bookmark navigation by using the following code snippet.,
@@ -139,5 +138,5 @@ Here is an example of how to use the getBookmarks method:
 
 ## See also
 
-* [Toolbar items](../toolbar-customization/)
+* [Toolbar items](../toolbar)
 * [Feature Modules](../feature-module)

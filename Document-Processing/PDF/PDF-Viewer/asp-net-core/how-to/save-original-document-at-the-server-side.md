@@ -4,7 +4,6 @@ title: Save the original document on the server in ASP.NET Core PDF Viewer | Syn
 description: Learn how to save the original PDF document on the server by calling a custom download action in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

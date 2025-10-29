@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Form Designer Toolbar Customization in Vue PDF Viewer component | Syncfusion
+title: Form Designer Toolbar in Vue PDF Viewer component | Syncfusion
 description: Learn how to customize the form designer toolbar in the Syncfusion Vue PDF Viewer. Show/hide the toolbar and choose which tools to display and in what order.
 platform: document-processing
 control: PDF Viewer
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Designer Toolbar Customization
+# Form Designer Toolbar Customization in Vue
 
 The form designer toolbar can be customized by showing or hiding default items and by controlling the order in which the items appear.
 

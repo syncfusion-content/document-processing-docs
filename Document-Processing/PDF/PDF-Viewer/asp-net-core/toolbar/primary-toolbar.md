@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Primary Toolbar Customization in ASP.NET Core PDF Viewer Component | Syncfusion
+title: Primary Toolbar in ASP.NET Core PDF Viewer Component | Syncfusion
 description: Learn here all about primary toolbar customization in Syncfusion ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Primary Toolbar Customization in PDF Viewer Component
+# Primary Toolbar in ASP.NET Core PDF Viewer Component
 
 The primary toolbar of the PDF Viewer can be customized by rearranging existing items, disabling default items, and adding custom items. New items can be placed at specific index positions among the existing items.
 

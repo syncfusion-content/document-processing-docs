@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize Pages in Mobile PDF Viewer | Syncfusion
-description: Learn how to organize pages in the mobile PDF Viewer, including rotating, rearranging, inserting, deleting, and copying pages on mobile devices.
+title: Organize Pages in TypeScript Mobile PDF Viewer | Syncfusion
+description: Manage PDF pages in ES6 mobile viewer—rotate, reorder, insert, delete, and copy pages for a smooth mobile experience.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Pages in Mobile PDF Viewer
+# Organize Pages in TypeScript Mobile PDF Viewer
 
 The PDF Viewer offers a mobile-responsive layout for the `Organize Pages` feature, ensuring a seamless experience on smaller devices. When viewed on a mobile device, the toolbar and navigation elements adapt to the screen size, providing easy access to all page management tools.
 
