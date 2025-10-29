@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Identify added annotation mode in Core PDF Viewer  | Syncfusion
+title: Identify added annotationmode in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn here all about Identify added annotation mode in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Identify added annotation mode
