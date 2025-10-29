@@ -20,24 +20,23 @@ Show or hide the toolbar using the `enableToolbar` property:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
-```html
+
 <div style="width:100%;height:600px">
      @Html.EJS().PdfViewer("pdfviewer").EnableToolbar(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
-```
+
 {% endhighlight %}
 {% highlight html tabtitle="Server-Backed" %}
-```html
     <div style="width:100%;height:600px">
          @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableToolbar(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
     </div>
-```
+
 {% endhighlight %}
 {% endtabs %}
 
 The following code snippet explains how to show or hide the toolbar using the `showToolbar` method.
 
-{{% tabs %}
+{% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 
 <div id="e-pv-e-sign-pdfViewer-div">
