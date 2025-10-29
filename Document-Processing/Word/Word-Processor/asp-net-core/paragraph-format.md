@@ -152,7 +152,9 @@ documenteditor.documentEditorSettings.showHiddenMarks = true;
 {% include code-snippet/document-editor/asp-net-core/paragraph-format/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Paragraph-format.cs" %}
-{% endhighlight %}{% endtabs %}
+{% include code-snippet/document-editor/asp-net-core/paragraph-format/document-editor %}
+{% endhighlight %}
+{% endtabs %}
 
 
 ## See Also
