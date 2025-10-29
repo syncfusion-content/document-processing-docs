@@ -1,11 +1,11 @@
 ---
-title: Open and Save PDF file in C# and VB.NET | Syncfusion
-description: This page describes how to open and save PDF file from or to file system, and stream in C# and VB.NET using Syncfusion .NET PDF library.
+title: Open and Save PDF file using C# and VB.NET | Syncfusion
+description: This page describes how to open and save PDF file from or to file system, and stream using C# and VB.NET using Syncfusion .NET PDF library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Open and save PDF file in C# and VB.NET
+# Open and save PDF file using C# and VB.NET
 
 ## Namespace required 
 The following namespaces of Essential<sup>&reg;</sup> PDF need to be included in your application to load and save the PDF document. 
