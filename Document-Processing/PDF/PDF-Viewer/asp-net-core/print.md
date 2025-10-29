@@ -4,7 +4,6 @@ title: Print in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to enable, invoke, and customize printing in the Syncfusion ASP.NET Core PDF Viewer, including quality and behavior settings.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
