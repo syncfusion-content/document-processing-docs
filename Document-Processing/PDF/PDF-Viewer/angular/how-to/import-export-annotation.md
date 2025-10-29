@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Import export annotation in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Import export annotation in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Import & Export Annotations in Angular PDF Viewer | Syncfusion
+description: Explore how to handle PDF annotations with import and export features in Syncfusion Angular PDF Viewer component.
 platform: document-processing
 control: Import export annotation
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import and Export annotation
+# Import Export annotation in Angular PDF Viewer component
 
 The PDF Viewer library allows you to import annotations from objects or streams instead of loading it as a file. To import such annotation objects, the PDF Viewer control must export the PDF annotations as objects by using the [**ExportAnnotationsAsObject()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#exportannotationsasobject) method. Only the annotation objects that are exported from the PDF Viewer can be imported.
 

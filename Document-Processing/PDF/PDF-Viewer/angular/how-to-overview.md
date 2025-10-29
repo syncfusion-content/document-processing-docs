@@ -1,14 +1,14 @@
 ---
 layout: post
-title: FAQ Section in PDF Viewer control | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of in PDF Viewer control.
+title: FAQ Section in Angular PDF Viewer control | Syncfusion
+description: In this section, you can know about the various questions asked about manipulation of in Angular PDF Viewer control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Frequently Asked Questions Section in PDF Viewer control
+# Frequently Asked Questions Section in Angular PDF Viewer control
 
 The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are listed below.
 

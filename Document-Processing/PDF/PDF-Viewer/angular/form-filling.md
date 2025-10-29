@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form filling in Angular PDF Viewer | Syncfusion
-description: Learn how to view, fill, export, and import PDF form fields using the Syncfusion Angular PDF Viewer, including disabling interaction and working with signatures.
+description: View, fill, import, and export PDF form fields in Angular PDF Viewer, including signature handling and disabling user interaction.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

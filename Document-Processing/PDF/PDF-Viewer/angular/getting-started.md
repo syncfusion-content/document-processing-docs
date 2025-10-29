@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with Standalone PDF Viewer component
+# Getting started with Angular Standalone PDF Viewer component
 
 This section explains the steps required to create a simple Standalone Angular PDF Viewer and demonstrates the basic usage of the PDF Viewer control in an Angular CLI application.
 

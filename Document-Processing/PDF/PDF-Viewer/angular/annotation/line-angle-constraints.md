@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Line angle constraints in Angular PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and configure highlight, underline, strikethrough, and squiggly text markup annotations programmatically.
+description: Programmatically manage text markup annotations like highlight, underline, strikethrough, and squiggly in your PDF documents.
 description: Learn all about Line Angle Constraints Annotation in the Syncfusion Angular PDF Viewer component of Essential JS 2 and more.
 platform: document-processing
 control: Line Angle Constraints

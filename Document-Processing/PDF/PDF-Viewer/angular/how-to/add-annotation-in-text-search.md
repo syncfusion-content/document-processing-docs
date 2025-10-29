@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add rectangle annotations using text search bounds in PDF Viewer
+# Add rectangle annotations using text search bounds in Angular PDF Viewer
 
 A concise guide to adding rectangle annotations at highlighted text search results in the Angular PDF Viewer to visually emphasize matches and improve readability.
 

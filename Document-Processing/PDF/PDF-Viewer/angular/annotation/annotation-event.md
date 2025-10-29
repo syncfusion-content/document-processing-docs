@@ -1142,7 +1142,7 @@ export class AppComponent implements OnInit {
 
 ### removeSignature
 
-The [removeSignature](https://ej2.syncfusion.com/angular.documentation/api/pdfviewer/#removesignature) event is triggered when a signature is removed from the PDF Viewer.
+The [removeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#removesignature) event is triggered when a signature is removed from the PDF Viewer.
 
 #### Event Arguments
 
@@ -1222,7 +1222,7 @@ export class AppComponent implements OnInit {
 
 ### resizeSignature
 
-The [resizeSignature](https://ej2.syncfusion.com/angular.documentation/api/pdfviewer/#resizesignature) event is triggered when a signature is resized in the PDF Viewer.
+The [resizeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#resizesignature) event is triggered when a signature is resized in the PDF Viewer.
 
 #### Event Arguments
 
@@ -1303,7 +1303,7 @@ export class AppComponent implements OnInit {
 
 ### signaturePropertiesChange
 
-The [signaturePropertiesChange](https://ej2.syncfusion.com/angular.documentation/api/pdfviewer/#signaturepropertieschange) event is triggered when signature properties are changed in the PDF Viewer.
+The [signaturePropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signaturepropertieschange) event is triggered when signature properties are changed in the PDF Viewer.
 
 #### Event Arguments
 
@@ -1383,7 +1383,7 @@ export class AppComponent implements OnInit {
 
 ### signatureSelect
 
-The [signatureSelect](https://ej2.syncfusion.com/angular.documentation/api/pdfviewer/#signatureselect) event is triggered when a signature is selected in the PDF Viewer.
+The [signatureSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signatureselect) event is triggered when a signature is selected in the PDF Viewer.
 
 #### Event Arguments
 
@@ -1465,7 +1465,7 @@ export class AppComponent implements OnInit {
 
 ### signatureUnselect
 
-The [signatureUnselect](https://ej2.syncfusion.com/angular.documentation/api/pdfviewer/#signatureunselect) event is triggered when a signature is unselected in the PDF Viewer.
+The [signatureUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signatureunselect) event is triggered when a signature is unselected in the PDF Viewer.
 
 #### Event Arguments
 
