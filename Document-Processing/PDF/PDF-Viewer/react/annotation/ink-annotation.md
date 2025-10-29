@@ -1,30 +1,30 @@
 ---
 layout: post
-title: Ink annotation in React Pdfviewer component | Syncfusion
-description: Learn here all about Ink annotation in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Ink annotation
+title: Ink annotation in React PDF Viewer control | Syncfusion
+description: Learn about ink annotations in the Syncfusion React PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ink annotation in React Pdfviewer component
+# Ink annotation in React PDF Viewer
 
-The PDF Viewer control provides the options to add, edit, and delete the ink annotations.
+The PDF Viewer control provides options to add, edit, and delete ink annotations.
 
-![InkAnnotation](../images/ink_annotation.png)
+![Ink annotations overview](../images/ink_annotation.png)
 
-## Adding an ink annotation to the PDF document
+## Add an ink annotation to the PDF document
 
-The ink annotations can be added to the PDF document using the annotation toolbar.
+Ink annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Select the **Draw Ink** button in the annotation toolbar. It enables the ink annotation mode.
-* You can draw anything over the pages of the PDF document.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar. The annotation toolbar appears below it.
+* Select the **Draw Ink** button to enable ink annotation mode.
+* Draw on any page of the PDF document.
 
-  ![InkTool](../images/ink_tool.png)
+  ![Ink tool in the annotation toolbar](../images/ink_tool.png)
 
-Refer to the following code sample to switch to the ink annotation mode.
+The following example switches to ink annotation mode.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -49,7 +49,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -103,11 +103,11 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Adding a Ink annotation to the PDF document Programmatically
+## Add an ink annotation programmatically to the PDF document
 
-With the PDF Viewer library, you can add a Ink annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
+The PDF Viewer library allows adding an ink annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#annotation) method.
 
-Here's a example of how you can utilize the **addAnnotation()** method to include a Ink annotation programmatically
+Here is an example of adding an ink annotation programmatically using addAnnotation():
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -139,7 +139,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -198,11 +198,11 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the existing Ink annotation programmatically
+## Edit an existing ink annotation programmatically
 
-To modify existing Ink annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer programmatically, you can use the **editAnnotation()** method.
+To modify an existing ink annotation programmatically, use the editAnnotation() method.
 
-Here is an example of how you can use the **editAnnotation()** method:
+Here is an example of using editAnnotation():
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -239,7 +239,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -303,33 +303,33 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Editing the properties of the ink annotation
+## Edit the properties of ink annotations
 
-The stroke color, thickness, and opacity of the ink annotation can be edited using the Edit stroke color tool, Edit thickness tool, and Edit opacity tool in the annotation toolbar.
+Stroke color, thickness, and opacity can be edited using the Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
-### Editing stroke color
+### Edit stroke color
 
-The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
+Edit the stroke color using the color palette in the Edit Stroke Color tool.
 
-![InkStrokeColor](../images/ink_strokecolor.png)
+![Change ink stroke color](../images/ink_strokecolor.png)
 
-### Editing thickness
+### Edit thickness
 
-The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
+Edit thickness using the range slider in the Edit Thickness tool.
 
-![InkThickness](../images/ink_thickness.png)
+![Change ink thickness](../images/ink_thickness.png)
 
-### Editing opacity
+### Edit opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+Edit opacity using the range slider in the Edit Opacity tool.
 
-![InkOpacity](../images/ink_opacity.png)
+![Change ink opacity](../images/ink_opacity.png)
 
-## Setting default properties during the control initialization
+## Set default properties during the control initialization
 
-The properties of the ink annotation can be set before creating the control using the InkAnnotationSettings.
+Default properties for ink annotations can be set before creating the control using InkAnnotationSettings.
 
-After editing the default values, they will be changed to the selected values. Refer to the following code sample to set the default ink annotation settings.
+After changing default values, the selected values are applied.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -348,7 +348,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         inkAnnotationSettings={{author: 'Syncfusion', strokeColor: 'green', thickness: 3, opacity: 0.6}}
         style={{ 'height': '640px' }}>
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,

@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Box cloud file storage in ASP.NET Core PDF Viewer Component
-description: Save PDF files to Box cloud file storage in ASP.NET CORE PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Save PDF files to Box cloud storage in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to save PDF files to Box cloud storage using the Syncfusion ASP.NET Core PDF Viewer component with a server-backed web service.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Save PDF file to Box cloud file storage
+# Save PDF files to Box cloud storage
 
-To save a PDF file to Box cloud file storage, you can follow the steps below
+To save a PDF file to Box cloud storage using the ASP.NET Core PDF Viewer, follow the steps below. This approach uses a server-backed web service.
 
-**Step 1** Set up a Box developer account and create a Box application
+**Step 1:** Set up a Box developer account and create a Box application
 
-To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials Client ID and Client Secret to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
+Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and create a new Box application. This application provides the required credentials (Client ID and Client Secret) to authenticate and access the Box APIs. Box supports OAuth 2.0 authentication.
 
-**Step 2:** Create PDF Viewer Sample in ASP.NET Core
+**Step 2:** Create an ASP.NET Core PDF Viewer sample
 
-Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET Core.
+Follow the instructions in this Getting Started [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET Core. This sets up the basic structure of the application.
 
-**Step 3:** Modify the `Index.cshtml.cs` File in the Project
+**Step 3:** Modify the `Index.cshtml.cs` file in the project
 
 1. Import the required namespaces at the top of the file:
 
@@ -31,7 +31,7 @@ using Box.V2.Config;
 using Box.V2.Models;
 ```
 
-2. Add the following private fields and constructor parameters to the `Index.cshtml.cs` class, In the constructor, assign the values from the configuration to the corresponding fields
+2. Add the following private fields and constructor parameters to the `Index.cshtml.cs` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -44,18 +44,17 @@ public IndexModel(Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnviro
 {
   _hostingEnvironment = hostingEnvironment;
   _cache = cache;
-   _configuration = configuration;
+  _configuration = configuration;
   _accessToken = _configuration.GetValue<string>("AccessToken");
   _clientID = _configuration.GetValue<string>("ClientID");
   _clientSecret = _configuration.GetValue<string>("ClientSecret");
   _folderID = _configuration.GetValue<string>("FolderID");
 }
-
 ```
 
-3. Modify the `OnPostDownload()` method to save the downloaded PDF files to Box cloud file storage folder.
-```csharp
+3. Modify the `OnPostDownload()` method to save the downloaded PDF files to the Box cloud storage folder.
 
+```csharp
 public async Task<IActionResult> OnPostDownload([FromBody] jsonObjects responseData)
 {
     PdfRenderer pdfviewer = new PdfRenderer(_cache);
@@ -85,10 +84,9 @@ public async Task<IActionResult> OnPostDownload([FromBody] jsonObjects responseD
     }
     return Content(documentBase);
 }
-
 ```
 
-4. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+4. Open the `appsettings.json` file in the project and add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -106,14 +104,13 @@ public async Task<IActionResult> OnPostDownload([FromBody] jsonObjects responseD
 }
 ```
 
-N> replace **Your_Box_Storage_Access_Token** with your actual box access token, and **Your_Folder_ID** with the ID of the folder in your box storage where you want to perform specific operations. Remember to use your valid box API credentials, as **Your_Box_Storage_ClientID** and **Your_Box_Storage_ClientSecret"** are placeholders for your application's API key and secret.
+N> Replace the placeholders with your actual Box access token and the target folder ID. Use valid Box API credentials for Client ID and Client Secret.
 
-**Step 4:** Set the PDF Viewer Properties in ASP.NET Core PDF viewer component
+**Step 4:** Set the PDF Viewer properties in the ASP.NET Core PDF Viewer component
 
-Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Box cloud file storage. Ensure that you correctly pass the document name from the files available in your azure container to the documentPath property.
+Set the `documentPath` property of the PDF Viewer component to the desired PDF file name that you wish to load from Box cloud storage. Ensure that the document exists in the target Box folder.
 
 ```csharp
-
 @page "{handler?}"
 @model IndexModel
 @{
@@ -124,10 +121,10 @@ Set the `documentPath` property of the PDF viewer component to the desired name 
     <ejs-pdfviewer id="pdfviewer" style="height:600px" serviceUrl="/Index" documentPath="PDF_Succinctly.pdf">
     </ejs-pdfviewer>
 </div>
-
 ```
-N> The **Box.V2.Core** NuGet package must be installed in your application to use the previous code example.
 
-N> Replace `PDF_Succinctly.pdf` with the actual document name that you want to load from Box cloud file storage. Make sure to pass the document name from the box folder to the `documentPath` property of the PDF viewer component
+N> Install the **Box.V2.Core** NuGet package in the application to use the previous code example.
+
+N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud storage. Pass the document name from the Box folder to the `documentPath` property of the PDF Viewer component.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-box-cloud-file-storage)
