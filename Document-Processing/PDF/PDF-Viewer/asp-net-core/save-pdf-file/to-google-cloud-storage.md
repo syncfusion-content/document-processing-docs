@@ -1,28 +1,28 @@
 ---
 layout: post
-title: Google Cloud Storage in ASP.NET Core PDF Viewer Component
-description: Save PDF files to Google Cloud Storage in ASP.NET CORE PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Save PDF files to Google Cloud Storage in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to save PDF files to Google Cloud Storage using the Syncfusion ASP.NET Core PDF Viewer component with a server-backed web service.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Save PDF file to Google Cloud Storage
+# Save PDF files to Google Cloud Storage
 
-To save a PDF file to Google Cloud Storage, you can follow the steps below
+To save a PDF file to Google Cloud Storage using the ASP.NET Core PDF Viewer, follow the steps below. This approach uses a server-backed web service.
 
-**Step 1** Create a Service Account
+**Step 1:** Create a service account
 
-Open the Google Cloud Console. Navigate to `IAM & Admin` > `Service accounts`. Click `Create Service Account`.` Enter a name, assign roles (e.g., Storage Object Admin), and create a key in JSON format. Download the key file securely. Utilize the downloaded key file in your applications or services for authentication and access to the Google Cloud Storage bucket. For additional details, refer to the [official documentation](https://cloud.google.com/iam/docs/service-accounts-create).
+Open the Google Cloud Console and navigate to `IAM & Admin` > `Service accounts`. Click `Create Service Account`, enter a name, assign roles (for example, Storage Object Admin), and create a key in JSON format. Download the key file securely and use it in your application for authentication and access to the Google Cloud Storage bucket. For more details, see the [official documentation](https://cloud.google.com/iam/docs/service-accounts-create)
 
-**Step 2:** Create PDF Viewer Sample in ASP.NET Core
+**Step 2:** Create an ASP.NET Core PDF Viewer sample
 
-Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET Core.
+Follow the instructions in this Getting Started [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET Core.
 
-**Step 3:** Modify the `Index.cshtml.cs` File in the Project
+**Step 3:** Modify the `Index.cshtml.cs` file in the project
 
-1. Import the required namespaces at the top of the file.
+1. Import the required namespaces at the top of the file:
 
 ```csharp
 using System.IO;
@@ -30,62 +30,60 @@ using Google.Cloud.Storage.V1;
 using Google.Apis.Auth.OAuth2;
 ```
 
-2. Add the following private fields and constructor parameters to the `Index.cshtml.cs` class, In the constructor, assign the values from the configuration to the corresponding fields
+2. Add the following private fields and constructor parameters to the `Index.cshtml.cs` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
+// Private readonly object _storageClient
+private readonly StorageClient _storageClient;
 
-    // Private readonly object _storageClient
-    private readonly StorageClient _storageClient;
+private IConfiguration _configuration;
 
-    private IConfiguration _configuration;
+public readonly string _bucketName;
 
-    public readonly string _bucketName;
+public IndexModel(Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment, IMemoryCache cache, IConfiguration configuration)
+{
+    _hostingEnvironment = hostingEnvironment;
+    _cache = cache;
+    // The key file is used to authenticate with Google Cloud Storage.
+    string keyFilePath = @"path/to/service-account-key.json";
 
-    public IndexModel(Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment, IMemoryCache cache, IConfiguration configuration)
-    {
-        _hostingEnvironment = hostingEnvironment;
-        _cache = cache;
-        // The key file is used to authenticate with Google Cloud Storage.
-        string keyFilePath = @"path/to/service-account-key.json";
+    // Load the service account credentials from the key file.
+    var credentials = GoogleCredential.FromFile(keyFilePath);
 
-        // Load the service account credentials from the key file.
-        var credentials = GoogleCredential.FromFile(keyFilePath);
+    // Create a storage client with Application Default Credentials
+    _storageClient = StorageClient.Create(credentials);
 
-        // Create a storage client with Application Default Credentials
-        _storageClient = StorageClient.Create(credentials);
+    _configuration = configuration;
 
-        _configuration = configuration;
-
-        _bucketName = _configuration.GetValue<string>("BucketName");
-    }
-
+    _bucketName = _configuration.GetValue<string>("BucketName");
+}
 ```
-3. Modify the `OnPostDownloadAsync()` method to save the downloaded PDF files to Google Cloud Storage bucket
+
+3. Modify the `OnPostDownload()` method to save the downloaded PDF files to the Google Cloud Storage bucket.
 
 ```csharp
 public IActionResult OnPostDownload([FromBody] jsonObjects responseData)
 {
-        PdfRenderer pdfviewer = new PdfRenderer(_cache);
-        var jsonObject = JsonConverterstring(responseData);
-        string documentBase = pdfviewer.GetDocumentAsBase64(jsonObject);
-        string bucketName = _bucketName;
-        string fileName = jsonObject["documentId"];
+    PdfRenderer pdfviewer = new PdfRenderer(_cache);
+    var jsonObject = JsonConverterstring(responseData);
+    string documentBase = pdfviewer.GetDocumentAsBase64(jsonObject);
+    string bucketName = _bucketName;
+    string fileName = jsonObject["documentId"];
 
-        // Convert the base64 string back to bytes
-        string result = Path.GetFileNameWithoutExtension(fileName);
-        byte[] documentBytes = Convert.FromBase64String(documentBase.Split(",")[1]);
+    // Convert the base64 string back to bytes
+    string result = Path.GetFileNameWithoutExtension(fileName);
+    byte[] documentBytes = Convert.FromBase64String(documentBase.Split(",")[1]);
 
-        // Upload the document to Google Cloud Storage
-        using (var memoryStream = new MemoryStream(documentBytes))
-        {
-            _storageClient.UploadObject(bucketName, result + "_downloaded.pdf", null, memoryStream);
-        }
-        return Content(documentBase);
+    // Upload the document to Google Cloud Storage
+    using (var memoryStream = new MemoryStream(documentBytes))
+    {
+        _storageClient.UploadObject(bucketName, result + "_downloaded.pdf", null, memoryStream);
+    }
+    return Content(documentBase);
 }
-
 ```
 
-4. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+4. Open the `appsettings.json` file in the project and add the following lines below the existing "`AllowedHosts`" configuration.
 
 ```json
 {
@@ -100,16 +98,15 @@ public IActionResult OnPostDownload([FromBody] jsonObjects responseData)
 }
 ```
 
-N> Replace **Your Bucket name from Google Cloud Storage** with the actual name of your Google Cloud Storage bucket
+N> Replace the placeholder with the actual Google Cloud Storage bucket name.
 
-N> Replace **path/to/service-account-key.json** with the actual file path to your service account key JSON file. Make sure to provide the correct path and filename.
+N> Replace **path/to/service-account-key.json** with the actual file path to your service account key JSON file.
 
-**Step 4:** Set the PDF Viewer Properties in ASP.NET Core PDF viewer component
+**Step 5:** Set the PDF Viewer properties in the ASP.NET Core PDF Viewer component
 
-Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Azure Blob Storage. Ensure that you correctly pass the document name from the files available in your azure container to the documentPath property.
+Set the `documentPath` property of the PDF Viewer component to the desired PDF file name that you wish to load from Google Cloud Storage. Ensure that the document exists in the target bucket.
 
 ```csharp
-
 @page "{handler?}"
 @model IndexModel
 @{
@@ -120,9 +117,8 @@ Set the `documentPath` property of the PDF viewer component to the desired name 
     <ejs-pdfviewer id="pdfviewer" style="height:600px" serviceUrl="/Index" documentPath="PDF_Succinctly.pdf">
     </ejs-pdfviewer>
 </div>
-
 ```
 
-N> The **Google.Cloud.Storage.V1** NuGet package must be installed in your application to use the previous code example.
+N> Install the **Google.Cloud.Storage.V1** NuGet package in the application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-google-cloud-storage)

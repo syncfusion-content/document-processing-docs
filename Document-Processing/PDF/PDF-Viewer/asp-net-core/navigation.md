@@ -1,29 +1,28 @@
 ---
 layout: post
-title: Navigation in ASP.NET Core Pdfviewer Component
-description: Learn here all about Navigation in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Navigation in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to use page, bookmark, thumbnail, hyperlink, and table of contents navigation in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
-control: Navigation
+control: PDF Viewer
 publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-
 # Navigation
 
-The ASP.NET Core PDF Viewer supports different internal and external navigations.
+The ASP.NET Core PDF Viewer supports internal and external navigation options.
 
-## Toolbar page navigation option
+## Toolbar page navigation options
 
-The default toolbar of PDF Viewer contains the following navigation options
+The default PDF Viewer toolbar contains the following navigation options:
 
-* **Go to page**:- Navigates to the specific page of a PDF document.
-* **Show next page**:- Navigates to the next page of PDF a document.
-* **Show previous page**:- Navigates to the previous page of a PDF document.
-* **Show first page**:-  Navigates to the first page of a PDF document.
-* **Show last page**:- Navigates to the last page of a PDF document.
+* **Go to page** – Navigate to a specific page in the PDF document.
+* **Show next page** – Navigate to the next page.
+* **Show previous page** – Navigate to the previous page.
+* **Show first page** – Navigate to the first page.
+* **Show last page** – Navigate to the last page.
 
-You can enable/disable page navigation option in PDF Viewer using the following code snippet.,
+Enable or disable page navigation using the following example:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -52,12 +51,12 @@ You can enable/disable page navigation option in PDF Viewer using the following 
 {% endtabs %}
 
 
-![Alt text](../images/navigation.png)
+![Toolbar navigation options in the PDF Viewer](./images/navigation.png)
 
 ## Bookmark navigation
 
-The Bookmarks saved in PDF files are loaded and made ready for easy navigation.
-You can enable/disable bookmark navigation by using the following code snippet.,
+Bookmarks saved in PDF files are loaded and made available for easy navigation.
+Enable or disable bookmark navigation using the following example:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -85,12 +84,12 @@ You can enable/disable bookmark navigation by using the following code snippet.,
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/bookmark.png)
+![Bookmark panel in the PDF Viewer](./images/bookmark.png)
 
 ## Thumbnail navigation
 
-Thumbnails is the miniature representation of actual pages in PDF files. This feature displays thumbnails of the pages and allows navigation.
-You can enable/disable thumbnail navigation by using the following code snippet.,
+Thumbnails are miniature representations of pages in a PDF file. This feature displays thumbnails of pages and allows quick navigation.
+Enable or disable thumbnail navigation using the following example:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -118,19 +117,19 @@ You can enable/disable thumbnail navigation by using the following code snippet.
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/thumbnail.png)
+![Thumbnail panel in the PDF Viewer](./images/thumbnail.png)
 
 ## Hyperlink navigation
 
-Hyperlink navigation features enables navigation to the URLs (website links) in a PDF file.
+Hyperlink navigation enables navigation to URLs (website links) within a PDF file.
 
-![Alt text](../images/link.png)
+![Hyperlink navigation in the PDF Viewer](./images/link.png)
 
-## Table of content navigation
+## Table of contents navigation
 
-Table of contents navigation allows users to navigate to different parts of a PDF file that are listed in the table of contents section.
+Table of contents navigation allows users to navigate to different parts of a PDF that are listed in the document’s table of contents.
 
-You can enable/disable link navigation by using the following code snippet.,
+Enable or disable hyperlink navigation using the following example:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -158,7 +157,7 @@ You can enable/disable link navigation by using the following code snippet.,
 {% endhighlight %}
 {% endtabs %}
 
-You can change the open state of the hyperlink in the PDF Viewer by using the following code snippet,
+Change the hyperlink open state using the following example:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -186,7 +185,7 @@ You can change the open state of the hyperlink in the PDF Viewer by using the fo
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/toc.png)
+![Table of contents panel in the PDF Viewer](./images/toc.png)
 
 ## See also
 

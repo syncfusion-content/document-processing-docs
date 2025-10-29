@@ -1,19 +1,18 @@
 ---
 layout: post
-title: Hand Written Signature in EJ2 ASP.NET CORE PDF Viewer | Syncfusion
-description: Learn here all about Hand Written Signature in ASP.NET CORE PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Handwritten signature in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to enable, add programmatically, and customize handwritten signatures in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
-control: Hand Written Signature
-publishingplatform: document-processing
+control: PDF Viewer
 documentation: ug
 ---
 
 
-# Handwritten Signature
+# Handwritten Signature Annotation
 
-The PDF Viewer control supports adding handwritten signatures to a PDF document. The handwritten signature reduces the paper work of reviewing the content and verifies it digitally.
+The PDF Viewer supports adding handwritten signatures to PDF documents. Handwritten signatures reduce paperwork during reviews and provide a simple way to verify documents digitally.
 
-The following code snippet describes how to enable the handwritten signature in PDF Viewer.
+The following example shows how to enable handwritten signatures in the PDF Viewer.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -40,26 +39,24 @@ The following code snippet describes how to enable the handwritten signature in 
 
 ## Adding a handwritten signature to the PDF document
 
-The handwritten signature can be added to the PDF document using the annotation toolbar.
+A handwritten signature can be added using the annotation toolbar:
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Select the **HandWritten Signature** button in the annotation toolbar. The signature panel will appear.
+- Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
+- Select the **HandWritten Signature** button to open the signature panel.
 
-![HandWrittenSignature](../images/handwritten_sign.png)
+![PDF Viewer toolbar showing Handwritten Signature button](../images/handwritten_sign.png)
 
-* Draw the signature in the signature panel.
+- Draw the signature in the signature panel.
 
-![SignaturePanel](../images/signature_panel.png)
+![Handwritten signature panel](../images/signature_panel.png)
 
-* Then click **Create** button and move the signature using the mouse and place them in the desired location.
+- Click **Create**, then move and place the signature at the desired location on the page.
 
-![SignatureAdded](../images/signature_added.png)
+![Handwritten signature placed on the PDF page](../images/signature_added.png)
 
-## Adding a Handwritten signature to the PDF document Programmatically
+## Add a handwritten signature programmatically
 
-With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the **addAnnotation()** method.
-
-Here is an example of how you can use the **addAnnotation()** method to add the Handwritten signature programmatically
+Use the **addAnnotation()** method to add a handwritten signature programmatically to the PDF Viewer.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -173,13 +170,13 @@ Here is an example of how you can use the **addAnnotation()** method to add the 
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Add%20Handwritten%20Signature%20Programmatically)
 
-## Editing the properties of handwritten signature
+## Edit handwritten signature properties
 
-The stroke color, border thickness, and opacity of the handwritten signature can be edited using the edit stroke color tool, edit thickness tool, and edit opacity tool in the annotation toolbar.
+Edit the stroke color, thickness, and opacity of a handwritten signature using the annotation toolbar’s edit stroke color, edit thickness, and edit opacity tools.
 
 ![SignatureProperties](../images/signature_properties.png)
 
-Refer to the following code snippet to set the default handwritten signature settings.
+Use the following example to set default handwritten signature settings.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -206,11 +203,6 @@ Refer to the following code snippet to set the default handwritten signature set
 
 {% endhighlight %}
 {% endtabs %}
-
-
-```html
-
-```
 
 ## See also
 
