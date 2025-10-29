@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Pages in vue Mobile PDF Viewer
+# Organize Pages in Mobile PDF Viewer vue
 
 The PDF Viewer offers a mobile-responsive layout for the Organize Pages feature, ensuring a seamless experience on smaller devices. When viewed on a mobile device, the toolbar and navigation elements adapt to the screen size, providing easy access to all page management tools.
 
