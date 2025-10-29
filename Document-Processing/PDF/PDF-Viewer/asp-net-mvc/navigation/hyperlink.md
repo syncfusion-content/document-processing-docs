@@ -4,7 +4,6 @@ title: Hyperlink navigation in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for ASP.NET MVC.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
@@ -159,6 +158,6 @@ The following example demonstrates how to use these events:
 
 ## See also
 
-- [Bookmark navigation](./bookmark-navigation)
-- [Page navigation](./page-navigation)
-- [Page thumbnail navigation](./page-thumbnail-navigation)
+- [Bookmark navigation](./bookmark)
+- [Page navigation](./page)
+- [Page thumbnail navigation](./page-thumbnail)

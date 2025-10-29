@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Designer Toolbar Customization
+# Form Designer Toolbar Customization in JavaScript
 
 The form designer toolbar can be customized by showing or hiding default items and by controlling the order in which the items appear.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotation Toolbar Customization in React Pdfviewer control | Syncfusion
-description: Learn here all about annotation toolbar customization in Syncfusion React Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Annotation Toolbar in React PDF viewer control | Syncfusion
+description: Learn here all about annotation toolbar customization in Syncfusion React PDF viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation Toolbar Customization
+# Annotation Toolbar Customization in React
 
 The annotation toolbar can be customized by showing or hiding default items and by controlling the order in which they appear.
 

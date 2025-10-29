@@ -4,7 +4,6 @@ title: Bookmark Navigation in ASP.NET MVC PDF Viewer control | Syncfusion
 description: Learn how to use bookmarks for quick navigation in the Syncfusion ASP.NET MVC PDF Viewer control, enhancing user experience and accessibility.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
@@ -118,5 +117,5 @@ Here is an example of how to use the getBookmarks method:
 
 ## See also
 
-* [Toolbar items](../toolbar-customization/)
+* [Toolbar items](../toolbar)
 * [Feature Modules](../feature-module)

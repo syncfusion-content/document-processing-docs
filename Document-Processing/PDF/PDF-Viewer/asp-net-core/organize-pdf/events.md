@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize Pages Events in PDF Viewer | Syncfusion
+title: Organize Pages Events in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to organize pages Events in the PDF viewer, including rotating, rearranging, inserting, deleting, and copying pages on mobile devices.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
+
 documentation: ug
 ---
 
-# Organize Pages Events in PDF Viewer
+# Organize Pages Events in ASP.NET Core PDF Viewer
 
 The PDF Viewer provides events to track and respond to actions within the page organizer, allowing for the customization of page manipulation features.
 

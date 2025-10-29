@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Form Designer Toolbar Customization in ASP.NET MVC PDF Viewer Component | Syncfusion
+title: Form Designer Toolbar in MVC PDF Viewer Component | Syncfusion
 description: Learn here all about form designer toolbar customization in Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
@@ -8,7 +8,7 @@ publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Form Designer Toolbar Customization
+# Form Designer Toolbar in ASP.NET MVC PDF Viewer
 
 The form designer toolbar can be customized by showing or hiding default items and by controlling the order in which the items appear.
 
@@ -41,7 +41,7 @@ The following code snippet explains how to show or hide the toolbar using the `E
 
 Choose which tools appear and control their order in the form designer toolbar.
 
-Use [`PdfViewerToolbarSettings`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html/) with the [`FormDesignerToolbarItems`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_FormDesignerToolbarItems) property to choose which form design tools are available. The property accepts a list of [`FormDesignerToolbarItem`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_FormDesignerToolbarItems/) values. The items you include are both displayed and rendered in the order listed; any items you omit are hidden. This provides a streamlined, user-friendly form design experience across devices.
+Use [`PdfViewerToolbarSettings`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) with the [`FormDesignerToolbarItems`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_FormDesignerToolbarItems) property to choose which form design tools are available. The property accepts a list of [`FormDesignerToolbarItem`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_FormDesignerToolbarItems) values. The items you include are both displayed and rendered in the order listed; any items you omit are hidden. This provides a streamlined, user-friendly form design experience across devices.
 
 The following example demonstrates how to customize the form designer toolbar by configuring specific tools using `FormDesignerToolbarItem`.
 

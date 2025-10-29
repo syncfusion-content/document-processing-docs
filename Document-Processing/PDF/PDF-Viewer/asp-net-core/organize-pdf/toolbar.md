@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Organize Page Toolbar Customization in ASP.NET Core PDF Viewer control | Syncfusion
+title: ASP.NET Core PDF Viewer – Organize Toolbar Customization | Syncfusion
 description: Learn here all about Organize Page Toolbar Customization in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
+
 documentation: ug
 ---
 
