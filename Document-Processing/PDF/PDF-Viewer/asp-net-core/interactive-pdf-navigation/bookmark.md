@@ -1,31 +1,38 @@
 ---
 layout: post
-title: Bookmark Navigation in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn how to use bookmarks for quick navigation in the Syncfusion ASP.NET MVC PDF Viewer control, enhancing user experience and accessibility.
+title: Navigation in ASP.NET Core PDF Viewer control | Syncfusion
+description: Learn here all about Navigation in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Bookmark navigation
+# Bookmark navigation in ASP.NET Core PDF Viewer control
 
 The Bookmarks saved in PDF files are loaded and made ready for easy navigation.
 You can enable/disable bookmark navigation by using the following code snippet.,
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
-```html
+{% highlight cshtml tabtitle="Standalone" %}
+
 <div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").EnableBookmark(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
+    <ejs-pdfviewer id="pdfviewer"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                   enableBookmark="true">
+    </ejs-pdfviewer>
 </div>
-```
+
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
+{% highlight cshtml tabtitle="Server-Backed" %}
+
 <div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableBookmark(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
+    <ejs-pdfviewer id="pdfviewer"
+                   serviceUrl='/Index'
+                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                   enableBookmark="true">
+    </ejs-pdfviewer>
 </div>
-```
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,7 +48,10 @@ Here is an example of how to use the **goToBookmark** method:
 <button id="gotobookmark" onclick="gotobookmark()">Specfic Page</button>
 
 <div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
+    </ejs-pdfviewer>
 </div>
 
 <script>
@@ -57,7 +67,11 @@ Here is an example of how to use the **goToBookmark** method:
 <button id="gotobookmark" onclick="gotobookmark()">Specfic Page</button>
 
 <div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   serviceUrl="/api/PdfViewer"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
+    </ejs-pdfviewer>
 </div>
 
 <script>
@@ -84,7 +98,10 @@ Here is an example of how to use the getBookmarks method:
 <button id="getBookmarks" onclick="getBookmarks()">Retrieve Bookmark</button>
 
 <div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
+    </ejs-pdfviewer>
 </div>
 
 <script>
@@ -101,7 +118,11 @@ Here is an example of how to use the getBookmarks method:
 <button id="getBookmarks" onclick="getBookmarks()">Retrieve Bookmark</button>
 
 <div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   serviceUrl="/api/PdfViewer"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
+    </ejs-pdfviewer>
 </div>
 
 <script>
@@ -117,5 +138,5 @@ Here is an example of how to use the getBookmarks method:
 
 ## See also
 
-* [Toolbar items](../toolbar)
+* [Toolbar items](../toolbar-customization)
 * [Feature Modules](../feature-module)
