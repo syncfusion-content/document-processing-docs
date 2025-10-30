@@ -38,7 +38,7 @@ Effortlessly add blank pages to your document with the following options:
 *   **Insert blank page left**: Insert a blank page to the left of the selected page.
 *   **Insert blank page right**: Insert a blank page to the right of the selected page.
 
-![Alt text](../images/insert-delete-copy.gif)
+![insert](../images/organize-insert.png)
 
 ## Deleting PDF pages
 
@@ -47,7 +47,7 @@ Remove unwanted pages from your document with these steps:
 1.  **Select pages to delete**: Click on the thumbnails of the pages you wish to remove. You can select multiple pages at once.
 2.  **Delete selected pages**: Use the delete option in the Organize Pages pane to remove the selected pages from the document.
 
-![Alt text](../images/insert-delete-copy.gif)
+![Delete](../images/organize-delete.png)
 
 ## Copying PDF pages
 
@@ -56,7 +56,7 @@ Duplicate pages within your PDF document effortlessly:
 *   **Select pages to copy**: Click on the page thumbnails you wish to duplicate.
 *   **Copy selected pages**: Use the copy option to create duplicates. The copied pages will be added to the right of the selected pages.
 
-![Alt text](../images/insert-delete-copy.gif)
+![Alt text](../images/organize-copy.png)
 
 ## Importing a PDF document
 
