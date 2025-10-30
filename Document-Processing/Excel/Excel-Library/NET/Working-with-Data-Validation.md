@@ -337,9 +337,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   validation.PromptBoxText = "Custom DataValidation";
   validation.ShowPromptBox = true;
 
-  FileStream file = new FileStream("DataValidation.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(file);
-  file.Dispose();
+  workbook.SaveAs("DataValidation.xlsx");
 }
 {% endhighlight %}
 

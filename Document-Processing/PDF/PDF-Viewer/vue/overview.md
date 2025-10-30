@@ -1,12 +1,12 @@
 ---
 title: Overview of Vue PDF Viewer Component | Syncfusion
-description: Checkout and learn about overview of the Syncfusion Vue PDF Viewer component and much more details.
+description: Learn about the Syncfusion Vue PDF Viewer component, its features, supported interactions, and how it helps in viewing PDF documents.
 platform: document-processing
 control: PDF Viewer
 documentation: UG
 ---
 
-# Overview of vue PDF Viewer Component
+# Overview of vue PDF viewer control
 
 The [`Vue PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
 
@@ -26,7 +26,7 @@ npm install
 
 ### Adding Syncfusion PDF Viewer package
 
-All Syncfusion Vue packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg)registry. To install Vue PDF Viewer package, use the following command.
+All Syncfusion Vue packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install Vue PDF Viewer package, use the following command.
 
 ```
 npm install @syncfusion/ej2-vue-pdfviewer --save
@@ -87,7 +87,7 @@ export default {
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib",
+      resourceUrl:"https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
     };
   },
 

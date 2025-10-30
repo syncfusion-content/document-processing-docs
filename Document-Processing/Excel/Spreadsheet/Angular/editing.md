@@ -40,15 +40,15 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/editing-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/editing-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/editing-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/editing-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/editing-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/editing-cs1" %}
 
 ## Limitations
 

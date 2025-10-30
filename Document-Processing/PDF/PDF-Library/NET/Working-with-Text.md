@@ -20,6 +20,10 @@ You can add text in the new PDF document by using [DrawString](https://help.sync
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Drawing-text-in-a-new-PDF-document/.NET/Drawing-text-in-a-new-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -32,16 +36,17 @@ PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
 //Draw the text.
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream.
-document.Save(stream);
-//Close the document.
+//Save the document and dispose it
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -63,6 +68,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -98,6 +107,10 @@ Please refer to the below code example to understand how to save and restore the
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Text/Saving-and-Restoring-the-PdfGraphics/.NET/Saving-and-Restoring-the-PdfGraphics/Saving-and-Restoring-the-PdfGraphics/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 // Create a new PDF document
 using (PdfDocument pdfDocument = new PdfDocument())
 {
@@ -116,17 +129,18 @@ using (PdfDocument pdfDocument = new PdfDocument())
     graphics.Restore();
     // Draw text that is not influenced by transformations
     graphics.DrawString("This text is not rotated.", font, PdfBrushes.Black, new PointF(0, 100));
-      using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
-   {
-       //Save the PDF document to file stream.
-       pdfDocument.Save(outputFileStream);
-   }
+    // Save the document to a file
+    pdfDocument.Save("Output.pdf");
 }
 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 // Create a new PDF document
 using (PdfDocument pdfDocument = new PdfDocument())
@@ -153,6 +167,11 @@ using (PdfDocument pdfDocument = new PdfDocument())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    Imports Syncfusion.Pdf
+    Imports Syncfusion.Pdf.Graphics
+    Imports System.Drawing
+
     ' Create a PDF document
     Using pdfDocument As New PdfDocument()
     ' Add Pages to the document
@@ -171,8 +190,9 @@ using (PdfDocument pdfDocument = new PdfDocument())
     graphics.Restore()
     ' Draw text that is not influenced by transformations
     graphics.DrawString("This text is not rotated.", font, PdfBrushes.Black, New PointF(0, 100))
-    ' Save the document to a file
+    ' Save and close the document to a file
     pdfDocument.Save("Output.pdf")
+    pdfDocument.Close(True)
 
 {% endhighlight %}
 
@@ -190,9 +210,13 @@ The following code snippet illustrates how to add text in the existing PDF docum
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-text-in-an-existing-PDF-document/.NET/Draw-text-in-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument doc = new PdfLoadedDocument(docStream);
+PdfLoadedDocument doc = new PdfLoadedDocument("Input.pdf");
 //Get first page from document.
 PdfLoadedPage page = doc.Pages[0] as PdfLoadedPage;
 //Create PDF graphics for the page.
@@ -203,16 +227,19 @@ PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
 //Draw the text.
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream.
-doc.Save(stream);
+//Save the document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
 //Load a PDF document.
 PdfLoadedDocument doc = new PdfLoadedDocument("input.pdf");
@@ -234,6 +261,11 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
+Imports Syncfusion.Pdf.Parsing
 
 'Load a PDF document.
 Dim doc As New PdfLoadedDocument("input.pdf")
@@ -278,6 +310,10 @@ You can add text using the standard PDF fonts, by initializing [PdfFont](https:/
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-text-in-PDF-document-using-standard-fonts/.NET/Draw-text-in-PDF-document-using-standard-fonts/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -290,16 +326,17 @@ PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
 //Draw the text.
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream.
-document.Save(stream);
-//Close the document.
+//Save the document and dispose it
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -321,6 +358,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -353,6 +394,9 @@ You can add text using the TrueType fonts installed in the system, by initializi
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -373,6 +417,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -401,6 +448,9 @@ You can add text using the font file from local file system by providing the pat
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-text-in-a-PDF-using-TrueType-fonts/.NET/Draw-text-in-a-PDF-using-TrueType-fonts/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -414,16 +464,16 @@ PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text.
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream.
-document.Save(stream);
-//Close the document.
+//Save the document and dispose it
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -445,6 +495,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -477,6 +530,9 @@ You can add text using CJK fonts, initializing [PdfFont](https://help.syncfusion
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-text-in-a-PDF-using-CJK-fonts/.NET/Draw-text-in-a-PDF-using-CJK-fonts/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -489,16 +545,17 @@ PdfFont font = new PdfCjkStandardFont(PdfCjkFontFamily.HeiseiMinchoW3, 20);
 //Draw the text.
 graphics.DrawString("こんにちは世界", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -520,6 +577,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -552,6 +612,10 @@ The Essential<sup>&reg;</sup> PDF allows you to measure the size of a string whi
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Measure-the-text-in-PDF-document/.NET/Measure-the-text-in-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create the new PDF document
 PdfDocument document = new PdfDocument();
 //Add a page to the document
@@ -567,16 +631,18 @@ SizeF size = font.MeasureString(text);
 //Draw string to th ePDF page
 graphics.DrawString(text, font, PdfBrushes.Black, new RectangleF(PointF.Empty, size));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-document.Save(stream);
-//Close the document
+//Save the document.
+document.Save("Output.pdf");
+//Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create the new PDF document
 PdfDocument document = new PdfDocument();
@@ -601,6 +667,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create the new PDF document
 Dim document As New PdfDocument()
@@ -639,6 +709,10 @@ Refer to the following code example for further information.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Measure-tilting-space-in-PDF/.NET/Measure-tilting-space-in-PDF/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 PdfDocument document = new PdfDocument();
 //Add a page to the document 
 PdfPage page = document.Pages.Add();
@@ -655,18 +729,20 @@ string text = "Hello World!";
 SizeF size = font.MeasureString(text, format);
 //Draw the text to the PDF document. 
 page.Graphics.DrawString(text, font, PdfBrushes.Black, new RectangleF(0, 0, size.Width, size.Height)); 
-//Creating the stream object 
-MemoryStream stream = new MemoryStream(); 
-//Save the document as stream 
-document.Save(stream); 
-//Close the document 
-document.Close(true); 
+//Save the document.
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
- //Create a new PDF document 
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new PDF document 
 PdfDocument document = new PdfDocument(); 
 //Add a page to the document 
 PdfPage page = document.Pages.Add(); 
@@ -690,6 +766,10 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
+
 'Create the new PDF document 
 Dim document As PdfDocument = New PdfDocument() 
 'Add a page to the document 
@@ -707,9 +787,8 @@ Dim text As String = "Hello World!"
 Dim size As SizeF = font.MeasureString(text, format) 
 'Draw the text to the PDF document.
 page.Graphics.DrawString(text, font, PdfBrushes.Black, New RectangleF(0, 0, size.Width, size.Height))
-Dim stream As MemoryStream = New MemoryStream() 
-Save the document as stream 
-document.Save(stream) 
+Save the document 
+document.Save("Output.pdf") 
 Close the document 
 document.Close(True) 
 
@@ -718,6 +797,166 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Measure-tilting-space-in-PDF/.NET).
+
+## Unit conversion in text layout
+
+The [PdfUnitConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfUnitConvertor.html) class is used to accurately position and layout paragraph text within a PDF document. By converting measurements from inches to points, it ensures consistent margins and precise placement of content.
+
+This example demonstrates how to use converted units to accurately position and format paragraph text within a PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Unit-conversion-in-text-layout/.NET/Unit-conversion-in-text-layout/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page
+    PdfPage page = document.Pages.Add();
+
+    // Initialize unit converter
+    PdfUnitConverter converter = new PdfUnitConverter();
+
+    // Convert margins from inches to points
+    float margin = converter.ConvertUnits(1f, PdfGraphicsUnit.Inch, PdfGraphicsUnit.Point);
+
+    // Define text bounds to fill the page with margins
+    RectangleF textBounds = new RectangleF(
+        margin,
+        margin,
+        page.Graphics.ClientSize.Width - 2 * margin,
+        page.Graphics.ClientSize.Height - 2 * margin
+    );
+
+    // Define font and paragraph text
+    PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 14);
+
+    string paragraphText = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
+
+    // Create text element and layout format
+    PdfTextElement textElement = new PdfTextElement(paragraphText, font, PdfBrushes.Black);
+
+    PdfLayoutFormat layoutFormat = new PdfLayoutFormat
+    {
+        Break = PdfLayoutBreakType.FitPage,
+        Layout = PdfLayoutType.Paginate
+    };
+
+    // Draw the paragraph text within the bounds
+    textElement.Draw(page, textBounds, layoutFormat);
+
+    //Save the document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Drawing;
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page
+    PdfPage page = document.Pages.Add();
+
+    // Initialize unit converter
+    PdfUnitConverter converter = new PdfUnitConverter();
+
+    // Convert margins from inches to points
+    float margin = converter.ConvertUnits(1f, PdfGraphicsUnit.Inch, PdfGraphicsUnit.Point);
+
+    // Define text bounds to fill the page with margins
+    RectangleF textBounds = new RectangleF(
+        margin,
+        margin,
+        page.Graphics.ClientSize.Width - 2 * margin,
+        page.Graphics.ClientSize.Height - 2 * margin
+    );
+
+    // Define font and paragraph text
+    PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 14);
+
+    string paragraphText = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
+
+    // Create text element and layout format
+    PdfTextElement textElement = new PdfTextElement(paragraphText, font, PdfBrushes.Black);
+
+    PdfLayoutFormat layoutFormat = new PdfLayoutFormat
+    {
+        Break = PdfLayoutBreakType.FitPage,
+        Layout = PdfLayoutType.Paginate
+    };
+
+    // Draw the paragraph text within the bounds
+    textElement.Draw(page, textBounds, layoutFormat);
+
+    //Save the document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
+
+Module Program
+    Sub Main()
+        ' Create a new PDF document
+        Using document As New PdfDocument()
+
+            ' Add a page
+            Dim page As PdfPage = document.Pages.Add()
+
+            ' Initialize unit converter
+            Dim converter As New PdfUnitConverter()
+
+            ' Convert 1 inch margin to points
+            Dim margin As Single = converter.ConvertUnits(1.0F, PdfGraphicsUnit.Inch, PdfGraphicsUnit.Point)
+
+            ' Define text bounds to fill the page with margins
+            Dim textBounds As New RectangleF(
+                margin,
+                margin,
+                page.Graphics.ClientSize.Width - 2 * margin,
+                page.Graphics.ClientSize.Height - 2 * margin
+            )
+
+            ' Define font and paragraph text
+            Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.TimesRoman, 14)
+            Dim paragraphText As String = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."
+
+            ' Create text element and layout format
+            Dim textElement As New PdfTextElement(paragraphText, font, PdfBrushes.Black)
+            Dim layoutFormat As New PdfLayoutFormat With {
+                .Break = PdfLayoutBreakType.FitPage,
+                .Layout = PdfLayoutType.Paginate
+            }
+
+            text within the bounds
+            textElement.Draw(page, textBounds, layoutFormat)
+
+            ' Save the document
+            document.Save("Output.pdf")
+        End Using
+    End Sub
+End Module
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Unit-conversion-in-text-layout/.NET).
 
 ## Embedding fonts and working with Unicode text
 
@@ -734,6 +973,10 @@ N> To render a Unicode text in the PDF document the chosen font should have the 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -759,6 +1002,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -795,6 +1042,10 @@ The Essential<sup>&reg;</sup> PDF allows you to draw the right-to-left language 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-Right-To-Left-text-in-a-PDF-document/.NET/Draw-Right-To-Left-text-in-a-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
 //Add a page to the document
@@ -827,16 +1078,18 @@ format.Alignment = PdfTextAlignment.Left;
 //Draw string with left-to-right format
 graphics.DrawString(text, font, PdfBrushes.Black, new RectangleF(0, 100, page.GetClientSize().Width, page.GetClientSize().Height), format);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream
-doc.Save(stream);
+//Save the document
+doc.Save("Output.pdf");
 //Close the document
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -876,6 +1129,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document
 Dim doc As PdfDocument = New PdfDocument()
@@ -977,6 +1234,10 @@ The following code example illustrates how to render the HTML string in a PDF do
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Adding-HTML-styled-text-to-PDF-document/.NET/Adding-HTML-styled-text-to-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //create a new PDF document
 PdfDocument doc = new PdfDocument();
 //Add a page to the document
@@ -997,15 +1258,18 @@ format.Break = PdfLayoutBreakType.FitPage;
 //Draw htmlString.
 richTextElement.Draw(page, new RectangleF(0, 20, page.GetClientSize().Width, page.GetClientSize().Height), format);
 
-//Save the document into stream 
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
-//Close the document 
+//Save the document
+doc.Save("Output.pdf");
+//Close the document
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -1037,6 +1301,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -1078,6 +1346,9 @@ Essential<sup>&reg;</sup> PDF allows you to create multi-column text in PDF docu
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Creating-a-multicolumn-PDF-document/.NET/Creating-a-multicolumn-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a PDF document instance
 PdfDocument document = new PdfDocument();
 //Add page to the document
@@ -1094,16 +1365,17 @@ textElement = new PdfTextElement(text, new PdfStandardFont(PdfFontFamily.TimesRo
 //Draw the text in the second column
 textElement.Draw(page, new RectangleF(page.GetClientSize().Width / 2, 0, page.GetClientSize().Width / 2, page.GetClientSize().Height));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a PDF document instance
 PdfDocument document = new PdfDocument();
@@ -1128,6 +1400,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a PDF document instance
 Dim document As New PdfDocument()
@@ -1165,6 +1440,9 @@ The following code example demonstrates how to add elements relatively and also 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Add-text-across-multiple-pages/.NET/Add-text-across-multiple-pages/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a PDF document instance
 PdfDocument document = new PdfDocument();
 //Add page to the document
@@ -1188,16 +1466,17 @@ PdfLayoutResult result = textElement.Draw(page, new RectangleF(0, 0, page.GetCli
 //Draw the second paragraph from the first paragraph end position
 result = textElement.Draw(page, new RectangleF(0, result.Bounds.Bottom + paragraphGap, page.GetClientSize().Width / 2, page.GetClientSize().Height), layoutFormat);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a PDF document instance
 PdfDocument document = new PdfDocument();
@@ -1229,6 +1508,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a PDF document instance
 Dim document As New PdfDocument()
@@ -1280,6 +1562,10 @@ The following code example illustrates how to insert RTF text in PDF document.
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
 //Add a page.
@@ -1306,6 +1592,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -1345,6 +1635,10 @@ Essential<sup>&reg;</sup> PDF allows you to create an ordered list in the docume
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Adding-an-ordered-list-to-PDF-document/.NET/Adding-an-ordered-list-to-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new instance of PdfDocument class.
 PdfDocument document = new PdfDocument();
 //Add a new page to the document.
@@ -1374,16 +1668,18 @@ foreach (string s in products)
 }
 pdfList.Draw(page, new RectangleF(0, 20, size.Width, size.Height));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new instance of PdfDocument class.
 PdfDocument document = new PdfDocument();
@@ -1421,6 +1717,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new instance of PdfDocument class.
 Dim document As New PdfDocument()
@@ -1469,6 +1769,10 @@ Essential<sup>&reg;</sup> PDF also provides support to create an unordered List 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Adding-an-unordered-list-to-PDF-document/.NET/Adding-an-unordered-list-to-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new instance of PdfDocument class.
 PdfDocument document = new PdfDocument();
 //Add a new page to the document.
@@ -1502,16 +1806,18 @@ list.TextIndent = 10;
 //Draw list
 list.Draw(page, new RectangleF(0, 10, size.Width, size.Height));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new instance of PdfDocument class.
 PdfDocument document = new PdfDocument();
@@ -1553,6 +1859,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new instance of PdfDocument class.
 Dim document As New PdfDocument()
@@ -1611,6 +1921,10 @@ Essential<sup>&reg;</sup> PDF allows you to replace the fonts in an existing PDF
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Creates a new PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Replace font 
@@ -1623,6 +1937,10 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Creates a new PDF document.
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -1653,6 +1971,9 @@ The following code snippet illustrates how to get the bound of a text from PDF d
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.PdfViewer;
+
 PdfViewerControl documentViewer = new PdfViewerControl();
 //Load the PDF document
 documentViewer.Load("Input.pdf");
@@ -1665,6 +1986,9 @@ documentViewer.Dispose();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing;
+Imports Syncfusion.PdfViewer;
 
 Dim documentViewer As New PdfViewerControl()
 'Load the PDF document
@@ -1687,6 +2011,10 @@ Essential<sup>&reg;</sup> PDF allows you to add complex script language text in 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Drawing-complex-script-language-text-to-PDF/.NET/Drawing-complex-script-language-text-to-PDF/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
+
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
 //Add a page to the document
@@ -1704,15 +2032,18 @@ format.ComplexScript = true;
 //Draw the text
 graphics.DrawString("สวัสดีชาวโลก", pdfFont, PdfBrushes.Black, new RectangleF(0, 0, page.GetClientSize().Width, page.GetClientSize().Height), format);
 
-//Save the PDF document     
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
-//Close the PDF document
+//Save the document
+doc.Save("Output.pdf");
+//Close the document
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Drawing;
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -1739,6 +2070,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document 
 Dim doc As New PdfDocument()
@@ -1774,9 +2109,12 @@ You can add the complex script language text in an existing PDF document by usin
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Add-complex-script-to-an-existing-PDF-document/.NET/Add-complex-script-to-an-existing-PDF-document/Program.cs" %}
 
-FileStream inputFileStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
+
 //Load a PDF document
-PdfLoadedDocument doc = new PdfLoadedDocument(inputFileStream);
+PdfLoadedDocument doc = new PdfLoadedDocument("Input.pdf");
 //Get first page from the document
 PdfLoadedPage page = doc.Pages[0] as PdfLoadedPage;
 
@@ -1792,15 +2130,18 @@ format.ComplexScript = true;
 //Draw the text
 graphics.DrawString("สวัสดีชาวโลก", pdfFont, PdfBrushes.Black, new RectangleF(0, 0, page.Size.Width, page.Size.Height), format);
 
-//Save the PDF document     
-MemoryStream stream = new MemoryStream();
-await doc.Save(stream);
-//Close the PDF document
+//Save the document
+doc.Save("Output.pdf");
+//Close the document
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Drawing;
 
 //Load a PDF document
 PdfLoadedDocument doc = new PdfLoadedDocument("input.pdf");
@@ -1827,6 +2168,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Load a PDF document
 Dim doc As New PdfLoadedDocument("input.pdf")
@@ -1864,6 +2209,10 @@ Essential<sup>&reg;</sup> PDF supports drawing text on a PDF document with OpenT
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-text-using-OpenTypeFont-in-PDF-document/.NET/Draw-text-using-OpenTypeFont-in-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Add a page
@@ -1884,15 +2233,18 @@ RectangleF rect = new RectangleF(0, 0, clipBounds.Width, clipBounds.Height);
 //Draw the text
 page.Graphics.DrawString(text, font, brush, rect);
 
-//Save the PDF document
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Close the PDF document
+//Save the document.
+document.Save("Output.pdf");
+//Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Drawing;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1918,6 +2270,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument 
@@ -1954,6 +2310,10 @@ The Essential<sup>&reg;</sup> PDF allows you to draw text using a different type
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Drawing-text-with-baseline-alignment-in-a-PDF/.NET/Drawing-text-with-baseline-alignment-in-a-PDF/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
+
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
 //Add a page to the document
@@ -1981,22 +2341,18 @@ graphics.DrawString("Hello World!", font, PdfBrushes.Black, new PointF(0, 50), f
 graphics.DrawString("Hello World!", font1, PdfBrushes.Black, new PointF(65, 50), format);
 graphics.DrawString("Hello World!", font2, PdfBrushes.Black, new PointF(220, 50), format);
 graphics.DrawString("Hello World!", font3, PdfBrushes.Black, new PointF(320, 50), format);
-//Save the PDF document
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
-//Close the PDF document
+
+//Save the document
+doc.Save("Output.pdf");
+//Close the document
 doc.Close(true);
-
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Drawing;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2031,6 +2387,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document 
 Dim document As New PdfDocument()
@@ -2078,6 +2438,10 @@ The following code sample explains this.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Drawing-text-using-different-text-alignment/.NET/Drawing-text-using-different-text-alignment/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
+
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
 //Add a page to the document
@@ -2099,18 +2463,18 @@ graphics.DrawRectangle(PdfPens.Black, new RectangleF(10, 10, 200, 20));
 //Draw the text
 graphics.DrawString("Right-Alignment", font, PdfBrushes.Red, new RectangleF(10, 10, 200, 20), format);
 
-//Create a file stream to save the document
-using (FileStream fs = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
-{
-    //Save the document to the file stream
-    document.Save(fs);
-}
-//Close the document
+//Save the document.
+document.Save("Output.pdf");
+//Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Drawing;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2142,6 +2506,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document
  Dim document As New PdfDocument()
@@ -2186,6 +2554,10 @@ N>To enable this functionality in .NET Core, ensure that the following encoding 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Add-text-encoding-using-standard-PDF-fonts/.NET/Add-text-encoding-using-standard-PDF-fonts/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Adding a new page to the PDF document 
@@ -2200,16 +2572,18 @@ font.SetTextEncoding(Encoding.GetEncoding("Windows-1250"));
 //Draw string to a PDF page.
 graphics.DrawString("äÖíßĆŇ", font, PdfBrushes.Black, PointF.Empty);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Drawing;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2233,6 +2607,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document.
 Dim document As PdfDocument =  New PdfDocument() 
@@ -2269,6 +2647,10 @@ The following code example demonstrates how to access the remainder text when th
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
+
 // Create a new PDF document
 PdfDocument document = new PdfDocument();
 
@@ -2311,6 +2693,10 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Drawing;
+
 // Create a new PDF document
 PdfDocument document = new PdfDocument();
 
@@ -2352,6 +2738,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 ' Create a new PDF document
 Dim document As New PdfDocument()
@@ -2406,6 +2796,10 @@ The following code example illustrates this.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Customizing-truetype-fonts-in-a-PDF/.NET/Customizing-truetype-fonts-in-a-PDF/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
+
 //Create a new PDF document. 
 PdfDocument document = new PdfDocument(); 
 //Add a page to the document. 
@@ -2417,17 +2811,21 @@ FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Re
 // Initialize the PdfFontSettings 
 PdfFontSettings fontSettings = new PdfFontSettings(10, PdfFontStyle.Bold, true, true, true); 
 PdfFont pdfFont = new PdfTrueTypeFont(fontStream, fontSettings); 
-//Draw the text. graphics.DrawString("Hello World!!!", pdfFont, PdfBrushes.Black, new PointF(0, 0)); 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-document.Save(stream);
+//Draw the text.
+graphics.DrawString("Hello World!!!", pdfFont, PdfBrushes.Black, new PointF(0, 0));
+
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Drawing;
 
 //Create a new PDF document. 
 PdfDocument document = new PdfDocument(); 
@@ -2438,7 +2836,8 @@ PdfGraphics graphics = page.Graphics;
 // Initialize the PdfFontSettings 
 PdfFontSettings fontSettings = new PdfFontSettings(10, PdfFontStyle.Bold, true, true, true); 
 PdfFont pdfFont = new PdfTrueTypeFont(new Font("Arial"), fontSettings); 
-//Draw the text. graphics.DrawString("Hello World!!!", pdfFont, PdfBrushes.Black, new PointF(0, 0)); 
+//Draw the text. 
+graphics.DrawString("Hello World!!!", pdfFont, PdfBrushes.Black, new PointF(0, 0)); 
 //Save the document. 
 document.Save("Output.pdf"); 
 //Close the document. 
@@ -2447,6 +2846,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document. 
 Dim document As PdfDocument = New PdfDocument 
@@ -2476,7 +2879,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 **LineLimit:** When LineLimit is enabled, the provided string will be laid out within the specified bounds. If the LineLimit property is disabled, the layout will continue to fill any remaining space. The default value of the LineLimit property is true.
 
-
 **NoClip:** If we enable the NoClip option, it will show the text without cutting any words. If we disable the NoClip option, any text outside the fitting area will be hidden.
 
 The following code example illustrates this.
@@ -2484,6 +2886,10 @@ The following code example illustrates this.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Graphics;
+    using Syncfusion.Drawing;
 
     // Create a new PdfStringFormat and set its properties
     PdfStringFormat format = new PdfStringFormat();
@@ -2512,10 +2918,8 @@ The following code example illustrates this.
     // Draw the string inside the rectangle with the specified font, brush, and format
     graphics.DrawString("PDF text line 1 \r\nPDF text line 3", font, PdfBrushes.Black, new RectangleF(100, 100, 100, 20), format);
 
-    //Creating the stream object.
-    MemoryStream stream = new MemoryStream();
-    //Save the document into stream.
-    document.Save(stream);
+    //Save the document.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 
@@ -2523,6 +2927,10 @@ The following code example illustrates this.
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Graphics;
+    using System.Drawing;
 
     // Create a new PdfStringFormat and set its properties
     PdfStringFormat format = new PdfStringFormat();
@@ -2559,6 +2967,10 @@ The following code example illustrates this.
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    Imports Syncfusion.Pdf
+    Imports Syncfusion.Pdf.Graphics
+    Imports System.Drawing
 
     ' Create a new PdfStringFormat and set its properties
     Dim format As New PdfStringFormat()

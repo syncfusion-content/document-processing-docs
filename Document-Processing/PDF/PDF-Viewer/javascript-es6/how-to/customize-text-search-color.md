@@ -1,17 +1,16 @@
 ---
 layout: post
-title: Customize text search color in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Customize text search color in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Customize text search color in TypeScript PDF Viewer | Syncfusion
+description: Learn how to customize text search and highlight colors in the TypeScript PDF Viewer using textSearchColorSettings.
 platform: document-processing
-control: Customize text search color
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize text search color in Typescript Pdfviewer control
+# Customize text search color in PDF Viewer
 
-To change the text search color in the Syncfusion PDF viewer, you can use the **searchColor** property of the searchModule object. This property accepts a string value that represents the color in hexadecimal format.
+Change the text search colors using the `textSearchColorSettings` properties. Set `searchColor` for matched text and `searchHighlightColor` for the active result. Both accept hexadecimal color values.
 
 ```ts
 
@@ -19,9 +18,7 @@ viewer.textSearchColorSettings.searchColor = "#FF0000";
 
 ```
 
-This will set the text search color to red. You can use any valid hexadecimal color code to set the text search color to the desired color.
-
-You can also use the **searchHighlightColor** property of the searchModule object to change the highlight color of the search results. This property also accepts a string value in hexadecimal format.
+The above sets the match color to red. Use any valid hex color.
 
 ```ts
 
@@ -29,12 +26,12 @@ viewer.textSearchColorSettings.searchHighlightColor = "#0000FF";
 
 ```
 
-This will set the highlight color of the search results to blue.
+The above sets the active result highlight to blue.
 
-* [**searchColor**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearchColorSettings/#searchcolor)
-* [**searchHighlightColor**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearchColorSettings/#searchhighlightcolor)
+- [searchColor](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearchColorSettings/#searchcolor)
+- [searchHighlightColor](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearchColorSettings/#searchhighlightcolor)
 
-Here is an example of how you can use the searchHighlightColor property and searchColor property:
+Example: Buttons to control search flow
 
 ```
 
@@ -48,9 +45,9 @@ Here is an example of how you can use the searchHighlightColor property and sear
 ```ts
 
 viewer.enableTextSearch = true;
-// customize the textSeach color
+// Customize the match color
 viewer.textSearchColorSettings.searchColor = "#FF0000";
-// customize the highlight color of the search results
+// Customize the active result highlight color
 viewer.textSearchColorSettings.searchHighlightColor = "#0000FF";
 document.getElementById("search").addEventListener("click", () => {
   viewer.textSearchModule.searchText("pdf", false);
@@ -67,4 +64,5 @@ document.getElementById("searchCancel").addEventListener("click", () => {
 
 ```
 
-Find the sample [how to customize the text search color](https://stackblitz.com/edit/typescript-oft4zw?file=index.ts)
+Sample: How to customize the text search color
+https://stackblitz.com/edit/typescript-oft4zw?file=index.ts

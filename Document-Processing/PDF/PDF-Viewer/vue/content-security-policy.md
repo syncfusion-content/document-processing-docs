@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Content Security Policy with Vue Pdfviewer component | Syncfusion
-description: Learn here all about Content Security Policy with Vue Pdfviewer component of Syncfusion Essential JS 2 and more details.
+title: Content Security Policy with Vue PDF Viewer component | Syncfusion
+description: Learn here all about Content Security Policy with Vue PDF Viewer component of Syncfusion Essential JS 2 and more details.
 control: CSP
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content Security Policy
+# Content Security Policy in Vue PDF Viewer
 
 Content Security Policy (CSP) is a security feature implemented by web browsers that helps to protect against attacks such as cross-site scripting (XSS) and data injection. It limits the sources from which content can be loaded on a web page.
 
 To enable strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/strict-csp.html), certain browser features are disabled by default. In order to use Syncfusion PDF Viewer control with strict CSP mode, it is essential to include following directives in the CSP meta tag.
 
-* Syncfusion PDF Viewer control are rendered with calculated **inline styles** and **base64** font icons, which are blocked on a strict CSP-enabled site. To allow them, add the [`style-src 'self' 'wasm-unsafe-eval' blob:;` ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src 'self' data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives in the meta tag as follows.
+* Syncfusion PDF Viewer control are rendered with calculated **inline styles** and **base64** font icons, which are blocked on a strict CSP-enabled site. To allow them, add the [`style-src 'self' 'wasm-unsafe' blob:;` ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src 'self' data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives in the meta tag as follows.
 
 {% tabs %}
 {% highlight razor tabtitle="HTML" %}
@@ -43,7 +43,7 @@ The resultant meta tag is included within the `<head>` tag and resolves the CSP 
 {% endhighlight %}
 {% endtabs %}
 
-* Syncfusion PDF Viewer control when images are added as **blob** and **base64**, which are blocked on a strict CSP-enabled site.To overcome this restriction, it is necessary to add the img-src data: directive in the meta tag. To allow them, add the  [`style-src  'self' blob:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`img-src 'self' data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directives as follows.
+* Syncfusion PDF Viewer control when images are added as **blob** and **base64**, which are blocked on a strict CSP-enabled site.To overcome this restriction, it is necessary to add the image-src data: directive in the meta tag. To allow them, add the  [`style-src  'self' blob:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`image-src 'self' data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directives as follows.
 
 {% tabs %}
 {% highlight razor tabtitle="HTML" %}
@@ -73,7 +73,7 @@ The resultant meta tag is included within the `<head>` tag and resolves the CSP 
 {% endhighlight %}
 {% endtabs %}
 
-N> In accordance with the latest security practices, the Syncfusion PDF Viewer control now recommends using `wasm-unsafe-eval` in the Content Security Policy (CSP) settings to enhance the security of WebAssembly operations. This change ensures a safer execution environment while maintaining the necessary functionality. Make sure to update your CSP meta tags to reflect this change for optimal security compliance.
+N> In accordance with the latest security practices, the Syncfusion PDF Viewer control now recommends using `wasm-unsafe` in the Content Security Policy (CSP) settings to enhance the security of WebAssembly operations. This change ensures a safer execution environment while maintaining the necessary functionality. Make sure to update your CSP meta tags to reflect this change for optimal security compliance.
 
 ### Please find the usage of each directives:
 

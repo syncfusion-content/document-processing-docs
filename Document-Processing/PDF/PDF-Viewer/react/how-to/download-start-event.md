@@ -1,20 +1,16 @@
 ---
 layout: post
-title: Controlling File Downloadsl in React Pdfviewer component | Syncfusion
-description: Learn here how to Controlling File Downloads in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Control file downloads in React PDF Viewer | Syncfusion
+description: Learn how to intercept and control file downloads in the React PDF Viewer using the downloadStart event.
 control: Open thumbnail
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Controlling File Downloads in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer
+# Control file downloads in PDF Viewer
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, we've introduced a new feature that enables you to manage file downloads more effectively. This feature allows you to intercept and potentially skip the download process of a PDF document, providing enhanced control over user interactions within your application.
-
-### Using the downloadStart Event
-
-The key to this functionality lies in the downloadStart event, which offers a mechanism to intercept the initiation of the download process. Within the event handler, you can set the cancel argument to true to programmatically prevent the download action from proceeding.
+Use the downloadStart event to intercept the start of a download and optionally cancel it. In the event handler, set `args.cancel = true` to prevent the download.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -30,7 +26,7 @@ let pdfviewer;
 function App() {
 
    function downloadStart(args){
-        // Your custom logic here
+        // Custom logic
         args.cancel = true; // Prevent download action
    };
   return (<div>
@@ -40,7 +36,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         downloadStart={downloadStart}
         style={{ 'height': '640px' }}>
               <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation,
@@ -95,8 +91,8 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-By default, the cancel argument is set to `false`, indicating that the download action will proceed unless explicitly canceled by your custom logic.
+By default, `args.cancel` is `false`, so the download proceeds unless explicitly canceled.
 
-### Enhanced Flexibility
+### Flexibility
 
-By leveraging the `downloadStart` event and its cancel argument, you gain the ability to implement custom logic to control and potentially prevent download actions based on your application's specific requirements. This enhancement provides greater flexibility in managing user interactions with PDF documents, empowering you to tailor the experience according to your needs.
+Leverage the [downloadStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#downloadstart) event to apply custom rules for allowing or preventing downloads based on application needs.

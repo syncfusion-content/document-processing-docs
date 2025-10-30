@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Print in Spreadsheet control
+# Print in ASP.NET MVC Spreadsheet control
 
 The printing functionality allows end-users to print all contents, such as tables, charts, images, and formatted contents, available in the active worksheet or entire workbook in the Spreadsheet. You can enable or disable print functionality by using the `allowPrint` property, which defaults to **true**.
 
@@ -32,10 +32,10 @@ The `printOptions` contain three properties, as described below.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/print-cs2/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/print-cs2/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="PrintController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/print-cs2/printController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/print-cs2/printController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -47,10 +47,10 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/print-cs3/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/print-cs3/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="PrintController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/print-cs3/printController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/print-cs3/printController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
