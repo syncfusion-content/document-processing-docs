@@ -39,7 +39,7 @@ The following list shows the key features available in the Essential<sup>&reg;</
 * Support to embed and manage [rich media content](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-annotations#rich-media-annotation) such as audio and video.
 * Support to embed and execute [JavaScript](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-javascript) within PDF documents.
 * Support to create and manage PDF [portfolios](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-portfolio).
-* Support to draw text using different [fonts](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text?cs-save-lang=1&cs-lang=vb#drawing-text-using-different-fonts).
+* Support to draw text using different [fonts](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text#drawing-text-using-different-fonts).
 * Support to integrate with [cloud storage services](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/save-pdf-files/to-google-cloud-storage) like OneDrive, Google Drive, and Dropbox.
 * Support to convert [images into PDF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/converting-images-to-pdf) documents.
 * Support to embed and interact with [3D models](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-annotations#3d-annotation).
