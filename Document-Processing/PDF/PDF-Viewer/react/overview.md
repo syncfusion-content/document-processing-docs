@@ -62,7 +62,7 @@ function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
          
          <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
@@ -83,7 +83,7 @@ root.render(<App />);
 *[`Form Fields`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/form-designer/create-fillable-pdf-forms/create-programmatically) - Form filling and form designing can be done.
 *[`Signature`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/signature-annotation) - Hand-written and digital signatures are allowed.
 *[`Toolbar`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/toolbar) - Built-in-toolbar and custom toolbars to perform user interaction of PDF Viewer functionalities.
-*[`Navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/navigation) - Easy navigation with the help of bookmarks, thumbnails, hyperlinks, and table of contents.
+*[`Navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/page-navigation) - Easy navigation with the help of bookmarks, thumbnails, hyperlinks, and table of contents.
 *[`Magnification`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/magnification) - Fit to page, fit to width, and automatic (fits to the visible area).
 *[`Search`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/text-search) - Search a text easily across the PDF document.
 *[`Core Interactions`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interaction-mode) - Allows scrolling, zooming, panning, selection, and page navigation.
