@@ -4,7 +4,6 @@ title: Resolve PDFium initialization error in ASP.NET Core PDF Viewer | Syncfusi
 description: Fix the “The type initializer for Syncfusion.EJ2.PdfViewer.PdfiumNative threw an exception” error in the Syncfusion ASP.NET Core PDF Viewer by copying the PDFium binaries and configuring ReferencePath.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

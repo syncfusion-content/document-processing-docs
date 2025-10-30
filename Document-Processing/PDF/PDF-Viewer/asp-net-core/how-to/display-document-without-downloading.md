@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Display PDFs without downloading in ASP.NET Core PDF Viewer
+title: Display PDF without download in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to display PDF documents without triggering downloads by using the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Display document without downloading
+# Display document without downloading in ASP.NET Core PDF Viewer
 
 The PDF Viewer server library allows the control to reload a PDF from memory so users can view the file without downloading it to the local device by calling the **load** method.
 

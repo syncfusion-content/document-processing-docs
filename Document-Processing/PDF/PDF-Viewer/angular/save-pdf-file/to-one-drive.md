@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Save PDF files to One Drive in Angular Pdfviewer Component | Syncfusion
-description: Learn here all about how to save PDF files to One Drive in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Save PDF files to One Drive in Angular PDF Viewer Component | Syncfusion
+description: Learn here all about how to save PDF files to One Drive in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Save PDF files to One Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF file to One Drive
+# Save PDF files to OneDrive
 
-To save a PDF file to One Drive, you can follow the steps below
+To save a PDF file to OneDrive, follow these steps:
 
-**Step 1** Create the Microsoft graph API.
+**Step 1:** Create a Microsoft Graph API application
 
-Need to create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs.
+Create a Microsoft Graph API application and obtain the application ID and tenant ID. Follow this guide: [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive)
 
 **Step 2:** Create a PDF Viewer sample in Angular
 
 Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will set up the basic structure of your PDF Viewer application.
 
-**Step 3:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 3:** Modify the PdfViewerController.cs file in the web service project
 
 1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
 
@@ -54,7 +54,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the `Download()` method to save the downloaded PDF files to One Drive bucket
+5. Modify the Download() method to save the downloaded PDF file to the OneDrive folder.
 
 ```csharp
 [HttpPost("Download")]
@@ -101,7 +101,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open appsettings.json in the web service project and add the following keys below the existing AllowedHosts configuration
 
 ```json
 {
@@ -119,11 +119,11 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 
 ```
 
-N> Replace **Your_Tenent_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
+N> Replace the placeholders with your actual values: Tenant ID, Application ID, and OneDrive folder name.
 
-**Step 4:**  Set the PDF Viewer Properties in Angular PDF viewer component
+**Step 4:** Set the PDF Viewer properties in the Angular component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from One Drive. Ensure that you correctly pass the document name from the files available in your drive folder to the documentPath property.
+Modify the serviceUrl with your web service endpoint and set documentPath to the PDF file name to load from OneDrive. Ensure the document exists in your OneDrive folder.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -153,12 +153,12 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   }
 ```
 
-N> The following NuGet packages are required to use the previous code example
-* **Microsoft.Identity.Client**
-* **Microsoft.Graph**
-* **Microsoft.Extensions.Configuration**
-* **Microsoft.Extensions.Configuration.FileExtensions**
-* **Microsoft.Extensions.Configuration.Json**
+N> Install the following NuGet packages in the web service application:
+- Microsoft.Identity.Client
+- Microsoft.Graph
+- Microsoft.Extensions.Configuration
+- Microsoft.Extensions.Configuration.FileExtensions
+- Microsoft.Extensions.Configuration.Json
 
 You can install these packages using the NuGet Package Manager.
 
