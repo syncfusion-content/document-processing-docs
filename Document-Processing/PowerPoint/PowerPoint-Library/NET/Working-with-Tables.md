@@ -38,9 +38,8 @@ foreach (IRow rows in table.Rows)
     }
     rowIndex++;
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -125,9 +124,8 @@ foreach (IColumn columns in table.Columns)
     }
     row++;
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -205,9 +203,8 @@ foreach (ICell cell in row.Cells)
 {
     cell.TextBody.AddParagraph(table.Rows.IndexOf(row).ToString());
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Table.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Table.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -263,9 +260,10 @@ IPresentation pptxDoc = Presentation.Open(inputStream);
 ITable table = pptxDoc.Slides[0].Shapes[0] as ITable;
 //Copy the first row to the end of table
 table.Rows.Add(table.Rows[0].Clone());
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Table.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Table.pptx");
+//Close the presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -312,9 +310,8 @@ IPresentation pptxDoc = Presentation.Open(inputStream);
 ITable table = pptxDoc.Slides[0].Shapes[0] as ITable;
 //Insert a row at the specified index. Here, the existing first row at index 0 is copied and inserted at row index 1
 table.Rows.Insert(1, table.Rows[0].Clone());
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Table.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Table.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -368,9 +365,8 @@ foreach (ICell cell in column.Cells)
 {
     cell.TextBody.AddParagraph(table.Columns.IndexOf(column).ToString());
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Table.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Table.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -428,9 +424,8 @@ IPresentation pptxDoc = Presentation.Open(inputStream);
 ITable table = pptxDoc.Slides[0].Shapes[0] as ITable;
 //Copy the column and append it to the end of table
 table.Columns.Add(table.Columns[0].Clone());
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Table.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Table.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -479,9 +474,8 @@ IPresentation pptxDoc = Presentation.Open(inputStream);
 ITable table = pptxDoc.Slides[0].Shapes[0] as ITable;
 //Insert a column at the specified index. Here, the existing first column at index 0 is copied and inserted at column index 1
 table.Columns.Insert(1, table.Columns[0].Clone());
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Table.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Table.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -536,9 +530,8 @@ ITable table = pptxDoc.Slides[0].Shapes[0] as ITable;
 table.Rows[0].Cells[0].TextBody.AddParagraph("Hello World");
 //Get the dynamic height of the table
 float height=table.GetActualHeight();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Table.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Table.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -640,9 +633,8 @@ cell.TextBody.MarginTop = 65;
 cell.Fill.SolidFill.Color  = ColorObject.Silver;
 cell.TextBody.AddParagraph("Second Row and Second Column");
 
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Table.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Table.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -811,9 +803,8 @@ cell.TextBody.AddParagraph("Third Row and Third Column");
 
 //Adds description to table shape
 table.Description = "Table arrangement";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Table.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Table.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -930,9 +921,8 @@ table.Width = 450;
 table.BuiltInStyle = BuiltInTableStyle.DarkStyle1Accent2;
 //Sets text content to the cell
 table.Rows[0].Cells[0].TextBody.AddParagraph("Row1 Cell1");          
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("TableModified.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("TableModified.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -1011,9 +1001,8 @@ cell.ColumnSpan = 2;
 
 //Give simple description to table shape.
 table.Description = "Table arrangement";
-//Save the PowerPoint Presentation as stream.
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Table.pptx");
 //Close the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
@@ -1102,9 +1091,8 @@ ISlide slide = pptxDoc.Slides[0];
 ITable table = slide.Shapes[0] as ITable;
 //Removes table from shape collection
 slide.Shapes.Remove(table);        
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("TableModified.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("TableModified.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -1174,9 +1162,8 @@ foreach (IRow row in table.Rows)
         }
     }
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}

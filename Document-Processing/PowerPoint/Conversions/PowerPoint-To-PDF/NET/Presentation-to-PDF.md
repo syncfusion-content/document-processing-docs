@@ -6,7 +6,7 @@ control: PowerPoint
 documentation: UG
 ---
 
-# Convert PowerPoint to PDF using Syncfusion<sup>&reg;</sup> PowerPoint library
+# Convert PowerPoint to PDF using Syncfusion® PowerPoint Library
 
 Syncfusion<sup>&reg;</sup> PowerPoint library (Presentation) allows you to convert PowerPoint Presentation document to PDF within a few lines of code in .NET applications and also it does not require Adobe and Microsoft PowerPoint application to be installed in the machine. Using this, you can create an input PowerPoint Presentation document from scratch or load an existing PowerPoint Presentation document and then easily convert to PDF.
 
@@ -76,10 +76,7 @@ using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Ope
         using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
         {
             //Save the PDF file to file system. 
-            using (FileStream outputStream = new FileStream("PPTXToPDF.pdf", FileMode.Create, FileAccess.ReadWrite))
-            {
-                pdfDocument.Save(outputStream);
-            }
+            pdfDocument.Save("PPTXToPDF.pdf");
         }
     }
 }
@@ -160,11 +157,7 @@ using (FileStream pptStream = new FileStream("Template.pptx", FileMode.Open, Fil
             if (!PresentationToPdfConverter.IsCanceled)
             {
                 //Saves the PDF file
-                using (FileStream outputStream = new FileStream("Output.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite))
-                {
-                    pdfDocument.Save(outputStream);
-                    outputStream.Position = 0;
-                }
+                pdfDocument.Save("Output.pdf");
             }
             else
             {
@@ -481,12 +474,8 @@ using (FileStream fileStreamInput = new FileStream("Sample.pptx", FileMode.Open,
         //Convert the PowerPoint document to a PDF document.
         using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc, pdfConverterSettings))
         {
-            //Save the converted PDF document to the fileStream.
-            using (FileStream fileStreamOutput = File.Create("Sample.pdf"))
-            {
-                pdfDocument.Save(fileStreamOutput);
-                fileStreamOutput.Position = 0;
-            }
+            //Save the converted PDF document.
+            pdfDocument.Save("Sample.pdf");
         }
     }
 }
@@ -555,10 +544,7 @@ using (FileStream fileStream = new FileStream(Path.GetFullPath(@"Data/Template.p
         using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
         {
             //Save the PDF file to file system. 
-            using (FileStream outputStream = new FileStream(Path.GetFullPath(@"Output/PPTXToPDF.pdf"), FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-            {
-                pdfDocument.Save(outputStream);
-            }
+            pdfDocument.Save("Output.pdf");
         }
     }
 }

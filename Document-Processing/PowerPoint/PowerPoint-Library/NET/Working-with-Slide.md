@@ -23,11 +23,8 @@ The following code example demonstrates how to add a blank slide to the Presenta
 IPresentation pptxDoc = Presentation.Create();
 //Adds a slide to the PowerPoint presentation
 ISlide slide = pptxDoc.Slides.Add();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Closes the Presentation instance
 pptxDoc.Close();
 {% endhighlight %}
@@ -85,11 +82,8 @@ The following example demonstrates how to access a slide from the predefined bla
 IPresentation pptxDoc = Presentation.Create();
 //Add a slide of blank layout type
 ISlide slide1 = pptxDoc.Slides.Add(SlideLayoutType.Blank);    
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Close the PowerPoint presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -149,11 +143,8 @@ ISlide slide9 = pptxDoc.Slides.Add(SlideLayoutType.TitleOnly);
 ISlide slide10 = pptxDoc.Slides.Add(SlideLayoutType.TwoContent);
 //Add a slide of VerticalTitleAndText type
 ISlide slide11 = pptxDoc.Slides.Add(SlideLayoutType.VerticalTitleAndText);    
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Close the PowerPoint presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -246,11 +237,8 @@ FileStream pictureStream = new FileStream(inputImagePath, FileMode.Open);
 layoutSlide.Shapes.AddPicture(pictureStream, 100, 100, 100, 100);
 //Add a slide of new designed custom layout to the presentation
 ISlide slide = pptxDoc.Slides.Add(layoutSlide);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -320,11 +308,8 @@ foreach (ILayoutSlide layout in layoutSlides)
 }
 //Add slide with the desired layout.
 ISlide slide = pptxDoc.Slides.Add(slideLayout);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -411,11 +396,8 @@ foreach (ISlide slide in presentation.Slides)
         ModifySlideElements(shape);
     }
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -825,11 +807,8 @@ IShape textboxShape = slideClone.AddTextBox(0, 0, 250, 250);
 textboxShape.TextBody.AddParagraph("Hello Presentation");
 //Adds the slide to the Presentation.
 pptxDoc.Slides.Add(slideClone);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -896,11 +875,8 @@ IPresentation destinationPresentation = Presentation.Open(destinationPresentatio
 ISlide clonedSlide = sourcePresentation.Slides[0].Clone();
 //Merges the cloned slide to the destination Presentation with paste option - Destination Theme
 destinationPresentation.Slides.Add(clonedSlide, PasteOptions.UseDestinationTheme);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-destinationPresentation.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+destinationPresentation.Save("Output.pptx");
 //Closes the source presentation
 sourcePresentation.Close();
 //Closes the destination Presentation
@@ -961,11 +937,8 @@ IPresentation destinationPresentation = Presentation.Open(destinationPresentatio
 ISlide clonedSlide = sourcePresentation.Slides[0].Clone();
 //Merges the cloned slide to the destination Presentation with paste option - Source formatting
 destinationPresentation.Slides.Add(clonedSlide, PasteOptions.SourceFormatting);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-destinationPresentation.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation 
+destinationPresentation.Save("Output.pptx");
 //Closes the source presentation
 sourcePresentation.Close();
 //Closes the destination Presentation
@@ -1026,11 +999,8 @@ ISlide slide = pptxDoc.Slides[0];
 pptxDoc.Slides.Remove(slide);
 // Removes the slide from the specified index.
 pptxDoc.Slides.RemoveAt(1);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation instance
 pptxDoc.Close();
 {% endhighlight %}
@@ -1133,11 +1103,8 @@ IGradientFill gradient = background.Fill.GradientFill;
 gradient.GradientStops.Add(ColorObject.Green, 20);
 //Adds the second gradient stop of the gradient fill.
 gradient.GradientStops.Add(ColorObject.Yellow, 50);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint Presentation 
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
