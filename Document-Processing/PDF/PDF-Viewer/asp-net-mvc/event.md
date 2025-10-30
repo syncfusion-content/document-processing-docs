@@ -6,7 +6,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Events in ASP.NET MVC Pdf viewer control
+# Events in ASP.NET MVC PDF Viewer control
 
 The PDF Viewer component triggers events for creation, page navigation, document life cycle, context menu interactions, comments, bookmarks, downloads/exports, hyperlinks, import/export of annotations, keyboard commands, printing, signatures, text search, and text selection. Use these events to integrate custom logic into your application workflows.
 

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate a Save Button into the Vue PDF Viewer Toolbar
+# Add a Save button to the built-in toolbar
 
 PDF Viewer supports customizing toolbar items, including adding, showing, hiding, enabling, and disabling items.
 
