@@ -4,7 +4,6 @@ title: Select multi page annotations in ASP.NET Core PDF Viewer control | Syncfu
 description: Learn here all about Select multi page annotations in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Select multi page annotations
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
