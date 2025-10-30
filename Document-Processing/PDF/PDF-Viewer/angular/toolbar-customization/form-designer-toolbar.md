@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Form Designer Toolbar Customization in Angular PDF Viewer Component | Syncfusion
+title: Form Designer Toolbar in Angular PDF Viewer Component | Syncfusion
 description: Learn here all about form designer toolbar customization in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Designer Toolbar Customization
+# Form Designer Toolbar Customization in Angular
 
 The form designer toolbar can be customized by showing or hiding default items and by controlling the order in which the items appear.
 

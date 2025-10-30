@@ -31,9 +31,9 @@ For a full guide to Organize Pages in Angular, see the feature landing page: [Or
 
 See also:
 
-- [UI interactions for Organize Pages](./organize-pdf/ui-interactions-organize-page)
-- [Toolbar items for Organize Pages](./organize-pdf/toolbar-organize-page)
-- [Programmatic support for Organize Pages](./organize-pdf/programmatic-support-for-organize-page)
-- [Organize Pages events](./organize-pdf/organize-pdf-events)
-- [Organize Pages in mobile view](./organize-pdf/organize-page-mobile-view)
+- [UI interactions for Organize Pages](./organize-page/ui-interactions-organize-page)
+- [Toolbar items for Organize Pages](./organize-page/toolbar-organize-page)
+- [Programmatic support for Organize Pages](./organize-page/programmatic-support-for-organize-page)
+- [Organize Pages events](./organize-page/organize-pdf-events)
+- [Organize Pages in mobile view](./organize-page/organize-page-mobile-view)
 
