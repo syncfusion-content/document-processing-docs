@@ -16,7 +16,7 @@ You can switch between the classic **Toolbar** and the new **Ribbon** UI, and yo
 
 ## Enable Ribbon Mode
 
-To enable Ribbon in Document Editor, use the [`toolbarMode`](https://ej2.syncfusion.com/documentation/api/document-editor-container#toolbarmode) property of `DocumentEditorContainer`. The available toolbar modes are:
+To enable Ribbon in Document Editor, use the [`toolbarMode`](https://ej2.syncfusion.com/documentation/api/document-editor-container/index-default#toolbarmode) property of `DocumentEditorContainer`. The available toolbar modes are:
 
 - **'Toolbar'** - The traditional toolbar UI.
 - **'Ribbon'** - The Ribbon UI, which provides a tabbed interface with grouped commands.
