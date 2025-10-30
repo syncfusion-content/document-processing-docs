@@ -186,5 +186,5 @@ root.render(<App />);
 
 ## See also
 
-* [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/toolbar/)
-* [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/feature-module/)
+* [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/toolbar)
+* [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/feature-module)
