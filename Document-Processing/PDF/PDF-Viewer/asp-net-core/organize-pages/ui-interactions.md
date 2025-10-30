@@ -55,7 +55,7 @@ Duplicate pages within your PDF document effortlessly:
 *   **Select pages to copy**: Click on the page thumbnails you wish to duplicate.
 *   **Copy selected pages**: Use the copy option to create duplicates. The copied pages will be added to the right of the selected pages.
 
-![Alt text](../images/insert-delete-copy.gif)
+![Copying](../images/insert-delete-copy.gif)
 
 ## Importing a PDF document
 
@@ -63,13 +63,13 @@ Seamlessly import another PDF document into your current document:
 
 *   **Import PDF document**: Click the **Import Document** button to select and import a PDF. The imported document will be inserted as a thumbnail. If a page is selected, the thumbnail will be added to its right. If no pages are selected, it will be added as the first page. The imported PDF will be merged with the current document upon saving.
 
-![Alt text](../images/import.gif)
+![Importing](../images/import.gif)
 
 ## Selecting all pages
 
 Select all pages simultaneously to perform bulk operations, such as rotating or deleting all pages at once.
 
-![Alt text](../images/selectall.png)
+![Selecting](../images/selectall.png)
 
 ## Zooming page thumbnails
 
@@ -79,7 +79,7 @@ Adjust the size of page thumbnails for better visibility and precision:
 *   Zoom in to see more detail on each page.
 *   Zoom out to view more pages at once.
 
-![Alt text](../images/zoomOrganize.png)
+![Zooming](../images/zoomOrganize.png)
 
 ## Real-time updates and saving
 
@@ -93,4 +93,4 @@ The following keyboard shortcuts are available in the Organize Pages dialog:
 *   **Ctrl+Y**: Redo the last undone action.
 *   **Ctrl+Scroll**: Zoom in and out on page thumbnails for better visibility.
 
-![Alt text](../images/undo-redo.png)
+![Keyboard](../images/undo-redo.png)

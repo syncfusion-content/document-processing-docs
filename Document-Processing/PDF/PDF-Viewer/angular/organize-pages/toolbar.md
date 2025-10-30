@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Organize Page Toolbar Customization in Angular PDF Viewer control | Syncfusion
+title: Organize Page Toolbar in Angular PDF Viewer control | Syncfusion
 description: Learn here all about Organize Page Toolbar Customization in Syncfusion Angular PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer

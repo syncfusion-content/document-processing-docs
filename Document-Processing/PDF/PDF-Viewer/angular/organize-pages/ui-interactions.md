@@ -1,7 +1,7 @@
 ---
 layout: post
-title: UI Interactions for Organizing Pages in Angular PDF Viewer | Syncfusion
-description: Learn about the UI interactions for organizing pages in the Syncfusion Angular PDF Viewer control, including rotating, rearranging, inserting, deleting, and copying pages.
+title: UI Interaction for Organize Pages in Angular PDF Viewer | Syncfusion
+description: Learn about the UI interactions for organize pages in the Angular PDF Viewer control, including rotating, rearranging, inserting, deleting, and copying pages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -21,7 +21,7 @@ You can adjust the orientation of pages to ensure proper alignment. The rotate i
 *   **Rotate clockwise**: Rotate the selected pages 90 degrees clockwise.
 *   **Rotate counter-clockwise**: Rotate the selected pages 90 degrees counter-clockwise.
 
-![Alt text](../images/rotate-rearrange.gif)
+![Rotating](../images/rotate-rearrange.gif)
 
 ## Rearranging PDF pages
 
@@ -29,7 +29,7 @@ Easily change the sequence of pages using the drag-and-drop method:
 
 *   **Drag and drop**: Click and drag a page thumbnail to the desired position within the document, then release it to reorder the pages.
 
-![Alt text](../images/rotate-rearrange.gif)
+![Rearranging](../images/rotate-rearrange.gif)
 
 ## Inserting new pages
 
@@ -38,7 +38,7 @@ Effortlessly add blank pages to your document with the following options:
 *   **Insert blank page left**: Insert a blank page to the left of the selected page.
 *   **Insert blank page right**: Insert a blank page to the right of the selected page.
 
-![Alt text](../images/insert-delete-copy.gif)
+![Inserting](../images/insert-delete-copy.gif)
 
 ## Deleting PDF pages
 
@@ -47,7 +47,7 @@ Remove unwanted pages from your document with these steps:
 1.  **Select pages to delete**: Click on the thumbnails of the pages you wish to remove. You can select multiple pages at once.
 2.  **Delete selected pages**: Use the delete option in the Organize Pages pane to remove the selected pages from the document.
 
-![Alt text](../images/insert-delete-copy.gif)
+![Deleting](../images/insert-delete-copy.gif)
 
 ## Copying PDF pages
 
@@ -56,7 +56,7 @@ Duplicate pages within your PDF document effortlessly:
 *   **Select pages to copy**: Click on the page thumbnails you wish to duplicate.
 *   **Copy selected pages**: Use the copy option to create duplicates. The copied pages will be added to the right of the selected pages.
 
-![Alt text](../images/insert-delete-copy.gif)
+![Copying](../images/insert-delete-copy.gif)
 
 ## Importing a PDF document
 
@@ -64,13 +64,13 @@ Seamlessly import another PDF document into your current document:
 
 *   **Import PDF document**: Click the **Import Document** button to select and import a PDF. The imported document will be inserted as a thumbnail. If a page is selected, the thumbnail will be added to its right. If no pages are selected, it will be added as the first page. The imported PDF will be merged with the current document upon saving.
 
-![Alt text](../images/import.gif)
+![Importing](../images/import.gif)
 
 ## Selecting all pages
 
 Select all pages simultaneously to perform bulk operations, such as rotating or deleting all pages at once.
 
-![Alt text](../images/selectall.png)
+![Selecting](../images/selectall.png)
 
 ## Zooming page thumbnails
 
@@ -80,7 +80,7 @@ Adjust the size of page thumbnails for better visibility and precision:
 *   Zoom in to see more detail on each page.
 *   Zoom out to view more pages at once.
 
-![Alt text](../images/zoomOrganize.png)
+![Zooming](../images/zoomOrganize.png)
 
 ## Real-time updates and saving
 
@@ -94,4 +94,4 @@ The following keyboard shortcuts are available in the Organize Pages dialog:
 *   **Ctrl+Y**: Redo the last undone action.
 *   **Ctrl+Scroll**: Zoom in and out on page thumbnails for better visibility.
 
-![Alt text](../images/undo-redo.png)
+![Keyboard](../images/undo-redo.png)
