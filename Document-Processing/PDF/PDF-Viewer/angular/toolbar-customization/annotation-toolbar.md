@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Annotation Toolbar Customization in Angular PDF Viewer control | Syncfusion
+title: Annotation Toolbar in Angular PDF Viewer control | Syncfusion
 description: Learn here all about annotation toolbar customization in Syncfusion Angular PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Annotation Toolbar Customization
-publishingplatform: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation Toolbar Customization
+# Annotation Toolbar Customization in Angular PDF Viewer
 
 The annotation toolbar can be customized by showing or hiding default items and by controlling the order in which they appear.
 

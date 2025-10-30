@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Toolbar in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Toolbar in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Custom Toolbar in Angular PDF Viewer | Syncfusion
+description: Learn here all about Toolbar in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom Toolbar
+# Custom Toolbar in Angular PDF Viewer
 
 The PDF Viewer provides APIs for user interaction options available in its built-in toolbar. Using these, you can create your own custom user interface for toolbar actions at the application level by hiding the default toolbar.
 
@@ -16,7 +16,7 @@ Follow these steps to create a custom toolbar for the PDF Viewer:
 
 **Step 1: Create a simple PDF Viewer sample.**
 
-Follow the steps provided in the [getting started](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started/) guide to create a basic PDF Viewer sample.
+Follow the steps provided in the [getting started](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started) guide to create a basic PDF Viewer sample.
 
 **Step 2: Add HTML elements for the custom toolbar.**
 

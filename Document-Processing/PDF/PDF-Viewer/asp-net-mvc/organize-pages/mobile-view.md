@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Organize Pages in Mobile PDF Viewer | Syncfusion
+title: Organize Pages in Mobile PDF Viewer ASP.NET MVC | Syncfusion
 description: Learn how to organize pages in the ASP.NET MVC mobile PDF viewer, including rotating, rearranging, inserting, deleting, and copying pages on mobile devices.
 platform: document-processing
 control: PDF Viewer

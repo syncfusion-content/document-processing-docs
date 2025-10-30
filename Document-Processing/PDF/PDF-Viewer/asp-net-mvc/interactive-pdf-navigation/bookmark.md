@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Bookmark navigation
+# Bookmark navigation in ASP.NET MVC PDF Viewer
 
 The Bookmarks saved in PDF files are loaded and made ready for easy navigation.
 You can enable/disable bookmark navigation by using the following code snippet.,
