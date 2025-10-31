@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Context Menu in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+title: Context Menu in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
 description: Learn here all about Context Menu in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Context Menu
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Context Menu in Spreadsheet control
+# Context Menu in ASP.NET Core Spreadsheet control
 
 Context Menu is used to improve user interaction with Spreadsheet using the popup menu. This will open when right-clicking on Cell/Column Header/Row Header/ Pager in the Spreadsheet. You can use [`enableContextMenu`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableContextMenu) property to enable/disable context menu.
 
@@ -71,10 +71,10 @@ In this demo, Custom Item is added after the Paste item in the context menu.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/add-context-menu/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/add-context-menu/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="AddContextMenu.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/add-context-menu/addContextMenu.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/add-context-menu/addContextMenu.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,10 +88,10 @@ In this demo, Insert Column item has been removed from the row/column header con
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/remove-context-menu/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/remove-context-menu/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="RemoveContextMenu.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/remove-context-menu/removeContextMenu.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/remove-context-menu/removeContextMenu.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -105,10 +105,10 @@ In this demo, Rename item is disabled in the pager context menu.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/enable-context-menu/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/enable-context-menu/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="EnableContextMenu.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/enable-context-menu/enableContextMenu.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/enable-context-menu/enableContextMenu.cs %}
 {% endhighlight %}
 {% endtabs %}
 

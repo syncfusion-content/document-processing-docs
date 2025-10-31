@@ -24,11 +24,11 @@ The following code example shows how to identify the context menu opened.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/find-target-context-menu/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/find-target-context-menu/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/find-target-context-menu/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/find-target-context-menu/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/find-target-context-menu" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/find-target-context-menu" %}

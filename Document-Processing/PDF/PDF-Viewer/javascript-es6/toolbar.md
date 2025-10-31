@@ -4,12 +4,11 @@ title: Toolbar in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Toolbar in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Toolbar
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Built-In Toolbar in Typescript Pdfviewer control
+# Built-In Toolbar in Typescript PDF Viewer control
 
 The PDF Viewer comes with a powerful built-in toolbar to execute important actions such as page navigation, text search,view mode,download,print,bookmark, and thumbnails.
 
