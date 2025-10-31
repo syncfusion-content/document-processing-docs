@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Form Field Events in EJ2 ASP.NET CORE PDF Viewer | Syncfusion
-description: Learn here all about form field event in ASP.NET CORE PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Form field events in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn about form field events supported in the Syncfusion ASP.NET Core PDF Viewer component and how to handle them.
 platform: document-processing
 control: Form Field Events
 documentation: ug
@@ -9,27 +9,27 @@ documentation: ug
 
 # PDF Viewer Form Field events in ASP.NET CORE
 
-The PDF Viewer control provides the support to different Form Field events. The Form Field events supported by the PDF Viewer Control are:
+The PDF Viewer component provides support for various form field events. The following events are available:
 
-| Form Field events | Description |
+| Form field events | Description |
 |---|---|
-| formFieldAdd | Event trigger when a form field is added.|
-| formFieldClick | Events trigger when the form field is selected.|
-| formFieldDoubleClick | Events trigger when the form field is double-clicked.|
-| formFieldFocusOut | Events trigger when focus out from the form fields.|
-| formFieldMouseLeave | Events trigger when the mouse cursor leaves the form field.|
-| formFieldMouseOver | Events trigger when the mouse cursor is over a form field.|
-| formFieldMove | Events trigger when a form field is moved.|
-| formFieldPropertiesChange | Events trigger when a property of form field is changed.|
-| formFieldRemove | Events trigger when a form field is removed.|
-| formFieldResize | Events trigger when a form field is resized.|
-| formFieldSelect | Events trigger when a form field is selected.|
-| formFieldUnselect | Events trigger when a form field is unselected.|
-| validateFormFields | Events trigger when validation is failed.|
+| formFieldAdd | Triggered when a form field is added. |
+| formFieldClick | Triggered when a form field is clicked. |
+| formFieldDoubleClick | Triggered when a form field is double-clicked. |
+| formFieldFocusOut | Triggered when focus moves out of a form field. |
+| formFieldMouseLeave | Triggered when the mouse cursor leaves a form field. |
+| formFieldMouseOver | Triggered when the mouse cursor is over a form field. |
+| formFieldMove | Triggered when a form field is moved. |
+| formFieldPropertiesChange | Triggered when a form field property changes. |
+| formFieldRemove | Triggered when a form field is removed. |
+| formFieldResize | Triggered when a form field is resized. |
+| formFieldSelect | Triggered when a form field is selected. |
+| formFieldUnselect | Triggered when a form field is unselected. |
+| validateFormFields | Triggered when validation fails. |
 
 ## formFieldAdd event
 
-The [formFieldAdd](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldAdd) event is triggered when a new form field is added, either programmatically or through user interaction. The event arguments provide the necessary information about the form field addition.
+The [formFieldAdd](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldAdd) event is triggered when a new form field is added, either programmatically or through user interaction. The event arguments provide details about the added form field.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -71,7 +71,7 @@ The [formFieldAdd](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.
 
 ## formFieldClick event
 
-The [formFieldClick](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldClick) event is triggered when a form field is clicked. The event arguments provide the necessary information about the form field click event.
+The [formFieldClick](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FormFieldClick) event is triggered when a form field is clicked. The event arguments provide details about the clicked form field.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

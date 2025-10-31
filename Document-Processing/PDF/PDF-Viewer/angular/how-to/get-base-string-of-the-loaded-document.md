@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get base string of the loaded document in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Get base string of the loaded document in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Get base string of the loaded document in Angular PDF Viewer component | Syncfusion
+description: Learn here all about Get base string of the loaded document in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Get base string of the loaded document
 documentation: ug

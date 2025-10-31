@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Save PDF files to AWS S3 in Angular Pdfviewer Component | Syncfusion
-description: Learn here all about how to save PDF files to AWS S3 in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Save PDF files to AWS S3 in Angular PDF Viewer Component | Syncfusion
+description: Learn here all about how to save PDF files to AWS S3 in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Save PDF files to AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF file to AWS S3
+# Save PDF files to AWS S3
 
-PDF Viewer allows to save PDF file to AWS S3 using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to save a PDF to AWS S3.
+The TypeScript PDF Viewer component supports saving PDF files to AWS S3 using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 
 ## Using Standalone PDF Viewer
 
@@ -18,7 +18,7 @@ To save a PDF file to AWS S3, you can follow the steps below
 
 **Step 1:** Create a PDF Viewer sample in Angular
 
-Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in TypeScript. This will set up the basic structure of your PDF Viewer application.
 
 **Step 2:** Modify the `src/app/app.component.ts` File in the Angular Project
 
@@ -28,7 +28,7 @@ Follow the instructions provided in this [link](https://help.syncfusion.com/docu
 import * as AWS from 'aws-sdk';
 ```
 
-2. Configures AWS SDK with the region, access key, and secret access key. This configuration allows the application to interact with AWS services like S3.
+2. Configure the AWS SDK with the region, access key, and secret access key. This configuration allows the application to interact with AWS services like S3.
 
 N> Replace **Your Region** with the actual Region of your AWS S3 account and **Your Access Key** with the actual Access Key of your AWS S3 account and **Your Security Access Key** with the actual Security Access Key of your AWS S3 account.
 
@@ -40,7 +40,7 @@ AWS.config.update({
 });
 ```
 
-3. Configure a custom toolbar item for the download function to save a PDF file in Azure Blob Storage.
+3. Configure a custom toolbar item for the download function to save a PDF file to AWS S3.
 
 ```typescript
 @Component({
@@ -82,7 +82,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-4. Retrieve the PDF viewer instance and save the current PDF as a Blob. Then, read the Blob using a FileReader to convert it into an ArrayBuffer, and upload the ArrayBuffer to AWS S3 using the putObject method of the S3 instance.
+4. Retrieve the PDF Viewer instance, save the current PDF as a Blob, read it using FileReader to get an ArrayBuffer, and upload the ArrayBuffer to AWS S3 using the putObject method.
 
 N> Replace **Your Bucket Name** with the actual Bucket name of your AWS S3 account and **Your Key** with the actual File Key of your AWS S3 account.
 
@@ -120,9 +120,9 @@ N> The **npm install aws-sdk** package must be installed in your application to 
 
 ## Using Server-Backed PDF Viewer
 
-To save a PDF file to AWS S3, you can follow the steps below
+To save a PDF file to AWS S3, you can follow the steps below:
 
-**Step 1:** Create a PDF Viewer sample in Angular
+**Step 1:** Create a PDF Viewer sample in TypeScript
 
 Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will set up the basic structure of your PDF Viewer application.
 
@@ -216,9 +216,9 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 
 N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
 
-**Step 3:**  Set the PDF Viewer Properties in Angular PDF viewer component
+**Step 3:** Set the PDF Viewer properties in the TypeScript PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from AWS S3. Ensure that you correctly pass the document name from the files available in your AWS S3 bucket to the documentPath property.
+Modify the serviceUrl with your web service endpoint and set documentPath to the PDF file name to load from AWS S3. Ensure the document exists in the target bucket.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -248,6 +248,6 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   }
 ```
 
-N> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.
+N> The AWSSDK.S3 NuGet package must be installed in your application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3/tree/master/Open%20and%20Save%20PDF%20in%20AWS%20S3%20using%20Server-Backend)
