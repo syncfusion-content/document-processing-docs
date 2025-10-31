@@ -1594,3 +1594,28 @@ Refer to the following package reference:
 
 {% endhighlight %}
 {% endtabs %}
+
+## Installing Chromium in Alpine Linux Docker Without Edge Repository
+
+<table>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<th style="font-size:14px">Using the Alpine Edge repository introduces packages that are not part of the stable release, which can trigger Twist lock security issues. To maintain security compliance, we should install Chromium from the stable repository.
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>You can install Chromium directly from the stable Alpine repository using the following command:
+<br><br>
+<b>Docker File:</b><br><br>
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+RUN apk add --no-cache chromium && \
+rm -rf /var/cache/apk/*
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+</table>
