@@ -7,6 +7,9 @@ documentation: UG
 ---
 # Working with Excel Tables
 
+To quickly learn how to create, edit, and format tables in Excel documents, check out this video:
+{% youtube "https://www.youtube.com/watch?v=i8H4ER7PpjU" %}
+
 ## Creating a table
 
 XlsIO supports reading and writing the table which helps to organize and analyze the related data. 
