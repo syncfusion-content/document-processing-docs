@@ -386,15 +386,30 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Draw-text-in-PDF-document-using-standard-fonts/). 
 
-### Draw text using TrueType fonts
+### Draw Text using TrueType fonts
 
-You can add text using the TrueType fonts installed in the system, by initializing [PdfFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfFont.html) class as [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html) class. The following code snippet illustrates this.
+You can add text using TrueType fonts either installed on the system or provided as a font stream by initializing the [PdfFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfFont.html) class as a [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html). The following code Example demonstrates this approach.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//The code uses `System.Drawing.Font`, which is `not cross-platform` and works only on Windows due to its dependency on GDI+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a page to the document.
+PdfPage page = document.Pages.Add();
+
+//Create PDF graphics for the page.
+PdfGraphics graphics = page.Graphics;
+//Provide the path of the local *.ttf file
+PdfFont font = new PdfTrueTypeFont(new Font("Arial.ttf", 14));
+//Draw the text.
+graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+
+//Save the document.
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
 
 {% endhighlight %}
 
