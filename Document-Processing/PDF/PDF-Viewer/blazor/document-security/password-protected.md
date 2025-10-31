@@ -15,22 +15,22 @@ Some PDFs require a password to open. When such a document is loaded in the view
 
 The viewer displays a password prompt UI when a protected document is opened.
 
-Desktop password prompt:
+**Desktop password prompt:**
 
 ![Blazor PDF Viewer desktop password prompt](../images/password-ui-desktop.png)
 
-Mobile password prompt:
+**Mobile password prompt:**
 
 ![Blazor PDF Viewer mobile password prompt](../images/password-ui-mobile.png)
 
 - If the correct password is provided, the document loads and becomes viewable per the document’s permissions.
 - If the password is incorrect, the viewer shows an error and continues to prompt until a valid password is entered or the operation is canceled.
 
-Invalid password error in desktop:
+**Invalid password error in desktop:**
 
 ![Blazor PDF Viewer desktop password error](../images/password-incorrect-desktop.png)
 
-Invalid password error in Mobile:
+**Invalid password error in Mobile:**
 
 ![Blazor PDF Viewer mobile password error](../images/password-incorrect-mobile.png)
 

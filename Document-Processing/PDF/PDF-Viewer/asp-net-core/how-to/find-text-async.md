@@ -1,18 +1,17 @@
 ---
 layout: post
-title: Find Text Async in EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn about the `findTextAsync` in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Use findTextAsync in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to search text asynchronously with findTextAsync in the Syncfusion ASP.NET Core PDF Viewer and retrieve match bounds.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Find Text using findTextAsync Method in Syncfusion PdfViewer
+# Find text with findTextAsync in the ASP.NET Core PDF Viewer
 
-The findTextAsync method in the Syncfusion PdfViewer control allows you to search for specific text or an array of strings asynchronously within a PDF document. The method returns the bounding rectangles for each occurrence of the search term, allowing you to find and work with text positions in the document.
+The `findTextAsync` method searches for a string or array of strings asynchronously and returns bounding rectangles for each match. Use it to locate text positions across the document or on a specific page.
 
-Here is an example of how you can use the **findTextAsync** method:
+Here is an example of how to use `findTextAsync`:
 
 
 {% tabs %}
@@ -36,7 +35,7 @@ Here is an example of how you can use the **findTextAsync** method:
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         // Search for a single text ('pdf') across all pages (case insensitive)
         viewer.textSearchModule.findTextAsync('pdf', false).then(function (res) {
-            console.log(res);  // Log the search results
+            console.log(res);  // Log the search results for 'pdf'
         });
     }
 
@@ -44,7 +43,7 @@ Here is an example of how you can use the **findTextAsync** method:
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         // Search for multiple texts (['pdf', 'the']) across all pages (case insensitive)
         viewer.textSearchModule.findTextAsync(['pdf', 'the'], false).then(function (res) {
-            console.log(res);  // Log the search results
+            console.log(res);  // Log the search results for 'pdf' and 'the'
         });
     }
 </script>
@@ -53,40 +52,26 @@ Here is an example of how you can use the **findTextAsync** method:
 {% endtabs %}
 
 
-### Description:
+### Description
 
-The `findTextAsync` method is designed for performing an asynchronous text search within a PDF document. You can use it to search for a single string or multiple strings, with the ability to control case sensitivity. By default, the search is applied to all pages of the document. However, you can adjust this behavior by specifying the page number (pageIndex), which allows you to search only a specific page if needed.
+The `findTextAsync` method performs an asynchronous text search within a PDF document. You can search for a single string or multiple strings while controlling case sensitivity. By default, the search runs across all pages. Specify the optional `pageIndex` argument to limit the search to a single page.
 
-### Parameters:
+### Parameters
 
-**text (string | string[]):**
+- **text (string | string[]):** String or array of strings to search for.
 
-The text or an array of texts you want to search for in the document.
+- **matchCase (boolean):** Whether the search is case-sensitive. `true` matches exact case; `false` ignores case.
 
-**matchCase (boolean):**
+- **pageIndex (optional, number):** Zero-based page index to search. If omitted, searches all pages.
 
-Indicates whether the search should be case-sensitive.
-When set to true, the search will match the exact case.
-When set to false, the search will ignore case differences.
+### Example workflow
 
-**pageIndex (optional, number):**
+- **findTextAsync('pdf', false)**: Searches for "pdf" case-insensitively across all pages.
 
-Specifies the page number (zero-based index) to search within the document.
-If not provided, the search will be performed across all pages in the document.
-For example, passing 0 would search only the first page of the document.
+- **findTextAsync(['pdf', 'the'], false)**: Searches for "pdf" and "the" case-insensitively across all pages.
 
-### Example Workflow:
+- **findTextAsync('pdf', false, 0)**: Searches for "pdf" case-insensitively on page 0 only.
 
-**findTextAsync('pdf', false):**
-This will search for the term "pdf" in a case-insensitive manner across all pages of the document.
-
-**findTextAsync(['pdf', 'the'], false):**
-This will search for the terms "pdf" and "the" in a case-insensitive manner across all pages of the document.
-
-**findTextAsync('pdf', false, 0):**
-This will search for the term "pdf" in a case-insensitive manner only on the first page (page 0).
-
-**findTextAsync(['pdf', 'the'], false, 1):**
-This will search for the terms "pdf" and "the" in a case-insensitive manner only on the second page (page 1).
+- **findTextAsync(['pdf', 'the'], false, 1)**: Searches for "pdf" and "the" case-insensitively on page 1 only.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)

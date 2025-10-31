@@ -57,4 +57,4 @@ N> Ensure that the browser allows pop-ups for the site, because this approach op
 
 ## See also
 
-* [Primary Toolbar Customization in SfPdfViewer](../toolbar/primary-toolbar-customization)
+* [Primary Toolbar Customization in SfPdfViewer](../toolbar-customization/primary-toolbar)

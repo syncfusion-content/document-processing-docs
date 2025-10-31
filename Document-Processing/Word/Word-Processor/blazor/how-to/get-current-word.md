@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Retrieve word and Paragraph in Blazor DocumentEditor | Syncfusion
+title: Get Word and Paragraph in Blazor DocumentEditor | Syncfusion
 description: Learn how to select and retrieve current word and Paragraph in the Syncfusion Blazor Document Editor component and much more.
 platform: document-processing
 control: DocumentEditor
@@ -9,11 +9,11 @@ documentation: ug
 
 # How to select and retrieve the word and paragraph in Document Editor
 
-You can get the current word or paragraph content from the Blazor Document Editor component as plain text and SFDT (rich text).
+The Blazor Document Editor component allows for getting the current word or paragraph content as plain text and SFDT (rich text).
 
 ## Select and get the word in current cursor position
 
-You can use [`SelectCurrentWordAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectCurrentWordAsync_System_Boolean_) API in selection module to select the current word at cursor position and use [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API to get the selected content as plain text from Blazor Document Editor component.
+Use the [`SelectCurrentWordAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectCurrentWordAsync_System_Boolean_) API in the selection module to select the current word at the cursor position, and use the [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API to get the selected content as plain text from Blazor Document Editor component.
 
 The following example code illustrates how to select and get the current word as plain text.
 

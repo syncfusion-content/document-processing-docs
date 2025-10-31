@@ -129,19 +129,14 @@ import { provide, ref } from 'vue';
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib;;
-
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
-
 const showToolbarClicked = function (args) {
   pdfviewer.value.ej2Instances.toolbar.showToolbar(false);
 }
-
 </script>
-
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
 <template>
   <div id="app">
     <button v-on:click="showToolbarClicked">showToolbarClicked</button>
@@ -150,14 +145,12 @@ const showToolbarClicked = function (args) {
     </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
 import {
   PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
   BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
   Annotation, FormDesigner, FormFields
 } from '@syncfusion/ej2-vue-pdfviewer';
-
 export default {
   name: "App",
   components: {
@@ -679,7 +672,6 @@ export default {
 {% endtabs %}
 
 >Note : Default value of toolbar items is ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
-
 ### Align Property
 
 The align property is used to specify the alignment of a toolbar item within the toolbar.
@@ -860,11 +852,9 @@ export default Vue.extend({
    #pdfviewer {
         height: 640px;
     }
-
     .control-section {
         padding-top: 0px !important;
     }
-
     #magnificationToolbar {
         background: transparent;
         height: auto;
@@ -877,67 +867,54 @@ export default Vue.extend({
         left: calc(100% - 120px);
         transform: rotate(90deg);
     }
-
     div#magnificationToolbar.e-toolbar .e-toolbar-items {
         background: transparent;
         padding: 2px 3px 2px 2px;
     }
-
     #magnificationToolbar.e-toolbar .e-tbar-btn {
         border-radius: 50%;
         min-height: 30px;
         min-width: 30px;
         border: 1px solid #c8c8c8;
     }
-
     #customToolbar {
         top: 0px;
         z-index: 900;
     }
-
     .e-bookmark-popup {
         height: 300px;
         max-width: 300px;
     }
-
     .e-text-search-popup {
         height: 104px;
         max-width: 348px;
     }
-
     .e-custom-search-input {
         width: 234px;
     }
-
     .e-text-search-popup .e-footer-content, .e-bookmark-popup .e-footer-content {
         padding: 0;
         height: 0;
     }
-
     .search-button, .search-button:disabled, .search-button:focus, .search-button:hover {
         background: transparent;
         box-shadow: none;
     }
-
     #popup .e-dlg-content {
         padding-left: 0;
         padding-bottom: 0;
     }
-
     .e-pv-bookmarks {
         min-width: 234px;
     }
-
     .e-pv-current-page-number {
         width: 46px;
         height: 28px;
         text-align: center;
     }
-
     .material .e-pv-current-page-number {
         border-width: 1px;
     }
-
     .e-icons {
         font-family: "e-icons";
         font-style: normal;
@@ -946,47 +923,36 @@ export default Vue.extend({
         line-height: 1;
         text-transform: none;
     }
-
     .e-pv-icon::before {
         font-family: 'e-icons';
     }
-
     .e-pv-open-document-icon::before  {
         content: '\e91c';
     }
-
     .e-pv-download-document-icon::before {
         content: '\e914';
     }
-
     .e-pv-print-document-icon::before {
         content: '\e917';
     }
-
     .e-pv-previous-page-navigation-icon::before {
         content: '\e910';
     }
-
     .e-pv-next-page-navigation-icon::before {
         content: '\e911';
     }
-
     .e-pv-zoom-out-icon::before {
         content: '\e912';
     }
-
     .e-pv-zoom-in-icon::before {
         content: '\e91d';
     }
-
     .e-pv-fit-page-icon::before {
         content: '\e91b';
     }
-
     .e-btn-icon.e-pv-zoom-out-icon.e-icons {
         transform: rotate(90deg);
     }
-
     @font-face {
         font-family: "e-icons";
         font-style: normal;
@@ -997,7 +963,6 @@ export default Vue.extend({
 ```
 
 >The icons are embedded in the font file used in above code snippet.
-
 **Step 8:** Add the following scripts for performing user interaction in PDF Viewer in code behind
 
 

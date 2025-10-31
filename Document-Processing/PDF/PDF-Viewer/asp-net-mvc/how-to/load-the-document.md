@@ -1,23 +1,21 @@
 ---
 layout: post
-title: Load the document in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to doad the document in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Load the document in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to load a PDF document in the Syncfusion ASP.NET MVC PDF Viewer and understand the JSON payload (jsonObjects) used by controller actions.
 platform: document-processing
-control: Load The Document
-publishingplatform: document-processing
+control: PDF Viewer
 documentation: ug
 ---
 
-
 # Load the PDF document
 
-The PDF Viewer server library allows you to load the PDF document in the PDF Viewer Control. PDF Document can be loaded by adding the necessary JSON object Properties in the **PdfViewerController.cs** file.
+The Syncfusion ASP.NET MVC PDF Viewer loads documents through server-side controller actions that receive a JSON payload. The payload is deserialized into a data transfer object (DTO) named `jsonObjects`, which supplies properties used across actions such as loading, rendering, and annotation processing.
 
-The following steps are used to load a PDF document.
+Follow these steps to load a PDF document.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Create a basic ASP.NET MVC PDF Viewer sample by following the getting started guide: [Getting started with ASP.NET MVC PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/).
 
-**Step 2:** Add the following code snippet in PDFViewerController.cs file to load a PDF document.
+**Step 2:** Add the following `jsonObjects` class to the `PdfViewerController.cs` file (or a Models folder). The `document`, `isFileName`, and `password` properties are commonly used when loading a document.
 
 ```cs
 
@@ -61,4 +59,4 @@ public class jsonObjects
 
 ```
 
-Find the sample [how to load the PDF Document in MVC PDF Viewer](https://www.syncfusion.com/downloads/support/directtrac/general/ze/PDFViewTest-1000651816)
+Find the sample [how to load the PDF document in MVC PDF Viewer](https://www.syncfusion.com/downloads/support/directtrac/general/ze/PDFViewTest-1000651816)
