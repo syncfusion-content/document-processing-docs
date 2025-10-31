@@ -392,6 +392,12 @@ You can add text using the TrueType fonts installed in the system, by initializi
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//The code uses `System.Drawing.Font`, which is `not cross-platform` and works only on Windows due to its dependency on GDI+
+
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.Pdf;
@@ -459,8 +465,7 @@ PdfPage page = document.Pages.Add();
 //Create PDF graphics for the page.
 PdfGraphics graphics = page.Graphics;
 //Load the TrueType font from the local *.ttf file.
-FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
-PdfFont font = new PdfTrueTypeFont(fontStream, 14);
+PdfFont font = new PdfTrueTypeFont("Arial.ttf", 14);
 //Draw the text.
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
@@ -716,10 +721,8 @@ using Syncfusion.Pdf.Graphics;
 PdfDocument document = new PdfDocument();
 //Add a page to the document 
 PdfPage page = document.Pages.Add();
-// Load the font file from the stream 
-FileStream fontStream = new FileStream(@"../../../arial.ttf", FileMode.Open, FileAccess.Read);
 //Create a new PDF font instance 
-PdfFont font = new PdfTrueTypeFont(fontStream, 14, PdfFontStyle.Italic);
+PdfFont font = new PdfTrueTypeFont("arial.ttf", 14, PdfFontStyle.Italic);
 //Create a new PDF string format instance 
 PdfStringFormat format = new PdfStringFormat();
 //Enable the measure tilting space      
@@ -774,10 +777,8 @@ Imports System.Drawing
 Dim document As PdfDocument = New PdfDocument() 
 'Add a page to the document 
 Dim page As PdfPage = document.Pages.Add() 
-'Load the font file from the stream 
-Dim fontStream As FileStream = New FileStream("font.ttf", FileMode.Open, FileAccess.Read) 
 'Create a new PDF font instance 
-Dim font As PdfFont = New PdfTrueTypeFont(fontStream, 14, PdfFontStyle.Italic) 
+Dim font As PdfFont = New PdfTrueTypeFont("font.ttf", 14, PdfFontStyle.Italic) 
 'Create a new PDF string format instance 
 Dim format As PdfStringFormat = New PdfStringFormat() 
 'Enable a measure tilting space  
@@ -1054,8 +1055,7 @@ PdfPage page = doc.Pages.Add();
 //Create PDF graphics for the page
 PdfGraphics graphics = page.Graphics;
 //Create a new PDF font instance
-FileStream fontStream = new FileStream("arial.ttf", FileMode.Open, FileAccess.Read);
-PdfFont font = new PdfTrueTypeFont(fontStream, 14);
+PdfFont font = new PdfTrueTypeFont("arial.ttf", 14);
 //Set the format for string
 PdfStringFormat format = new PdfStringFormat();
 //Set right-to-left text direction for RTL text
@@ -1065,8 +1065,7 @@ format.Alignment = PdfTextAlignment.Right;
 format.ParagraphIndent = 35f;
 
 //Read the text from file
-FileStream rtlText = new FileStream("Arabic.txt", FileMode.Open, FileAccess.Read);
-StreamReader reader = new StreamReader(rtlText, Encoding.Unicode);
+StreamReader reader = new StreamReader("Arabic.txt", Encoding.Unicode);
 string text = reader.ReadToEnd();
 reader.Dispose();
 //Draw string with right-to-left format
@@ -1451,8 +1450,7 @@ PdfPage page = document.Pages.Add();
 //Create PDF graphics for the page
 PdfGraphics graphics = page.Graphics;
 //Read the long text from the text file
-FileStream inputStream = new FileStream("Input.txt", FileMode.Open, FileAccess.Read);
-StreamReader reader = new StreamReader(inputStream, Encoding.ASCII);
+StreamReader reader = new StreamReader("Input.txt", Encoding.ASCII);
 string text = reader.ReadToEnd();
 reader.Dispose();
 const int paragraphGap = 10;
@@ -2022,9 +2020,8 @@ PdfPage page = doc.Pages.Add();
 
 //Create PDF graphics for the page
 PdfGraphics graphics = page.Graphics;
-FileStream fontStream = new FileStream("tahoma.ttf", FileMode.Open, FileAccess.Read);
 //Create a new PDF font instance
-PdfFont pdfFont = new PdfTrueTypeFont(fontStream, 10);
+PdfFont pdfFont = new PdfTrueTypeFont("tahoma.ttf", 10);
 //Set the format for string
 PdfStringFormat format = new PdfStringFormat();
 //Set the format as complex script layout type
@@ -2219,8 +2216,7 @@ PdfDocument document = new PdfDocument();
 PdfPage page = document.Pages.Add();
 
 //Create font
-FileStream fontFileStream = new FileStream("Font.otf", FileMode.Open, FileAccess.Read);
-PdfFont font = new PdfTrueTypeFont(fontFileStream, 14);
+PdfFont font = new PdfTrueTypeFont("Font.otf", 14);
 //Text to draw
 string text = "Syncfusion Essential PDF is a.NET Core PDF library used to create, read, and edit PDF files in any application";
 //Create a brush
@@ -2321,14 +2317,11 @@ PdfPage page = doc.Pages.Add();
 
 //Create PDF graphics for the page
 PdfGraphics graphics = page.Graphics;
-FileStream fontStream = new FileStream("tahoma.ttf", FileMode.Open, FileAccess.Read);
-FileStream fontStream1 = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
-FileStream fontStream2 = new FileStream("Calibri.ttf", FileMode.Open, FileAccess.Read);
 //Create a new PDF font instance
-PdfFont font = new PdfTrueTypeFont(fontStream, 8);
-PdfFont font1 = new PdfTrueTypeFont(fontStream1, 20);
+PdfFont font = new PdfTrueTypeFont("tahoma.ttf", 8);
+PdfFont font1 = new PdfTrueTypeFont("Arial.ttf", 20);
 PdfFont font2 = new PdfStandardFont(PdfFontFamily.Helvetica,16);
-PdfFont font3 = new PdfTrueTypeFont(fontStream2, 25);       
+PdfFont font3 = new PdfTrueTypeFont("Calibri.ttf", 25);       
 //Set the format for string
 PdfStringFormat format = new PdfStringFormat();
 //Set the line alignment
