@@ -402,7 +402,7 @@ PdfPage page = document.Pages.Add();
 //Create PDF graphics for the page.
 PdfGraphics graphics = page.Graphics;
 //Provide the path of the local *.ttf file
-PdfFont font = new PdfTrueTypeFont(new Font("Arial.ttf", 14));
+PdfFont font = new PdfTrueTypeFont("Arial.ttf", 14);
 //Draw the text.
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
 
