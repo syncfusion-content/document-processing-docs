@@ -70,15 +70,15 @@ Image feature allows you to view and insert an image in a spreadsheet, and you c
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/image-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/image-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/image-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/image-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/image-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/image-cs1" %}
 
 ### Limitations of Image
 
@@ -128,15 +128,15 @@ The available arguments in the `ChartModel` are:
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/chart-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/chart-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/chart-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/chart-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/chart-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/chart-cs2" %}
 
 ### Delete Chart
 
@@ -159,15 +159,15 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/chart-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/chart-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/chart-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/chart-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/chart-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/chart-cs1" %}
 
 #### Customization of line chart markers
 
@@ -175,15 +175,15 @@ Using the [`actionBegin`](https://ej2.syncfusion.com/angular/documentation/api/s
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/chart-cs3/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/chart-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/chart-cs3/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/chart-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/chart-cs3" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/chart-cs3" %}
 
 ### Limitations of Chart
 

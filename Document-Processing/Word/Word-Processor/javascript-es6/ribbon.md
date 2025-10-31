@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ribbon in JavaScript (ES6) Document editor control | Syncfusion
+title: Ribbon in JavaScript (ES6) Document editor | Syncfusion
 description: Learn here all about the Ribbon UI in Syncfusion JavaScript (ES6) Document editor control, how to switch between Ribbon and Toolbar modes.
 platform: document-processing
 control: Ribbon
@@ -16,7 +16,7 @@ You can switch between the classic **Toolbar** and the new **Ribbon** UI, and yo
 
 ## Enable Ribbon Mode
 
-To enable Ribbon in Document Editor, use the [`toolbarMode`](https://ej2.syncfusion.com/documentation/api/document-editor-container#toolbarmode) property of `DocumentEditorContainer`. The available toolbar modes are:
+To enable Ribbon in Document Editor, use the [`toolbarMode`](https://ej2.syncfusion.com/documentation/api/document-editor-container/#toolbarmode) property of `DocumentEditorContainer`. The available toolbar modes are:
 
 - **'Toolbar'** - The traditional toolbar UI.
 - **'Ribbon'** - The Ribbon UI, which provides a tabbed interface with grouped commands.
@@ -32,7 +32,7 @@ import { DocumentEditorContainer, Ribbon } from '@syncfusion/ej2-documenteditor'
 DocumentEditorContainer.Inject(Ribbon);
 // Initialize the Document Editor Container with Ribbon mode enabled
 var container = new ej.documenteditor.DocumentEditorContainer({
-    enableToobar: true,
+    enableToolbar: true,
     toolbarMode: 'Ribbon', // Options: 'Ribbon' or 'Toolbar'
     height: '590px'
 });
@@ -58,7 +58,7 @@ import { DocumentEditorContainer, Ribbon } from '@syncfusion/ej2-documenteditor'
 DocumentEditorContainer.Inject(Ribbon);
 // Initialize the Document Editor Container with Ribbon mode enabled
 var container = new ej.documenteditor.DocumentEditorContainer({
-    enableToobar: true,
+    enableToolbar: true,
     toolbarMode: 'Ribbon', // Options: 'Ribbon' or 'Toolbar'
     ribbonLayout: 'Classic', // Options: 'Simplified' or 'Classic'
     height: '590px'

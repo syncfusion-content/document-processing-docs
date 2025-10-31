@@ -1,10 +1,9 @@
 ---
 layout: post
 title: Organize Pages with EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about Organize Pages in ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Organize Pages in ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
@@ -16,7 +15,7 @@ The PDF Viewer allows you to manage your PDF documents efficiently by organizing
 
 To access the organize pages feature, simply open the PDF document in the PDF Viewer and navigate to the left vertical toolbar. Look for the `Organize Pages` option to begin utilizing these capabilities.
 
-![Alt text](../images/organize-page.png)
+![Alt text](./images/organize-page.png)
 
 The page organization support enables you to perform various actions such as rotating, rearranging, inserting, copying, and deleting pages within a PDF document using organize pages dialog.
 
@@ -33,7 +32,7 @@ You can easily change the sequence of pages within your document using the drag 
 
 * `Drag and drop`: Click and drag a page thumbnail to the desired position within the document, then release it to rearrange the page order.
 
-![Alt text](../images/rotate-rearrange.gif)
+![Alt text](./images/rotate-rearrange.gif)
 
 ### Inserting new pages
 
@@ -55,7 +54,7 @@ Duplicate the pages within your PDF document effortlessly:
 
 * `Select pages to copy`: Click on the page thumbnails you wish to duplicate. Use the copy option to create duplicates. When a page is copied, the duplicate is automatically added to the right of the selected page. Multiple copies can be made using the toolbar action.
 
-![Alt text](../images/insert-delete-copy.gif)
+![Alt text](./images/insert-delete-copy.gif)
 
 ### Importing a PDF Document
 
@@ -63,13 +62,13 @@ Seamlessly import a PDF document into your existing document:
 
 * `Import PDF document`: Click the **Import Document** button to import a PDF. If a page is selected, the imported document’s thumbnail will be inserted to the right of the selected page. If multiple or no pages are selected, the thumbnail will be added as the first page. When **Save** or **Save As** is clicked, the imported PDF will be merged with the current document. You can insert a blank page to the left or right of the imported thumbnail, delete it, or drag and drop it to reposition as needed.
 
-![Alt text](../images/import.gif)
+![Alt text](./images/import.gif)
 
 ### Selecting all pages
 
 Make comprehensive adjustments by selecting all pages simultaneously. This facilitates efficient editing and formatting across the entire document.
 
-![Alt text](../images/selectall.png)
+![Alt text](./images/selectall.png)
 
 ### Zooming Page Thumbnails
 
@@ -81,7 +80,7 @@ Adjust the size of page thumbnails within the organizer panel for better visibil
 
 This feature is especially useful when working with documents containing complex layouts or small details that need careful examination during organization.
 
-![Alt text](../images/zoomOrganize.png)
+![Alt text](./images/zoomOrganize.png)
 
 ### Real-time updates
 
@@ -302,7 +301,7 @@ The following keyboard shortcuts are available at the organize pages dialog.
 * **Ctrl+Y** : Redo the action that was undone
 * **Ctrl+Scroll** : Zoom in and zoom out page thumbnails for better visibility.
 
-![Alt text](../images/undo-redo.png)
+![Alt text](./images/undo-redo.png)
 
 #### Conclusion
 

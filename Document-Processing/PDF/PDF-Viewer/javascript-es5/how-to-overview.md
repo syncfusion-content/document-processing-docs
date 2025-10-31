@@ -1,7 +1,7 @@
 ---
 layout: post
-title: FAQ Section in PDF Viewer control | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of in PDF Viewer control.
+title: FAQ Section in JavaScript PDF Viewer control | Syncfusion
+description: In this section, you can know about the various questions asked about manipulation of JavaScript PDF Viewer control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
