@@ -26,8 +26,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 	
 	//Create for the given data
@@ -35,13 +34,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CreateTable.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/CreateTable.xlsx"));
 	#endregion
-
-	//Dispose streams
-	inputStream.Dispose();
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -89,8 +83,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Accessing first table in the sheet
@@ -101,13 +94,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ReadTable.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ReadTable.xlsx"));
 	#endregion
-
-	//Dispose streams
-	inputStream.Dispose();
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -163,8 +151,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Creating a table
@@ -175,13 +162,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/FormatTable.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/FormatTable.xlsx"));
 	#endregion
-
-	//Dispose streams
-	inputStream.Dispose();
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -323,12 +305,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CustomTableStyle.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/CustomTableStyle.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -540,8 +518,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Creating a table
@@ -552,13 +529,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/InsertTableColumn.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/InsertTableColumn.xlsx"));
 	#endregion
-
-	//Dispose streams
-	inputStream.Dispose();
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -622,8 +594,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Creating a table
@@ -637,13 +608,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/AddTotalRow.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/AddTotalRow.xlsx"));
 	#endregion
-
-	//Dispose streams
-	inputStream.Dispose();
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -742,9 +708,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Auto-fits the columns
   worksheet.UsedRange.AutofitColumns();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(stream);
+  //Saving the workbook 
+  workbook.SaveAs("Output.xlsx");
 }
 
 //Helper method to get data table using OLEDB connection
@@ -911,8 +876,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Excel2016;
-  FileStream inputStream = new FileStream("ExistingDataSource.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorkbook workbook = application.Workbooks.Open("ExistingDataSource.xlsx");
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Accessing a connection from the workbook
@@ -924,9 +888,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     listObject.Refresh();
   }
 
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -988,8 +951,7 @@ The following code example illustrates how to set parameter through **prompt** e
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("QueryTable.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("QueryTable.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   ///Get query table from list objects.
@@ -1004,10 +966,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Set parameter value through prompt.
   parameter.SetParam(ExcelParameterType.Prompt, "Prompt");
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("PromptParameter.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook
+  workbook.SaveAs("PromptParameter.xlsx");
 }
 {% endhighlight %}
 
@@ -1089,8 +1049,7 @@ The following code example illustrates how to set parameter through **constant**
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("QueryTable.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("QueryTable.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   ///Get query table from list objects.
@@ -1105,10 +1064,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Set constant to the parameter value.
   parameter.SetParam(ExcelParameterType.Constant, 30);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("ConstantParameter.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook 
+  workbook.SaveAs("ConstantParameter.xlsx");
 }
 {% endhighlight %}
 
@@ -1175,8 +1132,7 @@ The following code example illustrates how to set parameter type to a specific *
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("QueryTable.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("QueryTable.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Get query table from list objects.
@@ -1191,10 +1147,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Set range to the parameter value.
   parameter.SetParam(ExcelParameterType.Range, worksheet.Range["H1"]);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("RangeParameter.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook 
+  workbook.SaveAs("RangeParameter.xlsx");
 }
 {% endhighlight %}
 

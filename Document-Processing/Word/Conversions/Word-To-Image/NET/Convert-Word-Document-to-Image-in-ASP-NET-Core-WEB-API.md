@@ -115,7 +115,7 @@ N> Ensure your ASP.NET Core Web API is running on the specified port before runn
 
 Step 2: Add the below code snippet in the **Program.cs** file for accessing the Web API using HTTP requests. 
 
-This method sends a GET request to the Web API endpoint to retrieve and save the generated image.
+This method sends a GET request to the Web API endpoint to retrieve and save the converted image.
 
 {% tabs %}
 

@@ -1,19 +1,18 @@
 ---
 layout: post
-title: Magnification in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Magnification in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Magnification in JavaScript PDF Viewer | Syncfusion
+description: Learn how to enable and use magnification in the Syncfusion JavaScript PDF Viewer, including Zoom In, Zoom Out, Fit to Page, and Fit to Width options.
 platform: document-processing
-control: Magnification
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Magnification in Javascript Pdfviewer control
+# Magnification in JavaScript PDF Viewer
 
-The magnification tools of the PDF Viewer contains ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth tools in the default toolbar. The PDF Viewer also has an option to show or hide the magnification tools in the default toolbar.
+The PDF Viewer includes magnification tools in the default toolbar: Zoom In, Zoom Out, Zoom (to a specific value), Fit to Page, and Fit to Width. The toolbar can be configured to show or hide these tools.
 
-The following code snippet describes how to enable the magnification in PDF Viewer.
+Use the following configuration to enable magnification in the PDF Viewer:
 
 ```html
 {% raw %}
@@ -69,9 +68,9 @@ The following magnification options are available in the default toolbar of PDF 
 * [**FitPage**](https://ej2.syncfusion.com/documentation/api/pdfviewer/magnification/#fittopage):- Fits the page width with in the available view port size.
 * [**FitWidth**](https://ej2.syncfusion.com/documentation/api/pdfviewer/magnification/#fittowidth):- Fits the view port width based on the page content size.
 
-![Alt text ](./images/zoom.png)
+![Magnification tools in PDF Viewer](./images/zoom.png)
 
->PDF Viewer can support the zoom value ranges from 10 to 400.
+> The PDF Viewer supports zoom values from 10% to 400%.
 
 ## See also
 

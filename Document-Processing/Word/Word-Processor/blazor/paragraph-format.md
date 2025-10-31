@@ -63,8 +63,11 @@ await documentEditor.Editor.ToggleTextAlignmentAsync(TextAlignment.Center);
 You can define the line spacing and its type for selected paragraphs using the following sample code.
 
 ```csharp
+// Set line spacing type
 await documentEditor.Selection.ParagraphFormat.SetLineSpacingTypeAsync(LineSpacingType.AtLeast);
-await documentEditor.Selection.ParagraphFormat.SetLineSpacingAsync(6);
+// Set line spacing value (supports both integer and float)
+await documentEditor.Selection.ParagraphFormat.SetLineSpacingAsync(6);     // Integer value
+await documentEditor.Selection.ParagraphFormat.SetLineSpacingAsync(6.5);   // Float value
 ```
 
 ## Paragraph spacing

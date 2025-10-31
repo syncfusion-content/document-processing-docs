@@ -1,35 +1,34 @@
 ---
 layout: post
-title: Feature module in Typescript Pdfviewer Control | Syncfusion
-description: Learn here all about Feature module in Syncfusion Essential Typescript Pdfviewer control, its elements and more.
+title: Feature modules in TypeScript PDF Viewer | Syncfusion
+description: Learn to inject feature modules in Syncfusion TypeScript PDF Viewer to enable toolbar, search, forms, and more.
 platform: document-processing
-control: Feature module
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature module in Typescript Pdfviewer Control
+# Feature modules in TypeScript PDF Viewer
 
-The PDF Viewer features are segregated into individual feature-wise modules to enable selectively referencing in the application. The required modules should be injected to extend its functionality. The following are the selective modules of PDF Viewer that can be included as required:
+The PDF Viewer features are provided as individual modules, allowing applications to include only what is needed. Inject the required modules to enable functionality, then configure the corresponding properties on the PDF Viewer instance.
 
-The available PdfViewer modules are:
+Available PDF Viewer modules:
 
-* **Toolbar**:- Built-in toolbar for better user interaction.
-* **Magnification**:- Perform zooming operation for better viewing experience.
-* **Navigation**:- Easy navigation across the PDF pages.
-* **LinkAnnotation**:- Easy navigation within and outside of the PDF document.
-* **ThumbnailView**:- Easy navigation with in the PDF document.
-* **BookmarkView**:- Easy navigation based on the bookmark content of the PDF document.
-* **TextSelection**:- Select and copy text from a PDF file.
-* **TextSearch**:- Search a text easily across the PDF document.
-* **Print**:- Print the entire document or a specific page directly from the browser.
-* **Annotation**:- Annotations can be added or edited in the PDF document.
-* **FormFields**:- Preserve the form fields in the PDF document.
-* **FormDesigner**:- Form fields can be added or edited in the PDF document.
+* [**Toolbar**](./toolbar-customization): Built-in toolbar for user interaction.
+* [**Magnification**](./magnification): Perform zoom operations for a better viewing experience.
+* [**Navigation**](./interactive-pdf-navigation/page-navigation): Navigate across pages.
+* [**LinkAnnotation**](./interactive-pdf-navigation/table-of-content-navigation): Navigate within the document or to external destinations via hyperlinks.
+* [**ThumbnailView**](./interactive-pdf-navigation/page-thumbnail-navigation): Navigate within the document using page thumbnails.
+* [**BookmarkView**](./interactive-pdf-navigation/bookmark-navigation): Navigate using document bookmarks (table of contents).
+* [**TextSelection**](./textselection): Select and copy text from the document.
+* [**TextSearch**](./text-search): Search for text across the document.
+* [**Print**](./print): Print the entire document or specific pages directly from the browser.
+* [**Annotation**](./annotations/text-markup-annotation): Add and edit annotations.
+* [**FormFields**](./form-designer/create-programmatically): Work with form fields in the document.
+* [**FormDesigner**](./form-designer/create-programmatically): Add or edit form fields in the document.
 
->In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a PDF Viewer instance.
-Refer to the following table.
+> In addition to injecting the required modules in an application, enable the corresponding properties to activate features on a PDF Viewer instance.
+Refer to the following table:
 
 | Module | Dependent modules to be injected for extending the functionality of PDF Viewer in your application | Property to enable the functionality for a PDF Viewer instance |
 |---|---|---|

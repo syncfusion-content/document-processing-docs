@@ -37,20 +37,20 @@ The following code example shows `filter` functionality in the Spreadsheet contr
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/filter-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/filter-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/filter-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/filter-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/filter-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/filter-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/filter-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/filter-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/filter-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/filter-cs1" %}
 
 ## Filter by cell value
 
@@ -92,20 +92,20 @@ The following code example shows how to get the filtered rows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/filter-cs2/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/filter-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/filter-cs2/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/filter-cs2/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/filter-cs2/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/filter-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/filter-cs2/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/filter-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/filter-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/filter-cs2" %}
 
 ## Limitations
 
