@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Save Button to Toolbar in TypeScript PDF Viewer | Syncfusion
+title: Add Save button to the built-in toolbar in TypeScript PDF Viewer | Syncfusion
 description: Learn how to add, show, hide, enable, and disable a custom Save button in the built-in toolbar of the TypeScript PDF Viewer component.
 platform: document-processing
 control: Toolbar

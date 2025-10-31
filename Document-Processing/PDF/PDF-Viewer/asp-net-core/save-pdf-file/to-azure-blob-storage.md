@@ -4,7 +4,7 @@ title: Save PDF files to Azure Blob Storage in ASP.NET Core PDF Viewer | Syncfus
 description: Learn how to save PDF files to Azure Blob Storage using the Syncfusion ASP.NET Core PDF Viewer component in standalone and server-backed configurations.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
+
 documentation: ug
 ---
 
