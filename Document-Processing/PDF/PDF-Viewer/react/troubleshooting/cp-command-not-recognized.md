@@ -1,26 +1,31 @@
 ---
 layout: post
-title: Troubleshoot 'cp' is not recognized as a command in React PDF Viewer control | Syncfusion
-description: Learn here all about how to solve 'cp' is not recognized as a command in Syncfusion Essential JS 2 and more.
+title: Fix "cp is not recognized" on Windows for the React PDF Viewer
+description: Use Windows-friendly copy commands to replace Unix cp when copying ej2-pdfviewer-lib assets for the React PDF Viewer—examples for CMD (xcopy) and PowerShell (Copy-Item).
 platform: document-processing
 control: PDF Viewer
-publishingplatform: React
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Troubleshoot error 'cp' is not recognized as a command
 
-The error message you're seeing, "'cp' is not recognized as an internal or external command," is because the `cp` command you're trying to use is not recognized on Windows command prompt.
+The Unix `cp` command is not available in the Windows Command Prompt. Use one of the following Windows-native alternatives to copy the required assets.
 
-On Windows, you should use the `copy` command to copy files and directories instead of `cp`. The equivalent command in Windows to copy a directory and its contents recursively is:
+- CMD (xcopy) — recursive directory copy:
 
 ```batch
 xcopy /s /e /i .\node_modules\@syncfusion\ej2-pdfviewer\dist\ej2-pdfviewer-lib public\ej2-pdfviewer-lib
 ```
 
-Here, `/s` indicates that you want to copy directories and subdirectories recursively. Also, note that Windows uses backslashes `\` as path separators, not forward slashes `/`.
+- PowerShell (Copy-Item) — recursive directory copy:
 
-Make sure to run this command in the appropriate directory where you want to perform the copy operation.
+```powershell
+Copy-Item .\node_modules\@syncfusion\ej2-pdfviewer\dist\ej2-pdfviewer-lib -Destination .\src\ej2-pdfviewer-lib -Recurse -Force
+```
 
-**Note:** If you encounter other issues or error messages while working with the Windows Command Prompt, make sure to double-check your command syntax and file paths for accuracy. Additionally, ensure that you have the necessary permissions to perform the copy operation in the specified directories.
+Notes:
+- Run the command from the project root so the node_modules path resolves correctly.
+- Windows paths use backslashes (\). Adjust paths if your project structure differs.
+- Ensure sufficient permissions to write to the destination folder.
+
+For cross-platform scripts in package.json, consider tools such as "shx" or "copyfiles" to avoid OS-specific commands.

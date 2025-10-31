@@ -3,8 +3,7 @@ layout: post
 title: Toolbar in Javascript Pdfviewer control | Syncfusion
 description: Learn here all about Toolbar in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Toolbar
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

@@ -1,35 +1,30 @@
 ---
 layout: post
-title: Save PDF To AAD in EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about How to Save Pdf To AAD in ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Save PDF files to Azure Active Directory (AAD) in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to load and save PDF files with Azure Active Directory (AAD) using the Syncfusion ASP.NET Core PDF Viewer component and a server-backed web service.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Save PDF To Azure Active Directory in Viewer
+# Save PDF files to Azure Active Directory (AAD)
 
 ### **Overview**
 
-The Syncfusion PDF Viewer allows you to load and save PDF files directly from Azure Active Directory (AAD). Below are the steps to securely load and store PDF documents from and to AAD using the PDF Viewer.
+The ASP.NET Core PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps describe how to securely load and store PDF documents using a server-backed web service.
 
-### **Steps to Open the PDF File from Azure Active Directory**
+### **Step 1: Register an application in Azure Active Directory (AAD)**
 
----
-
-### **Step 1: Register an Application in Azure Active Directory (AAD)**
-
-1. **Go to the Azure Portal**:
+1. **Go to the Azure portal**:
    - Navigate to [Azure Portal](https://portal.azure.com).
 
-2. **Register your Application**:
+2. **Register the application**:
    - In the Azure portal, go to **Azure Active Directory** > **App registrations** > **New registration**.
    - Register your application and note down the **Application (client) ID** and **Directory (tenant) ID**.
 
    ![app-registration](../images/app-registration.png)
 
-3. **Create a Client Secret**:
+3. **Create a client secret**:
    - In the registered application, go to **Certificates & secrets**.
    - Click **New client secret**.
    - Provide a description and set an expiration period.
@@ -38,24 +33,20 @@ The Syncfusion PDF Viewer allows you to load and save PDF files directly from Az
 
    ![client-secret](../images/client-secret.png)
 
----
+### **Step 2: Create the Azure Storage account**
 
-### **Step 2: Create the Azure Storage Account**
-
-1. **Create a Storage Account**:
+1. **Create a storage account**:
    - In the Azure portal, use the search bar to search for **Storage accounts**.
    - Create a new storage account by filling in the required details (e.g., name, location, resource group, etc.).
 
     ![storage-account](../images/storage-account.png)
 
----
+### **Step 3: Assign a role to the application**
 
-### **Step 3: Assign Role to the Application**
-
-1. **Go to your Storage Account**:
+1. **Go to the storage account**:
    - Navigate to **Access control (IAM)** > **Add role assignment** in your Azure Storage Account.
 
-2. **Assign Role**:
+2. **Assign a role**:
    - Assign the **Storage Blob Data Contributor** role to your registered application.
    - In the **Assign access to** dropdown, select **User, group, or service principal**.
    - Click on **Select members** and search for your registered application by name or client ID.
@@ -63,23 +54,49 @@ The Syncfusion PDF Viewer allows you to load and save PDF files directly from Az
    - Click **Review + assign** to finalize the role assignment.
 
     ![add-role](../images/add-role.png)
----
 
-### **Step 4: Upload the PDF Document to the Azure Storage Account**
+### **Step 4: Upload the PDF document to Azure Storage**
 
-1. **Navigate to Data Storage**:
+1. **Navigate to Data storage**:
    - In the Azure portal, go to **Data storage** > **Containers**.
 
-2. **Upload the PDF File**:
+2. **Upload the PDF file**:
    - Create a new container and upload the PDF document you want to access in the PDF Viewer.
 
     ![upload-pdf](../images/upload-pdf.png)
----
 
-### **Step 5: ASP.NET Core PDF Viewer Control Configuration**
-1. Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed) to create a simple PDF Viewer sample.
+### **Step 5: Server-side configuration**
 
-2. Add the following code snippet in `Index.cshtml.cs`.
+1. **Configure server-side code**:
+   - Open the server-side application (e.g., ASP.NET Core) and configure the following details in the `PdfViewerController` file:
+     - `tenantId` (your Azure AD tenant ID),
+     - `clientId` (your registered application client ID),
+     - `clientSecret` (your registered application client secret),
+     - `blobServiceEndpoint` (your storage account blob service URL),
+     - `containerName` (your container name in Azure Blob Storage).
+
+2. **Run the web service**:
+   - After configuring the necessary details, run the web service to make it accessible.
+
+### **Client-side configuration**
+
+1. **Run the ASP.NET Core sample**:
+   - Start the ASP.NET Core (Razor) sample that includes the Syncfusion PDF Viewer.
+
+2. **Load a PDF from AAD**:
+   - When the user clicks the **Load from AAD** button, the client-side JavaScript will make an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.
+   - The server will retrieve the PDF from Azure, convert it to a Base64 string, and return it to the client.
+
+3. **Display the PDF in the PDF Viewer**:
+   - Once the Base64 string is received, the PDF Viewer will load the PDF using the `viewer.load()` method.
+
+### **Save the PDF document to Azure**
+
+1. Save PDF to AAD:
+   - The user can click the **Save to AAD** button to upload any modifications to the PDF back to Azure Blob Storage.
+   - This action sends the modified PDF to the server, where it is converted into a byte array and saved to the specified Azure Blob container.
+
+### **Server-side code snippets**
 
 {% tabs %}
 {% highlight c# tabtitle="~/Index.cshtml.cs" %}
@@ -134,16 +151,6 @@ string containerName = "your-container-name";
 {% endhighlight %}
 {% endtabs %}
 
-3. Configure Server-Side Code:
-   - Open the server-side application (e.g., ASP.NET Core) and configure the following details in the `PdfViewerController` file:
-     - `tenantId` (your Azure AD tenant ID),
-     - `clientId` (your registered application client ID),
-     - `clientSecret` (your registered application client secret),
-     - `blobServiceEndpoint` (your storage account blob service URL),
-     - `containerName` (your container name in Azure Blob Storage).
-
-4. Add the following code snippet in `Index.cshtml`.
-
 {% tabs %}
 {% highlight c# tabtitle="~/Index.cshtml" %}
 
@@ -172,7 +179,7 @@ string containerName = "your-container-name";
         // Handle the Load From AAD button click
         document.getElementById('loadFromAADButton').addEventListener('click', function () {
             const xhr = new XMLHttpRequest();
-            xhr.open('GET', `/Index/LoadFromAAD?fileName=1Page.pdf`, true);
+            xhr.open('GET', `/Index/LoadFromAAD?fileName=Test.PDF`, true);
             xhr.onreadystatechange = () => {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     const data = xhr.responseText; // Get the response (assumed to be the PDF data or URL)
@@ -200,16 +207,5 @@ string containerName = "your-container-name";
 
 {% endhighlight %}
 {% endtabs %}
-
-5. Run the Application
-    - Build and run your Core application. The PDF Viewer will be displayed with Load from AAD and Save to AAD buttons.
-
-6. Load PDF from AAD
-    - Click the Load from AAD button.
-    - The server fetches the PDF from Azure Blob Storage and loads it into the Syncfusion PDF Viewer.
-
-7. Save PDF to AAD
-    - Click the Save to AAD button.
-    - The server uploads the modified PDF back to Azure Blob Storage.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aad).

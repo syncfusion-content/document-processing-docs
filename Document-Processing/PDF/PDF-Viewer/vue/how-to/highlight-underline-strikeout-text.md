@@ -15,7 +15,9 @@ Step 1: Follow the steps in the [Get started with Vue PDF Viewer](https://help.s
 
 Step 2: Add the following Vue component snippet to enable highlight, underline, and strikeout actions using button clicks.
 
-```vue
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
 <template>
   <div>
     <div style="margin-bottom:10px;">
@@ -69,6 +71,8 @@ export default {
   }
 };
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 For the list of available annotation modes, see the [Annotation API](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/).

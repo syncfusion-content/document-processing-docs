@@ -1,23 +1,25 @@
 ---
 layout: post
-title: Load balancing environment in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to load balancing environment in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Configure Redis for Load Balancing in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to configure Redis for load balancing with the Syncfusion ASP.NET MVC PDF Viewer, ensuring efficient document processing in a distributed environment.
 platform: document-processing
-control: Load balancing environment
+control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
+# Configure Redis for Load Balancing in ASP.NET MVC PDF Viewer
 
-# Achieve Load balancing environment in MVC framework
+This document explains how to configure Redis for load balancing with the Syncfusion ASP.NET MVC PDF Viewer. This setup ensures efficient document processing and caching across multiple server instances.
 
-The PDF Viewer server library allows you to achieve a Load balancing environment in the MVC framework using the .NET 4.6.2 framework with the help of **StackExchange Redis package V1.2.6**.
+## Prerequisites
 
-## Steps to achieve load balancing environment in the MVC framework
+*   **Install Redis:** Ensure you have Redis installed and running on your server.
+*   **Install NuGet Package:** Install the [`StackExchange.Redis.StrongName`](https://www.nuget.org/packages/StackExchange.Redis.StrongName) NuGet package in your web-service project.
 
-**Step 1**: Install the [StackExchange.Redis.StrongName](https://www.nuget.org/packages/StackExchange.Redis.StrongName) NuGet in the web-service sample.
+## Steps to Configure Redis for Load Balancing
 
-**Step 2:** Create a new class in the web-service project (Example: CacheManager.cs) and implement the **Syncfusion.EJ2.PdfViewer.ICacheManager** interface in the class.
+**Step 1:** Create a new class in your web-service project (e.g., `CacheManager.cs`) and implement the `Syncfusion.EJ2.PdfViewer.ICacheManager` interface.
 
 ```cs
 
@@ -145,6 +147,13 @@ public object Load(Dictionary&lt;string, string&gt; jsonObject)
 
 ```
 
+**Important Notes:**
+
+*   Replace `"YOUR_REDIS_CONNECTION_STRING"` with your actual Redis connection string. It's highly recommended to load this from a configuration file (e.g., `Web.config` or `appsettings.json`) rather than hardcoding it.
+*   The `cacheSlidingExpiration` value is in minutes. Setting it to `0` will use the default 24-hour expiration.
+*   Ensure the `GetDocumentPath` method is correctly implemented in your controller to resolve document paths.
+*   Apply the `CacheManager` initialization logic to all relevant controller methods that process PDF documents.
+
 Find the Web-service sample and Nuget package below:
-* [Web service](https://www.syncfusion.com/downloads/support/directtrac/general/ze/PdfViewer_WebAPI_Service_(3)1568224382.zip)
-* [Nuget](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Syncfusion.EJ2.PdfViewer.AspNet.Mvc5.19.1.0.59-1399631455.zip)
+*   [Web service](https://www.syncfusion.com/downloads/support/directtrac/general/ze/PdfViewer_WebAPI_Service_(3)1568224382.zip)
+*   [Nuget](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Syncfusion.EJ2.PdfViewer.AspNet.Mvc5.19.1.0.59-1399631455.zip)

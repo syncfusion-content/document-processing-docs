@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Close Comment Panel in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn here all about Close Comment Panel in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Close Comment Panel in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to programmatically close the comment panel in the Syncfusion ASP.NET MVC PDF Viewer using JavaScript to enhance UI control or user experience.
 platform: document-processing
-control: Close Comment Panel
-publishingplatform: document-processing
+control: PDF Viewer
 documentation: ug
 ---
 
+# Close the comment panel programmatically
 
-# Close the comment panel
+The Syncfusion ASP.NET MVC PDF Viewer allows you to programmatically close the comment panel using a JavaScript function. This can be useful for customizing the user interface, responding to specific user actions, or enhancing accessibility by providing alternative controls.
 
-The PDF Viewer server library allows you to close the comment panel programmatically using the external button event.
+N> The comment panel must already be open for this action to have an effect.
 
-The following steps are used to close the comment panel programmatically in PDF Viewer,
+To close the comment panel programmatically, follow these steps:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Create an ASP.NET MVC PDF Viewer sample by following the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started).
 
-**Step 2:** Add the following code snippet to close the comment panel using button click event
+**Step 2:** Add a button and the following JavaScript code to your Razor view (e.g., `Index.cshtml`) to close the comment panel on click:
 
 ```html
 

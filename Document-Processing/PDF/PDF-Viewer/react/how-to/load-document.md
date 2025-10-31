@@ -1,28 +1,27 @@
 ---
 layout: post
-title: Load document in React Pdfviewer component | Syncfusion
-description: Learn here all about Load document in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Load document
+title: Load documents dynamically in React PDF Viewer | Syncfusion
+description: Learn how to load or switch PDF documents dynamically in the Syncfusion React PDF Viewer using the load method.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Load document in React Pdfviewer component
+# Load documents dynamically in React PDF Viewer
 
-The PDF Viewer library allows to switch or load PDF documents dynamically after the initial load operation. To achieve this, load the PDF document as a base64 string or the file name into the PDF Viewer control using the  [**Load()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#load) method dynamically.
+Load or switch PDF documents dynamically after the initial load. Use the [load](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#load) method to load a PDF by Base64 string or file name.
 
 The following steps are used to load the PDF document dynamically.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in the [Get started with React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) guide to create a sample.
 
-**Step 2:** Use the following code snippet to load the PDF document using a base64 string.
+**Step 2:** Use the following code to load a PDF using a Base64 string.
 
 ```
   <button id='load1'>LoadDocumentFromBase64</button>
 
   <script>
-    // Load PDF document from Base64 string
+    // Load PDF document from a Base64 string
   function load_1(){
     var viewer = document.getElementById('container').ej2_instances[0];
     viewer.load('data:application/pdf;base64,'+ AddBase64String, null);
@@ -30,13 +29,13 @@ The following steps are used to load the PDF document dynamically.
   </script>
 ```
 
-**Step 3:** Use the following code snippet to the load PDF document the using document name.
+**Step 3:** Use the following code to load a PDF by document name.
 
 ```
   <button id='load2'>LoadDocument</button>
 
   <script>
-  // Load PDF document using file name
+  // Load PDF document using a file name
   function load_2(){
     var viewer = document.getElementById('container').ej2_instances[0];
     viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
@@ -64,7 +63,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
             <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -109,4 +108,4 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-Find the sample [how to load PDF documents using documentPath](https://stackblitz.com/edit/react-nszkto?file=src%2Findex.js)
+Find the sample: [Load PDF documents dynamically](https://stackblitz.com/edit/react-nszkto?file=src%2Findex.js)

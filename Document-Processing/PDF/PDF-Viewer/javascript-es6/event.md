@@ -819,7 +819,7 @@ The [keyboardCustomCommands](https://ej2.syncfusion.com/javascript/documentation
 When it triggers
 - After registering gestures in commandManager.keyboardCommand. For example, pressing Shift + Alt + G or Shift + Alt + H triggers the event. Use this to handle custom keyboard shortcuts.
 
-Refer to [Keyboard interaction](./accessibility.md#keyboard-interaction) for details about adding and handling custom shortcut keys.
+Refer to [Keyboard interaction](./accessibility#keyboard-interaction) for details about adding and handling custom shortcut keys.
 Example:
 
 ```typescript

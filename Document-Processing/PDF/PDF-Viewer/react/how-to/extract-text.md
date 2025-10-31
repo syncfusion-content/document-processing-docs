@@ -1,39 +1,39 @@
 ---
 layout: post
-title: Extract Text in React Pdfviewer component | Syncfusion
-description: Learn about the Extract Text in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Extract Text
+title: Use extractText in React PDF Viewer | Syncfusion
+description: Learn how to use the extractText method in the Syncfusion React PDF Viewer to extract text and bounds from one or more pages.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Extract Text Method in Syncfusion PdfViewer Control
+# Extract text using extractText in React PDF Viewer
 
-The `extractText` method of the Syncfusion PdfViewer control enables text extraction from one or more pages in a PDF document. This method is useful for retrieving the text content along with its associated data, such as the bounds of each text element.
+The `extractText` method extracts text from one or more pages and can return plain text or text with bounds for each element.
 
-### extractText Method
-The extractText method retrieves text data from the specified page(s) of a PDF document. It can extract text from one page, a range of pages, or even provide detailed text data, depending on the options specified.
+### extractText method
+Retrieves text data from one page or a range of pages based on the specified options.
 
 #### Parameters:
 **startIndex:** The starting page index for text extraction (0-based index).
 
-**endIndex Or isOptions:** This can either be the ending page index for the text extraction (for extracting from multiple pages) or an option specifying text extraction criteria for a single page.
+**endIndex or isOptions:** Either the ending page index (for multiple pages) or an option specifying extraction criteria for a single page.
 
 **options (optional):** Specifies additional options, such as extracting plain text `TextOnly` or more detailed text data `TextAndBounds`. You can specify various options for text extraction. These options determine whether you want to extract plain text, text with bounds, or detailed text data.
 
-***TextOnly:*** Extracts only the plain text content without bounds or additional information.
-
-***TextAndBounds:*** Extracts text content along with its bounds (coordinates) within the PDF.
+- TextOnly: Extracts only plain text without bounds.
+- TextAndBounds: Extracts text with bounds (coordinates).
 
 #### Returns:
-The method returns a Promise that resolves to an object containing two properties:
+Returns a Promise with:
+- textData: An array of TextDataSettingsModel with details including bounds and page text.
+- pageText: A concatenated string of plain text from the specified page(s).
 
 **textData:** An array of TextDataSettingsModel objects, each representing the details of the extracted text (including bounds, page text, etc.).
 
 **pageText:** A concatenated string of plain text extracted from the specified page(s).
 
-### Usage of extractText in Syncfusion PdfViewer Control
+### Usage of extractText in Syncfusion PDF Viewer Control
 Here is an example that demonstrates how to use the extractText method along with event handling:
 
 ```html
@@ -79,7 +79,7 @@ export function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/29.1.33/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ height: '680px' }}
       >
         <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -95,9 +95,8 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-#### Explanation:
-**Single Page Extraction:** The first `extractText` call extracts text from page 1 (`startIndex = 1`), using the 'TextOnly' option for plain text extraction.
-
-**Multiple Pages Extraction:** The second extractText call extracts text from pages 0 through 2 (`startIndex = 0, endIndex = 2`), using the `TextOnly` option for plain text extraction.
+#### Explanation
+- Single page: Extracts text from page 1 (`startIndex = 1`) using `TextOnly`.
+- Multiple pages: Extracts text from pages 0–2 (`startIndex = 0, endIndex = 2`) using `TextOnly`.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)

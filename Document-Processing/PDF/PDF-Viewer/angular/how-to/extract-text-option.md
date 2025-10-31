@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Extract text Option in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Extract text Option in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Extract text Option in Angular PDF Viewer component | Syncfusion
+description: Learn here all about Extract text Option in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Extract text Option
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract Text Option in Syncfusion Angular Pdfviewer Control
+# Extract Text Option in Syncfusion Angular PDF Viewer Control
 
-The `extractTextOption` property in the Syncfusion PdfViewer control allows you to optimize memory usage by controlling the level of text extraction. This setting influences the data returned in the `extractTextCompleted` event. You can select one of the following options to determine the kind of text extraction and layout information to retrieve.
+The `extractTextOption` property in the Syncfusion PDF Viewer control allows you to optimize memory usage by controlling the level of text extraction. This setting influences the data returned in the `extractTextCompleted` event. You can select one of the following options to determine the kind of text extraction and layout information to retrieve.
 
 ### Available Options:
 
