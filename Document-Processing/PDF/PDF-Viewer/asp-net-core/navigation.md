@@ -4,7 +4,6 @@ title: Navigation in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to use page, bookmark, thumbnail, hyperlink, and table of contents navigation in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

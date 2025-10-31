@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Navigation in TypeScript PDF Viewer | Syncfusion
-description: Learn how to navigate PDF documents using the Syncfusion TypeScript PDF Viewer, including toolbar controls, programmatic navigation, bookmarks, thumbnails, hyperlinks, and table of contents.
+description: Learn to navigate PDFs in Syncfusion's TypeScript PDF Viewer using toolbar controls, bookmarks, thumbnails, and hyperlinks.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

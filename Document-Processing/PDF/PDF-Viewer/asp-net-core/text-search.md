@@ -4,7 +4,6 @@ title: Text search in ASP.NET Core PDF Viewer component | Syncfusion
 description: Learn all about text search in the Syncfusion ASP.NET Core PDF Viewer component, including features, programmatic search options, and events.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

@@ -4,7 +4,6 @@ title: Use extractTextCompleted in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to use the extractTextCompleted event and isExtractText property in the Syncfusion ASP.NET Core PDF Viewer to extract text and bounds.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
