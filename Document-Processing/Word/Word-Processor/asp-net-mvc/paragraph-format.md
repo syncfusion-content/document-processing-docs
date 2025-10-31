@@ -152,7 +152,7 @@ documenteditor.documentEditorSettings.showHiddenMarks = true;
 {% include code-snippet/document-editor/asp-net-mvc/paragraph-format/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Paragraph-format.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/paragraph-format/document-editor %}
+{% include code-snippet/document-editor/asp-net-mvc/paragraph-format/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
