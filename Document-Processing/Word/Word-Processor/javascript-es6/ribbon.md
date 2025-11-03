@@ -31,7 +31,7 @@ import { DocumentEditorContainer, Ribbon } from '@syncfusion/ej2-documenteditor'
 
 DocumentEditorContainer.Inject(Ribbon);
 // Initialize the Document Editor Container with Ribbon mode enabled
-var container = new ej.documenteditor.DocumentEditorContainer({
+let container: DocumentEditorContainer = new DocumentEditorContainer({
     enableToolbar: true,
     toolbarMode: 'Ribbon', // Options: 'Ribbon' or 'Toolbar'
     height: '590px'
@@ -57,7 +57,7 @@ import { DocumentEditorContainer, Ribbon } from '@syncfusion/ej2-documenteditor'
 
 DocumentEditorContainer.Inject(Ribbon);
 // Initialize the Document Editor Container with Ribbon mode enabled
-var container = new ej.documenteditor.DocumentEditorContainer({
+let container: DocumentEditorContainer  = new DocumentEditorContainer({
     enableToolbar: true,
     toolbarMode: 'Ribbon', // Options: 'Ribbon' or 'Toolbar'
     ribbonLayout: 'Classic', // Options: 'Simplified' or 'Classic'
