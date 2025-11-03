@@ -106,6 +106,75 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
+## Control editability of handwritten signatures after download
+
+Use the isSignatureEditable property to control whether handwritten signatures remain editable after download. When set to false, signatures are flattened and cannot be edited after the file is downloaded. When set to true, signatures are preserved as editable. Defaults to false.
+
+For details, refer to the isSignatureEditable API.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.LinkAnnotation,
+  ej.pdfviewer.ThumbnailView,
+  ej.pdfviewer.BookmarkView,
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.TextSearch,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.FormDesigner,
+  ej.pdfviewer.PageOrganizer
+);
+
+// Initialize the PDF Viewer
+var pdfviewer = new ej.pdfviewer.PdfViewer({
+  documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
+  isSignatureEditable: true // Allows handwritten signatures to remain editable after download
+});
+
+// Render the viewer
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.LinkAnnotation,
+  ej.pdfviewer.ThumbnailView,
+  ej.pdfviewer.BookmarkView,
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.TextSearch,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.FormDesigner,
+  ej.pdfviewer.PageOrganizer
+);
+
+// Initialize the PDF Viewer
+var pdfviewer = new ej.pdfviewer.PdfViewer({
+  documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+  serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/",
+  isSignatureEditable: true // Allows handwritten signatures to remain editable after download
+});
+
+// Render the viewer
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
+> API reference: For more information, see [isSignatureEditable API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#issignatureeditable)
+
 ## Add a handwritten signature programmatically to the PDF document
 
 With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.

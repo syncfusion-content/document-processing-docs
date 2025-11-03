@@ -504,6 +504,11 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
+> API reference:
+> * For more information about highlightSettings, see [highlightSettings API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#highlightsettings).
+> * For more information about underlineSettings, see [underlineSettings API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#underlinesettings).
+> * For more information about strikethroughSettings, see [strikethroughSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#strikethroughsettings).
+
 ## Perform undo and redo
 
 The PDF Viewer supports undo and redo for changes. For text markup annotations, undo and redo are provided for:
@@ -568,6 +573,74 @@ pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
+
+>API reference: For more information about enabletextmarkupannotation, see [enabletextmarkupannotation API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enabletextmarkupannotation).
+## Enable or disable text markup resizer
+
+Enable or disable the text markup resizer using the `enableTextMarkupResizer` API. Defaults to `false`.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.LinkAnnotation,
+  ej.pdfviewer.ThumbnailView,
+  ej.pdfviewer.BookmarkView,
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.TextSearch,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.FormDesigner,
+  ej.pdfviewer.PageOrganizer
+);
+
+// Initialize the PDF Viewer
+var pdfviewer = new ej.pdfviewer.PdfViewer({
+  documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
+  enableTextMarkupResizer: true // Enables resizing of text markup annotations
+});
+
+// Render the viewer
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.LinkAnnotation,
+  ej.pdfviewer.ThumbnailView,
+  ej.pdfviewer.BookmarkView,
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.TextSearch,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.FormDesigner,
+  ej.pdfviewer.PageOrganizer
+);
+
+// Initialize the PDF Viewer
+var pdfviewer = new ej.pdfviewer.PdfViewer({
+  documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+  serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/",
+  enableTextMarkupResizer: true // Enables resizing of text markup annotations
+});
+
+// Render the viewer
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
+>For more information about enabletextmarkupresizer, see [enabletextmarkupresizer API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enabletextmarkupresizer)
 
 ## See also
 

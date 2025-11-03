@@ -579,3 +579,43 @@ pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
+
+## Enable or disable import annotation measurement
+
+Controls whether the PDF Viewer recalculates measurement values for imported measurement annotations. For details, see [enableImportAnnotationMeasurement API documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enableimportannotationmeasurement).
+
+- true: Recalculates and displays measurement values using the viewer's current scale ratio and units.
+- false: Preserves the values embedded in the imported annotations (no recalculation), which can appear as original comment text.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.Print,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner
+  );
+  
+  // Initialize the PDF Viewer
+  var viewer = new ej.pdfviewer.PdfViewer({
+    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+    resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
+    // Enable or disable import annotation measurement customization
+    enableImportAnnotationMeasurement: false 
+  });
+  
+  // Render the viewer
+  viewer.appendTo('#pdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
