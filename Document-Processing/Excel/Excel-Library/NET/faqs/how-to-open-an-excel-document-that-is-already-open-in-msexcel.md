@@ -18,10 +18,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Excel2016;	
-  FileStream inputStream = new FileStream("Template.xlsx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);	
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(outputStream);
+  IWorkbook workbook = application.Workbooks.Open("Template.xlsx");	
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
