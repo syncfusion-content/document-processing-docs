@@ -624,7 +624,7 @@ This example demonstrates how to draw an image in a PDF document and apply a cli
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Clipping-and-graphics-state/.NET/Clipping-and-graphics-state/Program.cs" %} 
 
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
@@ -746,7 +746,7 @@ End Using
 
 {% endtabs %}  
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Clipping-and-graphics-state/.NET).
 
 ## Applying transparency and rotation to the image
 
