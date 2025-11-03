@@ -618,7 +618,7 @@ doc.Close(True)
  
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Paginate-an-image-in-PDF-document). 
 
-## Clipping and Graphics State
+## Clipping and graphics state
 
 This example demonstrates how to draw an image in a PDF document and apply a clipping region using the [SetClip](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#methods) method. Clipping restricts drawing to a defined area, allowing partial rendering of content. The code also uses [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#methods) and [Restore](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#methods) methods of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) to manage the graphics state, enabling temporary clipping and restoring the full drawing area afterward. 
 
