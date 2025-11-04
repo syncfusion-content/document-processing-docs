@@ -69,7 +69,7 @@ The Syncfusion<sup>&reg;</sup> AI Coding Assistant is designed with privacy in m
 
 ## See also
 
-  * Add the <a href="https://www.npmjs.com/package/@syncfusion/documentsdk-assistant">SyncfusionDocumentSDKAssistant MCP Server</a>  to an MCP-enabled client
+  * Add the <a href="https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server">SyncfusionDocumentSDKAssistant MCP Server</a>  to an MCP-enabled client
   *	[Syncfusion<sup>&reg;</sup> Document SDK Documentation](https://help.syncfusion.com/document-processing/introduction)
 
 
