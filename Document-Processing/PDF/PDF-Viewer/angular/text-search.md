@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Text search in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Text search in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Text search in Angular PDF Viewer component | Syncfusion
+description: Learn here all about Text search in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Text search
 documentation: ug
