@@ -101,6 +101,7 @@ For additional details, see the Code Studio [documentation](https://help.syncfus
   3. Confirm that <a href ="https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server">SyncfusionDocumentSDKAssistant</a> is being used (this does not happen automatically). Look for a statement in the output, which is similar to:
 
       * ```SyncfusionDocumentSDKAssistant is running...``` (in VS Code)
+  4. For more details, refer to the official <a href = "https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022"> Visual Studio documentation </a>.
 
 ### Cursor
 
@@ -123,6 +124,7 @@ To configure an MCP server for a specific workspace, you can create a .cursor/mc
    }
   }
 ~~~ 
+For more details, refer to the <a href = "https://docs.cursor.com/en/context/mcp#using-mcp-json">Cursor documentation</a>.
 
 ### JetBrains IDEs
 
@@ -149,12 +151,9 @@ To configure an MCP server for a specific workspace, you can create a .cursor/mc
 
   4. Click OK and Apply.
 
->  For more detailed information about configuring MCP servers in various clients, refer to the official documentations. 
->
-> - [VS Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers)
-> - <a href ="https://docs.cursor.com/en/context/mcp">Cursor</a>
-> - [JetBrains](https://www.jetbrains.com/help/ai-assistant/mcp.html)
-> - [Windsurf](https://docs.windsurf.com/windsurf/cascade/mcp)
+For further assistance, see the <a href ="https://www.jetbrains.com/help/ai-assistant/mcp.html#connect-to-an-mcp-server">JetBrains documentation</a>.
+
+> For more detailed information about configuring MCP servers in various clients, refer to the official documentations, e.g., [Windsurf](https://docs.windsurf.com/windsurf/cascade/mcp#mcp-config-json)
 
 ## Usage
 
