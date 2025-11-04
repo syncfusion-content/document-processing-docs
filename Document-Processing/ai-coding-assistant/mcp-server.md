@@ -12,7 +12,7 @@ documentation: ug
 
 ## Overview  
 
-The SyncfusionDocumentSDKAssistant a specialized [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) server that provides intelligent assistance for developers using Syncfusion’s DocumentSDK libraries. This tool seamlessly integrates with compatible [MCP clients](https://modelcontextprotocol.io/clients) to enhance your development workflow when building .NET applications with Syncfusion<sup>&reg;</sup> Document Processing libraries, such as PDF, Word, Excel, and PowerPoint.
+The [SyncfusionDocumentSDKAssistant](https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server) a specialized [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) server that provides intelligent assistance for developers using Syncfusion’s DocumentSDK libraries. This tool seamlessly integrates with compatible [MCP clients](https://modelcontextprotocol.io/clients) to enhance your development workflow when building .NET applications with Syncfusion<sup>&reg;</sup> Document Processing libraries, such as PDF, Word, Excel, and PowerPoint.
 
 ### Key Benefits
 
@@ -76,7 +76,7 @@ You need to add your [Syncfusion API key](https://syncfusion.com/account/api-key
 For additional details, see the Code Studio [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/customservers).
 
 ### VS Code (GitHub Copilot MCP)
-  1. To configure an MCP server for a specific workspace, you can create a ```.vscode/mcp.json``` file in your workspace folder.
+  * To configure an MCP server for a specific workspace, you can create a ```.vscode/mcp.json``` file in your workspace folder.
 
 ~~~json
   {
@@ -96,12 +96,12 @@ For additional details, see the Code Studio [documentation](https://help.syncfus
   }
 ~~~ 
 
-  2. After updating the configuration in settings.json, you’ll notice a “Start” option at the top of the config. This allows you to easily start the <a href ="https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server">SyncfusionDocumentSDKAssistant</a> server directly from the settings interface without additional commands.
+  * After updating the configuration in settings.json, you’ll notice a “Start” option at the top of the config. This allows you to easily start the <a href ="https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server">SyncfusionDocumentSDKAssistant</a> server directly from the settings interface without additional commands.
 
-  3. Confirm that <a href ="https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server">SyncfusionDocumentSDKAssistant</a> is being used (this does not happen automatically). Look for a statement in the output, which is similar to:
+  * Confirm that <a href ="https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server">SyncfusionDocumentSDKAssistant</a> is being used (this does not happen automatically). Look for a statement in the output, which is similar to:
 
       * ```SyncfusionDocumentSDKAssistant is running...``` (in VS Code)
-  4. For more details, refer to the official <a href = "https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022"> Visual Studio documentation </a>.
+  * For more details, refer to the official <a href = "https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022"> Visual Studio documentation </a>.
 
 ### Cursor
 
@@ -165,7 +165,9 @@ To activate the SyncfusionDocumentSDKAssistant MCP server:
       *	‘/syncfusion-documentsdk’
       *	‘@syncfusion-documentsdk’
       *	‘@ask_syncfusion_documentsdk’
+
      In VS Code, you can also use #SyncfusionDocumentSDKAssistant to explicitly invoke the MCP server.
+     
   2. Grant the SyncfusionDocumentSDKAssistant MCP server a permission to run for this session, workspace, or always.
   3. For best results, start a new chat for each new topic to maintain clean context.
 
@@ -182,7 +184,7 @@ Syncfusion® MCP Servers provide full access to all AI interaction modes — Ask
 
 ### Example Queries
 
-Here are some effective ways to use SyncfusionDocumentSDKAssistant:
+Here are some effective ways to use [SyncfusionDocumentSDKAssistant](https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server):
 
   * "Create an Excel file with formulas, charts, and conditional formatting using Syncfusion in WPF." 
   * "How to perform a mail merge in a Word document using Syncfusion Word library?"
@@ -203,7 +205,7 @@ If you encounter issues:
 
 Product support is available through the following mediums.
 
-  *	[Support ticket](https://support.syncfusion.com/support/tickets/create) - Guaranteed Response in 24 hours | Unlimited tickets | Holiday support
+  * [Support ticket](https://support.syncfusion.com/support/tickets/create) - Guaranteed Response in 24 hours \| Unlimited tickets \| Holiday support
   *	[Community forum](https://www.syncfusion.com/forums/document-sdk)
   *	[Request feature or report bug](https://www.syncfusion.com/feedback/document-sdk)
   *	Live chat
@@ -211,10 +213,6 @@ Product support is available through the following mediums.
 ## See also
   
   * [Syncfusion  DocumentSDK Documentation](https://help.syncfusion.com/document-processing/introduction)
-
-
-
-
 
 
 
