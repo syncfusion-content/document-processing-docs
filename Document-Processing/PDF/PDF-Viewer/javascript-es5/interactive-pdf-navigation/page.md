@@ -175,6 +175,22 @@ viewer.navigation.goToPreviousPage();
 
 Find the sample [here](https://stackblitz.com/edit/kpzmjpf7?file=index.js) to perform the page navigation options programmatically.
 
+## Enable or disable navigation module and toolbar on load
+
+The `enableNavigation` property gets or sets a boolean value to enable or disable the page navigation of PDF Viewer while loading a document. Defaults to true. You can refer to [enableNavigation API documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enablenavigation ) for more information.
+
+```js
+  // Enable or disable page navigation
+  viewer.enableNavigation = true;
+```
+
+The `enableNavigationToolbar` property gets or sets a boolean value to enable or disable the navigation toolbar of PDF Viewer while loading a document. Defaults to true. You can refer to [enableNavigationToolbar API documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enablenavigationtoolbar) for more information.
+
+```js
+  // Enable or disable navigation toolbar
+  viewer.enableNavigationToolbar = true;
+```
+
 ## See also
 
 * [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/toolbar)

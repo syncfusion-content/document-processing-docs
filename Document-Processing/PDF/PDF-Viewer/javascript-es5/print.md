@@ -9,9 +9,18 @@ domainurl: ##DomainURL##
 ---
 # Print in JavaScript PDF Viewer
 
-The Syncfusion JavaScript PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the `enablePrint` property.
+The PDF Viewer supports printing the loaded PDF file.
 
-The following HTML and JavaScript examples render the PDF Viewer with printing enabled in standalone and server-backed applications.
+## Enable or disable print option.
+
+The `enablePrint` property enables or disables the print option of the PDF Viewer. The default value is `true`. For more details, see the [enablePrint](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enableprint) API documentation.
+
+```js
+   // Enable or disable print.
+    viewer.enablePrint = false;
+```
+
+You can enable/disable the print using the following code snippet.
 
 ```html
 {% raw %}
@@ -142,7 +151,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Enable print rotation in the PDF Viewer
 
-Set the `enablePrintRotation` property to control whether landscape pages are rotated automatically to fit the paper orientation. Keep it enabled to minimize clipping, or disable it to preserve the original orientation.
+The `EnablePrintRotation` property controls whether landscape pages are auto-rotated to best fit when printing. The default value is `true`. Set to `false` to preserve the original page orientation and suppress automatic rotation during print. You can refer to [EnablePrintRotation API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enableprintrotation) for more information.
+
+You can enable/disable the print rotation using the following code snippet.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

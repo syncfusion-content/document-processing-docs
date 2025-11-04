@@ -59,6 +59,22 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
+### Enable or disable form designer toolbar on initial load
+
+Use the [enableFormDesignerToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enableformdesignertoolbar) property to open the form designer toolbar when the PDF document is loaded initially. It accepts a boolean value and defaults to true.
+
+```js
+viewer.enableFormDesignerToolbar = false;
+```
+
+### Show form designer toolbar on initial load and retrieve visible status
+
+Use the [`isFormDesignerToolbarVisible`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) property to open the form designer toolbar when the PDF document is loaded initially and retrieve its visible status. It accepts a boolean value and defaults to false.
+
+```js
+viewer.isFormDesignerToolbarVisible = true;
+```
+
 ## How to customize the form designer toolbar
 
 Choose which tools appear and control their order in the form designer toolbar.

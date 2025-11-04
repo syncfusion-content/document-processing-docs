@@ -9,7 +9,13 @@ domainurl: ##DomainURL##
 ---
 # Text search in JavaScript PDF Viewer control
 
-The text search feature in the PDF Viewer locates and highlights matching content within a document. Enable or disable this capability with the following configuration.
+The Text Search option in PDF Viewer is used to find and highlight the text content from the document. 
+
+## Enable or disable text search option.
+
+Use [enableTextSearch](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enabletextsearch) to enable or disable the text search in the PDF Viewer.
+
+You can enable/disable the text search using the following code snippet.
 
 ```html
 {% raw %}
@@ -52,6 +58,71 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
                     serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
+## Customize text search highlight colors
+
+Use [textSearchColorSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#textsearchcolorsettings) property to customize the color of the text search highlight and search term.
+
+You can customize the highlight and search colors using the following code snippet.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.LinkAnnotation,
+  ej.pdfviewer.ThumbnailView,
+  ej.pdfviewer.BookmarkView,
+  ej.pdfviewer.TextSelection
+);
+
+// Initialize the PDF Viewer
+var pdfviewer = new ej.pdfviewer.PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
+  textSearchColorSettings: {
+    searchHighlightColor: '#4070ff',
+    searchColor: '#FF4081'
+  }
+});
+
+// Render the viewer
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.LinkAnnotation,
+  ej.pdfviewer.ThumbnailView,
+  ej.pdfviewer.BookmarkView,
+  ej.pdfviewer.TextSelection
+);
+
+// Initialize the PDF Viewer
+var pdfviewer = new ej.pdfviewer.PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+  serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
+  textSearchColorSettings: {
+    searchHighlightColor: '#4070ff',
+    searchColor: '#FF4081'
+  }
+});
+
+// Render the viewer
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}

@@ -23,13 +23,14 @@ The PDF Viewer component supports interactive form field design, including drawi
 
 ## Enable or Disable form designer toolbar
 
-Inject the FormDesigner module and set enableFormDesignerToolbar to true to display the Form Designer icon on the toolbar. The default value is true. Use the following code to enable the toolbar option.
+Inject the FormDesigner module and set enableFormDesignerToolbar to true to display the Form Designer icon on the toolbar. The default value is true. 
 
+You can refer to [enableFormDesignerToolbar API  Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enableformdesigner) for more information. 
 
+Use the following code to enable the toolbar option.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: "https://cdn.syncfusion.com/content/pdf/form-designer.pdf",
@@ -51,6 +52,41 @@ pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
+
+## Show or hide form designer toolbar on initial load
+
+Open or close the form designer toolbar when the PDF document is loaded initially in the PDF Viewer control. Use the `isFormDesignerToolbarVisible` property to get or set the annotation toolbar visible status. The default value is false. You can refer to [isFormDesignerToolbarVisible API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) for more information. 
+
+Use the following code to enable or disable the form desinger toolbar on load:
+
+```js
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.LinkAnnotation,
+  ej.pdfviewer.ThumbnailView,
+  ej.pdfviewer.BookmarkView,
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.TextSearch,
+  ej.pdfviewer.Print,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.FormDesigner
+);
+
+// Initialize the PDF Viewer
+var viewer = new ej.pdfviewer.PdfViewer({
+  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
+  isFormDesignerToolbarVisible: true // Shows the Form Designer toolbar
+});
+
+// Render the viewer
+viewer.appendTo('#pdfViewer');
+```
+
 
 ## Add the form field dynamically
 

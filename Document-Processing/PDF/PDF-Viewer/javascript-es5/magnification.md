@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Magnification in JavaScript PDF Viewer
 
-The PDF Viewer includes magnification tools in the default toolbar: Zoom In, Zoom Out, Zoom (to a specific value), Fit to Page, and Fit to Width. The toolbar can be configured to show or hide these tools.
+The PDF Viewer includes magnification tools in the default toolbar: Zoom In, Zoom Out, Zoom (to a specific value), Fit to Page, and Fit to Width. The toolbar can be configured to show or hide these tools. You can refer to [enableMagnification API Documention](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enablemagnification) for more information.
 
 Use the following configuration to enable magnification in the PDF Viewer:
 
