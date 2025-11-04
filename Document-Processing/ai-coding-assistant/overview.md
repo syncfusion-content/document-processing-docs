@@ -17,7 +17,7 @@ The **Syncfusion<sup>&reg;</sup> AI Coding Assistant** are designed to streamlin
 
 AI Coding Assistant:
 
-  * **The SyncfusionDocumentSDKAssistant MCP Server** is designed to process advanced prompts and return intelligent, context-aware        code suggestions through   [MCP-compatible clients](https://modelcontextprotocol.io/clients). It specifically enhances productivity when working with **Syncfusion<sup>&reg;</sup> Document Processing libraries**, including **[PDF](https://help.syncfusion.com/document-processing/pdf/overview), [Word](https://help.syncfusion.com/document-processing/word/overview) (DocIO), [Excel](https://help.syncfusion.com/document-processing/excel/overview) (XlsIO), and [PowerPoint](https://help.syncfusion.com/document-processing/powerpoint/overview)**. 
+  * **The SyncfusionDocumentSDKAssistant MCP Server** is designed to process advanced prompts and return intelligent, context-aware        code suggestions through   [MCP-compatible clients](https://modelcontextprotocol.io/clients). It specifically enhances productivity when working with **Syncfusion<sup>&reg;</sup> Document Processing libraries**, including **[PDF](https://help.syncfusion.com/document-processing/pdf/overview)**, **[Word](https://help.syncfusion.com/document-processing/word/overview) (DocIO)**, **[Excel](https://help.syncfusion.com/document-processing/excel/overview) (XlsIO)**, and **[PowerPoint](https://help.syncfusion.com/document-processing/powerpoint/overview) (Presentation)**. 
 
 
 ## Getting Started
@@ -48,8 +48,7 @@ This ensures users can fully leverage Syncfusion<sup>&reg;</sup> components to e
   *	Initial Setup: Use the tools to quickly add and configure Syncfusion® components in your .NET applications.
   *	Feature Tuning: Enable or disable component features through prompt-based configuration for tailored functionality.
   *	Data Binding: Generate sample data for testing and prototyping. Avoid using sensitive or production data to ensure security.
-  *	Step-by-step explanations: Use annotated code to understand component behavior. Note that the level of detail may vary depending on   
-  the tool, mode, and AI model used. Refer to the [Syncfusion<sup>&reg;</sup> Document SDK Documentation](https://help.syncfusion.com/document-processing/introduction) for in-depth information.
+  *	Step-by-step explanations: Use annotated code to understand component behavior. Note that the level of detail may vary depending on the tool, mode, and AI model used. Refer to the [Syncfusion<sup>&reg;</sup> Document SDK Documentation](https://help.syncfusion.com/document-processing/introduction) for in-depth information.
   * Troubleshooting: Resolve common issues with AI-generated suggestions. For complex problems, refer to [documentation](https://help.syncfusion.com/document-processing/introduction) or [support](https://support.syncfusion.com/support/tickets/create).
   
   >Always check AI-generated content and code for accuracy before using it.
@@ -71,7 +70,7 @@ The Syncfusion<sup>&reg;</sup> AI Coding Assistant is designed with privacy in m
 ## See also
 
   * Add the <a href="https://help.syncfusion.com/document-processing/ai-coding-assistants/mcp-server">SyncfusionDocumentSDKAssistant MCP Server</a>  to an MCP-enabled client
-  *	Syncfusion<sup>&reg;</sup> Document [SDK Documentation](https://help.syncfusion.com/document-processing/introduction)
+  *	[Syncfusion<sup>&reg;</sup> Document SDK Documentation](https://help.syncfusion.com/document-processing/introduction)
 
 
 
