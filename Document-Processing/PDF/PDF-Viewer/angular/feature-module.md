@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Feature module in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Feature module in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Feature module in Angular PDF Viewer component | Syncfusion
+description: Learn here all about Feature module in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Feature module
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature modules
+# Feature modules in Angular PDF Viewer
 
 The [`Angular PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) features are segregated into individual feature-wise modules to enable selectively referencing in the application. The required modules should be injected to extend its functionality. The following are the selective modules of PDF Viewer that can be included as required:
 
-The available PdfViewer modules are:
+The available PDF Viewer modules are:
 
 * **Toolbar**:- Built-in toolbar for better user interaction.
 * **Magnification**:- Perform zooming operation for better viewing experience.

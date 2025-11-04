@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Unload document in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Unload document in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Unload document in Vue PDF Viewer component | Syncfusion
+description: Learn here all about Unload document in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Unload document
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Unload document in Vue Pdfviewer component
+# Unload document in Vue PDF viewer component
 
 The PDF Viewer library allows you to unload the PDF document being displayed in the PDF Viewer control programmatically using the [**unload()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#unload) method.
 

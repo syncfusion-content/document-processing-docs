@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Interaction mode in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Interaction mode in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Interaction mode in Angular PDF Viewer component | Syncfusion
+description: Learn here all about Interaction mode in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Interaction mode
 documentation: ug
