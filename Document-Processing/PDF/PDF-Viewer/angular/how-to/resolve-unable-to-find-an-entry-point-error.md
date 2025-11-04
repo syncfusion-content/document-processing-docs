@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Find an entry point in Angular Pdfviewer component | Syncfusion
-description: Learn here how to resolve unable to find an entry point named error in Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Find an entry point in Angular PDF Viewer component | Syncfusion
+description: Learn here how to resolve unable to find an entry point named error in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Resolve unable to find an entry point error
 platform: document-processing
 documentation: ug

@@ -129,7 +129,7 @@ using (HttpClient client = new HttpClient())
         // Check if the response is successful
         if (response.IsSuccessStatusCode)
         {
-		    // Read the content as a string
+			//Read the content as a string.
             Stream responseBody = await response.Content.ReadAsStreamAsync();
             FileStream fileStream = File.Create("../../../Output/Output.jpeg");
             responseBody.CopyTo(fileStream);

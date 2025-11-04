@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Retry Timeout | Syncfusion
-Description:  Learn here all about Retry Timeout in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+Description:  Learn here all about Retry Timeout in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Retry Timeout
 documentation: ug

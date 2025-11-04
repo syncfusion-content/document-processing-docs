@@ -4,7 +4,7 @@ title: Save PDF files to AWS S3 in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to save PDF files to AWS S3 using the Syncfusion ASP.NET Core PDF Viewer component in standalone and server-backed configurations.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
+
 documentation: ug
 ---
 

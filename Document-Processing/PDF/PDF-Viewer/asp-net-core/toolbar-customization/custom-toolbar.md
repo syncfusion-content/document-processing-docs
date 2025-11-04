@@ -4,15 +4,14 @@ title: Custom Toolbar in ASP.NET Core PDF Viewer Component | Syncfusion
 description: Learn here all about custom toolbar in Syncfusion ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Custom toolbar
+# Custom toolbar in ASP.NET Core PDF Viewer
 
 The PDF Viewer exposes APIs for the interactions available in the built-in toolbar. Using these, you can build your own UI for toolbar actions at the application level by hiding the built-in toolbar. Follow these steps to create a custom toolbar for the PDF Viewer:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create simple PDF Viewer sample.
 
 **Step 2:** Add an EJ2 Toolbar to perform primary actions like Open, Previous page, Next page, Go to page, Print, and Download using the following code snippet:
 

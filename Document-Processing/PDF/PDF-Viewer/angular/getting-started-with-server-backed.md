@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Getting started with Angular PDF Viewer component | Syncfusion
-description: Checkout and learn about Getting started with Angular PDF Viewer component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Angular PDF Viewer (server-backed) | Syncfusion
+description: Learn how to set up and use the Syncfusion Angular PDF Viewer in server-backed mode, including module injection and web service configuration.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with PDF Viewer component
+# Getting started with Angular PDF Viewer (server-backed)
 
-This section explains the steps required to create a simple Angular PDF Viewer and demonstrates the basic usage of the PDF Viewer control in a Angular CLI application.
+This guide explains how to create the PDF Viewer component and configure its features in Angular using the Essential JS 2 in server-backed mode.
 
-## Setup Angular Environment
+## Set up the development environment
 
 You can use the [`Angular CLI`](https://github.com/angular/angular-cli) to setup your Angular applications.
 To install the latest Angular CLI globally use the following command.
@@ -21,9 +21,7 @@ To install the latest Angular CLI globally use the following command.
 npm install -g @angular/cli
 ```
 
-N> Use the command **npm install --save @angular/cli@12.0.2** to install the Angular CLI version 12.0.2
-
-## Create an Angular Application
+## Create an Angular application
 
 Start a new Angular application using the Angular CLI command as follows.
 
@@ -32,15 +30,31 @@ ng new my-app
 cd my-app
 ```
 
-## Installing Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer package
+## Add Syncfusion JavaScript packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in `npmjs.com` registry. To install PDF Viewer component, use the following command.
+All the available Essential JS 2 packages are published in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. To install PDF Viewer component, use the following command.
 
 ```bash
 npm install @syncfusion/ej2-angular-pdfviewer --save
 ```
 
-## Registering PDF Viewer Module
+## Import Syncfusion CSS styles
+
+Add the component CSS in the `~/src/styles.css` file, as shown below:
+
+```css
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';
+```
+
+## Add the PDF Viewer component
 
 Import PDF Viewer module into Angular application(app.module.ts) from the package `@syncfusion/ej2-angular-pdfviewer` [src/app/app.module.ts].
 
@@ -67,24 +81,6 @@ import { AppComponent } from './app.component';
 })
 export class AppModule { }
 ```
-
-## Adding CSS reference
-
-Add the Angular PDF Viewer component’s styles as given below in `src/styles.css` file.
-
-```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';
-```
-
-## Adding PDF Viewer component
 
 Add the Angular PDF Viewer by using `<ejs-pdfviewer>` selector in `template` section of the `src/app/app.component.ts` file to render the PDF Viewer component.
 
@@ -118,7 +114,7 @@ export class AppComponent implements OnInit {
   }
 }
 ```
-N> The Web API hosted link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer utilized in the PDF viewer's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service and use for the serviceUrl property. **We strongly recommend using the standalone mode.**
+N> The Web API link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/ used in the `serviceUrl` property is intended for demonstration and evaluation only. For production, host your own web service with the required server configuration. You can reuse the [GitHub web service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server). **Standalone mode is strongly recommended.**
 
 ## Run the application
 
@@ -158,30 +154,52 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 > For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service)
 
-## How to run the PDF Viewer web service
+## Module injection
 
-1. Download the sample from the [Web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) link.
+To enable additional features, inject the required modules. The following modules extend the PDF Viewer's functionality:
 
-2. Navigate to the `ASP.NET Core` folder and open it in the command prompt.
+* `LinkAnnotationService`: Enables hyperlink navigation.
+* `BookmarkViewService`: Displays and navigates document bookmarks.
+* `MagnificationService`: Provides zoom in/out operations.
+* `NavigationService`: Enables page navigation.
+* `TextSelectionService`: Enables text selection.
+* `ThumbnailViewService`: Displays page thumbnails for navigation.
+* `ToolbarService`: Enables the built-in toolbar UI.
+* `PrintService`: Enables printing.
+* `AnnotationService`: Enables annotation features.
+* `TextSearchService`: Enables text search.
+* `FormFieldsService`: Enables form field support.
+* `FormDesignerService`: Enables designing and editing of form fields.
+* `PageOrganizerService`: Enables page organization features.
+
+Inject modules using the `providers` property in `@NgModule`.
+
+> To create a PDF Viewer `serviceUrl`, follow the steps in [Create PDF Viewer service](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service).
+
+## Run the PDF Viewer web service
+
+1. Download the sample from the [web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices).
+
+2. Navigate to the `ASP.NET Core` folder and open it in a command prompt.
 
 3. Navigate to the appropriate subfolder based on your .NET version:
 
    - .NET 6.0 → `PdfViewerWebService_6.0`
    - .NET 8.0 → `PdfViewerWebService_8.0`
 
-4. Use the below command to restore the required packages.
+4. Restore packages:
 
-   ```sh
-   dotnet restore
-   ```
+```
+ dotnet restore
+```
 
-5. Use the below command to run the web service.
+5. Run the web service:
 
-   ```sh
-   dotnet run
-   ```
+```
+ dotnet run
+```
 
-6. You can see that the PDF Viewer server instance runs in the local host with the port number `localhost:5001`and navigate to the PDF Viewer Web control `localhost:5001/pdfviewer`which returns the default get response method. We can bind the link to the `serviceUrl` property of PDF Viewer as below.
+6. The PDF Viewer server instance runs at `https://localhost:5001`. Navigate to `https://localhost:5001/pdfviewer` to see the default GET response. Bind this URL to the `serviceUrl` property of the PDF Viewer as shown below.
 
    ```javascript
    export class AppComponent implements OnInit {
@@ -190,9 +208,12 @@ platformBrowserDynamic().bootstrapModule(AppModule)
       ngOnInit(): void {
       }
    ```
-N> When configuring the server-backed PDF viewer, it's Essential<sup style="font-size:70%">&reg;</sup> to understand that there is no need to include the pdfium.js and pdfium.wasm files. Unlike the standalone PDF viewer, which relies on these files for local rendering, the server-backed PDF viewer fetches and renders PDFs directly from the server. Consequently, you can exclude the copy command for deployment process, as they are not required to load and display PDFs in this context.
 
-N> For hosting the web service on the Linux platform, ensure to include the [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1). Additionally, for AWS environments, utilize the following packages:
+N> In server-backed mode, do not include `pdfium.js` and `pdfium.wasm`. Unlike standalone mode, the server-backed PDF Viewer renders PDFs on the server. These files and their copy steps are not required for deployment in this context.
+
+> Refer to the [Angular PDF Viewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk) for an overview of capabilities. Explore the [Angular PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/angular/#/tailwind3/pdfviewer/default.html) to see core features in action.
+
+N> For hosting the web service on Linux, include [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1). For AWS environments, use the following packages:
 
 | **Amazon Web Services (AWS)** |**NuGet package name** |
 | --- | --- |

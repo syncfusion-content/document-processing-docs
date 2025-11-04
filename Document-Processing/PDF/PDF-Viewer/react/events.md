@@ -76,7 +76,8 @@ The [bookmarkClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -101,7 +102,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## toolbarClick
 
@@ -111,7 +114,8 @@ The [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -136,7 +140,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## validateFormFields
 
@@ -154,7 +160,9 @@ When it triggers
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -183,7 +191,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Tip
 - To require a field programmatically, set isRequired: true when creating or editing the field via Form Designer APIs.
@@ -196,7 +206,9 @@ The [zoomChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#z
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -221,7 +233,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## buttonFieldClick
 
@@ -231,7 +245,9 @@ The [buttonFieldClick](https://ej2.syncfusion.com/react/documentation/api/pdfvie
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -256,7 +272,8 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## commentAdd
 
@@ -266,7 +283,9 @@ The [commentAdd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#c
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -291,7 +310,8 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## commentDelete
 
@@ -301,7 +321,8 @@ The [commentDelete](https://ej2.syncfusion.com/react/documentation/api/pdfviewer
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -326,7 +347,8 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## commentEdit
 
@@ -336,7 +358,9 @@ The [commentEdit](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -361,7 +385,8 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## commentSelect
 
@@ -371,7 +396,9 @@ The [commentSelect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -396,7 +423,8 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## commentStatusChanged
 
@@ -406,7 +434,8 @@ The [commentStatusChanged](https://ej2.syncfusion.com/react/documentation/api/pd
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -431,7 +460,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## created
 
@@ -441,7 +472,8 @@ The [created](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#crea
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -466,7 +498,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## customContextMenuBeforeOpen
 
@@ -478,7 +512,8 @@ The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/react/documentation
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -521,7 +556,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## customContextMenuSelect
 
@@ -534,7 +571,8 @@ The [customContextMenuSelect](https://ej2.syncfusion.com/react/documentation/api
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -577,7 +615,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## documentLoad
 
@@ -587,7 +627,8 @@ The [documentLoad](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -612,7 +653,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## documentLoadFailed
 
@@ -622,7 +665,8 @@ The [documentLoadFailed](https://ej2.syncfusion.com/react/documentation/api/pdfv
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -646,7 +690,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## documentUnload
 
@@ -656,7 +702,8 @@ The [documentUnload](https://ej2.syncfusion.com/react/documentation/api/pdfviewe
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -681,7 +728,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## downloadEnd
 
@@ -691,7 +740,8 @@ The [downloadEnd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -716,7 +766,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## downloadStart
 
@@ -726,7 +778,8 @@ The [downloadStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -751,7 +804,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## exportFailed
 
@@ -761,7 +816,9 @@ The [exportFailed](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -786,7 +843,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## exportStart
 
@@ -796,7 +855,8 @@ The [exportStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -821,7 +881,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## exportSuccess
 
@@ -831,7 +893,8 @@ The [exportSuccess](https://ej2.syncfusion.com/react/documentation/api/pdfviewer
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -856,7 +919,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## extractTextCompleted
 
@@ -866,7 +931,8 @@ The [extractTextCompleted](https://ej2.syncfusion.com/react/documentation/api/pd
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -891,7 +957,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## hyperlinkClick
 
@@ -901,7 +969,8 @@ The [hyperlinkClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewe
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -926,7 +995,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## hyperlinkMouseOver
 
@@ -936,7 +1007,9 @@ The [hyperlinkMouseOver](https://ej2.syncfusion.com/react/documentation/api/pdfv
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -961,7 +1034,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## importFailed
 
@@ -971,7 +1046,9 @@ The [importFailed](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -996,7 +1073,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## importStart
 
@@ -1006,7 +1085,8 @@ The [importStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1031,7 +1111,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## importSuccess
 
@@ -1041,7 +1123,8 @@ The [importSuccess](https://ej2.syncfusion.com/react/documentation/api/pdfviewer
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1066,7 +1149,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## keyboardCustomCommands
 
@@ -1083,7 +1168,8 @@ When it triggers
 Refer to [Keyboard interaction](./accessibility#keyboard-interaction) for details about adding and handling custom shortcut keys.
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1123,7 +1209,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## moveSignature
 
@@ -1133,7 +1221,8 @@ The [moveSignature](https://ej2.syncfusion.com/react/documentation/api/pdfviewer
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1158,7 +1247,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## pageChange
 
@@ -1168,7 +1259,8 @@ The [pageChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#p
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1193,7 +1285,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## pageClick
 
@@ -1203,7 +1297,8 @@ The [pageClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#pa
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1228,7 +1323,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## pageMouseover
 
@@ -1238,7 +1335,8 @@ The [pageMouseover](https://ej2.syncfusion.com/react/documentation/api/pdfviewer
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1263,7 +1361,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## pageOrganizerSaveAs
 
@@ -1273,7 +1373,8 @@ The [pageOrganizerSaveAs](https://ej2.syncfusion.com/react/documentation/api/pdf
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1298,7 +1399,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## pageRenderComplete
 
@@ -1308,7 +1411,8 @@ The [pageRenderComplete](https://ej2.syncfusion.com/react/documentation/api/pdfv
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1333,7 +1437,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## pageRenderInitiate
 
@@ -1343,7 +1449,8 @@ The [pageRenderInitiate](https://ej2.syncfusion.com/react/documentation/api/pdfv
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1368,7 +1475,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## printEnd
 
@@ -1378,7 +1487,8 @@ The [printEnd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#pri
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1403,7 +1513,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## printStart
 
@@ -1413,7 +1525,8 @@ The [printStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#p
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1438,7 +1551,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## removeSignature
 
@@ -1448,7 +1563,8 @@ The [removeSignature](https://ej2.syncfusion.com/react/documentation/api/pdfview
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1473,7 +1589,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## resizeSignature
 
@@ -1483,7 +1601,8 @@ The [resizeSignature](https://ej2.syncfusion.com/react/documentation/api/pdfview
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1508,7 +1627,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## resourcesLoaded
 
@@ -1518,7 +1639,8 @@ The [resourcesLoaded](https://ej2.syncfusion.com/react/documentation/api/pdfview
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1543,7 +1665,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## signaturePropertiesChange
 
@@ -1553,7 +1677,8 @@ The [signaturePropertiesChange](https://ej2.syncfusion.com/react/documentation/a
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1578,7 +1703,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## signatureSelect
 
@@ -1588,7 +1715,8 @@ The [signatureSelect](https://ej2.syncfusion.com/react/documentation/api/pdfview
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1613,7 +1741,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## signatureUnselect
 
@@ -1623,7 +1753,8 @@ The [signatureUnselect](https://ej2.syncfusion.com/react/documentation/api/pdfvi
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1648,7 +1779,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## textSearchComplete
 
@@ -1658,7 +1791,8 @@ The [textSearchComplete](https://ej2.syncfusion.com/react/documentation/api/pdfv
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1683,7 +1817,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## textSearchHighlight
 
@@ -1693,7 +1829,8 @@ The [textSearchHighlight](https://ej2.syncfusion.com/react/documentation/api/pdf
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1718,7 +1855,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## textSearchStart
 
@@ -1728,7 +1867,8 @@ The [textSearchStart](https://ej2.syncfusion.com/react/documentation/api/pdfview
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1753,7 +1893,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## textSelectionEnd
 
@@ -1763,7 +1905,8 @@ The [textSelectionEnd](https://ej2.syncfusion.com/react/documentation/api/pdfvie
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1788,7 +1931,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## textSelectionStart
 
@@ -1798,7 +1943,8 @@ The [textSelectionStart](https://ej2.syncfusion.com/react/documentation/api/pdfv
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1823,7 +1969,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## thumbnailClick
 
@@ -1833,7 +1981,9 @@ The [thumbnailClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewe
 
 Example:
 
-```jsx
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1858,7 +2008,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('pdfViewer'));
 root.render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > Tip: For annotation and signature-specific events and arguments, see the dedicated Annotations Events topic.
 
