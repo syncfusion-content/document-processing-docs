@@ -302,6 +302,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 IF field compares two values and updates the field result with true text, when comparison succeeds otherwise false text.
 
+To quickly start working with IF field, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=us1FhWurqHw" %}
+
 To learn more about IF field and its syntax in Microsoft Word, refer to the [MSDN article](https://support.microsoft.com/en-us/office/field-codes-if-field-9f79e82f-e53b-4ff5-9d2c-ae3b22b7eb5e?ui=en-us&rs=en-us&ad=us#)
 
 The following code example explains how to add an If field to a Word document.
