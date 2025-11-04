@@ -17,7 +17,7 @@ The **Syncfusion<sup>&reg;</sup> AI Coding Assistant** are designed to streamlin
 
 AI Coding Assistant:
 
-  * **The SyncfusionDocumentSDKAssistant MCP Server** is designed to process advanced prompts and return intelligent, context-aware        code suggestions through   [MCP-compatible clients](https://modelcontextprotocol.io/clients). It specifically enhances productivity when working with **Syncfusion<sup>&reg;</sup> Document Processing libraries**, including **[PDF](https://help.syncfusion.com/document-processing/pdf/overview), [Word](https://help.syncfusion.com/document-processing/word/overview) (DocIO), [Excel](https://help.syncfusion.com/document-processing/excel/overview) (XlsIO), and [PowerPoint Presentation](https://help.syncfusion.com/document-processing/powerpoint/overview)**. 
+  * **The SyncfusionDocumentSDKAssistant MCP Server** is designed to process advanced prompts and return intelligent, context-aware        code suggestions through   [MCP-compatible clients](https://modelcontextprotocol.io/clients). It specifically enhances productivity when working with **Syncfusion<sup>&reg;</sup> Document Processing libraries**, including **[PDF](https://help.syncfusion.com/document-processing/pdf/overview)**, **[Word](https://help.syncfusion.com/document-processing/word/overview) (DocIO)**, **[Excel](https://help.syncfusion.com/document-processing/excel/overview) (XlsIO)**, and **[PowerPoint](https://help.syncfusion.com/document-processing/powerpoint/overview) (Presentation)**. 
 
 
 ## Getting Started
