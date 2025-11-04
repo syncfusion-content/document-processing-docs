@@ -35,12 +35,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
     #region Save
     //Saving the workbook
-    FileStream outputStream = new FileStream(Path.GetFullPath("Output.xlsx"), FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
+    workbook.SaveAs("Output.xlsx");
     #endregion
-
-    //Dispose streams
-    outputStream.Dispose();
 }
 {% endhighlight %}
 
