@@ -128,9 +128,9 @@ For more details, refer to the <a href = "https://docs.cursor.com/en/context/mcp
 
 ### JetBrains IDEs
 
-  1. Go to Settings -> Tools -> AI Assistant -> Model Context Protocol (MCP).
-  2. Click + Add to add a new MCP server configuration.
-  3. In the New MCP Server dialog, switch the dropdown as ```As JSON``` and add the following config:
+  * Go to Settings -> Tools -> AI Assistant -> Model Context Protocol (MCP).
+  * Click + Add to add a new MCP server configuration.
+  * In the New MCP Server dialog, switch the dropdown as ```As JSON``` and add the following config:
 
 ~~~json
   {
@@ -149,7 +149,7 @@ For more details, refer to the <a href = "https://docs.cursor.com/en/context/mcp
   }
 ~~~
 
-  4. Click OK and Apply.
+  * Click OK and Apply.
 
 For further assistance, see the <a href ="https://www.jetbrains.com/help/ai-assistant/mcp.html#connect-to-an-mcp-server">JetBrains documentation</a>.
 
