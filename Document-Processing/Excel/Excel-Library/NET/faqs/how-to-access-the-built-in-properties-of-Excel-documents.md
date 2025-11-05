@@ -1,5 +1,5 @@
 ---
-title: How to access the built-in properties of Excel documents | XlsIO | Syncfusion
+title: How to access the built-in properties of Excel documents | Syncfusion
 description: This page shows how to access the built-in properties of Excel documents using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
@@ -26,4 +26,4 @@ Dim documentProperties As IBuiltInDocumentProperties = workbook.BuiltInDocumentP
 
 ## See Also
 
-* [How to disable ExportDocumentProperties?](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/excel-to-pdf-converter-settings?cs-save-lang=1&cs-lang=vb#export-document-properties)
+* [How to disable ExportDocumentProperties](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/excel-to-pdf-converter-settings?cs-save-lang=1&cs-lang=vb#export-document-properties)
