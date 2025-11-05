@@ -101,7 +101,7 @@ For additional details, see the Code Studio [documentation](https://help.syncfus
   * Confirm that <a href ="https://www.npmjs.com/package/@syncfusion/documentsdk-assistant">SyncfusionDocumentSDKAssistant</a> is being used (this does not happen automatically). Look for a statement in the output, which is similar to:
 
       * ```SyncfusionDocumentSDKAssistant is running...``` (in VS Code)
-  * For more details, refer to the official <a href = "https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022"> Visual Studio documentation </a>.
+  * For more details, refer to the official <a href = "https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022"> Visual Studio documentation</a>.
 
 ### Cursor
 
