@@ -6,7 +6,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Annotations Events in ASP.NET MVC Pdf viewer control
+# Annotations Events in ASP.NET MVC PDF Viewer control
 
 The PDF Viewer component triggers various events based on user interactions and changes in the component's state. These events can be used to perform actions when a specific event occurs. This section describes the events available in the PDF Viewer component.
 

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get Base64 value from a loaded PDF
+# Get Base64 value from a loaded PDF in JavaScript
 
 ### Overview
 

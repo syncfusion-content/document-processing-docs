@@ -8,7 +8,7 @@ publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Get Base64 value from a loaded PDF
+# Get Base64 value from a loaded PDF in ASP.NET MVC
 
 ### Overview
 

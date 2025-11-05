@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Extract text using TextLineCollection in Syncfusion ASP.NET Core PDF Viewer
+title: Extract text using TextLineCollection in ASP.NET Core | Syncfusion
 description: Learn how to extract text with bounds from PDF pages by using the TextLineCollection API in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
 
-# Extract text using TextLineCollection
+# Extract text using TextLineCollection in ASP.NET Core
 
 The PDF Viewer server library can extract text and its bounding information from a PDF page by using the **ExtractText()** method. The `TextLineCollection` output contains each line of text along with coordinates that help map the content back to the page.
 
