@@ -1350,3 +1350,79 @@ document.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Restrict-permission-in-PDF).
+
+## Apply Matte to Transparent Images
+
+This setting allows you to determine whether to **apply a matte color to transparent images** during Word to PDF conversion, ensuring they render cleanly without unwanted borders or artifacts in the final PDF.
+
+The following code sample shows how to apply a matte color to transparent images during Word to PDF conversion.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+FileStream fileStream = new FileStream("Template.docx", FileMode.Open);
+// Loads an existing Word document
+WordDocument wordDocument = new WordDocument(fileStream, FormatType.Docx);
+// Instantiates DocIORenderer instance for Word to PDF conversion
+DocIORenderer renderer = new DocIORenderer();
+// Set to true to apply a matte color to transparent images.
+renderer.Settings.ApplyMatteToTransparentImages = true;
+// Converts Word document into PDF document
+PdfDocument pdfDocument = renderer.ConvertToPDF(wordDocument);
+// Closes the instance of Word document object
+wordDocument.Close();
+// Releases the resources occupied by DocIORenderer instance
+renderer.Dispose();
+// Saves the PDF file  
+pdfDocument.Save(@"../../../Output/Result.pdf");
+// Closes the instance of PDF document object
+pdfDocument.Close();
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+ 
+// Loads an existing Word document
+WordDocument wordDocument = new WordDocument("Template.docx");
+// Creates an instance of the DocToPDFConverter - responsible for Word to PDF conversion
+DocToPDFConverter converter = new DocToPDFConverter();
+// Set to true to apply a matte color to transparent images.
+converter.Settings.ApplyMatteToTransparentImages = true;
+// Converts Word document into PDF document
+PdfDocument pdfDocument = converter.ConvertToPDF(wordDocument);
+// Closes the instance of Word document object
+wordDocument.Close();
+// Releases the resources occupied by DocToPDFConverter instance
+converter.Dispose();
+// Saves the PDF file  
+pdfDocument.Save(@"../../../Output/Result.pdf");
+// Closes the instance of PDF document object
+pdfDocument.Close();
+ 
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Loads an existing Word document
+Dim wordDocument As New WordDocument("Template.docx")
+' Creates an instance of the DocToPDFConverter - responsible for Word to PDF conversion
+Dim converter As New DocToPDFConverter()
+' Set to true to apply a matte color to transparent images
+converter.Settings.ApplyMatteToTransparentImages = True
+' Converts Word document into PDF document
+Dim pdfDocument As PdfDocument = converter.ConvertToPDF(wordDocument)
+' Closes the instance of Word document object
+wordDocument.Close()
+' Releases the resources occupied by DocToPDFConverter instance
+converter.Dispose()
+' Saves the PDF file
+pdfDocument.Save("../../../Output/Result.pdf")
+' Closes the instance of PDF document object
+pdfDocument.Close()
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/).
