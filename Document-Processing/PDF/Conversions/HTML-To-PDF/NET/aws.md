@@ -19,15 +19,16 @@ The Syncfusion<sup>&reg;</sup> [HTML to PDF converter](https://www.syncfusion.co
 
 ## Convert HTML to PDF in AWS Lambda
 
-<<<<<<< HEAD
 HTML to PDF converter .NET library supports conversion in AWS Lambda. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-aws-lambda) section for more information about HTML to PDF conversion in AWS Lambda.
 
 ## Convert HTML to PDF in AWS Lambda with NET 6 container image
 
 HTML to PDF converter .NET library supports conversion in AWS Lambda with NET 6 container image. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-aws-lambda-with-net6-container-image) section for more information about HTML to PDF conversion in AWS Lambda with NET 6 container image.
 
-## Convert HTML to PDF in AWS Elastic Beanstalk.
+## Convert HTML to PDF in AWS Elastic Beanstalk
 
 HTML to PDF converter .NET library supports conversion in AWS Elastic Beanstalk. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-aws-elastic-beanstalk) section for more information about HTML to PDF conversion in AWS Elastic Beanstalk.
 
+## Convert HTML to PDF in Amazon ECS with Fargate
 
+HTML to PDF converter .NET library supports conversion in Amazon ECS with Fargate. Refer to this section for more information about HTML to PDF conversion in Amazon ECS with Fargate.
