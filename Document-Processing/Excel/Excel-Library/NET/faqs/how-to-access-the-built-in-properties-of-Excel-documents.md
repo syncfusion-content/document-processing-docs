@@ -26,4 +26,4 @@ Dim documentProperties As IBuiltInDocumentProperties = workbook.BuiltInDocumentP
 
 ## See Also
 
-* [How to disable ExportDocumentProperties](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/excel-to-pdf-converter-settings?cs-save-lang=1&cs-lang=vb#export-document-properties)
+* [How to disable ExportDocumentProperties](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/excel-to-pdf-converter-settings#export-document-properties)
