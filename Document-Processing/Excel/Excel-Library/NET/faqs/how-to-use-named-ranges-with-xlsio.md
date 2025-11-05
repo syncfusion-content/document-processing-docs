@@ -39,8 +39,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     MessageBox.Show(name.Name.ToString());
   }
 
-  FileStream stream = new FileStream("NamedRange.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  workbook.SaveAs("NamedRange.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }
