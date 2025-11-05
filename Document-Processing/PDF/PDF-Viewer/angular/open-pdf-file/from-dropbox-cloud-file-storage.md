@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Open PDF from Dropbox cloud storage in Angular PdfViewer | Syncfusion
-description: Learn here all about how to Open PDF files from Dropbox cloud file storage in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Open PDF from Dropbox cloud storage in Angular PDF Viewer | Syncfusion
+description: Learn here all about how to Open PDF files from Dropbox cloud file storage in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open PDF files from Dropbox cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF file from Dropbox cloud file storage
+# Open PDF from Dropbox cloud storage
 
-PDF Viewer allows to load PDF file from Drop Box using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to open a PDF from Drop Box.
+The Angular PDF Viewer component supports loading PDF files from Dropbox using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 
 ## Using Standalone PDF Viewer
 
@@ -18,13 +18,13 @@ To load a PDF file from Dropbox cloud file storage in a PDF Viewer, you can foll
 
 **Step 1** Create a Dropbox API
 
-To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
+Follow the Dropbox documentation to create an API app: [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). This enables programmatic access with secure credentials.
 
 **Step 2:** Create a Simple PDF Viewer Sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will give you a basic setup of the PDF Viewer component.
 
-**Step 3:** Modify the `src/app/app.component.ts` File in the Angular Project
+**Step 3:** Modify the src/app/app.ts file in the Angular project
 
 1. Import the required namespaces at the top of the file:
 
@@ -34,7 +34,7 @@ import { Dropbox } from 'dropbox';
 
 2. Create an instance of the Dropbox class using an access token for authentication. Next, call the filesDownload method of this Dropbox instance to download the file located at /PDF_Succinctly.pdf. Upon successfully downloading the file, extract the file blob from the response. Convert this file blob to a Base64 string using the blobToBase64 method. Finally, load the Base64 string into a PDF viewer control.
 
-N> Replace **Your Access Token** with the actual Access Token of your Drop Box account.
+N> Replace the placeholder with your actual Dropbox access token.
 
 ```typescript
 async loadPdfDocument(): Promise<void> {
@@ -65,17 +65,17 @@ N> The **npm install dropbox** package must be installed in your application to 
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage/tree/master/Open%20and%20Save%20PDF%20in%20Drop%20Box%20using%20Standalone)
 
-## Using Server-Backed PDF Viewer
+## Using the server-backed PDF Viewer
 
 To load a PDF file from Dropbox cloud file storage in a PDF Viewer, you can follow the steps below
 
 **Step 1** Create a Dropbox API
 
-To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
+To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). This enables programmatic access with secure credentials.
 
-**Step 2:** Create a Simple PDF Viewer Sample in Angular
+**Step 2:** Create a PDF Viewer sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will give you a basic setup of the PDF Viewer component.
 
 **Step 3:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -170,11 +170,11 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token and **Your_Folder_Name** with your folder name.
+N> Replace the placeholders with your actual Dropbox values: Access Token and Folder Name.
 
-**Step 4:**  Set the PDF Viewer Properties in Angular PDF viewer component
+**Step 4:** Configure the PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Dropbox cloud file storage. Ensure that you correctly pass the document name from the files available in your dropbox folder to the documentPath property.
+Set the serviceUrl to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Dropbox. Ensure the document name exists in your Dropbox folder.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';

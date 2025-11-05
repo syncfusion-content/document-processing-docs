@@ -1,28 +1,28 @@
 ---
 layout: post
-title: Google Drive in ASP.NET MVC PDF Viewer Component
-description: Save PDF files to Google Drive in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Save PDF files to Google Drive in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to save PDF files to Google Drive using the Syncfusion ASP.NET MVC PDF Viewer component with a server-backed web service.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Save PDF file to Google Drive
+# Save PDF files to Google Drive
 
-To save a PDF file to Google Drive, you can follow the steps below
+To save a PDF file to Google Drive using the ASP.NET MVC PDF Viewer, follow the steps below. This approach uses a server-backed web service.
 
-**Step 1** Set up Google Drive API
+**Step 1:** Set up the Google Drive API
 
-You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
+Create a project in the Google Cloud Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, see the official [guide](https://developers.google.com/drive/api/guides/enable-sdk)
 
-**Step 2:** Create PDF Viewer Sample in ASP.NET MVC
+**Step 2:** Create an ASP.NET MVC PDF Viewer sample
 
-Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/-with-server-backed#integrate-pdf-viewer-into-an-aspnet-mvc-application) to create a simple PDF Viewer sample in ASP.NET MVC.
+Follow the instructions in this [Getting Started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET MVC.
 
-**Step 3:** Modify the `HomeController.cs` File in the Project
+**Step 3:** Modify the `HomeController.cs` file in the project
 
-1. Import the required namespaces at the top of the file.
+1. Import the required namespaces at the top of the file:
 
 ```csharp
 using System.IO;
@@ -32,7 +32,7 @@ using Google.Apis.Services;
 using Google.Apis.Util.Store;
 ```
 
-3. Modify the `Download()` method to save the downloaded PDF files to Google Drive bucket
+2. Modify the `Download()` method to save the downloaded PDF files to the Google Drive folder.
 
 ```csharp
 
@@ -100,11 +100,11 @@ using Google.Apis.Util.Store;
 
 ```
 
-N> Replace **Your Google Drive Folder ID**, **Your Application name**, **tokenPath** and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google drive folder ID , Your name for your application, Path to the token file to generate and the path for the JSON file.
+N> Replace the placeholders with the actual Google Drive folder ID, application name, and the path to the OAuth 2.0 Client IDs JSON file. The folder ID is the unique identifier in the folder URL. For example, in `https://drive.google.com/drive/folders/abc123xyz456`, the ID is `abc123xyz456`.
 
-**Step 4:** Set the PDF Viewer Properties in ASP.NET MVC PDF viewer component
+**Step 4:** Set the PDF Viewer properties in the ASP.NET MVC PDF Viewer component
 
-Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Google Drive. Ensure that you correctly pass the document name from the files available in your azure container to the documentPath property.
+Set the `documentPath` property of the PDF Viewer component to the desired PDF file name that you wish to load from Google Drive. Ensure that the document exists in the target folder.
 
 ```csharp
 
@@ -120,6 +120,6 @@ Set the `documentPath` property of the PDF viewer component to the desired name 
 
 ```
 
-N> The **Google.Apis.Drive.v3** NuGet package must be installed in your application to use the previous code example.
+N> Install the **Google.Apis.Drive.v3** NuGet package in the application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-google-drive)

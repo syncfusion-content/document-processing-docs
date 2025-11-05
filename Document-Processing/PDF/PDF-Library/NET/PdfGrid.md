@@ -3645,7 +3645,6 @@ using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -3685,7 +3684,6 @@ using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
 using System.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -3725,7 +3723,6 @@ Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Grid
 Imports Syncfusion.Drawing
-Imports System.Reflection.Metadata
 
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()
@@ -3777,7 +3774,6 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Pdf;
 using Syncfusion.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -3832,7 +3828,6 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Pdf;
 using System.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -3886,7 +3881,6 @@ Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Grid
 Imports Syncfusion.Drawing
-Imports System.Reflection.Metadata
 
 'Create a new PDF document.
 Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -3948,7 +3942,6 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Pdf;
 using Syncfusion.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -4012,7 +4005,6 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Pdf;
 using System.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -4078,7 +4070,6 @@ Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Grid
 Imports Syncfusion.Drawing
-Imports System.Reflection.Metadata
 
 'Create a new PDF document.
 Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -4155,7 +4146,6 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Pdf;
 using Syncfusion.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -4206,7 +4196,6 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Pdf;
 using System.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -4257,7 +4246,6 @@ Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Grid
 Imports Syncfusion.Drawing
-Imports System.Reflection.Metadata
 
 'Create a new PDF document. 
 Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -4320,7 +4308,6 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Pdf;
 using Syncfusion.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -4389,7 +4376,6 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Pdf;
 using System.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -4459,7 +4445,6 @@ Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Grid
 Imports Syncfusion.Drawing
-Imports System.Reflection.Metadata
 
 'Create a new PDF document.
 Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -4535,7 +4520,6 @@ The following code illustrates how to create the nested table in a PDF document 
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Pdf;
 using Syncfusion.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -4590,7 +4574,6 @@ pdfDocument.Close(true);
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Pdf;
 using System.Drawing;
-using System.Reflection.Metadata;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -4645,7 +4628,6 @@ pdfDocument.Close(true);
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Grid
 Imports Syncfusion.Drawing
-Imports System.Reflection.Metadata
 
 'Create a new PDF document.
 Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -4849,7 +4831,7 @@ The following code sample demonstrates how to prevent row breaks across pages in
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Prevent-row-breaks-across-pages/.NET/Prevent-row-breaks-across-pages/Program.cs" %} 
 
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Pdf;
@@ -4982,7 +4964,7 @@ The following code sample demonstrates how to change the page margins beginning 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Changing-Margins-from-the-Second-Page-onwards/.NET/Changing-Margins-from-the-Second-Page-onwards/Program.cs" %} 
 
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Pdf;

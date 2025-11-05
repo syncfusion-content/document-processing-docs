@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Rows and columns in Spreadsheet control
+# Rows and columns in ASP.NET MVC Spreadsheet control
 
 Spreadsheet is a tabular format consisting of rows and columns. The intersection point of rows and columns are called as cells. The list of operations that you can perform in rows and columns are,
 
@@ -31,10 +31,10 @@ The following code example shows the options for inserting rows in the spreadshe
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/insert-row/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/insert-row/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="InsertRowController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/insert-row/insertRowController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/insert-row/insertRowController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -51,10 +51,10 @@ The following code example shows the options for inserting columns in the spread
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/insert-column/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/insert-column/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="InsertColumnController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/insert-column/insertColumnController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/insert-column/insertColumnController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,10 +73,10 @@ The following code example shows the delete operation of rows and columns in the
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/delete-row/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/delete-row/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="DeleteRowController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/delete-row/deleteRowController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/delete-row/deleteRowController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -106,10 +106,10 @@ The following code example shows the hide/show rows and columns operation in the
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/show-hide/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/show-hide/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ShowHideController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/show-hide/showHideController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/show-hide/showHideController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -134,10 +134,10 @@ The following code example shows how to change the height for single/multiple ro
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/row-height/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/row-height/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="RowHeightController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/row-height/rowHeightController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/row-height/rowHeightController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -156,10 +156,10 @@ The following code example shows how to change the width for single/multiple col
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/column-width/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/column-width/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ColumnWidthController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/column-width/columnWidthController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/column-width/columnWidthController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -171,7 +171,7 @@ The following code example shows how to change the text in the column headers.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/column-header-change/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/column-header-change/razor %}
 {% endhighlight %}
 {% endtabs %}
 

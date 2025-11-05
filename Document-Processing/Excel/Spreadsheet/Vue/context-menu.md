@@ -70,14 +70,14 @@ In this demo, Custom Item is added after the Paste item in the context menu.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/contextmenu/addContextMenu-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/contextmenu/addContextMenu-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/contextmenu/addContextMenu-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/contextmenu/addContextMenu-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/contextmenu/addContextMenu-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/contextmenu/addContextMenu-cs1" %}
 
 ### Remove Context Menu Items
 
@@ -87,14 +87,14 @@ In this demo, Insert Column item has been removed from the row/column header con
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/contextmenu/addContextMenu-cs2/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/contextmenu/addContextMenu-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/contextmenu/addContextMenu-cs2/app.vue %}
+{% include code-snippet/spreadsheet/vue/contextmenu/addContextMenu-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/contextmenu/addContextMenu-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/contextmenu/addContextMenu-cs2" %}
 
 ### Enable/Disable Context Menu Items
 
@@ -104,14 +104,14 @@ In this demo, Rename item is disabled in the pager context menu.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/contextmenu/addContextMenu-cs3/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/contextmenu/addContextMenu-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/contextmenu/addContextMenu-cs3/app.vue %}
+{% include code-snippet/spreadsheet/vue/contextmenu/addContextMenu-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/contextmenu/addContextMenu-cs3" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/contextmenu/addContextMenu-cs3" %}
 
 ## Note
 

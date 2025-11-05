@@ -1,24 +1,33 @@
 ---
 layout: post
-title: Extract Text Using Text Collection in Syncfusion ASP.NET MVC Pdfviewer Component
-description: Learn here all about Extract Text Using Text Collection in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Extract text using TextLineCollection in Syncfusion ASP.NET MVC PDF Viewer
+description: Learn how to extract text with bounds from PDF pages by using the TextLineCollection API in the Syncfusion ASP.NET MVC PDF Viewer.
 platform: document-processing
-control: Extract Text Using Text Collection
+control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
 
-# Extract Text using TextLineCollection
+# Extract text using TextLineCollection
 
-The PDF Viewer server library allows you to extract the text from a page along with the bounds using TextLineCollection. Text extracting can be done using the **ExtractText()** method.
+The PDF Viewer server library can extract text and its bounding information from a PDF page by using the **ExtractText()** method. The `TextLineCollection` output contains each line of text along with coordinates that help map the content back to the page.
 
-Add the following dependency to your application using the `NuGet Package Manager`.
-* Syncfusion.EJ2.PdfViewer.AspNet.Mvc5
+## Prerequisites
 
-N>From Volume 2 2019 release Syncfusion.Pdf.AspNet.Mvc5 and Syncfusion.Compression.Base packages are added as dependency for PDF Viewer control. Ensure the dependency packages are referred in your application properly.
+Add the following dependency to your application by using the NuGet Package Manager:
 
-The following code snippet explains how to extract the text from a page using TextLineCollection.
+* Syncfusion.EJ2.PdfViewer.AspNet.Core
+
+N> From the Volume 2 2019 release, the Syncfusion.Pdf.Net.Core and Syncfusion.Compression.Net.Core packages are added as dependencies for the PDF Viewer control. Ensure these packages are referenced correctly in your project.
+
+## Steps to extract text from a PDF page
+
+1. Load the PDF document into a `PdfLoadedDocument` instance.
+2. Retrieve the target page as a `PdfLoadedPage` object.
+3. Call `ExtractText` to obtain the text and the corresponding `TextLineCollection`.
+
+The following code snippet demonstrates the extraction workflow:
 
 ```cs
 
@@ -34,6 +43,6 @@ var text = page.ExtractText(out TextLineCollection textLineCollection);
 
 ```
 
-Find the sample [How to extract text using TextLineCollection](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Wordbound1901545288.zip)
+[View sample in GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/How%20to/Load%20N%20no%20of%20pages)
 
-N>Ensure the provided document path and output text saved locations in your application level.
+N> Ensure the document path and any output locations are valid for the hosting environment, and dispose of the `PdfLoadedDocument` after extraction to release file handles.

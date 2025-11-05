@@ -1,26 +1,25 @@
 ---
 layout: post
-title: Custom context menu in Typescript PDF Viewer control | Syncfusion
-description: Learn here all about Custom context menu in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Customize the context menu in TypeScript PDF Viewer | Syncfusion
+description: Learn how to add and customize custom context menu options in the TypeScript PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom context menu in Typescript Pdfviewer control
+# Customize the context menu in PDF Viewer
 
-PDF Viewer allows you to add custom option in context menu. It can be achieved by using the [addCustomMenu()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#addcustommenu) method and custom action is defined using the [customContextMenuSelect()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#customcontextMenuselect)method.
+PDF Viewer supports adding custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#addcustommenu) method. Define actions for custom items with the [customContextMenuSelect()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#customcontextMenuselect) method.
 
-### Add Custom Option
+### Add a custom option
 
-The following code shows how to add custom option in context menu.
+The following example adds custom options to the context menu.
 
 ```ts
     let viewer: PdfViewer = new PdfViewer();
     viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-    viewer.resourceUrl = "https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib";
+    viewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
     var menuItems: MenuItemModel[] = [
         {
             text: 'Search In Google',
@@ -83,15 +82,15 @@ The following code shows how to add custom option in context menu.
     };
 ```
 
-### Customize custom option in context menu
+### Customize the default vs custom menu
 
-The PDF Viewer feature enables customization of custom options and the ability to toggle the display of the default context menu. When the addCustomMenu parameter is set to `true`, the default menu is hidden; conversely, when it is set to `false`, the default menu items are displayed.
+Toggle the display of the default context menu. When the addCustomMenu parameter is `true`, the default menu is hidden; when `false`, default menu items are displayed alongside custom items.
 
 ```ts
 
     let viewer: PdfViewer = new PdfViewer();
     viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-    viewer.resourceUrl = "https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib";
+    viewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
     var menuItems: MenuItemModel[] = [
         {
             text: 'Search In Google',
@@ -126,15 +125,15 @@ The PDF Viewer feature enables customization of custom options and the ability t
 
 ```
 
-#### Customize added context menu items
+#### Show or hide custom items before opening
 
-The following code shows how to hide/show added custom option in context menu using the [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#customcontextMenubeforeopen) method.
+Use [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#customcontextMenubeforeopen) to hide or show custom options dynamically.
 
 ```ts
 
     let viewer: PdfViewer = new PdfViewer();
     viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-    viewer.resourceUrl = "https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib";
+    viewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
     var menuItems: MenuItemModel[] = [
         {
             text: 'Search In Google',
@@ -172,7 +171,7 @@ viewer.customContextMenuSelect = function (args) {
         case 'search_in_google':
             for (var i = 0; i < viewer.textSelectionModule.selectionRangeArray.length; i++) {
                 var content = viewer.textSelectionModule.selectionRangeArray[i].textContent;
-                if ((viewer.textSelectionModule.isTextSelection) && (/\S/.test(content))) {
+                if ((viewer.textSelectionModule.isTextSelection) && (\/\S\/.test(content))) {
                     window.open('http://google.com/search?q=' + content);
                 }
             }
@@ -278,7 +277,8 @@ function setReadOnlyFalse(args) {
     }
 }
 ```
-The following is the output of custom context menu with customization.
+
+The following is the output of the custom context menu with customization.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -293,4 +293,4 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.ts` file
 `viewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/custom-context-menu/index.html" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/custom-context-menu/index.html" %}

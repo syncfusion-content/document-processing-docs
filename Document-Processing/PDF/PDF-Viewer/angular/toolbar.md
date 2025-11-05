@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Toolbar in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Toolbar in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Toolbar in Angular PDF Viewer component | Syncfusion
+description: Learn here all about Toolbar in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Toolbar
 documentation: ug
