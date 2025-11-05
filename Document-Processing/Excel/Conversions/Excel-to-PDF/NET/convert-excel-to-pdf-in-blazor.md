@@ -86,27 +86,23 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
+    
+    // Open the workbook.
+    IWorkbook workbook = application.Workbooks.Open(@"wwwroot/InputTemplate.xlsx");
 
-    //Load an existing file
-    using (FileStream sourceStreamPath = new FileStream(@"wwwroot/InputTemplate.xlsx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-    {
-        // Open the workbook.
-        IWorkbook workbook = application.Workbooks.Open(sourceStreamPath);
+    // Instantiate the Excel to PDF renderer.
+    XlsIORenderer renderer = new XlsIORenderer();
 
-        // Instantiate the Excel to PDF renderer.
-        XlsIORenderer renderer = new XlsIORenderer();
+    //Convert Excel document into PDF document 
+    PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
-        //Convert Excel document into PDF document 
-        PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+    //Create the MemoryStream to save the converted PDF.      
+    MemoryStream pdfStream = new MemoryStream();
 
-        //Create the MemoryStream to save the converted PDF.      
-        MemoryStream pdfStream = new MemoryStream();
-
-        //Save the converted PDF document to MemoryStream.
-        pdfDocument.Save(pdfStream);
-        pdfStream.Position = 0;
-        return pdfStream;
-    }
+    //Save the converted PDF document to MemoryStream.
+    pdfDocument.Save(pdfStream);
+    pdfStream.Position = 0;
+    return pdfStream;   
 }
 {% endhighlight %}
 {% endtabs %}
@@ -245,26 +241,22 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
 
-    //Load an existing file
-    using (FileStream sourceStreamPath = new FileStream(@"wwwroot/InputTemplate.xlsx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-    {
-        // Open the workbook.
-        IWorkbook workbook = application.Workbooks.Open(sourceStreamPath);
+    // Open the workbook.
+    IWorkbook workbook = application.Workbooks.Open(@"wwwroot/InputTemplate.xlsx");
 
-        // Instantiate the Excel to PDF renderer.
-        XlsIORenderer renderer = new XlsIORenderer();
+    // Instantiate the Excel to PDF renderer.
+    XlsIORenderer renderer = new XlsIORenderer();
 
-        //Convert Excel document into PDF document 
-        PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+    //Convert Excel document into PDF document 
+    PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
-        //Create the MemoryStream to save the converted PDF.      
-        MemoryStream pdfStream = new MemoryStream();
+    //Create the MemoryStream to save the converted PDF.      
+    MemoryStream pdfStream = new MemoryStream();
 
-        //Save the converted PDF document to MemoryStream.
-        pdfDocument.Save(pdfStream);
-        pdfStream.Position = 0;
-        return pdfStream;
-    }
+    //Save the converted PDF document to MemoryStream.
+    pdfDocument.Save(pdfStream);
+    pdfStream.Position = 0;
+    return pdfStream;    
 }
 {% endhighlight %}
 {% endtabs %}
