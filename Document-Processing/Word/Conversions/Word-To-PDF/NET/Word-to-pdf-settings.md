@@ -1424,5 +1424,3 @@ pdfDocument.Close()
 {% endhighlight %}
 
 {% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/).
