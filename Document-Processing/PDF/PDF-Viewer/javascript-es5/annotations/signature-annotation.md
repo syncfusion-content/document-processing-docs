@@ -106,7 +106,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-## Control editability of handwritten signatures after download
+## Control ability to edit handwritten signatures after download
 
 Use the isSignatureEditable property to control whether handwritten signatures remain editable after download. When set to false, signatures are flattened and cannot be edited after the file is downloaded. When set to true, signatures are preserved as editable. Defaults to false.
 

@@ -57,7 +57,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 Open or close the form designer toolbar when the PDF document is loaded initially in the PDF Viewer control. Use the `isFormDesignerToolbarVisible` property to get or set the annotation toolbar visible status. The default value is false. You can refer to [isFormDesignerToolbarVisible API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) for more information. 
 
-Use the following code to enable or disable the form desinger toolbar on load:
+Use the following code to enable or disable the form designer toolbar on load:
 
 ```js
 // Inject required modules

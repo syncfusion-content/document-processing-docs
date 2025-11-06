@@ -82,7 +82,7 @@ document.getElementById('getBookmarks').addEventListener('click', () => {
 
 ## Show or hide the bookmark panel on load
 
-The `isBookmarkPanelOpen` property gets or sets a boolean value to show or hide the bookmark panel while loading a document. Defaults to false. You can refer to [isBookmarkPanelOpen API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#isbookmarkpanelopen) for mor Details
+The `isBookmarkPanelOpen` property gets or sets a boolean value to show or hide the bookmark panel while loading a document. Defaults to false. You can refer to [isBookmarkPanelOpen API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#isbookmarkpanelopen) for more Details
 
 ```js
   viewer.isBookmarkPanelOpen = true;
