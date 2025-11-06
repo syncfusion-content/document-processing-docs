@@ -7,10 +7,8 @@ control: AI coding assistant
 documentation: ug
 ---
 
-# Syncfusion <sup>&reg;</sup> AI Coding Assistant Overview
+# Syncfusion® AI Coding Assistant Overview
 
-
-## Overview  
 
 The **Syncfusion<sup>&reg;</sup> AI Coding Assistant** are designed to streamline your development workflow when building .NET applications with Syncfusion<sup>&reg;</sup> components. It uses contextual knowledge of the Syncfusion<sup>&reg;</sup> component library to generate accurate code snippets, configuration examples, and guided explanations—minimizing documentation searches and maximizing productivity. 
 
