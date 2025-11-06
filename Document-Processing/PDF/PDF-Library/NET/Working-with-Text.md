@@ -386,11 +386,32 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Draw-text-in-PDF-document-using-standard-fonts/). 
 
-### Draw text using TrueType fonts
+### Draw Text using TrueType fonts
 
-You can add text using the TrueType fonts installed in the system, by initializing [PdfFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfFont.html) class as [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html) class. The following code snippet illustrates this.
+You can add text using TrueType fonts either installed on the system or provided as a font stream by initializing the [PdfFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfFont.html) class as a [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html). The following code Example demonstrates this approach.
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a page to the document.
+PdfPage page = document.Pages.Add();
+
+//Create PDF graphics for the page.
+PdfGraphics graphics = page.Graphics;
+//Provide the path of the local *.ttf file
+PdfFont font = new PdfTrueTypeFont("Arial.ttf", 14);
+//Draw the text.
+graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+
+//Save the document.
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
@@ -459,8 +480,7 @@ PdfPage page = document.Pages.Add();
 //Create PDF graphics for the page.
 PdfGraphics graphics = page.Graphics;
 //Load the TrueType font from the local *.ttf file.
-FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
-PdfFont font = new PdfTrueTypeFont(fontStream, 14);
+PdfFont font = new PdfTrueTypeFont("Arial.ttf", 14);
 //Draw the text.
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
@@ -716,10 +736,8 @@ using Syncfusion.Pdf.Graphics;
 PdfDocument document = new PdfDocument();
 //Add a page to the document 
 PdfPage page = document.Pages.Add();
-// Load the font file from the stream 
-FileStream fontStream = new FileStream(@"../../../arial.ttf", FileMode.Open, FileAccess.Read);
 //Create a new PDF font instance 
-PdfFont font = new PdfTrueTypeFont(fontStream, 14, PdfFontStyle.Italic);
+PdfFont font = new PdfTrueTypeFont("arial.ttf", 14, PdfFontStyle.Italic);
 //Create a new PDF string format instance 
 PdfStringFormat format = new PdfStringFormat();
 //Enable the measure tilting space      
@@ -774,10 +792,8 @@ Imports System.Drawing
 Dim document As PdfDocument = New PdfDocument() 
 'Add a page to the document 
 Dim page As PdfPage = document.Pages.Add() 
-'Load the font file from the stream 
-Dim fontStream As FileStream = New FileStream("font.ttf", FileMode.Open, FileAccess.Read) 
 'Create a new PDF font instance 
-Dim font As PdfFont = New PdfTrueTypeFont(fontStream, 14, PdfFontStyle.Italic) 
+Dim font As PdfFont = New PdfTrueTypeFont("font.ttf", 14, PdfFontStyle.Italic) 
 'Create a new PDF string format instance 
 Dim format As PdfStringFormat = New PdfStringFormat() 
 'Enable a measure tilting space  
@@ -797,6 +813,166 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Measure-tilting-space-in-PDF/.NET).
+
+## Unit conversion in text layout
+
+The [PdfUnitConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfUnitConvertor.html) class is used to accurately position and layout paragraph text within a PDF document. By converting measurements from inches to points, it ensures consistent margins and precise placement of content.
+
+This example demonstrates how to use converted units to accurately position and format paragraph text within a PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Unit-conversion-in-text-layout/.NET/Unit-conversion-in-text-layout/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page
+    PdfPage page = document.Pages.Add();
+
+    // Initialize unit converter
+    PdfUnitConverter converter = new PdfUnitConverter();
+
+    // Convert margins from inches to points
+    float margin = converter.ConvertUnits(1f, PdfGraphicsUnit.Inch, PdfGraphicsUnit.Point);
+
+    // Define text bounds to fill the page with margins
+    RectangleF textBounds = new RectangleF(
+        margin,
+        margin,
+        page.Graphics.ClientSize.Width - 2 * margin,
+        page.Graphics.ClientSize.Height - 2 * margin
+    );
+
+    // Define font and paragraph text
+    PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 14);
+
+    string paragraphText = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
+
+    // Create text element and layout format
+    PdfTextElement textElement = new PdfTextElement(paragraphText, font, PdfBrushes.Black);
+
+    PdfLayoutFormat layoutFormat = new PdfLayoutFormat
+    {
+        Break = PdfLayoutBreakType.FitPage,
+        Layout = PdfLayoutType.Paginate
+    };
+
+    // Draw the paragraph text within the bounds
+    textElement.Draw(page, textBounds, layoutFormat);
+
+    //Save the document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Drawing;
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page
+    PdfPage page = document.Pages.Add();
+
+    // Initialize unit converter
+    PdfUnitConverter converter = new PdfUnitConverter();
+
+    // Convert margins from inches to points
+    float margin = converter.ConvertUnits(1f, PdfGraphicsUnit.Inch, PdfGraphicsUnit.Point);
+
+    // Define text bounds to fill the page with margins
+    RectangleF textBounds = new RectangleF(
+        margin,
+        margin,
+        page.Graphics.ClientSize.Width - 2 * margin,
+        page.Graphics.ClientSize.Height - 2 * margin
+    );
+
+    // Define font and paragraph text
+    PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 14);
+
+    string paragraphText = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
+
+    // Create text element and layout format
+    PdfTextElement textElement = new PdfTextElement(paragraphText, font, PdfBrushes.Black);
+
+    PdfLayoutFormat layoutFormat = new PdfLayoutFormat
+    {
+        Break = PdfLayoutBreakType.FitPage,
+        Layout = PdfLayoutType.Paginate
+    };
+
+    // Draw the paragraph text within the bounds
+    textElement.Draw(page, textBounds, layoutFormat);
+
+    //Save the document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
+
+Module Program
+    Sub Main()
+        ' Create a new PDF document
+        Using document As New PdfDocument()
+
+            ' Add a page
+            Dim page As PdfPage = document.Pages.Add()
+
+            ' Initialize unit converter
+            Dim converter As New PdfUnitConverter()
+
+            ' Convert 1 inch margin to points
+            Dim margin As Single = converter.ConvertUnits(1.0F, PdfGraphicsUnit.Inch, PdfGraphicsUnit.Point)
+
+            ' Define text bounds to fill the page with margins
+            Dim textBounds As New RectangleF(
+                margin,
+                margin,
+                page.Graphics.ClientSize.Width - 2 * margin,
+                page.Graphics.ClientSize.Height - 2 * margin
+            )
+
+            ' Define font and paragraph text
+            Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.TimesRoman, 14)
+            Dim paragraphText As String = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."
+
+            ' Create text element and layout format
+            Dim textElement As New PdfTextElement(paragraphText, font, PdfBrushes.Black)
+            Dim layoutFormat As New PdfLayoutFormat With {
+                .Break = PdfLayoutBreakType.FitPage,
+                .Layout = PdfLayoutType.Paginate
+            }
+
+            text within the bounds
+            textElement.Draw(page, textBounds, layoutFormat)
+
+            ' Save the document
+            document.Save("Output.pdf")
+        End Using
+    End Sub
+End Module
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Unit-conversion-in-text-layout/.NET).
 
 ## Embedding fonts and working with Unicode text
 
@@ -894,8 +1070,7 @@ PdfPage page = doc.Pages.Add();
 //Create PDF graphics for the page
 PdfGraphics graphics = page.Graphics;
 //Create a new PDF font instance
-FileStream fontStream = new FileStream("arial.ttf", FileMode.Open, FileAccess.Read);
-PdfFont font = new PdfTrueTypeFont(fontStream, 14);
+PdfFont font = new PdfTrueTypeFont("arial.ttf", 14);
 //Set the format for string
 PdfStringFormat format = new PdfStringFormat();
 //Set right-to-left text direction for RTL text
@@ -905,8 +1080,7 @@ format.Alignment = PdfTextAlignment.Right;
 format.ParagraphIndent = 35f;
 
 //Read the text from file
-FileStream rtlText = new FileStream("Arabic.txt", FileMode.Open, FileAccess.Read);
-StreamReader reader = new StreamReader(rtlText, Encoding.Unicode);
+StreamReader reader = new StreamReader("Arabic.txt", Encoding.Unicode);
 string text = reader.ReadToEnd();
 reader.Dispose();
 //Draw string with right-to-left format
@@ -1291,8 +1465,7 @@ PdfPage page = document.Pages.Add();
 //Create PDF graphics for the page
 PdfGraphics graphics = page.Graphics;
 //Read the long text from the text file
-FileStream inputStream = new FileStream("Input.txt", FileMode.Open, FileAccess.Read);
-StreamReader reader = new StreamReader(inputStream, Encoding.ASCII);
+StreamReader reader = new StreamReader("Input.txt", Encoding.ASCII);
 string text = reader.ReadToEnd();
 reader.Dispose();
 const int paragraphGap = 10;
@@ -1862,9 +2035,8 @@ PdfPage page = doc.Pages.Add();
 
 //Create PDF graphics for the page
 PdfGraphics graphics = page.Graphics;
-FileStream fontStream = new FileStream("tahoma.ttf", FileMode.Open, FileAccess.Read);
 //Create a new PDF font instance
-PdfFont pdfFont = new PdfTrueTypeFont(fontStream, 10);
+PdfFont pdfFont = new PdfTrueTypeFont("tahoma.ttf", 10);
 //Set the format for string
 PdfStringFormat format = new PdfStringFormat();
 //Set the format as complex script layout type
@@ -2059,8 +2231,7 @@ PdfDocument document = new PdfDocument();
 PdfPage page = document.Pages.Add();
 
 //Create font
-FileStream fontFileStream = new FileStream("Font.otf", FileMode.Open, FileAccess.Read);
-PdfFont font = new PdfTrueTypeFont(fontFileStream, 14);
+PdfFont font = new PdfTrueTypeFont("Font.otf", 14);
 //Text to draw
 string text = "Syncfusion Essential PDF is a.NET Core PDF library used to create, read, and edit PDF files in any application";
 //Create a brush
@@ -2161,14 +2332,11 @@ PdfPage page = doc.Pages.Add();
 
 //Create PDF graphics for the page
 PdfGraphics graphics = page.Graphics;
-FileStream fontStream = new FileStream("tahoma.ttf", FileMode.Open, FileAccess.Read);
-FileStream fontStream1 = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
-FileStream fontStream2 = new FileStream("Calibri.ttf", FileMode.Open, FileAccess.Read);
 //Create a new PDF font instance
-PdfFont font = new PdfTrueTypeFont(fontStream, 8);
-PdfFont font1 = new PdfTrueTypeFont(fontStream1, 20);
+PdfFont font = new PdfTrueTypeFont("tahoma.ttf", 8);
+PdfFont font1 = new PdfTrueTypeFont("Arial.ttf", 20);
 PdfFont font2 = new PdfStandardFont(PdfFontFamily.Helvetica,16);
-PdfFont font3 = new PdfTrueTypeFont(fontStream2, 25);       
+PdfFont font3 = new PdfTrueTypeFont("Calibri.ttf", 25);       
 //Set the format for string
 PdfStringFormat format = new PdfStringFormat();
 //Set the line alignment
@@ -2485,7 +2653,7 @@ The following code example demonstrates how to access the remainder text when th
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Detecting-text-clipping-in-PDF-layouts/.NET/Detecting-text-clipping-in-PDF-layouts/Program.cs" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -2624,7 +2792,7 @@ document.Close(True)
 
 {% endtabs %}
 
-A complete working sample is available for download on GitHub.
+A complete working sample is available for download on [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Detecting-text-clipping-in-PDF-layouts/.NET).
 
 ## Customizing TrueType fonts in a PDF document
 

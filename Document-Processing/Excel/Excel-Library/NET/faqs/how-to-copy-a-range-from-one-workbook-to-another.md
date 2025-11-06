@@ -18,10 +18,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Excel2013;
-  FileStream inputStream1 = new FileStream("SourceWorkbook.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook sourceWorkbook = application.Workbooks.Open(inputStream1, ExcelOpenType.Automatic);
-  FileStream inputStream2 = new FileStream("DestinationWorkbook.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook destinationWorkbook = application.Workbooks.Open(inputStream2, ExcelOpenType.Automatic);
+  IWorkbook sourceWorkbook = application.Workbooks.Open("SourceWorkbook.xlsx", ExcelOpenType.Automatic);
+  IWorkbook destinationWorkbook = application.Workbooks.Open("DestinationWorkbook.xlsx", ExcelOpenType.Automatic);
 
   //The first worksheet object in the worksheets collection in the Source Workbook is accessed.
   IWorksheet sourceWorksheet = sourceWorkbook.Worksheets[0];
@@ -36,8 +34,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Copying (90 rows) from Source to Destination worksheet.
   sourceRange.CopyTo(destinationRange);
 
-  FileStream stream = new FileStream("CopyingRange.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  destinationWorkbook.SaveAs(stream);
+  destinationWorkbook.SaveAs("CopyingRange.xlsx");
   destinationWorkbook.Close();
   excelEngine.Dispose();
 }

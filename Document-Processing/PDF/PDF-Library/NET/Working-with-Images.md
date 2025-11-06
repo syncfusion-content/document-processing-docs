@@ -618,6 +618,136 @@ doc.Close(True)
  
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Paginate-an-image-in-PDF-document). 
 
+## Clipping and graphics state
+
+This example demonstrates how to draw an image in a PDF document and apply a clipping region using the [SetClip](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#methods) method. Clipping restricts drawing to a defined area, allowing partial rendering of content. The code also uses [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#methods) and [Restore](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#methods) methods of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) to manage the graphics state, enabling temporary clipping and restoring the full drawing area afterward. 
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Clipping-and-graphics-state/.NET/Clipping-and-graphics-state/Program.cs" %} 
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page to the document
+    PdfPage page = document.Pages.Add();
+    // Get the graphics object for the page
+    PdfGraphics graphics = page.Graphics;
+    // Open the image file as a stream
+    using FileStream imageStream = new FileStream(Path.GetFullPath("Input.png"), FileMode.Open, FileAccess.Read);
+    // Load the image from the stream
+    PdfBitmap image = new PdfBitmap(imageStream);
+
+    // Save the current graphics state (to restore later)
+    PdfGraphicsState state = graphics.Save();
+
+    // Define a rectangular clipping region
+    RectangleF clipRect = new RectangleF(50, 50, 200, 100);
+    graphics.SetClip(clipRect);
+
+    // Draw the image — only the part within the clipping region will be visible
+    graphics.DrawImage(image, new RectangleF(40, 60, 150, 80));
+
+    // Restore the graphics state to remove the clipping region
+    graphics.Restore(state);
+    // Draw the image again — this time the full image will be visible
+    graphics.DrawImage(image, new RectangleF(60, 160, 150, 80));
+
+    // Save the PDF document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page to the document
+    PdfPage page = document.Pages.Add();
+    // Get the graphics object for the page
+    PdfGraphics graphics = page.Graphics;
+    // Open the image file as a stream
+    using FileStream imageStream = new FileStream(Path.GetFullPath("Input.png"), FileMode.Open, FileAccess.Read);
+    // Load the image from the stream
+    PdfBitmap image = new PdfBitmap(imageStream);
+
+    // Save the current graphics state (to restore later)
+    PdfGraphicsState state = graphics.Save();
+
+    // Define a rectangular clipping region
+    RectangleF clipRect = new RectangleF(50, 50, 200, 100);
+    graphics.SetClip(clipRect);
+
+    // Draw the image — only the part within the clipping region will be visible
+    graphics.DrawImage(image, new RectangleF(40, 60, 150, 80));
+
+    // Restore the graphics state to remove the clipping region
+    graphics.Restore(state);
+    // Draw the image again — this time the full image will be visible
+    graphics.DrawImage(image, new RectangleF(60, 160, 150, 80));
+
+    // Save the PDF document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+
+' Create a new PDF document
+Using document As New PdfDocument()
+' Add a page to the document
+Dim page As PdfPage = document.Pages.Add()
+
+' Get the graphics object for the page
+Dim graphics As PdfGraphics = page.Graphics
+
+' Open the image file as a stream
+Using imageStream As New FileStream(Path.GetFullPath("Input.png"), FileMode.Open, FileAccess.Read)
+' Load the image from the stream
+Dim image As New PdfBitmap(imageStream)
+
+' Save the current graphics state (to restore later)
+Dim state As PdfGraphicsState = graphics.Save()
+
+' Define a rectangular clipping region
+Dim clipRect As New RectangleF(50, 50, 200, 100)
+graphics.SetClip(clipRect)
+
+' Draw the image — only the part within the clipping region will be visible
+graphics.DrawImage(image, New RectangleF(40, 60, 150, 80))
+
+' Restore the graphics state to remove the clipping region
+graphics.Restore(state)
+
+' Draw the image again — this time the full image will be visible
+graphics.DrawImage(image, New RectangleF(60, 160, 150, 80))
+End Using
+
+' Save the PDF document
+document.Save("Output.pdf")
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Clipping-and-graphics-state/.NET).
+
 ## Applying transparency and rotation to the image
 
 You can add transparency and rotation to the image using [SetTransparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_SetTransparency_System_Single_) and [RotateTransform](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_RotateTransform_System_Single_) methods of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) respectively. This is explained in the below code snippet.
@@ -722,6 +852,160 @@ doc.Close(True)
 {% endtabs %}  
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Add-transparancy-and-rotation-to-the-image/). 
+
+## Unit conversion in image position
+
+The [PdfUnitConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfUnitConvertor.html) class provides precise measurement conversion capabilities for PDF layouts. When positioning images in a PDF document, the converter translates pixel dimensions to PDF points, enabling millimeter-perfect placement and sizing. This ensures images maintain their aspect ratio while rendering at exact locations and filling designated spaces like rectangles.
+
+The code example to illustrate the same is given below.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Unit-conversion-in-image-position/.NET/Unit-conversion-in-image-position/Program.cs" %} 
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess.Read))
+    {
+        //Load the image from the disk
+        PdfBitmap image = new PdfBitmap(stream);
+
+        //Add the first section to the PDF document
+        PdfSection section = document.Sections.Add();
+
+        //Initialize unit converter
+        PdfUnitConverter converter = new PdfUnitConverter();
+
+        //Convert the image size from pixel to points
+        SizeF size = converter.ConvertFromPixels(image.PhysicalDimension, PdfGraphicsUnit.Point);
+
+        //Set section size based on the image size
+        section.PageSettings.Size = size;
+
+        // Set section orientation based on the image size (by default Portrait) 
+        if (image.Width > image.Height)
+            section.PageSettings.Orientation = PdfPageOrientation.Landscape;
+
+        //Set a margin for the section
+        section.PageSettings.Margins.All = 0;
+
+        //Add a page to the section
+        PdfPage page = section.Pages.Add();
+
+        //Draw image
+        page.Graphics.DrawImage(image, 0, 0);
+
+        //Save the document
+        document.Save("Output.pdf");
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess.Read))
+    {
+        //Load the image from the disk
+        PdfBitmap image = new PdfBitmap(stream);
+
+        //Add the first section to the PDF document
+        PdfSection section = document.Sections.Add();
+
+        //Initialize unit converter
+        PdfUnitConverter converter = new PdfUnitConverter();
+
+        //Convert the image size from pixel to points
+        SizeF size = converter.ConvertFromPixels(image.PhysicalDimension, PdfGraphicsUnit.Point);
+
+        //Set section size based on the image size
+        section.PageSettings.Size = size;
+
+        // Set section orientation based on the image size (by default Portrait) 
+        if (image.Width > image.Height)
+            section.PageSettings.Orientation = PdfPageOrientation.Landscape;
+
+        //Set a margin for the section
+        section.PageSettings.Margins.All = 0;
+
+        //Add a page to the section
+        PdfPage page = section.Pages.Add();
+
+        //Draw image
+        page.Graphics.DrawImage(image, 0, 0);
+
+        //Save the document
+        document.Save("Output.pdf");
+    }
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
+
+Module Program
+    Sub Main()
+        ' Create a new PDF document
+        Using document As New PdfDocument()
+
+            ' Load the image from disk
+            Using stream As New FileStream("Image.png", FileMode.Open, FileAccess.Read)
+                Dim image As New PdfBitmap(stream)
+
+                ' Add a section to the PDF document
+                Dim section As PdfSection = document.Sections.Add()
+
+                ' Initialize unit converter
+                Dim converter As New PdfUnitConverter()
+
+                ' Convert image size from pixels to points
+                Dim size As SizeF = converter.ConvertFromPixels(image.PhysicalDimension, PdfGraphicsUnit.Point)
+
+                ' Set section size based on image size
+                section.PageSettings.Size = size
+
+                ' Set orientation to landscape if image is wider than tall
+                If image.Width > image.Height Then
+                    section.PageSettings.Orientation = PdfPageOrientation.Landscape
+                End If
+
+                ' Remove margins
+                section.PageSettings.Margins.All = 0
+
+                ' Add a page to the section
+                Dim page As PdfPage = section.Pages.Add()
+
+                ' Draw the image at position (0, 0)
+                page.Graphics.DrawImage(image, 0, 0)
+
+                ' Save the document
+                document.Save("Output.pdf")
+            End Using
+        End Using
+    End Sub
+End Module
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Unit-conversion-in-image-position/.NET).
 
 ## Converting multi page TIFF to PDF
 

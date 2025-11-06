@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with Standalone PDF Viewer component
+# Getting started with Angular Standalone PDF Viewer component
 
-This section explains the steps required to create a simple Standalone Angular PDF Viewer and demonstrates the basic usage of the PDF Viewer control in a Angular CLI application (for Angular versions below 17).
+This section explains the steps required to create a simple Standalone Angular PDF Viewer and demonstrates the basic usage of the PDF Viewer control in an Angular CLI application.
 
 N> For Angular 17+, see the following links:
 
@@ -87,7 +87,7 @@ export class AppModule { }
 
 ## Adding CSS reference
 
-Add the Angular PDF Viewer component’s styles as given below in `src/styles.css` file.
+Add the Angular PDF Viewer component's styles as given below in `src/styles.css` file.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -101,7 +101,7 @@ Add the Angular PDF Viewer component’s styles as given below in `src/styles.cs
 @import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';
 ```
 
-## Adding PDF Viewer component
+## Add the PDF Viewer component
 
 Add the Angular PDF Viewer by using `<ejs-pdfviewer>` selector in `template` section of the `src/app/app.component.ts` file to render the PDF Viewer component.
 
@@ -135,7 +135,8 @@ export class AppComponent implements OnInit {
   }
 }
 ```
-### Steps to Load PDF Viewer with Local Resources
+
+### Load PDF Viewer with local resources
 
 To configure the PDF Viewer to use local files for `documentPath` and `resourceUrl` instead of files hosted on a CDN, follow these steps:
 
@@ -215,5 +216,27 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 {% endtabs %}
 
 {% previewsample "Document-Processing/samples/pdfviewer/angular/getting-started-cs1-standalone/index.html" %}
+
+## Module injection
+
+To enable additional features, inject the required modules. The following modules extend the PDF Viewer's functionality:
+
+* `LinkAnnotationService`: Enables hyperlink navigation.
+* `BookmarkViewService`: Displays and navigates document bookmarks.
+* `MagnificationService`: Provides zoom in/out operations.
+* `NavigationService`: Enables page navigation.
+* `TextSelectionService`: Enables text selection.
+* `ThumbnailViewService`: Displays page thumbnails for navigation.
+* `ToolbarService`: Enables the built-in toolbar UI.
+* `PrintService`: Enables printing.
+* `AnnotationService`: Enables annotation features.
+* `TextSearchService`: Enables text search.
+* `FormFieldsService`: Enables form field support.
+* `FormDesignerService`: Enables designing and editing of form fields.
+* `PageOrganizerService`: Enables page organization features.
+
+Inject modules using the `providers` array in the component or module.
+
+> Refer to the [Angular PDF Viewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) for an overview of capabilities. Explore the [Angular PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/angular/#/tailwind3/pdfviewer/default) to see core features in action.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Getting%20started%20-%20Standalone).

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cell Range in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+title: Cell Range in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
 description: Learn here all about Cell Range in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Cell Range
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Cell Range in Spreadsheet control
+# Cell Range in ASP.NET Core Spreadsheet control
 
 A group of cells in a sheet is known as cell range.
 
@@ -26,10 +26,10 @@ The following code example shows the wrap text functionality in spreadsheet.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/wrap-text/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/wrap-text/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="WrapTextController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/wrap-text/wrapTextController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/wrap-text/wrapTextController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -65,10 +65,10 @@ The following code example shows the merge cells operation in spreadsheet.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/merge-cells/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/merge-cells/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="MergeCellController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/merge-cells/mergeCellController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/merge-cells/mergeCellController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -125,10 +125,10 @@ You can clear the highlighted invalid data by using the following ways,
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/data-validation/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/data-validation/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="DataValidation.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/data-validation/dataValidation.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/data-validation/dataValidation.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -151,10 +151,10 @@ The following code example demonstrates how to add custom data validation with a
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/data-validation-cs2/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/data-validation-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="DataValidation.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/data-validation-cs2/dataValidation.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/data-validation-cs2/dataValidation.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -232,10 +232,10 @@ In the following sample, you can enable/disable the fill option on the button cl
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/autofill/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/autofill/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="AutofillController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/autofill/autofillController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/autofill/autofillController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -267,10 +267,10 @@ Clear the cell contents and formats in the Spreadsheet document by using the `cl
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/clear/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/clear/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ClearController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/clear/clearController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/clear/clearController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

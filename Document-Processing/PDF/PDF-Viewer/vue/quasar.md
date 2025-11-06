@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
-The `Quasar` Framework is a Vue.js-based open-source framework that empowers developers to create high-performance and responsive applications across various platforms, such as web, mobile, and desktop.
+The Quasar Framework is a Vue.js-based open-source framework that empowers developers to create high-performance and responsive applications across various platforms, such as web, mobile, and desktop.
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ To initiate the creation of a new [Quasar](https://quasar.dev/start/quick-start/
 npm init quasar
 ```
 
-This command prompts additional configurations. Follow the steps outlined in the images below:
+This command prompts additional configurations. When asked for a preset, choose Vue 3 with the Composition API to align with the following examples. Follow the steps outlined in the images below:
 
 ![quasar-setup1](./images/quasar-setup1.png)
 
@@ -40,7 +40,7 @@ Navigate to your project directory:
 cd quasar-project
 ```
 
-Now that `quasar-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Now that `quasar-project` is ready to run with default settings, add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
@@ -80,9 +80,9 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue PDF Viewer component:
+Use the following steps to add the Vue PDF Viewer component to the application:
 
-1\. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. And import the PDF Viewer component in the `script` section of the **src/app.vue** file.
+1\. First, add the `setup` attribute to the `script` tag to indicate that Vue uses the Composition API, and import the PDF Viewer component in the `script` section of the **src/app.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -96,7 +96,7 @@ import { PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
 {% endhighlight %}
 {% endtabs %}
 
-2\. Then, define the Schedule component in the **src/app.vue** file, as shown below:
+2\. Then, define the Vue PDF Viewer component in the **src/app.vue** file, as shown below:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -115,7 +115,7 @@ import { PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
 {% endhighlight %}
 {% endtabs %}
 
-3\. Declare the bound properties `serviceUrl` and `documentPath` in the `script` section.
+3\. Declare the bound properties `serviceUrl` and `documentPath` in the `script` section so the component can retrieve PDF files from the hosted web service.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -137,7 +137,7 @@ provide('PdfViewer', [ Toolbar, Magnification, Navigation, LinkAnnotation, Bookm
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/app.vue** file:
+The following snippet summarizes the previous steps in the **src/app.vue** file. The `ref` assignment keeps a reference available for future customization of the PDF Viewer instance.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}

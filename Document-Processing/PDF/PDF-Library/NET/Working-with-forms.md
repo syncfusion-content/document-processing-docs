@@ -3190,7 +3190,7 @@ The following code snippet demonstrates how to retrieving an existing widget ann
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Get-widget-annotation-in-PDF/.NET/Get-widget-annotation-in-PDF/Program.cs" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
@@ -4354,7 +4354,7 @@ You can set the export value of the check box field in PDF forms using [PdfCheck
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Export_checkbox_values/.NET/Export_checkbox_values/Program.cs" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
