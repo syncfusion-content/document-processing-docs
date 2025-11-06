@@ -114,7 +114,7 @@ document.getElementById('print').addEventListener('click', function () {
 
 ## Customize print quality using the printScaleFactor API
 
-The PDF Viewer allows you to adjust the print rendering quality by setting the [printScaleFactor](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#printScaleFactor) property. Valid values range from 0.5 to 5. Higher values produce sharper output but also increase rendering time.
+The PDF Viewer allows you to adjust the print rendering quality by setting the [printScaleFactor](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#printScaleFactor) property. Valid values range from 0.5 to 5. Higher values produce sharper output but also increase rendering time.
 
 By default, `printScaleFactor` is set to 1.
 
@@ -246,10 +246,10 @@ Subscribe to print life cycle events to track usage and implement custom workflo
 | `printEnd`   | Raised after a print action completes. Use the event to notify users or clean up resources. |
 
 ### printStart event
-The [`printStart`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#printstart) event runs when printing starts from the toolbar or from code. Use it to validate prerequisites or cancel the action.
+The [`printStart`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#printstart) event runs when printing starts from the toolbar or from code. Use it to validate prerequisites or cancel the action.
 
 #### Event arguments
-Review [`PrintStartEventArgs`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/printStartEventArgs/) for details such as `fileName` and the `cancel` option.
+Review [`PrintStartEventArgs`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/printStartEventArgs) for details such as `fileName` and the `cancel` option.
 
 The following example logs the file that is being printed and shows how to cancel the operation.
 
@@ -292,10 +292,10 @@ viewer.appendTo('#PdfViewer');
 {% endtabs %}
 
 ### printEnd event
-The [`printEnd`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#printend) event triggers after printing completes. Use it to finalize analytics or inform users that printing finished.
+The [`printEnd`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#printend) event triggers after printing completes. Use it to finalize analytics or inform users that printing finished.
 
 #### Event arguments
-See [`PrintEndEventArgs`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/printEndEventArgs/) for available values such as `fileName`.
+See [`PrintEndEventArgs`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/printEndEventArgs) for available values such as `fileName`.
 
 The following example logs the printed file name.
 

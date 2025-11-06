@@ -82,7 +82,7 @@ if (distanceMode) {
 
 ## Add a measurement annotation to the PDF document programmatically
 
-The PDF Viewer library allows adding measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library allows adding measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
 Here is an example showing how to add measurement annotations programmatically using addAnnotation():
 
