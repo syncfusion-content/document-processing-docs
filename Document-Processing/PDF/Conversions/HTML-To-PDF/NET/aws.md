@@ -23,7 +23,7 @@ HTML to PDF converter .NET library supports conversion in AWS Lambda. Refer to [
 
 ## Convert HTML to PDF in AWS Lambda with NET 6 container image
 
-HTML to PDF converter .NET library supports conversion in AWS Lambda with NET 6 container image. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-aws-lambda-with-net6-container-image) section for more information about HTML to PDF conversion in AWS Lambda with NET 6 container image.
+HTML to PDF converter .NET library supports conversion in AWS Lambda with NET 6 container image. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-aws-lambda-with-net-6-container-image) section for more information about HTML to PDF conversion in AWS Lambda with NET 6 container image.
 
 ## Convert HTML to PDF in AWS Elastic Beanstalk
 
