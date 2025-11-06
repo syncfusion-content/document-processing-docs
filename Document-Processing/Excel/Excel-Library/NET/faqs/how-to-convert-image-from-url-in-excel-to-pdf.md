@@ -32,9 +32,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Convert Excel document into PDF document 
   PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
-  FileStream stream = new FileStream("ExcelToPDF.pdf", FileMode.Create, FileAccess.ReadWrite);
-  pdfDocument.Save(stream);
-  stream.Dispose();
+  pdfDocument.Save("ExcelToPDF.pdf");
 }
 {% endhighlight %}
 

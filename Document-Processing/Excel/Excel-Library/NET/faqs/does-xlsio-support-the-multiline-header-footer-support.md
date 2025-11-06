@@ -34,8 +34,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   pageSetup.RightFooter = "Right Footer Line 1\nRight Footer Line 2";
 
   //Save the excel file
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(outputStream);
+  workbook.SaveAs("Output.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

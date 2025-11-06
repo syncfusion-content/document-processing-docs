@@ -16,8 +16,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   IFont font = workbook.CreateFont();
@@ -27,10 +26,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IShape shape = worksheet.Shapes[0];
   shape.TextFrame.TextRange.RichText.SetFont(1, 3, font);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 

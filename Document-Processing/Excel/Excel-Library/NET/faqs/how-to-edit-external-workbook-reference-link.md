@@ -17,14 +17,12 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
   string filepath = (workbook as WorkbookImpl).ExternWorkbooks[0].URL;
 
   (workbook as WorkbookImpl).ExternWorkbooks[0].URL = DataPathBase + "Template.xlsx";
 
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 

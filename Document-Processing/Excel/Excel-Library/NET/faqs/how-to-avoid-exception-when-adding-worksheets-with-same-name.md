@@ -27,10 +27,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorksheet sheet_1 = workbook.Worksheets.Create("Sheet");
   IWorksheet sheet_2 = workbook.Worksheets.Create("Sheet");
 
-  //Saving the workbook as stream
-  FileStream file = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(file);
-  file.Dispose();
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 

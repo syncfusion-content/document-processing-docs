@@ -18,18 +18,14 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IApplication application = excelEngine.Excel;
 
   //Opening form module existing workbook
-  FileStream input = new FileStream("Test.xls", FileMode.Open, FileAccess.ReadWrite);
-  IWorkbook workbook = application.Workbooks.Open(input);
+  IWorkbook workbook = application.Workbooks.Open("Test.xls");
   IWorksheet sheet = workbook.Worksheets[0];
 
   //Check macro exist
   bool IsMacroEnabled = workbook.HasMacros;     
 
   // Save the workbook
-  FileStream output = new FileStream("Output.xls", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(output);
-  input.Close();
-  output.Close();
+  workbook.SaveAs("Output.xls");
 }
 {% endhighlight %}
 

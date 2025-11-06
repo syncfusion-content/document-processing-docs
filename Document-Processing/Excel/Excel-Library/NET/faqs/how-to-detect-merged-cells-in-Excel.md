@@ -16,8 +16,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Create a new worksheet
@@ -32,10 +31,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Autofit the used range
   mergedCells.UsedRange.AutofitColumns();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook 
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 

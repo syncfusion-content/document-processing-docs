@@ -16,8 +16,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream(@"../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
     IWorksheet worksheet = workbook.Worksheets[0];
 
     //Get the pane record
@@ -34,9 +33,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
     //Get the no of frozen columns
     int frozencolumns = paneRecord.VerticalSplit;
-
-    //Dispose streams
-    inputStream.Dispose();
 }
 {% endhighlight %}
 

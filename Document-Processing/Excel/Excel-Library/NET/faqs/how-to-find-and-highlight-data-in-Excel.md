@@ -25,8 +25,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Finds a value 1500 in a sheet and highlights the cell which contains the value
@@ -35,10 +34,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     range.CellStyle.Color = ExcelKnownColors.Green;
   }
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 

@@ -19,8 +19,7 @@ The following code snippet shows how to use font substitution in Excel to PDF co
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
   //Initializes the SubstituteFont event to perform font substitution during Excel to PDF conversion
   application.SubstituteFont += new SubstituteFontEventHandler(SubstituteFont);
@@ -28,8 +27,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   XlsIORenderer renderer = new XlsIORenderer();
   PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
-  FileStream stream = new FileStream("Output.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  pdfDocument.Save(stream);
+  pdfDocument.Save("Output.pdf");
 }
 
 private static void SubstituteFont(object sender, SubstituteFontEventArgs args)
