@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert HTML to PDF file in Amazon ECS with Fargate
 
-The Syncfusion<sup>&reg;</sup> [HTML to PDF converter](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) is a .NET library for converting webpages, SVG, MHTML, and HTML to PDF using C#. Using this library, **convert HTML to PDF document using Blink in Amazon ECS with Fargate**.
+The Syncfusion<sup>&reg;</sup> [HTML to PDF converter](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) is a .NET library for converting webpages, SVG, MHTML, and HTML to PDF using C#. Using this library, **convert HTML to PDF document using Blink in Amazon ECS with Fargate**.
 
 ## Steps to convert HTML to PDF using Blink in Amazon ECS with Fargate
 
