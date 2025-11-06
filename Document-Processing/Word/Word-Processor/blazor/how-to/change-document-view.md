@@ -26,9 +26,6 @@ The layout type can be set during component initialization. The following exampl
 <SfDocumentEditorContainer @ref="Container" EnableToolbar="true" Height="590px" LayoutType="LayoutType.Continuous">
 </SfDocumentEditorContainer>
 
-@code {
-    SfDocumentEditorContainer Container;
-}
 ```
 
 N> By default, the `LayoutType` is set to `LayoutType.Pages`, which provides a print layout view. To switch to a web layout, set the property to `LayoutType.Continuous`.
