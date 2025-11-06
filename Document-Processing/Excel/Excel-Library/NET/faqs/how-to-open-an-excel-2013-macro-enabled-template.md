@@ -17,12 +17,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IApplication application = excelEngine.Excel;
 
   //Open an existing XLTM file
-  FileStream inputStream = new FileStream("Sample.xltm", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xltm", ExcelOpenType.Automatic);
 
   //Save the file as XLSM
-  FileStream outputStream = new FileStream("Output.xlsm", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(outputStream);
+  workbook.SaveAs("Output.xlsm");
   workbook.Close();
   excelEngine.Dispose();
 }

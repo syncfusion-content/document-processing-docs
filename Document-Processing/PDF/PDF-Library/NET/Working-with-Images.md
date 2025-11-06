@@ -857,11 +857,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The [PdfUnitConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfUnitConvertor.html) class provides precise measurement conversion capabilities for PDF layouts. When positioning images in a PDF document, the converter translates pixel dimensions to PDF points, enabling millimeter-perfect placement and sizing. This ensures images maintain their aspect ratio while rendering at exact locations and filling designated spaces like rectangles.
 
-The code snippet to illustrate the same is given below.
+The code example to illustrate the same is given below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Unit-conversion-in-image-position/.NET/Unit-conversion-in-image-position/Program.cs" %} 
 
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
@@ -1005,7 +1005,7 @@ End Module
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Unit-conversion-in-image-position/.NET).
 
 ## Converting multi page TIFF to PDF
 
