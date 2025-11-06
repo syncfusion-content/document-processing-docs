@@ -19,8 +19,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Opening a File from a Stream
   FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
   IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  FileStream stream = new FileStream("Output.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  workbook.SaveAs("Output.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

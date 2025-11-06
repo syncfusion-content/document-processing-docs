@@ -4831,7 +4831,7 @@ The following code sample demonstrates how to prevent row breaks across pages in
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Prevent-row-breaks-across-pages/.NET/Prevent-row-breaks-across-pages/Program.cs" %} 
 
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Pdf;
@@ -4964,7 +4964,7 @@ The following code sample demonstrates how to change the page margins beginning 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Changing-Margins-from-the-Second-Page-onwards/.NET/Changing-Margins-from-the-Second-Page-onwards/Program.cs" %} 
 
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Pdf;
