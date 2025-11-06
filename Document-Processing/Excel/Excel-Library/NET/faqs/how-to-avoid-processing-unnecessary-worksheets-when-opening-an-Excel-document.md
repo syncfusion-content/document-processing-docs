@@ -5,7 +5,7 @@ platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# How to avoid processing unnecessary worksheets when opening an Excel document using C#?
+# How to avoid processing unnecessary worksheets using C#?
 XlsIO provides support to avoid processing unnecessary worksheets when opening an Excel. The following code snippet illustrates this.
 {% tabs %} 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Worksheet/.NET/Parse%20Worksheets%20On%20Demand/Parse%20Worksheets%20On%20Demand/Program.cs,180" %}
