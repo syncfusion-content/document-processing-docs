@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The PDF Viewer control provides options to add, edit, and delete free text annotations.
 
-## Enable or Disbale Free Text annotation
+## Enable or Disable Free Text annotation
 
 Enables or disables the free text annotation feature in the PDF Viewer. For more details, see [enableFreeText API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablefreetext).
 

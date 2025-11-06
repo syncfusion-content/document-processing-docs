@@ -4,7 +4,6 @@ title: Annotation Toolbar in TypeScript PDF Viewer control | Syncfusion
 description: Learn here all about annotation toolbar customization in Syncfusion TypeScript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Annotation Toolbar Customization
-publishingplatform: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

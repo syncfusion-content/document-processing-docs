@@ -1008,7 +1008,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
->API reference: For more information about enabletextmarkupannotation, see [enabletextmarkupannotation API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enabletextmarkupannotation).
+>API reference: For more information about enableTextMarkupAnnotation, see [enableTextMarkupAnnotation API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enabletextmarkupannotation).
 
 ## Enable or disable text markup resizer
 
@@ -1043,7 +1043,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
->For more information about enabletextmarkupresizer, see [enabletextmarkupresizer API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enabletextmarkupresizer)
+>For more information about enableTextMarkupResizer, see [enableTextMarkupResizer API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enabletextmarkupresizer)
 
 ## See also
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Form Designer Toolbar Customization in TypeScript PDF Viewer Component | Syncfusion
+title: Form Designer Toolbar in TypeScript PDF Viewer Component | Syncfusion
 description: Learn here all about form designer toolbar customization in Syncfusion TypeScript PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer

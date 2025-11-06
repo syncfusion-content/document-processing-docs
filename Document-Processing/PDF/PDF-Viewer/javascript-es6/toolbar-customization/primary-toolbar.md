@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Primary Toolbar Customization in TypeScript PDF Viewer Component | Syncfusion
+title: Primary Toolbar Customization in TS PDF Viewer Component | Syncfusion
 description: Learn here all about primary toolbar customization in Syncfusion TypeScript PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
