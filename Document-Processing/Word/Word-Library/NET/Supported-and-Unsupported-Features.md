@@ -397,15 +397,6 @@ No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
 <td>
-Drawing Canvas<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
-DOCX format only. Additional behavior explained [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#drawing-canvas).<br/><br/></td><td>
-DOCX format only. Additional behavior explained [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#drawing-canvas).<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td></tr>
-<tr>
-<td>
 WordArt<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td><td>

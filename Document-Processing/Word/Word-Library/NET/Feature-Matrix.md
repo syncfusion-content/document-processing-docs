@@ -35,6 +35,7 @@ The following table outlines the supported features across different Word format
   <tr><td>Create, access, and modify footnotes and endnotes.</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![Yes](Feature_Matrix/yes.png)</td></tr>
   <tr><td>Create, access, and modify images.</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![Yes](Feature_Matrix/yes.png)</td></tr>
   <tr><td>Create, access, and modify shapes.</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![Yes](Feature_Matrix/yes.png)</td></tr>
+  <tr><td>Create, access, and modify SmartArt.</td><td>![No](Feature_Matrix/no.png)</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![No](Feature_Matrix/no.png)</td></tr>
   <tr><td>Group and ungroup shapes.</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![Yes](Feature_Matrix/yes.png)</td></tr>
   <tr><td>Insert text and picture watermarks.</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![No](Feature_Matrix/no.png)</td></tr>
   <tr><td>Create, access, and modify OLE objects from the document.</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![No](Feature_Matrix/no.png)</td></tr>
@@ -248,6 +249,10 @@ The following table outlines the supported features across different Word format
     <td>Restrict editing the documents.</td>
     <td>![Yes](Feature_Matrix/yes.png)</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![No](Feature_Matrix/no.png)</td>
   </tr>
+  <tr>
+    <td>Allow editing specific parts of a protected document.</td>
+    <td>![No](Feature_Matrix/no.png)</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![No](Feature_Matrix/no.png)</td>
+  </tr>
 </table>
 
 ## File Formats
@@ -264,6 +269,7 @@ The following table outlines the supported features across different Word format
   <tr><td>OpenDocument Text (*.odt)</td><td>![No](Feature_Matrix/no.png)</td><td>![Yes](Feature_Matrix/yes.png)</td></tr>
   <tr><td>RTF</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![Yes](Feature_Matrix/yes.png)</td></tr>
   <tr><td>HTML</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![Yes](Feature_Matrix/yes.png)</td></tr>
+  <tr><td>Markdown</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![Yes](Feature_Matrix/yes.png)</td></tr>
   <tr><td>Text</td><td>![Yes](Feature_Matrix/yes.png)</td><td>![Yes](Feature_Matrix/yes.png)</td></tr>
   <tr><td>PDF</td><td>![No](Feature_Matrix/no.png)</td><td>![Yes](Feature_Matrix/yes.png)</td></tr>
   <tr><td>EPUB</td><td>![No](Feature_Matrix/no.png)</td><td>![Yes](Feature_Matrix/yes.png)</td></tr>
