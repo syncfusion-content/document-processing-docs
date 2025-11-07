@@ -8,7 +8,7 @@ documentation: UG
 
 # Feature Matrix in .NET PowerPoint Library
 
-Syncfusion® Essential PowerPoint is a [.NET Core PowerPoint library](syncfusion.com/document-processing/powerpoint-framework/net-core) that provides comprehensive support for creating, editing, and managing PowerPoint presentations programmatically. It allows seamless handling of slides, shapes, charts, SmartArt, tables, and more.
+Syncfusion® Essential PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) that provides comprehensive support for creating, editing, and managing PowerPoint presentations programmatically. It allows seamless handling of slides, shapes, charts, SmartArt, tables, and more.
 
 The following table outlines the supported features for PowerPoint 2007–2016 presentations.
 
@@ -35,6 +35,7 @@ The following table outlines the supported features for PowerPoint 2007–2016 p
   <tr><td>Access and modify placeholders.</td><td> ![Yes](Feature_Matrix/yes.png) </td></tr>
   <tr><td>Create, access, and modify SmartArt diagrams.</td><td> ![Yes](Feature_Matrix/yes.png) </td></tr>
   <tr><td>Create, access, and modify sections.</td><td> ![Yes](Feature_Matrix/yes.png) </td></tr>
+  <tr><td>Create, access, and modify animation and slide transition.</td><td> ![Yes](Feature_Matrix/yes.png) </td></tr>
   <tr><td>Create, access, and modify hyperlinks.</td><td> ![Yes](Feature_Matrix/yes.png) </td></tr>
   <tr><td>Create, access, and modify slide notes.</td><td> ![Yes](Feature_Matrix/yes.png) </td></tr>
   <tr><td>Copy and move slide elements between PowerPoint presentations.</td><td> ![Yes](Feature_Matrix/yes.png) </td></tr>
