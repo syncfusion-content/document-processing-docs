@@ -730,8 +730,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   application.DefaultVersion = ExcelVersion.Xlsx;
   
   //Load the existing Excel workbook into IWorkbook
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
   
   //Get the first worksheet in the workbook into IWorksheet
   IWorksheet worksheet = workbook.Worksheets[0];
@@ -2424,8 +2423,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   application.DefaultVersion = ExcelVersion.Xlsx;
   
   //Load the existing Excel workbook into IWorkbook
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
   
   //Get the first worksheet in the workbook into IWorksheet
   IWorksheet worksheet = workbook.Worksheets[0];

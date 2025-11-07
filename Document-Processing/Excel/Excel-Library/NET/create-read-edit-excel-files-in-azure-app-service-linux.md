@@ -510,8 +510,7 @@ IApplication application = excelEngine.Excel;
 application.DefaultVersion = ExcelVersion.Xlsx;
 
 //A existing workbook is opened.             
-FileStream sampleFile = new FileStream("Sample.xlsx", FileMode.Open);
-IWorkbook workbook = application.Workbooks.Open(sampleFile);
+IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
 //Access first worksheet from the workbook.
 IWorksheet worksheet = workbook.Worksheets[0];

@@ -291,8 +291,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     application.DefaultVersion = ExcelVersion.Xlsx;
 
     //A existing workbook is opened.             
-    FileStream sampleFile = new FileStream("Data/InputTemplate.xlsx", FileMode.Open);
-    IWorkbook workbook = application.Workbooks.Open(sampleFile);
+    IWorkbook workbook = application.Workbooks.Open("Data/InputTemplate.xlsx");
 
     //Access first worksheet from the workbook.
     IWorksheet worksheet = workbook.Worksheets[0];
