@@ -7,9 +7,9 @@ documentation: UG
 ---
 # Loading and saving workbook in ASP.NET Core
 
-## Opening an existing workbook from stream
+## Opening an existing workbook
 
-You can open an existing workbook from stream by using the overloads of [Open](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_Open_System_IO_Stream_) methods of [IWorkbooks](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbooks.html) interface.
+You can open an existing workbook by using the overloads of [Open](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_Open_System_String_) methods of [IWorkbooks](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbooks.html) interface.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -19,17 +19,14 @@ ExcelEngine excelEngine = new ExcelEngine();
 //Initialize IApplication
 IApplication application = excelEngine.Excel;
 
-//Load the file into stream
-FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-
 //Loads or open an existing workbook through Open method of IWorkbooks
-IWorkbook workbook = application.Workbooks.Open(inputStream);
+IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 {% endhighlight %}
 {% endtabs %}  
 
-## Saving an Excel workbook to stream
+## Saving an Excel workbook
 
-You can also save the created or manipulated workbook to stream using overloads of [SaveAs](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SaveAs_System_IO_Stream_) methods.
+You can also save the created or manipulated workbook using overloads of [SaveAs](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SaveAs_System_String_) methods.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -39,11 +36,8 @@ ExcelEngine excelEngine = new ExcelEngine();
 //Initialize IApplication
 IApplication application = excelEngine.Excel;
 
-//Load the file into stream
-FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-
 //Loads or open an existing workbook through Open method of IWorkbooks
-IWorkbook workbook = application.Workbooks.Open(inputStream);
+IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
 //To-Do some manipulation
 //To-Do some manipulation
@@ -51,8 +45,7 @@ IWorkbook workbook = application.Workbooks.Open(inputStream);
 //Set the version of the workbook
 workbook.Version = ExcelVersion.Xlsx;
 
-//Saving the workbook as stream
-FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-workbook.SaveAs(outputStream);
+//Saving the workbook
+workbook.SaveAs("Output.xlsx");
 {% endhighlight %}
 {% endtabs %} 
