@@ -327,6 +327,6 @@ root.render(<App />);
 
 ## See also
 
-- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/bookmark-navigation/)
-- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/page-navigation/)
-- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/page-thumbnail-navigation/)
+- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/bookmark-navigation)
+- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/page-navigation)
+- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/page-thumbnail-navigation)
