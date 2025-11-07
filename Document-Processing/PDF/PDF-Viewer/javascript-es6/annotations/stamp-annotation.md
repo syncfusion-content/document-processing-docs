@@ -181,7 +181,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
->API reference: For more information about enableStampAnnotations, see [enableStampAnnotations API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablestampannotations)
+>API reference: For more information about enableStampAnnotations, see [enableStampAnnotations API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enablestampannotations)
 
 ## Add a custom stamp to the PDF document
 
@@ -197,7 +197,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Add a stamp annotation to the PDF document programmatically
 
-The PDF Viewer library allows adding a stamp annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library allows adding a stamp annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
 Here are examples showing how to add stamp annotations programmatically using addAnnotation():
 
@@ -350,7 +350,7 @@ if (customStamp) {
 {% endhighlight %}
 {% endtabs %}
 
-> API reference: For more information about customStamp, see [customStamp API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#stampsettings)
+> API reference: For more information about customStamp, see [customStamp API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#stampsettings)
 
 ## Edit an existing stamp annotation programmatically
 
@@ -460,7 +460,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-> API reference: For more information about stampSettings, see [stampSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#stampsettings)
+> API reference: For more information about stampSettings, see [stampSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#stampsettings)
 
 ## Configure custom stamp settings
 
@@ -499,4 +499,4 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-> API reference: For more information about customStampSettings, see [customStampSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#customstampsettings)
+> API reference: For more information about customStampSettings, see [customStampSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#customstampsettings)

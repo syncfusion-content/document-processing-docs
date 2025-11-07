@@ -20,7 +20,7 @@ The PDF Viewer control provides options to add, edit, and delete shape annotatio
 
 ## Enable or disable shape annotation support
 
-Enables or disables the shape annotation feature in the PDF Viewer; defaults to true. For more information, see [enableShapeAnnotation API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enableshapeannotation)
+Enables or disables the shape annotation feature in the PDF Viewer; defaults to true. For more information, see [enableShapeAnnotation API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enableshapeannotation)
 
 ```html
 <div id="pdfViewer" style="height: 100%;width: 100%;"></div>
@@ -107,7 +107,7 @@ if (circleAnnotationButton) {
 
 ## Add a shape annotation to the PDF document programmatically
 
-The PDF Viewer library allows adding a shape annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library allows adding a shape annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
 Here is an example showing how to add shape annotations programmatically using addAnnotation():
 
@@ -537,11 +537,11 @@ Refer to the following code sample to set the default annotation settings.
 
 The following properties can be used to set default shape annotation properties:
 
-- **lineSettings**: Default LineSettingsModel. See [LineSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#linesettings)
-- **arrowSettings**: Default ArrowSettingsModel. See [ArrowSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#arrowsettings)
-- **rectangleSettings**: Default RectangleSettingsModel. See [RectangleSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#rectanglesettings)
-- **circleSettings**: Default CircleSettingsModel. See [CircleSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#circlesettings)
-- **polygonSettings**: Default PolygonSettingsModel. See [PolygonSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#polygonsettings)
+- **lineSettings**: Default LineSettingsModel. See [LineSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#linesettings)
+- **arrowSettings**: Default ArrowSettingsModel. See [ArrowSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#arrowsettings)
+- **rectangleSettings**: Default RectangleSettingsModel. See [RectangleSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#rectanglesettings)
+- **circleSettings**: Default CircleSettingsModel. See [CircleSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#circlesettings)
+- **polygonSettings**: Default PolygonSettingsModel. See [PolygonSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#polygonsettings)
 
 Default properties for shape annotations can be set before creating the control using LineSettings, ArrowSettings, RectangleSettings, CircleSettings, and PolygonSettings.
 
@@ -585,7 +585,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Enable or disable shape label visibility
 
-Enables or disables the display of shape labels in the PDF Viewer; defaults to true. For more information, see [enableShapeLabel API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enableshapelabel)
+Enables or disables the display of shape labels in the PDF Viewer; defaults to true. For more information, see [enableShapeLabel API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enableshapelabel)
 
 ```html
 <div id="pdfViewer" style="height: 100%;width: 100%;"></div>
@@ -598,7 +598,7 @@ viewer.enableShapeLabel = true;
 
 ## Configure shape label settings
 
-Defines the settings for shape labels using the [ShapeLabelSettingsModel] API. For more information, see [shapeLabelSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#shapelabelsettings)
+Defines the settings for shape labels using the [ShapeLabelSettingsModel] API. For more information, see [shapeLabelSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#shapelabelsettings)
 
 ```ts
 // Change the shape label settings.

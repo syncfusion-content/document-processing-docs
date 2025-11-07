@@ -24,7 +24,7 @@ The PDF Viewer component supports interactive form field design, including drawi
 
 Inject the FormDesigner module and set enableFormDesignerToolbar to true to display the Form Designer icon on the toolbar. The default value is true. 
 
-You can refer to [enableFormDesignerToolbar API  Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enableformdesignertoolbar) for more information. 
+You can refer to [enableFormDesignerToolbar API  Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enableformdesignertoolbar) for more information. 
 
 Use the following code to enable the toolbar option.
 
@@ -39,7 +39,7 @@ pdfviewer.enableFormDesignerToolbar= true;
 
 ## Show or hide form designer toolbar on initial load
 
-Open or close the form designer toolbar when the PDF document is loaded initially in the PDF Viewer control. Use the `isFormDesignerToolbarVisible` property to get or set the annotation toolbar visible status. The default value is false. You can refer to [isFormDesignerToolbarVisible API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#isformdesignertoolbarvisible) for more information. 
+Open or close the form designer toolbar when the PDF document is loaded initially in the PDF Viewer control. Use the `isFormDesignerToolbarVisible` property to get or set the annotation toolbar visible status. The default value is false. You can refer to [isFormDesignerToolbarVisible API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#isformdesignertoolbarvisible) for more information. 
 
 Use the following code to enable or disable the form designer toolbar on load:
 

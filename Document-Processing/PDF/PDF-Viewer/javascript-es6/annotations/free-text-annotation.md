@@ -14,7 +14,7 @@ The PDF Viewer control provides options to add, edit, and delete free text annot
 
 ## Enable or Disable Free Text annotation
 
-Enables or disables the free text annotation feature in the PDF Viewer. For more details, see [enableFreeText API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablefreetext).
+Enables or disables the free text annotation feature in the PDF Viewer. For more details, see [enableFreeText API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#enablefreetext).
 
 ```html
 <div id="pdfViewer" style="height: 100%;width: 100%;"></div>
@@ -97,7 +97,7 @@ if (addFreeTextAnnotationButton) {
 
 ## Add a free text annotation programmatically to the PDF document
 
-The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
 Here is an example of adding a free text annotation programmatically using addAnnotation():
 
@@ -330,7 +330,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-N> To know more about FreeTextSettings, you can refer [FreeTextSettings API documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#freetextsettings)
+N> To know more about FreeTextSettings, you can refer [FreeTextSettings API documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#freetextsettings)
 
 ## Set default free text placeholder
 
@@ -338,7 +338,7 @@ The `isValidFreeText` property specifies whether newly added free text annotatio
 - `true`: Displays **Type here** as placeholder text.  
 - `false`: Leaves the annotation blank so that user-entered text remains visible.
 
-For more information, see [isValidFreeText API documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#isvalidfreetext).
+For more information, see [isValidFreeText API documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#isvalidfreetext).
 
 ```ts
 import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';

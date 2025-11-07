@@ -22,7 +22,7 @@ The PDF Viewer component provides options to add, edit, and delete form fields. 
 
 ## Enable or Disable form designer toolbar
 
-Inject the FormDesigner module and set `enableFormDesigner` to `false` to display the Form Designer icon on the toolbar. The default value is `true`. You can refer [enableFormDesigner API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enableformdesigner) for more information. 
+Inject the FormDesigner module and set `enableFormDesigner` to `false` to display the Form Designer icon on the toolbar. The default value is `true`. You can refer [enableFormDesigner API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enableformdesigner) for more information. 
 
 Use the following code to enable or disable the form designer toolbar option.
 

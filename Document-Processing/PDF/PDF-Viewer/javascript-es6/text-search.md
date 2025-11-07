@@ -13,7 +13,7 @@ The Text Search option in PDF Viewer is used to find and highlight the text cont
 
 ## Enable or disable text search option.
 
-Use [enableTextSearch](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enabletextsearch) to enable or disable the text search in the PDF Viewer.
+Use [enableTextSearch](https://ej2.syncfusion.com/documentation/api/pdfviewer#enabletextsearch) to enable or disable the text search in the PDF Viewer.
 
 You can enable/disable the text search using the following code snippet.
 
@@ -74,7 +74,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Customize text search highlight colors
 
-Use [textSearchColorSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/#textsearchcolorsettings) property to customize the color of the text search highlight and search term.
+Use [textSearchColorSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer#textsearchcolorsettings) property to customize the color of the text search highlight and search term.
 
 You can customize the highlight and search colors using the following code snippet.
 
@@ -194,10 +194,10 @@ pdfviewer.textSearch.searchText('pdf', false, true);
 
 The following text search methods are available in the PDF Viewer,
 
-* [**Search text**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchtext): Searches the target text in the PDF document and highlights each occurrence in the pages.
-* [**Search next**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchnext): Searches the next occurrence of the current query from the active match.
-* [**Search previous**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchprevious): Searches the previous occurrence of the current query from the active match.
-* [**Cancel text search**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#canceltextsearch): Cancels the current text search and removes the highlighted occurrences from the PDF Viewer.
+* [**Search text**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch#searchtext): Searches the target text in the PDF document and highlights each occurrence in the pages.
+* [**Search next**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch#searchnext): Searches the next occurrence of the current query from the active match.
+* [**Search previous**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch#searchprevious): Searches the previous occurrence of the current query from the active match.
+* [**Cancel text search**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch#canceltextsearch): Cancels the current text search and removes the highlighted occurrences from the PDF Viewer.
 
 ![Alt text](./images/search.png)
 
@@ -384,9 +384,9 @@ The PDF Viewer triggers events during text search operations, allowing you to cu
 
 ### textSearchStart
 
-The [textSearchStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchstartevent) event fires as soon as a search begins from the toolbar interface or through the `textSearch.searchText` method. Use it to reset UI state, log analytics, or cancel the default search flow before results are processed.
+The [textSearchStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#textsearchstartevent) event fires as soon as a search begins from the toolbar interface or through the `textSearch.searchText` method. Use it to reset UI state, log analytics, or cancel the default search flow before results are processed.
 
-- Event arguments: [TextSearchStartEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchStartEventArgs/) exposes:
+- Event arguments: [TextSearchStartEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchStartEventArgs) exposes:
   - `searchText`: the term being searched.
   - `matchCase`: indicates whether case-sensitive search is enabled.
   - `isMatchWholeWord`: indicates whether whole-word matching is enabled.
@@ -407,9 +407,9 @@ viewer.appendTo('#pdfViewer');
 
 ### textSearchHighlight
 
-The [textSearchHighlight](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchhighlightevent) event triggers whenever a search result is brought into view, including navigation between matches. Use it to draw custom overlays or synchronize adjacent UI elements when a match is highlighted.
+The [textSearchHighlight](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#textsearchhighlightevent) event triggers whenever a search result is brought into view, including navigation between matches. Use it to draw custom overlays or synchronize adjacent UI elements when a match is highlighted.
 
-- Event arguments: [TextSearchHighlightEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchHighlightEventArgs/) exposes:
+- Event arguments: [TextSearchHighlightEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchHighlightEventArgs) exposes:
   - `bounds`: `RectangleBoundsModel | RectangleBoundsModel[]` representing the highlighted match.
   - `pageNumber`: page index where the match is highlighted.
   - `searchText`: the active search term.
@@ -429,13 +429,13 @@ viewer.appendTo('#pdfViewer');
 
 ### textSearchComplete
 
-The [textSearchComplete](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchcompleteevent) event runs after the search engine finishes scanning the document for the current query. Use it to update match counts, toggle navigation controls, or notify users when no results were found.
+The [textSearchComplete](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#textsearchcompleteevent) event runs after the search engine finishes scanning the document for the current query. Use it to update match counts, toggle navigation controls, or notify users when no results were found.
 
 - Typical uses:
   - Update UI with the total number of matches and enable navigation controls.
   - Hide loading indicators or show a "no results" message if none were found.
   - Record analytics for search effectiveness.
-- Event arguments: [TextSearchCompleteEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchCompleteEventArgs/) exposes:
+- Event arguments: [TextSearchCompleteEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchCompleteEventArgs) exposes:
   - `totalMatches`: total number of occurrences found.
   - `isMatchFound`: indicates whether at least one match was found.
   - `searchText`: the searched term.

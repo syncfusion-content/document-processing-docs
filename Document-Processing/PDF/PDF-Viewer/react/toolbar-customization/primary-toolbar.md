@@ -80,17 +80,6 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-## Enable or disable navigation toolbar on load
-
-Use the [enableNavigationToolbar](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enableNavigationToolbar) property to show or hide the navigation toolbar when the PDF Viewer is loaded.
-
-Show or hide the navigation toolbar using the `enableNavigationToolbar` property:
-
-```ts
- // Enable or disable navigation tool bar.
-viewer.enableNavigationToolbar = true;
-```
-
 The following code snippet explains how to show or hide the toolbar using the `showToolbar` method.
 
 {% tabs %}
@@ -163,78 +152,3 @@ export default App;
 
 {% endhighlight %}
 {% endtabs %}
-
-## Configure toolbar settings
-
-Use the [toolbarSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/) property to define the settings of the PDF Viewer toolbar. It accepts a `ToolbarSettingsModel` object for configuring primary, annotation, and form designer toolbars.
-
-The following example demonstrates how to customize tooltip visibility and the toolbar items for each toolbar:
-
-```ts
-import {PdfViewer, Toolbar, Magnification, Navigation,
-  LinkAnnotation, ThumbnailView, BookmarkView,TextSelection, TextSearch, Print, Annotation, FormFields,FormDesigner,
-} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation,
-  LinkAnnotation, ThumbnailView, BookmarkView, TextSelection,
-  TextSearch, Print, Annotation, FormFields, FormDesigner
-);
-
-let viewer: PdfViewer = new PdfViewer();
-viewer.resourceUrl =
-  'https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib';
-viewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-// Change the tool bar settings.
-viewer.toolbarSettings = {
-  showTooltip: false,
-  toolbarItems: [
-    'OpenOption',
-    'UndoRedoTool',
-    'PageNavigationTool',
-    'MagnificationTool',
-    'PanTool',
-    'SelectionTool',
-    'CommentTool',
-    'SubmitForm',
-    'AnnotationEditTool',
-    'FormDesignerEditTool',
-    'SearchOption',
-    'PrintOption',
-    'DownloadOption',
-  ],
-  annotationToolbarItems: [
-    'HighlightTool',
-    'UnderlineTool',
-    'StrikethroughTool',
-    'ColorEditTool',
-    'OpacityEditTool',
-    'AnnotationDeleteTool',
-    'StampAnnotationTool',
-    'HandWrittenSignatureTool',
-    'InkAnnotationTool',
-    'ShapeTool',
-    'CalibrateTool',
-    'StrokeColorEditTool',
-    'ThicknessEditTool',
-    'FreeTextAnnotationTool',
-    'FontFamilyAnnotationTool',
-    'FontSizeAnnotationTool',
-    'FontStylesAnnotationTool',
-    'FontAlignAnnotationTool',
-    'FontColorAnnotationTool',
-    'CommentPanelTool',
-  ],
-  formDesignerToolbarItems: [
-    'TextboxTool',
-    'PasswordTool',
-    'CheckBoxTool',
-    'RadioButtonTool',
-    'DropdownTool',
-    'ListboxTool',
-    'DrawSignatureTool',
-    'DeleteTool',
-  ],
-};
-viewer.appendTo('#pdfViewer');
-
-```

@@ -157,7 +157,7 @@ Add the below `serviceUrl` in the `index.ts` file
 
 ## Highlight text programmatically
 
-Programmatically add highlights using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add highlights using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -356,7 +356,7 @@ Add the below `serviceUrl` in the `index.ts` file
 
 ## Underline text programmatically
 
-Programmatically add underlines using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add underlines using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -556,7 +556,7 @@ Add the below `serviceUrl` in the `index.ts` file
 
 ## Strikethrough text programmatically
 
-Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -755,7 +755,7 @@ Add the below `serviceUrl` in the `index.ts` file
 
 ## Add squiggly to text programmatically
 
-Programmatically add squiggly using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add squiggly using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -889,9 +889,9 @@ pdfviewer.appendTo('#PdfViewer');
 {% endtabs %}
 
 > API reference:
-> * For more information about highlightSettings, see [highlightSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#highlightsettings).
-> * For more information about underlineSettings, see [underlineSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#underlinesettings).
-> * For more information about strikethroughSettings, see [strikethroughSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#strikethroughsettings).
+> * For more information about highlightSettings, see [highlightSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#highlightsettings).
+> * For more information about underlineSettings, see [underlineSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#underlinesettings).
+> * For more information about strikethroughSettings, see [strikethroughSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#strikethroughsettings).
 
 ## Perform undo and redo
 
@@ -1008,7 +1008,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
->API reference: For more information about enableTextMarkupAnnotation, see [enableTextMarkupAnnotation API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enabletextmarkupannotation).
+>API reference: For more information about enableTextMarkupAnnotation, see [enableTextMarkupAnnotation API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enabletextmarkupannotation).
 
 ## Enable or disable text markup resizer
 
@@ -1043,7 +1043,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
->For more information about enableTextMarkupResizer, see [enableTextMarkupResizer API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enabletextmarkupresizer)
+>For more information about enableTextMarkupResizer, see [enableTextMarkupResizer API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enabletextmarkupresizer)
 
 ## See also
 

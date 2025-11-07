@@ -85,7 +85,7 @@ if (distanceMode) {
 
 ## Add a measurement annotation to the PDF document programmatically
 
-The PDF Viewer library allows adding measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library allows adding measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
 Here is an example showing how to add measurement annotations programmatically using addAnnotation():
 
@@ -632,7 +632,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Enable or disable import annotation measurement
 
-Controls whether the PDF Viewer recalculates measurement values for imported measurement annotations. For details, see [enableImportAnnotationMeasurement API documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enableimportannotationmeasurement).
+Controls whether the PDF Viewer recalculates measurement values for imported measurement annotations. For details, see [enableImportAnnotationMeasurement API documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enableimportannotationmeasurement).
 
 - true: Recalculates and displays measurement values using the viewer's current scale ratio and units.
 - false: Preserves the values embedded in the imported annotations (no recalculation), which can appear as original comment text.

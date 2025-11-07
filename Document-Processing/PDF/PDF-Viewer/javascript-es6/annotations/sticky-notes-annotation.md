@@ -34,7 +34,7 @@ Annotation comments can be added using the comment panel.
 
 ## Add a sticky note annotation to the PDF document programmatically
 
-The PDF Viewer library allows adding a sticky note annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library allows adding a sticky note annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
 Here is an example showing how to add a sticky note annotation programmatically using addAnnotation():
 
@@ -218,7 +218,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
->API reference: For more information about stickyNotesSettings, see [stickyNotesSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#stickynotessettings)
+>API reference: For more information about stickyNotesSettings, see [stickyNotesSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#stickynotessettings)
 
 ## Disable sticky note annotations
 
@@ -253,4 +253,4 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
->API reference: For more information about enableStickyNotesAnnotation, see [enableStickyNotesAnnotation API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablestickynotesannotation)
+>API reference: For more information about enableStickyNotesAnnotation, see [enableStickyNotesAnnotation API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enablestickynotesannotation)

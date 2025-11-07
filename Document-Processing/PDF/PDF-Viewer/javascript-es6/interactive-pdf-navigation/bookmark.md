@@ -75,7 +75,7 @@ document.getElementById('getBookmarks').addEventListener('click', () => {
 
 ## Show or hide the bookmark panel on load
 
-The `isBookmarkPanelOpen` property gets or sets a boolean value to show or hide the bookmark panel while loading a document. Defaults to false. You can refer to [isBookmarkPanelOpen API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#isbookmarkpanelopen) for more Details
+The `isBookmarkPanelOpen` property gets or sets a boolean value to show or hide the bookmark panel while loading a document. Defaults to false. You can refer to [isBookmarkPanelOpen API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#isbookmarkpanelopen) for more Details
 
 ```ts
   viewer.isBookmarkPanelOpen = true;
