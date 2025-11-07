@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Supported and Unsupported Features
+# Supported and Unsupported Features in Word library
 
 This section describes the support and unsupported elements in the DocIO. 
 
@@ -1197,7 +1197,7 @@ Yes<br/><br/></td></tr>
 <td>Yes<br/><br/></td>
 </tr>
 <tr>
-<td>Mail Merge<br/><br/></td>
+<td>Mail merge<br/><br/></td>
 <td>Yes<br/><br/></td>
 <td>Yes<br/><br/></td>
 </tr>

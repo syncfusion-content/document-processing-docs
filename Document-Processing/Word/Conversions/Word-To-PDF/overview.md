@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Convert Word  to PDF using Syncfusion<sup>&reg;</sup> Word (DocIO) library 
+# Convert Word to PDF using Syncfusion® Word (DocIO) library
 
 Syncfusion<sup>&reg;</sup> Word library (DocIO) allows you to convert Word document to PDF within a few lines of code in .NET applications and also it does not require Adobe and Microsoft Word application to be installed in the machine. Using this, you can create an input Word document from scratch or load an existing Word document and then easily convert to PDF.  
 
@@ -286,5 +286,5 @@ When converting a Word document to a PDF, the presence of unsupported elements i
 * [How to preserve track changes markup in Word to PDF conversion](https://support.syncfusion.com/kb/article/14997/how-to-preserve-simple-markup-all-markup-and-no-markup-of-track-changes-during-word-to-pdf-conversion)
 * [How to preserve simple markup, all markup, and no markup of track changes during Word to PDF conversion?](https://support.syncfusion.com/kb/article/14997/how-to-preserve-simple-markup-all-markup-and-no-markup-of-track-changes-during-word-to-pdf-conversion)
 * [How to create a Word document with form fields from JSON and convert it to PDF?](https://support.syncfusion.com/kb/article/19823/how-to-create-a-word-document-with-form-fields-from-json-and-convert-it-to-pdf)
-* [How to Rename PDF Bookmark in Word to PDF in .Net Core Word Document?](https://support.syncfusion.com/kb/article/19808/how-to-rename-pdf-bookmark-in-word-to-pdf-in-net-core-word-document)
+* [How to Rename PDF Bookmark in Word to PDF in .NET Core Word Document?](https://support.syncfusion.com/kb/article/19808/how-to-rename-pdf-bookmark-in-word-to-pdf-in-net-core-word-document)
 * [How to check if a font contains the required glyphs for Word to PDF and image conversion?](https://support.syncfusion.com/kb/article/19671/how-to-check-if-a-font-contains-the-required-glyphs-for-word-to-pdf-and-image-conversion)
