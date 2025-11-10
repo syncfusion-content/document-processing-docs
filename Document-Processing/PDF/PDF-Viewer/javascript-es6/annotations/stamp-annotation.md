@@ -144,6 +144,45 @@ if (standardBusinessStamp) {
 {% endhighlight %}
 {% endtabs %}
 
+## Enable or disable stamp annotations
+
+Use the `enableStampAnnotations` API to enable or disable stamp annotation in the PDF Viewer loads. Defaults to true.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
+
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib";
+// Enable or disable stamp annotations.
+pdfviewer.enableStampAnnotations = false;
+
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
+
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+// Enable or disable stamp annotations.
+pdfviewer.enableStampAnnotations = false;
+
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
+>API reference: For more information about enableStampAnnotations, see [enableStampAnnotations API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enablestampannotations)
+
 ## Add a custom stamp to the PDF document
 
 * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
@@ -158,7 +197,7 @@ if (standardBusinessStamp) {
 
 ## Add a stamp annotation to the PDF document programmatically
 
-The PDF Viewer library allows adding a stamp annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library allows adding a stamp annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
 Here are examples showing how to add stamp annotations programmatically using addAnnotation():
 
@@ -311,6 +350,8 @@ if (customStamp) {
 {% endhighlight %}
 {% endtabs %}
 
+> API reference: For more information about customStamp, see [customStamp API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#stampsettings)
+
 ## Edit an existing stamp annotation programmatically
 
 To modify an existing stamp annotation programmatically, use the editAnnotation() method.
@@ -418,3 +459,44 @@ pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
+
+> API reference: For more information about stampSettings, see [stampSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#stampsettings)
+
+## Configure custom stamp settings
+
+Use the customStampSettings property (CustomStampSettingsModel) to configure default behavior and constraints for custom stamp annotations, including size, position, locking, print behavior, and enabling custom stamp mode.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
+
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib";
+// Change the custom stamp settings.
+pdfviewer.customStampSettings = { opacity: 1, author: 'XYZ', width: 100, height: 100, left: 200, top: 200, minHeight: 10, minWidth: 10, maxWidth: 100, maxHeight: 100, isLock: false, enableCustomStamp: true, allowedInteractions: ['None'], isPrint: true };
+
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
+
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+// Change the custom stamp settings.
+pdfviewer.customStampSettings = { opacity: 1, author: 'XYZ', width: 100, height: 100, left: 200, top: 200, minHeight: 10, minWidth: 10, maxWidth: 100, maxHeight: 100, isLock: false, enableCustomStamp: true, allowedInteractions: ['None'], isPrint: true };
+
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
+> API reference: For more information about customStampSettings, see [customStampSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#customstampsettings)

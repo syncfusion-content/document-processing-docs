@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Primary Toolbar Customization in TypeScript PDF Viewer Component | Syncfusion
+title: Primary Toolbar in TS PDF Viewer Component | Syncfusion
 description: Learn here all about primary toolbar customization in Syncfusion TypeScript PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
@@ -14,7 +14,7 @@ The primary toolbar of the PDF Viewer can be customized by rearranging existing 
 
 ## Show or hide the primary toolbar
 
-Toggle the built-in primary toolbar to create custom toolbar experiences or simplify the UI. In scenarios where a custom toolbar is required, the built-in toolbar can be hidden. Use the [enableToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/pdfViewerModel/#enabletoolbar) property or the [showToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#showtoolbar) method to show or hide the primary toolbar.
+Toggle the built-in primary toolbar to create custom toolbar experiences or simplify the UI. In scenarios where a custom toolbar is required, the built-in toolbar can be hidden. Use the [enableToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/pdfViewerModel#enabletoolbar) property or the [showToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar#showtoolbar) method to show or hide the primary toolbar.
 
 Show or hide the toolbar using the `enableToolbar` property:
 

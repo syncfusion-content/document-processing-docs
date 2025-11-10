@@ -18,6 +18,27 @@ The PDF Viewer control provides options to add, edit, and delete shape annotatio
 * Circle
 * Polygon
 
+## Enable or disable shape annotation support
+
+Enables or disables the shape annotation feature in the PDF Viewer; defaults to true. For more information, see [enableShapeAnnotation API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enableshapeannotation)
+
+```html
+<div id="pdfViewer" style="height: 100%;width: 100%;"></div>
+```
+
+```ts
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner);
+
+let viewer: PdfViewer = new PdfViewer();
+viewer.resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib',
+viewer.documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+// Enable or disable shape annotation.
+viewer.enableShapeAnnotation = false;
+viewer.appendTo("#pdfViewer");
+```
+
 ![Shape annotations overview](../images/shape_annot.png)
 
 ## Adding a shape annotation to the PDF document
@@ -86,7 +107,7 @@ if (circleAnnotationButton) {
 
 ## Add a shape annotation to the PDF document programmatically
 
-The PDF Viewer library allows adding a shape annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library allows adding a shape annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
 Here is an example showing how to add shape annotations programmatically using addAnnotation():
 
@@ -514,6 +535,14 @@ Refer to the following code sample to set the default annotation settings.
 
 ## Set default properties during control initialization
 
+The following properties can be used to set default shape annotation properties:
+
+- **lineSettings**: Default LineSettingsModel. See [LineSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#linesettings)
+- **arrowSettings**: Default ArrowSettingsModel. See [ArrowSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#arrowsettings)
+- **rectangleSettings**: Default RectangleSettingsModel. See [RectangleSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#rectanglesettings)
+- **circleSettings**: Default CircleSettingsModel. See [CircleSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#circlesettings)
+- **polygonSettings**: Default PolygonSettingsModel. See [PolygonSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#polygonsettings)
+
 Default properties for shape annotations can be set before creating the control using LineSettings, ArrowSettings, RectangleSettings, CircleSettings, and PolygonSettings.
 
 {% tabs %}
@@ -552,3 +581,35 @@ pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
+
+
+## Enable or disable shape label visibility
+
+Enables or disables the display of shape labels in the PDF Viewer; defaults to true. For more information, see [enableShapeLabel API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enableshapelabel)
+
+```html
+<div id="pdfViewer" style="height: 100%;width: 100%;"></div>
+```
+
+```ts
+// Enable or disable shape labels.
+viewer.enableShapeLabel = true;
+```
+
+## Configure shape label settings
+
+Defines the settings for shape labels using the [ShapeLabelSettingsModel] API. For more information, see [shapeLabelSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#shapelabelsettings)
+
+```ts
+// Change the shape label settings.
+viewer.shapeLabelSettings = { 
+    opacity: 1, 
+    fillColor: '#9c2592', 
+    borderColor: '#ff0000', 
+    fontColor: '#000', 
+    fontSize: 16, 
+    labelHeight: 24.6, 
+    labelMaxWidth: 151, 
+    labelContent: 'XYZ' 
+};
+```
