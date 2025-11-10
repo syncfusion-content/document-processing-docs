@@ -184,7 +184,7 @@ Dim application As IApplication = excelEngine.Excel
 {% endhighlight %}
 {% endtabs %}  
 
-By default, the Excel version 97 to 2003 (*.xls) is associated with application object. XlsIO writes the excel files in the respective format depending on this excel version. You can modify the default Excel version to Xlsx as shown as follows.
+By default, the Excel version 97 to 2003 (*.xls) is associated with application object. XlsIO writes the excel files in the respective format depending on this excel version. You can modify the default Excel version to XLSX as shown as follows.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
