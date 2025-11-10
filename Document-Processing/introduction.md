@@ -53,7 +53,7 @@ Essential<sup>&reg;</sup> PDF
 Essential<sup>&reg;</sup> XlsIO
 </td>
 <td>
-<a href="https://www.syncfusion.com/document-sdk/net-excel-library">.NET class library</a>  used to create, read, and write PDF files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.
+<a href="https://www.syncfusion.com/document-sdk/net-excel-library">.NET class library</a>  used to create, read, edit, write, and convert Microsoft Excel files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.
 </td>
 </tr>
 <tr>
@@ -61,7 +61,7 @@ Essential<sup>&reg;</sup> XlsIO
 Essential<sup>&reg;</sup> DocIO
 </td>
 <td>
-<a href="https://www.syncfusion.com/document-sdk/net-word-library">.NET class library</a>  used to create, read, and write PDF files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.
+<a href="https://www.syncfusion.com/document-sdk/net-word-library">.NET class library</a>  used to create, read, edit, and convert Microsoft Word files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.
 </td>
 </tr>
 <tr>
@@ -69,7 +69,7 @@ Essential<sup>&reg;</sup> DocIO
 Essential<sup>&reg;</sup> Presentation
 </td>
 <td>
-<a href="https://www.syncfusion.com/document-sdk/net-powerpoint-library">.NET class library</a>  used to create, read, and write PDF files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.
+<a href="https://www.syncfusion.com/document-sdk/net-powerpoint-library">.NET class library</a>  used to create, read, edit, and convert Microsoft PowerPoint (PPTX) files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.
 </td>
 </tr>
 </table>
