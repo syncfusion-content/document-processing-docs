@@ -13,8 +13,8 @@ Essential<sup>&reg;</sup> PDF supports different actions that can be triggered b
 
 The below code example illustrates how to add the action to the PDF document using [PdfLaunchAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLaunchAction.html) class.
 
-To quickly get started, work with actions in your application to automate tasks and streamline workflows. Please, check this video:
-{% youtube "" %}
+To quickly get started, work with actions in your application to automate tasks and streamline workflows. Watch this video:
+{% youtube "https://youtu.be/IVunNPJNBwI?si=Iz7h7nPNmSU0pLNz" %}
 
 {% tabs %}
 
