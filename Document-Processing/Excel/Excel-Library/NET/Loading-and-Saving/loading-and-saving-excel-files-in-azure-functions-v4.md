@@ -1,6 +1,6 @@
 ---
 title: Loading and Saving Excel in Azure Functions v4 | Syncfusion
-description: Explains how to load and save an Excel files in Azure Functions v4 using Syncfusion Excel library.
+description: Explains how to load and save an Excel files in Azure Functions v4 using Syncfusion Excel(XlsIO) library.
 platform: document-processing
 control: XlsIO
 documentation: UG
