@@ -7,9 +7,9 @@ documentation: UG
 keywords: PDF, Excel, Word, PowerPoint, Office, SDK, Automation, API, create, edit, convert, read
 ---
 
-> With the 2025 Volume 1 release, we will discontinue support for .NET 6.0 and 7.0 in WinForms, WPF, WinUI, and Document Processing Libraries. Please plan to upgrade to .Net 8.0 or higher.
+> With the 2025 Volume 1 release, we will discontinue support for .NET 6.0 and 7.0 in WinForms, WPF, WinUI, and Document Processing Libraries. Please plan to upgrade to .NET 8.0 or higher.
 
-# Welcome to Syncfusion<sup>&reg;</sup> Essential Document Processing Platform
+# Welcome to Syncfusion<sup>&reg;</sup> Document Processing Platform
 
 Essential<sup>&reg;</sup> Document Processing is a collection of .NET class libraries to create, edit, write, and convert PDF, Excel, Word, and PowerPoint file formats in .NET Framework [C#, VB.NET], .NET Core, UWP, and Xamarin applications without Microsoft Office or Adobe dependencies.
 
