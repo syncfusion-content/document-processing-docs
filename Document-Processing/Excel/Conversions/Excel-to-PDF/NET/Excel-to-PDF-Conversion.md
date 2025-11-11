@@ -1807,7 +1807,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert an Excel workbook to PDF by setting the paper size for all worksheets in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Page%20Setup%20Options/.NET/Paper%20Size).    
+A complete working example to convert an Excel workbook to PDF by setting the paper size for all worksheets in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Page%20Setup%20Options/.NET/Paper%20Size">this GitHub page</a>.    
 
 ## Supported elements
 
