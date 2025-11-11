@@ -1809,6 +1809,102 @@ End Using
 
 A complete working example to convert an Excel workbook to PDF by setting the paper size for all worksheets in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Page%20Setup%20Options/.NET/Paper%20Size">this GitHub page</a>.    
 
+### Orientation
+
+The following code illustrates how to convert an Excel workbook to PDF by setting the page orientation.
+
+{% tabs %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Page%20Setup%20Options/.NET/Orientation/Orientation/Program.cs,180" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
+
+  //Set the page orientation for all worksheets
+  foreach (IWorksheet worksheet in workbook.Worksheets)
+  {
+      worksheet.PageSetup.Orientation = ExcelPageOrientation.Portrait;
+  }
+
+  //Initialize XlsIORendererSettings
+  XlsIORendererSettings settings = new XlsIORendererSettings();
+
+  //Set the layout option as FitAllColumnsOnOnePage
+  settings.LayoutOptions = LayoutOptions.FitAllColumnsOnOnePage;
+
+  //Initialize XlsIORenderer
+  XlsIORenderer renderer = new XlsIORenderer();
+
+  //Convert the Excel document to PDF with renderer settings
+  PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
+
+  //Save the workbook as PDF
+  pdfDocument.Save(Path.GetFullPath("Output/Output.pdf"));
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+
+  //Set the page orientation for all worksheets
+  foreach (IWorksheet worksheet in workbook.Worksheets)
+  {
+      worksheet.PageSetup.Orientation = ExcelPageOrientation.Portrait;
+  }
+
+  //Initialize ExcelToPdfConverterSettings
+  ExcelToPdfConverterSettings settings = new ExcelToPdfConverterSettings();
+
+  //Set the layout option as FitAllColumnsOnOnePage
+  settings.LayoutOptions = LayoutOptions.FitAllColumnsOnOnePage;
+
+  //Load the Excel document into ExcelToPdfConverter
+  ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
+
+  //Convert the Excel document to PDF with converter settings
+  PdfDocument pdfDocument = converter.Convert(settings);
+
+  //Save the PDF document
+  pdfDocument.Save("Output.pdf");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
+
+  'Set the page orientation for all worksheets
+  For Each worksheet As IWorksheet In workbook.Worksheets
+      worksheet.PageSetup.Orientation = ExcelPageOrientation.Portrait
+  Next
+
+  'Initialize ExcelToPdfConverterSettings
+  Dim settings As ExcelToPdfConverterSettings = New ExcelToPdfConverterSettings()
+
+  'Set the layout option as FitAllColumnsOnOnePage
+  settings.LayoutOptions = LayoutOptions.FitAllColumnsOnOnePage
+
+  'Load the Excel document into ExcelToPdfConverter
+  Dim converter As ExcelToPdfConverter = New ExcelToPdfConverter(workbook)
+
+  'Convert the Excel document to PDF with converter settings
+  Dim pdfDocument As PdfDocument = converter.Convert(settings)
+
+  'Save the workbook as PDF
+  pdfDocument.Save("Output.pdf")
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example to convert an Excel workbook to PDF by setting the page orientation in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Page%20Setup%20Options/.NET/Orientation">this GitHub page</a>.
+
 ## Supported elements
 
 This feature supports the following elements:
