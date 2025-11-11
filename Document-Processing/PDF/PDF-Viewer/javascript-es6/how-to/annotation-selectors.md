@@ -1,19 +1,17 @@
 ---
 layout: post
-title: Annotation selectors in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Annotation selectors in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Customize annotation selectors in TypeScript PDF Viewer
+description: Learn how to customize annotation selectors in the TypeScript PDF Viewer component using annotationSelectorSettings with examples.
 platform: document-processing
-control: Annotation selectors
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Annotation selectors in Typescript Pdfviewer control
+# Customize annotation selectors in TypeScript PDF Viewer
 
-To customize the annotation selector in Syncfusion PDF Viewer, you can use the [**annotationSelectorSettings**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselectorsettings) property of the PdfViewer control.
+Customize the annotation selector using the [annotationSelectorSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselectorsettings) property of the PDF Viewer.
 
-Here is an example of how you can customize the selector of the shape annotation:
+Example: Customize the selector of a shape annotation
 
 ```
 
@@ -30,4 +28,5 @@ document.getElementById('annotationSelector').addEventListener('click', () => {
 
 ```
 
-Find the sample [how to customize the annotation selector](https://stackblitz.com/edit/typescript-u7xjdv?file=index.ts)
+Sample: How to customize the annotation selector
+https://stackblitz.com/edit/typescript-u7xjdv?file=index.ts
