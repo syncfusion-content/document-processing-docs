@@ -18,6 +18,67 @@ The PDF Viewer control provides options to add, edit, and delete shape annotatio
 * Circle
 * Polygon
 
+## Enable or disable shape annotation support
+
+Enables or disables the shape annotation feature in the PDF Viewer; defaults to true. For more information, see [enableShapeAnnotation API Documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableshapeannotation)
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { Component, OnInit } from "@angular/core";
+import {
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  AnnotationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  FormFieldsService,
+  FormDesignerService,
+} from "@syncfusion/ej2-angular-pdfviewer";
+
+@Component({
+  selector: "app-root",
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
+    <ejs-pdfviewer
+      id="pdfViewer"
+      [resourceUrl]="resource"
+      [documentPath]="document"
+      [enableShapeAnnotation]="false"
+      style="height:640px;display:block"
+    ></ejs-pdfviewer>
+  </div>`,
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    AnnotationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    FormFieldsService,
+    FormDesignerService,
+  ],
+})
+export class AppComponent implements OnInit {
+  public resource =
+    "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
+  public document = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+  ngOnInit(): void {}
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
 ![Shape annotations overview](../images/shape_annot.png)
 
 ## Adding a shape annotation to the PDF document
@@ -526,6 +587,14 @@ Refer to the following code sample to set the default annotation settings.
 
 ## Set default properties during control initialization
 
+The following properties can be used to set default shape annotation properties:
+
+- **lineSettings**: Default LineSettingsModel. See [LineSettings API Documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#linesettings)
+- **arrowSettings**: Default ArrowSettingsModel. See [ArrowSettings API Documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#arrowsettings)
+- **rectangleSettings**: Default RectangleSettingsModel. See [RectangleSettings API Documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#rectanglesettings)
+- **circleSettings**: Default CircleSettingsModel. See [CircleSettings API Documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#circlesettings)
+- **polygonSettings**: Default PolygonSettingsModel. See [PolygonSettings API Documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#polygonsettings)
+
 Default properties for shape annotations can be set before creating the control using LineSettings, ArrowSettings, RectangleSettings, CircleSettings, and PolygonSettings.
 
 {% tabs %}
@@ -608,3 +677,30 @@ Default properties for shape annotations can be set before creating the control 
 
 {% endhighlight %}
 {% endtabs %}
+
+## Enable or disable shape label visibility
+
+Enables or disables the display of shape labels in the PDF Viewer; defaults to true. For more information, see [enableShapeLabel API Documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableshapeannotation)
+
+```ts
+// Enable or disable shape labels.
+viewer.enableShapeLabel = true;
+```
+
+## Configure shape label settings
+
+Defines the settings for shape labels using the [ShapeLabelSettingsModel] API. For more information, see [shapeLabelSettings API Documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#shapelabelsettings)
+
+```ts
+// Change the shape label settings.
+viewer.shapeLabelSettings = { 
+    opacity: 1, 
+    fillColor: '#9c2592', 
+    borderColor: '#ff0000', 
+    fontColor: '#000', 
+    fontSize: 16, 
+    labelHeight: 24.6, 
+    labelMaxWidth: 151, 
+    labelContent: 'XYZ' 
+};
+```

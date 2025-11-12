@@ -380,6 +380,67 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
+## Enable or disable stamp annotations
+
+Use the `enableStampAnnotations` API to enable or disable stamp annotation in the PDF Viewer loads. Defaults to true.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { Component, OnInit } from "@angular/core";
+import {
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  AnnotationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  FormFieldsService,
+  FormDesignerService,
+} from "@syncfusion/ej2-angular-pdfviewer";
+
+@Component({
+  selector: "app-root",
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
+    <ejs-pdfviewer
+      id="pdfViewer"
+      [resourceUrl]="resource"
+      [documentPath]="document"
+      [enableStampAnnotations]="false"
+      style="height:640px;display:block"
+    ></ejs-pdfviewer>
+  </div>`,
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    AnnotationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    FormFieldsService,
+    FormDesignerService,
+  ],
+})
+export class AppComponent implements OnInit {
+  public resource = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
+  public document = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+  ngOnInit(): void {}
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+>API reference: For more information about enableStampAnnotations, see [enableStampAnnotations API Documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enablestampannotations)
+
 ## Add a custom stamp to the PDF document
 
 * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
@@ -463,3 +524,81 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 
 {% endhighlight %}
 {% endtabs %}
+
+## Configure custom stamp settings
+
+Use the customStampSettings property (CustomStampSettingsModel) to configure default behavior and constraints for custom stamp annotations, including size, position, locking, print behavior, and enabling custom stamp mode.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { Component, OnInit } from "@angular/core";
+import {
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  AnnotationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  FormFieldsService,
+  FormDesignerService,
+} from "@syncfusion/ej2-angular-pdfviewer";
+
+@Component({
+  selector: "app-root",
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
+    <ejs-pdfviewer
+      id="pdfViewer"
+      [resourceUrl]="resource"
+      [documentPath]="document"
+      [customStampSettings]="customStamp"
+      style="height:640px;display:block"
+    ></ejs-pdfviewer>
+  </div>`,
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    AnnotationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    FormFieldsService,
+    FormDesignerService,
+  ],
+})
+export class AppComponent implements OnInit {
+  public resource = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
+  public document = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+  // Change the custom stamp settings.
+  public customStamp = {
+    opacity: 1,
+    author: "XYZ",
+    width: 100, 
+    height: 100, 
+    left: 200, 
+    top: 200, 
+    minHeight: 10, 
+    minWidth: 10, 
+    maxWidth: 100, 
+    maxHeight: 100,
+    isLock: false,
+    enableCustomStamp: true,
+    allowedInteractions: ["None"],
+    isPrint: true,
+  };
+  ngOnInit(): void {}
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+> API reference: For more information about customStampSettings, see [customStampSettings API Documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#customstampsettings)

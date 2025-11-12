@@ -12,6 +12,66 @@ domainurl: ##DomainURL##
 
 The PDF Viewer control provides options to add, edit, and delete free text annotations.
 
+## Enable or Disable Free Text annotation
+
+Enables or disables the free text annotation feature in the PDF Viewer. For more details, see [enableFreeText API Documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enablefreetext).
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { Component, OnInit } from "@angular/core";
+import {
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  AnnotationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  FormFieldsService,
+  FormDesignerService,
+} from "@syncfusion/ej2-angular-pdfviewer";
+
+@Component({
+  selector: "app-root",
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
+    <ejs-pdfviewer
+      id="pdfViewer"
+      [resourceUrl]="resource"
+      [documentPath]="document"
+      [enableFreeText]="false"
+      style="height:640px;display:block"
+    ></ejs-pdfviewer>
+  </div>`,
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    AnnotationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    FormFieldsService,
+    FormDesignerService,
+  ],
+})
+export class AppComponent implements OnInit {
+    public resource = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
+    public document = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+  ngOnInit(): void {}
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
 ## Add a free text annotation to the PDF document
 
 Free text annotations can be added to the PDF document using the annotation toolbar.
@@ -102,7 +162,7 @@ import { LinkAnnotationService, BookmarkViewService,
 
 ## How to clear the selection focus from free text annotation
 
-The free text annotations selection focus can be cleared by using the [setAnnotationMode](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/)  property of the `annotationModule`.
+The free text annotations selection focus can be cleared by using the [setAnnotationMode](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation)  property of the `annotationModule`.
 
 Refer to the following code sample to remove the selection focus from the annotation by using a button click.
 
@@ -149,7 +209,7 @@ RemoveSelection() {
 
 ## Add a free text annotation programmatically to the PDF document
 
-The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method
+The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotationn) method
 
 Here is an example of adding a free text annotation programmatically using addAnnotation():
 
@@ -540,6 +600,69 @@ export class AppComponent implements OnInit {
   }
 }
 
+{% endhighlight %}
+{% endtabs %}
+
+N> To know more about FreeTextSettings, you can refer [FreeTextSettings API documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#freetextsettings)
+
+## Set default free text placeholder
+
+The `isValidFreeText` property specifies whether newly added free text annotations display a placeholder. By default, `isValidFreeText` is `true`.  
+- `true`: Displays **Type here** as placeholder text.  
+- `false`: Leaves the annotation blank so that user-entered text remains visible.
+
+For more information, see [isValidFreeText API documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#isvalidfreetext).
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { Component, OnInit } from "@angular/core";
+import {
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  AnnotationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  FormFieldsService,
+  FormDesignerService,
+} from "@syncfusion/ej2-angular-pdfviewer";
+
+@Component({
+  selector: "app-root",
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
+    <ejs-pdfviewer
+      id="pdfViewer"
+      [resourceUrl]="resource"
+      [documentPath]="document"
+      [isValidFreeText]="true"
+      style="height:640px;display:block"
+    ></ejs-pdfviewer>
+  </div>`,
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    AnnotationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    FormFieldsService,
+    FormDesignerService,
+  ],
+})
+export class AppComponent implements OnInit {
+  public resource = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
+  public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  ngOnInit(): void {}
+}
 {% endhighlight %}
 {% endtabs %}
 

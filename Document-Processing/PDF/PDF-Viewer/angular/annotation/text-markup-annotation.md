@@ -1433,3 +1433,65 @@ export class AppComponent implements OnInit {
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Enable or disable text markup resizer
+
+Enable or disable the text markup resizer using the `enableTextMarkupResizer` API. Defaults to `false`.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { Component, OnInit } from "@angular/core";
+import {
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  AnnotationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  FormFieldsService,
+  FormDesignerService,
+} from "@syncfusion/ej2-angular-pdfviewer";
+
+@Component({
+  selector: "app-root",
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
+    <ejs-pdfviewer
+      id="pdfViewer"
+      [resourceUrl]="resource"
+      [documentPath]="document"
+      [enableTextMarkupResizer]="true"
+      style="height:640px;display:block"
+    ></ejs-pdfviewer>
+  </div>`,
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    AnnotationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    FormFieldsService,
+    FormDesignerService,
+  ],
+})
+export class AppComponent implements OnInit {
+  public resource =
+    "https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib";
+  public document = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+  ngOnInit(): void {}
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+>For more information about enableTextMarkupResizer, see [enableTextMarkupResizer API Documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enabletextmarkupresizer)

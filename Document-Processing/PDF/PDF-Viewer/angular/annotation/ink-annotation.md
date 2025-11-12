@@ -14,6 +14,65 @@ The PDF Viewer control provides options to add, edit, and delete ink annotations
 
 ![Ink annotations overview](../images/ink_annotation.png)
 
+## Enable or disable ink annotation
+
+Enables or disables the ink annotation feature in the PDF Viewer; defaults to true. For details, see [enableInkAnnotation API Documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableinkannotation).
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { Component, OnInit } from "@angular/core";
+import {
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  AnnotationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  FormFieldsService,
+  FormDesignerService,
+} from "@syncfusion/ej2-angular-pdfviewer";
+
+@Component({
+  selector: "app-root",
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
+    <ejs-pdfviewer
+      id="pdfViewer"
+      [resourceUrl]="resource"
+      [documentPath]="document"
+      [enableInkAnnotation]="false"
+      style="height:640px;display:block"
+    ></ejs-pdfviewer>
+  </div>`,
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    AnnotationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    FormFieldsService,
+    FormDesignerService,
+  ],
+})
+export class AppComponent implements OnInit {
+  public resource = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
+  public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  ngOnInit(): void {}
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Add an ink annotation to the PDF document
 
 Ink annotations can be added to the PDF document using the annotation toolbar.
@@ -105,7 +164,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 
 ## Add an ink annotation programmatically to the PDF document
 
-The PDF Viewer library allows adding an ink annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+The PDF Viewer library allows adding an ink annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotationn) method.
 
 Here is an example of adding an ink annotation programmatically using addAnnotation():
 
@@ -401,3 +460,5 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 
 {% endhighlight %}
 {% endtabs %}
+
+N> To know more about FreeTextSettings, you can refer [inkAnnotationSettings API documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#inkannotationsettings)

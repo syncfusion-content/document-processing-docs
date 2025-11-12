@@ -720,3 +720,65 @@ export class AppComponent implements OnInit {
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Enable or disable import annotation measurement
+
+Controls whether the PDF Viewer recalculates measurement values for imported measurement annotations. For details, see [enableImportAnnotationMeasurement API documentation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableimportannotationmeasurement).
+
+- true: Recalculates and displays measurement values using the viewer's current scale ratio and units.
+- false: Preserves the values embedded in the imported annotations (no recalculation), which can appear as original comment text.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { Component, OnInit } from "@angular/core";
+import {
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  AnnotationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  FormFieldsService,
+  FormDesignerService,
+} from "@syncfusion/ej2-angular-pdfviewer";
+
+@Component({
+  selector: "app-root",
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
+    <ejs-pdfviewer
+      id="pdfViewer"
+      [resourceUrl]="resource"
+      [documentPath]="document"
+      [enableImportAnnotationMeasurement]="true"
+      style="height:640px;display:block"
+    ></ejs-pdfviewer>
+  </div>`,
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    AnnotationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    FormFieldsService,
+    FormDesignerService,
+  ],
+})
+export class AppComponent implements OnInit {
+  public resource = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
+  public document = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+  ngOnInit(): void {}  
+}
+
+{% endhighlight %}
+{% endtabs %}
