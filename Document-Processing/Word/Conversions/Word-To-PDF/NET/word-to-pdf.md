@@ -1,12 +1,12 @@
 ---
-title: Convert Word to PDF in C# | DocIO | Syncfusion
+title: Convert Word to PDF in C# using DocIO | Syncfusion
 description: Learn how to convert a Word document to PDF, PDF/A, and PDF/UA using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word to PDF using Syncfusion<sup>&reg;</sup> Word (DocIO) library 
+# Convert Word to PDF using Syncfusion® Word (DocIO) library
 
 Syncfusion<sup>&reg;</sup> Word library (DocIO) allows you to convert Word document to PDF within a few lines of code in .NET applications and also it does not require Adobe and Microsoft Word application to be installed in the machine. Using this, you can create an input Word document from scratch or load an existing Word document and then easily convert to PDF.  
 
@@ -237,6 +237,10 @@ You can preserve Ole Equation as bitmap image in the converted PDF document. For
 ### Restrict all permission in a PDF document
 
 You can restrict all the permission in a PDF document using [PdfPermissionsFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfPermissionsFlags.html). For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#restrict-all-permission-in-a-pdf-document).
+
+### Apply Matte to Transparent Images
+
+This setting allows you to determine whether to **apply a matte color to transparent images** during Word to PDF conversion, ensuring they render cleanly without unwanted borders or artifacts in the final PDF. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#restrict-all-permission-in-a-pdf-document).
 
 ## Font Substitution
 
