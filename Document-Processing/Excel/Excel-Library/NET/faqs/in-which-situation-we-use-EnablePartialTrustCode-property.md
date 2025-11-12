@@ -31,11 +31,3 @@ Dim application As IApplication = excelEngine.Excel
 application.EnablePartialTrustCode = False ' Setting EnablePartialTrustCode to False
 {% endhighlight %}
 {% endtabs %}
-
- 
-
-
-
-
-
-
