@@ -1,6 +1,6 @@
 ---
-title: Convert Word to PDF in C# | DocIO | Syncfusion
-description: Learn how to convert a Word document to PDF, PDF/A, and PDF/UA using the .NET Word library (DocIO) without Microsoft Word or interop dependencies.
+title: Convert Word to PDF in C# using DocIO | Syncfusion
+description: Learn how to convert a Word document to PDF, PDF/A, and PDF/UA using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
