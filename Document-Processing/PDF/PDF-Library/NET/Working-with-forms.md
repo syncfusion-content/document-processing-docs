@@ -5105,7 +5105,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Preserve form fields when creating a PDF Template from an existing page
 
-When you generate a `PdfTemplate` from an existing page, interactive **AcroForm** fields (textbox, checkbox, etc.) are **not copied** to the template.  
+When you create a  [PdfTemplate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTemplate.html) from an existing page, interactive **AcroForm** fields (textbox, checkbox, etc.) are **not copied** to the template.  
 If you still need the visual appearance of those form fields in the final document, you can flatten the form using the [FlattenFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_FlattenFields) API. 
 
 Please refer the code sample to flatten the form fields before saving the PDF document.
@@ -5114,7 +5114,7 @@ N>  Flattening permanently removes interactivity. The resulting PDF shows the fo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Preserve-Formfields- in-the-Template-created-from-existing-PDF/Preserve-Formfields- in-the-Template-created-from-existing-PDF/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Preserve-Formfields-in-the-Template-created-from-existing-PDF/Preserve-Formfields-in-the-Template-created-from-existing-PDF/Program.cs" %}
 
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
