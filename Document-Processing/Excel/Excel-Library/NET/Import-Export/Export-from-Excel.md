@@ -25,8 +25,13 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
-	//Read data from the worksheet and Export to the DataTable
-	DataTable customersTable = worksheet.ExportDataTable(worksheet.UsedRange, ExcelExportDataTableOptions.ColumnNames | ExcelExportDataTableOptions.ComputedFormulaValues);           
+	//Read all data from the used range of worksheet and Export to the DataTable
+	DataTable customersTable = worksheet.ExportDataTable(worksheet.UsedRange, ExcelExportDataTableOptions.ColumnNames | ExcelExportDataTableOptions.ComputedFormulaValues);   
+
+	IRange range = worksheet.Range["A1:B10"];
+	
+	//Read specified range from the worksheet and Export to DataTable
+	DataTable customersTable1 = worksheet.ExportDataTable(range, ExcelExportDataTableOptions.ColumnNames | ExcelExportDataTableOptions.ComputedFormulaValues);
 }
 
 //XlsIO supports binding of exported data table to data grid in Windows Forms, WPF, ASP.NET and ASP.NET MVC platforms alone.
