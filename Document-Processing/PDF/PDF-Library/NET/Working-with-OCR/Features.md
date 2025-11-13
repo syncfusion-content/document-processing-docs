@@ -1513,7 +1513,7 @@ Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with m
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/OCR-with-multiple-langauages/OCR%20with%20multiple%20languages/Program.cs, 300" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-on-PDF-with-multiple-languages/Perform-OCR-on-PDF-with-multiple-languages/Program.cs, 300" %}
 
     using Syncfusion.OCRProcessor;
     using Syncfusion.Pdf.Parsing;
@@ -1593,7 +1593,7 @@ Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with m
 
 You can find the `.traineddata` files for different languages on the [Tesseract GitHub page](https://github.com/tesseract-ocr/tessdata).
 
-You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/OCR-with-multiple-langauages).
+You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Perform-OCR-on-PDF-with-multiple-languages).
 
 ##  Adding Line Breaks Using OCRLayoutResult
 

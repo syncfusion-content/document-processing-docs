@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scrolling in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+title: Scrolling in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
 description: Learn here all about Scrolling in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Scrolling
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Scrolling in Spreadsheet control
+# Scrolling in ASP.NET Core Spreadsheet control
 
 Scrolling helps you to move quickly to different areas of the worksheet. It moves faster if we use horizontal and vertical scroll bars. Scrolling can be enabled by setting the [`allowScrolling`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowScrolling) as true.
 
@@ -53,10 +53,10 @@ The following code example shows the finite scrolling with defined rows and colu
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/scrolling/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/scrolling/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ScrollingController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/scrolling/scrollingController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/scrolling/scrollingController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

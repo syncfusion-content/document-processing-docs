@@ -1,21 +1,20 @@
 ---
 layout: post
-title: Interaction_mode in EJ2 ASP.NET CORE PDF Viewer | Syncfusion
-description: Learn here all about Interaction_mode in ASP.NET CORE PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Interaction mode in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to use selection and panning interaction modes in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
-control: Interaction_mode
-publishingplatform: document-processing
+control: PDF Viewer
 documentation: ug
 ---
 
 
-# Interaction Mode in PDF Viewer component
+# Interaction mode in PDF Viewer
 
-The PDF Viewer provides interaction mode for easy interaction with the loaded PDF document.  Selection mode and panning mode are the two interactions modes.
+The PDF Viewer provides two interaction modes to work with the loaded PDF document: selection mode and panning mode.
 
 ## Selection mode
 
-In this mode, the text selection can be performed in the PDF document loaded in PDF Viewer. The panning and scrolling of the pages by touch cannot be performed in this mode. It allows users to select and copy text from the PDF files. This is helpful for copying and sharing text content. You can enable/disable the text selection using the following code snippet.
+In this mode, users can select and copy text in the loaded PDF document. Panning and touch-based scrolling are disabled. This is useful for copying and sharing text content. Enable or disable text selection as shown in the following example.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -43,15 +42,15 @@ In this mode, the text selection can be performed in the PDF document loaded in 
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/selection.png)
+![Alt text](./images/selection.png)
 
-## Panning Mode
+## Panning mode
 
-In this mode, the panning and scrolling of the pages by touch can be performed in the PDF document loaded in the PDF Viewer, but the text selection cannot be performed.
+In this mode, panning and touch-based scrolling are enabled, while text selection is disabled.
 
-![Alt text](../images/pan.png)
+![Alt text](./images/pan.png)
 
-You can switch the interaction mode of PDF Viewer by using the following code snippet.,
+Switch the interaction mode of the PDF Viewer using the following example:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

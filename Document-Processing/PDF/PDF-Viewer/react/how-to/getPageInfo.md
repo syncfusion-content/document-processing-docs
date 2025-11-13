@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Get Page Info in React PDF Viewer component | Syncfusion
-description: Learn here all about Get Page Info in Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Get page info in React PDF Viewer | Syncfusion
+description: Learn how to retrieve page height, width, and rotation using getPageInfo in the Syncfusion React PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get Page Info in React Pdfviewer component
+# Get page info in React PDF Viewer
 
-The PDF Viewer library allows you to retrieves the information of a specified page in the viewer using the **getPageInfo()** method.This provides Essential<sup style="font-size:70%">&reg;</sup> information such as the height, width and rotation.
+Use the **getPageInfo()** method to retrieve information for a specified page, including height, width, and rotation.
 
-The following steps are used to getPageInfo.
+The following steps show how to use `getPageInfo`.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in the [Get started with React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) guide to create a sample.
 
-**Step 2:** The following code snippet to implement the functionality for retrieving height, width and rotation of a specified page in the viewer.
+**Step 2:** Use the following code to get the height, width, and rotation for a specified page.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -103,6 +103,6 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, you can successfully integrate and use the get page info API in the EJ2 PDF Viewer.
+By following these steps, the page info API can be integrated and used in the EJ2 PDF Viewer.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)

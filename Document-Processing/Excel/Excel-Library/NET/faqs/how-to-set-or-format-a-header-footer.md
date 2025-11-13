@@ -21,9 +21,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Format the header
   worksheet.PageSetup.CenterHeader = @"&""Gothic,bold""Center Header Text";
-
-  FileStream stream = new FileStream("HeaderFormat.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  
+  workbook.SaveAs("HeaderFormat.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

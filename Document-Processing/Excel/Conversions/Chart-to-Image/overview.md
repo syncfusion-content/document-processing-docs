@@ -28,8 +28,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Set converter chart image format to PNG
 	application.XlsIORenderer.ChartRenderingOptions.ImageFormat = ExportImageFormat.Png;
 
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	IChart chart = worksheet.Charts[0];
@@ -42,7 +41,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	//Dispose streams
 	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 

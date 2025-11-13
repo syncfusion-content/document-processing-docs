@@ -24,8 +24,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 
 	//Create a Chart
@@ -59,13 +58,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Chart.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/Chart.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -151,12 +145,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Chart.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/Chart.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -274,12 +264,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Chart.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/Chart.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -407,8 +393,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 
 	//Add SparklineGroups
@@ -426,13 +411,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Sparklines.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/Sparklines.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -502,8 +482,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 
 	//Edit Sparklines
@@ -517,13 +496,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/EditSparklines.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/EditSparklines.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -579,8 +553,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 
 	ISparklineGroup sparklineGroup = sheet.SparklineGroups[0];
@@ -597,13 +570,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RemoveSparklines.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/RemoveSparklines.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -675,8 +643,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 
 	//Create a chart
@@ -702,13 +669,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Funnel.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/Funnel.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -788,8 +750,7 @@ The following code example illustrates how to create Box and Whisker chart.
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 
 	//Create a chart
@@ -834,13 +795,8 @@ The following code example illustrates how to create Box and Whisker chart.
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/BoxandWhisker.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/BoxandWhisker.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -958,8 +914,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 
 	//Create a chart
@@ -988,13 +943,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Waterfall.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/Waterfall.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1088,8 +1038,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 
 	//Create a chart
@@ -1117,13 +1066,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Histogram.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/Histogram.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1215,8 +1159,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 
 	//Create a chart
@@ -1245,13 +1188,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Pareto.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/Pareto.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1346,8 +1284,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 
 	//Create a chart
@@ -1370,13 +1307,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Treemap.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/Treemap.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1458,8 +1390,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 
 	//Create a chart
@@ -1482,13 +1413,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Sunburst.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/Sunburst.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1651,12 +1577,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   #region Save
   //Saving the workbook
-  FileStream outputStream = new FileStream(Path.GetFullPath("Output.xlsx"), FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+  workbook.SaveAs("Output.xlsx");
   #endregion
-
-  //Dispose streams   
-  outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1744,8 +1666,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 	IChartShape chart = sheet.Charts[0];
 
@@ -1754,13 +1675,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Chart.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/Chart.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
