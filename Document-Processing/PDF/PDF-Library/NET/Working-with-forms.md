@@ -5103,7 +5103,7 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Auto-resize-the-text-of-textboxfield-in-a-PDF).
 
-## How to Preserve Form Fields While Creating a Template from an Existing PDF That Contains Form Fields
+## Preserve form fields when creating a PDF Template from an existing page
 
 When you generate a `PdfTemplate` from an existing page, interactive **AcroForm** fields (textbox, checkbox, etc.) are **not copied** to the template.  
 If you still need the visual appearance of those form fields in the final document, you can flatten the form using the [FlattenFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_FlattenFields) API. 
@@ -5114,7 +5114,8 @@ N>  Flattening permanently removes interactivity. The resulting PDF shows the fo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Preserve-Formfields- in-the-Template-created-from-existing-PDF/Preserve-Formfields- in-the-Template-created-from-existing-PDF/Program.cs" %}
+
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -5122,8 +5123,7 @@ using Syncfusion.Pdf.Parsing;
 using System.IO;
 
 //Open the source PDF that contains form fields.
-using FileStream fileStream = new FileStream("Form.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Form.pdf");
 
 //Flatten all form fields to make them part of the page graphics.
 PdfLoadedForm loadedForm = loadedDocument.Form;
