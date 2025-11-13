@@ -5160,8 +5160,7 @@ using Syncfusion.Pdf.Parsing;
 using System.IO;
 
 //Open the source PDF that contains form fields.
-using FileStream fileStream = new FileStream(@"Form.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Form.pdf");
 
 //Flatten all form fields.
 PdfLoadedForm loadedForm = loadedDocument.Form;
@@ -5198,8 +5197,7 @@ Imports System.Drawing
 Imports System.IO
 
 'Open the source PDF that contains form fields.
-Using fileStream As New FileStream("Form.pdf", FileMode.Open, FileAccess.Read)
-Dim loadedDocument As New PdfLoadedDocument(fileStream)
+Dim loadedDocument As New PdfLoadedDocument("Form.pdf")
 
 'Flatten all form fields.
 Dim loadedForm As PdfLoadedForm = loadedDocument.Form
