@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create an object structure in ASP.NET Core Spreadsheet Control | Syncfusion
+title: Create an object structure in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn here all about how to create an object structure in ASP.NET Core Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Create a object structure 
