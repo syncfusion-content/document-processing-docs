@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Worksheet in Spreadsheet control
+# Worksheet in ASP.NET Core Spreadsheet control
 
 Worksheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data.
 

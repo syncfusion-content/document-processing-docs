@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Performance Best Practices in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
+title: Performance Best Practices in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn here all about performance best practices in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Performance

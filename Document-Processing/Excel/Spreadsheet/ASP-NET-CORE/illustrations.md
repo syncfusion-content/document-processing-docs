@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Illustrations in Spreadsheet control
+# Illustrations in ASP.NET Core Spreadsheet control
 
 Illustrations helps you to insert a image, shapes and graphic objects in the Essential JS 2 spreadsheet.
 
