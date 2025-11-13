@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Formulas in Spreadsheet control
+# Formulas in ASP.NET Core Spreadsheet control
 
 Formulas are used for calculating the data in a worksheet. You can refer the cell reference from same sheet or from different sheets.
 
@@ -29,7 +29,7 @@ Previously, although you could import culture-based Excel files into the Spreads
 
 When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, ensure to set the [listSeparator](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ListSeparator) property value as the culture-based list separator from your end. Additionally, note that when importing an Excel file, the [listSeparator](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ListSeparator) property will be updated based on the culture of the launched import/export service.
 
-In the example below, the Spreadsheet control is rendered with the `German culture (de)`. Additionally, you can find references on how to set the culture-based argument separator and culture-based formatted numeric value as arguments to the formulas.
+In the example below, the Spreadsheet control is rendered with the `German culture` [`de`]. Additionally, you can find references on how to set the culture-based argument separator and culture-based formatted numeric value as arguments to the formulas.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}

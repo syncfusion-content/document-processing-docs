@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sort in EJ2 ASP.NET MVC Syncfusion Spreadsheet Component
-description: Learn here all about Sort in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Sort in EJ2 ASP.NET MVC Syncfusion Spreadsheet Control
+description: Learn here all about Sort in Syncfusion EJ2 ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Sort
 documentation: ug
 ---
 
 
-# Sorting in Spreadsheet control
+# Sorting in ASP.NET MVC Spreadsheet Control
 
 Sorting helps arranging the data to a specific order in a selected range of cells. You can use the [`allowSorting`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowSorting) property to enable or disable sorting functionality.
 

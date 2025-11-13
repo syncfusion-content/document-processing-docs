@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Selection in Spreadsheet Control
+# Selection in ASP.NET Core Spreadsheet Control
 
 Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` or `Multiple` in [`selectionSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SelectionSettings). If you set `mode` to `None`, it disables the UI selection.
 

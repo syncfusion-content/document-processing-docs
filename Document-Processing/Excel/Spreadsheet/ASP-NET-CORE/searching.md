@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Find and Replace in Spreadsheet control
+# Find and Replace in ASP.NET Core Spreadsheet control
 
 Find and Replace helps you to search for the target text and replace the found text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowFindAndReplace) property to enable or disable the Find and Replace functionality.
 
