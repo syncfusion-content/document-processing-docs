@@ -250,7 +250,7 @@ During Word to PDF conversions, if a glyph of the input text is unavailable in t
 
 ## Unsupported elements in Word to PDF conversion
 
-Refer [here](/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#detailed-limitations) to know about unsupported elements in Word to PDF conversion.
+Refer [here](document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#detailed-limitations) to know about unsupported elements in Word to PDF conversion.
 
 ## Show Warning for Unsupported Elements
 
