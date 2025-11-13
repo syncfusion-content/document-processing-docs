@@ -240,6 +240,10 @@ You can preserve Ole Equation as bitmap image in the converted PDF document. For
 
 You can restrict all the permission in a PDF document using [PdfPermissionsFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfPermissionsFlags.html). For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#restrict-all-permission-in-a-pdf-document).
 
+### Apply Matte to Transparent Images
+
+This setting allows you to determine whether to **apply a matte color to transparent images** during Word to PDF conversion, ensuring they render cleanly without unwanted borders or artifacts in the final PDF. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#apply-matte-to-transparent-images).
+
 ## Font Substitution
 
 When the necessary fonts used in the Word document has not been installed in the production machine, then Essential<sup>&reg;</sup> DocIO uses the ”Microsoft Sans Serif” as default font for rendering the text. This leads to preservation difference in generated PDF as each font has different glyphs for characters. 
