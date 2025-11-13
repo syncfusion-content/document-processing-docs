@@ -86,12 +86,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Adding text to a cell
   worksheet.Range["A1"].Text = "Hello World";
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Sample.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-
-  //Dispose stream
-  stream.Dispose();
+  //Saving the workbook 
+  workbook.SaveAs("Sample.xlsx");
 }
 {% endhighlight %}
 
@@ -188,7 +184,7 @@ Dim application As IApplication = excelEngine.Excel
 {% endhighlight %}
 {% endtabs %}  
 
-By default, the Excel version 97 to 2003 (*.xls) is associated with application object. XlsIO writes the excel files in the respective format depending on this excel version. You can modify the default Excel version to Xlsx as shown as follows.
+By default, the Excel version 97 to 2003 (*.xls) is associated with application object. XlsIO writes the excel files in the respective format depending on this excel version. You can modify the default Excel version to XLSX as shown as follows.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -342,12 +338,8 @@ Finally, save the document in file system and close/dispose the instance of [IWo
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Save the workbook as stream
-FileStream stream = new FileStream("Sample.xlsx", FileMode.Create, FileAccess.ReadWrite);
-workbook.SaveAs(stream);
-
-//Disposing the stream
-stream.Dispose();
+//Save the workbook
+workbook.SaveAs("Sample.xlsx");
 
 //Closing the workbook
 workbook.Close();
@@ -436,11 +428,7 @@ namespace ExcelCreation
         worksheet.Pictures.AddPicture(10, 2, imageStream);
 
         //Saving the workbook to disk in XLSX format
-        FileStream stream = new FileStream("Sample.xlsx", FileMode.Create, FileAccess.ReadWrite);
-        workbook.SaveAs(stream);
-
-        //Dispose stream
-        stream.Dispose();
+        workbook.SaveAs("Sample.xlsx");
       }
     }
   }
@@ -595,10 +583,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Import data to worksheet
   worksheet.ImportData(employees, 2, 1, false);
 
-  //Saving the workbook as stream
-  FileStream file = new FileStream("Sample.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(file);
-  file.Dispose();
+  //Saving the workbook 
+  workbook.SaveAs("Sample.xlsx");
 }
 {% endhighlight %}
 
@@ -831,17 +817,14 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("WorkbookWithData.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorkbook workbook = application.Workbooks.Open("WorkbookWithData.xlsx");
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Export data from worksheet used range to a DataTable
   DataTable customersTable = worksheet.ExportDataTable(worksheet.UsedRange, ExcelExportDataTableOptions.ColumnNames | ExcelExportDataTableOptions.DetectColumnTypes);
 
-  //Saving the workbook as stream
-  FileStream file = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(file);
-  file.Dispose();
+  //Saving the workbook 
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -1115,8 +1098,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("TemplateMarker.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorkbook workbook = application.Workbooks.Open("TemplateMarker.xlsx");
 
   //Create template marker processor for the workbook
   ITemplateMarkersProcessor marker = workbook.CreateTemplateMarkersProcessor();
@@ -1131,10 +1113,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Applying Markers
   marker.ApplyMarkers();
 
-  //Saving the workbook as stream
-  FileStream file = new FileStream("TemplateMarkerResult.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(file);
-  file.Dispose();
+  //Saving the workbook 
+  workbook.SaveAs("TemplateMarkerResult.xlsx");
 }
 {% endhighlight %}
 
