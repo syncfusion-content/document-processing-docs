@@ -97,6 +97,8 @@ document.getElementById("applyRedaction")?.addEventListener('click', ()=>{
 });
 ```
 
+[View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
+
 ## Notes
 - Ensure the PDF is fully loaded before triggering extraction and search.
 - Bounds from search are in points (72 DPI). Convert to pixels (96 DPI) to align with annotation coordinates.

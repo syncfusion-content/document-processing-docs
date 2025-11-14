@@ -139,6 +139,8 @@ viewer.redactionSettings= {
     };
 ```
 
+[View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
+
 ## Redaction property panel
 
 The redaction property panel allows users to update annotation properties through the UI. Programmatically, you can invoke the property panel by selecting an annotation and calling the relevant APIs. Properties such as overlay text, font style, and fill color can be updated directly in the panel.

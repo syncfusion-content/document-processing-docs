@@ -84,6 +84,8 @@ document.getElementById('hideRedactionToolbar').addEventListener('click', () => 
 });
 ```
 
+[View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
+
 Refer to the following image for details:
 
 ![Programmatically show the Redaction toolbar](../redaction/redaction-annotations-images/show-redaction-toolbar.png)
