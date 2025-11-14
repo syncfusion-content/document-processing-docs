@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Programmatic support for redaction in JavaScript PDF Viewer | Syncfusion
+title: Redaction Programmatic support in TypeScript PDF Viewer | Syncfusion
 description: Learn how to add, delete, update, and apply redaction annotations programmatically in the Syncfusion JavaScript (ES6/TypeScript) PDF Viewer.
 platform: document-processing
 control: PdfViewer
