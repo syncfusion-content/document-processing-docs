@@ -5102,6 +5102,134 @@ doc.Close(True)
 {% endtabs %}  
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Auto-resize-the-text-of-textboxfield-in-a-PDF).
+
+## Preserve form fields when creating a PDF Template from an existing page
+
+When you create a  [PdfTemplate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTemplate.html) from an existing page, interactive **AcroForm** fields (textbox, checkbox, etc.) are **not copied** to the template.  
+If you still need the visual appearance of those form fields in the final document, you can flatten the form using the [FlattenFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_FlattenFields) API. 
+
+Please refer the code sample to flatten the form fields before saving the PDF document.
+
+N>  Flattening permanently removes interactivity. The resulting PDF shows the form content exactly as it appears on screen, but users can no longer edit the fields.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Preserve-Formfields-in-the-Template-created-from-existing-PDF/Preserve-Formfields-in-the-Template-created-from-existing-PDF/Program.cs" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using System.IO;
+
+//Open the source PDF that contains form fields.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Form.pdf");
+
+//Flatten all form fields to make them part of the page graphics.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+loadedForm.FlattenFields();
+
+//Create a template from the first page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+PdfTemplate template = loadedPage.CreateTemplate();
+
+//Create the destination PDF (no page margins so the template fills it edge-to-edge).
+PdfDocument newDocument = new PdfDocument();
+newDocument.PageSettings.Margins.All = 0;
+PdfPage newPage = newDocument.Pages.Add();
+
+//Draw the template so it fills the entire new page.
+newPage.Graphics.DrawPdfTemplate(
+    template,
+    PointF.Empty,
+    new SizeF(newPage.Size.Width, newPage.Size.Height));
+
+//Save the result.
+newDocument.Save("Output.pdf");
+
+//Close documents.
+loadedDocument.Close(true);
+newDocument.Close(true);
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using System.IO;
+
+//Open the source PDF that contains form fields.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Form.pdf");
+
+//Flatten all form fields.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+loadedForm.FlattenFields();
+
+//Create a template from the first page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+PdfTemplate template = loadedPage.CreateTemplate();
+
+//Create the destination PDF.
+PdfDocument newDocument = new PdfDocument();
+newDocument.PageSettings.Margins.All = 0;
+PdfPage newPage = newDocument.Pages.Add();
+
+//Draw the template so it fills the entire new page.
+newPage.Graphics.DrawPdfTemplate(
+    template,
+    PointF.Empty,
+    new SizeF(newPage.Size.Width, newPage.Size.Height));
+
+//Save the result.
+newDocument.Save(@"Output.pdf");
+
+//Close documents.
+loadedDocument.Close(true);
+newDocument.Close(true);
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+Imports System.Drawing
+Imports System.IO
+
+'Open the source PDF that contains form fields.
+Dim loadedDocument As New PdfLoadedDocument("Form.pdf")
+
+'Flatten all form fields.
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+loadedForm.FlattenFields()
+
+'Create a template from the first page.
+Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
+Dim template As PdfTemplate = loadedPage.CreateTemplate()
+
+'Create the destination PDF.
+Dim newDocument As New PdfDocument()
+newDocument.PageSettings.Margins.All = 0
+Dim newPage As PdfPage = newDocument.Pages.Add()
+
+'Draw the template so it fills the entire new page.
+newPage.Graphics.DrawPdfTemplate(
+        template,
+        PointF.Empty,
+        New SizeF(newPage.Size.Width, newPage.Size.Height))
+
+'Save the result.
+newDocument.Save("Output.pdf")
+
+'Close documents.
+loadedDocument.Close(True)
+newDocument.Close(True)
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Auto-resize-the-text-of-textboxfield-in-a-PDF).
  
 ## Troubleshooting
 
