@@ -240,7 +240,7 @@ You can restrict all the permission in a PDF document using [PdfPermissionsFlags
 
 ### Apply Matte to Transparent Images
 
-This setting allows you to determine whether to **apply a matte color to transparent images** during Word to PDF conversion, ensuring they render cleanly without unwanted borders or artifacts in the final PDF. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#restrict-all-permission-in-a-pdf-document).
+This setting allows you to determine whether to **apply a matte color to transparent images** during Word to PDF conversion, ensuring they render cleanly without unwanted borders or artifacts in the final PDF. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#apply-matte-to-transparent-images).
 
 ## Font Substitution
 
@@ -254,7 +254,7 @@ During Word to PDF conversions, if a glyph of the input text is unavailable in t
 
 ## Unsupported elements in Word to PDF conversion
 
-Refer [here](document-processing/word/conversions/word-to-pdf/net/limitations-word-to-pdf) to know about unsupported elements in Word to PDF conversion.
+Refer [here](document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#detailed-limitations) to know about unsupported elements in Word to PDF conversion.
 
 ## Show Warning for Unsupported Elements
 
