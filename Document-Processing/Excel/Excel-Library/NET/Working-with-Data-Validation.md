@@ -541,9 +541,9 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-## Remove Validation 
+## Remove Data Validation 
 
-The following code snippet illustrates how to remove validations from a worksheet.
+The following code snippet illustrates how to remove data validation rules from a worksheet.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Data%20Validation/Remove%20Validation/.NET/Remove%20Validation/Remove%20Validation/Program.cs,180" %}
