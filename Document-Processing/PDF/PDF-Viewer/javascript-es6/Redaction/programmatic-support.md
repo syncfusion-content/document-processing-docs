@@ -16,9 +16,8 @@ The Syncfusion JavaScript PDF Viewer (EJ2) provides APIs to add, update, delete,
 You can add redaction annotations to a PDF document using the `addAnnotation` method of the `annotation` module.
 
 ```html
-
+    <button id="addRedactAnnot">Add Redaction Annotation</button>
 ```
-
 ```ts
 document.getElementById('addRedactAnnot').addEventListener('click', () => {
     viewer.annotation.addAnnotation("Redaction", {
@@ -150,7 +149,6 @@ The redaction property panel allows users to update annotation properties throug
 
 * [Overview of Redaction](./overview)
 * [Redaction UI interactions](./ui-interaction)
-* [Programmatic support](./programmatic-support)
 * [Redaction Toolbar](./toolbar)
 * [Reaction in Mobile view](./mobile-view)
-* [Events](./events)
+* [Search Text and Redact](./search-redact)

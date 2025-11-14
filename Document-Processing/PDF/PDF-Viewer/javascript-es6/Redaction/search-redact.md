@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Search text and redact in Typescript PDF Viewer | Syncfusion
-description: Learn how to find text and add redaction annotations programmatically in the Syncfusion JavaScript PDF Viewer.
+description: Learn how to find text and add redaction annotations programmatically in the Syncfusion TypeScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -14,65 +14,86 @@ You can search for a keyword in the loaded PDF and automatically add redaction a
 
 N> Prerequisites: Add the PdfViewer control to your JavaScript application and ensure a document is loaded. Make sure the redaction feature is available in the version you are using. Once applied, redaction permanently removes the selected content.
 
-## UI
+## Steps to add Redaction annotations on search Text Bounds
+
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample.
+
+
+**Step 2:** Use the following code-snippets to Add Redaction annotation on Search Text Bounds.
+
+
 ```html
-<button id="searchTextRedact">Search Text and Redact</button>
+    <button id="searchTextRedact">Search Text and Redact</button>
+    <button id="applyRedaction">Apply Redaction</button>
 ```
+```ts
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, RedactionSettings } from '@syncfusion/ej2-pdfviewer';
 
-## Implementation (ES6)
-```js
-// Assumes `viewer` is an initialized PDF Viewer instance and a document is loaded
-const btn = document.getElementById('searchTextRedact');
+// Inject required modules
+PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
 
-btn.addEventListener('click', () => {
-  // Handle text extraction completion
-  viewer.extractTextCompleted = (args) => {
-    const searchText = 'syncfusion'; // change to your keyword
+const viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
+});
 
-    // Perform text search for the provided term
-    const searchResults = viewer.textSearchModule.findText(searchText, false);
+//Adding Redaction Tool in the toolbar
+viewer.toolbarSettings.toolbarItems = ['OpenOption', 'UndoRedoTool', 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'CommentTool', 'SubmitForm', 'AnnotationEditTool', 'RedactionEditTool', 'FormDesignerEditTool', 'SearchOption', 'PrintOption', 'DownloadOption'];
+viewer.appendTo('#PdfViewer');
 
-    if (!searchResults || searchResults.length === 0) {
-      console.warn('No matches found.');
-      return;
-    }
+//EventListener to Search Text and Redact 
+document.getElementById('searchTextRedact')?.addEventListener('click', () => {
+        // Function to handle extractTextCompleted event
+        viewer.extractTextCompleted = args => {
+            const searchText = "syncfusion"; //Provide text to be redacted
 
-    // Iterate through search results and add redaction annotations
-    for (let i = 0; i < searchResults.length; i++) {
-      const pageResult = searchResults[i];
-      if (!pageResult.bounds || pageResult.bounds.length === 0) continue;
+            // Perform text search
+            const searchResults = viewer.textSearchModule.findText(searchText, false);
 
-      for (let j = 0; j < pageResult.bounds.length; j++) {
-        const bound = pageResult.bounds[j];
+            if (!searchResults || searchResults.length === 0) {
+                console.warn("No matches found.");
+                return;
+            }
 
-        // Convert from points (72 DPI) to pixels (96 DPI) and add redaction
-        viewer.annotation.addAnnotation('Redaction', {
-          bound: {
-            x: (bound.x * 96) / 72,
-            y: (bound.y * 96) / 72,
-            width: (bound.width * 96) / 72,
-            height: (bound.height * 96) / 72
-          },
-          pageNumber: pageResult.pageIndex + 1,
-          overlayText: 'Confidential',
-          fillColor: '#00FF40FF',
-          fontColor: '#333333',
-          fontSize: 12,
-          fontFamily: 'Arial',
-          textAlign: 'Center',
-          markerFillColor: '#FF0000',
-          markerBorderColor: '#000000'
-        });
-      }
-    }
-  };
+            // Loop through search results
+            for (let i = 0; i < searchResults.length; i++) {
+                const pageResult = searchResults[i];
+                if (!pageResult || !pageResult.bounds || pageResult.bounds.length === 0) { continue; }
 
-  // Trigger text extraction to raise the event
-  // If your app already extracted text earlier, you can call the search directly
-  if (typeof viewer.extractText === 'function') {
-    // Extract text for all pages (if supported in your build)
-    viewer.extractText(true);
-  }
+                // guard pageIndex (fixes TS18048)
+                if (pageResult.pageIndex == null) { continue; }
+                const pageNumber = pageResult.pageIndex + 1;
+
+                // Loop through each bounding box of the found text
+                for (let j = 0; j < pageResult.bounds.length; j++) {
+                    const bound = pageResult.bounds[j];
+
+                    // Add a redaction annotation at the found text location
+                    viewer.annotation.addAnnotation("Redaction", {
+                        bound: {
+                            x: (bound.x * 96) / 72,
+                            y: (bound.y * 96) / 72,
+                            width: (bound.width * 96) / 72,
+                            height: (bound.height * 96) / 72
+                        },
+                        pageNumber: pageNumber,
+                        overlayText: "Confidential",
+                        fillColor: "#00FF40FF",
+                        fontColor: "#333333",
+                        fontSize: 12,
+                        fontFamily: "Arial",
+                        // removed textAlign property (fixes TS2353)
+                        markerFillColor: "#FF0000",
+                        markerBorderColor: "#000000"
+                    }as RedactionSettings);
+                }
+            }
+        };
+    });
+
+//EventListener to Apply Redaction
+document.getElementById("applyRedaction")?.addEventListener('click', ()=>{
+    viewer.annotation.redact();
 });
 ```
 
@@ -84,6 +105,8 @@ btn.addEventListener('click', () => {
 
 ## See also
 
-- [Overview](./overview)
-- [Programmatic support](./programmatic-support)
-- [Events](./events)
+* [Overview of Redaction](./overview)
+* [Programmatic Support in Redaction](./programmatic-support)
+* [UI interactions](./ui-interaction)
+* [Redaction in Mobile View](./mobile-view)
+* [Redaction Toolbar](./toolbar)

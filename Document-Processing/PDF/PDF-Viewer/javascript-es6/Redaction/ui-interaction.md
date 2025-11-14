@@ -93,3 +93,5 @@ N> Redaction is permanent. Once applied, the original content cannot be restored
 * [Overview of Redaction](./overview)
 * [Programmatic Support in Redaction](./programmatic-support)
 * [Redaction in Mobile View](./mobile-view)
+* [Redaction Toolbar](./toolbar)
+* [Search Text and Redact](./search-redact)

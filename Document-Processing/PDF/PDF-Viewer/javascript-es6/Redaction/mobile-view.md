@@ -173,6 +173,8 @@ N> Once redactions have been applied to the document, they become part of the PD
 
 ## See Also
 
-- [Toolbar](../toolbar)
-- [UI Interaction](../ui-interaction)
-- [Overview](../overview)
+* [Redaction Overview](./overview)
+* [UI Interaction](./ui-interaction)
+* [Programmatic Support in Redaction](./programmatic-support)
+* [Toolbar](./toolbar)
+* [Search Text and Redact](./search-redact)

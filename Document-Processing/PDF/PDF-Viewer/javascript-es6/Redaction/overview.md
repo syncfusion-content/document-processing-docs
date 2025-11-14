@@ -70,8 +70,8 @@ For more details, see the [Export and import annotations documentation](../how-t
 
 ## See also
 
-* [UI interactions](./ui-interaction)
-* [Programmatic support](./programmatic-support)
-* [Toolbar items](./toolbar)
-* [Mobile view](./mobile-view)
-* [Events](./events)
+* [Redaction UI interactions](./ui-interaction)
+* [Redaction Programmatic support](./programmatic-support)
+* [Redaction Toolbar](./toolbar)
+* [Redaction Mobile view](./mobile-view)
+* [Search Text and Redact](./search-redact)

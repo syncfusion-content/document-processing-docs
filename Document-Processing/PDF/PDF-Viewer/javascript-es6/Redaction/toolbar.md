@@ -94,4 +94,4 @@ Refer to the following image for details:
 * [UI interactions](./ui-interaction)
 * [Programmatic support](./programmatic-support)
 * [Mobile view](./mobile-view)
-* [Events](./events)
+* [Search Text and Redact](./search-redact)
