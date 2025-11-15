@@ -60,8 +60,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
   //Initialize XlsIO renderer.
   XlsIORenderer renderer = new XlsIORenderer();

@@ -22,8 +22,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIORendererSettings
 	XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -39,13 +38,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ComplexScriptToPDF.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/ComplexScriptToPDF.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -111,8 +105,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIORendererSettings
 	XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -128,13 +121,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CustomPaperSize.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/CustomPaperSize.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -201,8 +189,7 @@ Gridlines will not be rendered in the output PDF document, when display style is
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
   //Initialize XlsIORendererSettings
   XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -216,17 +203,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Convert the Excel document to PDF with renderer settings
   PdfDocument document = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+  //Save the PDF document
+  document.Save("Output.pdf");
 }
 {% endhighlight %}
 
@@ -287,8 +265,7 @@ Gridlines will not be rendered in the output PDF document, when display style is
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
   //Initialize XlsIORendererSettings
   XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -302,17 +279,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Convert the Excel document to PDF with renderer settings
   PdfDocument document = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+  //Save the PDF document
+  document.Save("Output.pdf");
 }
 {% endhighlight %}
 
@@ -374,8 +342,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIORendererSettings
 	XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -391,13 +358,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Gridlines.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/Gridlines.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -463,8 +425,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIORendererSettings
 	XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -480,13 +441,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/EmbedFonts.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/EmbedFonts.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -552,8 +508,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIORendererSettings
 	XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -569,13 +524,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/BookmarksInPDF.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/BookmarksInPDF.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -641,8 +591,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIORendererSettings
 	XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -658,13 +607,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/DocumentProperties.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/DocumentProperties.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -730,8 +674,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIORendererSettings
 	XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -747,13 +690,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/QualityImageInPDF.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/QualityImageInPDF.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -820,8 +758,7 @@ Document header will be rendered to PDF document by default. This can be skipped
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
   //Initialize XlsIORendererSettings
   XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -835,17 +772,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Convert the Excel document to PDF with renderer settings
   PdfDocument document = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
-
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+  //Save the PDF document
+  document.Save("Output.pdf");
 }
 {% endhighlight %}
 
@@ -907,8 +835,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIORendererSettings
 	XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -927,13 +854,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/HeaderFooterInPDF.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/HeaderFooterInPDF.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -999,8 +921,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIORendererSettings
 	XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -1016,13 +937,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/BlankPageToPDF.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/BlankPageToPDF.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1088,8 +1004,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIORendererSettings
 	XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -1105,13 +1020,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/BlankSheetToPDF.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/BlankSheetToPDF.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1179,8 +1089,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIORendererSettings
 	XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -1196,13 +1105,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Automatic.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/Automatic.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1266,8 +1170,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIORendererSettings
 	XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -1283,13 +1186,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CustomScaling.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/CustomScaling.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1353,8 +1251,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIORendererSettings
 	XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -1370,13 +1267,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/FitAllColumnsOnOnePage.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/FitAllColumnsOnOnePage.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1440,8 +1332,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIORendererSettings
 	XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -1457,13 +1348,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/FitAllRowsOnOnePage.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/FitAllRowsOnOnePage.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1527,8 +1413,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIORendererSettings
 	XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -1544,13 +1429,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/FitSheetOnOnePage.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/FitSheetOnOnePage.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1614,8 +1494,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIORendererSettings
 	XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -1631,13 +1510,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/NoScaling.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/NoScaling.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1708,8 +1582,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Initialize XlsIO renderer.
 	XlsIORenderer renderer = new XlsIORenderer();
@@ -1725,13 +1598,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/PDFConformance.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/PDFConformance.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1799,11 +1667,9 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream1 = new FileStream(Path.GetFullPath(@"Data/Template1.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook1 = application.Workbooks.Open(inputStream1);
+	IWorkbook workbook1 = application.Workbooks.Open(Path.GetFullPath(@"Data/Template1.xlsx"));
 
-	FileStream inputStream2 = new FileStream(Path.GetFullPath(@"Data/Template2.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook2 = application.Workbooks.Open(inputStream2);
+	IWorkbook workbook2 = application.Workbooks.Open(Path.GetFullPath(@"Data/Template2.xlsx"));
 
 	//Initialize XlsIORenderer
 	XlsIORenderer renderer = new XlsIORenderer();
@@ -1822,14 +1688,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/MultipleExcelToPDF.pdf"), FileMode.Create, FileAccess.Write);
-	newDocument.Save(outputStream);
+	newDocument.Save(Path.GetFullPath("Output/MultipleExcelToPDF.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream1.Dispose();
-	inputStream2.Dispose();
 }
 {% endhighlight %}
 
@@ -1907,8 +1767,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
 	//Open an Excel document
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Get the first worksheet
 	IWorksheet worksheet1 = workbook.Worksheets[0];
@@ -1933,13 +1792,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/SelectedSheetsToPDF.pdf"), FileMode.Create, FileAccess.Write);
-	newDocument.Save(outputStream);
+	newDocument.Save(Path.GetFullPath("Output/SelectedSheetsToPDF.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -2039,8 +1893,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx",FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
   //Initialize XlsIORendererSettings
   XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -2055,8 +1908,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
   //Save the PDF document
-  FileStream outputStream = new FileStream("Output.pdf",FileMode.Create, FileAccess.Write);
-  pdfDocument.Save(outputStream);
+  pdfDocument.Save("Output.pdf");
 }
 {% endhighlight %}
 
@@ -2137,12 +1989,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/EmptyExcelToPDF.pdf"), FileMode.Create, FileAccess.Write);
-	pdfDocument.Save(outputStream);
+	pdfDocument.Save(Path.GetFullPath("Output/EmptyExcelToPDF.pdf"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -2227,8 +2075,7 @@ namespace Warnings
                 IApplication application = excelEngine.Excel;
                 application.DefaultVersion = ExcelVersion.Xlsx;
                 //Open the Excel document to convert.
-                FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-                IWorkbook workbook = application.Workbooks.Open(inputStream);
+                IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
                 //Initialize warning class to capture warnings during the conversion.
                 Warning warning = new Warning();
@@ -2250,14 +2097,9 @@ namespace Warnings
                 {
                     #region Save
                     //Saving the workbook
-                    FileStream outputStream = new FileStream(Path.GetFullPath("Output/ExceltoPDF.pdf"), FileMode.Create, FileAccess.Write);
-                    pdfDocument.Save(outputStream);
+                    pdfDocument.Save(Path.GetFullPath("Output/ExceltoPDF.pdf"));
                     #endregion
-
-                    //Dispose streams
-                    outputStream.Dispose();
                 }
-                inputStream.Dispose();
             }
         }
     }
@@ -2393,4 +2235,3 @@ End Namespace
 {% endtabs %}
 
 A complete working example to skip warning in Excel to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Warnings/.NET/Warnings).
-

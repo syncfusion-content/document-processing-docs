@@ -71,8 +71,7 @@ public string FunctionHandler(string input, ILambdaContext context)
     //Initializes the SubstituteFont event to perform font substitution during Excel-to-PDF conversion
     application.SubstituteFont += new SubstituteFontEventHandler(SubstituteFont);
 
-	FileStream excelStream = new FileStream(@"Data/Sample.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(excelStream);
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/Sample.xlsx"));
 
     //Initialize XlsIO renderer.
     XlsIORenderer renderer = new XlsIORenderer();
