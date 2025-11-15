@@ -375,5 +375,5 @@ By executing the program, you will get the **Excel document** as follows.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://ej2aspnetcore.azurewebsites.net/aspnetcore/excel/create#/material3) in ASP.NET Core.
 
