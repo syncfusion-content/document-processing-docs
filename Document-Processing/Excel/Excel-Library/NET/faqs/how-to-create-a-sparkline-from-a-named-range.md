@@ -46,9 +46,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Add a sparkline
   sparklines.Add(dataRange, referenceRange);
-
-  FileStream stream = new FileStream("SparklineFromNamedRange.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+ 
+  workbook.SaveAs("SparklineFromNamedRange.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

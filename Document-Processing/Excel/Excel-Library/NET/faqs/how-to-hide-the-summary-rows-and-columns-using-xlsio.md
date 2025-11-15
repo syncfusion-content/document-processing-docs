@@ -15,8 +15,7 @@ You can hide the summary rows and columns by using the [IsSummaryRowBelow](https
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Hide the summary rows at the bottom
@@ -25,8 +24,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Hide the summary columns to the right
   worksheet.PageSetup.IsSummaryColumnRight = false;
 
-  FileStream stream = new FileStream("SuppressRowsColumns.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  workbook.SaveAs("SuppressRowsColumns.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

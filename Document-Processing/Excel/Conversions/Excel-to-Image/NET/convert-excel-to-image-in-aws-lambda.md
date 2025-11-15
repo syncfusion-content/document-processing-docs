@@ -69,8 +69,7 @@ public string FunctionHandler(string input, ILambdaContext context)
     //Initialize XlsIO renderer.
     application.XlsIORenderer = new XlsIORenderer();
 
-    FileStream excelStream = new FileStream(@"Data/Sample.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(excelStream);
+    IWorkbook workbook = application.Workbooks.Open(@"Data/Sample.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
             
     //Create the MemoryStream to save the image.      

@@ -27,6 +27,9 @@ Find more information about migration changes [here](https://help.syncfusion.com
 
 N> The document may contain `IncludePicture` fields. These fields are designed to dynamically insert images by referencing external URLs. Each time such a field is encountered, the corresponding image is downloaded from the specified URL. This process significantly increases the time required to process and save the document. We recommend replacing these dynamic `IncludePicture` fields with standard image insertions. This approach eliminates the need for repeated external image downloads and allows the document to be saved in minimal time, ensuring optimal performance.
 
+To quickly start working with Fields, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=MSGoiKXd7Xo" %}
+
 ## Adding fields
 
 You can add a field to a Word document by using the [AppendField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendField_System_String_Syncfusion_DocIO_FieldType_) method of [WParagraph](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html) class.
@@ -301,6 +304,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## IF field
 
 IF field compares two values and updates the field result with true text, when comparison succeeds otherwise false text.
+
+To quickly start working with IF field, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=us1FhWurqHw" %}
 
 To learn more about IF field and its syntax in Microsoft Word, refer to the [MSDN article](https://support.microsoft.com/en-us/office/field-codes-if-field-9f79e82f-e53b-4ff5-9d2c-ae3b22b7eb5e?ui=en-us&rs=en-us&ad=us#)
 

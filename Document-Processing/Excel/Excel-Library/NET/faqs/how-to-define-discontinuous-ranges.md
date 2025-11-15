@@ -27,8 +27,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   rangeCollection.Add(worksheet.Range["D10:D11"]);
   rangeCollection.Text = "Welcome";
 
-  FileStream stream = new FileStream("DiscontinuousRange.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  workbook.SaveAs("DiscontinuousRange.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }
