@@ -1103,16 +1103,16 @@ using Syncfusion.Pdf;
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-
 BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+
 //Enable offline mode
 blinkConverterSettings.EnableOfflineMode = true;
+
 //Assign Blink converter settings to HTML converter
 htmlConverter.ConverterSettings = blinkConverterSettings;
-
+string inputHTML = Path.GetFullPath("input.html");
 //Convert URL to PDF
-PdfDocument document = htmlConverter.Convert("https://www.google.com");
-
+PdfDocument document = htmlConverter.Convert(inputHTML);
 //Save and close the PDF document.
 document.Save("Output.pdf");
 document.Close(true);
@@ -1124,18 +1124,19 @@ document.Close(true);
 Imports Syncfusion.HtmlConverter
 Imports Syncfusion.Pdf
 
-'Initialize the HTML to PDF converter.
-Dim htmlConverter As HtmlToPdfConverter = New HtmlToPdfConverter()
+' Initialize the HTML to PDF converter
+Dim htmlConverter As New HtmlToPdfConverter()
+Dim blinkConverterSettings As New BlinkConverterSettings()
 
-Dim blinkConverterSettings As BlinkConverterSettings = New BlinkConverterSettings()
-'Enable offline mode
+' Enable offline mode
 blinkConverterSettings.EnableOfflineMode = True
-'Assign Blink converter settings to HTML converter
-htmlConverter.ConverterSettings = blinkConverterSettings
 
-'Convert URL to PDF
-Dim document As PdfDocument = htmlConverter.Convert("https://www.google.com")
-'Save and close the PDF document
+' Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings
+Dim inputHTML As String = Path.GetFullPath("input.html")
+' Convert HTML to PDF
+Dim document As PdfDocument = htmlConverter.Convert(inputHTML)
+' Save and close the PDF document
 document.Save("Output.pdf")
 document.Close(True)
 
