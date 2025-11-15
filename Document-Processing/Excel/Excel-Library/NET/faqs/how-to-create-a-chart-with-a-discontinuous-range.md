@@ -74,9 +74,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   shape.TopRow = 10;
   shape.LeftColumn = 3;
   shape.RightColumn = 15;
-
-  FileStream stream = new FileStream("DiscontinuousRange.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+ 
+  workbook.SaveAs("DiscontinuousRange.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

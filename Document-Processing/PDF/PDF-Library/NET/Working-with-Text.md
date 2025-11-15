@@ -2653,7 +2653,7 @@ The following code example demonstrates how to access the remainder text when th
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Detecting-text-clipping-in-PDF-layouts/.NET/Detecting-text-clipping-in-PDF-layouts/Program.cs" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -2792,7 +2792,7 @@ document.Close(True)
 
 {% endtabs %}
 
-A complete working sample is available for download on GitHub.
+A complete working sample is available for download on [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Detecting-text-clipping-in-PDF-layouts/.NET).
 
 ## Customizing TrueType fonts in a PDF document
 
