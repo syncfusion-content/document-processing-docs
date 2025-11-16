@@ -446,8 +446,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IVbaModules vbaModules = project.Modules;
 
 	//Opening form module existing workbook
-	FileStream input = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xls"), FileMode.Open, FileAccess.ReadWrite);
-	IWorkbook newBook = application.Workbooks.Open(input);
+	IWorkbook newBook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xls"));
 
 	IVbaProject newProject = newBook.VbaProject;
 
@@ -470,7 +469,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	#endregion
 
 	//Dispose streams
-	input.Dispose();
 	outputStream.Dispose();
 }
 {% endhighlight %}
@@ -779,8 +777,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xls"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xls"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 
 	//Accessing Vba project
@@ -804,7 +801,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	#endregion
 
 	//Dispose streams
-	inputStream.Dispose();
 	outputStream.Dispose();
 }
 {% endhighlight %}
@@ -900,8 +896,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xls"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xls"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 
 	//Accessing Vba project
@@ -920,7 +915,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	#endregion
 
 	//Dispose streams
-	inputStream.Dispose();
 	outputStream.Dispose();
 }
 {% endhighlight %}
@@ -988,8 +982,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xls"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xls"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 
 	//Accessing Vba project
@@ -1008,7 +1001,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	#endregion
 
 	//Dispose streams
-	inputStream.Dispose();
 	outputStream.Dispose();
 }
 {% endhighlight %}
@@ -1074,8 +1066,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xls"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xls"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 
 	//Accessing Vba project
@@ -1094,7 +1085,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	#endregion
 
 	//Dispose streams
-	inputStream.Dispose();
 	outputStream.Dispose();
 }
 {% endhighlight %}
@@ -1161,8 +1151,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xls"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xls"), ExcelOpenType.Automatic);
 	IWorksheet sheet = workbook.Worksheets[0];
 
 	//Skip Macros while saving
@@ -1175,7 +1164,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	#endregion
 
 	//Dispose streams
-	inputStream.Dispose();
 	outputStream.Dispose();
 }
 {% endhighlight %}
