@@ -16,12 +16,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
 
-  FileStream stream = new FileStream("Sample.csv", FileMode.Open, FileAccess.Read);
-  System.Text.UnicodeEncoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
-  IWorkbook workbook = application.Workbooks.Open(stream, System.Text.UnicodeEncoding.GetEncoding("big5"));
+  System.Text.UnicodeEncoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+  IWorkbook workbook = application.Workbooks.Open("Sample.csv", System.Text.UnicodeEncoding.GetEncoding("big5"));
 
-  FileStream outputStream = new FileStream("Output.csv", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream, ",");
+  workbook.SaveAs("Output.csv", ",");
 }
 
 {% endhighlight %}

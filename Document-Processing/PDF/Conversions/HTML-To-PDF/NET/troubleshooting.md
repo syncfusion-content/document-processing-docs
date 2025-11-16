@@ -182,26 +182,55 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 ## Failed to launch chromium: Missing required dependent packages
 
 <table>
-
 <th style="font-size:14px" width="100px">Exception
 </th>
 <th style="font-size:14px">Failed to launch chromium: Missing required dependent packages
 </th>
-
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
 <td>The required dependencies for the Chromium are not installed on the system.
 </td>
 </tr>
-
-<tr>
-<th style="font-size:14px" width="100px">Solution
-</th>
+<tr>	
+<th style="font-size:14px" width="100px">Solution	
+</th>	
 <td>Ensure all required dependencies for the Chromium are installed on the system. This may include additional libraries or packages.
-</td>
-</tr>
+Ensure all required dependencies for the Chromium are installed on the system. This may include additional libraries or packages.
+Here's how you can modify your Docker file:
+{% highlight dockerfile %}
+FROM your-base-image
 
+RUN apt-get update && apt-get install -yq --no-install-recommends \
+    libasound2 \
+    libatk1.0-0 \
+    libc6 \
+    libcairo2 \
+    libcups2 \
+    libdbus-1-3 \
+    libexpat1 \
+    libfontconfig1 \
+    libgcc1 \
+    libgconf-2-4 \
+    libgdk-pixbuf2.0-0 \
+    libglib2.0-0 \
+    libgtk-3-0 \
+    libnspr4 \
+    libpango-1.0-0 \
+    libpangext6 \
+    libxfixes3 \
+    libxi6 \
+    libxrandr2 \
+    libxrender1 \
+    libxss1 \
+    libxtst6 \
+    libnss3 \
+    libgbm1 \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
+{% endhighlight %}	
+</td>	
+</tr>
 </table>
 
 ## Application Crash in Syncfusion 29.X.X Due to Missing `locales` Folder Required by Chromium During HTML Rendering or Conversion
@@ -1594,3 +1623,4 @@ Refer to the following package reference:
 
 {% endhighlight %}
 {% endtabs %}
+
