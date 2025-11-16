@@ -73,8 +73,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
   //Initialize ExcelToPdfConverter
   ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
@@ -100,4 +99,3 @@ By executing the program, you will get the **PDF document** as follows.
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
 An online sample link to [convert an Excel document to PDF](https://ej2.syncfusion.com/aspnetcore/Excel/ExcelToPDF#/material3) in ASP.NET Core.
-
