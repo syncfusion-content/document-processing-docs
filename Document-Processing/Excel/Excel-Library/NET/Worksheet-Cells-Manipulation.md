@@ -126,7 +126,7 @@ The following code example illustrates how to access the range relatively to the
 
 N> Here row and column indexes in the range are "one-based".
 
-N> When **ExcelRangeIndexerMode** is set to **Relative**, only numeric index access is relative to the specified range. In this mode, row and column indexes are one-based and reference cells within the range. Address-based access using the A1 reference style (example A1, B5) always points to the worksheet and returns results from the worksheet origin rather than from the specified range.
+N> When **ExcelRangeIndexerMode** is set to **Relative**, only numeric index access is relative to the specified range. In this mode, row and column indexes are one-based and reference cells within the range. Cell name bases references (example A1, B5) always points to the worksheet and returns results from the worksheet origin rather than from the specified range.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Relative%20Range/.NET/Access%20Relative%20Range/Access%20Relative%20Range/Program.cs,180" %}
