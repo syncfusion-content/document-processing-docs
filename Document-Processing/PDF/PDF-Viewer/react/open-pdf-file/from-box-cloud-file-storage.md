@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Open PDF from Box cloud storage
+# Open PDF from Box cloud storage in React
 
 Follow these steps to load a PDF from Box cloud storage using the server-backed PDF Viewer.
 

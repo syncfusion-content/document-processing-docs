@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Google Cloud Storage
+# Open PDF from Google Cloud Storage in Vue
 
 Follow these steps to load a PDF from Google Cloud Storage using the server-backed PDF Viewer.
 

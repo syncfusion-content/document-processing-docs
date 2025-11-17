@@ -8,7 +8,7 @@ publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Save PDF files to Azure Blob Storage
+# Save PDF files to Azure Blob Storage in ASP.NET MVC
 
 The ASP.NET MVC PDF Viewer component supports saving PDF files to Azure Blob Storage using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 
