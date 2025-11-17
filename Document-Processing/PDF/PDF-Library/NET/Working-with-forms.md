@@ -26,6 +26,11 @@ The below code snippet illustrates how to add a textbox field to a new PDF docum
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-a-textbox-field-to-a-new-PDF-document/.NET/Add-a-textbox-field-to-a-new-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a new page to the PDF document.
@@ -38,16 +43,19 @@ textBoxField.ToolTip = "First Name";
 //Add the form field to the document.
 document.Form.Fields.Add(textBoxField);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document as stream.
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -70,7 +78,12 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Create a new PDF document.
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
+
+'Load the PDF document.
 Dim document As PdfDocument = New PdfDocument()
 'Add a new page to the PDF document.
 Dim page As PdfPage = document.Pages.Add()
@@ -99,9 +112,12 @@ The below code snippet illustrates how to add the textbox to an existing PDF doc
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-the-textbox-to-an-existing-PDF-document/.NET/Add-the-textbox-to-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Create the form if the form does not exist in the loaded document.
 if (loadedDocument.Form == null)
     loadedDocument.CreateForm();
@@ -115,10 +131,8 @@ textBoxField.ToolTip = "First Name";
 //Add the form field to the existing PDF document.
 loadedDocument.Form.Fields.Add(textBoxField);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document as stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("Form.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -126,8 +140,12 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Create the form if the form does not exist in the loaded document.
 if(loadedDocument.Form==null)
 loadedDocument.CreateForm();
@@ -150,8 +168,12 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the existing PDF document
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Create the form if the form does not exist in the loaded document
 If loadedDocument.Form Is Nothing Then
 loadedDocument.CreateForm()
@@ -187,6 +209,9 @@ Please refer the below code snippet for adding the combo box in new PDF document
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Adding-combo-box-in-the-new-PDF-document/.NET/Adding-combo-box-in-the-new-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a new page to PDF document.
@@ -205,16 +230,17 @@ comboBoxField.Items.Add(new PdfListFieldItem("Documentation", "content"));
 //Add combo box to the form.
 document.Form.Fields.Add(comboBoxField);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document as stream.
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -242,8 +268,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-     
-'Create a new PDF document
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+'Load the PDF document.
 Dim document As New PdfDocument()
 'Add a new page to PDF document
 Dim page As PdfPage = document.Pages.Add()
@@ -278,9 +307,12 @@ Please refer the below code snippet for adding the combo box in existing PDF doc
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Adding-the-combo-box-in-existing-PDF-document/.NET/Adding-the-combo-box-in-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Create the form if the form does not exist in the loaded document.
 if (loadedDocument.Form == null)
     loadedDocument.CreateForm();
@@ -300,10 +332,8 @@ comboBoxField.Items.Add(new PdfListFieldItem("Documentation", "content"));
 //Add combo box to the form.
 loadedDocument.Form.Fields.Add(comboBoxField);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("Form.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -311,8 +341,12 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Create the form if the form does not exist in the loaded document.
 if(loadedDocument.Form==null)
 loadedDocument.CreateForm();
@@ -341,8 +375,12 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the existing PDF document
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Create the form if the form does not exist in the loaded document
 If loadedDocument.Form Is Nothing Then
 loadedDocument.CreateForm()
@@ -382,28 +420,27 @@ Use the [TextAlignment](https://help.syncfusion.com/cr/document-processing/Syncf
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Set-text-alignment-in-a-Combo-Box-field/.NET/Set-text-alignment-in-a-Combo-Box-field/Program.cs" %}
 
-    // Load an existing document from a file stream.
-    using (FileStream fileStream = new FileStream("SourceForm.pdf", FileMode.Open, FileAccess.Read))
-    {
-        PdfLoadedDocument doc = new PdfLoadedDocument(fileStream);
-        // Load an existing combo box field by its name.
-        PdfLoadedComboBoxField comboField = doc.Form.Fields["EmployeeCombo"] as PdfLoadedComboBoxField;
-        // Set text alignment to center for the combo box field.
-        comboField.TextAlignment = PdfTextAlignment.Center;
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Interactive;
+    using Syncfusion.Pdf.Parsing;
 
-        // Save the updated document to a file stream.
-        using (FileStream outputStream = new FileStream("Form.pdf", FileMode.Create, FileAccess.Write))
-        {
-            doc.Save(outputStream);
-        }
-
-        // Close the document.
-        doc.Close(true);
-    }
+    // Load an existing document.
+    PdfLoadedDocument doc = new PdfLoadedDocument("SourceForm.pdf");
+    // Load an existing combo box field by its name.
+    PdfLoadedComboBoxField comboField = doc.Form.Fields["EmployeeCombo"] as PdfLoadedComboBoxField;
+    // Set text alignment to center for the combo box field.
+    comboField.TextAlignment = PdfTextAlignment.Center;
+    // Save the updated document.
+    doc.Save("Form.pdf");
+    doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Interactive;
+    using Syncfusion.Pdf.Parsing;
 
     // Load an existing document.
     PdfLoadedDocument doc = new PdfLoadedDocument("SourceForm.pdf");
@@ -418,8 +455,11 @@ Use the [TextAlignment](https://help.syncfusion.com/cr/document-processing/Syncf
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-   
-    ' Load an existing document.
+
+    Imports Syncfusion.Pdf
+    Imports Syncfusion.Pdf.Interactive
+
+    'Load the PDF document.
     Dim doc As New PdfLoadedDocument("SourceForm.pdf")
     ' Load an existing combo box field by its name.
     Dim comboField As PdfLoadedComboBoxField = TryCast(doc.Form.Fields("EmployeeCombo"), PdfLoadedComboBoxField)
@@ -445,6 +485,9 @@ Please refer the below code snippet for adding the radio button in new PDF docum
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Adding-radio-button-in-new-PDF-document/.NET/Adding-radio-button-in-new-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a new page to PDF document.
@@ -463,16 +506,16 @@ radioButtonItem2.Bounds = new Syncfusion.Drawing.RectangleF(100, 170, 20, 20);
 employeesRadioList.Items.Add(radioButtonItem1);
 employeesRadioList.Items.Add(radioButtonItem2);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-document.Save(stream);
+//Save the document.
+document.Save("Form.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -500,8 +543,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-   
-'Create a new PDF document.
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+'Load the PDF document.
 Dim document As New PdfDocument()
 'Add a new page to PDF document.
 Dim page As PdfPage = document.Pages.Add()
@@ -536,9 +582,12 @@ The below code snippet illustrates how to add the radio button in existing PDF d
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-radio-button-in-existing-PDF-document/.NET/Add-radio-button-in-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Create the form if the form does not exist in the loaded document.
 if (loadedDocument.Form == null)
     loadedDocument.CreateForm();
@@ -558,10 +607,8 @@ radioButtonItem2.Bounds = new Syncfusion.Drawing.RectangleF(100, 170, 20, 20);
 employeesRadioList.Items.Add(radioButtonItem1);
 employeesRadioList.Items.Add(radioButtonItem2);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("Form.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -569,8 +616,12 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Create the form if the form does not exist in the loaded document.
 if(loadedDocument.Form==null)
 loadedDocument.CreateForm();
@@ -599,8 +650,12 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the existing PDF document
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Create the form if the form does not exist in the loaded document
 If loadedDocument.Form Is Nothing Then
 loadedDocument.CreateForm()
@@ -640,6 +695,9 @@ You can choose default value for radio button field using [SelectedIndex](https:
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Forms/Default-value-for-radio-button-field/.NET/Default_Value_For_Radio_Button/Program.cs" %}
 
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Interactive;
+
     // Create a new PDF document
     PdfDocument document = new PdfDocument();
     // Add a new page to the PDF document
@@ -672,15 +730,17 @@ You can choose default value for radio button field using [SelectedIndex](https:
     // Add the radio button list to the form
     document.Form.Fields.Add(employeesRadioList);
 
-    //Save the document into stream.
-    MemoryStream stream = new MemoryStream();
-    document.Save(stream);
-    //Close the document.
-    document.Close(true);
+//Save the document.
+document.Save("Form.pdf");
+//Close the document.
+document.Close(true);
  
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Interactive;
 
     // Create a new PDF document
     PdfDocument document = new PdfDocument();
@@ -723,7 +783,10 @@ You can choose default value for radio button field using [SelectedIndex](https:
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-    ' Create a new PDF document
+    Imports Syncfusion.Pdf
+    Imports Syncfusion.Pdf.Interactive
+
+    'Load the PDF document.
     Dim document As New PdfDocument()
     ' Add a new page to the PDF document
     Dim page As PdfPage = document.Pages.Add()
@@ -777,6 +840,9 @@ Please refer the below code snippet for adding the list box field in new PDF doc
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-listbox-field-in-new-PDF-document/.NET/Add-listbox-field-in-new-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a new page to PDF document.
@@ -797,16 +863,17 @@ listBoxField.MultiSelect = true;
 //Add the list box into PDF document.
 document.Form.Fields.Add(listBoxField);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-document.Save(stream);
+//Save the document.
+document.Save("Form.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -836,8 +903,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
- 
-'Create a new PDF document.
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+'Load the PDF document.
 Dim document As New PdfDocument()
 'Add a new page to PDF document.
 Dim page As PdfPage = document.Pages.Add()
@@ -874,9 +944,12 @@ Please refer the below code snippet for adding the list box field in existing PD
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-listbox-field-in-an-existing-PDF-document/.NET/Add-listbox-field-in-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Create the form if the form does not exist in the loaded document.
 if (loadedDocument.Form == null)
     loadedDocument.CreateForm();
@@ -898,10 +971,8 @@ listBoxField.MultiSelect = true;
 //Add the list box into PDF document.
 loadedDocument.Form.Fields.Add(listBoxField);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("Form.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -909,8 +980,12 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Create the form if the form does not exist in the loaded document.
 if(loadedDocument.Form==null)
   loadedDocument.CreateForm();
@@ -941,8 +1016,12 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the existing PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Create the form if the form does not exist in the loaded document.
 If loadedDocument.Form Is Nothing Then
 loadedDocument.CreateForm()
@@ -986,6 +1065,9 @@ Please refer the below code snippet for adding the check box field in new PDF do
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-checkbox-field-in-new-PDF-document/.NET/Add-checkbox-field-in-new-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a new page to PDF document.
@@ -999,16 +1081,17 @@ checkBoxField.Bounds = new Syncfusion.Drawing.RectangleF(0, 20, 10, 10);
 //Add the form field to the document.
 document.Form.Fields.Add(checkBoxField);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-document.Save(stream);
+//Save the document.
+document.Save("Form.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1031,8 +1114,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-  
-'Create a new PDF document.
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+'Load the PDF document.
 Dim document As New PdfDocument()
 'Add a new page to PDF document.
 Dim page As PdfPage = document.Pages.Add()
@@ -1062,8 +1148,12 @@ Please refer the below code snippet for adding the check box field in existing P
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Adding-checkbox-field-in-an-existing-PDF-document/.NET/Adding-checkbox-field-in-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Create the form if the form does not exist in the loaded document.
 if(loadedDocument.Form==null)
   loadedDocument.CreateForm();
@@ -1087,35 +1177,41 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-'Load the existing PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Create the form if the form does not exist in the loaded document.
-If loadedDocument.Form Is Nothing Then
-loadedDocument.CreateForm()
-End If
-'Load the page.
-Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
-'Create Check Box field.
-Dim checkBoxField As New PdfCheckBoxField(loadedPage, "CheckBox")
-'Set check box properties.
-checkBoxField.ToolTip = "Check Box"
-checkBoxField.Bounds = New RectangleF(0, 20, 10, 10)
-'Add the form field to the existing document.
-loadedDocument.Form.Fields.Add(checkBoxField)
+//Load the existing PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Create the form if the form does not exist in the loaded document.
+if(loadedDocument.Form==null)
+  loadedDocument.CreateForm();
+//Load the page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
-'Save the document.
-loadedDocument.Save("Form.pdf")
-'close the document.
-loadedDocument.Close(True)
+//Create Check Box field.
+PdfCheckBoxField checkBoxField = new PdfCheckBoxField(loadedPage, "CheckBox");
+//Set check box properties.
+checkBoxField.ToolTip = "Check Box";
+checkBoxField.Bounds = new RectangleF(0, 20, 10, 10);
+//Add the form field to the existing document.
+loadedDocument.Form.Fields.Add(checkBoxField);
+
+//Save the document.
+loadedDocument.Save("Form.pdf");
+//Close the document.
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Create the form if the form does not exist in the loaded document.
 if (loadedDocument.Form == null)
     loadedDocument.CreateForm();
@@ -1130,10 +1226,8 @@ checkBoxField.Bounds = new Syncfusion.Drawing.RectangleF(0, 20, 10, 10);
 //Add the form field to the existing document.
 loadedDocument.Form.Fields.Add(checkBoxField);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("Form.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -1153,6 +1247,9 @@ Please refer the below code snippet for adding the signature field in new PDF do
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-signature-field-in-a-new-PDF-document/.NET/Add-signature-field-in-a-new-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a new page to PDF document.
@@ -1166,16 +1263,17 @@ signatureField.ToolTip = "Signature";
 //Add the form field to the document.
 document.Form.Fields.Add(signatureField);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-document.Save(stream);
+//Save the document.
+document.Save("Form.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1199,7 +1297,10 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Create a new PDF document.
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+'Load the PDF document.
 Dim document As New PdfDocument()
 'Add a new page to PDF document.
 Dim page As PdfPage = document.Pages.Add()
@@ -1229,9 +1330,12 @@ Please refer the below code snippet for adding the signature field in existing P
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Adding-the-signatre-field-in-existing-PDF-document/.NET/Adding-the-signatre-field-in-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Create the form if the form does not exist in the loaded document.
 if (loadedDocument.Form == null)
   loadedDocument.CreateForm();
@@ -1246,10 +1350,8 @@ signatureField.ToolTip = "Signature";
 //Add the form field to the existing document.
 loadedDocument.Form.Fields.Add(signatureField);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("Form.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -1257,8 +1359,12 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Create the form if the form does not exist in the loaded document.
 if(loadedDocument.Form==null)
   loadedDocument.CreateForm();
@@ -1282,8 +1388,12 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the existing PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Create the form if the form does not exist in the loaded document.
 If loadedDocument.Form Is Nothing Then
   loadedDocument.CreateForm()
@@ -1318,6 +1428,9 @@ The signedDate parameter in the [PdfSignature](https://help.syncfusion.com/cr/do
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Customize-the-signed-date/.NET/Customize-the-signed-date/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
 //Adds a new page.
@@ -1327,15 +1440,17 @@ PdfSignature signature = new PdfSignature(page, "Signature", new DateTime(2020, 
 signature.TimeStampServer = new TimeStampServer(new Uri("http://timestamp.digicert.com"));
 signature.SignedName = "Test";
 signature.Bounds = new RectangleF(new PointF(0, 0), new SizeF(200, 100));
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("Form.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1354,8 +1469,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-    
-'Creates a new PDF document.
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+'Load the PDF document.
 Dim document As New PdfDocument()
 'Adds a new page.
 Dim page As PdfPage = document.Pages.Add()
@@ -1385,6 +1503,9 @@ The below code illustrates how to add the button field in new PDF document.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-the-button-field-in-a-new-PDF-document/.NET/Add-the-button-field-in-a-new-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a new page to PDF document.
@@ -1398,16 +1519,17 @@ buttonField.Text = "Click";
 //Add the form field to the document.
 document.Form.Fields.Add(buttonField);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-document.Save(stream);
+//Save the document.
+document.Save("Form.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1430,8 +1552,11 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-    
-'Create a new PDF document.
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+'Load the PDF document.
 Dim document As New PdfDocument()
 'Add a new page to PDF document.
 Dim page As PdfPage = document.Pages.Add()
@@ -1461,9 +1586,12 @@ Please refer the below code snippet for adding the button field in existing PDF 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Adding-button-field-in-an-existing-PDF-document/.NET/Adding-button-field-in-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Create the form if the form does not exist in the loaded document.
 if (loadedDocument.Form == null)
     loadedDocument.CreateForm();
@@ -1477,10 +1605,8 @@ buttonField.Text = "Click";
 //Add the form field to the existing document.
 loadedDocument.Form.Fields.Add(buttonField);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("Form.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -1488,8 +1614,12 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Create the form if the form does not exist in the loaded document.
 if (loadedDocument.Form == null)
   loadedDocument.CreateForm();
@@ -1510,10 +1640,14 @@ loadedDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the existing PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Create the form if the form does not exist in the loaded document.
 If loadedDocument.Form Is Nothing Then
   loadedDocument.CreateForm()
@@ -1539,13 +1673,16 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Adding-button-field-in-an-existing-PDF-document).
 
-## Complex script support for form fields
+### Complex script support for form fields
 
 You can add a complex script language text in PDF AcroForm fields by using the [ComplexScript](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html#Syncfusion_Pdf_Interactive_PdfTextBoxField_ComplexScript) property of the form field instance. The following code snippet illustrates this.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1570,15 +1707,17 @@ document.Form.Fields.Add(textField);
 //Set default appearance as false.
 document.Form.SetDefaultAppearance(false);
 
-//Save the PDF document.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Close the PDF document.
+//Save the document.
+document.Save("Form.pdf");
+//Close the document.
 document.Close(true);
 
 {% endhighlight %}      
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1611,7 +1750,10 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Create a new PDF document.
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+'Load the PDF document.
 Dim document As New PdfDocument()
 'Add a new PDF page.
 Dim page As PdfPage = document.Pages.Add()
@@ -1657,6 +1799,9 @@ The following code example illustrates how to add complex script support for all
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a new PDF page.
@@ -1680,15 +1825,17 @@ document.Form.SetDefaultAppearance(false);
 //Enable complex script layout for form.
 document.Form.ComplexScript = true;
 
-//Save the PDF document.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Close the PDF document.
+//Save the document.
+document.Save("Form.pdf");
+//Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1721,7 +1868,11 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Create a new PDF document
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
 Dim document As New PdfDocument()
 'Add a new PDF page
 Dim page As PdfPage = document.Pages.Add()
@@ -1758,9 +1909,11 @@ You can also flatten the existing form fields with complex script layout by usin
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Flatten-the-existing-form-fields-with-complex-script/.NET/Flatten-the-existing-form-fields-with-complex-script/Program.cs" %}
 
-//Load the existing PDF document.
-FileStream inputFileStream = new FileStream("Form.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputFileStream);
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the existing PDF form.
 PdfLoadedForm lForm = loadedDocument.Form as PdfLoadedForm;
 //Set the complex script layout.
@@ -1768,16 +1921,18 @@ lForm.ComplexScript = true;
 //Set flatten.
 lForm.Flatten = true;
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
 //Save the document.
-loadedDocument.Save(stream);
+loadedDocument.Save("flatten.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Form.pdf");
@@ -1797,7 +1952,11 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the existing PDF document
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
 Dim loadedDocument As New PdfLoadedDocument("Form.pdf")
 'Get the existing PDF form
 Dim lForm As PdfLoadedForm = TryCast(loadedDocument.Form, PdfLoadedForm)
@@ -1817,7 +1976,700 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Flatten-the-existing-form-fields-with-complex-script).
 
-## Grouping (auto naming) of form fields
+### Adding actions to form fields 
+
+Please refer to the [actions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-action#adding-an-action-to-the-form-field) section for more details.
+
+N> Essential<sup>&reg;</sup> PDF allows users to preserve the extended rights for form filling alone.
+
+## Filling form fields in an existing PDF Document
+
+Essential<sup>&reg;</sup> PDF allows you to fill the form fields using [PdfLoadedField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedField.html) class. 
+
+### Filling the text box field
+
+You can fill a text box field using [Text](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_Text) property of [PdfLoadedTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html) class. The below code snippet illustrates this.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Filling-the-textbox-field-in-an-existing-PDF-document/.NET/Filling-the-textbox-field-in-an-existing-PDF-document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+
+//Get the loaded text box field and fill it.
+PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
+loadedTextBoxField.Text = "First Name";
+
+//Save the document.
+loadedDocument.Save("flatten.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+
+//Get the loaded text box field and fill it.
+PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
+loadedTextBoxField.Text = "First Name";
+
+//Save the modified document.
+loadedDocument.Save("sample.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+'Get the loaded form.
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+
+'Get the loaded text box field and fill it.
+Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(loadedForm.Fields(0), PdfLoadedTextBoxField)
+loadedTextBoxField.Text = "First Name"
+
+'Save the modified document.
+loadedDocument.Save("sample.pdf")
+'Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Filling-the-textbox-field-in-an-existing-PDF-document).
+
+### Filling the combo box field
+
+You can fill a combo box field using [SelectedValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedComboBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedComboBoxField_SelectedValue) or [SelectedIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedComboBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedComboBoxField_SelectedIndex) properties of [PdfLoadedComboBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedComboBoxField.html) class. Please refer the below code snippet to fill the combo box field in an existing PDF document.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-the-combobox-field-in-an-existing-PDF-document/.NET/Fill-the-combobox-field-in-an-existing-PDF-document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+
+//Get the loaded combo box field  and modify the properties.
+PdfLoadedComboBoxField loadedComboboxField = loadedForm.Fields[1] as PdfLoadedComboBoxField;
+//Select the item.
+loadedComboboxField.SelectedIndex = 1;
+
+//Save the document.
+loadedDocument.Save("flatten.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+
+//Get the loaded combo box field  and modify the properties.
+PdfLoadedComboBoxField loadedComboboxField = loadedForm.Fields[1] as PdfLoadedComboBoxField;
+//Select the item.
+loadedComboboxField.SelectedIndex = 1;
+
+//Save the modified document.
+loadedDocument.Save("Sample.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+'Get the loaded form.
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+
+'Get the loaded combo box field and modify the properties.
+Dim loadedComboboxField As PdfLoadedComboBoxField = TryCast(loadedForm.Fields(1), PdfLoadedComboBoxField)
+'Select the item.
+loadedComboboxField.SelectedIndex = 1
+
+'Save the modified document.
+loadedDocument.Save("Sample.pdf")
+'Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Fill-the-combobox-field-in-an-existing-PDF-document).
+
+### Filling the radio button field
+
+You can fill a radio button field using [SelectedValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonListField.html#Syncfusion_Pdf_Parsing_PdfLoadedRadioButtonListField_SelectedValue) or [SelectedIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonListField.html#Syncfusion_Pdf_Parsing_PdfLoadedRadioButtonListField_SelectedIndex) properties of [PdfLoadedRadioButtonListField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonListField.html) class. Please refer the below code snippet to fill the radio button field in an existing PDF document.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-radio-button-field-in-an-existing-PDF-document/.NET/Fill-radio-button-field-in-an-existing-PDF-document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+
+//Get the loaded radio button field.
+PdfLoadedRadioButtonListField loadedRadioButtonField = loadedForm.Fields[3] as PdfLoadedRadioButtonListField;
+//Select the item.
+loadedRadioButtonField.SelectedIndex = 1;
+
+//Save the document.
+loadedDocument.Save("flatten.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+
+//Get the loaded radio button field.
+PdfLoadedRadioButtonListField loadedRadioButtonField = loadedForm.Fields[3] as PdfLoadedRadioButtonListField;
+//Select the item.
+loadedRadioButtonField.SelectedIndex = 1;
+
+//Save the document.
+loadedDocument.Save("Sample.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+'Get the loaded form.
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+
+'Get the loaded radio button field.
+Dim loadedRadioButtonField As PdfLoadedRadioButtonListField = TryCast(loadedForm.Fields(3), PdfLoadedRadioButtonListField)
+'Select the item.
+loadedRadioButtonField.SelectedIndex = 1
+
+'Save the document.
+loadedDocument.Save("Sample.pdf")
+'Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Fill-radio-button-field-in-an-existing-PDF-document).
+
+### Filling the list box field
+
+The below code snippet illustrates how to fill the list box field in an existing PDF document, using [SelectedIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedChoiceField.html#Syncfusion_Pdf_Parsing_PdfLoadedChoiceField_SelectedIndex) property of [PdfLoadedListBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedListBoxField.html) class.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-list-box-field-in-an-existing-PDF-document/.NET/Fill-list-box-field-in-an-existing-PDF-document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+
+//Fill list box.
+PdfLoadedListBoxField loadedListBox = loadedForm.Fields[2] as PdfLoadedListBoxField;
+//Fill list box and Modify the list box select index.
+loadedListBox.SelectedIndex = new int[2] { 1, 2 };
+
+//Save the document.
+loadedDocument.Save("flatten.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+
+//Fill list box.
+PdfLoadedListBoxField loadedListBox = loadedForm.Fields[2] as PdfLoadedListBoxField;
+//Fill list box and Modify the list box select index.
+loadedListBox.SelectedIndex = new int[2] { 1, 2 };
+
+//Save the document.
+loadedDocument.Save("Sample.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+'Get the loaded form.
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+
+'Fill list box.
+Dim loadedListBox As PdfLoadedListBoxField = TryCast(loadedForm.Fields(0), PdfLoadedListBoxField)
+'Fill list box and Modify the list box select index.
+loadedListBox.SelectedIndex = New Integer(1) {1, 2}
+
+'Save the document.
+loadedDocument.Save("Sample.pdf")
+'Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Fill-list-box-field-in-an-existing-PDF-document).
+
+### Filling the check Box field
+
+You can fill a check box field by enabling [Checked](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedCheckBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedCheckBoxField_Checked) property of [PdfLoadedCheckBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedCheckBoxField.html) class. Please refer the below code snippet to fill the check box field.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-the-checkbox-field-in-an-existing-PDF-document/.NET/Fill-the-checkbox-field-in-an-existing-PDF-document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+
+//load the check box from field collection.
+PdfLoadedCheckBoxField loadedCheckBoxField = loadedForm.Fields[0] as PdfLoadedCheckBoxField;
+//fill the checkbox.
+loadedCheckBoxField.Items[0].Checked = true;
+//Check the checkbox if it is not grouped.
+loadedCheckBoxField.Checked = true;
+
+//Save the document.
+loadedDocument.Save("flatten.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+
+//load the check box from field collection.
+PdfLoadedCheckBoxField loadedCheckBoxField = loadedForm.Fields[0] as PdfLoadedCheckBoxField;
+//fill the checkbox.
+loadedCheckBoxField.Items[0].Checked = true;
+//Check the checkbox if it is not grouped.
+loadedCheckBoxField.Checked = true;
+
+//Save the document.
+loadedDocument.Save("sample.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+'Get the loaded form.
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+
+'load the check box from field collection.
+Dim loadedCheckBoxField As PdfLoadedCheckBoxField = TryCast(loadedForm.Fields(0), PdfLoadedCheckBoxField)
+'Fill the checkbox.
+loadedCheckBoxField.Items(0).Checked = True
+'Check the checkbox if it is not grouped.
+loadedCheckBoxField.Checked = True
+
+'Save the document.
+loadedDocument.Save("sample.pdf")
+'Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Fill-the-checkbox-field-in-an-existing-PDF-document).
+
+### Filling the signature field
+
+The below code snippet illustrates how to fill the signature field with certificate using [Certificate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_Certificate) property.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-the-signature-field-in-an-existing-PDF/.NET/Fill-the-signature-field-in-an-existing-PDF/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+//Create PDF Certificate.
+FileStream certificateStream = new FileStream("PDF.pfx", FileMode.Open, FileAccess.Read);
+PdfCertificate certificate = new PdfCertificate(certificateStream, "syncfusion");
+
+//Load the signature field from field collection and fill this with certificate.
+PdfLoadedSignatureField loadedSignatureField = loadedForm.Fields[9] as PdfLoadedSignatureField
+loadedSignatureField.Signature = new PdfSignature();
+loadedSignatureField.Signature.Certificate = certificate;
+loadedSignatureField.Signature.Reason = "Reason";
+
+//Save the document.
+loadedDocument.Save("flatten.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+//Create PDF Certificate.
+PdfCertificate certificate = new PdfCertificate("Pdf.pfx", "password");
+
+//Load the signature field from field collection and fill this with certificate.
+PdfLoadedSignatureField loadedSignatureField = loadedForm.Fields[0] as PdfLoadedSignatureField;
+loadedSignatureField.Signature = new PdfSignature(loadedPage);
+loadedSignatureField.Signature.Certificate = certificate;
+loadedSignatureField.Signature.Reason = "Reason";
+
+//Save the document.
+loadedDocument.Save("output.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
+'Get the loaded form.
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+'Create PDF Certificate.
+Dim certificate As New PdfCertificate("Pdf.pfx", "password")
+
+'Load the signature field from field collection and fill with certificate.
+Dim loadedSignatureField As PdfLoadedSignatureField = TryCast(loadedForm.Fields(0), PdfLoadedSignatureField)
+loadedSignatureField.Signature = New PdfSignature(loadedPage)
+loadedSignatureField.Signature.Certificate = certificate
+loadedSignatureField.Signature.Reason = "Reason"
+
+'Save the document.
+loadedDocument.Save("output.pdf")
+'Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Fill-the-signature-field-in-an-existing-PDF).
+
+### Fill the XFA form fields along with Acroform in a same API
+
+The static XFA document contains both the XFA and Acroform.
+ 
+The Essential<sup>&reg;</sup> PDF supports filling both the XFA and Acroform in a same instance (Fills the XFA form via Acroform instance) by enabling the [EnableXfaFormFill](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_EnableXfaFormFill) property available in the [PdfLoadedForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html) class.
+
+The following code snippet illustrates how to fill XFA forms via Acroform API.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-the-XFA-forms-fields-via-acroform-API/.NET/Fill-the-XFA-forms-fields-via-acroform-API/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the existing Acroform.
+PdfLoadedForm acroform = loadedDocument.Form;
+//Enable XFA form filling.
+acroform.EnableXfaFormFill = true;
+
+//Get the existing text box field.
+PdfLoadedTextBoxField firstName = acroform.Fields["FirstName"] as PdfLoadedTextBoxField;
+//Set text.
+firstName.Text = "Simon";
+PdfLoadedTextBoxField lastName = acroform.Fields["LastName"] as PdfLoadedTextBoxField;
+//Set text.
+lastName.Text = "Bistro";
+
+//Save the document.
+loadedDocument.Save("Form.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the existing XFA PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Form.pdf");
+//Get the existing Acroform.
+PdfLoadedForm acroform = loadedDocument.Form;
+//Enable XFA form filling.
+acroform.EnableXfaFormFill = true;
+
+//Get the existing text box field.
+PdfLoadedTextBoxField firstName = acroform.Fields["FirstName"] as PdfLoadedTextBoxField;
+//Set text.
+firstName.Text = "Simon";
+PdfLoadedTextBoxField lastName = acroform.Fields["LastName"] as PdfLoadedTextBoxField;
+//Set text.
+lastName.Text = "Bistro";
+
+//Save the document.
+loadedDocument.Save("Output.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Form.pdf")
+'Get the existing Acroform.
+Dim acroform As PdfLoadedForm = loadedDocument.Form
+'Enable XFA form filling.
+acroform.EnableXfaFormFill = True
+
+'Get the existing text box field.
+Dim firstName As PdfLoadedTextBoxField = TryCast(acroform.Fields("FirstName"), PdfLoadedTextBoxField)
+'Set text.
+firstName.Text = "Simon"
+Dim lastName As PdfLoadedTextBoxField = TryCast(acroform.Fields("LastName"), PdfLoadedTextBoxField)
+'Set text.
+lastName.Text = "Bistro"
+
+'Save the document.
+loadedDocument.Save("Output.pdf")
+'Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Fill-the-XFA-forms-fields-via-acroform-API).
+
+### Enumerate the form fields
+
+All the form fields are maintained in [PdfLoadedFormFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedFormFieldCollection.html) class. You can enumerate the fields from this form field collection and fill them. 
+
+The following code example illustrates this.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Enumarate-form-fields-in-a-PDF-document/.NET/Enumarate-form-fields-in-a-PDF-document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+
+//Get the loaded form.
+PdfLoadedForm form = document.Form;
+PdfLoadedFormFieldCollection fields = form.Fields;
+//Enumerates the form fields.
+for (int i = 0; i < fields.Count; i++)
+{
+  if (fields[i] is PdfLoadedTextBoxField)
+  {
+    PdfLoadedTextBoxField loadedTextBoxField = fields[i] as PdfLoadedTextBoxField;
+    loadedTextBoxField.Text = "Text";
+  }
+}
+
+//Save the document.
+document.Save("Form.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+
+//Get the loaded form.
+PdfLoadedForm form = document.Form;
+PdfLoadedFormFieldCollection fields = form.Fields;
+//Enumerates the form fields.
+for (int i = 0; i < fields.Count; i++)
+{
+  if (fields[i] is PdfLoadedTextBoxField)
+  {
+    PdfLoadedTextBoxField loadedTextBoxField = fields[i] as PdfLoadedTextBoxField;
+    loadedTextBoxField.Text = "Text";
+  }
+}
+
+//Save and close the modified document.
+document.Save("Sample.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim document As New PdfLoadedDocument("Input.pdf")
+
+'Get the loaded form.
+Dim form As PdfLoadedForm = document.Form
+Dim fields As PdfLoadedFormFieldCollection = form.Fields
+'Enumerate the form fields.
+For i As Integer = 0 To fields.Count - 1
+  If TypeOf fields(i) Is PdfLoadedTextBoxField Then
+    Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(fields(i), PdfLoadedTextBoxField)
+    loadedTextBoxField.Text = "Text"
+  End If
+Next i
+
+'Save and close the modified document.
+document.Save("Sample.pdf")
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+ 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Enumarate-form-fields-in-a-PDF-document).
+
+### Grouping (auto naming) of form fields
 
 The Essential<sup>&reg;</sup> PDF supports grouping (auto naming) of form fields in a PDF document while creating form fields with same name. The [FieldAutoNaming](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_FieldAutoNaming) property of [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) is used to enable or disable auto naming of form field. 
 
@@ -1830,6 +2682,9 @@ By default, the value is set to true. This is illustrated in the following code 
 {% tabs %}  
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Auto-naming-of-form-fields-in-a-PDF-document/.NET/Auto-naming-of-form-fields-in-a-PDF-document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1855,16 +2710,17 @@ textBoxField1.Text = "Doe";
 //Add form field to the document.
 document.Form.Fields.Add(textBoxField1);
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document as stream.
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1899,7 +2755,11 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Create a new PDF document
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
 Dim document As New PdfDocument()
 'Add a new page to the PDF document
 Dim page As PdfPage = document.Pages.Add()
@@ -1937,31 +2797,37 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following screenshot shows the enabling and disabling of form fields auto naming in PDF documents. 
 <img src="Form_images/Form_img1.png" alt="Output screenshot" width="100%" Height="Auto"/>
 
-## Filling form fields in an existing PDF Document
+## Retrieving/Modifying the form fields
 
-Essential<sup>&reg;</sup> PDF allows you to fill the form fields using [PdfLoadedField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedField.html) class. 
+### Modifying the existing form field in PDF document 
 
-### Filling the text box field
+You can modify an existing form field by getting the field from the [PdfFormFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFormFieldCollection.html). You can retrieve a field from the field collection by index or by field name. 
 
-You can fill a text box field using [Text](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_Text) property of [PdfLoadedTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html) class. The below code snippet illustrates this.
+The following code snippet explains how to modify an existing form field in a PDF document.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Filling-the-textbox-field-in-an-existing-PDF-document/.NET/Filling-the-textbox-field-in-an-existing-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Modify-the-existing-form-field-in-PDF-document/.NET/Modify-the-existing-form-field-in-PDF-document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the loaded form.
 PdfLoadedForm loadedForm = loadedDocument.Form;
 
-//Get the loaded text box field and fill it.
+//Get the loaded form field and modify the properties.
 PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
-loadedTextBoxField.Text = "First Name";
+RectangleF newBounds = new RectangleF(100, 100, 150, 50);
+loadedTextBoxField.Bounds = newBounds;
+loadedTextBoxField.SpellCheck = true;
+loadedTextBoxField.Text = "New text of the field.";
+loadedTextBoxField.Password = false;
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("flatten.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -1969,16 +2835,24 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the loaded form.
 PdfLoadedForm loadedForm = loadedDocument.Form;
 
-//Get the loaded text box field and fill it.
-PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
-loadedTextBoxField.Text = "First Name";
+//Get the loaded form field and modify the properties.
+PdfLoadedTextBoxField loadedTextBoxField= loadedForm.Fields[0] as PdfLoadedTextBoxField;
+RectangleF newBounds = new RectangleF(100, 100, 150, 50);
+loadedTextBoxField.Bounds = newBounds;
+loadedTextBoxField.SpellCheck = true;
+loadedTextBoxField.Text = "New text of the field.";
+loadedTextBoxField.Password = false;
 
-//Save the modified document.
+//Save the document.
 loadedDocument.Save("sample.pdf");
 //Close the document.
 loadedDocument.Close(true);
@@ -1987,67 +2861,185 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
 'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Get the loaded form.
 Dim loadedForm As PdfLoadedForm = loadedDocument.Form
 
-'Get the loaded text box field and fill it.
+'Get the loaded form field and Modify the properties.
 Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(loadedForm.Fields(0), PdfLoadedTextBoxField)
-loadedTextBoxField.Text = "First Name"
+Dim newBounds As New RectangleF(100, 100, 150, 50)
+loadedTextBoxField.Bounds = newBounds
+loadedTextBoxField.SpellCheck = True
+loadedTextBoxField.Text = "New text of the field."
+loadedTextBoxField.Password = False
 
-'Save the modified document.
+'Save the document.
 loadedDocument.Save("sample.pdf")
 'Close the document.
 loadedDocument.Close(True)
 
 {% endhighlight %}
 
-{% endtabs %}  
+{% endtabs %} 
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Filling-the-textbox-field-in-an-existing-PDF-document).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Modify-the-existing-form-field-in-PDF-document).
 
-### Filling the combo box field
+### Modify export value in check box item
 
-You can fill a combo box field using [SelectedValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedComboBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedComboBoxField_SelectedValue) or [SelectedIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedComboBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedComboBoxField_SelectedIndex) properties of [PdfLoadedComboBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedComboBoxField.html) class. Please refer the below code snippet to fill the combo box field in an existing PDF document.
+You can Modified the export value a check box field property of [PdfLoadedCheckBoxItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedCheckBoxItem.html) class.  
+
+Please refer to the code example below to set the check box item.
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-the-combobox-field-in-an-existing-PDF-document/.NET/Fill-the-combobox-field-in-an-existing-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Export_checkbox_values/.NET/Export_checkbox_values/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
-//Get the loaded combo box field  and modify the properties.
-PdfLoadedComboBoxField loadedComboboxField = loadedForm.Fields[1] as PdfLoadedComboBoxField;
-//Select the item.
-loadedComboboxField.SelectedIndex = 1;
+//Get the loaded form. 
+PdfLoadedForm loadedForm = loadedDocument.Form; 
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//load the check box from field collection. 
+PdfLoadedCheckBoxField loadedCheckBoxField = loadedForm.Fields[0] as PdfLoadedCheckBoxField; 
+PdfLoadedCheckBoxItem pdfLoadedCheckBoxItem = loadedCheckBoxField.Items[0] as PdfLoadedCheckBoxItem; 
+
+//Set the Export value  
+pdfLoadedCheckBoxItem.ExportValue = "123"; 
+
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
-loadedDocument.Close(true);
+document.Close(true); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document. 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"); 
+
+//Get the loaded form. 
+PdfLoadedForm loadedForm = loadedDocument.Form; 
+
+//load the check box from field collection. 
+PdfLoadedCheckBoxField loadedCheckBoxField = loadedForm.Fields[0] as PdfLoadedCheckBoxField; 
+//load the check box from field collection. 
+PdfLoadedCheckBoxField loadedCheckBoxField = loadedForm.Fields[0] as PdfLoadedCheckBoxField; 
+PdfLoadedCheckBoxItem pdfLoadedCheckBoxItem = loadedCheckBoxField.Items[0] as PdfLoadedCheckBoxItem; 
+
+//Set the Export value  
+pdfLoadedCheckBoxItem.ExportValue = "123"; 
+
+//Save the document. 
+loadedDocument.Save("Output.pdf"); 
+//Close the document. 
+loadedDocument.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document. 
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf") 
+
+'Get the loaded form. 
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form 
+
+'load the check box from field collection. 
+Dim loadedCheckBoxField As PdfLoadedCheckBoxField = TryCast(loadedForm.Fields(0), PdfLoadedCheckBoxField) 
+' Get the first item in the checkbox field 
+Dim pdfLoadedCheckBoxItem As PdfLoadedCheckBoxItem = TryCast(loadedCheckBoxField.Items(0), PdfLoadedCheckBoxItem) 
+' Set the Export value 
+pdfLoadedCheckBoxItem.ExportValue = "123" 
+
+'Save the document. 
+loadedDocument.Save("Output.pdf") 
+'Close the document. 
+loadedDocument.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
+### Retrieving/Modifying the fore and back color of an existing form fields
+
+You can retrieve/modify the fore and background color of existing form fields in a PDF document by using [ForeColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_ForeColor) and [BackColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_BackColor) properties of the respective form fields. The following code snippet illustrate this. 
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Modifying-fore-and-backcolor-of-existing-form-fields/.NET/Modifying-fore-and-backcolor-of-existing-form-fields/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the loaded form.
 PdfLoadedForm loadedForm = loadedDocument.Form;
 
-//Get the loaded combo box field  and modify the properties.
-PdfLoadedComboBoxField loadedComboboxField = loadedForm.Fields[1] as PdfLoadedComboBoxField;
-//Select the item.
-loadedComboboxField.SelectedIndex = 1;
+//Get the loaded form field.
+PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
+//Get fore color of the field.
+PdfColor foreColor = loadedTextBoxField.ForeColor;
+//Set the fore color.
+loadedTextBoxField.ForeColor = new PdfColor(Color.Red);
+//Get background color of the field.
+PdfColor backColor = loadedTextBoxField.BackColor;
+//Set the background color.
+loadedTextBoxField.BackColor = new PdfColor(Color.Green);
 
-//Save the modified document.
-loadedDocument.Save("Sample.pdf");
+//Save the document.
+loadedDocument.Save("flatten.pdf");
+//Close the document.
+loadedDocument.Close(true);         
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+
+//Get the loaded form field.
+PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
+//Get fore color of the field.
+PdfColor foreColor = loadedTextBoxField.ForeColor;
+//Set the fore color.
+loadedTextBoxField.ForeColor = new PdfColor(Color.Red);
+//Get background color of the field.
+PdfColor backColor = loadedTextBoxField.BackColor;
+//Set the background color.
+loadedTextBoxField.BackColor = new PdfColor(Color.Green);
+
+//Save the document.
+loadedDocument.Save("Form.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -2055,406 +3047,376 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
 'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Get the loaded form.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+'Get the loaded form
 Dim loadedForm As PdfLoadedForm = loadedDocument.Form
 
-'Get the loaded combo box field and modify the properties.
-Dim loadedComboboxField As PdfLoadedComboBoxField = TryCast(loadedForm.Fields(1), PdfLoadedComboBoxField)
-'Select the item.
-loadedComboboxField.SelectedIndex = 1
+'Get the loaded form field
+Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(loadedForm.Fields(0), PdfLoadedTextBoxField)
+'Get fore color of the field
+Dim foreColor As PdfColor = loadedTextBoxField.ForeColor
+'Set the fore color
+loadedTextBoxField.ForeColor = New PdfColor(Color.Red)
+'Get background color of the field
+Dim backColor As PdfColor = loadedTextBoxField.BackColor
+'Set the background color
+loadedTextBoxField.BackColor = New PdfColor(Color.Green)
 
-'Save the modified document.
-loadedDocument.Save("Sample.pdf")
-'Close the document.
+'Save the document
+loadedDocument.Save("Form.pdf")
+'Close the document
 loadedDocument.Close(True)
 
 {% endhighlight %}
 
-{% endtabs %}  
+{% endtabs %} 
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Fill-the-combobox-field-in-an-existing-PDF-document).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Modifying-fore-and-backcolor-of-existing-form-fields).
 
-### Filling the radio button field
+### Retrieving option values from acroform radio button
 
-You can fill a radio button field using [SelectedValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonListField.html#Syncfusion_Pdf_Parsing_PdfLoadedRadioButtonListField_SelectedValue) or [SelectedIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonListField.html#Syncfusion_Pdf_Parsing_PdfLoadedRadioButtonListField_SelectedIndex) properties of [PdfLoadedRadioButtonListField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonListField.html) class. Please refer the below code snippet to fill the radio button field in an existing PDF document.
+The Essential<sup>&reg;</sup> PDF supports retrieving option values from acroform radio button. The [OptionValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonItem.html#Syncfusion_Pdf_Parsing_PdfLoadedRadioButtonItem_OptionValue) property is used to get option values of [PdfLoadedRadioButtonItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonItem.html) instance.
+
+The following code example illustrates how to get option values from acroform radio button.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Get-option-value-from-acroform-radio-button/.NET/Get-option-value-from-acroform-radio-button/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument doc = new PdfLoadedDocument("Input.pdf");
+//Gets the loaded form.
+PdfLoadedForm form = doc.Form;
+//Set default appearance to false.
+form.SetDefaultAppearance(false);
+
+//Gets the 'Gender' radio button field.
+PdfLoadedRadioButtonListField radioButtonField = form.Fields["Gender"] as PdfLoadedRadioButtonListField;
+//Select the item that contains option value as "Male".
+foreach (PdfLoadedRadioButtonItem item in radioButtonField.Items)
+{
+  //Gets an option value of the item.
+  if (item.OptionValue == "Male")
+  {
+    item.Selected = true;
+  }
+}
+
+//Save the document.
+doc.Save("Output.pdf");
+//Close the document.
+doc.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load an existing document.
+PdfLoadedDocument doc = new PdfLoadedDocument("SourceForm.pdf");
+//Gets the loaded form.
+PdfLoadedForm form = doc.Form;
+//Set default appearance to false.
+form.SetDefaultAppearance(false);
+
+//Gets the 'Gender' radio button field.
+PdfLoadedRadioButtonListField radioButtonField = form.Fields["Gender"] as PdfLoadedRadioButtonListField;
+//Select the item that contains option value as "Male".
+foreach (PdfLoadedRadioButtonItem item in radioButtonField.Items)
+{
+  //Gets an option value of the item.
+  if (item.OptionValue == "Male")
+  {
+    item.Selected = true;
+  }
+}
+
+//Save and close the PDF document.
+doc.Save("Form.pdf");
+doc.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim doc As New PdfLoadedDocument("SourceForm.pdf")
+'Gets the loaded form.
+Dim form As PdfLoadedForm = doc.Form
+'Set default appearance to false.
+form.SetDefaultAppearance(False)
+
+'Gets the 'Gender' radio button field. 
+Dim radioButtonField As PdfLoadedRadioButtonListField = TryCast(form.Fields("Gender"), PdfLoadedRadioButtonListField)
+'Select the item that contains option value as "Male".
+For Each item As PdfLoadedRadioButtonItem In radioButtonField.Items
+'Gets an option value of the item.
+If item.OptionValue = "Male" Then
+item.Selected = True
+End If
+Next
+
+'Save and close the PDF document.
+doc.Save("Form.pdf")
+doc.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Get-option-value-from-acroform-radio-button).
+
+### Retrieving the widget annotation in PDF document
+
+You can retrieve an existing widget annotation in a PDF document by using the [PdfLoadedWidgetAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedWidgetAnnotation.html) class.
+
+The following code snippet demonstrates how to retrieving an existing widget annotation in a PDF document.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-radio-button-field-in-an-existing-PDF-document/.NET/Fill-radio-button-field-in-an-existing-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Get-widget-annotation-in-PDF/.NET/Get-widget-annotation-in-PDF/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-
-//Get the loaded radio button field.
-PdfLoadedRadioButtonListField loadedRadioButtonField = loadedForm.Fields[3] as PdfLoadedRadioButtonListField;
-//Select the item.
-loadedRadioButtonField.SelectedIndex = 1;
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-
-//Get the loaded radio button field.
-PdfLoadedRadioButtonListField loadedRadioButtonField = loadedForm.Fields[3] as PdfLoadedRadioButtonListField;
-//Select the item.
-loadedRadioButtonField.SelectedIndex = 1;
-
-//Save the document.
-loadedDocument.Save("Sample.pdf");
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Get the loaded form.
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-
-'Get the loaded radio button field.
-Dim loadedRadioButtonField As PdfLoadedRadioButtonListField = TryCast(loadedForm.Fields(3), PdfLoadedRadioButtonListField)
-'Select the item.
-loadedRadioButtonField.SelectedIndex = 1
-
-'Save the document.
-loadedDocument.Save("Sample.pdf")
-'Close the document.
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Fill-radio-button-field-in-an-existing-PDF-document).
-
-### Filling the list box field
-
-The below code snippet illustrates how to fill the list box field in an existing PDF document, using [SelectedIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedChoiceField.html#Syncfusion_Pdf_Parsing_PdfLoadedChoiceField_SelectedIndex) property of [PdfLoadedListBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedListBoxField.html) class.
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-list-box-field-in-an-existing-PDF-document/.NET/Fill-list-box-field-in-an-existing-PDF-document/Program.cs" %}
-
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-
-//Fill list box.
-PdfLoadedListBoxField loadedListBox = loadedForm.Fields[2] as PdfLoadedListBoxField;
-//Fill list box and Modify the list box select index.
-loadedListBox.SelectedIndex = new int[2] { 1, 2 };
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-
-//Fill list box.
-PdfLoadedListBoxField loadedListBox = loadedForm.Fields[2] as PdfLoadedListBoxField;
-//Fill list box and Modify the list box select index.
-loadedListBox.SelectedIndex = new int[2] { 1, 2 };
-
-//Save the document.
-loadedDocument.Save("Sample.pdf");
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the existing PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Get the loaded form.
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-
-'Fill list box.
-Dim loadedListBox As PdfLoadedListBoxField = TryCast(loadedForm.Fields(0), PdfLoadedListBoxField)
-'Fill list box and Modify the list box select index.
-loadedListBox.SelectedIndex = New Integer(1) {1, 2}
-
-'Save the document.
-loadedDocument.Save("Sample.pdf")
-'Close the document.
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Fill-list-box-field-in-an-existing-PDF-document).
-
-### Filling the check Box field
-
-You can fill a check box field by enabling [Checked](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedCheckBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedCheckBoxField_Checked) property of [PdfLoadedCheckBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedCheckBoxField.html) class. Please refer the below code snippet to fill the check box field.
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-the-checkbox-field-in-an-existing-PDF-document/.NET/Fill-the-checkbox-field-in-an-existing-PDF-document/Program.cs" %}
-
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-
-//load the check box from field collection.
-PdfLoadedCheckBoxField loadedCheckBoxField = loadedForm.Fields[0] as PdfLoadedCheckBoxField;
-//fill the checkbox.
-loadedCheckBoxField.Items[0].Checked = true;
-//Check the checkbox if it is not grouped.
-loadedCheckBoxField.Checked = true;
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-
-//load the check box from field collection.
-PdfLoadedCheckBoxField loadedCheckBoxField = loadedForm.Fields[0] as PdfLoadedCheckBoxField;
-//fill the checkbox.
-loadedCheckBoxField.Items[0].Checked = true;
-//Check the checkbox if it is not grouped.
-loadedCheckBoxField.Checked = true;
-
-//Save the document.
-loadedDocument.Save("sample.pdf");
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Get the loaded form.
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-
-'load the check box from field collection.
-Dim loadedCheckBoxField As PdfLoadedCheckBoxField = TryCast(loadedForm.Fields(0), PdfLoadedCheckBoxField)
-'Fill the checkbox.
-loadedCheckBoxField.Items(0).Checked = True
-'Check the checkbox if it is not grouped.
-loadedCheckBoxField.Checked = True
-
-'Save the document.
-loadedDocument.Save("sample.pdf")
-'Close the document.
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Fill-the-checkbox-field-in-an-existing-PDF-document).
-
-### Filling the signature field
-
-The below code snippet illustrates how to fill the signature field with certificate using [Certificate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_Certificate) property.
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-the-signature-field-in-an-existing-PDF/.NET/Fill-the-signature-field-in-an-existing-PDF/Program.cs" %}
-
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-//Create PDF Certificate.
-FileStream certificateStream = new FileStream("PDF.pfx", FileMode.Open, FileAccess.Read);
-PdfCertificate certificate = new PdfCertificate(certificateStream, "syncfusion");
-
-//Load the signature field from field collection and fill this with certificate.
-PdfLoadedSignatureField loadedSignatureField = loadedForm.Fields[9] as PdfLoadedSignatureField
-loadedSignatureField.Signature = new PdfSignature();
-loadedSignatureField.Signature.Certificate = certificate;
-loadedSignatureField.Signature.Reason = "Reason";
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-//Create PDF Certificate.
-PdfCertificate certificate = new PdfCertificate("Pdf.pfx", "password");
-
-//Load the signature field from field collection and fill this with certificate.
-PdfLoadedSignatureField loadedSignatureField = loadedForm.Fields[0] as PdfLoadedSignatureField;
-loadedSignatureField.Signature = new PdfSignature(loadedPage);
-loadedSignatureField.Signature.Certificate = certificate;
-loadedSignatureField.Signature.Reason = "Reason";
-
-//Save the document.
-loadedDocument.Save("output.pdf");
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
-'Get the loaded form.
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-'Create PDF Certificate.
-Dim certificate As New PdfCertificate("Pdf.pfx", "password")
-
-'Load the signature field from field collection and fill with certificate.
-Dim loadedSignatureField As PdfLoadedSignatureField = TryCast(loadedForm.Fields(0), PdfLoadedSignatureField)
-loadedSignatureField.Signature = New PdfSignature(loadedPage)
-loadedSignatureField.Signature.Certificate = certificate
-loadedSignatureField.Signature.Reason = "Reason"
-
-'Save the document.
-loadedDocument.Save("output.pdf")
-'Close the document.
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Fill-the-signature-field-in-an-existing-PDF).
-
-### Enumerate the form fields
-
-All the form fields are maintained in [PdfLoadedFormFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedFormFieldCollection.html) class. You can enumerate the fields from this form field collection and fill them. 
-
-The following code example illustrates this.
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Enumarate-form-fields-in-a-PDF-document/.NET/Enumarate-form-fields-in-a-PDF-document/Program.cs" %}
-
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
-
-//Get the loaded form.
-PdfLoadedForm form = document.Form;
-PdfLoadedFormFieldCollection fields = form.Fields;
-//Enumerates the form fields.
-for (int i = 0; i < fields.Count; i++)
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+// Loop through each page in the loaded PDF document.
+foreach (PdfLoadedPage page in loadedDocument.Pages)
 {
-  if (fields[i] is PdfLoadedTextBoxField)
-  {
-    PdfLoadedTextBoxField loadedTextBoxField = fields[i] as PdfLoadedTextBoxField;
-    loadedTextBoxField.Text = "Text";
-  }
+    // Initialize the widget count to zero.
+    int widgetCount = 0;
+    // Loop through each annotation on the current page.
+    foreach (PdfLoadedAnnotation annot in page.Annotations)
+    {
+        // Check if the annotation is a widget annotation.
+        if (annot is PdfLoadedWidgetAnnotation)
+        {
+            // Cast the annotation to a PdfLoadedWidgetAnnotation type.
+            PdfLoadedWidgetAnnotation widget = annot as PdfLoadedWidgetAnnotation;
+            // Retrieve the bounds of the widget annotation.
+            RectangleF bounds = widget.Bounds;
+            // Display the index and bounds value of the widget annotation.
+            Console.WriteLine("Index: {0}, Bounds Value: {1}", widgetCount, bounds);
+            // Increment the widget count.
+            widgetCount++;
+        }
+    }
+    // Display the total number of widget annotations.
+    Console.WriteLine("Total number of widgets: {0}", widgetCount);
 }
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
 //Close the document.
-document.Close(true);
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load the PDF document.
-PdfLoadedDocument document = new PdfLoadedDocument(fileName);
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
-//Get the loaded form.
-PdfLoadedForm form = document.Form;
-PdfLoadedFormFieldCollection fields = form.Fields;
-//Enumerates the form fields.
-for (int i = 0; i < fields.Count; i++)
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+// Loop through each page in the loaded PDF document.
+foreach (PdfLoadedPage page in loadedDocument.Pages)
 {
-  if (fields[i] is PdfLoadedTextBoxField)
-  {
-    PdfLoadedTextBoxField loadedTextBoxField = fields[i] as PdfLoadedTextBoxField;
-    loadedTextBoxField.Text = "Text";
-  }
+    // Initialize the widget count to zero.
+    int widgetCount = 0;
+    // Loop through each annotation on the current page.
+    foreach (PdfLoadedAnnotation annot in page.Annotations)
+    {
+        // Check if the annotation is a widget annotation.
+        if (annot is PdfLoadedWidgetAnnotation)
+        {
+            // Cast the annotation to a PdfLoadedWidgetAnnotation type.
+            PdfLoadedWidgetAnnotation widget = annot as PdfLoadedWidgetAnnotation;
+            // Retrieve the bounds of the widget annotation.
+            RectangleF bounds = widget.Bounds;
+            // Display the index and bounds value of the widget annotation.
+            Console.WriteLine("Index: {0}, Bounds Value: {1}", widgetCount, bounds);
+            // Increment the widget count.
+            widgetCount++;
+        }
+    }
+    // Display the total number of widget annotations.
+    Console.WriteLine("Total number of widgets: {0}", widgetCount);
 }
 
-//Save and close the modified document.
-document.Save("Sample.pdf");
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the PDF document.
-Dim document As New PdfLoadedDocument(fileName)
-
-'Get the loaded form.
-Dim form As PdfLoadedForm = document.Form
-Dim fields As PdfLoadedFormFieldCollection = form.Fields
-'Enumerate the form fields.
-For i As Integer = 0 To fields.Count - 1
-  If TypeOf fields(i) Is PdfLoadedTextBoxField Then
-    Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(fields(i), PdfLoadedTextBoxField)
-    loadedTextBoxField.Text = "Text"
-  End If
-Next i
-
-'Save and close the modified document.
-document.Save("Sample.pdf")
-document.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
+//Close the document.
+loadedDocument.Close(true);
  
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Enumarate-form-fields-in-a-PDF-document).
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+
+' Loop through each page in the loaded PDF document.
+For Each page As PdfLoadedPage In loadedDocument.Pages
+    ' Initialize the widget count to zero.
+    Dim widgetCount As Integer = 0
+    ' Loop through each annotation on the current page.
+    For Each annot As PdfLoadedAnnotation In page.Annotations
+        ' Check if the annotation is a widget annotation.
+        If TypeOf annot Is PdfLoadedWidgetAnnotation Then
+            ' Cast the annotation to a PdfLoadedWidgetAnnotation type.
+            Dim widget As PdfLoadedWidgetAnnotation = CType(annot, PdfLoadedWidgetAnnotation)
+            ' Retrieve the bounds of the widget annotation.
+            Dim bounds As RectangleF = widget.Bounds
+            ' Display the index and bounds value of the widget annotation.
+            Console.WriteLine("Index: {0}, Bounds Value: {1}", widgetCount, bounds)
+            ' Increment the widget count.
+            widgetCount += 1
+        End If
+    Next
+    ' Display the total number of widget annotations.
+    Console.WriteLine("Total number of widgets: {0}", widgetCount)
+Next
+
+' Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Get-widget-annotation-in-PDF/.NET).
+
+### Retrieving Custom Values from PDF Form Fields 
+
+Essential&reg; PDF supports retrieving custom values from form fields using the [TryGetValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_TryGetValue_System_String_System_Object__) method available in the PdfField class. This method enables developers to safely access custom properties embedded within a PDF form field without throwing exceptions if the specified key is missing. 
+
+Refer to the code snippet below to retrieve a custom value from a form field using the TryGetValue method.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+//Gets the first page of the document 
+ PdfField field = loadedDocument.Form.Fields[0] as PdfField; 
+
+// Get the custom value from the annotation 
+ object values; 
+ bool foundValue = field.TryGetValue("T", out values); 
+
+// Check the values 
+ if (foundValue && values is List<string> stringValues) 
+ { 
+     foreach (string value in stringValues) 
+     { 
+        // Print the custom value to the console 
+         Console.WriteLine($"Found value: {value}"); 
+     } 
+ } 
+ else 
+ { 
+     Console.WriteLine("not found "); 
+ } 
+// Close the document and release resources 
+loadedDocument.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+// Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"); 
+
+//Gets the first page of the document 
+ PdfField field = loadedDocument.Form.Fields[0] as PdfField; 
+
+// Get the custom value from the annotation 
+ object values; 
+ bool foundValue = field.TryGetValue("T", out values); 
+
+// Check the values 
+ if (foundValue && values is List<string> stringValues) 
+ { 
+     foreach (string value in stringValues) 
+     { 
+
+        // Print the custom value to the console 
+         Console.WriteLine($"Found value: {value}"); 
+     } 
+ } 
+ else 
+ { 
+     Console.WriteLine("not found "); 
+ } 
+// Close the document and release resources 
+loadedDocument.Close(true); 
+ 
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+
+' Get the first form field from the document
+Dim field As PdfField = TryCast(loadedDocument.Form.Fields(0), PdfField)
+
+' Try to get the custom value "T" from the field
+Dim values As Object = Nothing
+Dim foundValue As Boolean = field.TryGetValue("T", values)
+
+' Check and print the values if found
+If foundValue AndAlso TypeOf values Is List(Of String) Then
+    Dim stringValues As List(Of String) = CType(values, List(Of String))
+    For Each value As String In stringValues
+        ' Print the custom value to the console
+        Console.WriteLine($"Found value: {value}")
+    Next
+Else
+    Console.WriteLine("Value not found.")
+End If
+' Close the document and release resources
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %} 
+
+You can download a complete working sample from GitHub.
 
 ### TryGetField
 
@@ -2466,9 +3428,12 @@ The below code snippet explains how to get the field from collection using [TryG
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Get-the-field-from-collection-using-TryGetField/.NET/Get-the-field-from-collection-using-TryGetField/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument doc = new PdfLoadedDocument(docStream);
+PdfLoadedDocument doc = new PdfLoadedDocument("Input.pdf");
 //Load the form from the loaded document.
 PdfLoadedForm form = doc.Form;
 
@@ -2481,9 +3446,8 @@ if (fieldCollection.TryGetField("f1-1", out loadedField))
   (loadedField as PdfLoadedTextBoxField).Text = "1";
 }
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
+//Save the document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -2491,8 +3455,12 @@ doc.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the document.
-PdfLoadedDocument doc = new PdfLoadedDocument(fileName);
+PdfLoadedDocument doc = new PdfLoadedDocument("Input.pdf");
 //Load the form from the loaded document.
 PdfLoadedForm form = doc.Form;
 
@@ -2513,8 +3481,12 @@ doc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Load the form from the loaded document.
 Dim form As PdfLoadedForm = loadedDocument.Form
 
@@ -2546,9 +3518,12 @@ Please refer the below code snippet to get the field value from collection using
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Get-the-field-from-collection-using-TryGetValue/.NET/Get-the-field-from-collection-using-TryGetValue/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the form from the loaded document.
 PdfLoadedForm form = loadedDocument.Form;
 
@@ -2558,9 +3533,8 @@ string fieldValue = string.Empty;
 //Get the field value using TryGetValue Method.
 fieldCollection.TryGetValue("FirstName", out fieldValue);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("flatten.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -2568,8 +3542,12 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(filename);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the form from the loaded document.
 PdfLoadedForm form = loadedDocument.Form;
 
@@ -2587,8 +3565,12 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the document.
-Dim loadedDocument As New PdfLoadedDocument(filename)
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Load the form from the loaded document.
 Dim form As PdfLoadedForm = loadedDocument.Form
 
@@ -2608,100 +3590,919 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Get-the-field-from-collection-using-TryGetValue).
 
+### Get the pages of a form field in the PDF
 
-### Retrieving option values from acroform radio button
+We need to iterate through all the pages to check and determine the page index of each field. To avoid using nested loops.
 
-The Essential<sup>&reg;</sup> PDF supports retrieving option values from acroform radio button. The [OptionValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonItem.html#Syncfusion_Pdf_Parsing_PdfLoadedRadioButtonItem_OptionValue) property is used to get option values of [PdfLoadedRadioButtonItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonItem.html) instance.
+The below code illustrates get the pages of a form fields.
 
-The following code example illustrates how to get option values from acroform radio button.
+{% tabs %} 
 
-{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Get-option-value-from-acroform-radio-button/.NET/Get-option-value-from-acroform-radio-button/Program.cs" %}
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Interactive;
+    using Syncfusion.Pdf.Parsing;
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument doc = new PdfLoadedDocument(docStream);
-//Gets the loaded form.
-PdfLoadedForm form = doc.Form;
-//Set default appearance to false.
-form.SetDefaultAppearance(false);
+    // Load the PDF document from the stream.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
-//Gets the 'Gender' radio button field.
-PdfLoadedRadioButtonListField radioButtonField = form.Fields["Gender"] as PdfLoadedRadioButtonListField;
-//Select the item that contains option value as "Male".
-foreach (PdfLoadedRadioButtonItem item in radioButtonField.Items)
-{
-  //Gets an option value of the item.
-  if (item.OptionValue == "Male")
-  {
-    item.Selected = true;
-  }
-}
+    // Get all the form fields in the PDF.
+    PdfLoadedForm loadedForm = document.Form;
+    PdfLoadedFormFieldCollection fieldCollection = loadedForm.Fields;
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
-//Close the document.
-doc.Close(true);
+    // Create a dictionary to map each page object to its respective page number.
+    Dictionary<PdfPageBase, int> pageNumberMapping = new Dictionary<PdfPageBase, int>();
+
+    // Populate the pageNumberMapping dictionary with page objects and their corresponding page numbers.
+    for (int i = 0; i < document.Pages.Count; i++)
+    {
+        // Page numbers are 1-based, so we add 1 to the index.
+        pageNumberMapping[document.Pages[i]] = i + 1;
+    }
+
+    // Iterate through each form field and find its page number using the dictionary.
+    foreach (PdfLoadedField field in fieldCollection)
+    {
+        // Check if the field is associated with a page.
+        if (field.Page != null && pageNumberMapping.TryGetValue(field.Page, out int pageNumber))
+        {
+            // Output the field name and its associated page number.
+            Console.WriteLine($"{field.Name} - Page number: {pageNumber}");
+        }
+    }
+
+    // Close the PDF document.
+    document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load an existing document.
-PdfLoadedDocument doc = new PdfLoadedDocument("SourceForm.pdf");
-//Gets the loaded form.
-PdfLoadedForm form = doc.Form;
-//Set default appearance to false.
-form.SetDefaultAppearance(false);
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
-//Gets the 'Gender' radio button field.
-PdfLoadedRadioButtonListField radioButtonField = form.Fields["Gender"] as PdfLoadedRadioButtonListField;
-//Select the item that contains option value as "Male".
-foreach (PdfLoadedRadioButtonItem item in radioButtonField.Items)
+// Load the PDF document.
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+
+// Get all the form fields in the PDF.
+PdfLoadedForm loadedForm = document.Form;
+PdfLoadedFormFieldCollection fieldCollection = loadedForm.Fields;
+
+// Create a dictionary to map each page object to its respective page number.
+Dictionary<PdfPageBase, int> pageNumberMapping = new Dictionary<PdfPageBase, int>();
+
+// Populate the pageNumberMapping dictionary with page objects and their corresponding page numbers.
+for (int i = 0; i < document.Pages.Count; i++)
 {
-  //Gets an option value of the item.
-  if (item.OptionValue == "Male")
-  {
-    item.Selected = true;
-  }
+    // Page numbers are 1-based, so we add 1 to the index.
+    pageNumberMapping[document.Pages[i]] = i + 1;
 }
 
-//Save and close the PDF document.
-doc.Save("Form.pdf");
-doc.Close(true);
+// Iterate through each form field and find its page number using the dictionary.
+foreach (PdfLoadedField field in fieldCollection)
+{
+    // Check if the field is associated with a page.
+    if (field.Page != null && pageNumberMapping.TryGetValue(field.Page, out int pageNumber))
+    {
+        // Output the field name and its associated page number.
+        Console.WriteLine($"{field.Name} - Page number: {pageNumber}");
+    }
+}
+
+// Close the PDF document.
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load an existing document.
-Dim doc As New PdfLoadedDocument("SourceForm.pdf")
-'Gets the loaded form.
-Dim form As PdfLoadedForm = doc.Form
-'Set default appearance to false.
-form.SetDefaultAppearance(False)
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
-'Gets the 'Gender' radio button field. 
-Dim radioButtonField As PdfLoadedRadioButtonListField = TryCast(form.Fields("Gender"), PdfLoadedRadioButtonListField)
-'Select the item that contains option value as "Male".
-For Each item As PdfLoadedRadioButtonItem In radioButtonField.Items
-'Gets an option value of the item.
-If item.OptionValue = "Male" Then
-item.Selected = True
-End If
+'Load the PDF document.
+Dim document As New PdfLoadedDocument("Input.pdf")
+
+' Get all the form fields in the PDF.
+Dim loadedForm As PdfLoadedForm = document.Form
+Dim fieldCollection As PdfLoadedFormFieldCollection = loadedForm.Fields
+
+' Create a dictionary to map each page object to its respective page number.
+Dim pageNumberMapping As New Dictionary(Of PdfPageBase, Integer)()
+
+' Populate the pageNumberMapping dictionary with page objects and their corresponding page numbers.
+For i As Integer = 0 To document.Pages.Count - 1
+    ' Page numbers are 1-based, so we add 1 to the index.
+    pageNumberMapping(document.Pages(i)) = i + 1
 Next
 
-'Save and close the PDF document.
-doc.Save("Form.pdf")
-doc.Close(True)
+' Iterate through each form field and find its page number using the dictionary.
+For Each field As PdfLoadedField In fieldCollection
+    ' Check if the field is associated with a page.
+    If field.Page IsNot Nothing AndAlso pageNumberMapping.ContainsKey(field.Page) Then
+        ' Output the field name and its associated page number.
+        Console.WriteLine(String.Format("{0} - Page number: {1}", field.Name, pageNumberMapping(field.Page)))
+    End If
+Next
+
+' Close the PDF document.
+document.Close(True)
 
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Get-option-value-from-acroform-radio-button).
+## Removing the form fields from existing PDF document
+
+You can remove the form fields from an existing PDF document using [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldCollection.html#Syncfusion_Pdf_Interactive_PdfFieldCollection_Remove_Syncfusion_Pdf_Interactive_PdfField_) or [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldCollection.html#Syncfusion_Pdf_Interactive_PdfFieldCollection_RemoveAt_System_Int32_) methods of [PdfFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldCollection.html) class.
+
+The below code illustrates how to remove the form fields from the existing PDF document.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Remove-the-form-fields-form-the-existing-PDF-document/.NET/Remove-the-form-fields-form-the-existing-PDF-document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Load the page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+//Load the textbox field.
+PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
+//Remove the field.
+loadedForm.Fields.Remove(loadedTextBoxField);
+//Remove the field at index 0.
+loadedForm.Fields.RemoveAt(0);
+
+//Save the document.
+loadedDocument.Save("flatten.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Load the page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+//Load the textbox field.
+PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
+//Remove the field.
+loadedForm.Fields.Remove(loadedTextBoxField);
+//Remove the field at index 0.
+loadedForm.Fields.RemoveAt(0);
+
+//Save the document.
+loadedDocument.Save("Form.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+'Load the page
+Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
+'Get the loaded form
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+'Load the textbox field
+Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(loadedForm.Fields(0), PdfLoadedTextBoxField)
+'Remove the field
+loadedForm.Fields.Remove(loadedTextBoxField)
+'Remove the field at index 0 
+loadedForm.Fields.RemoveAt(0);
+
+'Save the document
+loadedDocument.Save("Form.pdf")
+'Close the document
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Remove-the-form-fields-form-the-existing-PDF-document).
+
+### Flattening form fields in a PDF
+
+Essential<sup>&reg;</sup> PDF provides support to [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_Flatten) a form field by removing the existing form field and replacing it with graphical objects that would resemble the form field and cannot be edited.
+
+Please refer the sample for flattening the form fields in new PDF document.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Removing-editing-capability-of-form-fields/.NET/Removing-editing-capability-of-form-fields/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new page to PDF document.
+PdfPage page = document.Pages.Add();
+
+//Create a Text box field and add the properties.
+PdfTextBoxField textBoxField = new PdfTextBoxField(page, "FirstName");
+textBoxField.Bounds = new RectangleF(0, 0, 100, 20);
+textBoxField.ToolTip = "First Name";
+//Flatten the whole form field. 
+document.Form.Flatten = true;
+//Add the form field to the document.
+document.Form.Fields.Add(textBoxField);
+
+//Save the document.
+document.Save("Form.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new page to PDF document.
+PdfPage page = document.Pages.Add();
+
+//Create a Text box field and add the properties.
+PdfTextBoxField textBoxField = new PdfTextBoxField(page, "FirstName");
+textBoxField.Bounds = new RectangleF(0, 0, 100, 20);
+textBoxField.ToolTip = "First Name";
+//Flatten the whole form field. 
+document.Form.Flatten = true;
+//Add the form field to the document.
+document.Form.Fields.Add(textBoxField);
+
+//Save the document.
+document.Save("Form.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+'Load the PDF document.
+Dim document As New PdfDocument()
+'Add a new page to PDF document.
+Dim page As PdfPage = document.Pages.Add()
+
+'Create a Text box field and add the properties.
+Dim textBoxField As New PdfTextBoxField(page, "FirstName")
+textBoxField.Bounds = New RectangleF(0, 0, 100, 20)
+textBoxField.ToolTip = "First Name"
+'Flatten the whole form field.
+document.Form.Flatten = True
+'Add the form field to the document.
+document.Form.Fields.Add(textBoxField)
+
+'Save the PDF document.
+document.Save("Form.pdf")
+'Close the document.
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Removing-editing-capability-of-form-fields).
+
+Please refer the sample for flattening the form fields in existing PDF document.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Flattening-form-fields-in-an-existing-PDF-document/.NET/Flattening-form-fields-in-an-existing-PDF-document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+PdfLoadedFormFieldCollection fields = loadedForm.Fields;
+//Get the loaded text box field.
+PdfLoadedTextBoxField loadedTextBoxField = fields[0] as PdfLoadedTextBoxField;
+loadedTextBoxField.Text = "Text";
+//Flatten the whole form.
+loadedForm.Flatten = true;
+
+//Save the document.
+loadedDocument.Save("flatten.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the loaded form.
+PdfLoadedForm  = loadedDocument.Form;
+PdfLoadedFormFieldCollection fields = loadedForm.Fields;
+//Get the loaded text box field.
+PdfLoadedTextBoxField loadedTextBoxField = fields[0] as PdfLoadedTextBoxField;
+loadedTextBoxField.Text = "Text";
+//Flatten the whole form.
+loadedForm.Flatten = true;
+
+//Save and close the modified document.
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+'Get the loaded form.
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+Dim fields As PdfLoadedFormFieldCollection = loadedForm.Fields
+'Get the loaded text box field.
+Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(fields(0), PdfLoadedTextBoxField)
+loadedTextBoxField.Text = "Text"
+'Flatten the whole form.
+loadedForm.Flatten = True
+
+'Save and close the modified document.
+loadedDocument.Save("Output.pdf")
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Flattening-form-fields-in-an-existing-PDF-document).
+
+N> The form fields will be flattened only after the PDF document is saved. 
+
+PDF provides support to Flatten a form fields before saving the PDF document using the [FlattenFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_FlattenFields).
+
+Please refer the code sample to flatten the form fields before saving the PDF document.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Flattening-form-fields-in-an-existing-PDF-document/.NET/Flattening-form-fields-in-an-existing-PDF-document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;           
+//Flatten the form fields.
+loadedForm.FlattenFields();
+
+//Save the document.
+loadedDocument.Save("Output.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load a PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;           
+//Flatten the form fields.
+loadedForm.FlattenFields();
+
+//Save the document.
+loadedDocument.Save("Output.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+'Get the loaded form.
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+'Flatten the form fields.
+loadedForm.FlattenFields()
+
+'Save and close the modified document.
+loadedDocument.Save("Output.pdf")
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Flattening-form-fields-in-an-existing-PDF-document).
+
+### Marking form fields as Read-Only
+
+To prevent the user from changing the form field content, you can also use [Readonly](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_ReadOnly) property.
+
+The below code snippet illustrates how to set the [ReadOnly](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_ReadOnly) property to a new PDF document.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Set-readonly-property-to-a-new-PDF-document/.NET/Set-readonly-property-to-a-new-PDF-document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new page to PDF document.
+PdfPage page = document.Pages.Add();
+//Create the form.
+PdfForm form = document.Form;
+//Set the form as read only.
+form.ReadOnly = true;
+
+//Create a text box field and add the properties.
+PdfTextBoxField textBoxField = new PdfTextBoxField(page, "FirstName");
+textBoxField.Bounds = new RectangleF(0, 0, 100, 20);
+textBoxField.ToolTip = "First Name";
+textBoxField.Text = "john";
+//Add the form field to the document.
+document.Form.Fields.Add(textBoxField);
+
+//Save the document.
+document.Save("Form.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new page to PDF document.
+PdfPage page = document.Pages.Add();
+//Create the form.
+PdfForm form = document.Form;
+//Set the form as read only.
+form.ReadOnly = true;
+
+//Create a text box field and add the properties.
+PdfTextBoxField textBoxField = new PdfTextBoxField(page, "FirstName");
+textBoxField.Bounds = new RectangleF(0, 0, 100, 20);
+textBoxField.ToolTip = "First Name";
+textBoxField.Text = "john";
+//Add the form field to the document.
+document.Form.Fields.Add(textBoxField);
+
+//Save the document.
+document.Save("Form.pdf");
+//close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+'Load the PDF document.
+Dim document As New PdfDocument()
+'Add a new page to PDF document.
+Dim page As PdfPage = document.Pages.Add()
+'Create the form.
+Dim form As PdfForm = document.Form
+'Set the form as read only.
+form.ReadOnly = True
+
+'Create a Text box field and add the properties.
+Dim textBoxField As New PdfTextBoxField(page, "FirstName")
+textBoxField.Bounds = New RectangleF(0, 0, 100, 20)
+textBoxField.ToolTip = "First Name"
+textBoxField.Text = "john"
+'Add the form field to the document.
+document.Form.Fields.Add(textBoxField)
+
+'Save the document.
+document.Save("Form.pdf")
+'close the document.
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Set-readonly-property-to-a-new-PDF-document).
+
+The below code snippet illustrates how to set the [ReadOnly](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_ReadOnly) property to an existing PDF document.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Set-the-ReadOnly-property-to-an-existing-PDF-document/.NET/Set-the-ReadOnly-property-to-an-existing-PDF-document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+//Set the form as read only.
+loadedForm.ReadOnly = true;
+
+//Save the document.
+loadedDocument.Save("flatten.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+//Set the form as read only.
+loadedForm.ReadOnly = true;
+
+//Save the document.
+loadedDocument.Save("Sample.pdf");
+//close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+'Get the loaded form.
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+'Set the form as read only.
+loadedForm.ReadOnly = True
+
+'Save the document.
+loadedDocument.Save("Sample.pdf")
+'close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Set-the-ReadOnly-property-to-an-existing-PDF-document).
+
+N> Flattening and adding Read-only properties can be done to the entire form or an individual form field.
+
+## Importing form fields
+### Importing FDF file to PDF
+
+FDF stands for Forms Data Format. FDF is a file format for representing form data and annotations that are contained in a PDF form. You can import the FDF file to PDF using [ImportDataFDF](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ImportDataFDF_System_Byte___) method in [PdfLoadedForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html) class.
+
+The below code illustrates how to import FDF file to PDF.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Importing-FDF-file-to-PDF-document/.NET/Importing-FDF-file-to-PDF-document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Get stream from an existing PDF document.
+FileStream fdfStream = new FileStream("ImportFDF.fdf", FileMode.Open, FileAccess.Read);
+//Import the FDF stream.
+loadedDocument.Form.ImportDataFDF(fdfStream, true);
+//Save the document.
+loadedDocument.Save("flatten.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load an existing document.  
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Load the existing form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+//Load the FDF file.
+FileStream stream = new FileStream("ImportFDF.fdf", FileMode.Open);
+//Import the FDF stream.
+loadedForm.ImportDataFDF(stream, true);
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+'Load the existing form.
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+'Load the FDF file.
+Dim stream As New FileStream("ImportFDF.fdf", FileMode.Open)
+'Import the FDF stream.
+loadedForm.ImportDataFDF(stream, True)
+'Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+ 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Importing-FDF-file-to-PDF-document).
+
+## Exporting form fields
+### Export PDF file to FDF
+
+To export the FDF file from PDF document, you can use [ExportData](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ExportData_System_IO_Stream_Syncfusion_Pdf_Parsing_DataFormat_System_String_) method in [PdfLoadedForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html) class.
+
+The below code illustrates how to export FDF file from PDF document.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Export-FDF-file-from-PDF-document/.NET/Export-FDF-file-from-PDF-document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Load an existing form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+//Load the FDF file.
+FileStream stream = new FileStream("Export.fdf", FileMode.Create, FileAccess.ReadWrite);
+//Export the existing PDF document to FDF file.
+loadedForm.ExportData(stream, DataFormat.Fdf, "SourceForm.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
+//Load an existing document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Load an existing form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+//Export the existing PDF document to FDF file.
+loadedForm.ExportData("Export.fdf", DataFormat.Fdf, "SourceForm.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+'Load an existing form
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+'Export the existing PDF document to FDF file
+loadedForm.ExportData("Export.fdf", DataFormat.Fdf, "SourceForm.pdf")
+'Close the document
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Export-FDF-file-from-PDF-document).
+
+### Export value for check box field 
+
+You can set the export value of the check box field in PDF forms using [PdfCheckBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfCheckBoxField.html) class.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Export_checkbox_values/.NET/Export_checkbox_values/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument(); 
+//Add a new page to the PDF document. 
+PdfPage page = document.Pages.Add(); 
+
+//Create the form. 
+PdfForm form = document.Form; 
+
+//Enable the field auto naming.  
+form.FieldAutoNaming = false;  
+
+//Set default appearance as false. 
+document.Form.SetDefaultAppearance(false); 
+
+// Create First checkbox field 
+PdfCheckBoxField checkBoxField1 = new PdfCheckBoxField(page, "CheckBox"); 
+checkBoxField1.Bounds = new RectangleF(10, 150, 50, 20); 
+checkBoxField1.BorderColor = Color.Red; 
+checkBoxField1.BorderWidth = 3; 
+checkBoxField1.BackColor = Color.Yellow; 
+
+//Set the Export value 
+checkBoxField1.ExportValue = "Value"; 
+checkBoxField1.Checked = true; 
+
+// Add to form 
+form.Fields.Add(checkBoxField1); 
+
+// Create Second checkbox field 
+PdfCheckBoxField checkBoxField2 = new PdfCheckBoxField(page, "CheckBox"); 
+checkBoxField2.Bounds = new RectangleF(10, 250, 50, 20); 
+checkBoxField2.BorderColor = Color.Green; 
+checkBoxField2.BorderWidth = 2; 
+checkBoxField2.BackColor = Color.YellowGreen; 
+
+// Add to form 
+form.Fields.Add(checkBoxField2); 
+
+//Save the document.
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument(); 
+//Add a new page to the PDF document. 
+PdfPage page = document.Pages.Add(); 
+
+//Create the form. 
+PdfForm form = document.Form; 
+
+//Enable the field auto naming.  
+form.FieldAutoNaming = false; 
+
+//Set default appearance as false. 
+document.Form.SetDefaultAppearance(false); 
+
+// Create First checkbox field 
+PdfCheckBoxField checkBoxField1 = new PdfCheckBoxField(page, "CheckBox"); 
+checkBoxField1.Bounds = new RectangleF(10, 150, 50, 20); 
+checkBoxField1.BorderColor = Color.Red; 
+checkBoxField1.BorderWidth = 3; 
+checkBoxField1.BackColor = Color.Yellow; 
+
+//Set the Export value 
+checkBoxField1.ExportValue = "Value"; 
+checkBoxField1.Checked = true; 
+
+// Add to form 
+form.Fields.Add(checkBoxField1);  
+
+// Create Second checkbox field 
+PdfCheckBoxField checkBoxField2 = new PdfCheckBoxField(page, "CheckBox"); 
+checkBoxField2.Bounds = new RectangleF(10, 250, 50, 20); 
+checkBoxField2.BorderColor = Color.Green; 
+checkBoxField2.BorderWidth = 2; 
+checkBoxField2.BackColor = Color.YellowGreen; 
+
+// Add to form 
+form.Fields.Add(checkBoxField2); 
+
+//Save the document. 
+document.Save("Output.pdf"); 
+//Close the document. 
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+'Load the PDF document.
+Dim document As New PdfDocument() 
+'Add a new page to the PDF document 
+Dim page As PdfPage = document.Pages.Add() 
+
+'Create the form 
+Dim form As PdfForm = document.Form 
+
+'Enable the field auto naming  
+form.FieldAutoNaming = False 
+
+'Set default appearance as false. 
+document.Form.SetDefaultAppearance(False) 
+
+' Create First checkbox field  
+Dim checkBoxField1 As New PdfCheckBoxField(page, "CheckBox") 
+checkBoxField1.Bounds = New RectangleF(10, 150, 50, 20) 
+checkBoxField1.BorderColor = Color.Red 
+checkBoxField1.BorderWidth = 3 
+checkBoxField1.BackColor = Color.Yellow 
+checkBoxField1.ExportValue = "Value" 
+checkBoxField1.Checked = True 
+'Add to form
+form.Fields.Add(checkBoxField1) 
+
+' Create Second checkbox field  
+Dim checkBoxField2 As New PdfCheckBoxField(page, "CheckBox") 
+checkBoxField2.Bounds = New RectangleF(10, 250, 50, 20) 
+checkBoxField2.BorderColor = Color.Green 
+checkBoxField2.BorderWidth = 2 
+checkBoxField2.BackColor = Color.YellowGreen 
+'Add to form
+form.Fields.Add(checkBoxField2) 
+
+'Save the document 
+document.Save("Output.pdf") 
+'Close the document 
+document.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Export_checkbox_values/.NET).
 
 ## Unified radio button selection
 
@@ -2716,6 +4517,9 @@ The following code example illustrates how to enable or disable unison functiona
 {% tabs %}  
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document 
 PdfDocument document = new PdfDocument(); 
@@ -2751,16 +4555,17 @@ reportFrequencyRadioList.Items.Add(monthlyItem);
 // Add the radio button list field to the document's form fields 
 document.Form.Fields.Add(reportFrequencyRadioList); 
 
-//Save the document into stream 
-MemoryStream stream = new MemoryStream(); 
-document.Save(stream); 
-stream.Position = 0; 
-//Closes the document 
+//Save the document.
+document.Save("Output.pdf");
+//Close the document.
 document.Close(true); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document 
 PdfDocument document = new PdfDocument(); 
@@ -2805,7 +4610,10 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Create a new PDF document  
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+'Load the PDF document.
 Dim document As New PdfDocument() 
 'Add a new page to the PDF document 
 Dim page As PdfPage = document.Pages.Add() 
@@ -2888,9 +4696,12 @@ The following code snippet explains how to set appearance to the PDF form fields
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Set-appearance-to-the-PDF-form-fields/.NET/Set-appearance-to-the-PDF-form-fields/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the loaded form.
 PdfLoadedForm loadedForm = loadedDocument.Form;
 //Set the default appearance.
@@ -2900,9 +4711,8 @@ loadedForm.SetDefaultAppearance(false);
 PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
 loadedTextBoxField.Text ="text";
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("flatten.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -2910,8 +4720,12 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the loaded form.
 PdfLoadedForm loadedForm = loadedDocument.Form;
 //Set the default appearance.
@@ -2930,8 +4744,12 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
 'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Get the loaded form.
 Dim loadedForm As PdfLoadedForm = loadedDocument.Form
 'Set the default appearance.
@@ -2986,6 +4804,9 @@ The following code snippet explains how to set the visibility of form fields in 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Creates a new page of the document.
@@ -3002,10 +4823,8 @@ firstNameTextBox.Visibility = PdfFormFieldVisibility.Visible;
 page.Graphics.DrawString("First Name", font, PdfBrushes.Black, 10, 55);
 //Add the textbox in document.
 document.Form.Fields.Add(firstNameTextBox);
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document as stream.
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
@@ -3013,6 +4832,9 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Creates a new page of the document.
@@ -3029,10 +4851,8 @@ firstNameTextBox.Visibility = PdfFormFieldVisibility.Visible;
 page.Graphics.DrawString("First Name", font, PdfBrushes.Black, 10, 55);
 //Add the textbox in document.
 document.Form.Fields.Add(firstNameTextBox);
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document as stream.
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
@@ -3040,7 +4860,10 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Create a new PDF document.
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+'Load the PDF document.
 Dim document As New PdfDocument()
 'Creates a new page and adds it as the last page of the document.
 Dim page As PdfPage = document.Pages.Add()
@@ -3056,10 +4879,9 @@ firstNameTextBox.Visibility = PdfFormFieldVisibility.Visible
 page.Graphics.DrawString("First Name", font, PdfBrushes.Black, 10, 55)
 'Add the textbox in document.
 document.Form.Fields.Add(firstNameTextBox)
-'Creating the stream object.
-Dim stream As New MemoryStream()
-'Save the document as stream.
-document.Save(stream)
+
+'Save the document.
+document.Save("Output.pdf")
 'Close the document.
 document.Close(True)
 
@@ -3068,173 +4890,6 @@ document.Close(True)
 {% endtabs %} 
 
 You can download a complete working sample from GitHub.
-
-## Modifying the existing form field in PDF document 
-
-You can modify an existing form field by getting the field from the [PdfFormFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFormFieldCollection.html). You can retrieve a field from the field collection by index or by field name. 
-
-The following code snippet explains how to modify an existing form field in a PDF document.
-
-{% tabs %}  
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Modify-the-existing-form-field-in-PDF-document/.NET/Modify-the-existing-form-field-in-PDF-document/Program.cs" %}
-
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-
-//Get the loaded form field and modify the properties.
-PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
-RectangleF newBounds = new RectangleF(100, 100, 150, 50);
-loadedTextBoxField.Bounds = newBounds;
-loadedTextBoxField.SpellCheck = true;
-loadedTextBoxField.Text = "New text of the field.";
-loadedTextBoxField.Password = false;
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-
-//Get the loaded form field and modify the properties.
-PdfLoadedTextBoxField loadedTextBoxField= loadedForm.Fields[0] as PdfLoadedTextBoxField;
-RectangleF newBounds = new RectangleF(100, 100, 150, 50);
-loadedTextBoxField.Bounds = newBounds;
-loadedTextBoxField.SpellCheck = true;
-loadedTextBoxField.Text = "New text of the field.";
-loadedTextBoxField.Password = false;
-
-//Save the document.
-loadedDocument.Save("sample.pdf");
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Get the loaded form.
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-
-'Get the loaded form field and Modify the properties.
-Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(loadedForm.Fields(0), PdfLoadedTextBoxField)
-Dim newBounds As New RectangleF(100, 100, 150, 50)
-loadedTextBoxField.Bounds = newBounds
-loadedTextBoxField.SpellCheck = True
-loadedTextBoxField.Text = "New text of the field."
-loadedTextBoxField.Password = False
-
-'Save the document.
-loadedDocument.Save("sample.pdf")
-'Close the document.
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Modify-the-existing-form-field-in-PDF-document).
-
-## Retrieving/Modifying the fore and back color of an existing form fields
-
-You can retrieve/modify the fore and background color of existing form fields in a PDF document by using [ForeColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_ForeColor) and [BackColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_BackColor) properties of the respective form fields. The following code snippet illustrate this. 
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Modifying-fore-and-backcolor-of-existing-form-fields/.NET/Modifying-fore-and-backcolor-of-existing-form-fields/Program.cs" %}
-
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-
-//Get the loaded form field.
-PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
-//Get fore color of the field.
-PdfColor foreColor = loadedTextBoxField.ForeColor;
-//Set the fore color.
-loadedTextBoxField.ForeColor = new PdfColor(Color.Red);
-//Get background color of the field.
-PdfColor backColor = loadedTextBoxField.BackColor;
-//Set the background color.
-loadedTextBoxField.BackColor = new PdfColor(Color.Green);
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);         
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-
-//Get the loaded form field.
-PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
-//Get fore color of the field.
-PdfColor foreColor = loadedTextBoxField.ForeColor;
-//Set the fore color.
-loadedTextBoxField.ForeColor = new PdfColor(Color.Red);
-//Get background color of the field.
-PdfColor backColor = loadedTextBoxField.BackColor;
-//Set the background color.
-loadedTextBoxField.BackColor = new PdfColor(Color.Green);
-
-//Save the document.
-loadedDocument.Save("Form.pdf");
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Get the loaded form
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-
-'Get the loaded form field
-Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(loadedForm.Fields(0), PdfLoadedTextBoxField)
-'Get fore color of the field
-Dim foreColor As PdfColor = loadedTextBoxField.ForeColor
-'Set the fore color
-loadedTextBoxField.ForeColor = New PdfColor(Color.Red)
-'Get background color of the field
-Dim backColor As PdfColor = loadedTextBoxField.BackColor
-'Set the background color
-loadedTextBoxField.BackColor = New PdfColor(Color.Green)
-
-'Save the document
-loadedDocument.Save("Form.pdf")
-'Close the document
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Modifying-fore-and-backcolor-of-existing-form-fields).
 
 ## Customize indicator colors in PDF checkboxes and radio buttons
 
@@ -3246,11 +4901,12 @@ The following code example demonstrates how to modify these indicator colors pro
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Customize-indicator-colors/.NET/Customize-indicator-colors/Program.cs" %}
 
-// Open the input PDF file stream.
-using (FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
-{
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Interactive;
+    using Syncfusion.Pdf.Parsing;
+
     // Load the PDF document from the input stream.
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileStream);
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
     // Access the existing form fields in the PDF.
     PdfLoadedForm form = loadedDocument.Form;
@@ -3274,19 +4930,19 @@ using (FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAc
     }
     // Disable the default appearance to allow custom rendering of form fields.
     form.SetDefaultAppearance(false);
-    // Create the output file stream.
-    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        // Save the modified PDF document to the new file stream.
-        loadedDocument.Save(outputFileStream);
-    }
+    
+    // Save the modified PDF document
+    loadedDocument.Save("Output.pdf");
     // Close the PDF document.
     loadedDocument.Close(true);
-}
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 // Load the PDF document from the input PDF file.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -3323,7 +4979,11 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Load the PDF document from the input PDF file.
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 
 ' Access the form fields in the loaded PDF document.
@@ -3357,220 +5017,6 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Customize-indicator-colors/.NET).
 
-## Retrieving the widget annotation in PDF document
-
-You can retrieve an existing widget annotation in a PDF document by using the [PdfLoadedWidgetAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedWidgetAnnotation.html) class.
-
-The following code snippet demonstrates how to retrieving an existing widget annotation in a PDF document.
-
-{% tabs %}  
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-//Load the PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-// Loop through each page in the loaded PDF document.
-foreach (PdfLoadedPage page in loadedDocument.Pages)
-{
-    // Initialize the widget count to zero.
-    int widgetCount = 0;
-    // Loop through each annotation on the current page.
-    foreach (PdfLoadedAnnotation annot in page.Annotations)
-    {
-        // Check if the annotation is a widget annotation.
-        if (annot is PdfLoadedWidgetAnnotation)
-        {
-            // Cast the annotation to a PdfLoadedWidgetAnnotation type.
-            PdfLoadedWidgetAnnotation widget = annot as PdfLoadedWidgetAnnotation;
-            // Retrieve the bounds of the widget annotation.
-            RectangleF bounds = widget.Bounds;
-            // Display the index and bounds value of the widget annotation.
-            Console.WriteLine("Index: {0}, Bounds Value: {1}", widgetCount, bounds);
-            // Increment the widget count.
-            widgetCount++;
-        }
-    }
-    // Display the total number of widget annotations.
-    Console.WriteLine("Total number of widgets: {0}", widgetCount);
-}
-
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-// Loop through each page in the loaded PDF document.
-foreach (PdfLoadedPage page in loadedDocument.Pages)
-{
-    // Initialize the widget count to zero.
-    int widgetCount = 0;
-    // Loop through each annotation on the current page.
-    foreach (PdfLoadedAnnotation annot in page.Annotations)
-    {
-        // Check if the annotation is a widget annotation.
-        if (annot is PdfLoadedWidgetAnnotation)
-        {
-            // Cast the annotation to a PdfLoadedWidgetAnnotation type.
-            PdfLoadedWidgetAnnotation widget = annot as PdfLoadedWidgetAnnotation;
-            // Retrieve the bounds of the widget annotation.
-            RectangleF bounds = widget.Bounds;
-            // Display the index and bounds value of the widget annotation.
-            Console.WriteLine("Index: {0}, Bounds Value: {1}", widgetCount, bounds);
-            // Increment the widget count.
-            widgetCount++;
-        }
-    }
-    // Display the total number of widget annotations.
-    Console.WriteLine("Total number of widgets: {0}", widgetCount);
-}
-
-//Close the document.
-loadedDocument.Close(true);
- 
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-' Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
-
-' Loop through each page in the loaded PDF document.
-For Each page As PdfLoadedPage In loadedDocument.Pages
-    ' Initialize the widget count to zero.
-    Dim widgetCount As Integer = 0
-    ' Loop through each annotation on the current page.
-    For Each annot As PdfLoadedAnnotation In page.Annotations
-        ' Check if the annotation is a widget annotation.
-        If TypeOf annot Is PdfLoadedWidgetAnnotation Then
-            ' Cast the annotation to a PdfLoadedWidgetAnnotation type.
-            Dim widget As PdfLoadedWidgetAnnotation = CType(annot, PdfLoadedWidgetAnnotation)
-            ' Retrieve the bounds of the widget annotation.
-            Dim bounds As RectangleF = widget.Bounds
-            ' Display the index and bounds value of the widget annotation.
-            Console.WriteLine("Index: {0}, Bounds Value: {1}", widgetCount, bounds)
-            ' Increment the widget count.
-            widgetCount += 1
-        End If
-    Next
-    ' Display the total number of widget annotations.
-    Console.WriteLine("Total number of widgets: {0}", widgetCount)
-Next
-
-' Close the document.
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Get-widget-annotation-in-PDF/.NET).
-
-## Retrieving Custom Values from PDF Form Fields 
-
-Essential&reg; PDF supports retrieving custom values from form fields using the [TryGetValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_TryGetValue_System_String_System_Object__) method available in the PdfField class. This method enables developers to safely access custom properties embedded within a PDF form field without throwing exceptions if the specified key is missing. 
-
-Refer to the code snippet below to retrieve a custom value from a form field using the TryGetValue method.
-
-{% tabs %}  
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-// Load the PDF document using a file stream 
-FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read); 
- PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream); 
-
-//Gets the first page of the document 
- PdfField field = loadedDocument.Form.Fields[0] as PdfField; 
-
-// Get the custom value from the annotation 
- object values; 
- bool foundValue = field.TryGetValue("T", out values); 
-
-// Check the values 
- if (foundValue && values is List<string> stringValues) 
- { 
-     foreach (string value in stringValues) 
-     { 
-        // Print the custom value to the console 
-         Console.WriteLine($"Found value: {value}"); 
-     } 
- } 
- else 
- { 
-     Console.WriteLine("not found "); 
- } 
-// Close the document and release resources 
-loadedDocument.Close(true); 
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-// Load the PDF document using a file stream 
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"); 
-
-//Gets the first page of the document 
- PdfField field = loadedDocument.Form.Fields[0] as PdfField; 
-
-// Get the custom value from the annotation 
- object values; 
- bool foundValue = field.TryGetValue("T", out values); 
-
-// Check the values 
- if (foundValue && values is List<string> stringValues) 
- { 
-     foreach (string value in stringValues) 
-     { 
-
-        // Print the custom value to the console 
-         Console.WriteLine($"Found value: {value}"); 
-     } 
- } 
- else 
- { 
-     Console.WriteLine("not found "); 
- } 
-// Close the document and release resources 
-loadedDocument.Close(true); 
- 
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-' Load the PDF document
-Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
-
-' Get the first form field from the document
-Dim field As PdfField = TryCast(loadedDocument.Form.Fields(0), PdfField)
-
-' Try to get the custom value "T" from the field
-Dim values As Object = Nothing
-Dim foundValue As Boolean = field.TryGetValue("T", values)
-
-' Check and print the values if found
-If foundValue AndAlso TypeOf values Is List(Of String) Then
-    Dim stringValues As List(Of String) = CType(values, List(Of String))
-    For Each value As String In stringValues
-        ' Print the custom value to the console
-        Console.WriteLine($"Found value: {value}")
-    Next
-Else
-    Console.WriteLine("Value not found.")
-End If
-' Close the document and release resources
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-You can download a complete working sample from GitHub.
-
 ## Auto resizing text box field text
 
 The Essential<sup>&reg;</sup> PDF provides support to automatically resize the text of text box field based on the field width and height. You can auto resize the text box text by using the [AutoResizeText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_AutoResizeText) property available in [PdfLoadedTextBox](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html) instance.
@@ -3581,9 +5027,12 @@ The following code illustrates how to set [AutoResizeText](https://help.syncfusi
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Auto-resize-the-text-of-textboxfield-in-a-PDF/.NET/Auto-resize-the-text-of-textboxfield-in-a-PDF/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the loaded form.
 PdfLoadedForm loadedForm = loadedDocument.Form;
 
@@ -3594,15 +5043,18 @@ loadedField.AutoResizeText = true;
 //Flatten the form.
 form.Flatten = true;
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("flatten.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing document.
 PdfLoadedDocument doc = new PdfLoadedDocument("SourceForm.pdf");
@@ -3625,7 +5077,11 @@ doc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load an existing document.
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
 Dim doc As PdfLoadedDocument = New PdfLoadedDocument("SourceForm.pdf")
 Dim form As PdfLoadedForm = doc.Form
 
@@ -3647,1108 +5103,137 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Auto-resize-the-text-of-textboxfield-in-a-PDF).
 
+## Preserve form fields when creating a PDF Template from an existing page
 
-## Fill the XFA form fields along with Acroform in a same API
-
-The static XFA document contains both the XFA and Acroform.
- 
-The Essential<sup>&reg;</sup> PDF supports filling both the XFA and Acroform in a same instance (Fills the XFA form via Acroform instance) by enabling the [EnableXfaFormFill](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_EnableXfaFormFill) property available in the [PdfLoadedForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html) class.
-
-The following code snippet illustrates how to fill XFA forms via Acroform API.
-
-{% tabs %}  
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-the-XFA-forms-fields-via-acroform-API/.NET/Fill-the-XFA-forms-fields-via-acroform-API/Program.cs" %}
-
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the existing Acroform.
-PdfLoadedForm acroform = loadedDocument.Form;
-//Enable XFA form filling.
-acroform.EnableXfaFormFill = true;
-
-//Get the existing text box field.
-PdfLoadedTextBoxField firstName = acroform.Fields["FirstName"] as PdfLoadedTextBoxField;
-//Set text.
-firstName.Text = "Simon";
-PdfLoadedTextBoxField lastName = acroform.Fields["LastName"] as PdfLoadedTextBoxField;
-//Set text.
-lastName.Text = "Bistro";
-
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document as stream.
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the existing XFA PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Form.pdf");
-//Get the existing Acroform.
-PdfLoadedForm acroform = loadedDocument.Form;
-//Enable XFA form filling.
-acroform.EnableXfaFormFill = true;
-
-//Get the existing text box field.
-PdfLoadedTextBoxField firstName = acroform.Fields["FirstName"] as PdfLoadedTextBoxField;
-//Set text.
-firstName.Text = "Simon";
-PdfLoadedTextBoxField lastName = acroform.Fields["LastName"] as PdfLoadedTextBoxField;
-//Set text.
-lastName.Text = "Bistro";
-
-//Save the document.
-loadedDocument.Save("Output.pdf");
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the existing XFA PDF document.
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Form.pdf")
-'Get the existing Acroform.
-Dim acroform As PdfLoadedForm = loadedDocument.Form
-'Enable XFA form filling.
-acroform.EnableXfaFormFill = True
-
-'Get the existing text box field.
-Dim firstName As PdfLoadedTextBoxField = TryCast(acroform.Fields("FirstName"), PdfLoadedTextBoxField)
-'Set text.
-firstName.Text = "Simon"
-Dim lastName As PdfLoadedTextBoxField = TryCast(acroform.Fields("LastName"), PdfLoadedTextBoxField)
-'Set text.
-lastName.Text = "Bistro"
-
-'Save the document.
-loadedDocument.Save("Output.pdf")
-'Close the document.
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Fill-the-XFA-forms-fields-via-acroform-API).
-
-## Removing editing capability of form fields
-
-The form field editing or filling capabilities can be removed by either flattening the PDF document or by marking the form or field as read only.
-
-### Flattening form fields in a PDF
-
-Essential<sup>&reg;</sup> PDF provides support to [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_Flatten) a form field by removing the existing form field and replacing it with graphical objects that would resemble the form field and cannot be edited.
-
-Please refer the sample for flattening the form fields in new PDF document.
-
-{% tabs %}  
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Removing-editing-capability-of-form-fields/.NET/Removing-editing-capability-of-form-fields/Program.cs" %}
-
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Add a new page to PDF document.
-PdfPage page = document.Pages.Add();
-
-//Create a Text box field and add the properties.
-PdfTextBoxField textBoxField = new PdfTextBoxField(page, "FirstName");
-textBoxField.Bounds = new RectangleF(0, 0, 100, 20);
-textBoxField.ToolTip = "First Name";
-//Flatten the whole form field. 
-document.Form.Flatten = true;
-//Add the form field to the document.
-document.Form.Fields.Add(textBoxField);
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Close the document.
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Add a new page to PDF document.
-PdfPage page = document.Pages.Add();
-
-//Create a Text box field and add the properties.
-PdfTextBoxField textBoxField = new PdfTextBoxField(page, "FirstName");
-textBoxField.Bounds = new RectangleF(0, 0, 100, 20);
-textBoxField.ToolTip = "First Name";
-//Flatten the whole form field. 
-document.Form.Flatten = true;
-//Add the form field to the document.
-document.Form.Fields.Add(textBoxField);
-
-//Save the document.
-document.Save("Form.pdf");
-//Close the document.
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Create a new PDF document.
-Dim document As New PdfDocument()
-'Add a new page to PDF document.
-Dim page As PdfPage = document.Pages.Add()
-
-'Create a Text box field and add the properties.
-Dim textBoxField As New PdfTextBoxField(page, "FirstName")
-textBoxField.Bounds = New RectangleF(0, 0, 100, 20)
-textBoxField.ToolTip = "First Name"
-'Flatten the whole form field.
-document.Form.Flatten = True
-'Add the form field to the document.
-document.Form.Fields.Add(textBoxField)
-
-'Save the PDF document.
-document.Save("Form.pdf")
-'Close the document.
-document.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Removing-editing-capability-of-form-fields).
-
-Please refer the sample for flattening the form fields in existing PDF document.
-
-{% tabs %}  
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Flattening-form-fields-in-an-existing-PDF-document/.NET/Flattening-form-fields-in-an-existing-PDF-document/Program.cs" %}
-
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-PdfLoadedFormFieldCollection fields = loadedForm.Fields;
-//Get the loaded text box field.
-PdfLoadedTextBoxField loadedTextBoxField = fields[0] as PdfLoadedTextBoxField;
-loadedTextBoxField.Text = "Text";
-//Flatten the whole form.
-loadedForm.Flatten = true;
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-//Get the loaded form.
-PdfLoadedForm  = loadedDocument.Form;
-PdfLoadedFormFieldCollection fields = loadedForm.Fields;
-//Get the loaded text box field.
-PdfLoadedTextBoxField loadedTextBoxField = fields[0] as PdfLoadedTextBoxField;
-loadedTextBoxField.Text = "Text";
-//Flatten the whole form.
-loadedForm.Flatten = true;
-
-//Save and close the modified document.
-loadedDocument.Save("Output.pdf");
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Get the loaded form.
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-Dim fields As PdfLoadedFormFieldCollection = loadedForm.Fields
-'Get the loaded text box field.
-Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(fields(0), PdfLoadedTextBoxField)
-loadedTextBoxField.Text = "Text"
-'Flatten the whole form.
-loadedForm.Flatten = True
-
-'Save and close the modified document.
-loadedDocument.Save("Output.pdf")
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Flattening-form-fields-in-an-existing-PDF-document).
-
-N> The form fields will be flattened only after the PDF document is saved. 
-
-PDF provides support to Flatten a form fields before saving the PDF document using the [FlattenFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_FlattenFields).
+When you create a  [PdfTemplate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTemplate.html) from an existing page, interactive **AcroForm** fields (textbox, checkbox, etc.) are **not copied** to the template.  
+If you still need the visual appearance of those form fields in the final document, you can flatten the form using the [FlattenFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_FlattenFields) API. 
 
 Please refer the code sample to flatten the form fields before saving the PDF document.
 
-{% tabs %}  
+N>  Flattening permanently removes interactivity. The resulting PDF shows the form content exactly as it appears on screen, but users can no longer edit the fields.
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Flattening-form-fields-in-an-existing-PDF-document/.NET/Flattening-form-fields-in-an-existing-PDF-document/Program.cs" %}
+{% tabs %}
 
-//Load an existing PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;           
-//Flatten the form fields.
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Preserve-Formfields-in-the-Template-created-from-existing-PDF/Preserve-Formfields-in-the-Template-created-from-existing-PDF/Program.cs" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using System.IO;
+
+//Open the source PDF that contains form fields.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Form.pdf");
+
+//Flatten all form fields to make them part of the page graphics.
+PdfLoadedForm loadedForm = loadedDocument.Form;
 loadedForm.FlattenFields();
 
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);
+//Create a template from the first page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+PdfTemplate template = loadedPage.CreateTemplate();
 
+//Create the destination PDF (no page margins so the template fills it edge-to-edge).
+PdfDocument newDocument = new PdfDocument();
+newDocument.PageSettings.Margins.All = 0;
+PdfPage newPage = newDocument.Pages.Add();
+
+//Draw the template so it fills the entire new page.
+newPage.Graphics.DrawPdfTemplate(
+    template,
+    PointF.Empty,
+    new SizeF(newPage.Size.Width, newPage.Size.Height));
+
+//Save the result.
+newDocument.Save("Output.pdf");
+
+//Close documents.
+loadedDocument.Close(true);
+newDocument.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using System.IO;
 
-//Load a PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;           
-//Flatten the form fields.
+//Open the source PDF that contains form fields.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Form.pdf");
+
+//Flatten all form fields.
+PdfLoadedForm loadedForm = loadedDocument.Form;
 loadedForm.FlattenFields();
 
-//Save the document.
-loadedDocument.Save("Output.pdf");
-//Close the document.
-loadedDocument.Close(true);
+//Create a template from the first page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+PdfTemplate template = loadedPage.CreateTemplate();
 
+//Create the destination PDF.
+PdfDocument newDocument = new PdfDocument();
+newDocument.PageSettings.Margins.All = 0;
+PdfPage newPage = newDocument.Pages.Add();
+
+//Draw the template so it fills the entire new page.
+newPage.Graphics.DrawPdfTemplate(
+    template,
+    PointF.Empty,
+    new SizeF(newPage.Size.Width, newPage.Size.Height));
+
+//Save the result.
+newDocument.Save(@"Output.pdf");
+
+//Close documents.
+loadedDocument.Close(true);
+newDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+Imports System.Drawing
+Imports System.IO
 
-'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
-'Get the loaded form.
+'Open the source PDF that contains form fields.
+Dim loadedDocument As New PdfLoadedDocument("Form.pdf")
+
+'Flatten all form fields.
 Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-'Flatten the form fields.
 loadedForm.FlattenFields()
 
-'Save and close the modified document.
-loadedDocument.Save("Output.pdf")
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Flattening-form-fields-in-an-existing-PDF-document).
-
-### Marking form fields as Read-Only
-
-To prevent the user from changing the form field content, you can also use [Readonly](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_ReadOnly) property.
-
-The below code snippet illustrates how to set the [ReadOnly](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_ReadOnly) property to a new PDF document.
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Set-readonly-property-to-a-new-PDF-document/.NET/Set-readonly-property-to-a-new-PDF-document/Program.cs" %}
-
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Add a new page to PDF document.
-PdfPage page = document.Pages.Add();
-//Create the form.
-PdfForm form = document.Form;
-//Set the form as read only.
-form.ReadOnly = true;
-
-//Create a text box field and add the properties.
-PdfTextBoxField textBoxField = new PdfTextBoxField(page, "FirstName");
-textBoxField.Bounds = new RectangleF(0, 0, 100, 20);
-textBoxField.ToolTip = "First Name";
-textBoxField.Text = "john";
-//Add the form field to the document.
-document.Form.Fields.Add(textBoxField);
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Close the document.
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Add a new page to PDF document.
-PdfPage page = document.Pages.Add();
-//Create the form.
-PdfForm form = document.Form;
-//Set the form as read only.
-form.ReadOnly = true;
-
-//Create a text box field and add the properties.
-PdfTextBoxField textBoxField = new PdfTextBoxField(page, "FirstName");
-textBoxField.Bounds = new RectangleF(0, 0, 100, 20);
-textBoxField.ToolTip = "First Name";
-textBoxField.Text = "john";
-//Add the form field to the document.
-document.Form.Fields.Add(textBoxField);
-
-//Save the document.
-document.Save("Form.pdf");
-//close the document.
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Create a new PDF document.
-Dim document As New PdfDocument()
-'Add a new page to PDF document.
-Dim page As PdfPage = document.Pages.Add()
-'Create the form.
-Dim form As PdfForm = document.Form
-'Set the form as read only.
-form.ReadOnly = True
-
-'Create a Text box field and add the properties.
-Dim textBoxField As New PdfTextBoxField(page, "FirstName")
-textBoxField.Bounds = New RectangleF(0, 0, 100, 20)
-textBoxField.ToolTip = "First Name"
-textBoxField.Text = "john"
-'Add the form field to the document.
-document.Form.Fields.Add(textBoxField)
-
-'Save the document.
-document.Save("Form.pdf")
-'close the document.
-document.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Set-readonly-property-to-a-new-PDF-document).
-
-The below code snippet illustrates how to set the [ReadOnly](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_ReadOnly) property to an existing PDF document.
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Set-the-ReadOnly-property-to-an-existing-PDF-document/.NET/Set-the-ReadOnly-property-to-an-existing-PDF-document/Program.cs" %}
-
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-//Set the form as read only.
-loadedForm.ReadOnly = true;
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-//Set the form as read only.
-loadedForm.ReadOnly = true;
-
-//Save the document.
-loadedDocument.Save("Sample.pdf");
-//close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Get the loaded form.
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-'Set the form as read only.
-loadedForm.ReadOnly = True
-
-'Save the document.
-loadedDocument.Save("Sample.pdf")
-'close the document.
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Set-the-ReadOnly-property-to-an-existing-PDF-document).
-
-N> Flattening and adding Read-only properties can be done to the entire form or an individual form field.
-
-## Removing the form fields from existing PDF document
-
-You can remove the form fields from an existing PDF document using [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldCollection.html#Syncfusion_Pdf_Interactive_PdfFieldCollection_Remove_Syncfusion_Pdf_Interactive_PdfField_) or [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldCollection.html#Syncfusion_Pdf_Interactive_PdfFieldCollection_RemoveAt_System_Int32_) methods of [PdfFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldCollection.html) class.
-
-The below code illustrates how to remove the form fields from the existing PDF document.
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Remove-the-form-fields-form-the-existing-PDF-document/.NET/Remove-the-form-fields-form-the-existing-PDF-document/Program.cs" %}
-
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Load the page.
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-//Load the textbox field.
-PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
-//Remove the field.
-loadedForm.Fields.Remove(loadedTextBoxField);
-//Remove the field at index 0.
-loadedForm.Fields.RemoveAt(0);
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C#" %}
-
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-//Load the page.
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-//Load the textbox field.
-PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
-//Remove the field.
-loadedForm.Fields.Remove(loadedTextBoxField);
-//Remove the field at index 0.
-loadedForm.Fields.RemoveAt(0);
-
-//Save the document.
-loadedDocument.Save("Form.pdf");
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET" %}
-
-'Load the PDF document
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Load the page
+'Create a template from the first page.
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
-'Get the loaded form
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-'Load the textbox field
-Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(loadedForm.Fields(0), PdfLoadedTextBoxField)
-'Remove the field
-loadedForm.Fields.Remove(loadedTextBoxField)
-'Remove the field at index 0 
-loadedForm.Fields.RemoveAt(0);
+Dim template As PdfTemplate = loadedPage.CreateTemplate()
 
-'Save the document
-loadedDocument.Save("Form.pdf")
-'Close the document
+'Create the destination PDF.
+Dim newDocument As New PdfDocument()
+newDocument.PageSettings.Margins.All = 0
+Dim newPage As PdfPage = newDocument.Pages.Add()
+
+'Draw the template so it fills the entire new page.
+newPage.Graphics.DrawPdfTemplate(
+        template,
+        PointF.Empty,
+        New SizeF(newPage.Size.Width, newPage.Size.Height))
+
+'Save the result.
+newDocument.Save("Output.pdf")
+
+'Close documents.
 loadedDocument.Close(True)
-
+newDocument.Close(True)
+End Using
 {% endhighlight %}
 
-{% endtabs %}  
+{% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Remove-the-form-fields-form-the-existing-PDF-document).
-
-## Disable Auto Formatting
-
-When [DisableAutoFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_DisableAutoFormat) property is set to true, the form field will preserve the original input exactly as entered, offering greater control over data integrity.
-
-The following code example illustrates this.
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-// Load the existing PDF document from file stream with read-write access
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(new FileStream(@"Input.pdf", FileMode.Open, FileAccess.ReadWrite));
-
-// Access the form field named "email" from the PDF form
-PdfLoadedField field = loadedDocument.Form.Fields["email"] as PdfLoadedField;
-
-// Disable automatic formatting to prevent behaviors like JavaScript execution or auto-formatting of input
-loadedDocument.Form.DisableAutoFormat = true;
-
-// Check if the field is a text box and assign a plain string value
-if (field is PdfLoadedTextBoxField textBoxField)
-{
-    // Set the text box value to a raw email string without formatting
-    textBoxField.Text = "12345@gmail.com";
-}
-
-// Save the modified PDF document to a new file using a file stream
-using (FileStream outputStream = new FileStream(@"Output.pdf", FileMode.Create, FileAccess.Write))
-{
-    loadedDocument.Save(outputStream);
-}
-
-// Close and dispose the document to release resources
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C#" %}
-
-// Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(@"Input.pdf");
-
-// Access the form field named "email"
-PdfLoadedField field = loadedDocument.Form.Fields["email"] as PdfLoadedField;
-
-// Disable automatic formatting to prevent unwanted behaviors like JavaScript execution or auto-formatting of input
-loadedDocument.Form.DisableAutoFormat = true;
-
-// Check if the field is a text box and set its value
-if (field is PdfLoadedTextBoxField textBoxField)
-{
-    // Assign a plain string value to the text box field
-    textBoxField.Text = "12345@gmail.com";
-}
-
-// Save the modified PDF document to a new file
-loadedDocument.Save("Output.pdf");
-
-// Close and dispose the document to release resources
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET" %}
-
-' Load the existing PDF document
-Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
-
-' Access the form field named "email"
-Dim field As PdfLoadedField = TryCast(loadedDocument.Form.Fields("email"), PdfLoadedField)
-
-' Disable automatic formatting to prevent unwanted behaviors like JavaScript execution or auto-formatting
-loadedDocument.Form.DisableAutoFormat = True
-
-' Check if the field is a text box and set its value
-If TypeOf field Is PdfLoadedTextBoxField Then
-    Dim textBoxField As PdfLoadedTextBoxField = CType(field, PdfLoadedTextBoxField)
-    ' Assign a plain string value to the text box field
-    textBoxField.Text = "12345@gmail.com"
-End If
-
-' Save the modified PDF document to a new file
-loadedDocument.Save("Output.pdf")
-
-' Close and dispose the document to release resources
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Disable-Auto-Formatting-in-FormFields/.NET).
-
-## Importing form fields
-### Importing FDF file to PDF
-
-FDF stands for Forms Data Format. FDF is a file format for representing form data and annotations that are contained in a PDF form. You can import the FDF file to PDF using [ImportDataFDF](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ImportDataFDF_System_Byte___) method in [PdfLoadedForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html) class.
-
-The below code illustrates how to import FDF file to PDF.
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Importing-FDF-file-to-PDF-document/.NET/Importing-FDF-file-to-PDF-document/Program.cs" %}
-
-//Get stream from an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get stream from an existing PDF document.
-FileStream fdfStream = new FileStream("ImportFDF.fdf", FileMode.Open, FileAccess.Read);
-//Import the FDF stream.
-loadedDocument.Form.ImportDataFDF(fdfStream, true);
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load an existing document.  
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-//Load the existing form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-//Load the FDF file.
-FileStream stream = new FileStream("ImportFDF.fdf", FileMode.Open);
-//Import the FDF stream.
-loadedForm.ImportDataFDF(stream, true);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load an existing document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Load the existing form.
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-'Load the FDF file.
-Dim stream As New FileStream("ImportFDF.fdf", FileMode.Open)
-'Import the FDF stream.
-loadedForm.ImportDataFDF(stream, True)
-'Close the document.
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Auto-resize-the-text-of-textboxfield-in-a-PDF).
  
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Importing-FDF-file-to-PDF-document).
-
-## Exporting form fields
-### Export PDF file to FDF
-
-To export the FDF file from PDF document, you can use [ExportData](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ExportData_System_IO_Stream_Syncfusion_Pdf_Parsing_DataFormat_System_String_) method in [PdfLoadedForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html) class.
-
-The below code illustrates how to export FDF file from PDF document.
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Export-FDF-file-from-PDF-document/.NET/Export-FDF-file-from-PDF-document/Program.cs" %}
-
-//Get stream from an existing PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-//Load the PDF document from stream.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Load an existing form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-//Load the FDF file.
-FileStream stream = new FileStream("Export.fdf", FileMode.Create, FileAccess.ReadWrite);
-//Export the existing PDF document to FDF file.
-loadedForm.ExportData(stream, DataFormat.Fdf, "SourceForm.pdf");
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C#" %}
-
-//Load an existing document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-//Load an existing form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-//Export the existing PDF document to FDF file.
-loadedForm.ExportData("Export.fdf", DataFormat.Fdf, "SourceForm.pdf");
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET" %}
-
-'Load an existing document
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Load an existing form
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-'Export the existing PDF document to FDF file
-loadedForm.ExportData("Export.fdf", DataFormat.Fdf, "SourceForm.pdf")
-'Close the document
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Export-FDF-file-from-PDF-document).
-
-## Export value for check box field 
-
-You can set the export value of the check box field in PDF forms using [PdfCheckBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfCheckBoxField.html) class.
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-//Create a new PDF document 
-PdfDocument document = new PdfDocument(); 
-//Add a new page to the PDF document. 
-PdfPage page = document.Pages.Add(); 
-
-//Create the form. 
-PdfForm form = document.Form; 
-
-//Enable the field auto naming.  
-form.FieldAutoNaming = false;  
-
-//Set default appearance as false. 
-document.Form.SetDefaultAppearance(false); 
-
-// Create First checkbox field 
-PdfCheckBoxField checkBoxField1 = new PdfCheckBoxField(page, "CheckBox"); 
-checkBoxField1.Bounds = new RectangleF(10, 150, 50, 20); 
-checkBoxField1.BorderColor = Color.Red; 
-checkBoxField1.BorderWidth = 3; 
-checkBoxField1.BackColor = Color.Yellow; 
-
-//Set the Export value 
-checkBoxField1.ExportValue = "Value"; 
-checkBoxField1.Checked = true; 
-
-// Add to form 
-form.Fields.Add(checkBoxField1); 
-
-// Create Second checkbox field 
-PdfCheckBoxField checkBoxField2 = new PdfCheckBoxField(page, "CheckBox"); 
-checkBoxField2.Bounds = new RectangleF(10, 250, 50, 20); 
-checkBoxField2.BorderColor = Color.Green; 
-checkBoxField2.BorderWidth = 2; 
-checkBoxField2.BackColor = Color.YellowGreen; 
-
-// Add to form 
-form.Fields.Add(checkBoxField2); 
-
-//Save the document into stream 
-MemoryStream stream = new MemoryStream(); 
-document.Save(stream); 
-stream.Position = 0; 
-//Closes the document 
-document.Close(true); 
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Create a new PDF document 
-PdfDocument document = new PdfDocument(); 
-//Add a new page to the PDF document. 
-PdfPage page = document.Pages.Add(); 
-
-//Create the form. 
-PdfForm form = document.Form; 
-
-//Enable the field auto naming.  
-form.FieldAutoNaming = false; 
-
-//Set default appearance as false. 
-document.Form.SetDefaultAppearance(false); 
-
-// Create First checkbox field 
-PdfCheckBoxField checkBoxField1 = new PdfCheckBoxField(page, "CheckBox"); 
-checkBoxField1.Bounds = new RectangleF(10, 150, 50, 20); 
-checkBoxField1.BorderColor = Color.Red; 
-checkBoxField1.BorderWidth = 3; 
-checkBoxField1.BackColor = Color.Yellow; 
-
-//Set the Export value 
-checkBoxField1.ExportValue = "Value"; 
-checkBoxField1.Checked = true; 
-
-// Add to form 
-form.Fields.Add(checkBoxField1);  
-
-// Create Second checkbox field 
-PdfCheckBoxField checkBoxField2 = new PdfCheckBoxField(page, "CheckBox"); 
-checkBoxField2.Bounds = new RectangleF(10, 250, 50, 20); 
-checkBoxField2.BorderColor = Color.Green; 
-checkBoxField2.BorderWidth = 2; 
-checkBoxField2.BackColor = Color.YellowGreen; 
-
-// Add to form 
-form.Fields.Add(checkBoxField2); 
-
-//Save the document. 
-document.Save("Output.pdf"); 
-//Close the document. 
-document.Close(true); 
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-' Create a new PDF document  
-Dim document As New PdfDocument() 
-'Add a new page to the PDF document 
-Dim page As PdfPage = document.Pages.Add() 
-
-'Create the form 
-Dim form As PdfForm = document.Form 
-
-'Enable the field auto naming  
-form.FieldAutoNaming = False 
-
-'Set default appearance as false. 
-document.Form.SetDefaultAppearance(False) 
-
-' Create First checkbox field  
-Dim checkBoxField1 As New PdfCheckBoxField(page, "CheckBox") 
-checkBoxField1.Bounds = New RectangleF(10, 150, 50, 20) 
-checkBoxField1.BorderColor = Color.Red 
-checkBoxField1.BorderWidth = 3 
-checkBoxField1.BackColor = Color.Yellow 
-checkBoxField1.ExportValue = "Value" 
-checkBoxField1.Checked = True 
-'Add to form
-form.Fields.Add(checkBoxField1) 
-
-' Create Second checkbox field  
-Dim checkBoxField2 As New PdfCheckBoxField(page, "CheckBox") 
-checkBoxField2.Bounds = New RectangleF(10, 250, 50, 20) 
-checkBoxField2.BorderColor = Color.Green 
-checkBoxField2.BorderWidth = 2 
-checkBoxField2.BackColor = Color.YellowGreen 
-'Add to form
-form.Fields.Add(checkBoxField2) 
-
-'Save the document 
-document.Save("Output.pdf") 
-'Close the document 
-document.Close(True) 
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Export_checkbox_values/.NET).
-
-### Modify export value in check box item
-
-You can Modified the export value a check box field property of [PdfLoadedCheckBoxItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedCheckBoxItem.html) class.  
-
-Please refer to the code example below to set the check box item.
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Export_checkbox_values/.NET/Export_checkbox_values/Program.cs" %}
-
-//Load the PDF document. 
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read); 
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream); 
-
-//Get the loaded form. 
-PdfLoadedForm loadedForm = loadedDocument.Form; 
-
-//load the check box from field collection. 
-PdfLoadedCheckBoxField loadedCheckBoxField = loadedForm.Fields[0] as PdfLoadedCheckBoxField; 
-PdfLoadedCheckBoxItem pdfLoadedCheckBoxItem = loadedCheckBoxField.Items[0] as PdfLoadedCheckBoxItem; 
-
-//Set the Export value  
-pdfLoadedCheckBoxItem.ExportValue = "123"; 
-
-//Save the document into stream 
-MemoryStream stream = new MemoryStream(); 
-document.Save(stream); 
-stream.Position = 0; 
-//Closes the document 
-document.Close(true); 
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the PDF document. 
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"); 
-
-//Get the loaded form. 
-PdfLoadedForm loadedForm = loadedDocument.Form; 
-
-//load the check box from field collection. 
-PdfLoadedCheckBoxField loadedCheckBoxField = loadedForm.Fields[0] as PdfLoadedCheckBoxField; 
-//load the check box from field collection. 
-PdfLoadedCheckBoxField loadedCheckBoxField = loadedForm.Fields[0] as PdfLoadedCheckBoxField; 
-PdfLoadedCheckBoxItem pdfLoadedCheckBoxItem = loadedCheckBoxField.Items[0] as PdfLoadedCheckBoxItem; 
-
-//Set the Export value  
-pdfLoadedCheckBoxItem.ExportValue = "123"; 
-
-//Save the document. 
-loadedDocument.Save("Output.pdf"); 
-//Close the document. 
-loadedDocument.Close(true); 
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the PDF document. 
-Dim loadedDocument As New PdfLoadedDocument("Input.pdf") 
-
-'Get the loaded form. 
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form 
-
-'load the check box from field collection. 
-Dim loadedCheckBoxField As PdfLoadedCheckBoxField = TryCast(loadedForm.Fields(0), PdfLoadedCheckBoxField) 
-' Get the first item in the checkbox field 
-Dim pdfLoadedCheckBoxItem As PdfLoadedCheckBoxItem = TryCast(loadedCheckBoxField.Items(0), PdfLoadedCheckBoxItem) 
-' Set the Export value 
-pdfLoadedCheckBoxItem.ExportValue = "123" 
-
-'Save the document. 
-loadedDocument.Save("Output.pdf") 
-'Close the document. 
-loadedDocument.Close(True) 
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from GitHub.
-
-## Adding actions to form fields 
-
-Please refer to the [actions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-action#adding-an-action-to-the-form-field) section for more details.
-
-N> Essential<sup>&reg;</sup> PDF allows users to preserve the extended rights for form filling alone.
-
-## Get the pages of a form field in the PDF
-
-We need to iterate through all the pages to check and determine the page index of each field. To avoid using nested loops.
-
-The below code illustrates get the pages of a form fields.
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-// Use the 'using' statement to automatically dispose of the FileStream when done.
-using (FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
-{
-    // Load the PDF document from the stream.
-    PdfLoadedDocument document = new PdfLoadedDocument(docStream);
-
-    // Get all the form fields in the PDF.
-    PdfLoadedForm loadedForm = document.Form;
-    PdfLoadedFormFieldCollection fieldCollection = loadedForm.Fields;
-
-    // Create a dictionary to map each page object to its respective page number.
-    Dictionary<PdfPageBase, int> pageNumberMapping = new Dictionary<PdfPageBase, int>();
-
-    // Populate the pageNumberMapping dictionary with page objects and their corresponding page numbers.
-    for (int i = 0; i < document.Pages.Count; i++)
-    {
-        // Page numbers are 1-based, so we add 1 to the index.
-        pageNumberMapping[document.Pages[i]] = i + 1;
-    }
-
-    // Iterate through each form field and find its page number using the dictionary.
-    foreach (PdfLoadedField field in fieldCollection)
-    {
-        // Check if the field is associated with a page.
-        if (field.Page != null && pageNumberMapping.TryGetValue(field.Page, out int pageNumber))
-        {
-            // Output the field name and its associated page number.
-            Console.WriteLine($"{field.Name} - Page number: {pageNumber}");
-        }
-    }
-
-    // Close the PDF document.
-    document.Close(true);
-}
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-// Load the PDF document.
-PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
-
-// Get all the form fields in the PDF.
-PdfLoadedForm loadedForm = document.Form;
-PdfLoadedFormFieldCollection fieldCollection = loadedForm.Fields;
-
-// Create a dictionary to map each page object to its respective page number.
-Dictionary<PdfPageBase, int> pageNumberMapping = new Dictionary<PdfPageBase, int>();
-
-// Populate the pageNumberMapping dictionary with page objects and their corresponding page numbers.
-for (int i = 0; i < document.Pages.Count; i++)
-{
-    // Page numbers are 1-based, so we add 1 to the index.
-    pageNumberMapping[document.Pages[i]] = i + 1;
-}
-
-// Iterate through each form field and find its page number using the dictionary.
-foreach (PdfLoadedField field in fieldCollection)
-{
-    // Check if the field is associated with a page.
-    if (field.Page != null && pageNumberMapping.TryGetValue(field.Page, out int pageNumber))
-    {
-        // Output the field name and its associated page number.
-        Console.WriteLine($"{field.Name} - Page number: {pageNumber}");
-    }
-}
-
-// Close the PDF document.
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-' Load the PDF document.
-Dim document As New PdfLoadedDocument("Input.pdf")
-
-' Get all the form fields in the PDF.
-Dim loadedForm As PdfLoadedForm = document.Form
-Dim fieldCollection As PdfLoadedFormFieldCollection = loadedForm.Fields
-
-' Create a dictionary to map each page object to its respective page number.
-Dim pageNumberMapping As New Dictionary(Of PdfPageBase, Integer)()
-
-' Populate the pageNumberMapping dictionary with page objects and their corresponding page numbers.
-For i As Integer = 0 To document.Pages.Count - 1
-    ' Page numbers are 1-based, so we add 1 to the index.
-    pageNumberMapping(document.Pages(i)) = i + 1
-Next
-
-' Iterate through each form field and find its page number using the dictionary.
-For Each field As PdfLoadedField In fieldCollection
-    ' Check if the field is associated with a page.
-    If field.Page IsNot Nothing AndAlso pageNumberMapping.ContainsKey(field.Page) Then
-        ' Output the field name and its associated page number.
-        Console.WriteLine(String.Format("{0} - Page number: {1}", field.Name, pageNumberMapping(field.Page)))
-    End If
-Next
-
-' Close the PDF document.
-document.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ## Troubleshooting
+
+<b>Form fields are sometimes missing in the acrobat and the other PDF Viewer applications.</b>
 
 Form fields may appear empty in adobe reader some time due to the absence of the appearance dictionary. To resolve this, you have to enable the Adobe Reader default appearance by using the [SetDefaultAppearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_SetDefaultAppearance_System_Boolean_) method in [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) class.
 
@@ -4758,6 +5243,9 @@ The below code illustrates how to enable the default appearance in new PDF docum
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Enable-default-appearance-in-new-PDF-document/.NET/Enable-default-appearance-in-new-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a new page to PDF document.
@@ -4772,15 +5260,17 @@ document.Form.Fields.Add(textBoxField);
 //Enable the default Appearance.
 document.Form.SetDefaultAppearance(false);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("Form.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -4805,7 +5295,10 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Create a new PDF document.
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+'Load the PDF document.
 Dim document As New PdfDocument()
 'Add a new page to PDF document.
 Dim page As PdfPage = document.Pages.Add()
@@ -4836,9 +5329,12 @@ The below code illustrates how to enable the default appearance in existing PDF 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Enable-default-appearance-in-existing-PDF-document/.NET/Enable-default-appearance-in-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the loaded form.
 PdfLoadedForm loadedForm = loadedDocument.Form;
 
@@ -4848,9 +5344,8 @@ loadedTextBoxField.Text = "First Name";
 //Enable the default Appearance.
 loadedDocument.Form.SetDefaultAppearance(false);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("flatten.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -4858,8 +5353,12 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the loaded form.
 PdfLoadedForm loadedForm = loadedDocument.Form;
 
@@ -4878,8 +5377,12 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+
 'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Get the loaded form.
 Dim loadedForm As PdfLoadedForm = loadedDocument.Form
 

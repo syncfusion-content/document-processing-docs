@@ -15,8 +15,7 @@ You can unfreeze rows and columns in XlsIO by using the [RemovePanes](https://he
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Freeze the panes
@@ -25,8 +24,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Unfreeze the panes
   worksheet.RemovePanes();
 
-  FileStream stream = new FileStream("Unfreeze.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  workbook.SaveAs("Unfreeze.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

@@ -16,8 +16,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Excel2016;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream,ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx",ExcelOpenType.Automatic);
   IWorksheet sheet = workbook.Worksheets[0];
 
   //Accessing first chart in the sheet
@@ -27,10 +26,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   chart.Series[0].DataPoints[0].DataLabels.IsValue = true;
   chart.Series[0].DataPoints[0].DataLabels.RGBColor = Color.Green;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Waterfall.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook
+  workbook.SaveAs("Waterfall.xlsx");
 }
 {% endhighlight %}
 

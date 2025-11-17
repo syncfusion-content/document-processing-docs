@@ -123,6 +123,9 @@ You can create a PDF/A-1b document by specifying the conformance level as ```Pdf
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA1B-document/.NET/Creating-the-new-PDFA1B-document/Program.cs" %}	
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new document with PDF/A-1b standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A1B);
 //Add a page to the document
@@ -137,24 +140,15 @@ PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream
-document.Save(stream);
-//If the position is not set to '0', then the PDF will be empty
-stream.Position = 0;
-//Close the document
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new document with PDF/A-1b standard.
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A1B);
@@ -179,6 +173,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new document with PDF/A-1b standard.
 Dim document As New PdfDocument(PdfConformanceLevel.Pdf_A1B)
@@ -214,6 +211,9 @@ You can create a PDF/A-2b document by specifying the conformance level as ```Pdf
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA2B-document/.NET/Creating-the-new-PDFA2B-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new document with PDF/A-2b standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A2B);
 //Add a page to the document
@@ -228,24 +228,16 @@ PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream
-document.Save(stream);
-//If the position is not set to '0', then the PDF will be empty
-stream.Position = 0;
-//Close the document
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new document with PDF/A-2b standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A2B);
@@ -270,6 +262,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new document with PDF/A-2b standard
 Dim document As New PdfDocument(PdfConformanceLevel.Pdf_A2B)
@@ -307,6 +302,10 @@ You can create a PDF/A-3b document by specifying the conformance level as Pdf_A3
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA3B-document/.NET/Creating-the-new-PDFA3B-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new document with PDF/A-3b standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
 //Add a page to the document
@@ -330,24 +329,17 @@ PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream
-document.Save(stream);
-//If the position is not set to '0', then the PDF will be empty
-stream.Position = 0;
-//Close the document
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new document with PDF/A-3b standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
@@ -380,6 +372,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new document with PDF/A-3b standard
 Dim document As New PdfDocument(PdfConformanceLevel.Pdf_A3B)
@@ -425,6 +421,9 @@ You can create a PDF/A-1a document by specifying the conformance level as ```Pdf
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA1A-document/.NET/Creating-the-new-PDFA1A-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new document with PDF/A-1a standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A1A);
 //Add a page to the document
@@ -438,24 +437,15 @@ PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream
-document.Save(stream);
-//If the position is not set to '0', then the PDF will be empty
-stream.Position = 0;
-//Close the document
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new document with PDF/A-1a standard.
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A1A);
@@ -479,6 +469,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new document with PDF/A-1a standard.
 Dim document As New PdfDocument(PdfConformanceLevel.Pdf_A1A)
@@ -515,6 +508,9 @@ You can create a PDF/A-2a document by specifying the conformance level as ```Pdf
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA2A-document/.NET/Creating-the-new-PDFA2A-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new document with PDF/A-2a standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A2A);
 //Add a page to the document
@@ -528,24 +524,16 @@ PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream
-document.Save(stream);
-//If the position is not set to '0', then the PDF will be empty
-stream.Position = 0;
-//Close the document
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new document with PDF/A-2a standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A2A);
@@ -569,6 +557,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new document with PDF/A-2a standard
 Dim document As New PdfDocument(PdfConformanceLevel.Pdf_A2A)
@@ -605,6 +596,10 @@ You can create a PDF/A-3a document by specifying the conformance level as ``Pdf_
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA3A-document/.NET/Creating-the-new-PDFA3A-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new document with PDF/A-3a standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3A);
 //Add a page to the document
@@ -628,24 +623,17 @@ PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream
-document.Save(stream);
-//If the position is not set to '0', then the PDF will be empty
-stream.Position = 0;
-//Close the document
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new document with PDF/A-3a standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3A);
@@ -679,6 +667,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new document with PDF/A-3a standard
 Dim document As New PdfDocument(PdfConformanceLevel.Pdf_A3A)
@@ -725,6 +717,9 @@ You can create a PDF/A-2u document by specifying the conformance level as ```Pdf
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA2U-document/.NET/Creating-the-new-PDFA2U-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new document with PDF/A-2u standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A2U);
 //Add a page to the document
@@ -738,24 +733,15 @@ PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream
-document.Save(stream);
-//If the position is not set to '0', then the PDF will be empty
-stream.Position = 0;
-//Close the document
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new document with PDF/A-2u standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A2U);
@@ -779,6 +765,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new document with PDF/A-2u standard
 Dim document As New PdfDocument(PdfConformanceLevel.Pdf_A2U)
@@ -815,6 +804,10 @@ You can create a PDF/A-3u document by specifying the conformance level as ``Pdf_
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA3U-document/.NET/Creating-the-new-PDFA3U-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
 //Create a new document with PDF/A-3u standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3U);
 //Add a page to the document
@@ -838,24 +831,17 @@ PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream
-document.Save(stream);
-//If the position is not set to '0', then the PDF will be empty
-stream.Position = 0;
-//Close the document
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
 
 //Create a new document with PDF/A-3u standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3U);
@@ -889,6 +875,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
 
 'Create a new document with PDF/A-3u standard
 Dim document As New PdfDocument(PdfConformanceLevel.Pdf_A3U)
@@ -935,6 +925,9 @@ Create a PDF/A-4 document by specifying the conformance level as ``Pdf_A4`` thro
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA4-document/.NET/Creating-the-new-PDFA4-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new document with the PDF/A-4 standard. 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4); 
 //Add a page to the document. 
@@ -948,24 +941,16 @@ PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text.
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0)); 
 
-//Create the stream object. 
-MemoryStream stream = new MemoryStream(); 
-//Save the document into the memory stream. 
-document.Save(stream); 
-//If the position is not set to '0,' a PDF will be empty.
-stream.Position = 0;
-//Close the document.
-document.Close(true); 
-//Define the content type for a PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Create the FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
+//Save and close the document.
+document.Save("Output.pdf");
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new document with the PDF/A-4 standard. 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4);
@@ -989,6 +974,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new document with the PDF/A-4 standard. 
 Dim document As New PdfDocument(PdfConformanceLevel.Pdf_A4) 
@@ -1025,6 +1013,9 @@ Create a PDF/A-4E document by specifying the conformance level as ``Pdf_A4E`` th
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA4E-document/.NET/Creating-the-new-PDFA4E-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new document with the PDF/A-4 standard. 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4); 
 //Creates a new page. 
@@ -1040,21 +1031,15 @@ activation.ShowToolbar = true; pdf3dAnnotation.Activation = activation;
 //Add the annotation to the page. 
 page.Annotations.Add(pdf3dAnnotation); 
 
-//Save the document into the stream. 
-MemoryStream stream = new MemoryStream(); 
-document.Save(stream); stream.Position = 0; 
-//Close the document. 
-document.Close(true); 
-//Define the ContentType for a pdf file. 
-string contentType = "application/pdf"; 
-//Define the file name. 
-string fileName = "3DAnnotation.pdf"; 
-//Create the FileContentResult object by using the file contents, content type, and file name. 
-return File(stream, contentType, fileName);
-
+//Save and close the document.
+document.Save("Output.pdf");
+document.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new document with the PDF/A-4E standard. 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4E); 
@@ -1078,6 +1063,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new document with the PDF/A-4 standard. 
 Dim document As New PdfDocument(PdfConformanceLevel.Pdf_A4E) 
@@ -1115,6 +1103,9 @@ Create a PDF/A-4f document by specifying the conformance level as ``Pdf_A4F`` th
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-a-new-PDFA4F-document/.NET/Creating-a-new-PDFA4F-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new document with the PDF/A-4F standard. 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4F); 
 //Add a page to the document. 
@@ -1140,17 +1131,16 @@ PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text. 
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0)); 
 
-//Save the document into the memory stream. 
-MemoryStream stream = new MemoryStream(); 
-await document.SaveAsync(stream); 
-//Close the document. 
-document.Close(true); 
-//Save the stream as a PDF document file in the local machine. Refer to the PDF/UWP section for respective code samples. 
-Save(stream, "Output.pdf");
+//Save and close the document.
+document.Save("Output.pdf");
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new document with the PDF/A-3b standard. 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4F); 
@@ -1183,6 +1173,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new document with the PDF/A-3b standard. 
 Dim document As New PdfDocument(PdfConformanceLevel.Pdf_A4F) 
@@ -1233,6 +1226,9 @@ You can create a PDF/X-1a document by specifying the conformance level as ```Pdf
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new document with PDF/x standard.
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_X1A2001);
 //Add a page.
@@ -1257,6 +1253,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new document with PDF/x standard.
 Dim document As New PdfDocument(PdfConformanceLevel.Pdf_X1A2001)
@@ -1307,31 +1306,31 @@ Refer to the following code sample to implement this conversion.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Convert-PDF-to-PDFA-conformance-document/.NET/Convert-PDF-to-PDFA-conformance-document/Program.cs" %}
 
-//Load an existing PDF document
-FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+using SkiaSharp;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 //Sample level font event handling
 loadedDocument.SubstituteFont += LoadedDocument_SubstituteFont ;
 //Convert the loaded document to PDF/A document
 loadedDocument.ConvertToPDFA(PdfConformanceLevel.Pdf_A1B);
 
-//Save the document
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream); 
-stream.Position = 0; 
-//Close the document 
-loadedDocument.Close(true); 
-//Defining the content type for PDF file 
-string contentType = "application/pdf";
-//Define the file name 
-string fileName = "output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true)
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using SkiaSharp;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -1346,6 +1345,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports SkiaSharp
 
 'Load an existing PDF document.
 Dim document As New PdfLoadedDocument("Input.pdf")
@@ -1429,9 +1433,15 @@ N> To convert an existing PDF to a PDF/A-compliant document in .NET Core, ensure
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Font_Subsetting_in_PDFA_conversion/.NET/Font_Subsetting_in_PDFA_conversion/Program.cs" %}	
 
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf;
+using System.Reflection.Metadata;
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Graphics;
+using SkiaSharp;
+
 //Load an existing PDF document  
-FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);  
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream); 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"); 
 
 //Sample level font event handling  
 loadedDocument.SubstituteFont += LoadedDocument_SubstituteFont;  
@@ -1447,16 +1457,20 @@ options.SubsetFonts = true;
 // Convert to PDF/A conformance 
 loadedDocument.ConvertToPDFA(options); 
 
-//Save the document into stream 
-MemoryStream stream = new MemoryStream(); 
-loadedDocument.Save(stream); 
-stream.Position = 0; 
-//Closes the document 
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf;
+using System.Reflection.Metadata;
+using System.Drawing;
+using Syncfusion.Pdf.Graphics;
+using SkiaSharp;
 
 //Load an existing PDF document  
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"); 
@@ -1477,6 +1491,13 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf
+Imports System.Reflection.Metadata
+Imports System.Drawing
+Imports Syncfusion.Pdf.Graphics
+Imports SkiaSharp
 
 ' Load an existing PDF document. 
 Dim document As New PdfLoadedDocument("Input.pdf") 
@@ -1562,9 +1583,11 @@ You can find the conformance level of the existing PDF document using the [Confo
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Get-the-conformance-level-of-the-existing-PDF-document/.NET/Program.cs" %}	
 
-//Load an existing PDF document
-FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 //Get the conformance level of the loaded document. 
 PdfConformanceLevel conformance = loadedDocument.Conformance;
@@ -1575,6 +1598,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document. 
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"); 
@@ -1588,6 +1614,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf
 
 'Load an existing PDF. 
 Dim document As New PdfLoadedDocument("Input.pdf") 
@@ -1613,24 +1642,20 @@ The following code sample shows the delegate for handling PDF to PDF/A conversio
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Get-PDF-to-PDFA-conversion-progress/.NET/Get-PDF-to-PDFA-conversion-progress/Program.cs" %}
-
-
-//Get stream from an existing PDF document.
-FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
  
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
  
 //Subscribe to the PdfAConversionProgress event to track the PDF to PDF/A conversion process
 loadedDocument.PdfAConversionProgress += new PdfLoadedDocument.PdfAConversionProgressEventHandler(pdfAConversion_TrackProgress);
  
 loadedDocument.ConvertToPDFA(PdfConformanceLevel.Pdf_A1B);
  
-//Save the document
-FileStream outputStream = new FileStream(Path.GetFullPath(@"Output.pdf"), FileMode.Create, FileAccess.Write);
-loadedDocument.Save(outputStream);
- 
-//Close the document
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
  
  
@@ -1644,6 +1669,9 @@ void pdfAConversion_TrackProgress(object sender, PdfAConversionProgressEventArgs
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load a PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -1667,6 +1695,9 @@ Console.WriteLine(String.Format("PDF to PDF/A conversion Process " + arguments. 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf
 
 'Load a PDF document. 
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("input.pdf") 
@@ -1699,29 +1730,24 @@ An existing PDF/A conformance document can be converted to a PDF document using 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Convert-PDFA-to-PDF-document/.NET/Convert-PDFA-to-PDF-document/Program.cs" %}	
 
+using Syncfusion.Pdf.Parsing;
+
 //Load a PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 //Remove PDF/A conformance.
 document.RemoveConformance();
 
 //Save the document.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name. 
-string fileName = "output.pdf";
-
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing document.
 PdfLoadedDocument document = new PdfLoadedDocument("input.pdf");
@@ -1737,6 +1763,8 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
 
 'Load an existing document.
 Dim document As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
