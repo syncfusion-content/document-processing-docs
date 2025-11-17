@@ -21,8 +21,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   application.XlsIORenderer = new XlsIORenderer();
 
   //Opening workbook with hidden worksheets
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
   //Converting only hidden worksheets to image
   foreach (IWorksheet worksheet in workbook.Worksheets)

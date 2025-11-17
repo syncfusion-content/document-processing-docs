@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Supported and Unsupported Features
+# Supported and Unsupported Features in Word library
 
 This section describes the support and unsupported elements in the DocIO. 
 
@@ -393,15 +393,6 @@ No<br/><br/></td><td>
 No<br/><br/></td><td>
 DOCX format only. Additional behavior explained {{'[here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#drawing-canvas)'| markdownify }}.<br/><br/></td><td>
 DOCX format only. Additional behavior explained {{'[here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#drawing-canvas)'| markdownify }}.<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td></tr>
-<tr>
-<td>
-Drawing Canvas<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
-DOCX format only. Additional behavior explained [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#drawing-canvas).<br/><br/></td><td>
-DOCX format only. Additional behavior explained [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#drawing-canvas).<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
@@ -1206,7 +1197,7 @@ Yes<br/><br/></td></tr>
 <td>Yes<br/><br/></td>
 </tr>
 <tr>
-<td>Mail Merge<br/><br/></td>
+<td>Mail merge<br/><br/></td>
 <td>Yes<br/><br/></td>
 <td>Yes<br/><br/></td>
 </tr>

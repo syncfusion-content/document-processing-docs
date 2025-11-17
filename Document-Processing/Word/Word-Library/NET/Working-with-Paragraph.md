@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Paragraph
+# Working with Paragraph in Word Library
 
 Paragraph is the basic element in a Word document that contains a textual and graphical contents. Each paragraph has its own formatting such as line spacing, alignment, indentation, and more. Within a paragraph, the contents are represented by one or more child elements such as [WTextRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextRange.html), [WPicture](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WPicture.html), and [Hyperlink](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyperlink.html) and more. The [ParagraphItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ParagraphItem.html) is the base class for the child elements of paragraph. The following elements can be the child elements of a paragraph:
 
@@ -1777,6 +1777,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to Keep Paragraphs Inside a Table in ASP.NET Core Word?](https://support.syncfusion.com/kb/article/19678/how-to-keep-paragraphs-inside-a-table-in-aspnet-core-word)
 * [How to apply highlight color to fields in a Word document?](https://support.syncfusion.com/kb/article/20092/how-to-apply-highlight-color-to-fields-in-a-word-document)
 * [How to Replace DISPLAYBARCODE Field with Image in DocIO .NET Core?](https://support.syncfusion.com/kb/article/19842/how-to-replace-displaybarcode-field-with-image-in-docio-net-core)
+* [How to resize images to fit owner element in NET Core Word document?](https://support.syncfusion.com/kb/article/21490/how-to-resize-images-to-fit-owner-element-in-net-core-word-document)
 
 ## Frequently Asked Questions
 

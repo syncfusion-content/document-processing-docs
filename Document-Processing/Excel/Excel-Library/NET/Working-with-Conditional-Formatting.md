@@ -150,12 +150,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ConditionalFormat.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ConditionalFormat.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -297,16 +293,14 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Read conditional formatting settings 
 	string formatType = worksheet.Range["A1"].ConditionalFormats[0].FormatType.ToString();
 	string cfOperator = worksheet.Range["A1"].ConditionalFormats[0].Operator.ToString();
 
-	//Dispose streams
-	inputStream.Dispose();
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -359,8 +353,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Removing conditional format for a specified range 
@@ -368,13 +361,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RemoveConditionalFormat.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/RemoveConditionalFormat.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -422,8 +410,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Removing first conditional Format at the specified Range
@@ -431,13 +418,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RemoveConditionalFormat.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/RemoveConditionalFormat.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -483,8 +465,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Removing Conditional Formatting Settings From Entire Sheet
@@ -492,13 +473,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RemoveAll.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/RemoveAll.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -557,12 +533,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ConditionalFormat.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ConditionalFormat.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 

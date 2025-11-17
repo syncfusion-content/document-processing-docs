@@ -57,8 +57,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
 
     //Initialize XlsIORenderer
@@ -77,8 +76,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     #endregion
 
     //Dispose streams
-    outputStream.Dispose();
-    excelStream.Dispose();
+    outputStream.Dispose();   
 }
 {% endhighlight %}
 {% endtabs %}
@@ -132,8 +130,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
 
     //Initialize XlsIORenderer
@@ -152,8 +149,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     #endregion
 
     //Dispose streams
-    outputStream.Dispose();
-    excelStream.Dispose();
+    outputStream.Dispose();   
 }
 {% endhighlight %}
 {% endtabs %}

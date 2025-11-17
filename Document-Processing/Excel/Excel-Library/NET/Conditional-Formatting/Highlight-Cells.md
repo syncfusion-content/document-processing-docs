@@ -90,12 +90,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/UniqueandDuplicate.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/UniqueandDuplicate.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 

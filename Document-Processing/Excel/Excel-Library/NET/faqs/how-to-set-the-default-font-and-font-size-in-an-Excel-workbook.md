@@ -28,9 +28,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     sheet.Range["A1"].Text = "This is default font and size";
 
     //Save to file
-    FileStream outputStream = new FileStream("Output/Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
-    outputStream.Dispose();
+    workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
