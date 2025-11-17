@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Google Drive
+# Open PDF from Google Drive in Angular
 
 Follow these steps to load a PDF from Google Drive using the server-backed PDF Viewer.
 
