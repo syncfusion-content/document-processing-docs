@@ -75,7 +75,7 @@ End Using
 
 ## See Also
 
-* [How to copy a range from one workbook to another?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-copy-a-range-from-one-workbook-to-another)
+* [How to copy a range from one workbook to another?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-copy-a-range-from-one-workbook-to-another)
 * [How to protect certain cells in a worksheet?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-protect-certain-cells-in-a-worksheet)
 * [How to set a line break inside a cell?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-set-a-line-break-inside-a-cell)
 * [How to format text within a cell?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-format-text-within-a-cell)
