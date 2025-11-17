@@ -53,7 +53,7 @@ End Using
 
 ## See Also
 
-* [How to open an Excel 2013 Macro Enabled Template?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-open-an-excel-2013-macro-enabled-template)
+* [How to open an Excel 2013 Macro Enabled Template?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-open-an-excel-2013-macro-enabled-template)
 * [How to create and open Excel Template files by using XlsIO?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-create-and-open-excel-template-files-by-using-xlsio)
 * [How to open an existing workbook from stream?](https://help.syncfusion.com/file-formats/xlsio/loading-and-saving-workbook#opening-an-existing-workbook-from-stream)
 * [How to open a CSV file?](https://help.syncfusion.com/file-formats/xlsio/working-with-excel-worksheet#open-a-csv-file)

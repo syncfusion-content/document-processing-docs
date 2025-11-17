@@ -71,7 +71,7 @@ End Using
 
 ## See Also
 
-* [How to change the grid line color of the Excel sheet?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-change-the-grid-line-color-of-the-excel-sheet)
+* [How to change the grid line color of the Excel sheet?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-change-the-grid-line-color-of-the-excel-sheet)
 * [How to import data table with its data type using template markers?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-import-data-table-with-its-data-type-using-template-markers)
 * [How to add chart labels to scatter points?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-add-chart-labels-to-scatter-points)
 * [How to create a Chart with a discontinuous range?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-create-a-chart-with-a-discontinuous-range)
