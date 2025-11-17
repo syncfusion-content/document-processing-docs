@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Form Designer Toolbar in ASP.NET Core PDF Viewer Component | Syncfusion
+title: Form Designer Toolbar in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn here all about form designer toolbar customization in Syncfusion ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer

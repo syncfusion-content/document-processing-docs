@@ -17,6 +17,7 @@ Step 2: Add the following Vue component snippet to enable highlight, underline, 
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
+
 <template>
   <div>
     <div style="margin-bottom:10px;">
@@ -70,6 +71,7 @@ export default {
   }
 };
 </script>
+
 {% endhighlight %}
 {% endtabs %}
 

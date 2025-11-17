@@ -4,6 +4,7 @@ title: Overview of the toolbars in ASP.NET MVC PDF Viewer Component | Syncfusion
 description: Check out and learn about the primary, annotation, form designer, and redaction toolbars in the Syncfusion ASP.NET MVC PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

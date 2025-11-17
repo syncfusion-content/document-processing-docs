@@ -40,5 +40,5 @@ You can enable/disable thumbnail navigation by using the following code snippet.
 
 ## See also
 
-* [Toolbar items](../toolbar)
+* [Toolbar items](../toolbar-customization)
 * [Feature Modules](../feature-module)
