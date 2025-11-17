@@ -5,7 +5,7 @@ platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Working with Data Validation 
+# Working with Data Validation
 
 Data Validation is a list of rules to the data that can be entered in a cell. This can be applied by using [IDataValidation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IDataValidation.html) interface. XlsIO supports following validation types.
 
