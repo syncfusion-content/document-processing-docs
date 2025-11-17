@@ -5,7 +5,7 @@ platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# How to avoid processing unnecessary worksheets when opening an Excel document using C#?
+# How to avoid processing unnecessary worksheets using C#?
 XlsIO provides support to avoid processing unnecessary worksheets when opening an Excel. The following code snippet illustrates this.
 {% tabs %} 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Worksheet/.NET/Parse%20Worksheets%20On%20Demand/Parse%20Worksheets%20On%20Demand/Program.cs,180" %}
@@ -13,8 +13,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("Input.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream,ExcelOpenType.Automatic, ExcelParseOptions.ParseWorksheetsOnDemand);
+    IWorkbook workbook = application.Workbooks.Open("Input.xlsx",ExcelOpenType.Automatic, ExcelParseOptions.ParseWorksheetsOnDemand);
 
     // Access the first worksheet (triggers parsing)
     IWorksheet worksheet = workbook.Worksheets[0];
@@ -23,8 +22,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     string value = worksheet.Range["A1"].Text;
 
     // Save to file system
-    FileStream stream = new FileStream("Output.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
+    workbook.SaveAs("Output.xlsx");
     workbook.Close();
     excelEngine.Dispose();
 }

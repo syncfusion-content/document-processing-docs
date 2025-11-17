@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# How to delete hyperlinks from a worksheet without affecting the cell styles using C#?
+# How to delete worksheet hyperlinks without affecting cell styles?
 
 You can remove hyperlinks from an Excel worksheet without altering the cell formatting using [HyperLinks]( https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_HyperLinks) property of the [IWorksheet]( https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) interface. Below are the code examples in C# (cross-platform and Windows-specific) and VB.NET to demonstrate how to do this.
 
@@ -16,14 +16,13 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
     IWorksheet worksheet = workbook.Worksheets[0];
     // Remove first hyperlink without affecting cell styles
     HyperLinksCollection hyperlink = worksheet.HyperLinks as HyperLinksCollection;
     hyperlink.Remove(hyperlink[0] as HyperLinkImpl);
-    FileStream outputStream = new FileStream("Output/Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
+    FileStream outputStream = new FileStream(, FileMode.Create, FileAccess.Write);
+    workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
     workbook.Close();
     excelEngine.Dispose();
 }
