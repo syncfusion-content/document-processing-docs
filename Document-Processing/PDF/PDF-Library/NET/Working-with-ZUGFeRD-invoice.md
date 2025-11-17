@@ -162,6 +162,9 @@ Using **PDF/A-3b** conformance, you can create a **ZUGFeRD invoice PDF** by spec
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ZUGFeRD/Factur-X/.NET/Factur-X/Program.cs" %} 
 
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf;
+
 //Create a new PDF document 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
 
@@ -184,16 +187,17 @@ attachment.MimeType = "text/xml";
 //Add attachment to PDF document 
 document.Attachments.Add(attachment); 
 
-//Save the document into stream 
-MemoryStream stream = new MemoryStream(); 
-document.Save(stream); 
-stream.Position = 0; 
+//Save the document
+document.Save("Output.pdf"); 
 //Closes the document 
-document.Close(true); 
+document.Close(true);  
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf;
 
 //Create a new PDF document 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
@@ -225,6 +229,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf
 
 ' Create a new PDF document  
 Dim document As New PdfDocument(PdfConformanceLevel.Pdf_A3B)  
@@ -266,6 +273,9 @@ The complete code to create ZUGFeRD invoice PDF document as follows.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ZUGFeRD/Create-ZUGFeRD-compliment-PDF-invoice/.NET/Create-ZUGFeRD-compliment-PDF-invoice/Program.cs" %} 
 
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf;
+
 //Create ZUGFeRD invoice PDF document
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
 //Set ZUGFeRD conformance level 
@@ -281,24 +291,17 @@ attachment.MimeType = "application/xml";
 //Add attachment to PDF document
 document.Attachments.Add(attachment);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream
-document.Save(stream);
-//If the position is not set to '0', then the PDF will be empty
-stream.Position = 0;
-//Close the document
-document.Close(true);
-//Defining the ContentType for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Zugferd.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
+//Save the document
+document.Save("Output.pdf"); 
+//Closes the document 
+document.Close(true); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf;
 
 //Create ZUGFeRD invoice PDF document
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
@@ -322,6 +325,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf
 
 'Create ZUGFeRD invoice PDF document
 Dim document As PdfDocument = New PdfDocument(PdfConformanceLevel.Pdf_A3B)
@@ -356,27 +362,31 @@ You can extract the ZUGFeRD invoice using [PdfAttachment](https://help.syncfusio
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ZUGFeRD/Extract-ZUGFeRD-invoice-from-PDF-document/.NET/Extract-ZUGFeRD-invoice-from-PDF-document/Program.cs" %} 	
 
-//Get stream from an existing PDF document. 
-FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
-//Load the PDF document. 
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Loads the PDF document
+PdfLoadedDocument document = new PdfLoadedDocument("Sample.pdf");
 
-//Iterates the attachments.
-foreach (PdfAttachment attachment in loadedDocument.Attachments)
+//Iterates the attachments
+foreach (PdfAttachment attachment in document.Attachments)
 {
-    //Extracts the ZUGFeRD invoice attachment and saves it to the disk.
-    FileStream s = new FileStream("Output/" + attachment.FileName, FileMode.Create, FileAccess.Write);
-    s.Write(attachment.Data, 0, attachment.Data.Length);
-    s.Dispose();
+//Extracts the ZUGFeRD invoice attachment and saves it to the disk
+FileStream s = new FileStream(attachment.FileName, FileMode.Create);
+s.Write(attachment.Data, 0, attachment.Data.Length);
+s.Dispose();
 }
 
-//Close the PDF document. 
-loadedDocument.Close(true);
+//Saves and closes the document
+document.Save("Output.pdf");
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 //Loads the PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Sample.pdf");
@@ -397,6 +407,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Loads the PDF document
 Dim document As New PdfLoadedDocument("Sample.pdf")

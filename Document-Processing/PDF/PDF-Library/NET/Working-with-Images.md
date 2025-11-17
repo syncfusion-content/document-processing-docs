@@ -34,6 +34,9 @@ The following code snippet shows how to add a file from disk to the PDF document
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Insert-image-in-a-new-PDF-document/.NET/Insert-image-in-a-new-PDF-document/Program.cs" %} 
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
 //Add a page to the document
@@ -47,16 +50,17 @@ PdfBitmap image = new PdfBitmap(imageStream);
 //Draw the image
 graphics.DrawImage(image, 0, 0);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-doc.Save(stream);
+//Save the document
+doc.Save("Output.pdf");
 //Close the document
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -78,6 +82,9 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim doc As New PdfDocument()
@@ -110,9 +117,12 @@ You can also add images into an existing PDF document using the below code snipp
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Insert-image-in-an-existing-PDF-document/.NET/Insert-image-in-an-existing-PDF-document/Program.cs" %} 
 
-//Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument doc = new PdfLoadedDocument(docStream);
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument doc = new PdfLoadedDocument("Input.pdf");
 //Get first page from document
 PdfLoadedPage page = doc.Pages[0] as PdfLoadedPage;
 
@@ -124,16 +134,18 @@ PdfBitmap image = new PdfBitmap(imageStream);
 //Draw the image
 graphics.DrawImage(image, 0, 0);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-doc.Save(stream);
+//Save the document
+doc.Save("Output.pdf");
 //Close the document
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
 //Load a PDF document
 PdfLoadedDocument doc = new PdfLoadedDocument("input.pdf");
@@ -155,6 +167,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Load a PDF document
 Dim doc As New PdfLoadedDocument("input.pdf")
@@ -182,9 +198,12 @@ To add image from stream, use the below code snippet.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Insert-image-in-an-existing-PDF-document/.NET/Insert-image-in-an-existing-PDF-document/Program.cs" %} 
 
-//Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument doc = new PdfLoadedDocument(docStream);
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument doc = new PdfLoadedDocument("Input.pdf");
 //Get first page from document
 PdfLoadedPage page = doc.Pages[0] as PdfLoadedPage;
 
@@ -196,16 +215,18 @@ PdfBitmap image = new PdfBitmap(imageStream);
 //Draw the image
 graphics.DrawImage(image, 0, 0);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-doc.Save(stream);
+//Save the document
+doc.Save("Output.pdf");
 //Close the document
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
 //Load a PDF document
 PdfLoadedDocument doc = new PdfLoadedDocument("input.pdf");
@@ -229,6 +250,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 'Load a PDF document
 Dim doc As New PdfLoadedDocument("input.pdf")
@@ -278,6 +303,10 @@ The following code illustrate this,
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Drawing;
+
 //Create a PDF Document
 PdfDocument doc = new PdfDocument();
 //Add pages to the document
@@ -303,6 +332,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a PDF Document
 Dim doc As New PdfDocument()
@@ -342,6 +375,9 @@ The following code illustrate shows how to add a mask to TIFF image.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Add-a-mask-to-TIFF-image/.NET/Add-a-mask-to-TIFF-image/Program.cs" %} 
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a PDF document
 PdfDocument doc = new PdfDocument();
 //Add pages to the document
@@ -360,15 +396,17 @@ image.Mask = mask;
 graphics.DrawImage(image, 0, 0);
 ///Creating the stream object
 
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-doc.Save(stream);
+//Save the document
+doc.Save("Output.pdf");
 //Close the document
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a PDF document
 PdfDocument doc = new PdfDocument();
@@ -393,6 +431,9 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a PDF document
 Dim doc As New PdfDocument()
@@ -430,9 +471,11 @@ Essential<sup>&reg;</sup> PDF allows you to replace images in an existing docume
 
 {% highlight c# tabtitle="C# [Cross-platform]" %} 
 
-//Load an existing PDF document. 
-FileStream pdfStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(pdfStream);
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 //Create an image instance.
 FileStream imageStream = new FileStream(Path.GetFullPath("Autumn Leaves.jpg"), FileMode.Open, FileAccess.Read);
@@ -440,15 +483,17 @@ PdfBitmap bmp = new PdfBitmap(imageStream);
 //Replace the first image in the page
 loadedDocument.Pages[0].ReplaceImage(0, bmp);
 
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-loadedDocument.Save(stream);
+//Save the document
+loadedDocument.Save("Output.pdf");
 //Close the document
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument doc = new PdfLoadedDocument(@"image.pdf");
@@ -465,6 +510,9 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Graphics
 
 'Load the PDF document
 Dim doc As New PdfLoadedDocument("image.pdf")
@@ -492,6 +540,9 @@ You can allow a large image to paginate across multiple pages in the PDF documen
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Paginate-an-image-in-PDF-document/.NET/Paginate-an-image-in-PDF-document/Program.cs" %} 
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create Document
 PdfDocument doc = new PdfDocument();
 //Add new page
@@ -507,16 +558,16 @@ format.Layout = PdfLayoutType.Paginate;
 //Draw image
 image.Draw(page, 20, 400, format);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-doc.Save(stream);
-//Close the document
+//Save the PDF
+doc.Save("output.pdf");
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create Document
 PdfDocument doc = new PdfDocument();
@@ -539,6 +590,9 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create Document
 Dim doc As New PdfDocument()
@@ -564,6 +618,136 @@ doc.Close(True)
  
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Paginate-an-image-in-PDF-document). 
 
+## Clipping and graphics state
+
+This example demonstrates how to draw an image in a PDF document and apply a clipping region using the [SetClip](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#methods) method. Clipping restricts drawing to a defined area, allowing partial rendering of content. The code also uses [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#methods) and [Restore](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#methods) methods of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) to manage the graphics state, enabling temporary clipping and restoring the full drawing area afterward. 
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Clipping-and-graphics-state/.NET/Clipping-and-graphics-state/Program.cs" %} 
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page to the document
+    PdfPage page = document.Pages.Add();
+    // Get the graphics object for the page
+    PdfGraphics graphics = page.Graphics;
+    // Open the image file as a stream
+    using FileStream imageStream = new FileStream(Path.GetFullPath("Input.png"), FileMode.Open, FileAccess.Read);
+    // Load the image from the stream
+    PdfBitmap image = new PdfBitmap(imageStream);
+
+    // Save the current graphics state (to restore later)
+    PdfGraphicsState state = graphics.Save();
+
+    // Define a rectangular clipping region
+    RectangleF clipRect = new RectangleF(50, 50, 200, 100);
+    graphics.SetClip(clipRect);
+
+    // Draw the image — only the part within the clipping region will be visible
+    graphics.DrawImage(image, new RectangleF(40, 60, 150, 80));
+
+    // Restore the graphics state to remove the clipping region
+    graphics.Restore(state);
+    // Draw the image again — this time the full image will be visible
+    graphics.DrawImage(image, new RectangleF(60, 160, 150, 80));
+
+    // Save the PDF document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page to the document
+    PdfPage page = document.Pages.Add();
+    // Get the graphics object for the page
+    PdfGraphics graphics = page.Graphics;
+    // Open the image file as a stream
+    using FileStream imageStream = new FileStream(Path.GetFullPath("Input.png"), FileMode.Open, FileAccess.Read);
+    // Load the image from the stream
+    PdfBitmap image = new PdfBitmap(imageStream);
+
+    // Save the current graphics state (to restore later)
+    PdfGraphicsState state = graphics.Save();
+
+    // Define a rectangular clipping region
+    RectangleF clipRect = new RectangleF(50, 50, 200, 100);
+    graphics.SetClip(clipRect);
+
+    // Draw the image — only the part within the clipping region will be visible
+    graphics.DrawImage(image, new RectangleF(40, 60, 150, 80));
+
+    // Restore the graphics state to remove the clipping region
+    graphics.Restore(state);
+    // Draw the image again — this time the full image will be visible
+    graphics.DrawImage(image, new RectangleF(60, 160, 150, 80));
+
+    // Save the PDF document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+
+' Create a new PDF document
+Using document As New PdfDocument()
+' Add a page to the document
+Dim page As PdfPage = document.Pages.Add()
+
+' Get the graphics object for the page
+Dim graphics As PdfGraphics = page.Graphics
+
+' Open the image file as a stream
+Using imageStream As New FileStream(Path.GetFullPath("Input.png"), FileMode.Open, FileAccess.Read)
+' Load the image from the stream
+Dim image As New PdfBitmap(imageStream)
+
+' Save the current graphics state (to restore later)
+Dim state As PdfGraphicsState = graphics.Save()
+
+' Define a rectangular clipping region
+Dim clipRect As New RectangleF(50, 50, 200, 100)
+graphics.SetClip(clipRect)
+
+' Draw the image — only the part within the clipping region will be visible
+graphics.DrawImage(image, New RectangleF(40, 60, 150, 80))
+
+' Restore the graphics state to remove the clipping region
+graphics.Restore(state)
+
+' Draw the image again — this time the full image will be visible
+graphics.DrawImage(image, New RectangleF(60, 160, 150, 80))
+End Using
+
+' Save the PDF document
+document.Save("Output.pdf")
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Clipping-and-graphics-state/.NET).
+
 ## Applying transparency and rotation to the image
 
 You can add transparency and rotation to the image using [SetTransparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_SetTransparency_System_Single_) and [RotateTransform](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_RotateTransform_System_Single_) methods of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) respectively. This is explained in the below code snippet.
@@ -571,6 +755,9 @@ You can add transparency and rotation to the image using [SetTransparency](https
 {% tabs %}  
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Add-transparancy-and-rotation-to-the-image/.NET/Add-transparancy-and-rotation-to-the-image/Program.cs" %} 
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create Document
 PdfDocument doc = new PdfDocument();
@@ -594,16 +781,16 @@ image.Draw(page, 0, 0);
 //Restore the graphics state
 page.Graphics.Restore(state);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document as strea
-doc.Save(stream);
-//Close the document
+//Save the PDF
+doc.Save("output.pdf");
 doc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create Document
 PdfDocument doc = new PdfDocument();
@@ -632,6 +819,9 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create Document
 Dim doc As New PdfDocument()
@@ -663,6 +853,160 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Add-transparancy-and-rotation-to-the-image/). 
 
+## Unit conversion in image position
+
+The [PdfUnitConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfUnitConvertor.html) class provides precise measurement conversion capabilities for PDF layouts. When positioning images in a PDF document, the converter translates pixel dimensions to PDF points, enabling millimeter-perfect placement and sizing. This ensures images maintain their aspect ratio while rendering at exact locations and filling designated spaces like rectangles.
+
+The code example to illustrate the same is given below.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Unit-conversion-in-image-position/.NET/Unit-conversion-in-image-position/Program.cs" %} 
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess.Read))
+    {
+        //Load the image from the disk
+        PdfBitmap image = new PdfBitmap(stream);
+
+        //Add the first section to the PDF document
+        PdfSection section = document.Sections.Add();
+
+        //Initialize unit converter
+        PdfUnitConverter converter = new PdfUnitConverter();
+
+        //Convert the image size from pixel to points
+        SizeF size = converter.ConvertFromPixels(image.PhysicalDimension, PdfGraphicsUnit.Point);
+
+        //Set section size based on the image size
+        section.PageSettings.Size = size;
+
+        // Set section orientation based on the image size (by default Portrait) 
+        if (image.Width > image.Height)
+            section.PageSettings.Orientation = PdfPageOrientation.Landscape;
+
+        //Set a margin for the section
+        section.PageSettings.Margins.All = 0;
+
+        //Add a page to the section
+        PdfPage page = section.Pages.Add();
+
+        //Draw image
+        page.Graphics.DrawImage(image, 0, 0);
+
+        //Save the document
+        document.Save("Output.pdf");
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess.Read))
+    {
+        //Load the image from the disk
+        PdfBitmap image = new PdfBitmap(stream);
+
+        //Add the first section to the PDF document
+        PdfSection section = document.Sections.Add();
+
+        //Initialize unit converter
+        PdfUnitConverter converter = new PdfUnitConverter();
+
+        //Convert the image size from pixel to points
+        SizeF size = converter.ConvertFromPixels(image.PhysicalDimension, PdfGraphicsUnit.Point);
+
+        //Set section size based on the image size
+        section.PageSettings.Size = size;
+
+        // Set section orientation based on the image size (by default Portrait) 
+        if (image.Width > image.Height)
+            section.PageSettings.Orientation = PdfPageOrientation.Landscape;
+
+        //Set a margin for the section
+        section.PageSettings.Margins.All = 0;
+
+        //Add a page to the section
+        PdfPage page = section.Pages.Add();
+
+        //Draw image
+        page.Graphics.DrawImage(image, 0, 0);
+
+        //Save the document
+        document.Save("Output.pdf");
+    }
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
+
+Module Program
+    Sub Main()
+        ' Create a new PDF document
+        Using document As New PdfDocument()
+
+            ' Load the image from disk
+            Using stream As New FileStream("Image.png", FileMode.Open, FileAccess.Read)
+                Dim image As New PdfBitmap(stream)
+
+                ' Add a section to the PDF document
+                Dim section As PdfSection = document.Sections.Add()
+
+                ' Initialize unit converter
+                Dim converter As New PdfUnitConverter()
+
+                ' Convert image size from pixels to points
+                Dim size As SizeF = converter.ConvertFromPixels(image.PhysicalDimension, PdfGraphicsUnit.Point)
+
+                ' Set section size based on image size
+                section.PageSettings.Size = size
+
+                ' Set orientation to landscape if image is wider than tall
+                If image.Width > image.Height Then
+                    section.PageSettings.Orientation = PdfPageOrientation.Landscape
+                End If
+
+                ' Remove margins
+                section.PageSettings.Margins.All = 0
+
+                ' Add a page to the section
+                Dim page As PdfPage = section.Pages.Add()
+
+                ' Draw the image at position (0, 0)
+                page.Graphics.DrawImage(image, 0, 0)
+
+                ' Save the document
+                document.Save("Output.pdf")
+            End Using
+        End Using
+    End Sub
+End Module
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Unit-conversion-in-image-position/.NET).
+
 ## Converting multi page TIFF to PDF
 
 Multi frame TIFF image can be converted to PDF document. This can be done by accessing each frame of the multi frame TIFF image and rendering it in each page of the PDF document using [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) class.
@@ -672,6 +1016,9 @@ The code snippet to illustrate the same is given below.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Converting-multi-page-TIFF-to-PDF/.NET/Converting-multi-page-TIFF-to-PDF/Program.cs" %} 
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -691,16 +1038,16 @@ for (int i = 0; i < frameCount; i++)
     tiffImage.ActiveFrame = i;
     graphics.DrawImage(tiffImage, 0, 0, page.GetClientSize().Width, page.GetClientSize().Height);
 }
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-doc.Save(stream);
-//Close the document
-doc.Close(true);
+//Save and close the document
+pdfDocument.Save("Sample.pdf");
+pdfDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a PDF document
 PdfDocument pdfDocument = new PdfDocument();
@@ -727,6 +1074,9 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a PDF document
 Dim pdfDocument As New PdfDocument()
@@ -767,26 +1117,30 @@ The code snippet to illustrate the same is given below.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Remove-images-from-PDF-document/.NET/Remove-images-from-PDF-document/Program.cs" %} 
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Exporting;
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing PDF.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the first page.
 PdfPageBase pageBase = loadedDocument.Pages[0];
 //Extract images from the first page.
 PdfImageInfo[] imageInfo = loadedDocument.Pages[0].GetImagesInfo();
 //Remove the Image.
 pageBase.RemoveImage(imageInfo[0]);
-//Create the stream object
-MemoryStream stream = new MemoryStream();
 
-//Save the document into stream
-loadedDocument.Save(stream);
-//Close the document
+//Save and close the document
+loadedDocument.Save("Sample.pdf");
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Exporting;
+using Syncfusion.Pdf.Parsing;
 
 //Load a PDF document
 PdfLoadedDocument doc = new PdfLoadedDocument("input.pdf");
@@ -805,6 +1159,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+
 'Load an existing PDF 
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("input.pdf") 
 'Load the first page 
@@ -813,10 +1171,9 @@ Dim pageBase As PdfPageBase = loadedDocument.Pages(0)
 Dim imageInfo As PdfImageInfo = pageBase.ImagesInfo(0)
 'Remove the Image
 pageBase.RemoveImage(imageInfo)
-Dim stream As New MemoryStream()
 
 'Save the document
-loadedDocument.Save(stream) 
+loadedDocument.Save("Output.pdf") 
 'Close the document
 loadedDocument.Close(True)
 
