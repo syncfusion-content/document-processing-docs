@@ -15,6 +15,9 @@ The following code sample explains you on how to add a [PdfPage](https://help.sy
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Add-a-new-page-to-the-PDF-document/.NET/Add-a-new-page-to-the-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page.
@@ -29,16 +32,16 @@ PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 14);
 //Draw the text.
 graphics.DrawString("Hello world!", font, brush, new Syncfusion.Drawing.PointF(20, 20));
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document as stream.
-document.Save(stream);
-//Close the document.
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -61,6 +64,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -94,22 +100,22 @@ You can insert an empty page at any location in the existing PDF document using 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Insert-pages-in-a-PDF-document/.NET/Insert-pages-in-a-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Insert a new page in the beginning of the document.
 loadedDocument.Pages.Insert(0);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document as stream.
-loadedDocument.Save(stream);
-//Close the document.
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -122,6 +128,8 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document.
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -145,6 +153,9 @@ You can add margin to all the PDF pages of the PDF document using the [PageSetti
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Add-margin-to-the-PDF-pages/.NET/Add-margin-to-the-PDF-pages/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Set margin for all the pages.
@@ -161,16 +172,16 @@ PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 14);
 //Draw the text.
 graphics.DrawString("Hello world!", font, brush, new Syncfusion.Drawing.PointF(20, 20));
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document as stream.
-document.Save(stream);
-//Close the document.
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -195,6 +206,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -222,7 +236,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Add-margin-to-the-PDF-pages/).
 
-N> N> The default margin is set to 40 points, ensuring uniform spacing between the content and the page edges. This margin allows sufficient space for better readability and helps prevent content from being truncated during printing or viewing.
+N> The default margin is set to 40 points, ensuring uniform spacing between the content and the page edges. This margin allows sufficient space for better readability and helps prevent content from being truncated during printing or viewing.
 
 ## Adding sections with different page settings
 
@@ -233,6 +247,9 @@ The following code snippet explains how to add more sections to a PDF document w
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Adding-sections-with-different-page-settings/.NET/Adding-sections-with-different-page-settings/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -293,16 +310,17 @@ graphics = page.Graphics;
 //Draw simple text on the page
 graphics.DrawString("Rotated by 270 degrees", font, brush, new PointF(20, 20));
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-
-//Close the document.
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
+
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -371,6 +389,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim document As PdfDocument = New PdfDocument
@@ -451,6 +472,9 @@ For example, to use lowercase Roman numerals (i, ii, iii, ...), assign `PdfNumbe
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new document.
 PdfDocument document = new PdfDocument();
 //Add a section to the document.
@@ -484,20 +508,16 @@ for (int i = 0; i < 3; i++)
     page.Graphics.DrawString("This is the main content of a page with a footer.", font, PdfBrushes.Black, new PointF(10, 10));
 }
 
-//Create file stream.
-using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-{
-    //Save the PDF document to file stream.
-    document.Save(outputFileStream);
-}
-
-//Close the document.
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
-
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new document.
 PdfDocument document = new PdfDocument();
@@ -540,6 +560,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new document.
 Dim document As New PdfDocument()
@@ -592,9 +615,10 @@ You can get page count from the existing PDF document as shown in the following 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Get-number-of-pages-from-PDF-document/.NET/Get-number-of-pages-from-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the page count.
 int pageCount = loadedDocument.Pages.Count;
 //Close the document.
@@ -603,6 +627,8 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -614,6 +640,8 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -637,10 +665,11 @@ Essential<sup>&reg;</sup> PDF allows you to import a page or import a range of p
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Importing-pages-from-one-PDF-to-another-PDF/.NET/Importing-pages-from-one-PDF-to-another-PDF/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 int startIndex = 0;
@@ -648,17 +677,16 @@ int endIndex = loadedDocument.Pages.Count - 1;
 //Import all the pages to the new PDF document.
 document.ImportPageRange(loadedDocument, startIndex, endIndex);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document as stream.
-document.Save(stream);
-//Close the document instances.
-document.Close(true);
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -678,6 +706,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document.
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -710,10 +741,11 @@ N> Performance will be effective only in the large PDF document.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Import-pages-from-PDF-without-bookmarks/.NET/Import-pages-from-PDF-without-bookmarks/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Create the new PDF document
 PdfDocument document = new PdfDocument();
 int startIndex = 0;
@@ -721,17 +753,16 @@ int endIndex = loadedDocument.Pages.Count - 1;
 //Import all the pages to the new PDF document
 document.ImportPageRange(loadedDocument, startIndex, endIndex, false);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-document.Save(stream);
-//Close the document instances
-document.Close(true);
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -753,6 +784,9 @@ System.Diagnostics.Process.Start("Output.pdf");
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -783,21 +817,24 @@ You can rearrange the pages in an existing PDF document using [ReArrange](https:
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Rearrange-pages-in-an-existing-PDF-document/.NET/Rearrange-pages-in-an-existing-PDF-document/Program.cs" %}
 
-//Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Rearrange the page by index
-loadedDocument.Pages.ReArrange(new int[] { 1, 0 });//Creating the stream object
-MemoryStream stream = new MemoryStream();
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
-//Save the document as stream
-loadedDocument.Save(stream);
-//Close the document
+//Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Rearrange the page by index
+loadedDocument.Pages.ReArrange(new int[] { 1, 0 });
+
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -810,6 +847,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -834,10 +874,11 @@ You can alter the page label for the existing PDF document using [PdfPageLabel](
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Changing-page-numbers-in-a-PDF-document/.NET/Changing-page-numbers-in-a-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 // Create a page label
 PdfPageLabel pageLabel = new PdfPageLabel();
 //Set the number style with upper case roman letters
@@ -846,16 +887,15 @@ pageLabel.NumberStyle = PdfNumberStyle.UpperRoman;
 pageLabel.StartNumber = 1;
 loadedDocument.LoadedPageLabel = pageLabel;
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-loadedDocument.Save(stream);
-//Close the document
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -875,6 +915,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -901,26 +944,32 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can remove the pages from the existing PDF document using [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_RemoveAt_System_Int32_) method as shown in the below code example. 
 
+N> 1. Most PDF creators optimize file size by identifying identical images and storing them as shared resources. These shared objects are referenced across multiple pages rather than being duplicated. Therefore, removing a specific page does not automatically remove the shared image resource, as it may still be used on other pages.
+
+This behavior is by design and not considered an issue. If a shared resource is still referenced by other pages, removing it would result in missing content on those pages. In our current implementation, shared resources—such as images, text, and other objects—are only removed when all pages referencing them are deleted.
+
+
 {% tabs %}  
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Remove-pages-from-the-existing-PDF-document/.NET/Remove-pages-from-the-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Remove the first page in the PDF document
 loadedDocument.Pages.RemoveAt(0);
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-loadedDocument.Save(stream);
-//Close the document.
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -934,6 +983,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document.
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -958,6 +1010,10 @@ You can rotate a particular PDF page in the PDF document using [PdfPageRotateAng
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Rotating-a-PDF-page/.NET/Rotating-a-PDF-page/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a section.
@@ -975,16 +1031,17 @@ PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 14);
 //Draws the text.
 graphics.DrawString("Rotated by 90 degree", font, brush, new Syncfusion.Drawing.PointF(20, 20));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-document.Save(stream);
-//Close the document.
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1011,6 +1068,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -1048,23 +1109,26 @@ You can also rotate a PDF page in the existing PDF document using [PdfPageRotate
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Rotate-an-existing-PDF-page/.NET/Rotate-an-existing-PDF-page/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Gets the page
 PdfPageBase loadedPage = loadedDocument.Pages[0] as PdfPageBase;
 //Set the rotation for loaded page
 loadedPage.Rotation = PdfPageRotateAngle.RotateAngle90;            
 
-//Save the document into stream 
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document 
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -1081,6 +1145,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document. 
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -1108,23 +1175,26 @@ You can find the empty pages from the PDF document using the [IsBlank](https://h
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Detect-empty-pages-from-PDF/.NET/Detect-empty-pages-from-PDF/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Gets the page.
 PdfPageBase loadedPage = loadedDocument.Pages[0] as PdfPageBase;
 //get the page is blank or not.
 bool isEmpty = loadedPage.IsBlank;
 
-//Save the document into a stream. 
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document.
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -1141,6 +1211,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document.
  Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -1170,27 +1243,29 @@ Essential<sup>&reg;</sup> PDF allows to split the pages of an existing PDF docum
 
 //Due to platform limitations, Essential<sup>&reg;</sup> PDF supports splitting a PDF file into individual pages only in Windows Forms, WPF, ASP.NET, and ASP.NET MVC platforms. However this can be achieved by using the following code snippet. 
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-for (int i=0;i<loadedDocument.PageCount;i++)
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+for (int i = 0; i < loadedDocument.PageCount; i++)
 {
 //Creates a new document
 PdfDocument document = new PdfDocument();
 //Imports the pages from the loaded document
 document.ImportPage(loadedDocument, i);
 
-//Create a memory stream 
-MemoryStream stream = new MemoryStream();
-//Save the document to stream
-document.Save(stream);
-//Close the document
-document.Close(true);
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true);
 }
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -1204,6 +1279,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document.
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -1230,6 +1308,11 @@ The following code example illustrates the same.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Span-text-element-to-multiple-pages-in-a-PDF/.NET/Span-text-element-to-multiple-pages-in-a-PDF/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Text;
+
 //Create a PDF document instance.
 PdfDocument document = new PdfDocument();
 //Add the event.
@@ -1254,11 +1337,8 @@ PdfLayoutResult result = textElement.Draw(page, new RectangleF(0, 0, page.GetCli
 //Draw the second paragraph from the first paragraph’s end position.
 result = textElement.Draw(result.Page, new RectangleF(0, result.Bounds.Bottom + paragraphGap, page.GetClientSize().Width / 2, page.GetClientSize().Height), layoutFormat);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into memory stream.
-document.Save(stream);
-//Close the document.
+//Save and close the document.
+document.Save("Output.pdf");
 document.Close(true);
 
 //Event handler for PageAdded event.
@@ -1271,6 +1351,11 @@ page.Graphics.DrawRectangle(PdfPens.Black, new RectangleF(0, 0, page.GetClientSi
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Text;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1310,6 +1395,11 @@ page.Graphics.DrawRectangle(PdfPens.Black, new RectangleF(0, 0, page.GetClientSi
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Text
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -1362,23 +1452,25 @@ Refer to the following code example for creating duplicate page in a PDF documen
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Inserting-duplicate-pages-in-the-existing-pdf/.NET/Inserting-duplicate-pages-in-the-existing-pdf/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document. 
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read); 
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream); 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"); 
 //Gets the page 
 PdfLoadedPage loadedPage= loadedDocument.Pages[0] as PdfLoadedPage; 
 //Inserts the duplicate page in the beginning of the document. 
 loadedDocument.Pages.Insert(0, loadedPage); 
-//Creating the stream object. 
-MemoryStream stream = new MemoryStream(); 
-//Save the document as stream. 
-loadedDocument.Save(stream); 
-//Close the document. 
-loadedDocument.Close(true); 
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document. 
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"); 
@@ -1394,6 +1486,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document. 
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf") 
@@ -1422,32 +1517,32 @@ Refer to the following code example to create a new page in a PDF document while
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Insert-New-Page-in-Existing-PDF-with-Same-Size/.NET/Insert-New-Page-in-Existing-PDF-with-Same-Size/Program.cs" %}
 
-// Load the PDF document from a FileStream
-using (FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
-{
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-    // Get the size of the first page
-    PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
-    // Insert a new page at the beginning with the same size as the first page
-    PdfPageBase page = loadedDocument.Pages.Insert(0, loadedPage.Size);
+//Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+// Get the size of the first page
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
-    // Set the standard font
-    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-    // Draw the text on the page, centered
-    page.Graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-    // Save the updated PDF to a FileStream
-    using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
-    {
-        loadedDocument.Save(outputStream);
-    }
-    // Close the loaded document
-    loadedDocument.Close(true);
-}
+// Insert a new page at the beginning with the same size as the first page
+PdfPageBase page = loadedDocument.Pages.Insert(0, loadedPage.Size);
+
+// Set the standard font
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+// Draw the text on the page, centered
+page.Graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+// Save the updated PDF document
+loadedDocument.Save("Output.pdf");
+// Close the loaded document
+loadedDocument.Close(true); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -1469,6 +1564,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 ' Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
