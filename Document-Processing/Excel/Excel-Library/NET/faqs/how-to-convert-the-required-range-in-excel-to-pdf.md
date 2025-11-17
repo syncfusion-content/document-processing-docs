@@ -16,8 +16,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream excelStream = new FileStream("ExceltoPDF.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+  IWorkbook workbook = application.Workbooks.Open("ExceltoPDF.xlsx");
   IWorksheet sheet = workbook.Worksheets[0];
 
   XlsIORendererSettings settings = new XlsIORendererSettings();
@@ -35,10 +34,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   XlsIORenderer renderer = new XlsIORenderer();
   //Convert Excel document into PDF document
   PdfDocument pdfDocument = renderer.ConvertToPDF(tempWorksheet, settings);
-  Stream stream = new FileStream("ExcelToPDF.pdf", FileMode.Create, FileAccess.ReadWrite);
-  pdfDocument.Save(stream);
-  excelStream.Dispose();
-  stream.Dispose();
+  pdfDocument.Save("ExcelToPDF.pdf");
 }
 {% endhighlight %}
 

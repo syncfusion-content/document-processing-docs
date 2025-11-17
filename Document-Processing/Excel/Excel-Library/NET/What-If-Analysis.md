@@ -24,10 +24,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/WhatIfAnalysisTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-	inputStream.Dispose();
-
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/WhatIfAnalysisTemplate.xlsx"), ExcelOpenType.Automatic);	
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	// Access the collection of scenarios in the worksheet
@@ -51,12 +48,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CreateScenarios.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/CreateScenarios.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -138,8 +131,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	
+	IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx", ExcelOpenType.Automatic);
     IWorksheet worksheet = workbook.Worksheets[0];
 
     IScenarios scenarios = worksheet.Scenarios;
@@ -149,10 +142,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Modify the scenario 
     scenario1.ModifyScenario(scenario2.ChangingCells, scenario2.Values);
 
-    //Saving the workbook as stream
-    FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
-    stream.Dispose();
+    //Saving the workbook
+	workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -207,8 +198,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx", ExcelOpenType.Automatic);
     IWorksheet worksheet = workbook.Worksheets[0];
 
     IScenarios scenarios = worksheet.Scenarios;
@@ -217,10 +207,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Delete the scenario 
     scenario1.Delete();
 
-    //Saving the workbook as stream
-    FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
-    stream.Dispose();
+    //Saving the workbook
+	workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -274,18 +262,15 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx", ExcelOpenType.Automatic);
     IWorksheet worksheet1 = workbook.Worksheets[0];
     IWorksheet worksheet2 = workbook.Worksheets[1];
 
     //Merge the second worksheet scenario into first worksheet.
     worksheet1.Scenarios.Merge(worksheet2);
 
-    //Saving the workbook as stream
-    FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
-    stream.Dispose();
+    //Saving the workbook
+	workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -334,8 +319,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx", ExcelOpenType.Automatic);
     IWorksheet worksheet = workbook.Worksheets[0];
 
     IScenarios scenarios = worksheet.Scenarios;
@@ -359,10 +343,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Create Summary
     worksheet.Scenarios.CreateSummary(worksheet.Range["L7"]);
 
-    //Saving the workbook as stream
-    FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
-    stream.Dispose();
+    //Saving the workbook
+	workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -447,10 +429,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/WhatIfAnalysisTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-	inputStream.Dispose();
-
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/WhatIfAnalysisTemplate.xlsx"), ExcelOpenType.Automatic);
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Access the collection of scenarios in the worksheet
@@ -467,12 +446,9 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 		newSheet.Name = scenarios[pos].Name;
 
-		//Saving the new workbook as a stream
-		using (FileStream stream = new FileStream(Path.GetFullPath(@"Output/" + scenarios[pos].Name + ".xlsx"), FileMode.Create, FileAccess.ReadWrite))
-		{
-			newBook.SaveAs(stream);
-		}
-
+		//Saving the new workbook
+		newBook.SaveAs(Path.GetFullPath(@"Output/" + scenarios[pos].Name + ".xlsx"));
+		
 		//To restore the cell values from the previous scenario results
 		scenarios["Current % of Change"].Show();
 		scenarios["Current Quantity"].Show();
@@ -533,8 +509,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx", ExcelOpenType.Automatic);
     IWorksheet worksheet = workbook.Worksheets[0];
 
     IScenarios scenarios = worksheet.Scenarios;
@@ -543,10 +518,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Set the name of the scenario
     scenario.Name = "Current Quantity";
 
-    //Saving the workbook as stream
-    FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
-    stream.Dispose();
+    //Saving the workbook
+	workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -599,9 +572,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/WhatIfAnalysisTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-	inputStream.Dispose();
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/WhatIfAnalysisTemplate.xlsx"), ExcelOpenType.Automatic);
 
 	IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -616,12 +587,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/HideScenario.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/HideScenario.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 
 }
 {% endhighlight %}
@@ -678,9 +645,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/WhatIfAnalysisTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-	inputStream.Dispose();
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/WhatIfAnalysisTemplate.xlsx"), ExcelOpenType.Automatic);
 
 	IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -695,12 +660,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ProtectScenario.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ProtectScenario.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 
 }
 {% endhighlight %}
@@ -756,9 +717,8 @@ The comment associated with that particular scenario can be generated using the 
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+    application.DefaultVersion = ExcelVersion.Xlsx;	
+	IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx", ExcelOpenType.Automatic);
     IWorksheet worksheet = workbook.Worksheets[0];
 
     IScenarios scenarios = worksheet.Scenarios;
@@ -767,10 +727,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Set the comment value 
     scenario.Comment = "Scenario has been created";
 
-    //Saving the workbook as stream
-    FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
-    stream.Dispose();
+    //Saving the workbook
+	workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
