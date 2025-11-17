@@ -5192,7 +5192,7 @@ End Using
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/260329/Annotation/Setting-Annotation-Intent/.NET).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Setting-Annotation-Intent/.NET).
 
 ## Adding comments and review status to the PDF annotation
 
