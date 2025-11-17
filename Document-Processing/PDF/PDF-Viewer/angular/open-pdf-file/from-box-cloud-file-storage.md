@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open PDF from Box cloud storage in Angular PDF Viewer | Syncfusion
-description: Learn how to load PDF files from Box cloud storage in the Syncfusion Angular PDF Viewer component.
+description: Learn how to integrate Box cloud storage and load PDF files seamlessly in the Syncfusion Angular PDF Viewer component for better document management.
 platform: document-processing
 control: Open PDF files from Box cloud file storage
 documentation: ug
