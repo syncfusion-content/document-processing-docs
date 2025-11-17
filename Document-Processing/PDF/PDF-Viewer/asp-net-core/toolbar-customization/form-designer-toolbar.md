@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Form Designer Toolbar in ASP.NET Core PDF Viewer Component | Syncfusion
+title: Form Designer Toolbar in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn here all about form designer toolbar customization in Syncfusion ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
@@ -15,7 +15,7 @@ The form designer toolbar can be customized by showing or hiding default items a
 
 Show or hide the form designer toolbar programmatically during initialization or at runtime.
 
-Use the [EnableFormDesigner](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableFormDesigner) property or the [showFormDesignerToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#showformdesignertoolbar) method to toggle visibility.
+Use the [EnableFormDesigner](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableFormDesigner) property or the [showFormDesignerToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar#showformdesignertoolbar) method to toggle visibility.
 
 The following code snippet explains how to show or hide the toolbar using the `EnableFormDesigner` property.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Load N specific number of pages in PDFViewer | Syncfusion
+title: Load N number of pages on initial load in PDF Viewer | Syncfusion
 description: Learn how to configure the ASP.NET Core PDF Viewer to load a defined number of pages during the initial render by using the initialRenderPages property.
 platform: document-processing
 control: PDF Viewer

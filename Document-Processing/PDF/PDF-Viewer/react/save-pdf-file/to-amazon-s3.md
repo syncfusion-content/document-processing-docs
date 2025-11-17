@@ -6,7 +6,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF files to AWS S3
+# Save PDF files to AWS S3 in React
 
 The React PDF Viewer component supports saving PDF files to AWS S3 using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 

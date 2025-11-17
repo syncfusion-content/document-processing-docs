@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Open PDF from Google Drive in ASP.NET Core PDF Viewer | Syncfusion
+title: Open Google Cloud PDF in Syncfusion ASP.NET Core Viewer
 description: Learn how to load PDFs from Google Drive in the Syncfusion ASP.NET Core PDF Viewer component using a server-backed approach.
 platform: document-processing
 control: PDF Viewer
-
 documentation: ug
 ---
 
-# Open PDF from Google Drive
+# Open PDF from Google Drive in ASP.NET Core
 
 Follow these steps to load a PDF from Google Drive using the server-backed PDF Viewer.
 
@@ -147,7 +146,7 @@ N> The **FolderId** part is the unique identifier for the folder. For example, i
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set `documentPath` to the PDF file name to load from Google Drive. Ensure the document name exists in your Drive folder.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set `documentPath` to the PDF file name to load from Google Drive. Ensure the document name exists in your Drive folder.
 
 ```csharp
 
