@@ -156,7 +156,7 @@ validation.FirstFormula = "=Sheet1!$B$1:$B$3"
 {% endhighlight %}
 {% endtabs %}   
 
-A complete working example of list validation for a user-defined range in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/UserDefinedValidation/.NET/UserDefinedValidation). 
+A complete working example of list validation for a user-defined range in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/UserDefinedValidation/.NET/UserDefinedValidation">this GitHub page</a>. 
 
 ## Number Validation
 
