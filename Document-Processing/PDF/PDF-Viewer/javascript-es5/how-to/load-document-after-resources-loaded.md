@@ -53,11 +53,11 @@ function onResourcesLoaded() {
 
 - Always set a valid resourceUrl when using the Standalone PDF Viewer. If the path is incorrect or blocked by the network, the event cannot fire.
 - Load documents inside resourcesLoaded. This guarantees the PDFium runtime is ready and prevents intermittent errors on slower networks.
-- The event fires for the viewer’s asset load lifecycle, not for every document load. After it fires once, you can safely call load again later (for example, in response to user actions) without waiting for the event.
+- The event fires for the viewer’s asset load life cycle, not for every document load. After it fires once, you can safely call load again later (for example, in response to user actions) without waiting for the event.
 
 ## See also
 
-- [Events in JavaScript PDF Viewer](../event/#resourcesloaded)
+- [Events in JavaScript PDF Viewer](../event#resourcesloaded)
 - [Open PDF files](../open-pdf-files)
 - [Save PDF files](../save-pdf-files)
 - [Getting started](../getting-started)

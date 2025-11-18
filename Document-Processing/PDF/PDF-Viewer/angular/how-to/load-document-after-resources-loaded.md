@@ -14,7 +14,7 @@ In Standalone mode, the Angular PDF Viewer downloads its PDFium runtime assets (
 
 ## When does resourcesLoaded trigger?
 
-The `resourcesLoaded` event fires once the viewer finishes loading all required PDFium assets. At this point, it is safe to call the [`load`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#load) method to open a document (by URL or Base64).
+The `resourcesLoaded` event fires once the viewer finishes loading all required PDFium assets. At this point, it is safe to call the [`load`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#load) method to open a document (by URL or Base64).
 
 ## How to Load Document after resourcesLoaded
 
@@ -90,11 +90,11 @@ export class AppComponent {
 
 - Always set a valid `resourceUrl` when using the Standalone PDF Viewer. If the path is incorrect or blocked by the network, the event cannot fire.
 - Load documents inside `resourcesLoaded`. This guarantees the PDFium runtime is ready and prevents intermittent errors on slower networks.
-- The event fires for the viewer’s asset load lifecycle, not for every document load. After it fires once, you can safely call `load` again later (for example, in response to user actions) without waiting for the event.
+- The event fires for the viewer’s asset load life cycle, not for every document load. After it fires once, you can safely call `load` again later (for example, in response to user actions) without waiting for the event.
 
 ## See also
 
-- [Events in Angular PDF Viewer](../events/#resourcesloaded)
+- [Events in Angular PDF Viewer](../events#resourcesloaded)
 - [Open PDF files](../open-pdf-files)
 - [Save PDF files](../save-pdf-files)
 - [Getting started](../getting-started)

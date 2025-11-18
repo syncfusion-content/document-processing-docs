@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Load document after resources Loaded ASP.NET MVC PDF Viewer | Syncfusion
+title: Load document after resources Loaded MVC PDF Viewer | Syncfusion
 description: Learn here how to load a PDF only after assets are ready in the Syncfusion ASP.NET Core PDF Viewer (Standalone) using the resourcesLoaded event.
 platform: document-processing
 control: PDF Viewer 
@@ -60,11 +60,11 @@ The resourcesLoaded event fires once the viewer finishes loading all required PD
 
 - Always set a valid resourceUrl when using the Standalone PDF Viewer. If the path is incorrect or blocked by the network, the event cannot fire.
 - Load documents inside resourcesLoaded. This guarantees the PDFium runtime is ready and prevents intermittent errors on slower networks.
-- The event fires for the viewer’s asset load lifecycle, not for every document load. After it fires once, you can safely call load again later (for example, in response to user actions) without waiting for the event.
+- The event fires for the viewer’s asset load life cycle, not for every document load. After it fires once, you can safely call load again later (for example, in response to user actions) without waiting for the event.
 
 ## See also
 
-- [Events in ASP.NET MVC PDF Viewer](../event/#resourcesloaded)
+- [Events in ASP.NET MVC PDF Viewer](../event#resourcesloaded)
 - [Open PDF files](../open-pdf-files)
 - [Save PDF files](../save-pdf-files)
 - [Getting started](../getting-started)
