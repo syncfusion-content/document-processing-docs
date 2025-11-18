@@ -25,8 +25,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     worksheet.Pictures.AddPicture(15, 10, barcode2);
 
     // Save to file system
-    FileStream stream = new FileStream("Output.xlsx",FileMode.OpenOrCreate, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
+    workbook.SaveAs("Output.xlsx");
     workbook.Close();
     excelEngine.Dispose();
 }

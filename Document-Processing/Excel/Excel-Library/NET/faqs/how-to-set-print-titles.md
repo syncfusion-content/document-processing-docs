@@ -17,15 +17,13 @@ XlsIO allows to designate row header to repeat on all pages of a printed workboo
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Print Rows 1 to 3 on every printed page
   worksheet.PageSetup.PrintTitleRows = "$A$1:$IV$3";
-
-  FileStream stream = new FileStream("TitleRows.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+ 
+  workbook.SaveAs("TitleRows.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }
@@ -68,15 +66,13 @@ XlsIO allows to designate column header to repeat on all pages of a printed work
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Print Columns 1 to 3 on every printed page
   worksheet.PageSetup.PrintTitleColumns = "$A$1:$C$65536";
 
-  FileStream stream = new FileStream("TitleColumns.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  workbook.SaveAs("TitleColumns.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

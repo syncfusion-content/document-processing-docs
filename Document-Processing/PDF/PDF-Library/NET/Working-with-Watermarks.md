@@ -14,11 +14,17 @@ To quickly get started, add Watermarks and Bookmarks to a PDF document in .NET u
 
 ## Adding text watermark in PDF document
 
-The below code illustrates how to draw the text watermark in new PDF document using [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The transparency can be applied to the text or images using [SetTransparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_SetTransparency_System_Single_) method and rotation can be applied using [RotateTransform](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_RotateTransform_System_Single_) method. 
+The below code illustrates how to draw the text watermark in new PDF document using [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The transparency can be applied to the text or images using [SetTransparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_SetTransparency_System_Single_) method and rotation can be applied using [RotateTransform](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_RotateTransform_System_Single_) method.
+
+The [PdfGraphicsState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphicsState.html) class is used to save the current graphics context of a PdfGraphics object. This includes properties like transformations, transparency settings, clipping paths, and other graphical configurations. By calling `graphics.Save()`, you store the current state before applying changes such as rotation or transparency. Later, you can restore this state using `graphics.Restore(state)` to revert to the original settings, ensuring that temporary modifications do not affect subsequent drawing operations. This is especially useful when adding watermarks, as it allows you to isolate the watermark styling from other content on the page.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Watermark/Adding-text-watermark-in-PDF-document/.NET/Adding-text-watermark-in-PDF-document/Program.cs" %} 
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -35,22 +41,17 @@ graphics.SetTransparency(0.25f);
 graphics.RotateTransform(-40);
 graphics.DrawString("Imported using Essential PDF", font, PdfPens.Red, PdfBrushes.Red, new PointF(-150, 450));
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-pdfDocument.Save(stream);
-stream.Position = 0;
-//Close the document.
+//Save and close the document.
+pdfDocument.Save("Watermark.pdf");
 pdfDocument.Close(true);
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Watermark.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -74,6 +75,10 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()
@@ -109,9 +114,13 @@ The below code illustrates how to draw the text watermark in an existing PDF doc
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Watermark/Add-text-watermark-in-an-existing-PDF-document/.NET/Add-text-watermark-in-an-existing-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get first page from document.
 PdfPageBase loadedPage = loadedDocument.Pages[0];
 //Create PDF graphics for the page.
@@ -124,27 +133,23 @@ PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
 PdfGraphicsState state = graphics.Save();
 graphics.SetTransparency(0.25f);
 graphics.RotateTransform(-40);
-graphics.DrawString("Imported using Essential PDF", font, PdfPens.Red, PdfBrushes.Red, new PointF(-150, 
+graphics.DrawString("Imported using Essential PDF", font, PdfPens.Red, PdfBrushes.Red, new PointF(-150, 450));
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-stream.Position = 0;
-//Close the document.
+//Save and close the document.
+loadedDocument.Save("Watermark.pdf");
 loadedDocument.Close(true);
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Watermark.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get first page from document.
 PdfPageBase loadedPage = loadedDocument.Pages[0];
 //Create PDF graphics for the page.
@@ -166,8 +171,13 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+Imports System.Drawing
+
 'Load an existing PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Get first page from document.
 Dim loadedPage As PdfPageBase = loadedDocument.Pages(0)
 'Create PDF graphics for the page.
@@ -197,11 +207,17 @@ The following screenshot shows the output of adding text watermark to an existin
 
 ## Adding image watermark in PDF document
 
-The below code sample illustrates how to add image watermark in PDF document, using [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_System_Drawing_SizeF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The transparency can be applied to the text or images using [SetTransparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_SetTransparency_System_Single_) method and rotation can be applied using [RotateTransform](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_RotateTransform_System_Single_) method. 
+The below code sample illustrates how to add image watermark in PDF document, using [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_System_Drawing_SizeF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The transparency can be applied to the text or images using [SetTransparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_SetTransparency_System_Single_) method and rotation can be applied using [RotateTransform](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_RotateTransform_System_Single_) method.
+
+The [PdfGraphicsState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphicsState.html) class is used to save the current graphics context of a PdfGraphics object. This includes properties like transformations, transparency settings, clipping paths, and other graphical configurations. By calling `graphics.Save()`, you store the current state before applying changes such as rotation or transparency. Later, you can restore this state using `graphics.Restore(state)` to revert to the original settings, ensuring that temporary modifications do not affect subsequent drawing operations. This is especially useful when adding watermarks, as it allows you to isolate the watermark styling from other content on the page.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Watermark/Adding-image-watermark-in-PDF-document/.NET/Adding-image-watermark-in-PDF-document/Program.cs" %} 	
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -219,22 +235,17 @@ graphics.SetTransparency(0.25f);
 //Draw the image. 
 graphics.DrawImage(image, new PointF(0, 0), pdfPage.Graphics.ClientSize);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-pdfDocument.Save(stream);
-stream.Position = 0;
-//Close the document.
+//Save and close the document.
+pdfDocument.Save("Watermark.pdf");
 pdfDocument.Close(true);
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Watermark.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -257,6 +268,10 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()
@@ -291,9 +306,13 @@ The below code illustrates how to draw the image watermark in existing PDF docum
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Watermark/Draw-the-image-watermark-in-an-existing-PDF-document/.NET/Draw-the-image-watermark-in-an-existing-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get first page from document
 PdfPageBase loadedPage = loadedDocument.Pages[0];
 //Create PDF graphics for the page
@@ -307,25 +326,21 @@ graphics.SetTransparency(0.25f);
 //Draw the image
 graphics.DrawImage(image, new PointF(0, 0), loadedPage.Graphics.ClientSize);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-stream.Position = 0;
-//Close the document
+//Save and close the document.
+loadedDocument.Save("watermark.pdf");
 loadedDocument.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Watermark.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get first page from document.
 PdfPageBase loadedPage = loadedDocument.Pages[0];
 //Create PDF graphics for the page.
@@ -346,8 +361,13 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+Imports System.Drawing
+
 'Load the document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Get first page from document.
 Dim loadedPage As PdfPageBase = loadedDocument.Pages(0)
 'Create PDF graphics for the page
@@ -382,9 +402,13 @@ The following code example explains how to add a watermark annotation in the PDF
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-watermark-annotation-in-the-PDF-document/.NET/Add-watermark-annotation-in-the-PDF-document/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Get the page 
 PdfLoadedPage lpage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -397,15 +421,18 @@ watermark.Appearance.Normal.Graphics.DrawString("Watermark Text", new PdfStandar
 //Adds the annotation to page 
 lpage.Annotations.Add(watermark);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document 
-loadedDocument.Close(true); 
+//Saves the document. 
+loadedDocument.Save("WatermarkAnnotation.pdf"); 
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -428,6 +455,11 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+Imports System.Drawing
 
 'Load the existing PDF document
  Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -460,9 +492,12 @@ You can remove the Watermark annotation from the annotation collection, represen
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Watermark/Removing-watermark-annotation-in-PDF-document/.NET/Remove-watermark-annotation-in-the-PDF-document/Program.cs" %} 
 
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Graphics;
+    using Syncfusion.Pdf.Parsing;
+
     //Load the PDF document
-    FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
     // Iterate through the annotations collection and remove PdfLoadedWatermark annotations
     foreach (PdfPageBase page in loadedDocument.Pages)
     {
@@ -477,15 +512,17 @@ You can remove the Watermark annotation from the annotation collection, represen
         }
     }
 
-    //Save the document into stream
-    MemoryStream stream = new MemoryStream();
-    loadedDocument.Save(stream);
-    //Close the document 
-    loadedDocument.Close(true); 
+    //Saves the document to disk. 
+    loadedDocument.Save("WatermarkAnnotation.pdf"); 
+    loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Graphics;
+    using Syncfusion.Pdf.Parsing;
 
     //Load the existing PDF document
     PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
@@ -510,6 +547,10 @@ You can remove the Watermark annotation from the annotation collection, represen
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    Imports Syncfusion.Pdf
+    Imports Syncfusion.Pdf.Graphics
+    Imports Syncfusion.Pdf.Parsing
 
     'Load the existing PDF document
     Dim loadedDocument As New PdfLoadedDocument("input.pdf")

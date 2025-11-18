@@ -18,8 +18,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     application.DefaultVersion = ExcelVersion.Xlsx;
 
     //Loads an existing file.
-    FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
+    IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
 
     //Find duplicate values in the column
@@ -28,9 +27,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
         worksheet.Range["D" + i].Formula = $"=IF(MATCH(C{i},C$2:C{i},0)=ROW(C{i})-1,1,0)";
     }
 
-    //Saving the workbook as stream
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
+    //Saving the workbook 
+    workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 

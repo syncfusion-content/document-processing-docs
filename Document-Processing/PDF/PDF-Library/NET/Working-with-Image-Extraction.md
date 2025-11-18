@@ -15,9 +15,12 @@ Refer to the following code snippet to extract the images from a PDF page.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Image%20Extraction/Extract-images-from-a-PDF-pages/.NET/Extract-images-from-a-PDF-pages/Program.cs" %}
 
-//Load an existing PDF
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Exporting;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the first page
 PdfPageBase pageBase = loadedDocument.Pages[0];
 
@@ -30,8 +33,12 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Exporting;
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing PDF
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the first page
 PdfPageBase pageBase = loadedDocument.Pages[0];
 
@@ -44,8 +51,12 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Exporting
+Imports Syncfusion.Pdf.Parsing
+
 'Load an existing PDF
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Load the first page
 Dim pageBase As PdfPageBase = loadedDocument.Pages(0)
 
@@ -72,9 +83,13 @@ Refer to the following code snippet to extract the image info from a PDF page.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Image%20Extraction/Extract-the-image-info-from-a-PDF-page/.NET/Extract-the-image-info-from-a-PDF-page/Program.cs" %}
 
-//Load an existing PDF
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Exporting;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the first page
 PdfPageBase pageBase = loadedDocument.Pages[0];
 
@@ -87,8 +102,13 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Exporting;
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing PDF
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Load the first page
 PdfPageBase pageBase = loadedDocument.Pages[0];
 
@@ -101,8 +121,13 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Exporting
+Imports Syncfusion.Pdf.Parsing
+
 'Load an existing PDF
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Load the first page
 Dim pageBase As PdfPageBase = loadedDocument.Pages(0)
 
@@ -125,6 +150,9 @@ The following code example illustrates how to extract images from an entire PDF 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Image%20Extraction/Extract-images-from-PDF-documents/.NET/Extract-images-from-PDF-documents/Program.cs" %}
 
+using Syncfusion.Pdf.Parsing;
+using System.IO;
+
 //Get stream from an existing PDF document.
 FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
 //Initialize the PDF document extractor.
@@ -144,6 +172,9 @@ documentExtractor.Dispose();
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf.Parsing;
+using System.IO;
+
 //Get stream from an existing PDF document.
 FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
 //Initialize the PDF document extractor.
@@ -162,6 +193,9 @@ documentExtractor.Dispose();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports System.IO
 
 'Get stream from an existing PDF document.
 Dim inputStream As FileStream = New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
@@ -185,3 +219,54 @@ documentExtractor.Dispose()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Image%20Extraction/Extract-images-from-PDF-documents). 
 
 N> To extract images from PDF page in .NET Core application, add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package to your project.
+
+## Troubleshooting and FAQ's
+
+### Missing SkiaSharp Native Assets on Ubuntu ARM64
+
+<table>
+<th style="font-size:14px" width="100px">Issue
+</th>
+<th style="font-size:14px">Image extraction fails on Ubuntu 22.04.5 LTS servers running on ARM64 architecture due to missing SkiaSharp native dependencies.
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>SkiaSharp requires platform-specific native binaries for graphics operations:<br>
+
+1.The default SkiaSharp package doesn't include ARM64 Linux binaries.<br>
+2.Ubuntu ARM64 environments lack these native assets by default.<br>
+3.SkiaSharp fails to initialize without these dependencies.<br>
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>Add the appropriate native assets package based on your environment:<br>
+
+1.For Standard Linux Environments<br>
+(Ubuntu, Alpine, CentOS, Debian, Fedora, RHEL, Azure App Service, Google App Engine)
+<br><br/>
+{% highlight c# tabtitle="C#" %}
+
+dotnet add package SkiaSharp.NativeAssets.Linux --version 3.116.1
+
+{% endhighlight %}
+
+2.For cloud native deployments<br>
+(AWS Lambda, AWS Elastic Beanstalk)
+<br><br/>
+{% highlight c# tabtitle="C#" %}
+
+dotnet add package SkiaSharp.NativeAssets.Linux.NoDependencies --version 3.116.1
+
+{% endhighlight %}
+
+For Ubuntu 22.04.5 LTS on ARM64, use `SkiaSharp.NativeAssets.Linux`<br>
+Check your `.csproj` file for the following entry: `<PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="3.116.1" />`
+
+</td>
+</tr>
+</table>
