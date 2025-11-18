@@ -84,7 +84,7 @@ export class AppComponent {
 }
 ```
 
-[View Sample in GitHub]()
+[View Sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)
 
 ## Notes and best practices
 
