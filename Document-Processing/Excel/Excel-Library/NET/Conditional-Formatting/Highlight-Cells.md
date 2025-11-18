@@ -12,7 +12,7 @@ Highlight cell rules are powerful tools for data analysis and presentation, enha
 
 ## Format Unique and Duplicate Values
 
-Format unique and duplicate values of an Excel range using conditional formatting. The values, **Unique** and **Duplicate** of the enumeration [ExcelCFType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelCFType.html) helps to achieve the requirement.
+Format unique and duplicate values of an Excel range using conditional formatting. The values, **Unique** and **Duplicate** of the enumeration [ExcelCFType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelCFType.html) helps to achieve the requirement.
 
 The following code example illustrates how to format unique and duplicate values using conditional formatting.
 

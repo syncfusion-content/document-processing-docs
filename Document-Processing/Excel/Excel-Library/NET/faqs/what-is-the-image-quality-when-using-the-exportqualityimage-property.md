@@ -21,5 +21,5 @@ Hence, we have used PNG format as default for exporting the images into PDF. If 
 ## See Also
 
 * [How to export quality image?](https://help.syncfusion.com/file-formats/xlsio/excel-to-pdf-converter-settings#export-quality-image)
-* [How to convert Worksheet to Image?](https://help.syncfusion.com/file-formats/xlsio/worksheet-to-image-conversion)
+* [How to convert Worksheet to Image?](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-image/net/worksheet-to-image-conversion)
 * [How to convert Chart to Image?](https://help.syncfusion.com/file-formats/xlsio/chart-to-image-conversion)
