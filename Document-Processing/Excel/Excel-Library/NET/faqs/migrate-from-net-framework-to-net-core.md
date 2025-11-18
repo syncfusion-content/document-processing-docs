@@ -78,7 +78,7 @@ Not needed. Same functionalities are moved to {{'[Syncfusion.XlsIORenderer](http
 </tr>
 <tr>
 <td>
-{{'[Syncfusion.ExcelChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.ExcelChartToImageConverter.html)'| markdownify}}
+{{'[Syncfusion.ExcelChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelChartToImageConverter.html)'| markdownify}}
 </td>
 <td>
 {{'[Syncfusion.XlsIORenderer](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.XlsIORenderer.html)'| markdownify}}
@@ -98,7 +98,7 @@ Not needed. Same functionalities are moved to {{'[Syncfusion.XlsIORenderer](http
 </tr>
 <tr>
 <td>
-{{'[ExcelToPDFConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html)'| markdownify}}
+{{'[ExcelToPDFConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html)'| markdownify}}
 </td>
 <td>
 {{'[XlsIORenderer](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.XlsIORenderer.html)'| markdownify}}
@@ -106,7 +106,7 @@ Not needed. Same functionalities are moved to {{'[Syncfusion.XlsIORenderer](http
 </tr>
 <tr>
 <td>
-{{'[ExcelChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.ExcelChartToImageConverter.ChartToImageConverter.html)'| markdownify}}
+{{'[ExcelChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelChartToImageConverter.ChartToImageConverter.html)'| markdownify}}
 </td>
 <td>
 {{'[XlsIORenderer ](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.XlsIORenderer.html)'| markdownify}}
@@ -202,7 +202,7 @@ Not supported due to .NET Framework limitation.
 </tr>
 <tr>
 <td>
-{{'[ExcelToPdfConverter ExcelToPdfConverter(IWorkbook workbook)](https://help.syncfusion.com/cr/file-formats/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter__ctor_Syncfusion_XlsIO_IWorkbook_)'| markdownify}}
+{{'[ExcelToPdfConverter ExcelToPdfConverter(IWorkbook workbook)](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter__ctor_Syncfusion_XlsIO_IWorkbook_)'| markdownify}}
 </td>
 <td>
 {{'[XlsIORenderer XlsIORenderer()](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.XlsIORenderer.XlsIORenderer.html#Syncfusion_XlsIORenderer_XlsIORenderer__ctor)'| markdownify}}
@@ -210,7 +210,7 @@ Not supported due to .NET Framework limitation.
 </tr>
 <tr>
 <td>
-{{'[ExcelToPdfConverter Convert()](https://help.syncfusion.com/cr/file-formats/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter_Convert)'| markdownify}}
+{{'[ExcelToPdfConverter Convert()](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter_Convert)'| markdownify}}
 </td>
 <td>
 {{'[XlsIORenderer ConvertToPDF(IWorkbook workbook)](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.XlsIORenderer.XlsIORenderer.html#Syncfusion_XlsIORenderer_XlsIORenderer_ConvertToPDF_Syncfusion_XlsIO_IWorkbook_)'| markdownify}}
