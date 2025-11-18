@@ -21,24 +21,46 @@ The resourcesLoaded event fires once the viewer finishes loading all required PD
 - Set the resourceUrl to a valid PDF Viewer assets path (CDN or your hosted path).
 - Listen to resourcesLoaded and call load inside the handler.
 
-```tsx
-// App.tsx
+```js
+//index.js
 import React, { useRef, useCallback } from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { createRoot } from 'react-dom/client';
+import './index.css';
 
-export default function App() {
-  const viewerRef = useRef<PdfViewerComponent>(null);
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  LinkAnnotation,
+  ThumbnailView,
+  BookmarkView,
+  TextSelection,
+  Annotation,
+  FormDesigner,
+  FormFields,
+  PageOrganizer,
+  Inject
+} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  const viewerRef = useRef(null);
 
   const onResourcesLoaded = useCallback(() => {
     // Choose ONE of the following load options:
 
-    // 1) Load by URL
-    viewerRef.current?.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', '');
+    // 1) Load by URL (recommended for your case)
+    viewerRef.current?.load(
+      'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+      ''
+    );
 
-    // 2) Load by Base64 (uncomment if you want to load Base64)
-    // const base64 = '';// supply your Base64 here when needed
+    // 2) Load by Base64 (uncomment if needed)
+    // supply your Base64 string
+    // const base64 ='data:application/pdf;base64,JVBERi0xLjMNCiXi48...';
+
     // if (base64) {
-    //   viewerRef.current?.load(`data:application/pdf;base64,${base64}`, '');
+    //   viewerRef.current?.load(base64, '');
     // }
   }, []);
 
@@ -51,14 +73,33 @@ export default function App() {
         resourcesLoaded={onResourcesLoaded}
         style={{ display: 'block', height: '100%' }}
       >
-        <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]} />
+        <Inject
+          services={[
+            Toolbar,
+            Magnification,
+            Navigation,
+            LinkAnnotation,
+            ThumbnailView,
+            BookmarkView,
+            TextSelection,
+            Annotation,
+            FormDesigner,
+            FormFields,
+            PageOrganizer
+          ]}
+        />
       </PdfViewerComponent>
     </div>
   );
 }
+
+// Mount (make sure you have <div id="sample"></div> in index.html)
+const container = document.getElementById('sample');
+const root = createRoot(container);
+root.render(<App />);
 ```
 
-[View Sample in GitHub]()
+[View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)
 
 ## Notes and best practices
 

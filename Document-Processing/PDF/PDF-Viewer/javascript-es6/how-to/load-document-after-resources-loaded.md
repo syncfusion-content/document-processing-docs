@@ -21,40 +21,36 @@ The resourcesLoaded event fires once the viewer finishes loading all required PD
 - Set the resourceUrl to a valid PDF Viewer assets path (CDN or your hosted path).
 - Listen to resourcesLoaded and call load inside the handler.
 
-```html
-<!-- index.html (snippet) -->
-<link href="https://cdn.syncfusion.com/ej2/31.2.2/material.css" rel="stylesheet">
-<div id="pdfViewer" style="height: 640px; display: block"></div>
-<script type="module">
-  import { PdfViewer } from '@syncfusion/ej2-pdfviewer';
+```ts
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
 
-  // Initialize the viewer in Standalone mode and point to the assets
-  const viewer = new PdfViewer({
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
+// Inject required modules
+PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
+
+const viewer: PdfViewer = new PdfViewer({
+    resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
     resourcesLoaded: onResourcesLoaded
-  });
-  viewer.appendTo('#pdfViewer');
-
-  // Sample sources to demonstrate both URL and Base64 loading
+});
+viewer.appendTo('#PdfViewer');
+ // Sample sources to demonstrate both URL and Base64 loading
   const documentUrl = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  const base64 = '';// supply your Base64 here when needed
+  const base64 ='data:application/pdf;base64,JVBERi0xLjMNCiX...';// supply your Base64 here when needed
 
   // Called when PDFium runtime assets have finished loading
-  function onResourcesLoaded(args) {
+  function onResourcesLoaded() {
     // Choose ONE of the following load options:
 
     // 1) Load by URL
-    viewer.load(documentUrl, null);
+    viewer.load(documentUrl, '');
 
     // 2) Load by Base64 (uncomment if you want to load Base64)
     // if (base64) {
-    //   viewer.load(`data:application/pdf;base64,${base64}`, null);
+    //   viewer.load(base64, '');
     // }
   }
-</script>
 ```
 
-[View Sample in GitHub]()
+[View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to)
 
 ## Notes and best practices
 
@@ -64,7 +60,7 @@ The resourcesLoaded event fires once the viewer finishes loading all required PD
 
 ## See also
 
-- [Events in JavaScript PDF Viewer](../events/#resourcesloaded)
+- [Events in JavaScript PDF Viewer](../event/#resourcesloaded)
 - [Open PDF files](../open-pdf-files)
 - [Save PDF files](../save-pdf-files)
 - [Getting started](../getting-started)

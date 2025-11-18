@@ -21,54 +21,81 @@ The resourcesLoaded event fires once the viewer finishes loading all required PD
 - Set the resourceUrl to a valid PDF Viewer assets path (CDN or your hosted path).
 - Listen to resourcesLoaded and call load inside the handler.
 
-```vue
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 <!-- App.vue -->
 <template>
-  <div style="height: 640px">
+  <div id="app">
     <ejs-pdfviewer
       id="pdfViewer"
-      ref="viewer"
+      ref="pdfviewer"
+      :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       @resourcesLoaded="onResourcesLoaded"
-      style="height: 100%; display: block"
-    ></ejs-pdfviewer>
+      style="height: 640px;"
+    >
+    </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSelection,
+  TextSearch,
+  FormFields,
+  FormDesigner,
+  PageOrganizer,
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
   name: 'App',
-  components: { 'ejs-pdfviewer': PdfViewerComponent },
-  provide: {
-    pdfviewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
   },
   data() {
     return {
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
-      documentUrl: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      base64: '' // supply your Base64 here when needed
+        documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+        resourceUrl: 'https://cdn.syncfusion.com/ej2/28.1.33/dist/ej2-pdfviewer-lib'
     };
   },
-  methods: {
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      Annotation,
+      TextSelection,
+      TextSearch,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
+  },
+    methods: {
     onResourcesLoaded() {
       // Choose ONE of the following load options:
 
       // 1) Load by URL
-      this.$refs.viewer?.load(this.documentUrl, '');
+      this.$refs.pdfviewer?.load(this.documentPath, '');
 
       // 2) Load by Base64 (uncomment if you want to load Base64)
-      // if (this.base64) {
-      //   this.$refs.viewer?.load(`data:application/pdf;base64,${this.base64}`, '');
+      // const base64 ='data:application/pdf;base64,JVBERi0xLjMNCiXi48...';
+      // if (base64) {
+      //   this.$refs.viewer?.load(base64, '');
       // }
     }
-  }
+  },
 };
 </script>
-```
+{% endhighlight %}
+{% endtabs %}
 
-[View Sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to)
 
 ## Notes and best practices
 
@@ -78,7 +105,7 @@ export default {
 
 ## See also
 
-- [Events in Vue PDF Viewer](../events/#resourcesloaded)
+- [Events in Vue PDF Viewer](../event/#resourcesloaded)
 - [Open PDF files](../open-pdf-files)
 - [Save PDF files](../save-pdf-files)
 - [Getting started](../getting-started)

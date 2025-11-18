@@ -21,42 +21,47 @@ The resourcesLoaded event fires once the viewer finishes loading all required PD
 - Set the resourceUrl to a valid PDF Viewer assets path (CDN or your hosted path).
 - Listen to resourcesLoaded and call load inside the handler.
 
-```cshtml
-@addTagHelper *, Syncfusion.EJ2
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
 
-<!-- Index.cshtml -->
-<div class="control-section">
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
     <ejs-pdfviewer
         id="pdfViewer"
+        style="height:600px; display:block"
         resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        resourcesLoaded="onResourcesLoaded"
-        style="height: 640px; display: block">
+        resourcesLoaded="onResourcesLoaded">
     </ejs-pdfviewer>
 </div>
 
 <script>
-  // Sample sources to demonstrate both URL and Base64 loading
+  // Choose one of the following load sources:
   var documentUrl = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  var base64 = '';// supply your Base64 here when needed
+  var base64 = ''; // put Base64 if you want to load from base64
 
-  // Called by the resourcesLoaded event
+  // Called automatically when the PDF Viewer’s resources (worker/lib) are ready
   function onResourcesLoaded(args) {
     var viewer = document.getElementById('pdfViewer').ej2_instances[0];
 
-    // Choose ONE of the following load options:
+    // 1) Load by URL (most common)
+    viewer.load(documentUrl, '');
 
-    // 1) Load by URL
-    viewer.load(documentUrl, null);
-
-    // 2) Load by Base64 (uncomment if you want to load Base64)
+    // 2) Load by Base64 (uncomment if needed)
     // if (base64) {
-    //   viewer.load('data:application/pdf;base64,' + base64, null);
+    //   viewer.load(base64, '');
     // }
   }
 </script>
-```
 
-[View Sample in GitHub]()
+{% endhighlight %}
+{% endtabs %}
+
+[View Sample in GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/How%20to)
 
 ## Notes and best practices
 
@@ -66,7 +71,7 @@ The resourcesLoaded event fires once the viewer finishes loading all required PD
 
 ## See also
 
-- [Events in ASP.NET Core PDF Viewer](../events/#resourcesloaded)
+- [Events in ASP.NET Core PDF Viewer](../event/#resourcesloaded)
 - [Open PDF files](../open-pdf-files)
 - [Save PDF files](../save-pdf-files)
 - [Getting started](../getting-started)
