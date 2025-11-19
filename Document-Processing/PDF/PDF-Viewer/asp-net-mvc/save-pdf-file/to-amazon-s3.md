@@ -8,7 +8,7 @@ publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Save PDF files to AWS S3
+# Save PDF files to AWS S3 in ASP.NET MVC
 
 The ASP.NET MVC PDF Viewer component supports saving PDF files to AWS S3 using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 
