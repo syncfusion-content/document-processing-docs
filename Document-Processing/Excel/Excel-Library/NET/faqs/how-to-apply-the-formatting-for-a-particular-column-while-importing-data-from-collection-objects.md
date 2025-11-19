@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# How to apply formatting to a specific column while importing data from collection objects?
+# How to apply formatting to a specific column while importing data?
 
 To apply formatting to a specific column while importing data from collection objects, use the **DisplayFormatAttribute** in the class definition, as shown in the example below.
 
