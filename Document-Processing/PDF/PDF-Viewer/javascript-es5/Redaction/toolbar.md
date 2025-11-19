@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Customize the redaction toolbar in TypeScript PDF Viewer | Syncfusion
-description: Learn how to customize the redaction toolbar in the Syncfusion TypeScript PDF Viewer by showing or hiding default items.
+title: Customize the redaction toolbar in JavaScript PDF Viewer | Syncfusion
+description: Learn how to customize the redaction toolbar in the Syncfusion JavaScript PDF Viewer by showing or hiding default items.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Redaction toolbar customization in TypeScript
+# Redaction toolbar customization in JavaScript
 
-The redaction toolbar in the Syncfusion JavaScript (ES6/TypeScript) PDF Viewer can be customized by rearranging existing items, hiding default items, or adding new ones. You can also place custom items at specific index positions among the existing toolbar items.
+The redaction toolbar in the Syncfusion JavaScript (ES5/JavaScript) PDF Viewer can be customized by rearranging existing items, hiding default items, or adding new ones. You can also place custom items at specific index positions among the existing toolbar items.
 
 ## Enable the redaction toolbar
 
@@ -80,7 +80,7 @@ document.getElementById('hideRedactionToolbar').addEventListener('click', () => 
 });
 ```
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
+[View Sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples)
 
 Refer to the following image for details:
 
