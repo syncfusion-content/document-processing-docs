@@ -2599,8 +2599,8 @@ N> In the above-mentioned code samples, for Xamarin platforms the document is sa
 
 ## Online Demo
 
-* Explore how to fill a form and protect the content controls in an existing Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/formfillingandprotection#/bootstrap5).
-* See how to map custom XML parts to content controls in the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/xmlmapping#/bootstrap5).
+* Explore how to fill a form and protect the content controls in an existing Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/formfillingandprotection#/tailwind).
+* See how to map custom XML parts to content controls in the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/xmlmapping#/tailwind).
 
 
 ## See Also
