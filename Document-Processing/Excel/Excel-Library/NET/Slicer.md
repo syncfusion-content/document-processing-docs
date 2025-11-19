@@ -25,8 +25,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet sheet = workbook.Worksheets[0];
 
   //Access the table.
@@ -35,9 +34,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Add slicer for the table.
   sheet.Slicers.Add(table, 3, 11, 2);
 
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -266,8 +263,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet sheet = workbook.Worksheets[0];
 
   //Access the table
@@ -306,9 +302,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Slicer style
   slicer.SlicerStyle = ExcelSlicerStyle.SlicerStyleDark2;
 
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
