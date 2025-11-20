@@ -186,7 +186,6 @@ The highlight color of the selected text can be get or set using the following s
 let highlightColor : HighlightColor = documenteditor.selection.characterFormat.highlightColor;
 //Sets highlightColor formatting for selected text.
 documenteditor.selection.characterFormat.highlightColor= 'Pink';
-documenteditor.selection.characterFormat.highlightColor= '#FFC0CB';
 ```
 
 ## Toolbar with options for text formatting
