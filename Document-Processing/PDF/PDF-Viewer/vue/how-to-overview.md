@@ -61,3 +61,4 @@ The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are liste
 * [How to convert pixel to point in server side?](./how-to/convert-pixel-to-point-in-server-side)
 * [Why is the web service not listening?](./how-to/webservice-not-listening)
 * [How to select annotation?](./how-to/select-annotation)
+* [Load Document after resources Loaded](./how-to/load-document-after-resources-loaded)

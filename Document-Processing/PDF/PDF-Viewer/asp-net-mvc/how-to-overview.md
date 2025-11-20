@@ -74,3 +74,4 @@ The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are liste
 * [How to set Author name for annotation in PDF Viewer?](./how-to/set-author-name-to-annotation)
 * [How to Show notification dialog in PDF Viewer?](./how-to/show-notification-dialog)
 * [How to set date to the signature in PDF Viewer?](./how-to/signature-date)
+* [Load Document after resources Loaded](./how-to/load-document-after-resources-loaded)
