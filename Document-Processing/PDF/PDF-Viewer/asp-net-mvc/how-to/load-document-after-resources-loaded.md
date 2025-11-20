@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load document after resources Loaded MVC PDF Viewer | Syncfusion
-description: Learn here how to load a PDF only after assets are ready in the Syncfusion ASP.NET Core PDF Viewer (Standalone) using the resourcesLoaded event.
+description: Learn here how to load a PDF only after assets are ready in the Syncfusion ASP.NET MVC PDF Viewer (Standalone) using the resourcesLoaded event.
 platform: document-processing
 control: PDF Viewer 
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Load a PDF only after PDFium resources are ready
 
-In Standalone mode, the ASP.NET Core PDF Viewer downloads its PDFium runtime assets (scripts/wasm) from the location specified in the resourceUrl property. Attempting to load a document before those assets are available can cause errors. Use the resourcesLoaded event to defer document loading until all required assets are ready.
+In Standalone mode, the ASP.NET MVC PDF Viewer downloads its PDFium runtime assets (scripts/wasm) from the location specified in the resourceUrl property. Attempting to load a document before those assets are available can cause errors. Use the resourcesLoaded event to defer document loading until all required assets are ready.
 
 ## When does resourcesLoaded trigger?
 
@@ -23,34 +23,29 @@ The resourcesLoaded event fires once the viewer finishes loading all required PD
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-@using Syncfusion.EJ2
+
 @{
     ViewBag.Title = "Home Page";
 }
-
-<div class="control-section">
-    @Html.EJS().PdfViewer("pdfViewer")
-        .ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib")
-        .ResourcesLoaded("onResourcesLoaded")
-        .Render()
+@Html.EJS().ScriptManager()
+<div>
+<div style="height:500px;width:100%;">
+        @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").Render()
 </div>
-
+</div>
+ 
 <script>
-  var documentUrl = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  var base64 = 'data:application/pdf;base64,JVBERi0xLjMNCiXi48...'; //Update Base64 here
+    window.onload = function() {
+        var viewer = (document.getElementById('pdfviewer')).ej2_instances[0];
+        viewer.resourcesLoaded = function () {
+            viewer.load(base64, ''); //viewer.load(documnetUrl,'') to load via document Url
+        }
+    }
+    var documentUrl = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 
-  function onResourcesLoaded(args) {
-    var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-
-    // Load by URL
-    viewer.load(documentUrl, '');
-
-    // Or Base64
-    // if (base64) {
-    //   viewer.load('data:application/pdf;base64,' + base64, '');
-    // }
-  }
+    var base64 = 'data:application/pdf;base64,JVBERi0xLjMNCiXi48....'; //Update Base64 here
 </script>
+
 {% endhighlight %}
 {% endtabs %}
 
