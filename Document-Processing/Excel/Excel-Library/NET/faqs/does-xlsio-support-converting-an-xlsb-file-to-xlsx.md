@@ -1,6 +1,6 @@
 ---
 title: Convert XLSB to XLSX using XlsIO | Syncfusion
-description: Learn how to convert an XLSB file to XLSX with the Syncfusion .NET Excel (XlsIO) library. 
+description: This page explains how to convert an XLSB file to XLSX with the Syncfusion .NET Excel (XlsIO) library. 
 platform: document-processing
 control: XlsIO
 documentation: UG
