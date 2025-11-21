@@ -807,6 +807,101 @@ padding-left: 5px;
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Create-custom-style-TOC-when-converting-HTML-to-PDF).
 
+## Skip Cover Page in TOC Numbering
+
+The following code snippet demonstrates how to set the starting page number for the Table of Contents (TOC) so that it skips the cover page. In this example, we have only one cover page, so the starting page number is set to 1. If your document includes multiple cover pages, you can adjust this value accordingly.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+// Create an instance of HTML-to-PDF converter using Blink rendering engine
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+// Configure Blink converter settings
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings
+{
+    ViewPortSize = new Size(1280, 0), // Set viewport width for rendering
+    EnableToc = true,                 // Enable Table of Contents (TOC)
+};
+// Set TOC starting page number to skip the cover page
+blinkConverterSettings.Toc.StartingPageNumber = 1;
+// Apply the settings to the converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+// Read the main HTML content and convert it to PDF
+string inputhtml = File.ReadAllText("input.html"));
+PdfDocument document = htmlConverter.Convert(inputhtml, "");
+// Create new settings for scaling the cover page
+BlinkConverterSettings settings = new BlinkConverterSettings();
+settings.Scale = 1.5f;
+// Apply scaling settings
+htmlConverter.ConverterSettings = settings;
+// Convert the cover page HTML to PDF
+string coverimage = File.ReadAllText("coverpage.html"));
+PdfDocument coverPage = htmlConverter.Convert(coverimage, "");
+// Insert the cover page at the beginning of the main document
+document.Pages.Insert(0, coverPage.Pages[0]);
+// Save the PDF document
+document.Save("Output.pdf"));
+// Close the PDF document
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.HtmlConverter
+Imports Syncfusion.Pdf
+
+' Create an instance of HTML-to-PDF converter using Blink rendering engine
+Dim htmlConverter As New HtmlToPdfConverter()
+
+' Configure Blink converter settings
+Dim blinkConverterSettings As New BlinkConverterSettings() With {
+    .ViewPortSize = New Size(1280, 0), ' Set viewport width for rendering
+    .EnableToc = True                  ' Enable Table of Contents (TOC)
+}
+
+' Set TOC starting page number to skip the cover page
+blinkConverterSettings.Toc.StartingPageNumber = 1
+
+' Apply the settings to the converter
+htmlConverter.ConverterSettings = blinkConverterSettings
+
+' Read the main HTML content and convert it to PDF
+Dim inputhtml As String = File.ReadAllText("input.html")
+Dim document As PdfDocument = htmlConverter.Convert(inputhtml, "")
+
+' Create new settings for scaling the cover page
+Dim settings As New BlinkConverterSettings()
+settings.Scale = 1.5F
+
+' Apply scaling settings
+htmlConverter.ConverterSettings = settings
+
+' Convert the cover page HTML to PDF
+Dim coverimage As String = File.ReadAllText("coverpage.html")
+Dim coverPage As PdfDocument = htmlConverter.Convert(coverimage, "")
+
+' Insert the cover page at the beginning of the main document
+document.Pages.Insert(0, coverPage.Pages(0))
+
+' Save the PDF document
+document.Save("Output.pdf")
+
+' Close the PDF document
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Media Type
 
 The Blink HTML Converter allows selection of media type while converting HTML to PDF. Blink rendering engine supports <b>Screen</b> and <b>Print</b> media types. Refer to the following code snippet to select Print [MediaType](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_MediaType).
