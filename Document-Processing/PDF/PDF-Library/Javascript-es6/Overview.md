@@ -20,8 +20,15 @@ The following are the key features of this library.
 * Support to load and save existing PDF documents.
 * Support to load and manipulate secured PDF documents.
 * Support to enhance existing PDF files by adding graphical elements such as text, images, shapes, and more.
-* Support to add and manipulate interactive elements, including annotations and form fields.
+* Support to add and manipulate interactive elements, including bookmarks, annotations and form fields.
 * Support to flatten form fields and annotations.
 * Support to import and export form fields and annotations.
-* Support to parse existing bookmarks.
+* Ability to merge and split PDF files.
+* Support to text watermark, image watermark, and watermark annotation.
+* Support to hyperlinks for web navigation and document navigation.
+* Support to insert, remove, and modify bookmarks.
+* Support to layers. Add, remove, and flatten the layers.
+* Support to create and apply PDF templates for consistent document layout and design.
+* Support to digitally sign a PDF document.
+* Support to extract and redact text in the PDF documents.
 
