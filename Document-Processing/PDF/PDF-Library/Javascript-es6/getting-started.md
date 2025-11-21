@@ -86,5 +86,5 @@ function createPdf() {
 
 By executing the program, you will get the PDF document as follows.
 
-![Output EJ2 PDF document](ej2-images/Helloworld.png)
+![Output EJ2 PDF document](EJ2-images/Helloworld.png)
 
