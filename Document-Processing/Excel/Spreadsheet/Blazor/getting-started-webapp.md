@@ -216,7 +216,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
-<SfSpreadsheet DataSourceBytes="@DataSourceBytes">
+<SfSpreadsheet DataSource="@DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
@@ -225,8 +225,8 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
     protected override void OnInitialized()
     {
-         string filePath = "wwwroot/Sample.xlsx";
-         DataSourceBytes = File.ReadAllBytes(filePath);
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
      }
 }
 

@@ -1244,7 +1244,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to add tables in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/table#/bootstrap5).
+* Explore how to add tables in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/table#/tailwind).
 
 ## See Also
 * [How to set background image for a table cell?](https://support.syncfusion.com/kb/article/5731/how-to-set-background-image-for-a-table-cell-in-winforms-)

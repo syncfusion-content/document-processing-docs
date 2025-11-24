@@ -58,7 +58,7 @@ Step 5: Add a new button in the **Index.cshtml** as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in the **Homecontroller.cs** file to **convert a Word document to image** and download it.
+Step 6: Include the below code snippet in the **HomeController.cs** file to **convert a Word document to image** and download it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -138,4 +138,4 @@ By executing the program, you will get the **image** as follows.
 
 Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
 
-An online sample link to [convert Word document to image](https://ej2.syncfusion.com/aspnetcore/Word/WordToImage#/material3) in ASP.NET Core.
+An online sample link to [convert Word document to image](https://document.syncfusion.com/demos/word/wordtoimage#/tailwind) in ASP.NET Core.
