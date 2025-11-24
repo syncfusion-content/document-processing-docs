@@ -20,4 +20,4 @@ When defining a named range in Excel, the following rules apply:
 
 **Length limit:** Maximum of 255 characters.
 
-**Case sensitivity:** Names are case-insensitive (e.g., SalesData and salesdata are treated the same).
+**Case sensitivity:** Names are case-insensitive.
