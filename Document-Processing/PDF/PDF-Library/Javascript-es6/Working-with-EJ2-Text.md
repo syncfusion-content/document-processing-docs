@@ -126,7 +126,7 @@ button.element.onclick = async () => {
 
 // Function to create PDF
 function createPdf() {
- // Load an existing PDF document
+    // Load an existing PDF document
     let document: PdfDocument = new PdfDocument('input.pdf');
     // Access first page
     let page: PdfPage = document.getPage(0);
@@ -250,7 +250,7 @@ function createPdf() {
 
 ### Draw text using CJK fonts
 
-This example demonstrates how to draw text using CJK fonts in a PDF document by utilizing the `drawString` method of the `PdfGraphics` class along with a `PdfCjkStandardFont` instance. CJK fonts provide support for Chinese, Japanese, and Korean characters, ensuring accurate rendering of multilingual text in the document.
+This example demonstrates how to draw text using fonts in a PDF document by utilizing the `drawString` method of the `PdfGraphics` class along with a `PdfCjkStandardFont` instance. CJK fonts provide support for Chinese, Japanese, and Korean characters, ensuring accurate rendering of multilingual text in the document.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
