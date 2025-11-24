@@ -102,7 +102,6 @@ public class FileOptions
 
 ```Json
 
-Apply
 {
   "Logging": {
     "LogLevel": {
