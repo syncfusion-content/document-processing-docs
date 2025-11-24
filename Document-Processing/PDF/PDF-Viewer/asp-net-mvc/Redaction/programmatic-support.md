@@ -21,12 +21,11 @@ You can add redaction annotations to a PDF document using the `addAnnotation` me
     <div style="margin-bottom:8px; display:flex; gap:8px; align-items:center;">
         <button id="addRedactAnnot" type="button" onclick="addRedaction()">Add Redaction Annotation</button>
     </div>
-    <ejs-pdfviewer
-        id="pdfViewer"
-        style="height:640px; display:block"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.12/dist/ej2-pdfviewer-lib"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+    @Html.EJS().PdfViewer("pdfViewer")
+        .ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.12/dist/ej2-pdfviewer-lib")
+        .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
+        .Height("640px")
+        .Render()
 </div>
 <script type="text/javascript">
     window.onload = function () {
@@ -69,12 +68,11 @@ Redaction annotations can be removed using the `deleteAnnotationById` event or b
     <div style="margin-bottom:8px;">
         <button type="button" onclick="deleteAnnotationById()">Delete Annotation By Id</button>
     </div>
-    <ejs-pdfviewer
-        id="pdfViewer"
-        style="height:640px; display:block"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.12/dist/ej2-pdfviewer-lib"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+    @Html.EJS().PdfViewer("pdfViewer")
+        .ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.12/dist/ej2-pdfviewer-lib")
+        .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
+        .Height("640px")
+        .Render()
 </div>
 <script type="text/javascript">
     window.onload = function () {
@@ -111,12 +109,11 @@ You can update properties of an existing redaction annotation using the `editAnn
     <div style="margin-bottom:8px; display:flex; gap:8px;">
         <button id="editRedactAnnotation" type="button" onclick="editRedactAnnotation()">Edit Redact Annotation</button>
     </div>
-    <ejs-pdfviewer
-        id="pdfViewer"
-        style="height:640px; display:block"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.12/dist/ej2-pdfviewer-lib"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+    @Html.EJS().PdfViewer("pdfViewer")
+        .ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.12/dist/ej2-pdfviewer-lib")
+        .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
+        .Height("640px")
+        .Render()
 </div>
 <script type="text/javascript">
     window.onload = function () {
@@ -162,12 +159,11 @@ Entire pages can be marked for redaction using the `addPageRedactions` method:
     <div style="margin-bottom:8px; display:flex; gap:8px; align-items:center;">
         <button id="addPageRedactions" type="button" onclick="addPageRedactions()">Add Page Redaction</button>
     </div>
-    <ejs-pdfviewer
-        id="pdfViewer"
-        style="height:640px; display:block"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.12/dist/ej2-pdfviewer-lib"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+    @Html.EJS().PdfViewer("pdfViewer")
+        .ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.12/dist/ej2-pdfviewer-lib")
+        .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
+        .Height("640px")
+        .Render()
 </div>
 <script type="text/javascript">
     window.onload = function () {
@@ -199,12 +195,11 @@ Once annotations are added, you can permanently apply them to the document using
     <div style="margin-bottom:8px; display:flex; gap:8px; align-items:center;">
         <button id="redact" type="button" onclick="applyRedaction()">Apply Redaction</button>
     </div>
-    <ejs-pdfviewer
-        id="pdfViewer"
-        style="height:640px; display:block"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.12/dist/ej2-pdfviewer-lib"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+    @Html.EJS().PdfViewer("pdfViewer")
+        .ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.12/dist/ej2-pdfviewer-lib")
+        .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
+        .Height("640px")
+        .Render()
 </div>
 <script type="text/javascript">
     window.onload = function () {
@@ -234,12 +229,11 @@ You can configure default properties for redaction annotations (such as fill col
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div class="text-center">
-    <ejs-pdfviewer
-        id="pdfViewer"
-        style="height:640px; display:block"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.12/dist/ej2-pdfviewer-lib"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+    @Html.EJS().PdfViewer("pdfViewer")
+        .ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.12/dist/ej2-pdfviewer-lib")
+        .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
+        .Height("640px")
+        .Render()
 </div>
 <script type="text/javascript">
     window.onload = function () {

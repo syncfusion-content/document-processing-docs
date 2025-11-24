@@ -23,27 +23,26 @@ N> Prerequisites: Add the PdfViewer control to your ASP.NET MVC application and 
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-@page
-@model IndexModel
 @{
-    ViewData["Title"] = "Search text and redact";
+    ViewBag.Title = "Search text and redact";
 }
+
 <div class="content-wrapper">
     <div style="margin-bottom:8px; display:flex; gap:8px; align-items:center;">
         <button id="searchTextRedact" type="button" onclick="searchTextAndRedact()">Search "syncfusion" & Mark for Redaction</button>
         <button id="applyRedaction" type="button" onclick="applyRedaction()">Apply Redaction</button>
     </div>
 
-    <ejs-pdfviewer
-        id="pdfViewer"
-        style="height:640px; display:block"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.12/dist/ej2-pdfviewer-lib"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        isExtractText="true">
-    </ejs-pdfviewer>
+    @Html.EJS().PdfViewer("pdfViewer")
+        .Height("640px")
+        .ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.12/dist/ej2-pdfviewer-lib")
+        .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
+        .IsExtractText(true)
+        .Render()
 </div>
+
 <script type="text/javascript">
-    window.onload = function () {
+    document.addEventListener('DOMContentLoaded', function () {
         window.viewer = document.getElementById('pdfViewer').ej2_instances[0];
         // Primary toolbar including Redaction
         viewer.toolbarSettings = {
@@ -53,7 +52,7 @@ N> Prerequisites: Add the PdfViewer control to your ASP.NET MVC application and 
                 'FormDesignerEditTool', 'SearchOption', 'PrintOption', 'DownloadOption'
             ]
         };
-    };
+    });
 
     // Finds "syncfusion" and adds redaction annotations for each match
     async function searchTextAndRedact() {
