@@ -100,7 +100,7 @@ function createPdf() {
    // Draw text on the page with specified font, position, and styles
    graphics.drawString('Hello World!!!', font, [10, 10, 200, 50], new PdfPen([255, 0, 255], 1),  new PdfBrush([0, 0, 0]));
    // Save the PDF document
-   let data = document.save("Output.pdf);
+   let data = document.save('Output.pdf');
    // Close and dispose the document
    document.destroy();
 }
