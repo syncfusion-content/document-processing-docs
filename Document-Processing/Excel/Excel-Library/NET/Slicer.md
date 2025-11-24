@@ -299,7 +299,7 @@ cache.CrossFilterType = SlicerCrossFilterType.ShowItemsWithDataAtTop;
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Dim slicer As ISlicer = sheet.Slicers(0)
 Dim cache As ISlicerCache = slicer.SlicerCache
-cache.SlicerCacheItems(0).IsSelected = True
+cache.CrossFilterType = SlicerCrossFilterType.ShowItemsWithDataAtTop
 {% endhighlight %}
 {% endtabs %}
 
