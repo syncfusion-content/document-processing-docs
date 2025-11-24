@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 In this article, we are going to see how to export the document as PDF format. You can export the document as PDF in following ways:
 
-To quickly get started with exporting to PDF in Document Editor, please check out the video below.
+To quickly get started with exporting to PDF in the Document Editor, check out the video below.
 
 {% youtube "https://www.youtube.com/watch?v=YMNGYPrDyv0" %}
 
