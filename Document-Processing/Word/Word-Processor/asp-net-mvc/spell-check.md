@@ -147,4 +147,4 @@ Using this option, you can open spell check dialog.
 
 ![Spell check dialog](images/spell-check-dialog.png)
 
-* Refer to the [Spell checker](https://gitea.syncfusion.com/essential-studio/ej2-documenteditor-server/) link for configuring spell checker in server-side.
+* Refer to the [Spell checker](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/tree/master/ASP.NET%20MVC#spell-check) link for configuring spell checker in server-side.

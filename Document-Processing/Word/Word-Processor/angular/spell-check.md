@@ -73,8 +73,6 @@ Document Editor provides multi-language spell check support. You can add as many
 this.container.documentEditor.spellChecker.languageID = 1033; //LCID of "en-us";
 ```
 
-* Refer to the [Spell checker](https://gitea.syncfusion.com/essential-studio/ej2-documenteditor-server/) link for configuring spell checker in server-side.
-
 ### EnableOptimizedSpellCheck
 
 Document Editor provides option to spellcheck page by page when loading the documents. The default value of this property is false, so when opening the document spellcheck web API will be called for each word in the document. To optimize the frequency of spellcheck web API calls, you can enable this property.
@@ -163,3 +161,5 @@ Ignore All: ignore all occurrence of a word from error in the entire document.
 Using this option, you can open spell check dialog. Please see below screenshot for your reference.
 
 ![Spell check dialog](images/spell-check-dialog.png)
+
+* Refer to the [Spell checker](https://help.syncfusion.com/document-processing/word/word-processor/angular/web-services/core#spell-check) link for configuring spell checker in server-side.
