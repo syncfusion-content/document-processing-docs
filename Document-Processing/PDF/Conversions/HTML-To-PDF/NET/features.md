@@ -819,10 +819,10 @@ using Syncfusion.Drawing;
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
 
-// Create an instance of HTML-to-PDF converter using Blink rendering engine
+// Create an instance of HTML-to-PDF converter
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
 // Configure Blink converter settings
-BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings()
 {
     ViewPortSize = new Size(1280, 0), // Set viewport width for rendering
     EnableToc = true,                 // Enable Table of Contents (TOC)
@@ -832,24 +832,25 @@ blinkConverterSettings.Toc.StartingPageNumber = 1;
 // Apply the settings to the converter
 htmlConverter.ConverterSettings = blinkConverterSettings;
 // Read the main HTML content and convert it to PDF
-string inputhtml = File.ReadAllText("Data/input.html");
-using (PdfDocument document = htmlConverter.Convert(inputhtml, ""))
+string inputhtml = File.ReadAllText("input.html");
+PdfDocument document = htmlConverter.Convert(inputhtml, "");
+//Create cover page and insert to the 0th index.
+// Apply scaling settings for the cover page
+htmlConverter.ConverterSettings = new BlinkConverterSettings()
 {
-    // Apply scaling settings for the cover page
-    htmlConverter.ConverterSettings = new BlinkConverterSettings()
-    {
-        Scale = 1.5f
-    };
-    // Convert the cover page HTML to PDF
-    string coverimage = File.ReadAllText(Path.GetFullPath(@"Data/coverpage.html"));
-    using (PdfDocument coverPage = htmlConverter.Convert(coverimage, ""))
-    {
-        // Insert the cover page at the beginning of the main document
-        document.Pages.Insert(0, coverPage.Pages[0]);
-        // Save the PDF document
-        document.Save("Output.pdf");
-    }
-}
+    Scale = 1.5f
+};
+// Convert the cover page HTML to PDF
+string coverimage = File.ReadAllText("coverpage.html");
+PdfDocument coverPage = htmlConverter.Convert(coverimage, "");
+// Insert the cover page at the beginning of the main document
+document.Pages.Insert(0, coverPage.Pages[0]);
+// Save the PDF document
+document.Save("Output.pdf");
+//Dispose the document
+coverPage.Close(true);
+document.Close(true);
+htmlConverter.Close();
 
 {% endhighlight %}
 
@@ -859,7 +860,7 @@ Imports Syncfusion.Drawing
 Imports Syncfusion.HtmlConverter
 Imports Syncfusion.Pdf
 
-' Create an instance of HTML-to-PDF converter using Blink rendering engine
+' Create an instance of HTML-to-PDF converter
 Dim htmlConverter As New HtmlToPdfConverter()
 ' Configure Blink converter settings
 Dim blinkConverterSettings As New BlinkConverterSettings() With {
@@ -871,21 +872,24 @@ blinkConverterSettings.Toc.StartingPageNumber = 1
 ' Apply the settings to the converter
 htmlConverter.ConverterSettings = blinkConverterSettings
 ' Read the main HTML content and convert it to PDF
-Dim inputhtml As String = File.ReadAllText("Data/input.html")
-Using document As PdfDocument = htmlConverter.Convert(inputhtml, "")
-    ' Apply scaling settings for the cover page
-    htmlConverter.ConverterSettings = New BlinkConverterSettings() With {
-        .Scale = 1.5F
-    }
-    ' Convert the cover page HTML to PDF
-    Dim coverimage As String = File.ReadAllText(Path.GetFullPath("Data/coverpage.html"))
-    Using coverPage As PdfDocument = htmlConverter.Convert(coverimage, "")
-        ' Insert the cover page at the beginning of the main document
-        document.Pages.Insert(0, coverPage.Pages(0))
-        ' Save the PDF document
-        document.Save("Output.pdf")
-    End Using
-End Using
+Dim inputhtml As String = File.ReadAllText("input.html")
+Dim document As PdfDocument = htmlConverter.Convert(inputhtml, "")
+' Create cover page and insert to the 0th index.
+' Apply scaling settings for the cover page
+htmlConverter.ConverterSettings = New BlinkConverterSettings() With {
+    .Scale = 1.5F
+}
+' Convert the cover page HTML to PDF
+Dim coverimage As String = File.ReadAllText("coverpage.html")
+Dim coverPage As PdfDocument = htmlConverter.Convert(coverimage, "")
+' Insert the cover page at the beginning of the main document
+document.Pages.Insert(0, coverPage.Pages(0))
+' Save the PDF document
+document.Save("Output.pdf")
+' Dispose the documents
+coverPage.Close(True)
+document.Close(True)
+htmlConverter.Close()
 
 {% endhighlight %}
 
