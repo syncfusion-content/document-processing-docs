@@ -18,7 +18,7 @@ The following system configurations were used for benchmarking:
 * **Processor:** 11th Gen Intel(R) Core(TM)  
 * **RAM:** 16GB  
 * **.NET Version:** .NET 8.0  
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v31.1.17](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/31.1.17)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v31.2.12](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/31.2.12)
 
 ## Word to PDF conversion
 
@@ -31,22 +31,22 @@ The following system configurations were used for benchmarking:
 <tr>
     <td>2</td>
     <td>{{'[Word-2.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-PDF/.NET/Word-to-PDF/Word-to-PDF/Data/Document-2.docx)'| markdownify }}</td>
-    <td>1.3</td>
+    <td>0.12</td>
 </tr>
 <tr>
     <td>50</td>
     <td>{{'[Word-50.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-PDF/.NET/Word-to-PDF/Word-to-PDF/Data/Document-50.docx)'| markdownify }}</td>
-    <td>8.6</td>
+    <td>4.50</td>
 </tr>
 <tr>
     <td>100</td>
     <td>{{'[Word-100.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-PDF/.NET/Word-to-PDF/Word-to-PDF/Data/Document-100.docx)'| markdownify }}</td>
-    <td>14.2</td>
+    <td>11.71</td>
 </tr>
 <tr>
     <td>500</td>
     <td>{{'[Word-500.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-PDF/.NET/Word-to-PDF/Word-to-PDF/Data/Document-500.docx)'| markdownify }}</td>
-    <td>31.6</td>
+    <td>23.73</td>
 </tr>
 </table>
 
