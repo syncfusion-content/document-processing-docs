@@ -1,6 +1,6 @@
 ---
 title: Performance Metrics of the Syncfusion Excel (XlsIO) Library
-description: This section provides the Syncfusion Excel (XlsIO) Library performance metrics for handling String, DateTime, Number, Boolean, and Formula data types in typical operations.
+description: This section provides an overview of the performance capabilities of the Syncfusion Excel (XlsIO) Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
