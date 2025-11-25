@@ -1,6 +1,6 @@
 ---
-title: HTML to PDF Performance Benchmarks
-description: This section provides an overview of the performance capabilities of the HTML to PDF Library.
+title: Performance Metrics of Syncfusion HTML-to-PDF Conversion
+description: This section provides a detailed overview of the performance metrics and capabilities of the HTML-to-PDF conversion library.
 platform: document-processing
 control: PDF
 documentation: UG
