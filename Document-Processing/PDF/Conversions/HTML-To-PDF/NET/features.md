@@ -807,9 +807,9 @@ padding-left: 5px;
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Create-custom-style-TOC-when-converting-HTML-to-PDF).
 
-## Skip Cover Page in TOC Numbering
+## Exclude cover page from TOC
 
-The following code snippet demonstrates how to set the starting page number for the Table of Contents (TOC) so that it skips the cover page. In this example, we have only one cover page, so the starting page number is set to 1. If your document includes multiple cover pages, you can adjust this value accordingly.
+This code snippet shows how to configure the Table of Contents (TOC) to skip the cover page by setting the starting page number. In this example, the cover page is a single page, so the TOC begins at page 1. For documents with multiple cover pages, adjust the starting page number as needed.
 
 {% tabs %}
 
@@ -832,22 +832,24 @@ blinkConverterSettings.Toc.StartingPageNumber = 1;
 // Apply the settings to the converter
 htmlConverter.ConverterSettings = blinkConverterSettings;
 // Read the main HTML content and convert it to PDF
-string inputhtml = File.ReadAllText("input.html"));
-PdfDocument document = htmlConverter.Convert(inputhtml, "");
-// Create new settings for scaling the cover page
-BlinkConverterSettings settings = new BlinkConverterSettings();
-settings.Scale = 1.5f;
-// Apply scaling settings
-htmlConverter.ConverterSettings = settings;
-// Convert the cover page HTML to PDF
-string coverimage = File.ReadAllText("coverpage.html"));
-PdfDocument coverPage = htmlConverter.Convert(coverimage, "");
-// Insert the cover page at the beginning of the main document
-document.Pages.Insert(0, coverPage.Pages[0]);
-// Save the PDF document
-document.Save("Output.pdf"));
-// Close the PDF document
-document.Close(true);
+string inputhtml = File.ReadAllText("Data/input.html");
+using (PdfDocument document = htmlConverter.Convert(inputhtml, ""))
+{
+    // Apply scaling settings for the cover page
+    htmlConverter.ConverterSettings = new BlinkConverterSettings()
+    {
+        Scale = 1.5f
+    };
+    // Convert the cover page HTML to PDF
+    string coverimage = File.ReadAllText(Path.GetFullPath(@"Data/coverpage.html"));
+    using (PdfDocument coverPage = htmlConverter.Convert(coverimage, ""))
+    {
+        // Insert the cover page at the beginning of the main document
+        document.Pages.Insert(0, coverPage.Pages[0]);
+        // Save the PDF document
+        document.Save("Output.pdf");
+    }
+}
 
 {% endhighlight %}
 
@@ -859,42 +861,31 @@ Imports Syncfusion.Pdf
 
 ' Create an instance of HTML-to-PDF converter using Blink rendering engine
 Dim htmlConverter As New HtmlToPdfConverter()
-
 ' Configure Blink converter settings
 Dim blinkConverterSettings As New BlinkConverterSettings() With {
     .ViewPortSize = New Size(1280, 0), ' Set viewport width for rendering
     .EnableToc = True                  ' Enable Table of Contents (TOC)
 }
-
 ' Set TOC starting page number to skip the cover page
 blinkConverterSettings.Toc.StartingPageNumber = 1
-
 ' Apply the settings to the converter
 htmlConverter.ConverterSettings = blinkConverterSettings
-
 ' Read the main HTML content and convert it to PDF
-Dim inputhtml As String = File.ReadAllText("input.html")
-Dim document As PdfDocument = htmlConverter.Convert(inputhtml, "")
-
-' Create new settings for scaling the cover page
-Dim settings As New BlinkConverterSettings()
-settings.Scale = 1.5F
-
-' Apply scaling settings
-htmlConverter.ConverterSettings = settings
-
-' Convert the cover page HTML to PDF
-Dim coverimage As String = File.ReadAllText("coverpage.html")
-Dim coverPage As PdfDocument = htmlConverter.Convert(coverimage, "")
-
-' Insert the cover page at the beginning of the main document
-document.Pages.Insert(0, coverPage.Pages(0))
-
-' Save the PDF document
-document.Save("Output.pdf")
-
-' Close the PDF document
-document.Close(True)
+Dim inputhtml As String = File.ReadAllText("Data/input.html")
+Using document As PdfDocument = htmlConverter.Convert(inputhtml, "")
+    ' Apply scaling settings for the cover page
+    htmlConverter.ConverterSettings = New BlinkConverterSettings() With {
+        .Scale = 1.5F
+    }
+    ' Convert the cover page HTML to PDF
+    Dim coverimage As String = File.ReadAllText(Path.GetFullPath("Data/coverpage.html"))
+    Using coverPage As PdfDocument = htmlConverter.Convert(coverimage, "")
+        ' Insert the cover page at the beginning of the main document
+        document.Pages.Insert(0, coverPage.Pages(0))
+        ' Save the PDF document
+        document.Save("Output.pdf")
+    End Using
+End Using
 
 {% endhighlight %}
 
