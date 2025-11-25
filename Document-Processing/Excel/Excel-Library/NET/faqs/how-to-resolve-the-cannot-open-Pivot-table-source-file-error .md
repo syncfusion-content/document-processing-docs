@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# How to resolve the “Can't open Pivottable source file” error?
+# How to resolve the “Can't open Pivot table source file” error?
 
 Deleting the source worksheet and refreshing the PivotTable may work in the current session, but reopening the saved workbook and refreshing can trigger this error. If “Refresh data when opening the file” is enabled, Excel will not disable it automatically. This is Microsoft Excel behavior, and XlsIO follows the same behavior.
 
