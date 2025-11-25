@@ -15,7 +15,7 @@ The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/doc
 The following system configurations were used for benchmarking:
 
 * Operating System: Windows 10
-* Processor: AMD Ryzen 7 5800HS, 3.20 GHz
+* Processor: AMD Ryzen 7 5800HS with Radeon Graphics 3.20 GHz
 * RAM: 16GB
 * .NET Version: .NET 10.0
 * Syncfusion® Version: [Syncfusion.Pdf.Imaging.Net.Core 31.2.12](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core/31.2.12)
