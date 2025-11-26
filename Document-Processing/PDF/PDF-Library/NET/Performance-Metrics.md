@@ -20,6 +20,33 @@ The following system configurations were used for benchmarking:
 * .NET Version: .NET 10.0
 * Syncfusion® Version: [Syncfusion.Pdf.Imaging.Net.Core 31.2.12](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core/31.2.12)
 
+## Create document
+
+The table below illustrates the performance of PDF document creation.
+
+<table>
+  <tr>
+    <th>Pages</th>
+    <th>Syncfusion<sup>&reg;</sup> Syncfusion Time (sec)</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0.17 seconds</td>
+  </tr>
+  <tr>
+    <td>100</td>
+    <td>0.79 seconds</td>
+  </tr>
+    <tr>
+    <td>500</td>
+    <td>1.16 seconds</td>
+  </tr>
+  <tr>
+    <td>1000</td>
+    <td>1.68 seconds</td>
+  </tr>
+</table>
+
 ## Open and save PDF document
 
 The table below illustrates the performance of open and save operations when working with PDF documents.
@@ -64,9 +91,9 @@ The table below illustrates the performance of watermark application operations 
   </tr>
 </table>  
 
-## Compress PDF
+## Merge PDF document
 
-The table below illustrates the performance of compression operations applied to PDF documents.
+The table below illustrates the performance of merge operations on PDF documents.
 
 <table>
   <tr>
@@ -77,16 +104,14 @@ The table below illustrates the performance of compression operations applied to
   <tr>
     <td>64</td>
     <td>PDF_Succinctly</td>
-    <td>12.28 seconds</td>    
+    <td>0.96 seconds</td>    
   </tr>
   <tr>
     <td>132</td>
     <td>JavaScript_Succinctly</td>
-    <td>8.39 seconds</td>
+    <td>0.96 seconds</td>
   </tr>
 </table>
-
-N> Compression efficiency varies based on the type of content in the input PDF document.
 
 ## Split PDF document
 
@@ -110,9 +135,9 @@ The table below illustrates the performance of split operations on PDF documents
   </tr>
 </table>
 
-## Merge PDF document
+## Compress PDF
 
-The table below illustrates the performance of merge operations on PDF documents.
+The table below illustrates the performance of compression operations applied to PDF documents.
 
 <table>
   <tr>
@@ -123,40 +148,14 @@ The table below illustrates the performance of merge operations on PDF documents
   <tr>
     <td>64</td>
     <td>PDF_Succinctly</td>
-    <td>0.96 seconds</td>    
+    <td>12.28 seconds</td>    
   </tr>
   <tr>
     <td>132</td>
     <td>JavaScript_Succinctly</td>
-    <td>0.96 seconds</td>
+    <td>8.39 seconds</td>
   </tr>
 </table>
 
+N> Compression efficiency varies based on the type of content in the input PDF document.
 N> Benchmarks were measured on a freshly configured system. Performance results such as speed and memory usage may differ when additional processes are running on the machine.
-
-## Document Creation 
-
-The table below illustrates the performance of PDF document creation.
-
-<table>
-  <tr>
-    <th>Pages</th>
-    <th>Syncfusion<sup>&reg;</sup> Syncfusion Time (sec)</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>0.17 seconds</td>
-  </tr>
-  <tr>
-    <td>100</td>
-    <td>0.79 seconds</td>
-  </tr>
-    <tr>
-    <td>500</td>
-    <td>1.16 seconds</td>
-  </tr>
-  <tr>
-    <td>1000</td>
-    <td>1.68 seconds</td>
-  </tr>
-</table>
