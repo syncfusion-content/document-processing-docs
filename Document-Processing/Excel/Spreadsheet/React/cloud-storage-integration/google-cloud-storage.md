@@ -221,7 +221,7 @@ public async Task<IActionResult> SaveToGoogleCloud([FromForm] SaveSettings saveS
 
 ```
 
-5. Create the `saveToGoogleCloud()` method to save the document to the Google Cloud Storage.
+**Step 3:**  Modify the index File in the Spreadsheet sample to using [`saveAsJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#saveasjson) method to serialize the spreadsheet and send it to the backend
 
 ```csharp
 
