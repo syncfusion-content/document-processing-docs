@@ -20,6 +20,7 @@ Visual Studio provides the **.NET MAUI Blazor Hybrid App** template to create .N
 ## Prerequisites
 
 - .NET SDK 8.0 or above
+
 - Visual Studio 2022 17.1 or above with the required workloads:
   - [Mobile development with .NET](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-10.0&tabs=visual-studio)
   - ASP.NET and web development
