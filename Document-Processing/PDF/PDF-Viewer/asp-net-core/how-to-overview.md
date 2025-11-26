@@ -63,3 +63,4 @@ The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are liste
 * [How to select annotations in multi page?](./how-to/select-multi-page-annotations)
 * [How to get the annotation when it is overlapped with another annotation on its selection?](./how-to/overlapped-annotation)
 * [How to print the PDF document silently?](./how-to/print-document)
+* [Load Document after resources Loaded](./how-to/load-document-after-resources-loaded)
