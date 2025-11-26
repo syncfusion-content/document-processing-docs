@@ -28,7 +28,7 @@ The table below illustrates the performance of open and save operations when wor
   <tr>
     <th>Pages</th>
     <th>Input PDF files</th>
-    <th>Time (sec)</th>
+    <th>Syncfusion<sup>&reg;</sup> Time (sec)</th>
   </tr>
   <tr>
     <td>64</td>
@@ -50,7 +50,7 @@ The table below illustrates the performance of watermark application operations 
   <tr>
     <th>Pages</th>
     <th>Input PDF files</th>
-    <th>Time (sec)</th>
+    <th>Syncfusion<sup>&reg;</sup> Time (sec)</th>
   </tr>
   <tr>
     <td>64</td>
@@ -72,7 +72,7 @@ The table below illustrates the performance of compression operations applied to
   <tr>
     <th>Pages</th>
     <th>Input PDF files</th>
-    <th>Time (sec)</th>
+    <th>Syncfusion<sup>&reg;</sup> Time (sec)</th>
   </tr>
   <tr>
     <td>64</td>
@@ -96,7 +96,7 @@ The table below illustrates the performance of split operations on PDF documents
   <tr>
     <th>Pages</th>
     <th>Input PDF files</th>
-    <th>Time (sec)</th>
+    <th>Syncfusion<sup>&reg;</sup> Time (sec)</th>
   </tr>
   <tr>
     <td>64</td>
@@ -118,7 +118,7 @@ The table below illustrates the performance of merge operations on PDF documents
   <tr>
     <th>Pages</th>
     <th>Input PDF files</th>
-    <th>Time (sec)</th>
+    <th>Syncfusion<sup>&reg;</sup> Time (sec)</th>
   </tr>
   <tr>
     <td>64</td>
@@ -133,3 +133,30 @@ The table below illustrates the performance of merge operations on PDF documents
 </table>
 
 N> Benchmarks were measured on a freshly configured system. Performance results such as speed and memory usage may differ when additional processes are running on the machine.
+
+## Document Creation 
+
+The table below illustrates the performance of PDF document creation.
+
+<table>
+  <tr>
+    <th>Pages</th>
+    <th>Syncfusion<sup>&reg;</sup> Syncfusion Time (sec)</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0.17 seconds</td>
+  </tr>
+  <tr>
+    <td>100</td>
+    <td>0.79 seconds</td>
+  </tr>
+    <tr>
+    <td>500</td>
+    <td>1.16 seconds</td>
+  </tr>
+  <tr>
+    <td>1000</td>
+    <td>1.68 seconds</td>
+  </tr>
+</table>
