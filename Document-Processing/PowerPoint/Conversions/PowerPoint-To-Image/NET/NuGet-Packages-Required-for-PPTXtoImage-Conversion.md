@@ -5,7 +5,7 @@ platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
-# NuGet Packages Required
+# NuGet Packages Required for PPTX to Image Conversion
 
 ## Converting PowerPoint Presentation to image
 

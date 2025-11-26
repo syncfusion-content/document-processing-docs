@@ -120,7 +120,7 @@ dotnet run
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Linux/Convert-PowerPoint-Presentation-to-Image).
 
-By executing the program, you will get the **image** as follows. The output will be saved in **bin** foleder.
+By executing the program, you will get the **image** as follows. The output will be saved in **bin** folder.
 
 ![PowerPoint to Image in Linux](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
 
@@ -213,7 +213,7 @@ Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Linux/Convert-PowerPoint-Presentation-to-Image).
 
-By executing the program, you will get the **image** as follows. The output will be saved in **bin** foleder.
+By executing the program, you will get the **image** as follows. The output will be saved in **bin** folder.
 
 ![PowerPoint to Image in Linux](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
 
