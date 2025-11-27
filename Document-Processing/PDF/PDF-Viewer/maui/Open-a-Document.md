@@ -79,6 +79,21 @@ The .NET MAUI PDF Viewer does not currently support annotations comparable to Xa
 N> * All the [LoadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_LoadDocument_System_IO_Stream_System_String_System_Nullable_Syncfusion_Maui_PdfViewer_FlattenOptions__) methods accept the flatten options parameter.
 N> * Refer to this [section](https://help.syncfusion.com/maui/pdf-viewer/migration#upcoming-features) for the upcoming annotation features in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
+## Optimizing document loading on Android
+
+When your application handles large images, complex graphics, or memory-intensive operations, the default heap size may not be sufficient, leading to performance issues or crashes. Enabling a larger heap allows the app to allocate more memory, ensuring smooth performance and preventing out-of-memory errors in such scenarios. You can enable this by adding the following highlighted attribute in your AndroidManifest.xml under the <application> tag.
+
+{% tabs %}
+{% highlight xml hl_lines="4" %}
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" 
+        android:largeHeap="true" ></application>
+	...
+</manifest>
+{% endhighlight %}
+{% endtabs %}
+
 ## Check other PDF opening options
 
 * [Open a document from local storage](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-local-storage)
