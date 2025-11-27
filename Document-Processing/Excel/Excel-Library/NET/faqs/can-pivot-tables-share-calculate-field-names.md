@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# Can PivotTables share calculated field names?
+# Can PivotTables have the same name for multiple calculated fields?
 
 In **Microsoft Excel**, calculated fields are scoped to the pivot cache, not to individual PivotTables. 
 
