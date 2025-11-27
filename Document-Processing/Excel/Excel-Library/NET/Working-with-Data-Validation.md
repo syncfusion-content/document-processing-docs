@@ -5,7 +5,7 @@ platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Working with Data Validation 
+# Working with Data Validation
 
 Data Validation is a list of rules to the data that can be entered in a cell. This can be applied by using [IDataValidation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IDataValidation.html) interface. XlsIO supports following validation types.
 
@@ -128,6 +128,35 @@ validation.ListOfValues = New String() {"ListItem1", "ListItem2", "ListItem3"}
 A complete working example for list data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/List%20Validation/.NET/List%20Validation). 
 
 N> The [ListOfValues](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IDataValidation.html#Syncfusion_XlsIO_IDataValidation_ListOfValues) property should be used when the values in the Data Validation list are entered manually whose limit is only 255 characters including separators.
+
+### List Validation with User-defined Range
+
+The following code snippet illustrates how to set list validation for a user-defined range.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Data%20Validation/UserDefinedValidation/.NET/UserDefinedValidation/UserDefinedValidation/Program.cs,180" %}
+//Data validation for the user-defined range
+IDataValidation validation = worksheet.Range["C3"].DataValidation;
+validation.AllowType = ExcelDataType.User;
+validation.FirstFormula = "=Sheet1!$B$1:$B$3";
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Data validation for the user-defined range
+IDataValidation validation = worksheet.Range["C3"].DataValidation;
+validation.AllowType = ExcelDataType.User;
+validation.FirstFormula = "=Sheet1!$B$1:$B$3";
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Data validation for the user-defined range
+Dim validation As IDataValidation = worksheet.Range("C3").DataValidation
+validation.AllowType = ExcelDataType.User
+validation.FirstFormula = "=Sheet1!$B$1:$B$3"
+{% endhighlight %}
+{% endtabs %}   
+
+A complete working example of list validation for a user-defined range in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/UserDefinedValidation/.NET/UserDefinedValidation">this GitHub page</a>. 
 
 ## Number Validation
 
