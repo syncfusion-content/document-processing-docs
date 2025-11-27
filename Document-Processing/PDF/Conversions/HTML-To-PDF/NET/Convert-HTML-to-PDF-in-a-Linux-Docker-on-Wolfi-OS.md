@@ -1,5 +1,5 @@
 ---
-title: Convert HTML to PDF in Linux Docker on Wolfi OS | Syncfusion
+title: Convert HTML to PDF in a Linux Docker on Wolfi OS | Syncfusion
 description: Learn how to convert a HTML to PDF file in Docker on Wolfi OS with easy steps using Syncfusion .NET HTML converter library and Chainguard images.
 platform: document-processing
 control: PDF
@@ -7,7 +7,7 @@ documentation: UG
 keywords: Assemblies
 ---
 
-# Convert HTML to PDF in Linux Docker on Wolfi OS 
+# Convert HTML to PDF in a Linux Docker container on Wolfi OS
 
 The Syncfusion<sup>&reg;</sup> HTML to PDF converter is a .NET library that converts HTML or web pages to PDF document in a Linux [Docker](https://www.docker.com/why-docker/) container. This guide adapts the standard Linux Docker setup for Wolfi OS, a secure and minimal Linux distribution using [Chainguard](https://www.chainguard.dev/) base images. Wolfi OS requires custom dependency installation due to its minimal footprint, so we use Chainguard images with `apk` package manager to install Chromium for the Blink rendering engine.
 
@@ -18,7 +18,7 @@ N> Ensure your environment supports Docker and .NET 8.0+. Chainguard images prov
 - Docker installed and running
 - .NET 8.0 SDK
 
-## Steps to Convert HTML to PDF in Linux Docker on Wolfi OS 
+## Convert HTML to PDF in a Linux Docker container on Wolfi OS
 
 Step 1: Create a new ASP.NET Core Web Application and enable Docker support with Linux as the target OS.
 ![Convert HTMLToPDF Docker Step1](htmlconversion_images/DockerStep1.png)
@@ -32,6 +32,9 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 3: Update the Dockerfile to use Chainguard wolfi-based images and install Chromium via apk. Chainguard's `dotnet-sdk:latest-dev` and `aspnet-runtime:latest-dev` images include alp-compatible package managers.
 
 {% highlight dockerfile tabtitle="Dockerfile" %}
+
+
+# This stage is used when running from VS in fast mode (Default for Debug configuration)
 
 FROM cgr.dev/chainguard/aspnet-runtime:latest-dev AS base
 USER root
