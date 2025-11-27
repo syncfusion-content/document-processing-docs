@@ -8,7 +8,7 @@ documentation: UG
 
 # Performance Metrics in Excel (XlsIO) Library
 
-This section evaluates the performance of the Syncfusion XlsIO library when handling String, DateTime, Number, Boolean, and Formula data types during operations such as opening and reading, creating and saving Excel files. It provides insights into the efficiency and capabilities of XlsIO for processing these data types across various platforms.
+This section evaluates the performance of the Syncfusion XlsIO library when handling string, DateTime, number, Boolean, and formula data types during operations such as opening and reading, creating, and saving Excel files with 100,000 rows and 50 columns.. It provides insights into the efficiency and capabilities of XlsIO for processing these data types across various platforms.
 
 ## Open and Read
 
@@ -16,38 +16,32 @@ The table below illustrates the performance of data types for open and read oper
 
 <table>
   <tr>
-    <th>Data types</th>
-    <th>Test case Matrix (Open & Read)</th>
-    <th>XlsIO (ms)</th>
-    <th>Sample</th>
+    <th>Data type</th>
+    <th>Time Taken (ms)</th>
+    <th>Sample Link</th>
   </tr>
   <tr>
     <td>String</td>
-    <td>100000 rows * 50 columns</td>
     <td>8880</td>    
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/String%20Data%20Type/.NET/String%20Data%20Type">GitHub page</a></td>
   </tr>
   <tr>
     <td>DateTime</td>
-    <td>100000 rows * 50 columns</td>
     <td>5339</td>
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/DateTime%20Data%20Type/.NET/DateTime%20Data%20Type">GitHub page</a></td>
   </tr>
   <tr>
     <td>Number</td>
-    <td>100000 rows * 50 columns</td>
     <td>5592</td>     
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Number%20Data%20Type/.NET/Number%20Data%20Type">GitHub page</a></td>
   </tr>
   <tr>
     <td>Boolean</td>
-    <td>100000 rows * 50 columns</td>
     <td>3815</td>   
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Boolean%20Data%20Type/.NET/Boolean%20Data%20Type">GitHub page</a></td>
   </tr>
   <tr>
     <td>Formula</td>
-    <td>100000 rows * 50 columns</td>
     <td>8695</td>        
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Formula%20Data%20Type/.NET/Formula%20Data%20Type">GitHub page</a></td>
   </tr>
@@ -61,38 +55,32 @@ The table below illustrates the performance of data types for create and save op
 
 <table> 
   <tr>
-    <th>Data types</th>
-    <th>Test case Matrix (Create & Save)</th>
-    <th>XlsIO (ms)</th>
-    <th>Sample</th>
+    <th>Data type</th>
+    <th>Time Taken (ms)</th>
+    <th>Sample Link</th>
   </tr>
   <tr>
     <td>String</td>
-    <td>100000 rows * 50 columns</td>
     <td>12753</td>   
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/String%20Data%20Type/.NET/String%20Data%20Type">GitHub page</a></td>
   </tr>
   <tr>
     <td>DateTime</td>
-    <td>100000 rows * 50 columns</td>
     <td>15474</td>  
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/DateTime%20Data%20Type/.NET/DateTime%20Data%20Type">GitHub page</a></td>
   </tr>
   <tr>
     <td>Number</td>
-    <td>100000 rows * 50 columns</td>
     <td>5018</td>    
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Number%20Data%20Type/.NET/Number%20Data%20Type">GitHub page</a></td>
   </tr>
   <tr>
     <td>Boolean</td>
-    <td>100000 rows * 50 columns</td>
     <td>4716</td>     
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Boolean%20Data%20Type/.NET/Boolean%20Data%20Type">GitHub page</a></td>
   </tr>
   <tr>
     <td>Formula</td>
-    <td>100000 rows * 50 columns</td>
     <td>34668</td>    
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Formula%20Data%20Type/.NET/Formula%20Data%20Type">GitHub page</a></td>
   </tr>
