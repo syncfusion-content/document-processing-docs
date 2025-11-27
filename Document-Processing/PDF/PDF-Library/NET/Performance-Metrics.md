@@ -147,7 +147,7 @@ A complete working sample used for this performance evaluation is available for 
 
 ## Compress PDF
 
-The table below shows the performance of compression operations applied to PDF documents. To compress an existing PDF document in .NET Core, you should add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core/31.2.12) package.
+The table below illustrates the performance of compression operations applied to PDF documents. To compress an existing PDF document in .NET, you should add the [Syncfusion.Pdf.Imaging.NET](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.NET/31.2.12) package.
 
 <table>
   <tr>
