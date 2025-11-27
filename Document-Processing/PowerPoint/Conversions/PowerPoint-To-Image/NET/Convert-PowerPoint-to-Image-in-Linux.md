@@ -36,15 +36,15 @@ dotnet new console
 Step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/) by execute the following command.
 
 * [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) 
-* [SkiaSharp.NativeAssets.Linux v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)
-* [HarfBuzzSharp.NativeAssets.Linux v8.3.0.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.0.1)
+* [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
+* [HarfBuzzSharp.NativeAssets.Linux v8.3.0.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.0.2)
 
 {% tabs %}
 {% highlight KCONFIG %}
 
 dotnet add package Syncfusion.PresentationRenderer.Net.Core -v 22.1.38 -s https://www.nuget.org/
-dotnet add package SkiaSharp.NativeAssets.Linux -v 3.116.1 -s https://www.nuget.org/
-dotnet add package HarfBuzzSharp.NativeAssets.Linux -v 8.3.0.1 -s https://www.nuget.org/
+dotnet add package SkiaSharp.NativeAssets.Linux -v 3.119.1 -s https://www.nuget.org/
+dotnet add package HarfBuzzSharp.NativeAssets.Linux -v 8.3.0.2 -s https://www.nuget.org/
 
 {% endhighlight %}
 {% endtabs %}
@@ -120,7 +120,7 @@ dotnet run
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Linux/Convert-PowerPoint-Presentation-to-Image).
 
-By executing the program, you will get the **image** as follows. The output will be saved in **bin** foleder.
+By executing the program, you will get the **image** as follows. The output will be saved in **bin** folder.
 
 ![PowerPoint to Image in Linux](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
 
@@ -213,7 +213,7 @@ Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Linux/Convert-PowerPoint-Presentation-to-Image).
 
-By executing the program, you will get the **image** as follows. The output will be saved in **bin** foleder.
+By executing the program, you will get the **image** as follows. The output will be saved in **bin** folder.
 
 ![PowerPoint to Image in Linux](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
 
