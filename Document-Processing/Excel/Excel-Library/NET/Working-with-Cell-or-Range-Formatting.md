@@ -919,7 +919,7 @@ workbook.DetectDateTimeInValue = False
 {% endhighlight %}
 {% endtabs %}  
 
-N> To display the **$** symbol, apply a currency or accounting number format. Using a plain number format shows only the numeric value and omits the currency symbol.
+N> To display the **$** symbol, apply a currency or accounting number format. Using a number format without any currency symbol does not show any currency symbol in the value.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
