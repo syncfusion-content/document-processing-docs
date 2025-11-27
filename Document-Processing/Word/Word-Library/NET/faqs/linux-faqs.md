@@ -178,6 +178,15 @@ NuGet packages to install
 </thead>
 <tr>
 <td>
+From v32.1.10
+</td>
+<td>
+{{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)'| markdownify }}<br/>
+{{'[HarfBuzzSharp.NativeAssets.Linux v8.3.0.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.0.2)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
 From v28.2.3
 </td>
 <td>
@@ -266,6 +275,15 @@ NuGet packages to install
 </th>
 </tr>
 </thead>
+<tr>
+<td>
+From v32.1.10
+</td>
+<td>
+{{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)'| markdownify }}<br/>
+{{'[HarfBuzzSharp.NativeAssets.Linux v8.3.0.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.0.2)'| markdownify }}
+</td>
+</tr>
 <tr>
 <td>
 From v28.2.3
