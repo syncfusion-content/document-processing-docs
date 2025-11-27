@@ -1,5 +1,5 @@
 ---
-title: Performance Metrics for the Excel to PDF conversion
+title: Performance Metrics for the Syncfusion Excel to PDF conversion
 description: This section provides benchmark results and performance metrics for converting Excel files to PDF using the Syncfusion Excel (XlsIO) library.
 platform: document-processing
 control: XlsIO
