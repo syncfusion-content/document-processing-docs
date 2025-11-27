@@ -622,4 +622,5 @@ root.render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-N> In the Arrow and Line annotation settings, the Fill Color option should only be available when an Arrowhead Style is applied on either end (Start or End). Lines without arrowheads do not support fill rendering, so keep the Fill Color option disabled when both arrowhead styles are set to None.
+
+N> In both [Arrow](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#arrowsettings) and [Line](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#linesettings) annotations Settings, the Fill Color option is available only when an arrowhead style is applied at the Start or End. If both Start and End arrowhead styles are set to None, lines do not support fill rendering and the Fill Color option remains disabled.
