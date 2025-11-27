@@ -41,11 +41,11 @@ export class AppComponent {
 
 ## Enable SpellCheck
 
-To enable spell check in DocumentEditor, set [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#enablespellcheck) property as `true` and then configure SpellCheckSettings.
+To enable spell check in DocumentEditor, set [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#enablespellcheck) property as `true` and then configure SpellCheckSettings.
 
 ## Disable SpellCheck
 
-To disable spell check in DocumentEditor, set [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#enablespellcheck) property as `false` or remove [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#enablespellcheck) property initialization code. The default value of this property is false.
+To disable spell check in DocumentEditor, set [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#enablespellcheck) property as `false` or remove [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#enablespellcheck) property initialization code. The default value of this property is false.
 
 ## Spell check settings
 
