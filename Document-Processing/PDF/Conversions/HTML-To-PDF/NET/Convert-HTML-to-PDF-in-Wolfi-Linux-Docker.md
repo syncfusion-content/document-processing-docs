@@ -1,5 +1,5 @@
 ---
-title: Convert HTML to PDF file in Linux Docker container on Wolfi OS | Syncfusion
+title: Convert HTML to PDF in Linux Docker on Wolfi OS | Syncfusion
 description: Learn how to convert a HTML to PDF file in Docker on Wolfi OS with easy steps using Syncfusion .NET HTML converter library and Chainguard images.
 platform: document-processing
 control: PDF
@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Convert HTML to PDF file in Linux Docker container on Wolfi OS
 
-The Syncfusion<sup>&reg;</sup> HTML to PDF converter is a .NET library that converts HTML or web pages to PDF document in a Linux [Docker](https://www.docker.com/why-docker/) container. This guide adapts the standard Linux Docker setup for [Wolfi OS](https://wolfi.dev/), a secure and minimal Linux distribution using [Chainguard](https://www.chainguard.dev/) base images. Wolfi OS requires custom dependency installation due to its minimal footprint, so we use Chainguard images with `apk` package manager to install Chromium for the Blink rendering engine.
+The Syncfusion<sup>&reg;</sup> HTML to PDF converter is a .NET library that converts HTML or web pages to PDF document in a Linux [Docker](https://www.docker.com/why-docker/) container. This guide adapts the standard Linux Docker setup for Wolfi OS, a secure and minimal Linux distribution using [Chainguard](https://www.chainguard.dev/) base images. Wolfi OS requires custom dependency installation due to its minimal footprint, so we use Chainguard images with `apk` package manager to install Chromium for the Blink rendering engine.
 
 N> Ensure your environment supports Docker and .NET 8.0+. Chainguard images provide a secure, wolfi-based alternative to standard Ubuntu images.
 
