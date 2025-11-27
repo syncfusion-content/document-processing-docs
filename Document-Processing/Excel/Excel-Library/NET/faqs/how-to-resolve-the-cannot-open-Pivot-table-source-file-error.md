@@ -12,8 +12,8 @@ Deleting the source worksheet and refreshing the PivotTable may work in the curr
 
 **Recommendations:**
 
-If you need to remove the worksheet that contains the PivotTable’s source data, hide the worksheet instead of deleting it.
-If the source worksheet no longer exists, disable IsRefreshOnLoad before saving the workbook.
+* If you need to remove the worksheet that contains the PivotTable’s source data, hide the worksheet instead of deleting it.
+* If the source worksheet no longer exists, disable IsRefreshOnLoad before saving the workbook.
 
 The following code illustrate how to disable the IsRefreshOnLoad property.
 
