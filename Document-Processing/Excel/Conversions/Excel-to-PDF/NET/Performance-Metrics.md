@@ -1,16 +1,14 @@
 ---
-title: Performance Metrics of the Syncfusion Excel (XlsIO) Library
-description: This section provides an overview of the performance capabilities of the Syncfusion Excel (XlsIO) Library.
+title: Excel to PDF Conversion Performance Metrics in the Syncfusion Excel (XlsIO) Library
+description: This page provides an overview of performance metrics for Excel to PDF conversion using the Syncfusion Excel (XlsIO) Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Performance Metrics in Excel (XlsIO) Library
+# Excel to PDF Conversion Performance Metrics
 
 This section evaluates the performance of the Syncfusion XlsIO library in handling String, DateTime, Number, Boolean, and Formula data types during Excel to PDF conversion, providing insights into its efficiency and capabilities across various platforms.
-
-## Excel to PDF
 
 The table below illustrates the performance of data types for Excel to PDF conversion.
 
