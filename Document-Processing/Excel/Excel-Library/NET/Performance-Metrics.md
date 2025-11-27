@@ -17,32 +17,32 @@ The table below illustrates the performance of data types for open and read oper
 <table>
   <tr>
     <th>Data type</th>
-    <th>Time Taken (ms)</th>
+    <th>Time Taken (sec)</th>
     <th>Sample Link</th>
   </tr>
   <tr>
     <td>String</td>
-    <td>8880</td>    
+    <td>9</td>    
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/String%20Data%20Type/.NET/String%20Data%20Type">GitHub page</a></td>
   </tr>
   <tr>
     <td>DateTime</td>
-    <td>5339</td>
+    <td>5</td>
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/DateTime%20Data%20Type/.NET/DateTime%20Data%20Type">GitHub page</a></td>
   </tr>
   <tr>
     <td>Number</td>
-    <td>5592</td>     
+    <td>6</td>     
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Number%20Data%20Type/.NET/Number%20Data%20Type">GitHub page</a></td>
   </tr>
   <tr>
     <td>Boolean</td>
-    <td>3815</td>   
+    <td>4</td>   
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Boolean%20Data%20Type/.NET/Boolean%20Data%20Type">GitHub page</a></td>
   </tr>
   <tr>
     <td>Formula</td>
-    <td>8695</td>        
+    <td>9</td>        
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Formula%20Data%20Type/.NET/Formula%20Data%20Type">GitHub page</a></td>
   </tr>
 </table>            
@@ -56,32 +56,32 @@ The table below illustrates the performance of data types for create and save op
 <table> 
   <tr>
     <th>Data type</th>
-    <th>Time Taken (ms)</th>
+    <th>Time Taken (sec)</th>
     <th>Sample Link</th>
   </tr>
   <tr>
     <td>String</td>
-    <td>12753</td>   
+    <td>13</td>   
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/String%20Data%20Type/.NET/String%20Data%20Type">GitHub page</a></td>
   </tr>
   <tr>
     <td>DateTime</td>
-    <td>15474</td>  
+    <td>15</td>  
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/DateTime%20Data%20Type/.NET/DateTime%20Data%20Type">GitHub page</a></td>
   </tr>
   <tr>
     <td>Number</td>
-    <td>5018</td>    
+    <td>5</td>    
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Number%20Data%20Type/.NET/Number%20Data%20Type">GitHub page</a></td>
   </tr>
   <tr>
     <td>Boolean</td>
-    <td>4716</td>     
+    <td>5</td>     
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Boolean%20Data%20Type/.NET/Boolean%20Data%20Type">GitHub page</a></td>
   </tr>
   <tr>
     <td>Formula</td>
-    <td>34668</td>    
+    <td>35</td>    
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Formula%20Data%20Type/.NET/Formula%20Data%20Type">GitHub page</a></td>
   </tr>
 </table>
