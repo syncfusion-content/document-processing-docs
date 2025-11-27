@@ -30,7 +30,7 @@ spellChecker.allowSpellCheckAndSuggestion = true;
 ```
 
 >Note: Document Editor requires server-side dependencies for spell check configuration.
-Refer to the [Document Editor Web API service projects from GitHub](https://gitea.syncfusion.com/essential-studio/ej2-documenteditor-server/) link for configuring spell checker in server-side.To know about server-side dependencies, please refer this [page](./web-services-overview).
+Refer to the [Document Editor Web API service projects](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es5/web-services/core) link for configuring spell checker in server-side.To know about server-side dependencies, please refer this [page](./web-services-overview).
 
 ## Features
 
