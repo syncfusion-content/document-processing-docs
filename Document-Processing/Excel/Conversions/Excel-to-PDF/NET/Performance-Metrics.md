@@ -1,18 +1,14 @@
 ---
-title: Performance Metrics of the Excel to PDF in Syncfusion XlsIO Library
-description: This section provides an overview of the performance capabilities of the Syncfusion Excel (XlsIO) Library.
+title: Performance Metrics for the Excel to PDF conversion
+description: This section provides benchmark results and performance metrics for converting Excel files to PDF using the Syncfusion Excel (XlsIO) library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Performance Metrics for Excel-to-PDF in XlsIO
+# Performance Metrics for Excel to PDF Conversion
 
-This section evaluates the performance of the Syncfusion XlsIO library when converting an Excel file with 100,000 rows and 50 columns to PDF, handling string, DateTime, number, Boolean, and formula data types. It provides insights into the efficiency and capabilities of XlsIO for processing these data types across various platforms.
-
-## Excel to PDF
-
-The table below illustrates the performance of data types for Excel to PDF conversion.
+The following benchmark demonstrates the performance of the Syncfusion Excel (XlsIO) library when converting a large Excel workbook—containing 100,000 rows and 50 columns with distinct data types such as text, date and time, numbers, booleans, and formulas—into a PDF.
 
 <table>
   <tr>
@@ -21,7 +17,7 @@ The table below illustrates the performance of data types for Excel to PDF conve
     <th>Sample Link</th>
   </tr>
   <tr>
-    <td>String</td>
+    <td>Text</td>
     <td>121</td>    
 	<td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/String%20Data%20Type/.NET/String%20Data%20Type">GitHub page</a></td>
   </tr>
