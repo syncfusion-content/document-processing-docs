@@ -485,7 +485,7 @@ function createPdf() {
 {% endhighlight %}
 {% endtabs %}
 
-The following code snippet explains how to add a ruber stamp annotation in an existing PDF document.
+The following code snippet explains how to add a rubber stamp annotation in an existing PDF document.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -1210,7 +1210,7 @@ function createPdf() {
 {% endhighlight %}
 {% endtabs %}
 
-The following code snippet explains how to add a textmarkup annotation in an existing PDF document.
+The following code snippet explains how to add a text markup annotation in an existing PDF document.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}

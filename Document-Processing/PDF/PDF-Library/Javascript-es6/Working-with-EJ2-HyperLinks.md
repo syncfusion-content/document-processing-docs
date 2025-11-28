@@ -1,6 +1,6 @@
 ---
 title: Working with Hyperlinks in PDF | Syncfusion
-description: This section explains how to add hyperlink in a new and existing PDF document using Syncfusion .NET PDF library 
+description: This section explains how to add hyperlink in a new and existing PDF document using Syncfusion EJ2 PDF library 
 platform: document-processing
 control: PDF
 documentation: UG

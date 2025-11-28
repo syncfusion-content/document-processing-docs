@@ -1,6 +1,6 @@
 ---
 title: Working with EJ2 Text Extraction | Syncfusion
-description: This section explains how to extract text and its bounds from a particular page or the entire PDF document.
+description: This section explains how to extract text and its bounds from a particular page or the entire EJ2 PDF document.
 platform: document-processing
 control: PDF
 documentation: UG

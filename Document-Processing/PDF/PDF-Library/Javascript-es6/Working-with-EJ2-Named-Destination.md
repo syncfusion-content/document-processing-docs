@@ -1,6 +1,6 @@
 ---
 title: Working with EJ2 named destination | Syncfusion
-description: This section explains about how to add, remove and modify the named destination in the Essential PDF document with example.
+description: This section explains about how to add, remove and modify the named destination in the Essential EJ2 PDF document with example.
 platform: document-processing
 control: PDF
 documentation: UG

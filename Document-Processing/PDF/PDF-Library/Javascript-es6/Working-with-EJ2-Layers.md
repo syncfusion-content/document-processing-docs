@@ -1,6 +1,6 @@
 ---
 title: Working with EJ2 Layers | Syncfusion
-description: This section explains adding the layer in the PDF document and the layers refers to section of Content of PDF document
+description: This section explains adding the layer in the EJ2 PDF document and the layers refers to section of Content of EJ2 PDF document
 platform: document-processing
 control: PDF
 documentation: UG

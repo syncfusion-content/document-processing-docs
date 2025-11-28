@@ -75,8 +75,6 @@ function createPdf() {
 The following code snippet explains how to draw a polygon in an existing PDF document.
 
 {% tabs %}
-
-{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 
 // Create and render button
@@ -167,8 +165,6 @@ function createPdf() {
 {% endtabs %}
 
 The following code snippet explains how to draw a line in an existing PDF document.
-
-{% tabs %}
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -266,8 +262,6 @@ function createPdf() {
 
 The following code snippet explains how to draw path in an existing PDF document.
 
- {% tabs %}
-
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 
@@ -354,8 +348,6 @@ function createPdf() {
 
 The following code snippet explains how to draw text in an existing PDF document.
 
- {% tabs %}
-
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 
@@ -435,8 +427,6 @@ function createPdf() {
 }
 
 The following code snippet explains how to draw rectangle in an existing PDF document.
-
- {% tabs %}
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -518,8 +508,6 @@ function createPdf() {
 
 The following code snippet explains how to draw pie in an existing PDF document.
 
- {% tabs %}
-
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 
@@ -599,8 +587,6 @@ function createPdf() {
 }
 
 The following code snippet explains how to draw arc in an existing PDF document.
-
- {% tabs %}
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -682,8 +668,6 @@ function createPdf() {
 
 The following code snippet explains how to draw bezier in an existing PDF document.
 
- {% tabs %}
-
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 
@@ -763,8 +747,6 @@ function createPdf() {
 }
 
 The following code snippet explains how to draw ellipse in an existing PDF document.
-
- {% tabs %}
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}

@@ -1,6 +1,6 @@
 ---
 title: Working with EJ2 PDF templates | Syncfusion
-description: This section explains how to create a PDF template is a drawing surface, where contents can be added;
+description: This section explains how to create a PDF template is a drawing surface, where contents can be added using EJ2 PDF library.
 platform: document-processing
 control: PDF
 documentation: UG
