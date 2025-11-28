@@ -30,7 +30,7 @@ spellChecker.allowSpellCheckAndSuggestion = true;
 ```
 
 >Note: Document Editor requires server-side dependencies for spell check configuration.
-Refer to the [Document Editor Web API service projects from GitHub](https://gitea.syncfusion.com/essential-studio/ej2-documenteditor-server/) link for configuring spell checker in server-side.To know about server-side dependencies, please refer this [page](./web-services-overview).
+Refer to the [Document Editor Web API service projects](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/web-services/core#spell-check) link for configuring spell checker in server-side.To know about server-side dependencies, please refer this [page](./web-services-overview).
 
 ## Features
 
@@ -159,3 +159,5 @@ Ignore All: ignore all occurrence of a word from error in the entire document.
 Using this option, you can open spell check dialog. Please see below screenshot for your reference.
 
 ![Spell check dialog in JavaScript document editor](images/spell-check-dialog.png)
+
+* Refer to the [Spell checker](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/web-services/core#spell-check) link for configuring spell checker in server-side.
