@@ -22,6 +22,10 @@ The below code snippet explains how to draw the page numbers in footer using aut
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Header%20and%20Footer/Adding-an-automatic-field-in-header-and-footer/.NET/Adding-an-automatic-field-in-header-and-footer/Program.cs" %} 
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
 //Add a page to the PDF document
@@ -52,15 +56,17 @@ compositeField.Draw(footer.Graphics, new PointF(470, 40));
 //Add the footer template at the bottom.
 pdfDocument.Template.Bottom = footer;
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-pdfDocument.Save(stream);
-//Closes the document.
+//Save and close the document.
+pdfDocument.Save("Output.pdf");
 pdfDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -97,6 +103,10 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document.
 Dim pdfDocument As New PdfDocument()
@@ -145,6 +155,10 @@ The example below illustrates how to implement a dynamic footer that updates uni
 {% tabs %}  
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Header%20and%20Footer/Adding-dynamic-headers-and-footers-in-PDF/.NET/Adding-dynamic-headers-and-footers-in-PDF/Program.cs" %} 
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 // Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -213,10 +227,7 @@ PdfPage firstPage = document.Pages.Add();
 textElement.Draw(firstPage, new PointF(0, headerHeight));
 
 // Save and close the document.
-using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Output.pdf"), FileMode.Create, FileAccess.Write))
-{
-    document.Save(outputFileStream);
-}
+document.Save("Output.pdf");
 document.Close(true);
 
 // Add header and footer to every page.
@@ -248,6 +259,10 @@ static void PageAddedHandler(object sender, PageAddedEventArgs e)
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 // Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -348,6 +363,10 @@ static void PageAddedHandler(object sender, PageAddedEventArgs e)
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 ' Create a new PDF document.
 Dim document As New PdfDocument()

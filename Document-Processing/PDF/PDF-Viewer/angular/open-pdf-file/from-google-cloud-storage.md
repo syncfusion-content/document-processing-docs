@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Open PDF from Google Cloud Storage in Angular PDF Viewer | Syncfusion
-description: Learn how to load PDFs from Google Cloud Storage in the Syncfusion Angular PDF Viewer component
+description: Learn how to load PDF files from Google Cloud Storage in the Syncfusion Angular PDF Viewer component
 platform: document-processing
 control: Open PDF files from Google Cloud Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Google Cloud Storage
+# Open PDF from Google Cloud Storage in Angular PDF Viewer
 
 Follow these steps to load a PDF from Google Cloud Storage using the server-backed PDF Viewer.
 

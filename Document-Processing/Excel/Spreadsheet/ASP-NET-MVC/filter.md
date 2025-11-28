@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Filtering in Spreadsheet control
+# Filtering in ASP.NET MVC Spreadsheet control
 
 Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowFiltering) property to enable or disable filtering functionality.
 

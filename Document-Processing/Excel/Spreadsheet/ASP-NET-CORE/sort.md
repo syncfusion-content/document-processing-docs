@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Sorting in Spreadsheet control
+# Sorting in ASP.NET Core Spreadsheet control
 
 Sorting helps arranging the data to a specific order in a selected range of cells. You can use the [`allowSorting`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowSorting) property to enable or disable sorting functionality.
 

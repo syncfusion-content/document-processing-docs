@@ -294,7 +294,7 @@ sudo apt-get install libleptonica-dev
 {% endhighlight %}
 {% endtabs %}
 <br><br>
-<img src="OCR-Images/Install-leptonica.png">
+<img alt="OCR Install leptonica logo" src="OCR-Images/Install-leptonica.png">
 <br><br>
 2.Install the tesseract.
 <br>
@@ -306,7 +306,7 @@ sudo apt-get install tesseract-ocr-eng
 {% endhighlight %}
 {% endtabs %}
 <br><br>
-<img src="OCR-Images/Install-tesseract.png">
+<img alt="OCR Install tesseract logo" src="OCR-Images/Install-tesseract.png">
 <br><br>
 3. Copy the binaries (liblept.so and libtesseract.so) to the missing files exception folder in the project location.
 <br>
@@ -351,17 +351,17 @@ Step 1: Execute the following command in terminal window to check dependencies a
 {% tabs %}
 {% highlight C# %}
 
-        ldd  liblept1753.so
-        ldd  libSyncfusionTesseract.so
+ldd  liblept1753.so
+ldd  libSyncfusionTesseract.so
 
 {% endhighlight %}
 {% endtabs %}
-Run the following commands in terminal
+Run the following commands in terminal<br>
 Step 1:
 {% tabs %}
 {% highlight C# %}
 
-        sudo apt-get install libleptonica-dev libjpeg62
+sudo apt-get install libleptonica-dev libjpeg62
 
 {% endhighlight %}
 {% endtabs %}
@@ -369,7 +369,7 @@ Step 2:
 {% tabs %}
 {% highlight C# %}
 
-        ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5
+ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5
 
 {% endhighlight %}
 {% endtabs %}
@@ -377,7 +377,7 @@ Step 3:
 {% tabs %}
 {% highlight C# %}
 
-        ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
+ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
 
 {% endhighlight %}
 {% endtabs %}
@@ -487,6 +487,39 @@ bin\Debug\net6.0.\runtimes\osx\native
 Installing the following Skiasharp NuGet for the Linux environment will resolve the System.NullReferenceException while extracting the Images in Linux.<br>
 Please find the NuGet link below,<br>
 NuGet:  <a href="https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6">https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6</a>
+</td>
+</tr>
+</table>
+
+## IIS Fails to Load Tesseract OCR DLLs
+<table>
+<th style="font-size:14px" width="100px">Exception</th>
+<th style="font-size:14px">The application failed to load Tesseract OCR DLLs when hosted on IIS, resulting in the error:
+Could not find a part of the path 'C:\inetpub\wwwroot\VizarCore\x64'.</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td> * IIS couldn't load the required Tesseract and Leptonica DLLs because some system components were missing.<br>
+* The Visual C++ Redistributables for VS2015-VS2022 (x86 and x64) were not installed.<br>
+* IIS on a 64-bit server needs both redistributables to load native libraries correctly.<br>
+* The application's folder paths and permissions were not properly set up for OCR binaries.<br>
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+<b>Installed Required Redistributables</b><br>
+Installed both <b>VC_redist.x86</b> and <b>VC_redist.x64</b> for VS2015-VS2022 on the IIS server.<br>
+<b>Updated Server</b><br>
+Applied all available Windows updates (including cumulative and Defender updates) to ensure system stability.<br>
+<b>Configured Application Paths</b><br>
+Set default paths for OCR binaries:<br>
+* C:\inetpub\wwwroot\myapp\Tesseractbinaries<br>
+* C:\inetpub\wwwroot\myapp\tessdata<br>
+<b>Set Proper Permissions</b><br>
+Ensured IIS_IUSRS group has <b>Read & Execute</b> and <b>List folder contents</b> permissions on the above directories.<br>
+<b>Observed Delayed Activation</b><br>
+OCR functionality did not activate immediately-likely due to IIS caching or delayed DLL loading-but began working shortly after configuration.<br>
 </td>
 </tr>
 </table>

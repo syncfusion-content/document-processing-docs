@@ -24,11 +24,62 @@ Step 3: Select the function worker as .NET 8.0 isolated (Long-term support), and
 ![Convert HTMLToPDF Azure Functions Step3](Azure_images\Azure-function-linux\AzureFunctions3.png)
 
 Step 4: Install the [Syncfusion.HtmlToPdfConverter.Net.Linux](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Linux/) NuGet package as a reference to your .NET Core application [NuGet.org](https://www.nuget.org/).
-![Convert HTMLToPDF Azure Functions Step3](Azure_images\Azure-function-linux\Nuget-package.png)
+![Convert HTMLToPDF Azure Functions Step4](Azure_images\Azure-function-linux\Nuget-package.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 5: Include the following namespaces in Function1.cs file.
+
+Step 5: Create a shell file with the below commands in the project and name it as dependenciesInstall.sh. In this article, these steps have been followed to install dependencies packages.
+
+{% highlight bash tabtitle="Shell" %}
+
+echo "Starting dependencies installation script..."
+
+
+if ! command -v rsync &> /dev/null; then
+    echo "rsync could not be found, installing..."
+    apt-get update && apt-get install -yq rsync
+fi
+
+FILE_PATH="/home/site/wwwroot/Package/usr/lib/x86_64-linux-gnu/libnss3.so"
+if [ -f "$FILE_PATH" ]; then
+    echo "Dependencies file exists."
+    PACKAGE_USR="/home/site/wwwroot/Package/usr/lib/x86_64-linux-gnu"
+    if [ -d "$PACKAGE_USR" ]; then
+        echo "Copying user libraries..."
+        rsync -av --update /home/site/wwwroot/Package/usr/lib/ /usr/lib/
+        echo "Copied successfully..."
+    fi
+else
+    echo "Package directory does not exist. Installing dependencies..."
+    apt-get update && apt-get install -yq --no-install-recommends \
+        libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 \
+        libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 \
+        libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 \
+        libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 \
+        libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libgbm1
+
+    mkdir -p /home/site/wwwroot/Package/usr/lib/x86_64-linux-gnu
+    mkdir -p /home/site/wwwroot/Package/lib/x86_64-linux-gnu
+
+    PACKAGE_USR="/home/site/wwwroot/Package/usr/lib/x86_64-linux-gnu"
+    if [ -d "$PACKAGE_USR" ]; then
+        echo "Copying user libraries to package..."
+        rsync -av /usr/lib/x86_64-linux-gnu/ /home/site/wwwroot/Package/usr/lib/x86_64-linux-gnu
+    fi
+fi
+
+echo "Dependencies installation script completed."
+
+{% endhighlight %}
+
+![Convert HTMLToPDF Azure Functions Step5](htmlconversion_images\ShellCommand.png)
+
+Step 6: Set Copy to Output Directory as “Copy if newer” to the dependenciesInstall.sh file.
+
+![Convert HTMLToPDF Azure Functions Step6](htmlconversion_images\CopyToNewer.png)
+
+Step 7: Include the following namespaces in Function1.cs file.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -39,7 +90,7 @@ Step 5: Include the following namespaces in Function1.cs file.
 
 {% endhighlight %}
 
-Step 6: This Azure Function converts HTML to PDF using HTTP triggers. It handles GET/POST requests, processes the HTML, and returns a PDF response.
+Step 8: This Azure Function converts HTML to PDF using HTTP triggers. It handles GET/POST requests, processes the HTML, and returns a PDF response.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -67,7 +118,7 @@ Step 6: This Azure Function converts HTML to PDF using HTTP triggers. It handles
 
 {% endhighlight %}
 
-step 7: Use the following code example in the HtmlToPdfConvert method to convert HTML to a PDF document using the [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in the [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The Blink command line arguments are configured based on the given [CommandLineArguments](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_CommandLineArguments) property of the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
+step 9: Use the following code example in the HtmlToPdfConvert method to convert HTML to a PDF document using the [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in the [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The Blink command line arguments are configured based on the given [CommandLineArguments](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_CommandLineArguments) property of the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -99,6 +150,7 @@ public byte[] HtmlToPdfConvert(string htmlText)
                 Bottom = 20
             }
         };
+     
         htmlConverter.ConverterSettings = settings;
 
         // Convert HTML to PDF
@@ -127,7 +179,7 @@ N> settings.CommandLineArguments.Add("--disable-setuid-sandbox");
 N> ```
 N> These arguments are only required when using **older versions** of the library that depend on Blink in sandbox-restricted environments.
 
-Step 8: This code is designed to ensure that the necessary Linux packages for HTML to PDF conversion are installed if the operating system is Linux. It adjusts file permissions and executes a shell script to carry out the installation.
+Step 10: This code is designed to ensure that the necessary Linux packages for HTML to PDF conversion are installed if the operating system is Linux. It adjusts file permissions and executes a shell script to carry out the installation.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -195,7 +247,7 @@ private static void InstallLinuxPackages()
 {% endhighlight %}
 
 
-Step 9: Add the following helper methods to copy and set permission to the BlinkBinariesLinux folder.
+Step 11: Add the following helper methods to copy and set permission to the BlinkBinariesLinux folder.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -257,7 +309,7 @@ private static void SetExecutablePermission(string tempBlinkDir)
 
 {% endhighlight %}
 
-Step 10: Include the below enum in the Function1.cs file. 
+Step 12: Include the below enum in the Function1.cs file. 
 
 {% highlight c# tabtitle="C#" %}
 
@@ -317,5 +369,6 @@ Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-co
 An online sample link to [convert HTML to PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HtmltoPDF#/material3) in ASP.NET Core. 
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core/html-to-pdf) to explore the rich set of Syncfusion<sup>&reg;</sup> HTML to PDF converter library features. 
+
 
 An online sample link to [convert HTML to PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HtmltoPDF#/material3) in ASP.NET Core. 

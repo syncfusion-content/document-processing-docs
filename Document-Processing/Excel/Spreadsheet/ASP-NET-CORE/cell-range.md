@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Cell Range in Spreadsheet control
+# Cell Range in ASP.NET Core Spreadsheet control
 
 A group of cells in a sheet is known as cell range.
 

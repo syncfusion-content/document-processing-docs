@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Notes in Spreadsheet control
+# Notes in ASP.NET Core Spreadsheet control
 
 The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [`enableNotes`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableNotes) property, which defaults to **true**.
 
@@ -56,7 +56,7 @@ In the active worksheet, right-click on the desired cell containing the note tha
 
 ## Saving the document with notes
 
-The Spreadsheet data, including notes, can be saved and exported as an Excel document by selecting **File > Save As** in the ribbon menu. Exporting worksheets with notes is supported in Excel file formats such as MS Excel (.xlsx) and MS Excel 97-2003 (.xls).
+The Spreadsheet data, including notes, can be saved and exported as an Excel document by selecting **File > Save As** in the ribbon menu. Exporting worksheets with notes is supported in Excel file formats such as Microsoft Excel (.xlsx) and Microsoft Excel 97-2003 (.xls).
 
 > When exporting the Spreadsheet to file formats such as Comma Separated Values (.csv), Excel Macro-Enabled Workbook (.xlsm), Excel Binary Workbook (.xlsb), and PDF Document (.pdf), the notes will not be available.
 

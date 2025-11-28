@@ -20,15 +20,12 @@ The two available layout types are:
 
 The layout type can be set during component initialization. The following example demonstrates how to configure the Document Editor to use the `Continuous` (Web Layout) view.
 
-```razor
+```
 @using Syncfusion.Blazor.DocumentEditor
 
 <SfDocumentEditorContainer @ref="Container" EnableToolbar="true" Height="590px" LayoutType="LayoutType.Continuous">
 </SfDocumentEditorContainer>
 
-@code {
-    private SfDocumentEditorContainer Container;
-}
 ```
 
 N> By default, the `LayoutType` is set to `LayoutType.Pages`, which provides a print layout view. To switch to a web layout, set the property to `LayoutType.Continuous`.

@@ -17,6 +17,9 @@ You can choose the standard or custom page size when you add a page to the PDF d
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create-a-PDF-document-with-standard-page-size/.NET/Create-a-PDF-document-with-standard-page-size/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 // Set the page size.
@@ -31,16 +34,17 @@ PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
 //Draw the text.
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -64,6 +68,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -96,6 +103,9 @@ You can create a PDF document with custom page size in [PdfPageSettings Size](ht
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create-a-PDF-document-with-custom-page-size/.NET/Create-a-PDF-document-with-custom-page-size/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 // Set the custom page size.
@@ -110,16 +120,17 @@ PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
 //Draw the text.
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -143,6 +154,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -175,6 +189,9 @@ You can change page orientation from portrait to landscape, through [PdfPageOrie
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Change-the-page-orientation-from-portrait-to-landscape/.NET/Change-the-page-orientation-from-portrait-to-landscape/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 // Set the page size.
@@ -191,16 +208,17 @@ PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
 //Draw the text.
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -226,6 +244,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -262,6 +283,10 @@ You can also change orientation by setting the rotation angle using [PdfPageRota
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Rotate_PDF_based_on_angle/.NET/Rotate_PDF_based_on_angle/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 // Set the page size.
@@ -278,16 +303,18 @@ PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
 //Draw the text.
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -313,6 +340,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -349,6 +380,10 @@ PDF sections are parts of the PDF document, which may contain one or more pages 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create_sections_in_PDF_document/.NET/Create_sections_in_PDF_document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a section to PDF document.
@@ -363,16 +398,18 @@ PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
 //Draw the text.
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -396,6 +433,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -436,6 +477,8 @@ The following code snippet illustrates how to print a PDF document.
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.PdfViewer;
+
 PdfDocumentView viewer = new PdfDocumentView();
 //Load the PDF document
 viewer.Load("Input.pdf");
@@ -455,6 +498,8 @@ viewer.Dispose();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.PdfViewer
 
 Dim viewer As New PdfDocumentView()
 'Load the PDF document
@@ -486,6 +531,10 @@ The following code snippet illustrates how to set PDF document information.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Add_PDF_document_properties/.NET/Add_PDF_document_properties/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 
@@ -506,16 +555,18 @@ PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
 //Draw the text.
 graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -545,6 +596,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -583,9 +638,10 @@ To read and modify the document [DocumentInformation](https://help.syncfusion.co
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Change_existing_PDF_properties/.NET/Change_existing_PDF_properties/Program.cs" %}
 
-//Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+using Syncfusion.Pdf.Parsing;
+
+//Load a existing PDF document
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 //Modify document information.
 document.DocumentInformation.Author = "Syncfusion";
@@ -595,10 +651,8 @@ document.DocumentInformation.Keywords = "PDF";
 document.DocumentInformation.Subject = "Document information DEMO";
 document.DocumentInformation.Title = "Essential PDF Sample";
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
@@ -606,7 +660,9 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Create a new PDF document.
+using Syncfusion.Pdf.Parsing;
+
+//Load a existing PDF document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 //Modify document information.
@@ -626,7 +682,9 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Create a new PDF document.
+Imports Syncfusion.Pdf.Parsing
+
+'Load a existing PDF document
 Dim document As New PdfLoadedDocument("Input.pdf")
 
 'Modify document information.
@@ -656,9 +714,10 @@ To remove specific details from the existing document information, use the **Rem
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Remove-specific-keys-from-the-existing-document-information/.NET/Program.cs" %}
 
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing PDF document. 
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream); 
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 //Remove the document information properties. 
 document.DocumentInformation.Remove("Title"); 
@@ -670,16 +729,16 @@ document.DocumentInformation.Remove("Producer");
 document.DocumentInformation.Remove("ModDate"); 
 document.DocumentInformation.Remove("CreationDate"); 
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document. 
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf"); 
@@ -702,6 +761,8 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
 
 'Load an existing PDF document.
 Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
@@ -735,25 +796,27 @@ The Essential<sup>&reg;</sup> PDF supports incremental update for PDF document. 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Perform-incremental-update-for-the-PDF-document/.NET/Perform-incremental-update-for-the-PDF-document/Program.cs" %}
 
-//Load the PDF document
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 //Disable the incremental update
 loadedDocument.FileStructure.IncrementalUpdate = false;
 //Set the compression level
 loadedDocument.Compression = PdfCompressionLevel.Best;
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -771,6 +834,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf
 
 'Load the PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
@@ -801,6 +867,10 @@ You can hide the menu bar and toolbar by enabling [HideMenubar](https://help.syn
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create_PDF_with_viewer_preference/.NET/Create_PDF_with_viewer_preference/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -819,16 +889,18 @@ document.ViewerPreferences.HideToolbar = true;
 //Shows user interface elements in the document's window (such as scroll bars and navigation controls).
 document.ViewerPreferences.HideWindowUI = false;
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -856,6 +928,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf
+Imports System.Drawing
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -892,6 +968,9 @@ You can also allow the reader application to initially display the bookmarks, th
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create-PDF-with-display-of-specific-panel/.NET/Create-PDF-with-display-of-specific-panel/Program.cs" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -906,15 +985,17 @@ graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new Syncfusion.Dra
 //Show the attachments panel.
 document.ViewerPreferences.PageMode = PdfPageMode.UseAttachments;
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -938,6 +1019,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -978,6 +1062,10 @@ The following code sample illustrates how to create a PDF document in multi-thre
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 IEnumerable<int> works = Enumerable.Range(0, 100);
 
 Parallel.ForEach(works, index => GeneratePDF(index));
@@ -1009,6 +1097,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 Dim works As IEnumerable(Of Integer) = Enumerable.Range(0, 100)
 Parallel.ForEach(works, Sub(index) GeneratePDF(index))
@@ -1046,6 +1138,11 @@ To modify the existing PDF document in multi-threading environment [EnableThread
 {% tabs %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
 IEnumerable<int> works = Enumerable.Range(0, 100);
 Parallel.ForEach(works, index => GeneratePDF(index));
 
@@ -1074,6 +1171,11 @@ doc.Close(true);
 
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
 Dim works As IEnumerable(Of Integer) = Enumerable.Range(0, 100)
 Parallel.ForEach(works, Sub(index) GeneratePDF(index))
@@ -1115,6 +1217,10 @@ The following code snippet explains how to have uniform resource naming in a PDF
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create_PDF_with_Uniform_Resouce_Naming/.NET/Create_PDF_with_Uniform_Resouce_Naming/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Disable unique resource naming
 PdfDocument.EnableUniqueResourceNaming = false;
 
@@ -1139,15 +1245,18 @@ PdfFont font3 = new PdfCjkStandardFont(PdfCjkFontFamily.HeiseiMinchoW3, 20);
 //Draw the text
 graphics.DrawString("こんにちは世界", font3, PdfBrushes.Blue, new PointF(50, 150));
 
-//Saving the PDF to the MemoryStream
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
-//Close the document
+//Save the document.
+doc.Save("Output.pdf");
+//Close the document.
 doc.Close(true);
 
 {%endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Disable unique resource naming
 PdfDocument.EnableUniqueResourceNaming = false;
@@ -1179,6 +1288,10 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Disable unique resource naming
 PdfDocument.EnableUniqueResourceNaming = False
@@ -1222,9 +1335,11 @@ Enabling this property will optimize the memory but difference in time occurs ba
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Manage_memory_while_appending_PDF_document/.NET/Manage_memory_while_appending_PDF_document/Program.cs" %}
 
-//Load an existing PDF document
-FileStream docStream = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
+//Load an existing PDF document. 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1234,16 +1349,17 @@ document.EnableMemoryOptimization = true;
 //Append the document with source document
 document.Append(loadedDocument);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Close the documents
-document.Close(true);
+//Save the document.
+loadedDocument.Save("Output.pdf");
+//Close the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("file1.pdf");
@@ -1265,6 +1381,10 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+
 'Load an existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("file1.pdf")
 
@@ -1293,10 +1413,13 @@ Syncfusion PDF Library provides support to check whether the existing PDF docume
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Find_corrupted_PDF_document/.NET/Find_corrupted_PDF_document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using System.Text;
+
 //Load the PDF document 
-FileStream  docStream = new  FileStream("Input.pdf", FileMode.Open, FileAccess.Read); 
-//Create a new instance for the PDF analyzer
-PdfDocumentAnalyzer analyzer = new PdfDocumentAnalyzer(docStream);
+PdfDocumentAnalyzer analyzer = new PdfDocumentAnalyzer("Input.pdf");
 
 //Get the syntax errors
 SyntaxAnalyzerResult result = analyzer.AnalyzeSyntax();
@@ -1320,6 +1443,10 @@ analyzer.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using System.Text;
 
 //Create a new instance for the PDF analyzer
 PdfDocumentAnalyzer analyzer = new PdfDocumentAnalyzer("Input.pdf");
@@ -1347,6 +1474,10 @@ analyzer.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+
 'Create a new instance for the PDF analyzer
 Dim analyzer As PdfDocumentAnalyzer = New PdfDocumentAnalyzer("Input.pdf")
 
@@ -1379,6 +1510,9 @@ Refer to the following code sample to achieve the same,
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
 //Embed all the non-embedded fonts.
@@ -1393,6 +1527,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+
 //Load an existing document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
 // Embed all the non-embedded fonts.
@@ -1415,6 +1552,8 @@ The Essential<sup>&reg;</sup> PDF allows you to get or set the [BaseUri](https:/
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Add_BaseUri_in_the_PDF_document/.NET/Add_BaseUri_in_the_PDF_document/Program.cs" %}
 
+using Syncfusion.Pdf;
+
 //Create a new instance of the PdfDocument class.
 PdfDocument document = new PdfDocument();
 //Set the Base URI.
@@ -1423,13 +1562,14 @@ document.BaseUri = "https://www.syncfusion.com/";
 PdfPage page = document.Pages.Add();
 
 //Save the document.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
 
 //Create a new instance of the PdfDocument class.
 PdfDocument document = new PdfDocument();
@@ -1446,6 +1586,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+
 'Create a new instance of the PdfDocument class.
 Dim document As PdfDocument = New PdfDocument()
 'Set the Base URI.
@@ -1467,17 +1610,21 @@ The following code example illustrates the retrieval of [BaseUri](https://help.s
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Retrieve_BaseUri_from_the_existing_PDF/.NET/Retrieve_BaseUri_from_the_existing_PDF/Program.cs" %}
 
-//Load the PDF document as file stream.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-//Load a PDF document.
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+using Syncfusion.Pdf.Parsing;
+
+//Load an existing PDF document. 
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Get the Base URI.
 string baseUri = document.BaseUri;
 //Close the document.
 document.Close(true);
+
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+
 //Load an existing document.
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
@@ -1488,6 +1635,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+
 'Load an existing document.
 Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
 'Get the Base URI.
@@ -1507,6 +1657,10 @@ Essential<sup>&reg;</sup> PDF enables you to track the save progress through the
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create-a-PDF-document-with-save-progress/.NET/PDF-document-with-save-progress/Program.cs" %}
 
+   using Syncfusion.Pdf.Graphics;
+   using Syncfusion.Pdf;
+   using Syncfusion.Drawing;
+
       // Create a new PDF document.
       PdfDocument document = new PdfDocument();
 
@@ -1529,13 +1683,8 @@ Essential<sup>&reg;</sup> PDF enables you to track the save progress through the
       // Subscribe to the SaveProgress event.
       document.SaveProgress += new PdfDocument.ProgressEventHandler(document_SaveProgress);
 
-      // Create a file stream to save the PDF document.
-      using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
-      {
-         // Save the PDF document to the file stream.
-         document.Save(outputFileStream);
-      }
-
+      //Save the document.
+      document.Save("Output.pdf");
       // Close the document.
       document.Close(true);
 
@@ -1551,6 +1700,10 @@ Essential<sup>&reg;</sup> PDF enables you to track the save progress through the
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+   using Syncfusion.Pdf.Graphics;
+   using Syncfusion.Pdf;
+   using System.Drawing;
+
       // Create a new PDF document.
       PdfDocument document = new PdfDocument();
       // Add multiple pages to the document.
@@ -1567,12 +1720,8 @@ Essential<sup>&reg;</sup> PDF enables you to track the save progress through the
       }
       // Subscribe to the SaveProgress event.
       document.SaveProgress += new PdfDocument.ProgressEventHandler(document_SaveProgress);
-      // Create a file stream to save the PDF document.
-      using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"../../../Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
-      {
-         // Save the PDF document to the file stream.
-         document.Save(outputFileStream);
-      }
+      //Save the document.
+      document.Save("Output.pdf");
       // Close the document.
       document.Close(true);
 
@@ -1586,6 +1735,10 @@ Essential<sup>&reg;</sup> PDF enables you to track the save progress through the
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+   Imports Syncfusion.Pdf.Graphics
+   Imports Syncfusion.Pdf
+   Imports Syncfusion.Drawing
 
       Module Program
          Sub Main()
@@ -1604,11 +1757,8 @@ Essential<sup>&reg;</sup> PDF enables you to track the save progress through the
             Next
             ' Subscribe to the SaveProgress event.
             AddHandler document.SaveProgress, AddressOf document_SaveProgress
-            ' Create a file stream to save the PDF document.
-            Using outputFileStream As New FileStream(Path.GetFullPath("../../../Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite)
-                  ' Save the PDF document to the file stream.
-                  document.Save(outputFileStream)
-            End Using
+            ' Save the document.
+            document.Save("Output.pdf")
             ' Close the document.
             document.Close(True)
          End Sub

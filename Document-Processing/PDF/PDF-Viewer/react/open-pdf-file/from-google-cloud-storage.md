@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Open PDF from Google Cloud Storage
+# Open PDF from Google Cloud Storage in React
 
 Follow these steps to load a PDF from Google Cloud Storage using the server-backed PDF Viewer.
 

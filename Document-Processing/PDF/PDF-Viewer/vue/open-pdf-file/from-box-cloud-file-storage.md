@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Box cloud storage
+# Open PDF from Box cloud storage in Vue
 
 Follow these steps to load a PDF from Box cloud storage using the server-backed PDF Viewer.
 

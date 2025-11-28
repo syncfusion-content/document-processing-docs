@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to AWS S3
+# Save PDF files to AWS S3 in JavaScript
 
 The JavaScript PDF Viewer component supports saving PDF files to AWS S3 using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 

@@ -8,7 +8,7 @@ publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Open PDF from Google Drive
+# Open PDF from Google Drive in ASP.NET MVC
 
 Follow these steps to load a PDF from Google Drive using the server-backed PDF Viewer.
 

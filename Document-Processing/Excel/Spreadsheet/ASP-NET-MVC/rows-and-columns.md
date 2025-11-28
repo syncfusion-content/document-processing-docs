@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Rows and columns in Spreadsheet control
+# Rows and columns in ASP.NET MVC Spreadsheet control
 
 Spreadsheet is a tabular format consisting of rows and columns. The intersection point of rows and columns are called as cells. The list of operations that you can perform in rows and columns are,
 

@@ -18,16 +18,13 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     application.DefaultVersion = ExcelVersion.Xlsx;
     
     //Loads an xls file
-    FileStream fileStream = new FileStream("InputTemplate.xls", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(fileStream);
+    IWorkbook workbook = application.Workbooks.Open("InputTemplate.xls");
 
     //Set the workbook version to xlsx
     workbook.Version = ExcelVersion.Xlsx;
     
-    //Saving the workbook as stream in xlsx format
-    FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
-    stream.Dispose();
+    //Saving the workbook in xlsx format
+    workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 

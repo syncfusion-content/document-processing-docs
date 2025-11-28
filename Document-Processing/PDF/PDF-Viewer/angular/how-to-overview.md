@@ -58,3 +58,4 @@ The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are liste
 * [Extract Text](./how-to/extract-text)
 * [Dynamically Enable or Disable Text Selection](./how-to/enable-text-selection)
 * [Show and Hide Annotations](./how-to/show-hide-annotation)
+* [Load Document after resources Loaded](./how-to/load-document-after-resources-loaded)
