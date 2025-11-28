@@ -22,7 +22,11 @@ The PDF Viewer component supports interactive form field design, including drawi
 
 ## Enable or Disable form designer toolbar
 
-Inject the FormDesigner module and set enableFormDesignerToolbar to true to display the Form Designer icon on the toolbar. The default value is true. Use the following code to enable the toolbar option.
+Inject the FormDesigner module and set enableFormDesignerToolbar to true to display the Form Designer icon on the toolbar. The default value is true. 
+
+You can refer to [enableFormDesignerToolbar API  Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enableformdesignertoolbar) for more information. 
+
+Use the following code to enable the toolbar option.
 
 ```ts
 import { PdfViewer } from '@syncfusion/ej2-pdfviewer';
@@ -31,6 +35,25 @@ PdfViewer.Inject(FormDesigner);
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.enableFormDesignerToolbar= true;
 
+```
+
+## Show or hide form designer toolbar on initial load
+
+Open or close the form designer toolbar when the PDF document is loaded initially in the PDF Viewer control. Use the `isFormDesignerToolbarVisible` property to get or set the annotation toolbar visible status. The default value is false. You can refer to [isFormDesignerToolbarVisible API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#isformdesignertoolbarvisible) for more information. 
+
+Use the following code to enable or disable the form designer toolbar on load:
+
+```ts
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
+         BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
+                 BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner);
+
+let viewer: PdfViewer = new PdfViewer();
+viewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib';
+viewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
+viewer.appendTo('#pdfViewer');
+viewer.isFormDesignerToolbarVisible=true;
 ```
 
 ## Add the form field dynamically
