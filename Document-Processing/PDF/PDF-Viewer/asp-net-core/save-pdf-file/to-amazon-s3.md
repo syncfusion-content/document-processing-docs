@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF files to AWS S3
+# Save PDF files to AWS S3 in ASP.NET Core
 
 The ASP.NET Core PDF Viewer component supports saving PDF files to AWS S3 using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 
@@ -215,7 +215,7 @@ N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from AWS S3, and ensure that the document exists in the target bucket.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl) property of the PDF Viewer component with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from AWS S3, and ensure that the document exists in the target bucket.
 
 ```csharp
 

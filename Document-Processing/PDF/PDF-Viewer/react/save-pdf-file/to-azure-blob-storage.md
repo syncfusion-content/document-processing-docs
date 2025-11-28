@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Save PDF files to Azure Blob Storage
+# Save PDF files to Azure Blob Storage in React
 
 The React PDF Viewer component supports saving PDF files to Azure Blob Storage using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 

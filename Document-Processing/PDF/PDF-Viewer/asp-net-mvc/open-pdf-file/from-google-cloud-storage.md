@@ -8,7 +8,7 @@ publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Open PDF from Google Cloud Storage
+# Open PDF from Google Cloud Storage in ASP.NET MVC
 
 Follow these steps to load a PDF from Google Cloud Storage using the server-backed PDF Viewer.
 

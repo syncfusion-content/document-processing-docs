@@ -144,7 +144,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet comp
 
 Note: Due to browser-level restrictions in WebAssembly (WASM), the method File.ReadAllBytes is not supported. As a result, the sample implementations provided use a Base64-encoded Excel file to import data. This approach ensures compatibility with WASM environments, where direct file system access is limited. Instead of reading the file from disk, the Excel content is embedded or passed as a Base64 string, which is then decoded within the application to simulate file input. This method allows seamless data import while adhering to the constraints of the WebAssembly runtime.
 
-<SfSpreadsheet DataSourceBytes="@DataSourceBytes">
+<SfSpreadsheet DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
