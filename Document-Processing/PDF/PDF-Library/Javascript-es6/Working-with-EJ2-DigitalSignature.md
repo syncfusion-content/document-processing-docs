@@ -5,7 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Digital Signature
+# Working with EJ2 Digital Signature
 
 ## Adding a digital signature
 

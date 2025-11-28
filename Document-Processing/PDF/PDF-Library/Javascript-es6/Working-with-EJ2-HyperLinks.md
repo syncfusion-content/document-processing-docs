@@ -1,11 +1,11 @@
 ---
-title: Working with Hyperlinks in PDF | Syncfusion
+title: Working with EJ2 Hyperlinks | Syncfusion
 description: This section explains how to add hyperlink in a new and existing PDF document using Syncfusion EJ2 PDF library 
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Hyperlinks in PDF
+# Working with EJ2 Hyperlinks in PDF
 
 In EJ2 PDF, hyperlinks can be added to allow the users to navigate to another part of PDF file, web page or any other external content. Essential<sup>&reg;</sup> EJ2 PDF provides support for all these types of hyperlink.
 

@@ -5,7 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Bookmarks
+# Working with EJ2 Bookmarks
 
 Essential<sup>&reg;</sup> EJ2 PDF provides support to insert, remove and modify the bookmarks in the PDF Document.
 

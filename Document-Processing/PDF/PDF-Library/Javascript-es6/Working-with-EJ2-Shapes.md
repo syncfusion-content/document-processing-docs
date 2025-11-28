@@ -345,6 +345,15 @@ function createPdf() {
     // Close the document
     document.destroy();
 }
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+
+<div class="row">
+    <button id="normalbtn">Create PDF</button>
+</div>
+
+{% endhighlight %}
+{% endtabs %}
 
 The following code snippet explains how to draw text in an existing PDF document.
 
@@ -425,6 +434,15 @@ function createPdf() {
     // Close the document
     document.destroy();
 }
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+
+<div class="row">
+    <button id="normalbtn">Create PDF</button>
+</div>
+
+{% endhighlight %}
+{% endtabs %}
 
 The following code snippet explains how to draw rectangle in an existing PDF document.
 
@@ -505,6 +523,15 @@ function createPdf() {
     // Close the document
     document.destroy();
 }
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+
+<div class="row">
+    <button id="normalbtn">Create PDF</button>
+</div>
+
+{% endhighlight %}
+{% endtabs %}
 
 The following code snippet explains how to draw pie in an existing PDF document.
 
@@ -585,6 +612,15 @@ function createPdf() {
     // Close the document
     document.destroy();
 }
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+
+<div class="row">
+    <button id="normalbtn">Create PDF</button>
+</div>
+
+{% endhighlight %}
+{% endtabs %}
 
 The following code snippet explains how to draw arc in an existing PDF document.
 
@@ -665,6 +701,15 @@ function createPdf() {
     // Close the document
     document.destroy();
 }
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+
+<div class="row">
+    <button id="normalbtn">Create PDF</button>
+</div>
+
+{% endhighlight %}
+{% endtabs %}
 
 The following code snippet explains how to draw bezier in an existing PDF document.
 
@@ -745,6 +790,15 @@ function createPdf() {
     // Close the document
     document.destroy();
 }
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+
+<div class="row">
+    <button id="normalbtn">Create PDF</button>
+</div>
+
+{% endhighlight %}
+{% endtabs %}
 
 The following code snippet explains how to draw ellipse in an existing PDF document.
 
