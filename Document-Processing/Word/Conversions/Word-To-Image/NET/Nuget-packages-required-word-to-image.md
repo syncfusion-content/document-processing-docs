@@ -169,7 +169,7 @@ The following table illustrates the native assets NuGet packages and their appli
     <tr>
       <td>
         {{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)'| markdownify }}<br/>
-        {{'[HarfBuzzSharp.NativeAssets.Linux v8.3.0.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.0.2)'| markdownify }}
+        {{'[HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)'| markdownify }}
       </td>
       <td>
         <ul>
