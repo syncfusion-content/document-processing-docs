@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Blazor Hybrid App | Syncfusion
-description: Learn how to build apps using .NET MAUI Blazor Hybrid App with the Syncfusion spreadsheet component. This guide helps you set up, create, and run cross-platform applications quickly.
+description: Learn how to get started with .NET MAUI Blazor Hybrid App using the Syncfusion Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
@@ -33,7 +33,6 @@ Create a **.NET MAUI Blazor Hybrid App** using Visual Studio via [Microsoft Temp
 The above steps create a multi-targeted .NET MAUI Blazor app that can be deployed to Android, iOS, macOS, and Windows.
 
 In `MainPage.xaml`, the `BlazorWebView` is added and points to the root of the Blazor app. The root Blazor component for the app is in `Routes.razor`, which Razor compiles into a type named `Routes` in the application’s root namespace.
-
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
