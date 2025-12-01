@@ -5591,6 +5591,15 @@ loadedDocument.Close(true)
 
 {% endtabs %}
 
+## Preserving previous signatures in the PDF document
+
+When you add a new digital signature to a PDF that already contains valid signatures, the file must be written using an incremental update.  If the whole document is rewritten, the byte–range originally covered by the earlier signatures changes and those signatures become invalid.
+
+The Syncfusion PDF Library supports incremental saving for PDF version 1.4 and above. This ensures that multiple signatures can be applied without invalidating earlier ones.
+If you are working with a document that meets the version requirement (PDF 1.4+), the current version of our library correctly saves changes incrementally. This allows additional signatures to be appended while keeping prior signatures valid.
+
+If your PDF document is in older version (e.g., 1.3), upgrade the document to 1.4 or higher before applying multiple signatures.
+
 ## Troubleshooting
 
 <th style="font-size:14px"><b>Signature is not visible after signing the document.
