@@ -162,7 +162,7 @@ private void PdfTextSearchProgress(object sender, TextSearchProgressEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### Cancelling search progress
+### Canceling search progress
 
 The [Clear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchResult.html#Syncfusion_Maui_PdfViewer_TextSearchResult_Clear) method of the [TextSearchResult](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchResult.html) can be used to cancel the text search progress that does not need to be continued. For example, under the following scenarios, cancellation may be necessary.
 
