@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Prevent actions without read-only and sheet protection in Spreadsheet | Syncfusion
+title:  Prevent actions without read-only and sheet protection | Syncfusion
 description: Learn here all about to prevent actions without read-only and sheet protection in React Spreadsheet component of Syncfusion Essential JS 2 and more. 
 control: Spreadsheet
 platform: document-processing
