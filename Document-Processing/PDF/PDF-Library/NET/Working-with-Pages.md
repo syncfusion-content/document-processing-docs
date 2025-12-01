@@ -1693,7 +1693,7 @@ document.Close(true);
 {% endhighlight %}
 {% endtabs %}
 
-{% highlight c# tabtitle="VB.NET”%}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports System.Drawing
 Imports System.IO
@@ -1739,7 +1739,7 @@ g.DrawString(
 document.Save("Output.pdf")
 'Close the instance of PdfDocument
 document.Close(True)
-```
+
 {% endhighlight %}
 {% endtabs %}
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Insert-New-Page-in-Existing-PDF-with-Same-Size/.NET).   
