@@ -24,11 +24,12 @@ The PDF Viewer supports editing these field types:
 
 ## Edit with the UI
 
-- Select a form field and open the Properties panel from the context menu to change its settings.
+- Select a form field and Right-click to open the Properties panel from the context menu to change its settings.
+
+![Edit FormFields](../../images/formFields_properties.png)
+
 - Drag to move; use resize handles to resize.
 - Use the toolbar to toggle field mode and add new fields.
-
-Placeholders for UI screenshots are included below for each field type. Replace them with actual images later.
 
 ## Textbox
 
@@ -60,8 +61,8 @@ pdfviewer.appendTo('#PdfViewer');
 (document.getElementById('editTextbox') as HTMLButtonElement)?.addEventListener('click', () => {
   // Retrieve form fields collection
   const fields = pdfviewer.retrieveFormFields();
-  // Find the textbox field by name
-  const field = fields.find((f: any) => f.name === 'First Name') || fields[0];
+  // Find the textbox field by name (Here field name is FIrst Name)
+  const field = fields.find((f: any) => f.name === 'First Name') || fields[0]; //Update Name accordingly
   if (field) {
     // Update textbox field styling and value
     pdfviewer.formDesignerModule.updateFormField(field, {
@@ -91,10 +92,13 @@ pdfviewer.appendTo('#PdfViewer');
 
 ### Edit Password programmatically
 
-Update a password field (masked textbox) using `updateFormField` as shown below.
+Use `updateFormField` on a button click for a simple, discoverable flow. The example below retrieves the fields, locates the password field, and applies tooltip, validation flags, typography, colors, alignment, max length, and border thickness updates.
 
+```html
+ <button id="editPasswordBox">Edit PasswordBox</button>
+```
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PasswordFieldSettings } from '@syncfusion/ej2-pdfviewer';
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
 
@@ -103,9 +107,13 @@ pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.p
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
 pdfviewer.appendTo('#PdfViewer');
 
-pdfviewer.documentLoad = () => {
-  const field = pdfviewer.formFieldCollections.find(f => f.name === 'Password');
+(document.getElementById('editPasswordBox') as HTMLButtonElement)?.addEventListener('click', () => {
+  // Retrieve form fields collection
+  const fields = pdfviewer.retrieveFormFields();
+  // Find the password field by name (Here field name is Password)
+  const field = fields.find((f: any) => f.name === 'Password');
   if (field) {
+    // Update password field properties
     pdfviewer.formDesignerModule.updateFormField(field, {
       tooltip: 'Enter your password',
       isReadOnly: false,
@@ -119,9 +127,9 @@ pdfviewer.documentLoad = () => {
       alignment: 'Left',
       maxLength: 20,
       thickness: 1
-    });
+    } as PasswordFieldSettings);
   }
-};
+});
 ```
 
 ## CheckBox
@@ -135,10 +143,13 @@ pdfviewer.documentLoad = () => {
 
 ### Edit CheckBox programmatically
 
-Use `updateFormField` to check/uncheck and change appearance.
+Use `updateFormField` on a button click for a simple, discoverable flow. The example below retrieves the fields, locates the checkbox field, and applies checked state, tooltip, colors, and border thickness updates.
 
+```html
+<button id="editCheckbox">Edit CheckBox</button>
+```
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, CheckBoxFieldSettings } from '@syncfusion/ej2-pdfviewer';
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
 
@@ -147,18 +158,22 @@ pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.p
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
 pdfviewer.appendTo('#PdfViewer');
 
-pdfviewer.documentLoad = () => {
-  const cb = pdfviewer.formFieldCollections.find(f => f.name === 'Subscribe');
+(document.getElementById('editCheckbox') as HTMLButtonElement)?.addEventListener('click', () => {
+  // Retrieve form fields collection
+  const fields = pdfviewer.retrieveFormFields();
+  // Find the checkbox field by name (Here field name is Subscribe)
+  const cb = fields.find((f: any) => f.name === 'Subscribe');
   if (cb) {
+    // Update checkbox field properties and state
     pdfviewer.formDesignerModule.updateFormField(cb, {
       isChecked: true,
       backgroundColor: 'white',
       borderColor: 'black',
       thickness: 2,
       tooltip: 'Subscribe to newsletter'
-    });
+    } as CheckBoxFieldSettings);
   }
-};
+});
 ```
 
 ## RadioButton
@@ -172,10 +187,13 @@ pdfviewer.documentLoad = () => {
 
 ### Edit RadioButton programmatically
 
-Update one radio in the group or set the selected option by updating its `isSelected`.
+Use `updateFormField` on a button click for a simple, discoverable flow. The example below retrieves the fields, locates the radio button group, and applies selection state and border appearance updates.
 
+```html
+<button id="editRadio">Edit RadioButton</button>
+```
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, RadioButtonFieldSettings } from '@syncfusion/ej2-pdfviewer';
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
 
@@ -184,14 +202,17 @@ pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.p
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
 pdfviewer.appendTo('#PdfViewer');
 
-pdfviewer.documentLoad = () => {
-  const genderRadios = pdfviewer.formFieldCollections.filter(f => f.name === 'Gender');
-  // Select the second option
+(document.getElementById('editRadio') as HTMLButtonElement)?.addEventListener('click', () => {
+  // Retrieve form fields collection
+  const fields = pdfviewer.retrieveFormFields();
+  // Filter the radio button group by name (Here group name is Gender)
+  const genderRadios = fields.filter((f: any) => f.name === 'Gender');
   if (genderRadios[1]) {
-    pdfviewer.formDesignerModule.updateFormField(genderRadios[0], { isSelected: false });
-    pdfviewer.formDesignerModule.updateFormField(genderRadios[1], { isSelected: true, thickness: 2, borderColor: 'black' });
+    // Update radio button selection and appearance
+    pdfviewer.formDesignerModule.updateFormField(genderRadios[0], { isSelected: false } as RadioButtonFieldSettings);
+    pdfviewer.formDesignerModule.updateFormField(genderRadios[1], { isSelected: true, thickness: 2, borderColor: 'black' } as RadioButtonFieldSettings);
   }
-};
+});
 ```
 
 ## ListBox
@@ -205,10 +226,13 @@ pdfviewer.documentLoad = () => {
 
 ### Edit ListBox programmatically
 
-Update options and selection using `updateFormField`.
+Use `updateFormField` on a button click for a simple, discoverable flow. The example below retrieves the fields, locates the list box, and applies options, selection, typography, colors, and border appearance updates.
 
+```html
+<button id="editListBox">Edit ListBox</button>
+```
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, TextFieldSettings } from '@syncfusion/ej2-pdfviewer';
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
 
@@ -217,25 +241,28 @@ pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.p
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
 pdfviewer.appendTo('#PdfViewer');
 
-pdfviewer.documentLoad = () => {
-  const lb = pdfviewer.formFieldCollections.find(f => f.name === 'States');
+(document.getElementById('editListBox') as HTMLButtonElement)?.addEventListener('click', () => {
+  // Retrieve form fields collection
+  const fields = pdfviewer.retrieveFormFields();
+  // Find the listbox field by name (Here field name is States)
+  const lb = fields.find((f: any) => f.name === 'States');
   if (lb) {
+    // Update listbox options, selection, and appearance
     pdfviewer.formDesignerModule.updateFormField(lb, {
       options: [
         { itemName: 'Alabama', itemValue: 'AL' },
         { itemName: 'Alaska', itemValue: 'AK' },
         { itemName: 'Arizona', itemValue: 'AZ' }
       ],
-      // Set selected item value if needed
       value: 'AZ',
       fontFamily: 'Courier',
       fontSize: 10,
       color: 'black',
       borderColor: 'black',
       backgroundColor: 'white'
-    } as any);
+    } as unknown as TextFieldSettings);
   }
-};
+});
 ```
 
 ## DropDown
@@ -249,10 +276,13 @@ pdfviewer.documentLoad = () => {
 
 ### Edit DropDown programmatically
 
-Update dropdown items and value.
+Use `updateFormField` on a button click for a simple, discoverable flow. The example below retrieves the fields, locates the dropdown, and applies items, value, typography, colors, and border appearance updates.
 
+```html
+<button id="editDropDown">Edit DropDown</button>
+```
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, DropdownFieldSettings } from '@syncfusion/ej2-pdfviewer';
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
 
@@ -261,9 +291,13 @@ pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.p
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
 pdfviewer.appendTo('#PdfViewer');
 
-pdfviewer.documentLoad = () => {
-  const dd = pdfviewer.formFieldCollections.find(f => f.name === 'Country');
+(document.getElementById('editDropDown') as HTMLButtonElement)?.addEventListener('click', () => {
+  // Retrieve form fields collection
+  const fields = pdfviewer.retrieveFormFields();
+  // Find the dropdown field by name (Here field name is Country)
+  const dd = fields.find((f: any) => f.name === 'Country');
   if (dd) {
+    // Update dropdown items, value, and appearance
     pdfviewer.formDesignerModule.updateFormField(dd, {
       options: [
         { itemName: 'USA', itemValue: 'US' },
@@ -276,9 +310,9 @@ pdfviewer.documentLoad = () => {
       color: 'black',
       borderColor: 'black',
       backgroundColor: 'white'
-    } as any);
+    } as DropdownFieldSettings);
   }
-};
+});
 ```
 
 ## Signature field
@@ -292,10 +326,13 @@ pdfviewer.documentLoad = () => {
 
 ### Edit Signature field programmatically
 
-Update signature field properties.
+Use `updateFormField` on a button click for a simple, discoverable flow. The example below retrieves the fields, locates the signature field, and applies tooltip, required/print flags, colors, and border thickness updates.
 
+```html
+<button id="editSignature">Edit Signature</button>
+```
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, SignatureFieldSettings } from '@syncfusion/ej2-pdfviewer';
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
 
@@ -304,9 +341,13 @@ pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.p
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
 pdfviewer.appendTo('#PdfViewer');
 
-pdfviewer.documentLoad = () => {
-  const sig = pdfviewer.formFieldCollections.find(f => f.name === 'Sign');
+(document.getElementById('editSignature') as HTMLButtonElement)?.addEventListener('click', () => {
+  // Retrieve form fields collection
+  const fields = pdfviewer.retrieveFormFields();
+  // Find the signature field by name (Here field name is Sign)
+  const sig = fields.find((f: any) => f.name === 'Sign');
   if (sig) {
+    // Update signature field properties
     pdfviewer.formDesignerModule.updateFormField(sig, {
       tooltip: 'Please sign here',
       thickness: 3,
@@ -314,9 +355,9 @@ pdfviewer.documentLoad = () => {
       isPrint: true,
       backgroundColor: 'white',
       borderColor: 'black'
-    });
+    } as SignatureFieldSettings);
   }
-};
+});
 ```
 
 ## Initial field
@@ -330,10 +371,13 @@ pdfviewer.documentLoad = () => {
 
 ### Edit Initial field programmatically
 
-Update an initial field’s properties.
+Use `updateFormField` on a button click for a simple, discoverable flow. The example below retrieves the fields, locates the initial field, and applies tooltip, required/print flags, colors, and border thickness updates.
 
+```html
+<button id="editInitial">Edit Initial</button>
+```
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, InitialFieldSettings } from '@syncfusion/ej2-pdfviewer';
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
 
@@ -342,9 +386,13 @@ pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.p
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
 pdfviewer.appendTo('#PdfViewer');
 
-pdfviewer.documentLoad = () => {
-  const init = pdfviewer.formFieldCollections.find(f => f.name === 'Initial');
+(document.getElementById('editInitial') as HTMLButtonElement)?.addEventListener('click', () => {
+  // Retrieve form fields collection
+  const fields = pdfviewer.retrieveFormFields();
+  // Find the initial field by name (Here field name is Initial)
+  const init = fields.find((f: any) => f.name === 'Initial');
   if (init) {
+    // Update initial field properties
     pdfviewer.formDesignerModule.updateFormField(init, {
       tooltip: 'Add your initials',
       thickness: 2,
@@ -352,7 +400,7 @@ pdfviewer.documentLoad = () => {
       isPrint: true,
       backgroundColor: 'white',
       borderColor: 'black'
-    });
+    } as InitialFieldSettings);
   }
-};
+});
 ```

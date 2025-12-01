@@ -34,13 +34,6 @@ Use the Properties panel to adjust the value, font family/size/style, text color
 
 Use `updateFormField` to modify a textbox’s appearance and behavior on a button click. The example below finds the field by name (or falls back to the first field) and updates value, typography, colors, alignment, and border thickness.
 
-- value: Sets the displayed text.
-- fontFamily, fontSize, fontStyle: Controls text typography.
-- color: Text color.
-- borderColor, backgroundColor: Field border and fill colors.
-- alignment: Horizontal text alignment (Left, Center, Right).
-- thickness: Border thickness (set 0 to hide).
-
 ```html
 <button id="updateTextboxStyle">Update Textbox Style</button>
 ```
@@ -78,7 +71,9 @@ pdfviewer.appendTo('#PdfViewer');
 });
 ```
 
-### Default Textbox settings (toolbar additions)
+### Default Textbox settings
+
+The PDF Viewer exposes a default settings APIs for form fields. Use the [TextFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#textfieldsettings) to preconfigure TextBox properties applied when adding fields from the Form Designer toolbar.
 
 ```ts
 // Apply as defaults for Textbox added from toolbar
@@ -114,8 +109,19 @@ Use the Properties panel to configure the tooltip, font family and size, masked 
 ### Style Password programmatically
 
 ```ts
-const pw = pdfviewer.formFieldCollections.find(f => f.name === 'Password');
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PasswordFieldSettings } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+// Retrieve form fields collection and find the password field by name
+const pw = pdfviewer.formFieldCollections.find((f: any) => f.name === 'Password');
 if (pw) {
+  // Update password field styling
   pdfviewer.formDesignerModule.updateFormField(pw, {
     tooltip: 'Enter password',
     fontFamily: 'Courier',
@@ -126,11 +132,13 @@ if (pw) {
     alignment: 'Left',
     maxLength: 20,
     thickness: 1
-  });
+  } as PasswordFieldSettings);
 }
 ```
 
-### Default Password settings (toolbar additions)
+### Default Password settings
+
+The PDF Viewer exposes default settings APIs for form fields. Use the [PasswordFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#passwordfieldsettings) to preconfigure Password properties applied when adding fields from the Form Designer toolbar.
 
 ```ts
 pdfviewer.passwordFieldSettings = {
@@ -164,19 +172,32 @@ Use the Properties panel to toggle the checked state and customize border and ba
 ### Style CheckBox programmatically
 
 ```ts
-const cb = pdfviewer.formFieldCollections.find(f => f.name === 'Subscribe');
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, CheckBoxFieldSettings } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+// Retrieve form fields collection and find the checkbox field by name
+const cb = pdfviewer.formFieldCollections.find((f: any) => f.name === 'Subscribe');
 if (cb) {
+  // Update checkbox field styling
   pdfviewer.formDesignerModule.updateFormField(cb, {
     isChecked: true,
     backgroundColor: 'white',
     borderColor: 'black',
     thickness: 2,
     tooltip: 'Subscribe'
-  });
+  } as CheckBoxFieldSettings);
 }
 ```
 
-### Default CheckBox settings (toolbar additions)
+### Default CheckBox settings
+
+The PDF Viewer exposes default settings APIs for form fields. Use the [CheckBoxFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#checkboxfieldsettings) to preconfigure CheckBox properties applied when adding fields from the Form Designer toolbar.
 
 ```ts
 pdfviewer.checkBoxFieldSettings = {
@@ -204,14 +225,28 @@ Use the Properties panel to set the selected state, border and background colors
 ### Style RadioButton programmatically
 
 ```ts
-const radios = pdfviewer.formFieldCollections.filter(f => f.name === 'Gender');
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, RadioButtonFieldSettings } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+// Retrieve all radio buttons by group name
+const radios = pdfviewer.formFieldCollections.filter((f: any) => f.name === 'Gender');
 if (radios.length > 1) {
-  pdfviewer.formDesignerModule.updateFormField(radios[0], { isSelected: false });
-  pdfviewer.formDesignerModule.updateFormField(radios[1], { isSelected: true, thickness: 2, borderColor: 'black' });
+  // Deselect first option
+  pdfviewer.formDesignerModule.updateFormField(radios[0], { isSelected: false } as RadioButtonFieldSettings);
+  // Select second option and style
+  pdfviewer.formDesignerModule.updateFormField(radios[1], { isSelected: true, thickness: 2, borderColor: 'black' } as RadioButtonFieldSettings);
 }
 ```
 
-### Default RadioButton settings (toolbar additions)
+### Default RadioButton settings
+
+The PDF Viewer exposes default settings APIs for form fields. Use the [RadioButtonFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#radiobuttonfieldsettings) to preconfigure RadioButton properties applied when adding fields from the Form Designer toolbar.
 
 ```ts
 pdfviewer.radioButtonFieldSettings = {
@@ -240,8 +275,19 @@ Use the Properties panel to add or remove items, set the selected value, and adj
 ### Style ListBox programmatically
 
 ```ts
-const lb = pdfviewer.formFieldCollections.find(f => f.name === 'States');
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, TextFieldSettings } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+// Retrieve form fields collection and find the list box field by name
+const lb = pdfviewer.formFieldCollections.find((f: any) => f.name === 'States');
 if (lb) {
+  // Update list box items, value, and styling
   pdfviewer.formDesignerModule.updateFormField(lb, {
     options: [
       { itemName: 'Item 1', itemValue: 'item1' },
@@ -254,11 +300,13 @@ if (lb) {
     color: 'black',
     borderColor: 'black',
     backgroundColor: 'white'
-  } as any);
+  } as unknown as TextFieldSettings);
 }
 ```
 
-### Default ListBox settings (toolbar additions)
+### Default ListBox settings
+
+The PDF Viewer exposes default settings APIs for form fields. Use the [listBoxFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#listboxfieldsettings) to preconfigure ListBox properties applied when adding fields from the Form Designer toolbar.
 
 ```ts
 const customOptions = [
@@ -298,8 +346,19 @@ Use the Properties panel to add or remove items, set the default value, and adju
 ### Style DropDown programmatically
 
 ```ts
-const dd = pdfviewer.formFieldCollections.find(f => f.name === 'Country');
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, DropdownFieldSettings } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+// Retrieve form fields collection and find the dropdown field by name
+const dd = pdfviewer.formFieldCollections.find((f: any) => f.name === 'Country');
 if (dd) {
+  // Update dropdown items, value, and styling
   pdfviewer.formDesignerModule.updateFormField(dd, {
     options: [
       { itemName: 'USA', itemValue: 'US' },
@@ -312,11 +371,13 @@ if (dd) {
     color: 'black',
     borderColor: 'black',
     backgroundColor: 'white'
-  } as any);
+  } as DropdownFieldSettings);
 }
 ```
 
-### Default DropDown settings (toolbar additions)
+### Default DropDown settings
+
+The PDF Viewer exposes default settings APIs for form fields. DropDown uses [DropDownFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#DropDownfieldsettings) to preconfigure properties applied when adding fields from the Form Designer toolbar.
 
 ```ts
 const ddOptions = [
@@ -326,7 +387,7 @@ const ddOptions = [
 ];
 
 // DropDown uses listBoxFieldSettings for defaults
-pdfviewer.listBoxFieldSettings = {
+pdfviewer.DropdownFieldSettings = {
   name: 'DropDown',
   isReadOnly: false,
   visibility: 'visible',
@@ -357,8 +418,19 @@ Use the Properties panel to configure the tooltip, indicator text, dialog displa
 ### Style Signature field programmatically
 
 ```ts
-const sig = pdfviewer.formFieldCollections.find(f => f.name === 'Sign');
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, SignatureFieldSettings } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+// Retrieve form fields collection and find the signature field by name
+const sig = pdfviewer.formFieldCollections.find((f: any) => f.name === 'Sign');
 if (sig) {
+  // Update signature field settings
   pdfviewer.formDesignerModule.updateFormField(sig, {
     tooltip: 'Please sign here',
     thickness: 3,
@@ -366,11 +438,13 @@ if (sig) {
     isPrint: true,
     backgroundColor: 'white',
     borderColor: 'black'
-  });
+  } as unknown as SignatureFieldSettings);
 }
 ```
 
-### Default Signature field settings (toolbar additions)
+### Default Signature field settings
+
+The PDF Viewer exposes default settings APIs for form fields. Use the [SignatureFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#signaturefieldsettings) to preconfigure Signature properties applied when adding fields from the Form Designer toolbar.
 
 ```ts
 pdfviewer.signatureFieldSettings = {
@@ -407,8 +481,19 @@ Use the Properties panel to configure the tooltip, indicator text, dialog displa
 ### Style Initial field programmatically
 
 ```ts
-const init = pdfviewer.formFieldCollections.find(f => f.name === 'Initial');
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, InitialFieldSettings } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+// Retrieve form fields collection and find the initial field by name
+const init = pdfviewer.formFieldCollections.find((f: any) => f.name === 'Initial');
 if (init) {
+  // Update initial field settings
   pdfviewer.formDesignerModule.updateFormField(init, {
     tooltip: 'Add your initials',
     thickness: 2,
@@ -416,11 +501,13 @@ if (init) {
     isPrint: true,
     backgroundColor: 'white',
     borderColor: 'black'
-  });
+  } as unknown as InitialFieldSettings);
 }
 ```
 
-### Default Initial field settings (toolbar additions)
+### Default Initial field settings
+
+The PDF Viewer exposes default settings APIs for form fields. Use the [InitialFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#initialfieldsettings) to preconfigure Initial properties applied when adding fields from the Form Designer toolbar.
 
 ```ts
 pdfviewer.initialFieldSettings = {
@@ -445,4 +532,3 @@ pdfviewer.initialFieldSettings = {
   }
 };
 ```
-
