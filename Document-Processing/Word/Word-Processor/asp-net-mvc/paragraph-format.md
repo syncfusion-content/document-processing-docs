@@ -151,8 +151,7 @@ documenteditor.documentEditorSettings.showHiddenMarks = true;
 {% highlight razor tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-mvc/paragraph-format/razor %}
 {% endhighlight %}
-{% highlight c# tabtitle="Paragraph-format.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endtabs %}
 
 
 
