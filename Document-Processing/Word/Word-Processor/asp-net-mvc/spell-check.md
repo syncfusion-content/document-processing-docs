@@ -17,8 +17,8 @@ Document editor supports performing spell checking for any input text. You can p
 {% highlight razor tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-mvc/spell-checker/razor %}
 {% endhighlight %}
-{% endtabs %}
 
+{% endtabs %}
 
 
 ## Features
