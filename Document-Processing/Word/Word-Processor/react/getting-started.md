@@ -22,7 +22,7 @@ To get started quickly with DocumentEditor component, you can check the video be
 
 ## Dependencies
 
-Following is the list of minimum dependencies required to use the documenteditor.
+Following is the list of minimum dependencies required to use the document Editor.
 
 ```javascript
 |-- @syncfusion/ej2-react-documenteditor
@@ -86,7 +86,7 @@ npm run dev
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmJs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 You can choose the component that you want to install.
 
 To install Document Editor component, use the following command
@@ -139,7 +139,7 @@ import * as React from 'react';
 import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
-    return (<DocumentEditorContainerComponent id="container" style={{ 'height': '590px' }} serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" enableToolbar={true}/>);
+    return (<DocumentEditorContainerComponent id="container" height={'590px'} serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" enableToolbar={true}/>);
 }
 export default App
 
