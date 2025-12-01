@@ -1,12 +1,12 @@
 ---
-title: Chart to Image Conversion | Syncfusion
-description: This section explains about Chart to Image conversion supported in XlsIO. Use XlsIORenderer class ChartRenderingOptions for specify Image format & quality.
+title: Chart to Image Conversion using XlsIO | Syncfusion
+description: This page explains about Chart to Image conversion supported in XlsIO. Use XlsIORenderer class ChartRenderingOptions for specify Image format & quality.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Chart to image conversion
+# Chart to Image Conversion in XlsIO
 
 Refer to the following links for assemblies/nuget packages required based on platforms to convert the chart to image.
 
@@ -177,7 +177,9 @@ Line
 <td>
 * Line<br/>
 * Line_Markers<br/>
-* Line_3D
+* Line_3D<br/>
+* Stacked_Line<br/>
+* Stacked_Line_Markers
 </td>
 </tr>
 <tr>
@@ -219,7 +221,9 @@ Stock
 </td>
 <td>
 * Stock_HighLowClose<br/>
-* Stock_OpenHighLowClose
+* Stock_OpenHighLowClose<br/>
+* Stock_VolumeOpenHighLowClose<br/>
+* Stock_VolumeHighLowClose
 </td>
 </tr>
 <tr>
