@@ -85,7 +85,7 @@ if (distanceMode) {
 
 ## Add a measurement annotation to the PDF document programmatically
 
-The PDF Viewer library allows adding measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library allows adding measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
 Here is an example showing how to add measurement annotations programmatically using addAnnotation():
 
@@ -629,3 +629,27 @@ pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
+
+## Enable or disable import annotation measurement
+
+Controls whether the PDF Viewer recalculates measurement values for imported measurement annotations. For details, see [enableImportAnnotationMeasurement API documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enableimportannotationmeasurement).
+
+- true: Recalculates and displays measurement values using the viewer's current scale ratio and units.
+- false: Preserves the values embedded in the imported annotations (no recalculation), which can appear as original comment text.
+
+```html
+<div id="pdfViewer" style="height: 100%;width: 100%;"></div>
+```
+
+```ts
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner);
+
+let viewer: PdfViewer = new PdfViewer({
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib',
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    // Enable or disable import annotation measurement customization
+    enableImportAnnotationMeasurement: false
+});
+viewer.appendTo('#pdfViewer');
+```

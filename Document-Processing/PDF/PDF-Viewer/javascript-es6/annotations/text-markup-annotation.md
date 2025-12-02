@@ -157,7 +157,7 @@ Add the below `serviceUrl` in the `index.ts` file
 
 ## Highlight text programmatically
 
-Programmatically add highlights using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add highlights using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -356,7 +356,7 @@ Add the below `serviceUrl` in the `index.ts` file
 
 ## Underline text programmatically
 
-Programmatically add underlines using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add underlines using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -556,7 +556,7 @@ Add the below `serviceUrl` in the `index.ts` file
 
 ## Strikethrough text programmatically
 
-Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -755,7 +755,7 @@ Add the below `serviceUrl` in the `index.ts` file
 
 ## Add squiggly to text programmatically
 
-Programmatically add squiggly using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add squiggly using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -888,6 +888,11 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
+> API reference:
+> * For more information about highlightSettings, see [highlightSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#highlightsettings).
+> * For more information about underlineSettings, see [underlineSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#underlinesettings).
+> * For more information about strikethroughSettings, see [strikethroughSettings API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#strikethroughsettings).
+
 ## Perform undo and redo
 
 The PDF Viewer supports undo and redo for changes. For text markup annotations, undo and redo are provided for:
@@ -1002,6 +1007,43 @@ pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
+
+>API reference: For more information about enableTextMarkupAnnotation, see [enableTextMarkupAnnotation API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enabletextmarkupannotation).
+
+## Enable or disable text markup resizer
+
+Enable or disable the text markup resizer using the `enableTextMarkupResizer` API. Defaults to `false`.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
+
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib";
+viewer.enableTextMarkupResizer = true;
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
+
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+pdfviewer.enableTextMarkupResizer = true;
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
+>For more information about enableTextMarkupResizer, see [enableTextMarkupResizer API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enabletextmarkupresizer)
 
 ## See also
 

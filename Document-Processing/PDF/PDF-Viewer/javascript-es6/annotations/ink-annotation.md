@@ -14,6 +14,26 @@ The PDF Viewer control provides options to add, edit, and delete ink annotations
 
 ![Ink annotations overview](../images/ink_annotation.png)
 
+## Enable or disable ink annotation
+
+Enables or disables the ink annotation feature in the PDF Viewer; defaults to true. For details, see [enableInkAnnotation API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enableinkannotation).
+
+```html
+<div id="pdfViewer" style="height: 100%;width: 100%;"></div>
+```
+
+```ts
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner);
+
+let viewer: PdfViewer = new PdfViewer({
+    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+    resourceUrl : "https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib",
+    enableInkAnnotation: false
+});
+viewer.appendTo('#pdfViewer');
+```
+
 ## Add an ink annotation to the PDF document
 
 Ink annotations can be added to the PDF document using the annotation toolbar.
@@ -73,7 +93,7 @@ if (addInkAnnotation) {
 
 ## Add an ink annotation programmatically to the PDF document
 
-The PDF Viewer library allows adding an ink annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library allows adding an ink annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
 Here is an example of adding an ink annotation programmatically using addAnnotation():
 
@@ -270,3 +290,5 @@ pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
+
+N> To know more about FreeTextSettings, you can refer [inkAnnotationSettings API documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#inkannotationsettings)

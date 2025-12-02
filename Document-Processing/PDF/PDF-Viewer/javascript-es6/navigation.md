@@ -12,15 +12,33 @@ domainurl: ##DomainURL##
 
 The TypeScript PDF Viewer supports multiple navigation options, including toolbar controls, programmatic commands, bookmarks, thumbnails, hyperlinks, and table of contents.
 
+## Enable or disable navigation features
+
+The following properties allow you to toggle navigation:
+
+**enableNavigation** (boolean)  
+  Enables or disables the Navigation module of PDF Viewer. Defaults to true. [API reference](https://ej2.syncfusion.com/documentation/api/pdfviewer#enablenavigation)  
+  ```ts
+  // Enable or disable navigation
+  viewer.enableNavigation = false;
+  ```
+
+**enableNavigationToolbar** (boolean)  
+  Enables or disables the Navigation toolbar of PDF Viewer. Defaults to true. [API reference](https://ej2.syncfusion.com/documentation/api/pdfviewer#enablenavigationtoolbar)  
+  ```ts
+  // Enable or disable navigation toolbar
+  viewer.enableNavigationToolbar = true;
+  ```  
+
 ## Toolbar page navigation option
 
 The default toolbar includes the following navigation options:
 
-* [**Go to page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to the specific page of a PDF document.
-* [**Show next page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page of PDF a document.
-* [**Show previous page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopreviouspage):- Navigates to the previous page of a PDF document.
-* [**Show first page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotofirstpage):-  Navigates to the first page of a PDF document.
-* [**Show last page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of a PDF document.
+* [**Go to page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation#gotopage):- Navigates to the specific page of a PDF document.
+* [**Show next page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation#gotonextpage):- Navigates to the next page of PDF a document.
+* [**Show previous page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation#gotopreviouspage):- Navigates to the previous page of a PDF document.
+* [**Show first page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation#gotofirstpage):-  Navigates to the first page of a PDF document.
+* [**Show last page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation#gotolastpage):- Navigates to the last page of a PDF document.
 
 ```html
 <!DOCTYPE html>

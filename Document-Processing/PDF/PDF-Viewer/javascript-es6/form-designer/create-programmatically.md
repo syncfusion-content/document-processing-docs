@@ -20,6 +20,29 @@ The PDF Viewer component provides options to add, edit, and delete form fields. 
 - Signature field
 - Initial field
 
+## Enable or Disable form designer toolbar
+
+Inject the FormDesigner module and set `enableFormDesigner` to `false` to display the Form Designer icon on the toolbar. The default value is `true`. You can refer [enableFormDesigner API Documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer#enableformdesigner) for more information. 
+
+Use the following code to enable or disable the form designer toolbar option.
+
+
+
+```ts
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
+         BookmarkView, TextSelection, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
+                 BookmarkView, TextSelection, Annotation, FormDesigner, FormFields);
+
+let pdfviewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib',
+    enableFormDesigner: false
+});
+pdfviewer.appendTo('#PdfViewer');
+```
+
 ## Add a form field to PDF document programmatically
 
 Use the addFormField method to add form fields programmatically. Pass the form field type and the corresponding property object as parameters. The following example demonstrates adding multiple fields on document load.
