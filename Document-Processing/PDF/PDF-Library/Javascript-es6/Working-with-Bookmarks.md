@@ -34,6 +34,12 @@ function createPdf() {
     let section: PdfSection = document.addSection();
     // Add a page to the section
     let page: PdfPage = section.addPage();
+    // Get the bookmarks
+    let bookmarks: PdfBookmarkBase = document.bookmarks;
+    // Add a new outline to the PDF document
+    let bookmark: PdfBookmark = bookmarks.add('Introduction');
+    // Sets destination to the bookmark
+    bookmark.destination = new PdfDestination(page, [10, 10]);
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -93,47 +99,6 @@ function createPdf() {
 {% endhighlight %}
 {% endtabs %}
 
-## Adding a Child to the Bookmarks
-
-This example demonstrates how to add a child bookmark under an existing bookmark using the `PdfBookmark` class. Child bookmarks help organize content hierarchically.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Inserting Bookmarks in an existing PDF
 
 This example demonstrates how to insert bookmarks at a specific position in an existing PDF document using the `PdfBookmark` class. This feature allows precise control over bookmark order.
@@ -157,6 +122,12 @@ function createPdf() {
     let document: PdfDocument = new PdfDocument('Input.pdf');
     // Get the first page
     let page: PdfPage = document.getPage(0) as PdfPage;
+    // Get the bookmarks
+    let bookmarks: PdfBookmarkBase = document.bookmarks;
+    // Add a new outline to the PDF document
+    let bookmark: PdfBookmark = bookmarks.add('Introduction');
+    // Sets destination to the bookmark
+    bookmark.destination = new PdfDestination(page, [10, 10]);
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -196,45 +167,12 @@ function createPdf() {
     let document: PdfDocument = new PdfDocument('Input.pdf');
     // Get the first page
     let page: PdfPage = document.getPage(0) as PdfPage;
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Modifying the Bookmarks
-
-This example demonstrates how to modify existing bookmarks in a PDF document using the `PdfBookmark` class. You can update bookmark titles, destinations, and hierarchy.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
-    // Get the first page
-    let page: PdfPage = document.getPage(0) as PdfPage;
+    // Get the bookmarks
+    let bookmarks: PdfBookmarkBase = document.bookmarks;
+    // Remove specified bookmark from the document.
+    bookmarks.remove('Introduction');
+    // Sets destination to the bookmark
+    bookmark.destination = new PdfDestination(page, [10, 10]);
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -272,8 +210,10 @@ button.element.onclick = async () => {
 function createPdf() {
     // Load an existing PDF document
     let document: PdfDocument = new PdfDocument('Input.pdf');
-    // Get the first page
-    let page: PdfPage = document.getPage(0) as PdfPage;
+    // Get bookmarks
+    let bookmarks: PdfBookmarkBase = document.bookmarks;
+    // Get bookmark at the specified index
+    let bookmark: PdfBookmark = bookmarks.at(0) as PdfBookmark;
     // Save the document
     document.save('Output.pdf');
     // Close the document

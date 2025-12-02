@@ -37,12 +37,23 @@ function createPdf() {
     let section: PdfSection = document.addSection();
     // Add a page to the section
     let page: PdfPage = section.addPage();
+    // Access the collection of layers in the PDF document
+    let layers: PdfLayerCollection = document.layers;
+    // Add a new layer named 'Layer1' to the PDF document
+    let layer: PdfLayer = layers.add('Layer1');
+    // Create a graphics object for the newly added layer on the specified page
+    let graphics: PdfGraphics = layer.createGraphics(page);
+    // Translate the graphics origin to the specified coordinates (x: 100, y: 60)
+    graphics.translateTransform({ x: 100, y: 60 });
+    // Create a black pen with a thickness of 1 unit
+    let pen: PdfPen = new PdfPen({ r: 0, g: 0, b: 0 }, 1);
+    // Draw a line using the pen from point (200, 10) to point (300, 100)
+    graphics.drawLine(pen, { x: 200, y: 10 }, { x: 300, y: 100 });
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
 }
-
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 
@@ -72,12 +83,18 @@ button.element.onclick = async () => {
 
 // Function to create PDF
 function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Load an existing PDF document
+    let document: PdfDocument = new PdfDocument('Input.pdf');
+    // Access the first page
+    let page: PdfPage = document.getPage(0);
+    // Access the collection of layers in the document
+    let layers: PdfLayerCollection = document.layers;
+    // Add a new layer to the document with the name 'Layer1'
+    let layer: PdfLayer = layers.add('Layer1');
+    // Access the first annotation on the page
+    let annotation: PdfAnnotation = page.annotations.at(0);
+    // Assign the layer to the annotation
+    annotation.layer = layer;
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -119,6 +136,23 @@ function createPdf() {
     let section: PdfSection = document.addSection();
     // Add a page to the section
     let page: PdfPage = section.addPage();
+    // Get the collection of layers from the PDF document
+    let layers: PdfLayerCollection = document.layers;
+    // Add a new layer named 'Layer1' to the document
+    let layer: PdfLayer = layers.add('Layer1');
+    // Create graphics context for 'Layer1' on the specified page
+    let graphics: PdfGraphics = layer.createGraphics(page);
+    // Add two child layers under 'Layer1': 'ChildLayer1' and 'ChildLayer2'
+    let layer1: PdfLayer = layer.layers.add('ChildLayer1');
+    let layer2: PdfLayer = layer.layers.add('ChildLayer2');
+    // Create graphics context for 'ChildLayer2' on the same page
+    graphics = layer2.createGraphics(page);
+    // Apply a translation transform to shift the drawing origin by (100, 60)
+    graphics.translateTransform({ x: 100, y: 60 });
+    // Create a black pen with a thickness of 1 unit for drawing
+    let pen: PdfPen = new PdfPen({ r: 0, g: 0, b: 0 }, 1);
+    // Draw a straight line from point (200, 10) to point (300, 100) using the pen
+    graphics.drawLine(pen, { x: 200, y: 10 }, { x: 300, y: 100 });
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -156,96 +190,10 @@ button.element.onclick = async () => {
 function createPdf() {
     // Load an existing PDF document
     let document: PdfDocument = new PdfDocument('Input.pdf');
-    // Get the bookmarks
-    let bookmarks: PdfBookmarkBase = document.bookmarks;
-    // Gets the bookmark at the specified index
-    let bookmark: PdfBookmark = bookmarks.at(0) as PdfBookmark;
-    // Set the destination
-    bookmark.destination = new PdfDestination(page, [100, 200]);
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
- 
-## Flattening the layers in an existing PDF document
-
-This example demonstrates how to flatten layers in an existing PDF document using the `PdfLayer` class. Flattening layers merges their content into the main page, making it permanent and non-editable.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
-    // Get the bookmarks
-    let bookmarks: PdfBookmarkBase = document.bookmarks;
-    // Gets the bookmark at the specified index
-    let bookmark: PdfBookmark = bookmarks.at(0) as PdfBookmark;
-    // Set the destination
-    bookmark.destination = new PdfDestination(page, [100, 200]);
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Toggling the visibility of layers
-
-This example demonstrates how to toggle the visibility of layers in a PDF document using the `PdfLayer` class. This feature allows users to show or hide specific content dynamically.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Get the layer collection.
+    let layers: PdfLayerCollection = document.layers;
+    //Remove the layer
+    layers.RemoveAt(0);
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -283,53 +231,24 @@ button.element.onclick = async () => {
 function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
+   // Add a new section to the document
     let section: PdfSection = document.addSection();
     // Add a page to the section
     let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Removing the layer with its graphical content
-
-This example demonstrates how to remove a layer along with its graphical content from a PDF document using the `PdfLayerCollection` class. This operation helps clean up unnecessary layers and their associated elements.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
-    // Get the bookmarks
-    let bookmarks: PdfBookmarkBase = document.bookmarks;
-    // Gets the bookmark at the specified index
-    let bookmark: PdfBookmark = bookmarks.at(0) as PdfBookmark;
-    // Set the destination
-    bookmark.destination = new PdfDestination(page, [100, 200]);
+    // Access the collection of layers in the PDF document
+    let layers: PdfLayerCollection = document.layers;
+    // Add a new layer named 'Layer1' to the PDF document
+    let layer: PdfLayer = layers.add('Layer1');
+    // Create a graphics object for the newly added layer on the specified page
+    let graphics: PdfGraphics = layer.createGraphics(page);
+    //Set a lock state.  
+    layer.Locked = true;
+    // Translate the graphics origin to the specified coordinates (x: 100, y: 60)
+    graphics.translateTransform({ x: 100, y: 60 });
+    // Create a black pen with a thickness of 1 unit
+    let pen: PdfPen = new PdfPen({ r: 0, g: 0, b: 0 }, 1);
+    // Draw a line using the pen from point (200, 10) to point (300, 100)
+    graphics.drawLine(pen, { x: 200, y: 10 }, { x: 300, y: 100 });
     // Save the document
     document.save('Output.pdf');
     // Close the document

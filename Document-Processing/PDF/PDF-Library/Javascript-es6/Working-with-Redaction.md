@@ -32,6 +32,10 @@ function createPdf() {
     let document: PdfDocument = new PdfDocument('Input.pdf');
     // Access the first page
     let page: PdfPage = document.getPage(0);
+    // Create a new redaction annotation
+    const annotation: PdfRedactionAnnotation = new PdfRedactionAnnotation (50, 100, 100, 50);
+    // Add annotation to the page
+    page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -71,6 +75,12 @@ function createPdf() {
     let document: PdfDocument = new PdfDocument('Input.pdf');
     // Access the first page
     let page: PdfPage = document.getPage(0);
+    // Create a new redaction annotation
+    const font: PdfFont = new PdfStandardFont(PdfFontFamily.timesRoman, 12);
+    const annot: PdfRedactionAnnotation = new PdfRedactionAnnotation(100, 100, 100, 100, { borderColor: [255, 0, 0], repeatText: true,
+    overlayText: 'Sample Overlay', font: font, textColor: [0, 0, 0], appearanceFillColor: [255, 255, 255]});
+    // Add annotation to the page
+    page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document

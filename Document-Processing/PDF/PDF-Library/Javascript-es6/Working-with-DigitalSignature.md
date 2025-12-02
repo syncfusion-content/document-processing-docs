@@ -9,7 +9,7 @@ documentation: UG
 
 ## Adding a digital signature
 
-This example demonstrates how to add a digital signature to a PDF document using the PdfSignature class. Digital signatures ensure document authenticity and integrity by applying cryptographic standards.
+This example demonstrates how to add a digital signature to a PDF document using the `PdfSignature` class. Digital signatures ensure document authenticity and integrity by applying cryptographic standards.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -32,6 +32,14 @@ function createPdf() {
     let section: PdfSection = document.addSection();
     // Add a page to the section
     let page: PdfPage = section.addPage();
+    // Create a new signature field
+    let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', {x: 10, y: 10, width: 100, height: 50});
+    // Create a new signature using PFX data and private key
+    const sign: PdfSignature = PdfSignature.create({ cryptographicStandard: CryptographicStandard.cms, digestAlgorithm: DigestAlgorithm.sha256 }, certData, password);
+    // Sets the signature to the field
+    field.setSignature(sign);
+    // Add the field into PDF form
+    form.add(field);
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -73,6 +81,14 @@ function createPdf() {
     let section: PdfSection = document.addSection();
     // Add a page to the section
     let page: PdfPage = section.addPage();
+    // Create a new signature field
+    let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', {x: 10, y: 10, width: 100, height: 50});
+    // Create a new signature using PFX data and private key
+    const sign: PdfSignature = PdfSignature.create({ cryptographicStandard: CryptographicStandard.cms, digestAlgorithm: DigestAlgorithm.sha256 }, certData, password);
+    // Sets the signature to the field
+    field.setSignature(sign);
+    // Add the field into PDF form
+    form.add(field);
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -89,9 +105,7 @@ function createPdf() {
 {% endhighlight %}
 {% endtabs %}
 
-## Adding a digital signature using X509Certificate2
-
-This example demonstrates how to add a digital signature to a PDF document using the X509Certificate2 class. This method leverages .NET’s built-in certificate handling for secure signing.
+## Create a Signature Without Certificate Data for External Signing
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -108,15 +122,35 @@ button.element.onclick = async () => {
 
 // Function to create PDF
 function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Load the document
+    let document: PdfDocument = new PdfDocument('Input.pdf');
+    // Gets the first page of the document
+    let page: PdfPage = document.getPage(0);
+    // Access the PDF form
+    let form: PdfForm = document.form;
+    // Create a new signature field
+    let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
+    // Define a callback function used for external signing
+    const externalSignatureCallback = (data: Uint8Array,
+                                        options: {
+                                          algorithm: DigestAlgorithm,
+                                          cryptographicStandard: CryptographicStandard,
+                                          }): {signedData: Uint8Array, timestampData?: Uint8Array}  => {
+    // Implement external signing logic here
+    return new Uint8Array(); // Placeholder return
+     };
+    // Create a new signature using external signing
+    const signature: PdfSignature = PdfSignature.create({
+         cryptographicStandard: CryptographicStandard.cms,
+         algorithm: DigestAlgorithm.sha256
+    }, externalSignatureCallback);
+    // Set the signature to the field
+    field.setSignature(signature);
+    // Add the field into PDF form
+    form.add(field);
     // Save the document
-    document.save('Output.pdf');
-    // Close the document
+    document.save('output.pdf');
+    // Destroy the document
     document.destroy();
 }
 
@@ -130,9 +164,9 @@ function createPdf() {
 {% endhighlight %}
 {% endtabs %}
 
-## Signing an existing document
+## Create Signature with Public Certificates for External Signing
 
-This example demonstrates how to sign an existing PDF document by applying a digital signature to its form fields. Signing ensures the document remains tamper-proof after distribution.
+This example demonstrates how to create a new PDF signature using the `PdfSignature` class with public certificates for external signing. External signing allows you to implement custom signing logic outside the PDF library while maintaining compliance with cryptographic standards.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -149,16 +183,43 @@ button.element.onclick = async () => {
 
 // Function to create PDF
 function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
+
+// Load the document
+let document: PdfDocument = new PdfDocument('Input.pdf');
+// Get the first page of the document
+let page: PdfPage = document.getPage(0);
+// Access the PDF form
+let form: PdfForm = document.form;
+// Create a new signature field
+let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
+// Define a callback function used for external signing
+const externalSignatureCallback = (
+    data: Uint8Array,
+    options: {
+        algorithm: DigestAlgorithm,
+        cryptographicStandard: CryptographicStandard
+    }
+): { signedData: Uint8Array; timestampData?: Uint8Array } => {
+    // Implement external signing logic here
+    return new Uint8Array(); // Placeholder return
+};
+// Create a new signature using external signing with public certificate collection
+const signature: PdfSignature = PdfSignature.create(
+    {
+        cryptographicStandard: CryptographicStandard.cms,
+        algorithm: DigestAlgorithm.sha256
+    },
+    externalSignatureCallback,
+    publicCertificates
+);
+// Set the signature to the field
+field.setSignature(signature);
+// Add the field into PDF form
+form.add(field);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
 }
 
 {% endhighlight %}
@@ -171,9 +232,9 @@ function createPdf() {
 {% endhighlight %}
 {% endtabs %}
 
-## Sign an existing document using byte array
+## Create Signature Using PFX Data and Private Key
 
-This example demonstrates how to sign an existing PDF document by loading certificate data from a byte array. This method is ideal for scenarios where certificates are not stored as files.
+This example demonstrates how to create a new PDF signature using the `PdfSignature` class with PFX certificate data and a private key. This approach is commonly used for digital signing when you have access to a personal certificate file and its password.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -181,25 +242,38 @@ This example demonstrates how to sign an existing PDF document by loading certif
 // Create and render button
 let button: Button = new Button();
 button.appendTo('#normalbtn');
-
 // Handle click event
 button.element.onclick = async () => {
     console.log('Start PDF Creation');
     createPdf();
 };
-
 // Function to create PDF
 function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
+// Load the document
+let document: PdfDocument = new PdfDocument('Input.pdf');
+// Get the first page of the document
+let page: PdfPage = document.getPage(0);
+// Access the PDF form
+let form: PdfForm = document.form;
+// Create a new signature field
+let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
+// Create a new signature using PFX data and private key
+const sign: PdfSignature = PdfSignature.create(
+    {
+        cryptographicStandard: CryptographicStandard.cms,
+        digestAlgorithm: DigestAlgorithm.sha256
+    },
+    certData,
+    password
+);
+// Set the signature to the field
+field.setSignature(sign);
+// Add the field into PDF form
+form.add(field);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
 }
 
 {% endhighlight %}
@@ -212,9 +286,9 @@ function createPdf() {
 {% endhighlight %}
 {% endtabs %}
 
-## Verify if a signature field is signed
+## Check Signature Visibility
 
-This example demonstrates how to verify whether a signature field in a PDF document is signed. Verification ensures the integrity and authenticity of the signed content.
+This example demonstrates how to check whether a PDF signature is visible using the `isVisible()` method of the `PdfSignature` class. This property helps determine if the signature appearance is displayed on the document.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -222,25 +296,41 @@ This example demonstrates how to verify whether a signature field in a PDF docum
 // Create and render button
 let button: Button = new Button();
 button.appendTo('#normalbtn');
-
 // Handle click event
 button.element.onclick = async () => {
     console.log('Start PDF Creation');
     createPdf();
 };
-
 // Function to create PDF
 function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
+
+// Load the document
+let document: PdfDocument = new PdfDocument('Input.pdf');
+// Get the first page of the document
+let page: PdfPage = document.getPage(0);
+// Access the PDF form
+let form: PdfForm = document.form;
+// Create a new signature field
+let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
+// Create a new signature using PFX data and private key
+const sign: PdfSignature = PdfSignature.create(
+    {
+        cryptographicStandard: CryptographicStandard.cms,
+        digestAlgorithm: DigestAlgorithm.sha256
+    },
+    certData,
+    password
+);
+// Set the signature to the field
+field.setSignature(sign);
+// Check the signature visibility
+sign.isVisible();
+// Add the field into PDF form
+form.add(field);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
 }
 
 {% endhighlight %}
@@ -253,9 +343,9 @@ function createPdf() {
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Timestamps to a PDF document using external signing
+## Get Signed Date
 
-This example demonstrates how to add a timestamp to a PDF document during external signing. Timestamps provide proof of signing time and enhance compliance with digital signature standards.
+This example demonstrates how to retrieve the signed date of a PDF signature using the `getSignedDate()` method of the `PdfSignature` class. This property helps identify when the document was digitally signed.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -263,25 +353,41 @@ This example demonstrates how to add a timestamp to a PDF document during extern
 // Create and render button
 let button: Button = new Button();
 button.appendTo('#normalbtn');
-
 // Handle click event
 button.element.onclick = async () => {
     console.log('Start PDF Creation');
     createPdf();
 };
-
 // Function to create PDF
 function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
+
+// Load the document
+let document: PdfDocument = new PdfDocument('Input.pdf');
+// Get the first page of the document
+let page: PdfPage = document.getPage(0);
+// Access the PDF form
+let form: PdfForm = document.form;
+// Create a new signature field
+let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
+// Create a new signature using PFX data and private key
+const sign: PdfSignature = PdfSignature.create(
+    {
+        cryptographicStandard: CryptographicStandard.cms,
+        digestAlgorithm: DigestAlgorithm.sha256
+    },
+    certData,
+    password
+);
+// Set the signature to the field
+field.setSignature(sign);
+// Get the signed date
+sign.getSignedDate();
+// Add the field into PDF form
+form.add(field);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
 }
 
 {% endhighlight %}
@@ -294,9 +400,9 @@ function createPdf() {
 {% endhighlight %}
 {% endtabs %}
 
-## Digitally sign a PDF document using the Windows certificate store
+## Get Certificate Information of the Signature
 
-This example demonstrates how to digitally sign a PDF document using certificates from the Windows Certificate Store. This approach simplifies certificate management for enterprise environments.
+This example demonstrates how to retrieve the certificate information of a PDF signature using the `getCertificateInformation()` method of the `PdfSignature` class. This information includes details about the signer’s certificate used for digital signing.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -304,25 +410,40 @@ This example demonstrates how to digitally sign a PDF document using certificate
 // Create and render button
 let button: Button = new Button();
 button.appendTo('#normalbtn');
-
 // Handle click event
 button.element.onclick = async () => {
     console.log('Start PDF Creation');
     createPdf();
 };
-
 // Function to create PDF
 function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
+// Load the document
+let document: PdfDocument = new PdfDocument(data);
+// Get the first page of the document
+let page: PdfPage = document.getPage(0);
+// Access the PDF form
+let form: PdfForm = document.form;
+// Create a new signature field
+let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
+// Create a new signature using PFX data and private key
+const sign: PdfSignature = PdfSignature.create(
+    {
+        cryptographicStandard: CryptographicStandard.cms,
+        digestAlgorithm: DigestAlgorithm.sha256
+    },
+    certData,
+    password
+);
+// Set the signature to the field
+field.setSignature(sign);
+// Get the certificate information of the signature
+const certificateInfo: PdfCertificateInformation = sign.getCertificateInformation();
+// Add the field into PDF form
+form.add(field);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
 }
 
 {% endhighlight %}
@@ -335,9 +456,9 @@ function createPdf() {
 {% endhighlight %}
 {% endtabs %}
 
-## Adding a signature validation appearance based on the signature 
+## Get Digital Signature Options
 
-This example demonstrates how to add a visual representation of signature validation status to a PDF document. This helps users quickly identify whether the signature is valid.
+This example demonstrates how to retrieve the configuration options of a digital signature in a PDF document using the `getSignatureOptions()` method of the `PdfSignature` class. These options include details such as the cryptographic standard and digest algorithm used for signing.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -345,25 +466,29 @@ This example demonstrates how to add a visual representation of signature valida
 // Create and render button
 let button: Button = new Button();
 button.appendTo('#normalbtn');
-
 // Handle click event
 button.element.onclick = async () => {
     console.log('Start PDF Creation');
     createPdf();
 };
-
 // Function to create PDF
 function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
+// Load the document
+let document: PdfDocument = new PdfDocument(data);
+// Get the first page of the document
+let page: PdfPage = document.getPage(0);
+// Access the PDF form
+let form: PdfForm = document.form;
+// Get the signature field
+let field: PdfSignatureField = form.fieldAt(0) as PdfSignatureField;
+// Get the PDF signature
+let signature: PdfSignature = field.getSignature();
+// Get the signature options
+let options: PdfSignatureOptions = signature.getSignatureOptions();
+// Get the cryptographic standard of the signature
+let cryptographicStandard: CryptographicStandard = options.cryptographicStandard;
+// Destroy the document
+document.destroy();
 }
 
 {% endhighlight %}
@@ -376,50 +501,9 @@ function createPdf() {
 {% endhighlight %}
 {% endtabs %}
 
-## Adding a timestamp in digital signature
+## Replace Empty Signature with Externally Signed Data
 
-This example demonstrates how to include a timestamp within a digital signature to indicate when the document was signed. This ensures compliance with advanced signature standards.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Adding a timestamp to PDF document
-
-This example demonstrates how to add a timestamp to a PDF document using a trusted timestamp authority (TSA). Timestamps provide verifiable proof of signing time.
+This example demonstrates how to replace an empty signature field in a PDF document with externally signed data using the `replaceEmptySignature()` method of the `PdfSignature` class. This method allows embedding externally signed content, certificates, and optional timestamp data into the PDF.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -427,785 +511,61 @@ This example demonstrates how to add a timestamp to a PDF document using a trust
 // Create and render button
 let button: Button = new Button();
 button.appendTo('#normalbtn');
-
 // Handle click event
 button.element.onclick = async () => {
     console.log('Start PDF Creation');
     createPdf();
 };
-
 // Function to create PDF
 function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Adding a timestamp to existing PDF document
-
-This example demonstrates how to add a timestamp to a existing PDF document using a trusted timestamp authority (TSA). Timestamps provide verifiable proof of signing time.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
+// Load the document
+let document: PdfDocument = new PdfDocument('data');
+// Get the first page of the document
+let page: PdfPage = document.getPage(0);
+// Access the PDF form
+let form: PdfForm = document.form;
+// Create a new signature field
+let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
+// Placeholder for signed data
+let signedData: Uint8Array;
+// Define a callback function used for external signing
+const externalSignatureCallback = (
+    data: Uint8Array,
+    options: {
+        algorithm: DigestAlgorithm;
+        cryptographicStandard: CryptographicStandard;
+    }
+): void => {
+    // Implement external signing logic here
+    signedData = new Uint8Array(); // Placeholder return
 };
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Retrieve certificate details from an existing signed PDF document
-
-The Essential<sup>&reg;</sup> EJ2 PDF provides support to get the certificate details from an existing signed PDF document.
-
-This example demonstrates how to retrieve certificate details from an existing signed PDF document. Certificate details provide important information about the signer and the validity of the signature.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Adding a digital signature with customization
-
-### Adding a digital signature with CAdES format
-
-This example demonstrates how to add a digital signature to a PDF document using the CAdES (CMS Advanced Electronic Signatures) format. CAdES signatures provide enhanced security and compliance with advanced cryptographic standards, making them suitable for long-term validation and regulatory requirements.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-### Customize digestion algorithm
-
-In addition, you can now set the different message digest algorithm to sign PDF document using the DigestAlgorithm enum available in the class PdfSignatureSettings.
-The following message digest algorithms are now supported:
-* SHA1
-* SHA256
-* SHA384
-* SHA512
-* RIPEMD160
-
-This example demonstrates how to customize the digest algorithm used during the digital signing process. Customizing the digest algorithm allows you to select a specific hashing method.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Digital signature validation
-
-Added the support to validate the digital signatures in an existing PDF document. Digital signature validation covers the following steps to ensure the validity of the signatures:
-
-* Validate the document modification.
-* Validate the certificate chain.
-* Ensure the signature with timestamp time.
-* Check the revocation status of the certificate with OCSP and CRL.
-* Ensure the multiple digital signatures.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-### Validate all signatures in PDF document
-
-This example demonstrates how to validate all digital signatures present in a PDF document. Validation ensures that each signature is authentic, unaltered, and complies with security standards.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-### Validate and classify digital signatures in a PDF document
-
-This example demonstrates how to validate and classify digital signatures in a PDF document. Classification helps identify the signature type (e.g., certified, approval, or invisible) and provides detailed status information for compliance and auditing.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Deferred signing in PDF document
-
-The following code sample shows how to be deferred signing in a PDF document from an external signature using IPdfExternalSigner class and AddExternalSigner method in PdfSignature.
-Steps for deferred signing: 
-1.	Create a PDF document with an empty signature.
-2.	Users will sign the document hash using the external services.
-3.	Replace the empty signature with a signed hash from the external services
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Adding the estimated size of the signature
-
-This example demonstrates how to calculate and add the estimated size of a digital signature before applying it to a PDF document. Estimating the size helps in reserving adequate space for the signature field and ensures proper layout.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Drawing text/image in the Signature Appearance
-
-This example demonstrates how to customize the signature appearance by drawing text or images within the signature field. Customization allows adding branding elements, logos, or signer details for a professional look.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Customized revocation validation
-
-This example demonstrates how to perform customized revocation validation for digital signatures. Custom validation ensures that certificate revocation checks comply with specific security policies and organizational requirements.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Remove existing digital signatures from a PDF document 
-
-This example demonstrates how to remove one or more existing digital signatures from a PDF document. Removing signatures is useful when updating or re-signing documents while maintaining integrity.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Certified signature 
-
-This example demonstrates how to add a certified signature to a PDF document. Certified signatures protect the document from unauthorized changes and provide assurance of authenticity and integrity.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Retrieve digital signature information from an existing PDF document 
-
-This example demonstrates how to extract digital signature information from an already signed PDF document. Retrieving details helps verify the signer, signature validity, and compliance with security standards.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Adding multiple signatures to a PDF document
-
-This example demonstrates how to apply multiple digital signatures to a single PDF document. Multiple signatures allow different parties to sign the same document sequentially or collaboratively.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Retrieve revocation certificate information from digital signature
-
-This example demonstrates how to retrieve revocation certificate details from a digital signature. This information helps confirm whether the signer’s certificate is valid or revoked.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Get images from the existing signed signature field
-
-This example demonstrates how to extract images from an existing signed signature field in a PDF document. This feature is useful for auditing or reusing signature graphics.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Integrating signature and timestamp certificates into the Document Secure Store (DSS).
-
-This example demonstrates how to integrate signature and timestamp certificates into a Document Secure Store (DSS). DSS ensures centralized management of certificates for secure and compliant digital signing workflows.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
+// Create a new signature using external signing with public certificate collection
+const signature: PdfSignature = PdfSignature.create(
+    {
+        cryptographicStandard: CryptographicStandard.cms,
+        algorithm: DigestAlgorithm.sha256
+    },
+    externalSignatureCallback,
+    publicCertificates
+);
+// Set the signature to the field
+field.setSignature(signature);
+// Add the field into PDF form
+form.add(field);
+// Save the document data
+const data: Uint8Array = document.save();
+// Destroy the document
+document.destroy();
+// Replace the empty signature with externally signed hash and certificates
+const signedDocumentData: Uint8Array = PdfSignature.replaceEmptySignature(
+    data,
+    'Signature',
+    signedData,
+    DigestAlgorithm.sha256,
+    publicCertificates
+);
+// Destroy the document
+document.destroy();
 }
 
 {% endhighlight %}

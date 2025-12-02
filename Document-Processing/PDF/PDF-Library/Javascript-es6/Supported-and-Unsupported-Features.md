@@ -95,7 +95,7 @@ No<br/><br/></td><td>
 </tbody>
 </table>
 
-Document level Operations:
+Document-level Operations:
 
 <table>
 <thead>
@@ -134,7 +134,7 @@ Yes<br/><br/></td><td>
 </tbody>
 </table>
 
-Document Settings :
+Document Settings:
 
 <table>
 <thead>
