@@ -16,20 +16,20 @@ The Essential<sup>&reg;</sup> TypeScript PDF library is a feature-rich, high-per
 
 The following are the key features of this library.
 
-* Support to create PDF files from scratch.
-* Support to load and save existing PDF documents.
-* Support to load and manipulate secured PDF documents.
-* Support to enhance existing PDF files by adding graphical elements such as text, images, shapes, and more.
-* Support to add and manipulate interactive elements, including bookmarks, annotations and form fields.
-* Support to flatten form fields and annotations.
-* Support to import and export PDF form field data and annotations.
-* Ability to merge and split PDF files.
-* Support to text watermark, image watermark, and watermark annotation.
-* Support to hyperlinks for web navigation and document navigation.
-* Support to insert, remove, and modify bookmarks.
-* Support to add, remove, and flatten the layers.
-* Support to create and apply PDF templates for consistent document layout and design.
-* Support to digitally sign a PDF document.
-* Support to extract and redact text in the PDF documents.
-* Support to extract images from the PDF documents.
-* Support to redact shapes in the PDF documents.
+* Create PDF documents from scratch with ease.
+* Load, edit, and save existing PDF files.
+* Open and manipulate password-protected PDF documents.
+* Enhance PDFs by adding text, images, shapes, and other graphical elements.
+* Add and manage interactive components such as bookmarks, annotations, and form fields.
+* Flatten form fields and annotations for a finalized document.
+* Import and export form field data and annotations seamlessly.
+* Merge multiple PDFs or split a document into separate files.
+* Apply text watermarks, image watermarks, and watermark annotations.
+* Insert hyperlinks for both web and document navigation.
+* Add, remove, or modify bookmarks for better document organization.
+* Create, remove, and flatten layers within PDFs.
+* Design and apply templates for consistent layouts and branding.
+* Digitally sign PDF documents for secure authentication.
+* Extract or redact text from PDF files.
+* Extract images from PDF documents.
+* Redact shapes to protect sensitive graphical content.
