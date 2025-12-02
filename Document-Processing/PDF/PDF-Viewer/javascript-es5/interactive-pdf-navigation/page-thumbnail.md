@@ -47,6 +47,20 @@ pdfviewer.appendTo('#PdfViewer');
 
 ![Alt text](../images/thumbnail.png)
 
+## Enable or disable thumbnail view on load
+
+The `enableThumbnail` property gets or sets a boolean value to enable or disable the thumbnail view in PDF Viewer while loading a document. Defaults to true. You can refer to [enableThumbnail API documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enablethumbnail) for more information.
+
+```js
+  viewer.enableThumbnail = false;
+```
+## Show or hide thumbnail view panel on load
+
+The `isThumbnailViewOpen` property gets or sets a boolean value to show or hide the thumbnail view while loading a document. Defaults to false. You can refer to [isThumbnailViewOpen API documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#isthumbnailviewopen) for more information.
+
+```js
+  viewer.isThumbnailViewOpen = true;
+```
 
 ## See also
 
