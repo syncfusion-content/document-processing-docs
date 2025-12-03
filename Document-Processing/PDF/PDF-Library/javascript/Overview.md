@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Overview of the TypeScript PDF library control 
 
-The Essential<sup>&reg;</sup> TypeScript PDF library is a feature-rich, high-performance, non-UI PDF library written natively in TypeScript. It enables you to seamlessly integrate robust PDF functionalities into your TypeScript applications. The library allows users to read and manipulate PDF documents without requiring Adobe Acrobat.
+The Essential<sup>&reg;</sup> TypeScript PDF Library is a powerful, high-performance, non-UI solution built natively in TypeScript. It provides seamless integration of advanced PDF functionalities into applications developed with TypeScript, JavaScript, Angular, React, Vue, ASP.NET Core, and ASP.NET MVC. With this library, you can easily read, create, and manipulate PDF documents—without relying on Adobe Acrobat.
 
 ## Key features
 
@@ -33,3 +33,13 @@ The following are the key features of this library.
 * Extract or redact text from PDF files.
 * Extract images from PDF documents.
 * Redact shapes to protect sensitive graphical content.
+
+## Supported web platforms
+
+* ASP.Net core
+* ASP.Net MVC
+* Angular
+* React
+* Vue
+* JavaScript
+* TypeScript
