@@ -147,7 +147,7 @@ Windows Forms, WPF, ASP.NET, and ASP.NET MVC
 <li>Syncfusion.PdfImaging.Portable.dll</li>
 <li>Syncfusion.Pdf.Portable.dll</li>
 <li>Syncfusion.Compression.Portable.dll</li>
-<li>{{'[SkiaSharp](https://www.nuget.org/packages/SkiaSharp/3.119.2-preview.1)'| markdownify }} package</li>
+<li>{{'[SkiaSharp](https://www.nuget.org/packages/SkiaSharp/3.119.1)'| markdownify }} package</li>
 <li>Syncfusion.ImagePreProcessor.Portable.dll</li>
 </ul>
 </td>
@@ -162,7 +162,7 @@ Windows Forms, WPF, ASP.NET, and ASP.NET MVC
 <li>Syncfusion.PdfImaging.NET.dll</li>
 <li>Syncfusion.Pdf.NET.dll</li>
 <li>Syncfusion.Compression.NET.dll</li>
-<li>{{'[SkiaSharp](https://www.nuget.org/packages/SkiaSharp/3.119.2-preview.1)'| markdownify }} package</li>
+<li>{{'[SkiaSharp](https://www.nuget.org/packages/SkiaSharp/3.119.1)'| markdownify }} package</li>
 <li>Syncfusion.ImagePreProcessor.NET.dll</li>
 </ul>
 </td>
