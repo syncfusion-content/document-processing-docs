@@ -11,7 +11,15 @@ keywords: Assemblies
 
 Optical character recognition (OCR) is a technology used to convert scanned paper documents in the form of PDF files or images into searchable and editable data.  
 
-The [Syncfusion<sup>&reg;</sup> OCR processor library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) has extended support to process OCR on scanned PDF documents and images with the help of Google’s [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.  
+The [Syncfusion<sup>&reg;</sup> OCR processor library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) has extended support to process OCR on scanned PDF documents and images with the help of Google’s [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
+
+An inbuilt `image preprocessor` has been added to the OCR to prepare images for optimal recognition. This step ensures cleaner input and reduces OCR errors. The preprocessor supports the following enhancements:
+
+* **Convert to Grayscale** – Simplifies image data by removing color information, making text easier to detect.
+* **Deskew** – Corrects tilted or rotated text for proper alignment.
+* **Denoise** – Removes speckles and artifacts that can interfere with character recognition.
+* **Apply Contrast Adjustment** – Enhances text visibility against the background.
+* **Apply Binarization** – Converts images to black-and-white for sharper text edges, using advanced thresholding methods
 
 The Syncfusion<sup>&reg;</sup> OCR processor library works seamlessly in various platforms: Azure App Services, Azure Functions, AWS Textract, Docker, WinForms, WPF, Blazor, ASP.NET MVC, ASP.NET Core with Windows, MacOS and Linux. 
 
@@ -85,14 +93,6 @@ ASP.NET
 </tr>
 <tr>
 <td>
-ASP.NET MVC4
-</td>
-<td>
-{{'[Syncfusion.Pdf.OCR.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.AspNet.Mvc4)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 ASP.NET MVC5
 </td>
 <td>
@@ -133,6 +133,7 @@ Windows Forms, WPF, ASP.NET, and ASP.NET MVC
 <li>Syncfusion.OCRProcessor.Base.dll</li>
 <li>Syncfusion.Pdf.Base.dll</li>
 <li>Syncfusion.Compression.Base.dll</li>
+<li>Syncfusion.ImagePreProcessor.Base.dll</li>
 </ul>
 </td>
 </tr>
@@ -146,13 +147,14 @@ Windows Forms, WPF, ASP.NET, and ASP.NET MVC
 <li>Syncfusion.PdfImaging.Portable.dll</li>
 <li>Syncfusion.Pdf.Portable.dll</li>
 <li>Syncfusion.Compression.Portable.dll</li>
-<li>{{'[SkiaSharp](https://www.nuget.org/packages/SkiaSharp/2.88.0-preview.232)'| markdownify }} package</li>
+<li>{{'[SkiaSharp](https://www.nuget.org/packages/SkiaSharp/3.119.2-preview.1)'| markdownify }} package</li>
+<li>Syncfusion.ImagePreProcessor.Portable.dll</li>
 </ul>
 </td>
 </tr>
 <tr>
 <td>
-.NET 8/.NET 9
+.NET 8/.NET 9/.NET 10
 </td>
 <td>
 <ul>
@@ -160,7 +162,8 @@ Windows Forms, WPF, ASP.NET, and ASP.NET MVC
 <li>Syncfusion.PdfImaging.NET.dll</li>
 <li>Syncfusion.Pdf.NET.dll</li>
 <li>Syncfusion.Compression.NET.dll</li>
-<li>{{'[SkiaSharp](https://www.nuget.org/packages/SkiaSharp/2.88.0-preview.232)'| markdownify }} package</li>
+<li>{{'[SkiaSharp](https://www.nuget.org/packages/SkiaSharp/3.119.2-preview.1)'| markdownify }} package</li>
+<li>Syncfusion.ImagePreProcessor.NET.dll</li>
 </ul>
 </td>
 </tr>
