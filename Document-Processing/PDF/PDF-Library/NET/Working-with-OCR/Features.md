@@ -1066,7 +1066,7 @@ N> The OCR Engine Mode is supported only in the Tesseract version 4.0 and above.
 
 ## Performing OCR with different OCR Image Enhancement Mode
 
-The `ImageEnhancementMode` property is used to set the ocr image enhancement modes. By default, OCR works with the `EnhanceForRecognitionOnly` image enhancement mode. Kindly refer to the following code example to perform OCR with different ocr image enhancement segmentation mode.
+The `ImageEnhancementMode` property is used to set the OCR image enhancement modes. By default, OCR works with the `EnhanceForRecognitionOnly` image enhancement mode. Kindly refer to the following code example to perform OCR with different OCR image enhancement segmentation mode.
 
 The following table describes the available OCR image enhancement modes and their respective purposes.
 
