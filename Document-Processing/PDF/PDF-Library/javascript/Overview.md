@@ -36,8 +36,8 @@ The following are the key features of this library.
 
 ## Supported web platforms
 
-* ASP.Net core
-* ASP.Net MVC
+* ASP.NET core
+* ASP.NET MVC
 * Angular
 * React
 * Vue
