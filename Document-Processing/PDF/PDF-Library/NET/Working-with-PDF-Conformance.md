@@ -1220,7 +1220,29 @@ You can create a PDF/X-1a document by specifying the conformance level as ```Pdf
 
 {% highlight c# tabtitle="C# [Cross-platform]" %} 
 
-//Creating PDF/X-conformance documents is not supported on C#.NET cross-platform environments.
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new document with PDF/x standard.
+PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_X1A2001);
+//Add a page.
+PdfPage page = document.Pages.Add();
+//Set color space. 
+document.ColorSpace = PdfColorSpace.CMYK;
+
+//Create Pdf graphics for the page.
+PdfGraphics graphics = page.Graphics;
+//Create a solid brush.
+PdfBrush brush = new PdfSolidBrush(Color.Black);
+//Set the font.
+Font font = new Font("Arial",20f, FontStyle.Regular);
+PdfFont pdfFont = new PdfTrueTypeFont(font, FontStyle.Regular, 12, false, true);
+//Draw the text.
+graphics.DrawString("Hello world!", pdfFont, brush, new PointF(20, 20));
+
+//Save and close the document.
+document.Save("Output.pdf");
+document.Close(true);
 
 {% endhighlight %}
 
@@ -1417,9 +1439,8 @@ static void LoadedDocument_SubstituteFont(object sender, PdfFontEventArgs args)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Conformance/Get-PDF-to-PDFA-conversion-progress).
 
-N> 1. Converting PDF to PDF/X-1a conformance document is not supported.
-N> 2. CMYK color space images and symbolic fonts are not supported.
-N> 3. From the .NET Framework 3.5 version, the Essential<sup>&reg;</sup> PDF is compatible with the PDF to PDF/A conversion. 
+N> 1. CMYK color space images and symbolic fonts are not supported.
+N> 2. From the .NET Framework 3.5 version, the Essential<sup>&reg;</sup> PDF is compatible with the PDF to PDF/A conversion. 
 
 ## Font subsetting during PDF to PDF/A conversion
 
@@ -1806,7 +1827,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     <tr>
       <td>PDF/X-1a</td>
       <td>Yes</td>
-      <td>No</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <td>PDF/A-2a</td>

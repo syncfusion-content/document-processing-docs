@@ -660,10 +660,10 @@ Yes<br/><br/></td>
 PDF/x1a: 2001 Compliance<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
-No<br/><br/></td>
-<td>No<br/><br/></td>
-<td>No<br/><br/></td>
-<td>No<br/><br/></td></tr>
+Yes<br/><br/></td>
+<td>Yes<br/><br/></td>
+<td>Yes<br/><br/></td>
+<td>Yes<br/><br/></td></tr>
 <tr>
 <td>
 ZUGFeRD Invoice<br/><br/></td><td>
