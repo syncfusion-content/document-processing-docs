@@ -9,15 +9,20 @@ documentation: ug
 
 # Export form data from PDF
 
-The PDF Viewer provides APIs to export the values of interactive form fields from the loaded PDF. You can export to FDF, XFDF, JSON, or as a JavaScript object for custom processing.
+The PDF Viewer component supports exporting and importing form field data using the importFormFields, exportFormFields, and exportFormFieldsAsObject methods in the following formats:
 
-Supported APIs:
-- exportFormFields(pathOrFileName, format)
-- exportFormFieldsAsObject(format) → Promise<object>
-
-Note: When using the server-backed viewer, set serviceUrl before exporting.
+- FDF
+- XFDF
+- JSON
 
 ## Export as FDF
+
+Using the `exportFormFields` method, the form field data can be exported in the specified data format. This method accepts two parameters:
+
+* The first one must be the destination path for the exported data. If the path is not specified, it will ask for the location while exporting.
+* The second parameter should be the format type of the form data.
+
+The following example exports and imports form field data as FDF.
 
 ```html
 <button id="exportFdf">Export FDF</button>
@@ -32,7 +37,7 @@ const viewer = new PdfViewer({
   // serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/' // Server-backed
   resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
 });
-viewer.appendTo('#PdfViewer');
+viewer.appendTo('#pdfViewer');
 
 document.getElementById('exportFdf')!.addEventListener('click', () => {
   // Data must be the desired path or file name for the exported document.
@@ -42,53 +47,75 @@ document.getElementById('exportFdf')!.addEventListener('click', () => {
 
 ## Export as XFDF
 
-```ts
+The following example exports form field data as XFDF.
+
+```html
 <button id="exportXfdf">Export XFDF</button>
-<div id="pdfViewer" style="height: 640px; width: 100%"></div>
+```
 
-import { PdfViewer, FormFieldDataFormat, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection } from '@syncfusion/ej2-pdfviewer';
+```ts
+import { PdfViewer, FormFieldDataFormat, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner);
 
-const viewer = new PdfViewer({ documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf' });
+const viewer = new PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
+  // serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/' // Server-backed
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
+});
 viewer.appendTo('#pdfViewer');
 
 document.getElementById('exportXfdf')!.addEventListener('click', () => {
+  // Data must be the desired path or file name for the exported document.
   viewer.exportFormFields('FormData', FormFieldDataFormat.Xfdf);
 });
 ```
 
 ## Export as JSON
 
-```ts
+The following example exports form field data as JSON.
+
+```html
 <button id="exportJson">Export JSON</button>
-<div id="pdfViewer" style="height: 640px; width: 100%"></div>
+```
 
-import { PdfViewer, FormFieldDataFormat, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection } from '@syncfusion/ej2-pdfviewer';
+```ts
+import { PdfViewer, FormFieldDataFormat, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner);
 
-const viewer = new PdfViewer({ documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf' });
+const viewer = new PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
+  // serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/' // Server-backed
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
+});
 viewer.appendTo('#pdfViewer');
 
 document.getElementById('exportJson')!.addEventListener('click', () => {
+  // Data must be the desired path or file name for the exported document.
   viewer.exportFormFields('FormData', FormFieldDataFormat.Json);
 });
 ```
 
 ## Export as Object
 
-Export the form data to a JavaScript object for custom persistence (database, API, or client storage).
+Export the form data to a JavaScript object for custom persistence (database, API, or client storage). 
+The following example exports and imports form field data as Object.
+
+```html
+<button id="exportObj">Export Object</button>
+```
 
 ```ts
-<button id="exportObj">Export Object</button>
-<div id="pdfViewer" style="height: 640px; width: 100%"></div>
+import { PdfViewer, FormFieldDataFormat, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
 
-import { PdfViewer, FormFieldDataFormat, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection } from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner);
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection);
-
-const viewer = new PdfViewer({ documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf' });
+const viewer = new PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
+  // serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/' // Server-backed
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
+});
 viewer.appendTo('#pdfViewer');
 
 let exportedData: object | undefined;
