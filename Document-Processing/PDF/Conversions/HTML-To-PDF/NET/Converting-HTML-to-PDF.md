@@ -110,7 +110,7 @@ HTML to PDF converter .NET library supports conversion in ASP.NET MVC. Refer to 
 HTML to PDF converter .NET library supports conversion in Blazor. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/blazor) section for more information about HTML to PDF conversion in Blazor.
 
 ### Convert HTML to PDF in Azure
-HTML to PDF converter .NET library supports conversion in Azure. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-windows) section for more information about HTML to PDF conversion in Azure.
+HTML to PDF converter .NET library supports conversion in Azure. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/converting-html-to-pdf#convert-html-to-pdf-in-azure) section for more information about HTML to PDF conversion in Azure.
 
 ### Convert HTML to PDF in AWS
 HTML to PDF converter .NET library supports conversion in AWS. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/aws) section for more information about HTML to PDF conversion in AWS.
