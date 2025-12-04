@@ -2235,3 +2235,86 @@ End Namespace
 {% endtabs %}
 
 A complete working example to skip warning in Excel to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Warnings/.NET/Warnings).
+
+## Show File Name with Extension in Header and Footer
+
+This property allows you to display the file name along with its extension in the header and/or footer when converting an Excel document to PDF. It's default value is FALSE.
+
+The following code snippet explains how to enable the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverterSettings_ShowFileNameWithExtension">ShowFileNameWithExtension</a> property during Excel to PDF conversion.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Show%20file%20name%20with%20extension%20in%20PDF/.NET/ShowFileNameWithExtension/ShowFileNameWithExtension/Program.cs,180" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
+
+  //Initialize XlsIORendererSettings
+  XlsIORendererSettings settings = new XlsIORendererSettings();
+
+  //Enable ShowFileNameWithExtension property
+  settings.ShowFileNameWithExtension = true;
+
+  //Initialize XlsIORenderer
+  XlsIORenderer renderer = new XlsIORenderer();
+
+  //Convert the Excel document to PDF with renderer settings
+  PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
+
+  #region Save
+  //Save the PDF document
+  pdfDocument.Save(Path.GetFullPath(@"Output/Output.pdf"));
+  #endregion
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+
+  //Initialize ExcelToPdfConverterSettings
+  ExcelToPdfConverterSettings settings = new ExcelToPdfConverterSettings();
+
+  //Enable ShowFileNameWithExtension property
+  settings.ShowFileNameWithExtension = true;
+  
+  //Load the Excel document into ExcelToPdfConverter
+  ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
+
+  //Convert the Excel document to PDF with converter settings
+  PdfDocument document = converter.Convert(settings);
+
+  //Save the PDF document
+  document.Save("Output.pdf");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
+
+  'Initialize ExcelToPdfConverterSettings
+  Dim settings As ExcelToPdfConverterSettings = New ExcelToPdfConverterSettings()
+
+  'Enable ShowFileNameWithExtension property
+  settings.ShowFileNameWithExtension = True
+
+  'Load the Excel document into ExcelToPdfConverter
+  Dim converter As ExcelToPdfConverter = New ExcelToPdfConverter(workbook)
+
+  'Convert the Excel document to PDF with converter settings
+  Dim document As PdfDocument = converter.Convert(settings)
+
+  'Save the PDF document
+  document.Save("Output.pdf")
+End Using
+{% endhighlight %}
+{% endtabs%}
+
+A complete working example demonstrating how to enable the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverterSettings_ShowFileNameWithExtension">ShowFileNameWithExtension</a> property during Excel to PDF conversion in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Show%20file%20name%20with%20extension%20in%20PDF/.NET/ShowFileNameWithExtension">this GitHub page</a>.
