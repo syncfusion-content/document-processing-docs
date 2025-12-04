@@ -152,7 +152,7 @@ You can downloaded a complete working sample from [GitHub](https://github.com/Sy
 
 ## Performing OCR with tesseract version 3.05
 
-The [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) property is used to switch the tesseract version between 3.02 and 3.05. By default, OCR works with tesseract version 3.02.
+The [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) property is used to switch the tesseract version between 3.02 and 3.05. By default, OCR works with tesseract version 5.0.
 
 N> The starting supported version of tesseract in ASP.NET Core is 4.0. So the lower tesseract versions 3.02 and 3.05 are not supported and we don't have the property called ``TesseractVersion`` in ASP.NET Core platform.
 
@@ -216,9 +216,7 @@ End Using
 
 ## Performing OCR with Tesseract Version 4.0
 
-The [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) property is used to switch the tesseract version to 4.0. By default, OCR will be performed with tesseract version 3.02.
-
-N> In ASP.NET Core platform, the default and starting supported version of tesseract is 4.0. So we did not have the property called ``TesseractVersion`` in ASP.NET Core platform. 
+The [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) property is used to switch the tesseract version to 4.0. By default, OCR will be performed with tesseract version 5.0.
 
 The following code sample explains the OCR processor with Tesseract version 4.0 for PDF documents.
  
@@ -264,6 +262,67 @@ Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries/4.0/")
     processor.Settings.Language = Languages.English
     'Set tesseract OCR Engine. 
     processor.Settings.TesseractVersion = TesseractVersion.Version4_0
+    'Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
+    processor.PerformOCR(document)
+    
+    'Save the PDF document.
+    document.Save("Output.pdf")
+    'Close the document. 
+    document.Close(True)
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+## Performing OCR with Tesseract Version 5.0
+
+The [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) property is used to switch the tesseract version to 5.0. By default, OCR will be performed with tesseract version 5.0.
+
+The following code sample explains the OCR processor with Tesseract version 5.0 for PDF documents.
+ 
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Set tesseract OCR Engine.
+    processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
+    //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
+    processor.PerformOCR(document);
+
+    //Save the PDF document.
+    document.Save("Output.pdf);
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
+'Initialize the OCR processor with tesseract binaries folder path. 
+Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries/5.0/")
+    'Load an existing PDF document. 
+    Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
+
+    'Set OCR language. 
+    processor.Settings.Language = Languages.English
+    'Set tesseract OCR Engine. 
+    processor.Settings.TesseractVersion = TesseractVersion.Version5_0
     'Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
     processor.PerformOCR(document)
     
@@ -1004,6 +1063,178 @@ End Using
 {% endtabs %} 
 
 N> The OCR Engine Mode is supported only in the Tesseract version 4.0 and above.
+
+## Performing OCR with different OCR Image Enhancement Mode
+
+The `ImageEnhancementMode` property is used to set the OCR image enhancement modes. By default, OCR works with the `EnhanceForRecognitionOnly` image enhancement mode. Kindly refer to the following code example to perform OCR with different OCR image enhancement segmentation mode.
+
+The following table describes the available OCR image enhancement modes and their respective purposes.
+
+<table>
+<thead>
+<tr>
+<th>
+OCR Image Enhancement Mode<br/><br/></th><th>
+Description<br/><br/></th></tr>
+</thead>
+<tbody>
+<tr>
+<td>
+EnhanceForRecognitionOnly<br/><br/></td><td>
+Image is enhanced internally to improve OCR accuracy, but the original image is retained in the output.<br/><br/></td></tr>
+<tr>
+<td>
+EnhanceAndIncludeInOutput<br/><br/></td><td>
+Image is enhanced and the enhanced version is used in the output document.<br/><br/></td></tr>
+<tr>
+<td>
+None<br/><br/></td><td>
+No image enhancement is performed. The original image is used for OCR processing.<br/><br/></td></tr>
+</tbody>
+</table>
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+// Initialize the OCR processor
+using (OCRProcessor processor = new OCRProcessor())
+{
+    // Load an existing PDF document
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    // Set the OCR language to English for text recognition.
+    processor.Settings.Language = Languages.English;
+    // Set the OCR image enhancement mode to improve recognition accuracy.
+    processor.ImageEnhancementMode = OcrImageEnhancementMode.EnhanceForRecognitionOnly;
+    // Perform OCR with input document and tessdata (Language packs)
+    processor.PerformOCR(document);
+    // Save the processed PDF document
+    document.Save("Output.pdf");
+    // Close the document 
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
+' Initialize the OCR processor
+Using processor As New OCRProcessor()
+
+    ' Load an existing PDF document
+    Dim document As New PdfLoadedDocument("Input.pdf")
+    ' Set the OCR language to English for text recognition
+    processor.Settings.Language = Languages.English
+    ' Set the OCR image enhancement mode to improve recognition accuracy
+    processor.ImageEnhancementMode = OcrImageEnhancementMode.EnhanceForRecognitionOnly
+    ' Perform OCR with input document and tessdata (Language packs)
+    processor.PerformOCR(document)
+    ' Save the processed PDF document
+    document.Save("Output.pdf")
+    ' Close the document
+    document.Close(True)
+
+End Using
+
+{% endhighlight %}
+{% endtabs %} 
+
+## Performing OCR with different OCR Image Enhancement options
+
+The `ImageEnhancementMode` property is used to set the OCR image enhancement mode. Refer to the following code example to perform OCR with different image enhancement options.
+
+The following table describes the available OCR image enhancement options and their respective purposes.
+
+<table>
+<thead>
+<tr>
+<th>
+OCR Image Enhancement options<br/><br/></th><th>
+Description<br/><br/></th></tr>
+</thead>
+<tbody>
+<tr>
+<td>
+IsGrayscaleEnabled<br/><br/></td><td>
+Simplifies image data by removing color information, making text easier to detect.<br/><br/></td></tr>
+<tr>
+<td>
+IsDeskewEnabled<br/><br/></td><td>
+Corrects tilted or rotated text for proper alignment.<br/><br/></td></tr>
+<tr>
+<td>
+IsDenoiseEnabled<br/><br/></td><td>
+Removes speckles and artifacts that can interfere with character recognition.<br/><br/></td></tr>
+<tr>
+<td>
+IsConstrastEnabled<br/><br/></td><td>
+Enhances text visibility against the background.<br/><br/></td></tr>
+<tr>
+<td>
+IsBinarizeEnabled<br/><br/></td><td>
+Converts images to black-and-white for sharper text edges, using advanced thresholding methods.<br/><br/></td></tr>
+</tbody>
+</table>
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+// Initialize the OCR processor
+using (OCRProcessor processor = new OCRProcessor())
+{
+    // Load an existing PDF document
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    // Set the OCR language to English for text recognition.
+    processor.Settings.Language = Languages.English;
+    // Set the options for image enhancement during the OCR process.
+    OcrImageEnhancementOptions options = new OcrImageEnhancementOptions();
+    // Enable grayscale conversion to improve OCR accuracy by reducing color noise.
+    options.IsGrayscaleEnabled = true;
+    // Perform OCR with input document and tessdata (Language packs)
+    processor.PerformOCR(document);
+    // Save the processed PDF document
+    document.Save("Output.pdf");
+    // Close the document 
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
+
+' Initialize the OCR processor inside a Using block to ensure proper disposal.
+Using processor As New OCRProcessor()
+    ' Load an existing PDF document.
+    Dim document As New PdfLoadedDocument("Input.pdf")
+    ' Set the OCR language to English for text recognition.
+    processor.Settings.Language = Languages.English
+    ' Set the options for image enhancement during the OCR process.
+    Dim options As New OcrImageEnhancementOptions()
+    ' Enable grayscale conversion to improve OCR accuracy by reducing color noise.
+    options.IsGrayscaleEnabled = True
+    ' Perform OCR on the input document using tessdata (language packs).
+    processor.PerformOCR(document)
+    ' Save the processed PDF document.
+    document.Save("Output.pdf")
+    ' Close the document and release resources.
+    document.Close(True)
+End Using
+
+{% endhighlight %}
+{% endtabs %} 
 
 ## White List
 
