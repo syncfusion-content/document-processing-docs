@@ -9,83 +9,48 @@ documentation: ug
 
 # Import/Export events
 
-You can listen to lifecycle events around import and export operations to validate, customize, or log actions.
+Import/Export events let you track and customize the full lifecycle of form field data flowing into and out of the PDF Viewer. 
 
-Commonly used events:
-- validateFormFields: Triggered during download/print when enableFormFieldsValidation is true and required fields are not filled.
-- documentLoad: Useful for wiring custom logic right after a document is loaded.
+Use them to validate inputs, show progress UI, log audit trails, or block operations based on your business rules. Each event exposes typed event-args (ImportStartEventArgs, ImportSuccessEventArgs, ImportFailureEventArgs, ExportStartEventArgs, ExportSuccessEventArgs, ExportFailureEventArgs) describing the operation context.
 
-Note: Set enableFormFieldsValidation = true to enforce validation before print/download.
+Use these events to monitor and customize form field import/export operations.
 
-## Validate before export/print
+## Import events
+- [importStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importstart): Triggers when an import operation starts.
+- [importSuccess](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importsuccess): Triggers when form fields are successfully imported.
+- [importFailed](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importfailed): Triggers when importing form fields fails.
 
-The following shows how to capture non-filled fields and prevent export/print until the user completes them.
-
+## Handle import events
 ```ts
-<div>
-  <button id="exportJson">Export JSON</button>
-  <button id="printPdf">Print</button>
-</div>
-<div id="pdfViewer" style="height: 640px; width: 100%"></div>
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormDesigner, FormFields, FormFieldDataFormat } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormDesigner, FormFields);
-
-const viewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf'
-});
-viewer.appendTo('#pdfViewer');
-
-viewer.enableFormFieldsValidation = true;
-viewer.validateFormFields = (args: any) => {
-  const nonfilled = args.nonFillableFields || [];
-  if (nonfilled.length) {
-    // Show your UI and stop further action
-    alert('Please fill required fields before continuing. Missing: ' + nonfilled.map((f: any) => f.name).join(', '));
-    // args.isFormFieldValid = false; // Optional: explicitly indicate invalid
-  }
+viewer.importStart = (args: any) => {
+  console.log('Import started', args);
 };
-
-document.getElementById('exportJson')!.addEventListener('click', () => {
-  viewer.exportFormFields('FormData', FormFieldDataFormat.Json);
-});
-
-document.getElementById('printPdf')!.addEventListener('click', () => {
-  viewer.print.print();
-});
+viewer.importSuccess = (args: any) => {
+  console.log('Import success', args);
+};
+viewer.importFailed = (args: any) => {
+  console.error('Import failed', args);
+};
 ```
 
-## Log import/export completion
+## Export events
+- [exportStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportstart): Triggers when an export operation starts.
+- [exportSuccess](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportsuccess): Triggers when form fields are successfully exported.
+- [exportFailed](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportfailed): Triggers when exporting form fields fails.
 
-Hook your own UI or analytics around import and export actions.
-
+## Handle export events
 ```ts
-<button id="importJson">Import JSON</button>
-<button id="exportFdf">Export FDF</button>
-<div id="pdfViewer" style="height: 640px; width: 100%"></div>
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFieldDataFormat } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection);
-
-const viewer = new PdfViewer({ documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf' });
-viewer.appendTo('#pdfViewer');
-
-// Example wrappers to log completion
-function importJson() {
-  viewer.importFormFields('File', FormFieldDataFormat.Json);
-  console.log('Import requested (JSON)');
-}
-
-function exportFdf() {
-  viewer.exportFormFields('FormData', FormFieldDataFormat.Fdf);
-  console.log('Export requested (FDF)');
-}
-
-document.getElementById('importJson')!.addEventListener('click', importJson);
-
-document.getElementById('exportFdf')!.addEventListener('click', exportFdf);
+viewer.exportStart = (args: any) => {
+  console.log('Export started', args);
+};
+viewer.exportSuccess = (args: any) => {
+  console.log('Export success', args);
+};
+viewer.exportFailed = (args: any) => {
+  console.error('Export failed', args);
+};
 ```
 
-Tip: You can also use documentLoad to inject default values or layout form fields programmatically before users start filling.
+Notes:
+- importStart/importSuccess/importFailed cover the lifecycle of form field imports.
+- exportStart/exportSuccess/exportFailed cover the lifecycle of form field exports.

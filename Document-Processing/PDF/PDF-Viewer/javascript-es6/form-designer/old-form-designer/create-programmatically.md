@@ -248,7 +248,7 @@ N> To configure the server-backed PDF Viewer, add the following `serviceUrl` in 
 
 Selecting the Download icon on the toolbar saves the form fields in the exported PDF without modifying the original document. See the following GIF for reference.
 
-![Save form fields from the PDF Viewer](../images/saveformfield.gif)
+![Save form fields from the PDF Viewer](../../images/saveformfield.gif)
 
 You can invoke the download action using the following code snippet.
 
@@ -285,7 +285,7 @@ pdfviewer.download();
 
 Selecting the Print icon on the toolbar prints the PDF with the added form fields. This action does not modify the original document. See the following GIF for reference.
 
-![Print the PDF with form fields](../images/printformfield.gif)
+![Print the PDF with form fields](../../images/printformfield.gif)
 
 You can invoke the print action using the following code snippet:
 
@@ -376,7 +376,7 @@ document.getElementById('addPasswordField').addEventListener('click', function (
 
 Open a PDF that already contains form fields by clicking the Open icon on the toolbar. See the following GIF for reference.
 
-![Open a PDF with existing form fields](../images/openexistingpdf.gif)
+![Open a PDF with existing form fields](../../images/openexistingpdf.gif)
 
 ## Validate form fields
 
@@ -627,7 +627,7 @@ viewer.signatureFieldSettings = {
 
 ```
 
-![Signature field settings in the PDF Viewer](../images/SignatureField.png)
+![Signature field settings in the PDF Viewer](../../images/SignatureField.png)
 
 The following code shows how to configure default properties for an initial field added from the Form Designer toolbar.
 
@@ -667,7 +667,7 @@ viewer.initialFieldSettings = {
 
 ```
 
-![Initial field settings in the PDF Viewer](../images/InitialField.png)
+![Initial field settings in the PDF Viewer](../../images/InitialField.png)
 
 ### Textbox field settings
 
@@ -753,7 +753,7 @@ viewer.textFieldSettings = {
 
 ```
 
-![Textbox field settings in the PDF Viewer](../images/Textbox.png)
+![Textbox field settings in the PDF Viewer](../../images/Textbox.png)
 
 ### Password field settings
 
@@ -836,7 +836,7 @@ viewer.passwordFieldSettings = {
 
 ```
 
-![Password field settings in the PDF Viewer](../images/Password.png)
+![Password field settings in the PDF Viewer](../../images/Password.png)
 
 ### CheckBox field settings
 
@@ -902,7 +902,7 @@ viewer.checkBoxFieldSettings = {
 
 ```
 
-![CheckBox field settings in the PDF Viewer](../images/Checkbox.png)
+![CheckBox field settings in the PDF Viewer](../../images/Checkbox.png)
 
 ### RadioButton field settings
 
@@ -969,7 +969,7 @@ viewer.radioButtonFieldSettings = {
 
 ```
 
-![RadioButton field settings in the PDF Viewer](../images/Radiobutton.png)
+![RadioButton field settings in the PDF Viewer](../../images/Radiobutton.png)
 
 ### ListBox field settings
 
@@ -1052,7 +1052,7 @@ viewer.listBoxFieldSettings = {
 
 ```
 
-![ListBox field settings in the PDF Viewer](../images/Listbox.png)
+![ListBox field settings in the PDF Viewer](../../images/Listbox.png)
 
 ### DropDown field settings
 
@@ -1135,4 +1135,4 @@ viewer.listBoxFieldSettings = {
 
 ```
 
-![DropDown field settings in the PDF Viewer](../images/Dropdown.png)
+![DropDown field settings in the PDF Viewer](../../images/Dropdown.png)
