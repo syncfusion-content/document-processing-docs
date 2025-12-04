@@ -19,7 +19,7 @@ An inbuilt `image preprocessor` has been added to the OCR to prepare images for 
 * **Deskew** – Corrects tilted or rotated text for proper alignment.
 * **Denoise** – Removes speckles and artifacts that can interfere with character recognition.
 * **Apply Contrast Adjustment** – Enhances text visibility against the background.
-* **Apply Binarization** – Converts images to black-and-white for sharper text edges, using advanced thresholding methods
+* **Apply Binarize** – Converts images to black-and-white for sharper text edges, using advanced thresholding methods
 
 The Syncfusion<sup>&reg;</sup> OCR processor library works seamlessly in various platforms: Azure App Services, Azure Functions, AWS Textract, Docker, WinForms, WPF, Blazor, ASP.NET MVC, ASP.NET Core with Windows, MacOS and Linux. 
 
