@@ -76,10 +76,8 @@ You can apply a solid fill color to cover the redacted content. This is the most
 
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Add a page
+    let page: PdfPage = document.addPage();
     // Create a new redaction annotation with specified position and size
     let annot: PdfRedactionAnnotation = new PdfRedactionAnnotation({ x: 100, y: 100, width: 300, height: 200 });
     // Define multiple rectangular areas (bounds) within the annotation for redaction
