@@ -11,6 +11,94 @@ documentation: ug
 
 The Syncfusion Vue PDF Viewer provides APIs to add, update, delete, and apply redaction annotations programmatically. You can also redact entire pages, configure default properties, and work with the redaction property panel.
 
+## Enable the redaction toolbar
+
+To enable the redaction toolbar, configure the `toolbarSettings.toolbarItems` property of the PdfViewer instance to include the **RedactionEditTool**.
+
+The following example shows how to enable the redaction toolbar:
+
+{% tabs %}
+{% highlight html tabtitle="App.vue" %}
+<template>
+  <div>
+    <div class="control-section">
+      <ejs-pdfviewer
+        id="container"
+        :documentPath="documentPath"
+        :resourceUrl="resourceUrl"
+        :toolbarSettings="toolbarSettings"
+        style="height: 680px"
+      />
+    </div>
+  </div>
+</template>
+<script>
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  LinkAnnotation,
+  BookmarkView,
+  ThumbnailView,
+  Print,
+  TextSelection,
+  TextSearch,
+  FormFields,
+  FormDesigner,
+  PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: 'App',
+  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  data() {
+    return {
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+      toolbarSettings: {
+        toolbarItems: [
+          'OpenOption',
+          'UndoRedoTool',
+          'PageNavigationTool',
+          'MagnificationTool',
+          'PanTool',
+          'SelectionTool',
+          'CommentTool',
+          'SubmitForm',
+          'AnnotationEditTool',
+          'RedactionEditTool',
+          'FormDesignerEditTool',
+          'SearchOption',
+          'PrintOption',
+          'DownloadOption'
+        ]
+      }
+    };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      Annotation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      FormFields,
+      FormDesigner,
+      PageOrganizer
+    ]
+  }
+};
+</script>
+{% endhighlight %}
+{% endtabs %}
+
 ## Add redaction annotations programmatically
 
 You can add redaction annotations to a PDF document using the `addAnnotation` method of the `annotation` module. You can listen to the `annotationAdd` event to track when annotations are added.
