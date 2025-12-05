@@ -14,7 +14,7 @@ This example shows how to configure custom page settings before adding a page to
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
  
-    import { PdfDocument, PdfPage, PdfPageSettings, PdfMargins, PdfPage, PdfPageOrientation, PdfStandardFont, PdfFontFamily, PdfFontStyle } from '@syncfusion/ej2-pdf';
+    import { PdfDocument, PdfPage, PdfPageSettings, PdfMargins, PdfPageOrientation, PdfStandardFont, PdfFontFamily, PdfFontStyle } from '@syncfusion/ej2-pdf';
  
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();

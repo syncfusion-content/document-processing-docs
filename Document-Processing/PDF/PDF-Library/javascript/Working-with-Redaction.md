@@ -1,53 +1,35 @@
 ---
-title: Working with EJ2 Redaction |Syncfusion
-description: This section explains how to Redact the content from an existing PDF document by using Essential EJ2 PDF
+title: Working with Redaction |Syncfusion
+description: This section explains how to Redact the content from an existing PDF document by using Essential PDF
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with EJ2 PDF Redaction
+# Working with PDF Redaction
 
-Redacting a PDF is the process of permanently removing sensitive or confidential information from PDF documents. Syncfusion<sup>&reg;</sup> EJ2 PDF library provides an easy way to redact PDF documents. 
+Redacting a PDF is the process of permanently removing sensitive or confidential information from PDF documents. Syncfusion<sup>&reg;</sup> PDF library provides an easy way to redact PDF documents. 
 
 ## Removing sensitive content from the PDF document
 
 Redaction permanently removes confidential or sensitive information from a PDF. The `PdfRedactionAnnotation` class allows you to define areas to redact, ensuring the underlying text or image data is completely deleted from the document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfRedactionAnnotation } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new redaction annotation
-    const annotation: PdfRedactionAnnotation = new PdfRedactionAnnotation (50, 100, 100, 50);
+    const annotation: PdfRedactionAnnotation = new PdfRedactionAnnotation ({x: 50, y: 100, width: 100, height: 50});
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -57,42 +39,28 @@ function createPdf() {
 You can overlay custom text on the redacted region to indicate the reason for redaction or provide context. For example, adding "Confidential" or "Redacted" helps users understand why the content was removed.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfRedactionAnnotation } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new redaction annotation
     const font: PdfFont = new PdfStandardFont(PdfFontFamily.timesRoman, 12);
-    const annot: PdfRedactionAnnotation = new PdfRedactionAnnotation(100, 100, 100, 100, { borderColor: [255, 0, 0], repeatText: true,
-    overlayText: 'Redacted', font: font, textColor: [0, 0, 0], appearanceFillColor: [255, 255, 255]});
+    const annotation: PdfRedactionAnnotation = new PdfRedactionAnnotation({x: 100, y: 100, width: 100, height: 100},{ borderColor: {r: 255, g: 0, b: 0},
+            repeatText: true,
+            overlayText: 'Sample Overlay',
+            font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular),
+            textColor: {r: 0, g: 0, b: 0},
+            appearanceFillColor: {r: 255, g: 255, b: 255} });
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -102,20 +70,10 @@ function createPdf() {
 You can apply a solid fill color to cover the redacted content. This is the most common approach for redaction.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfRedactionAnnotation } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
     // Add a new section to the document
@@ -154,13 +112,6 @@ function createPdf() {
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -170,40 +121,22 @@ function createPdf() {
 Customize the appearance of the redacted area by applying specific fill colors. This helps maintain a consistent design or highlight redacted sections in a visually appealing way.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfRedactionAnnotation } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
      //Appearance Fill color
-    annot = new PdfRedactionAnnotation({x: 100, y: 100, width: 100, height: 50});
+    const annot = new PdfRedactionAnnotation({x: 100, y: 100, width: 100, height: 50});
     annot.appearanceFillColor = {r: 255, g: 255, b: 0};
     page.annotations.add(annot);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
