@@ -70,21 +70,21 @@ import { PdfDocument, PdfPage, PdfStandardFont, PdfPen, PdfBrush } from '@syncfu
 
 document.getElementById('normalButton').onclick = (): void => {
         // Create a new PDF document
-        var pdf = new PdfDocument();
+        const document = new PdfDocument();
         // Add a new page
-        var page = pdf.addPage();
+        const page: PdfPage = document.addPage();
         // Get graphics from the page
-        let graphics = page.graphics;
+        const graphics: PdfGraphics = page.graphics;
         // Set font
-        var font = pdf.embedFont(ej.pdf.PdfFontFamily.helvetica, 36, pdf.PdfFontStyle.regular);
+        const font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 36, PdfFontStyle.regular);
         // Create a new black brush
-        var brush = new pdf.PdfBrush({r: 0, g: 0, b: 0});
+        const brush = new PdfBrush({r: 0, g: 0, b: 0});
         // Draw text
         graphics.drawString('Hello World!!!', font, {x: 20, y: 20, width: graphics.clientSize.width - 20, height: 60}, brush);
         // Save and download PDF
-        pdf.save('Output.pdf');
+        document.save('Output.pdf');
         // Destroy the PDF document instance
-        pdf.destroy();
+        document.destroy();
         });   
 };
 
@@ -102,5 +102,3 @@ ng serve --open
 By executing the program, you will get the PDF document as follows.
 
 ![Output PDF document](Getting_started_images/Output.png)
-
-

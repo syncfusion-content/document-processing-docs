@@ -1,6 +1,6 @@
 ---
 title: Working with PDF Document | Syncfusion
-description: This section explains how to set document Settings and properties to the PDF document using Essential PDF
+description: This section explains how to set document Settings and properties to the PDF file using Essential PDF
 platform: document-processing
 control: PDF
 documentation: UG
@@ -29,7 +29,7 @@ This example shows how to configure custom page settings before adding a page to
     // Add a page
     let page: PdfPage = document.addPage(pageSettings);
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Set font
     let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
     // Draw text
@@ -64,7 +64,7 @@ This example demonstrates how to create a section in a PDF document with custom 
     // Add a page
     let page: PdfPage = section.addPage();
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Set font
     let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
     // Draw text
@@ -103,7 +103,7 @@ This example demonstrates how to create a PDF document, set its metadata propert
     // Add a page
     let page: PdfPage = document.addPage();
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Set font
     let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
     // Draw text
@@ -132,7 +132,7 @@ The `isIncrementalUpdate` property allows you to check if the PDF document suppo
     // Add a page
     let page: PdfPage = document.addPage();
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Set font
     let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
     // Draw text

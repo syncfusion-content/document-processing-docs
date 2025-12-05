@@ -58,16 +58,16 @@ import { PdfDocument, PdfPage, PdfStandardFont, PdfPen, PdfBrush } from '@syncfu
 {% highlight html tabtitle="index.ts" %}
 
 document.getElementById('normalButton').onclick = (): void => {
-        // Create a new PDF document
-        var pdf = new pdf.PdfDocument();
+// Create a new PDF document
+        let pdf = new PdfDocument();
         // Add a new page
-        var page = pdf.addPage();
+        let page: PdfPage = document.addPage();
         // Get graphics from the page
-        let graphics = page.graphics;
+        let graphics: PdfGraphics = page.graphics;
         // Set font
-        var font = pdf.embedFont(PdfFontFamily.helvetica, 36, PdfFontStyle.regular);
+        let font: PdfStandardFont = pdf.embedFont(PdfFontFamily.helvetica, 36, PdfFontStyle.regular);
         // Create a new black brush
-        var brush = new pdf.PdfBrush({r: 0, g: 0, b: 0});
+        let brush = new PdfBrush({r: 0, g: 0, b: 0});
         // Draw text
         graphics.drawString('Hello World!!!', font, {x: 20, y: 20, width: graphics.clientSize.width - 20, height: 60}, brush);
         // Save and download PDF
@@ -90,4 +90,3 @@ npm start
 By executing the program, you will get the PDF document as follows.
 
 ![Output PDF document](Getting_started_images/Output.png)
-
