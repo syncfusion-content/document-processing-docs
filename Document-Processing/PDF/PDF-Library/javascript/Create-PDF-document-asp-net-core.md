@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create or Generate PDF file in ASP.NET Core | Syncfusion
+title: Create or Generate PDF in ASP.NET Core | Syncfusion
 description: Learn how to create or generate a PDF file in ASP.NET Core applications with easy steps using Syncfusion JavaScript PDF library without depending on Adobe.
 platform: document-processing
 control: PDF
@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net core create pdf, edit pdf, merge, pdf form, fill form, digital sign, table, javascript, dotnet core pdf, asp generate pdf, aspx generate pdf
 ---
 
-# Create or Generate PDF file in ASP.NET Core
+# Create or Generate PDF in ASP.NET Core
 
 The Syncfusion<sup>&reg;</sup> JavaScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, forms, and secure PDF files.
 
@@ -53,15 +53,15 @@ This guide explains how to integrate the JavaScript PDF library into an ASP.NET 
     <script>
         document.getElementById('btnCreatePdf').addEventListener('click', function () {
         // Create a new PDF document
-        var pdf = new ej.pdf.PdfDocument();
+        let pdf = new ej.pdf.PdfDocument();
         // Add a new page
-        var page = pdf.addPage();
+        let page: ej.pdf.PdfPage = document.addPage();
         // Get graphics from the page
-        let graphics = page.graphics;
+        let graphics: ej.pdf.PdfGraphics = page.graphics;
         // Set font
-        var font = pdf.embedFont(ej.pdf.PdfFontFamily.helvetica, 36, ej.pdf.PdfFontStyle.regular);
+        let font: ej.pdf.PdfStandardFont = pdf.embedFont(ej.pdf.PdfFontFamily.helvetica, 36, ej.pdf.PdfFontStyle.regular);
         // Create a new black brush
-        var brush = new ej.pdf.PdfBrush({r: 0, g: 0, b: 0});
+        let brush = new ej.pdf.PdfBrush({r: 0, g: 0, b: 0});
         // Draw text
         graphics.drawString('Hello World!!!', font, {x: 20, y: 20, width: graphics.clientSize.width - 20, height: 60}, brush);
         // Save and download PDF
