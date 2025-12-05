@@ -12,6 +12,49 @@ domainurl: ##DomainURL##
 
 Redaction annotations are used to hide confidential or sensitive information in a PDF. The Syncfusion ASP.NET Core PDF Viewer lets you mark areas or entire pages for redaction, customize their appearance, and permanently apply them with a single action.
 
+## Enable the redaction toolbar
+
+To enable the redaction toolbar, configure the `toolbarSettings.toolbarItems` property of the PdfViewer instance to include the **RedactionEditTool**.
+
+The following example shows how to enable the redaction toolbar:
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<div class="text-center">
+    <ejs-pdfviewer
+        id="pdfViewer"
+        style="height:640px; display:block"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.12/dist/ej2-pdfviewer-lib"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
+    </ejs-pdfviewer>
+</div>
+<script type="text/javascript">
+window.onload = function () {
+        var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+        // Include RedactionEditTool in the primary toolbar
+        viewer.toolbarSettings = {
+            toolbarItems: [
+                'OpenOption',
+                'UndoRedoTool',
+                'PageNavigationTool',
+                'MagnificationTool',
+                'PanTool',
+                'SelectionTool',
+                'CommentTool',
+                'SubmitForm',
+                'AnnotationEditTool',
+                'RedactionEditTool',
+                'FormDesignerEditTool',
+                'SearchOption',
+                'PrintOption',
+                'DownloadOption'
+            ]
+        };
+    }
+</script>
+{% endhighlight %}
+{% endtabs %}
+
 N> Prerequisites: Add the PdfViewer control to your ASP.NET Core application and ensure the redaction feature is available in the version you are using. Once applied, redaction permanently removes the selected content.
 
 ![Toolbar with the Redaction tool highlighted](redaction-annotations-images/redaction-icon-toolbar.png)

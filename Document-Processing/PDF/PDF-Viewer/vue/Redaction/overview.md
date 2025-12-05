@@ -12,6 +12,94 @@ domainurl: ##DomainURL##
 
 Redaction annotations are used to hide confidential or sensitive information in a PDF. The Syncfusion Vue PDF Viewer (EJ2) lets you mark areas or entire pages for redaction, customize their appearance, and permanently apply them with a single action.
 
+## Enable the redaction toolbar
+
+To enable the redaction toolbar, configure the `toolbarSettings.toolbarItems` property of the PdfViewer instance to include the **RedactionEditTool**.
+
+The following example shows how to enable the redaction toolbar:
+
+{% tabs %}
+{% highlight html tabtitle="App.vue" %}
+<template>
+  <div>
+    <div class="control-section">
+      <ejs-pdfviewer
+        id="container"
+        :documentPath="documentPath"
+        :resourceUrl="resourceUrl"
+        :toolbarSettings="toolbarSettings"
+        style="height: 680px"
+      />
+    </div>
+  </div>
+</template>
+<script>
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  LinkAnnotation,
+  BookmarkView,
+  ThumbnailView,
+  Print,
+  TextSelection,
+  TextSearch,
+  FormFields,
+  FormDesigner,
+  PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: 'App',
+  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  data() {
+    return {
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+      toolbarSettings: {
+        toolbarItems: [
+          'OpenOption',
+          'UndoRedoTool',
+          'PageNavigationTool',
+          'MagnificationTool',
+          'PanTool',
+          'SelectionTool',
+          'CommentTool',
+          'SubmitForm',
+          'AnnotationEditTool',
+          'RedactionEditTool',
+          'FormDesignerEditTool',
+          'SearchOption',
+          'PrintOption',
+          'DownloadOption'
+        ]
+      }
+    };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      Annotation,
+      LinkAnnotation,
+      BookmarkView,
+      ThumbnailView,
+      Print,
+      TextSelection,
+      TextSearch,
+      FormFields,
+      FormDesigner,
+      PageOrganizer
+    ]
+  }
+};
+</script>
+{% endhighlight %}
+{% endtabs %}
+
 N> Prerequisites: Add the PdfViewer control to your Vue application and ensure the redaction feature is available in the version you are using. Once applied, redaction permanently removes the selected content.
 
 ![Toolbar with the Redaction tool highlighted](redaction-annotations-images/redaction-icon-toolbar.png)

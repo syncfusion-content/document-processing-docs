@@ -11,6 +11,48 @@ documentation: ug
 
 The Syncfusion ASP.NET MVC PDF Viewer provides APIs to add, update, delete, and apply redaction annotations programmatically. You can also redact entire pages, configure default properties, and work with the redaction property panel.
 
+## Enable the redaction toolbar
+
+To enable the redaction toolbar, configure the `toolbarSettings.toolbarItems` property of the PdfViewer instance to include the **RedactionEditTool**.
+
+The following example shows how to enable the redaction toolbar:
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<div class="text-center">
+    @Html.EJS().PdfViewer("pdfViewer")
+        .ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.12/dist/ej2-pdfviewer-lib")
+        .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
+        .Height("640px")
+        .Render()
+</div>
+<script type="text/javascript">
+    window.onload = function () {
+        var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+        // Include RedactionEditTool in the primary toolbar
+        viewer.toolbarSettings = {
+            toolbarItems: [
+                'OpenOption',
+                'UndoRedoTool',
+                'PageNavigationTool',
+                'MagnificationTool',
+                'PanTool',
+                'SelectionTool',
+                'CommentTool',
+                'SubmitForm',
+                'AnnotationEditTool',
+                'RedactionEditTool',
+                'FormDesignerEditTool',
+                'SearchOption',
+                'PrintOption',
+                'DownloadOption'
+            ]
+        };
+    }
+</script>
+{% endhighlight %}
+{% endtabs %}
+
 ## Add redaction annotations programmatically
 
 You can add redaction annotations to a PDF document using the `addAnnotation` method of the `annotation` module. You can listen to the `annotationAdd` event to track when annotations are added.

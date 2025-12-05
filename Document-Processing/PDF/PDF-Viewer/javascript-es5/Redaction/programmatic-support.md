@@ -11,6 +11,39 @@ documentation: ug
 
 The Syncfusion JavaScript PDF Viewer (EJ2) provides APIs to add, update, delete, and apply redaction annotations programmatically. You can also redact entire pages, configure default properties, and work with the redaction property panel.
 
+## Enable the redaction toolbar
+
+To enable the redaction toolbar, configure the `toolbarSettings.toolbarItems` property of the PdfViewer instance to include the **RedactionEditTool**.
+
+The following example shows how to enable the redaction toolbar:
+
+```js
+var pdfviewer = new ej.pdfviewer.PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
+  toolbarSettings: {
+    toolbarItems: [
+      'OpenOption',
+      'UndoRedoTool',
+      'PageNavigationTool',
+      'MagnificationTool',
+      'PanTool',
+      'SelectionTool',
+      'CommentTool',
+      'SubmitForm',
+      'AnnotationEditTool',
+      'RedactionEditTool',   // Enables Redaction toolbar
+      'FormDesignerEditTool',
+      'SearchOption',
+      'PrintOption',
+      'DownloadOption'
+    ]
+  }
+});
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
+pdfviewer.appendTo('#PdfViewer');
+```
+
 ## Add redaction annotations programmatically
 
 You can add redaction annotations to a PDF document using the `addAnnotation` method of the `annotation` module.

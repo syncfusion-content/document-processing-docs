@@ -12,6 +12,62 @@ domainurl: ##DomainURL##
 
 Redaction annotations are used to hide confidential or sensitive information in a PDF. The Syncfusion React PDF Viewer (EJ2) lets you mark areas or entire pages for redaction, customize their appearance, and permanently apply them with a single action.
 
+## Enable the redaction toolbar
+
+To enable the redaction toolbar, configure the `toolbarSettings.toolbarItems` property of the PdfViewer instance to include the **RedactionEditTool**.
+
+The following example shows how to enable the redaction toolbar:
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+
+import * as ReactDOM from 'react-dom/client';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
+export function App() {
+  // includes RedactionEditTool
+  const toolbarSettings = {
+    toolbarItems: [
+      'OpenOption',
+      'UndoRedoTool',
+      'PageNavigationTool',
+      'MagnificationTool',
+      'PanTool',
+      'SelectionTool',
+      'CommentTool',
+      'SubmitForm',
+      'AnnotationEditTool',
+      'RedactionEditTool', // Redaction entry in the primary toolbar
+      'FormDesignerEditTool',
+      'SearchOption',
+      'PrintOption',
+      'DownloadOption'
+    ]
+  };
+  return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent 
+        id="container" 
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl= "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+        toolbarSettings={toolbarSettings}
+        
+        style={{ 'height': '680px' }} 
+      >
+        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+          Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+  
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endhighlight %}
+{% endtabs %}
+
 N> Prerequisites: Add the PdfViewer control to your React application and ensure the redaction feature is available in the version you are using. Once applied, redaction permanently removes the selected content.
 
 ![Toolbar with the Redaction tool highlighted](redaction-annotations-images/redaction-icon-toolbar.png)
