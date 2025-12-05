@@ -1,35 +1,25 @@
 ---
-title: Working with EJ2 Text Extraction | Syncfusion
-description: This section explains how to extract text and its bounds from a particular page or the entire EJ2 PDF document.
+title: Working with Text Extraction | Syncfusion
+description: This section explains how to extract text and its bounds from a particular page or the entire PDF document.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with EJ2 Text Extraction
+# Working with Text Extraction
 
-Essential<sup>&reg;</sup> EJ2 PDF allows you to extract the text from a particular page or the entire PDF document. 
+Essential<sup>&reg;</sup> PDF allows you to extract the text from a particular page or the entire PDF document. 
 
 ## Working with basic text extraction
 
 This example demonstrates how to extract text from a PDF page using the `PdfDataExtractor` class. Basic text extraction allows retrieving plain text content from a PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, string, PdfDataExtractor } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Initialize a new instance of the `PdfDataExtractor` class
     let extractor: PdfDataExtractor = new PdfDataExtractor(document);
     // Extract text content from the PDF document.
@@ -38,14 +28,6 @@ function createPdf() {
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -55,22 +37,12 @@ function createPdf() {
 This example demonstrates how to extract text from a PDF page using the `PdfDataExtractor` class with layout-based options.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, string, PdfDataExtractor } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Initialize a new instance of the `PdfDataExtractor` class
     let extractor: PdfDataExtractor = new PdfDataExtractor(document);
     // Extracts text from the PDF Page based on its layout
@@ -79,14 +51,6 @@ function createPdf() {
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -100,22 +64,12 @@ N> Layout based text extraction may take additional processing time when compare
 This example demonstrates how to extract text from a PDF page based on individual lines using the `extractTextLines` method. This approach provides a collection of `TextLine` objects, allowing precise access to text content line by line.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, TextLine, PdfDataExtractor } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Initialize a new instance of the `PdfDataExtractor` class
     let extractor: PdfDataExtractor = new PdfDataExtractor(document);
     // Extracts text from the PDF Page based on its line
@@ -124,14 +78,6 @@ function createPdf() {
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -141,22 +87,12 @@ function createPdf() {
 This example demonstrates how to extract words from a PDF document using the `extractTextLines` method. Each line contains a collection of `TextWord` objects. 
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, TextLine, TextWord, PdfDataExtractor, TextGlyph } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Create a PdfDataExtractor instance for the given PDF document
     let extractor: PdfDataExtractor = new PdfDataExtractor(document);
     // Extract text lines from all pages in the document
@@ -194,14 +130,6 @@ function createPdf() {
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -211,22 +139,12 @@ function createPdf() {
 This example demonstrates how to access individual characters from a PDF document using the `TextGlyph` class. 
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, TextLine, TextWord, PdfDataExtractor, TextGlyph } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Create a PdfDataExtractor instance for the given PDF document
     let extractor: PdfDataExtractor = new PdfDataExtractor(document);
     // Extract text lines from all pages in the document
@@ -264,14 +182,6 @@ function createPdf() {
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
