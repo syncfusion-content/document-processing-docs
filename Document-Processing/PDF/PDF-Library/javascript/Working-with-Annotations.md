@@ -1,13 +1,13 @@
 ---
 title: Working with Annotations | Syncfusion
-description: This section explains how to create, modify or remove different type of interactive Annotation by using TypeScript PDF library.
+description: This section explains how to create, modify or remove different type of interactive Annotation by using TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 # Working with Annotations
 
-Syncfusion JavaScript PDF library provides support for interactive annotations. You can add, delete and modify the annotation from the PDF documents.
+Syncfusion<sup>&reg;</sup> JavaScript PDF library provides support for interactive annotations. You can add, delete and modify the annotation from the PDF documents.
 
 ## Adding annotations to a PDF document
 
@@ -352,41 +352,22 @@ document.destroy();
 This example demonstrates how to add an ink annotation to a PDF page using the `PdfInkAnnotation` class. An ink annotation allows drawing freehand marks or sketches directly on a PDF page.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfInkAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Adds a new page to the PDF
+    let page: PdfPage = document.addPage();
     // Create a new ink annotation with the bounds and ink points
-    const annotation: PdfInkAnnotation = new PdfInkAnnotation([0, 0, 300, 400], [40, 300, 60, 100, 40, 50, 40, 300]);
+    const annotation: PdfInkAnnotation = new PdfInkAnnotation({x: 0, y: 0, width: 300, height: 400}, [{x: 40, y: 300}, {x: 60, y: 100}, {x: 40, y: 50}, {x: 40, y: 300}]);
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -394,39 +375,22 @@ function createPdf() {
 The following code snippet explains how to add a ink annotation in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfInkAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new ink annotation with the bounds and ink points
-    const annotation: PdfInkAnnotation = new PdfInkAnnotation([0, 0, 300, 400], [40, 300, 60, 100, 40, 50, 40, 300]);
+    const annotation: PdfInkAnnotation = new PdfInkAnnotation({x: 0, y: 0, width: 300, height: 400}, [{x: 40, y: 300}, {x: 60, y: 100}, {x: 40, y: 50}, {x: 40, y: 300}]);
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -436,41 +400,22 @@ function createPdf() {
 This example demonstrates how to add a popup annotation to a PDF document using the `PdfPopupAnnotation` class. A popup annotation allows you to display additional information or comments within the PDF at a specified position and size.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfPopupAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Adds a new page to the PDF
+    let page: PdfPage = document.addPage();
     // Create a new popup annotation
-    const annotation: PdfPopupAnnotation = new PdfPopupAnnotation('Test popup annotation', 10, 40, 30, 30);
+    const annotation: PdfPopupAnnotation = new PdfPopupAnnotation('Test popup annotation', {x: 10, y: 40, width: 30, height: 30});
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -478,40 +423,22 @@ function createPdf() {
 The following code snippet explains how to add a popup annotation in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfPopupAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new popup annotation
-    const annotation: PdfPopupAnnotation = new PdfPopupAnnotation('Test popup annotation', 10, 40, 30, 30);
+    const annotation: PdfPopupAnnotation = new PdfPopupAnnotation('Test popup annotation', {x: 10, y: 40, width: 30, height: 30});
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -521,41 +448,22 @@ function createPdf() {
 This example demonstrates how to add a file attachment annotation to a PDF page using the `PdfAttachmentAnnotation` class. A file attachment annotation allows embedding external files within a PDF document, enabling users to include supporting documents or resources for easy access.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfAttachmentAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Adds a new page to the PDF
+    let page: PdfPage = document.addPage();
     // Create a new attachment annotation
-    const annotation: PdfAttachmentAnnotation = new PdfAttachmentAnnotation(300, 200, 30, 30, "Nature.jpg", imageData);
+    const annotation: PdfAttachmentAnnotation = new PdfAttachmentAnnotation({x: 300, y: 200, width: 30, height: 30}, 'Nature.jpg', imageData);
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -563,40 +471,22 @@ function createPdf() {
 The following code snippet explains how to add a attachment annotation in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfAttachmentAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new attachment annotation
-    const annotation: PdfAttachmentAnnotation = new PdfAttachmentAnnotation(300, 200, 30, 30, "Nature.jpg", imageData);
+    const annotation: PdfAttachmentAnnotation = new PdfAttachmentAnnotation({x: 300, y: 200, width: 30, height: 30}, 'Nature.jpg', imageData);
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -606,22 +496,12 @@ function createPdf() {
 This example demonstrates how to access a sound annotation to a PDF page using the `PdfSoundAnnotation` class.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfSoundAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Access the annotation at index 0
@@ -630,14 +510,6 @@ function createPdf() {
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -647,41 +519,22 @@ function createPdf() {
 This example demonstrates how to add a URI annotation to a PDF page using the `PdfUriAnnotation` class. A URI annotation allows linking to a web address or online resource from within a PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfUriAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Adds a new page to the PDF
+    let page: PdfPage = document.addPage();
     // Create a new URI annotation
-    let annotation: PdfUriAnnotation = new PdfUriAnnotation(100, 150, 200, 100, ‘http://www.google.com’);
+    let annotation: PdfUriAnnotation = new PdfUriAnnotation({x: 100, y: 150, width: 200, height: 100}, 'http://www.google.com');
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -689,40 +542,22 @@ function createPdf() {
 The following code snippet explains how to add a URI annotation in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfUriAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new URI annotation
-    let annotation: PdfUriAnnotation = new PdfUriAnnotation(100, 150, 200, 100, ‘http://www.google.com’);
+     let annotation: PdfUriAnnotation = new PdfUriAnnotation({x: 100, y: 150, width: 200, height: 100}, 'http://www.google.com');
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -732,41 +567,22 @@ function createPdf() {
 This example demonstrates how to add a document link annotation to a PDF page using the `PdfDocumentLinkAnnotation` class. A document link annotation allows creating clickable links that navigate to a specific page or location within the same PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfDocumentLinkAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Adds a new page to the PDF
+    let page: PdfPage = document.addPage();
     // Create a new document link annotation
-    let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation(100, 150, 40, 60);
+    let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation({x: 100, y: 150, width: 40, height: 60});
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -774,40 +590,22 @@ function createPdf() {
 The following code snippet explains how to add a document link annotation in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfDocumentLinkAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new document link annotation
-    let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation(100, 150, 40, 60);
+    let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation({x: 100, y: 150, width: 40, height: 60});
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -817,41 +615,22 @@ function createPdf() {
 This example demonstrates how to add a redaction annotation to a PDF page using the `PdfRedactionAnnotation` class. A redaction annotation allows marking areas of a PDF for permanent removal of sensitive content, ensuring confidentiality and compliance with privacy requirements.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfRedactionAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Adds a new page to the PDF
+    let page: PdfPage = document.addPage();
     // Create a new redaction annotation
-    const annotation: PdfRedactionAnnotation = new PdfRedactionAnnotation (50, 100, 100, 50);
+    const annotation: PdfRedactionAnnotation = new PdfRedactionAnnotation({x: 50, y: 100, width: 100, height: 50});
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -859,40 +638,22 @@ function createPdf() {
 The following code snippet explains how to add a document link annotation in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfRedactionAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new redaction annotation
-    const annotation: PdfRedactionAnnotation = new PdfRedactionAnnotation (50, 100, 100, 50);
+    const annotation: PdfRedactionAnnotation = new PdfRedactionAnnotation({x: 50, y: 100, width: 100, height: 50});
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -902,43 +663,24 @@ function createPdf() {
 This example demonstrates how to add a watermark annotation to a PDF page using the `PdfWatermarkAnnotation` class. A watermark annotation allows overlaying text or images on a PDF page, typically used for branding, confidentiality notices, or document status indicators.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfWatermarkAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Adds a new page to the PDF
+    let page: PdfPage = document.addPage();
     // Create a new water mark annotation
-    const annotation: PdfWatermarkAnnotation = new PdfWatermarkAnnotation('Water Mark', 50, 100, 100, 50);
+    const annotation: PdfWatermarkAnnotation = new PdfWatermarkAnnotation('Water Mark', {x: 50, y: 100, width: 100, height: 50});
     // Set the color of the annotation
-    annotation.color = [0, 0, 0];
+    annotation.color = {r: 0, g: 0, b: 0};
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -946,42 +688,24 @@ function createPdf() {
 The following code snippet explains how to add a watermark annotation in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfWatermarkAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new water mark annotation
-    const annotation: PdfWatermarkAnnotation = new PdfWatermarkAnnotation('Water Mark', 50, 100, 100, 50);
+    const annotation: PdfWatermarkAnnotation = new PdfWatermarkAnnotation('Water Mark', {x: 50, y: 100, width: 100, height: 50});
     // Set the color of the annotation
-    annotation.color = [0, 0, 0];
+    annotation.color = {r: 0, g: 0, b: 0};
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -991,43 +715,22 @@ function createPdf() {
 This example demonstrates how to add a text markup annotation to a PDF page using the `PdfTextMarkupAnnotation` class. A text markup annotation allows highlighting, underlining, or striking out text within a PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfTextMarkupAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Adds a new page to the PDF
+    let page: PdfPage = document.addPage();
     // Create a new text markup annotation
-    const annotation: PdfTextMarkupAnnotation = new PdfTextMarkupAnnotation();
-    // Sets the bounds of the annotation.
-    annotation.bounds = {x: 50, y: 100, width: 100, height: 100};
+    let annotation: PdfTextMarkupAnnotation = new PdfTextMarkupAnnotation('Text markup', {x: 50, y: 100, width: 100, height: 50});
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1035,42 +738,22 @@ function createPdf() {
 The following code snippet explains how to add a text markup annotation in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfTextMarkupAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new text markup annotation
-    const annotation: PdfTextMarkupAnnotation = new PdfTextMarkupAnnotation();
-    // Sets the bounds of the annotation.
-    annotation.bounds = {x: 50, y: 100, width: 100, height: 100};
+    let annotation: PdfTextMarkupAnnotation = new PdfTextMarkupAnnotation('Text markup', {x: 50, y: 100, width: 100, height: 50});
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1082,41 +765,22 @@ function createPdf() {
 This example demonstrates how to add a rectangle annotation to a PDF page using the `PdfRectangleAnnotation` class. A rectangle annotation allows drawing rectangular shapes on a PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfRectangleAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Adds a new page to the PDF
+    let page: PdfPage = document.addPage();
     // Create a new square annotation with bounds
-    const annotation: PdfRectangleAnnotation = new PdfRectangleAnnotation(10, 10, 200, 100);
+    const annotation: PdfRectangleAnnotation = new PdfRectangleAnnotation({x: 10, y: 10, width: 200, height: 100});
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1124,40 +788,22 @@ function createPdf() {
 The following code snippet explains how to add a rectangle annotation in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfRectangleAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new square annotation with bounds
-    const annotation: PdfRectangleAnnotation = new PdfRectangleAnnotation(10, 10, 200, 100);
+    const annotation: PdfRectangleAnnotation = new PdfRectangleAnnotation({x: 10, y: 10, width: 200, height: 100});
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1167,41 +813,22 @@ function createPdf() {
 This example demonstrates how to add a polygon annotation to a PDF page using the `PdfPolygonAnnotation` class. A polygon annotation allows drawing multi-sided shapes on a PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfPolygonAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Adds a new page to the PDF
+    let page: PdfPage = document.addPage();
     // Create a new polygon annotation with bounds
-    const annotation: PdfPolygonAnnotation = new PdfPolygonAnnotation([100, 300, 150, 200, 300, 200, 350, 300, 300, 400, 150, 400]);
+    const annotation: PdfPolygonAnnotation = new PdfPolygonAnnotation([{x: 100, y: 300}, {x: 150, y: 200}, {x: 300, y: 200}, {x: 350, y: 300}, {x: 300, y: 400}, {x: 150, y: 400}]);
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1209,40 +836,22 @@ function createPdf() {
 The following code snippet explains how to add a polygon annotation in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfPolygonAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new polygon annotation with bounds
-    const annotation: PdfPolygonAnnotation = new PdfPolygonAnnotation([100, 300, 150, 200, 300, 200, 350, 300, 300, 400, 150, 400]);
+    const annotation: PdfPolygonAnnotation = new PdfPolygonAnnotation([{x: 100, y: 300}, {x: 150, y: 200}, {x: 300, y: 200}, {x: 350, y: 300}, {x: 300, y: 400}, {x: 150, y: 400}]);
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1252,41 +861,22 @@ function createPdf() {
 This example demonstrates how to add a circle annotation to a PDF page using the `PdfCircleAnnotation` class. A circle annotation allows drawing circular or oval shapes on a PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfCircleAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Adds a new page to the PDF
+    let page: PdfPage = document.addPage();
     // Create a new circle annotation with circle bounds
-    const annotation: PdfCircleAnnotation = new PdfCircleAnnotation(10, 10, 100, 100);
+    const annotation: PdfCircleAnnotation = new PdfCircleAnnotation({x: 10, y: 10, width: 100, height: 100});
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1294,40 +884,22 @@ function createPdf() {
 The following code snippet explains how to add a circle annotation in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfCircleAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new circle annotation with circle bounds
-    const annotation: PdfCircleAnnotation = new PdfCircleAnnotation(10, 10, 100, 100);
+    const annotation: PdfCircleAnnotation = new PdfCircleAnnotation({x: 10, y: 10, width: 100, height: 100});
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1337,41 +909,22 @@ function createPdf() {
 This example demonstrates how to add an ellipse annotation to a PDF page using the `PdfEllipseAnnotation` class. An ellipse annotation allows drawing elliptical shapes on a PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfEllipseAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Adds a new page to the PDF
+    let page: PdfPage = document.addPage();
     // Create a new ellipse annotation with bounds
-    const annotation: PdfEllipseAnnotation = new PdfEllipseAnnotation(10, 10, 100, 100);
+    const annotation: PdfEllipseAnnotation = new PdfEllipseAnnotation({x: 10, y: 10, width: 100, height: 100});
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1379,40 +932,22 @@ function createPdf() {
 The following code snippet explains how to add a ellipse annotation in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfEllipseAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new ellipse annotation with bounds
-    const annotation: PdfEllipseAnnotation = new PdfEllipseAnnotation(10, 10, 100, 100);
+    const annotation: PdfEllipseAnnotation = new PdfEllipseAnnotation({x: 10, y: 10, width: 100, height: 100});
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1422,22 +957,12 @@ function createPdf() {
 This example demonstrates how to access a measurement annotation from a PDF page using the PdfLineAnnotation class. A measurement annotation allows defining and displaying dimensions such as distances or lengths within a PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfLineAnnotation, PdfMeasurementUnit} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Access the annotation at index 0
@@ -1448,14 +973,6 @@ function createPdf() {
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1465,22 +982,12 @@ function createPdf() {
 This example demonstrates how to modify an existing annotation in a PDF page using the PdfAnnotation class. Modifying annotations allows updating properties such as position, color, content, or appearance, enabling customization and refinement of the document’s interactive elements.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfPopupAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Get the first annotation of the page
@@ -1491,14 +998,6 @@ function createPdf() {
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1508,22 +1007,12 @@ function createPdf() {
 This example demonstrates how to remove an annotation from a PDF page using the PdfAnnotationCollection class. Removing annotations allows deleting comments, shapes, or other interactive elements from a PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, PdfPage, PdfAnnotation} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Access first annotation from the PDF page
@@ -1534,14 +1023,6 @@ function createPdf() {
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1551,36 +1032,18 @@ function createPdf() {
 This example demonstrates how to flatten annotations in a PDF document using the PdfAnnotation class. Flattening annotations converts interactive elements such as comments, highlights, and shapes into static content.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Flatten PDF annotations and form fields
     document.flatten = true;    
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1590,36 +1053,18 @@ function createPdf() {
 This example demonstrates how to import annotations into a PDF document using the PdfDocument. `importAnnotations` method.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, DataFormat} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load the base PDF document from resources
-    let pdfDocument: PdfDocument = new PdfDocument('Input.pdf');
+    let pdfDocument: PdfDocument = new PdfDocument(data, password);
     // Imports annotations from to the PDF document.
     document.importAnnotations('annotations.json', DataFormat.json);
     // Save the PDF document
     pdfDocument.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1629,34 +1074,16 @@ function createPdf() {
 This example demonstrates how to export annotations from a PDF document using the PdfDocument.exportAnnotations method. 
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import {PdfDocument, Uint8Array} from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Exports the annotations from the PDF document.
     let data: Uint8Array = document.exportAnnotations();
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
