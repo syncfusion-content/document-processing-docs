@@ -1,84 +1,25 @@
 ---
-title: Working with EJ2 Hyperlinks | Syncfusion
-description: This section explains how to add hyperlink in a new and existing PDF document using Syncfusion EJ2 PDF library 
+title: Working with Hyperlinks | Syncfusion
+description: This section explains how to add hyperlink in a new and existing PDF document using Syncfusion PDF library 
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with EJ2 Hyperlinks in PDF
+# Working with Hyperlinks in PDF
 
-In EJ2 PDF, hyperlinks can be added to allow the users to navigate to another part of PDF file, web page or any other external content. Essential<sup>&reg;</sup> EJ2 PDF provides support for all these types of hyperlink.
+In PDF, hyperlinks can be added to allow the users to navigate to another part of PDF file, web page or any other external content. Essential<sup>&reg;</sup> PDF provides support for all these types of hyperlink.
 
 ## Working with Web navigation
 
 This example demonstrates how to create a web link annotation in a PDF document using the `PdfTextWebLinkAnnotation` class. A web link annotation allows users to navigate to a specified URL directly from the PDF by clicking the annotated text.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, PdfFontFamily, Size, PdfTextWebLinkAnnotation, PdfFontStyle  } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Create a new PDF string format
-    const format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.left, PdfVerticalAlignment.top);
-    // Create a new standard font
-    const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
-    // Get the text size
-    let size: number[] = font.measureString("Syncfusion Site", format, [0, 0], 0, 0);
-    // Create a new text web link annotation
-    let annot: PdfTextWebLinkAnnotation = new PdfTextWebLinkAnnotation(50, 40, size[0], size[1], [0, 0, 0], [165, 42, 42], 1);
-    // Add annotation to the page
-    page.annotations.add(annotation);
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-The following code snippet explains how to add a text web link annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new PDF string format
@@ -86,23 +27,44 @@ function createPdf() {
     // Create a new standard font
     const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
     // Get the text size
-    let size: number[] = font.measureString("Syncfusion Site", format, [0, 0], 0, 0);
+    let size: Size = font.measureString('Syncfusion');
     // Create a new text web link annotation
-    let annot: PdfTextWebLinkAnnotation = new PdfTextWebLinkAnnotation(50, 40, size[0], size[1], [0, 0, 0], [165, 42, 42], 1);
+    let annotation: PdfTextWebLinkAnnotation = new PdfTextWebLinkAnnotation({x: 50, y: 40, width: size.width, height: size.height}, {r: 0, g: 0, b: 0}, {r: 165, g: 42, b: 42}, 1);
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
 
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
+{% endtabs %}
 
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
+The following code snippet explains how to add a text web link annotation in an existing PDF document.
+
+{% tabs %}
+{% highlight c# tabtitle="TypeScript" %}
+
+    import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, PdfFontFamily, Size, PdfTextWebLinkAnnotation, PdfFontStyle  } from '@syncfusion/ej2-pdf';
+
+    // Load an existing PDF document
+    let document: PdfDocument = new PdfDocument(data, password);
+    // Access the first page
+    let page: PdfPage = document.getPage(0);
+    // Create a new PDF string format
+    const format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.left, PdfVerticalAlignment.top);
+    // Create a new standard font
+    const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
+    // Get the text size
+    let size: Size = font.measureString('Syncfusion');
+    // Create a new text web link annotation
+     let annotation: PdfTextWebLinkAnnotation = new PdfTextWebLinkAnnotation({x: 50, y: 40, width: size.width, height: size.height}, {r: 0, g: 0, b: 0}, {r: 165, g: 42, b: 42}, 1);
+    // Add annotation to the page
+    page.annotations.add(annotation);
+    // Save the document
+    document.save('Output.pdf');
+    // Close the document
+    document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -112,34 +74,22 @@ function createPdf() {
 This example demonstrates how to create internal navigation within a PDF document using destination-based annotations.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, Size, PdfTextWebLinkAnnotation, PdfDestination } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Add a page
+    let page: PdfPage = document.addPage();
     // Create a new PDF string format
     const format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.left, PdfVerticalAlignment.top);
     // Create a new standard font
     const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
     // Get the text size
-    let size: number[] = font.measureString("Syncfusion Site", format, [0, 0], 0, 0);
+    let size: Size = font.measureString('Syncfusion');
     // Create a new text web link annotation
-    let annot: PdfTextWebLinkAnnotation = new PdfTextWebLinkAnnotation(50, 40, size[0], size[1], [0, 0, 0], [165, 42, 42], 1);
+    let annotation: PdfTextWebLinkAnnotation = new PdfTextWebLinkAnnotation({x: 50, y: 40, width: size.width, height: size.height}, {r: 0, g: 0, b: 0}, {r: 165, g: 42, b: 42}, 1);
     // Initializes a new instance of the `PdfDestination` class.
     let destination: PdfDestination = new PdfDestination();
     // Sets the zoom factor.
@@ -149,23 +99,15 @@ function createPdf() {
     // Sets the mode of the destination.
     destination.mode = PdfDestinationMode.fitToPage;
     // Sets the location of the destination.
-    destination.location = [20, 20];
+    destination.location = {x: 20, y: 20};;
    // Sets the bounds of the destination.
-   destination.destinationBounds = [20, 20, 100, 50];
+   destination.destinationBounds = {x: 20, y: 20, width: 100, height: 50};
    // Sets destination to  document link annotation.
    annotation.destination = destination;
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -173,22 +115,14 @@ function createPdf() {
 The following code snippet demonstrates how to add internal document navigation to a web link annotation in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfDocumentLinkAnnotation } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
+    // Get the page
+    let page: PdfPage = document.getPage(0);
     // Access the annotation at index 0
     let annotation: PdfDocumentLinkAnnotation = document.getPage(0).annotations.at(0) as PdfDocumentLinkAnnotation;
     // Initializes a new instance of the `PdfDestination` class.
@@ -199,24 +133,16 @@ function createPdf() {
     destination.page = page;
     // Sets the mode of the destination.
     destination.mode = PdfDestinationMode.fitToPage;
-    // Sets the location of the destination.
-    destination.location = [20, 20];
+     // Sets the location of the destination.
+    destination.location = {x: 20, y: 20};;
     // Sets the bounds of the destination.
-    destination.destinationBounds = [20, 20, 100, 50];
+    destination.destinationBounds = {x: 20, y: 20, width: 100, height: 50};
     // Sets destination to  document link annotation.
     annotation.destination = destination;
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -226,42 +152,22 @@ function createPdf() {
 This example demonstrates how to create external navigation in a PDF document using `PdfFileLinkAnnotation` annotations. External navigation allows users to open and navigate to another PDF or an external file from within the current document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfFileLinkAnnotation } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Add a page
+    let page: PdfPage = document.addPage();
     // Create a new file link annotation
-    let annotation: PdfFileLinkAnnotation = new PdfFileLinkAnnotation(10, 40, 30, 30, "image.png");
+    let annotation: PdfFileLinkAnnotation = new PdfFileLinkAnnotation({x: 10, y: 40, width: 30, height: 30}, 'image.png');
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -269,40 +175,22 @@ function createPdf() {
 The following code snippet demonstrates how to add internal document navigation to a web link annotation in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfFileLinkAnnotation } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Get the first page
     let page: PdfPage = document.getPage(0) as PdfPage;
     // Create a new file link annotation
-    let annotation: PdfFileLinkAnnotation = new PdfFileLinkAnnotation(10, 40, 30, 30, "image.png");
+    let annotation: PdfFileLinkAnnotation = new PdfFileLinkAnnotation({x: 10, y: 40, width: 30, height: 30}, 'image.png');
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
