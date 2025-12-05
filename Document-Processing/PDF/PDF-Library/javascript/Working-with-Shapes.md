@@ -1,11 +1,11 @@
 ---
-title: PDF Working with EJ2 Shapes | Syncfusion
-description: This section explains how to add shapes such as Line, curve, path, text, rectangle, pie, arc, Bezier, ellipse in the EJ2 PDF document
+title: PDF Working with Shapes | Syncfusion
+description: This section explains how to add shapes such as Line, curve, path, text, rectangle, pie, arc, Bezier, ellipse in the PDF file
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with EJ2 Shapes in PDF Documents
+# Working with Shapes in PDF file
 
 Essential<sup>&reg;</sup> PDF has support for adding the below shapes.
 
@@ -21,53 +21,33 @@ Essential<sup>&reg;</sup> PDF has support for adding the below shapes.
 
 ## Adding Shapes to a PDF document
 
-Essential<sup>&reg;</sup> EJ2 PDF supports adding shapes with different types of brushes like solid bush, gradient brush, tiling brush, and image brush along with various color spaces and transparency levels.
+Essential<sup>&reg;</sup> PDF supports adding shapes with different types of brushes like solid bush, gradient brush, tiling brush, and image brush along with various color spaces and transparency levels.
 
 ### Polygon
 
 This example demonstrates how to draw a polygon shape in a PDF document using the `drawPolygon` method of the `PdfGraphics` class.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfPen } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Add a page
+    let page: PdfPage = document.addPage();
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Create a new pen
-    let pen: PdfPen = new PdfPen([0, 0, 0], 1);
+    let pen: PdfPen = new PdfPen({r: 0, g: 0, b: 0}, 1);
     // Define the polygon points
-    let points: number[][] = [[10, 100], [10, 200], [100, 100], [100, 200], [55, 150]];
+    let points: Point[] = [{x: 10, y: 100}, {x: 10, y: 200}, {x: 100, y: 100}, {x: 100, y: 200}, {x: 55, y: 150}];
     // Draw the polygon on the page graphics
     graphics.drawPolygon(points, pen);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -75,44 +55,26 @@ function createPdf() {
 The following code snippet explains how to draw a polygon in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfPen } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Create a new pen
-    let pen: PdfPen = new PdfPen([0, 0, 0], 1);
+    let pen: PdfPen = new PdfPen({r: 0, g: 0, b: 0}, 1);
     // Define the polygon points
-    let points: number[][] = [[10, 100], [10, 200], [100, 100], [100, 200], [55, 150]];
+    let points: Point[] = [{x: 10, y: 100}, {x: 10, y: 200}, {x: 100, y: 100}, {x: 100, y: 200}, {x: 55, y: 150}];
     // Draw the polygon on the page graphics
     graphics.drawPolygon(points, pen);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -122,44 +84,24 @@ function createPdf() {
 This example demonstrates how to draw a straight line in a PDF document using the `drawLine` method of the `PdfGraphics` class.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfPen } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Add a page
+    let page: PdfPage = document.addPage();
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Create a new pen
-    let pen: PdfPen = new PdfPen([0, 0, 0], 1);
+    let pen: PdfPen = new PdfPen({r: 0, g: 0, b: 0}, 1);
     // Draw a line on the page graphics
-    graphics.drawLine(pen, 10, 10, 100, 100);
+    graphics.drawLine(pen, {x: 10, y: 200}, {x: 100, y: 100});
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -167,42 +109,24 @@ function createPdf() {
 The following code snippet explains how to draw a line in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfPen } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Create a new pen
-    let pen: PdfPen = new PdfPen([0, 0, 0], 1);
+    let pen: PdfPen = new PdfPen({r: 0, g: 0, b: 0}, 1);
     // Draw a line on the page graphics
-    graphics.drawLine(pen, 10, 10, 100, 100);
+    graphics.drawLine(pen, {x: 10, y: 200}, {x: 100, y: 100});
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -212,50 +136,30 @@ function createPdf() {
 This example demonstrates how to draw a path in a PDF document using the `drawPath` method of the `PdfGraphics` class.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfPen, PdfPath } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Add a page
+    let page: PdfPage = document.addPage();
     // Create a new path
     let path: PdfPath = new PdfPath();
     // Gets the graphics of the PDF page
     let graphics: PdfGraphics = page.graphics;
     // Create a new pen
-    let pen: PdfPen = new PdfPen([0, 0, 0], 1);
+    let pen: PdfPen = new PdfPen({r: 0, g: 0, b: 0}, 1);
     // Add lines to the path
-    path.addLine(10, 100, 50, 100);
-    path.addLine(50, 100, 50, 150);
-    path.addLine(50, 150, 10, 100);
+    path.addLine({x: 10, y: 50}, {x: 200, y: 250});
+    path.addLine({x: 10, y: 150}, {x: 220, y: 250});
+    path.addLine({x: 10, y: 200}, {x: 240, y: 250});
     // Draw the path on the page graphics
     graphics.drawPath(path, pen);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -263,22 +167,12 @@ function createPdf() {
 The following code snippet explains how to draw path in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfPen, PdfPath } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new path
@@ -286,25 +180,17 @@ function createPdf() {
     // Gets the graphics of the PDF page
     let graphics: PdfGraphics = page.graphics;
     // Create a new pen
-    let pen: PdfPen = new PdfPen([0, 0, 0], 1);
+    let pen: PdfPen = new PdfPen({r: 0, g: 0, b: 0}, 1);
     // Add lines to the path
-    path.addLine(10, 100, 50, 100);
-    path.addLine(50, 100, 50, 150);
-    path.addLine(50, 150, 10, 100);
+    path.addLine({x: 10, y: 50}, {x: 200, y: 250});
+    path.addLine({x: 10, y: 150}, {x: 220, y: 250});
+    path.addLine({x: 10, y: 200}, {x: 240, y: 250});
     // Draw the path on the page graphics
     graphics.drawPath(path, pen);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -314,43 +200,24 @@ function createPdf() {
 This example demonstrates how to draw a text in a PDF document using the `drawString` method of the `PdfGraphics` class.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfStandardFont, PdfBrush } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Add a page
+    let page: PdfPage = document.addPage();
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Set font
-    let font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 10);
+    let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
     // Draw text
-    graphics.drawString('Hello World!!!', font, [70, 10, 200, 50], new PdfPen([255, 0, 0], 1), new PdfBrush([0, 0, 255]));
+    graphics.drawString('Hello World', font, {x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -358,42 +225,24 @@ function createPdf() {
 The following code snippet explains how to draw text in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfStandardFont, PdfBrush } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Set font
-    let font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 10);
+    let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
     // Draw text
-    graphics.drawString('Hello World!!!', font, [70, 10, 200, 50], new PdfPen([255, 0, 0], 1), new PdfBrush([0, 0, 255]));
+    graphics.drawString('Hello World', font, {x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -403,43 +252,24 @@ function createPdf() {
 This example demonstrates how to draw a rectangle in a PDF document using the `drawRectangle` method of the `PdfGraphics` class.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Add a page
+    let page: PdfPage = document.addPage();
     // Gets the graphics of the PDF page
     let graphics: PdfGraphics = page.graphics;
     // Create a new pen.
-    let pen: PdfPen = new PdfPen([0, 0, 0], 1);
+    let pen: PdfPen = new PdfPen({r: 0, g: 0, b: 0}, 1);
     // Draw a rectangle on the page graphics.
-    graphics.drawRectangle(10, 20, 100, 200, pen);
+    graphics.drawRectangle({x: 10, y: 20, width: 100, height: 200}, pen);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -447,42 +277,24 @@ function createPdf() {
 The following code snippet explains how to draw rectangle in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
       // Gets the graphics of the PDF page
     let graphics: PdfGraphics = page.graphics;
     // Create a new pen.
-    let pen: PdfPen = new PdfPen([0, 0, 0], 1);
+    let pen: PdfPen = new PdfPen({r: 0, g: 0, b: 0}, 1);
     // Draw a rectangle on the page graphics.
-    graphics.drawRectangle(10, 20, 100, 200, pen);
+    graphics.drawRectangle({x: 10, y: 20, width: 100, height: 200}, pen);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -492,43 +304,24 @@ function createPdf() {
 This example demonstrates how to draw a pie in a PDF document using the `drawPie` method of the `PdfGraphics` class.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Add a page
+    let page: PdfPage = document.addPage();
     // Gets the graphics of the PDF page
     let graphics: PdfGraphics = page.graphics;
     // Create a new pen
-    let pen: PdfPen = new PdfPen([0, 0, 0], 1);
+    let pen: PdfPen = new PdfPen({r: 0, g: 0, b: 0}, 1);
     // Draw a pie slice on the page graphics
-    graphics.drawPie(10, 50, 200, 200, 180, 60, pen);
+    graphics.drawPie({x: 10, y: 50, width: 200, height: 200}, 180, 60, pen);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -536,42 +329,24 @@ function createPdf() {
 The following code snippet explains how to draw pie in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Gets the graphics of the PDF page
     let graphics: PdfGraphics = page.graphics;
     // Create a new pen
-    let pen: PdfPen = new PdfPen([0, 0, 0], 1);
+    let pen: PdfPen = new PdfPen({r: 0, g: 0, b: 0}, 1);
     // Draw a pie slice on the page graphics
-    graphics.drawPie(10, 50, 200, 200, 180, 60, pen);
+    graphics.drawPie({x: 10, y: 50, width: 200, height: 200}, 180, 60, pen);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -581,43 +356,24 @@ function createPdf() {
 This example demonstrates how to draw a arc in a PDF document using the `drawArc` method of the `PdfGraphics` class.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Add a page
+    let page: PdfPage = document.addPage();
     // Gets the graphics of the PDF page
     let graphics: PdfGraphics = page.graphics;
     // Create a new pen
-    let pen: PdfPen = new PdfPen([0, 0, 0], 1);
+    let pen: PdfPen = new PdfPen({r: 0, g: 0, b: 0}, 1);
     // Draw a arc slice on the page graphics
-    graphics.drawArc(10, 20, 100, 200, 20, 30, pen);
+    graphics.drawArc({x: 10, y: 20, width: 100, height: 200}, 20, 30, pen);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -625,42 +381,24 @@ function createPdf() {
 The following code snippet explains how to draw arc in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Gets the graphics of the PDF page
     let graphics: PdfGraphics = page.graphics;
     // Create a new pen
-    let pen: PdfPen = new PdfPen([0, 0, 0], 1);
+    let pen: PdfPen = new PdfPen({r: 0, g: 0, b: 0}, 1);
     // Draw a aec slice on the page graphics
-    graphics.drawArc(10, 20, 100, 200, 20, 30, pen);
+    graphics.drawArc({x: 10, y: 20, width: 100, height: 200}, 20, 30, pen);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -670,43 +408,24 @@ function createPdf() {
 This example demonstrates how to draw a bezier in a PDF document using the `drawBezier` method of the `PdfGraphics` class.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Add a page
+    let page: PdfPage = document.addPage();
     // Gets the graphics of the PDF page
     let graphics: PdfGraphics = page.graphics;
     // Create a new pen
-    let pen: PdfPen = new PdfPen([0, 0, 0], 1);
+    let pen: PdfPen = new PdfPen({r: 0, g: 0, b: 0}, 1);
     // Draw a Bezier curve on the page graphics
-    graphics.drawBezier(50, 100, 200, 50, 100, 150, 150, 100, pen);
+    graphics.drawBezier({x: 50, y: 100}, {x: 200, y: 50}, {x: 100, y: 150}, {x: 150, y: 100}, pen);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -714,44 +433,26 @@ function createPdf() {
 The following code snippet explains how to draw bezier in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Gets the graphics of the PDF page
     let graphics: PdfGraphics = page.graphics;
     // Create a new pen
-    let pen: PdfPen = new PdfPen([0, 0, 0], 1);
+    let pen: PdfPen = new PdfPen({r: 0, g: 0, b: 0}, 1);
     // Draw a Bezier curve on the page graphics
-    graphics.drawBezier(50, 100, 200, 50, 100, 150, 150, 100, pen);
+     graphics.drawBezier({x: 50, y: 100}, {x: 200, y: 50}, {x: 100, y: 150}, {x: 150, y: 100}, pen);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
 
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
+{% enhighlight %}
 {% endtabs %}
 
 ### Ellipse
@@ -759,43 +460,24 @@ function createPdf() {
 This example demonstrates how to draw a ellipse in a PDF document using the `drawEllipse` method of the `PdfGraphics` class.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Add a page
+    let page: PdfPage = document.addPage();
     // Gets the graphics of the PDF page
     let graphics: PdfGraphics = page.graphics;
     // Create a new pen
-    let pen: PdfPen = new PdfPen([0, 0, 0], 1);
+    let pen: PdfPen = new PdfPen({r: 0, g: 0, b: 0}, 1);
     // Draw an ellipse on the page graphics
-    graphics.drawEllipse(10, 20, 100, 200, pen);
+    graphics.drawEllipse({x: 10, y: 20, width: 100, height: 200}, pen);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -803,42 +485,24 @@ function createPdf() {
 The following code snippet explains how to draw ellipse in an existing PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
+    import { PdfDocument, PdfPage, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
+    
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('Input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Gets the graphics of the PDF page
     let graphics: PdfGraphics = page.graphics;
     // Create a new pen
-    let pen: PdfPen = new PdfPen([0, 0, 0], 1);
+     let pen: PdfPen = new PdfPen({r: 0, g: 0, b: 0}, 1);
     // Draw an ellipse on the page graphics
-    graphics.drawEllipse(10, 20, 100, 200, pen);
+    graphics.drawEllipse({x: 10, y: 20, width: 100, height: 200}, pen);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}

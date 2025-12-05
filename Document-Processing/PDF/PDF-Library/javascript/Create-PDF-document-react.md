@@ -36,15 +36,15 @@ import React from 'react';
 export default function App() {
   const createPdf = () => {
         // Create a new PDF document
-        var pdf = new ej.pdf.PdfDocument();
+        let pdf = new ej.pdf.PdfDocument();
         // Add a new page
-        var page = pdf.addPage();
+        let page: ej.pdf.PdfPage = document.addPage();
         // Get graphics from the page
-        let graphics = page.graphics;
+        let graphics: ej.pdf.PdfGraphics = page.graphics;
         // Set font
-        var font = pdf.embedFont(ej.pdf.PdfFontFamily.helvetica, 36, ej.pdf.PdfFontStyle.regular);
+        let font: ej.pdf.PdfStandardFont = pdf.embedFont(ej.pdf.PdfFontFamily.helvetica, 36, ej.pdf.PdfFontStyle.regular);
         // Create a new black brush
-        var brush = new window.ej.pdf.PdfBrush({r: 0, g: 0, b: 0});
+        let brush = new ej.pdf.PdfBrush({r: 0, g: 0, b: 0});
         // Draw text
         graphics.drawString('Hello World!!!', font, {x: 20, y: 20, width: graphics.clientSize.width - 20, height: 60}, brush);
         // Save and download PDF

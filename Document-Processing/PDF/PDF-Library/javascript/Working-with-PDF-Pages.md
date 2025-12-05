@@ -1,6 +1,6 @@
 ---
 title: Working with PDF pages | Syncfusion
-description: This section explains how to add, rearrange, remove pages and detect empty pages from the PDF document
+description: This section explains how to add, rearrange, remove pages and detect empty pages from the PDF file
 platform: document-processing
 control: PDF
 documentation: UG
@@ -21,7 +21,7 @@ The following code sample demonstrates how to add a `PdfPage` to a PDF document.
     // Add a page
     let page: PdfPage = document.addPage();
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Set font
     let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
     // Draw text
@@ -54,7 +54,7 @@ The `PdfPageSettings` class is used to define properties such as margins, orient
     // Add a page
     let page: PdfPage = section.addPage();
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Set font
     let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
     // Draw text
@@ -89,7 +89,7 @@ This example demonstrates how to add sections with different page settings in a 
     // Add a page
     let page: PdfPage = document.addPage(pageSetting);
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Set font
     let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
     // Draw text
@@ -219,7 +219,7 @@ This example demonstrates how to rotate a PDF page using the `rotation` property
     // Add a page
     let page: PdfPage = document.addPage(pageSetting);
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Set font
     let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
     // Draw text
