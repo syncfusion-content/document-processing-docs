@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create or Generate PDF file in ASP.NET Core | Syncfusion
+title: Create or Generate PDF in ASP.NET Core | Syncfusion
 description: Learn how to create or generate a PDF file in ASP.NET Core applications with easy steps using Syncfusion JavaScript PDF library without depending on Adobe.
 platform: document-processing
 control: PDF
@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net core create pdf, edit pdf, merge, pdf form, fill form, digital sign, table, javascript, dotnet core pdf, asp generate pdf, aspx generate pdf
 ---
 
-# Create or Generate PDF file in ASP.NET Core
+# Create or Generate PDF in ASP.NET Core
 
 The Syncfusion<sup>&reg;</sup> JavaScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, forms, and secure PDF files.
 

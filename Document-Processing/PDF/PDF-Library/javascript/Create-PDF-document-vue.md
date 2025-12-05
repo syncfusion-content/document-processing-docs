@@ -64,15 +64,15 @@ export default {
     createPdf() {
       
   // Create a new PDF document
-  const pdf = new window.ej.pdf.PdfDocument();
+  const pdf = new ej.pdf.PdfDocument();
   // Add a new page
   const page = pdf.addPage() as PdfPage;
   // Get graphics from the page
   const graphics = page.graphics;
   // Set font (Syncfusion EJ2 API)
-  const font = new PdfStandardFont(window.ej.pdf.PdfFontFamily.helvetica, 36, window.ej.pdf.PdfFontStyle.regular);
+  const font = new PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 36, ej.pdf.PdfFontStyle.regular);
   // Create a new black brush (RGB array)
-  const brush = new window.ej.pdf.PdfBrush({r: 0, g: 0, b: 0});
+  const brush = new ej.pdf.PdfBrush({r: 0, g: 0, b: 0});
   // Draw text inside a rectangle [x, y, width, height]
   graphics.drawString('Hello World!!!', font, {x: 20, y: 20, width: graphics.clientSize.width - 20, height: 60}, brush);
   // Save and download PDF

@@ -10,9 +10,9 @@ keywords: javascript, pdf, script, react
 
 # Create or Generate PDF file in React
 
-The Syncfusion<sup>&reg;</sup> Javascript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
+The Syncfusion<sup>&reg;</sup> JavaScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
-This guide explains how to integrate the Javascript PDF library into an React application.
+This guide explains how to integrate the JavaScript PDF library into an React application.
 
 ## Add script reference
 
@@ -21,12 +21,12 @@ This guide explains how to integrate the Javascript PDF library into an React ap
 ```
 <head>
     ...
-    <!-- Syncfusion Javascript PDF Library (CDN) -->
+    <!-- Syncfusion JavaScript PDF Library (CDN) -->
     <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
 </head>
 ```
 
-**Create a PDF document** : Add the script in `App.jsx` by creating a button and attaching a click event that uses the Javascript PDF API to generate a PDF document.
+**Create a PDF document** : Add the script in `App.jsx` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}
 {% highlight c# tabtitle="~/App.jsx" %}
@@ -36,13 +36,13 @@ import React from 'react';
 export default function App() {
   const createPdf = () => {
         // Create a new PDF document
-        var pdf = new window.ej.pdf.PdfDocument();
+        var pdf = new ej.pdf.PdfDocument();
         // Add a new page
         var page = pdf.addPage();
         // Get graphics from the page
         let graphics = page.graphics;
         // Set font
-        var font = pdf.embedFont(window.ej.pdf.PdfFontFamily.helvetica, 36,window.ej.pdf.PdfFontStyle.regular);
+        var font = pdf.embedFont(ej.pdf.PdfFontFamily.helvetica, 36, ej.pdf.PdfFontStyle.regular);
         // Create a new black brush
         var brush = new window.ej.pdf.PdfBrush({r: 0, g: 0, b: 0});
         // Draw text
