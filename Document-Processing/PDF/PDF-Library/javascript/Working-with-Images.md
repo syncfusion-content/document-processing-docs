@@ -1,19 +1,19 @@
 ---
-title: Working with EJ2 Images | Syncfusion
-description: This section explains how to add and replace images in the EJ2 PDF document using Essential PDF. It supports both raster and vector images.
+title: Working with Images | Syncfusion
+description: This section explains how to add and replace images in the PDF document using Essential PDF. It supports both raster and vector images.
 platform: document-processing
 control: PDF
 documentation: UG
 domainurl: ##DomainURL##
 ---
 
-# Working with EJ2 images using various options
+# Working with images using various options
 
 Essential<sup>&reg;</sup> PDF supports both raster and vector images.
 
-Images are supported through the `PdfImage` class, which is an abstract base class that provides the common functionality for `PdfBitmap` class.
+Images are supported through the `PdfImage` class, which is an abstract base class that provides the common functionality for `PdfBitmap` class.
 
-## Inserting an EJ2 image in a new document
+## Inserting an image in a new document
 
 The following raster images are supported in Essential<sup>&reg;</sup> PDF.
 
@@ -30,44 +30,24 @@ The following raster images are supported in Essential<sup>&reg;</sup> PDF.
 This example demonstrates how to add an image to a PDF document using the `PdfBitmap` class and the `draw` method of the `PdfImage` class. The image is loaded from a file and drawn at the specified coordinates on the page.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfImage, PdfGraphics, PdfBitmap } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Add a page
+    let page: PdfPage = document.addPage();
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Load the image
-    let image: PdfImage = new PdfBitmap('Image.jpg');
+    let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
     // Draw the image.
-    image.draw(graphics, 0,0);
+      image.draw(graphics, {x: 10, y: 10});
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -77,94 +57,24 @@ function createPdf() {
 This example demonstrates how to insert an image into an existing PDF document using the `PdfBitmap` class and the `draw` method of the `PdfImage` class. The image is loaded from a file and rendered at the specified position on the selected page.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfGraphics, PdfImage, PdfBitmap } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument('input.pdf');
+    let document: PdfDocument = new PdfDocument(data, password);
     // Access first page
     let page: PdfPage = document.getPage(0);
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Load the image
-    let image: PdfImage = new PdfBitmap('Image.jpg');
+    let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
     // Draw the image.
-    image.draw(graphics, 0,0);
+      image.draw(graphics, {x: 10, y: 10});
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Image Pagination
-
-This example demonstrates how to enable image pagination in a PDF document using the `PdfLayoutFormat` class. By setting the `break` property to PdfLayoutBreakType.fitPage and the `layout` property to PdfLayoutType.paginate, the image is automatically split across multiple pages when it exceeds the page size.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
-
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
-    // Get graphics from the page
-    let graphics = page.graphics;
-    // Load the image
-    let image: PdfImage = new PdfBitmap('Image.jpg');
-    // Create a layout for drawing
-    let pageLayout: PdfLayoutFormat = new PdfLayoutFormat();
-    // Set the layout break type for drawing
-    pageLayout.break = PdfLayoutBreakType.fitPage;
-    pageLayout.Layout = PdfLayoutType.paginate;
-    // Draw the image.
-    image.draw(graphics, 20, 20, pageLayout);
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -174,49 +84,29 @@ function createPdf() {
 This example demonstrates how to apply clipping and manage graphics state in a PDF document using the `PdfGraphics` class. The `save` and `restore` methods preserve the current graphics state, while the `setClip` method defines a clipping region to restrict drawing operations, ensuring precise control over rendering.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfGraphics, PdfImage, PdfBitmap, PdfGraphicsState, PdfFillMode  } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Add a page
+    let page: PdfPage = document.addPage();
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Load the image— only the part within the clipping region will be visible
-    let image: PdfImage = new PdfBitmap('Image.jpg');
+    let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
     // Save the current graphics state (to restore later)
     let state: PdfGraphicsState = graphics.save();
-    graphics.setClip( [50, 50, 200, 100] );
+    graphics.setClip({x: 0, y: 0, width: 50, height: 12}, PdfFillMode.alternate );
     // Draw the image.
-    image.draw(graphics, 20, 20);
+    image.draw(graphics, {x: 10, y: 10});
     // Restore the graphics state to remove the clipping region
     graphics.restore(state);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
@@ -226,54 +116,34 @@ function createPdf() {
 This example demonstrates how to apply transparency and rotation to an image in a PDF document using the `PdfGraphics` class. Transparency can be controlled through the graphics state, while rotation is applied by transforming the graphics context before drawing the image, enabling advanced visual effects in the document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight c# tabtitle="TypeScript" %}
 
-// Create and render button
-let button: Button = new Button();
-button.appendTo('#normalbtn');
+    import { PdfDocument, PdfPage, PdfGraphics, PdfImage, PdfBitmap, PdfGraphicsState } from '@syncfusion/ej2-pdf';
 
-// Handle click event
-button.element.onclick = async () => {
-    console.log('Start PDF Creation');
-    createPdf();
-};
-
-// Function to create PDF
-function createPdf() {
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-    // Add a new section to the document
-    let section: PdfSection = document.addSection();
-    // Add a page to the section
-    let page: PdfPage = section.addPage();
+    // Add a page
+    let page: PdfPage = document.addPage();
     // Get graphics from the page
-    let graphics = page.graphics;
+    let graphics: PdfGraphics = page.graphics;
     // Load the image— only the part within the clipping region will be visible
-    let image: PdfImage = new PdfBitmap('Image.jpg');
+    let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
     // Save the current graphics state (to restore later)
     let state: PdfGraphicsState = graphics.save();
     //Translate the coordinate system to the  required position
-    graphics.translateTransform(20, 100);
+    graphics.translateTransform({x: 100, y: 100});
     //Apply transparency
     graphics.setTransparency(0.5);
     //Rotate the coordinate system
     graphics.rotateTransform(-45);
     // Draw the image.
-    image.draw(graphics, 20, 20);
+    image.draw(graphics,{x: 10, y: 20});
     // Restore the graphics state to remove the clipping region
     graphics.restore(state);
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
-}
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<div class="row">
-    <button id="normalbtn">Create PDF</button>
-</div>
 
 {% endhighlight %}
 {% endtabs %}
