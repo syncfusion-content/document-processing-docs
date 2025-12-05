@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Fields API in TypeScript PDF Viewer | Syncfusion
-description:  Learn How to use Form Fields API in the Syncfusion TypeScript PDF Viewer.
+description:  Learn How to use Form Fields API to enable, update, retrieve and clear in the Syncfusion TypeScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

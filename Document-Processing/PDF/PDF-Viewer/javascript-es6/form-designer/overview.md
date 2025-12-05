@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Forms in TypeScript PDF Viewer | Syncfusion
+title: Overview of Forms in TypeScript PDF Viewer Control | Syncfusion
 description: Learn what the Form Designer in Syncfusion TypeScript PDF Viewer offers, supported field types, and how the topics are organized.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Forms overview
+# Overview of Forms in TypeScript PDF Viewer
 
 Syncfusion TypeScript PDF Viewer provides a complete forms experience. Design new forms or enhance existing PDFs, fill and validate fields, import or export data, and capture signatures — all via an intuitive UI and rich APIs.
 

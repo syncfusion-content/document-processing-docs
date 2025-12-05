@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Group form fields in the TypeScript PDF Viewer component | Syncfusion
-description: Learn how to group PDF form fields in the Syncfusion TypeScript PDF Viewer by assigning the same name to multiple widgets, using both UI and programmatic approaches.
+description: Learn how to group PDF form fields in the Syncfusion TypeScript PDF Viewer by assigning the same name to multiple widgets.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add custom data to form fields in the TypeScript PDF Viewer component | Syncfusion
-description: Learn how to attach, update, and read custom metadata (customData) on PDF form fields using the Form Designer UI and APIs in the Syncfusion TypeScript PDF Viewer.
+title: Add custom data to form fields in TypeScript Pdf Viewer | Syncfusion
+description: Learn how to attach, update, and read custom Data on PDF form fields using the Form Designer UI and APIs in the Syncfusion TypeScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
