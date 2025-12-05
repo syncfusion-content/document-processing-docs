@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spell Check in Document Editor Component
+title: Spell Check in ASP.NET Core Document Editor Component | Syncfusion
 description: Learn here all about spell check in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Spell Check
@@ -17,9 +17,7 @@ Document editor supports performing spell checking for any input text. You can p
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/spell-checker/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="Spell-checker.cs" %}
-{% endhighlight %}{% endtabs %}
-
+{% endtabs %}
 
 
 ## Features
@@ -147,4 +145,4 @@ Using this option, you can open spell check dialog.
 
 ![Spell check dialog](images/spell-check-dialog.png)
 
-* Refer to the [Spell checker](https://gitea.syncfusion.com/essential-studio/ej2-documenteditor-server/) link for configuring spell checker in server-side.
+* Refer to the [Spell checker](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/tree/master/ASP.NET%20Core#steps-to-configure-spell-checker) link for configuring spell checker in server-side.
