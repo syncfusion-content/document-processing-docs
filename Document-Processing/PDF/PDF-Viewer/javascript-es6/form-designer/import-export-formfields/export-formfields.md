@@ -138,3 +138,19 @@ document.getElementById('exportObj')!.addEventListener('click', () => {
 - Export as FDF/XFDF for interoperability with other PDF tools.
 - Export as object to combine with your app state and store securely.
 - Automate exports after validation using validateFormFields.
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
+
+## See also
+
+- [Form Designer overview](../overview)
+- [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
+- [Import form fields](./import-formfields)
+- [Import Export Events](./import-export-events)
+- [Create form fields](../Create-edit-Style-del-formFields/create-formfields)
+- [Edit form fields](../Create-edit-Style-del-formFields//edit-formfields)
+- [Remove form fields](../Create-edit-Style-del-formFields//remove-formfields)
+- [Group form fields](../group-formfields)
+- [Form validation](../form-validation)
+- [Add custom data to form fields](../custom-data)
+- [Form fields API](../formfields-api)

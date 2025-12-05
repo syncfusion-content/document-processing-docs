@@ -138,3 +138,19 @@ document.getElementById('importData')!.addEventListener('click', () => {
 - Migrate data from other PDF tools using FDF/XFDF.
 - Restore user progress stored locally or on the server using object import.
 - Combine with validation to block print/download until required fields are filled.
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
+
+## See also
+
+- [Form Designer overview](../overview)
+- [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
+- [Export form fields](./export-formfields)
+- [Import Export Events](./import-export-events)
+- [Create form fields](../Create-edit-Style-del-formFields/create-formfields)
+- [Edit form fields](../Create-edit-Style-del-formFields//edit-formfields)
+- [Remove form fields](../Create-edit-Style-del-formFields//remove-formfields)
+- [Group form fields](../group-formfields)
+- [Form validation](../form-validation)
+- [Add custom data to form fields](../custom-data)
+- [Form fields API](../formfields-api)

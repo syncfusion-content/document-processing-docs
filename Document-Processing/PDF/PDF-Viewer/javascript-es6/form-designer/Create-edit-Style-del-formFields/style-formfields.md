@@ -532,3 +532,17 @@ pdfviewer.initialFieldSettings = {
   }
 };
 ```
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
+
+## See also
+
+- [Form Designer overview](../overview)
+- [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
+- [Create form fields](./create-formfields)
+- [Edit form fields](./edit-formfields)
+- [Remove form fields](./remove-formfields)
+- [Group form fields](../group-formfields)
+- [Form validation](../form-validation)
+- [Add custom data to form fields](../custom-data)
+- [Form fields API](../formfields-api)

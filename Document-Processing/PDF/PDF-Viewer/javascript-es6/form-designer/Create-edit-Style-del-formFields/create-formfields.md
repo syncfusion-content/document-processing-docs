@@ -351,3 +351,16 @@ document.getElementById('addPasswordField').addEventListener('click', function (
     //In setFormFieldModule-You can pass the required field to be added like Textbox, Checkbox etc.,
 });
 ```
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
+
+## See Also
+
+- [Form Designer overview](../overview)
+- [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
+- [Edit form fields](./edit-formfields)
+- [Style form fields](./style-formfields)
+- [Remove form fields](./remove-formfields)
+- [Group form fields](../group-formfields)
+- [Form validation](../form-validation)
+- [Form Fields API](../formfields-api)

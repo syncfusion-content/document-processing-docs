@@ -49,6 +49,7 @@ Work with the runtime form fields present in a PDF (AcroForm).
 ## See also
 
 - [Form filling](./form-filling)
+- [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
 - [Create form fields](./Create-edit-Style-del-formFields/create-formfields)
 - [Edit form fields](./Create-edit-Style-del-formFields/edit-formfields)
 - [Style form fields](./Create-edit-Style-del-formFields/style-formfields)

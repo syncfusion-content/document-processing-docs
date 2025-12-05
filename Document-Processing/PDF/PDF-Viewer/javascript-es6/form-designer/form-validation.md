@@ -78,3 +78,15 @@ pdfviewer.validateFormFields = (args: any) => {
 - The event only fires when a print or download action is invoked.
 - To perform custom checks (e.g., regex for email), iterate over pdfviewer.retrieveFormFields() and apply your own logic before triggering print or download.
 
+[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
+
+## See also
+
+- [Form Designer overview](./overview)
+- [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
+- [Create form fields](./Create-edit-Style-del-formFields/create-formfields)
+- [Edit form fields](./Create-edit-Style-del-formFields/edit-formfields)
+- [Group form fields](./group-formfields)
+- [Add custom data to form fields](./custom-data)
+- [Form Constrain](./form-constrain)
+- [Form fields API](./formfields-api)

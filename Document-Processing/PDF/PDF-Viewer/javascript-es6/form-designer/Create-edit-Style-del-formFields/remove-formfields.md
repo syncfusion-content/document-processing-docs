@@ -88,3 +88,17 @@ pdfviewer.documentLoad = () => {
 
 N> To configure the server-backed PDF Viewer, add the following `serviceUrl` in the `index.ts` file:
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
+
+## See also
+
+- [Form Designer overview](../overview)
+- [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
+- [Create form fields](./create-formfields)
+- [Edit form fields](./edit-formfields)
+- [Style form fields](./style-formfields)
+- [Group form fields](../group-formfields)
+- [Form validation](../form-validation)
+- [Add custom data to form fields](../custom-data)
+- [Form fields API](../formfields-api)
