@@ -209,7 +209,7 @@ using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, F
     using (WordDocument wordDocument = new WordDocument(inputStream, Syncfusion.DocIO.FormatType.Docx))
     {
         //Adds fallback font for basic symbols like bullet characters.
-        wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS");
+        wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS, Wingdings");
         //Adds fallback font for mathematics symbols.
         wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Mathematics, "Cambria Math, Noto Sans Math, Segoe UI Symbol, Arial Unicode MS");
         //Adds fallback font for emojis.
@@ -236,7 +236,7 @@ using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, F
 using (WordDocument wordDocument = new WordDocument("Template.docx", Syncfusion.DocIO.FormatType.Docx))
 {
    //Adds fallback font for basic symbols like bullet characters.
-   wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS");
+   wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS, Wingdings");
    //Adds fallback font for mathematics symbols.
    wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Mathematics, "Cambria Math, Noto Sans Math, Segoe UI Symbol, Arial Unicode MS");
    //Adds fallback font for emojis.
@@ -258,7 +258,7 @@ using (WordDocument wordDocument = new WordDocument("Template.docx", Syncfusion.
 'Loads an existing Word document.
 Using wordDocument As WordDocument = New WordDocument("Template.docx", FormatType.Docx)
     'Adds fallback font for basic symbols Like bullet characters.
-    wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS")
+    wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS, Wingdings")
     'Adds fallback font for mathematics symbols.
     wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Mathematics, "Cambria Math, Noto Sans Math, Segoe UI Symbol, Arial Unicode MS")
     'Adds fallback font for emojis.
@@ -789,8 +789,9 @@ Malgun Gothic, Batang
 <tr>
   <td>Symbols</td>
   <td>0x2000 - 0x27BF<br>
-  0x2300 - 0x23FF</td>
-  <td>Segoe UI Symbol, Arial Unicode MS</td>
+  0x2300 - 0x23FF<br>
+  0xF000 - 0xF104</td>
+  <td>Segoe UI Symbol, Arial Unicode MS, Wingdings</td>
 </tr>
 <tr>
   <td>Mathematics</td>

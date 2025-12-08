@@ -103,6 +103,45 @@ using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Ope
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Fallback-fonts-based-on-scripttype).
 
+## Fallback Symbols based on script type
+
+The following code example demonstrates how a user can add fallback fonts based on the script types, which Presentation considers internally when converting a PowerPoint presentation to an Image.
+
+{% tabs %}
+
+{% highlight C# tabtitle="C# [Cross-platform]" %}
+//Load the PowerPoint presentation into stream.
+using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
+{
+    //Open the existing PowerPoint presentation with loaded stream.
+    using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+    {
+        //Adds fallback font for basic symbols like bullet characters.
+        pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS, Wingdings");
+        //Adds fallback font for mathematics symbols.
+        pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Mathematics, "Cambria Math, Noto Sans Math, Segoe UI Symbol, Arial Unicode MS");
+        //Adds fallback font for emojis.
+        pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Emoji, "Segoe UI Emoji, Noto Color Emoji, Arial Unicode MS");  
+        //Initialize the PresentationRenderer to perform image conversion.
+        pptxDoc.PresentationRenderer = new PresentationRenderer();
+        //Convert PowerPoint slide to image as stream.
+        using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
+        {
+            //Reset the stream position.
+            stream.Position = 0;
+            //Create the output image file stream.
+            using (FileStream fileStreamOutput = File.Create("Output.jpg"))
+            {
+                //Copy the converted image stream into created output stream.
+                stream.CopyTo(fileStreamOutput);
+            }
+        }
+    }
+}
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Fallback fonts for range of Unicode text
 
 Users can set fallback fonts for specific Unicode range of text to be used in Presentation to Image conversion.
@@ -500,8 +539,9 @@ Malgun Gothic, Batang
 <tr>
   <td>Symbols</td>
   <td>0x2000 - 0x27BF<br>
-  0x2300 - 0x23FF</td>
-  <td>Segoe UI Symbol, Arial Unicode MS</td>
+  0x2300 - 0x23FF<br>
+  0xF000 - 0xF104</td>
+  <td>Segoe UI Symbol, Arial Unicode MS, Wingdings</td>
 </tr>
 <tr>
   <td>Mathematics</td>

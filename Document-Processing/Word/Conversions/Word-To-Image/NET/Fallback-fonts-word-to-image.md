@@ -111,6 +111,49 @@ using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, F
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Fallback-fonts-based-on-scripttype).
 
+## Fallback Symbols based on script type
+
+The following code example demonstrates how a user can add fallback fonts based on the script types, which DocIO considers internally when converting a Word document to image.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Opens the file as stream.
+using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
+{
+   //Loads an existing Word document file stream.
+   using (WordDocument wordDocument = new WordDocument(inputStream, Syncfusion.DocIO.FormatType.Docx))
+   {
+      //Adds fallback font for basic symbols like bullet characters.
+      wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS, Wingdings");
+      //Adds fallback font for mathematics symbols.
+      wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Mathematics, "Cambria Math, Noto Sans Math, Segoe UI Symbol, Arial Unicode MS");
+      //Adds fallback font for emojis.
+      wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Emoji, "Segoe UI Emoji, Noto Color Emoji, Arial Unicode MS");   
+      //Instantiation of DocIORenderer for Word to image conversion.
+      using (DocIORenderer render = new DocIORenderer())
+      {
+         //Convert the entire Word document to images.
+         Stream[] imageStreams = wordDocument.RenderAsImages(); 
+         int i = 0;
+         foreach (Stream stream in imageStreams)
+         {
+             //Reset the stream position.
+             stream.Position = 0;
+             //Save the stream as file.
+             using (FileStream fileStreamOutput = File.Create("WordToImage_" + i + ".jpeg"))
+             {
+                 stream.CopyTo(fileStreamOutput);
+             }
+             i++;
+         }
+      }
+   }
+}
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Fallback fonts for range of Unicode text
 
 Users can set fallback fonts for specific Unicode range of text to be used in Word to Image conversion.
@@ -518,8 +561,9 @@ Malgun Gothic, Batang
 <tr>
   <td>Symbols</td>
   <td>0x2000 - 0x27BF<br>
-  0x2300 - 0x23FF</td>
-  <td>Segoe UI Symbol, Arial Unicode MS</td>
+  0x2300 - 0x23FF<br>
+  0xF000 - 0xF104</td>
+  <td>Segoe UI Symbol, Arial Unicode MS, Wingdings</td>
 </tr>
 <tr>
   <td>Mathematics</td>

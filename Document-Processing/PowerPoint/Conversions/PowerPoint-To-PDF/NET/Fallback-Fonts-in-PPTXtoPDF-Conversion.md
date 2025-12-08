@@ -210,6 +210,94 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Fallback-fonts-based-on-scripttype).
 
+## Fallback Symbols based on script type
+
+The following code example demonstrates how a user can add fallback fonts based on the script types, which Presentation considers internally when converting a PowerPoint presentation to PDF.
+
+{% tabs %}
+
+{% highlight C# tabtitle="C# [Cross-platform]" %}
+//Load the PowerPoint presentation into stream.
+using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
+{
+    //Open the existing PowerPoint presentation with loaded stream.
+    using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+    {
+        //Adds fallback font for basic symbols like bullet characters.
+        pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS, Wingdings");
+        //Adds fallback font for mathematics symbols.
+        pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Mathematics, "Cambria Math, Noto Sans Math, Segoe UI Symbol, Arial Unicode MS");
+        //Adds fallback font for emojis.
+        pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Emoji, "Segoe UI Emoji, Noto Color Emoji, Arial Unicode MS");  
+        //Create the MemoryStream to save the converted PDF.
+        using (MemoryStream pdfStream = new MemoryStream())
+        {
+            //Convert the PowerPoint document to PDF document.
+            using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
+            {
+                //Save the converted PDF document to MemoryStream.
+                pdfDocument.Save(pdfStream);
+                pdfStream.Position = 0;
+            }
+            //Create the output PDF file stream.
+            using (FileStream fileStreamOutput = File.Create("Output.pdf"))
+            {
+                //Copy the converted PDF stream into created output PDF stream.
+                pdfStream.CopyTo(fileStreamOutput);
+            }
+        }
+    }
+}
+{% endhighlight %}
+
+{% highlight C# tabtitle="C# [Windows-specific]" %}
+//Opens a PowerPoint Presentation.
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Initialize the conversion settings.
+PresentationToPdfConverterSettings pdfConverterSettings = new PresentationToPdfConverterSettings();
+//Enable the portable rendering.
+pdfConverterSettings.EnablePortableRendering = true;
+//Adds fallback font for basic symbols like bullet characters.
+pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS, Wingdings");
+//Adds fallback font for mathematics symbols.
+pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Mathematics, "Cambria Math, Noto Sans Math, Segoe UI Symbol, Arial Unicode MS");
+//Adds fallback font for emojis.
+pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Emoji, "Segoe UI Emoji, Noto Color Emoji, Arial Unicode MS");  
+//Converts the PowerPoint Presentation into PDF document with Portable rendering option.
+PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc);
+//Saves the PDF document.
+pdfDocument.Save("Sample.pdf");
+//Closes the PDF document.
+pdfDocument.Close(true);
+//Closes the Presentation.
+pptxDoc.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Opens a PowerPoint Presentation.
+Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
+'Initialize the conversion settings.
+Dim pdfConverterSettings As PresentationToPdfConverterSettings = new PresentationToPdfConverterSettings()
+'Enable the portable rendering.
+pdfConverterSettings.EnablePortableRendering = true
+'Adds fallback font for basic symbols Like bullet characters.
+pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS, Wingdings")
+'Adds fallback font for mathematics symbols.
+pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Mathematics, "Cambria Math, Noto Sans Math, Segoe UI Symbol, Arial Unicode MS")
+'Adds fallback font for emojis.
+pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Emoji, "Segoe UI Emoji, Noto Color Emoji, Arial Unicode MS")
+'Converts the PowerPoint Presentation into PDF document.
+Dim pdfDocument As PdfDocument = PresentationToPdfConverter.Convert(pptxDoc)
+'Saves the PDF document.
+pdfDocument.Save("Sample.pdf")
+'Closes the PDF document.
+pdfDocument.Close(True)
+'Closes the Presentation.
+pptxDoc.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Fallback fonts for range of Unicode text
 
 Users can set fallback fonts for specific Unicode range of text to be used in presentation to PDF conversion.
@@ -726,8 +814,9 @@ Malgun Gothic, Batang
 <tr>
   <td>Symbols</td>
   <td>0x2000 - 0x27BF<br>
-  0x2300 - 0x23FF</td>
-  <td>Segoe UI Symbol, Arial Unicode MS</td>
+  0x2300 - 0x23FF<br>
+  0xF000 - 0xF104</td>
+  <td>Segoe UI Symbol, Arial Unicode MS, Wingdings</td>
 </tr>
 <tr>
   <td>Mathematics</td>
