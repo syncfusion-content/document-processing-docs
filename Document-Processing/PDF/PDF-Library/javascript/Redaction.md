@@ -16,20 +16,27 @@ Redaction permanently removes confidential or sensitive information from a PDF. 
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import { PdfDocument, PdfPage, PdfRedactionAnnotation } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfRedactionAnnotation } from '@syncfusion/ej2-pdf';
 
-    // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument(data, password);
-    // Access the first page
-    let page: PdfPage = document.getPage(0);
-    // Create a new redaction annotation
-    const annotation: PdfRedactionAnnotation = new PdfRedactionAnnotation ({x: 50, y: 100, width: 100, height: 50});
-    // Add annotation to the page
-    page.annotations.add(annotation);
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data, password);
+// Get the first page
+let page: PdfPage = document.getPage(0) as PdfPage;
+// Create a new redaction annotation
+const annot: PdfRedactionAnnotation = new PdfRedactionAnnotation(
+    { x: 100, y: 100, width: 100, height: 100 },
+    {
+        borderColor: { r: 255, g: 0, b: 0 },
+        repeatText: true,
+        font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular),
+        textColor: { r: 0, g: 0, b: 0 },
+        appearanceFillColor: { r: 255, g: 255, b: 255 }
+    }
+);
+// Add annotation to the page
+page.annotations.add(annot);
+// Destroy the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}

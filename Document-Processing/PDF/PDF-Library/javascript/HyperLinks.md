@@ -19,9 +19,9 @@ This example demonstrates how to create a web link annotation in a PDF document 
     import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, PdfFontFamily, Size, PdfTextWebLinkAnnotation, PdfFontStyle  } from '@syncfusion/ej2-pdf';
 
     // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument(data, password);
+    let document: PdfDocument = new PdfDocument();
     // Access the first page
-    let page: PdfPage = document.getPage(0);
+    let page: PdfPage = document.addPage();
     // Create a new PDF string format
     const format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.left, PdfVerticalAlignment.top);
     // Create a new standard font
@@ -76,7 +76,7 @@ This example demonstrates how to create internal navigation within a PDF documen
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, Size, PdfTextWebLinkAnnotation, PdfDestination } from '@syncfusion/ej2-pdf';
+    import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, Size, PdfDocumentLinkAnnotation, PdfDestination, PdfDestinationMode } from '@syncfusion/ej2-pdf';
 
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
@@ -89,7 +89,7 @@ This example demonstrates how to create internal navigation within a PDF documen
     // Get the text size
     let size: Size = font.measureString('Syncfusion');
     // Create a new text web link annotation
-    let annotation: PdfTextWebLinkAnnotation = new PdfTextWebLinkAnnotation({x: 50, y: 40, width: size.width, height: size.height}, {r: 0, g: 0, b: 0}, {r: 165, g: 42, b: 42}, 1);
+    let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation({x: 50, y: 40, width: size.width, height: size.height}, {r: 0, g: 0, b: 0}, {r: 165, g: 42, b: 42}, 1);
     // Initializes a new instance of the `PdfDestination` class.
     let destination: PdfDestination = new PdfDestination();
     // Sets the zoom factor.
@@ -112,7 +112,7 @@ This example demonstrates how to create internal navigation within a PDF documen
 {% endhighlight %}
 {% endtabs %}
 
-The following code snippet demonstrates how to add internal document navigation to a web link annotation in an existing PDF document.
+The following code snippet demonstrates how to add internal document navigation to a link annotation in an existing PDF document.
 
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}

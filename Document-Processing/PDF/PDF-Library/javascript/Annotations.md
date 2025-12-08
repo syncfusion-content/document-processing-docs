@@ -93,7 +93,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Creates a file link annotation
-const fileLink = new PdfFileLinkAnnotation(
+let fileLink = new PdfFileLinkAnnotation(
     { x: 100, y: 150, width: 120, height: 18 },
     'logo.png',
     {
@@ -125,7 +125,7 @@ let document: PdfDocument = new PdfDocument(data, password);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Creates a file link annotation
-const fileLink = new PdfFileLinkAnnotation(
+let fileLink = new PdfFileLinkAnnotation(
     { x: 100, y: 150, width: 120, height: 18 },
     'logo.png',
     {
@@ -159,7 +159,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create new free text annotation
-const freeText = new PdfFreeTextAnnotation({ x: 250, y: 260, width: 180, height: 80 },
+let freeText = new PdfFreeTextAnnotation({ x: 250, y: 260, width: 180, height: 80 },
     {
         text: 'Free Text with Callout',
         annotationIntent: PdfAnnotationIntent.freeTextCallout,
@@ -195,7 +195,7 @@ let document: PdfDocument = new PdfDocument(data, password);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Create new free text annotation
-const freeText = new PdfFreeTextAnnotation({ x: 250, y: 260, width: 180, height: 80 },
+let freeText = new PdfFreeTextAnnotation({ x: 250, y: 260, width: 180, height: 80 },
     {
         text: 'Free Text with Callout',
         annotationIntent: PdfAnnotationIntent.freeTextCallout,
@@ -354,20 +354,46 @@ This example demonstrates how to add an ink annotation to a PDF page using the `
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfInkAnnotation} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfInkAnnotation} from '@syncfusion/ej2-pdf';
 
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Adds a new page to the PDF
-    let page: PdfPage = document.addPage();
-    // Create a new ink annotation with the bounds and ink points
-    const annotation: PdfInkAnnotation = new PdfInkAnnotation({x: 0, y: 0, width: 300, height: 400}, [{x: 40, y: 300}, {x: 60, y: 100}, {x: 40, y: 50}, {x: 40, y: 300}]);
-    // Add annotation to the page
-    page.annotations.add(annotation);
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a new page to the PDF
+let page: PdfPage = document.addPage();
+// Create an ink annotation
+let annotation = new PdfInkAnnotation(
+    { x: 50, y: 100, width: 200, height: 150 },
+    [
+        { x: 60, y: 120 },
+        { x: 120, y: 180 },
+        { x: 200, y: 160 }
+    ],
+    {
+        text: 'Ink',
+        author: 'Syncfusion',
+        subject: 'Ink Annotation',
+        color: { r: 0, g: 0, b: 255 },
+        thickness: 2,
+        opacity: 0.8,
+        pointsCollection: [
+            [
+                { x: 60, y: 120 },
+                { x: 90, y: 130 },
+                { x: 110, y: 140 }
+            ],
+            [
+                { x: 120, y: 180 },
+                { x: 150, y: 175 }
+            ]
+        ]
+    }
+);
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -377,20 +403,46 @@ The following code snippet explains how to add a ink annotation in an existing P
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfInkAnnotation} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfInkAnnotation} from '@syncfusion/ej2-pdf';
 
-    // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument(data, password);
-    // Access the first page
-    let page: PdfPage = document.getPage(0);
-    // Create a new ink annotation with the bounds and ink points
-    const annotation: PdfInkAnnotation = new PdfInkAnnotation({x: 0, y: 0, width: 300, height: 400}, [{x: 40, y: 300}, {x: 60, y: 100}, {x: 40, y: 50}, {x: 40, y: 300}]);
-    // Add annotation to the page
-    page.annotations.add(annotation);
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data, password);
+// Access the first page
+let page: PdfPage = document.getPage(0);
+// Create an ink annotation
+let annotation = new PdfInkAnnotation(
+    { x: 50, y: 100, width: 200, height: 150 },
+    [
+        { x: 60, y: 120 },
+        { x: 120, y: 180 },
+        { x: 200, y: 160 }
+    ],
+    {
+        text: 'Ink',
+        author: 'Syncfusion',
+        subject: 'Ink Annotation',
+        color: { r: 0, g: 0, b: 255 },
+        thickness: 2,
+        opacity: 0.8,
+        pointsCollection: [
+            [
+                { x: 60, y: 120 },
+                { x: 90, y: 130 },
+                { x: 110, y: 140 }
+            ],
+            [
+                { x: 120, y: 180 },
+                { x: 150, y: 175 }
+            ]
+        ]
+    }
+);
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -402,14 +454,25 @@ This example demonstrates how to add a popup annotation to a PDF document using 
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfPopupAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfPopupAnnotation, PdfPopupIcon, PdfAnnotationState, PdfAnnotationStateModel} from '@syncfusion/ej2-pdf';
 
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
     // Adds a new page to the PDF
     let page: PdfPage = document.addPage();
     // Create a new popup annotation
-    const annotation: PdfPopupAnnotation = new PdfPopupAnnotation('Test popup annotation', {x: 10, y: 40, width: 30, height: 30});
+    let annotation = new PdfPopupAnnotation('Review this paragraph',
+    {x: 10, y: 40, width: 30, height: 30},
+    {
+      author: 'Reviewer',
+      subject: 'General',
+      color: { r: 255, g: 255, b: 0 },
+      icon: PdfPopupIcon.comment,
+      open: true,
+      state: PdfAnnotationState.accepted,
+      stateModel: PdfAnnotationStateModel.review
+    }
+    );
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -425,14 +488,24 @@ The following code snippet explains how to add a popup annotation in an existing
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfPopupAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfPopupAnnotation, PdfPopupIcon, PdfAnnotationState, PdfAnnotationStateModel} from '@syncfusion/ej2-pdf';
 
     // Load an existing PDF document
     let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
-    // Create a new popup annotation
-    const annotation: PdfPopupAnnotation = new PdfPopupAnnotation('Test popup annotation', {x: 10, y: 40, width: 30, height: 30});
+     let annotation = new PdfPopupAnnotation('Review this paragraph',
+    {x: 10, y: 40, width: 30, height: 30},
+    {
+      author: 'Reviewer',
+      subject: 'General',
+      color: { r: 255, g: 255, b: 0 },
+      icon: PdfPopupIcon.comment,
+      open: true,
+      state: PdfAnnotationState.accepted,
+      stateModel: PdfAnnotationStateModel.review
+    }
+    );
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -450,14 +523,20 @@ This example demonstrates how to add a file attachment annotation to a PDF page 
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfAttachmentAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfAttachmentAnnotation, PdfAttachmentIcon, PdfAnnotationBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
     // Adds a new page to the PDF
     let page: PdfPage = document.addPage();
     // Create a new attachment annotation
-    const annotation: PdfAttachmentAnnotation = new PdfAttachmentAnnotation({x: 300, y: 200, width: 30, height: 30}, 'Nature.jpg', imageData);
+    let annotation = new PdfAttachmentAnnotation(
+      { x: 300, y: 200, width: 30, height: 30 },
+      'Nature.jpg',
+       imageData,
+       { text: 'Attachment', icon: PdfAttachmentIcon.pushPin, color: { r: 255, g: 0, b: 0 }, opacity: 1,
+        border: new PdfAnnotationBorder({width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid})}
+    );
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -473,14 +552,20 @@ The following code snippet explains how to add a attachment annotation in an exi
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfAttachmentAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfAttachmentAnnotation, PdfAttachmentIcon, PdfAnnotationBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
     // Load an existing PDF document
     let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new attachment annotation
-    const annotation: PdfAttachmentAnnotation = new PdfAttachmentAnnotation({x: 300, y: 200, width: 30, height: 30}, 'Nature.jpg', imageData);
+    let annotation = new PdfAttachmentAnnotation(
+      { x: 300, y: 200, width: 30, height: 30 },
+      'Nature.jpg',
+       imageData,
+       { text: 'Attachment', icon: PdfAttachmentIcon.pushPin, color: { r: 255, g: 0, b: 0 }, opacity: 1,
+        border: new PdfAnnotationBorder({width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid})}
+    );
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -569,14 +654,19 @@ This example demonstrates how to add a document link annotation to a PDF page us
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfDocumentLinkAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfDocumentLinkAnnotation, PdfDestinationMode, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
     // Adds a new page to the PDF
     let page: PdfPage = document.addPage();
-    // Create a new document link annotation
-    let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation({x: 100, y: 150, width: 40, height: 60});
+    // Create new document link annotation
+    let annotation = new PdfDocumentLinkAnnotation(
+      { x: 80, y: 100, width: 120, height: 18 },
+      new PdfDestination({page , location: { x: 0, y: 0 }, mode: PdfDestinationMode.fitToPage}),
+      { color: { r: 0, g: 128, b: 0 }, opacity: 1,
+     border: new PdfAnnotationBorder({width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid})}
+    );
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -592,14 +682,19 @@ The following code snippet explains how to add a document link annotation in an 
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfDocumentLinkAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfDocumentLinkAnnotation, PdfDestinationMode, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
     // Load an existing PDF document
     let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
-    // Create a new document link annotation
-    let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation({x: 100, y: 150, width: 40, height: 60});
+    // Create new document link annotation
+    let annotation = new PdfDocumentLinkAnnotation(
+      { x: 80, y: 100, width: 120, height: 18 },
+      new PdfDestination({page , location: { x: 0, y: 0 }, mode: PdfDestinationMode.fitToPage}),
+      { color: { r: 0, g: 128, b: 0 }, opacity: 1,
+     border: new PdfAnnotationBorder({width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid})}
+    );
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -617,14 +712,21 @@ This example demonstrates how to add a redaction annotation to a PDF page using 
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfRedactionAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfRedactionAnnotation, PdfFontFamily, PdfFontStyle } from '@syncfusion/ej2-pdf';
 
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
     // Adds a new page to the PDF
     let page: PdfPage = document.addPage();
     // Create a new redaction annotation
-    const annotation: PdfRedactionAnnotation = new PdfRedactionAnnotation({x: 50, y: 100, width: 100, height: 50});
+    let annotation: PdfRedactionAnnotation = new PdfRedactionAnnotation({x: 100, y: 100, width: 100, height: 100},
+        { borderColor: {r: 255, g: 0, b: 0},
+          repeatText: true,
+          overlayText: 'Sample Overlay',
+          font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular),
+          textColor: {r: 0, g: 0, b: 0},
+          appearanceFillColor: {r: 255, g: 255, b: 255} 
+        });
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -640,14 +742,21 @@ The following code snippet explains how to add a document link annotation in an 
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfRedactionAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfRedactionAnnotation, PdfFontFamily, PdfFontStyle } from '@syncfusion/ej2-pdf';
 
     // Load an existing PDF document
     let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new redaction annotation
-    const annotation: PdfRedactionAnnotation = new PdfRedactionAnnotation({x: 50, y: 100, width: 100, height: 50});
+    let annotation: PdfRedactionAnnotation = new PdfRedactionAnnotation({x: 100, y: 100, width: 100, height: 100},
+        { borderColor: {r: 255, g: 0, b: 0},
+          repeatText: true,
+          overlayText: 'Sample Overlay',
+          font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular),
+          textColor: {r: 0, g: 0, b: 0},
+          appearanceFillColor: {r: 255, g: 255, b: 255} 
+        });
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -672,7 +781,7 @@ This example demonstrates how to add a watermark annotation to a PDF page using 
     // Adds a new page to the PDF
     let page: PdfPage = document.addPage();
     // Create a new water mark annotation
-    const annotation: PdfWatermarkAnnotation = new PdfWatermarkAnnotation('Water Mark', {x: 50, y: 100, width: 100, height: 50});
+    let annotation: PdfWatermarkAnnotation = new PdfWatermarkAnnotation('Water Mark', {x: 50, y: 100, width: 100, height: 50});
     // Set the color of the annotation
     annotation.color = {r: 0, g: 0, b: 0};
     // Add annotation to the page
@@ -697,7 +806,7 @@ The following code snippet explains how to add a watermark annotation in an exis
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new water mark annotation
-    const annotation: PdfWatermarkAnnotation = new PdfWatermarkAnnotation('Water Mark', {x: 50, y: 100, width: 100, height: 50});
+    let annotation: PdfWatermarkAnnotation = new PdfWatermarkAnnotation('Water Mark', {x: 50, y: 100, width: 100, height: 50});
     // Set the color of the annotation
     annotation.color = {r: 0, g: 0, b: 0};
     // Add annotation to the page
@@ -717,14 +826,20 @@ This example demonstrates how to add a text markup annotation to a PDF page usin
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfTextMarkupAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfTextMarkupAnnotation, PdfTextMarkupAnnotationType, PdfAnnotationBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
     // Adds a new page to the PDF
     let page: PdfPage = document.addPage();
     // Create a new text markup annotation
-    let annotation: PdfTextMarkupAnnotation = new PdfTextMarkupAnnotation('Text markup', {x: 50, y: 100, width: 100, height: 50});
+    // Create a new text markup annotation
+    let annotation = new PdfTextMarkupAnnotation('Water Mark', {x: 0, y: 0, width: 0, height: 0}, {
+       boundsCollection: [{x: 50, y: 200, width: 120, height: 14}, {x: 50, y: 215, width: 90, height: 14}],
+       textMarkupType: PdfTextMarkupAnnotationType.underline, author: 'Syncfusion', subject: 'Annotation',
+       textMarkUpColor: {r: 0, g: 128, b: 255}, innerColor: {r: 0, g: 0, b: 255}, opacity: 0.5,
+       border: new PdfAnnotationBorder({width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid})
+     });
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -740,14 +855,20 @@ The following code snippet explains how to add a text markup annotation in an ex
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfTextMarkupAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfTextMarkupAnnotation, PdfTextMarkupAnnotationType, PdfAnnotationBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
     // Load an existing PDF document
     let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new text markup annotation
-    let annotation: PdfTextMarkupAnnotation = new PdfTextMarkupAnnotation('Text markup', {x: 50, y: 100, width: 100, height: 50});
+    // Create a new text markup annotation
+    let annotation = new PdfTextMarkupAnnotation('Water Mark', {x: 0, y: 0, width: 0, height: 0}, {
+       boundsCollection: [{x: 50, y: 200, width: 120, height: 14}, {x: 50, y: 215, width: 90, height: 14}],
+       textMarkupType: PdfTextMarkupAnnotationType.underline, author: 'Syncfusion', subject: 'Annotation',
+       textMarkUpColor: {r: 0, g: 128, b: 255}, innerColor: {r: 0, g: 0, b: 255}, opacity: 0.5,
+       border: new PdfAnnotationBorder({width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid})
+     });
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -767,14 +888,20 @@ This example demonstrates how to add a rectangle annotation to a PDF page using 
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfRectangleAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfRectangleAnnotation, PdfAnnotationBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
     // Adds a new page to the PDF
     let page: PdfPage = document.addPage();
     // Create a new square annotation with bounds
-    const annotation: PdfRectangleAnnotation = new PdfRectangleAnnotation({x: 10, y: 10, width: 200, height: 100});
+    let annotation = new PdfRectangleAnnotation({ x: 50, y: 80, width: 200, height: 100 }, {
+       text: 'Rect', author: 'Syncfusion', subject: 'Rectangle Annotation',
+       color: { r: 255, g: 0, b: 0 },
+       innerColor: { r: 255, g: 240, b: 240 },
+       opacity: 0.6,
+       border: new PdfAnnotationBorder({width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid})
+    });
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -790,14 +917,20 @@ The following code snippet explains how to add a rectangle annotation in an exis
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfRectangleAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfRectangleAnnotation, PdfAnnotationBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
     // Load an existing PDF document
     let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new square annotation with bounds
-    const annotation: PdfRectangleAnnotation = new PdfRectangleAnnotation({x: 10, y: 10, width: 200, height: 100});
+    let annotation = new PdfRectangleAnnotation({ x: 50, y: 80, width: 200, height: 100 }, {
+       text: 'Rect', author: 'Syncfusion', subject: 'Rectangle Annotation',
+       color: { r: 255, g: 0, b: 0 },
+       innerColor: { r: 255, g: 240, b: 240 },
+       opacity: 0.6,
+       border: new PdfAnnotationBorder({width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid})
+    });
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -815,14 +948,22 @@ This example demonstrates how to add a polygon annotation to a PDF page using th
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfPolygonAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfPolygonAnnotation, PdfAnnotationBorder, PdfBorderStyle } from '@syncfusion/ej2-pdf';
 
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
     // Adds a new page to the PDF
     let page: PdfPage = document.addPage();
     // Create a new polygon annotation with bounds
-    const annotation: PdfPolygonAnnotation = new PdfPolygonAnnotation([{x: 100, y: 300}, {x: 150, y: 200}, {x: 300, y: 200}, {x: 350, y: 300}, {x: 300, y: 400}, {x: 150, y: 400}]);
+    let annotation = new PdfPolygonAnnotation(
+    [{ x: 100, y: 300 }, { x: 150, y: 200 }, { x: 300, y: 200 }, { x: 350, y: 300 }, { x: 300, y: 400 }, { x: 150, y: 400 }],
+       {
+         text: 'Polygon', author: 'Syncfusion', subject: 'Polygon Annotation',
+         color: { r: 0, g: 128, b: 255 },
+         innerColor: { r: 220, g: 240, b: 255 },
+         opacity: 0.7,
+         border: new PdfAnnotationBorder({width: 2, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid})
+    });
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -838,14 +979,22 @@ The following code snippet explains how to add a polygon annotation in an existi
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfPolygonAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfPolygonAnnotation, PdfAnnotationBorder, PdfBorderStyle } from '@syncfusion/ej2-pdf';
 
     // Load an existing PDF document
     let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new polygon annotation with bounds
-    const annotation: PdfPolygonAnnotation = new PdfPolygonAnnotation([{x: 100, y: 300}, {x: 150, y: 200}, {x: 300, y: 200}, {x: 350, y: 300}, {x: 300, y: 400}, {x: 150, y: 400}]);
+    let annotation = new PdfPolygonAnnotation(
+    [{ x: 100, y: 300 }, { x: 150, y: 200 }, { x: 300, y: 200 }, { x: 350, y: 300 }, { x: 300, y: 400 }, { x: 150, y: 400 }],
+       {
+         text: 'Polygon', author: 'Syncfusion', subject: 'Polygon Annotation',
+         color: { r: 0, g: 128, b: 255 },
+         innerColor: { r: 220, g: 240, b: 255 },
+         opacity: 0.7,
+         border: new PdfAnnotationBorder({width: 2, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid})
+    });
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -863,14 +1012,22 @@ This example demonstrates how to add a circle annotation to a PDF page using the
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfCircleAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfCircleAnnotation, PdfAnnotationBorder, PdfBorderStyle, PdfMeasurementUnit, PdfCircleMeasurementType} from '@syncfusion/ej2-pdf';
 
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
     // Adds a new page to the PDF
     let page: PdfPage = document.addPage();
     // Create a new circle annotation with circle bounds
-    const annotation: PdfCircleAnnotation = new PdfCircleAnnotation({x: 10, y: 10, width: 100, height: 100});
+    let annotation = new PdfCircleAnnotation({ x: 50, y: 100, width: 120, height: 120 }, {
+       text: 'Diameter',
+       author: 'Syncfusion',
+       color: {r: 255, g: 0, b: 0},
+       innerColor: {r: 255, g: 255, b: 200},
+       opacity: 0.9,
+       border: new PdfAnnotationBorder({width: 2, hRadius: 0, vRadius: 0, style: PdfBorderStyle.dashed, dash: [3, 2]}),
+       measure: { unit: PdfMeasurementUnit.centimeter, type: PdfCircleMeasurementType.diameter }
+    });
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -886,14 +1043,22 @@ The following code snippet explains how to add a circle annotation in an existin
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfCircleAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfCircleAnnotation, PdfAnnotationBorder, PdfBorderStyle, PdfMeasurementUnit, PdfCircleMeasurementType} from '@syncfusion/ej2-pdf';
 
     // Load an existing PDF document
     let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new circle annotation with circle bounds
-    const annotation: PdfCircleAnnotation = new PdfCircleAnnotation({x: 10, y: 10, width: 100, height: 100});
+    let annotation = new PdfCircleAnnotation({ x: 50, y: 100, width: 120, height: 120 }, {
+       text: 'Diameter',
+       author: 'Syncfusion',
+       color: {r: 255, g: 0, b: 0},
+       innerColor: {r: 255, g: 255, b: 200},
+       opacity: 0.9,
+       border: new PdfAnnotationBorder({width: 2, hRadius: 0, vRadius: 0, style: PdfBorderStyle.dashed, dash: [3, 2]}),
+       measure: { unit: PdfMeasurementUnit.centimeter, type: PdfCircleMeasurementType.diameter }
+    });
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -911,14 +1076,20 @@ This example demonstrates how to add an ellipse annotation to a PDF page using t
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfEllipseAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfEllipseAnnotation, PdfAnnotationBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
     // Adds a new page to the PDF
     let page: PdfPage = document.addPage();
     // Create a new ellipse annotation with bounds
-    const annotation: PdfEllipseAnnotation = new PdfEllipseAnnotation({x: 10, y: 10, width: 100, height: 100});
+    let annotation = new PdfEllipseAnnotation({ x: 80, y: 120, width: 160, height: 100 }, {
+       text: 'Ellipse', author: 'Syncfusion', subject: 'Ellipse Annotation',
+       color: {r: 0, g: 128, b: 255},
+       innerColor: {r: 220, g: 240, b: 255},
+       opacity: 0.7,
+       border: new PdfAnnotationBorder({width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid})
+    });
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -934,14 +1105,20 @@ The following code snippet explains how to add a ellipse annotation in an existi
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfPage, PdfEllipseAnnotation} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfEllipseAnnotation, PdfAnnotationBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
     // Load an existing PDF document
     let document: PdfDocument = new PdfDocument(data, password);
     // Access the first page
     let page: PdfPage = document.getPage(0);
     // Create a new ellipse annotation with bounds
-    const annotation: PdfEllipseAnnotation = new PdfEllipseAnnotation({x: 10, y: 10, width: 100, height: 100});
+    let annotation = new PdfEllipseAnnotation({ x: 80, y: 120, width: 160, height: 100 }, {
+       text: 'Ellipse', author: 'Syncfusion', subject: 'Ellipse Annotation',
+       color: {r: 0, g: 128, b: 255},
+       innerColor: {r: 220, g: 240, b: 255},
+       opacity: 0.7,
+       border: new PdfAnnotationBorder({width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid})
+    });
     // Add annotation to the page
     page.annotations.add(annotation);
     // Save the document
@@ -954,7 +1131,7 @@ The following code snippet explains how to add a ellipse annotation in an existi
 
 ## Measurement Annotations
 
-This example demonstrates how to access a measurement annotation from a PDF page using the PdfLineAnnotation class. A measurement annotation allows defining and displaying dimensions such as distances or lengths within a PDF document.
+This example demonstrates how to access a measurement annotation from a PDF page using the `PdfLineAnnotation` class. A measurement annotation allows defining and displaying dimensions such as distances or lengths within a PDF document.
 
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
@@ -992,8 +1169,10 @@ This example demonstrates how to modify an existing annotation in a PDF page usi
     let page: PdfPage = document.getPage(0);
     // Get the first annotation of the page
     let annotation: PdfPopupAnnotation = page.annotations.at(0) as PdfPopupAnnotation;
-    // Gets the boolean flag indicating whether annotation has open or not.
-    let open: boolean =  annotation.open;
+    // Modified its properties
+    annotation.text ='Popup annotation';
+    annotation.color = {r: 0, g: 128, b: 255};
+    annotation.opacity = 0.5;
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -1034,15 +1213,17 @@ This example demonstrates how to flatten annotations in a PDF document using the
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfLineAnnotation} from '@syncfusion/ej2-pdf';
 
     // Load an existing PDF document
     let document: PdfDocument = new PdfDocument(data, password);
-    // Flatten PDF annotations and form fields
-    document.flatten = true;    
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
+    // Get the first page
+    let page: PdfPage = document.getPage(0) as PdfPage;
+    // Get the first annotation of the page
+    let annotation: PdfLineAnnotation = page.annotations.at(0) as PdfLineAnnotation;
+    // Sets the boolean flag indicating whether the annotation have been flattened or not.
+    annotation.flatten = true;
+    // Destroy the document
     document.destroy();
 
 {% endhighlight %}

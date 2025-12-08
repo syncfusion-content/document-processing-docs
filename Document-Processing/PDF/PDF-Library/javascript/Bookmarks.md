@@ -16,10 +16,12 @@ This example demonstrates how to add bookmarks to a PDF document using the `PdfB
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfBookmarkBase, PdfDestination} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfBookmarkBase, PdfDestination} from '@syncfusion/ej2-pdf';
 
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
+    // Add page
+    let page: PdfPage = document.addPage();
     // Get the bookmarks
     let bookmarks: PdfBookmarkBase = document.bookmarks;
     // Add a new outline to the PDF document
@@ -41,10 +43,12 @@ This example demonstrates how to add bookmarks to an existing PDF document using
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-    import {PdfDocument, PdfBookmarkBase, PdfDestination} from '@syncfusion/ej2-pdf';
+    import {PdfDocument, PdfPage, PdfBookmarkBase, PdfDestination} from '@syncfusion/ej2-pdf';
 
     // Load an existing PDF document
     let document: PdfDocument = new PdfDocument(data, password);
+    // Get page
+    let page: PdfPage = document.getPage(0);
     // Get the bookmarks
     let bookmarks: PdfBookmarkBase = document.bookmarks;
     // Gets the bookmark at the specified index
@@ -75,7 +79,7 @@ This example demonstrates how to insert bookmarks at a specific position in an e
     // Get the bookmarks
     let bookmarks: PdfBookmarkBase = document.bookmarks;
     // Add a new outline to the PDF document
-    let bookmark: PdfBookmark = bookmarks.add('Introduction');
+    let bookmark: PdfBookmark = bookmarks.add('Introduction', 1);
     // Sets destination to the bookmark
     bookmark.destination = new PdfDestination(page, {x: 100, y: 200});
     // Save the document
@@ -88,8 +92,7 @@ This example demonstrates how to insert bookmarks at a specific position in an e
 
 ## Removing Bookmarks from an existing PDF 
 
-This example demonstrates how to remove bookmarks from an existing PDF document using the `PdfBookmark` class. Removing bookmarks helps clean up unnecessary navigation links.
-
+This example demonstrates how to remove bookmarks from an existing PDF document using the `PdfBookmark` class.
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
@@ -111,6 +114,58 @@ This example demonstrates how to remove bookmarks from an existing PDF document 
 {% endhighlight %}
 {% endtabs %}
 
+## Removing Bookmark from the document at the specified index
+
+This example demonstrates how to remove bookmarks from the document at the specific index using the `PdfBookmark` class.
+
+{% tabs %}
+{% highlight c# tabtitle="TypeScript" %}
+
+    import {PdfDocument, PdfPage, PdfBookmarkBase, PdfDestination} from '@syncfusion/ej2-pdf';
+
+    // Load an existing PDF document
+    let document: PdfDocument = new PdfDocument(data, password);
+    // Get the first page
+    let page: PdfPage = document.getPage(0) as PdfPage;
+    // Get the bookmarks
+    let bookmarks: PdfBookmarkBase = document.bookmarks;
+    // Remove the bookmark from the document at the index 1.
+    bookmarks.remove(1);
+    // Sets destination to the bookmark
+    bookmark.destination = new PdfDestination(page, {x: 10, 10});
+    // Save the document
+    document.save('Output.pdf');
+    // Close the document
+    document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Removing all the Bookmark from the collection
+
+This example demonstrates how to removes all the bookmarks from the collection using the `PdfBookmark` class.
+
+{% tabs %}
+{% highlight c# tabtitle="TypeScript" %}
+
+    import {PdfDocument, PdfPage, PdfBookmarkBase} from '@syncfusion/ej2-pdf';
+
+    // Load an existing PDF document
+    let document: PdfDocument = new PdfDocument(data, password);
+    // Get the bookmarks
+    let bookmarks: PdfBookmarkBase = document.bookmarks;
+    // Remove all the bookmark from the collection.
+    bookmarks.clear();
+    // Get count after removal of all outlines.
+    let count: number = bookmarks.count;
+    // Save the document
+    document.save('Output.pdf');
+    // Destroy the document
+    document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Bookmark page index in an existing PDF document
 
 This example demonstrates how to retrieve the page index associated with a bookmark in an existing PDF document using the `PdfBookmark` class. This helps identify the exact location of the bookmark.
@@ -125,7 +180,7 @@ This example demonstrates how to retrieve the page index associated with a bookm
     // Get bookmarks
     let bookmarks: PdfBookmarkBase = document.bookmarks;
     // Get bookmark at the specified index
-    let bookmark: PdfBookmark = bookmarks.at(0) as PdfBookmark;
+    let pageIndex: number = bookmarks.destination.pageIndex;
     // Save the document
     document.save('Output.pdf');
     // Close the document

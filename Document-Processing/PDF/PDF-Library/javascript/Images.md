@@ -42,7 +42,7 @@ This example demonstrates how to add an image to a PDF document using the `PdfBi
     // Load the image
     let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
     // Draw the image.
-      image.draw(graphics, {x: 10, y: 10});
+    image.draw(graphics, {x: 10, y: 10});
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -69,7 +69,7 @@ This example demonstrates how to insert an image into an existing PDF document u
     // Load the image
     let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
     // Draw the image.
-      image.draw(graphics, {x: 10, y: 10});
+    image.draw(graphics, {x: 10, y: 10});
     // Save the document
     document.save('Output.pdf');
     // Close the document

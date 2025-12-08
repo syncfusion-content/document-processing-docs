@@ -149,8 +149,8 @@ This example demonstrates how to import pages from an existing PDF document into
     // Load an existing PDF document
 	let document: PdfDocument = new PdfDocument(data, password);
     // Define start and end page indices
-    const startIndex = 0;
-    const endIndex = document.pageCount - 1;
+    let startIndex = 0;
+    let endIndex = document.pageCount - 1;
     // Import all pages from the loaded document into the new document
     document.importPageRange(document, startIndex, endIndex);
     // Save the new document

@@ -32,6 +32,29 @@ This example demonstrates how to extract text from a PDF page using the `PdfData
 {% endhighlight %}
 {% endtabs %}
 
+## Extract Text from Specific Page Range in a PDF Document
+
+This example demonstrates how to extract text from a PDF document by specifying a start and end page number. This approach allows you to retrieve text content from a defined range of pages for processing or analysis.
+
+{% tabs %}
+{% highlight c# tabtitle="TypeScript" %}
+
+    import { PdfDocument, string, PdfDataExtractor } from '@syncfusion/ej2-pdf';
+
+    // Load an existing PDF document
+    let document: PdfDocument = new PdfDocument(data, password);
+    // Initialize a new instance of the `PdfDataExtractor` class
+    let extractor: PdfDataExtractor = new PdfDataExtractor(document);
+    // Extract text content from the PDF document.
+    let text: string = extractor.extractText({ startPageIndex: 0, endPageIndex: document.pageCount - 1 });
+    // Save the document
+    document.save('Output.pdf');
+    // Close the document
+    document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Working with layout based text extraction
 
 This example demonstrates how to extract text from a PDF page using the `PdfDataExtractor` class with layout-based options.
@@ -73,7 +96,7 @@ This example demonstrates how to extract text from a PDF page based on individua
     // Initialize a new instance of the `PdfDataExtractor` class
     let extractor: PdfDataExtractor = new PdfDataExtractor(document);
     // Extracts text from the PDF Page based on its line
-    let textCollection: TextLine[] = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: 0 });
+    let textCollection: TextLine[] = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount - 1});
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -106,10 +129,10 @@ This example demonstrates how to extract words from a PDF document using the `ex
     // Get the page corresponding to the current text line
     page = document.getPage(textCollection[i].pageIndex);
     // Retrieve all words from the current text line
-    const wordCollection: TextWord[] = textCollection[i].words;
+    let wordCollection: TextWord[] = textCollection[i].words;
     // Iterate through each word in the line
     for (let j: number = 0; j < wordCollection.length; j++) {
-        const word: TextWord = wordCollection[j];
+        let word: TextWord = wordCollection[j];
         if (word) {
             // Iterate through each glyph (character shape) in the word
             for (let k: number = 0; k < word.glyphs.length; k++) {
@@ -158,10 +181,10 @@ This example demonstrates how to access individual characters from a PDF documen
     // Get the page corresponding to the current text line
     page = document.getPage(textCollection[i].pageIndex);
     // Retrieve all words from the current text line
-    const wordCollection: TextWord[] = textCollection[i].words;
+    let wordCollection: TextWord[] = textCollection[i].words;
     // Iterate through each word in the line
     for (let j: number = 0; j < wordCollection.length; j++) {
-        const word: TextWord = wordCollection[j];
+        let word: TextWord = wordCollection[j];
         if (word) {
             // Iterate through each glyph (character shape) in the word
             for (let k: number = 0; k < word.glyphs.length; k++) {

@@ -354,18 +354,30 @@ This example demonstrates how to add a signature field to a PDF document using t
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-import {PdfDocument, PdfPage, PdfForm, PdfSignatureField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, PdfInteractiveBorder} from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
-// Access the PDF form
-let form: PdfForm = document.form;
-// Create a new signature field
-let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', {x: 10, y: 10, width: 100, height: 50});
-// Add the field into PDF form
-form.add(field);
+// Add the signature field into PDF form
+document.form.add(
+    new PdfSignatureField(
+        page,
+        'ApprovalSignature',
+        { x: 50, y: 260, width: 200, height: 40 },
+        {
+            toolTip: 'Sign here',
+            color: { r: 0, g: 0, b: 0 },
+            backColor: { r: 255, g: 255, b: 255 },
+            borderColor: { r: 0, g: 0, b: 0 },
+            border: new PdfInteractiveBorder({
+                width: 1,
+                style: PdfBorderStyle.solid
+            })
+        }
+    )
+);
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -379,18 +391,30 @@ The following code snippet explains how to add a popup annotation in an existing
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-import {PdfDocument, PdfPage, PdfForm, PdfSignatureField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, PdfInteractiveBorder} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data, password);
 // Access the first page
 let page: PdfPage = document.getPage(0);
-// Access the PDF form
-let form: PdfForm = document.form;
-// Create a new signature field
-let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', {x: 10, y: 10, width: 100, height: 50});
-// Add the field into PDF form
-form.add(field);
+// Add the signature field into PDF form
+document.form.add(
+    new PdfSignatureField(
+        page,
+        'ApprovalSignature',
+        { x: 50, y: 260, width: 200, height: 40 },
+        {
+            toolTip: 'Sign here',
+            color: { r: 0, g: 0, b: 0 },
+            backColor: { r: 255, g: 255, b: 255 },
+            borderColor: { r: 0, g: 0, b: 0 },
+            border: new PdfInteractiveBorder({
+                width: 1,
+                style: PdfBorderStyle.solid
+            })
+        }
+    )
+);
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -406,22 +430,37 @@ This example demonstrates how to add a button field to a PDF document using the 
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-import {PdfDocument, PdfPage, PdfForm, PdfButtonField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfForm, PdfButtonField, PdfHighlightMode, PdfBorderStyle, PdfInteractiveBorder} from '@syncfusion/ej2-pdf';
 
-// Create a new PDF document
+/ Create a new PDF document
 let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
-// Access the PDF form
-let form: PdfForm = document.form;
-// Create a new button field
-let field: PdfButtonField = new PdfButtonField(page , 'Button1', {x: 100, y: 40, width: 100, height: 20});
-// Add the field into PDF form
-form.add(field);
+// Add a button field into the PDF form
+document.form.add(
+    new PdfButtonField(
+        page,
+        'Submit',
+        { x: 50, y: 560, width: 120, height: 28 },
+        {
+            toolTip: 'Submit form',
+            color: { r: 255, g: 255, b: 255 },
+            backColor: { r: 0, g: 122, b: 204 },
+            borderColor: { r: 0, g: 0, b: 0 },
+            border: new PdfInteractiveBorder({
+                width: 1,
+                style: PdfBorderStyle.solid
+            }),
+            text: 'Submit',
+            highlightMode: PdfHighlightMode.push
+        }
+    )
+);
 // Save the document
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -431,18 +470,32 @@ The following code snippet explains how to add a popup annotation in an existing
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
 
-import {PdfDocument, PdfPage, PdfForm, PdfButtonField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfForm, PdfButtonField, PdfHighlightMode, PdfBorderStyle, PdfInteractiveBorder} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data, password);
 // Access the first page
 let page: PdfPage = document.getPage(0);
-// Access the PDF form
-let form: PdfForm = document.form;
-// Create a new button field
-let field: PdfButtonField = new PdfButtonField(page , 'Button1', {x: 100, y: 40, width: 100, height: 20});
-// Add the field into PDF form
-form.add(field);
+// Add a button field into the PDF form
+document.form.add(
+    new PdfButtonField(
+        page,
+        'Submit',
+        { x: 50, y: 560, width: 120, height: 28 },
+        {
+            toolTip: 'Submit form',
+            color: { r: 255, g: 255, b: 255 },
+            backColor: { r: 0, g: 122, b: 204 },
+            borderColor: { r: 0, g: 0, b: 0 },
+            border: new PdfInteractiveBorder({
+                width: 1,
+                style: PdfBorderStyle.solid
+            }),
+            text: 'Submit',
+            highlightMode: PdfHighlightMode.push
+        }
+    )
+);
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -472,6 +525,8 @@ This example demonstrates how to fill a text box field in a PDF document using t
     let field: PdfTextBoxField = document.form.fieldAt(0) as PdfTextBoxField;
     // Sets the text value to text box field
     field.text = 'Syncfusion';
+    // Sets the text alignment of form field as center
+    field.textAlignment = PdfTextAlignment.center;
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -497,6 +552,8 @@ This example demonstrates how to fill a combo box field in a PDF document using 
     let field: PdfComboBoxField = document.form.fieldAt(0) as PdfComboBoxField;
     // Sets the selected index
     field.selectedIndex = 2;
+    // Sets the flag indicates whether the list box allows multiple selections.
+    field.multiSelect = true;
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -522,6 +579,8 @@ This example demonstrates how to fill a radio button field in a PDF document usi
     let field: PdfRadioButtonListField = document.form.fieldAt(0) as PdfRadioButtonListField;
     // Sets the selected index
     field.selectedIndex = 2;
+    // Added tool tip
+    field.toolTip = 'Radio button';
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -547,6 +606,8 @@ This example demonstrates how to fill a list box field in a PDF document using t
     let field: PdfListBoxField = document.form.fieldAt(2) as PdfListBoxField;
     // Sets the selected index
     field.selectedIndex = 2;
+    // Added tool tip
+    field.toolTip = 'ListBox Fields';
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -572,6 +633,8 @@ This example demonstrates how to fill a check box field in a PDF document using 
     let field: PdfCheckBoxField = document.form.fieldAt(2) as PdfCheckBoxField;
     // Sets the tooltip value
     field.toolTip = 'Checked';
+    // Added tool tip
+    field.toolTip = 'CheckBox Fields';
     // Save the document
     document.save('Output.pdf');
     // Close the document
@@ -592,30 +655,14 @@ This example demonstrates how to fill a signature field in a PDF document using 
 
     // Load an existing PDF document
     let document: PdfDocument = new PdfDocument(data, password);
-    // Gets the first page of the document
+    // Access the first page
     let page: PdfPage = document.getPage(0);
-    // Access the PDF form
-    let form: PdfForm = document.form;
-    // Create a new signature field
-    let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
-    // Define a callback function used for external signing
-    const externalSignatureCallback = (data: Uint8Array,
-                                        options: {
-                                         algorithm: DigestAlgorithm,
-                                         cryptographicStandard: CryptographicStandard,
-                                         }): {signedData: Uint8Array, timestampData?: Uint8Array}  => {
-        // Implement external signing logic here
-        return new Uint8Array(); // Placeholder return
-    };
-    // Create a new signature using external signing
-    const signature: PdfSignature = PdfSignature.create(externalSignatureCallback, {
-         cryptographicStandard: CryptographicStandard.cms,
-         algorithm: DigestAlgorithm.sha256
-    });
-    // Sets the signature to the field
-    field.setSignature(signature);
-    // Add the field into PDF form
-    form.add(field);
+    // Access checkbox field
+    let field: PdfSignatureField = document.form.fieldAt(2) as PdfSignatureField;
+    // // Set custom value
+    field.setValue('Author', 'John');
+    // Added tool tip
+    field.toolTip = 'CheckBox Fields';
     // Save the document
     document.save('Output.pdf');
     // Close the document

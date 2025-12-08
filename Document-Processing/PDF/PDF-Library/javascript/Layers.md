@@ -93,11 +93,10 @@ let layers = document.layers;
 let layer = layers.add('Layer1');
 // Create graphics for 'Layer1'
 let graphics = layer.createGraphics(page);
-// Add two child layers
-let childLayer1 = layer.layers.add('ChildLayer1');
-let childLayer2 = layer.layers.add('ChildLayer2');
+// Add one child layers
+let childLayer1 = layer.layers.add('ChildLayer2');
 // Create graphics for 'ChildLayer2'
-graphics = childLayer2.createGraphics(page);
+graphics = childLayer1.createGraphics(page);
 // Apply translation transform
 graphics.translateTransform({ x: 100, y: 60 });
 // Create a black pen
@@ -107,7 +106,6 @@ graphics.drawLine(pen, { x: 200, y: 10 }, { x: 300, y: 100 });
 // Save and destroy the document
 document.save('Output.pdf');
 document.destroy();
-
 
 {% endhighlight %}
 {% endtabs %}

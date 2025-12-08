@@ -23,7 +23,7 @@ This example demonstrates how to create a new PDF template using the `PdfTemplat
     // Add a page
     let page: PdfPage = document.addPage();
     // Create a new rubber stamp annotation
-    const annotation: PdfRubberStampAnnotation = new PdfRubberStampAnnotation ({x: 50, y: 100, width: 100, height: 50});
+    let annotation: PdfRubberStampAnnotation = new PdfRubberStampAnnotation ({x: 50, y: 100, width: 100, height: 50});
     // Get the normal appearance of the annotation
     let normalAppearance: PdfTemplate = annotation.appearance.normal;
     // Create new image object by using JPEG image data as Base64 string format
@@ -54,7 +54,7 @@ This example demonstrates how to create templates from an existing PDF document 
     // Get the first page
     let page: PdfPage = document.getPage(0) as PdfPage;
     // Create a new rubber stamp annotation
-    const annotation: PdfRubberStampAnnotation = new PdfRubberStampAnnotation ({x: 50, y: 100, width: 100, height: 50});
+    let annotation: PdfRubberStampAnnotation = new PdfRubberStampAnnotation ({x: 50, y: 100, width: 100, height: 50});
     // Get the normal appearance of the annotation
     let normalAppearance: PdfTemplate = annotation.appearance.normal;
     // Create new image object by using JPEG image data as Base64 string format
