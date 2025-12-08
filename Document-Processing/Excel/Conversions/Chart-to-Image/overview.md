@@ -245,9 +245,9 @@ N> From the above supported chart types table, Line_3D charts are not supported 
 
 N> Only embedded charts are supported in chart to image conversion. Chart sheets are not supported.
 
-N> Waterfall charts are supported in both .NET Framework and .NET Core platforms.
+N> Waterfall charts are supported in both .NET Framework and .NET Core platforms for chart to image conversion.
 
-N> Pie of Pie, Sunburst, Box and Whisker, and Treemap charts are supported only in .NET Core platforms.
+N> Pie of Pie, Sunburst, Box and Whisker, and Treemap charts are supported only in .NET Core platforms for chart to image conversion.
 
 ## Supported chart elements
 XlsIO supports the following chart elements in image conversion:
