@@ -1,11 +1,13 @@
 ---
-title: Working with PDF Document | Syncfusion
-description: This section explains how to set document Settings and properties to the PDF file using Essential PDF
+title: PDF Document | Syncfusion
+description: This section explains how to set document settings and properties in a PDF file by using the TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with PDF Document
+# PDF Document
+
+Essential<sup>&reg;</sup> PDF provides support to create, read, and manipulate PDF documents, allowing you to generate high-quality, secure, and feature-rich PDF files programmatically.
 
 ## Adding the document settings
 

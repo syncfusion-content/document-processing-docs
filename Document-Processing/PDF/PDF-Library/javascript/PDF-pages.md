@@ -1,11 +1,13 @@
 ---
-title: Working with PDF pages | Syncfusion
-description: This section explains how to add, rearrange, remove pages and detect empty pages from the PDF file
+title: PDF pages | Syncfusion
+description: This section explains how to add, rearrange, remove pages, and detect empty pages in a PDF file by using the TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with PDF Pages
+# PDF Pages
+
+Essential<sup>&reg;</sup> PDF provides support to add, remove, rearrange, and detect empty pages in PDF documents, enabling complete control over page management for creating dynamic and customized PDFs.
 
 ## Adding a new page to the document
 

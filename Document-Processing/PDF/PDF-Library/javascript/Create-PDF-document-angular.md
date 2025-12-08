@@ -35,10 +35,24 @@ cd my-app
 ```
 ## Create a PDF document using TypeScript
 
-* Add a simple button to `main.ts` and attach a click handler that uses the TypeScript PDF API to create a new PDF document.
+* **Add script reference** : Add the required scripts using the CDN inside the `<head>` of `src/index.cshtml` as follows:
 
 {% tabs %}
-{% highlight ts tabtitle="main.ts" %}
+{% highlight c# tabtitle="index.html" %}
+
+<head>
+    ...
+    <!-- Syncfusion JavaScript PDF Library (CDN) -->
+    <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+* Add a simple button to `app.component.html` and attach a click handler that uses the TypeScript PDF API to create a new PDF document.
+
+{% tabs %}
+{% highlight ts tabtitle="app.component.html" %}
 
 <html>
   <head>

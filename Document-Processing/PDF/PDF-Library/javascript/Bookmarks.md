@@ -1,11 +1,11 @@
 ---
-title: Working with Bookmarks | PDF library | Syncfusion
+title: Bookmarks | Syncfusion
 description: This section explains how to add, modify and remove bookmarks in the PDF document by using TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Bookmarks
+# Bookmarks
 
 Essential<sup>&reg;</sup> PDF provides support to insert, remove and modify the bookmarks in the PDF Document.
 

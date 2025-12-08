@@ -1,11 +1,11 @@
 ---
-title: Working with Forms | Syncfusion
-description: This section explains how to create, fill, modify, read only and flatten form fields in the  PDF document
+title: Form Fields | Syncfusion
+description: This section explains how to create a digital signature in the PDF document by using the TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with PDF Forms
+# Form Fields
 
 An interactive form, sometimes referred to as an AcroForm is a collection of fields for gathering information. A PDF document can contain any number of fields appearing on any combination of pages, all of that make a single, globally interactive form spanning the entire document.
 

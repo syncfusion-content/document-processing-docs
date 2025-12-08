@@ -1,11 +1,11 @@
 ---
-title: Working with PDF file templates | Syncfusion
-description: This section explains how to create a PDF template is a drawing surface, where contents can be added using PDF library.
+title: PDF Templates | Syncfusion
+description: This section explains how to create a PDF template, which is a drawing surface where contents can be added, by using the TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with PDF Templates 
+# PDF Templates 
 
 A PDF template is a drawing surface, where contents can be added. All the elements that can be added to a PdfPage is supported in PdfTemplate as well. The template in turn can be drawn over the page or can be positioned at any part of the page.
 

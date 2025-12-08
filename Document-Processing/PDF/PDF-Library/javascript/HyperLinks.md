@@ -1,13 +1,13 @@
 ---
-title: Working with Hyperlinks | Syncfusion
-description: This section explains how to add hyperlink in a new and existing PDF document using Syncfusion PDF library 
+title: Hyperlinks | Syncfusion
+description: This section explains how to add a hyperlink in a new or existing PDF document by using the TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Hyperlinks in PDF
+# Hyperlinks
 
-In PDF, hyperlinks can be added to allow the users to navigate to another part of PDF file, web page or any other external content. Essential<sup>&reg;</sup> PDF provides support for all these types of hyperlink.
+In PDF, hyperlinks can be added to allow the users to navigate to another part of PDF file, web page or any other external content.
 
 ## Working with Web navigation
 

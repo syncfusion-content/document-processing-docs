@@ -1,12 +1,12 @@
 ---
-title: Working with Layers | Syncfusion
-description: This section explains adding the layer in the PDF document and the layers refers to section of Content of PDF document
+title: Layers | Syncfusion
+description: This section explains how to add a layer in a PDF document by using the TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working  with Layers 
+# Layers 
 
 Layers, also known as Option Content refers to sections of content in a PDF document that can be selectively viewed or hidden by document authors or consumers. This capability is useful in items such as CAD drawings, layered artwork, maps, and multi-language documents.
 
@@ -146,7 +146,7 @@ This example demonstrates how to lock or unlock layers in a PDF document using t
 
     // Create a new PDF document
     let document: PdfDocument = new PdfDocument();
-   // Add a new section to the document
+    // Add a new section to the document
     let section: PdfSection = document.addSection();
     // Add a page to the section
     let page: PdfPage = section.addPage();

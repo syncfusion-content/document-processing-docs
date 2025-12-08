@@ -1,13 +1,12 @@
 ---
-title: Working with Images | Syncfusion
-description: This section explains how to add and replace images in the PDF document using Essential PDF. It supports both raster and vector images.
+title: Images | Syncfusion
+description: This section explains how to add and replace images in a PDF document by using the TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
-domainurl: ##DomainURL##
 ---
 
-# Working with images using various options
+# Images
 
 Essential<sup>&reg;</sup> PDF supports both raster and vector images.
 
