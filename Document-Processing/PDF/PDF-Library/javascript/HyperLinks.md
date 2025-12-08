@@ -1,11 +1,11 @@
 ---
-title: Hyperlinks | Syncfusion
+title: Hyperlinks in TypeScript PDF library | Syncfusion
 description: This section explains how to add a hyperlink in a new or existing PDF document by using the TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Hyperlinks
+# Hyperlinks in TypeScript PDF library
 
 In PDF, hyperlinks can be added to allow the users to navigate to another part of PDF file, web page or any other external content.
 

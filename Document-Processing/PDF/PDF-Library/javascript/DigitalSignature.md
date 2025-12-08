@@ -1,11 +1,11 @@
 ---
-title: Digital Signature | Syncfusion
+title: Digital Signature in TypeScript PDF library | Syncfusion
 description: This section explains how to create a digital signature in the PDF document by using TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Digital Signature
+# Digital Signature in TypeScript PDF library
 
 Essential<sup>&reg;</sup> PDF provides support to create, validate, and manage digital signatures in PDF documents, ensuring authenticity, integrity, and security.
 

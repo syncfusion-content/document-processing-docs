@@ -1,11 +1,11 @@
 ---
-title: Text | Syncfusion
+title: Text in TypeScript PDF library | Syncfusion
 description: This section explains how to add text to a PDF by using different types of fonts, including TrueType fonts and standard fonts, with the TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Text
+# Text in TypeScript PDF library
 
 Essential<sup>&reg;</sup> PDF provides support to add and format text in PDF documents using various font types, including TrueType and standard fonts, enabling precise control over text appearance and layout.
 

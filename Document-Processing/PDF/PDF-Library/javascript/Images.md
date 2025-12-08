@@ -1,12 +1,12 @@
 ---
-title: Images | Syncfusion
+title: Images in TypeScript PDF library | Syncfusion
 description: This section explains how to add and replace images in a PDF document by using the TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Images
+# Images in TypeScript PDF library
 
 Essential<sup>&reg;</sup> PDF supports both raster and vector images.
 

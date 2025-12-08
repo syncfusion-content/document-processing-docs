@@ -1,11 +1,11 @@
 ---
-title: Shapes | Syncfusion
+title: Shapes in TypeScript PDF library | Syncfusion
 description: This section explains how to add shapes such as lines, curves, paths, text, rectangles, pies, arcs, Beziers, and ellipses by using the TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Shapes
+# Shapes in TypeScript PDF library
 
 Essential<sup>&reg;</sup> PDF has support for adding the below shapes.
 

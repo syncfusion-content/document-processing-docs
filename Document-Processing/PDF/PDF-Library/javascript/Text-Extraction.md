@@ -1,11 +1,11 @@
 ---
-title: Text Extraction | Syncfusion
+title: Text Extraction in TypeScript PDF library | Syncfusion
 description: This section explains how to extract text and its bounds from a specific page or the entire PDF document by using the TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Text Extraction
+# Text Extraction in TypeScript PDF library
 
 Essential<sup>&reg;</sup> PDF allows you to extract the text from a particular page or the entire PDF document. 
 

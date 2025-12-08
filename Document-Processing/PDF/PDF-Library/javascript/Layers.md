@@ -1,12 +1,12 @@
 ---
-title: Layers | Syncfusion
-description: This section explains how to add a layer in a PDF document by using the TypeScript PDF library
+title: Layers in TypeScript PDF library | Syncfusion
+description: This section explains how to add a layer in a PDF document using the TypeScript PDF library to organize content and enhance document structure
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Layers 
+# Layers in TypeScript PDF library
 
 Layers, also known as Option Content refers to sections of content in a PDF document that can be selectively viewed or hidden by document authors or consumers. This capability is useful in items such as CAD drawings, layered artwork, maps, and multi-language documents.
 

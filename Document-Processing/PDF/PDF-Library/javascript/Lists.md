@@ -1,12 +1,12 @@
 ---
-title: Lists | Syncfusion
-description: This section explains how to work with lists in a PDF document by using the TypeScript PDF library
+title: Lists in TypeScript PDF library | Syncfusion
+description: This section explains how to work with lists in a PDF document using the TypeScript PDF library to display and manage items in a structured format
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Lists
+# Lists in TypeScript PDF library
 
 The Syncfusion<sup>&reg;</sup> PDF allows you list the content in ordered and unordered list. The ordered list can be number or alphabets and the unordered list can be bullets, circles, and images.
 

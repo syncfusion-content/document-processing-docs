@@ -1,11 +1,11 @@
 ---
-title: Redaction |Syncfusion
+title: Redaction in TypeScript PDF library |Syncfusion
 description: This section explains how to redact content from an existing PDF document by using the TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Redaction
+# Redaction in TypeScript PDF library
 
 Redacting a PDF is the process of permanently removing sensitive or confidential information from PDF documents. Syncfusion<sup>&reg;</sup> PDF library provides an easy way to redact PDF documents. 
 

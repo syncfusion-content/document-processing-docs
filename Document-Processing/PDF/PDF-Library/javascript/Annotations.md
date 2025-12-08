@@ -1,11 +1,11 @@
 ---
-title: Annotations | Syncfusion
+title: Annotation in TypeScript PDF library | Syncfusion
 description: This section explains how to create, modify or remove different type of interactive Annotation by using TypeScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Annotations
+# Annotation in TypeScript PDF library
 
 Syncfusion<sup>&reg;</sup> JavaScript PDF library provides support for interactive annotations. You can add, delete and modify the annotation from the PDF documents.
 
