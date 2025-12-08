@@ -183,7 +183,9 @@ Line
 <td>
 * Line<br/>
 * Line_Markers<br/>
-* Line_3D
+* Line_3D<br/>
+* Stacked_Line<br/>
+* Stacked_Line_Markers
 </td>
 </tr>
 <tr>
@@ -194,7 +196,8 @@ Pie
 * Pie<br/>
 * Pie_Exploded<br/>
 * Pie_3D<br/>
-* Pie_Exploded_3D
+* Pie_Exploded_3D<br/>
+* PieOfPie
 </td>
 </tr>
 <tr>
@@ -225,7 +228,9 @@ Stock
 </td>
 <td>
 * Stock_HighLowClose<br/>
-* Stock_OpenHighLowClose
+* Stock_OpenHighLowClose<br/>
+* Stock_VolumeOpenHighLowClose<br/>
+* Stock_VolumeHighLowClose
 </td>
 </tr>
 <tr>
@@ -233,13 +238,24 @@ Stock
 Excel 2016 Charts
 </td>
 <td>
-* Funnel<br/>* Waterfall<br/>* Histogram<br/>* Pareto<br/></td>
+* Funnel<br/>
+* Waterfall<br/>
+* Histogram<br/>
+* Pareto<br/>
+* Sunburst<br/>
+* Box and Whisker<br/>
+* Treemap
+</td>
 </tr>
 </table>
 
-N> From the above supported chart types table, Waterfall and Line_3D charts are not supported in chart to image conversion in .NET Standard 2.0 onwards.
+N> From the above supported chart types table, Line_3D charts are not supported in chart to image conversion in .NET Standard 2.0 onwards.
 
 N> Only embedded charts are supported in chart to image conversion. Chart sheets are not supported.
+
+N> Waterfall charts are supported in both .NET Framework and .NET Core platforms.
+
+N> Pie of Pie, Sunburst, Box and Whisker, and Treemap charts are supported only in .NET Core platforms.
 
 ## Supported chart elements
 XlsIO supports the following chart elements in image conversion:
