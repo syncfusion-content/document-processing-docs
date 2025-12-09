@@ -987,6 +987,27 @@ Essential<sup>&reg;</sup> PDF supports JBIG2 compression for best compression of
 
 Refer the below code snippet to draw a single frame monochrome TIFF image with JBIG2 compression using [EncodingType](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Graphics.EncodingType.html) Enum.
 
+<table border="1">
+<th style="font-size:14px" width="100px">Encoding Type</th>
+<th style="font-size:14px">Image Type</th>
+<th style="font-size:14px">Compression Applied</th>
+<tr>
+    <td>Default</td>
+    <td>All images</td>
+    <td>Applies <b>Deflate (DEFLATE)</b> compression to monochrome, grayscale, and color images.</td>
+</tr>
+<tr>
+    <td>Default</td>
+    <td>TIFF images</td>
+    <td>Monochrome TIFF images use <b>CCITT Group 4 (CCITT4)</b> compression by default.</td>
+</tr>
+<tr>
+    <td>JBIG2</td>
+    <td>All images</td>
+    <td>Supported only in lossy mode and only for single-frame TIFF images.</td>
+</tr>
+</table>
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
