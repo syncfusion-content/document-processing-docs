@@ -24,9 +24,7 @@ For WPF, WinForms and MVC, Pdfium folder structure will be generated as below,
 
 ![Folder Structure](PDFium_images/folder-structure.png)
 
-For ASP .NET Core and Blazor, Pdfium folder structure will be generated as below,
-
-![Folder Structure](PDFium_images/folder-structure-cross-platform.png)
+N> For Syncfusion.PdfToImageConverter.Net and Syncfusion.PdfToImageConverter.Net.Core NuGet packages, Extractions of Pdfium will not occur.
 
 N> When you include PdfToImageConverter via a NuGet package, PDFium assemblies will automatically be generated in the application's output path folder from the NuGet package during compilation
 

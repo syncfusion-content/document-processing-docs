@@ -30,7 +30,7 @@ Step 2:  In configuration windows, name your project and select Next.
 ![Configuration window1](Asp.Net.Core_images/aspnetcore2.png)
 ![Configuration window2](Asp.Net.Core_images/aspnetcore3.png)
 
-Step 3:  Install [Syncfusion.PdfToImageConverter.Net](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.Net/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 3:  Install [Syncfusion.PdfToImageConverter.Net.Core](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.Net.Core/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
 N> If you want to use the PdfToImageConverter in the Linux environment, you need to install the [SkiaSharp.NativeAssets.Linux v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1) NuGet package as reference to your applications from [NuGet.org](https://www.nuget.org/).
 
