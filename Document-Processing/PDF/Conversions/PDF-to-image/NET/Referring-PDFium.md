@@ -24,13 +24,13 @@ For WPF, WinForms and MVC, Pdfium folder structure will be generated as below,
 
 ![Folder Structure](PDFium_images/folder-structure.png)
 
-N> For Syncfusion.PdfToImageConverter.Net and Syncfusion.PdfToImageConverter.Net.Core NuGet packages, Extractions of Pdfium will not occur.
+N> For Syncfusion.PdfToImageConverter.Net and Syncfusion.PdfToImageConverter.Net.Core NuGet packages, Extractions of PDFium will not occur.
 
 N> When you include PdfToImageConverter via a NuGet package, PDFium assemblies will automatically be generated in the application's output path folder from the NuGet package during compilation
 
 ## How to run PDFium in a restricted access environment
 
-If there is any access restriction applied to the application output folder, then the Syncfusion&reg; Pdf To Image Converter cannot able to extract and consume the PDFium engine.
+If there is any access restriction applied to the application output folder, then the Syncfusion&reg; PDF To Image Converter cannot able to extract and consume the PDFium engine.
 
 In that situation, you need to add the following steps to consume the PDFium.
 
