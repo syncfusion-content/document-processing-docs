@@ -249,11 +249,9 @@ Excel 2016 Charts
 </tr>
 </table>
 
-N> From the above supported chart types table, Line_3D charts are not supported in chart to image conversion in .NET Standard 2.0 onwards.
+N> From the above supported chart types table, Line_3D charts are not supported in chart to image conversion in .NET Core platforms.
 
-N> Only embedded charts are supported in chart to image conversion. Chart sheets are not supported.
-
-N> Waterfall charts are supported in both .NET Framework and .NET Core platforms for chart to image conversion.
+N> Only embedded charts are supported in chart to image conversion. The Chart sheets are not supported.
 
 N> Pie of Pie, Sunburst, Box and Whisker, and Treemap charts are supported only in .NET Core platforms for chart to image conversion.
 
