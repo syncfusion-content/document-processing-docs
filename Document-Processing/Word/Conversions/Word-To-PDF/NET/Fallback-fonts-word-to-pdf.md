@@ -197,7 +197,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Fallback Symbols based on script type
 
-The following code example demonstrates how a user can add fallback fonts based on the script types, which DocIO considers internally when converting a Word document to PDF.
+The following code example demonstrates **how a user can add fallback fonts for Symbols and Emojis**, which DocIO considers internally when converting a Word document to PDF.
 
 {% tabs %}
 
