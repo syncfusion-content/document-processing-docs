@@ -105,7 +105,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Fallback Symbols based on script type
 
-The following code example demonstrates **how a user can add fallback fonts for Symbols and Emojis**, which Presentation considers internally when converting a PowerPoint presentation to an Image.
+The following code example demonstrates how a user can add fallback fonts for Symbols and Emojis, which Presentation considers internally when converting a PowerPoint presentation to an Image.
 
 {% tabs %}
 
