@@ -46,3 +46,7 @@ imageConverter.ReferencePath = @"D:\ThirdPartyBinaries\";
 
 {% endhighlight %}
 {% endtabs %}
+
+N> For Syncfusion.PdfToImageConverter.Net and Syncfusion.PdfToImageConverter.Net.Core NuGet packages, Extractions of PDFium will not occur.
+
+N> When you include PdfToImageConverter via a NuGet package, PDFium assemblies will automatically be generated in the application's output path folder from the NuGet package during compilation
