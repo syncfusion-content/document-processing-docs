@@ -993,7 +993,7 @@ Refer the below code snippet to draw a single frame monochrome TIFF image with J
 <th style="font-size:14px">Compression Applied</th>
 <tr>
     <td>Default</td>
-    <td>All images</td>
+    <td>Non-TIFF images</td>
     <td>Applies <b>Deflate (DEFLATE)</b> compression to monochrome, grayscale, and color images.</td>
 </tr>
 <tr>
@@ -1003,7 +1003,7 @@ Refer the below code snippet to draw a single frame monochrome TIFF image with J
 </tr>
 <tr>
     <td>JBIG2</td>
-    <td>All images</td>
+    <td>Monochrome (bi-level)</td>
     <td>Supported only in lossy mode and only for single-frame TIFF images.</td>
 </tr>
 </table>
