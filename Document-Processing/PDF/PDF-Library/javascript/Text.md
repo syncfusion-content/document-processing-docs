@@ -242,7 +242,7 @@ document.destroy();
 
 ### Draw text using CJK fonts
 
-This example demonstrates how to draw text using fonts in a PDF document by utilizing the `drawString` method of the `PdfGraphics` class along with a `PdfCjkStandardFont` instance. CJK fonts provide support for Chinese, Japanese, and Korean characters, ensuring accurate rendering of multilingual text in the document.
+This example demonstrates how to draw text using fonts in a PDF document by utilizing the `drawString` method of the `PdfGraphics` class along with a `PdfCjkStandardFont` instance. The fonts provide support for Chinese, Japanese, and Korean characters, ensuring accurate rendering of multilingual text in the document.
 
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
