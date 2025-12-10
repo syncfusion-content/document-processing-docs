@@ -1593,7 +1593,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to add different margin on different pages in PDF document
 
-The following example shows how to create multiple sections that use different margin sizes and then save the PDF entirely in memory.  
+Essential<sup>&reg;</sup> PDF supports adding sections with different page settings like [Margins](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Margins). You can add sections to a PDF document by using the [PdfSection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfSection.html) available in [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) instance and create page settings to the ``PdfSection`` using the [PageSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfSection.html#Syncfusion_Pdf_PdfSection_PageSettings) property. 
+
+The following code snippet explains how to create multiple sections that use different margin.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
