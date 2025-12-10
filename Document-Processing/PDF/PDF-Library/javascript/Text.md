@@ -1,13 +1,13 @@
 ---
-title: Text in TypeScript PDF library | Syncfusion
-description: This section explains how to add text to a PDF by using different types of fonts, including TrueType fonts and standard fonts, with the TypeScript PDF library
+title: Text in JavaScript PDF library | Syncfusion
+description: This section explains how to add text to a PDF by using different types of fonts, including TrueType fonts and standard fonts, with the JavaScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Text in TypeScript PDF library
+# Text in JavaScript PDF library
 
-Essential<sup>&reg;</sup> PDF provides support to add and format text in PDF documents using various font types, including TrueType and standard fonts, enabling precise control over text appearance and layout.
+The PDF provides support to add and format text in PDF documents using various font types, including TrueType and standard fonts, enabling precise control over text appearance and layout.
 
 ## Drawing text in a new document
 
@@ -32,6 +32,24 @@ This example demonstrates how to draw text in a new PDF document using the `draw
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Get graphics from the page
+var graphics = page.graphics;
+// Set font
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+// Draw text
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -67,6 +85,28 @@ This example demonstrates the importance of saving and restoring the graphics st
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Get graphics from the page
+var graphics = page.graphics;
+// Save the current graphics state and apply transformations
+graphics.save();
+graphics.translateTransform({ x: 100, y: 50 });
+graphics.rotateTransform(45);
+// Set font
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+// Draw text
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 ## Drawing text in an existing document
@@ -92,11 +132,27 @@ This example demonstrates how to draw text in an existing PDF document using the
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Access first page
+var page = document.getPage(0);
+// Set font
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+// Draw text
+page.graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 ## Drawing text using different fonts
 
-Essential<sup>&reg;</sup> PDF allows you to add text to the PDF document using the following types of fonts.
+JavaScript PDF allows you to add text to the PDF document using the following types of fonts.
 
 1. Standard fonts
 2. TrueType fonts
@@ -125,6 +181,22 @@ This example demonstrates how to draw text using standard fonts in a PDF documen
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Set font
+var font = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 10);
+// Draw text
+page.graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 ### Draw Text using TrueType fonts
@@ -148,6 +220,22 @@ This example demonstrates how to draw text using TrueType fonts in a PDF documen
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Set font
+var font = new ej.pdf.PdfTrueTypeFont('Arial.ttf', 10);
+// Draw text
+page.graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -175,6 +263,22 @@ This example demonstrates how to draw text using fonts in a PDF document by util
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Set font
+var font = new ej.pdf.PdfCjkStandardFont(ej.pdf.PdfCjkFontFamily.heiseiMinchoW3, 10);
+// Draw text
+page.graphics.drawString('こんにちは世界', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 ## Drawing text using OpenType font
@@ -191,13 +295,29 @@ This example demonstrates how to draw text using an OpenType font in a PDF docum
     // Add a page
     let page: PdfPage = document.addPage();
     // Set font
-    let font: PdfTrueTypeFont = new PdfTrueTypeFont("Arial.otf", 10);
+    let font: PdfTrueTypeFont = new PdfTrueTypeFont('Arial.otf', 10);
     // Draw text
-    page.graphics.drawString('Syncfusion Essential PDF library used to create, read, and edit PDF files in any application', font, {x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
+    page.graphics.drawString('Syncfusion JavaScript PDF library used to create, read, and edit PDF files in any application', font, {x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Set font
+var font = new ej.pdf.PdfTrueTypeFont('Arial.otf', 10);
+// Draw text
+page.graphics.drawString('Syncfusion JavaScript PDF library used to create, read, and edit PDF files in any application', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -223,11 +343,32 @@ This example demonstrates how to draw text in a PDF document using different tex
     // Set font
     let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
     // Draw text
-    page.graphics.drawString('Syncfusion Essential PDF library', font, {x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
+    page.graphics.drawString('Syncfusion JavaScript PDF library', font, {x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
     // Save the document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Create a string format object to define text layout
+var format = new ej.pdf.PdfStringFormat();
+format.alignment = ej.pdf.PdfTextAlignment.right; // Align text to the right
+format.wordSpacing = 2; // Set word spacing
+format.characterSpacing = 1; // Set character spacing
+// Set font
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+// Draw text
+page.graphics.drawString('Syncfusion JavaScript PDF library', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }), format);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -261,6 +402,28 @@ This example demonstrates how to draw text in a PDF document using different tex
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Set font
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+// Create a new PdfStringFormat and set its properties
+var format = new ej.pdf.PdfStringFormat();
+// Set no clip
+format.noClip = true;
+// Set line limit
+format.lineLimit = false;
+// Draw text
+page.graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }), format);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
