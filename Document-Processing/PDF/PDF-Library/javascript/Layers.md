@@ -1,16 +1,16 @@
 ---
-title: Layers in TypeScript PDF library | Syncfusion
-description: This section explains how to add a layer in a PDF document using the TypeScript PDF library to organize content and enhance document structure
+title: Layers in JavaScript PDF library | Syncfusion
+description: This section explains how to add a layer in a PDF document using the JavaScript PDF library to organize content and enhance document structure
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Layers in TypeScript PDF library
+# Layers in JavaScript PDF library
 
 Layers, also known as Option Content refers to sections of content in a PDF document that can be selectively viewed or hidden by document authors or consumers. This capability is useful in items such as CAD drawings, layered artwork, maps, and multi-language documents.
 
-Essential<sup>&reg;</sup> PDF provides support to create, add and merge the layers into PDF document.
+JavaScript PDF provides support to create, add and merge the layers into PDF document.
 
 ## Adding Layers in a PDF document
 
@@ -43,6 +43,29 @@ This example demonstrates how to add layers to a PDF document using the `PdfLaye
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Access the collection of layers in the PDF document
+var layers = document.layers;
+// Add a new layer named 'Layer1' to the PDF document
+var layer = layers.add('Layer1');
+// Create a graphics object for the newly added layer on the specified page
+var graphics = layer.createGraphics(page);
+// Translate the graphics origin to the specified coordinates (x: 100, y: 60)
+graphics.translateTransform({ x: 100, y: 60 });
+// Create a black pen with a thickness of 1 unit
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Draw a line using the pen from point (200, 10) to point (300, 100)
+graphics.drawLine(pen, { x: 200, y: 10 }, { x: 300, y: 100 });
+// Save the document
+document.save('Output.pdf');
+// Close the document
+ document.destroy();
+{% endhighlight %}
 {% endtabs %}
 
 ## Adding annotation to layer
@@ -70,6 +93,26 @@ This example demonstrates how to add an annotation to a specific layer in a PDF 
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Access the first page
+var page = document.getPage(0);
+// Access the collection of layers in the document
+var layers = document.layers;
+// Add a new layer to the document with the name 'Layer1'
+var layer = layers.add('Layer1');
+// Access the first annotation on the page
+var annotation = page.annotations.at(0);
+// Assign the layer to the annotation
+annotation.layer = layer;
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -108,6 +151,33 @@ document.save('Output.pdf');
 document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Get the collection of layers
+var layers = document.layers;
+// Add a new layer named 'Layer1'
+var layer = layers.add('Layer1');
+// Create graphics for 'Layer1'
+var graphics = layer.createGraphics(page);
+// Add one child layer
+var childLayer1 = layer.layers.add('ChildLayer2');
+// Create graphics for 'ChildLayer2'
+graphics = childLayer1.createGraphics(page);
+// Apply translation transform
+graphics.translateTransform({ x: 100, y: 60 });
+// Create a black pen
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Draw a line
+graphics.drawLine(pen, { x: 200, y: 10 }, { x: 300, y: 100 });
+// Save and destroy the document
+document.save('Output.pdf');
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 ## Removing layers from an existing PDF document
@@ -129,6 +199,20 @@ This example demonstrates how to remove layers from an existing PDF document usi
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Get the layer collection.
+var layers = document.layers;
+// Remove the layer
+layers.removeAt(0);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -166,6 +250,34 @@ This example demonstrates how to lock or unlock layers in a PDF document using t
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a new section to the document
+var section = document.addSection();
+// Add a page to the section
+var page = section.addPage();
+// Access the collection of layers in the PDF document
+var layers = document.layers;
+// Add a new layer named 'Layer1' to the PDF document
+var layer = layers.add('Layer1');
+// Create a graphics object for the newly added layer on the specified page
+var graphics = layer.createGraphics(page);
+// Set a lock state
+layer.locked = true;
+// Translate the graphics origin to the specified coordinates (x: 100, y: 60)
+graphics.translateTransform({ x: 100, y: 60 });
+// Create a black pen with a thickness of 1 unit
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Draw a line using the pen from point (200, 10) to point (300, 100)
+graphics.drawLine(pen, { x: 200, y: 10 }, { x: 300, y: 100 });
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}

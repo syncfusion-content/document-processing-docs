@@ -10,13 +10,13 @@ keywords: javascript, pdf, script
 
 # Create or Generate PDF file in JavaScript
 
-The Essential JS 2 for JavaScript (global script) is an ES5 formatted pure JavaScript framework which can be directly used in latest web browsers.
+The Syncfusion<sup>&reg;</sup> JS 2 for JavaScript (global script) is an ES5 formatted pure JavaScript framework which can be directly used in latest web browsers.
 
 ## Component Initialization with CDN link for script and style reference
 
-**Step 1:** Create an app folder `my-app` for the Essential JS 2 JavaScript components.
+**Step 1:** Create an app folder `my-app` for the JS 2 JavaScript components.
 
-**Step 2:** The Essential JS 2 component's global scripts and styles are already hosted in the below CDN link formats.
+**Step 2:** The JS 2 component's global scripts and styles are already hosted in the below CDN link formats.
 
 **Syntax:**
 > Script: `https://cdn.syncfusion.com/ej2/{Version}/dist/{PACKAGE_NAME}.min.js`
@@ -57,15 +57,15 @@ The Essential JS 2 for JavaScript (global script) is an ES5 formatted pure JavaS
      <script>
          document.getElementById('btnCreatePdf').addEventListener('click', function () {
         // Create a new PDF document
-        let pdf = new ej.pdf.PdfDocument();
+        var pdf = new ej.pdf.PdfDocument();
         // Add a new page
-        let page: ej.pdf.PdfPage = document.addPage();
+        var page = document.addPage();
         // Get graphics from the page
-        let graphics: ej.pdf.PdfGraphics = page.graphics;
+        var graphics = page.graphics;
         // Set font
-        let font: ej.pdf.PdfStandardFont = pdf.embedFont(ej.pdf.PdfFontFamily.helvetica, 36, ej.pdf.PdfFontStyle.regular);
+        var font = pdf.embedFont(ej.pdf.PdfFontFamily.helvetica, 36, ej.pdf.PdfFontStyle.regular);
         // Create a new black brush
-        let brush = new ej.pdf.PdfBrush({r: 0, g: 0, b: 0});
+        var brush = new ej.pdf.PdfBrush({r: 0, g: 0, b: 0});
         // Draw text
         graphics.drawString('Hello World!!!', font, {x: 20, y: 20, width: graphics.clientSize.width - 20, height: 60}, brush);
         // Save and download PDF

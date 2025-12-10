@@ -1,18 +1,18 @@
 ---
 layout: post
 title: Create or Generate PDF file in Angular | Syncfusion
-description: Learn how to create a PDF file in Angular with easy steps using Syncfusion TypeScript PDF library without depending on Adobe
+description: Learn how to create a PDF file in Angular with easy steps using Syncfusion JavaScript PDF library without depending on Adobe
 platform: document-processing
 control: PDF
 documentation: ug
-keywords: angular create pdf, angular generate pdf, angular pdf library, ej2 pdf angular, TypeScript
+keywords: angular create pdf, angular generate pdf, angular pdf library, ej2 pdf angular, JavaScript
 ---
 
 # Create or Generate PDF file in Angular application
 
-The Syncfusion<sup>&reg;</sup> TypeScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
+The Syncfusion<sup>&reg;</sup> JavaScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
-This guide explains how to integrate the TypeScript PDF library into an Angular application.
+This guide explains how to integrate the JavaScript PDF library into an Angular application.
 
 ## Setup Angular Environment
 
@@ -34,20 +34,6 @@ ng new my-app
 cd my-app
 ```
 ## Create a PDF document using TypeScript
-
-* **Add script reference** : Add the required scripts using the CDN inside the `<head>` of `src/index.cshtml` as follows:
-
-{% tabs %}
-{% highlight c# tabtitle="index.html" %}
-
-<head>
-    ...
-    <!-- Syncfusion JavaScript PDF Library (CDN) -->
-    <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
-</head>
-
-{% endhighlight %}
-{% endtabs %}
 
 * Add a simple button to `app.component.html` and attach a click handler that uses the TypeScript PDF API to create a new PDF document.
 

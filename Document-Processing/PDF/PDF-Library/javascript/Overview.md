@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Overview of the TypeScript PDF Library Component | Syncfusion
-description: Learn about the Syncfusion TypeScript PDF library component, its key capabilities, and supported platforms.
+title: Overview of the JavaScript PDF Library Component | Syncfusion
+description: Learn about the Syncfusion JavaScript PDF library component, its key capabilities, and supported platforms.
 platform: document-processing
 control: PDF
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overview of the TypeScript PDF library control 
+# Overview of the JavaScript PDF library control 
 
-The Essential<sup>&reg;</sup> TypeScript PDF Library is a powerful, high-performance, non-UI solution built natively in TypeScript. It provides seamless integration of advanced PDF functionalities into applications developed with TypeScript, JavaScript, Angular, React, Vue, ASP.NET Core, and ASP.NET MVC. With this library, you can easily read, create, and manipulate PDF documents—without relying on Adobe Acrobat.
+The JavaScript PDF Library is a powerful, high-performance, non-UI solution. It provides seamless integration of advanced PDF functionalities into applications developed with TypeScript, JavaScript, Angular, React, Vue, ASP.NET Core, and ASP.NET MVC. With this library, you can easily read, create, and manipulate PDF documents—without relying on Adobe Acrobat.
 
 ## Key features
 

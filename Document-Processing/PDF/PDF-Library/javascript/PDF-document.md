@@ -1,13 +1,13 @@
 ---
-title: Document in TypeScript PDF library | Syncfusion
-description: This section explains how to set document settings and properties in a PDF file by using the TypeScript PDF library
+title: Document in JavaScript PDF library | Syncfusion
+description: This section explains how to set document settings and properties in a PDF file by using the JavaScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Document in TypeScript PDF library
+# Document in JavaScript PDF library
 
-Essential<sup>&reg;</sup> PDF provides support to create, read, and manipulate PDF documents, allowing you to generate high-quality, secure, and feature-rich PDF files programmatically.
+The PDF provides support to create, read, and manipulate PDF documents, allowing you to generate high-quality, secure, and feature-rich PDF files programmatically.
 
 ## Adding the document settings
 
@@ -25,7 +25,7 @@ This example shows how to configure custom page settings before adding a page to
     // Sets the margins
     pageSettings.margins = new PdfMargins(40);
     // Sets the page size
-    pageSettings.size ={width: 595, height: 842};;
+    pageSettings.size ={width: 595, height: 842};
     // Sets the page orientation
     pageSettings.orientation = PdfPageOrientation.landscape;
     // Add a page
@@ -41,6 +41,32 @@ This example shows how to configure custom page settings before adding a page to
     // Close the document
     document.destroy();
  
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Create a new PDF page settings instance
+var pageSettings = new ej.pdf.PdfPageSettings();
+// Sets the margins
+pageSettings.margins = new ej.pdf.PdfMargins(40);
+// Sets the page size
+pageSettings.size = { width: 595, height: 842 };
+// Sets the page orientation
+pageSettings.orientation = ej.pdf.PdfPageOrientation.landscape;
+// Add a page
+var page = document.addPage(pageSettings);
+// Get graphics from the page
+var graphics = page.graphics;
+// Set font
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+// Draw text
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -60,7 +86,7 @@ This example demonstrates how to create a section in a PDF document with custom 
     settings.rotation = PdfRotationAngle.angle180;
     settings.orientation = PdfPageOrientation.landscape;  
     settings.margins = new PdfMargins(40);               
-    settings.size = {width: 595, height: 842};;                       
+    settings.size = {width: 595, height: 842};                    
     // Add a section to the document with the specified settings
     let section: PdfSection = document.addSection(settings);
     // Add a page
@@ -76,6 +102,31 @@ This example demonstrates how to create a section in a PDF document with custom 
     // Close the document
     document.destroy();
  
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Define page settings
+var settings = new ej.pdf.PdfPageSettings();
+settings.rotation = ej.pdf.PdfRotationAngle.angle180;
+settings.orientation = ej.pdf.PdfPageOrientation.landscape;
+settings.margins = new ej.pdf.PdfMargins(40);
+settings.size = { width: 595, height: 842 };
+// Add a section to the document with the specified settings
+var section = document.addSection(settings);
+// Add a page
+var page = section.addPage();
+// Get graphics from the page
+var graphics = page.graphics;
+// Set font
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+// Draw text
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
@@ -97,8 +148,8 @@ This example demonstrates how to create a PDF document, set its metadata propert
     documentProperties.author = "John Doe";                 // Author name
     documentProperties.subject = "PDF Metadata Example";    // Subject of the document
     documentProperties.keywords = "PDF, Metadata, Example"; // Keywords for search
-    documentProperties.creator = "Syncfusion PDF Library";  // Application that created the PDF
-    documentProperties.producer = "Syncfusion PDF Engine";  // PDF producer
+    documentProperties.creator = "JavaScript PDF Library";  // Application that created the PDF
+    documentProperties.producer = "JavaScript PDF Engine";  // PDF producer
     documentProperties.language = "en-US";                  // Language of the document
     documentProperties.creationDate = new Date();           // Creation date
     documentProperties.modificationDate = new Date();       // Last modified date
@@ -115,6 +166,36 @@ This example demonstrates how to create a PDF document, set its metadata propert
     // Close the document
     document.destroy();
  
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a PDF document
+var document = new ej.pdf.PdfDocument();
+// Access the document information (metadata)
+var documentProperties = document.getDocumentInformation();
+// Set document properties
+documentProperties.title = "Sample PDF Document";        // Title of the PDF
+documentProperties.author = "John Doe";                 // Author name
+documentProperties.subject = "PDF Metadata Example";    // Subject of the document
+documentProperties.keywords = "PDF, Metadata, Example"; // Keywords for search
+documentProperties.creator = "JavaScript PDF Library";  // Application that created the PDF
+documentProperties.producer = "JavaScript PDF Engine";  // PDF producer
+documentProperties.language = "en-US";                  // Language of the document
+documentProperties.creationDate = new Date();           // Creation date
+documentProperties.modificationDate = new Date();       // Last modified date
+// Add a page
+var page = document.addPage();
+// Get graphics from the page
+var graphics = page.graphics;
+// Set font
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+// Draw text
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -144,5 +225,25 @@ The `isIncrementalUpdate` property allows you to check if the PDF document suppo
     // Close the document
     document.destroy();
  
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a PDF document
+var document = new ej.pdf.PdfDocument();
+// Disable incremental update to rewrite the entire file
+document.fileStructure.isIncrementalUpdate = false;
+// Add a page
+var page = document.addPage();
+// Get graphics from the page
+var graphics = page.graphics;
+// Set font
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+// Draw text
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
 {% endhighlight %}
 {% endtabs %}

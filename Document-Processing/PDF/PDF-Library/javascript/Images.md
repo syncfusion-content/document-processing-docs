@@ -1,28 +1,16 @@
 ---
-title: Images in TypeScript PDF library | Syncfusion
-description: This section explains how to add and replace images in a PDF document by using the TypeScript PDF library
+title: Images in JavaScript PDF library | Syncfusion
+description: This section explains how to add and replace images in a PDF document by using the JavaScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Images in TypeScript PDF library
+# Images in JavaScript PDF library
 
-Essential<sup>&reg;</sup> PDF supports both raster and vector images.
+The JavaScript PDF supports both raster and vector images.
 
 Images are supported through the `PdfImage` class, which is an abstract base class that provides the common functionality for `PdfBitmap` class.
-
-## Inserting an image in a new document
-
-The following raster images are supported in Essential<sup>&reg;</sup> PDF.
-
-* BMP
-* JPEG
-* JPEG with Exif standard
-* GIF
-* PNG
-* TIFF
-* ICO and ICON
 
 ## Adding image in PDF document
 
@@ -47,6 +35,25 @@ This example demonstrates how to add an image to a PDF document using the `PdfBi
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Get graphics from the page
+var graphics = page.graphics;
+// Load the image (base64 or binary string)
+var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
+// Draw the image
+image.draw(graphics, { x: 10, y: 10 });
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -74,6 +81,24 @@ This example demonstrates how to insert an image into an existing PDF document u
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Access first page
+var page = document.getPage(0);
+// Get graphics from the page
+var graphics = page.graphics;
+// Load the image
+var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
+// Draw the image.
+image.draw(graphics, {x: 10, y: 10});
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -106,6 +131,29 @@ This example demonstrates how to apply clipping and manage graphics state in a P
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Get graphics from the page
+var graphics = page.graphics;
+// Load the image— only the part within the clipping region will be visible
+var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
+// Save the current graphics state (to restore later)
+var state = graphics.save();
+graphics.setClip({x: 0, y: 0, width: 50, height: 12}, ej.pdf.PdfFillMode.alternate);
+// Draw the image.
+image.draw(graphics, {x: 10, y: 10});
+// Restore the graphics state to remove the clipping region
+graphics.restore(state);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -143,6 +191,34 @@ This example demonstrates how to apply transparency and rotation to an image in 
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Get graphics from the page
+var graphics = page.graphics;
+// Load the image— only the part within the clipping region will be visible
+var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
+// Save the current graphics state (to restore later)
+var state = graphics.save();
+// Translate the coordinate system to the required position
+graphics.translateTransform({x: 100, y: 100});
+// Apply transparency
+graphics.setTransparency(0.5);
+// Rotate the coordinate system
+graphics.rotateTransform(-45);
+// Draw the image.
+image.draw(graphics, {x: 10, y: 20});
+// Restore the graphics state to remove the clipping region
+graphics.restore(state);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}

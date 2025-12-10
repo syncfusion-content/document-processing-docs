@@ -1,13 +1,13 @@
 ---
-title: Pages in TypeScript PDF library | Syncfusion
-description: This section explains how to add, rearrange, remove pages, and detect empty pages in a PDF file by using the TypeScript PDF library
+title: Pages in JavaScript PDF library | Syncfusion
+description: This section explains how to add, rearrange, remove pages, and detect empty pages in a PDF file by using the JavaScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Pages in TypeScript PDF library
+# Pages in JavaScript PDF library
 
-Essential<sup>&reg;</sup> PDF provides support to add, remove, rearrange, and detect empty pages in PDF documents, enabling complete control over page management for creating dynamic and customized PDFs.
+The PDF provides support to add, remove, rearrange, and detect empty pages in PDF documents, enabling complete control over page management for creating dynamic and customized PDFs.
 
 ## Adding a new page to the document
 
@@ -32,6 +32,24 @@ The following code sample demonstrates how to add a `PdfPage` to a PDF document.
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Get graphics from the page
+var graphics = page.graphics;
+// Set font
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+// Draw text
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -67,6 +85,30 @@ The `PdfPageSettings` class is used to define properties such as margins, orient
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Define page settings
+var settings = new ej.pdf.PdfPageSettings();
+// Add margin  
+settings.margins = new ej.pdf.PdfMargins(40);
+// Add a section to the document with the specified settings
+var section = document.addSection(settings);
+// Add a page
+var page = section.addPage();
+// Get graphics from the page
+var graphics = page.graphics;
+// Set font
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+// Draw text
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 ## Adding sections with different page settings
@@ -85,7 +127,7 @@ This example demonstrates how to add sections with different page settings in a 
     // Sets the margins
     pageSetting.margins = new PdfMargins(40);
     // Sets the page size
-    pageSetting.size ={width: 595, height: 842};;
+    pageSetting.size ={width: 595, height: 842};
     // Sets the page orientation
     pageSetting.orientation = PdfPageOrientation.landscape;
     // Add a page
@@ -101,7 +143,7 @@ This example demonstrates how to add sections with different page settings in a 
     // Sets the margins
     pageSetting1.margins = new PdfMargins(40);
     // Sets the page size
-    pageSetting1.size ={width: 595, height: 842};;
+    pageSetting1.size ={width: 595, height: 842};
     // Sets the page orientation
     pageSetting1.orientation = PdfPageOrientation.landscape;
     // Add a page
@@ -114,6 +156,47 @@ This example demonstrates how to add sections with different page settings in a 
     document.save('Output.pdf');
     // Close and dispose the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Create a new PDF page settings instance
+var pageSetting = new ej.pdf.PdfPageSettings();
+// Sets the margins
+pageSetting.margins = new ej.pdf.PdfMargins(40);
+// Sets the page size
+pageSetting.size = { width: 595, height: 842 };
+// Sets the page orientation
+pageSetting.orientation = ej.pdf.PdfPageOrientation.landscape;
+// Add a page
+var page = document.addPage(pageSetting);
+// Get graphics from the page
+var graphics = page.graphics;
+// Set font
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+// Draw text
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Create a new PDF page settings instance
+var pageSetting1 = new ej.pdf.PdfPageSettings();
+// Sets the margins
+pageSetting1.margins = new ej.pdf.PdfMargins(40);
+// Sets the page size
+pageSetting1.size = { width: 595, height: 842 };
+// Sets the page orientation
+pageSetting1.orientation = ej.pdf.PdfPageOrientation.landscape;
+// Add a page
+var page1 = document.addPage(pageSetting1);
+// Get graphics from the page
+var graphics1 = page1.graphics;
+// Draw text
+graphics1.drawString('Hello World', font, { x: 40, y: 60, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the PDF document
+document.save('Output.pdf');
+// Close and dispose the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -133,6 +216,16 @@ This example demonstrates how to retrieve the total number of pages in a PDF doc
     let count: number = document.pageCount;
     // Destroy the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Gets the page count
+var count = document.pageCount;
+// Destroy the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -159,6 +252,21 @@ This example demonstrates how to import pages from an existing PDF document into
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Define start and end page indices
+var startIndex = 0;
+var endIndex = document.pageCount - 1;
+// Import all pages from the loaded document into the new document
+document.importPageRange(document, startIndex, endIndex);
+// Save the new document
+document.save('Output.pdf');
+// Close the loaded document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 ## Rearranging pages in an existing document
@@ -180,6 +288,18 @@ This example demonstrates how to rearrange the pages in an existing PDF document
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Reorders the pages in the PDF document
+document.reorderPages([3, 2, 1]);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 ## Removing pages from a document
@@ -199,6 +319,18 @@ This example demonstrates how to remove a page from a PDF document using the `re
     document.save('output.pdf');
     // Destroy the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Removes the first page
+document.removePage(0);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -232,6 +364,28 @@ This example demonstrates how to rotate a PDF page using the `rotation` property
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Create a new PDF page settings instance
+var pageSetting = new ej.pdf.PdfPageSettings();
+// Sets the page rotation
+pageSetting.rotation = ej.pdf.PdfRotationAngle.angle180;
+// Add a page
+var page = document.addPage(pageSetting);
+// Get graphics from the page
+var graphics = page.graphics;
+// Set font
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+// Draw text
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the PDF document
+var data = document.save('Output.pdf');
+// Close and dispose the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 ## Rotating an existing PDF page
@@ -255,6 +409,20 @@ This example demonstrates how to rotate an existing PDF page using the `rotation
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Access first page
+var page = document.getPage(0);
+// Set the rotation for loaded page
+page.rotation = ej.pdf.PdfRotationAngle.angle180;
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 ## Splitting a PDF file to individual pages
@@ -274,6 +442,18 @@ This example demonstrates how to split a PDF file into individual pages by impor
     document.save('Output.pdf');
     // Destroy the documents
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Copy the second page and add it as third page
+document.importPage(1);
+// Save the output PDF
+document.save('Output.pdf');
+// Destroy the documents
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
