@@ -104,4 +104,4 @@ Using excelEngine As New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
-A complete working example to set the first item in a list as the default selected value in an Excel File is available on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/List%20Validation/.NET/List%20Validation).
+A complete working example to set the first item in a list as the default selected value in an Excel File is available on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/List%20Validation/.NET/List%20Validation">this GitHub page</a>.
