@@ -31,7 +31,7 @@ N> When in pan mode, selecting a measurement annotation switches the viewer to t
 
 #### Enable distance mode
 
-The PDF Viewer library allows drawing Distance annotations programmatically after enabling Distance mode in button clicks.
+The PDF Viewer component allows drawing Distance annotations programmatically after enabling Distance mode in button clicks.
 
 ```html
 <button id="distanceMode">Distance</button>
@@ -188,7 +188,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 document.getElementById('editDistanceAnnotation')?.addEventListener('click', () => {
     for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-        if (pdfviewer.annotationCollection[i].subject === 'Distance') {
+        if (pdfviewer.annotationCollection[i].subject === 'Distance calculation') {
             pdfviewer.annotationCollection[i].strokeColor = '#0000FF';
             pdfviewer.annotationCollection[i].thickness = 2;
             pdfviewer.annotationCollection[i].opacity = 0.8;
@@ -209,7 +209,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 document.getElementById('editDistanceAnnotation')?.addEventListener('click', () => {
     for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-        if (pdfviewer.annotationCollection[i].subject === 'Distance') {
+        if (pdfviewer.annotationCollection[i].subject === 'Distance calculation') {
             pdfviewer.annotationCollection[i].strokeColor = '#0000FF';
             pdfviewer.annotationCollection[i].thickness = 2;
             pdfviewer.annotationCollection[i].opacity = 0.8;
