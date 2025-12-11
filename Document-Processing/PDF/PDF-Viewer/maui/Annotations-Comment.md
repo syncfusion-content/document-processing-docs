@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comments in .NET MAUI PDF Viewer | Syncfusion
-description: Learn here all about how to add liquid glass effect for Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn here all about how to add comments or replies to annotations in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -71,6 +71,22 @@ Follow these steps to add comments or replies :
 ## Add comments or replies programmatically
 you can add comments or replies to existing annotations programmatically by accessing the specific annotation from the Annotations collection. This allows you to enhance collaboration and provide feedback directly within the PDF.
 The following example explains how to add comments or replies to specific annotations in the PDF document.
+
+{% tabs %}
+{% highlight c# %}
+
+ReadOnlyObservableCollection<Annotation> annotations = pdfViewer.Annotations;
+Annotation annotation = annotations[0];
+Comment comment = new Comment()
+{
+    Text = "First Annotations",
+    Author="User Name",
+    ModifiedDate= DateTime.Now, 
+};
+annotation.Comments.Add(comment);
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Editing the comments and comments replies of the annotations
 Comments and replies can be edited through the context menu available under the More Options in the Comment Panel. Follow the steps below:
