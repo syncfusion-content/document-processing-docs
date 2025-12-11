@@ -1,4 +1,4 @@
-<img width="710" height="548" alt="image" src="https://github.com/user-attachments/assets/675a41e8-c17c-409c-ae2e-1f9faeec5f6b" />---
+---
 layout: post
 title: Comments in .NET MAUI PDF Viewer | Syncfusion
 description: Learn here all about how to add liquid glass effect for Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
