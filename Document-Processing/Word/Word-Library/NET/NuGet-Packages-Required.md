@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# NuGet Packages Required
+# NuGet Packages Required for Word Library
 
 ## Installing Syncfusion<sup>&reg;</sup> DocIO through NuGet Packages 
 
