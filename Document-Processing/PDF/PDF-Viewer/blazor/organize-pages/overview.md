@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Organize Pages in Blazor PDF Viewer component | Syncfusion
-description: Learn here all about Overview of Organize Pages in Syncfusion Blazor PDF Viewer component.
+description: Learn here all about Overview of functionalities of Organize Pages in Syncfusion Blazor PDF Viewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
