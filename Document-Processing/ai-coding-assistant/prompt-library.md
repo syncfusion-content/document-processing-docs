@@ -33,10 +33,10 @@ The Syncfusion PDF Library enables developers to create, read, and edit PDF docu
 #SyncfusionDocumentSDKAssistant Show me how to create text and images in a PDF document? 
 {% endpromptcard %}
 {% promptcard Edit and Save %}
-#SyncfusionDocumentSDKAssistant How can I open an existing PDF, modify its content, and save the updated file in ASP .NET MVC?
+#SyncfusionDocumentSDKAssistant How can I open an existing PDF, modify its content, and save the updated file in ASP.NET MVC?
 {% endpromptcard %}
 {% promptcard Form Fields %}
-#SyncfusionDocumentSDKAssistant How can I create form fields and add combo and radio box in pdf document?
+#SyncfusionDocumentSDKAssistant How can I create form fields and add combo and radio box in PDF document?
 {% endpromptcard %}
 {% promptcard Bookmarks %}
 #SyncfusionDocumentSDKAssistant How do I add, edit, and remove bookmarks in a PDF?
@@ -91,7 +91,7 @@ The Syncfusion Word Library enables developers to create, read, edit, and conver
 #SyncfusionDocumentSDKAssistant How do I split a Word document into multiple files by section?
 {% endpromptcard %}
 {% promptcard Table and Shapes %}
-#SyncfusionDocumentSDKAssistant Insert a table in new page, draw a shape, and place text inside the shape in word document?  
+#SyncfusionDocumentSDKAssistant Insert a table in new page, draw a shape, and place text inside the shape in Word document?  
 {% endpromptcard %}
 {% promptcard Table of Contents (TOC) %}
 #SyncfusionDocumentSDKAssistant How can I insert TOC in Word Document?
@@ -103,13 +103,13 @@ The Syncfusion Word Library enables developers to create, read, edit, and conver
 #SyncfusionDocumentSDKAssistant How to update the fields present in Word document?
 {% endpromptcard %}
 {% promptcard Styles and Formatting %}
-#SyncfusionDocumentSDKAssistant How can I define and apply paragraph, styles, bullet lists in word document?
+#SyncfusionDocumentSDKAssistant How can I define and apply paragraph, styles, bullet lists in Word document?
 {% endpromptcard %}
 {% promptcard HTML to DOCX %}
 #SyncfusionDocumentSDKAssistant Provide code to convert HTML to DOCX Document?
 {% endpromptcard %}
 {% promptcard Find and Replace %}
-#SyncfusionDocumentSDKAssistant How to find text and replace with other text in word document?
+#SyncfusionDocumentSDKAssistant How to find text and replace with other text in Word document?
 {% endpromptcard %}
 {% promptcard Security %}
 #SyncfusionDocumentSDKAssistant Show me how to encrypt the Word document with password?
@@ -137,7 +137,7 @@ The Syncfusion Excel Library enables developers to create, read, edit, and conve
 #SyncfusionDocumentSDKAssistant How to create an Excel file from scratch?
 {% endpromptcard %}
 {% promptcard Edit and Save %}
-#SyncfusionDocumentSDKAssistant How can open an existing excel document, modify content and save the document?
+#SyncfusionDocumentSDKAssistant How can I open an existing Excel document, modify content and save the document?
 {% endpromptcard %}
 {% promptcard Import Data from Data Table to Excel %}
 #SyncfusionDocumentSDKAssistant How do I import a Data Table into a new Excel worksheet using Document SDK?
@@ -164,7 +164,7 @@ The Syncfusion Excel Library enables developers to create, read, edit, and conve
 #SyncfusionDocumentSDKAssistant How to remove a protection for an encrypted document for Excel Data?
 {% endpromptcard %}
 {% promptcard Drawing Objects and Shapes %}
-#SyncfusionDocumentSDKAssistant Show the code for how to create a group shape in Asp .NET MVC for Excel Components?
+#SyncfusionDocumentSDKAssistant Show the code for how to create a group shape in ASP.NET MVC for Excel Components?
 {% endpromptcard %}
 {% promptcard Excel to PDF %}
 #SyncfusionDocumentSDKAssistant How to convert an entire Excel workbook to PDF?
@@ -210,7 +210,7 @@ The Syncfusion PowerPoint Library enables developers to create, read, edit, and 
 #SyncfusionDocumentSDKAssistant Does PPTX support a password-protect with encryption and open a protected file?
 {% endpromptcard %}
 {% promptcard Create and Modify Sections %}
-#SyncfusionDocumentSDKAssistant How can create sections in PowerPoint?
+#SyncfusionDocumentSDKAssistant How can I create sections in PowerPoint?
 {% endpromptcard %}
 {% promptcard Clone and Merge %}
 #SyncfusionDocumentSDKAssistant How to clone the slide collection of a section and add those slides to a destination presentation?
