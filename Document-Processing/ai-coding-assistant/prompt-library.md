@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion AI Coding Assistant Prompt Library | Syncfusion
-description: Explore the AI Coding Assistant Prompt Library to enhance DocumentSDK development productivity with code generation, configuration examples, and contextual guidance.
+description: Explore the AI Coding Assistant Prompt Library to enhance DocumentSDK productivity with code generation and configuration guidance.
 platform: document-processing
 control: Syncfusion AI Coding Assistant Prompt Library
 documentation: ug
@@ -165,7 +165,7 @@ The Syncfusion PowerPoint Library enables developers to create, read, and write 
 #SyncfusionDocumentSDKAssistant How can I load an existing PPTX and save the updated presentation?
 {% endpromptcard %}
 {% promptcard Convert PowerPoint to PDF %}
-#SyncfusionDocumentSDKAssistant How to convert a PowerPoint document into PDF document in .Net Core?
+#SyncfusionDocumentSDKAssistant How to convert a PowerPoint document into PDF document in .NET Core?
 {% endpromptcard %}
 {% promptcard Convert Slides to Images%}
 #SyncfusionDocumentSDKAssistant Give an example that demonstrates the conversion of an entire Presentation to images?
