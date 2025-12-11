@@ -33,7 +33,7 @@ The Syncfusion PDF Library enables developers to create, read, and edit PDF docu
 #SyncfusionDocumentSDKAssistant Show me how to create text and images in a PDF document? 
 {% endpromptcard %}
 {% promptcard Edit and Save %}
-##SyncfusionDocumentSDKAssistant How can I open an existing PDF, modify its content, and save the updated file in ASP .NET MVC?
+#SyncfusionDocumentSDKAssistant How can I open an existing PDF, modify its content, and save the updated file in ASP .NET MVC?
 {% endpromptcard %}
 {% promptcard Form Fields %}
 #SyncfusionDocumentSDKAssistant How can I create form fields and add combo and radio box in pdf document?
@@ -76,7 +76,7 @@ The Syncfusion Word Library enables developers to create, read, edit, and conver
 
 {% promptcards %}
 {% promptcard Create Word Document %}
-#SyncfusionDocumentSDKAssistant Show me how to create a Word document from scratch with paragraphs, images in new document?
+#SyncfusionDocumentSDKAssistant Show me how to create a Word document from scratch with paragraphs in new document?
 {% endpromptcard %}
 {% promptcard Edit and Save %}
 #SyncfusionDocumentSDKAssistant How can I open an existing DOCX, modify content and save the document?
@@ -91,7 +91,7 @@ The Syncfusion Word Library enables developers to create, read, edit, and conver
 #SyncfusionDocumentSDKAssistant How do I split a Word document into multiple files by section?
 {% endpromptcard %}
 {% promptcard Table and Shapes %}
-#SyncfusionDocumentSDKAssistant Insert an image on a new page, add a table, draw a shape, and place text inside the shape in word document? 
+#SyncfusionDocumentSDKAssistant Insert a table in new page, draw a shape, and place text inside the shape in word document?  
 {% endpromptcard %}
 {% promptcard Table of Contents (TOC) %}
 #SyncfusionDocumentSDKAssistant How can I insert TOC in Word Document?
@@ -105,11 +105,26 @@ The Syncfusion Word Library enables developers to create, read, edit, and conver
 {% promptcard Styles and Formatting %}
 #SyncfusionDocumentSDKAssistant How can I define and apply paragraph, styles, bullet lists in word document?
 {% endpromptcard %}
-{% promptcard Images and Tables %}
-#SyncfusionDocumentSDKAssistant Show me how to insert images with wrapping in word Document?
-{% endpromptcard %}
 {% promptcard HTML to DOCX %}
 #SyncfusionDocumentSDKAssistant Provide code to convert HTML to DOCX Document?
+{% endpromptcard %}
+{% promptcard Find and Replace %}
+#SyncfusionDocumentSDKAssistant How to find text and replace with other text in word document?
+{% endpromptcard %}
+{% promptcard Security %}
+#SyncfusionDocumentSDKAssistant Show me how to encrypt the Word document with password?
+{% endpromptcard %}
+{% promptcard Compare %}
+#SyncfusionDocumentSDKAssistant How to compare two Word documents?
+{% endpromptcard %}
+{% promptcard Math Equation %}
+#SyncfusionDocumentSDKAssistant How to create accent equation using LaTeX in Word document?
+{% endpromptcard %}
+{% promptcard Word to PDF %}
+#SyncfusionDocumentSDKAssistant How to convert a Word document into PDF document?
+{% endpromptcard %}
+{% promptcard Word to MD %}
+#SyncfusionDocumentSDKAssistant How to convert a Word document to a Markdown?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -118,19 +133,23 @@ The Syncfusion Word Library enables developers to create, read, edit, and conver
 The Syncfusion Excel Library enables developers to create, read, edit, and convert Excel documents programmatically across all .NET applications.
 
 {% promptcards %}
+{% promptcard Create Excel Document %}
+#SyncfusionDocumentSDKAssistant How to create an Excel file from scratch?
+{% endpromptcard %}
+{% promptcard Edit and Save %}
+#SyncfusionDocumentSDKAssistant How can open an existing excel document, modify content and save the document?
+{% endpromptcard %}
 {% promptcard Import Data from Data Table to Excel %}
 #SyncfusionDocumentSDKAssistant How do I import a Data Table into a new Excel worksheet using Document SDK?
 {% endpromptcard %}
 {% promptcard Conditional Format %}
 #SyncfusionDocumentSDKAssistant How to create and apply various conditional formats for different ranges?
-#SyncfusionDocumentSDKAssistant Remove or clear conditional formatting from a worksheet in Excel?
 {% endpromptcard %}
 {% promptcard Export Data from Excel to Data Table %}
 #SyncfusionDocumentSDKAssistant Show me how to export Excel data into collection objects using Export Data<>?
 {% endpromptcard %}
 {% promptcard Charts and PivotChart %}
 #SyncfusionDocumentSDKAssistant Create a column chart from a data range with title, axis labels, and legend in Excel?
-#SyncfusionDocumentSDKAssistant How do I change PivotChart type to Stacked Column with data labels for Excel?
 {% endpromptcard %}
 {% promptcard Formula %}
 #SyncfusionDocumentSDKAssistant How to create workbook-level named ranges and use them in formulas in Excel Components?
@@ -173,7 +192,7 @@ The Syncfusion PowerPoint Library enables developers to create, read, edit, and 
 #SyncfusionDocumentSDKAssistant Give an example that demonstrates the conversion of an entire Presentation to images?
 {% endpromptcard %}
 {% promptcard Create and Edit Charts %}
-#SyncfusionDocumentSDKAssistant Show me how to insert charts, update data, and customize titles, legends, axes, and data labels in PPTX?
+#SyncfusionDocumentSDKAssistant Show me how to insert charts, update data, and customize legends, axes, and data labels in PPTX?
 {% endpromptcard %}
 {% promptcard Convert Chart to Image %}
 #SyncfusionDocumentSDKAssistant Is it possible to convert the charts in a Presentation slide to image?
@@ -194,7 +213,7 @@ The Syncfusion PowerPoint Library enables developers to create, read, edit, and 
 #SyncfusionDocumentSDKAssistant How can create sections in PowerPoint?
 {% endpromptcard %}
 {% promptcard Clone and Merge %}
-#SyncfusionDocumentSDKAssistant how to clone the slide collection of a section and add those slides to a destination presentation?
+#SyncfusionDocumentSDKAssistant How to clone the slide collection of a section and add those slides to a destination presentation?
 {% endpromptcard %}
 {% promptcard Work with Tables %}
 #SyncfusionDocumentSDKAssistant Show the code to apply the custom table formatting in presentation?
