@@ -73,7 +73,7 @@ An Excel file encoded as a Base64 string can be loaded into the Spreadsheet comp
 {% endtabs %}
 
 ### Open an Excel file from Google Drive
-To load an Excel file from `Google Drive`, use the Google Drive API to download the file into a stream, convert the stream to a byte array, and then bind that byte array to the Syncfusion Blazor Spreadsheet component.
+To load an Excel file from `Google Drive` in the Blazor Spreadsheet, follow the steps below.
 
 **Prerequisites:**
 - [Google Cloud project](https://developers.google.com/workspace/guides/create-project) in the Google Cloud Console.
@@ -102,7 +102,9 @@ Import the required namespaces at the top of the file:
 @using System.IO;
 ```
 
-**Step 3:** Add the below code example to download the `Google Drive` file using the Drive API, convert the stream to a byte array, and bind it to the Spreadsheet's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DataSource) property.
+**Step 3:** Download the Excel file, convert to bytes, and prepare for binding
+
+Add the below code example to download the `Google Drive` file using the Drive API, convert the stream to a byte array, and bind it to the Spreadsheet's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DataSource) property.
 
 {% tabs %}
 {% highlight razor %}
