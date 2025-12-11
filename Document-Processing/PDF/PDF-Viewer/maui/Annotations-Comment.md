@@ -20,7 +20,23 @@ The PDF Viewer control provides options to add, edit, and delete comments for th
 
 ## Showing/Hiding the Comment panel
 The built-in Comment Panel in the PDF Viewer displays annotation comments. You can show or hide this panel using the IsCommentsPanelVisible property. The default value of this property is false.
+{% tabs %}
+{% highlight c# %}
 
+// Enable the comment panel in the PDF Viewer 
+PdfViewer.IsCommentsPanelVisible = true;
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight XAML %}
+
+<syncfusion:SfPdfViewer x:Name="PdfViewer" IsCommentsPanelVisible = "True" > 
+</syncfusion:SfPdfViewer>
+ 
+{% endhighlight %}
+{% endtabs %}
 
 
 ## Comment panel
@@ -29,12 +45,32 @@ The following image represents how to add the comments using the toolbar on the 
 
 The following image represents how to add comments using the toolbar on mobile.
 
+{% tabs %}
+{% highlight c# %}
+
+ReadOnlyObservableCollection<Annotation> annotations = pdfViewer.Annotations;
+Annotation annotation = annotations[0];
+Comment comment = new Comment()
+{
+    Text = "First Annotations",
+    Author="User Name",
+    ModifiedDate= DateTime.Now, 
+};
+annotation.Comments.Add(comment);
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Adding comments or replies
-You can add the comments or replies using below steps:
+Follow these steps to add comments or replies :
 1. Select the annotation in the PDF document and open the comment panel.
 2. The corresponding comment thread is highlighted in the comment panel.
 3. Add comments and replies using the comment panel.
 4. Multiple replies can be added to a comment.
+
+## Add comments or replies programmatically
+you can add comments or replies to existing annotations programmatically by accessing the specific annotation from the Annotations collection. This allows you to enhance collaboration and provide feedback directly within the PDF.
+The following example explains how to add comments or replies to specific annotations in the PDF document.
 
 ## Editing the comments and comments replies of the annotations
 Comments and replies can be edited through the context menu available under the More Options in the Comment Panel. Follow the steps below:
