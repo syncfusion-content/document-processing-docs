@@ -178,7 +178,7 @@ NuGet packages to install
 </thead>
 <tr>
 <td>
-From v32.1.10
+From v32.1.19
 </td>
 <td>
 {{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)'| markdownify }}<br/>
@@ -277,7 +277,7 @@ NuGet packages to install
 </thead>
 <tr>
 <td>
-From v32.1.10
+From v32.1.19
 </td>
 <td>
 {{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)'| markdownify }}<br/>
