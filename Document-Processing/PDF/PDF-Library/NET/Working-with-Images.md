@@ -1021,9 +1021,9 @@ using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
-PdfDocument doc = new PdfDocument();
+PdfDocument document = new PdfDocument();
 //Set page margins
-doc.PageSettings.Margins.All = 0;
+document.PageSettings.Margins.All = 0;
 
 //Load the multi frame TIFF image from the disk
 FileStream imageStream = new FileStream("image.tiff", FileMode.Open, FileAccess.Read);
@@ -1033,14 +1033,14 @@ int frameCount = tiffImage.FrameCount;
 //Access each frame and draw into the page
 for (int i = 0; i < frameCount; i++)
 {
-    PdfPage page = doc.Pages.Add();
+    PdfPage page = document.Pages.Add();
     PdfGraphics graphics = page.Graphics;
     tiffImage.ActiveFrame = i;
     graphics.DrawImage(tiffImage, 0, 0, page.GetClientSize().Width, page.GetClientSize().Height);
 }
 //Save and close the document
-pdfDocument.Save("Sample.pdf");
-pdfDocument.Close(true);
+document.Save("Sample.pdf");
+document.Close(true);
 
 {% endhighlight %}
 
@@ -1050,9 +1050,9 @@ using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 
 //Create a PDF document
-PdfDocument pdfDocument = new PdfDocument();
+PdfDocument document = new PdfDocument();
 //Set page margins
-pdfDocument.PageSettings.Margins.All = 0;
+document.PageSettings.Margins.All = 0;
 
 //Load multi frame TIFF image
 PdfBitmap tiffImage = new PdfBitmap("image.tiff");
@@ -1061,15 +1061,15 @@ int frameCount = tiffImage.FrameCount;
 //Access each frame and draw into the page
 for (int i = 0; i < frameCount; i++)
 {
-PdfPage page = pdfDocument.Pages.Add();
+PdfPage page = document.Pages.Add();
 PdfGraphics graphics = page.Graphics;
 tiffImage.ActiveFrame = i;
 graphics.DrawImage(tiffImage, 0, 0, page.GetClientSize().Width, page.GetClientSize().Height);
 }
 
 //Save and close the document
-pdfDocument.Save("Sample.pdf");
-pdfDocument.Close(true);
+document.Save("Sample.pdf");
+document.Close(true);
 
 {% endhighlight %}
 
@@ -1079,9 +1079,9 @@ Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 
 'Create a PDF document
-Dim pdfDocument As New PdfDocument()
+Dim document As New PdfDocument()
 'Set page margins
-pdfDocument.PageSettings.Margins.All = 0
+document.PageSettings.Margins.All = 0
 
 'Load multi frame TIFF image
 Dim tiffImage As New PdfBitmap("image.tiff")
@@ -1089,15 +1089,15 @@ Dim tiffImage As New PdfBitmap("image.tiff")
 Dim frameCount As Integer = tiffImage.FrameCount
 'Access each frame and draw into the page
 For i As Integer = 0 To frameCount - 1
-Dim page As PdfPage = pdfDocument.Pages.Add()
+Dim page As PdfPage = document.Pages.Add()
 Dim graphics As PdfGraphics = page.Graphics
 tiffImage.ActiveFrame = i
 graphics.DrawImage(tiffImage, 0, 0, page.GetClientSize().Width, page.GetClientSize().Height)
 Next
 
 'Save and close the document
-pdfDocument.Save("Sample.pdf")
-pdfDocument.Close(True)
+document.Save("Sample.pdf")
+document.Close(True)
 
 {% endhighlight %}
 
