@@ -14,9 +14,9 @@ The Syncfusion<sup>&reg;</sup> JS 2 for JavaScript (global script) is an ES5 for
 
 ## Component Initialization with CDN link for script and style reference
 
-**Step 1:** Create an app folder `my-app` for the JS 2 JavaScript components.
+Step 1: Create an app folder `my-app` for the JS 2 JavaScript components.
 
-**Step 2:** The JS 2 component's global scripts and styles are already hosted in the below CDN link formats.
+Step 2: The JS 2 component's global scripts and styles are already hosted in the below CDN link formats.
 
 **Syntax:**
 > Script: `https://cdn.syncfusion.com/ej2/{Version}/dist/{PACKAGE_NAME}.min.js`
@@ -28,7 +28,7 @@ The Syncfusion<sup>&reg;</sup> JS 2 for JavaScript (global script) is an ES5 for
 >
 > Styles: [`https://cdn.syncfusion.com/ej2/31.2.15/ej2-base/styles/material.css`](https://cdn.syncfusion.com/ej2/31.2.15/ej2-base/styles/material.css)
 
-**Step 3:** Create a HTML page (index.html) in `my-app` location and add the CDN link references.
+Step 3: Create a HTML page (index.html) in `my-app` location and add the CDN link references.
 
 {% tabs %}
 {% highlight ts tabtitle="index.html" %}
@@ -42,7 +42,7 @@ The Syncfusion<sup>&reg;</sup> JS 2 for JavaScript (global script) is an ES5 for
 {% endhighlight %}
 {% endtabs %}
 
-**Step 4:** **Create a PDF document** : Add the script in `index.html` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
+Step 4: **Create a PDF document** : Add the script in `index.html` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Index.html" %}
