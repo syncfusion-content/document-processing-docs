@@ -34,7 +34,7 @@ ng new my-app
 cd my-app
 ```
 
-## Installing Syncfusion<sup>&reg;</sup> JavaScript package
+## Installing Syncfusion<sup>&reg;</sup> JavaScript PDF package
 
 All the available JS 2 packages are published in `npmjs.com` registry.
 
@@ -43,14 +43,21 @@ All the available JS 2 packages are published in `npmjs.com` registry.
 ```bash
 npm install @syncfusion/ej2-pdf --save
 ```
+N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
+
+* Copy the contents of the openjpeg folder from ./node_modules/@syncfusion/ej2-pdf-data-extract/dist to the public directory using the command:
+```bash
+cp -R ./node_modules/@syncfusion/ej2-pdf-data-extract/dist/openjpeg public/openjpeg
+```
+* Confirm that there is an 'openjpeg' directory within your public directory, if you extracting images from PDF.
+* Validate that your server has been configured to utilize the Content-Type: application/wasm MIME type. Additional information can be found in the [Troubleshooting](./troubleshooting/troubleshooting) section.
 
 ## Create a PDF document using TypeScript
 
 * Add a simple button to `app.component.html` and attach a click handler that uses the TypeScript PDF API to create a new PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.html" %}
-
+{% highlight html tabtitle="app.component.html" %}
 <html>
   <head>
     <title>PDF creation example</title>
@@ -59,26 +66,21 @@ npm install @syncfusion/ej2-pdf --save
     <button id="normalButton">Create PDF document</button>
   </body>
 </html>
-
 {% endhighlight %}
 {% endtabs %}
 
 * Include the following namespaces in `app.component.ts` file.
 
 {% tabs %}
-{% highlight c# tabtitle="~/app.component.ts" %}
-
-import { NgModule } from '@angular/core';
+{% highlight ts tabtitle="~/app.component.ts" %}
 import { PdfDocument, PdfPage, PdfStandardFont, PdfPen, PdfBrush } from '@syncfusion/ej2-pdf';
-
 {% endhighlight %}
 {% endtabs %}
 
 * Include the following code example in the click event of the button in `app.component.ts` to generate a PDF document. 
 
 {% tabs %}
-{% highlight html tabtitle="app.component.ts" %}
-
+{% highlight ts tabtitle="app.component.ts" %}
 document.getElementById('normalButton').onclick = (): void => {
         // Create a new PDF document
         const document = new PdfDocument();
@@ -96,9 +98,7 @@ document.getElementById('normalButton').onclick = (): void => {
         document.save('Output.pdf');
         // Destroy the PDF document instance
         document.destroy();
-        });   
-};
-
+        };   
 {% endhighlight %}
 {% endtabs %}
 

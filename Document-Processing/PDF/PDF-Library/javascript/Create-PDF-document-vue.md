@@ -41,10 +41,8 @@ Once the `quick start` project is set up with default settings, proceed to add S
 * **Add script reference** : Add the required scripts using the CDN inside the `<head>` of `index.html` as follows:
 
 {% tabs %}
-{% highlight c# tabtitle="~/index.html" %}
-
+{% highlight html tabtitle="~/index.html" %}
 <head>
-    ...
     <!-- Syncfusion EJ2 PDF Library (CDN) -->
     <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
 </head>
@@ -55,8 +53,7 @@ Once the `quick start` project is set up with default settings, proceed to add S
 * **Create a PDF document** : Add the script in `App.vue` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="~/App.vue" %}
-
+{% highlight vue tabtitle="~/App.vue" %}
 <script>
 export default {
   name: 'App',
@@ -84,7 +81,6 @@ export default {
   }
 };
 </script>
-
 {% endhighlight %}
 {% endtabs %}
 
