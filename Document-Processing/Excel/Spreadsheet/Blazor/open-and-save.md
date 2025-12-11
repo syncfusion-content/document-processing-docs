@@ -73,7 +73,7 @@ An Excel file encoded as a Base64 string can be loaded into the Spreadsheet comp
 {% endtabs %}
 
 ### Open an Excel file from Google Drive
-Open an Excel file from Google Drive by downloading it as a stream and binding it to the Spreadsheet component.
+To load an Excel file from `Google Drive` programmatically, download the file using the Drive API into a stream, convert the stream to a byte array, and bind that byte array to the Spreadsheet DataSource.
 
 **Prerequisites:**
 - [Google Cloud project](https://developers.google.com/workspace/guides/create-project) in the Google Cloud Console.
@@ -83,7 +83,7 @@ Open an Excel file from Google Drive by downloading it as a stream and binding i
 - [Google Drive account](https://drive.google.com/) with access to the file to download.
 - [Google.Apis.Drive.v3](https://www.nuget.org/packages/Google.Apis.Drive.v3) NuGet package installed in your project to access Google Drive API.
 
-After completing these prerequisites, follow the steps below to download an Excel file from Google Drive using a service account and load it into the Blazor Spreadsheet component.
+Follow the steps below to download an Excel file from Google Drive using a service account and load it into the Blazor Spreadsheet component.
 
 **Step 1:** Install required NuGet packages
 
@@ -92,7 +92,7 @@ To use Google Drive with the Blazor Spreadsheet, install the following packages:
 - [Google.Apis.Drive.v3](https://www.nuget.org/packages/Google.Apis.Drive.v3) — to access the Google Drive API
 - [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet) — to use the Syncfusion Blazor Spreadsheet component
 
-**Step 2:** Include the following namespaces in the Razor file
+**Step 2:** Include the following namespaces in the **Index.razor** file
 
 Import the required namespaces at the top of the file:
 
@@ -104,7 +104,7 @@ Import the required namespaces at the top of the file:
 @using System.IO;
 ```
 
-**Step 3:** Add the code example below to load an Excel file from Google Drive
+**Step 3:** Add the below code example to download the `Google Drive` file using the Drive API, convert the stream to a byte array, and bind it to the Spreadsheet
 
 {% tabs %}
 {% highlight razor %}
@@ -181,7 +181,7 @@ Import the required namespaces at the top of the file:
 
 N> Replace **Your_file_id** with the actual Google Drive file ID, and **Your_service_account_key_path** with the actual path to your service account key JSON file.
 
-N> The File ID is the unique identifier for a Google Drive file. For example, if the file URL is: `https://drive.google.com/file/d/abc123xyz456/view?usp=sharing`, then the file ID is `abc123xyz456`.
+N> The **FileID** is the unique identifier for a Google Drive file. For example, if the file URL is: `https://drive.google.com/file/d/abc123xyz456/view?usp=sharing`, then the file ID is `abc123xyz456`.
 
 ### Supported file formats
 The Spreadsheet component supports opening the following file formats:
