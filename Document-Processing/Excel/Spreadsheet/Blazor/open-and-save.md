@@ -104,7 +104,7 @@ Import the required namespaces at the top of the file:
 
 **Step 3:** Download the Excel file, convert to bytes, and prepare for binding
 
-Add the below code example to download the `Google Drive` file using the Drive API, convert the stream to a byte array, and bind it to the Spreadsheet's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DataSource) property.
+Add the below code example to download the `Google Drive` file using the Drive API, convert the stream to a byte array, and bind it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DataSource) property.
 
 {% tabs %}
 {% highlight razor %}
