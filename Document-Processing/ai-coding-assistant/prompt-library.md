@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Prompt Library - AI Coding Assistant
 
-Speed up your DocumentSDK projects using these ready-made prompts for popular Syncfusion components. Each prompt is short, easy to understand, and focused on real tasks—like quick setups, tweaks, and fixes.
+Speed up your projects using these ready-made prompts for Syncfusion® Document Processing libraries. Each prompt is short, easy to understand, and focused on real tasks—like quick setups, tweaks, and fixes.
 
 ## How to Use
 
@@ -26,11 +26,14 @@ Before starting, make sure your MCP Server is set up and running.
 
 ### PDF
 
-The Syncfusion PDF Library enables developers to create, read, and write PDF files programmatically across .NET, Blazor, MAUI, and Flutter.
+The Syncfusion PDF Library enables developers to create, read, and edit PDF documents programmatically across all .NET applications.
 
 {% promptcards %}
-{% promptcard Create PDF from Scratch %}
+{% promptcard Create PDF %}
 #SyncfusionDocumentSDKAssistant Show me how to create text and images in a PDF document? 
+{% endpromptcard %}
+{% promptcard Edit and Save %}
+##SyncfusionDocumentSDKAssistant How can I open an existing PDF, modify its content, and save the updated file in ASP .NET MVC?
 {% endpromptcard %}
 {% promptcard Form Fields %}
 #SyncfusionDocumentSDKAssistant How can I create form fields and add combo and radio box in pdf document?
@@ -56,11 +59,10 @@ The Syncfusion PDF Library enables developers to create, read, and write PDF fil
 {% promptcard Digital Signatures %}
 #SyncfusionDocumentSDKAssistant Provide steps to digitally sign a PDF and validate existing signatures?
 {% endpromptcard %}
-{% promptcard Edit and Save PDFs %}
-#SyncfusionDocumentSDKAssistant How can I open an existing PDF, modify its content, and save the updated file in ASP .NET MVC?
-{% endpromptcard %}
-{% promptcard PDF Conversions %}
+{% promptcard XPS to PDF Conversion %}
 #SyncfusionDocumentSDKAssistant How do I convert XPS documents to PDF?
+{% endpromptcard %}
+{% promptcard HTML to PDF Conversion %}
 #SyncfusionDocumentSDKAssistant How do I convert HTML documents to PDF? 
 {% endpromptcard %}
 {% promptcard Security Operations %}
@@ -70,7 +72,7 @@ The Syncfusion PDF Library enables developers to create, read, and write PDF fil
 
 ### Word
 
-The Syncfusion Word Library enables developers to create, read, and write Word documents programmatically across .NET, Blazor, MAUI, and Java.
+The Syncfusion Word Library enables developers to create, read, edit, and convert Word documents programmatically across all .NET applications.
 
 {% promptcards %}
 {% promptcard Create Word Document %}
@@ -106,14 +108,14 @@ The Syncfusion Word Library enables developers to create, read, and write Word d
 {% promptcard Images and Tables %}
 #SyncfusionDocumentSDKAssistant Show me how to insert images with wrapping in word Document?
 {% endpromptcard %}
-{% promptcard Document Conversions %}
+{% promptcard HTML to DOCX %}
 #SyncfusionDocumentSDKAssistant Provide code to convert HTML to DOCX Document?
 {% endpromptcard %}
 {% endpromptcards %}
 
 ### Excel
 
-The Syncfusion Excel Library enables developers to create, read, and write Excel files programmatically across .NET, Blazor, MAUI, and Flutter.
+The Syncfusion Excel Library enables developers to create, read, edit, and convert Excel documents programmatically across all .NET applications.
 
 {% promptcards %}
 {% promptcard Import Data from Data Table to Excel %}
@@ -131,15 +133,13 @@ The Syncfusion Excel Library enables developers to create, read, and write Excel
 #SyncfusionDocumentSDKAssistant How do I change PivotChart type to Stacked Column with data labels for Excel?
 {% endpromptcard %}
 {% promptcard Formula %}
-#SyncfusionDocumentSDKAssistant How to create workbook-level named ranges and use it in formulas in Excel Components?
+#SyncfusionDocumentSDKAssistant How to create workbook-level named ranges and use them in formulas in Excel Components?
 {% endpromptcard %}
 {% promptcard Data Validation %}
 #SyncfusionDocumentSDKAssistant Add dropdown list validation for a column using a named range?
-#SyncfusionDocumentSDKAssistant Use custom formula validation to prevent duplicates. For Excel Components?
 {% endpromptcard %}
 {% promptcard Table %}
 #SyncfusionDocumentSDKAssistant Convert a range to an Excel Table with header row and banded style?
-#SyncfusionDocumentSDKAssistant Add calculated columns and total row to a Table in Excel?
 {% endpromptcard %}
 {% promptcard Remove Encryption %}
 #SyncfusionDocumentSDKAssistant How to remove a protection for an encrypted document for Excel Data?
@@ -155,23 +155,25 @@ The Syncfusion Excel Library enables developers to create, read, and write Excel
 {% endpromptcard %}
 {% endpromptcards %}
 
-### PPT
+### PowerPoint
 
-The Syncfusion PowerPoint Library enables developers to create, read, and write PowerPoint presentations programmatically across .NET, Blazor, and MAUI.
+The Syncfusion PowerPoint Library enables developers to create, read, edit, and convert PowerPoint presentations programmatically across all .NET applications.
 
-{% promptcards Create Presentation %}
+{% promptcards %}
+{% promptcard Create Presentation %}
 #SyncfusionDocumentSDKAssistant How to programmatically create a new PowerPoint with slides, layouts, themes, and styled text?
-{% promptcard Edit and Save Presentation %}
+{% endpromptcard %}
+{% promptcard Edit and Save %}
 #SyncfusionDocumentSDKAssistant How can I load an existing PPTX and save the updated presentation?
 {% endpromptcard %}
 {% promptcard Convert PowerPoint to PDF %}
 #SyncfusionDocumentSDKAssistant How to convert a PowerPoint document into PDF document in .NET Core?
 {% endpromptcard %}
-{% promptcard Convert Slides to Images%}
+{% promptcard Convert Slides to Images %}
 #SyncfusionDocumentSDKAssistant Give an example that demonstrates the conversion of an entire Presentation to images?
 {% endpromptcard %}
 {% promptcard Create and Edit Charts %}
-#SyncfusionDocumentSDKAssistant Show me how to insert charts, update data, and customize titles, legends, axes, and data labels in PPT?
+#SyncfusionDocumentSDKAssistant Show me how to insert charts, update data, and customize titles, legends, axes, and data labels in PPTX?
 {% endpromptcard %}
 {% promptcard Convert Chart to Image %}
 #SyncfusionDocumentSDKAssistant Is it possible to convert the charts in a Presentation slide to image?
@@ -188,21 +190,19 @@ The Syncfusion PowerPoint Library enables developers to create, read, and write 
 {% promptcard Encrypt and Decrypt Presentations %}
 #SyncfusionDocumentSDKAssistant Does PPTX support a password-protect with encryption and open a protected file?
 {% endpromptcard %}
-{% promptcard Set and Remove Write Protection %}
-#SyncfusionDocumentSDKAssistant How do I restrict editing and remove writing programmatically in PPT?
-{% endpromptcard %}
-{% promptcard Access and Update Document Properties %}
-#SyncfusionDocumentSDKAssistant Show me how to read and modify built-in properties like author keywords in PPT?
-{% endpromptcard %}
 {% promptcard Create and Modify Sections %}
-#SyncfusionDocumentSDKAssistant How can create sections in PPT?
+#SyncfusionDocumentSDKAssistant How can create sections in PowerPoint?
+{% endpromptcard %}
+{% promptcard Clone and Merge %}
 #SyncfusionDocumentSDKAssistant how to clone the slide collection of a section and add those slides to a destination presentation?
 {% endpromptcard %}
 {% promptcard Work with Tables %}
 #SyncfusionDocumentSDKAssistant Show the code to apply the custom table formatting in presentation?
 {% endpromptcard %}
-{% promptcard Shapes and Images %}
+{% promptcard Insert Shapes %}
 #SyncfusionDocumentSDKAssistant Show how to insert shapes in presentation document?
+{% endpromptcard %}
+{% promptcard Insert PowerPoint Elements %}
 #SyncfusionDocumentSDKAssistant Insert an image on a new slide, add a table, draw a shape, and place text inside the shape in the presentation document?
 {% endpromptcard %}
 {% endpromptcards %}
