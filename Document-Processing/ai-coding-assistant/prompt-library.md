@@ -180,7 +180,7 @@ The Syncfusion PowerPoint Library enables developers to create, read, and write 
 #SyncfusionDocumentSDKAssistant How do I apply and control entrance and emphasis animations with triggers and sequence ordering in Presentation?
 {% endpromptcard %}
 {% promptcard Create and Edit Transition Effects %}
-#SyncfusionDocumentSDKAssistant Show me how to add and customize slide transitions, durations, and advance timings in PPT?
+#SyncfusionDocumentSDKAssistant Show how to set a transition effect to a PowerPoint slide?
 {% endpromptcard %}
 {% promptcard Create and Manage Comments %}
 #SyncfusionDocumentSDKAssistant How can I insert, edit, and delete reviewer comments and list all comments in a presentation?
@@ -195,13 +195,15 @@ The Syncfusion PowerPoint Library enables developers to create, read, and write 
 #SyncfusionDocumentSDKAssistant Show me how to read and modify built-in properties like author keywords in PPT?
 {% endpromptcard %}
 {% promptcard Create and Modify Sections %}
-#SyncfusionDocumentSDKAssistant How can I create sections, move slides between sections, and rename or delete sections in PPT?
+#SyncfusionDocumentSDKAssistant How can create sections in PPT?
+#SyncfusionDocumentSDKAssistant how to clone the slide collection of a section and add those slides to a destination presentation?
 {% endpromptcard %}
 {% promptcard Work with Tables %}
 #SyncfusionDocumentSDKAssistant Show the code to apply the custom table formatting in presentation?
 {% endpromptcard %}
 {% promptcard Shapes and Images %}
-#SyncfusionDocumentSDKAssistant Show me how to insert shapes and images in presentation document?
+#SyncfusionDocumentSDKAssistant Show how to insert shapes in presentation document?
+#SyncfusionDocumentSDKAssistant Insert an image on a new slide, add a table, draw a shape, and place text inside the shape in the presentation document?
 {% endpromptcard %}
 {% endpromptcards %}
 
