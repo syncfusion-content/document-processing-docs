@@ -15,12 +15,11 @@ The PDF allows you list the content in ordered and unordered list. The ordered l
 This example demonstrates how to create an ordered list in a PDF document using the `PdfOrderedList` class. Ordered lists allow you to present items in a structured, sequential format, typically numbered or lettered, enhancing readability and organization within the PDF content.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
-
+{% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfList, PdfStandardFont, PdfBrush, PdfStringFormat, PdfPen, PdfNumberStyle, PdfOrderedList, PdfListItemCollection } from '@syncfusion/ej2-pdf';
 
 // Load an existing document
-let document: PdfDocument = new PdfDocument(data, password);
+let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Assign the array of string items
@@ -56,13 +55,10 @@ list.draw(page, { x: 0, y: 20, width: 500, height: 700 });
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
-
+{% highlight javascript tabtitle="JavaScript" %}
 // Load an existing document
-var document = new ej.pdf.PdfDocument(data, password);
+var document = new ej.pdf.PdfDocument(data);
 // Access the first page
 var page = document.getPage(0);
 // Assign the array of string items
@@ -106,12 +102,11 @@ document.destroy();
 This example demonstrates how to create an unordered list in a PDF document using the `PdfUnorderedList` class. Unordered lists display items with bullet points instead of numbers, making them ideal for presenting non-sequential information in a clear and organized manner.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
-
+{% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfList, PdfStandardFont, PdfBrush, PdfStringFormat, PdfPen, PdfNumberStyle, PdfUnorderedListStyle, PdfListItemCollection } from '@syncfusion/ej2-pdf';
 
 // Load the existing document
-let document: PdfDocument = new PdfDocument(data, password);
+let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Define the items in the unordered list
@@ -147,12 +142,10 @@ list.draw(page, { x: 0, y: 20, width: 500, height: 700 });
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
+{% highlight javascript tabtitle="JavaScript" %}
 // Load the existing document
-var document = new ej.pdf.PdfDocument(data, password);
+var document = new ej.pdf.PdfDocument(data);
 // Access the first page
 var page = document.getPage(0);
 // Define the items in the unordered list
@@ -188,6 +181,5 @@ list.draw(page, { x: 0, y: 20, width: 500, height: 700 });
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
 {% endtabs %}

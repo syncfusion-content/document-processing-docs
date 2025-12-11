@@ -36,8 +36,6 @@ Step 5: **Add script reference** : Add the required scripts using the CDN inside
 {% endhighlight %}
 {% endtabs %}
 
-N> And ensure the application includes an `openjpeg` folder under `Scripts` (or a publicly accessible static path). This folder must contain the `openjpeg.js` and `openjpeg.wasm` files, along with the PDF file to extract images. Keep these in the same static content area as `ej2.min.js`.
-
 Step 6: **Create a PDF document** : Add the script in `~/Views/Home/Index.cshtml` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}

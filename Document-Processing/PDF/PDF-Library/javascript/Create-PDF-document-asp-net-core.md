@@ -40,9 +40,6 @@ N> Check out the following topics for including script references in an ASP.NET 
 *   [NPM Package](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#node-package-manager-npm)
 *   [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)
 
-And ensure the application includes an `openjpeg` folder under `wwwroot` (or a publicly accessible static path). This folder must contain the `openjpeg.js` and `openjpeg.wasm` files, along with the PDF file to extract images. Keep these in the same static content area as `ej2.min.js`.
-***
-
 Would you like me to **reformat this into a proper Syncfusion documentation style note block** (with icons and emphasis), or **convert it into a step-by-step guide for adding script references**?
 
 

@@ -61,7 +61,7 @@ This example demonstrates how to add bookmarks to an existing PDF document using
 import {PdfDocument, PdfPage, PdfBookmarkBase, PdfDestination} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data, password);
+let document: PdfDocument = new PdfDocument(data);
 // Get page
 let page: PdfPage = document.getPage(0);
 // Get the bookmarks
@@ -78,7 +78,7 @@ document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data, password);
+var document = new ej.pdf.PdfDocument(data);
 // Get page
 var page = document.getPage(0);
 // Get the bookmarks
@@ -104,7 +104,7 @@ This example demonstrates how to insert bookmarks at a specific position in an e
 import {PdfDocument, PdfPage, PdfBookmarkBase, PdfDestination} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data, password);
+let document: PdfDocument = new PdfDocument(data);
 // Get the first page
 let page: PdfPage = document.getPage(0) as PdfPage;
 // Get the bookmarks
@@ -121,7 +121,7 @@ document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data, password);
+var document = new ej.pdf.PdfDocument(data);
 // Get the first page
 var page = document.getPage(0);
 // Get the bookmarks
@@ -146,7 +146,7 @@ This example demonstrates how to remove bookmarks from an existing PDF document 
 import {PdfDocument, PdfPage, PdfBookmarkBase} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data, password);
+let document: PdfDocument = new PdfDocument(data);
 // Get the first page
 let page: PdfPage = document.getPage(0) as PdfPage;
 // Get the bookmarks
@@ -161,7 +161,7 @@ document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data, password);
+var document = new ej.pdf.PdfDocument(data);
 // Get the first page
 var page = document.getPage(0);
 // Get the bookmarks
@@ -185,7 +185,7 @@ This example demonstrates how to remove bookmarks from the document at the speci
 import {PdfDocument, PdfPage, PdfBookmarkBase, PdfDestination} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data, password);
+let document: PdfDocument = new PdfDocument(data);
 // Get the first page
 let page: PdfPage = document.getPage(0) as PdfPage;
 // Get the bookmarks
@@ -200,7 +200,7 @@ document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data, password);
+var document = new ej.pdf.PdfDocument(data);
 // Get the first page
 var page = document.getPage(0);
 // Get the bookmarks
@@ -224,7 +224,7 @@ This example demonstrates how to removes all the bookmarks from the collection u
 import {PdfDocument, PdfPage, PdfBookmarkBase} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data, password);
+let document: PdfDocument = new PdfDocument(data);
 // Get the bookmarks
 let bookmarks: PdfBookmarkBase = document.bookmarks;
 // Remove all the bookmark from the collection.
@@ -239,7 +239,7 @@ document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data, password);
+var document = new ej.pdf.PdfDocument(data);
 // Get the bookmarks
 var bookmarks = document.bookmarks;
 // Remove all the bookmarks from the collection
@@ -263,7 +263,7 @@ This example demonstrates how to retrieve the page index associated with a bookm
 import {PdfDocument, PdfBookmarkBase} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data, password);
+let document: PdfDocument = new PdfDocument(data);
 // Get bookmarks
 let bookmarks: PdfBookmarkBase = document.bookmarks;
 // Get bookmark at the specified index
@@ -276,7 +276,7 @@ document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data, password);
+var document = new ej.pdf.PdfDocument(data);
 // Get bookmarks
 var bookmarks = document.bookmarks;
 // Get the first bookmark (or any specific one)

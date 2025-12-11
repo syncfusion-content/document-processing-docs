@@ -523,7 +523,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-The following code snippet explains how to add a free text annotation in an existing PDF document.
+The following code snippet explains how to add a rubber stamp annotation in an existing PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -894,7 +894,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-The following code snippet explains how to add a attachment annotation in an existing PDF document.
+The following code snippet explains how to add a file attachment annotation in an existing PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -940,41 +940,6 @@ var annotation = new ej.pdf.PdfAttachmentAnnotation(
 );
 // Add annotation to the page
 page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-### Sound Annotation
-
-This example demonstrates how to access a sound annotation to a PDF page using the `PdfSoundAnnotation` class.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfSoundAnnotation} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Access the annotation at index 0
-let annotation: PdfSoundAnnotation = page.annotations.at(0) as PdfSoundAnnotation;
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Access the annotation at index 0
-var annotation = page.annotations.at(0);
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -1225,7 +1190,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-The following code snippet explains how to add a document link annotation in an existing PDF document.
+The following code snippet explains how to add a redaction annotation in an existing PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1493,9 +1458,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Cloud border style Annotation
-
-### PdfRectangleAnnotation
+## Rectangle Annotation
 
 This example demonstrates how to add a rectangle annotation to a PDF page using the `PdfRectangleAnnotation` class. A rectangle annotation allows drawing rectangular shapes on a PDF document.
 
@@ -1507,7 +1470,7 @@ import {PdfDocument, PdfPage, PdfRectangleAnnotation, PdfAnnotationBorder, PdfBo
 let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
-// Create a new square annotation with bounds
+// Create a new rectangle annotation with bounds
 let annotation = new PdfRectangleAnnotation({ x: 50, y: 80, width: 200, height: 100 }, {
 text: 'Rect', author: 'Syncfusion', subject: 'Rectangle Annotation',
        color: { r: 255, g: 0, b: 0 },
@@ -1528,7 +1491,7 @@ document.destroy();
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
 var page = document.addPage();
-// Create a new square annotation with bounds
+// Create a new rectangle annotation with bounds
 var annotation = new ej.pdf.PdfRectangleAnnotation(
   { x: 50, y: 80, width: 200, height: 100 },
   {
@@ -1615,7 +1578,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Polygon Annotation
+## Polygon Annotation
 
 This example demonstrates how to add a polygon annotation to a PDF page using the `PdfPolygonAnnotation` class. A polygon annotation allows drawing multi-sided shapes on a PDF document.
 
@@ -1753,7 +1716,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### PdfCircleAnnotation
+## Circle Annotation
 
 This example demonstrates how to add a circle annotation to a PDF page using the `PdfCircleAnnotation` class. A circle annotation allows drawing circular or oval shapes on a PDF document.
 
@@ -1881,7 +1844,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### PdfEllipseAnnotation
+## Ellipse Annotation
 
 This example demonstrates how to add an ellipse annotation to a PDF page using the `PdfEllipseAnnotation` class. An ellipse annotation allows drawing elliptical shapes on a PDF document.
 
@@ -2004,6 +1967,13 @@ document.destroy();
 ## Measurement Annotations
 
 This example demonstrates how to access a measurement annotation from a PDF page using the `PdfLineAnnotation` class. A measurement annotation allows defining and displaying dimensions such as distances or lengths within a PDF document.
+
+Common types of measurement annotations include:
+
+* Line   - Represents a straight distance between two points.
+* Circle - Used to measure circular dimensions.
+* Square - Defines rectangular or square measurements.
+* Angle  - Displays angular measurements between two intersecting lines.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

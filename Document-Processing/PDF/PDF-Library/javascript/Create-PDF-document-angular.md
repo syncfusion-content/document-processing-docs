@@ -45,13 +45,6 @@ npm install @syncfusion/ej2-pdf --save
 ```
 N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
 
-* Copy the contents of the openjpeg folder from ./node_modules/@syncfusion/ej2-pdf-data-extract/dist to the public directory using the command:
-```bash
-cp -R ./node_modules/@syncfusion/ej2-pdf-data-extract/dist/openjpeg public/openjpeg
-```
-* Confirm that there is an 'openjpeg' directory within your public directory, if you extracting images from PDF.
-* Validate that your server has been configured to utilize the Content-Type: application/wasm MIME type. Additional information can be found in the [Troubleshooting](./troubleshooting/troubleshooting) section.
-
 ## Create a PDF document using TypeScript
 
 * Add a simple button to `app.component.html` and attach a click handler that uses the TypeScript PDF API to create a new PDF document.
