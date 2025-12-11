@@ -1,13 +1,13 @@
 ---
-title: Shapes in TypeScript PDF library | Syncfusion
-description: This section explains how to add shapes such as lines, curves, paths, text, rectangles, pies, arcs, Beziers, and ellipses by using the TypeScript PDF library
+title: Shapes in JavaScript PDF library | Syncfusion
+description: This section explains how to add shapes such as lines, curves, paths, text, rectangles, pies, arcs, Beziers, and ellipses by using the JavaScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Shapes in TypeScript PDF library
+# Shapes in JavaScript PDF library
 
-Essential<sup>&reg;</sup> PDF has support for adding the below shapes.
+The PDF has support for adding the below shapes.
 
 * Line
 * Curve
@@ -21,7 +21,7 @@ Essential<sup>&reg;</sup> PDF has support for adding the below shapes.
 
 ## Adding Shapes to a PDF document
 
-Essential<sup>&reg;</sup> PDF supports adding shapes with different types of brushes like solid bush, gradient brush, tiling brush, and image brush along with various color spaces and transparency levels.
+JavaScript PDF supports adding shapes with different types of brushes like solid bush, gradient brush, tiling brush, and image brush along with various color spaces and transparency levels.
 
 ### Polygon
 
@@ -48,6 +48,26 @@ This example demonstrates how to draw a polygon shape in a PDF document using th
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Get graphics from the page
+var graphics = page.graphics;
+// Create a new pen
+var pen = new ej.pdf.PdfPen({r:0,g:0,b:0},1);
+// Define the polygon points
+var points=[{x:10,y:100}, {x:10,y:200}, {x:100,y:100}, {x:100,y:200}, {x:55,y:150}];
+// Draw the polygon on the page graphics
+graphics.drawPolygon(points,pen);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -77,6 +97,26 @@ The following code snippet explains how to draw a polygon in an existing PDF doc
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Add a page
+var page = document.getPage(0);
+// Get graphics from the page
+var graphics = page.graphics;
+// Create a new pen
+var pen = new ej.pdf.PdfPen({r:0,g:0,b:0},1);
+// Define the polygon points
+var points=[{x:10,y:100}, {x:10,y:200}, {x:100,y:100}, {x:100,y:200}, {x:55,y:150}];
+// Draw the polygon on the page graphics
+graphics.drawPolygon(points,pen);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 ### Line
@@ -104,6 +144,24 @@ This example demonstrates how to draw a straight line in a PDF document using th
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Get graphics from the page
+var graphics = page.graphics;
+// Create a new pen
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Draw a line on the page graphics
+graphics.drawLine(pen, { x: 10, y: 200 }, { x: 100, y: 100 });
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 The following code snippet explains how to draw a line in an existing PDF document.
@@ -127,6 +185,24 @@ The following code snippet explains how to draw a line in an existing PDF docume
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Add a page
+var page = document.getPage(0);
+// Get graphics from the page
+var graphics = page.graphics;
+// Create a new pen
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Draw a line on the page graphics
+graphics.drawLine(pen, { x: 10, y: 200 }, { x: 100, y: 100 });
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -162,6 +238,30 @@ This example demonstrates how to draw a path in a PDF document using the `drawPa
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Create a new path
+var path = new ej.pdf.PdfPath();
+// Gets the graphics of the PDF page
+var graphics = page.graphics;
+// Create a new pen
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Add lines to the path
+path.addLine({ x: 10, y: 50 }, { x: 200, y: 250 });
+path.addLine({ x: 10, y: 150 }, { x: 220, y: 250 });
+path.addLine({ x: 10, y: 200 }, { x: 240, y: 250 });
+// Draw the path on the page graphics
+graphics.drawPath(path, pen);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 The following code snippet explains how to draw path in an existing PDF document.
@@ -193,6 +293,30 @@ The following code snippet explains how to draw path in an existing PDF document
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Add a page
+var page = document.getPage(0);
+// Create a new path
+var path = new ej.pdf.PdfPath();
+// Gets the graphics of the PDF page
+var graphics = page.graphics;
+// Create a new pen
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Add lines to the path
+path.addLine({ x: 10, y: 50 }, { x: 200, y: 250 });
+path.addLine({ x: 10, y: 150 }, { x: 220, y: 250 });
+path.addLine({ x: 10, y: 200 }, { x: 240, y: 250 });
+// Draw the path on the page graphics
+graphics.drawPath(path, pen);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 ### Text
@@ -220,6 +344,24 @@ This example demonstrates how to draw a text in a PDF document using the `drawSt
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Get graphics from the page
+var graphics = page.graphics;
+// Set font
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+// Draw text
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 The following code snippet explains how to draw text in an existing PDF document.
@@ -243,6 +385,24 @@ The following code snippet explains how to draw text in an existing PDF document
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Add a page
+var page = document.getPage(0);
+// Get graphics from the page
+var graphics = page.graphics;
+// Set font
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+// Draw text
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -272,6 +432,24 @@ This example demonstrates how to draw a rectangle in a PDF document using the `d
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Gets the graphics of the PDF page
+var graphics = page.graphics;
+// Create a new pen.
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Draw a rectangle on the page graphics.
+graphics.drawRectangle({ x: 10, y: 20, width: 100, height: 200 }, pen);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 The following code snippet explains how to draw rectangle in an existing PDF document.
@@ -295,6 +473,24 @@ The following code snippet explains how to draw rectangle in an existing PDF doc
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Add a page
+var page = document.getPage(0);
+// Gets the graphics of the PDF page
+var graphics = page.graphics;
+// Create a new pen.
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Draw a rectangle on the page graphics.
+graphics.drawRectangle({ x: 10, y: 20, width: 100, height: 200 }, pen);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -324,6 +520,24 @@ This example demonstrates how to draw a pie in a PDF document using the `drawPie
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Gets the graphics of the PDF page
+var graphics = page.graphics;
+// Create a new pen
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Draw a pie slice on the page graphics
+graphics.drawPie({ x: 10, y: 50, width: 200, height: 200 }, 180, 60, pen);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 The following code snippet explains how to draw pie in an existing PDF document.
@@ -347,6 +561,24 @@ The following code snippet explains how to draw pie in an existing PDF document.
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Add a page
+var page = document.getPage(0);
+// Gets the graphics of the PDF page
+var graphics = page.graphics;
+// Create a new pen
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Draw a pie slice on the page graphics
+graphics.drawPie({ x: 10, y: 50, width: 200, height: 200 }, 180, 60, pen);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -376,6 +608,24 @@ This example demonstrates how to draw a arc in a PDF document using the `drawArc
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Gets the graphics of the PDF page
+var graphics = page.graphics;
+// Create a new pen
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Draw an arc slice on the page graphics
+graphics.drawArc({ x: 10, y: 20, width: 100, height: 200 }, 20, 30, pen);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 The following code snippet explains how to draw arc in an existing PDF document.
@@ -399,6 +649,24 @@ The following code snippet explains how to draw arc in an existing PDF document.
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Add a page
+var page = document.getPage(0);
+// Gets the graphics of the PDF page
+var graphics = page.graphics;
+// Create a new pen
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Draw an arc slice on the page graphics
+graphics.drawArc({ x: 10, y: 20, width: 100, height: 200 }, 20, 30, pen);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -428,6 +696,24 @@ This example demonstrates how to draw a bezier in a PDF document using the `draw
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Gets the graphics of the PDF page
+var graphics = page.graphics;
+// Create a new pen
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Draw a Bezier curve on the page graphics
+graphics.drawBezier({ x: 50, y: 100 }, { x: 200, y: 50 }, { x: 100, y: 150 }, { x: 150, y: 100 }, pen);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 The following code snippet explains how to draw bezier in an existing PDF document.
@@ -452,7 +738,25 @@ The following code snippet explains how to draw bezier in an existing PDF docume
     // Close the document
     document.destroy();
 
-{% enhighlight %}
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Add a page
+var page = document.getPage(0);
+// Gets the graphics of the PDF page
+var graphics = page.graphics;
+// Create a new pen
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Draw a Bezier curve on the page graphics
+graphics.drawBezier({ x: 50, y: 100 }, { x: 200, y: 50 }, { x: 100, y: 150 }, { x: 150, y: 100 }, pen);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 ### Ellipse
@@ -480,6 +784,24 @@ This example demonstrates how to draw a ellipse in a PDF document using the `dra
     document.destroy();
 
 {% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Gets the graphics of the PDF page
+var graphics = page.graphics;
+// Create a new pen
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Draw an ellipse on the page graphics
+graphics.drawEllipse({ x: 10, y: 20, width: 100, height: 200 }, pen);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 The following code snippet explains how to draw ellipse in an existing PDF document.
@@ -503,6 +825,25 @@ The following code snippet explains how to draw ellipse in an existing PDF docum
     document.save('Output.pdf');
     // Close the document
     document.destroy();
+
+{% endhighlight %}
+{% highlight c# tabtitle="JavaScript" %}
+
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Add a page
+var page = document.getPage(0);
+// Gets the graphics of the PDF page
+var graphics = page.graphics;
+// Create a new pen
+var pen = new ej.pdf.PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Draw an ellipse on the page graphics
+graphics.drawEllipse({ x: 10, y: 20, width: 100, height: 200 }, pen);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}

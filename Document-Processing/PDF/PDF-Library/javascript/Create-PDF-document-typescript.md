@@ -47,7 +47,7 @@ The following list of dependencies are required to use the `TypeScript PDF libra
 {% tabs %}
 {% highlight html tabtitle="index.ts" %}
 
-import { PdfDocument, PdfPage, PdfStandardFont, PdfPen, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfStandardFont, PdfFontFamily,  PdfPen, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
 
 {% endhighlight %}
 {% endtabs %}
