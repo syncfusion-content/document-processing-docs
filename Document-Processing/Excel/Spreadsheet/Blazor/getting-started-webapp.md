@@ -216,7 +216,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
-<SfSpreadsheet DataSource="DataSourceBytes">
+<SfSpreadsheet DataSource="@DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
