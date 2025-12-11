@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Organize Pages in Blazor PDF Viewer component | Syncfusion
-description: Learn here all about Organize Pages in Syncfusion Blazor PDF Viewer component.
+title: Overview of Organize Pages in Blazor PDF Viewer component | Syncfusion
+description: Learn here all about Overview of Organize Pages in Syncfusion Blazor PDF Viewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -80,7 +80,7 @@ Seamlessly import a PDF document into your existing document:
 
 Make comprehensive adjustments by selecting all pages simultaneously. This facilitates efficient editing and formatting across the entire document.
 
-![Organzie Select Pages](./images/organize-select-all.png)
+![Organzie Select Pages](./images/organize-select-all.jpg)
 
 ### Zooming Page Thumbnails
 
@@ -92,7 +92,7 @@ Adjust the size of page thumbnails within the organizer panel for better visibil
 
 This feature is especially useful when working with documents containing complex layouts or small details that need careful examination during organization.
 
-![Organzie Zoom Panel](./images/organize-zoom-panel.png)
+![Organzie Zoom Panel](./images/organize-zoom-panel.jpg)
 
 ### Real-time updates
 
@@ -134,13 +134,13 @@ Safeguard your edits by utilizing the **Save As** feature. This enables you to d
 
 **PageOrganizerSettings:** This API allows control over various page management functionalities within the PDF Viewer. It includes options to enable or disable actions such as deleting, inserting, rotating, duplicating, importing and rearranging pages, as well as configuring thumbnail zoom settings. By default, all these actions are enabled and standard zoom settings are applied.
 
-* **CanDelete** : It allow users to enable or disbale the delete pages from the document. By default it set as `true`.
-* **CanInsert** : It allow users to enable or disbale the insert new pages from the document. By default it set as `true`.
-* **CanRotate** : It allow users to enable or disbale the rotate pages from the document. By default it set as `true`.
-* **CanDuplicate** : It allow users to enable or disbale the duplicate pages from the document. By default it set as `true`.
-* **CanRearrange** : It allow users to enable or disbale the order of pages from the document. By default it set as `true`.
-* **CanExtractPages** : It allow users to enable or disbale extract pages into a separate document. By default it set as `true`.
-* **ShowImageZoomingSlider** : It allow users to enable or disbale the zoom slider for images. By default it set as `true`.
+* **CanDelete** : It allow users to enable or disable the delete pages from the document. By default it set as `true`.
+* **CanInsert** : It allow users to enable or disable the insert new pages from the document. By default it set as `true`.
+* **CanRotate** : It allow users to enable or disable the rotate pages from the document. By default it set as `true`.
+* **CanDuplicate** : It allow users to enable or disable the duplicate pages from the document. By default it set as `true`.
+* **CanRearrange** : It allow users to enable or disable the order of pages from the document. By default it set as `true`.
+* **CanExtractPages** : It allow users to enable or disable extract pages into a separate document. By default it set as `true`.
+* **ShowImageZoomingSlider** : It allow users to enable or disable the zoom slider for images. By default it set as `true`.
 * **ImageZoom** : It represents the current zoom value of the images in the page organizer view. By default it set as `1`.
 * **ImageZoomMin** : It represent minimum value for the image zooming slider in the page organizer view. By default it set as `1` and acceptable values: `1` to `4`.
 * **ImageZoomMin** : It represent maximum value for the image zooming slider in the page organizer view. By default it set as `5` and acceptable values: `2` to `5`.

@@ -17,11 +17,11 @@ You can adjust the orientation of pages to ensure proper alignment. The rotate i
 
 *   **Rotate clockwise**: Rotate the selected pages 90 degrees clockwise.
 
-![Rotating Clockwise](./images/organize-ui-rotate-right.png)
+![Rotating Clockwise](./images/organize-ui-rotate-right.jpg)
 
 *   **Rotate counter-clockwise**: Rotate the selected pages 90 degrees counter-clockwise.
 
-![Rotating Counter Clockwise](./images/organize-ui-rotate-left.png)
+![Rotating Counter Clockwise](./images/organize-ui-rotate-left.jpg)
 
 ## Rearranging PDF pages
 
@@ -50,7 +50,7 @@ Remove unwanted pages from your document with these steps:
 1.  **Select pages to delete**: Click on the thumbnails of the pages you wish to remove. You can select multiple pages at once.
 2.  **Delete selected pages**: Use the delete option in the Organize Pages pane to remove the selected pages from the document.
 
-![Delete](./images/organize-ui-delete.png)
+![Delete](./images/organize-ui-delete.jpg)
 
 ## Copying PDF pages
 
@@ -67,13 +67,13 @@ Seamlessly import another PDF document into your current document:
 
 *   **Import PDF document**: Click the **Import Document** button to select and import a PDF. The imported document will be inserted as a thumbnail. If a page is selected, the thumbnail will be added to its right. If no pages are selected, it will be added as the first page. The imported PDF will be merged with the current document upon saving.
 
-![Importing](./images/organize-ui-extract-page.png)
+![Importing](./images/organize-ui-extract-page.jpg)
 
 ## Selecting all pages
 
 Select all pages simultaneously to perform bulk operations, such as rotating or deleting all pages at once.
 
-![Selecting](./images/organize-ui-select.png)
+![Selecting](./images/organize-ui-select.jpg)
 
 ## Zooming page thumbnails
 
@@ -83,7 +83,7 @@ Adjust the size of page thumbnails for better visibility and precision:
 *   Zoom in to see more detail on each page.
 *   Zoom out to view more pages at once.
 
-![Zooming](./images/organize-zoom-panel.png)
+![Zooming](./images/organize-zoom-panel.jpg)
 
 ## Real-time updates and saving
 
@@ -95,8 +95,8 @@ The following keyboard shortcuts are available in the Organize Pages dialog:
 
 *   **Ctrl+Z**: Undo the last action.
 
-![Keyboard](./images/organize-ui-undo.png)
+![Keyboard](./images/organize-ui-undo.jpg)
 
 *   **Ctrl+Y**: Redo the last undone action.
 
-![Keyboard](./images/organize-ui-redo.png)
+![Keyboard](./images/organize-ui-redo.jpg)

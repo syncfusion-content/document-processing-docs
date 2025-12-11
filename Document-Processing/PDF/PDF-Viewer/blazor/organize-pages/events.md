@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Organize Pages Events in Blazor PDF Viewer | Syncfusion
-description: Learn how to organize pages Events in the PDF Viewer, including rotating, rearranging, inserting, deleting, and copying pages on mobile devices.
+description: Learn how to organize pages Events in the Blazor PDF Viewer, including rotating, rearranging, inserting, deleting, and copying pages.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

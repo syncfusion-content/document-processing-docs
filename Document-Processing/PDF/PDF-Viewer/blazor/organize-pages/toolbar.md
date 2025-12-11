@@ -28,7 +28,7 @@ The `CanInsert` property controls the visibility of the insert tool. When set to
 {% endhighlight %}
 {% endtabs %}
 
-![Insert Disable](./images/organize-insert-disable.png)
+![Insert Disable](./images/organize-insert-disable.jpg)
 
 ## Show or hide the delete option
 
@@ -47,7 +47,7 @@ The `CanDelete` property controls the visibility of the delete tool. When set to
 {% endhighlight %}
 {% endtabs %}
 
-![Delete Disable](./images/organize-delete-disable.png)
+![Delete Disable](./images/organize-delete-disable.jpg)
 
 ## Show or hide the rotate option
 
@@ -66,7 +66,7 @@ The `CanRotate` property controls the visibility of the rotate tool. When set to
 {% endhighlight %}
 {% endtabs %}
 
-![Rotate Disable](./images/organize-rotate-disable.png)
+![Rotate Disable](./images/organize-rotate-disable.jpg)
 
 ## Show or hide the duplicate option
 
@@ -85,7 +85,7 @@ The `CanDuplicate` property controls the visibility of the copy tool. When set t
 {% endhighlight %}
 {% endtabs %}
 
-![Duplicate Disable](./images/organize-copy-disable.png)
+![Duplicate Disable](./images/organize-copy-disable.jpg)
 
 ## Show or hide the import option
 
@@ -104,7 +104,7 @@ The `CanImport` property controls the visibility of the import tool. When set to
 {% endhighlight %}
 {% endtabs %}
 
-![Import Disable](./images/organize-import-disable.png)
+![Import Disable](./images/organize-import-disable.jpg)
 
 ## Show or hide the rearrange option
 
@@ -140,4 +140,4 @@ The `CanExtractPages` property controls the visibility of the extract tool. When
 {% endhighlight %}
 {% endtabs %}
 
-![Extract Disable](./images/organize-extract-disable.png)
+![Extract Disable](./images/organize-extract-disable.jpg)
