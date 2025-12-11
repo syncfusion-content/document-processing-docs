@@ -45,22 +45,6 @@ The following image represents how to add the comments using the toolbar on the 
 
 The following image represents how to add comments using the toolbar on mobile.
 
-{% tabs %}
-{% highlight c# %}
-
-ReadOnlyObservableCollection<Annotation> annotations = pdfViewer.Annotations;
-Annotation annotation = annotations[0];
-Comment comment = new Comment()
-{
-    Text = "First Annotations",
-    Author="User Name",
-    ModifiedDate= DateTime.Now, 
-};
-annotation.Comments.Add(comment);
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Adding comments or replies
 Follow these steps to add comments or replies :
 1. Select the annotation in the PDF document and open the comment panel.
