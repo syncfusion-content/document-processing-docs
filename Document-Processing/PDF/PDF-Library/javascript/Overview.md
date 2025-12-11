@@ -36,7 +36,7 @@ The following are the key features of this library.
 
 ## Supported web platforms
 
-* ASP.NET core
+* ASP.NET Core
 * ASP.NET MVC
 * Angular
 * React
