@@ -34,7 +34,18 @@ Step 5: **Add script reference** : Add the required scripts using the CDN inside
 </head>
 {% endhighlight %}
 {% endtabs %}
- 
+
+N> Check out the following topics for including script references in an ASP.NET Core application to enable PDF creation using the Syncfusion<sup style="font-size:70%">®</sup> JavaScript PDF library:
+*   [CDN](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#cdn-reference)
+*   [NPM Package](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#node-package-manager-npm)
+*   [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)
+
+And ensure the application includes an `openjpeg` folder under `wwwroot` (or a publicly accessible static path). This folder must contain the `openjpeg.js` and `openjpeg.wasm` files, along with the PDF file to extract images. Keep these in the same static content area as `ej2.min.js`.
+***
+
+Would you like me to **reformat this into a proper Syncfusion documentation style note block** (with icons and emphasis), or **convert it into a step-by-step guide for adding script references**?
+
+
 Step 6: **Create a PDF document** : Add the script in `~/Views/Home/Index.cshtml` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}

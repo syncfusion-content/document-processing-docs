@@ -14,16 +14,23 @@ The Syncfusion<sup>&reg;</sup> JavaScript PDF library is used to create, read, a
 
 This guide explains how to integrate the JavaScript PDF library into an React application.
 
-## Add script reference
+## Installing Syncfusion<sup>&reg;</sup> JavaScript PDF package
 
-* Add the required scripts using the CDN inside the `<head>` of `public/index.html` using the following code.
+All the available JS 2 packages are published in `npmjs.com` registry.
 
-```javascript
-<head>
-    <!-- Syncfusion JavaScript PDF Library (CDN) -->
-    <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
-</head>
+* To install PDF component, use the following command.
+
+```bash
+npm install @syncfusion/ej2-pdf --save
 ```
+N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
+
+* Copy the contents of the openjpeg folder from ./node_modules/@syncfusion/ej2-pdf-data-extract/dist to the public directory using the command:
+```bash
+cp -R ./node_modules/@syncfusion/ej2-pdf-data-extract/dist/openjpeg public/openjpeg
+```
+* Confirm that there is an 'openjpeg' directory within your public directory, if you extracting images from PDF.
+* Validate that your server has been configured to utilize the Content-Type: application/wasm MIME type. Additional information can be found in the [Troubleshooting](./troubleshooting/troubleshooting) section.
 
 **Create a PDF document** : Add the script in `App.jsx` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 

@@ -38,17 +38,23 @@ When creating a new project, choose the option `Default ([Vue 2] babel, es-lint)
 
 Once the `quick start` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-* **Add script reference** : Add the required scripts using the CDN inside the `<head>` of `index.html` as follows:
+* **Installing Syncfusion<sup>&reg;</sup> JavaScript PDF package**
 
-{% tabs %}
-{% highlight html tabtitle="~/index.html" %}
-<head>
-    <!-- Syncfusion EJ2 PDF Library (CDN) -->
-    <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
-</head>
+All the available JS 2 packages are published in `npmjs.com` registry.
 
-{% endhighlight %}
-{% endtabs %}
+* To install PDF component, use the following command.
+
+```bash
+npm install @syncfusion/ej2-pdf --save
+```
+N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
+
+* Copy the contents of the openjpeg folder from ./node_modules/@syncfusion/ej2-pdf-data-extract/dist to the public directory using the command:
+```bash
+cp -R ./node_modules/@syncfusion/ej2-pdf-data-extract/dist/openjpeg public/js/openjpeg
+```
+* Confirm that there is an 'openjpeg' directory within your public directory, if you extracting images from PDF.
+* Validate that your server has been configured to utilize the Content-Type: application/wasm MIME type. Additional information can be found in the [Troubleshooting](./troubleshooting/troubleshooting) section.
 
 * **Create a PDF document** : Add the script in `App.vue` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
