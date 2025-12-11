@@ -33,6 +33,17 @@ Start a new Angular application using the Angular CLI command as follows.
 ng new my-app
 cd my-app
 ```
+
+## Installing Syncfusion<sup>&reg;</sup> JavaScript package
+
+All the available JS 2 packages are published in `npmjs.com` registry.
+
+* To install PDF component, use the following command.
+
+```bash
+npm install @syncfusion/ej2-pdf --save
+```
+
 ## Create a PDF document using TypeScript
 
 * Add a simple button to `app.component.html` and attach a click handler that uses the TypeScript PDF API to create a new PDF document.
