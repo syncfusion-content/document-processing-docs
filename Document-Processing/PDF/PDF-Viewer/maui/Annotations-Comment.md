@@ -23,7 +23,7 @@ The built-in Comment Panel in the PDF Viewer displays annotation comments. You c
 {% tabs %}
 {% highlight c# %}
 
-// Enable the comment panel in the PDF Viewer 
+// Show the comment panel in the PDF Viewer 
 PdfViewer.IsCommentsPanelVisible = true;
 
 {% endhighlight %}
@@ -54,10 +54,11 @@ Follow these steps to add comments or replies :
 1. Select the annotation in the PDF document and open the comment panel.
 2. The corresponding comment thread is highlighted in the comment panel.
 3. Add comments and replies using the comment panel.
-4. Multiple replies can be added to a comment.
+4. Using the reply button in the comment panel, you can add a comment directly to a specific annotation, ensuring the discussion stays linked to that annotation.
+5. Multiple replies can be added to a comment.
 
 ## Add comments or replies programmatically
-you can add comments or replies to existing annotations programmatically by accessing the specific annotation from the Annotations collection. This allows you to enhance collaboration and provide feedback directly within the PDF.
+These can add comments or replies to existing annotations programmatically by accessing the specific annotation from the Annotations collection. This allows you to enhance collaboration and provide feedback directly within the PDF.
 The following example explains how to add comments or replies to specific annotations in the PDF document.
 
 {% tabs %}
