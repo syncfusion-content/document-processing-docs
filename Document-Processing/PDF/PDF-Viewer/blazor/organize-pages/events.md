@@ -11,6 +11,12 @@ documentation: ug
 
 The PDF Viewer provides events to track and respond to actions within the page organizer, allowing for the customization of page manipulation features.
 
+|Name|Description|
+|---|---|
+|PageOrganizerSaveRequested|Triggers when a save action is performed in the page organizer.|
+|PageOrganizerZoomChanged|Triggers when the zoom level of the page organizer is changed.|
+|PageOrganizerVisibilityChanged|Triggers when the page organizer dialog visibility is changed.|
+
 ## PageOrganizerSaveRequested Event
 
 The `PageOrganizerSaveRequested` event is triggered when a save action is performed in the page organizer.
@@ -25,8 +31,8 @@ The event arguments provide the necessary information about the save event:
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
+
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%">
@@ -55,8 +61,8 @@ Event arguments:
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
+
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%">
@@ -78,8 +84,8 @@ The `PageOrganizerVisibilityChanged` event is triggered when the page organizer 
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
+
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%" PageOrganizerVisibilityChanged="VisibleChanged">
@@ -94,7 +100,9 @@ The `PageOrganizerVisibilityChanged` event is triggered when the page organizer 
 {% endhighlight %}
 {% endtabs %}
 
-## Related event documentation
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Page%20Organizer/Page-Organizer-Events)
+
+## See also
 
 - Overall Viewer events: [Event](../events)
 - Annotation events: [Annotation events](../annotation/events)
