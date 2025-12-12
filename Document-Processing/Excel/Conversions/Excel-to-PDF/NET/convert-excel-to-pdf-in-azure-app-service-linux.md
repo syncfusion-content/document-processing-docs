@@ -27,7 +27,7 @@ Step 3: Select the framework and click **Create** button.
 Step 4: Install the following NuGet packages as reference to your project from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
-* [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)
+* [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
 * [HarfBuzzSharp.NativeAssets.Linux](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/2.8.2.3)
 
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Azure-Images/App-Service-Linux/Install_NuGet.png)
