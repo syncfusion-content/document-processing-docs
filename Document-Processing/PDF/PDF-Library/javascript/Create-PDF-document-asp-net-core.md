@@ -35,7 +35,7 @@ Step 5: **Add script reference** : Add the required scripts using the CDN inside
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the following topics for including script references in an ASP.NET Core application to enable PDF creation using the Syncfusion<sup style="font-size:70%">®</sup> JavaScript PDF library:
+N> Check out the following topics for including script references in an ASP.NET Core application to enable PDF creation using the Syncfusion<sup>&reg;</sup> JavaScript PDF library:
 *   [CDN](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#cdn-reference)
 *   [NPM Package](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#node-package-manager-npm)
 *   [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)
@@ -58,7 +58,7 @@ Step 6: **Create a PDF document** : Add the script in `~/Views/Home/Index.cshtml
         // Create a new PDF document
         let pdf = new ej.pdf.PdfDocument();
         // Add a new page
-        let page: ej.pdf.PdfPage = document.addPage();
+        let page: ej.pdf.PdfPage = pdf.addPage();
         // Get graphics from the page
         let graphics: ej.pdf.PdfGraphics = page.graphics;
         // Set font
