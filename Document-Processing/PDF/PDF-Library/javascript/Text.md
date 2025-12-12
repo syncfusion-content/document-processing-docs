@@ -17,20 +17,20 @@ This example demonstrates how to draw text in a new PDF document using the `draw
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
 
-    // Create a PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a page
-    let page: PdfPage = document.addPage();
-    // Get graphics from the page
-    let graphics: PdfGraphics = page.graphics;
-    // Set font
-    let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
-    // Draw text
-    graphics.drawString('Hello World', font, {x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
+// Create a PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a page
+let page: PdfPage = document.addPage();
+// Get graphics from the page
+let graphics: PdfGraphics = page.graphics;
+// Set font
+let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
+// Draw text
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Create a PDF document
@@ -58,26 +58,26 @@ This example demonstrates the importance of saving and restoring the graphics st
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfGraphics, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
 
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a page
-    let page: PdfPage = document.addPage();
-    // Get graphics from the page
-    let graphics: PdfGraphics = page.graphics;
-    // Save the current graphics state and apply transformations
-    graphics.save();
-    graphics.translateTransform({x: 100, y: 50});
-    graphics.rotateTransform(45);
-    // Set font
-    let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
-    // Draw text
-    graphics.drawString('Hello World', font, {x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a page
+let page: PdfPage = document.addPage();
+// Get graphics from the page
+let graphics: PdfGraphics = page.graphics;
+// Save the current graphics state and apply transformations
+graphics.save();
+graphics.translateTransform({ x: 100, y: 50});
+graphics.rotateTransform(45);
+// Set font
+let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
+// Draw text
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Create a new PDF document
@@ -263,18 +263,17 @@ This example demonstrates how to draw text in a PDF document using different tex
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfStandardFont, PdfStringFormat, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfStandardFont, PdfTextAlignment, PdfVerticalAlignment, PdfStringFormat, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
 // Create a string format object to define text layout
-let format = new PdfStringFormat();
-format.alignment = PdfTextAlignment.right; // Align text to the right
+let format = new PdfStringFormat(PdfTextAlignment.right, PdfVerticalAlignment.bottom);
 format.wordSpacing = 2;                    // Set word spacing
 format.characterSpacing = 1;               // Set character spacing
-                                           // Set font
+// Set font
 let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
 // Draw text
 page.graphics.drawString('Syncfusion JavaScript PDF library', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
@@ -289,8 +288,7 @@ var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
 // Create a string format object to define text layout
-var format = new ej.pdf.PdfStringFormat();
-format.alignment = ej.pdf.PdfTextAlignment.right; // Align text to the right
+var format = new ej.pdf.PdfStringFormat(ej.pdf.PdfTextAlignment.right, ej.pdf.PdfVerticalAlignment.bottom);
 format.wordSpacing = 2; // Set word spacing
 format.characterSpacing = 1; // Set character spacing
 // Set font

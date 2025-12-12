@@ -15,7 +15,7 @@ This example demonstrates how to add a text watermark using standard fonts in a 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfGraphics, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush} from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfGraphics, PdfStandardFont, PdfGraphicsState, PdfFontFamily, PdfFontStyle, PdfBrush} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument();
@@ -24,7 +24,7 @@ let page: PdfPage = document.addPage();
 // Gets the graphics of the PDF page
 let graphics: PdfGraphics = page.graphics;
 // Create a new font
-let font: PdfFont = document.embedFont(PdfFontFamily.helvetica, 20, PdfFontStyle.regular);
+let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 20, PdfFontStyle.regular);
 // Save the graphics state
 let state: PdfGraphicsState = graphics.save();
 // Set graphics transparency
