@@ -118,7 +118,7 @@ Using the context menu.
 * Select text in the PDF document and right-click it.
 * Select the **Strikethrough** option in the context menu.
 
-![Context menu with Strikethrough option in Blazor SfPdfViewer](../../ssic/images/blazor-pdfviewer-strike-through-in-contextmenu.png)
+![Context menu with Strikethrough option in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-strike-through-in-contextmenu.png)
 
 **Using the annotation toolbar.**
 
