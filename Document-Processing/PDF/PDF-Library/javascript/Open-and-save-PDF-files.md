@@ -15,14 +15,12 @@ domainurl: ##DomainURL##
 Open an existing PDF document using the `PdfDocument` class with the specified PDF data.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
-
+{% highlight typescript tabtitle="TypeScript" %}
 // Load an existing PDF document from string data
 let document: PdfDocument = new PdfDocument(data);
 
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
+{% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document from string data
 var document = new ej.pdf.PdfDocument(data);
 
@@ -36,15 +34,13 @@ The PdfDocument constructor can accept PDF data in either Base64 string or Uint8
 Open an existing PDF document using the `PdfDocument` class with the specified PDF data as Base64 string.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
+{% highlight typescript tabtitle="TypeScript" %}
 
 let data: string = 'JVBERi0xLjcNJeLjz9MNCjEyNSAw...........TU3MTQNCiUlRU9GDQo=';
 // Load an existing PDF document from data as Base64 string
 let document: PdfDocument = new PdfDocument(data);
-
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
+{% highlight javascript tabtitle="JavaScript" %}
 var data = 'JVBERi0xLjcNJeLjz9MNCjEyNSAw...........TU3MTQNCiUlRU9GDQo=';
 // Load an existing PDF document from data as Base64 string
 var document = new ej.pdf.PdfDocumentPdfDocument(data);
@@ -57,19 +53,15 @@ var document = new ej.pdf.PdfDocumentPdfDocument(data);
 Open an existing PDF document using the `PdfDocument` class with the specified PDF data as Uint8Array.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
-
+{% highlight typescript tabtitle="TypeScript" %}
 let binaryData: Uint8Array = Uint8Array.from(data);
 // Load an existing PDF document from data as Uint8Array
 let document: PdfDocument = new PdfDocument(binaryData);
-
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
+{% highlight javascript tabtitle="JavaScript" %}
 var binaryData = Uint8Array.from(data);
 // Load an existing PDF document from data as Uint8Array
 let document= new ej.pdf.PdfDocument(binaryData);
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -78,17 +70,13 @@ let document= new ej.pdf.PdfDocument(binaryData);
 Open an encrypted PDF document using the `PdfDocument` class by providing the correct password.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
-
+{% highlight typescript tabtitle="TypeScript" %}
 // Load an existing PDF document with password
 let document: PdfDocument = new PdfDocument(data, "password");
-
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
+{% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document with password
 var document = new ej.pdf.PdfDocument(data, "password");
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -97,23 +85,19 @@ var document = new ej.pdf.PdfDocument(data, "password");
 Save and download the PDF document using the `save` method of `PdfDocument` class with the specified file name.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
-
+{% highlight typescript tabtitle="TypeScript" %}
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // To-Do some manipulation
 // Save and download the PDF document to the specified filename.
 document.save('output.pdf');
-
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
+{% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // To-Do some manipulation
 // Save and download the PDF document to the specified filename.
 document.save('output.pdf');
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -122,23 +106,19 @@ document.save('output.pdf');
 Save the modified PDF document to the specified byte array using the `save` method available in `PdfDocument` class.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
-
+{% highlight typescript tabtitle="TypeScript" %}
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 //To-Do some manipulation
 // Save and get PDF data as byte array.
 let data: Uint8Array = document.save();
-
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
+{% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
 var document: PdfDocument = new ej.pdf.PdfDocument(data);
 //To-Do some manipulation
 // Save and get PDF data as byte array.
 var data = document.save();
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -147,8 +127,7 @@ var data = document.save();
 After the document manipulation and save operation are completed, you should close the instance of `PdfDocument`, in order to release all the memory consumed by PDF DOM. The following code example illustrates how to destroy a `PdfDocument` instance.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
-
+{% highlight typescript tabtitle="TypeScript" %}
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 //To-Do some manipulation
@@ -156,10 +135,8 @@ let document: PdfDocument = new PdfDocument(data);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
+{% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 //To-Do some manipulation
@@ -167,6 +144,5 @@ var document = new ej.pdf.PdfDocument(data);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
 {% endtabs %}
