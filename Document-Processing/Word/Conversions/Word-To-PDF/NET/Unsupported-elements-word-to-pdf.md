@@ -30,7 +30,26 @@ Only DOCX and WordML format documents are supported.
 Chart
 </td>
 <td>
-Only DOCX and WordML format documents are supported from .NET Framework 4.0 onwards. The following chart types are not supported: Line-Stacked Line, Line-Stacked line with markers, Pie-Pie of Pie, Pie-Bar of Pie, Map-Filled Map, Stock-Volume high low close, Stock-Volume open high low close, Surface-3D Surface, Surface-Wireframe 3D Surface, Surface-Contour, Surface-Wireframe Contour, Treemap-Treemap, Sunburst-Sunburst, Histogram-Histogram, Histogram-Pareto chart, Box & Whisker, Waterfall and Funnel.
+    Only DOCX and WordML format documents are supported from .NET Framework 4.0 onwards.
+    <br/><br/>
+    The following chart types are not supported on all platforms:
+    <ul>
+      <li>Pie‑Bar of Pie</li>
+      <li>Map‑Filled Map</li>
+      <li>Surface‑3D Surface</li>
+      <li>Surface‑Wireframe 3D Surface</li>
+      <li>Surface‑Contour</li>
+      <li>Surface‑Wireframe Contour</li>
+    </ul><br/>
+    In addition, the following chart types are not supported in the Framework only:
+    <ul>
+      <li>Pie‑Pie of Pie</li>
+      <li>Stock‑Volume High‑Low‑Close</li>
+      <li>Stock‑Volume Open‑High‑Low‑Close</li>
+      <li>Treemap‑Treemap</li>
+      <li>Sunburst‑Sunburst</li>
+      <li>Box & Whisker</li>
+    </ul>
 </td>
 </tr>
 <tr>

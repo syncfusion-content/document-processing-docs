@@ -292,7 +292,7 @@ You can restart the list numbering in a Word document during Mail merge. For fur
 
 ## Online Demo
 
-* Explore how to generate a letter using mail merge functionality using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/letterformat#/tailwind).
+* Explore how to generate a letter using mail merge functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/letterformat#/bootstrap5).
 
 ## See Also
 

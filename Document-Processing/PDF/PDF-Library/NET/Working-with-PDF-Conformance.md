@@ -1220,7 +1220,30 @@ You can create a PDF/X-1a document by specifying the conformance level as ```Pdf
 
 {% highlight c# tabtitle="C# [Cross-platform]" %} 
 
-//Creating PDF/X-conformance documents is not supported on C#.NET cross-platform environments.
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new document with PDF/x standard.
+PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_X1A2001);
+//Add a page.
+PdfPage page = document.Pages.Add();
+//Set color space. 
+document.ColorSpace = PdfColorSpace.CMYK;
+
+//Create Pdf graphics for the page.
+PdfGraphics graphics = page.Graphics;
+//Create a solid brush.
+PdfBrush brush = new PdfSolidBrush(Color.Black);
+//Load the TrueType font from the local file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read); 
+//Set the font.
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
+//Draw the text.
+graphics.DrawString("Hello world!", pdfFont, brush, new PointF(20, 20));
+
+//Save and close the document.
+document.Save("Output.pdf");
+document.Close(true);
 
 {% endhighlight %}
 

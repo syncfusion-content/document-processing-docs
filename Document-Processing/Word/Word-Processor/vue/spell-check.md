@@ -200,4 +200,4 @@ Using this option, you can open spell check dialog. Please see below screenshot 
 
 ![Spell check dialog](images/spell-check-dialog.png)
 
-* Refer to the [Spell checker](https://gitea.syncfusion.com/essential-studio/ej2-documenteditor-server/) link for configuring spell checker in server-side.
+* Refer to the [Spell checker](https://help.syncfusion.com/document-processing/word/word-processor/vue/web-services/core#spell-check) link for configuring spell checker in server-side.

@@ -465,7 +465,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to add and format images in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/image#/tailwind).
+* Explore how to add and format images in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/image#/bootstrap5).
 
 ## See Also
 * [How to crop an image in a Presentation using C#?](https://support.syncfusion.com/kb/article/15431/how-to-crop-an-image-in-a-presentation-using-c)

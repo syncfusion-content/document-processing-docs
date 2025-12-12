@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Convert Word to PDF using Syncfusion® Word (DocIO) library
+# Convert Word  to PDF using Syncfusion<sup>&reg;</sup> Word (DocIO) library 
 
 Syncfusion<sup>&reg;</sup> Word library (DocIO) allows you to convert Word document to PDF within a few lines of code in .NET applications and also it does not require Adobe and Microsoft Word application to be installed in the machine. Using this, you can create an input Word document from scratch or load an existing Word document and then easily convert to PDF.  
 
@@ -148,7 +148,7 @@ T> For troubleshooting issues in the .NET Word Library (DocIO), refer [this](htt
 N> 1. For .NET Framework, creating an instance of the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts present in the Word to PDF. Otherwise, the charts are not preserved in the converted PDF. Whereas this is not necessary for .NET Core, as ChartToImageConverter is initialized internally in Syncfusion.DocIORenderer.Portable assembly.
 N> 2. Total number of pages in the converted PDF may vary based on unsupported elements in the input Word document.
 N> 3. "DocIO supports Word to PDF conversion in UWP application using DocIORenderer." For further information, please refer [here](https://support.syncfusion.com/kb/article/8902/how-to-convert-word-document-to-pdf-in-uwp)
-N> 4. Font-related issues during Word to PDF or image conversion can arise due to missing or incorrect font. For detailed instructions on resolving these problems, refer to this [article](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion).
+N> 4. Font-related issues during Word to PDF or image conversion can arise due to missing or incorrect font. For detailed instructions on resolving these problems, refer to this [articl(https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion).
 
 ## Supported File formats
 
@@ -242,7 +242,7 @@ You can restrict all the permission in a PDF document using [PdfPermissionsFlags
 
 ### Apply Matte to Transparent Images
 
-This setting allows you to determine whether to **apply a matte color to transparent images** during Word to PDF conversion, ensuring they render cleanly without unwanted borders or artifacts in the final PDF. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#apply-matte-to-transparent-images).
+This setting allows you to determine whether to **apply a matte color to transparent images** during Word to PDF conversion, ensuring they render cleanly without unwanted borders or artifacts in the final PDF. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#restrict-all-permission-in-a-pdf-document).
 
 ## Font Substitution
 
@@ -264,9 +264,9 @@ When converting a Word document to a PDF, the presence of unsupported elements i
 
 ## Online Demo
 
-* Explore how to convert a Word document to PDF using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind).
-* See how to convert a Word document to PDF/UA using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtopdfua#/tailwind).
-* See how to convert a Word document to PDF/A using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtopdfa#/tailwind).
+* Explore how to convert a Word document to PDF using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/wordtopdf#/bootstrap5).
+* See how to convert a Word document to PDF/UA using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/wordtopdfua#/bootstrap5).
+* See how to convert a Word document to PDF/A using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/wordtopdfa#/bootstrap5).
 
 ## See Also
 
@@ -290,5 +290,5 @@ When converting a Word document to a PDF, the presence of unsupported elements i
 * [How to preserve track changes markup in Word to PDF conversion](https://support.syncfusion.com/kb/article/14997/how-to-preserve-simple-markup-all-markup-and-no-markup-of-track-changes-during-word-to-pdf-conversion)
 * [How to preserve simple markup, all markup, and no markup of track changes during Word to PDF conversion?](https://support.syncfusion.com/kb/article/14997/how-to-preserve-simple-markup-all-markup-and-no-markup-of-track-changes-during-word-to-pdf-conversion)
 * [How to create a Word document with form fields from JSON and convert it to PDF?](https://support.syncfusion.com/kb/article/19823/how-to-create-a-word-document-with-form-fields-from-json-and-convert-it-to-pdf)
-* [How to Rename PDF Bookmark in Word to PDF in .NET Core Word Document?](https://support.syncfusion.com/kb/article/19808/how-to-rename-pdf-bookmark-in-word-to-pdf-in-net-core-word-document)
+* [How to Rename PDF Bookmark in Word to PDF in .Net Core Word Document?](https://support.syncfusion.com/kb/article/19808/how-to-rename-pdf-bookmark-in-word-to-pdf-in-net-core-word-document)
 * [How to check if a font contains the required glyphs for Word to PDF and image conversion?](https://support.syncfusion.com/kb/article/19671/how-to-check-if-a-font-contains-the-required-glyphs-for-word-to-pdf-and-image-conversion)

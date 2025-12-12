@@ -195,6 +195,89 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Fallback-fonts-based-on-scripttype).
 
+## Fallback Symbols based on script type
+
+The following code example demonstrates how a user can add fallback fonts for Symbols and Emojis, which DocIO considers internally when converting a Word document to PDF.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Opens the file as stream.
+using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
+{
+    //Loads an existing Word document file stream.
+    using (WordDocument wordDocument = new WordDocument(inputStream, Syncfusion.DocIO.FormatType.Docx))
+    {
+        //Adds fallback font for basic symbols like bullet characters.
+        wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS, Wingdings");
+        //Adds fallback font for mathematics symbols.
+        wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Mathematics, "Cambria Math, Noto Sans Math, Segoe UI Symbol, Arial Unicode MS");
+        //Adds fallback font for emojis.
+        wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Emoji, "Segoe UI Emoji, Noto Color Emoji, Arial Unicode MS");        
+        //Instantiation of DocIORenderer for Word to PDF conversion.
+        using (DocIORenderer render = new DocIORenderer())
+        {
+            //Converts Word document into PDF document.
+            using (PdfDocument pdfDocument = render.ConvertToPDF(wordDocument))
+            {
+                //Saves the PDF file to file system.
+                using (FileStream outputStream = new FileStream("WordToPDF.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite))
+                {
+                    pdfDocument.Save(outputStream);
+                }
+            }
+        }
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads an existing Word document.
+using (WordDocument wordDocument = new WordDocument("Template.docx", Syncfusion.DocIO.FormatType.Docx))
+{
+   //Adds fallback font for basic symbols like bullet characters.
+   wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS, Wingdings");
+   //Adds fallback font for mathematics symbols.
+   wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Mathematics, "Cambria Math, Noto Sans Math, Segoe UI Symbol, Arial Unicode MS");
+   //Adds fallback font for emojis.
+   wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Emoji, "Segoe UI Emoji, Noto Color Emoji, Arial Unicode MS");     
+   //Instantiation of DocToPDFConverter for Word to PDF conversion.
+   using (DocToPDFConverter converter = new DocToPDFConverter())
+   {
+      //Converts Word document into PDF document.
+      using (PdfDocument pdfDocument = converter.ConvertToPDF(wordDocument))
+      {
+         //Saves the PDF file to file system.
+         pdfDocument.Save("WordToPDF.pdf");
+      }
+   }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Loads an existing Word document.
+Using wordDocument As WordDocument = New WordDocument("Template.docx", FormatType.Docx)
+    'Adds fallback font for basic symbols Like bullet characters.
+    wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS, Wingdings")
+    'Adds fallback font for mathematics symbols.
+    wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Mathematics, "Cambria Math, Noto Sans Math, Segoe UI Symbol, Arial Unicode MS")
+    'Adds fallback font for emojis.
+    wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Emoji, "Segoe UI Emoji, Noto Color Emoji, Arial Unicode MS")
+    'Instantiation of DocToPDFConverter for Word to PDF conversion.
+    Using converter As New DocToPDFConverter()
+        'Converts Word document into PDF document.
+        Using pdfDocument As PdfDocument = converter.ConvertToPDF(wordDocument)
+            'Saves the PDF file to file system.
+            pdfDocument.Save("WordToPDF.pdf")
+        End Using
+    End Using
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+
+
 ## Fallback fonts for range of Unicode text
 
 Users can set fallback fonts for specific Unicode range of text to be used in Word to PDF conversion.
@@ -512,5 +595,214 @@ Korean
 <td>
 Malgun Gothic, Batang
 </td>
+</tr>
+<tr>
+  <td>Tamil</td>
+  <td>0x0B80 - 0x0BFF</td>
+  <td>Latha, Nirmala UI, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Bengali</td>
+  <td>0x0980 - 0x09FF</td>
+  <td>Vrinda, Arial Unicode MS, Nikosh, Siyam Rupali, Nirmala UI</td>
+</tr>
+<tr>
+  <td>Gujarati</td>
+  <td>0x0A80 - 0x0AFF</td>
+  <td>Shruti, Nirmala UI, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Telugu</td>
+  <td>0x0C00 - 0x0C7F</td>
+  <td>Gautami, Nirmala UI, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Malayalam</td>
+  <td>0x0D00 - 0x0D7F</td>
+  <td>Kartika, Nirmala UI, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Kannada</td>
+  <td>0x0C80 - 0x0CFF</td>
+  <td>Tunga, Nirmala UI, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Ethiopic</td>
+  <td>0x1200 - 0x137F<br>
+  0x1380 - 0x139F</td>
+  <td>Nyala, Ebrima</td>
+</tr>
+<tr>
+  <td>Khmer</td>
+  <td>0x1780 - 0x17FF<br>
+  0x19E0 - 0x19FF</td>
+  <td>MoolBoran, DaunPenh, Leelawadee, Leelawadee UI</td>
+</tr>
+<tr>
+  <td>Gurmukhi</td>
+  <td>0x0A00 - 0x0A7F</td>
+  <td>Raavi, Nirmala UI, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Canadian</td>
+  <td>0x1400 - 0x167F</td>
+  <td>Euphemia, Gadugi</td>
+</tr>
+<tr>
+  <td>Cherokee</td>
+  <td>0x13A0 - 0x13FF<br>
+  0xAB70 - 0xABBF</td>
+  <td>Plantagenet Cherokee, Gadugi, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Yi</td>
+  <td>0xA000 - 0xA48F<br>
+  0xA490 - 0xA4CF</td>
+  <td>Microsoft Yi Baiti, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Tibetan</td>
+  <td>0x0F00 - 0x0FFF</td>
+  <td>Microsoft Himalaya, Nirmala UI, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Thaana</td>
+  <td>0x0780 - 0x07BF</td>
+  <td>MV Boli, Nirmala UI, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Syriac</td>
+  <td>0x0700 - 0x074F</td>
+  <td>Estrangelo Edessa, Segoe UI Historic, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Odia</td>
+  <td>0x0B00 - 0x0B7F</td>
+  <td>Kalinga, Nirmala UI, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Lao</td>
+  <td>0x0E80 - 0x0EFF</td>
+  <td>DokChampa, Lao UI, Leelawadee UI, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Sinhala</td>
+  <td>0x0D80 - 0x0DFF</td>
+  <td>Iskoola Pota, Nirmala UI, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Mongolian</td>
+  <td>0x1800 - 0x18AF</td>
+  <td>Mongolian Baiti, Microsoft YaHei, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Vietnamese</td>
+  <td>0x00C0 - 0x00FF<br>
+  0x0102 - 0x0103<br>
+  0x0110 - 0x0111<br>
+  0x0128 - 0x0129<br>
+  0x0168 - 0x0169<br>
+  0x01A0 - 0x01A1<br>
+  0x01AF - 0x01B0<br>
+  0x0300 - 0x036F</td>
+  <td>Times New Roman, Arial, Tahoma, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Georgian</td>
+  <td>0x10A0 - 0x10FF<br>
+  0x2D00 - 0x2D2F</td>
+  <td>Sylfaen, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Armenian</td>
+  <td>0x0530 - 0x058F<br>
+  0xFB13 - 0xFB17</td>
+  <td>Arial, Sylfaen, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Buginese</td>
+  <td>0x1A00 - 0x1A1F</td>
+  <td>Leelawadee UI, Segoe UI Symbol</td>
+</tr>
+<tr>
+  <td>Bopomofo</td>
+  <td>0x3100 - 0x312F<br>
+  0x31A0 - 0x31BF</td>
+  <td>Microsoft JhengHei, PMingLiU, SimSun, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Javanese</td>
+  <td>0xA980 - 0xA9DF</td>
+  <td>Javanese Text, Segoe UI Symbol</td>
+</tr>
+<tr>
+  <td>Lisu</td>
+  <td>0xA4D0 - 0xA4FF</td>
+  <td>Segoe UI Symbol, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Burmese</td>
+  <td>0x1000 - 0x109F<br>
+  0xAA60 - 0xAA7F</td>
+  <td>Myanmar Text, Noto Sans Myanmar, Padauk</td>
+</tr>
+<tr>
+  <td>NKo</td>
+  <td>0x07C0 - 0x07FF</td>
+  <td>Ebrima, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>OlChiki</td>
+  <td>0x1C50 - 0x1C7F</td>
+  <td>Nirmala UI, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Osmanya</td>
+  <td>0x10480 - 0x104AF</td>
+  <td>Ebrima, Noto Sans Osmanya</td>
+</tr>
+<tr>
+  <td>PhagsPa</td>
+  <td>0xA840 - 0xA87F</td>
+  <td>Phagspa, Microsoft PhagsPa, Noto Sans PhagsPa, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>SoraSompeng</td>
+  <td>0x110D0 - 0x110FF</td>
+  <td>Nirmala UI, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>TaiLe</td>
+  <td>0x1950 - 0x197F</td>
+  <td>Microsoft Tai Le, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>NewTaiLue</td>
+  <td>0x1980 - 0x19DF</td>
+  <td>Microsoft New Tai Lue, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Tifinagh</td>
+  <td>0x2D30 - 0x2D7F</td>
+  <td>Ebrima, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Symbols</td>
+  <td>0x2000 - 0x27BF<br>
+  0x2300 - 0x23FF<br>
+  0xF000 - 0xF104</td>
+  <td>Segoe UI Symbol, Arial Unicode MS, Wingdings</td>
+</tr>
+<tr>
+  <td>Mathematics</td>
+  <td>0x2200 - 0x2AFF<br>
+  0x1D400 - 0x1D7FF</td>
+  <td>Cambria Math, Noto Sans Math, Segoe UI Symbol, Arial Unicode MS</td>
+</tr>
+<tr>
+  <td>Emoji</td>
+  <td>0x1F300 - 0x1FAFF<br>
+  0xFE0F - 0xFE0F</td>
+  <td>Segoe UI Emoji, Noto Color Emoji, Arial Unicode MS</td>
 </tr>
 </table>

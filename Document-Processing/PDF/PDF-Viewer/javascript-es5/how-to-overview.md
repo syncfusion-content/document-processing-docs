@@ -66,4 +66,5 @@ The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are liste
 * [How to get the signature selected and unselected event?](./how-to/signatureselect-signatureunselect-js)
 * [How to unload the PDF document from the viewer?](./how-to/unload-document)
 * [How to use local script and style references?](./how-to/use-local-script-and-style-references)
+* [Load Document after resources Loaded](./how-to/load-document-after-resources-loaded)
 

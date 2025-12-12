@@ -255,102 +255,6 @@ slicer.SlicerStyle = ExcelSlicerStyle.SlicerStyleDark2
 {% endhighlight %}
 {% endtabs %}
 
-### Select a Slicer Item
-
-The following example shows how to select items in a slicer.
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-ISlicer slicer = sheet.Slicers[0];
-ISlicerCache cache = slicer.SlicerCache;
-cache.SlicerCacheItems[0].IsSelected = true;
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-ISlicer slicer = sheet.Slicers[0];
-ISlicerCache cache = slicer.SlicerCache;
-cache.SlicerCacheItems[0].IsSelected = true;
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Dim slicer As ISlicer = sheet.Slicers(0)
-Dim cache As ISlicerCache = slicer.SlicerCache
-cache.SlicerCacheItems(0).IsSelected = True
-{% endhighlight %}
-{% endtabs %}
-
-### Select slicer filter type
-
-The following example shows how to select the slicer filter type.
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-ISlicer slicer = sheet.Slicers[0];
-ISlicerCache cache = slicer.SlicerCache;
-cache.CrossFilterType = SlicerCrossFilterType.ShowItemsWithDataAtTop;
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-ISlicer slicer = sheet.Slicers[0];
-ISlicerCache cache = slicer.SlicerCache;
-cache.CrossFilterType = SlicerCrossFilterType.ShowItemsWithDataAtTop;
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Dim slicer As ISlicer = sheet.Slicers(0)
-Dim cache As ISlicerCache = slicer.SlicerCache
-cache.CrossFilterType = SlicerCrossFilterType.ShowItemsWithDataAtTop
-{% endhighlight %}
-{% endtabs %}
-
-### Sort the slicer items
-
-The following example shows how to sort the slicer items.
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-ISlicer slicer = sheet.Slicers[0];
-ISlicerCache cache = slicer.SlicerCache;
-cache.IsAscending = true;
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-ISlicer slicer = sheet.Slicers[0];
-ISlicerCache cache = slicer.SlicerCache;
-cache.IsAscending = true;
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Dim slicer As ISlicer = sheet.Slicers(0)
-Dim cache As ISlicerCache = slicer.SlicerCache
-cache.IsAscending = True
-{% endhighlight %}
-{% endtabs %}
-
-### Sort the slicer items using Custom list sorting option
-
-The following example shows how to sort the slicer items using Custom list sorting option
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-ISlicer slicer = sheet.Slicers[0];
-ISlicerCache cache = slicer.SlicerCache;
-cache.UseCustomListSorting = true;
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-ISlicer slicer = sheet.Slicers[0];
-ISlicerCache cache = slicer.SlicerCache;
-cache.UseCustomListSorting = true;
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Dim slicer As ISlicer = sheet.Slicers(0)
-Dim cache As ISlicerCache = slicer.SlicerCache
-cache.UseCustomListSorting = True
-{% endhighlight %}
-{% endtabs %}
-
 The following code snippet illustrates how to format an existing slicer with all the above discussed properties. 
 
 {% tabs %}
@@ -397,19 +301,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Slicer style
   slicer.SlicerStyle = ExcelSlicerStyle.SlicerStyleDark2;
-  
-  //Select the slicer item
-  ISlicerCache cache = slicer.SlicerCache;
-  cache.SlicerCacheItems[0].IsSelected = true;
-
-  //Set the slicer filter type
-  cache.CrossFilterType = SlicerCrossFilterType.ShowItemsWithDataAtTop;
-
-  //Sort the slicer items in ascending order
-  cache.IsAscending = true;
-
-  //Custom list sorting
-  cache.UseCustomListSorting = true;
 
   workbook.SaveAs("Output.xlsx");
 }
@@ -458,19 +349,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Slicer style
   slicer.SlicerStyle = ExcelSlicerStyle.SlicerStyleDark2;
-  
-  //Select the slicer item
-  ISlicerCache cache = slicer.SlicerCache;
-  cache.SlicerCacheItems[0].IsSelected = true;
-
-  //Set the slicer filter type
-  cache.CrossFilterType = SlicerCrossFilterType.ShowItemsWithDataAtTop;
-
-  //Sort the slicer items in ascending order
-  cache.IsAscending = true;
-
-  //Custom list sorting
-  cache.UseCustomListSorting = true;
 
   workbook.SaveAs("Output.xlsx");
 }
@@ -518,19 +396,6 @@ Using excelEngine As ExcelEngine = New ExcelEngine
 
   'Slicer style
   slicer.SlicerStyle = ExcelSlicerStyle.SlicerStyleDark2
-  
-  'Select the slicer item
-  Dim cache As ISlicerCache = slicer.SlicerCache
-  cache.SlicerCacheItems(0).IsSelected = True
-
-  'Set the slicer filter type
-  cache.CrossFilterType = SlicerCrossFilterType.ShowItemsWithDataAtTop
-
-  'Sort the slicer items in ascending order
-  cache.IsAscending = True
-
-  'Custom list sorting
-  cache.UseCustomListSorting = True
 
   workbook.SaveAs("Output.xlsx")
 End Using

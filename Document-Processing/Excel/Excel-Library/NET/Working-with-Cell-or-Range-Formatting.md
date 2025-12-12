@@ -919,52 +919,6 @@ workbook.DetectDateTimeInValue = False
 {% endhighlight %}
 {% endtabs %}  
 
-N> To display the **$** symbol, apply a currency or accounting number format. Using a number format without any currency symbol does not show any currency symbol in the value.
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-//Plain number format
-sheet.Range["A1"].Number = 100;
-sheet.Range["A1"].NumberFormat = "0.00";  //shows 100.00
-
-//Currency format
-sheet.Range["A2"].Number = 1234.56;
-sheet.Range["A2"].NumberFormat = "$#,##0.00";  //shows $1,234.56
-
-//Accounting format
-sheet.Range["A3"].Number = 234;
-sheet.Range["A3"].NumberFormat = "_($* #,##0.00_)";  //shows $   234.00
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-//Plain number format
-sheet.Range["A1"].Number = 100;
-sheet.Range["A1"].NumberFormat = "0.00";  //shows 100.00
-
-//Currency format
-sheet.Range["A2"].Number = 1234.56;
-sheet.Range["A2"].NumberFormat = "$#,##0.00";  //shows $1,234.56
-
-//Accounting format
-sheet.Range["A3"].Number = 234;
-sheet.Range["A3"].NumberFormat = "_($* #,##0.00_)";  //shows $   234.00
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Plain Number format
-sheet.Range("A1").Number = 100
-sheet.Range("A1").NumberFormat = "0.00"   'shows 100.00
-
-'Currency format
-sheet.Range("A2").Number = 1234.56
-sheet.Range("A2").NumberFormat = "$#,##0.00"   'shows $1,234.56
-
-'Accounting format
-sheet.Range("A3").Number = 234
-sheet.Range("A3").NumberFormat = "_($* #,##0.00_)"   'shows $   234.00
-{% endhighlight %}
-{% endtabs %}
-
 ##  Number Format Detection Behavior Based on System Culture
 
 In Microsoft Excel, when a value is inserted, the system's culture settings determine whether the value is interpreted as a [Text](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Text) or [Number](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Number). If it is a valid number according to the current culture, Excel automatically detects and applies a corresponding number format.

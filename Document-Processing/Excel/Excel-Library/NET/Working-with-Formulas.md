@@ -10,9 +10,6 @@ keywords: c#, vb.net, excel, read excel, edit excel, edit excel cell, excel form
 
 [Formulas](https://support.microsoft.com/en-gb/office/overview-of-formulas-in-excel-ecfdc708-9162-49e8-b993-c311f47ca173?redirectsourcepath=%252fen-us%252farticle%252foverview-of-formulas-7abfda78-eff3-4cc6-b4a7-6350d512d2dc) are entries in Excel that have equations, by which values are calculated. A typical formula might contain cell references, constants, and even functions. 
 
-To quickly learn How to Work with Formulas in an Excel Using the .NET Excel Library, check out this video:
-{% youtube "https://www.youtube.com/watch?v=SjHcYYvVSF4" %}
-
 ## Enable and Disable Calculation
 
 To perform calculation in an Excel workbook, it is recommended to invoke [EnableSheetCalculations](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_EnableSheetCalculations) method of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html). Enabling this method will initialize [CalcEngine](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#calculation-engine) objects and retrieves calculated values of formulas in a worksheet. 

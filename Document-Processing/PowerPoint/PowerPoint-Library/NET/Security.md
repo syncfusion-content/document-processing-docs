@@ -297,5 +297,5 @@ N> 2. For ASP.NET Core, Encryption, Decryption and Write Protection features are
 
 ## Online Demo
 
-* Explore how to set write protection for a PowerPoint presentation with a password using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/writeprotection#/tailwind).
-* See how to encrypt and decrypt the PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/encryptanddecrypt#/tailwind).
+* Explore how to set write protection for a PowerPoint presentation with a password using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/writeprotection#/bootstrap5).
+* See how to encrypt and decrypt the PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/encryptanddecrypt#/bootstrap5).

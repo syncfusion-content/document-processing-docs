@@ -19,36 +19,30 @@ The following code snippet shows how to convert an Excel chart to an image using
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Chart%20to%20Image/Chart%20to%20Image/.NET/Chart%20to%20Image/Chart%20to%20Image/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  //Initialize application
-  IApplication application = excelEngine.Excel;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Set the default version as Xlsx
-  application.DefaultVersion = ExcelVersion.Xlsx;
+	// Initialize XlsIORenderer
+	application.XlsIORenderer = new XlsIORenderer();
 
-  //Initialize XlsIORenderer
-  application.XlsIORenderer = new XlsIORenderer();
+	//Set converter chart image format to PNG
+	application.XlsIORenderer.ChartRenderingOptions.ImageFormat = ExportImageFormat.Png;
 
-  //Set converter chart image format to PNG or JPEG
-  application.XlsIORenderer.ChartRenderingOptions.ImageFormat = ExportImageFormat.Png;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Set the chart image quality to best
-  application.XlsIORenderer.ChartRenderingOptions.ScalingMode = ScalingMode.Best;
+	IChart chart = worksheet.Charts[0];
 
-  //Open existing workbook with chart
-  IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
-  IWorksheet worksheet = workbook.Worksheets[0];
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Image.png"), FileMode.Create, FileAccess.Write);
+	chart.SaveAsImage(outputStream);
+	#endregion
 
-  //Access the chart from the worksheet
-  IChart chart = worksheet.Charts[0];
-
-  #region Save
-  //Exporting the chart as image
-  FileStream outputStream = new FileStream(Path.GetFullPath("Output/Image.png"), FileMode.Create, FileAccess.Write);
-  chart.SaveAsImage(outputStream);
-  #endregion
-
-  //Dispose streams
-  outputStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 

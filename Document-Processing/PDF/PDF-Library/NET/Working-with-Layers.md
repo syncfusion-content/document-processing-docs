@@ -12,9 +12,6 @@ Layers, also known as Option Content refers to sections of content in a PDF docu
 
 Essential<sup>&reg;</sup> PDF provides support to create, add and merge the layers into PDF document.
 
-Check the following video to learn how to work with PDF layers using the .NET PDF Library.
-{% youtube "https://youtu.be/xvQ7yM0Pddk?si=T8guG9seZNX09pFb" %}
-
 ## Adding Layers in a PDF document
 
 Essential<sup>&reg;</sup> PDF allows the users to create a layer in a PDF page using [PdfPageLayer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLayer.html) class. The below code example illustrates how to add the multiple layers in a new PDF document.

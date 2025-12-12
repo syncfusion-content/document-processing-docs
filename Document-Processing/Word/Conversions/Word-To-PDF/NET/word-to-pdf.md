@@ -1,12 +1,12 @@
 ---
-title: Convert Word to PDF in C# using DocIO | Syncfusion
+title: Convert Word to PDF in C# | DocIO | Syncfusion
 description: Learn how to convert a Word document to PDF, PDF/A, and PDF/UA using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word to PDF using Syncfusion® Word (DocIO) library
+# Convert Word  to PDF using Syncfusion<sup>&reg;</sup> Word (DocIO) library 
 
 Syncfusion<sup>&reg;</sup> Word library (DocIO) allows you to convert Word document to PDF within a few lines of code in .NET applications and also it does not require Adobe and Microsoft Word application to be installed in the machine. Using this, you can create an input Word document from scratch or load an existing Word document and then easily convert to PDF.  
 
@@ -240,7 +240,7 @@ You can restrict all the permission in a PDF document using [PdfPermissionsFlags
 
 ### Apply Matte to Transparent Images
 
-This setting allows you to determine whether to **apply a matte color to transparent images** during Word to PDF conversion, ensuring they render cleanly without unwanted borders or artifacts in the final PDF. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#apply-matte-to-transparent-images).
+This setting allows you to determine whether to **apply a matte color to transparent images** during Word to PDF conversion, ensuring they render cleanly without unwanted borders or artifacts in the final PDF. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#restrict-all-permission-in-a-pdf-document).
 
 ## Font Substitution
 
@@ -254,7 +254,7 @@ During Word to PDF conversions, if a glyph of the input text is unavailable in t
 
 ## Unsupported elements in Word to PDF conversion
 
-Refer [here](document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#detailed-limitations) to know about unsupported elements in Word to PDF conversion.
+Refer [here](document-processing/word/conversions/word-to-pdf/net/limitations-word-to-pdf) to know about unsupported elements in Word to PDF conversion.
 
 ## Show Warning for Unsupported Elements
 
@@ -262,9 +262,9 @@ When converting a Word document to a PDF, the presence of unsupported elements i
 
 ## Online Demo
 
-* Explore how to convert a Word document to PDF using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind).
-* See how to convert a Word document to PDF/UA using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtopdfua#/tailwind).
-* See how to convert a Word document to PDF/A using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtopdfa#/tailwind).
+* Explore how to convert a Word document to PDF using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/wordtopdf#/bootstrap5).
+* See how to convert a Word document to PDF/UA using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/wordtopdfua#/bootstrap5).
+* See how to convert a Word document to PDF/A using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/wordtopdfa#/bootstrap5).
 
 ## See Also
 
