@@ -10,45 +10,6 @@ documentation: ug
 # Managing Cell Ranges in Blazor Spreadsheet component
 A cell range is a set of selected cells in a Spreadsheet, typically specified using A1 notation (for example, `A1:B10`). A range may be a single cell or a contiguous block of cells that can be manipulated or processed collectively.
 
-## Cell formatting
-
-Cell formatting enhances the visual presentation of data by applying styles such as font changes, colors, borders, and alignment to individual cells or cell ranges. This helps organize content and emphasize important information for faster interpretation.
-
-Cell formatting options include:
-
-* **Bold** - Applies a heavier font weight to make the text stand out in the Spreadsheet.
-
-* **Italic** - Slants the text to give it a distinct look, often used for emphasis or to highlight differences.
-
-*   **Underline** - Adds a line below the text, commonly used for emphasis or to indicate hyperlinks.
-
-*   **Strikethrough** - Draws a line through the text, often used to show completed tasks or outdated information.
-
-*   **Font Family** - Changes the typeface of the text (e.g., Arial, Calibri, Times New Roman, and more) to enhance readability or visual appeal.
-
-*   **Font Size** - Adjusts the size of the text to create visual hierarchy or improve readability in the Spreadsheet.
-
-*   **Font Color** - Changes the color of the text to improve visual hierarchy or to organize information using color codes.
-
-*   **Fill Color** - Adds color to the cell background to visually organize data or highlight important information.
-
-*  **Horizontal Alignment** - Controls the position of text from left to right within a cell. Options include:
-    * **Left** - Default for text
-    * **Center** - Useful for headings
-    * **Right** - Default for numbers
-
-*   **Vertical Alignment** - Controls the position of text from top to bottom within a cell. Options include:
-    * **Top** – Aligns content to the top of the cell
-    * **Middle** – Centers content vertically
-    * **Bottom** – Default alignment
-
-*   **Wrap Text** - Displays long content on multiple lines within a single cell, preventing it from overflowing into adjacent cells. To enable text wrapping:
-    1. Select the target cell or range (e.g., C5).
-    2. Go to the Home tab.
-    3. Click Wrap Text in the ribbon to toggle text wrapping for the selected cells.
-
-Cell formatting can be applied or removed from a cell or range by using the options available in the component's built-in **Ribbon** under the **Home** tab.
-
 ## Autofill
 
 Autofill is used to fill cells with data that follows a pattern or is based on data in other cells. It helps avoid entering repetitive data manually. The [AllowAutofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowAutofill) property can be used to enable or disable this feature.
