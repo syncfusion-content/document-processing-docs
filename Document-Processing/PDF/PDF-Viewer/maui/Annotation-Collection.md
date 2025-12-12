@@ -56,7 +56,7 @@ void WireAnnotationsLoadedEvent()
 
 private void OnAnnotationsLoaded(object? sender, EventArgs e) 
 { 
-    Debug.WriteLine("All existing annotations have been loaded."); 
+    Debug.WriteLine("All annotations have been loaded."); 
 }
 
 {% endhighlight %}
