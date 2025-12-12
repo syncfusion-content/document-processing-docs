@@ -123,6 +123,7 @@ destination.save('Output.pdf');
 // Destroy the documents
 destination.destroy();
 sourceDocument.destroy();
+{% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
 var destination = new ej.pdf.PdfDocument(data1);
