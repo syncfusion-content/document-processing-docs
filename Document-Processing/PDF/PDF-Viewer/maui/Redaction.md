@@ -46,7 +46,7 @@ You can mark the region for redaction in a PDF document with UI interaction usin
 3.	Drag the finger (or cursor) across the text to select.
 4.	Complete adding the region to the selected text or area by releasing the finger (or cursor).
 5.	Once you have done that, set the `RedactionMode` to None. It will disable the redaction mode and save the marked region for redaction.
-6.	You can later redact the marked region programmatically. 
+6.	You can later redact the marked regions using `RedactAsync` method. 
 
 The following code explains how to enable the text-based redaction mode.
 
@@ -59,7 +59,7 @@ void EnableTextBasedRedactionMode()
     PdfViewer.RedactionMode = RedactionMode.Text;
 }
 
-// Enable or activate the selected-area redaction mode.
+// Enable or activate the area redaction mode.
 void EnableSelectedAreaRedactionMode()
 {
     // Set the redaction mode to rect using the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
@@ -113,7 +113,7 @@ You can remove a redaction mark for text, a specific area, or a page programmati
 
 {% tabs %}
 {% highlight C# %}
-void RemoveSpecificRedactionMark()
+void RemoveSelectedRedactionMark()
 {
     // Check if any redaction mark is currently selected.
     if (PdfViewer.SelectedRedactionMark != null)
@@ -146,10 +146,10 @@ You can redact the marked regions by using the `RedactAsync` method of [SfPdfVie
 {% tabs %}
 {% highlight C# %}
 private async void RedactMarkedRegion()
- {
+{
     // Apply redaction to all marked regions in the PDF document.
     await PdfViewer.RedactAsync();
- }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -160,7 +160,7 @@ The following example demonstrates how to obtain the default redaction settings 
 
 {% tabs %}
 {% highlight C# %}
-private void CustomizeDefaultRedactionSettings_Button_Clicked(object sender, EventArgs e)
+void CustomizeDefaultRedactionSettings()
 {
     // Access the default redaction settings from the SfPdfViewer instance and modify the default appearance properties.
     PdfViewer.RedactionSettings.MarkerBorderColor = Colors.Blue; // Border color for the marked region.
