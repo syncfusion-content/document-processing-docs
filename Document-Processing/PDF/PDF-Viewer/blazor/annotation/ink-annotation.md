@@ -11,7 +11,7 @@ documentation: ug
 
 The Blazor SfPdfViewer component supports adding, editing, and deleting ink annotations.
 
-![Ink annotation toolbar in Blazor PDF Viewer](../../blazor-classic/images/ink_annotation.png)
+![Ink annotation toolbar in Blazor PDF Viewer](../images/ink_annotation.png)
 
 ## Adding an ink annotation to the PDF document
 
@@ -21,7 +21,7 @@ Ink annotations can be added using the annotation toolbar.
 * Choose the **Draw Ink** button to enable ink mode.
 * Draw on any page of the loaded PDF document.
 
-![Draw ink tool in annotation toolbar](../../blazor-classic/images/ink_tool.png)
+![Draw ink tool in annotation toolbar](../images/ink_tool.png)
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -49,19 +49,19 @@ The stroke color, thickness, and opacity of an ink annotation can be modified us
 
 Change the stroke color using the color palette available in the Edit Stroke Color tool.
 
-![Change stroke color of ink annotation](../../blazor-classic/images/ink_strokecolor.png)
+![Change stroke color of ink annotation](../images/ink_strokecolor.png)
 
 ### Editing thickness
 
 Adjust the border thickness using the range slider in the Edit Thickness tool.
 
-![Change thickness of ink annotation](../../blazor-classic/images/ink_thickness.png)
+![Change thickness of ink annotation](../images/ink_thickness.png)
 
 ### Editing opacity
 
 Control the transparency using the range slider in the Edit Opacity tool.
 
-![Change opacity of ink annotation](../../blazor-classic/images/ink_opacity.png)
+![Change opacity of ink annotation](../images/ink_opacity.png)
 
 ## Setting default properties during the control initialization
 
