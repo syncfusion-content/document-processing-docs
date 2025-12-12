@@ -1,6 +1,6 @@
 ---
 title: Image Extraction in TypeScript PDF library | Syncfusion
-description: This section explains how to extract images from PDF documents and retrieve their properties such as position, size, and format using the JavaScript PDF library.
+description: This section explains how to extract images from PDF documents and retrieve their properties such as position and size using the JavaScript PDF library
 platform: document-processing
 control: PDF
 documentation: UG
@@ -33,6 +33,7 @@ let imageInfo: PdfEmbeddedImage = imageInfoCollection[0];
 let data: Uint8Array = imageInfo.data;
 // Destroy the document
 document.destroy();
+{% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
@@ -73,6 +74,7 @@ let imageInfoCollection: PdfEmbeddedImage[] = extractor.extractImages({
 let imageInfo: PdfEmbeddedImage = imageInfoCollection[0];
 // Destroy the document
 document.destroy();
+{% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);

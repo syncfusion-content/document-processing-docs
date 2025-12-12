@@ -33,6 +33,7 @@ destination.importPageRange(sourceDocument, 0, sourceDocument.pageCount-1);
 destination.save('Output.pdf');
 // Destroy the documents
 destination.destroy();
+{% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
 var destination= new PdfDocument(data1);
@@ -50,7 +51,6 @@ destination.importPageRange(sourceDocument, 0, sourceDocument.pageCount-1);
 destination.save('Output.pdf');
 // Destroy the documents
 destination.destroy();
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -78,6 +78,7 @@ destination.save('Output.pdf');
 // Destroy the documents to free resources
 destination.destroy();
 sourceDocument.destroy();
+{% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
 var destination = new ej.pdf.PdfDocument(data1);
