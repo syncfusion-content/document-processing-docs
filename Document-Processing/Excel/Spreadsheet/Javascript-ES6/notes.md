@@ -28,32 +28,116 @@ In the below example, you can add, edit, save, and delete notes.
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/note-cs1" %}
 
+## Accessing notes features
+
+The Spreadsheet provides two primary ways to access and manage notes:
+
+### Ribbon (Review Tab)
+
+The **Review** tab in the ribbon contains a **"Notes"** dropdown that provides access to various note-related operations:
+
+* Add Note
+* Edit Note
+* Delete Note
+* Previous Note
+* Next Note
+* Show/Hide Note
+* Show All Notes
+
+> **Note**: The available options dynamically change based on whether the selected cell contains a note. If the cell contains a note, the "Add Note" option will not be shown. If the cell does not contain a note, "Edit Note", "Delete Note", and "Show/Hide Note" options will not be shown.
+
+### Context Menu (Right-click)
+
+You can also access note operations by right-clicking on cells:
+
+* Add Note
+* Edit Note
+* Delete Note
+* Show/Hide Note
+
+> **Note**: The available options dynamically change based on whether the cell contains a note. If the cell contains a note, only "Edit Note", "Delete Note", and "Show/Hide Note" options are shown. If the cell does not contain a note, only the "Add Note" option is shown.
+
 ## Adding a note
 
-In the active worksheet, you can add a note in the following ways:
+You can add a note to any cell in the active worksheet using the following methods:
 
-* To add a note, right-click the cell to open the context menu and choose the **"Add Note"** option from the context menu. This will open a dialog box to add the content as a note.
-* You can also use the `Shift` + `F2` keyboard shortcut to add a note to the desired cell. A dialog box will be opened to add the content as a note.
-* After entering the content in the dialog box, you can either click on other cells or press the `Esc` button on the keyboard to automatically save the note in the cell and close the dialog box.
+* **Context Menu**: Right-click on the desired cell and select **"Add Note"**.
+* **Ribbon**: Select the cell, navigate to the **Review** tab, click the **"Notes"** dropdown, and select **"Add Note"**.
+* **Keyboard Shortcut**: Select the cell and press `Shift` + `F2`.
+
+A dialog box will open where you can enter the note content. After entering the content, you can either click on other cells or press the `Esc` button to automatically save the note and close the dialog box.
 
 ![Adding a note in Spreadsheet](./images/spreadsheet_add_note.gif)
 
+> **Note**: Once a note is added, a red triangle indicator appears at the top-right corner of the cell.
+
 ## Editing a note
 
-In the active worksheet, you can modify the content of existing notes in the document.
+You can modify the content of existing notes in the active worksheet using the following methods:
 
-* To edit a note, right-click on the desired cell containing the note, which will open the context menu.
-* Select the **"Edit Note"** option from the context menu.
-* You can also use the `Shift` + `F2` keyboard shortcut to edit the note of the desired cell. A dialog box will be opened to edit the note.
-* After editing the content in the dialog box, you can either click on other cells or press the `Esc` button on the keyboard to automatically save the note in the cell and close the dialog box.
+* **Context Menu**: Right-click on the cell containing the note and select **"Edit Note"**.
+* **Ribbon**: Select the cell containing the note, navigate to the **Review** tab, click the **"Notes"** dropdown, and select **"Edit Note"**.
+* **Keyboard Shortcut**: Select the cell containing the note and press `Shift` + `F2`.
+
+The note editor dialog box will open with the existing content. After editing the content, you can either click on other cells or press the `Esc` button to automatically save the changes and close the dialog box.
 
 ![Editing a note in Spreadsheet](./images/spreadsheet_edit_note.gif)
 
 ## Deleting a note
 
-In the active worksheet, right-click on the desired cell containing the note that you want to remove, which opens the context menu. In the context menu, select the **"Delete Note"** option to delete the note.
+You can remove notes from cells using the following methods:
+
+* **Context Menu**: Right-click on the cell containing the note and select **"Delete Note"**.
+* **Ribbon**: Select the cell containing the note, navigate to the **Review** tab, click the **"Notes"** dropdown, and select **"Delete Note"**.
+
+The note will be immediately removed from the cell, and the red triangle indicator will be removed.
 
 ![Deleting a note in Spreadsheet](./images/spreadsheet_delete_note.gif)
+
+## Navigating between notes
+
+The Spreadsheet provides navigation features to quickly move between cells containing notes in your worksheet. These navigation options are available in the **Notes** dropdown of the **Review** tab, regardless of whether the current cell contains a note or not.
+
+### Previous Note
+
+To navigate to the previous note, select **"Previous Note"** from the **Notes** dropdown in the **Review** tab. The Spreadsheet will automatically select the cell containing the previous note, moving upward and leftward through the worksheet. If no previous note exists, the selection will remain on the current cell.
+
+### Next Note
+
+To navigate to the next note, select **"Next Note"** from the **Notes** dropdown in the **Review** tab. The Spreadsheet will automatically select the cell containing the next note, moving downward and rightward through the worksheet. If no next note exists, the selection will remain on the current cell.
+
+<!-- ![Navigating between notes in Spreadsheet](./images/spreadsheet_navigate_notes.gif) -->
+
+> **Note**: The navigation follows the natural order of cells in the worksheet (left to right, top to bottom).
+
+## Show/Hide Note
+
+The **Show/Hide Note** feature allows you to toggle the visibility of individual notes as sticky notes in the worksheet. When enabled, the note remains persistently visible as a floating text box, making it easier to reference important information without needing to hover over the cell.
+
+To toggle the show/hide state of a note:
+
+* **Context Menu**: Right-click on the cell containing the note and select **"Show/Hide Note"**.
+* **Ribbon**: Select the cell containing the note, navigate to the **Review** tab, click the **"Notes"** dropdown, and select **"Show/Hide Note"**.
+
+<!-- ![Toggling show/hide note in Spreadsheet](./images/spreadsheet_show_hide_note.gif) -->
+
+**Behavior:**
+
+* **Default State (Hidden)**: By default, notes are hidden and only appear when you hover over the cell with the red triangle indicator.
+* **Sticky State (Visible)**: When you toggle Show/Hide Note on a hidden note, it becomes visible as a sticky note that remains visible even when navigating to other cells.
+* **Toggle Functionality**: Selecting Show/Hide Note again on a visible sticky note will hide it, returning to the default state.
+* **Independent Control**: Each note can be toggled independently, allowing you to show only the notes that are most relevant to your current work.
+
+
+## Show All Notes
+
+The **Show All Notes** feature allows you to display all notes in the current worksheet simultaneously as sticky notes, making it easier to review multiple comments at once. This option is available in the **Notes** dropdown of the **Review** tab, regardless of whether the selected cell contains a note or not.
+
+To show all notes, navigate to the **Review** tab, click the **"Notes"** dropdown, and select **"Show All Notes"**. All notes in the current worksheet will be displayed as floating text boxes near their respective cells.
+
+<!-- ![Showing all notes in Spreadsheet](./images/spreadsheet_show_all_notes.gif) -->
+
+> **Note**: After using Show All Notes, you can selectively hide individual notes using the **"Show/Hide Note"** option.
 
 ## Saving the document with notes
 
