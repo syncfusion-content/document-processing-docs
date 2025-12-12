@@ -40,7 +40,7 @@ PdfViewer.IsCommentsPanelVisible = true;
 
 
 ## Comment panel
-Annotation comments can be added to the PDF using the comment panel. Comment panel can be opened by using Built-in toolbar , In the toolbar you can see the comments button in the primary toolbar for desktop and top toolbar for mobile. A comment panel will appear.
+Annotation comments can be added to the PDF using the comment panel. Comment panel can be opened by using Built-in toolbar, In the toolbar you can see the comments button in the primary toolbar for desktop and top toolbar for mobile. A comment panel will appear.
 The following image represents how to add the comments using the toolbar on the desktop.
 
 ![Annotations comments Built-in toolbar](Images/Annotations/desktop-comment.gif)
