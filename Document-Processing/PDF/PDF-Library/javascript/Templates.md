@@ -14,32 +14,29 @@ A PDF template is a drawing surface, where contents can be added. All the elemen
 This example demonstrates how to create a new PDF template using the `PdfTemplate` class. A PDF template allows you to define reusable graphics or content that can be drawn on multiple pages or annotations within a PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfRubberStampAnnotation, PdfTemplate, PdfImage, PdfBitmap } from '@syncfusion/ej2-pdf';
 
-    import { PdfDocument, PdfPage, PdfRubberStampAnnotation, PdfTemplate, PdfImage, PdfBitmap } from '@syncfusion/ej2-pdf';
-
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Add a page
-    let page: PdfPage = document.addPage();
-    // Create a new rubber stamp annotation
-    let annotation: PdfRubberStampAnnotation = new PdfRubberStampAnnotation ({x: 50, y: 100, width: 100, height: 50});
-    // Get the normal appearance of the annotation
-    let normalAppearance: PdfTemplate = annotation.appearance.normal;
-    // Create new image object by using JPEG image data as Base64 string format
-    let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
-    // Draw the image as the custom appearance for the annotation
-    normalAppearance.graphics.drawImage(image, {x: 10, y: 20});
-    // Add annotation to the page
-    page.annotations.add(annotation);
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a page
+let page: PdfPage = document.addPage();
+// Create a new rubber stamp annotation
+let annotation: PdfRubberStampAnnotation = new PdfRubberStampAnnotation({ x: 50, y: 100, width: 100, height: 50 });
+// Get the normal appearance of the annotation
+let normalAppearance: PdfTemplate = annotation.appearance.normal;
+// Create new image object by using JPEG image data as Base64 string format
+let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
+// Draw the image as the custom appearance for the annotation
+normalAppearance.graphics.drawImage(image, { x: 10, y: 20});
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
+{% highlight javascript tabtitle="JavaScript" %}
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -67,34 +64,31 @@ document.destroy();
 This example demonstrates how to create templates from an existing PDF document using the `PdfTemplate` class. A PDF template allows you to extract and reuse content from a PDF page or annotation, enabling consistent design and repeated elements across multiple pages.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
-
-    import { PdfDocument, PdfPage, PdfRubberStampAnnotation, PdfTemplate, PdfImage, PdfBitmap } from '@syncfusion/ej2-pdf';
-
-    // Load an existing PDF document
-    let document: PdfDocument = new PdfDocument(data, password);
-    // Get the first page
-    let page: PdfPage = document.getPage(0) as PdfPage;
-    // Create a new rubber stamp annotation
-    let annotation: PdfRubberStampAnnotation = new PdfRubberStampAnnotation ({x: 50, y: 100, width: 100, height: 50});
-    // Get the normal appearance of the annotation
-    let normalAppearance: PdfTemplate = annotation.appearance.normal;
-    // Create new image object by using JPEG image data as Base64 string format
-    let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
-    // Draw the image as the custom appearance for the annotation
-    normalAppearance.graphics.drawImage(image, {x: 10, y: 20});
-    // Add annotation to the page
-    page.annotations.add(annotation);
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
-
-{% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfRubberStampAnnotation, PdfTemplate, PdfImage, PdfBitmap } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data, password);
+let document: PdfDocument = new PdfDocument(data);
+// Get the first page
+let page: PdfPage = document.getPage(0) as PdfPage;
+// Create a new rubber stamp annotation
+let annotation: PdfRubberStampAnnotation = new PdfRubberStampAnnotation({ x: 50, y: 100, width: 100, height: 50 });
+// Get the normal appearance of the annotation
+let normalAppearance: PdfTemplate = annotation.appearance.normal;
+// Create new image object by using JPEG image data as Base64 string format
+let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
+// Draw the image as the custom appearance for the annotation
+normalAppearance.graphics.drawImage(image, { x: 10, y: 20});
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
 // Get the first page
 var page = document.getPage(0);
 // Create a new rubber stamp annotation

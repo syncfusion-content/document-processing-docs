@@ -27,28 +27,31 @@ Step 4: In the **Additional information** dialog, select a .NET LTS version (for
 Step 5: **Add script reference** : Add the required scripts using the CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` as follows:
 
 {% tabs %}
-{% highlight c# tabtitle="~/_Layout.cshtml" %}
-
+{% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 <head>
-    ...
     <!-- Syncfusion JavaScript PDF Library (CDN) -->
     <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
 </head>
-
 {% endhighlight %}
 {% endtabs %}
- 
+
+N> Check out the following topics for including script references in an ASP.NET Core application to enable PDF creation using the Syncfusion<sup style="font-size:70%">®</sup> JavaScript PDF library:
+*   [CDN](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#cdn-reference)
+*   [NPM Package](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#node-package-manager-npm)
+*   [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)
+
+Would you like me to **reformat this into a proper Syncfusion documentation style note block** (with icons and emphasis), or **convert it into a step-by-step guide for adding script references**?
+
+
 Step 6: **Create a PDF document** : Add the script in `~/Views/Home/Index.cshtml` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Index.cshtml" %}
-
+{% highlight cshtml tabtitle="~/Index.cshtml" %}
 <div class="container py-4">
     <h1 class="h4 mb-3">Create PDF document</h1>
     <p class="text-muted">Click the button to generate and download a PDF.</p>
     <button id="btnCreatePdf" class="btn btn-primary">Generate PDF document</button>
 </div>
-
 @section Scripts {
     <script>
         document.getElementById('btnCreatePdf').addEventListener('click', function () {
@@ -71,7 +74,6 @@ Step 6: **Create a PDF document** : Add the script in `~/Views/Home/Index.cshtml
         });   
     </script>
 }
-
 {% endhighlight %}
 {% endtabs %}
 

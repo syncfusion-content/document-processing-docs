@@ -31,28 +31,23 @@ Step 2: The JS 2 component's global scripts and styles are already hosted in the
 Step 3: Create a HTML page (index.html) in `my-app` location and add the CDN link references.
 
 {% tabs %}
-{% highlight ts tabtitle="index.html" %}
-
+{% highlight html tabtitle="index.html" %}
 <head>
-    ...
     <!-- Syncfusion JavaScript PDF Library (CDN) -->
     <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
 </head>
-
 {% endhighlight %}
 {% endtabs %}
 
 Step 4: **Create a PDF document** : Add the script in `index.html` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Index.html" %}
-
+{% highlight html tabtitle="~/Index.html" %}
 <div class="container py-4">
     <h1 class="h4 mb-3">Create PDF document</h1>
     <p class="text-muted">Click the button to generate and download a PDF.</p>
     <button id="btnCreatePdf" class="btn btn-primary">Generate PDF document</button>
 </div>
-
 @section Scripts {
      <script>
          document.getElementById('btnCreatePdf').addEventListener('click', function () {
@@ -78,6 +73,8 @@ Step 4: **Create a PDF document** : Add the script in `index.html` by creating a
 
 {% endhighlight %}
 {% endtabs %}
+
+Along with the PDF file from which you want to extract images. Keep these files in the same static content area as `ej2.min.js` to ensure proper loading.
 
 By executing the program, you will get the PDF document as follows.
 
