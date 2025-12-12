@@ -17,7 +17,6 @@ This method allows programmatic rotation of individual or multiple pages within 
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
 @using Syncfusion.Blazor.Buttons
 
@@ -49,7 +48,6 @@ This method allows programmatic rotation of individual or multiple pages within 
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
 @using Syncfusion.Blazor.Buttons
 
@@ -83,7 +81,6 @@ This method allows asynchronously arranges the specified pages at the given targ
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
 @using Syncfusion.Blazor.Buttons
 
@@ -110,7 +107,6 @@ This method allows asynchronously inserts one or more blank pages at the specifi
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
 @using Syncfusion.Blazor.Buttons
 
@@ -137,7 +133,6 @@ This method allows asynchronously deletes the pages at the specified indices fro
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
 @using Syncfusion.Blazor.Buttons
 
@@ -164,7 +159,6 @@ This method allows asynchronously duplicates the pages at the specified indices 
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
 @using Syncfusion.Blazor.Buttons
 
@@ -191,7 +185,6 @@ This method allows extracts the specified pages and downloads them as a separate
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
 @using Syncfusion.Blazor.Buttons
 
@@ -218,7 +211,6 @@ This method allows extracts the specified pages and returns the extracted PDF as
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
 @using Syncfusion.Blazor.Buttons
 
@@ -246,7 +238,6 @@ This method allows inserts pages from another PDF document at the specified inde
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
 @using Syncfusion.Blazor.Buttons
 
@@ -274,7 +265,6 @@ This method allows inserts pages from another PDF document as stream at the spec
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
 @using Syncfusion.Blazor.Buttons
 
@@ -297,4 +287,4 @@ This method allows inserts pages from another PDF document as stream at the spec
 {% endhighlight %}
 {% endtabs %}
 
-<!-- [View sample in GitHub](Need to added) -->
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Page%20Organizer/Organize-API-Support)

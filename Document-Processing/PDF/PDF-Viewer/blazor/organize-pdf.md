@@ -29,7 +29,7 @@ After completing the changes, apply them by selecting **Save** to overwrite the 
 
 For a full guide to Organize Pages in Blazor, see the feature landing page: [Organize pages in Blazor PDF Viewer](./organize-pages/overview).
 
-See also:
+## See also
 
 - [UI interactions for Organize Pages](./organize-pages/ui-interactions)
 - [Toolbar items for Organize Pages](./organize-pages/toolbar)
