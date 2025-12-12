@@ -70,7 +70,6 @@ Step 4: **Create a PDF document** : Add the script in `index.html` by creating a
         });   
     </script>
 }
-
 {% endhighlight %}
 {% endtabs %}
 
