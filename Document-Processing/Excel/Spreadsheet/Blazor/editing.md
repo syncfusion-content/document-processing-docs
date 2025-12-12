@@ -84,6 +84,105 @@ To exit edit mode without saving changes, press the **ESCAPE** key. This action 
 
 ![Animation showing a user canceling a cell edit in the Blazor Spreadsheet component.](./images/cell-editing.gif)
 
+## Events
+
+The Blazor Spreadsheet provides events that are triggered during editing operations, such as [CellEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellEditingEventArgs.html) and [CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellSavedEventArgs.html). These events enable the execution of custom actions before and after a cell edit, allowing for validation, customization, and response handling.
+
+### CellEditing
+
+The `CellEditing` event is triggered before a cell enters edit mode, allowing for validation or cancellation of the edit operation.
+
+**Purpose**
+
+This event is useful for scenarios where cell editing needs to be controlled dynamically, such as restricting editing in specific ranges or preventing editing based on certain conditions.
+
+**Event Arguments**
+
+The event uses the [CellEditingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellEditingEventArgs.html) class, which includes the following properties:
+
+| Event Arguments | Description |
+|---|---|
+| RowIndex | The zero-based row index of the cell being edited. |
+| ColIndex | The zero-based column index of the cell being edited. |
+| Address | The address of the cell being edited (e.g., "A1"). |
+| Value | The current value of the cell before editing. |
+| Cancel | Set to `true` to cancel the editing operation. |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet DataSource="DataSourceBytes" CellEditing="OnCellEditing">
+<SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    private void OnCellEditing(CellEditingEventArgs args)
+    {
+        // Prevents editing in the first row.
+        if (args.RowIndex == 0)
+        {
+            args.Cancel = true;
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### CellSaved
+
+The `CellSaved` event is raised after a cell's value has been successfully saved, providing details about the change and the action that triggered it.
+
+**Purpose**
+
+This event is useful for scenarios where post-editing actions are needed, such as logging the cell change, updating related data, or triggering additional UI updates.
+
+**Event Arguments**
+
+The event uses the [CellSavedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellSavedEventArgs.html) class, which includes the following properties:
+
+| Event Arguments | Description |
+|---|---|
+| Address | The address of the cell whose value was saved (e.g., "A1"). |
+| Value | The new value of the cell after saving. |
+| OldValue | The original value of the cell before saving. |
+| Action | The action that triggered the save (e.g., "Edit", "Cut", "Paste", "Autofill"). |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet DataSource="DataSourceBytes" CellSaved="OnCellSaved">
+<SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+    private void OnCellSaved(CellSavedEventArgs args)
+    {
+        // Log the cell change, including the action that triggered it.
+        Console.WriteLine($"Cell {args.Address} changed from '{args.OldValue}' to '{args.Value}' by {args.Action}.");
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## Cell editing in protected sheet
 
 In a protected sheet, only unlocked ranges can be edited based on the sheet's protection settings. Attempting to modify a locked range triggers an error message, as shown below:
