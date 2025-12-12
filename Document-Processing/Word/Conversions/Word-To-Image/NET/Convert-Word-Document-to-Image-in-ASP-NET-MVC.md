@@ -250,4 +250,3 @@ By executing the program, you will get the **image** as follows.
 
 Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
 
-An online sample link to [convert Word document to image](https://ej2.syncfusion.com/aspnetmvc/Word/WordtoImage#/material3) in ASP.NET MVC.
