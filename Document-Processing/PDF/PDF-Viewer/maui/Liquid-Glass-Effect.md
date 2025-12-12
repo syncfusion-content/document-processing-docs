@@ -30,7 +30,9 @@ The Liquid Glass effect enhances the UI of the PDF Viewer by adding a translucen
 {% endtabs %}
 
 following image represents Liquid glass effect on the desktop.
+
 ![Liquid glass](Images/desktop-liquidglass.gif)
 
 following image represents Liquid glass effect on the mobile.
+
 ![Liquid glass](Images/mobile-liquidglass.gif)
