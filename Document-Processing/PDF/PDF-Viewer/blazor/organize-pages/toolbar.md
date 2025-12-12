@@ -17,8 +17,8 @@ The `CanInsert` property controls the visibility of the insert tool. When set to
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
+
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%">
@@ -28,7 +28,7 @@ The `CanInsert` property controls the visibility of the insert tool. When set to
 {% endhighlight %}
 {% endtabs %}
 
-![Insert Disable](./images/organize-insert-disable.jpg)
+![Insert Disable](./images/organize-insert-disable.png)
 
 ## Show or hide the delete option
 
@@ -36,8 +36,8 @@ The `CanDelete` property controls the visibility of the delete tool. When set to
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
+
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%">
@@ -47,7 +47,7 @@ The `CanDelete` property controls the visibility of the delete tool. When set to
 {% endhighlight %}
 {% endtabs %}
 
-![Delete Disable](./images/organize-delete-disable.jpg)
+![Delete Disable](./images/organize-delete-disable.png)
 
 ## Show or hide the rotate option
 
@@ -55,8 +55,8 @@ The `CanRotate` property controls the visibility of the rotate tool. When set to
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
+
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%">
@@ -66,7 +66,7 @@ The `CanRotate` property controls the visibility of the rotate tool. When set to
 {% endhighlight %}
 {% endtabs %}
 
-![Rotate Disable](./images/organize-rotate-disable.jpg)
+![Rotate Disable](./images/organize-rotate-disable.png)
 
 ## Show or hide the duplicate option
 
@@ -74,8 +74,8 @@ The `CanDuplicate` property controls the visibility of the copy tool. When set t
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
+
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%">
@@ -85,7 +85,7 @@ The `CanDuplicate` property controls the visibility of the copy tool. When set t
 {% endhighlight %}
 {% endtabs %}
 
-![Duplicate Disable](./images/organize-copy-disable.jpg)
+![Duplicate Disable](./images/organize-copy-disable.png)
 
 ## Show or hide the import option
 
@@ -93,8 +93,8 @@ The `CanImport` property controls the visibility of the import tool. When set to
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
+
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%">
@@ -104,24 +104,7 @@ The `CanImport` property controls the visibility of the import tool. When set to
 {% endhighlight %}
 {% endtabs %}
 
-![Import Disable](./images/organize-import-disable.jpg)
-
-## Show or hide the rearrange option
-
-The `CanRearrange` property controls the ability to rearrange pages. When set to `false`, pages cannot be rearranged.
-
-{% tabs %}
-{% highlight razor %}
-
-@page "/"
-<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-              Height="100%"
-              Width="100%">
-              <PageOrganizerSettings CanRearrange="false"></PageOrganizerSettings>
-</SfPdfViewer2>
-
-{% endhighlight %}
-{% endtabs %}
+![Import Disable](./images/organize-import-disable.png)
 
 ## Show or hide the extract option
 
@@ -129,8 +112,8 @@ The `CanExtractPages` property controls the visibility of the extract tool. When
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
+
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%">
@@ -140,4 +123,23 @@ The `CanExtractPages` property controls the visibility of the extract tool. When
 {% endhighlight %}
 {% endtabs %}
 
-![Extract Disable](./images/organize-extract-disable.jpg)
+![Extract Disable](./images/organize-extract-disable.png)
+
+## Show or hide the rearrange option
+
+The `CanRearrange` property controls the ability to rearrange pages. When set to `false`, pages cannot be rearranged.
+
+{% tabs %}
+{% highlight razor %}
+@page "/"
+
+<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+              Height="100%"
+              Width="100%">
+              <PageOrganizerSettings CanRearrange="false"></PageOrganizerSettings>
+</SfPdfViewer2>
+
+{% endhighlight %}
+{% endtabs %}
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Page%20Organizer/Page-Organizer-Settings)
