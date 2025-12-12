@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Merge cells in Blazor Spreadsheet component | Syncfusion
-description: Learn how to merge, center, merge across, and unmerge cells in the Syncfusion Blazor Spreadsheet component, including selection rules, borders, undo/redo, and behavior details.
+description: Checkout and learn all about the comprehensive merge functionality in Syncfusion Blazor Spreadsheet component and much more.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
@@ -26,7 +26,7 @@ N> The **Merge Cell** button is disabled when a single unmerged cell is selected
 
 ## Merge Cells
 
-### Merge cell via UI
+### Merge cells via UI
 
 - Select a range.
 - Click on **Merge Cell** drop-down in the ribbon.
@@ -93,7 +93,7 @@ The [MergeAsync]() method merges cells based on the specified merge type. If the
 
 ## Unmerge Cells
 
-### Unmerge cell via UI
+### Unmerge cells via UI
 
 - Select a range.
 - Click on **Unmerge Cells** drop-down in the ribbon.
@@ -101,7 +101,7 @@ The [MergeAsync]() method merges cells based on the specified merge type. If the
 
 ![unmerge cells](./images/unmerge-cells.gif)
 
-### Unmerge cell programmatically.
+### Unmerge cells programmatically.
 
 The [UnmergeAsync]() method splits merged cells back into individual cells. If the **cellRange** parameter is not provided, the current selection cell is unmerged. This method provides a programmatic way to unmerge cells without using the UI. The available parameters in the `UnmergeAsync` method are:
 
@@ -140,7 +140,7 @@ The [UnmergeAsync]() method splits merged cells back into individual cells. If t
 {% endhighlight %}
 {% endtabs %}
 
-### Merge cell validation messages
+### Merge cells validation messages
 
 When perform merge cell in the Blazor Spreadsheet, validation messages are displayed in specific scenarios to inform about merge cell constraints:
 
