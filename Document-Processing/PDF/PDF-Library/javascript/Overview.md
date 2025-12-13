@@ -36,10 +36,10 @@ The following are the key features of this library.
 
 ## Supported web platforms
 
-* [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-asp-net-core)
-* [ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-asp-net-mvc)
-* [Angular](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-angular)
-* [React](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-react)
-* [Vue](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-vue)
-* [JavaScript](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-javascript)
-* [TypeScript](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-typescript)
+* ASP.NET Core
+* ASP.NET MVC
+* Angular
+* React
+* Vue
+* JavaScript
+* TypeScript
