@@ -21,7 +21,7 @@ Free text annotations can be added using the annotation toolbar.
 
 When Free Text Annotation mode is enabled from Pan, the viewer automatically switches to Text Select mode.
 
-![Free Text Annotation in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-free-text-annotation.png)
+![Free Text Annotation in Blazor SfPdfViewer](../images/blazor-pdfviewer-free-text-annotation.png)
 
 ```cshtml
 
