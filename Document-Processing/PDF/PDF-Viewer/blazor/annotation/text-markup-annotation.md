@@ -35,7 +35,7 @@ There are two ways to highlight text in a PDF document.
 * Select the text to add the highlight annotation.
 * Alternatively, select the text first and then click **Highlight** to apply it.
 
-![Highlighted text in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-highlight-text.png)
+![Highlighted text in Blazor SfPdfViewer](../images/blazor-pdfviewer-highlight-text.png)
 
 In pan mode, entering highlight mode switches the viewer to text select mode to enable text selection for highlighting.
 
@@ -81,7 +81,7 @@ There are two ways to underline text in a PDF document.
 * Select the text to add the underline annotation.
 * Alternatively, select the text first and then click **Underline** to apply it.
 
-![Underlined text in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-underline-text.png)
+![Underlined text in Blazor SfPdfViewer](../images/blazor-pdfviewer-underline-text.png)
 
 In pan mode, entering underline mode switches the viewer to text select mode to enable text selection for underlining.
 
@@ -127,7 +127,7 @@ Using the context menu.
 * Select the text to add the strikethrough annotation.
 * Alternatively, select the text first and then click **Strikethrough** to apply it.
 
-![Strikethrough text in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-strike-through-text.png)
+![Strikethrough text in Blazor SfPdfViewer](../images/blazor-pdfviewer-strike-through-text.png)
 
 In pan mode, entering strikethrough mode switches the viewer to text select mode to enable text selection for striking through.
 
@@ -208,13 +208,13 @@ The color and opacity of a text markup annotation can be changed using the **Edi
 
 Change the annotation color using the color palette in the **Edit Color** tool.
 
-![Editing text markup color in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-editing-text-color.png)
+![Editing text markup color in Blazor SfPdfViewer](../images/blazor-pdfviewer-editing-text-color.png)
 
 ### Editing opacity
 
 Change the annotation opacity using the range slider in the **Edit Opacity** tool.
 
-![Editing text markup opacity in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-edit-text-opacity.png)
+![Editing text markup opacity in Blazor SfPdfViewer](../images/blazor-pdfviewer-edit-text-opacity.png)
 
 ## Text markup annotation settings
 
