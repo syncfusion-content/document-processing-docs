@@ -40,13 +40,15 @@ The Blazor Spreadsheet component provides several built-in number format categor
 | Long Date | `dddd, mmmm dd, yyyy` | Saturday, March 15, 2025 |
 | Time | `h:mm:ss AM/PM` | 3:45:30 PM |
 
-### Applying Number Formats via the UI
+### Applying Number Formats via UI
 
 Number formats can be applied through the UI using the following method:
 
-*   **Ribbon**: Navigate to the **Home** tab and use the **Number Format** dropdown. This dropdown displays previews of built-in formats based on the current culture.
+* Click the **Home** tab in the Ribbon.
+* Open the **Number Format** dropdown.
+* The dropdown displays previews of built-in formats based on the current culture.
 
-![Blazor Spreadsheet showing Number Format Dropdown in Ribbon](./images/number-format-ribbon.png)
+![Blazor Spreadsheet showing Number Format Dropdown in Ribbon](./images/number-format-ribbon.gif)
 
 ### Applying Number Formats Programmatically
 
@@ -55,7 +57,7 @@ Number formats can be applied programmatically to the current selection or a spe
 | Parameter | Type | Description |
 | -- | -- | -- |
 | format | string | The built-in format or a supported custom pattern. |
-| cellAddress | string (Optional) | The address of the target range where the number format was applied (e.g., `"Sheet1!A2:A5"` or `"A2:A5"`).When cellAddress is omitted, the current selection is formatted. |
+| cellAddress | string (Optional) | The address of the target range where the number format is applied (e.g., `"Sheet1!A2:A5"` or `"A2:A5"`). If the sheet name is not specified, the number format is applied to the specified range in the active sheet. When cellAddress is omitted, the current selection is formatted. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -88,13 +90,15 @@ Number formats can be applied programmatically to the current selection or a spe
 {% endhighlight %}
 {% endtabs %}
 
-If the built-in formats do not meet specific requirements, custom patterns can be applied programmatically using the `NumberFormatAsync` method. Currently, a dedicated UI dialog for defining custom formats is not available. They are exclusively supported through the API. Patterns must be compatible with Excel-style format strings.
+> If the built-in formats do not meet specific requirements, custom patterns can be applied programmatically using the `NumberFormatAsync` method. Patterns must be compatible with Excel-style format strings.
 
 ## Text and Cell Formatting
 
 Text and cell formatting enhances the visual presentation of data by applying styles such as font changes, colors, borders, and alignment to individual cells or cell ranges. This helps organize content and emphasize important information for faster interpretation.
 
-### Text and cell formatting options include:
+### Text Formatting
+
+Text formatting options include:
 
 *   **Bold** - Applies a heavier font weight to make the text stand out in the Spreadsheet.
 
@@ -109,6 +113,10 @@ Text and cell formatting enhances the visual presentation of data by applying st
 *   **Font Size** - Adjusts the size of the text to create visual hierarchy or improve readability in the Spreadsheet.
 
 *   **Font Color** - Changes the color of the text to improve visual hierarchy or to organize information using color codes.
+
+### Cell Formatting
+
+Cell formatting options include:
 
 *   **Fill Color** - Adds color to the cell background to visually organize data or highlight important information.
 
@@ -150,21 +158,23 @@ Border color, size, and style can also be customized. The supported sizes and st
 
 | Type   | Description                      |
 |--------|----------------------------------|
-| Thin   | Specifies a `1px` border size (default). |
+| Thin   | Specifies a `1px` border size. |
 | Medium | Specifies a `2px` border size.       |
 | Thick  | Specifies a `3px` border size.       |
-| Solid  | Creates a `solid` border (default).  |
+| Solid  | Creates a `solid` border.  |
 | Dashed | Creates a `dashed` border.|
 | Dotted | Creates a `dotted` border.|
 | Double | Creates a `double` border.|
 
-### Applying Borders via the UI
+### Applying Borders via UI
 
 Borders can be applied through the UI using the following method:
 
-*   **Ribbon**: Navigate to the **Home** tab in the Ribbon toolbar and select the **Borders** dropdown. Styling options such as color, size, and style are available within the same menu.
+* Click the **Home** tab in the Ribbon.
+* Open the **Borders** dropdown.
+* Select the desired border style, color, and size from the dropdown.
 
-![Blazor Spreadsheet displaying available border options on the Home tab in the Ribbon toolbar](./images/borders.png)
+![Blazor Spreadsheet displaying available border options on the Home tab in the Ribbon toolbar](./images/borders.gif)
 
 ### Applying Borders Programmatically
 

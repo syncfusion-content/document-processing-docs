@@ -86,11 +86,11 @@ To exit edit mode without saving changes, press the **ESCAPE** key. This action 
 
 ## Events
 
-The Blazor Spreadsheet provides events that are triggered during editing operations, such as [CellEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellEditingEventArgs.html) and [CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellSavedEventArgs.html). These events enable the execution of custom actions before and after a cell edit, allowing for validation, customization, and response handling.
+The Blazor Spreadsheet component provides events that are triggered during editing operations, such as [CellEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellEditingEventArgs.html) and [CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellSavedEventArgs.html). These events allow you to perform custom actions before a cell enters edit mode and after its value has been successfully saved, enabling scenarios such as data validation or logging changes.
 
 ### CellEditing
 
-The `CellEditing` event is triggered before a cell enters edit mode, allowing for validation or cancellation of the edit operation.
+The `CellEditing` event is triggered before a cell enters edit mode. It provides an opportunity to validate or cancel the edit operation.
 
 **Purpose**
 
@@ -102,10 +102,10 @@ The event uses the [CellEditingEventArgs](https://help.syncfusion.com/cr/blazor/
 
 | Event Arguments | Description |
 |---|---|
-| RowIndex | The zero-based row index of the cell being edited. |
-| ColIndex | The zero-based column index of the cell being edited. |
-| Address | The address of the cell being edited (e.g., "A1"). |
-| Value | The current value of the cell before editing. |
+| RowIndex (read-only)| The zero-based row index of the cell being edited. |
+| ColIndex (read-only)| The zero-based column index of the cell being edited. |
+| Address (read-only)| The address of the cell being edited (e.g., "Sheet1!A1"). |
+| Value (read-only)| The current value of the cell before editing. |
 | Cancel | Set to `true` to cancel the editing operation. |
 
 {% tabs %}
@@ -140,11 +140,11 @@ The event uses the [CellEditingEventArgs](https://help.syncfusion.com/cr/blazor/
 
 ### CellSaved
 
-The `CellSaved` event is raised after a cell's value has been successfully saved, providing details about the change and the action that triggered it.
+The `CellSaved` event is triggered after a cell’s value has been successfully saved, providing details about the updated value and the action that caused the change (such as Edit, Cut, Paste, or Autofill).
 
 **Purpose**
 
-This event is useful for scenarios where post-editing actions are needed, such as logging the cell change, updating related data, or triggering additional UI updates.
+This event is useful for scenarios where post-editing actions are needed, such as logging the cell change or refreshing the UI.
 
 **Event Arguments**
 
@@ -152,10 +152,10 @@ The event uses the [CellSavedEventArgs](https://help.syncfusion.com/cr/blazor/Sy
 
 | Event Arguments | Description |
 |---|---|
-| Address | The address of the cell whose value was saved (e.g., "A1"). |
-| Value | The new value of the cell after saving. |
-| OldValue | The original value of the cell before saving. |
-| Action | The action that triggered the save (e.g., "Edit", "Cut", "Paste", "Autofill"). |
+| Address (read-only)| The address of the cell whose value was saved (e.g., "Sheet1!A1"). |
+| Value (read-only)| The new value of the cell after saving. |
+| OldValue (read-only)| The original value of the cell before saving. |
+| Action (read-only)| The action that triggered the save (e.g., "Edit", "Cut", "Paste", "Autofill"). |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
