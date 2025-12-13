@@ -27,7 +27,7 @@ var document = new ej.pdf.PdfDocument(data);
 {% endhighlight %}
 {% endtabs %}
 
-The PdfDocument constructor can accept PDF data in either Base64 string or Uint8Array format. Here’s a quick example for both approaches:
+The PdfDocument constructor can accept PDF data in either Base64 string or Uint8Array format. Here's a quick example for both approaches:
 
 ### Using Base64 String
 
