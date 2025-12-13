@@ -16,7 +16,7 @@ This guide explains how to integrate the JavaScript PDF library into an Angular 
 
 ## Setup Angular Environment
 
-You can use the [`Angular CLI`](https://github.com/angular/angular-cli) to setup your Angular applications.
+You can use the [Angular CLI](https://github.com/angular/angular-cli) to setup your Angular applications.
 To install the latest Angular CLI globally use the following command.
 
 ```bash
