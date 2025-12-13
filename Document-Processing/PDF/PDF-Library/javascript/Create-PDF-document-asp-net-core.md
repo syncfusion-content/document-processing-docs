@@ -40,8 +40,6 @@ N> Check out the following topics for including script references in an ASP.NET 
 *   [NPM Package](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#node-package-manager-npm)
 *   [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)
 
-Would you like me to **reformat this into a proper Syncfusion documentation style note block** (with icons and emphasis), or **convert it into a step-by-step guide for adding script references**?
-
 
 Step 6: **Create a PDF document** : Add the script in `~/Views/Home/Index.cshtml` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
