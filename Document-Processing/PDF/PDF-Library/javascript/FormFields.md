@@ -19,33 +19,30 @@ This example demonstrates how to add a text box field to a PDF document using th
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfTextBoxField, PdfStandardFont} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfTextBoxField, PdfInteractiveBorder, PdfBorderStyle, PdfFontFamily, PdfFontStyle} from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
 //Add the PDF page.
 let page: PdfPage = document.addPage();
-// Access the PDF form from the document
-let form: PdfForm = document.form;
-// Create a new text box field
-let field: PdfTextBoxField = new PdfTextBoxField(page, 'FirstName', {x: 10, y: 10, width: 100, height: 50});
-// Set the default text value for the text box
-field.text = 'John';
-// Apply a standard font (Helvetica) with size 10 to the text box
-field.font = new PdfStandardFont(PdfFontFamily.helvetica, 10);
-// Set the background color of the text box to red
-field.backColor = { r: 255, g: 0, b: 0 };
-// Set the border color of the text box to blue
-field.borderColor = { r: 0, g: 0, b: 255 };
-// Add a tooltip to the text box for user guidance
-field.toolTip = 'FirstName';
-// Set the text color inside the text box to green
-field.color = { r: 0, g: 255, b: 0 };
-// Add the configured text box field to the PDF form
-form.add(field);
+// Add new textbox field into PDF form
+document.form.add(new PdfTextBoxField(
+  page,
+  'FirstName',
+  { x: 50, y: 600, width: 200, height: 22 },
+  {
+    toolTip: 'Enter your first name',
+    color: { r: 0, g: 0, b: 0 },
+    backColor: { r: 255, g: 255, b: 255 },
+    borderColor: { r: 0, g: 122, b: 204 },
+    border: new PdfInteractiveBorder({ width: 1, style: PdfBorderStyle.solid }),
+    text: 'John',
+    font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular)
+  }
+));
 // Save the document
-document.save('Output.pdf');
-// Close the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
@@ -53,24 +50,21 @@ document.destroy();
 var document = new ej.pdf.PdfDocument();
 // Add the PDF page.
 var page = document.addPage();
-// Access the PDF form from the document
-var form = document.form;
-// Create a new text box field
-var field = new ej.pdf.PdfTextBoxField(page, 'FirstName', { x: 10, y: 10, width: 100, height: 50 });
-// Set the default text value for the text box
-field.text = 'John';
-// Apply a standard font (Helvetica) with size 10 to the text box
-field.font = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 10);
-// Set the background color of the text box to red
-field.backColor = { r: 255, g: 0, b: 0 };
-// Set the border color of the text box to blue
-field.borderColor = { r: 0, g: 0, b: 255 };
-// Add a tooltip to the text box for user guidance
-field.toolTip = 'FirstName';
-// Set the text color inside the text box to green
-field.color = { r: 0, g: 255, b: 0 };
-// Add the configured text box field to the PDF form
-form.add(field);
+// Add new textbox field into PDF form
+document.form.add(new PdfTextBoxField(
+  page,
+  'FirstName',
+  { x: 50, y: 600, width: 200, height: 22 },
+  {
+    toolTip: 'Enter your first name',
+    color: { r: 0, g: 0, b: 0 },
+    backColor: { r: 255, g: 255, b: 255 },
+    borderColor: { r: 0, g: 122, b: 204 },
+    border: new ej.pdf.PdfInteractiveBorder({ width: 1, style: PdfBorderStyle.solid }),
+    text: 'John',
+    font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular)
+  }
+));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -82,33 +76,30 @@ The following code snippet explains how to add a text box field in an existing P
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfTextBoxField, PdfStandardFont} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfTextBoxField, PdfInteractiveBorder, PdfBorderStyle, PdfFontFamily, PdfFontStyle} from '@syncfusion/ej2-pdf';
 
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+//Add the PDF page.
 let page: PdfPage = document.getPage(0);
-// Access the PDF form from the document
-let form: PdfForm = document.form;
-// Create a new text box field
-let field: PdfTextBoxField = new PdfTextBoxField(page, 'FirstName', {x: 10, y: 10, width: 100, height: 50});
-// Set the default text value for the text box
-field.text = 'John';
-// Apply a standard font (Helvetica) with size 10 to the text box
-field.font = new PdfStandardFont(PdfFontFamily.helvetica, 10);
-// Set the background color of the text box to red
-field.backColor = { r: 255, g: 0, b: 0 };
-// Set the border color of the text box to blue
-field.borderColor = { r: 0, g: 0, b: 255 };
-// Add a tooltip to the text box for user guidance
-field.toolTip = 'FirstName';
-// Set the text color inside the text box to green
-field.color = { r: 0, g: 255, b: 0 };
-// Add the configured text box field to the PDF form
-form.add(field);
+// Add new textbox field into PDF form
+document.form.add(new PdfTextBoxField(
+  page,
+  'FirstName',
+  { x: 50, y: 600, width: 200, height: 22 },
+  {
+    toolTip: 'Enter your first name',
+    color: { r: 0, g: 0, b: 0 },
+    backColor: { r: 255, g: 255, b: 255 },
+    borderColor: { r: 0, g: 122, b: 204 },
+    border: new PdfInteractiveBorder({ width: 1, style: PdfBorderStyle.solid }),
+    text: 'John',
+    font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular)
+  }
+));
 // Save the document
-document.save('Output.pdf');
-// Close the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
@@ -116,24 +107,21 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
 var page = document.getPage(0);
-// Access the PDF form from the document
-var form = document.form;
-// Create a new text box field
-var field = new ej.pdf.PdfTextBoxField(page, 'FirstName', { x: 10, y: 10, width: 100, height: 50 });
-// Set the default text value for the text box
-field.text = 'John';
-// Apply a standard font (Helvetica) with size 10 to the text box
-field.font = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 10);
-// Set the background color of the text box to red
-field.backColor = { r: 255, g: 0, b: 0 };
-// Set the border color of the text box to blue
-field.borderColor = { r: 0, g: 0, b: 255 };
-// Add a tooltip to the text box for user guidance
-field.toolTip = 'FirstName';
-// Set the text color inside the text box to green
-field.color = { r: 0, g: 255, b: 0 };
-// Add the configured text box field to the PDF form
-form.add(field);
+// Add new textbox field into PDF form
+document.form.add(new ej.pdf.PdfTextBoxField(
+  page,
+  'FirstName',
+  { x: 50, y: 600, width: 200, height: 22 },
+  {
+    toolTip: 'Enter your first name',
+    color: { r: 0, g: 0, b: 0 },
+    backColor: { r: 255, g: 255, b: 255 },
+    borderColor: { r: 0, g: 122, b: 204 },
+    border: new ej.pdf.PdfInteractiveBorder({ width: 1, style: ej.pdf.PdfBorderStyle.solid }),
+    text: 'John',
+    font: document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular)
+  }
+));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -147,29 +135,35 @@ This example demonstrates how to add a combo box field to a PDF document using t
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfComboBoxField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfForm, PdfComboBoxField, PdfInteractiveBorder, PdfBorderStyle, PdfFontFamily, PdfFontStyle} from '@syncfusion/ej2-pdf';
 
-// Create a new PDF document
-let document: PdfDocument = new PdfDocument();
-// Add a page
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Add the first page of the document
 let page: PdfPage = document.addPage();
-// Access the PDF form
-let form: PdfForm = document.form;
-// Create a new combo box field
-let field: PdfComboBoxField = new PdfComboBoxField(page, 'list1', { x: 100, y: 60, width: 100, height: 50 });
-// Add list items to the field
-field.addItem(new PdfListFieldItem('English', 'English'));
-field.addItem(new PdfListFieldItem('French', 'French'));
-field.addItem(new PdfListFieldItem('German', 'German'));
-// Set the selected index
-field.selectedIndex = 2;
-// Set the flag indicating whether the combo box allows multiple selections
-field.multiSelect = true;
-// Add the field into PDF form
-form.add(field);
+// Add new combobox field into PDF form
+document.form.add(new PdfComboBoxField(
+  page,
+  'Country',
+  { x: 50, y: 400, width: 180, height: 22 },
+  {
+    items: [
+      { text: 'United States', value: 'US' },
+      { text: 'Canada', value: 'CA' },
+      { text: 'Germany', value: 'DE' }
+    ],
+    toolTip: 'Choose a country',
+    color: { r: 0, g: 0, b: 0 },
+    backColor: { r: 255, g: 255, b: 255 },
+    borderColor: { r: 0, g: 0, b: 0 },
+    border: new PdfInteractiveBorder({ width: 1, style: PdfBorderStyle.solid }),
+    selectedIndex: 0,
+    font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular)
+  }
+));
 // Save the document
-document.save('Output.pdf');
-// Close the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
@@ -177,20 +171,26 @@ document.destroy();
 var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
-// Access the PDF form
-var form = document.form;
-// Create a new combo box field
-var field = new ej.pdf.PdfComboBoxField(page, 'list1', { x: 100, y: 60, width: 100, height: 50 });
-// Add list items to the field
-field.addItem(new ej.pdf.PdfListFieldItem('English', 'English'));
-field.addItem(new ej.pdf.PdfListFieldItem('French', 'French'));
-field.addItem(new ej.pdf.PdfListFieldItem('German', 'German'));
-// Set the selected index
-field.selectedIndex = 2;
-// Set the flag indicating whether the combo box allows multiple selections
-field.multiSelect = true;
-// Add the field into PDF form
-form.add(field);
+// Add new combobox field into PDF form
+document.form.add(new ej.pdf.PdfComboBoxField(
+  page,
+  'Country',
+  { x: 50, y: 400, width: 180, height: 22 },
+  {
+    items: [
+      { text: 'United States', value: 'US' },
+      { text: 'Canada', value: 'CA' },
+      { text: 'Germany', value: 'DE' }
+    ],
+    toolTip: 'Choose a country',
+    color: { r: 0, g: 0, b: 0 },
+    backColor: { r: 255, g: 255, b: 255 },
+    borderColor: { r: 0, g: 0, b: 0 },
+    border: new ej.pdf.PdfInteractiveBorder({ width: 1, style: ej.pdf.PdfBorderStyle.solid }),
+    selectedIndex: 0,
+    font: document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular)
+  }
+));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -202,29 +202,35 @@ The following code snippet explains how to add a combo box field in an existing 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfComboBoxField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfForm, PdfComboBoxField, PdfInteractiveBorder, PdfBorderStyle, PdfFontFamily, PdfFontStyle} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Access the first page
+// Get the first page of the document
 let page: PdfPage = document.getPage(0);
-// Access the PDF form
-let form: PdfForm = document.form;
-// Create a new combo box field
-let field: PdfComboBoxField = new PdfComboBoxField(page, 'list1', { x: 100, y: 60, width: 100, height: 50 });
-// Add list items to the field
-field.addItem(new PdfListFieldItem('English', 'English'));
-field.addItem(new PdfListFieldItem('French', 'French'));
-field.addItem(new PdfListFieldItem('German', 'German'));
-// Set the selected index
-field.selectedIndex = 2;
-// Set the flag indicating whether the combo box allows multiple selections
-field.multiSelect = true;
-// Add the field into PDF form
-form.add(field);
+// Add new combobox field into PDF form
+document.form.add(new PdfComboBoxField(
+  page,
+  'Country',
+  { x: 50, y: 400, width: 180, height: 22 },
+  {
+    items: [
+      { text: 'United States', value: 'US' },
+      { text: 'Canada', value: 'CA' },
+      { text: 'Germany', value: 'DE' }
+    ],
+    toolTip: 'Choose a country',
+    color: { r: 0, g: 0, b: 0 },
+    backColor: { r: 255, g: 255, b: 255 },
+    borderColor: { r: 0, g: 0, b: 0 },
+    border: new PdfInteractiveBorder({ width: 1, style: PdfBorderStyle.solid }),
+    selectedIndex: 0,
+    font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular)
+  }
+));
 // Save the document
-document.save('Output.pdf');
-// Close the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
@@ -232,20 +238,26 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
 var page = document.getPage(0);
-// Access the PDF form
-var form = document.form;
-// Create a new combo box field
-var field = new ej.pdf.PdfComboBoxField(page, 'list1', { x: 100, y: 60, width: 100, height: 50 });
-// Add list items to the field
-field.addItem(new ej.pdf.PdfListFieldItem('English', 'English'));
-field.addItem(new ej.pdf.PdfListFieldItem('French', 'French'));
-field.addItem(new ej.pdf.PdfListFieldItem('German', 'German'));
-// Set the selected index
-field.selectedIndex = 2;
-// Set the flag indicating whether the combo box allows multiple selections
-field.multiSelect = true;
-// Add the field into PDF form
-form.add(field);
+// Add new combobox field into PDF form
+document.form.add(new ej.pdf.PdfComboBoxField(
+  page,
+  'Country',
+  { x: 50, y: 400, width: 180, height: 22 },
+  {
+    items: [
+      { text: 'United States', value: 'US' },
+      { text: 'Canada', value: 'CA' },
+      { text: 'Germany', value: 'DE' }
+    ],
+    toolTip: 'Choose a country',
+    color: { r: 0, g: 0, b: 0 },
+    backColor: { r: 255, g: 255, b: 255 },
+    borderColor: { r: 0, g: 0, b: 0 },
+    border: new ej.pdf.PdfInteractiveBorder({ width: 1, style: ej.pdf.PdfBorderStyle.solid }),
+    selectedIndex: 0,
+    font: document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular)
+  }
+));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -259,27 +271,30 @@ This example demonstrates how to add a radio button field to a PDF document usin
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfRadioButtonListField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfRadioButtonListField} from '@syncfusion/ej2-pdf';
 
-// Create a new PDF document
-let document: PdfDocument = new PdfDocument();
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
 // Add a page
-let page: PdfPage = document.addPage(); 
-// Access the PDF form
-let form: PdfForm = document.form;
-// Create a new radio button list field
-let field: PdfRadioButtonListField = new PdfRadioButtonListField(page, 'Age');
-// Create and add first item
-let first: PdfRadioButtonListItem = field.add('1-9', { x: 100, y: 140, width: 20, height: 20 });
-// Create and add second item
-let second: PdfRadioButtonListItem = field.add('10-49', { x: 100, y: 170, width: 20, height: 20 }, page);
-// Set selected index of the radio button list field
-field.selectedIndex = 0;
-// Add the field into PDF form
-form.add(field);
+let page: PdfPage = document.addPage();
+// Add new radio button list field into PDF form
+document.form.add(new PdfRadioButtonListField(
+  page,
+  'AgeGroup',
+  {
+    items: [
+      { name: '18-25', bounds: { x: 50, y: 480, width: 14, height: 14 } },
+      { name: '26-35', bounds: { x: 50, y: 460, width: 14, height: 14 } },
+      { name: '36-45', bounds: { x: 50, y: 440, width: 14, height: 14 } }
+    ],
+    toolTip: 'Select an age range',
+    selectedIndex: 1,
+    allowUnisonSelection: false
+  }
+));
 // Save the document
-document.save('Output.pdf');
-// Close the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
@@ -287,18 +302,21 @@ document.destroy();
 var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage(); 
-// Access the PDF form
-var form = document.form;
-// Create a new radio button list field
-var field = new ej.pdf.PdfRadioButtonListField(page, 'Age');
-// Create and add first item
-var first = field.add('1-9', { x: 100, y: 140, width: 20, height: 20 });
-// Create and add second item
-var second = field.add('10-49', { x: 100, y: 170, width: 20, height: 20 }, page);
-// Set selected index of the radio button list field
-field.selectedIndex = 0;
-// Add the field into PDF form
-form.add(field);
+// Add new radio button list field into PDF form
+document.form.add(new ej.pdf.PdfRadioButtonListField(
+  page,
+  'AgeGroup',
+  {
+    items: [
+      { name: '18-25', bounds: { x: 50, y: 480, width: 14, height: 14 } },
+      { name: '26-35', bounds: { x: 50, y: 460, width: 14, height: 14 } },
+      { name: '36-45', bounds: { x: 50, y: 440, width: 14, height: 14 } }
+    ],
+    toolTip: 'Select an age range',
+    selectedIndex: 1,
+    allowUnisonSelection: false
+  }
+));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -310,24 +328,27 @@ The following code snippet explains how to add a radio button field in an existi
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfRadioButtonListField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfRadioButtonListField} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
-// Access the PDF form
-let form: PdfForm = document.form;
-// Create a new radio button list field
-let field: PdfRadioButtonListField = new PdfRadioButtonListField(page, 'Age');
-// Create and add first item
-let first: PdfRadioButtonListItem = field.add('1-9', { x: 100, y: 140, width: 20, height: 20 });
-// Create and add second item
-let second: PdfRadioButtonListItem = field.add('10-49', { x: 100, y: 170, width: 20, height: 20 }, page);
-// Set selected index of the radio button list field
-field.selectedIndex = 0;
-// Add the field into PDF form
-form.add(field);
+// Add new radio button list field into PDF form
+document.form.add(new PdfRadioButtonListField(
+  page,
+  'AgeGroup',
+  {
+    items: [
+      { name: '18-25', bounds: { x: 50, y: 480, width: 14, height: 14 } },
+      { name: '26-35', bounds: { x: 50, y: 460, width: 14, height: 14 } },
+      { name: '36-45', bounds: { x: 50, y: 440, width: 14, height: 14 } }
+    ],
+    toolTip: 'Select an age range',
+    selectedIndex: 1,
+    allowUnisonSelection: false
+  }
+));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -338,18 +359,21 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
 var page = document.getPage(0);
-// Access the PDF form
-var form = document.form;
-// Create a new radio button list field
-var field = new ej.pdf.PdfRadioButtonListField(page, 'Age');
-// Create and add first item
-var first = field.add('1-9', { x: 100, y: 140, width: 20, height: 20 });
-// Create and add second item
-var second = field.add('10-49', { x: 100, y: 170, width: 20, height: 20 }, page);
-// Set selected index of the radio button list field
-field.selectedIndex = 0;
-// Add the field into PDF form
-form.add(field);
+// Add new radio button list field into PDF form
+document.form.add(new ej.pdf.PdfRadioButtonListField(
+  page,
+  'AgeGroup',
+  {
+    items: [
+      { name: '18-25', bounds: { x: 50, y: 480, width: 14, height: 14 } },
+      { name: '26-35', bounds: { x: 50, y: 460, width: 14, height: 14 } },
+      { name: '36-45', bounds: { x: 50, y: 440, width: 14, height: 14 } }
+    ],
+    toolTip: 'Select an age range',
+    selectedIndex: 1,
+    allowUnisonSelection: false
+  }
+));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -363,28 +387,36 @@ This example demonstrates how to add a list box field to a PDF document using th
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfListBoxField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfListBoxField, PdfInteractiveBorder, PdfBorderStyle, PdfFontFamily, PdfFontStyle} from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
-// Access the PDF form
-let form: PdfForm = document.form;
-// Create a new list box field
-let field: PdfListBoxField = new PdfListBoxField(page, 'list1', { x: 100, y: 60, width: 100, height: 50 });
-// Add list items to the field
-field.addItem(new PdfListFieldItem('English', 'English'));
-field.addItem(new PdfListFieldItem('French', 'French'));
-// Set the selected index
-field.selectedIndex = 1;
-// Set the flag indicating whether the list box allows multiple selections
-field.multiSelect = true;
-// Add the field into PDF form
-form.add(field);
+// Add new listbox field into PDF form
+document.form.add(new PdfListBoxField(
+  page,
+  'Languages',
+  { x: 50, y: 340, width: 180, height: 60 },
+  {
+    items: [
+      { text: 'English', value: 'en' },
+      { text: 'French', value: 'fr' },
+      { text: 'German', value: 'de' }
+    ],
+    toolTip: 'Select language(s)',
+    color: { r: 0, g: 0, b: 0 },
+    backColor: { r: 255, g: 255, b: 255 },
+    borderColor: { r: 0, g: 0, b: 0 },
+    border: new PdfInteractiveBorder({ width: 1, style: PdfBorderStyle.solid }),
+    selectedIndex: [0, 2],
+    multiSelect: true,
+    font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular)
+  }
+));
 // Save the document
-document.save('Output.pdf');
-// Close the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
@@ -392,19 +424,27 @@ document.destroy();
 var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
-// Access the PDF form
-var form = document.form;
-// Create a new list box field
-var field = new ej.pdf.PdfListBoxField(page, 'list1', { x: 100, y: 60, width: 100, height: 50 });
-// Add list items to the field
-field.addItem(new ej.pdf.PdfListFieldItem('English', 'English'));
-field.addItem(new ej.pdf.PdfListFieldItem('French', 'French'));
-// Set the selected index
-field.selectedIndex = 1;
-// Set the flag indicating whether the list box allows multiple selections
-field.multiSelect = true;
-// Add the field into PDF form
-form.add(field);
+// Add new listbox field into PDF form
+document.form.add(new ej.pdf.PdfListBoxField(
+  page,
+  'Languages',
+  { x: 50, y: 340, width: 180, height: 60 },
+  {
+    items: [
+      { text: 'English', value: 'en' },
+      { text: 'French', value: 'fr' },
+      { text: 'German', value: 'de' }
+    ],
+    toolTip: 'Select language(s)',
+    color: { r: 0, g: 0, b: 0 },
+    backColor: { r: 255, g: 255, b: 255 },
+    borderColor: { r: 0, g: 0, b: 0 },
+    border: new ej.pdf.PdfInteractiveBorder({ width: 1, style: ej.pdf.PdfBorderStyle.solid }),
+    selectedIndex: [0, 2],
+    multiSelect: true,
+    font: document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular)
+  }
+));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -416,25 +456,33 @@ The following code snippet explains how to add a list box field in an existing P
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfListBoxField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfListBoxField, PdfInteractiveBorder, PdfBorderStyle, PdfFontFamily, PdfFontStyle} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
-// Access the PDF form
-let form: PdfForm = document.form;
-// Create a new list box field
-let field: PdfListBoxField = new PdfListBoxField(page, 'list1', { x: 100, y: 60, width: 100, height: 50 });
-// Add list items to the field
-field.addItem(new PdfListFieldItem('English', 'English'));
-field.addItem(new PdfListFieldItem('French', 'French'));
-// Set the selected index
-field.selectedIndex = 1;
-// Set the flag indicating whether the list box allows multiple selections
-field.multiSelect = true;
-// Add the field into PDF form
-form.add(field);
+// Add new listbox field into PDF form
+document.form.add(new PdfListBoxField(
+  page,
+  'Languages',
+  { x: 50, y: 340, width: 180, height: 60 },
+  {
+    items: [
+      { text: 'English', value: 'en' },
+      { text: 'French', value: 'fr' },
+      { text: 'German', value: 'de' }
+    ],
+    toolTip: 'Select language(s)',
+    color: { r: 0, g: 0, b: 0 },
+    backColor: { r: 255, g: 255, b: 255 },
+    borderColor: { r: 0, g: 0, b: 0 },
+    border: new PdfInteractiveBorder({ width: 1, style: PdfBorderStyle.solid }),
+    selectedIndex: [0, 2],
+    multiSelect: true,
+    font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular)
+  }
+));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -445,19 +493,27 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
 var page = document.getPage(0);
-// Access the PDF form
-var form = document.form;
-// Create a new list box field
-var field = new ej.pdf.PdfListBoxField(page, 'list1', { x: 100, y: 60, width: 100, height: 50 });
-// Add list items to the field
-field.addItem(new ej.pdf.PdfListFieldItem('English', 'English'));
-field.addItem(new ej.pdf.PdfListFieldItem('French', 'French'));
-// Set the selected index
-field.selectedIndex = 1;
-// Set the flag indicating whether the list box allows multiple selections
-field.multiSelect = true;
-// Add the field into PDF form
-form.add(field);
+// Add new listbox field into PDF form
+document.form.add(new ej.pdf.PdfListBoxField(
+  page,
+  'Languages',
+  { x: 50, y: 340, width: 180, height: 60 },
+  {
+    items: [
+      { text: 'English', value: 'en' },
+      { text: 'French', value: 'fr' },
+      { text: 'German', value: 'de' }
+    ],
+    toolTip: 'Select language(s)',
+    color: { r: 0, g: 0, b: 0 },
+    backColor: { r: 255, g: 255, b: 255 },
+    borderColor: { r: 0, g: 0, b: 0 },
+    border: new ej.pdf.PdfInteractiveBorder({ width: 1, style: ej.pdf.PdfBorderStyle.solid }),
+    selectedIndex: [0, 2],
+    multiSelect: true,
+    font: document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular)
+  }
+));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -471,22 +527,25 @@ This example demonstrates how to add a check box field to a PDF document using t
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfCheckBoxField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfCheckBoxField, PdfInteractiveBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
-// Access the PDF form
-let form: PdfForm = document.form;
-// Create a new check box field
-let field: PdfCheckBoxField = new PdfCheckBoxField('CheckBox1', { x: 100, y: 40, width: 20, height: 20 }, page);
-// Set the checked flag as true
-field.checked = true;
-// Set the tooltip value
-field.toolTip = 'Checked';
-// Add the field into PDF form
-form.add(field);
+// Add new checkbox field into PDF form
+document.form.add(new PdfCheckBoxField(
+  'AcceptTerms',
+  { x: 50, y: 520, width: 14, height: 14 },
+  page,
+  {
+    toolTip: 'Accept the terms and conditions',
+    backColor: { r: 255, g: 255, b: 255 },
+    borderColor: { r: 0, g: 0, b: 0 },
+    border: new PdfInteractiveBorder({ width: 1, style: PdfBorderStyle.solid }),
+    checked: true
+  }
+));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -497,16 +556,19 @@ document.destroy();
 var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
-// Access the PDF form
-var form = document.form;
-// Create a new check box field
-var field = new ej.pdf.PdfCheckBoxField('CheckBox1', { x: 100, y: 40, width: 20, height: 20 }, page);
-// Set the checked flag as true
-field.checked = true;
-// Set the tooltip value
-field.toolTip = 'Checked';
-// Add the field into PDF form
-form.add(field);
+// Add new checkbox field into PDF form
+document.form.add(new ej.pdf.PdfCheckBoxField(
+  'AcceptTerms',
+  { x: 50, y: 520, width: 14, height: 14 },
+  page,
+  {
+    toolTip: 'Accept the terms and conditions',
+    backColor: { r: 255, g: 255, b: 255 },
+    borderColor: { r: 0, g: 0, b: 0 },
+    border: new ej.pdf.PdfInteractiveBorder({ width: 1, style: ej.pdf.PdfBorderStyle.solid }),
+    checked: true
+  }
+));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -518,22 +580,25 @@ The following code snippet explains how to check Box field in an existing PDF do
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfCheckBoxField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfCheckBoxField, PdfInteractiveBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
-// Access the PDF form
-let form: PdfForm = document.form;
-// Create a new check box field
-let field: PdfCheckBoxField = new PdfCheckBoxField('CheckBox1', { x: 100, y: 40, width: 20, height: 20 }, page);
-// Set the checked flag as true
-field.checked = true;
-// Set the tooltip value
-field.toolTip = 'Checked';
-// Add the field into PDF form
-form.add(field);
+// Add new checkbox field into PDF form
+document.form.add(new PdfCheckBoxField(
+  'AcceptTerms',
+  { x: 50, y: 520, width: 14, height: 14 },
+  page,
+  {
+    toolTip: 'Accept the terms and conditions',
+    backColor: { r: 255, g: 255, b: 255 },
+    borderColor: { r: 0, g: 0, b: 0 },
+    border: new PdfInteractiveBorder({ width: 1, style: PdfBorderStyle.solid }),
+    checked: true
+  }
+));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -544,16 +609,19 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
 var page = document.getPage(0);
-// Access the PDF form
-var form = document.form;
-// Create a new check box field
-var field = new ej.pdf.PdfCheckBoxField('CheckBox1', { x: 100, y: 40, width: 20, height: 20 }, page);
-// Set the checked flag as true
-field.checked = true;
-// Set the tooltip value
-field.toolTip = 'Checked';
-// Add the field into PDF form
-form.add(field);
+// Add new checkbox field into PDF form
+document.form.add(new ej.pdf.PdfCheckBoxField(
+  'AcceptTerms',
+  { x: 50, y: 520, width: 14, height: 14 },
+  page,
+  {
+    toolTip: 'Accept the terms and conditions',
+    backColor: { r: 255, g: 255, b: 255 },
+    borderColor: { r: 0, g: 0, b: 0 },
+    border: new ej.pdf.PdfInteractiveBorder({ width: 1, style: ej.pdf.PdfBorderStyle.solid }),
+    checked: true
+  }
+));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -567,7 +635,7 @@ This example demonstrates how to add a signature field to a PDF document using t
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, PdfInteractiveBorder} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfSignatureField, PdfInteractiveBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -630,7 +698,7 @@ The following code snippet explains how to add a signature filed in an existing 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, PdfInteractiveBorder} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfSignatureField, PdfInteractiveBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -695,7 +763,7 @@ This example demonstrates how to add a button field to a PDF document using the 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfButtonField, PdfHighlightMode, PdfBorderStyle, PdfInteractiveBorder} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfButtonField, PdfHighlightMode, PdfBorderStyle, PdfInteractiveBorder} from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -835,7 +903,7 @@ This example demonstrates how to fill a text box field in a PDF document using t
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfTextBoxField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfTextBoxField, PdfTextAlignment} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -1041,7 +1109,7 @@ This example demonstrates how to fill a signature field in a PDF document using 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfSignatureField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfSignatureField} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -1084,7 +1152,7 @@ This example demonstrates how to modify an existing form field in a PDF document
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfTextBoxField} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfTextBoxField, PdfTextAlignment} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -1290,7 +1358,7 @@ This example demonstrates how to export form data from a PDF document to an FDF 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, Uint8Array, PdfFormFieldExportSettings } from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfFormFieldExportSettings } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -1325,7 +1393,7 @@ This example demonstrates how to export form data from a PDF document to an XFDF
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, Uint8Array, PdfFormFieldExportSettings } from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfFormFieldExportSettings } from '@syncfusion/ej2-pdf';
     
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);

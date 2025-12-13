@@ -15,25 +15,23 @@ This example demonstrates how to create a new PDF template using the `PdfTemplat
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfRubberStampAnnotation, PdfTemplate, PdfImage, PdfBitmap } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfTemplate, PdfImage, PdfBitmap } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
-// Create a new rubber stamp annotation
-let annotation: PdfRubberStampAnnotation = new PdfRubberStampAnnotation({ x: 50, y: 100, width: 100, height: 50 });
-// Get the normal appearance of the annotation
-let normalAppearance: PdfTemplate = annotation.appearance.normal;
+// Create a template
+let template: PdfTemplate = new PdfTemplate({ x: 100, y: 100, width: 400, height: 200 });
 // Create new image object by using JPEG image data as Base64 string format
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
-// Draw the image as the custom appearance for the annotation
-normalAppearance.graphics.drawImage(image, { x: 10, y: 20});
-// Add annotation to the page
-page.annotations.add(annotation);
+// Draw the image into the template graphics
+template.graphics.drawImage(image, { x: 0, y: 0, width: 100, height: 50 });
+// Draw template to the page
+page.graphics.drawTemplate(template, { x: 0, y: 0, width: 100, height: 50 });
 // Save the document
-document.save('Output.pdf');
-// Close the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
@@ -41,19 +39,17 @@ document.destroy();
 var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
-// Create a new rubber stamp annotation
-var annotation = new ej.pdf.PdfRubberStampAnnotation({ x: 50, y: 100, width: 100, height: 50 });
-// Get the normal appearance of the annotation
-var normalAppearance = annotation.appearance.normal;
+// Create a template
+var template = new ej.pdf.PdfTemplate({ x: 100, y: 100, width: 400, height: 200 });
 // Create new image object by using JPEG image data as Base64 string format
 var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
-// Draw the image as the custom appearance for the annotation
-normalAppearance.graphics.drawImage(image, { x: 10, y: 20 });
-// Add annotation to the page
-page.annotations.add(annotation);
+// Draw the image into the template graphics
+template.graphics.drawImage(image, { x: 0, y: 0, width: 100, height: 50 });
+// Draw template to the page
+page.graphics.drawTemplate(template, { x: 0, y: 0, width: 100, height: 50 });
 // Save the document
-document.save('Output.pdf');
-// Close the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -65,25 +61,23 @@ This example demonstrates how to create templates from an existing PDF document 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfRubberStampAnnotation, PdfTemplate, PdfImage, PdfBitmap } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfTemplate, PdfImage, PdfBitmap } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Get the first page
 let page: PdfPage = document.getPage(0) as PdfPage;
-// Create a new rubber stamp annotation
-let annotation: PdfRubberStampAnnotation = new PdfRubberStampAnnotation({ x: 50, y: 100, width: 100, height: 50 });
-// Get the normal appearance of the annotation
-let normalAppearance: PdfTemplate = annotation.appearance.normal;
+// Create a template
+let template: PdfTemplate = new PdfTemplate({ x: 100, y: 100, width: 400, height: 200 });
 // Create new image object by using JPEG image data as Base64 string format
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
-// Draw the image as the custom appearance for the annotation
-normalAppearance.graphics.drawImage(image, { x: 10, y: 20});
-// Add annotation to the page
-page.annotations.add(annotation);
+// Draw the image into the template graphics
+template.graphics.drawImage(image, { x: 0, y: 0, width: 100, height: 50 });
+// Draw template to the page
+page.graphics.drawTemplate(template, { x: 0, y: 0, width: 100, height: 50 });
 // Save the document
-document.save('Output.pdf');
-// Close the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
@@ -91,19 +85,17 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Get the first page
 var page = document.getPage(0);
-// Create a new rubber stamp annotation
-var annotation = new ej.pdf.PdfRubberStampAnnotation({ x: 50, y: 100, width: 100, height: 50 });
-// Get the normal appearance of the annotation
-var normalAppearance = annotation.appearance.normal;
+// Create a template
+var template = new ej.pdf.PdfTemplate({ x: 100, y: 100, width: 400, height: 200 });
 // Create new image object by using JPEG image data as Base64 string format
 var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
-// Draw the image as the custom appearance for the annotation
-normalAppearance.graphics.drawImage(image, { x: 10, y: 20 });
-// Add annotation to the page
-page.annotations.add(annotation);
+// Draw the image into the template graphics
+template.graphics.drawImage(image, { x: 0, y: 0, width: 100, height: 50 });
+// Draw template to the page
+page.graphics.drawTemplate(template, { x: 0, y: 0, width: 100, height: 50 });
 // Save the document
-document.save('Output.pdf');
-// Close the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}

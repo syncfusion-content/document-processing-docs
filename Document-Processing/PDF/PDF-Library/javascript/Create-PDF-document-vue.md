@@ -62,7 +62,7 @@ export default {
         // Create a new PDF document
         const pdf = new ej.pdf.PdfDocument();
         // Add a new page
-        const page: ej.pdf.PdfPage = document.addPage();
+        const page: ej.pdf.PdfPage = pdf.addPage();
         // Get graphics from the page
         const graphics: ej.pdf.PdfGraphics = page.graphics;
         // Set font

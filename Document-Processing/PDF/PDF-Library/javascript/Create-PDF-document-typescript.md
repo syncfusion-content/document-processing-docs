@@ -58,7 +58,7 @@ document.getElementById('normalButton').onclick = (): void => {
 // Create a new PDF document
         let pdf = new PdfDocument();
         // Add a new page
-        let page: PdfPage = document.addPage();
+        let page: PdfPage = pdf.addPage();
         // Get graphics from the page
         let graphics: PdfGraphics = page.graphics;
         // Set font

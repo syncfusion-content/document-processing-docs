@@ -15,16 +15,16 @@ This example demonstrates how to create a web link annotation in a PDF document 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, PdfFontFamily, Size, PdfTextWebLinkAnnotation, PdfFontStyle  } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, PdfFontFamily, PdfTextWebLinkAnnotation, PdfFontStyle  } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument();
 // Access the first page
 let page: PdfPage = document.addPage();
 // Create a new PDF string format
-const format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.left, PdfVerticalAlignment.top);
+let format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.left, PdfVerticalAlignment.top);
 // Create a new standard font
-const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
+let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 36, PdfFontStyle.regular);
 // Get the text size
 let size: Size = font.measureString('Syncfusion');
 // Create a new text web link annotation
@@ -44,7 +44,7 @@ var page = document.addPage();
 // Create a new PDF string format
 var format = new ej.pdf.PdfStringFormat(ej.pdf.PdfTextAlignment.left, ej.pdf.PdfVerticalAlignment.top);
 // Create a new standard font
-var font = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
 // Get the text size
 var size = font.measureString('Syncfusion');
 // Create a new text web link annotation
@@ -62,16 +62,16 @@ The following code snippet explains how to add a text web link annotation in an 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, PdfFontFamily, Size, PdfTextWebLinkAnnotation, PdfFontStyle  } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, PdfFontFamily, PdfTextAlignment, PdfTextWebLinkAnnotation, PdfFontStyle  } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Create a new PDF string format
-const format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.left, PdfVerticalAlignment.top);
+let format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.left, PdfVerticalAlignment.top);
 // Create a new standard font
-const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
+let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 36, PdfFontStyle.regular);
 // Get the text size
 let size: Size = font.measureString('Syncfusion');
 // Create a new text web link annotation
@@ -91,7 +91,7 @@ var page = document.getPage(0);
 // Create a new PDF string format
 var format = new ej.pdf.PdfStringFormat(ej.pdf.PdfTextAlignment.left, ej.pdf.PdfVerticalAlignment.top);
 // Create a new standard font
-var font = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
 // Get the text size
 var size = font.measureString('Syncfusion');
 // Create a new text web link annotation
@@ -111,16 +111,16 @@ This example demonstrates how to create internal navigation within a PDF documen
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, Size, PdfDocumentLinkAnnotation, PdfDestination, PdfDestinationMode } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, PdfDocumentLinkAnnotation, PdfTextAlignment, PdfFontFamily, PdfFontStyle, PdfDestination, PdfDestinationMode,  } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
 // Create a new PDF string format
-const format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.left, PdfVerticalAlignment.top);
+let format: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.left, PdfVerticalAlignment.top);
 // Create a new standard font
-const font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
+let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
 // Get the text size
 let size: Size = font.measureString('Syncfusion');
 // Create a new text web link annotation
@@ -182,7 +182,7 @@ The following code snippet demonstrates how to add internal document navigation 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfDocumentLinkAnnotation } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfDestination, PdfDocumentLinkAnnotation } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -249,8 +249,8 @@ import { PdfDocument, PdfPage, PdfFileLinkAnnotation } from '@syncfusion/ej2-pdf
 let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
-// Create a new file link annotation
-let annotation: PdfFileLinkAnnotation = new PdfFileLinkAnnotation({ x: 10, y: 40, width: 30, height: 30 }, 'image.png');
+// Create a new file link annotation(base64 / uint8array)
+let annotation: PdfFileLinkAnnotation = new PdfFileLinkAnnotation({ x: 10, y: 40, width: 30, height: 30 }, '/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
@@ -263,8 +263,8 @@ document.destroy();
 var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
-// Create a new file link annotation
-var annotation = new ej.pdf.PdfFileLinkAnnotation({ x: 10, y: 40, width: 30, height: 30 }, 'image.png');
+// Create a new file link annotation(base64 / uint8array)
+var annotation = new ej.pdf.PdfFileLinkAnnotation({ x: 10, y: 40, width: 30, height: 30 }, '/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
@@ -284,8 +284,8 @@ import { PdfDocument, PdfPage, PdfFileLinkAnnotation } from '@syncfusion/ej2-pdf
 let document: PdfDocument = new PdfDocument(data);
 // Get the first page
 let page: PdfPage = document.getPage(0) as PdfPage;
-// Create a new file link annotation
-let annotation: PdfFileLinkAnnotation = new PdfFileLinkAnnotation({ x: 10, y: 40, width: 30, height: 30 }, 'image.png');
+// Create a new file link annotation(base64 / uint8array)
+let annotation: PdfFileLinkAnnotation = new PdfFileLinkAnnotation({ x: 10, y: 40, width: 30, height: 30 }, '/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
@@ -298,8 +298,8 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Get the first page
 var page = document.getPage(0);
-// Create a new file link annotation
-var annotation = new ej.pdf.PdfFileLinkAnnotation({ x: 10, y: 40, width: 30, height: 30 }, 'image.png');
+// Create a new file link annotation(base64 / uint8array)
+var annotation = new ej.pdf.PdfFileLinkAnnotation({ x: 10, y: 40, width: 30, height: 30 }, '/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document

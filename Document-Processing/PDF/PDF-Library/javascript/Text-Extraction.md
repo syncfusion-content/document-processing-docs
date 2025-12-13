@@ -162,7 +162,7 @@ This example demonstrates how to extract words from a PDF document using the `ex
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument } from '@syncfusion/ej2-pdf';
-import { PdfDataExtractor, TextLine, TextWord, TextGlyph } from '@syncfusion/ej2-pdf-data-extract';
+import { PdfDataExtractor, TextLine, TextWord } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -251,94 +251,95 @@ document.destroy();
 
 ### Working with characters
 
-This example demonstrates how to access individual characters from a PDF document using the `TextGlyph` class. 
+You can retrieve a single character and its properties, including bounds, font name, font size, and text color, using the `extractTextLines` method. Refer to the code sample below.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument } from '@syncfusion/ej2-pdf';
-import { PdfDataExtractor, TextLine, TextWord, TextGlyph } from '@syncfusion/ej2-pdf-data-extract';
+import { PdfDataExtractor, TextLine, TextWord } from '@syncfusion/ej2-pdf-data-extract';
 
-// Load an existing PDF document
+// Load the existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Create a PdfDataExtractor instance for the given PDF document
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
-// Extract text lines from all pages in the document
-let textCollection: TextLine[] = extractor.extractTextLines({
-      startPageIndex: 0,
-  endPageIndex: document.pageCount - 1
-    });
-let page: PdfPage;
-// Iterate through each extracted text line
-for (let i: number = 0; i < textCollection.length; i++)
-{
-    // Get the page corresponding to the current text line
-    page = document.getPage(textCollection[i].pageIndex);
-    // Retrieve all words from the current text line
-    let wordCollection: TextWord[] = textCollection[i].words;
-    // Iterate through each word in the line
-    for (let j: number = 0; j < wordCollection.length; j++)
-    {
-        let word: TextWord = wordCollection[j];
-        if (word)
-        {
-            // Iterate through each glyph (character shape) in the word
-            for (let k: number = 0; k < word.glyphs.length; k++)
-            {
-                let glyph: TextGlyph = word.glyphs[k];
-                // Draw a rectangle around the glyph's bounding box on the page
-                page.graphics.drawRectangle(
-                    glyph.bounds[0], // X-coordinate
-                    glyph.bounds[1], // Y-coordinate
-                    glyph.bounds[2], // Width
-                    glyph.bounds[3], // Height
-                    new PdfPen([238, 130, 238], 1) // Violet-colored pen with thickness 1
-                );
-            }
-        }
-    }
-}
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Create a PdfDataExtractor instance for the given PDF document
-var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
-// Extract text lines from all pages in the document
-var textCollection = extractor.extractTextLines({
+// Extract text lines only from the first page (index 0)
+let lineCollection: TextLine[] = extractor.extractTextLines({
   startPageIndex: 0,
-  endPageIndex: document.pageCount - 1
+  endPageIndex: 0
 });
-var page;
-// Iterate through each extracted text line
-for (var i = 0; i < textCollection.length; i++) {
-  // Get the page corresponding to the current text line
-  page = document.getPage(textCollection[i].pageIndex);
-  // Retrieve all words from the current text line
-  var wordCollection = textCollection[i].words;
-  // Iterate through each word in the line
-  for (var j = 0; j < wordCollection.length; j++) {
-    var word = wordCollection[j];
-    if (word) {
-      // Iterate through each glyph (character shape) in the word
-      for (var k = 0; k < word.glyphs.length; k++) {
-        var glyph = word.glyphs[k];
-        // Draw a rectangle around the glyph's bounding box on the page
-        page.graphics.drawRectangle(
-          { x: glyph.bounds[0], y: glyph.bounds[1], width: glyph.bounds[2], height: glyph.bounds[3] },
-          new ej.pdf.PdfPen({ r: 238, g: 130, b: 238 }, 1) // Violet-colored pen with thickness 1
-        );
-      }
-    }
-  }
-}
-// Save the document
+// Get the first line
+let line: TextLine = lineCollection[0];
+// Get the collection of words in the first line
+let textWordCollection: TextWord[] = line.words;
+// Get the first word
+let textWord: TextWord = textWordCollection[0];
+// Get glyph details of the first word
+let textGlyphCollection: TextGlyph[] = textWord.glyphs;
+// Get the first glyph
+let textGlyph: TextGlyph = textGlyphCollection[0];
+// ---- Glyph properties ----
+// Bounds of the character (x, y, width, height)
+let glyphBounds = {
+  x: textGlyph.bounds[0],
+  y: textGlyph.bounds[1],
+  width: textGlyph.bounds[2],
+  height: textGlyph.bounds[3]
+};
+// Font name of the character
+let glyphFontName: string = textGlyph.fontName;
+// Font size of the character
+let glyphFontSize: number = textGlyph.fontSize;
+// Font style of the character (e.g., PdfFontStyle.regular/bold/italic)
+let glyphFontStyle: PdfFontStyle = textGlyph.fontStyle;
+// The character itself
+let glyphText: string = textGlyph.text;
+// The color of the character (typically RGB)
+let glyphColor = textGlyph.textColor;
+// Save and close
 document.save('Output.pdf');
-// Close the document
 document.destroy();
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Load the existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Create a PdfDataExtractor instance for the given PDF document
+var extractor = new ej.pdf.PdfDataExtractor(document);
+// Extract text lines only from the first page (index 0)
+var lineCollection = extractor.extractTextLines({
+  startPageIndex: 0,
+  endPageIndex: 0
+});
+// Get the first line
+var line = lineCollection[0];
+// Get the collection of words in the first line
+var textWordCollection = line.words;
+// Get the first word
+var textWord = textWordCollection[0];
+// Get glyph details of the first word
+var textGlyphCollection = textWord.glyphs;
+// Get the first glyph
+var textGlyph = textGlyphCollection[0];
+// ---- Glyph properties ----
+// Bounds of the character (x, y, width, height)
+var glyphBounds = {
+  x: textGlyph.bounds[0],
+  y: textGlyph.bounds[1],
+  width: textGlyph.bounds[2],
+  height: textGlyph.bounds[3]
+};
+// Font name of the character
+var glyphFontName = textGlyph.fontName;
+// Font size of the character
+var glyphFontSize = textGlyph.fontSize;
+// Font style of the character (e.g., PdfFontStyle.regular/bold/italic)
+var glyphFontStyle = textGlyph.fontStyle;
+// The character itself
+var glyphText = textGlyph.text;
+// The color of the character (typically RGB)
+var glyphColor = textGlyph.textColor;
+// Save and close
+document.save('Output.pdf');
+document.destroy();
 {% endhighlight %}
 {% endtabs %}

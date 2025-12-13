@@ -233,7 +233,7 @@ This example demonstrates how to add a free text annotation to a PDF page using 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfFreeTextAnnotation, PdfTextAlignment, PdfAnnotationBorder, PdfBorderStyle, PdfFreeTextAnnotation, PdfLineEndingStyle, PdfStandardFont, PdfFontFamily, PdfFontStyle} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfFreeTextAnnotation, PdfTextAlignment, PdfAnnotationIntent, PdfAnnotationBorder, PdfBorderStyle, PdfLineEndingStyle, PdfFontFamily, PdfFontStyle} from '@syncfusion/ej2-pdf';
 
 // Creates a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -246,7 +246,7 @@ let freeText = new PdfFreeTextAnnotation({ x: 250, y: 260, width: 180, height: 8
         annotationIntent: PdfAnnotationIntent.freeTextCallout,
         calloutLines: [{ x: 200, y: 320 }, { x: 260, y: 300 }, { x: 260, y: 300 }],
         lineEndingStyle: PdfLineEndingStyle.openArrow,
-        font: new PdfStandardFont(PdfFontFamily.helvetica, 9, PdfFontStyle.italic),
+        font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular),
         textMarkUpColor: { r: 40, g: 40, b: 40 },
         innerColor: { r: 240, g: 248, b: 255 },
         borderColor: { r: 0, g: 0, b: 0 },
@@ -295,7 +295,7 @@ The following code snippet explains how to add a free text annotation in an exis
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfFreeTextAnnotation, PdfTextAlignment, PdfAnnotationBorder, PdfBorderStyle, PdfFreeTextAnnotation, PdfLineEndingStyle, PdfStandardFont, PdfFontFamily, PdfFontStyle} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfAnnotationIntent, PdfFreeTextAnnotation, PdfTextAlignment, PdfAnnotationBorder, PdfBorderStyle, PdfLineEndingStyle, PdfFontFamily, PdfFontStyle} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -308,7 +308,7 @@ let freeText = new PdfFreeTextAnnotation({ x: 250, y: 260, width: 180, height: 8
         annotationIntent: PdfAnnotationIntent.freeTextCallout,
         calloutLines: [{ x: 200, y: 320 }, { x: 260, y: 300 }, { x: 260, y: 300 }],
         lineEndingStyle: PdfLineEndingStyle.openArrow,
-        font: new PdfStandardFont(PdfFontFamily.helvetica, 9, PdfFontStyle.italic),
+        font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
         textMarkUpColor: { r: 40, g: 40, b: 40 },
         innerColor: { r: 240, g: 248, b: 255 },
         borderColor: { r: 0, g: 0, b: 0 },
@@ -1030,7 +1030,7 @@ This example demonstrates how to add a document link annotation to a PDF page us
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfDocumentLinkAnnotation, PdfDestinationMode, PdfBorderStyle} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfDocumentLinkAnnotation, PdfDestination, PdfAnnotationBorder, PdfDestinationMode, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -1077,7 +1077,7 @@ The following code snippet explains how to add a document link annotation in an 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfDocumentLinkAnnotation, PdfDestinationMode, PdfBorderStyle} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfDocumentLinkAnnotation, PdfDestination, PdfAnnotationBorder, PdfDestinationMode, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -2014,7 +2014,7 @@ document.destroy();
 
 ## Modifying the annotations
 
-This example demonstrates how to modify an existing annotation in a PDF page using the PdfAnnotation class. Modifying annotations allows updating properties such as position, color, content, or appearance, enabling customization and refinement of the document’s interactive elements.
+This example demonstrates how to modify an existing annotation in a PDF page using the PdfAnnotation class. Modifying annotations allows updating properties such as position, color, content, or appearance, enabling customization and refinement of the document's interactive elements.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -2171,7 +2171,7 @@ This example demonstrates how to export annotations from a PDF document using th
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, Uint8Array} from '@syncfusion/ej2-pdf';
+import {PdfDocument} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);

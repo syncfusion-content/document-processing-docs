@@ -51,7 +51,7 @@ Step 6: **Create a PDF document** : Add the script in `~/Views/Home/Index.cshtml
         // Create a new PDF document
         let pdf = new ej.pdf.PdfDocument();
         // Add a new page
-        let page: ej.pdf.PdfPage = document.addPage();
+        let page: ej.pdf.PdfPage = pdf.addPage();
         // Get graphics from the page
         let graphics: ej.pdf.PdfGraphics = page.graphics;
         // Set font

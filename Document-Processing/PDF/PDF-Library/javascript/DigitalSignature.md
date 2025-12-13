@@ -360,7 +360,7 @@ This example demonstrates how to retrieve the certificate information of a PDF s
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, DigestAlgorithm,PdfCertificateInformation, CryptographicStandard} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, DigestAlgorithm, PdfCertificateInformation, CryptographicStandard} from '@syncfusion/ej2-pdf';
 
 // Load the document
 let document: PdfDocument = new PdfDocument(data);
@@ -420,7 +420,7 @@ This example demonstrates how to retrieve the configuration options of a digital
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, DigestAlgorithm, CryptographicStandard} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfForm, PdfSignature, PdfSignatureOptions, PdfSignatureField, CryptographicStandard} from '@syncfusion/ej2-pdf';
 
 // Load the document
 let document: PdfDocument = new PdfDocument(data);

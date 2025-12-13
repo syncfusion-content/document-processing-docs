@@ -71,7 +71,7 @@ This example demonstrates how to add an annotation to a specific layer in a PDF 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfLayerCollection, PdfLayer, PdfGraphics, PdfAnnotation, PdfPen } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfLayerCollection, PdfLayer, PdfAnnotation } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);

@@ -66,7 +66,7 @@ N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-da
 
 {% tabs %}
 {% highlight ts tabtitle="~/app.component.ts" %}
-import { PdfDocument, PdfPage, PdfStandardFont, PdfPen, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfStandardFont, PdfBrush } from '@syncfusion/ej2-pdf';
 {% endhighlight %}
 {% endtabs %}
 

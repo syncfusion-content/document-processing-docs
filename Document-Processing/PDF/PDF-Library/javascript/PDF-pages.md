@@ -56,7 +56,7 @@ The `PdfPageSettings` class is used to define properties such as margins, orient
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfStandardFont, PdfGraphics, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -94,6 +94,8 @@ document.save('Output.pdf');
 document.destroy();
 {% endhighlight %}
 {% endtabs %}
+
+N> The creation default margin is set to 40 points, ensuring uniform spacing between the content and the page edges. This margin allows sufficient space for better readability and helps prevent content from being truncated during printing or viewing.
 
 ## Adding sections with different page settings
 
@@ -171,7 +173,7 @@ This example demonstrates how to retrieve the total number of pages in a PDF doc
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument } from '@syncfusion/ej2-pdf';
+import { PdfDocument} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -260,17 +262,15 @@ This example demonstrates how to remove a page from a PDF document using the `re
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Removes the first page
-document.removePage(0);
-or
-// Removes the page
+// Removes the last page
+let page: PdfPage = document.getPage(document.pageCount - 1);
 document.removePage(page);
+// Removes the first page by specifying index
+document.removePage(0);
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -279,13 +279,11 @@ document.destroy();
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page: PdfPage = document.getPage(0);
-// Removes the first page
-document.removePage(0);
-or
-// Removes the page
+// Removes the last page
+var page = document.getPage(document.pageCount - 1);
 document.removePage(page);
+// Removes the first page by specifying index
+document.removePage(0);
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -299,14 +297,14 @@ This example demonstrates how to rotate a PDF page using the `rotation` property
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfStandardFont, PdfFontFamily, PdfFontStyle } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPageSettings, PdfPage, PdfStandardFont, PdfRotationAngle, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
+// Define page settings with rotate
+let settings: PdfPageSettings = new PdfPageSettings({rotation: PdfRotationAngle.angle180});
 // Add page
-let page: PdfPage = document.addPage();
-// Rotate the PDF document
-page.rotation = PdfRotationAngle.angle90;
+let page: PdfPage = document.addPage(settings);
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
 // Set font
@@ -321,10 +319,10 @@ document.destroy();
 {% highlight javascript tabtitle="JavaScript" %}
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
+// Define page settings with rotate
+var settings = new ej.pdf.PdfPageSettings({rotation: PdfRotationAngle.angle180});
 // Add page
-var page = document.addPage();
-// Rotate the PDF document
-page.rotation = PdfRotationAngle.angle90;
+var page = document.addPage(settings);
 // Get graphics from the page
 var graphics = page.graphics;
 // Set font
@@ -344,7 +342,7 @@ This example demonstrates how to rotate an existing PDF page using the `rotation
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfStandardFont, PdfFontFamily, PdfFontStyle } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -371,31 +369,47 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Splitting a PDF file to individual pages
+## Insert a Duplicate Page at a Specific Index
 
-This example demonstrates how to split a PDF file into individual pages by importing a specific page from the source document using the `importPage` method of the `PdfDocument` class. The method takes the zero-based index of the page to be copied and adds it as a new page in the target document.
+Duplicates a page from a source PDF and inserts it into the destination document at the specified index using `PdfPageImportOptions.targetIndex`. This is useful for reusing or cloning content across documents or within the same document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfStandardFont, PdfFontFamily, PdfFontStyle } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPageImportOptions} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Copy the second page and add it as third page
-document.importPage(1);
-// Save the output PDF
-document.save('Output.pdf');
-// Destroy the documents
+// Options to customize the support of import PDF pages.
+let options: PdfPageImportOptions = new PdfPageImportOptions();
+// Sets the target page index to import
+options.targetIndex = 1;
+// Sets the rotation angle of the page to import
+options.rotation = PdfRotationAngle.angle180;
+// Sets the boolean value indicating whether to optimize resources while importing pages or not
+options.optimizeResources = true;
+// Copy the first page and add it as second page with page rotation
+document.importPage(0, options);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Copy the second page and add it as third page
-document.importPage(1);
-// Save the output PDF
-document.save('Output.pdf');
-// Destroy the documents
+let document = new ej.pdf.PdfDocument(data);
+// Options to customize the support of import PDF pages.
+let options = new ej.pdf.PdfPageImportOptions();
+// Sets the target page index to import
+options.targetIndex = 1;
+// Sets the rotation angle of the page to import
+options.rotation = ej.pdf.PdfRotationAngle.angle180;
+// Sets the boolean value indicating whether to optimize resources while importing pages or not
+options.optimizeResources = true;
+// Copy the first page and add it as second page with page rotation
+document.importPage(0, options);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 {% endhighlight %}
 {% endtabs %}

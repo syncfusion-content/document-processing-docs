@@ -182,7 +182,7 @@ This example demonstrates how to remove bookmarks from the document at the speci
 
 {% tabs %}
 {% highlight javascript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfBookmarkBase, PdfDestination} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfBookmarkBase} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -221,7 +221,7 @@ This example demonstrates how to removes all the bookmarks from the collection u
 
 {% tabs %}
 {% highlight javascript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfBookmarkBase} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfBookmarkBase} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);

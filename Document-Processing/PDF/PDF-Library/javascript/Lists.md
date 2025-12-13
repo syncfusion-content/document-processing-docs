@@ -16,7 +16,7 @@ This example demonstrates how to create an ordered list in a PDF document using 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfList, PdfStandardFont, PdfBrush, PdfStringFormat, PdfPen, PdfNumberStyle, PdfOrderedList, PdfListItemCollection } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfListItemCollection, PdfBrush, PdfStringFormat, PdfPen, PdfNumberStyle, PdfOrderedList, PdfListItemCollection } from '@syncfusion/ej2-pdf';
 
 // Load an existing document
 let document: PdfDocument = new PdfDocument(data);
@@ -24,30 +24,18 @@ let document: PdfDocument = new PdfDocument(data);
 let page: PdfPage = document.getPage(0);
 // Assign the array of string items
 let products: string[] = ['Excel', 'Power', 'Point', 'Word', 'PDF'];
-// Create a new font for list
-let itemFont: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 10);
-// Create a new brush for list
-let itemBrush: PdfBrush = new PdfBrush({ r: 0, g: 255, b: 255 });
-// Create a new format for list
-let itemFormat: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.center);
-// Create a new pen for list
-let itemPen: PdfPen = new PdfPen({ r: 0, g: 255, b: 0 }, 1);
-// Initialize a PdfNumberStyle for items
-let itemStyle: PdfNumberStyle = PdfNumberStyle.numeric;
-// Initialize a delimiter for the items
-let itemDelimiter: string = ')';
 // Add the items to list item collection by passing the array of products
 let items: PdfListItemCollection = new PdfListItemCollection(products);
 // Initialize the instance of ordered list and pass the item collection and optional settings
 let list: PdfOrderedList = new PdfOrderedList(items, {
-    font: itemFont,
-    format: itemFormat,
-    pen: itemPen,
-    brush: itemBrush,
+    font: document.embedFont(PdfFontFamily.helvetica, 36, PdfFontStyle.regular),
+    format: new PdfStringFormat(PdfTextAlignment.center),
+    pen: new PdfPen({ r: 0, g: 255, b: 0 }, 1),
+    brush: new PdfBrush({ r: 0, g: 255, b: 255 }),
     indent: 30,
     textIndent: 50,
-    style: itemStyle,
-    delimiter: itemDelimiter
+    style: PdfNumberStyle.numeric,
+    delimiter:  ')'
 });
 // Draw the ordered list on the page
 list.draw(page, { x: 0, y: 20, width: 500, height: 700 });
@@ -63,30 +51,16 @@ var document = new ej.pdf.PdfDocument(data);
 var page = document.getPage(0);
 // Assign the array of string items
 var products = ['Excel', 'Power', 'Point', 'Word', 'PDF'];
-// Create a new font for list
-var itemFont = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 10);
-// Create a new brush for list
-var itemBrush = new ej.pdf.PdfBrush({ r: 0, g: 255, b: 255 });
-// Create a new format for list
-var itemFormat = new ej.pdf.PdfStringFormat(ej.pdf.PdfTextAlignment.center);
-// Create a new pen for list
-var itemPen = new ej.pdf.PdfPen({ r: 0, g: 255, b: 0 }, 1);
-// Initialize a PdfNumberStyle for items
-var itemStyle = ej.pdf.PdfNumberStyle.numeric;
-// Initialize a delimiter for the items
-var itemDelimiter = ')';
-// Add the items to list item collection by passing the array of products
-var items = new ej.pdf.PdfListItemCollection(products);
 // Initialize the instance of ordered list and pass the item collection and optional settings
-var list = new ej.pdf.PdfOrderedList(items, {
-    font: itemFont,
-    format: itemFormat,
-    pen: itemPen,
-    brush: itemBrush,
+var list: PdfOrderedList = new PdfOrderedList(items, {
+    font: document.embedFont(PdfFontFamily.helvetica, 36, PdfFontStyle.regular),
+    format: new ej.pdf.PdfStringFormat(PdfTextAlignment.center),
+    pen: new ej.pdf.PdfPen({ r: 0, g: 255, b: 0 }, 1),
+    brush: new ej.pdf.PdfBrush({ r: 0, g: 255, b: 255 }),
     indent: 30,
     textIndent: 50,
-    style: itemStyle,
-    delimiter: itemDelimiter
+    style: ej.pdf.PdfNumberStyle.numeric,
+    delimiter:  ')'
 });
 // Draw the ordered list on the page
 list.draw(page, { x: 0, y: 20, width: 500, height: 700 });
@@ -111,30 +85,18 @@ let document: PdfDocument = new PdfDocument(data);
 let page: PdfPage = document.getPage(0);
 // Define the items in the unordered list
 let products: string[] = ['Excel', 'Power', 'Point', 'Word', 'PDF'];
-// Create a new font for list
-let itemFont: PdfStandardFont = new PdfStandardFont(PdfFontFamily.helvetica, 10);
-// Create a new brush for list
-let itemBrush: PdfBrush = new PdfBrush({ r: 0, g: 255, b: 255 });
-// Create a new format for list
-let itemFormat: PdfStringFormat = new PdfStringFormat(PdfTextAlignment.center);
-// Create a new pen for list
-let itemPen: PdfPen = new PdfPen({ r: 0, g: 255, b: 0 }, 1);
-// Initialise a PdfUnorderedListStyle
-let itemStyle: PdfUnorderedListStyle = PdfUnorderedListStyle.square;
-// Initialize a delimiter for the items
-let itemDelimiter: string = ')';
 // Add the items to list item collection by passing the array of products
 let items: PdfListItemCollection = new PdfListItemCollection(products);
 // Initialize the instance of the unordered list and pass the list item collection and settings
 let list: PdfUnorderedList = new PdfUnorderedList(items, {
-    font: itemFont,
-    format: itemFormat,
-    pen: itemPen,
-    brush: itemBrush,
+    font: document.embedFont(PdfFontFamily.helvetica, 36, PdfFontStyle.regular),
+    format: new PdfStringFormat(PdfTextAlignment.center),
+    pen: new PdfPen({ r: 0, g: 255, b: 0 }, 1),
+    brush: new PdfBrush({ r: 0, g: 255, b: 255 }),
     indent: 30,
     textIndent: 50,
-    style: itemStyle,
-    delimiter: itemDelimiter
+    style: PdfNumberStyle.numeric,
+    delimiter:  ')'
 });
 // Draw the unordered list on the page
 list.draw(page, { x: 0, y: 20, width: 500, height: 700 });
@@ -150,30 +112,16 @@ var document = new ej.pdf.PdfDocument(data);
 var page = document.getPage(0);
 // Define the items in the unordered list
 var products = ['Excel', 'Power', 'Point', 'Word', 'PDF'];
-// Create a new font for list
-var itemFont = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 10);
-// Create a new brush for list
-var itemBrush = new ej.pdf.PdfBrush({ r: 0, g: 255, b: 255 });
-// Create a new format for list
-var itemFormat = new ej.pdf.PdfStringFormat(ej.pdf.PdfTextAlignment.center);
-// Create a new pen for list
-var itemPen = new ej.pdf.PdfPen({ r: 0, g: 255, b: 0 }, 1);
-// Initialise a PdfUnorderedListStyle
-var itemStyle = ej.pdf.PdfUnorderedListStyle.square;
-// Initialize a delimiter for the items
-var itemDelimiter = ')';
-// Add the items to list item collection by passing the array of products
-var items = new ej.pdf.PdfListItemCollection(products);
 // Initialize the instance of the unordered list and pass the list item collection and settings
 var list = new ej.pdf.PdfUnorderedList(items, {
-    font: itemFont,
-    format: itemFormat,
-    pen: itemPen,
-    brush: itemBrush,
+    font: document.embedFont(PdfFontFamily.helvetica, 36, PdfFontStyle.regular),
+    format: new ej.pdf.PdfStringFormat(PdfTextAlignment.center),
+    pen: new ej.pdf.PdfPen({ r: 0, g: 255, b: 0 }, 1),
+    brush: new ej.pdf.PdfBrush({ r: 0, g: 255, b: 255 }),
     indent: 30,
     textIndent: 50,
-    style: itemStyle,
-    delimiter: itemDelimiter
+    style: ej.pdf.PdfNumberStyle.numeric,
+    delimiter:  ')'
 });
 // Draw the unordered list on the page
 list.draw(page, { x: 0, y: 20, width: 500, height: 700 });

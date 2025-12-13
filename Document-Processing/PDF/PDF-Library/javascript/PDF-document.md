@@ -15,42 +15,40 @@ This example shows how to configure custom page settings before adding a page to
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfPageSettings, PdfMargins, PdfPageOrientation, PdfStandardFont, PdfFontFamily, PdfFontStyle } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfPageSettings, PdfRotationAngle, PdfMargins, PdfPageOrientation, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
  
-    // Create a new PDF document
-    let document: PdfDocument = new PdfDocument();
-    // Create a new PDF page settings instance
-    let pageSettings: PdfPageSettings = new PdfPageSettings();
-    // Sets the margins
-    pageSettings.margins = new PdfMargins(40);
-    // Sets the page size
-    pageSettings.size ={width: 595, height: 842};
-    // Sets the page orientation
-    pageSettings.orientation = PdfPageOrientation.landscape;
-    // Add a page
-    let page: PdfPage = document.addPage(pageSettings);
-    // Get graphics from the page
-    let graphics: PdfGraphics = page.graphics;
-    // Set font
-    let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
-    // Draw text
-    graphics.drawString('Hello World', font, {x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
-    // Save the document
-    document.save('Output.pdf');
-    // Close the document
-    document.destroy();
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Create a new PDF page settings instance
+let pageSettings: PdfPageSettings = new PdfPageSettings({
+  orientation: PdfPageOrientation.landscape,
+  size: { width: 842, height: 595 },
+  margins: new PdfMargins(40),
+  rotation: PdfRotationAngle.angle0
+});
+// Add a page
+let page: PdfPage = document.addPage(pageSettings);
+// Get graphics from the page
+let graphics: PdfGraphics = page.graphics;
+// Set font
+let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
+// Draw text
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Create a new PDF page settings instance
-var pageSettings = new ej.pdf.PdfPageSettings();
-// Sets the margins
-pageSettings.margins = new ej.pdf.PdfMargins(40);
-// Sets the page size
-pageSettings.size = { width: 595, height: 842 };
-// Sets the page orientation
-pageSettings.orientation = ej.pdf.PdfPageOrientation.landscape;
+var pageSettings = new ej.pdf.PdfPageSettings({
+  orientation: ej.pdf.PdfPageOrientation.landscape,
+  size: { width: 842, height: 595 },
+  margins: new ej.pdf.PdfMargins(40),
+  rotation: ej.pdf.PdfRotationAngle.angle0
+});
 // Add a page
 var page = document.addPage(pageSettings);
 // Get graphics from the page
@@ -72,19 +70,19 @@ This example demonstrates how to create a section in a PDF document with custom 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfPageSettings, PdfMargins, PdfPageOrientation, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfPageSettings, PdfRotationAngle, PdfMargins, PdfPageOrientation, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
  
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
-// Define page settings
-let settings: PdfPageSettings = new PdfPageSettings();
-settings.rotation = PdfRotationAngle.angle180;
-settings.orientation = PdfPageOrientation.landscape;
-settings.margins = new PdfMargins(40);
-settings.size = { width: 595, height: 842}
-;
+// Create a new PDF page settings with custom options
+let pageSettings = new PdfPageSettings({
+  orientation: PdfPageOrientation.landscape,
+  size: { width: 842, height: 595 },
+  margins: new PdfMargins(40),
+  rotation: PdfRotationAngle.angle90
+});
 // Add a section to the document with the specified settings
-let section: PdfSection = document.addSection(settings);
+let section: PdfSection = document.addSection(pageSettings);
 // Add a page
 let page: PdfPage = section.addPage();
 // Get graphics from the page
@@ -101,14 +99,15 @@ document.destroy();
 {% highlight javascript tabtitle="JavaScript" %}
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
-// Define page settings
-var settings = new ej.pdf.PdfPageSettings();
-settings.rotation = ej.pdf.PdfRotationAngle.angle180;
-settings.orientation = ej.pdf.PdfPageOrientation.landscape;
-settings.margins = new ej.pdf.PdfMargins(40);
-settings.size = { width: 595, height: 842 };
+// Create a new PDF page settings with custom options
+let pageSettings = new ej.pdf.PdfPageSettings({
+  orientation: ej.pdf.PdfPageOrientation.landscape,
+  size: { width: 842, height: 595 },
+  margins: new ej.pdf.PdfMargins(40),
+  rotation: ej.pdf.PdfRotationAngle.angle90
+});
 // Add a section to the document with the specified settings
-var section = document.addSection(settings);
+var section = document.addSection(pageSettings);
 // Add a page
 var page = section.addPage();
 // Get graphics from the page
@@ -126,7 +125,7 @@ document.destroy();
 
 ## Working with document properties
 
-This example demonstrates how to create a PDF document, set its metadata properties such as title, author, subject, keywords, creator, producer, language, and dates, and then retrieve these properties using the `PdfDocumentInformation` class.
+This example demonstrates how to create a PDF document, get and set its metadata properties such as title, author, subject, keywords, creator, producer, language, and dates, and then retrieve these properties using the `PdfDocumentInformation` class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -134,19 +133,40 @@ import { PdfDocument, PdfPage, PdfDocumentInformation, PdfStandardFont, PdfFontF
  
 // Create a PDF document
 let document: PdfDocument = new PdfDocument();
-// Access the document information (metadata)
-let documentProperties: PdfDocumentInformation = document.setDocumentInformation();
-// Set document properties
-documentProperties.title = "Sample PDF Document";        // Title of the PDF
-documentProperties.author = "John Doe";                 // Author name
-documentProperties.subject = "PDF Metadata Example";    // Subject of the document
-documentProperties.keywords = "PDF, Metadata, Example"; // Keywords for search
-documentProperties.creator = "JavaScript PDF Library";  // Application that created the PDF
-documentProperties.producer = "JavaScript PDF Engine";  // PDF producer
-documentProperties.language = "en-US";                  // Language of the document
-documentProperties.creationDate = new Date();           // Creation date
-documentProperties.modificationDate = new Date();       // Last modified date
-                                                        // Add a page
+
+// Set or update document properties
+document.setDocumentInformation({
+title: "Sample PDF Document",        // Title of the PDF
+author: "John Doe",                  // Author name
+subject: "PDF Metadata Example",     // Subject of the document
+keywords: "PDF, Metadata, Example",  // Keywords for search
+creator: "JavaScript PDF Library",   // Application that created the PDF
+producer: "JavaScript PDF Engine",   // PDF producer
+language: "en-US",                   // Language of the document
+creationDate: new Date(),            // Creation date
+modificationDate: new Date()         // Last modified date
+});
+// Access the document information
+let documentProperties: PdfDocumentInformation = document.getDocumentInformation();
+// Gets the title of the PDF document
+let title = documentProperties.title;
+// Gets the author of the PDF document
+let author = documentProperties.author;
+// Gets the subject of the PDF document
+let subject = documentProperties.subject;
+// Gets the keywords of the PDF document
+let keywords = documentProperties.keywords;
+// Gets the creator of the PDF document
+let creator = documentProperties.creator;
+// Gets the producer of the PDF document
+let producer = documentProperties.producer;
+// Gets the language of the PDF document
+let language = documentProperties.language;
+// Gets the creation date of the PDF document
+let creationDate = documentProperties.creationDate;
+// Gets the modification date of the PDF document
+let modificationDate = documentProperties.modificationDate;
+// Add a page
 let page: PdfPage = document.addPage();
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
@@ -162,18 +182,38 @@ document.destroy();
 {% highlight javascript tabtitle="JavaScript" %}
 // Create a PDF document
 var document = new ej.pdf.PdfDocument();
-// Access the document information (metadata)
-var documentProperties = document.setDocumentInformation();
-// Set document properties
-documentProperties.title = "Sample PDF Document";        // Title of the PDF
-documentProperties.author = "John Doe";                 // Author name
-documentProperties.subject = "PDF Metadata Example";    // Subject of the document
-documentProperties.keywords = "PDF, Metadata, Example"; // Keywords for search
-documentProperties.creator = "JavaScript PDF Library";  // Application that created the PDF
-documentProperties.producer = "JavaScript PDF Engine";  // PDF producer
-documentProperties.language = "en-US";                  // Language of the document
-documentProperties.creationDate = new Date();           // Creation date
-documentProperties.modificationDate = new Date();       // Last modified date
+// Set or update document properties
+document.setDocumentInformation({
+title: "Sample PDF Document",        // Title of the PDF
+author: "John Doe",                  // Author name
+subject: "PDF Metadata Example",     // Subject of the document
+keywords: "PDF, Metadata, Example",  // Keywords for search
+creator: "JavaScript PDF Library",   // Application that created the PDF
+producer: "JavaScript PDF Engine",   // PDF producer
+language: "en-US",                   // Language of the document
+creationDate: new Date(),            // Creation date
+modificationDate: new Date()         // Last modified date
+});
+// Access the document information
+var documentProperties: PdfDocumentInformation = document.getDocumentInformation();
+// Gets the title of the PDF document
+var title = documentProperties.title;
+// Gets the author of the PDF document
+var author = documentProperties.author;
+// Gets the subject of the PDF document
+var subject = documentProperties.subject;
+// Gets the keywords of the PDF document
+var keywords = documentProperties.keywords;
+// Gets the creator of the PDF document
+var creator = documentProperties.creator;
+// Gets the producer of the PDF document
+var producer = documentProperties.producer;
+// Gets the language of the PDF document
+var language = documentProperties.language;
+// Gets the creation date of the PDF document
+var creationDate = documentProperties.creationDate;
+// Gets the modification date of the PDF document
+var modificationDate = documentProperties.modificationDate;
 // Add a page
 var page = document.addPage();
 // Get graphics from the page
@@ -195,7 +235,7 @@ The `isIncrementalUpdate` property allows you to check if the PDF document suppo
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfGraphics, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
  
 // Create a PDF document
 let document: PdfDocument = new PdfDocument();
