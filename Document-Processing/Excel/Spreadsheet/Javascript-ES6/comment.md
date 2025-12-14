@@ -22,7 +22,7 @@ The Syncfusion Spreadsheet does not automatically track user identity. To tag ne
     import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
     // Initialize Spreadsheet component
     const spreadsheet: Spreadsheet = new Spreadsheet(
-        // Assign the author property
+        // Set the author name, If not set, "Guest User" will be shown as the author by default.
         author: 'Place the Author Name Here'
     );
     // Render initialized Spreadsheet
@@ -45,7 +45,7 @@ You can add a **comment** to a cell in the following ways:
 
 ```ts
 
-    // Create a comment in the desired cell
+    // Create a comment at the target cell using updateCell
     spreadsheet.updateCell({
     comment: {
         author: 'Chistoper', text: 'Are you completed the report',

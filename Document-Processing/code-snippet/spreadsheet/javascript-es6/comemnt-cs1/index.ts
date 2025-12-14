@@ -1,11 +1,11 @@
 import { Spreadsheet, SheetModel } from '@syncfusion/ej2-spreadsheet';
 import { shipmentData } from './datasource.ts';
 
-// Added comments using the cell data binding
 let sheets: SheetModel[] = [{
     name: 'Shipment Details',
     ranges: [{ dataSource: shipmentData }],
     columns: [{ width: 80 }, { width: 130 }, { width: 150 }, { width: 100 }, { width: 100 }],
+    // Attach comment to the specific cells
     rows: [{
         index: 1, cells: [{
             index: 4, comment: {
@@ -72,14 +72,13 @@ let sheets: SheetModel[] = [{
 }];
 
 let spreadsheet: Spreadsheet = new Spreadsheet({
-    // To show the comments review pane on initial rendering.
-    showCommentsPane: true,
+    showCommentsPane: true, // Show the comments review pane on initial rendering
     openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
     saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
     sheets: sheets,
     created: (): void => {
         spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'Shipment Details!A1:F1');
-        // Added comment using the updateCell method.
+        // Add comment using updateCell.
         spreadsheet.updateCell({
             comment: {
                 author: 'Cristi Espinos', text: 'Validate customer name for Order 10249.', createdTime: 'November 18, 2025 at 4:00 PM',
@@ -102,5 +101,5 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
         }, 'Shipment Details!D9');
     }
 });
-
+// Render the Spreadsheet
 spreadsheet.appendTo('#spreadsheet');
