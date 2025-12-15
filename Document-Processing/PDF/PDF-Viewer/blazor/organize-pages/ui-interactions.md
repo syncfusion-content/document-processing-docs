@@ -1,7 +1,7 @@
 ---
 layout: post
 title: UI Interaction for Organize Pages in Blazor PDF Viewer | Syncfusion
-description: Learn about the UI interactions for organize pages in the Blazor PDF Viewer control.
+description: Learn about the UI interactions including rotating, rearranging, inserting, deleting, and duplicating for organize pages.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -29,19 +29,16 @@ Easily change the sequence of pages using the drag-and-drop method:
 
 *   **Drag and drop**: Click and drag a page thumbnail to the desired position within the document, then release it to reorder the pages.
 
-![Rearranging](./images/rotate-rearrange.gif)
+![Rearranging](./images/Drag_and_Drop.gif)
 
 ## Inserting new pages
 
 Effortlessly add blank pages to your document with the following options:
 
 *   **Insert blank page left**: Insert a blank page to the left of the selected page.
-
-![Insert Left](./images/organize-insert-left.png)
-
 *   **Insert blank page right**: Insert a blank page to the right of the selected page.
 
-![Insert Right](./images/organize-insert-right.png)
+![Rearranging](./images/Insert_Pages.gif)
 
 ## Deleting PDF pages
 
@@ -52,14 +49,14 @@ Remove unwanted pages from your document with these steps:
 
 ![Delete](./images/organize-ui-delete.png)
 
-## Copying PDF pages
+## Duplicating PDF pages
 
 Duplicate pages within your PDF document effortlessly:
 
-*   **Select pages to copy**: Click on the page thumbnails you wish to duplicate.
-*   **Copy selected pages**: Use the copy option to create duplicates. The copied pages will be added to the right of the selected pages.
+*   **Select pages to duplicate**: Click on the page thumbnails you wish to duplicate.
+*   **Duplicate selected pages**: Use the duplicate option to create duplicates. The copied pages will be added to the right of the selected pages.
 
-![Copying](./images/organize-copy-page.png)
+![Duplicating](./images/Duplicate_Pages.gif)
 
 ## Importing a PDF document
 
@@ -68,6 +65,12 @@ Seamlessly import another PDF document into your current document:
 *   **Import PDF document**: Click the **Import Document** button to select and import a PDF. The imported document will be inserted as a thumbnail. If a page is selected, the thumbnail will be added to its right. If no pages are selected, it will be added as the first page. The imported PDF will be merged with the current document upon saving.
 
 ![Importing](./images/organize-ui-extract-page.png)
+
+### Extract Document Pages
+
+* `Extract Document Pages`: Click the **Extract Document** button to extract a PDF pages. If a pages are selected, the selected pages are extracted as a separate document.
+
+![Alt text](./images/organize-ui-import-page.png)
 
 ## Selecting all pages
 
