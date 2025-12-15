@@ -155,8 +155,8 @@ When perform merge cell in the Blazor Spreadsheet, validation messages are displ
 
 - **Sorting with merged cells** - When sorting a range that contains merged cells, a validation dialog appears to indicate that sorting cannot proceed unless all merged cells are consistent in size.
 
-![merge cell same cell size validation](./images/mergecell-same-size-cell.png)
-
 - **Autofill on merged cells** - When performing autofill and dropping the fill handle onto merged cells, a validation dialog appears to indicate that autofill requires all merged cells to be the same size.
+
+These limitations are enforced to maintain data integrity and prevent unexpected behavior during operations like sorting and autofill.
 
 ![merge cell same cell size validation](./images/mergecell-same-size-cell.png)
