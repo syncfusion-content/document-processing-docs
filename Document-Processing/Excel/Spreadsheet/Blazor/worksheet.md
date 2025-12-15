@@ -394,8 +394,8 @@ This method creates a copy of the sheet with the specified name. The sheet name 
 
 ## Gridlines
 
-Gridlines act as a border-like appearance of cells. They are used to distinguish cells on the worksheet. Gridlines can be shown or hidden using the following method:
+Gridlines provide a border-like appearance that helps distinguish cells on a worksheet. Gridlines can be shown or hidden through the Ribbon UI:
 
-*   Navigate to the **View tab** in the Ribbon toolbar and select the **Hide Gridlines** option to hide gridlines in the worksheet.
+- Navigate to the **View** tab in the Ribbon toolbar and select the **Hide Gridlines** option to hide gridlines in the active worksheet.
 
 ![Hide Gridlines option](images/hide-gridlines-option.gif)

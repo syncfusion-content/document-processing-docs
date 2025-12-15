@@ -15,13 +15,13 @@ Formatting options improve data readability and presentation. The Blazor Spreads
 * Text Formatting
 * Cell Formatting
 
-The entire formatting functionality can be globally enabled or disabled using the [`AllowCellFormatting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowCellFormatting) property. By default, `AllowCellFormatting` is set to **true**.
+The entire formatting functionality can be globally enabled or disabled using the [AllowCellFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowCellFormatting) property. By default, `AllowCellFormatting` is set to **true**.
 
 ## Number Formatting
 
 Number formatting in the Blazor Spreadsheet component controls how numeric, date, and time values are displayed without altering their underlying data. The component offers Excel-like number formats that are culture-aware, integrate with undo/redo operations, and respect worksheet protection settings. These formats can be applied through the Ribbon toolbar or programmatically.
 
-The number formatting functionality can be globally enabled or disabled using the [`AllowNumberFormatting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowNumberFormatting) property. By default, `AllowNumberFormatting` is set to **true**.
+The number formatting functionality can be globally enabled or disabled using the [AllowNumberFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowNumberFormatting) property. By default, `AllowNumberFormatting` is set to **true**.
 
 ### Supported Categories
 

@@ -98,7 +98,7 @@ The Spreadsheet component supports saving files in the Microsoft Excel (.xlsx) f
 The Blazor Spreadsheet component provides two methods for saving Excel files programmatically:
 
 - [SaveAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsync_Syncfusion_Blazor_Spreadsheet_SaveOptions_) – Saves the spreadsheet as an Excel file.
-- [SaveAsStreamAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsStreamAsync) – Returns the spreadsheet content as a memory stream for further processing or storage.
+- [SaveAsStreamAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsStreamAsync) – Returns the spreadsheet content as a [MemoryStream](https://learn.microsoft.com/dotnet/api/system.io.memorystream) for further processing or storage.
 
 #### Save as an Excel file
 
@@ -141,9 +141,9 @@ N> If options are not provided, the default settings are **FileName**: `"Spreads
 {% endhighlight %}
 {% endtabs %}
 
-#### Save as a memory stream
+#### Save as a MemoryStream
 
-The [SaveAsStreamAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsStreamAsync) method retrieves the spreadsheet content as a memory stream for further processing, such as saving to a database or cloud storage.
+The [SaveAsStreamAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsStreamAsync) method retrieves the spreadsheet content as a [MemoryStream](https://learn.microsoft.com/dotnet/api/system.io.memorystream) for further processing, such as saving to a database or cloud storage.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

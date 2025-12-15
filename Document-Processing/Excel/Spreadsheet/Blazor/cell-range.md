@@ -10,6 +10,10 @@ documentation: ug
 # Managing Cell Ranges in Blazor Spreadsheet component
 A cell range is a set of selected cells in a Spreadsheet, typically specified using A1 notation (for example, `A1:B10`). A range may be a single cell or a contiguous block of cells that can be manipulated or processed collectively.
 
+## Cell formatting
+
+To know more about cell formatting, refer [here](./formatting#text-and-cell-formatting).
+
 ## Autofill
 
 Autofill is used to fill cells with data that follows a pattern or is based on data in other cells. It helps avoid entering repetitive data manually. The [AllowAutofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowAutofill) property can be used to enable or disable this feature.
