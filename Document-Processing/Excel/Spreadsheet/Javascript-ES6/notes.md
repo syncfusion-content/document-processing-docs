@@ -137,7 +137,20 @@ To show all notes, navigate to the **Review** tab, click the **"Notes"** dropdow
 
 <!-- ![Showing all notes in Spreadsheet](./images/spreadsheet_show_all_notes.gif) -->
 
-> **Note**: After using Show All Notes, you can selectively hide individual notes using the **"Show/Hide Note"** option.
+> **Note**: After using Show All Notes, you can selectively hide individual notes using the **"Show/Hide Note"** option. When Show All Notes is enabled, any new notes added to the spreadsheet will automatically be displayed as sticky notes.
+
+In the below example, you can navigate between notes using Previous Note and Next Note options, toggle individual note visibility with Show/Hide Note, and display all notes at once using Show All Notes.
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/javascript-es6/note-cs4/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es6/note-cs4/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/note-cs4" %}
 
 ## Saving the document with notes
 
