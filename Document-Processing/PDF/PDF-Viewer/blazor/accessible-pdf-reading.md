@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessible PDF Reading in Blazor PDF Viewer | Syncfusion
-description: Learn two approaches for accessible PDF reading in the Blazor PDF Viewer: Microsoft Edge’s Screen Reader and the Windows Speech Synthesis API, with steps and sample code.
+description: Learn about accessible PDF reading in Blazor PDF Viewer using Microsoft Edge’s Screen Reader and Windows Speechdescription.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -16,7 +16,7 @@ This accessible PDF reading feature supports two approaches:
 2. Windows Speech Synthesis API
 
 The following demo illustrates both supported approaches:
-- [Blazor PDF Viewer example -Accessible PDF Reading](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/accessible-pdf-reading)
+- [Blazor PDF Viewer example -Accessible PDF Reading]()
 
 ## Microsoft Edge’s Screen Reader
 
@@ -641,4 +641,4 @@ function clearAllHighlights() {
 
 ## See also
 
-- [Blazor PDF Viewer example -Accessible PDF Reading](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/accessible-pdf-reading)
+- [Blazor PDF Viewer example -Accessible PDF Reading]()
