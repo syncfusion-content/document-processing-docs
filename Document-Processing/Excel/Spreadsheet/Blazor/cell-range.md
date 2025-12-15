@@ -100,6 +100,48 @@ The `AutofillAsync()` method accepts string parameters in A1 notation for `fillR
 {% endhighlight %}
 {% endtabs %}
 
+### Autofill options
+
+The Spreadsheet provides multiple autofill behaviors that determine how adjacent cells are populated when using the fill handle :
+
+- `CopyCells`
+- `FillSeries`
+- `FillFormattingOnly`
+- `FillWithoutFormatting`
+
+
+#### Copy Cells
+
+Copies the selected cell content and formatting to the adjacent cells.
+
+Can be done in the following way:
+
+- Using the fill handle to select the adjacent cell range and choosing the "Copy Cells" option from the "AutoFillOptions" menu to fill the adjacent cells.
+
+#### Fill Series
+
+Fills a series of numbers, characters, or dates based on the selected cell content to the adjacent cells, including their formats.
+
+Can be done in the following ways:
+
+- Using the fill handle to select the adjacent cell range and choosing the "Fill Series" option from the "AutoFillOptions" menu to fill the adjacent cells.
+
+#### Fill Formatting Only
+
+Fills only the cell style and number formatting based on the selected cell content to the adjacent cells, without copying the content itself.
+
+Can be done in the following way:
+
+- Using the fill handle to select the adjacent cell range and choosing the "Fill Formatting Only" option in the "AutoFillOptions" menu to fill the adjacent cells.
+
+#### Fill Without Formatting
+
+Fills a series of numbers, characters, or dates based on the selected cells to the adjacent cells, without copying their formats.
+
+Can be done in the following way:
+
+- Using the fill handle to select the adjacent cell range and choosing the "Fill Without Formatting" option in the "AutoFillOptions" menu to fill the adjacent cells.
+
 The following illustration demonstrates the use of autofill in the Spreadsheet component.
 
 ![Autofill Illustration](images/autofill.gif)
