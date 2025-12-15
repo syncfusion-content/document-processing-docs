@@ -70,9 +70,12 @@ Step 4: **Create a PDF document** : Add the script in `index.html` by creating a
         });   
     </script>
 }
-
 {% endhighlight %}
 {% endtabs %}
+
+N> For the JavaScript platform, place the **openjpeg** folder in the same location as your `index.html` file. Ensure that your application includes an `openjpeg` folder under `Scripts` (or any publicly accessible static path). This folder must contain the following:
+*   `openjpeg.js`
+*   `openjpeg.wasm`
 
 Along with the PDF file from which you want to extract images. Keep these files in the same static content area as `ej2.min.js` to ensure proper loading.
 
