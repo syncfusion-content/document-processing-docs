@@ -64,8 +64,11 @@ documenteditor.editor.toggleTextAlignment('Center' | 'Left' | 'Right' | 'Justify
 You can define the line spacing and its type for selected paragraphs using the following sample code.
 
 ```typescript
+// Set line spacing type
 documenteditor.selection.paragraphFormat.lineSpacingType='AtLeast';
-documenteditor.selection.paragraphFormat.lineSpacing= 6;
+// Set line spacing value (supports both integer and float)
+documenteditor.selection.paragraphFormat.lineSpacing= 6; // Integer value
+documenteditor.selection.paragraphFormat.lineSpacing= 6.5; // Float value
 ```
 
 ## Paragraph spacing
@@ -148,8 +151,7 @@ documenteditor.documentEditorSettings.showHiddenMarks = true;
 {% highlight razor tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-mvc/paragraph-format/razor %}
 {% endhighlight %}
-{% highlight c# tabtitle="Paragraph-format.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endtabs %}
 
 
 
