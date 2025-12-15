@@ -136,7 +136,7 @@ The **Comments Review Pane** provides a centralized view of all comments in the 
 You can show or hide the Comments Review Pane using:
 
 * **Ribbon**: Use **Review > Comment > Show Comments**.
-* **Property**: Set the [`showCommentsPane`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#showCommentsPane) property when initializing the Spreadsheet.
+* **Property**: Set the `showCommentsPane` property when initializing the Spreadsheet.
 
 > The default value for the `showCommentsPane` property is `false`.
 
@@ -208,7 +208,7 @@ In the below example, comments are added to specific cells via cell data binding
 
 ## Limitations
 
-* **Unposted comment is not stored**: If you type in the comment container and close it without clicking **Post**, the entered text is not saved. Only posted content is persisted in the comment model.
+* **Un-posted comment is not stored**: If you type in the comment container and close it without clicking **Post**, the entered text is not saved. Only posted content is persisted in the comment model.
 * **Export support**: Threaded comments are not exported to **.xls**, **.csv**, and **.pdf**.
 * **Single thread per cell**: Only one comment thread is supported per cell; replies are a flat list (no nested reply-to-reply).
 * **Non-collaborative**: Real-time multi-user sync is not supported; the host app must set the author identity for the session.
