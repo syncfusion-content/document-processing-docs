@@ -9,7 +9,7 @@ documentation: ug
 
 # Notes in EJ2 TypeScript Spreadsheet control
 
-The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [`enableNotes`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#enablenotes) property, which defaults to **true**.
+The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [`enableNotes`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#enablenotes) property, which defaults to **true**.
 
 When opening the Excel document with notes in the Spreadsheet, they will be displayed in the control. The cells containing notes will be indicated with a red colored triangle at the top-right corner. Hovering the mouse over these cells will display the content of the notes.
 
@@ -106,8 +106,6 @@ To navigate to the previous note, select **"Previous Note"** from the **Notes** 
 
 To navigate to the next note, select **"Next Note"** from the **Notes** dropdown in the **Review** tab. The Spreadsheet will automatically select the cell containing the next note, moving downward and rightward through the worksheet. If no next note exists, the selection will remain on the current cell.
 
-<!-- ![Navigating between notes in Spreadsheet](./images/spreadsheet_navigate_notes.gif) -->
-
 > **Note**: The navigation follows the natural order of cells in the worksheet (left to right, top to bottom).
 
 ## Show/Hide Note
@@ -118,8 +116,6 @@ To toggle the show/hide state of a note:
 
 * **Context Menu**: Right-click on the cell containing the note and select **"Show/Hide Note"**.
 * **Ribbon**: Select the cell containing the note, navigate to the **Review** tab, click the **"Notes"** dropdown, and select **"Show/Hide Note"**.
-
-<!-- ![Toggling show/hide note in Spreadsheet](./images/spreadsheet_show_hide_note.gif) -->
 
 **Behavior:**
 
@@ -134,8 +130,6 @@ To toggle the show/hide state of a note:
 The **Show All Notes** feature allows you to display all notes in the current worksheet simultaneously as sticky notes, making it easier to review multiple comments at once. This option is available in the **Notes** dropdown of the **Review** tab, regardless of whether the selected cell contains a note or not.
 
 To show all notes, navigate to the **Review** tab, click the **"Notes"** dropdown, and select **"Show All Notes"**. All notes in the current worksheet will be displayed as floating text boxes near their respective cells.
-
-<!-- ![Showing all notes in Spreadsheet](./images/spreadsheet_show_all_notes.gif) -->
 
 > **Note**: After using Show All Notes, you can selectively hide individual notes using the **"Show/Hide Note"** option. When Show All Notes is enabled, any new notes added to the spreadsheet will automatically be displayed as sticky notes.
 
@@ -154,13 +148,13 @@ In the below example, you can navigate between notes using Previous Note and Nex
 
 ## Saving the document with notes
 
-The Spreadsheet data, including notes, can be saved and exported as an Excel document by selecting **File > Save As** in the ribbon menu. Exporting worksheets with notes is supported in Excel file formats such as MS Excel (.xlsx) and MS Excel 97-2003 (.xls).
+The Spreadsheet data, including notes, can be saved and exported as an Excel document by selecting **File > Save As** in the ribbon menu. Exporting worksheets with notes is supported in Excel file formats such as Microsoft Excel (.xlsx) and Microsoft Excel 97-2003 (.xls).
 
 > When exporting the Spreadsheet to file formats such as Comma Separated Values (.csv), Excel Macro-Enabled Workbook (.xlsm), Excel Binary Workbook (.xlsb), and PDF Document (.pdf), the notes will not be available.
 
 ## Disabling notes
 
-To disable the note functionality, you need to set the [`enableNotes`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#enablenotes) property to **false**. After disabling, the notes in the document will not be shown when opened in the Spreadsheet. The **"Add Note"** option will not be shown in the context menu. The keyboard shortcuts for the note functionality will not work.
+To disable the note functionality, you need to set the [`enableNotes`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#enablenotes) property to **false**. After disabling, the notes in the document will not be shown when opened in the Spreadsheet. The **"Add Note"** option will not be shown in the context menu. The keyboard shortcuts for the note functionality will not work.
 
 ![Spreadsheet with notes feature disabled](./images/spreadsheet_notes_disable.png)
 
