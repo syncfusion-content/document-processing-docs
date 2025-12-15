@@ -70,8 +70,6 @@ You can add one or more replies to an existing comment to provide additional det
 * **Ribbon**: Use **Review > Comment > New Comment** on a cell that already has a comment. This triggers **reply mode**.
 * **Keyboard shortcut**: Press **Ctrl + Shift + F2** on a cell that contains a comment to open the comment container in reply mode.
 
-![Adding a reply in comment](./images/spreadsheet_adding_a_reply.gif)
-
 After posting, the replies appear under the initial comment in the container.
 
 ## Editing a comment or reply
@@ -81,7 +79,7 @@ You can edit the content of a comment or its replies directly within the contain
 * **Initial comment**: Hover over the cell indicator to open the comment container. Click the **⋯ (More thread actions)** menu in the header, select **Edit Comment**, modify the text, and click **Post**.
 * **Reply**: Hover over the specific reply, click the **⋯ (More actions)**, select **Edit Comment**, update the text, and click **Post**.
 
-![Editing a comment or reply in Spreadsheet](./images/spreadsheet_comment_editing.gif)
+![Editing a comment reply in Spreadsheet](./images/spreadsheet_edit_comment.png)
 
 ## Deleting a reply
 
@@ -89,7 +87,7 @@ You can remove a specific reply from a comment:
 
 * Hover over the reply inside the comment container, click **⋯ (More actions)** and select **Delete Comment**.
 
-![Deleting reply in Spreadsheet](./images/spreadsheet_deleting_a_comment-reply.gif)
+![Deleting a comment reply in Spreadsheet](./images/spreadsheet_edit_comment.png)
 
 ## Resolve and Reopen
 
@@ -114,8 +112,6 @@ You can delete an entire comment thread
 * **Ribbon**: Use **Review > Comment > Delete Comment** on a cell that contains the comment.
 * **Comment container**: Hover over the cell indicator to open the comment container, click **⋯ (More thread actions)** menu in the container header and select **Delete Thread** for active comment or use the **Delete Thread** button in container header for the resolved comment.
 
-![Deleting comment in Spreadsheet](./images/spreadsheet_deleting_a_comment.gif)
-
 Deleting a thread removes the comment and all its replies from the cell.
 
 ## Next and Previous Comment
@@ -124,8 +120,6 @@ The **Review > Comment > Next Comment and Previous Comment** options in the ribb
 
 * **Next Comment**: Moves to the next cell with a comment.
 * **Previous Comment**: Moves to the previous cell with a comment.
-
-![Next and Previous comment in Spreadsheet](./images/spreadsheet_next_previous_comment.gif)
 
 Navigation starts within the active sheet. When all comments in the active sheet have been visited (end or start reached), the navigation automatically continues to the next or previous sheet that contains comments. This ensures you can review all comments across the workbook without manually switching sheets.
 
