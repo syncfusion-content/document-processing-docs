@@ -723,10 +723,10 @@ Select "Blazor WebAssembly Standalone App" from the template and click **Next**.
 
 Step 2: Install the following **Nuget packages** in the application from [Nuget.org](https://www.nuget.org/).
 *   [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core)
-*   [SkiaSharp.Views.Blazor v3.116.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.116.1)
+*   [SkiaSharp.Views.Blazor v3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
 
 ![Install Syncfusion.DocIORenderer.Net.Core NuGet Package](Blazor_Images/NugetPackage.png)
-![Install SkiaSharp.Views.Blazor v3.116.1 NuGet Package](Blazor_Images/NuGet-Package-WordtoPDF.png)
+![Install SkiaSharp.Views.Blazor v3.119.1 NuGet Package](Blazor_Images/NuGet-Package-WordtoPDF.png)
 
 N> 1. If deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
@@ -914,10 +914,10 @@ Step 1: Create a new C# Blazor WASM Standalone app project.
 * Select the project location, type the project name and press enter.
 * Then choose **Create project**.
 
-Step 2: To **convert a Word document to PDF in Blazor WASM Standalone app**, install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) and [SkiaSharp.Views.Blazor v3.116.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.116.1) to the Blazor project.
+Step 2: To **convert a Word document to PDF in Blazor WASM Standalone app**, install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) and [SkiaSharp.Views.Blazor v3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1) to the Blazor project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
-* Run the command `dotnet add package Syncfusion.DocIORenderer.Net.Core` and `dotnet add package SkiaSharp.Views.Blazor --version 3.116.1` to install the NuGet package.
+* Run the command `dotnet add package Syncfusion.DocIORenderer.Net.Core` and `dotnet add package SkiaSharp.Views.Blazor --version 3.119.1` to install the NuGet package.
 
 ![Add Syncfusion.DocIORenderer.Net.Core NuGet package](Blazor_Images/Command-to-add-NuGet-package-for-WASM.png)
 
