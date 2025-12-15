@@ -33,8 +33,7 @@ To achieve a glass like background in the [SfPdfViewer](https://help.syncfusion.
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="15 17 19" %}
-
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 18" %}
 <Grid>
     <Grid.Background>
         <LinearGradientBrush StartPoint="0,0" 
@@ -56,10 +55,9 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
         </syncfusion:SfPdfViewer>
     </core:SfGlassEffectView>
 </Grid>
-
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
 
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="19 20 21 22 23 28" %}
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.PdfViewer;
  
@@ -90,12 +88,9 @@ var pdfViewer = new SfPdfViewer
     EnableLiquidGlassEffect = true
 };
  
-glassEffectView.Content = pdfViewer;
- 
-grid.Children.Add(glassEffectView);
- 
+glassEffectView.Content = pdfViewer; 
+grid.Children.Add(glassEffectView); 
 this.Content = grid;
-
 {% endhighlight %}
 {% endtabs %}
 
