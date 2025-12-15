@@ -188,6 +188,8 @@ function wirePage(div) {
 
 ![Edge Screen Reader](./images/edge-screen-reader.png)
 
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Accessible/EdgeScreenReader)
+
 ## Windows Speech Synthesis API
 
 Use the browser’s Windows Speech Synthesis API (speechSynthesis) to implement in-app Read Aloud functionality with custom controls. This approach:
@@ -638,6 +640,8 @@ function clearAllHighlights() {
 {% endtabs %}
 
 ![Windows Speech Synthesis](./images/windows-speech-synthesis.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Accessible/WebSynthesis)
 
 ## See also
 
