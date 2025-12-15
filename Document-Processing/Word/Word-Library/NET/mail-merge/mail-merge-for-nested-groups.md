@@ -748,4 +748,4 @@ By executing the above code example, it generates the resultant Word document as
 
 ## Online Demo
 
-* Explore how to do a mail merge for a nested group in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/nestedmailmerge#/tailwind).
+* Explore how to do a mail merge for a nested group in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/nestedmailmerge#/bootstrap5).

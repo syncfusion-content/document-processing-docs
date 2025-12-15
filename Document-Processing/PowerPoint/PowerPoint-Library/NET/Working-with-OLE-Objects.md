@@ -377,7 +377,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to insert and extract an OLE Object in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/oleobject#/tailwind).
+* Explore how to insert and extract an OLE Object in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/oleobject#/bootstrap5).
 
 ## See Also
 * [How to replace all OLE objects with text in PowerPoint using C#?](https://support.syncfusion.com/kb/article/15653/how-to-replace-all-ole-objects-with-text-in-powerpoint-using-c)

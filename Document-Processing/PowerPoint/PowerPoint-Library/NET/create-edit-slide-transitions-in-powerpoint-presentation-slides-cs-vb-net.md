@@ -1127,4 +1127,4 @@ Zoom
 
 ## Online Demo
 
-* Explore how to create slide transition effects in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/slidetransition#/tailwind).
+* Explore how to create slide transition effects in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/slidetransition#/bootstrap5).

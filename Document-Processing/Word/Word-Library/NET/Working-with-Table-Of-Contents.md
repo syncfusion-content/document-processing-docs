@@ -1651,8 +1651,8 @@ By executing the program, you will get the **Word document** as follows.
 
 ## Online Demo
 
-* Explore how to insert and update the table of figures in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/tableoffigures#/tailwind).
-* See how to insert and update the table of contents in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/tableofcontents#/tailwind).
+* Explore how to insert and update the table of figures in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/tableoffigures#/bootstrap5).
+* See how to insert and update the table of contents in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/tableofcontents#/bootstrap5).
  
 ## See Also
 

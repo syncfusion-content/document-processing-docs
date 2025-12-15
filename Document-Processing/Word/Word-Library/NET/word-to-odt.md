@@ -758,4 +758,4 @@ Yes<br/><br/></td>
 
 ## Online Demo
 
-* Explore how to convert the Word document to ODT using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/doctoodt#/tailwind).
+* Explore how to convert the Word document to ODT using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/doctoodt#/bootstrap5).

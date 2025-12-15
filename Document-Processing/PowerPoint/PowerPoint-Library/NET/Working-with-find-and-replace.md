@@ -685,8 +685,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to replace a specific text or text pattern in a PowerPoint presentation with another text using the find and replace functionality of the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/findandreplace#/tailwind).
-* See how to find specific text and highlight it in an existing PowerPoint presentation using the find functionality of the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/findandhighlight#/tailwind).
+* Explore how to replace a specific text or text pattern in a PowerPoint presentation with another text using the find and replace functionality of the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/findandreplace#/bootstrap5).
+* See how to find specific text and highlight it in an existing PowerPoint presentation using the find functionality of the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/findandhighlight#/bootstrap5).
 
 ## See Also
 * [How to replace the hyperlink within a SmartArt in PowerPoint Presentation?](https://support.syncfusion.com/kb/article/15293/how-to-replace-the-hyperlink-within-a-smartart-in-powerpoint-presentation)

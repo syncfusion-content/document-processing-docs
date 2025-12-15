@@ -892,4 +892,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to insert the footnotes and endnotes in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/footnotesandendnotes#/tailwind).
+* Explore how to insert the footnotes and endnotes in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/footnotesandendnotes#/bootstrap5).

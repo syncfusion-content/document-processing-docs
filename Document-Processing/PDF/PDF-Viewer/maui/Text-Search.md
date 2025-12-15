@@ -11,10 +11,6 @@ documentation: ug
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to search for text in a PDF document and navigate to all its occurrences.
 
-You can also watch the video tutorial below to learn about text search.
-
-<style>#MAUISfPdfViewerVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUISfPdfViewerVideoTutorial' src='https://www.youtube.com/embed/7t1yHUQaHU4'></iframe>
-
 ## Initiate a text search
 
 The [SearchTextAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SearchTextAsync_System_String_TextSearchOptions_System_Threading_CancellationTokenSource_) method asynchronously searches the specified text throughout the PDF document and highlights each occurrence (match). To start the search, you need to call the method in a button click by passing the text to be searched as a parameter, as shown in the following example:
@@ -162,7 +158,7 @@ private void PdfTextSearchProgress(object sender, TextSearchProgressEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### Canceling search progress
+### Cancelling search progress
 
 The [Clear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchResult.html#Syncfusion_Maui_PdfViewer_TextSearchResult_Clear) method of the [TextSearchResult](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchResult.html) can be used to cancel the text search progress that does not need to be continued. For example, under the following scenarios, cancellation may be necessary.
 

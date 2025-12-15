@@ -10,9 +10,6 @@ documentation: UG
 
 Conditional formatting allows to format the contents of a cell dynamically. This can be defined and applied in XlsIO through the [IConditionalFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormat.html) interface.
 
-To quickly learn How to Apply Conditional Formatting in Excel Using .NET Excel Library, check out this video:
-{% youtube "https://www.youtube.com/watch?v=S1lkNLV70hc" %}
-
 ## Create a Conditional Format 
 
 The [IConditionalFormats](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormats.html) represents a collection of conditional formats for a single [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html). One or more conditional formats can be added to the range as follows.

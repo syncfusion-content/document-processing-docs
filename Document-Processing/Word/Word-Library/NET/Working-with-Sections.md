@@ -1520,7 +1520,7 @@ N> * And also, it is not feasible to get the page-wise details from Word documen
 
 ## Online Demo
 
-* Explore how to insert headers and footers to the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/headerandfooter#/tailwind).
+* Explore how to insert headers and footers to the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/headerandfooter#/bootstrap5).
 
 ## See Also
 

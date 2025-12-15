@@ -1244,8 +1244,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to create a Word document with shapes using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/autoshapes#/tailwind).
-* See how to create a Word document with group shapes using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/groupshapes#/tailwind).  
+* Explore how to create a Word document with shapes using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/autoshapes#/bootstrap5).
+* See how to create a Word document with group shapes using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/groupshapes#/bootstrap5).  
 
 ## See Also
 

@@ -2027,5 +2027,5 @@ SmartArt typically contains graphic properties, including bounds information for
 
 ## Online Demo
 
-* Explore how to create a Word document with SmartArt using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/createsmartart#/tailwind).
-* Explore how to edit a Word document with SmartArt using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/editsmartart#/tailwind).
+* Explore how to create a Word document with SmartArt using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/createsmartart#/bootstrap5).
+* Explore how to edit a Word document with SmartArt using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/editsmartart#/bootstrap5).
