@@ -16,7 +16,7 @@ This guide explains how to integrate the JavaScript PDF library into an Angular 
 
 ## Setup Angular Environment
 
-You can use the [`Angular CLI`](https://github.com/angular/angular-cli) to setup your Angular applications.
+You can use the [Angular CLI](https://github.com/angular/angular-cli) to setup your Angular applications.
 To install the latest Angular CLI globally use the following command.
 
 ```bash
@@ -66,7 +66,7 @@ N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-da
 
 {% tabs %}
 {% highlight ts tabtitle="~/app.component.ts" %}
-import { PdfDocument, PdfPage, PdfStandardFont, PdfPen, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfStandardFont, PdfBrush } from '@syncfusion/ej2-pdf';
 {% endhighlight %}
 {% endtabs %}
 

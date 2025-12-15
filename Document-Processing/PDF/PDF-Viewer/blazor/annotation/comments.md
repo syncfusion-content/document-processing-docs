@@ -18,7 +18,7 @@ The SfPdfViewer component provides options to add, edit, and delete comments for
 * Text markup annotation
 * Free text annotation
 
-![Comments in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-comments.png)
+![Comments in Blazor SfPdfViewer](../images/blazor-pdfviewer-comments.png)
 
 ## Adding a comment to the annotation
 
@@ -50,7 +50,7 @@ If the comment panel is already open, select an annotation and add a comment usi
 * The selected annotation’s comment container is highlighted in the comment panel.
 * Add a comment and any required replies using the comment panel.
 
-![Adding Comments in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-add-new-comment.png)
+![Adding Comments in Blazor SfPdfViewer](../images/blazor-pdfviewer-add-new-comment.png)
 
 ### Adding Comment Replies
 
@@ -64,7 +64,7 @@ If the comment panel is already open, select an annotation and add a comment usi
 * Select Set status in the context menu.
 * Choose the required status for the annotation comment.
 
-![Blazor PDFViewer with Comment Status](../../blazor-classic/images/blazor-pdfviewer-comment-status.png)
+![Blazor PDFViewer with Comment Status](../images/blazor-pdfviewer-comment-status.png)
 
 ### Editing the comments and comments replies of the annotations
 
@@ -95,7 +95,7 @@ Edit comments and replies in the following ways:
 * Choose the required status for the annotation comment.
 * Status 'None' is the default. Choosing 'None' removes the status indicator from the comment or reply.
 
-![Editing Comment in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-comment-editing.png)
+![Editing Comment in Blazor SfPdfViewer](../images/blazor-pdfviewer-comment-editing.png)
 
 ### Delete Comment or Comment Replies
 
@@ -103,7 +103,7 @@ Edit comments and replies in the following ways:
 * Click the More options button in the comment or reply container.
 * Select Delete in the context menu.
 
-![Deleting Comment in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-delete-comments.png)
+![Deleting Comment in Blazor SfPdfViewer](../images/blazor-pdfviewer-delete-comments.png)
 
 N> Deleting the root comment from the comment panel also deletes the associated annotation.
 

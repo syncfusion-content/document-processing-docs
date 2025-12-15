@@ -9,11 +9,11 @@ documentation: UG
 
 Redacting a PDF is the process of permanently removing sensitive or confidential information from PDF documents. Syncfusion<sup>&reg;</sup> PDF library provides an easy way to redact PDF documents. 
 
+N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
+
 ## Removing sensitive content from the PDF document
 
 Redaction permanently removes confidential or sensitive information from a PDF. The `PdfRedactionAnnotation` class allows you to define areas to redact, ensuring the underlying text or image data is completely deleted from the document.
-
-N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -63,7 +63,7 @@ You can apply a solid fill color to cover the redacted content. This is the most
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument } from '@syncfusion/ej2-pdf';
-import { PdfRedactor, PdfRedactor, PdfRedactionRegion} from '@syncfusion/ej2-pdf-data-extract';
+import { PdfRedactor, PdfRedactionRegion} from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -110,8 +110,8 @@ Customize the appearance of the redacted area by applying specific fill colors. 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage } from '@syncfusion/ej2-pdf';
-import { PdfRedactionAnnotation } from '@syncfusion/ej2-pdf-data-extract';
+import { PdfDocument } from '@syncfusion/ej2-pdf';
+import { PdfRedactor, PdfRedactionRegion } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data, password);
