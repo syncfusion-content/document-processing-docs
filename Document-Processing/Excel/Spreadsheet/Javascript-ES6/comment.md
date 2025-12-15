@@ -57,7 +57,7 @@ You can add a **comment** to a cell in the following ways:
     }, 'Sheet1!D5');
 
 ```
-![Adding a comment in Spreadsheet](./images/spreadsheet_show_comment.png)
+![Adding a comment in Spreadsheet](./images/spreadsheet_adding_a_comment.gif)
 
 After posting, the comment becomes visible with the comment indicator in the cell and can be previewed on hover.
 
@@ -70,7 +70,7 @@ You can add one or more replies to an existing comment to provide additional det
 * **Ribbon**: Use **Review > Comment > New Comment** on a cell that already has a comment. This triggers **reply mode**.
 * **Keyboard shortcut**: Press **Ctrl + Shift + F2** on a cell that contains a comment to open the comment container in reply mode.
 
-![Adding a reply in comment](./images/spreadsheet_show_comment.png)
+![Adding a reply in comment](./images/spreadsheet_adding_a_reply.gif)
 
 After posting, the replies appear under the initial comment in the container.
 
@@ -81,7 +81,7 @@ You can edit the content of a comment or its replies directly within the contain
 * **Initial comment**: Hover over the cell indicator to open the comment container. Click the **⋯ (More thread actions)** menu in the header, select **Edit Comment**, modify the text, and click **Post**.
 * **Reply**: Hover over the specific reply, click the **⋯ (More actions)**, select **Edit Comment**, update the text, and click **Post**.
 
-![Editing a comment or reply in Spreadsheet](./images/spreadsheet_show_comment.png)
+![Editing a comment or reply in Spreadsheet](./images/spreadsheet_comment_editing.gif)
 
 ## Deleting a reply
 
@@ -89,7 +89,7 @@ You can remove a specific reply from a comment:
 
 * Hover over the reply inside the comment container, click **⋯ (More actions)** and select **Delete Comment**.
 
-![Deleting reply in Spreadsheet](./images/spreadsheet_show_comment.png)
+![Deleting reply in Spreadsheet](./images/spreadsheet_deleting_a_comment-reply.gif)
 
 ## Resolve and Reopen
 
@@ -101,7 +101,7 @@ The **Resolve** option marks a comment as completed when the discussion or issue
 ### Reopen a comment
 * Hover over the cell indicator to open the comment container and click **Reopen** button in the header to make the thread active again.
 
-![Resolve and reopen in Spreadsheet](./images/spreadsheet_show_comment.png)
+![Resolve and reopen in Spreadsheet](./images/spreadsheet_resolve_reopen.gif)
 
 You can also use the `isResolved` property in the comment model when initializing or updating comments programmatically.
 
@@ -114,7 +114,7 @@ You can delete an entire comment thread
 * **Ribbon**: Use **Review > Comment > Delete Comment** on a cell that contains the comment.
 * **Comment container**: Hover over the cell indicator to open the comment container, click **⋯ (More thread actions)** menu in the container header and select **Delete Thread** for active comment or use the **Delete Thread** button in container header for the resolved comment.
 
-![Deleting comment in Spreadsheet](./images/spreadsheet_show_comment.png)
+![Deleting comment in Spreadsheet](./images/spreadsheet_deleting_a_comment.gif)
 
 Deleting a thread removes the comment and all its replies from the cell.
 
@@ -125,7 +125,7 @@ The **Review > Comment > Next Comment and Previous Comment** options in the ribb
 * **Next Comment**: Moves to the next cell with a comment.
 * **Previous Comment**: Moves to the previous cell with a comment.
 
-![Next and Previous comment in Spreadsheet](./images/spreadsheet_show_comment.png)
+![Next and Previous comment in Spreadsheet](./images/spreadsheet_next_previous_comment.gif)
 
 Navigation starts within the active sheet. When all comments in the active sheet have been visited (end or start reached), the navigation automatically continues to the next or previous sheet that contains comments. This ensures you can review all comments across the workbook without manually switching sheets.
 
@@ -140,7 +140,7 @@ You can show or hide the Comments Review Pane using:
 
 > The default value for the `showCommentsPane` property is `false`.
 
-![Show comments in Spreadsheet](./images/spreadsheet_show_comment.png)
+![Show comments in Spreadsheet](./images/spreadsheet_show_comments.gif)
 
 ### Features of the Comments Review Pane
 
