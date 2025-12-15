@@ -149,9 +149,9 @@ The [UnmergeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sprea
 {% endhighlight %}
 {% endtabs %}
 
-### Merge cells validation messages
+### Limitations of Merge
 
-When perform merge cell in the Blazor Spreadsheet, validation messages are displayed in specific scenarios to inform about merge cell constraints:
+When merging cells in the Blazor Spreadsheet, certain constraints apply to ensure data integrity. In these cases, validation messages are displayed:
 
 - **Sorting with merged cells** - When sorting a range that contains merged cells, a validation dialog appears to indicate that sorting cannot proceed unless all merged cells are consistent in size.
 
