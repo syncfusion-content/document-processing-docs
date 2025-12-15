@@ -136,7 +136,7 @@ Parameters
         DataSourceBytes = File.ReadAllBytes(filePath);
     }
 
-    public async Task GetActiveWorksheet()
+    public async Task GetData()
     {
         // Get the active sheet snapshot
         var data = spreadsheet.GetData("Sheet2!D5:E6");
