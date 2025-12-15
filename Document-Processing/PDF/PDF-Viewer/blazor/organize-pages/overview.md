@@ -80,7 +80,7 @@ Seamlessly import a PDF document into your existing document:
 
 Make comprehensive adjustments by selecting all pages simultaneously. This facilitates efficient editing and formatting across the entire document.
 
-![Organzie Select Pages](./images/organize-select-all.jpg)
+![Organzie Select Pages](./images/organize-select-all.png)
 
 ### Zooming Page Thumbnails
 
@@ -92,7 +92,7 @@ Adjust the size of page thumbnails within the organizer panel for better visibil
 
 This feature is especially useful when working with documents containing complex layouts or small details that need careful examination during organization.
 
-![Organzie Zoom Panel](./images/organize-zoom-panel.jpg)
+![Organzie Zoom Panel](./images/organize-zoom-panel.png)
 
 ### Real-time updates
 
@@ -108,8 +108,8 @@ Safeguard your edits by utilizing the **Save As** feature. This enables you to d
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
+
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%" EnablePageOrganizer="true">
@@ -122,8 +122,8 @@ Safeguard your edits by utilizing the **Save As** feature. This enables you to d
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
+
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%" PageOrganizerVisibility="true">
@@ -145,13 +145,12 @@ Safeguard your edits by utilizing the **Save As** feature. This enables you to d
 * **ImageZoomMin** : It represent minimum value for the image zooming slider in the page organizer view. By default it set as `1` and acceptable values: `1` to `4`.
 * **ImageZoomMin** : It represent maximum value for the image zooming slider in the page organizer view. By default it set as `5` and acceptable values: `2` to `5`.
 * **FooterButtons** : It specifies which buttons are visible in the Page Organizer dialog footer.
-  - `None` - Hide both Save and Save As buttons.
-  - `Save` - Show only the "Save" button.
-  - `Save As` - Show only the "SaveAs" button.
+  * `None` - Hide both Save and Save As buttons.
+  * `Save` - Show only the "Save" button.
+  * `Save As` - Show only the "SaveAs" button.
 
 {% tabs %}
 {% highlight razor %}
-
 @page "/"
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" Height="100%" Width="100%">
@@ -172,4 +171,4 @@ The following keyboard shortcuts are available at the organize pages dialog.
 
 With the Organize Pages feature in the PDF Viewer, managing your PDF documents has never been easier. Whether you are adding new content, adjusting page orientation, moving the pages, duplicating the pages, or removing unnecessary pages, this feature provides the tools you need to streamline your document management workflow. Explore these capabilities today and take control of your PDF documents with ease!
 
-<!-- [View sample in GitHub](Need to added) -->
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Page%20Organizer)
