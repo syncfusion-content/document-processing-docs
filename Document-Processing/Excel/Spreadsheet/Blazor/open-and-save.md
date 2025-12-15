@@ -72,6 +72,273 @@ An Excel file encoded as a Base64 string can be loaded into the Spreadsheet comp
 {% endhighlight %}
 {% endtabs %}
 
+### Open an Excel file from JSON data
+
+The Blazor Spreadsheet component accepts data only as a byte array through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DataSource) property. To load JSON data into the Spreadsheet, convert the JSON data into an Excel file format using [XlsIO](https://help.syncfusion.com/file-formats/xlsio/overview), then convert it to a byte array. This approach allows importing JSON data from a local file or a remote URL.
+
+#### Load an Excel file from a local JSON file
+
+JSON data can be loaded from a local JSON file, converted to Excel format using XlsIO, and displayed in the Spreadsheet component. This approach is useful when working with static JSON data files within the application. The implementation reads the JSON file, converts it to Excel format using XlsIO, and binds it to the Spreadsheet as a byte array.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using System.Text.Json
+@using Syncfusion.XlsIO
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet DataSource="@DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { set; get; }
+
+    protected override void OnInitialized()
+    {
+        // Construct the full path to the JSON file
+        var jsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "sample.json");
+
+        // Read the entire JSON file content as a string
+        var jsonContent = File.ReadAllText(jsonFilePath);
+
+        // Convert the JSON content to an Excel byte array for Spreadsheet binding
+        DataSourceBytes = ConvertJsonToExcelBytes(jsonContent);
+    }
+
+    // Converts a JSON string into an Excel workbook byte array using Syncfusion XlsIO
+    private byte[] ConvertJsonToExcelBytes(string jsonContent)
+    {
+        // Parse the JSON string into a JsonDocument for processing
+        using var jsonDocument = JsonDocument.Parse(jsonContent);
+        var rootElement = jsonDocument.RootElement;
+
+        // Normalize the JSON structure into a list of row dictionaries
+        var dataRows = NormalizeJsonToRows(rootElement);
+
+        // Extract all unique column headers (keys) from all rows
+        var columnHeaders = dataRows.SelectMany(row => row.Keys).Distinct().ToList();
+
+        // Initialize the Excel engine
+        using var excelEngine = new ExcelEngine();
+        var excelApplication = excelEngine.Excel;
+
+        // Create a new workbook with one worksheet
+        var workbook = excelApplication.Workbooks.Create(1);
+        var worksheet = workbook.Worksheets[0];
+
+        // Write header row with column names
+        for (int columnIndex = 0; columnIndex < columnHeaders.Count; columnIndex++)
+        {
+            var headerCell = worksheet.Range[1, columnIndex + 1];
+            headerCell.Text = columnHeaders[columnIndex];
+            headerCell.CellStyle.Font.Bold = true;
+        }
+
+        // Write data rows starting from the second row
+        int rowIndex = 2;
+        foreach (var dataRow in dataRows)
+        {
+            for (int columnIndex = 0; columnIndex < columnHeaders.Count; columnIndex++)
+            {
+                var columnKey = columnHeaders[columnIndex];
+
+                // Write cell value if the key exists in the current row
+                if (dataRow.TryGetValue(columnKey, out var cellValue))
+                {
+                    worksheet.Range[rowIndex, columnIndex + 1].Value2 = cellValue;
+                }
+            }
+            rowIndex++;
+        }
+
+        // Save the workbook to a memory stream and return as byte array
+        using var memoryStream = new MemoryStream();
+        workbook.SaveAs(memoryStream);
+        return memoryStream.ToArray();
+    }
+
+    // Normalizes various JSON structures (array, object, or single value) into a uniform list of row dictionaries
+    private List<Dictionary<string, JsonElement>> NormalizeJsonToRows(JsonElement rootElement)
+    {
+        // Case 1: JSON is an array - convert each element to a dictionary
+        if (rootElement.ValueKind == JsonValueKind.Array)
+        {
+            return rootElement.EnumerateArray()
+                .Select(ConvertJsonElementToDictionary)
+                .ToList();
+        }
+
+        // Case 2: JSON is an object
+        if (rootElement.ValueKind == JsonValueKind.Object)
+        {
+            // Check if the object contains array properties (wrapper pattern)
+            foreach (var property in rootElement.EnumerateObject())
+            {
+                if (property.Value.ValueKind == JsonValueKind.Array)
+                {
+                    return property.Value.EnumerateArray()
+                        .Select(ConvertJsonElementToDictionary)
+                        .ToList();
+                }
+            }
+
+            // Single object record - wrap in a list
+            return new List<Dictionary<string, JsonElement>> { ConvertJsonElementToDictionary(rootElement) };
+        }
+
+        // Case 3: Fallback for primitive values - wrap in a dictionary with "value" key
+        return new List<Dictionary<string, JsonElement>>
+        {
+            new Dictionary<string, JsonElement> { ["value"] = rootElement }
+        };
+    }
+
+    // Converts a JsonElement to a dictionary of property names and values
+    private Dictionary<string, JsonElement> ConvertJsonElementToDictionary(JsonElement jsonElement)
+    {
+        // If not an object, wrap the value in a dictionary with "value" key
+        if (jsonElement.ValueKind != JsonValueKind.Object)
+        {
+            return new Dictionary<string, JsonElement> { ["value"] = jsonElement };
+        }
+
+        // Create a case-insensitive dictionary for robust property access
+        var propertyDictionary = new Dictionary<string, JsonElement>(StringComparer.OrdinalIgnoreCase);
+
+        // Enumerate all properties and add to dictionary
+        foreach (var property in jsonElement.EnumerateObject())
+        {
+            propertyDictionary[property.Name] = property.Value;
+        }
+
+        return propertyDictionary;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Load an Excel from a remote JSON URL
+
+This approach enables loading JSON data from remote web APIs or external endpoints into the Spreadsheet component. HttpClient retrieves the JSON data asynchronously, which is then converted to Excel format using XlsIO and bound to the Spreadsheet as a byte array. This method is particularly useful for integrating real-time data from REST APIs or other web services.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using System.Text.Json
+@using Syncfusion.Blazor.Spreadsheet
+@using Syncfusion.XlsIO
+@inject HttpClient HttpClient
+
+@if (IsDataLoaded)
+{
+    <SfSpreadsheet DataSource="DataSourceBytes">
+        <SpreadsheetRibbon></SpreadsheetRibbon>
+    </SfSpreadsheet>
+}
+
+@code {
+
+    public byte[] DataSourceBytes{ set; get; }
+
+    // Flag to indicate whether the data has been loaded
+    public bool IsDataLoaded { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // URL of the online JSON file
+        string jsonUrl = "https://jsonplaceholder.typicode.com/todos";
+
+        // Download JSON data from the online source
+        string jsonContent = await DownloadJsonFromUrl(jsonUrl);
+
+        // Convert the JSON string into a byte array
+        DataSourceBytes = ConvertJsonToByteArray(jsonContent);
+
+        // Set flag to indicate data is loaded
+        IsDataLoaded = true;
+    }
+
+    // Method to download JSON from an online URL
+    public async Task<string> DownloadJsonFromUrl(string url)
+    {
+        try
+        {
+            // Send HTTP GET request to download the JSON content
+            var response = await HttpClient.GetAsync(url);
+
+            // Ensure the request was successful
+            response.EnsureSuccessStatusCode();
+
+            // Read and return the JSON content as a string
+            string jsonContent = await response.Content.ReadAsStringAsync();
+            return jsonContent;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error downloading JSON: {ex.Message}");
+            throw;
+        }
+    }
+
+    // Method to convert JSON string to Excel byte array using XlsIO
+    public byte[] ConvertJsonToByteArray(string jsonContent)
+    {
+        // Deserialize JSON string into a list of dictionaries
+        var records = JsonSerializer.Deserialize<List<Dictionary<string, object>>>(jsonContent);
+
+        using (ExcelEngine excelEngine = new ExcelEngine())
+        {
+            // Get the Excel application instance and set the version
+            IApplication excelApp = excelEngine.Excel;
+            excelApp.DefaultVersion = ExcelVersion.Xlsx;
+
+            // Create a new workbook with one worksheet
+            IWorkbook workbook = excelApp.Workbooks.Create(1);
+            IWorksheet worksheet = workbook.Worksheets[0];
+
+            // Extract column headers from the first record
+            var columnHeaders = records.First().Keys.ToList();
+
+            // Get the column and row count
+            int columnCount = columnHeaders.Count;
+            int rowCount = records.Count;
+
+            // Get the worksheet range to access cells
+            IRange worksheetRange = worksheet.Range;
+
+            // Add headers to the first row
+            for (int columnIndex = 0; columnIndex < columnCount; columnIndex++)
+            {
+                worksheetRange[1, columnIndex + 1].Text = columnHeaders[columnIndex];
+            }
+
+            // Add data rows starting from the second row
+            for (int rowIndex = 0; rowIndex < rowCount; rowIndex++)
+            {
+                var rowData = records[rowIndex];
+
+                for (int columnIndex = 0; columnIndex < columnCount; columnIndex++)
+                {
+                    // Write the cell value (row index starts from 2 as row 1 has headers)
+                    worksheetRange[rowIndex + 2, columnIndex + 1].Value2 = rowData[columnHeaders[columnIndex]];
+                }
+            }
+
+            // Save the workbook to a memory stream and convert to byte array
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                workbook.SaveAs(memoryStream);
+                return memoryStream.ToArray();
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Open an Excel file from Google Drive
 To load an Excel file from `Google Drive` in the Blazor Spreadsheet, follow the steps below.
 
