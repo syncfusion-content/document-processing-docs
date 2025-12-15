@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Programmatical Organize Pages in Syncfusion PDF Viewer | Syncfusion
-description: Learn here all about Programmatic Support for Organize Pages in Syncfusion Syncfusion PDF Viewer.
+description: Learn here all about Programmatic Support for Organize Pages in Syncfusion Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
