@@ -28,8 +28,7 @@ The following list of dependencies are required to use the `TypeScript PDF libra
 * Add a simple button to `index.html` and attach a click handler that uses the TypeScript PDF API to create a new PDF document.
 
 {% tabs %}
-{% highlight ts tabtitle="index.html" %}
-
+{% highlight html tabtitle="index.html" %}
 <html>
   <head>
     <title>Button onclick Example</title>
@@ -38,30 +37,32 @@ The following list of dependencies are required to use the `TypeScript PDF libra
     <button id="normalButton">Create PDF document</button>
   </body>
 </html>
-
 {% endhighlight %}
 {% endtabs %}
+
+N> For the TypeScript platform, place the **openjpeg** folder in the same location as your `index.html` file. Ensure that your application includes an `openjpeg` folder under `Scripts` (or any publicly accessible static path). This folder must contain the following:
+*   `openjpeg.js`
+*   `openjpeg.wasm`
+
+Along with the PDF file from which you want to extract images. Keep these files in the same static content area as `ej2.min.js` to ensure proper loading.
 
 * Include the following namespaces in `index.ts` file.
 
 {% tabs %}
-{% highlight html tabtitle="index.ts" %}
-
-import { PdfDocument, PdfPage, PdfStandardFont, PdfPen, PdfBrush } from '@syncfusion/ej2-pdf';
-
+{% highlight ts tabtitle="index.ts" %}
+import { PdfDocument, PdfPage, PdfStandardFont, PdfFontFamily,  PdfPen, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
 {% endhighlight %}
 {% endtabs %}
 
 * Include the following code example in the click event of the button in `index.ts` to generate a PDF document 
 
 {% tabs %}
-{% highlight html tabtitle="index.ts" %}
-
+{% highlight ts tabtitle="index.ts" %}
 document.getElementById('normalButton').onclick = (): void => {
 // Create a new PDF document
         let pdf = new PdfDocument();
         // Add a new page
-        let page: PdfPage = document.addPage();
+        let page: PdfPage = pdf.addPage();
         // Get graphics from the page
         let graphics: PdfGraphics = page.graphics;
         // Set font
@@ -75,7 +76,6 @@ document.getElementById('normalButton').onclick = (): void => {
         // Destroy the PDF document instance
         pdf.destroy();
 };
-
 {% endhighlight %}
 {% endtabs %}
 
