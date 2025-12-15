@@ -14,9 +14,8 @@ The PDF provides support to add watermark or stamp with text and images in the P
 This example demonstrates how to add a text watermark using standard fonts in a PDF document by utilizing the `drawString` method of the `PdfGraphics` class along with predefined font types from the `PdfStandardFont` class. The transparency can be applied to the text using `setTransparency` method and rotation can be applied using `rotateTransform` method.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
-
-import { PdfDocument, PdfPage, PdfGraphics, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush} from '@syncfusion/ej2-pdf';
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfGraphics, PdfStandardFont, PdfGraphicsState, PdfFontFamily, PdfFontStyle, PdfBrush} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument();
@@ -25,7 +24,7 @@ let page: PdfPage = document.addPage();
 // Gets the graphics of the PDF page
 let graphics: PdfGraphics = page.graphics;
 // Create a new font
-let font: PdfFont = document.embedFont(PdfFontFamily.helvetica, 20, PdfFontStyle.regular);
+let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 20, PdfFontStyle.regular);
 // Save the graphics state
 let state: PdfGraphicsState = graphics.save();
 // Set graphics transparency
@@ -34,17 +33,15 @@ graphics.setTransparency(0.25);
 graphics.rotateTransform(-45);
 graphics.drawImage
 // Draw the string
-graphics.drawString('Imported using Syncfusion PDF', font, {x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
+graphics.drawString('Created by Syncfusion PDF', font, {x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
 // Restore the graphics state
 graphics.restore(state);
 // Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
+{% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument();
 // Access first page
@@ -61,26 +58,24 @@ graphics.setTransparency(0.25);
 graphics.rotateTransform(-45);
 graphics.drawImage
 // Draw the string
-graphics.drawString('Imported using Syncfusion PDF', font, {x: 10, y: 20, width: 100, height: 200}, new ej.pdf.({r: 0, g: 0, b: 255}));
+graphics.drawString('Created by Syncfusion PDF', font, {x: 10, y: 20, width: 100, height: 200}, new ej.pdf.({r: 0, g: 0, b: 255}));
 // Restore the graphics state
 graphics.restore(state);
 // Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
 {% endtabs %}
 
 The following code snippet explains how add a text watermark in an existing PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
-
+{% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfGraphics, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data, password);
+let document: PdfDocument = new PdfDocument(data);
 // Access first page
 let page: PdfPage = document.getPage(0);
 // Gets the graphics of the PDF page
@@ -95,19 +90,17 @@ graphics.setTransparency(0.25);
 graphics.rotateTransform(-45);
 graphics.drawImage
 // Draw the string
-graphics.drawString('Imported using Syncfusion PDF', font, {x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
+graphics.drawString('Created by Syncfusion PDF', font, {x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
 // Restore the graphics state
 graphics.restore(state);
 // Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
+{% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data, password);
+var document = new ej.pdf.PdfDocument(data);
 // Access first page
 var page = document.getPage(0);
 // Gets the graphics of the PDF page
@@ -122,14 +115,13 @@ graphics.setTransparency(0.25);
 graphics.rotateTransform(-45);
 graphics.drawImage
 // Draw the string
-graphics.drawString('Imported using Syncfusion PDF', font, {x: 10, y: 20, width: 100, height: 200}, new ej.pdf.PdfBrush({r: 0, g: 0, b: 255}));
+graphics.drawString('Created by Syncfusion PDF', font, {x: 10, y: 20, width: 100, height: 200}, new ej.pdf.PdfBrush({r: 0, g: 0, b: 255}));
 // Restore the graphics state
 graphics.restore(state);
 // Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -138,8 +130,7 @@ document.destroy();
 This example demonstrates how to add a image watermark using standard fonts in a PDF document by utilizing the `drawImage` method of the `PdfGraphics` class along with predefined font types from the `PdfStandardFont` class. The transparency can be applied to the images using `setTransparency` method.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
-
+{% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfGraphics, PdfBitmap} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
@@ -162,10 +153,8 @@ graphics.restore(state);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
+{% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument();
 // Access the first page
@@ -186,19 +175,17 @@ graphics.restore(state);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
 {% endtabs %}
 
 The following code snippet explains how add a image watermark in an existing PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
-
+{% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfGraphics, PdfBitmap} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data, password);
+let document: PdfDocument = new PdfDocument(data);
 // Access first page
 let page: PdfPage = document.getPage(0);
 // Gets the graphics of the PDF page
@@ -217,13 +204,10 @@ graphics.restore(state);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
-
+{% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data, password);
+var document = new ej.pdf.PdfDocument(data);
 // Access first page
 var page = document.getPage(0);
 // Gets the graphics of the PDF page
@@ -242,7 +226,6 @@ graphics.restore(state);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -251,8 +234,7 @@ document.destroy();
 This example demonstrates how to add a text watermark to an existing PDF document using the `PdfWatermarkAnnotation` class. The annotation allows you to specify the watermark text, color, opacity, and position to visually mark the document as confidential or draft.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
-
+{% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfWatermarkAnnotation} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
@@ -269,10 +251,8 @@ let annotation: PdfWatermarkAnnotation = new PdfWatermarkAnnotation('CONFIDENTIA
 page.annotations.add(watermark);
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
+{% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a new page (first page)
@@ -292,19 +272,17 @@ var annotation = new ej.pdf.PdfWatermarkAnnotation(
 page.annotations.add(annotation);
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
 {% endtabs %}
 
 The following code snippet explains how add a watermark annotation in an existing PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
-
+{% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfWatermarkAnnotation} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data, password);
+let document: PdfDocument = new PdfDocument(data);
 // Get the first page
 let page: PdfPage = document.getPage(0);
 // Create new watermark annotation
@@ -317,12 +295,10 @@ let annotation: PdfWatermarkAnnotation = new PdfWatermarkAnnotation('WaterMark',
 page.annotations.add(watermark);
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
+{% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data, password);
+var document = new ej.pdf.PdfDocument(data);
 // Get the first page
 var page = document.getPage(0);
 // Create new watermark annotation
@@ -335,22 +311,19 @@ opacity:0.3
 page.annotations.add(annotation);
 // Destroy the document
 document.destroy();
-
-
 {% endhighlight %}
 {% endtabs %}
 
 ## Removing Watermark Annotation
 
-Remove a watermark annotation from the page’s annotation collection using the `PdfAnnotationCollection` of the loaded page. The following example demonstrates how to achieve this.
+Remove a watermark annotation from the page's annotation collection using the `PdfAnnotationCollection` of the loaded page. The following example demonstrates how to achieve this.
 
 {% tabs %}
-{% highlight c# tabtitle="TypeScript" %}
-
+{% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfAnnotationCollection, PdfWatermarkAnnotation} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data, password);
+let document: PdfDocument = new PdfDocument(data);
 // Access first page
 let page: PdfPage = document.getPage(0);
 // Check if the first annotation is a watermark, then remove it
@@ -363,12 +336,10 @@ if (annotation instanceof PdfWatermarkAnnotation) {
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
-{% highlight c# tabtitle="JavaScript" %}
-
+{% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data, password);
+var document = new ej.pdf.PdfDocument(data);
 // Access first page
 var page = document.getPage(0);
 // Check if the first annotation is a watermark, then remove it
@@ -380,6 +351,5 @@ page.annotations.removeAt(0);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
-
 {% endhighlight %}
 {% endtabs %}

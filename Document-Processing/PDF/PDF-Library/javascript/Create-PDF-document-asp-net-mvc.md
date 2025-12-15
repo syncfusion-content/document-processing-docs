@@ -27,35 +27,31 @@ Step 4: Select Web Application pattern (MVC) for the project and then select **C
 Step 5: **Add script reference** : Add the required scripts using the CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` as follows:
 
 {% tabs %}
-{% highlight c# tabtitle="~/_Layout.cshtml" %}
-
+{% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 <head>
     ...
     <!-- Syncfusion JavaScript PDF Library (CDN) -->
     <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
 </head>
-
 {% endhighlight %}
 {% endtabs %}
- 
+
 Step 6: **Create a PDF document** : Add the script in `~/Views/Home/Index.cshtml` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Index.cshtml" %}
-
+{% highlight cshtml tabtitle="~/Index.cshtml" %}
 <div class="container py-4">
     <h1 class="h4 mb-3">Create PDF document</h1>
     <p class="text-muted">Click the button to generate and download a PDF.</p>
     <button id="btnCreatePdf" class="btn btn-primary">Generate PDF document</button>
 </div>
-
 @section Scripts {
     <script>
          document.getElementById('btnCreatePdf').addEventListener('click', function () {
         // Create a new PDF document
         let pdf = new ej.pdf.PdfDocument();
         // Add a new page
-        let page: ej.pdf.PdfPage = document.addPage();
+        let page: ej.pdf.PdfPage = pdf.addPage();
         // Get graphics from the page
         let graphics: ej.pdf.PdfGraphics = page.graphics;
         // Set font
@@ -71,7 +67,6 @@ Step 6: **Create a PDF document** : Add the script in `~/Views/Home/Index.cshtml
         });   
     </script>
 }
-
 {% endhighlight %}
 {% endtabs %}
 
