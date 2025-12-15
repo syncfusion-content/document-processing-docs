@@ -1,7 +1,7 @@
 ---
 layout: post
 title: UI Interaction for Organize Pages in Blazor PDF Viewer | Syncfusion
-description: Learn about the UI interactions for organize pages in the Syncfusion Blazor PDF Viewer control.
+description: Learn about the UI interactions for organize pages in the Syncfusion Blazor PDF Viewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

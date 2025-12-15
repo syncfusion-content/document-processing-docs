@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Programmatical Organize Pages in Syncfusion PDF Viewer | Syncfusion
-description: Learn here all about Programmatic Support for Organize Pages in Syncfusion Blazor PDF Viewer.
+description: Learn here all about the Programmatic Support for Organize Pages in Syncfusion Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -77,7 +77,7 @@ This method allows programmatic rotation of individual or multiple pages within 
 
 ## Move Pages
 
-This method allows asynchronously arranges the specified pages at the given target position. It rearrage the pages in the document based in the targeted index. Provide the indexes of the page to move and targeted index to move.
+This method allows asynchronously arranges the specified pages at the given target position. It rearrange the pages in the document based in the targeted index. Provide the indexes of the page to move and targeted index to move.
 
 {% tabs %}
 {% highlight razor %}
