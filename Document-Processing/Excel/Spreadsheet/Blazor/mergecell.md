@@ -9,18 +9,20 @@ documentation: ug
 
 # Merge cells in Blazor Spreadsheet component
 
-Cell merging combines adjacent cells into one larger cell. This is used to create headings, section labels, or grouped content for better readability. The Blazor Spreadsheet offers multiple merge actions, including merging an entire selection into one cell, merging across each row, and unmerging previously merged regions. The merge feature is enabled by default. To disable or enable merging, set the **AllowMerge** property to **false** or **true** as required.
+Merging cells in the Blazor Spreadsheet component allows you to combine adjacent cells into a single larger cell, improving layout and readability. This feature is commonly used to create headers, section labels, or grouped content for a structured view. To control this functionality, use the **AllowMerge** property, which enables or disables merge cell support in the Spreadsheet. The default value of the `AllowMerge` property is true.
+
+N> When `AllowMerge` is set to **`false`**, merge options are **disabled** in the Ribbon. API methods related to merging will also be inactive. Additionally, if the **worksheet is protected**, the merging feature is disabled. For more information, refer to the [Worksheet Protection](./protection#protect-sheet) documentation.
 
 ## Merge operations
 
-The following merge actions are available:
+The Blazor Spreadsheet supports the following merge operations:
 
 | Operation       | Description |
 | -- | -- |
-| Merge cells     | Merges the selected range into one cell. The top-left cell value is retained. |
-| Merge & center  | Merges the selected range and centers the content horizontally. The top-left cell value is retained. |
-| Merge across    | Merges cells across columns in each row of the selection. The first cell value in each row is retained. |
-| Unmerge cells   | Splits a merged region into individual cells. |
+| Merge cells     | Combines all selected cells into one single cell. The value from the top-left cell is kept. |
+| Merge & center  | Combines all selected cells into one single cell and centers the content horizontally. The value from the top-left cell is kept. |
+| Merge across    | Merges cells row by row across columns in the selection. Each row keeps its first cell value. |
+| Unmerge cells   | Reverses a merge and restores individual cells. The top-left cell value remains, and other cells are cleared. |
 
 N> The **Merge Cell** button is disabled when a single unmerged cell is selected. Merge options are also unavailable when the sheet is protected.
 
@@ -28,11 +30,18 @@ N> The **Merge Cell** button is disabled when a single unmerged cell is selected
 
 ### Merge cells via UI
 
-- Select a range.
+- Select a range of cells to merge.
 - Click on **Merge Cell** drop-down in the ribbon.
-- Choose one of the following options: **Merge & Center**, **Merge Across** or **Merge Cells**.
+- Choose one of the following option:
+   - **Merge & Center**
+   - **Merge Across**
+   - **Merge Cells**
 
 ![merge cells](./images/merge-cells.gif)
+
+When merging cells through the user interface, a validation dialog is displayed to inform that only the upper-left cell value will be retained and other values will be discarded.
+
+![merge cell validation message](./images/mergecell-dialog.png)
 
 N> Clicking the **Merge Cells** button (not the drop-down) applies the default action. If the selection is not merged, the cells are merged into a single cell. If the selection includes or intersects a merged range, that merged range is unmerged.
 
@@ -42,8 +51,8 @@ The [MergeAsync]() method merges cells based on the specified merge type. If the
 
 | Parameter | Type | Description |
 | -- | -- | -- |
-| mergeType | `MergeType` | Specifies the merge behavior.<br><br> Default **MergeType** is `MergeType.Cells`. Supported values:<br> - `Cells` - Merge the entire selection into one cell and preserve the top-left value;<br> - `Center` - Merge the entire selection and horizontally center the resulting cell’s content;<br> - `Across` - For each row in the selection, merge the cells across columns and preserve each row’s first cell value. |
-| cellRange | string (optional) | A1-style address of the target range (e.g., `"A1:C3"`). Leave it empty or pass `null` to use the current selection. |
+| mergeType | **MergeType** | Specifies the merge behavior.<br><br> the Default MergeType is `MergeType.Cells`. Supported values:<br> - `Cells` - Merge the entire selection into one cell and preserve the top-left value;<br> - `Center` - Merge the entire selection and horizontally center the resulting cell’s content;<br> - `Across` - For each row in the selection, merge the cells across columns and preserve each row’s first cell value. |
+| cellRange | string (optional) | Specifies the A1-style address of the range to unmerge (e.g., `"A1:D1"`). If not provided, the currently selected range will be unmerged. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -95,19 +104,19 @@ The [MergeAsync]() method merges cells based on the specified merge type. If the
 
 ### Unmerge cells via UI
 
-- Select a range.
-- Click on **Unmerge Cells** drop-down in the ribbon.
-- Choose **Unmerge Cells** option.
+- Select a range of cells to unmerge.
+- Click on **Merge Cell** drop-down in the ribbon.
+- Choose **Unmerge cells** option.
 
 ![unmerge cells](./images/unmerge-cells.gif)
 
 ### Unmerge cells programmatically.
 
-The [UnmergeAsync]() method splits merged cells back into individual cells. If the **cellRange** parameter is not provided, the current selection cell is unmerged. This method provides a programmatic way to unmerge cells without using the UI. The available parameters in the `UnmergeAsync` method are:
+The [UnmergeAsync]() method reverses a merge and restores individual cells. If the **cellRange** parameter is not provided, the current selection cell is unmerged. This method provides a programmatic way to unmerge cells without using the UI. The available parameters in the `UnmergeAsync` method are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
-| cellRange | string (optional) | A1-style address of the range to unmerge. Leave it empty or pass `null` to target the current selection. |
+| cellRange | string (optional) | Specifies the A1-style address of the range to unmerge (e.g., "A1:D1"). If not provided, the currently selected range will be unmerged. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -144,10 +153,6 @@ The [UnmergeAsync]() method splits merged cells back into individual cells. If t
 
 When perform merge cell in the Blazor Spreadsheet, validation messages are displayed in specific scenarios to inform about merge cell constraints:
 
-- **Merge cells value retention message** - When merging cells through the user interface, a validation dialog is displayed to inform that only the upper-left cell value will be retained and other values will be discarded.
-
-![merge cell validation message](./images/mergecell-dialog.png)
-
 - **Sorting with merged cells** - When sorting a range that contains merged cells, a validation dialog appears to indicate that sorting cannot proceed unless all merged cells are consistent in size.
 
 ![merge cell same cell size validation](./images/mergecell-same-size-cell.png)
@@ -155,4 +160,3 @@ When perform merge cell in the Blazor Spreadsheet, validation messages are displ
 - **Autofill on merged cells** - When performing autofill and dropping the fill handle onto merged cells, a validation dialog appears to indicate that autofill requires all merged cells to be the same size.
 
 ![merge cell same cell size validation](./images/mergecell-same-size-cell.png)
-
