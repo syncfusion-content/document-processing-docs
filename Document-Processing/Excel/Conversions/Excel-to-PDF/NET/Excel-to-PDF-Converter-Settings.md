@@ -2236,7 +2236,7 @@ End Namespace
 
 A complete working example to skip warning in Excel to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Warnings/.NET/Warnings).
 
-## Show File Name with Extension in Header and Footer
+## Show File Name
 
 This property allows you to display the file name along with its extension in the header and/or footer when converting an Excel document to PDF. It's default value is FALSE.
 
