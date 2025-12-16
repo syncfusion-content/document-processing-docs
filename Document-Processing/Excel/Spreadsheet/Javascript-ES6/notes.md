@@ -32,8 +32,8 @@ In the below example, you can add, edit, save, and delete notes.
 
 In the active worksheet, you can add a note in the following ways:
 
-* **Context Menu**: Right-click on the desired cell and select **"Add Note"**.
-* **Ribbon**: Select the cell, navigate to the **Review** tab, click the **"Notes"** dropdown, and select **"Add Note"**.
+* **Context Menu**: Right-click on the desired cell and select **Add Note**.
+* **Ribbon**: Select the cell, navigate to the **Review** tab, click the **Notes** dropdown, and select **Add Note**.
 * **Keyboard Shortcut**: Select the cell and press `Shift` + `F2`.
 
 A dialog box will open where you can enter the note content. After entering the content, you can either click on other cells or press the `Esc` button to automatically save the note and close the dialog box.
@@ -44,8 +44,8 @@ A dialog box will open where you can enter the note content. After entering the 
 
 In the active worksheet, you can modify the content of existing notes in the document:
 
-* **Context Menu**: Right-click on the cell containing the note and select **"Edit Note"**.
-* **Ribbon**: Select the cell containing the note, navigate to the **Review** tab, click the **"Notes"** dropdown, and select **"Edit Note"**.
+* **Context Menu**: Right-click on the cell containing the note and select **Edit Note**.
+* **Ribbon**: Select the cell containing the note, navigate to the **Review** tab, click the **Notes** dropdown, and select **Edit Note**.
 * **Keyboard Shortcut**: Select the cell containing the note and press `Shift` + `F2`.
 
 The note editor dialog box will open with the existing content. After editing the content, you can either click on other cells or press the `Esc` button to automatically save the changes and close the dialog box.
@@ -56,8 +56,8 @@ The note editor dialog box will open with the existing content. After editing th
 
 You can remove notes from cells using the following methods:
 
-* **Context Menu**: Right-click on the cell containing the note and select **"Delete Note"**.
-* **Ribbon**: Select the cell containing the note, navigate to the **Review** tab, click the **"Notes"** dropdown, and select **"Delete Note"**.
+* **Context Menu**: Right-click on the cell containing the note and select **Delete Note**.
+* **Ribbon**: Select the cell containing the note, navigate to the **Review** tab, click the **Notes** dropdown, and select **Delete Note**.
 
 The note will be removed from the cell, and the red triangle indicator will be removed.
 
@@ -65,40 +65,57 @@ The note will be removed from the cell, and the red triangle indicator will be r
 
 ## Navigating between notes
 
-The Spreadsheet provides navigation features to quickly move between cells containing notes in your worksheet. These navigation options are available in the **Notes** dropdown of the **Review** tab.
+The Syncfusion Spreadsheet provides intuitive navigation features to quickly move between cells containing notes in your worksheet. These options are accessible through the Notes dropdown in the Review tab.
 
 ### Previous Note
 
-To navigate to the previous note, select **"Previous Note"** from the **Notes** dropdown in the **Review** tab. The Spreadsheet will automatically select the cell containing the previous note, moving upward and leftward through the worksheet. If no previous note exists in the current worksheet, the selection will move to the previous worksheet in a circular order (wrapping to the last worksheet if currently on the first worksheet). The selection will remain on the current cell only if no notes exist in the entire workbook.
+To navigate to the previous note:
+
+* Select **Previous Note** from the **Notes** dropdown in the **Review** tab.
+* The Spreadsheet will automatically select the cell containing the previous note, scanning the worksheet upward and leftward.
+* If no prior note is found in the current worksheet, the search continues to the preceding worksheet in a sequential manner.
+* If no notes are present in the entire workbook, the selection stays on the current cell.
 
 ### Next Note
 
-To navigate to the next note, select **"Next Note"** from the **Notes** dropdown in the **Review** tab. The Spreadsheet will automatically select the cell containing the next note, moving downward and rightward through the worksheet. If no next note exists in the current worksheet, the selection will move to the next worksheet in a circular order (wrapping to the first worksheet if currently on the last worksheet). The selection will remain on the current cell only if no notes exist in the entire workbook.
+To navigate to the next note:
+
+* Select **Next Note** from the **Notes** dropdown in the **Review** tab.
+* The Spreadsheet will automatically select the cell containing the next note, scanning the worksheet downward and rightward.
+* If no subsequent note is found in the current worksheet, the search proceeds to the following worksheet in a sequential manner.
+* If no notes are present in the entire workbook, the selection stays on the current cell.
+
+This functionality streamlines the process of reviewing notes across worksheets, ensuring efficient traversal and discovery.
 
 ## Show/Hide Note
 
-The **Show/Hide Note** feature allows you to toggle the visibility of individual notes as sticky notes in the worksheet. When enabled, the note remains persistently visible as a floating text box, making it easier to reference important information without needing to hover over the cell.
+The **Show/Hide Note** feature allows you to toggle the visibility of individual notes as sticky notes within the worksheet. When enabled, the note appears as a persistent floating text box, making it convenient to reference key information without hovering over the cell.
 
-To toggle the show/hide state of a note:
+To toggle the visibility of a note:
 
-* **Context Menu**: Right-click on the cell containing the note and select **"Show/Hide Note"**.
-* **Ribbon**: Select the cell containing the note, navigate to the **Review** tab, click the **"Notes"** dropdown, and select **"Show/Hide Note"**.
+* **Context Menu**: Right-click the cell containing the note and select **Show/Hide Note**.
+* **Ribbon**: Select the cell, go to the **Review** tab, click the **Notes** dropdown, and choose **Show/Hide Note**.
 
 **Behavior:**
 
-* **Default State (Hidden)**: By default, notes are hidden and only appear when you hover over the cell with the red triangle indicator.
-* **Sticky State (Visible)**: When you toggle Show/Hide Note on a hidden note, it becomes visible as a sticky note that remains visible even when navigating to other cells.
-* **Toggle Functionality**: Selecting Show/Hide Note again on a visible sticky note will hide it, returning to the default state.
-* **Independent Control**: Each note can be toggled independently, allowing you to show only the notes that are most relevant to your current work.
-
+* **Default State (Hidden)**: Notes are hidden by default and only appear when hovering over the cell, which displays a red triangle indicator.
+* **Sticky State (Visible)**: Toggling Show/Hide Note on a hidden note makes it visible as a sticky note, which remains on display even when navigating to other cells or selections.
+* **Toggle Functionality**: Selecting Show/Hide Note again on a visible note hides it, reverting to the default state.
+* **Independent Control**: Each note can be toggled individually, allowing you to display only the most relevant notes for your current task.
 
 ## Show All Notes
 
-The **Show All Notes** feature allows you to display all notes in the current worksheet simultaneously as sticky notes, making it easier to review multiple comments at once.
+The **Show All Notes** feature enables you to display all notes in the current worksheet simultaneously as sticky notes, simplifying the review of multiple comments at a glance.
 
-To show all notes, navigate to the **Review** tab, click the **"Notes"** dropdown, and select **"Show All Notes"**. All notes in the current worksheet will be displayed as floating text boxes near their respective cells.
+To activate:
 
-> **Note**: After using Show All Notes, you can selectively hide individual notes using the **"Show/Hide Note"** option. When Show All Notes is enabled, any new notes added to the spreadsheet will automatically be displayed as sticky notes(visible notes).
+* Navigate to the **Review** tab, click the **Notes** dropdown, and select **Show All Notes**.
+
+All notes in the worksheet will appear as floating text boxes near their respective cells.
+
+> **Note**: After using Show All Notes, you can hide individual notes selectively via the **Show/Hide Note** option. Additionally, any new notes added to the worksheet will automatically appear as visible sticky notes when Show All Notes is active.
+
+This functionality enhances workflow efficiency by providing flexible control over note visibility, whether for individual focus or comprehensive review.
 
 ## Saving the document with notes
 
@@ -108,7 +125,7 @@ The Spreadsheet data, including notes, can be saved and exported as an Excel doc
 
 ## Disabling notes
 
-To disable the note functionality, you need to set the [`enableNotes`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#enablenotes) property to **false**. After disabling, the notes in the document will not be shown when opened in the Spreadsheet. The **"Add Note"** option will not be shown in the context menu. The keyboard shortcuts for the note functionality will not work.
+To disable the note functionality, you need to set the [`enableNotes`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#enablenotes) property to **false**. After disabling, the notes in the document will not be shown when opened in the Spreadsheet. The **Add Note** option will not be shown in the context menu. The keyboard shortcuts for the note functionality will not work.
 
 ![Spreadsheet with notes feature disabled](./images/spreadsheet_notes_disable.png)
 
