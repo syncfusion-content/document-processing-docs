@@ -20,11 +20,16 @@ var sheet = [
         cells: [
           {
             value: 'Sports Shoes',
-            notes:
-              'These shoes have the highest sales in terms of quantity this month.',
+            notes: {
+              text: 'These shoes have the highest sales in terms of quantity this month.',
+              isVisible: true
+            },
           },
           { value: 'IN STOCK' },
-          { value: 'Overstack' },
+          {
+            value: 'Overstack',
+            notes: { text: 'This website is best for buying sports shoes.' },
+          },
         ],
       },
       {
@@ -43,10 +48,7 @@ var sheet = [
       },
       {
         cells: [
-          {
-            value: 'Flip-Flops & Slippers',
-            notes: 'These shoes have been the most profitable this month.',
-          },
+          { value: 'Flip-Flops & Slippers' },
           { value: 'IN STOCK' },
           { value: 'Taobao' },
         ],
