@@ -72,15 +72,19 @@ This method inserts one or more sheets at a specified position in the workbook w
 {% endtabs %}
 
 
-### Get active worksheet
+### Get Active Worksheet Programmatically
 
-Retrieves key properties of the  [GetActiveWorksheet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_GetActiveWorksheet), including name, index, row and column counts, the active cell, and the current selection. Returns null when no active worksheet is available.
+Use the [GetActiveWorksheet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_GetActiveWorksheet) method to retrieve the currently active worksheet in the Spreadsheet component. This is particularly useful to perform operations relative to the current sheet selection. The method returns key properties of the active worksheet, such as its name, index, size (row and column counts), current active cell, and selected range. Returns null if no active worksheet is available.
+
+**Retrieve the active worksheet**
+
+This approach fetches the worksheet that is currently active (selected), enabling access to its properties or performing operations programmatically (for example, reading its name or ID, or using it as a context for further actions).
 
 {% tabs %}
 {% highlight razor %}
+@using Syncfusion.Blazor.Spreadsheet
 
 <button @onclick="GetActiveWorksheet">Get Active Worksheet</button>
-
 <SfSpreadsheet @ref=SpreadsheetInstance DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
@@ -101,23 +105,29 @@ Retrieves key properties of the  [GetActiveWorksheet](https://help.syncfusion.co
         var active = SpreadsheetInstance.GetActiveWorksheet();
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-### Get cell or range data
 
-Retrieves key properties of the  [GetData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_GetData_System_String_),  for a single cell or a selected range and returns a map keyed by each cell's address. Each value is a `CellData` built from the corresponding worksheet cell, including value, number format, formatted display text (when a format is applied), wrap state, lock state, optional hyperlink, and computed style. Returns null when the provided address is null or whitespace.
+
+### Get Worksheet Data Programmatically
+
+Use the [GetData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_GetData_System_String_) method to retrieve data from a worksheet, either from a single cell or a specified range. This API returns key information about each cell in the given address, making it ideal for extracting and processing spreadsheet data programmatically.
+
+**Retrieve cell or range data from an active worksheet**
+
+This method returns a dictionary where each key is a cell's address and its value is a `CellData` object. The returned data includes the raw value, number format, display text (with formatting, if any), wrap/lock status, hyperlink (if applicable), and calculated style. If no cell address is given, or if it is invalid, the result will be null.
 
 | Parameter | Type | Description |
-| -- | -- | -- |
-| cellAddress | string | Specifies the cell or range to read. Supports A1 addresses (for example, "A1"), ranges (for example, "A2:B5"), or sheet-qualified references (for example, "Sheet1!A1" or "Sheet1!A2:B5"). When a sheet name is specified, data is read from that sheet; otherwise, the active sheet is used. Null or whitespace results in no data being returned. |
+| :-- | :-- | :-- |
+| cellAddress | string | The address of the cell or range to read. Can use simple A1 (e.g., "A1"), range (e.g., "A2:B5"), or a sheet-qualified reference (e.g., "Sheet1!A2:B5"). If omitted or invalid, returns null. |
 
 {% tabs %}
 {% highlight razor %}
 
-<button @onclick="GetData">Get Data</button>
+@using Syncfusion.Blazor.Spreadsheet
 
+<button @onclick="GetData">Get Data</button>
 <SfSpreadsheet @ref=SpreadsheetInstance DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
@@ -136,6 +146,50 @@ Retrieves key properties of the  [GetData](https://help.syncfusion.com/cr/blazor
     {
         // Get the cellData snapshot
         var data = SpreadsheetInstance.GetData("Sheet2!D5:E6");
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+
+
+**Get cell or range data**
+
+This method retrieves data for a single cell or a selected range, returning a dictionary where each key is a cell's address and each value is a `CellData` object. This object contains important cell properties like its raw value, number format, formatted display text (if a format is applied), wrap text status, locked status, any hyperlinks (if applicable and not a formula), and computed style. If the `cellAddress` is null or contains only whitespace, this method returns null.
+
+| Parameter | Type | Description |
+| :-- | :-- | :-- |
+| cellAddress | string | Specifies the cell or range to read. Supports A1 addresses (for example, "A1"), ranges (for example, "A2:B5"), or sheet-qualified references (for example, "Sheet1!A1" or "Sheet1!A2:B5"). If a sheet name is specified, data is read from that sheet; otherwise, the active sheet is used. Null or whitespace results in no data being returned. |
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<button @onclick="GetData">Get Data</button>
+<SfSpreadsheet @ref=SpreadsheetInstance DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetInstance;
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public async Task GetData()
+    {
+        // Get data for a specific range
+        var data = SpreadsheetInstance.GetData("Sheet2!D5:E6");
+        // You can now iterate through `data` to access individual cell information
+        foreach (var entry in data)
+        {
+            Console.WriteLine($"Cell: {entry.Key}, Value: {entry.Value.Value}, DisplayText: {entry.Value.DisplayText}");
+        }
     }
 }
 
