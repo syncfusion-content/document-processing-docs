@@ -74,20 +74,20 @@ This method inserts one or more sheets at a specified position in the workbook w
 
 ### Get active worksheet
 
-Retrieves key properties of the  [GetActiveWorksheet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_GetActiveWorksheet_System_Nullable_System_Int32__System_Int32_:~:text=A1%22%2C%20%22New%20York%22), including name, index, row and column counts, the active cell, and the current selection. Returns null when no active worksheet is available.
+Retrieves key properties of the  [GetActiveWorksheet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_GetActiveWorksheet), including name, index, row and column counts, the active cell, and the current selection. Returns null when no active worksheet is available.
 
 {% tabs %}
 {% highlight razor %}
 
 <button @onclick="GetActiveWorksheet">Get Active Worksheet</button>
 
-<SfSpreadsheet @ref=SpreadsheetRef DataSource="DataSourceBytes">
+<SfSpreadsheet @ref=SpreadsheetInstance DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
     public byte[] DataSourceBytes { get; set; }
-    public SfSpreadsheet SpreadsheetRef;
+    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -98,7 +98,7 @@ Retrieves key properties of the  [GetActiveWorksheet](https://help.syncfusion.co
     public async Task GetActiveWorksheet()
     {
         // Get the active sheet snapshot
-        var active = spreadsheet.GetActiveWorksheet();
+        var active = SpreadsheetInstance.GetActiveWorksheet();
     }
 }
 
@@ -107,7 +107,7 @@ Retrieves key properties of the  [GetActiveWorksheet](https://help.syncfusion.co
 
 ### Get cell or range data
 
-Retrieves key properties of the  [GetData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_GetActiveWorksheet_System_Nullable_System_Int32__System_Int32_:~:text=Selected%3A%20%7Bactive.SelectedRange%7D%22),  for a single cell or a selected range and returns a map keyed by each cell's address. Each value is a `CellData` built from the corresponding worksheet cell, including value, number format, formatted display text (when a format is applied), wrap state, lock state, optional hyperlink, and computed style. Returns null when the provided address is null or whitespace.
+Retrieves key properties of the  [GetData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_GetData_System_String_),  for a single cell or a selected range and returns a map keyed by each cell's address. Each value is a `CellData` built from the corresponding worksheet cell, including value, number format, formatted display text (when a format is applied), wrap state, lock state, optional hyperlink, and computed style. Returns null when the provided address is null or whitespace.
 
 Parameters
 
@@ -122,13 +122,13 @@ Parameters
 
 <button @onclick="GetData">Get Data</button>
 
-<SfSpreadsheet @ref=SpreadsheetRef DataSource="DataSourceBytes">
+<SfSpreadsheet @ref=SpreadsheetInstance DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
     public byte[] DataSourceBytes { get; set; }
-    public SfSpreadsheet SpreadsheetRef;
+    public SfSpreadsheet SpreadsheetInstance;
 
     protected override void OnInitialized()
     {
@@ -138,8 +138,8 @@ Parameters
 
     public async Task GetData()
     {
-        // Get the active sheet snapshot
-        var data = spreadsheet.GetData("Sheet2!D5:E6");
+        // Get the cellData snapshot
+        var data = SpreadsheetInstance.GetData("Sheet2!D5:E6");
     }
 }
 
