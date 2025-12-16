@@ -37,7 +37,7 @@ To add **Blazor PDF Viewer** component in the app, open the NuGet package manage
 
 If using the WebAssembly or Auto interactive render mode, install the NuGet packages in the client project to add the component to the Web App.
 
-N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.116.1. Ensure this version is referenced.
+N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
 * [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
 
 ![SkiaSharp Views Blazor](gettingstarted-images/skia-sharp-image.png)
