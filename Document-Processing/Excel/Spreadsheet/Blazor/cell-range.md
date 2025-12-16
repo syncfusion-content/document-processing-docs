@@ -71,19 +71,19 @@ Autofill supports multiple behaviors that control how adjacent cells are populat
 
 #### Copy Cells
 
-Copies the source cell content and formatting to the selected destination range. After dragging the fill handle from the selection to the target area, choose Copy Cells from the AutoFillOptions menu to replicate both values and presentation. When the source contains formulas, relative references are adjusted to match the destination.
+Copies the source cell content and formatting to the selected destination range. After dragging the fill handle from the selection to the target area, choose **Copy Cells** from the **AutoFillOption** menu to replicate both values and presentation. When the source contains formulas, relative references are adjusted to match the destination.
 
 #### Fill Series
 
-Extends a recognizable pattern—such as numbers (1, 2, 3), days or months (Mon, Tue; Jan, Feb), or dates—into the destination range while preserving the source formatting. Drag the fill handle to the target cells and choose Fill Series in the AutoFillOptions menu to continue the detected sequence.
+Extends a recognizable pattern—such as numbers (1, 2, 3), days or months (Mon, Tue; Jan, Feb), or dates—into the destination range while preserving the source formatting. Drag the fill handle to the target cells and choose **Fill Series** in the **AutoFillOptions** menu to continue the detected sequence.
 
 #### Fill Formatting Only
 
-Applies only the source styling—number format, font, fill color, borders, and alignment—to the destination range, leaving existing values unchanged. Drag the fill handle over the target cells and select Fill Formatting Only from the AutoFillOptions menu to unify appearance without altering data.
+Applies only the source styling—number format, font, fill color, borders, and alignment—to the destination range, leaving existing values unchanged. Drag the fill handle over the target cells and select **Fill Formatting Only** from the **AutoFillOptions** menu to unify appearance without altering data.
 
 #### Fill Without Formatting
 
-Continues the detected series into the destination range but retains the destination’s existing formatting. After dragging the fill handle, choose Fill Without Formatting from the AutoFillOptions menu to apply only the new values while keeping the target style intact.
+Continues the detected series into the destination range but retains the destination’s existing formatting. After dragging the fill handle, choose **Fill Without Formatting** from the **AutoFillOptions** menu to apply only the new values while keeping the target style intact.
 
 The following illustration demonstrates the use of autofill in the Spreadsheet component.
 
