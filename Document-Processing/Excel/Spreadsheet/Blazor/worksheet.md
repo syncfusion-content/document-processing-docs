@@ -109,13 +109,9 @@ Retrieves key properties of the  [GetActiveWorksheet](https://help.syncfusion.co
 
 Retrieves key properties of the  [GetData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_GetData_System_String_),  for a single cell or a selected range and returns a map keyed by each cell's address. Each value is a `CellData` built from the corresponding worksheet cell, including value, number format, formatted display text (when a format is applied), wrap state, lock state, optional hyperlink, and computed style. Returns null when the provided address is null or whitespace.
 
-Parameters
-
-- `cellAddress` string: The cell or selected range to read. Supported forms:
-  - Single cell (for example, "A1")
-  - Selected range (for example, "A2:B5")
-  - Sheet-qualified (for example, "Sheet1!A1" or "Sheet1!A2:B5")
-  When a worksheet name is included, data is read from that worksheet; otherwise, the active worksheet is used.
+| Parameter | Type | Description |
+| -- | -- | -- |
+| cellAddress | string | Specifies the cell or range to read. Supports A1 addresses (for example, "A1"), ranges (for example, "A2:B5"), or sheet-qualified references (for example, "Sheet1!A1" or "Sheet1!A2:B5"). When a sheet name is specified, data is read from that sheet; otherwise, the active sheet is used. Null or whitespace results in no data being returned. |
 
 {% tabs %}
 {% highlight razor %}
