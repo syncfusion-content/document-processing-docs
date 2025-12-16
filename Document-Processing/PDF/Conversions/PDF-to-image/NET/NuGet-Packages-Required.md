@@ -34,11 +34,14 @@ WPF
 </td>
 </tr>
 <tr>
-<td>
-ASP.NET Core, Blazor
-</td>
+<td rowspan="2">Blazor, .NET Core and .NET Platforms</td>
 <td>
 {{'[Syncfusion.PdfToImageConverter.Net.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.Net/)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+{{'[Syncfusion.PdfToImageConverter.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.Net.Core/)'| markdownify }}
 </td>
 </tr>
 <tr>
