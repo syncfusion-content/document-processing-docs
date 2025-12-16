@@ -72,7 +72,7 @@ The Syncfusion Spreadsheet provides intuitive navigation features to quickly mov
 To navigate to the previous note:
 
 * Select **Previous Note** from the **Notes** dropdown in the **Review** tab.
-* The Spreadsheet will automatically select the cell containing the previous note, scanning the worksheet upward and leftward.
+* The Spreadsheet will automatically select the cell containing the previous note, scanning the worksheet leftward and upward.
 * If no prior note is found in the current worksheet, the search continues to the preceding worksheet in a sequential manner.
 * If no notes are present in the entire workbook, the selection stays on the current cell.
 
@@ -81,7 +81,7 @@ To navigate to the previous note:
 To navigate to the next note:
 
 * Select **Next Note** from the **Notes** dropdown in the **Review** tab.
-* The Spreadsheet will automatically select the cell containing the next note, scanning the worksheet downward and rightward.
+* The Spreadsheet will automatically select the cell containing the next note, scanning the worksheet rightward and downward.
 * If no subsequent note is found in the current worksheet, the search proceeds to the following worksheet in a sequential manner.
 * If no notes are present in the entire workbook, the selection stays on the current cell.
 
