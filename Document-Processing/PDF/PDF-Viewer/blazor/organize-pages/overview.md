@@ -37,7 +37,7 @@ You can easily change the sequence of pages within your document using the drag 
 
 * `Drag and drop`: Click and drag a page thumbnail to the desired position within the document, then release it to rearrange the page order.
 
-![Drag and Drop Organize](./images/rotate-rearrange.gif)
+![Drag and Drop Organize](./images/Drag_and_Drop.gif)
 
 ### Inserting new pages
 
@@ -74,7 +74,13 @@ Seamlessly import a PDF document into your existing document:
 
 * `Import PDF document`: Click the **Import Document** button to import a PDF. If a page is selected, the imported document’s thumbnail will be inserted to the right of the selected page. If multiple or no pages are selected, the thumbnail will be added as the first page. When **Save** or **Save As** is clicked, the imported PDF will be merged with the current document. You can insert a blank page to the left or right of the imported thumbnail, delete it, or drag and drop it to reposition as needed.
 
-![Alt text](./images/import.gif)
+![Alt text](./images/Import_Pages.gif)
+
+### Extract Document Pages
+
+* `Extract Document Pages`: Click the **Extract Document** button to extract a PDF pages. If a pages are selected, the selected pages are extracted as a separate document.
+
+![Alt text](./images/Extract_Pages.gif)
 
 ### Selecting all pages
 

@@ -40,6 +40,10 @@ The following list of dependencies are required to use the `TypeScript PDF libra
 {% endhighlight %}
 {% endtabs %}
 
+N> For the TypeScript platform, place the **openjpeg** folder in the same location as your `index.html` file. Ensure that your application includes an `openjpeg` folder under `Scripts` (or any publicly accessible static path). This folder must contain the following:
+*   `openjpeg.js`
+*   `openjpeg.wasm`
+
 Along with the PDF file from which you want to extract images. Keep these files in the same static content area as `ej2.min.js` to ensure proper loading.
 
 * Include the following namespaces in `index.ts` file.
@@ -58,7 +62,7 @@ document.getElementById('normalButton').onclick = (): void => {
 // Create a new PDF document
         let pdf = new PdfDocument();
         // Add a new page
-        let page: PdfPage = document.addPage();
+        let page: PdfPage = pdf.addPage();
         // Get graphics from the page
         let graphics: PdfGraphics = page.graphics;
         // Set font
