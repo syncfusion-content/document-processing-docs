@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# How to assign data to multiple rows and columns in parallel without exceptions?
+# Write Data to Multiple Cells in Parallel Without Errors?
 
 When values are written to a worksheet range, XlsIO stores the data in an internal collection. If a Parallel.For loop writes to the same range simultaneously, the same value can be added twice, causing an exception.
 The solution is to wrap each write operation in a lock/SyncLock, ensuring that only one thread updates the collection at a time.
@@ -114,4 +114,4 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to assign data to multiple rows and columns parallelly using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Parallel%20Write/.NET/Parallel%20Write">this GitHub page</a>.
+A complete working example of assigning data to multiple rows and columns in parallel using C# is available on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Parallel%20Write/.NET/Parallel%20Write">this GitHub page</a>.
