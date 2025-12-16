@@ -9,7 +9,7 @@ documentation: ug
 
 # Notes in EJ2 TypeScript Spreadsheet control
 
-The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [`enableNotes`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#enablenotes) property, which defaults to **true**.
+The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#enablenotes) property, which defaults to **true**.
 
 When opening the Excel document with notes in the Spreadsheet, they will be displayed in the control. The cells containing notes will be indicated with a red colored triangle at the top-right corner. Hovering the mouse over these cells will display the content of the notes.
 
@@ -32,11 +32,11 @@ In the below example, you can add, edit, save, and delete notes.
 
 In the active worksheet, you can add a note in the following ways:
 
-* **Context Menu**: Right-click on the desired cell and select **Add Note**.
+* **Context Menu**: Right-click the desired cell and select **Add Note**.
 * **Ribbon**: Select the cell, navigate to the **Review** tab, click the **Notes** dropdown, and select **Add Note**.
-* **Keyboard Shortcut**: Select the cell and press `Shift` + `F2`.
+* **Keyboard Shortcut**: Select the cell and press <kbd>Shift</kbd> + <kbd>F2</kbd>.
 
-A dialog box will open where you can enter the note content. After entering the content, you can either click on other cells or press the `Esc` button to automatically save the note and close the dialog box.
+A dialog box will open where you can enter the note content. After entering the content, you can either click on other cells or press the <kbd>Esc</kbd> button to automatically save the note and close the dialog box.
 
 ![Adding a note in Spreadsheet](./images/spreadsheet_add_note.gif)
 
@@ -44,19 +44,19 @@ A dialog box will open where you can enter the note content. After entering the 
 
 In the active worksheet, you can modify the content of existing notes in the document:
 
-* **Context Menu**: Right-click on the cell containing the note and select **Edit Note**.
+* **Context Menu**: Right-click the cell containing the note and select **Edit Note**.
 * **Ribbon**: Select the cell containing the note, navigate to the **Review** tab, click the **Notes** dropdown, and select **Edit Note**.
-* **Keyboard Shortcut**: Select the cell containing the note and press `Shift` + `F2`.
+* **Keyboard Shortcut**: Select the cell containing the note and press <kbd>Shift</kbd> + <kbd>F2</kbd>.
 
-The note editor dialog box will open with the existing content. After editing the content, you can either click on other cells or press the `Esc` button to automatically save the changes and close the dialog box.
+The note editor dialog box will open with the existing content. After editing the content, you can either click on other cells or press the <kbd>Esc</kbd> button to automatically save the changes and close the dialog box.
 
 ![Editing a note in Spreadsheet](./images/spreadsheet_edit_note.gif)
 
 ## Deleting a note
 
-You can remove notes from cells using the following methods:
+You can remove notes from cells using the following ways:
 
-* **Context Menu**: Right-click on the cell containing the note and select **Delete Note**.
+* **Context Menu**: Right-click the cell containing the note and select **Delete Note**.
 * **Ribbon**: Select the cell containing the note, navigate to the **Review** tab, click the **Notes** dropdown, and select **Delete Note**.
 
 The note will be removed from the cell, and the red triangle indicator will be removed.
@@ -65,31 +65,31 @@ The note will be removed from the cell, and the red triangle indicator will be r
 
 ## Navigating between notes
 
-The Syncfusion Spreadsheet provides intuitive navigation features to quickly move between cells containing notes in your worksheet. These options are accessible through the Notes dropdown in the Review tab.
+The Syncfusion Spreadsheet provides intuitive navigation to quickly move between cells containing notes in your worksheet. These options are accessible through the **Notes** dropdown in the **Review** tab.
 
 ### Previous Note
 
 To navigate to the previous note:
 
-* Select **Previous Note** from the **Notes** dropdown in the **Review** tab.
-* The Spreadsheet will automatically select the cell containing the previous note, scanning the worksheet leftward and upward.
-* If no prior note is found in the current worksheet, the search continues to the preceding worksheet in a sequential manner.
-* If no notes are present in the entire workbook, the selection stays on the current cell.
+* In the **Review** tab, open the **Notes** dropdown and select **Previous Note**.
+* The Spreadsheet will automatically select the previous note in the current worksheet, searching leftward and then upward.
+* If no prior note exists in the sheet, the search continues to the previous worksheet in order.
+* If the workbook contains no notes, the selection remains on the current cell.
 
 ### Next Note
 
 To navigate to the next note:
 
-* Select **Next Note** from the **Notes** dropdown in the **Review** tab.
-* The Spreadsheet will automatically select the cell containing the next note, scanning the worksheet rightward and downward.
-* If no subsequent note is found in the current worksheet, the search proceeds to the following worksheet in a sequential manner.
-* If no notes are present in the entire workbook, the selection stays on the current cell.
+*  In the **Review** tab, open the **Notes** dropdown and select **Next Note**.
+* The Spreadsheet will automatically select the next note in the current worksheet, searching rightward and then downward.
+* If no subsequent note exists in the sheet, the search continues to the next worksheet in order.
+* If the workbook contains no notes, the selection remains on the current cell.
 
 This functionality streamlines the process of reviewing notes across worksheets, ensuring efficient traversal and discovery.
 
 ## Show/Hide Note
 
-The **Show/Hide Note** feature allows you to toggle the visibility of individual notes as sticky notes within the worksheet. When enabled, the note appears as a persistent floating text box, making it convenient to reference key information without hovering over the cell.
+The **Show/Hide Note** allows you to toggle the visibility of individual notes as sticky notes within the worksheet. When enabled, the note appears as a persistent floating text box, making it convenient to reference key information without hovering over the cell.
 
 To toggle the visibility of a note:
 
@@ -105,7 +105,7 @@ To toggle the visibility of a note:
 
 ## Show All Notes
 
-The **Show All Notes** feature enables you to display all notes in the current worksheet simultaneously as sticky notes, simplifying the review of multiple comments at a glance.
+The **Show All Notes** enables you to display all notes in the current worksheet simultaneously as sticky notes, simplifying the review of multiple comments at a glance.
 
 To activate:
 
@@ -125,7 +125,7 @@ The Spreadsheet data, including notes, can be saved and exported as an Excel doc
 
 ## Disabling notes
 
-To disable the note functionality, you need to set the [`enableNotes`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#enablenotes) property to **false**. After disabling, the notes in the document will not be shown when opened in the Spreadsheet. The **Add Note** option will not be shown in the context menu. The keyboard shortcuts for the note functionality will not work.
+To disable the note functionality, you need to set the [enableNotes](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#enablenotes) property to **false**. After disabling, the notes in the document will not be shown when opened in the Spreadsheet. The **Add Note** option will not be shown in the context menu. The keyboard shortcuts for the note functionality will not work.
 
 ![Spreadsheet with notes feature disabled](./images/spreadsheet_notes_disable.png)
 
@@ -144,9 +144,9 @@ In the below example, the note functionality is disabled in the Spreadsheet.
 
 ## Integrating notes during initial loading and using cell data binding
 
-The notes can be added initially when the Spreadsheet loads using cell data binding. You need to use the `notes` property in the cell settings to add notes to the Spreadsheet.
+The notes can be added initially when the Spreadsheet loads using cell data binding. You need to use the [notes](https://ej2.syncfusion.com/documentation/api/spreadsheet/cell#notes) property in the cell settings to add notes to the Spreadsheet.
 
-In the below example, you can navigate between notes using Previous Note and Next Note options, toggle individual note visibility with Show/Hide Note, and display all notes at once using Show All Notes.
+In the below example, you can navigate between notes using **Previous Note** and **Next Note** options, toggle individual note visibility with **Show/Hide Note**, and display all notes at once using **Show All Notes**.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
