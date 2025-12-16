@@ -11,7 +11,7 @@ documentation: ug
 
 The SfPdfViewer control supports adding, editing, and deleting text markup annotations, including highlight, underline, strikethrough, and squiggly, in a PDF document.
 
-![Blazor SfPdfViewer showing text markup annotations](../../blazor-classic/images/blazor-pdfviewer-text-markup-annotation.png)
+![Blazor SfPdfViewer showing text markup annotations](../images/blazor-pdfviewer-text-markup-annotation.png)
 
 ## Adding text markup annotation to the PDF Document
 
@@ -26,7 +26,7 @@ There are two ways to highlight text in a PDF document.
 * Select text in the PDF document and right-click it.
 * Select the **Highlight** option in the context menu.
 
-![Context menu with Highlight option in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-highlight-context.png)
+![Context menu with Highlight option in Blazor SfPdfViewer](../images/blazor-pdfviewer-highlight-context.png)
 
 **Using the annotation toolbar.**
 
@@ -72,7 +72,7 @@ There are two ways to underline text in a PDF document.
 * Select text in the PDF document and right-click it.
 * Select the **Underline** option in the context menu.
 
-![Context menu with Underline option in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-underline-context-menu.png)
+![Context menu with Underline option in Blazor SfPdfViewer](../images/blazor-pdfviewer-underline-context-menu.png)
 
 **Using the annotation toolbar.**
 
@@ -118,7 +118,7 @@ Using the context menu.
 * Select text in the PDF document and right-click it.
 * Select the **Strikethrough** option in the context menu.
 
-![Context menu with Strikethrough option in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-strike-through-in-contextmenu.png)
+![Context menu with Strikethrough option in Blazor SfPdfViewer](../images/blazor-pdfviewer-strike-through-in-contextmenu.png)
 
 **Using the annotation toolbar.**
 
