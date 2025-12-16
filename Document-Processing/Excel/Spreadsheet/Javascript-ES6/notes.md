@@ -89,7 +89,7 @@ This functionality streamlines the process of reviewing notes across worksheets,
 
 ## Show/Hide Note
 
-The **Show/Hide Note** allows you to toggle the visibility of individual notes as sticky notes within the worksheet. When enabled, the note appears as a persistent floating text box, making it convenient to reference key information without hovering over the cell.
+The **Show/Hide Note** option allows you to toggle the visibility of individual notes as sticky notes within the worksheet. When enabled, the note appears as a persistent floating text box, making it convenient to reference key information without hovering over the cell.
 
 To toggle the visibility of a note:
 
@@ -105,7 +105,7 @@ To toggle the visibility of a note:
 
 ## Show All Notes
 
-The **Show All Notes** enables you to display all notes in the current worksheet simultaneously as sticky notes, simplifying the review of multiple comments at a glance.
+The **Show All Notes** option enables you to display all notes in the current worksheet simultaneously as sticky notes, simplifying the review of multiple comments at a glance.
 
 To activate:
 
