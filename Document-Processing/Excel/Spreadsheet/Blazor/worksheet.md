@@ -71,6 +71,83 @@ This method inserts one or more sheets at a specified position in the workbook w
 {% endhighlight %}
 {% endtabs %}
 
+
+### Get Active Worksheet Programmatically
+
+The [GetActiveWorksheet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_GetActiveWorksheet) method retrieves properties of the active worksheet. This method is useful when it is necessary to obtain details about the currently active sheet. If no worksheet is active, this method returns null.
+
+**Retrieve the active worksheet**
+
+This method retrieves details of the currently active worksheet. Properties of the active worksheet, such as sheet name, index, or selected range, can be accessed for diagnostics, automation, or integration with other logic.
+
+{% tabs %}
+{% highlight razor %}
+@using Syncfusion.Blazor.Spreadsheet
+
+<button @onclick="GetActiveWorksheet">Get Active Worksheet</button>
+<SfSpreadsheet @ref=SpreadsheetInstance DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetInstance;
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public async Task GetActiveWorksheet()
+    {
+        // Get the active sheet snapshot
+        var active = SpreadsheetInstance.GetActiveWorksheet();
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Get Worksheet Data Programmatically
+
+The [GetData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_GetData_System_String_) method retrieves content from the worksheet. This method provides data as a dictionary, where each entry consists of a cell address and its associated `CellData` object. The returned data includes the actual value, number format, display text, wrap and lock status, hyperlinks, and calculated style of each cell in the target area. If the specified cell address is invalid or not set, the method returns null.
+
+**Retrieve cell or range data from an active worksheet**
+
+Call this method by passing the desired cell or range as the address. For example, provide a reference such as "A1" for a single cell, "A2:B5" for a range, or "Sheet1!A2:B5" to target a range on a specific sheet. The result can be iterated to read individual cell data for further processing, logging, or custom display.
+
+| Parameter | Type | Description |
+| :-- | :-- | :-- |
+| cellAddress | string | Specifies the cell or range to read. Supports addresses such as "A1", "A2:B5", or "Sheet1!A2:B5". If omitted or invalid, the return value is null. |
+
+{% tabs %}
+{% highlight razor %}
+@using Syncfusion.Blazor.Spreadsheet
+
+<button @onclick="GetData">Get Data</button>
+<SfSpreadsheet @ref=SpreadsheetInstance DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetInstance;
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public async Task GetData()
+    {
+        // Get the cellData snapshot
+        var data = SpreadsheetInstance.GetData("Sheet2!D5:E6");
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 **Insert a single sheet with a user-defined name**
 
 This method adds one sheet at a specific position with a user-defined name. Each call to this method adds only one sheet. Using meaningful names like "Budget" or "Inventory" makes the workbook easier to understand. If a negative index value is provided, the method will exit without adding any sheet.

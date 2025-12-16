@@ -40,3 +40,24 @@ private void OnDocumentLoaded(object sender, EventArgs e)
 }
 {% endhighlight %}
 {% endtabs %}
+
+## AnnotationsLoaded event
+The AnnotationsLoaded event occurs after all annotations in the PDF have finished loading, either when the document is opened or when annotations are imported. You can use this event to perform actions once annotations are fully available in the viewer. 
+The following example explains how to wire and handle the event.
+
+{% tabs %}
+{% highlight c# %}
+
+void WireAnnotationsLoadedEvent() 
+{ 
+    // Wire the annotations loaded event of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
+    pdfViewer.AnnotationsLoaded += OnAnnotationsLoaded; 
+} 
+
+private void OnAnnotationsLoaded(object? sender, EventArgs e) 
+{ 
+    Debug.WriteLine("All annotations have been loaded."); 
+}
+
+{% endhighlight %}
+{% endtabs %}
