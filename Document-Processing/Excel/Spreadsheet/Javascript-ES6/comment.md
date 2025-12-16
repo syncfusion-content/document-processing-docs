@@ -82,19 +82,19 @@ You can also use the `isResolved` property in the comment model when initializin
 ## Deleting a comment or reply
 You can delete either a specific reply or an entire comment thread (including all replies) using the following options:
 
-### Delete a reply
-In the comment container, hover over the reply and click the **⋯ (More actions)** menu then select **Delete Comment**.
-
-![Deleting a comment reply in Spreadsheet](./images/spreadsheet_delete-reply_comment.png)
-
 ### Deleting a comment thread
 * **Context menu**: Right-click the cell that contains the comment and select **Comment > Delete Comment**.
 * **Ribbon**: Use **Review > Comment > Delete Comment** on a cell that contains the comment.
 * **Comment container**: In the comment container, click the **⋯ (More thread actions)** menu in the header and select **Delete Thread** for an active comment or use the **Delete Thread** button in container header for a resolved comment.
 
+![Deleting a comment thread in Spreadsheet](./images/spreadsheet_delete_comment.png)
+
 Deleting a thread removes the comment and all its replies from the cell.
 
-![Deleting a comment thread in Spreadsheet](./images/spreadsheet_delete_comment.png)
+### Delete a reply
+In the comment container, hover over the reply and click the **⋯ (More actions)** menu then select **Delete Comment**.
+
+![Deleting a comment reply in Spreadsheet](./images/spreadsheet_delete-reply_comment.png)
 
 ## Next and Previous Comment
 
