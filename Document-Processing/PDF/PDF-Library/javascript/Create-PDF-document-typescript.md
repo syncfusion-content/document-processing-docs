@@ -14,6 +14,21 @@ The Syncfusion<sup>&reg;</sup> TypeScript PDF library is used to create, read, a
 
 This guide explains how to integrate the TypeScript PDF library into an TypeScript application.
 
+## Installing Syncfusion<sup>&reg;</sup> JavaScript PDF package
+
+All the available JS 2 packages are published in `npmjs.com` registry.
+
+* To install PDF component, use the following command.
+
+```bash
+npm install @syncfusion/ej2-pdf --save
+```
+N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
+For the TypeScript platform, place the **openjpeg** folder in the same location as your `index.html` file. Ensure that your application includes an `openjpeg` folder under `Scripts` (or any publicly accessible static path). This folder must contain the following:
+*   `openjpeg.js`
+*   `openjpeg.wasm`
+Along with the PDF file from which you want to extract images.
+
 ## Dependencies
 
 The following list of dependencies are required to use the `TypeScript PDF library` component in your application.
@@ -39,12 +54,6 @@ The following list of dependencies are required to use the `TypeScript PDF libra
 </html>
 {% endhighlight %}
 {% endtabs %}
-
-N> For the TypeScript platform, place the **openjpeg** folder in the same location as your `index.html` file. Ensure that your application includes an `openjpeg` folder under `Scripts` (or any publicly accessible static path). This folder must contain the following:
-*   `openjpeg.js`
-*   `openjpeg.wasm`
-
-Along with the PDF file from which you want to extract images. Keep these files in the same static content area as `ej2.min.js` to ensure proper loading.
 
 * Include the following namespaces in `index.ts` file.
 
