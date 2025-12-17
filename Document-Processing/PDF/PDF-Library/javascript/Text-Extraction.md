@@ -48,7 +48,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Extract Text from Specific Page Range in a PDF Document
+## Extract text from specific page range in a PDF document
 
 This example demonstrates how to extract text from a PDF document by specifying a start and end page number. This approach allows you to retrieve text content from a defined range of pages for processing or analysis.
 
@@ -124,9 +124,9 @@ document.destroy();
 
 N> Layout based text extraction may take additional processing time when compared to the normal extraction mode.
 
-## Text Extraction with Bounds
+## Text extraction with bounds
 
-### Working with Lines
+### Working with lines
 
 This example demonstrates how to extract text from a PDF page based on individual lines using the `extractTextLines` method. This approach provides a collection of `TextLine` objects, allowing precise access to text content line by line.
 

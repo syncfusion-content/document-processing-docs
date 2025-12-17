@@ -237,7 +237,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Watermark Annotation
+## Adding watermark annotation
 
 This example demonstrates how to add a text watermark to an existing PDF document using the `PdfWatermarkAnnotation` class. The annotation allows you to specify the watermark text, color, opacity, and position to visually mark the document as confidential or draft.
 
@@ -326,7 +326,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Removing Watermark Annotation
+## Removing watermark annotation
 
 Remove a watermark annotation from the page's annotation collection using the `PdfAnnotationCollection` of the loaded page. The following example demonstrates how to achieve this.
 

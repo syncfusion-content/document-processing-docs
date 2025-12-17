@@ -45,7 +45,6 @@ destination.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Importing pages from multiple documents
 
 This section demonstrates how to import multiple pages from a source PDF into a destination document at a specified position using the `importPageRange` method and `PdfPageImportOptions`. This is useful for merging selected page ranges from different PDFs into one document.
