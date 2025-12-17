@@ -36,6 +36,7 @@ In the active worksheet, you can add a note in the following ways:
 * **Context Menu**: Right-click the desired cell and select **Add Note**.
 * **Ribbon**: Select the cell, navigate to the **Review** tab, click the **Notes** dropdown, and select **Add Note**.
 * **Keyboard Shortcut**: Select the cell and press <kbd>Shift</kbd> + <kbd>F2</kbd>.
+* **Programmatically**: Use the `updateCell` method with the note model to add a note to a specific cell.
 
 A dialog box will open where you can enter the note content. After entering the content, you can either click on other cells or press the <kbd>Esc</kbd> button to automatically save the note and close the dialog box.
 
@@ -148,7 +149,7 @@ In the below example, the note functionality is disabled in the Spreadsheet.
 
 The notes can be added initially when the Spreadsheet loads using cell data binding. You need to use the `notes` property in the cell settings to add notes to the Spreadsheet.
 
-In the below example, you can navigate between notes using **Previous Note** and **Next Note** options, toggle individual note visibility with **Show/Hide Note**, and display all notes at once using **Show All Notes**.
+In the below example, you can navigate between notes using **Previous Note** and **Next Note** options, toggle individual note visibility with **Show/Hide Note**, display all notes at once using **Show All Notes** and see how notes are added using the `updateCell` method in the `created` event.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}

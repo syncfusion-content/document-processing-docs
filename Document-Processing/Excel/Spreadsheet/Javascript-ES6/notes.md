@@ -147,7 +147,7 @@ In the below example, the note functionality is disabled in the Spreadsheet.
 
 The notes can be added initially when the Spreadsheet loads using cell data binding. You need to use the `notes` property in the cell settings to add notes to the Spreadsheet.
 
-In the below example, you can navigate between notes using **Previous Note** and **Next Note** options, toggle individual note visibility with **Show/Hide Note**, display all notes at once using **Show All Notes** and how notes are added using `updateCell` method in the `created` event.
+In the below example, you can navigate between notes using **Previous Note** and **Next Note** options, toggle individual note visibility with **Show/Hide Note**, display all notes at once using **Show All Notes** and see how notes are added using the `updateCell` method in the `created` event.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
