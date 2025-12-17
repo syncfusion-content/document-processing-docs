@@ -26,10 +26,7 @@ var sheet = [
             },
           },
           { value: 'IN STOCK' },
-          {
-            value: 'Overstack',
-            notes: { text: 'This website is best for buying sports shoes.' },
-          },
+          { value: 'Overstack' },
         ],
       },
       {
@@ -86,6 +83,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
   saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
   created: function () {
     spreadsheet.cellFormat({ fontWeight: 'bold' }, 'A1:C1');
+    spreadsheet.updateCell({ notes: { text: 'This website is best for buying sports shoes.' } }, 'C3:C3')
   }
 });
 spreadsheet.appendTo('#spreadsheet');

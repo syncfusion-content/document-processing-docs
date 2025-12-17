@@ -28,10 +28,7 @@ let sheet: SheetModel[] = [
             },
           },
           { value: 'IN STOCK' },
-          {
-            value: 'Overstack',
-            notes: { text: 'This website is best for buying sports shoes.' },
-          },
+          { value: 'Overstack' },
         ],
       },
       {
@@ -89,6 +86,7 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
   saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
   created: function (): void {
     spreadsheet.cellFormat({ fontWeight: 'bold' }, 'A1:C1');
+    spreadsheet.updateCell({ notes: { text: 'This website is best for buying sports shoes.' } }, 'C3:C3')
   }
 });
 spreadsheet.appendTo('#spreadsheet');
