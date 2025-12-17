@@ -126,6 +126,54 @@ End Using
 
 A complete working example to add a text box in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Text%20Box/.NET/Text%20Box). 
 
+**Lock Text in Text Box**
+ 
+Enabling the **LockText** property of <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITextBox.html">ITextBox</a> prevents editing the text inside a text box. This setting takes effect only when the worksheet is protected.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Create a new text box
+ITextBoxShape textbox = sheet.TextBoxes.AddTextBox(2, 2, 30, 200);
+
+//Add text to the text box
+textbox.Text = "Text Box 1";
+
+//Enable LockText property to prevent editing
+textbox.LockText = true;
+
+//Protect the worksheet
+sheet.Protect("syncfusion");
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Create a new text box
+ITextBoxShape textbox = sheet.TextBoxes.AddTextBox(2, 2, 30, 200);
+
+//Add text to the text box
+textbox.Text = "Text Box 1";
+
+//Enable LockText property to prevent editing
+textbox.LockText = true;
+
+//Protect the worksheet
+sheet.Protect("syncfusion");
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Create a new text box
+Dim textBox As ITextBoxShape = sheet.TextBoxes.AddTextBox(2, 2, 30, 200)
+
+'Add text to the text box
+textBox.Text = "Text Box 1"
+
+'Enable LockText property to prevent editing 
+textBox.LockText = True
+
+'Protect the worksheet
+sheet.Protect("syncfusion")
+{% endhighlight %}
+{% endtabs %}
+
 **Text Box in Chart**
 
 Syncfusion<sup>&reg;</sup> XlsIO supports creating and reading text box within Excel chart. The following code example illustrates this.
