@@ -112,7 +112,7 @@ sourceDocument2.destroy();
 
 ## Optimizing PDF resources when merging PDF documents
 
-Imports a page from a source PDF into a destination document at a specific index with group form fiels, rotation and resource optimization using `PdfPageImportOptions` class.
+Imports a page from a source PDF into a destination document at a specific index with group form fields, rotation and resource optimization using `PdfPageImportOptions` class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
