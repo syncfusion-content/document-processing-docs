@@ -9,7 +9,7 @@ documentation: UG
 
 In PDF, hyperlinks can be added to allow the users to navigate to another part of PDF file, web page or any other external content.
 
-## Working with Web navigation
+## Working with web navigation
 
 This example demonstrates how to create a web link annotation in a PDF document using the `PdfTextWebLinkAnnotation` class. A web link annotation allows users to navigate to a specified URL directly from the PDF by clicking the annotated text.
 

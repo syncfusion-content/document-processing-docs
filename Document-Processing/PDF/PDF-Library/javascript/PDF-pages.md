@@ -391,7 +391,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Insert a Duplicate Page at a Specific Index
+## Insert a duplicate Page at a specific index
 
 Duplicates a page from a source PDF and inserts it into the destination document at the specified index using `PdfPageImportOptions.targetIndex`. This is useful for reusing or cloning content across documents or within the same document.
 

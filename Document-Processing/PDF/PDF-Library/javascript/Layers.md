@@ -12,7 +12,7 @@ Layers, also known as Option Content refers to sections of content in a PDF docu
 
 JavaScript PDF provides support to create, add and merge the layers into PDF document.
 
-## Adding Layers in a PDF document
+## Adding layers in a PDF document
 
 This example demonstrates how to add layers to a PDF document using the `PdfLayer` class. Layers allow you to organize content into separate, optional sections that can be shown or hidden by the user.
 
@@ -113,7 +113,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Nested Layers
+## Nested layers
 
 This example demonstrates how to create nested layers in a PDF document using the `PdfLayer` class. Nested layers enable hierarchical organization of content for better control and user experience.
 

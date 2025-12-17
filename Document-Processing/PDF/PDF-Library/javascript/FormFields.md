@@ -7,11 +7,11 @@ documentation: UG
 ---
 # Form Fields in JavaScript PDF library
 
-An interactive form, sometimes referred to as an AcroForm is a collection of fields for gathering information. A PDF document can contain any number of fields appearing on any combination of pages, all of that make a single, globally interactive form spanning the entire document.
+An interactive form, sometimes referred to as an AcroForm, is a collection of fields for gathering information. A PDF document can contain any number of fields appearing on any combination of pages, all of which make a single, globally interactive form spanning the entire document.
 
 ## Creating a new PDF form
 
-Syncfusion<sup>&reg;</sup> PDF allows you to create and manage the form in PDF document by using `PdfForm` class. The `PdfForm` class represents the entire field collection of the form.
+Syncfusion<sup>&reg;</sup> PDF allows you to create and manage form in PDF document by using `PdfForm` class. The `PdfForm` class represents the entire field collection of the form.
 
 ### Adding the text box field 
 
@@ -53,7 +53,7 @@ var document = new ej.pdf.PdfDocument();
 // Add the PDF page.
 var page = document.addPage();
 // Add new textbox field into PDF form
-document.form.add(new PdfTextBoxField(
+document.form.add(new ej.pdf.PdfTextBoxField(
   page,
   'FirstName',
   { x: 50, y: 600, width: 200, height: 22 },
@@ -62,9 +62,9 @@ document.form.add(new PdfTextBoxField(
     color: { r: 0, g: 0, b: 0 },
     backColor: { r: 255, g: 255, b: 255 },
     borderColor: { r: 0, g: 122, b: 204 },
-    border: new ej.pdf.PdfInteractiveBorder({ width: 1, style: PdfBorderStyle.solid }),
+    border: new ej.pdf.PdfInteractiveBorder({ width: 1, style: ej.pdf.PdfBorderStyle.solid }),
     text: 'John',
-    font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular)
+    font: document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular)
   }
 ));
 // Save the document
@@ -81,7 +81,7 @@ The following code snippet explains how to add a text box field in an existing P
 {% highlight typescript tabtitle="TypeScript" %}
 import {PdfDocument, PdfPage, PdfTextBoxField, PdfInteractiveBorder, PdfBorderStyle, PdfFontFamily, PdfFontStyle} from '@syncfusion/ej2-pdf';
 
-// Create a new PDF document
+// Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 //Add the PDF page.
 let page: PdfPage = document.getPage(0);
@@ -143,8 +143,8 @@ This example demonstrates how to add a combo box field to a PDF document using t
 {% highlight typescript tabtitle="TypeScript" %}
 import {PdfDocument, PdfPage, PdfForm, PdfComboBoxField, PdfInteractiveBorder, PdfBorderStyle, PdfFontFamily, PdfFontStyle} from '@syncfusion/ej2-pdf';
 
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
 // Add the first page of the document
 let page: PdfPage = document.addPage();
 // Add new combobox field into PDF form
@@ -285,8 +285,8 @@ This example demonstrates how to add a radio button field to a PDF document usin
 {% highlight typescript tabtitle="TypeScript" %}
 import {PdfDocument, PdfPage, PdfRadioButtonListField} from '@syncfusion/ej2-pdf';
 
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
 // Add new radio button list field into PDF form
@@ -603,7 +603,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-The following code snippet explains how to check Box field in an existing PDF document.
+The following code snippet explains how to add a check Box field in an existing PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -727,7 +727,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-The following code snippet explains how to add a signature filed in an existing PDF document.
+The following code snippet explains how to add a signature field in an existing PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1130,7 +1130,7 @@ let page: PdfPage = document.getPage(0);
 // Access checkbox field
 let field: PdfCheckBoxField = document.form.fieldAt(2) as PdfCheckBoxField;
 // Sets the tooltip value
-field.toolTip = 'Checked';
+field.toolTip = 'Check Box Field';
 // Added tool tip
 field.toolTip = 'CheckBox Fields';
 // Save the document
@@ -1148,7 +1148,7 @@ var page = document.getPage(0);
 // Access checkbox field
 var field = document.form.fieldAt(2);
 // Sets the tooltip value
-field.toolTip = 'Checked';
+field.toolTip = 'Check Box Field';
 // Added tool tip
 field.toolTip = 'CheckBox Fields';
 // Save the document
@@ -1158,7 +1158,6 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ### Filling the signature field
 
@@ -1302,7 +1301,7 @@ import {PdfDocument, PdfField} from '@syncfusion/ej2-pdf';
 let document: PdfDocument = new PdfDocument(data);
 // Get the first field
 let field: PdfField = document.form.fieldAt(0);
-// Sets the boolean flag indicating whether the form field have been flattened or not.
+// Sets the boolean flag indicating whether the form field has been flattened or not.
 field.flatten = true;
 // Save the document
 document.save('Output.pdf');
@@ -1316,7 +1315,7 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Get the first field
 var field = document.form.fieldAt(0);
-// Sets the boolean flag indicating whether the form field have been flattened or not.
+// Sets the boolean flag indicating whether the form field has been flattened or not.
 field.flatten = true;
 // Save the document
 document.save('Output.pdf');
@@ -1369,11 +1368,11 @@ This example demonstrates how to import form data from an FDF file into a PDF do
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument} from '@syncfusion/ej2-pdf';
+import {PdfDocument, DataFormat} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Imports form data from to the PDF document.
+// Imports form data into the PDF document.
 document.importFormData('formData.fdf', DataFormat.fdf);
 // Save the document
 document.save('Output.pdf');
@@ -1383,7 +1382,7 @@ document.destroy();
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Imports form data from to the PDF document.
+// Imports form data into the PDF document.
 document.importFormData('formData.fdf', ej.pdf.DataFormat.fdf);
 // Save the document
 document.save('Output.pdf');
@@ -1398,11 +1397,11 @@ This example demonstrates how to import form data from an XFDF file into a PDF d
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument} from '@syncfusion/ej2-pdf';
+import {PdfDocument, DataFormat} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Imports form data from to the PDF document.
+// Imports form data into the PDF document.
 document.importFormData('formData.xfdf', DataFormat.xfdf);
 // Save the document
 document.save('Output.pdf');
@@ -1414,7 +1413,7 @@ document.destroy();
 
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Imports form data from to the PDF document.
+// Imports form data into the PDF document.
 document.importFormData('formData.xfdf', ej.pdf.DataFormat.xfdf);
 // Save the document
 document.save('Output.pdf');
@@ -1432,7 +1431,7 @@ This example demonstrates how to export form data from a PDF document to an FDF 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfFormFieldExportSettings } from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfFormFieldExportSettings, DataFormat } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -1470,7 +1469,7 @@ This example demonstrates how to export form data from a PDF document to an XFDF
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfFormFieldExportSettings } from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfFormFieldExportSettings, DataFormat } from '@syncfusion/ej2-pdf';
     
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);

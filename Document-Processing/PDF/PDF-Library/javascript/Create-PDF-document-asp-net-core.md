@@ -10,11 +10,11 @@ keywords: .net core create pdf, edit pdf, merge, pdf form, fill form, digital si
 
 # Create or Generate PDF in ASP.NET Core
 
-The Syncfusion<sup>&reg;</sup> JavaScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, forms, and secure PDF files.
+The Syncfusion<sup>&reg;</sup> JavaScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
 This guide explains how to integrate the JavaScript PDF library into an ASP.NET Core application.
 
-## Integrate PDF library into an ASP.NET Core application
+## Integrate the PDF library into an ASP.NET Core application
 
 Step 1: Start Visual Studio and select **Create a new project**.
 Step 2: In the **Create a new project** dialog, select **ASP.NET Core Web App**.
@@ -24,7 +24,7 @@ Step 3: In the **Configure your new project** dialog, enter the project name and
 Step 4: In the **Additional information** dialog, select a .NET LTS version (for example, **.NET 8.0 (Long-term Support)**) and then select **Create**.
 ![ASP.NET Core PDF creation3](Getting_started_images/Asp-net-core-creation3.png)
 
-Step 5: **Add script reference** : Add the required scripts using the CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` as follows:
+Step 5: **Add script reference**: Add the required scripts using the CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` as follows:
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -41,10 +41,10 @@ N> Check out the following topics for including script references in an ASP.NET 
 *   [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)
 And ensure the application includes an `openjpeg` folder under `wwwroot` (or a publicly accessible static path). This folder must contain the `openjpeg.js` and `openjpeg.wasm` files, along with the PDF file to extract images. Keep these in the same static content area as `ej2.min.js`.
 
-Step 6: **Create a PDF document** : Add the script in `~/Views/Home/Index.cshtml` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
+Step 6: **Create a PDF document**: Add the script in `~/Views/Home/Index.cshtml` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/Index.cshtml" %}
+{% highlight cshtml tabtitle="~/Views/Home/Index.cshtml" %}
 <div class="container py-4">
     <h1 class="h4 mb-3">Create PDF document</h1>
     <p class="text-muted">Click the button to generate and download a PDF.</p>
@@ -66,7 +66,7 @@ Step 6: **Create a PDF document** : Add the script in `~/Views/Home/Index.cshtml
         // Draw text
         graphics.drawString('Hello World!!!', font, {x: 20, y: 20, width: graphics.clientSize.width - 20, height: 60}, brush);
         // Save and download PDF
-        pdf.save('Output.pdf');
+        pdf.save('output.pdf');
         // Destroy the PDF document instance
         pdf.destroy();
         });   
@@ -75,9 +75,9 @@ Step 6: **Create a PDF document** : Add the script in `~/Views/Home/Index.cshtml
 {% endhighlight %}
 {% endtabs %}
 
-step 7: **Build the project** : Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+step 7: **Build the project**: Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
 
-Step 8: **Run the project** : Click the Start button (green arrow) or press F5 to run the app.
+Step 8: **Run the project**: Click the Start button (green arrow) or press F5 to run the app.
 
 By executing the program, you will generate the following PDF document.
 

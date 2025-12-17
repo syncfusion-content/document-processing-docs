@@ -10,13 +10,13 @@ keywords: javascript, pdf, script
 
 # Create or Generate PDF file in JavaScript
 
-The Syncfusion<sup>&reg;</sup> JS 2 for JavaScript (global script) is an ES5 formatted pure JavaScript framework which can be directly used in latest web browsers.
+Syncfusion<sup>&reg;</sup> JS 2 (global script) is an ES5-formatted JavaScript library that works directly in modern web browsers.
 
-## Component Initialization with CDN link for script and style reference
+## Component initialization with CDN links
 
-Step 1: Create an app folder `my-app` for the JS 2 JavaScript components.
+Step 1: Create a folder named `my-app` for your project.
 
-Step 2: The JS 2 component's global scripts and styles are already hosted in the below CDN link formats.
+Step 2: The JS 2 global scripts and styles are hosted on the CDN in the following formats.
 
 **Syntax:**
 > Script: `https://cdn.syncfusion.com/ej2/{Version}/dist/{PACKAGE_NAME}.min.js`
@@ -39,12 +39,12 @@ Step 3: Create a HTML page (index.html) in `my-app` location and add the CDN lin
 {% endhighlight %}
 {% endtabs %}
 
-N> For the JavaScript platform, place the **openjpeg** folder in the same location as your `index.html` file. Ensure that your application includes an `openjpeg` folder under `Scripts` (or any publicly accessible static path). This folder must contain the following:
+N> For image/data extraction features, install and deploy the openjpeg runtime. Place an openjpeg folder alongside your index.html (or any publicly accessible static path) containing:
 *   `openjpeg.js`
 *   `openjpeg.wasm`
-Along with the PDF file from which you want to extract images. Keep these files in the same static content area as `ej2.min.js` to ensure proper loading.
+Ensure your server serves .wasm files with the Content-Type: application/wasm MIME type. This is not required for basic PDF creation.
 
-Step 4: **Create a PDF document** : Add the script in `index.html` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
+Step 4: **Create a PDF document**: Add the script in `index.html` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}
 {% highlight html tabtitle="~/Index.html" %}

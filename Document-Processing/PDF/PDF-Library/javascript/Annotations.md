@@ -22,7 +22,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Creates a new popup annotation
-let popup = new PdfPopupAnnotation(
+let popup: PdfPopupAnnotation = new PdfPopupAnnotation(
     'Test popup annotation',
     { x: 10, y: 40, width: 30, height: 30 },
     {
@@ -77,7 +77,7 @@ let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Creates a new popup annotation
-let popup = new PdfPopupAnnotation(
+let popup: PdfPopupAnnotation = new PdfPopupAnnotation(
     'Test popup annotation',
     { x: 10, y: 40, width: 30, height: 30 },
     {
@@ -136,7 +136,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Creates a file link annotation
-let fileLink = new PdfFileLinkAnnotation(
+let fileLink: PdfFileLinkAnnotation = new PdfFileLinkAnnotation(
     { x: 100, y: 150, width: 120, height: 18 },
     'logo.png',
     {
@@ -144,7 +144,7 @@ let fileLink = new PdfFileLinkAnnotation(
         author: 'Syncfusion',
         subject: 'File Link Annotation',
         color: { r: 0, g: 0, b: 255 },
-        action: "app.alert('Launching file');"
+        action: "app.alert('Launching file')"
     });
 // Adds annotation to the page
 page.annotations.add(fileLink);
@@ -166,7 +166,7 @@ text:'Open attachment',
 author:'Syncfusion',
 subject:'File Link Annotation',
 color:{r:0,g:0,b:255},
-action:"app.alert('Launching file');"
+action:"app.alert('Launching file')"
 });
 // Adds annotation to the page
 page.annotations.add(fileLink);
@@ -189,7 +189,7 @@ let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Creates a file link annotation
-let fileLink = new PdfFileLinkAnnotation(
+let fileLink: PdfFileLinkAnnotation = new PdfFileLinkAnnotation(
     { x: 100, y: 150, width: 120, height: 18 },
     'logo.png',
     {
@@ -197,7 +197,7 @@ let fileLink = new PdfFileLinkAnnotation(
         author: 'Syncfusion',
         subject: 'File Link Annotation',
         color: { r: 0, g: 0, b: 255 },
-        action: "app.alert('Launching file');"
+        action: "app.alert('Launching file')"
     });
 // Adds annotation to the page
 page.annotations.add(fileLink);
@@ -219,7 +219,7 @@ text:'Open attachment',
 author:'Syncfusion',
 subject:'File Link Annotation',
 color:{r:0,g:0,b:255},
-action:"app.alert('Launching file');"
+action:"app.alert('Launching file')"
 });
 // Adds annotation to the page
 page.annotations.add(fileLink);
@@ -244,7 +244,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create new free text annotation
-let freeText = new PdfFreeTextAnnotation({ x: 250, y: 260, width: 180, height: 80 },
+let freeText: PdfFreeTextAnnotation = new PdfFreeTextAnnotation({ x: 250, y: 260, width: 180, height: 80 },
     {
         text: 'Free Text with Callout',
         annotationIntent: PdfAnnotationIntent.freeTextCallout,
@@ -307,7 +307,7 @@ let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Create new free text annotation
-let freeText = new PdfFreeTextAnnotation({ x: 250, y: 260, width: 180, height: 80 },
+let freeText: PdfFreeTextAnnotation = new PdfFreeTextAnnotation({ x: 250, y: 260, width: 180, height: 80 },
     {
         text: 'Free Text with Callout',
         annotationIntent: PdfAnnotationIntent.freeTextCallout,
@@ -588,7 +588,7 @@ let document: PdfDocument = new PdfDocument();
 // Add a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create an ink annotation
-let annotation = new PdfInkAnnotation(
+let annotation: PdfInkAnnotation = new PdfInkAnnotation(
     { x: 50, y: 100, width: 200, height: 150 },
     [
         { x: 60, y: 120 },
@@ -618,7 +618,7 @@ let annotation = new PdfInkAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -649,7 +649,7 @@ var annotation = new ej.pdf.PdfInkAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -667,7 +667,7 @@ let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Create an ink annotation
-let annotation = new PdfInkAnnotation(
+let annotation: PdfInkAnnotation = new PdfInkAnnotation(
     { x: 50, y: 100, width: 200, height: 150 },
     [
         { x: 60, y: 120 },
@@ -697,7 +697,7 @@ let annotation = new PdfInkAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -728,7 +728,7 @@ var annotation = new ej.pdf.PdfInkAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -748,7 +748,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create a new popup annotation
-let annotation = new PdfPopupAnnotation('Review this paragraph',
+let annotation: PdfPopupAnnotation = new PdfPopupAnnotation('Review this paragraph',
 {x: 10, y: 40, width: 30, height: 30},
 {
   author: 'Reviewer',
@@ -763,7 +763,7 @@ let annotation = new PdfPopupAnnotation('Review this paragraph',
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -787,7 +787,7 @@ var annotation = new ej.pdf.PdfPopupAnnotation('Review this paragraph',{x:10,y:4
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -804,7 +804,7 @@ import {PdfDocument, PdfPage, PdfPopupAnnotation, PdfPopupIcon, PdfAnnotationSta
 let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
-let annotation = new PdfPopupAnnotation('Review this paragraph',
+let annotation: PdfPopupAnnotation = new PdfPopupAnnotation('Review this paragraph',
     {x: 10, y: 40, width: 30, height: 30},
     {
 author: 'Reviewer',
@@ -819,7 +819,7 @@ author: 'Reviewer',
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -843,7 +843,7 @@ var annotation = new ej.pdf.PdfPopupAnnotation('Review this paragraph',{x:10,y:4
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -863,7 +863,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create a new attachment annotation
-let annotation = new PdfAttachmentAnnotation(
+let annotation: PdfAttachmentAnnotation = new PdfAttachmentAnnotation(
       { x: 300, y: 200, width: 30, height: 30 },
       'Nature.jpg',
        imageData,
@@ -873,7 +873,7 @@ let annotation = new PdfAttachmentAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -900,7 +900,7 @@ var annotation = new ej.pdf.PdfAttachmentAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -918,7 +918,7 @@ let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Create a new attachment annotation
-let annotation = new PdfAttachmentAnnotation(
+let annotation: PdfAttachmentAnnotation = new PdfAttachmentAnnotation(
       { x: 300, y: 200, width: 30, height: 30 },
       'Nature.jpg',
        imageData,
@@ -928,7 +928,7 @@ let annotation = new PdfAttachmentAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -955,7 +955,7 @@ var annotation = new ej.pdf.PdfAttachmentAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -979,7 +979,7 @@ let annotation: PdfUriAnnotation = new PdfUriAnnotation({ x: 100, y: 150, width:
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -995,7 +995,7 @@ var annotation = new ej.pdf.PdfUriAnnotation({x:100,y:150,width:200,height:100},
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1017,7 +1017,7 @@ let annotation: PdfUriAnnotation = new PdfUriAnnotation({ x: 100, y: 150, width:
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1033,7 +1033,7 @@ var annotation = new ej.pdf.PdfUriAnnotation({x:100,y:150,width:200,height:100},
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1053,9 +1053,9 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create new document link annotation
-let annotation = new PdfDocumentLinkAnnotation(
+let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation(
       { x: 80, y: 100, width: 120, height: 18 },
-      new PdfDestination({page, location: { x: 0, y: 0 }, mode: PdfDestinationMode.fitToPage}),
+      new PdfDestination(page, { x: 0, y: 0 }, {mode: PdfDestinationMode.fitToPage}),
       {
 color: { r: 0, g: 128, b: 0 }, opacity: 1,
      border: new PdfAnnotationBorder({ width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })}
@@ -1063,7 +1063,7 @@ color: { r: 0, g: 128, b: 0 }, opacity: 1,
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1077,13 +1077,13 @@ var page = document.addPage();
 // Create new document link annotation
 var annotation = new ej.pdf.PdfDocumentLinkAnnotation(
   {x:80,y:100,width:120,height:18},
-  new ej.pdf.PdfDestination({page:page,location:{x:0,y:0},mode:ej.pdf.PdfDestinationMode.fitToPage}),
+  new ej.pdf.PdfDestination(page:page,{x:0,y:0},{mode:ej.pdf.PdfDestinationMode.fitToPage}),
   {color:{r:0,g:128,b:0},opacity:1,border:new ej.pdf.PdfAnnotationBorder({width:1,hRadius:0,vRadius:0,style:ej.pdf.PdfBorderStyle.solid})}
 );
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1103,7 +1103,7 @@ let page: PdfPage = document.getPage(0);
 // Create new document link annotation
 let annotation = new PdfDocumentLinkAnnotation(
       { x: 80, y: 100, width: 120, height: 18 },
-      new PdfDestination({page, location: { x: 0, y: 0 }, mode: PdfDestinationMode.fitToPage}),
+      new PdfDestination(page, { x: 0, y: 0 }, { mode: PdfDestinationMode.fitToPage}),
       {
 color: { r: 0, g: 128, b: 0 }, opacity: 1,
      border: new PdfAnnotationBorder({ width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })}
@@ -1111,7 +1111,7 @@ color: { r: 0, g: 128, b: 0 }, opacity: 1,
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1125,9 +1125,9 @@ var page = document.getPage(0);
 // Create new document link annotation
 var annotation = new ej.pdf.PdfDocumentLinkAnnotation(
   { x: 80, y: 100, width: 120, height: 18 },
-  new ej.pdf.PdfDestination({
-    page: page,
-    location: { x: 0, y: 0 },
+  new ej.pdf.PdfDestination(
+    page,
+    { x: 0, y: 0 },{
     mode: ej.pdf.PdfDestinationMode.fitToPage
   }),
   {
@@ -1144,7 +1144,7 @@ var annotation = new ej.pdf.PdfDocumentLinkAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1175,7 +1175,7 @@ borderColor: { r: 255, g: 0, b: 0},
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1200,7 +1200,7 @@ var annotation = new ej.pdf.PdfRedactionAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1229,7 +1229,7 @@ borderColor: { r: 255, g: 0, b: 0},
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1254,7 +1254,7 @@ var annotation = new ej.pdf.PdfRedactionAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1280,7 +1280,7 @@ annotation.color = { r: 0, g: 0, b: 0};
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1298,7 +1298,7 @@ annotation.color = { r: 0, g: 0, b: 0 };
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1322,7 +1322,7 @@ annotation.color = { r: 0, g: 0, b: 0};
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1340,7 +1340,7 @@ annotation.color = { r: 0, g: 0, b: 0 };
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1361,7 +1361,7 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Create a new text markup annotation
 // Create a new text markup annotation
-let annotation = new PdfTextMarkupAnnotation('Water Mark', {x: 0, y: 0, width: 0, height: 0}, {
+let annotation: PdfTextMarkupAnnotation = new PdfTextMarkupAnnotation('Water Mark', {x: 0, y: 0, width: 0, height: 0}, {
 boundsCollection: [{ x: 50, y: 200, width: 120, height: 14}, { x: 50, y: 215, width: 90, height: 14}],
        textMarkupType: PdfTextMarkupAnnotationType.underline, author: 'Syncfusion', subject: 'Annotation',
        textMarkUpColor: { r: 0, g: 128, b: 255}, innerColor: { r: 0, g: 0, b: 255}, opacity: 0.5,
@@ -1370,7 +1370,7 @@ boundsCollection: [{ x: 50, y: 200, width: 120, height: 14}, { x: 50, y: 215, wi
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1407,8 +1407,9 @@ var annotation = new ej.pdf.PdfTextMarkupAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -1424,8 +1425,7 @@ let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Create a new text markup annotation
-// Create a new text markup annotation
-let annotation = new PdfTextMarkupAnnotation('Water Mark', {x: 0, y: 0, width: 0, height: 0}, {
+let annotation: PdfTextMarkupAnnotation = new PdfTextMarkupAnnotation('Water Mark', {x: 0, y: 0, width: 0, height: 0}, {
 boundsCollection: [{ x: 50, y: 200, width: 120, height: 14}, { x: 50, y: 215, width: 90, height: 14}],
        textMarkupType: PdfTextMarkupAnnotationType.underline, author: 'Syncfusion', subject: 'Annotation',
        textMarkUpColor: { r: 0, g: 128, b: 255}, innerColor: { r: 0, g: 0, b: 255}, opacity: 0.5,
@@ -1434,7 +1434,7 @@ boundsCollection: [{ x: 50, y: 200, width: 120, height: 14}, { x: 50, y: 215, wi
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1471,7 +1471,7 @@ var annotation = new ej.pdf.PdfTextMarkupAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1491,7 +1491,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create a new rectangle annotation with bounds
-let annotation = new PdfRectangleAnnotation({ x: 50, y: 80, width: 200, height: 100 }, {
+let annotation: PdfRectangleAnnotation = new PdfRectangleAnnotation({ x: 50, y: 80, width: 200, height: 100 }, {
 text: 'Rect', author: 'Syncfusion', subject: 'Rectangle Annotation',
        color: { r: 255, g: 0, b: 0 },
        innerColor: { r: 255, g: 240, b: 240 },
@@ -1501,7 +1501,7 @@ text: 'Rect', author: 'Syncfusion', subject: 'Rectangle Annotation',
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1533,7 +1533,7 @@ var annotation = new ej.pdf.PdfRectangleAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1551,7 +1551,7 @@ let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Create a new square annotation with bounds
-let annotation = new PdfRectangleAnnotation({ x: 50, y: 80, width: 200, height: 100 }, {
+let annotation: PdfRectangleAnnotation = new PdfRectangleAnnotation({ x: 50, y: 80, width: 200, height: 100 }, {
 text: 'Rect', author: 'Syncfusion', subject: 'Rectangle Annotation',
        color: { r: 255, g: 0, b: 0 },
        innerColor: { r: 255, g: 240, b: 240 },
@@ -1561,7 +1561,7 @@ text: 'Rect', author: 'Syncfusion', subject: 'Rectangle Annotation',
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1593,7 +1593,7 @@ var annotation = new ej.pdf.PdfRectangleAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1613,7 +1613,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create a new polygon annotation with bounds
-let annotation = new PdfPolygonAnnotation(
+let annotation: PdfPolygonAnnotation = new PdfPolygonAnnotation(
 [{ x: 100, y: 300 }, { x: 150, y: 200 }, { x: 300, y: 200 }, { x: 350, y: 300 }, { x: 300, y: 400 }, { x: 150, y: 400 }],
        {
 text: 'Polygon', author: 'Syncfusion', subject: 'Polygon Annotation',
@@ -1625,7 +1625,7 @@ text: 'Polygon', author: 'Syncfusion', subject: 'Polygon Annotation',
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1664,7 +1664,7 @@ var annotation = new ej.pdf.PdfPolygonAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1682,7 +1682,7 @@ let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Create a new polygon annotation with bounds
-let annotation = new PdfPolygonAnnotation(
+let annotation: PdfPolygonAnnotation = new PdfPolygonAnnotation(
 [{ x: 100, y: 300 }, { x: 150, y: 200 }, { x: 300, y: 200 }, { x: 350, y: 300 }, { x: 300, y: 400 }, { x: 150, y: 400 }],
        {
 text: 'Polygon', author: 'Syncfusion', subject: 'Polygon Annotation',
@@ -1694,7 +1694,7 @@ text: 'Polygon', author: 'Syncfusion', subject: 'Polygon Annotation',
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1733,7 +1733,7 @@ var annotation = new ej.pdf.PdfPolygonAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1753,7 +1753,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create a new circle annotation with circle bounds
-let annotation = new PdfCircleAnnotation({ x: 50, y: 100, width: 120, height: 120 }, {
+let annotation: PdfCircleAnnotation = new PdfCircleAnnotation({ x: 50, y: 100, width: 120, height: 120 }, {
 text: 'Diameter',
        author: 'Syncfusion',
        color: { r: 255, g: 0, b: 0},
@@ -1765,7 +1765,7 @@ text: 'Diameter',
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1798,7 +1798,7 @@ var annotation = new ej.pdf.PdfCircleAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 
 {% endhighlight %}
@@ -1815,7 +1815,7 @@ let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Create a new circle annotation with circle bounds
-let annotation = new PdfCircleAnnotation({ x: 50, y: 100, width: 120, height: 120 }, {
+let annotation: PdfCircleAnnotation = new PdfCircleAnnotation({ x: 50, y: 100, width: 120, height: 120 }, {
 text: 'Diameter',
        author: 'Syncfusion',
        color: { r: 255, g: 0, b: 0},
@@ -1827,7 +1827,7 @@ text: 'Diameter',
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1863,7 +1863,7 @@ var annotation = new ej.pdf.PdfCircleAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1883,7 +1883,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create a new ellipse annotation with bounds
-let annotation = new PdfEllipseAnnotation({ x: 80, y: 120, width: 160, height: 100 }, {
+let annotation: PdfEllipseAnnotation = new PdfEllipseAnnotation({ x: 80, y: 120, width: 160, height: 100 }, {
 text: 'Ellipse', author: 'Syncfusion', subject: 'Ellipse Annotation',
        color: { r: 0, g: 128, b: 255},
        innerColor: { r: 220, g: 240, b: 255},
@@ -1893,7 +1893,7 @@ text: 'Ellipse', author: 'Syncfusion', subject: 'Ellipse Annotation',
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1925,7 +1925,7 @@ var annotation = new ej.pdf.PdfEllipseAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1943,7 +1943,7 @@ let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Create a new ellipse annotation with bounds
-let annotation = new PdfEllipseAnnotation({ x: 80, y: 120, width: 160, height: 100 }, {
+let annotation: PdfEllipseAnnotation = new PdfEllipseAnnotation({ x: 80, y: 120, width: 160, height: 100 }, {
 text: 'Ellipse', author: 'Syncfusion', subject: 'Ellipse Annotation',
        color: { r: 0, g: 128, b: 255},
        innerColor: { r: 220, g: 240, b: 255},
@@ -1953,7 +1953,7 @@ text: 'Ellipse', author: 'Syncfusion', subject: 'Ellipse Annotation',
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1985,7 +1985,7 @@ var annotation = new ej.pdf.PdfEllipseAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -2021,9 +2021,6 @@ let lineAnnotation: PdfLineAnnotation = new PdfLineAnnotation({ x: 80, y: 420 },
     opacity: 0.5,
     measurementUnit: PdfMeasurementUnit.centimeter
 });
-// Assigns the leader line
-lineAnnotation.leaderExt = 0;
-lineAnnotation.leaderLine = 0;
 // Assigns the line caption type
 lineAnnotation.caption = new PdfAnnotationCaption({ cap: true, type: PdfLineCaptionType.inline });
 // Adds annotation to the page
@@ -2050,9 +2047,6 @@ lineEndingStyle:new ej.pdf.PdfAnnotationLineEndingStyle({begin:ej.pdf.PdfLineEnd
 opacity:0.5,
 measurementUnit: PdfMeasurementUnit.centimeter
 });
-// Assigns the leader line
-lineAnnotation.leaderExt = 0;
-lineAnnotation.leaderLine = 0;
 // Assigns the line caption type
 lineAnnotation.caption = new ej.pdf.PdfAnnotationCaption({cap:true,type:ej.pdf.PdfLineCaptionType.inline});
 // Adds annotation to the page
@@ -2082,7 +2076,7 @@ annotation.unit = PdfMeasurementUnit.centimeter;
 // Sets the flag to have measurement dictionary of the line annotation.
 annotation.measure = true;
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -2101,7 +2095,7 @@ if (annotation instanceof ej.pdf.PdfLineAnnotation) {
   annotation.measure = true;
 }
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -2127,7 +2121,7 @@ annotation.text = 'Popup annotation';
 annotation.color = { r: 0, g: 128, b: 255};
 annotation.opacity = 0.5;
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -2147,7 +2141,7 @@ if (annotation instanceof ej.pdf.PdfPopupAnnotation) {
   annotation.opacity = 0.5;
 }
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -2173,7 +2167,7 @@ page.annotations.remove(annotation);
 // Remove an annotation with specific index
 page.annotations.removeAt(1);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -2190,7 +2184,7 @@ page.annotations.remove(annotation);
 // Remove an annotation with specific index
 page.annotations.removeAt(1);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -2245,24 +2239,25 @@ This example demonstrates how to import annotations into a PDF document using th
 import {PdfDocument, DataFormat} from '@syncfusion/ej2-pdf';
 
 // Load the base PDF document from resources
-let pdfDocument: PdfDocument = new PdfDocument(data);
+let document: PdfDocument = new PdfDocument(data);
 // Imports annotations from to the PDF document.
 document.importAnnotations('annotations.json', DataFormat.json);
 // Save the PDF document
-pdfDocument.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load the base PDF document from resources
-var pdfDocument = new ej.pdf.PdfDocument(data);
+var document = new ej.pdf.PdfDocument(data);
 // Import annotations into the PDF document
-pdfDocument.importAnnotations('annotations.json', ej.pdf.DataFormat.json);
+document.importAnnotations('annotations.json', ej.pdf.DataFormat.json);
 // Save the PDF document
-pdfDocument.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
-pdfDocument.destroy();
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -2278,7 +2273,7 @@ import {PdfDocument, PdfAnnotationExportSettings, DataFormat} from '@syncfusion/
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Sets export data format as JSON for annotation export settings
-let settings = new PdfAnnotationExportSettings();
+let settings: PdfAnnotationExportSettings = new PdfAnnotationExportSettings();
 settings.dataFormat = DataFormat.json;
 // Export annotations to JSON format
 let jsonData = document.exportAnnotations('annotations.json', settings);
