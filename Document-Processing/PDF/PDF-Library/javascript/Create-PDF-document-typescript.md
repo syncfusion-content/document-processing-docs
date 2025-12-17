@@ -14,31 +14,30 @@ The Syncfusion<sup>&reg;</sup> TypeScript PDF library is used to create, read, a
 
 This guide explains how to integrate the TypeScript PDF library into an TypeScript application.
 
-## Installing Syncfusion<sup>&reg;</sup> JavaScript PDF package
+## Installing the Syncfusion TypeScript PDF package
 
-All the available JS 2 packages are published in `npmjs.com` registry.
+All Syncfusion JS 2 packages are published in `npmjs.com` registry.
 
-* To install PDF component, use the following command.
+* To install the PDF library, use the following command.
 
 ```bash
 npm install @syncfusion/ej2-pdf --save
 ```
-N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
-For the TypeScript platform, place the **openjpeg** folder in the same location as your `index.html` file. Ensure that your application includes an `openjpeg` folder under `Scripts` (or any publicly accessible static path). This folder must contain the following:
-*   `openjpeg.js`
-*   `openjpeg.wasm`
-Along with the PDF file from which you want to extract images.
+N> For image/data extraction features, install the `@syncfusion/ej2-pdf-data-extract` add-on. Place an openjpeg folder alongside your built static assets (for example, under public or dist) containing:
+* openjpeg.js
+* openjpeg.wasm
+Ensure your server serves .wasm files with the Content-Type: application/wasm MIME type. This is not required for basic PDF creation.
 
 ## Dependencies
 
 The following list of dependencies are required to use the `TypeScript PDF library` component in your application.
 
-```typescript
+```text
 |-- @syncfusion/ej2-compression
 |-- @syncfusion/ej2-base
 ```
 
-## Create a PDF document using TypeScript.
+## Create a PDF document using TypeScript
 
 * Add a simple button to `index.html` and attach a click handler that uses the TypeScript PDF API to create a new PDF document.
 
@@ -59,7 +58,7 @@ The following list of dependencies are required to use the `TypeScript PDF libra
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-import { PdfDocument, PdfPage, PdfStandardFont, PdfFontFamily,  PdfPen, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfGraphics, PdfPage, PdfFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,13 +74,13 @@ document.getElementById('normalButton').onclick = (): void => {
         // Get graphics from the page
         let graphics: PdfGraphics = page.graphics;
         // Set font
-        let font: PdfStandardFont = pdf.embedFont(PdfFontFamily.helvetica, 36, PdfFontStyle.regular);
+        let font: PdfFont = pdf.embedFont(PdfFontFamily.helvetica, 36, PdfFontStyle.regular);
         // Create a new black brush
         let brush = new PdfBrush({r: 0, g: 0, b: 0});
         // Draw text
         graphics.drawString('Hello World!!!', font, {x: 20, y: 20, width: graphics.clientSize.width - 20, height: 60}, brush);
         // Save and download PDF
-        pdf.save('Output.pdf');
+        pdf.save('output.pdf');
         // Destroy the PDF document instance
         pdf.destroy();
 };
@@ -92,7 +91,7 @@ document.getElementById('normalButton').onclick = (): void => {
 
 The quickstart project is configured to compile and run in the browser. Use the following command to start the application:
 
-```javascript
+````bash
 npm start
 ```
 

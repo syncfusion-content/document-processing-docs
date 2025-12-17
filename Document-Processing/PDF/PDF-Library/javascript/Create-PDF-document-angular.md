@@ -8,7 +8,7 @@ documentation: ug
 keywords: angular create pdf, angular generate pdf, angular pdf library, ej2 pdf angular, JavaScript
 ---
 
-# Create or Generate PDF file in Angular application
+# Create or generate PDF file in Angular application
 
 The Syncfusion<sup>&reg;</sup> JavaScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
@@ -23,7 +23,7 @@ To install the latest Angular CLI globally use the following command.
 npm install -g @angular/cli
 ```
 
-N> Use the command **npm install --save @angular/cli@12.0.2** to install the Angular CLI version 12.0.2
+N> To install a specific Angular CLI version, use: **npm install --save @angular/cli@12.0.2**
 
 ## Create an Angular Application
 
@@ -36,7 +36,7 @@ cd my-app
 
 ## Installing Syncfusion<sup>&reg;</sup> JavaScript PDF package
 
-All the available JS 2 packages are published in `npmjs.com` registry.
+All Syncfusion<sup>&reg;</sup> JS 2 packages are published in `npmjs.com` registry.
 
 * To install PDF component, use the following command.
 
@@ -46,12 +46,12 @@ npm install @syncfusion/ej2-pdf --save
 N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
 * Copy the contents of the openjpeg folder from ./node_modules/@syncfusion/ej2-pdf-data-extract/dist to the public directory using the command:
 ```bash
-cp -R ./node_modules/@syncfusion/ej2-pdf-data-extract/dist/openjpeg public/js/openjpeg
+cp -R ./node_modules/@syncfusion/ej2-pdf-data-extract/dist/openjpeg ./src/assets/openjpeg
 ```
-* Confirm that there is an 'openjpeg' directory within your public directory, if you extracting images from PDF.
-* Validate that your server has been configured to utilize the Content-Type: application/wasm MIME type.
+* Confirm that there is an `openjpeg` directory within your src/assets directory if you are extracting images from PDFs.
+* Ensure your server serves .wasm files with the Content-Type: application/wasm MIME type (Angular dev server handles this by default; configure your production server accordingly).
 
-## Create a PDF document using TypeScript
+## Create a PDF document
 
 * Add a simple button to `app.component.html` and attach a click handler that uses the TypeScript PDF API to create a new PDF document.
 
@@ -72,7 +72,7 @@ cp -R ./node_modules/@syncfusion/ej2-pdf-data-extract/dist/openjpeg public/js/op
 
 {% tabs %}
 {% highlight ts tabtitle="~/app.component.ts" %}
-import { PdfDocument, PdfPage, PdfStandardFont, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfGraphics, PdfPage, PdfFontFamily, PdfFontStyle, PdfFont, PdfBrush } from '@syncfusion/ej2-pdf';
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,7 +88,7 @@ document.getElementById('normalButton').onclick = (): void => {
     // Get graphics from the page
     const graphics: PdfGraphics = page.graphics;
     // Set font
-    const font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 36, PdfFontStyle.regular);
+    const font: PdfFont = document.embedFont(PdfFontFamily.helvetica, 36, PdfFontStyle.regular);
     // Create a new black brush
     const brush = new PdfBrush({r: 0, g: 0, b: 0});
     // Draw text
@@ -105,7 +105,7 @@ document.getElementById('normalButton').onclick = (): void => {
 
 Use the following command to run the application in browser.
 
-```javascript
+```bash
 ng serve --open
 ```
 

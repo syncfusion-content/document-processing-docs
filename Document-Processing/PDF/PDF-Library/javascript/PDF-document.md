@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Document in JavaScript PDF library
 
-The PDF provides support to create, read, and manipulate PDF documents, allowing you to generate high-quality, secure, and feature-rich PDF files programmatically.
+The PDF library provides support to create, read, and manipulate PDF documents, allowing you to generate high-quality, secure, and feature-rich PDF files programmatically.
 
 ## Adding the document settings
 
@@ -15,7 +15,7 @@ This example shows how to configure custom page settings before adding a page to
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfPageSettings, PdfRotationAngle, PdfMargins, PdfPageOrientation, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfPageSettings, PdfGraphics, PdfRotationAngle, PdfMargins, PdfPageOrientation, PdfFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
  
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -31,11 +31,11 @@ let page: PdfPage = document.addPage(pageSettings);
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
 // Set font
-let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
+let font: PdfFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
 // Draw text
 graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 {% endhighlight %}
@@ -59,7 +59,7 @@ var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFont
 // Draw text
 graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -72,7 +72,7 @@ This example demonstrates how to create a PDF document, get and set its metadata
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfDocumentInformation, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
+ { PdfDocument, PdfDocumentInformation }
  
 // Create a PDF document
 let document: PdfDocument = new PdfDocument();
@@ -110,7 +110,7 @@ let creationDate = documentProperties.creationDate;
 // Gets the modification date of the PDF document
 let modificationDate = documentProperties.modificationDate;
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -132,7 +132,7 @@ creationDate: new Date(),            // Creation date
 modificationDate: new Date()         // Last modified date
 });
 // Access the document information
-var documentProperties: PdfDocumentInformation = document.getDocumentInformation();
+var documentProperties = document.getDocumentInformation();
 // Gets the title of the PDF document
 var title = documentProperties.title;
 // Gets the author of the PDF document
@@ -152,7 +152,7 @@ var creationDate = documentProperties.creationDate;
 // Gets the modification date of the PDF document
 var modificationDate = documentProperties.modificationDate;
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 {% endhighlight %}
@@ -164,7 +164,7 @@ The `isIncrementalUpdate` property allows you to check if the PDF document suppo
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfGraphics, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfGraphics, PdfFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
  
 // Create a PDF document
 let document: PdfDocument = new PdfDocument();
@@ -175,11 +175,11 @@ let page: PdfPage = document.addPage();
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
 // Set font
-let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
+let font: PdfFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
 // Draw text
-graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({ r: 0, g: 0, b: 255 }));
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -199,7 +199,7 @@ var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFont
 // Draw text
 graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 

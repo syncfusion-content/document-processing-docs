@@ -183,7 +183,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Draw Text using TrueType fonts
+### Draw text using TrueType fonts
 
 This example demonstrates how to draw text using TrueType fonts in a PDF document by utilizing the `drawString` method of the `PdfGraphics` class along with a `PdfTrueTypeFont` instance. The TrueType font provides enhanced text rendering with support for custom font styles.
 

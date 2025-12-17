@@ -156,7 +156,7 @@ document.destroy();
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
-var extractor = new ej.pdf.PdfDataExtractor(document);
+var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
 // Extract `TextLine` from the PDF document.
 var textLines = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
 textLines.forEach((textLine) => {
@@ -213,11 +213,11 @@ document.destroy();
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
-var extractor = new ej.pdf.PdfDataExtractor(document);
+var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
 // Extract `TextLine` from the PDF document.
 var textLines = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
 textLines.forEach((textLine) => {
-    textLine.words.forEach((textWord: TextWord) => {
+    textLine.words.forEach((textWord) => {
         // Gets the bounds of the text word.
         var wordBounds = textWord.bounds;
         // Gets the single word of extracted text from the PDF page.
@@ -286,14 +286,14 @@ document.destroy();
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
-var extractor = new ej.pdf.PdfDataExtractor(document);
+var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
 // Extract `TextLine` from the PDF document.
 var textLines = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
 textLines.forEach((textLine) => {
-    textLine.words.forEach((textWord: TextWord) => {
+    textLine.words.forEach((textWord) => {
         textWord.glyphs.forEach((textGlyph) => {
             // Gets the bounds of the text glyph
-            var glyphBounds= textGlyph.bounds;
+            var glyphBounds = textGlyph.bounds;
             // Gets the single character of extracted text from the PDF page.
             var character = textGlyph.text;
             // Gets the font size used for a particular character of the text.

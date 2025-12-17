@@ -157,8 +157,10 @@ graphics.restore(state);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument();
 // Access the first page
@@ -208,8 +210,10 @@ graphics.restore(state);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access first page
@@ -255,8 +259,10 @@ let annotation: PdfWatermarkAnnotation = new PdfWatermarkAnnotation('CONFIDENTIA
 page.annotations.add(watermark);
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a new page (first page)
@@ -299,8 +305,10 @@ let annotation: PdfWatermarkAnnotation = new PdfWatermarkAnnotation('WaterMark',
 page.annotations.add(watermark);
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Get the first page
@@ -334,7 +342,7 @@ let page: PdfPage = document.getPage(0);
 let annotation: PdfAnnotation = page.annotations.at(0);
 // Remove an annotation
 page.annotations.remove(annotation);
-// Remove an annotation from the collection
+// Removes an annotation from the page at the specified index
 page.annotations.removeAt(1);
 // Save the document
 document.save('output.pdf');
@@ -352,7 +360,7 @@ var page = document.getPage(0);
 var annotation = page.annotations.at(0);
 // Remove an annotation
 page.annotations.remove(annotation);
-// Remove an annotation from specific index
+// Removes an annotation from the page at the specified index
 page.annotations.removeAt(1);
 // Save the document
 document.save('output.pdf');
