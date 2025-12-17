@@ -66,6 +66,8 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+N> The PDF page is created using the default settings, which include A4 page size, portrait orientation, and 40 point page margins.
+
 ## Working with document properties
 
 This example demonstrates how to create a PDF document, get and set its metadata properties such as title, author, subject, keywords, creator, producer, language, and dates, and then retrieve these properties using the `PdfDocumentInformation` class.

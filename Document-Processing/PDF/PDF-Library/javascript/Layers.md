@@ -217,7 +217,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Lock or Unlock layers
+## Lock or unlock layers
 
 This example demonstrates how to lock or unlock layers in a PDF document using the `PdfLayer` class. Locking layers prevents users from toggling their visibility, ensuring that critical content remains displayed.
 
