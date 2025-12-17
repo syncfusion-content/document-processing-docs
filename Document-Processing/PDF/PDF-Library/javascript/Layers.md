@@ -8,7 +8,7 @@ documentation: UG
 
 # Layers in JavaScript PDF library
 
-Layers, also known as Option Content refers to sections of content in a PDF document that can be selectively viewed or hidden by document authors or consumers. This capability is useful in items such as CAD drawings, layered artwork, maps, and multi-language documents.
+Layers, also known as Option Content refers to sections of content in a PDF document that can be selectively viewed or hidden by document authors or consumers.
 
 JavaScript PDF provides support to create, add and merge the layers into PDF document.
 
@@ -40,8 +40,10 @@ graphics.drawLine(pen, { x: 200, y: 10 }, { x: 300, y: 100 });
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -62,6 +64,7 @@ graphics.drawLine(pen, { x: 200, y: 10 }, { x: 300, y: 100 });
 document.save('Output.pdf');
 // Close the document
  document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -176,30 +179,41 @@ This example demonstrates how to remove layers from an existing PDF document usi
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfLayerCollection  } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfLayerCollection, PdfLayer } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Get the layer collection.
 let layers: PdfLayerCollection = document.layers;
-//Remove the layer
-layers.removeAt(0);
+// Retrieve the first layer from the layers collection
+let layer: PdfLayer = layers.at(0);
+// Remove the layer from layer collection with instance
+layers.remove(layer);
+// Remove an layer from specific index
+layers.removeAt(1);
 // Save the document
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Get the layer collection.
 var layers = document.layers;
-// Remove the layer
-layers.removeAt(0);
+// Retrieve the first layer from the layers collection
+var layer = layers.at(0);
+// Remove the layer from layer collection with instance
+layers.remove(layer);
+// Remove an layer from specific index
+layers.removeAt(1);
 // Save the document
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -213,10 +227,8 @@ import { PdfDocument, PdfLayerCollection, PdfLayer, PdfGraphics, PdfPen } from '
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
-// Add a new section to the document
-let section: PdfSection = document.addSection();
-// Add a page to the section
-let page: PdfPage = section.addPage();
+// Add a page
+let page: PdfPage = document.addPage();
 // Access the collection of layers in the PDF document
 let layers: PdfLayerCollection = document.layers;
 // Add a new layer named 'Layer1' to the PDF document
@@ -235,14 +247,14 @@ graphics.drawLine(pen, { x: 200, y: 10 }, { x: 300, y: 100 });
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
-// Add a new section to the document
-var section = document.addSection();
-// Add a page to the section
-var page = section.addPage();
+// Add a page
+var page = document.addPage();
 // Access the collection of layers in the PDF document
 var layers = document.layers;
 // Add a new layer named 'Layer1' to the PDF document
@@ -261,5 +273,6 @@ graphics.drawLine(pen, { x: 200, y: 10 }, { x: 300, y: 100 });
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}

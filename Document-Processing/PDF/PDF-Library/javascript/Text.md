@@ -195,7 +195,7 @@ import { PdfDocument, PdfPage, PdfTrueTypeFont, PdfBrush } from '@syncfusion/ej2
 let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
-// Set font
+// Embed a TTF font into the PDF
 let font: PdfTrueTypeFont = document.embedFont(data, 10);
 // Draw text
 page.graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
@@ -209,7 +209,7 @@ document.destroy();
 var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
-// Set font
+// Embed a TTF font into the PDF
 var font = document.embedFont(data, 10);
 // Draw text
 page.graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
@@ -302,7 +302,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## LineLimit, ClipPath, NoClip properties in PdfStringFormat
+## LineLimit, NoClip properties in PdfStringFormat
 
 **LineLimit:** When LineLimit is enabled, the provided string will be laid out within the specified bounds. If the LineLimit property is disabled, the layout will continue to fill any remaining space. The default value of the LineLimit property is true.
 

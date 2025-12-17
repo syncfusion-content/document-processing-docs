@@ -39,7 +39,7 @@ N> Check out the following topics for including script references in an ASP.NET 
 *   [CDN](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#cdn-reference)
 *   [NPM Package](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#node-package-manager-npm)
 *   [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)
-N> And ensure the application includes an `openjpeg` folder under `wwwroot` (or a publicly accessible static path). This folder must contain the `openjpeg.js` and `openjpeg.wasm` files, along with the PDF file to extract images. Keep these in the same static content area as `ej2.min.js`.
+And ensure the application includes an `openjpeg` folder under `wwwroot` (or a publicly accessible static path). This folder must contain the `openjpeg.js` and `openjpeg.wasm` files, along with the PDF file to extract images. Keep these in the same static content area as `ej2.min.js`.
 
 Step 6: **Create a PDF document** : Add the script in `~/Views/Home/Index.cshtml` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 

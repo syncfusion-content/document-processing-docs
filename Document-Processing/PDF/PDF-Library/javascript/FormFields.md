@@ -44,8 +44,10 @@ document.form.add(new PdfTextBoxField(
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add the PDF page.
@@ -69,6 +71,7 @@ document.form.add(new PdfTextBoxField(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -79,7 +82,7 @@ The following code snippet explains how to add a text box field in an existing P
 import {PdfDocument, PdfPage, PdfTextBoxField, PdfInteractiveBorder, PdfBorderStyle, PdfFontFamily, PdfFontStyle} from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
-let document: PdfDocument = new PdfDocument();
+let document: PdfDocument = new PdfDocument(data);
 //Add the PDF page.
 let page: PdfPage = document.getPage(0);
 // Add new textbox field into PDF form
@@ -101,8 +104,10 @@ document.form.add(new PdfTextBoxField(
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -126,6 +131,7 @@ document.form.add(new ej.pdf.PdfTextBoxField(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -165,8 +171,10 @@ document.form.add(new PdfComboBoxField(
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -195,6 +203,7 @@ document.form.add(new ej.pdf.PdfComboBoxField(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -232,8 +241,10 @@ document.form.add(new PdfComboBoxField(
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -262,6 +273,7 @@ document.form.add(new ej.pdf.PdfComboBoxField(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -296,8 +308,10 @@ document.form.add(new PdfRadioButtonListField(
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -321,6 +335,7 @@ document.form.add(new ej.pdf.PdfRadioButtonListField(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -353,8 +368,10 @@ document.form.add(new PdfRadioButtonListField(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -378,6 +395,7 @@ document.form.add(new ej.pdf.PdfRadioButtonListField(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -418,8 +436,10 @@ document.form.add(new PdfListBoxField(
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -449,6 +469,7 @@ document.form.add(new ej.pdf.PdfListBoxField(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -487,8 +508,10 @@ document.form.add(new PdfListBoxField(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -518,6 +541,7 @@ document.form.add(new ej.pdf.PdfListBoxField(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -550,8 +574,10 @@ document.form.add(new PdfCheckBoxField(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -573,6 +599,7 @@ document.form.add(new ej.pdf.PdfCheckBoxField(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -603,8 +630,10 @@ document.form.add(new PdfCheckBoxField(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -626,6 +655,7 @@ document.form.add(new ej.pdf.PdfCheckBoxField(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -663,8 +693,10 @@ document.form.add(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -691,6 +723,7 @@ document.form.add(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -726,8 +759,10 @@ document.form.add(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -754,6 +789,7 @@ document.form.add(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -793,8 +829,10 @@ document.form.add(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -823,6 +861,7 @@ document.form.add(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -860,8 +899,10 @@ document.form.add(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -890,6 +931,7 @@ document.form.add(
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -919,8 +961,10 @@ field.textAlignment = PdfTextAlignment.center;
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -935,6 +979,7 @@ field.textAlignment = ej.pdf.PdfTextAlignment.center;
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -960,8 +1005,10 @@ field.multiSelect = true;
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -976,6 +1023,7 @@ field.multiSelect = true;
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1001,8 +1049,10 @@ field.toolTip = 'Radio button';
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -1017,6 +1067,7 @@ field.toolTip = 'Radio button';
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1042,8 +1093,10 @@ field.toolTip = 'ListBox Fields';
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -1058,6 +1111,7 @@ field.toolTip = 'ListBox Fields';
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1083,8 +1137,10 @@ field.toolTip = 'CheckBox Fields';
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -1099,6 +1155,7 @@ field.toolTip = 'CheckBox Fields';
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1125,8 +1182,10 @@ field.toolTip = 'CheckBox Fields';
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -1141,6 +1200,7 @@ field.toolTip = 'CheckBox Fields';
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1170,8 +1230,10 @@ field.defaultValue = 'Syncfusion';
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -1188,12 +1250,13 @@ field.defaultValue = 'Syncfusion';
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
 ## Removing the form fields from existing PDF document
 
-This example demonstrates how to remove items from an existing form field in a PDF document using the `removeItemAt()` method of the `PdfField` class. The following code snippet illustrates how to access a form field and remove its first item.
+This example demonstrates how to remove items from an existing form field in a PDF document using the `remove()` method of the `PdfField` class. The following code snippet illustrates how to access a form field and remove its first item.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1209,8 +1272,10 @@ field.removeItemAt(0);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the form field at index 0
@@ -1221,6 +1286,7 @@ field.removeItemAt(0);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1242,8 +1308,10 @@ field.flatten = true;
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Get the first field
@@ -1254,8 +1322,11 @@ field.flatten = true;
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
+
+N> Setting `document.flatten = true;` flattens all interactive elements in the PDF, converting form fields and annotations into static content throughout the entire document.
 
 ## Marking form fields as Read-Only
 
@@ -1290,7 +1361,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Importing form fields
+## Importing form fields data
 
 ### Importing FDF file to PDF
 
@@ -1337,8 +1408,10 @@ document.importFormData('formData.xfdf', DataFormat.xfdf);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Imports form data from to the PDF document.
@@ -1347,10 +1420,11 @@ document.importFormData('formData.xfdf', ej.pdf.DataFormat.xfdf);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
-## Exporting form fields
+## Exporting form fields data
 
 ### Export PDF file to FDF
 
@@ -1371,8 +1445,10 @@ let fdf: Uint8Array = document.exportFormData(settings);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Sets the form field data export settings with output data format.
@@ -1384,6 +1460,7 @@ var fdf = document.exportFormData(settings);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1406,8 +1483,10 @@ let xfdf: Uint8Array = document.exportFormData(settings);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Sets the form field data export settings with output data format.
@@ -1419,5 +1498,6 @@ var xfdf = document.exportFormData(settings);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}

@@ -31,7 +31,6 @@ let state: PdfGraphicsState = graphics.save();
 graphics.setTransparency(0.25);
 // Set the rotate transform
 graphics.rotateTransform(-45);
-graphics.drawImage
 // Draw the string
 graphics.drawString('Created by Syncfusion PDF', font, {x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
 // Restore the graphics state
@@ -40,8 +39,10 @@ graphics.restore(state);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument();
 // Access first page
@@ -56,7 +57,6 @@ var state = graphics.save();
 graphics.setTransparency(0.25);
 // Set the rotate transform
 graphics.rotateTransform(-45);
-graphics.drawImage
 // Draw the string
 graphics.drawString('Created by Syncfusion PDF', font, {x: 10, y: 20, width: 100, height: 200}, new ej.pdf.({r: 0, g: 0, b: 255}));
 // Restore the graphics state
@@ -65,6 +65,7 @@ graphics.restore(state);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -97,8 +98,10 @@ graphics.restore(state);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access first page
@@ -122,12 +125,13 @@ graphics.restore(state);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
 ## Adding image watermark in PDF document
 
-This example demonstrates how to add a image watermark using standard fonts in a PDF document by utilizing the `drawImage` method of the `PdfGraphics` class along with predefined font types from the `PdfStandardFont` class. The transparency can be applied to the images using `setTransparency` method.
+This example demonstrates how to add a image watermark using standard fonts in a PDF document by utilizing the `drawImage` method of the `PdfGraphics` class. The transparency can be applied to the images using `setTransparency` method.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -320,36 +324,40 @@ Remove a watermark annotation from the page's annotation collection using the `P
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfAnnotationCollection, PdfWatermarkAnnotation} from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfAnnotation} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Access first page
 let page: PdfPage = document.getPage(0);
-// Check if the first annotation is a watermark, then remove it
-let annotation: PdfAnnotationCollection = page.annotations[0];
-if (annotation instanceof PdfWatermarkAnnotation) {
-  // Remove the watermark annotation
-  page.annotations.removeAt(0);
-}
+// Get the first annotation is a watermark
+let annotation: PdfAnnotation = page.annotations.at(0);
+// Remove an annotation
+page.annotations.remove(annotation);
+// Remove an annotation from the collection
+page.annotations.removeAt(1);
 // Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access first page
 var page = document.getPage(0);
-// Check if the first annotation is a watermark, then remove it
-var annotation = page.annotations[0];
-if (annotation instanceof ej.pdf.PdfWatermarkAnnotation){
-page.annotations.removeAt(0);
-}
+// Get the first annotation is a watermark
+var annotation = page.annotations.at(0);
+// Remove an annotation
+page.annotations.remove(annotation);
+// Remove an annotation from specific index
+page.annotations.removeAt(1);
 // Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
