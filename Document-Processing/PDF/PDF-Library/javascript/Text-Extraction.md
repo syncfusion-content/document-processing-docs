@@ -104,8 +104,10 @@ let text: string = extractor.extractText({isLayout: true});
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the PdfDataExtractor class
@@ -137,17 +139,15 @@ import { PdfDataExtractor, TextLine } from '@syncfusion/ej2-pdf-data-extract';
 let document: PdfDocument = new PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
-// Extracts text from the PDF Page based on its line
-let textCollection: TextLine[] = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount - 1});
-// Gets the bounds of the text line
-let lineBounds = textLine[0].bounds;
-// Gets the single line of extracted text from the PDF page
-let line = textLine[0].text;
-// Gets the page index of the text line extracted
-let pageIndex = textLine[0].pageIndex;
+// Extract `TextLine` from the PDF document.
+let textLines: Array<TextLine> = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
+textLines.forEach((textLine: TextLine) => {
+  // Gets the bounds of the text line.
+  let lineBounds: Rectangle = textLine.bounds;
+});
 // Save the document
-document.save('Output.pdf');
-// Close the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -155,25 +155,17 @@ document.destroy();
 
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Initialize a new instance of the PdfDataExtractor class
-var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
-// Extracts text from the PDF Page based on its line
-var textLine = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount - 1 });
-// Gets the bounds of the text line
-var lineBounds = textLine[0].bounds;
-// Gets the single line of extracted text from the PDF page
-var line = textLine[0].text;
-// Gets the page index of the text line extracted
-var pageIndex = textLine[0].pageIndex;
-// Gets the bounds of the text line.
-var lineBounds = textLine.bounds;
-// Gets the single line of extracted text from the PDF page.
-var line = textLine.text;
-// Gets the page index of the text line extracted.
-var pageIndex = textLine.pageIndex;
+// Initialize a new instance of the `PdfDataExtractor` class
+var extractor = new ej.pdf.PdfDataExtractor(document);
+// Extract `TextLine` from the PDF document.
+var textLines = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
+textLines.forEach((textLine) => {
+  // Gets the bounds of the text line.
+  var lineBounds = textLine.bounds;
+});
 // Save the document
-document.save('Output.pdf');
-// Close the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
@@ -186,62 +178,64 @@ This example demonstrates how to extract words from a PDF document using the `ex
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument } from '@syncfusion/ej2-pdf';
-import { PdfDataExtractor, TextLine, TextWord } from '@syncfusion/ej2-pdf-data-extract';
+import { PdfDataExtractor, TextLine, TextWord, PdfFontStyle } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
-let destination: PdfDocument = new PdfDocument(data1);
-// Load another existing PDF document
-let sourceDocument1: PdfDocument = new PdfDocument(data2);
-// Options to customize the import of PDF pages
-let options: PdfPageImportOptions = new PdfPageImportOptions();
-// Sets the target page index to insert the imported pages
-options.targetIndex = 3;
-// Import 5 pages from page index 2 to 6 into the destination document and insert them at index 3
-destination.importPageRange(sourceDocument1, 2, 6, options);
-// Load another existing PDF document
-let sourceDocument2: PdfDocument = new PdfDocument(data3);
-// Options to customize the import of PDF pages
-options = new PdfPageImportOptions();
-// Sets the target page index to insert the imported pages
-options.targetIndex = 7;
-// Import 4 pages from page index 0 to 3 into the destination document and insert them at index 7
-destination.importPageRange(sourceDocument2, 0, 3, options);
-// Save the output PDF
-destination.save('Output.pdf');
-// Destroy the documents to free resources
-destination.destroy();
-sourceDocument1.destroy();
-sourceDocument2.destroy();
+let document: PdfDocument = new PdfDocument(data);
+// Initialize a new instance of the `PdfDataExtractor` class
+let extractor: PdfDataExtractor = new PdfDataExtractor(document);
+// Extract `TextLine` from the PDF document.
+let textLines: Array<TextLine> = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
+textLines.forEach((textLine: TextLine) => {
+    textLine.words.forEach((textWord: TextWord) => {
+        // Gets the bounds of the text word.
+        let wordBounds: Rectangle = textWord.bounds;
+        // Gets the single word of extracted text from the PDF page.
+        let word: string = textWord.text;
+        // Gets the collection of text glyphs extracted from a specified page in a PDF document.
+        let glyphs: TextGlyph[] = textWord.glyphs;
+        // Gets the name of the font used for a particular word.
+        let wordFontName: string = textWord.fontName;
+        // Gets the style of the font used for a particular word.
+        let wordFontStyle: PdfFontStyle = textWord.fontStyle;
+        // Gets the size of the font used for a particular word.
+        let wordFontSize: number = textWord.fontSize;
+    });
+});
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy(); 
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Create a PdfDataExtractor instance for the given PDF document
-var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
-// Extract text lines from all pages in the document
-var textCollection = extractor.extractTextLines({
-  startPageIndex: 0,
-  endPageIndex: document.pageCount - 1
+// Initialize a new instance of the `PdfDataExtractor` class
+var extractor = new ej.pdf.PdfDataExtractor(document);
+// Extract `TextLine` from the PDF document.
+var textLines = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
+textLines.forEach((textLine) => {
+    textLine.words.forEach((textWord: TextWord) => {
+        // Gets the bounds of the text word.
+        var wordBounds = textWord.bounds;
+        // Gets the single word of extracted text from the PDF page.
+        var word = textWord.text;
+        // Gets the collection of text glyphs extracted from a specified page in a PDF document.
+        var glyphs = textWord.glyphs;
+        // Gets the name of the font used for a particular word.
+        var wordFontName = textWord.fontName;
+        // Gets the style of the font used for a particular word.
+        var wordFontStyle = textWord.fontStyle;
+        // Gets the size of the font used for a particular word.
+        var wordFontSize = textWord.fontSize;
+    });
 });
-var page;
-// Iterate through each extracted text line
-for (var i = 0; i < textCollection.length; i++) {
-  // Get the page corresponding to the current text line
-  page = document.getPage(textCollection[i].pageIndex);
-  // Retrieve all words from the current text line
-  var wordCollection = textCollection[i].words;
-  // Iterate through each word in the line
-  for (var j = 0; j < wordCollection.length; j++) {
-    var word = wordCollection[j];
-    if (word) {
-
-    }
-  }
-}
 // Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
+document.save('output.pdf');
+// Destroy the document
+document.destroy(); 
 
 {% endhighlight %}
 {% endtabs %}
@@ -253,90 +247,72 @@ You can retrieve a single character and its properties, including bounds, font n
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument } from '@syncfusion/ej2-pdf';
-import { PdfDataExtractor, TextLine, TextWord } from '@syncfusion/ej2-pdf-data-extract';
+import { PdfDataExtractor, TextLine, TextWord, PdfFontStyle } from '@syncfusion/ej2-pdf-data-extract';
 
-// Load the existing PDF document
+// Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Create a PdfDataExtractor instance for the given PDF document
+// Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
-// Extract text lines only from the first page (index 0)
-let lineCollection: TextLine[] = extractor.extractTextLines({
-  startPageIndex: 0,
-  endPageIndex: 0
+// Extract `TextLine` from the PDF document.
+let textLines: Array<TextLine> = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
+textLines.forEach((textLine: TextLine) => {
+    textLine.words.forEach((textWord: TextWord) => {
+        textWord.glyphs.forEach((textGlyph: TextGlyph) => {
+            // Gets the bounds of the text glyph
+            let glyphBounds: Rectangle = textGlyph.bounds;
+            // Gets the single character of extracted text from the PDF page.
+            let character: string = textGlyph.text;
+            // Gets the font size used for a particular character of the text.
+            let fontSize: number = textGlyph.fontSize;
+            // Gets the name of the font used for a particular character of the text.
+            let fontName: string = textGlyph.fontName;
+            // Gets the font style used for a particular character of the text.
+            let fontStyle: PdfFontStyle = textGlyph.fontStyle;
+            // Gets the text color of the text glyph.
+            let color: PdfColor = textGlyph.color;
+            // Gets the value indicating whether the glyph is rotated or not.
+            let isRotated: boolean = textGlyph.isRotated;
+        });
+  });
 });
-// Get the first line
-let line: TextLine = lineCollection[0];
-// Get the collection of words in the first line
-let textWordCollection: TextWord[] = line.words;
-// Get the first word
-let textWord: TextWord = textWordCollection[0];
-// Get glyph details of the first word
-let textGlyphCollection: TextGlyph[] = textWord.glyphs;
-// Get the first glyph
-let textGlyph: TextGlyph = textGlyphCollection[0];
-// ---- Glyph properties ----
-// Bounds of the character (x, y, width, height)
-let glyphBounds = {
-  x: textGlyph.bounds[0],
-  y: textGlyph.bounds[1],
-  width: textGlyph.bounds[2],
-  height: textGlyph.bounds[3]
-};
-// Font name of the character
-let glyphFontName: string = textGlyph.fontName;
-// Font size of the character
-let glyphFontSize: number = textGlyph.fontSize;
-// Font style of the character (e.g., PdfFontStyle.regular/bold/italic)
-let glyphFontStyle: PdfFontStyle = textGlyph.fontStyle;
-// The character itself
-let glyphText: string = textGlyph.text;
-// The color of the character (typically RGB)
-let glyphColor = textGlyph.textColor;
-// Save and close
-document.save('Output.pdf');
+// Save the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-// Load the existing PDF document
+
+// Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Create a PdfDataExtractor instance for the given PDF document
+// Initialize a new instance of the `PdfDataExtractor` class
 var extractor = new ej.pdf.PdfDataExtractor(document);
-// Extract text lines only from the first page (index 0)
-var lineCollection = extractor.extractTextLines({
-  startPageIndex: 0,
-  endPageIndex: 0
+// Extract `TextLine` from the PDF document.
+var textLines = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
+textLines.forEach((textLine) => {
+    textLine.words.forEach((textWord: TextWord) => {
+        textWord.glyphs.forEach((textGlyph) => {
+            // Gets the bounds of the text glyph
+            var glyphBounds= textGlyph.bounds;
+            // Gets the single character of extracted text from the PDF page.
+            var character = textGlyph.text;
+            // Gets the font size used for a particular character of the text.
+            var fontSize = textGlyph.fontSize;
+            // Gets the name of the font used for a particular character of the text.
+            var fontName = textGlyph.fontName;
+            // Gets the font style used for a particular character of the text.
+            var fontStyle = textGlyph.fontStyle;
+            // Gets the text color of the text glyph.
+            var color = textGlyph.color;
+            // Gets the value indicating whether the glyph is rotated or not.
+            var isRotated = textGlyph.isRotated;
+        });
+  });
 });
-// Get the first line
-var line = lineCollection[0];
-// Get the collection of words in the first line
-var textWordCollection = line.words;
-// Get the first word
-var textWord = textWordCollection[0];
-// Get glyph details of the first word
-var textGlyphCollection = textWord.glyphs;
-// Get the first glyph
-var textGlyph = textGlyphCollection[0];
-// ---- Glyph properties ----
-// Bounds of the character (x, y, width, height)
-var glyphBounds = {
-  x: textGlyph.bounds[0],
-  y: textGlyph.bounds[1],
-  width: textGlyph.bounds[2],
-  height: textGlyph.bounds[3]
-};
-// Font name of the character
-var glyphFontName = textGlyph.fontName;
-// Font size of the character
-var glyphFontSize = textGlyph.fontSize;
-// Font style of the character (e.g., PdfFontStyle.regular/bold/italic)
-var glyphFontStyle = textGlyph.fontStyle;
-// The character itself
-var glyphText = textGlyph.text;
-// The color of the character (typically RGB)
-var glyphColor = textGlyph.textColor;
-// Save and close
-document.save('Output.pdf');
+// Save the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
