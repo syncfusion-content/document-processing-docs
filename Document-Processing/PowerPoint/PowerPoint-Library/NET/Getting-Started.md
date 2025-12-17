@@ -492,4 +492,4 @@ N> You can refer to our [.NET PowerPoint framework](https://www.syncfusion.com/d
 
 ## Online Demo
 
-* Explore how to create slides with simple text in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/default#/bootstrap5).
+* Explore how to create slides with simple text in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/default#/tailwind).
