@@ -14,7 +14,7 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/26.1.35/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/32.1.19/"
     },
     map: {
         app: 'app',
