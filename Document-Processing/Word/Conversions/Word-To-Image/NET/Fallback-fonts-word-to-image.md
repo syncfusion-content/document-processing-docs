@@ -111,7 +111,7 @@ using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, F
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Fallback-fonts-based-on-scripttype).
 
-## Fallback Symbols based on script type
+## Fallback fonts for symbols
 
 The following code example demonstrates how a user can add fallback fonts for Symbols and Emojis, which DocIO considers internally when converting a Word document to image.
 

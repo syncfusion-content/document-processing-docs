@@ -210,7 +210,7 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Fallback-fonts-based-on-scripttype).
 
-## Fallback Symbols based on script type
+## Fallback fonts for symbols
 
 The following code example demonstrates how a user can add fallback fonts for Symbols and Emojis, which Presentation considers internally when converting a PowerPoint presentation to PDF.
 
