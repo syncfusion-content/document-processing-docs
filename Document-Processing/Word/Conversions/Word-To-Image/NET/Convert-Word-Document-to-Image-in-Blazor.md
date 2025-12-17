@@ -1301,4 +1301,3 @@ Click [here](https://www.syncfusion.com/document-processing/word-framework/blazo
 
 An online sample link to [convert Word document to image](https://document.syncfusion.com/demos/word/wordtoimage#/tailwind) in ASP.NET Core. 
  
- 
