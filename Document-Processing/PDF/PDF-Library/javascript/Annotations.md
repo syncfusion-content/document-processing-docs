@@ -1998,10 +1998,74 @@ This example demonstrates how to access a measurement annotation from a PDF page
 
 Common types of measurement annotations include:
 
-* Line   - Represents a straight distance between two points.
-* Circle - Used to measure circular dimensions.
-* Square - Defines rectangular or square measurements.
-* Angle  - Displays angular measurements between two intersecting lines.
+* Line   - Represents a straight distance between two points.(distance)
+* Circle - Used to measure circular dimensions.(Radius)
+* Square - Defines rectangular or square measurements.(Area)
+* Angle  - Displays angular measurements between two intersecting lines.(degrees)
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfLineAnnotation, PdfAnnotationLineEndingStyle, PdfLineEndingStyle, PdfAnnotationCaption, PdfLineCaptionType, PdfMeasurementUnit} from '@syncfusion/ej2-pdf';
+
+// Creates a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Adds a new page to the PDF
+let page: PdfPage = document.addPage();
+// Creates a new line annotation.
+let lineAnnotation: PdfLineAnnotation = new PdfLineAnnotation({ x: 80, y: 420 }, { x: 150, y: 420 }, {
+    text: 'Line Annotation',
+    author: 'Syncfusion',
+    color: { r: 255, g: 0, b: 0 },
+    innerColor: { r: 255, g: 255, b: 0 },
+    lineEndingStyle: new PdfAnnotationLineEndingStyle({ begin: PdfLineEndingStyle.circle, end: PdfLineEndingStyle.diamond }),
+    opacity: 0.5,
+    measurementUnit: PdfMeasurementUnit.centimeter
+});
+// Assigns the leader line
+lineAnnotation.leaderExt = 0;
+lineAnnotation.leaderLine = 0;
+// Assigns the line caption type
+lineAnnotation.caption = new PdfAnnotationCaption({ cap: true, type: PdfLineCaptionType.inline });
+// Adds annotation to the page
+page.annotations.add(lineAnnotation);
+// Saves and download the PDF document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Creates a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Adds a new page to the PDF
+var page = document.addPage();
+// Creates a new line annotation.
+var lineAnnotation = new ej.pdf.PdfLineAnnotation({x:80,y:420},{x:150,y:420},{
+text:'Line Annotation',
+author:'Syncfusion',
+color:{r:255,g:0,b:0},
+innerColor:{r:255,g:255,b:0},
+lineEndingStyle:new ej.pdf.PdfAnnotationLineEndingStyle({begin:ej.pdf.PdfLineEndingStyle.circle,end:ej.pdf.PdfLineEndingStyle.diamond}),
+opacity:0.5,
+measurementUnit: PdfMeasurementUnit.centimeter
+});
+// Assigns the leader line
+lineAnnotation.leaderExt = 0;
+lineAnnotation.leaderLine = 0;
+// Assigns the line caption type
+lineAnnotation.caption = new ej.pdf.PdfAnnotationCaption({cap:true,type:ej.pdf.PdfLineCaptionType.inline});
+// Adds annotation to the page
+page.annotations.add(lineAnnotation);
+// Saves and download the PDF document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+The following code snippet explains how to add a measurement annotation in an existing PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -2174,12 +2238,7 @@ N> Setting `document.flatten = true;` flattens all interactive elements in the P
 
 ## Importing annotations
 
-This example demonstrates how to import annotations into a PDF document using the PdfDocument. `importAnnotations` method. The DataFormat enum specifies the format of the annotation data you are importing or exporting:
-
-* fdf (Forms Data Format): Compact, PDF specific key/value representation.
-* xfdf (XML Forms Data Format): XML-based FDF for wider tool interoperability.
-* json: Human readable and easy to parse in web apps/services.
-* xml: Generic XML structure suitable for systems that prefer XML processing.
+This example demonstrates how to import annotations into a PDF document using the PdfDocument. `importAnnotations` method. The DataFormat enum specifies the format of the annotation data being imported, such as FDF, XFDF, JSON, or XML.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -2210,7 +2269,7 @@ pdfDocument.destroy();
 
 ## Exporting annotations
 
-This example demonstrates how to export annotations from a PDF document using the PdfDocument.exportAnnotations method. 
+This example demonstrates how to export annotations from a PDF document using the PdfDocument.exportAnnotations method. The DataFormat enum specifies the format of the annotation data being exported, such as FDF, XFDF, JSON, or XML.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
