@@ -6,7 +6,7 @@ control: PowerPoint
 documentation: UG
 ---
 
-# Convert PowerPoint to PDF using Syncfusion<sup>&reg;</sup> PowerPoint library
+# Convert PowerPoint to PDF using Syncfusion® PowerPoint library
 
 Syncfusion<sup>&reg;</sup> PowerPoint library (Presentation) allows you to convert PowerPoint Presentation document to PDF within a few lines of code in .NET applications and also it does not require Adobe and Microsoft PowerPoint application to be installed in the machine. Using this, you can create an input PowerPoint Presentation document from scratch or load an existing PowerPoint Presentation document and then easily convert to PDF.
 
@@ -599,9 +599,6 @@ End Using
 
 {% endtabs %}
 
-By running the above code, you will generate a **PDF with editable text form fields** as shown below.
-![Editable text form fields](PPTXtoPDF_images/Editable-text-form-fields.png)
-
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Create-fillable-PDF-from-PPTX).
 
 ## Chart quality
@@ -753,9 +750,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to convert a PowerPoint presentation to PDF using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/pptxtopdf#/bootstrap5).
-* See how to convert a PowerPoint presentation to PDF/UA using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/pptxtopdfua#/bootstrap5).
-* See how to convert a PowerPoint presentation to PDF/A using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/pptxtopdfa#/bootstrap5).
+* Explore how to convert a PowerPoint presentation to PDF using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind).
+* See how to convert a PowerPoint presentation to PDF/UA using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/pptxtopdfua#/tailwind).
+* See how to convert a PowerPoint presentation to PDF/A using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/pptxtopdfa#/tailwind).
 
 ## See Also
 
