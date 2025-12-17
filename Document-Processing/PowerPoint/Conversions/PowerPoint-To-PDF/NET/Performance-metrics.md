@@ -18,7 +18,7 @@ The following system configurations were used for benchmarking:
 * **Processor:** 11th Gen Intel(R) Core(TM)
 * **RAM:** 16GB
 * **.NET Version:** .NET 8.0
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.PresentationRenderer.Net.Core v30.1.37](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/30.1.37)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.PresentationRenderer.Net.Core v32.1.19](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/32.1.19)
 
 ## PowerPoint to PDF conversion 
 
@@ -41,12 +41,12 @@ The following system configurations were used for benchmarking:
 <tr>
     <td>100</td>
     <td>{{'[PowerPoint-100.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-PDF/.NET/PPTX-to-PDF/Data/PowerPoint-100.pptx)'| markdownify }}</td>
-    <td>1.2</td>
+    <td>0.7</td>
 </tr>
 <tr>
     <td>500</td>
     <td>{{'[PowerPoint-500.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-PDF/.NET/PPTX-to-PDF/Data/PowerPoint-500.pptx)'| markdownify }}</td>
-    <td>16</td>
+    <td>13.5</td>
 </tr>
 </table>
 
