@@ -20,8 +20,10 @@ var sheet = [
         cells: [
           {
             value: 'Sports Shoes',
-            notes:
-              'These shoes have the highest sales in terms of quantity this month.',
+            notes: {
+              text: 'These shoes have the highest sales in terms of quantity this month.',
+              isVisible: true
+            },
           },
           { value: 'IN STOCK' },
           { value: 'Overstack' },
@@ -43,10 +45,7 @@ var sheet = [
       },
       {
         cells: [
-          {
-            value: 'Flip-Flops & Slippers',
-            notes: 'These shoes have been the most profitable this month.',
-          },
+          { value: 'Flip-Flops & Slippers' },
           { value: 'IN STOCK' },
           { value: 'Taobao' },
         ],
@@ -84,6 +83,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
   saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
   created: function () {
     spreadsheet.cellFormat({ fontWeight: 'bold' }, 'A1:C1');
+    spreadsheet.updateCell({ notes: { text: 'This website is best for buying sports shoes.' } }, 'C3:C3')
   }
 });
 spreadsheet.appendTo('#spreadsheet');
