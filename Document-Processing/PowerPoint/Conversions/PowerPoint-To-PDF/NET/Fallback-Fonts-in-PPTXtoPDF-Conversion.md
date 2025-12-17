@@ -298,6 +298,8 @@ pptxDoc.Close()
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Fallback-symbols-based-on-scripttype/)
+
 ## Fallback fonts for range of Unicode text
 
 Users can set fallback fonts for specific Unicode range of text to be used in presentation to PDF conversion.

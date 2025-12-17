@@ -142,6 +142,8 @@ using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Ope
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Fallback-symbols-based-on-scripttype/)
+
 ## Fallback fonts for range of Unicode text
 
 Users can set fallback fonts for specific Unicode range of text to be used in Presentation to Image conversion.

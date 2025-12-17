@@ -154,6 +154,8 @@ using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, F
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Fallback-symbol-based-on-scripttype/)
+
 ## Fallback fonts for range of Unicode text
 
 Users can set fallback fonts for specific Unicode range of text to be used in Word to Image conversion.
