@@ -34,7 +34,7 @@ cp -R ./node_modules/@syncfusion/ej2-pdf-data-extract/dist/openjpeg public/openj
 **Create a PDF document** : Add the script in `App.jsx` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}
-{% highlight jsx tabtitle="~/App.jsx" %}
+{% highlight html tabtitle="~/App.jsx" %}
 import React from 'react';
 
 export default function App() {

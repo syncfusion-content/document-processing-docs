@@ -58,7 +58,7 @@ cp -R ./node_modules/@syncfusion/ej2-pdf-data-extract/dist/openjpeg public/js/op
 * **Create a PDF document** : Add the script in `App.vue` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}
-{% highlight vue tabtitle="~/App.vue" %}
+{% highlight html tabtitle="~/App.vue" %}
 <script>
 export default {
   name: 'App',

@@ -13,7 +13,7 @@ The PDF has support for adding the below shapes.
 * Rectangle
 * Rounded rectangle
 * Ellipse
-* Polygone
+* Polygon
 * Pie
 * Arc
 * Bezier
