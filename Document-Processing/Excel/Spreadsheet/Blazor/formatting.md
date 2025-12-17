@@ -90,7 +90,7 @@ Number formats can be applied programmatically to the current selection or a spe
 {% endhighlight %}
 {% endtabs %}
 
-> If the built-in formats do not meet specific requirements, custom patterns can be applied programmatically using the `NumberFormatAsync` method. Patterns must be compatible with Excel-style format strings.
+N> If the built-in formats do not meet specific requirements, custom patterns can be applied programmatically using the `NumberFormatAsync` method. Patterns must be compatible with Excel-style format strings.
 
 ## Text and Cell Formatting
 
@@ -178,7 +178,7 @@ Borders can be applied through the UI using the following method:
 
 ### Applying Borders Programmatically
 
-Borders can be applied programmatically to a specific cell or range of cells using the [SetBordersAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SetBordersAsync_Syncfusion_Blazor_Spreadsheet_BorderType_Syncfusion_XlsIO_ExcelLineStyle_System_String_System_String) method. The available parameters in the `SetBordersAsync` method are:
+Borders can be applied programmatically to a specific cell or range of cells using the [SetBordersAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SetBordersAsync_Syncfusion_Blazor_Spreadsheet_BorderType_Syncfusion_XlsIO_ExcelLineStyle_System_String_System_String_) method. The available parameters in the `SetBordersAsync` method are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
