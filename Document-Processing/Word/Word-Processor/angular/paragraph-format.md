@@ -76,11 +76,8 @@ this.documentEditor.selection.paragraphFormat.lineSpacing= 6.5; // Float value
 You can define the spacing before or after the paragraph by using the following sample code.
 
 ```typescript
-// Set line spacing type
 this.documentEditor.selection.paragraphFormat.beforeSpacing= 24;
-// Set line spacing value (supports both integer and float)
-this.documentEditor.selection.paragraphFormat.lineSpacing= 6; // Integer value
-this.documentEditor.selection.paragraphFormat.lineSpacing= 6.5; // Float value
+this.documentEditor.selection.paragraphFormat.afterSpacing= 24;
 ```
 
 You can also set automatic spacing before and after the paragraph by using the following sample code.
