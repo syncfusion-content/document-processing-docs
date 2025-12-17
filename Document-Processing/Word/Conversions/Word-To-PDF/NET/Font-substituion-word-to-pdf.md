@@ -216,3 +216,7 @@ End Sub
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Use-alternate-font-without-installing).
 
 N> The above event will be triggered only if the specified font is not installed in production machine.
+
+## See Also
+
+* [How to get the list of font names used in a Word document?](https://support.syncfusion.com/kb/article/22134/how-to-get-the-list-of-font-names-used-in-a-word-document-in-c-net-core)
