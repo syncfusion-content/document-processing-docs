@@ -47,8 +47,10 @@ form.add(field);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load the document
 var document = new ej.pdf.PdfDocument();
 // Get the first page of the document
@@ -67,6 +69,7 @@ form.add(field);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -106,8 +109,10 @@ form.add(field);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load the document
 var document = new ej.pdf.PdfDocument(data);
 // Get the first page of the document
@@ -138,6 +143,7 @@ form.add(field);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -181,8 +187,10 @@ form.add(field);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load the document
 var document = new ej.pdf.PdfDocument(data);
 // Gets the first page of the document
@@ -212,6 +220,7 @@ form.add(field);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -259,8 +268,10 @@ form.add(field);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load the document
 var document = new ej.pdf.PdfDocument(data);
 // Gets the first page of the document
@@ -291,6 +302,7 @@ form.add(field);
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -300,7 +312,7 @@ This example demonstrates how to retrieve the signed date of a PDF signature usi
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, DigestAlgorithm, CryptographicStandard} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfForm, PdfSignatureField} from '@syncfusion/ej2-pdf';
 
 // Load the document
 let document: PdfDocument = new PdfDocument(data);
@@ -308,49 +320,33 @@ let document: PdfDocument = new PdfDocument(data);
 let page: PdfPage = document.getPage(0);
 // Access the PDF form
 let form: PdfForm = document.form;
-// Create a new signature field
-let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
-// Create a new signature using PFX data and private key
-let sign: PdfSignature = PdfSignature.create(
-    {
-        cryptographicStandard: CryptographicStandard.cms,
-        digestAlgorithm: DigestAlgorithm.sha256
-    },
-    certData,
-    password
-);
-// Set the signature to the field
-field.setSignature(sign);
+// Access the loaded signature field
+let field: PdfSignatureField = document.form.fieldAt(0) as PdfSignatureField;
+// Get the signed
+let signature = field.getSignature();
 // Get the signed date
-sign.getSignedDate();
-// Add the field into PDF form
-form.add(field);
-// Save the document
-document.save('output.pdf');
+let date = signature.getSignedDate;
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load the document
 var document = new ej.pdf.PdfDocument(data);
 // Get the first page of the document
 var page = document.getPage(0);
 // Access the PDF form
 var form = document.form;
-// Create a new signature field
-var field = new ej.pdf.PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
-// Create a new signature using PFX data and private key
-var sign = ej.pdf.PdfSignature.create({ cryptographicStandard: ej.pdf.CryptographicStandard.cms, digestAlgorithm: ej.pdf.DigestAlgorithm.sha256 }, certData, password);
-// Set the signature to the field
-field.setSignature(sign);
+// Access the loaded signature field
+var field = document.form.fieldAt(0) as ej.pdf.PdfSignatureField;
+// Get the signed
+var signature = field.getSignature();
 // Get the signed date
-sign.getSignedDate();
-// Add the field into PDF form
-form.add(field);
-// Save the document
-document.save('output.pdf');
+var date = signature.getSignedDate;
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -360,57 +356,53 @@ This example demonstrates how to retrieve the certificate information of a PDF s
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfForm, PdfSignatureField, DigestAlgorithm, PdfCertificateInformation, CryptographicStandard} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfSignatureField, PdfCertificateInformation} from '@syncfusion/ej2-pdf';
 
 // Load the document
 let document: PdfDocument = new PdfDocument(data);
 // Get the first page of the document
 let page: PdfPage = document.getPage(0);
-// Access the PDF form
-let form: PdfForm = document.form;
-// Create a new signature field
-let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
-// Create a new signature using PFX data and private key
-let sign: PdfSignature = PdfSignature.create(
-    {
-        cryptographicStandard: CryptographicStandard.cms,
-        digestAlgorithm: DigestAlgorithm.sha256
-    },
-    certData,
-    password
-);
-// Set the signature to the field
-field.setSignature(sign);
+// Access the loaded signature field
+let field = document.form.fieldAt(0) as PdfSignatureField;
+// Get the signed
+let signature = field.getSignature();
 // Get the certificate information of the signature
-let certificateInfo: PdfCertificateInformation = sign.getCertificateInformation();
-// Add the field into PDF form
-form.add(field);
-// Save the document
-document.save('output.pdf');
+let certificateInfo: PdfCertificateInformation = signature.getCertificateInformation();
+// Get the issuer name of the certificate
+let issuerName = certificateInfo.issuerName;
+// Get the serial number of the certificate
+let serialNumber = certificateInfo.serialNumber;
+// Get the subject name of the certificate
+let subjectName = certificateInfo.subjectName;
+// Get the start date from which the certificate is valid
+let validFrom = certificateInfo.validFrom;
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load the document
 var document = new ej.pdf.PdfDocument(data);
 // Get the first page of the document
 var page = document.getPage(0);
-// Access the PDF form
-var form = document.form;
-// Create a new signature field
-var field = new ej.pdf.PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
-// Create a new signature using PFX data and private key
-var sign = ej.pdf.PdfSignature.create({ cryptographicStandard: ej.pdf.CryptographicStandard.cms, digestAlgorithm: ej.pdf.DigestAlgorithm.sha256 }, certData, password);
-// Set the signature to the field
-field.setSignature(sign);
+// Access the loaded signature field
+var field = document.form.fieldAt(0) as PdfSignatureField;
+// Get the signed
+var signature = field.getSignature();
 // Get the certificate information of the signature
-var certificateInfo = sign.getCertificateInformation();
-// Add the field into PDF form
-form.add(field);
-// Save the document
-document.save('output.pdf');
+var certificateInfo = signature.getCertificateInformation();
+// Get the issuer name of the certificate
+var issuerName = certificateInfo.issuerName;
+// Get the serial number of the certificate
+var serialNumber = certificateInfo.serialNumber;
+// Get the subject name of the certificate
+var subjectName = certificateInfo.subjectName;
+// Get the start date from which the certificate is valid
+var validFrom = certificateInfo.validFrom;
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -434,12 +426,30 @@ let field: PdfSignatureField = form.fieldAt(0) as PdfSignatureField;
 let signature: PdfSignature = field.getSignature();
 // Get the signature options
 let options: PdfSignatureOptions = signature.getSignatureOptions();
-// Get the cryptographic standard of the signature
-let cryptographicStandard: CryptographicStandard = options.cryptographicStandard;
+// Get the cryptographic standard
+let cryptographicStandard = options.cryptographicStandard;
+// Get the digest algorithm
+let digestAlgorithm = options.digestAlgorithm;
+// Get the signer contact information
+let contactInfo = options.contactInfo;
+// Get the reason for signing
+let reason = options.reason;
+// Get the physical signing location
+let locationInfo = options.locationInfo;
+// Get the certification flag
+let certify = options.certify;
+// Get the certification permissions
+let documentPermissions = options.documentPermissions;
+// Get// Get the signature name
+let signedName = options.signedName;
+// Get the lock status of the signature
+let isLocked = options.isLocked
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load the document
 var document = new ej.pdf.PdfDocument(data);
 // Get the first page of the document
@@ -452,10 +462,27 @@ var field = form.fieldAt(0);
 var signature = field.getSignature();
 // Get the signature options
 var options = signature.getSignatureOptions();
-// Get the cryptographic standard of the signature
+// Get the cryptographic standard
 var cryptographicStandard = options.cryptographicStandard;
+// Get the digest algorithm
+var digestAlgorithm = options.digestAlgorithm;
+// Get the signer contact information
+var contactInfo = options.contactInfo;
+// Get the reason for signing
+var reason = options.reason;
+// Get the physical signing location
+var locationInfo = options.locationInfo;
+// Get the certification flag
+var certify = options.certify;
+// Get the certification permissions
+var documentPermissions = options.documentPermissions;
+// Get// Get the signature name
+var signedName = options.signedName;
+// Get the lock status of the signature
+var isLocked = options.isLocked
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -502,12 +529,12 @@ field.setSignature(signature);
 // Add the field into PDF form
 form.add(field);
 // Save the document data
-let data: Uint8Array = document.save();
+let finalData: Uint8Array = document.save();
 // Destroy the document
 document.destroy();
 // Replace the empty signature with externally signed hash and certificates
 let signedDocumentData: Uint8Array = PdfSignature.replaceEmptySignature(
-    data,
+    finalData,
     'Signature',
     signedData,
     DigestAlgorithm.sha256,
@@ -515,8 +542,10 @@ let signedDocumentData: Uint8Array = PdfSignature.replaceEmptySignature(
 );
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load the document
 var document = new ej.pdf.PdfDocument(data);
 // Get the first page of the document
@@ -546,12 +575,12 @@ field.setSignature(signature);
 // Add the field into PDF form
 form.add(field);
 // Save the document data
-var data = document.save();
+var finalData = document.save();
 // Destroy the document
 document.destroy();
 // Replace the empty signature with externally signed hash and certificates
 var signedDocumentData = ej.pdf.PdfSignature.replaceEmptySignature(
-    data,
+    finalData,
     'Signature',
     signedData,
     ej.pdf.DigestAlgorithm.sha256,
@@ -559,5 +588,6 @@ var signedDocumentData = ej.pdf.PdfSignature.replaceEmptySignature(
 );
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}

@@ -28,15 +28,17 @@ let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 36, PdfF
 // Get the text size
 let size: Size = font.measureString('Syncfusion');
 // Create a new text web link annotation
-let annotation: PdfTextWebLinkAnnotation = new PdfTextWebLinkAnnotation({ x: 50, y: 40, width: size.width, height: size.height }, { r: 0, g: 0, b: 0}, { r: 165, g: 42, b: 42}, 1);
+let annotation: PdfTextWebLinkAnnotation = new PdfTextWebLinkAnnotation({ x: 50, y: 40, width: size.width, height: size.height }, { r: 0, g: 0, b: 0}, { r: 165, g: 42, b: 42 }, 1);
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument();
 // Access the first page
@@ -55,6 +57,7 @@ page.annotations.add(annotation);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,15 +78,17 @@ let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 36, PdfF
 // Get the text size
 let size: Size = font.measureString('Syncfusion');
 // Create a new text web link annotation
-let annotation: PdfTextWebLinkAnnotation = new PdfTextWebLinkAnnotation({ x: 50, y: 40, width: size.width, height: size.height }, { r: 0, g: 0, b: 0}, { r: 165, g: 42, b: 42}, 1);
+let annotation: PdfTextWebLinkAnnotation = new PdfTextWebLinkAnnotation({ x: 50, y: 40, width: size.width, height: size.height }, { r: 0, g: 0, b: 0}, { r: 165, g: 42, b: 42 }, 1);
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -102,6 +107,7 @@ page.annotations.add(annotation);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -111,7 +117,7 @@ This example demonstrates how to create internal navigation within a PDF documen
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, PdfDocumentLinkAnnotation, PdfTextAlignment, PdfFontFamily, PdfFontStyle, PdfDestination, PdfDestinationMode,  } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, PdfDocumentLinkAnnotation, PdfTextAlignment, PdfFontFamily, PdfFontStyle, PdfDestination, PdfDestinationMode  } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -124,7 +130,7 @@ let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfF
 // Get the text size
 let size: Size = font.measureString('Syncfusion');
 // Create a new text web link annotation
-let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation({ x: 50, y: 40, width: size.width, height: size.height }, { r: 0, g: 0, b: 0}, { r: 165, g: 42, b: 42}, 1);
+let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation({ x: 50, y: 40, width: size.width, height: size.height }, { r: 0, g: 0, b: 0}, { r: 165, g: 42, b: 42 }, 1);
 // Initializes a new instance of the `PdfDestination` class.
 let destination: PdfDestination = new PdfDestination();
 // Sets the zoom factor.
@@ -143,8 +149,10 @@ annotation.destination = destination;
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -175,6 +183,7 @@ annotation.destination = destination;
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -208,8 +217,10 @@ annotation.destination = destination;
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Get the page
@@ -234,6 +245,7 @@ annotation.destination = destination;
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -249,28 +261,31 @@ import { PdfDocument, PdfPage, PdfFileLinkAnnotation } from '@syncfusion/ej2-pdf
 let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
-// Create a new file link annotation(base64 / uint8array)
-let annotation: PdfFileLinkAnnotation = new PdfFileLinkAnnotation({ x: 10, y: 40, width: 30, height: 30 }, '/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
+// Create a new file link annotation
+let annotation: PdfFileLinkAnnotation = new PdfFileLinkAnnotation({ x: 10, y: 40, width: 30, height: 30 }, 'image.png');
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
-// Create a new file link annotation(base64 / uint8array)
-var annotation = new ej.pdf.PdfFileLinkAnnotation({ x: 10, y: 40, width: 30, height: 30 }, '/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
+// Create a new file link annotation
+var annotation = new ej.pdf.PdfFileLinkAnnotation({ x: 10, y: 40, width: 30, height: 30 }, 'image.png');
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -284,27 +299,30 @@ import { PdfDocument, PdfPage, PdfFileLinkAnnotation } from '@syncfusion/ej2-pdf
 let document: PdfDocument = new PdfDocument(data);
 // Get the first page
 let page: PdfPage = document.getPage(0) as PdfPage;
-// Create a new file link annotation(base64 / uint8array)
-let annotation: PdfFileLinkAnnotation = new PdfFileLinkAnnotation({ x: 10, y: 40, width: 30, height: 30 }, '/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
+// Create a new file link annotation
+let annotation: PdfFileLinkAnnotation = new PdfFileLinkAnnotation({ x: 10, y: 40, width: 30, height: 30 }, 'image.png');
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Get the first page
 var page = document.getPage(0);
-// Create a new file link annotation(base64 / uint8array)
-var annotation = new ej.pdf.PdfFileLinkAnnotation({ x: 10, y: 40, width: 30, height: 30 }, '/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
+// Create a new file link annotation
+var annotation = new ej.pdf.PdfFileLinkAnnotation({ x: 10, y: 40, width: 30, height: 30 }, 'image.png');
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
 document.save('Output.pdf');
 // Close the document
 document.destroy(); 
+
 {% endhighlight %}
 {% endtabs %}

@@ -42,6 +42,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Creates a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -96,6 +97,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -153,6 +155,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Creates a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -205,6 +208,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -263,6 +267,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Creates a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -325,6 +330,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -388,6 +394,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Creates a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -548,6 +555,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -616,6 +624,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a new page to the PDF
@@ -694,6 +703,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -759,6 +769,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -814,6 +825,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -867,6 +879,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -921,6 +934,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -971,6 +985,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1008,6 +1023,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -1053,6 +1069,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1100,6 +1117,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -1152,8 +1170,7 @@ borderColor: { r: 255, g: 0, b: 0},
           repeatText: true,
           overlayText: 'Sample Overlay',
           font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular),
-          textColor: { r: 0, g: 0, b: 0},
-          appearanceFillColor: { r: 255, g: 255, b: 255}
+          textColor: { r: 0, g: 0, b: 0}
 });
 // Add annotation to the page
 page.annotations.add(annotation);
@@ -1164,6 +1181,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1176,8 +1194,7 @@ var annotation = new ej.pdf.PdfRedactionAnnotation(
     repeatText: true,
     overlayText: 'Sample Overlay',
     font: document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular),
-    textColor: { r: 0, g: 0, b: 0 },
-    appearanceFillColor: { r: 255, g: 255, b: 255 }
+    textColor: { r: 0, g: 0, b: 0 }
   }
 );
 // Add annotation to the page
@@ -1207,8 +1224,7 @@ borderColor: { r: 255, g: 0, b: 0},
           repeatText: true,
           overlayText: 'Sample Overlay',
           font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular),
-          textColor: { r: 0, g: 0, b: 0},
-          appearanceFillColor: { r: 255, g: 255, b: 255}
+          textColor: { r: 0, g: 0, b: 0}
 });
 // Add annotation to the page
 page.annotations.add(annotation);
@@ -1219,6 +1235,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -1231,8 +1248,7 @@ var annotation = new ej.pdf.PdfRedactionAnnotation(
     repeatText: true,
     overlayText: 'Sample Overlay',
     font: document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular),
-    textColor: { r: 0, g: 0, b: 0 },
-    appearanceFillColor: { r: 255, g: 255, b: 255 }
+    textColor: { r: 0, g: 0, b: 0 }
   }
 );
 // Add annotation to the page
@@ -1270,6 +1286,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1311,6 +1328,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -1358,6 +1376,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1421,6 +1440,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -1487,6 +1507,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1546,6 +1567,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -1609,6 +1631,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1677,6 +1700,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -1747,6 +1771,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1808,6 +1833,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -1873,6 +1899,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1932,6 +1959,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -1970,10 +1998,74 @@ This example demonstrates how to access a measurement annotation from a PDF page
 
 Common types of measurement annotations include:
 
-* Line   - Represents a straight distance between two points.
-* Circle - Used to measure circular dimensions.
-* Square - Defines rectangular or square measurements.
-* Angle  - Displays angular measurements between two intersecting lines.
+* Line   - Represents a straight distance between two points.(distance)
+* Circle - Used to measure circular dimensions.(Radius)
+* Square - Defines rectangular or square measurements.(Area)
+* Angle  - Displays angular measurements between two intersecting lines.(degrees)
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfLineAnnotation, PdfAnnotationLineEndingStyle, PdfLineEndingStyle, PdfAnnotationCaption, PdfLineCaptionType, PdfMeasurementUnit} from '@syncfusion/ej2-pdf';
+
+// Creates a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Adds a new page to the PDF
+let page: PdfPage = document.addPage();
+// Creates a new line annotation.
+let lineAnnotation: PdfLineAnnotation = new PdfLineAnnotation({ x: 80, y: 420 }, { x: 150, y: 420 }, {
+    text: 'Line Annotation',
+    author: 'Syncfusion',
+    color: { r: 255, g: 0, b: 0 },
+    innerColor: { r: 255, g: 255, b: 0 },
+    lineEndingStyle: new PdfAnnotationLineEndingStyle({ begin: PdfLineEndingStyle.circle, end: PdfLineEndingStyle.diamond }),
+    opacity: 0.5,
+    measurementUnit: PdfMeasurementUnit.centimeter
+});
+// Assigns the leader line
+lineAnnotation.leaderExt = 0;
+lineAnnotation.leaderLine = 0;
+// Assigns the line caption type
+lineAnnotation.caption = new PdfAnnotationCaption({ cap: true, type: PdfLineCaptionType.inline });
+// Adds annotation to the page
+page.annotations.add(lineAnnotation);
+// Saves and download the PDF document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Creates a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Adds a new page to the PDF
+var page = document.addPage();
+// Creates a new line annotation.
+var lineAnnotation = new ej.pdf.PdfLineAnnotation({x:80,y:420},{x:150,y:420},{
+text:'Line Annotation',
+author:'Syncfusion',
+color:{r:255,g:0,b:0},
+innerColor:{r:255,g:255,b:0},
+lineEndingStyle:new ej.pdf.PdfAnnotationLineEndingStyle({begin:ej.pdf.PdfLineEndingStyle.circle,end:ej.pdf.PdfLineEndingStyle.diamond}),
+opacity:0.5,
+measurementUnit: PdfMeasurementUnit.centimeter
+});
+// Assigns the leader line
+lineAnnotation.leaderExt = 0;
+lineAnnotation.leaderLine = 0;
+// Assigns the line caption type
+lineAnnotation.caption = new ej.pdf.PdfAnnotationCaption({cap:true,type:ej.pdf.PdfLineCaptionType.inline});
+// Adds annotation to the page
+page.annotations.add(lineAnnotation);
+// Saves and download the PDF document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+The following code snippet explains how to add a measurement annotation in an existing PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1984,9 +2076,11 @@ let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Access the annotation at index 0
-let annotation: PdfLineAnnotation = page.annotations.at(0) PdfLineAnnotation;
+let annotation: PdfLineAnnotation = page.annotations.at(0) as PdfLineAnnotation;
 // Sets the measurement unit of line measurement annoation as centimeter
 annotation.unit = PdfMeasurementUnit.centimeter;
+// Sets the flag to have measurement dictionary of the line annotation.
+annotation.measure = true;
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -1994,6 +2088,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -2003,6 +2098,7 @@ var annotation = page.annotations.at(0);
 // Sets the measurement unit of line measurement annotation as centimeter
 if (annotation instanceof ej.pdf.PdfLineAnnotation) {
   annotation.unit = ej.pdf.PdfMeasurementUnit.centimeter;
+  annotation.measure = true;
 }
 // Save the document
 document.save('Output.pdf');
@@ -2028,8 +2124,7 @@ let page: PdfPage = document.getPage(0);
 let annotation: PdfPopupAnnotation = page.annotations.at(0) as PdfPopupAnnotation;
 // Modified its properties
 annotation.text = 'Popup annotation';
-annotation.color = { r: 0, g: 128, b: 255}
-;
+annotation.color = { r: 0, g: 128, b: 255};
 annotation.opacity = 0.5;
 // Save the document
 document.save('Output.pdf');
@@ -2038,6 +2133,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -2074,6 +2170,8 @@ let page: PdfPage = document.getPage(0);
 let annotation: PdfAnnotation = page.annotations.at(0);
 // Remove an annotation from the collection
 page.annotations.remove(annotation);
+// Remove an annotation with specific index
+page.annotations.removeAt(1);
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -2089,6 +2187,8 @@ var page = document.getPage(0);
 var annotation = page.annotations.at(0);
 // Remove an annotation from the collection
 page.annotations.remove(annotation);
+// Remove an annotation with specific index
+page.annotations.removeAt(1);
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -2134,9 +2234,11 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+N> Setting `document.flatten = true;` flattens all interactive elements in the PDF, converting form fields and annotations into static content throughout the entire document.
+
 ## Importing annotations
 
-This example demonstrates how to import annotations into a PDF document using the PdfDocument. `importAnnotations` method.
+This example demonstrates how to import annotations into a PDF document using the PdfDocument. `importAnnotations` method. The DataFormat enum specifies the format of the annotation data being imported, such as FDF, XFDF, JSON, or XML.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -2167,25 +2269,31 @@ pdfDocument.destroy();
 
 ## Exporting annotations
 
-This example demonstrates how to export annotations from a PDF document using the PdfDocument.exportAnnotations method. 
+This example demonstrates how to export annotations from a PDF document using the PdfDocument.exportAnnotations method. The DataFormat enum specifies the format of the annotation data being exported, such as FDF, XFDF, JSON, or XML.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfAnnotationExportSettings, DataFormat} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Exports the annotations from the PDF document.
-let data: Uint8Array = document.exportAnnotations();
-// Close the document
+// Sets export data format as JSON for annotation export settings
+let settings = new PdfAnnotationExportSettings();
+settings.dataFormat = DataFormat.json;
+// Export annotations to JSON format
+let jsonData = document.exportAnnotations('annotations.json', settings);
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Export the annotations from the PDF document
-var data = document.exportAnnotations();
+// Sets export data format as JSON for annotation export settings
+var settings = new ej.pdf.PdfAnnotationExportSettings();
+settings.dataFormat = ej.pdf.DataFormat.json;
+// Export annotations to JSON format
+var jsonData = document.exportAnnotations('annotations.json', settings);
 // Close the document
 document.destroy();
 

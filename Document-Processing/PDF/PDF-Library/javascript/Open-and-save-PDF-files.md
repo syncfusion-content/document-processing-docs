@@ -72,11 +72,11 @@ Open an encrypted PDF document using the `PdfDocument` class by providing the co
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 // Load an existing PDF document with password
-let document: PdfDocument = new PdfDocument(data, "password");
+let document: PdfDocument = new PdfDocument(data, 'password');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document with password
-var document = new ej.pdf.PdfDocument(data, "password");
+var document = new ej.pdf.PdfDocument(data, 'password');
 {% endhighlight %}
 {% endtabs %}
 

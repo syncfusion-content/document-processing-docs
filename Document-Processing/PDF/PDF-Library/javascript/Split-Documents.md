@@ -8,7 +8,7 @@ documentation: UG
 
 # Split in JavaScript PDF library
 
-The PDF library supports Splitting PDF file into single-page or multiple-page PDF documents.
+The PDF library supports splitting PDF file into single-page or multiple-page PDF documents.
 
 ## Splitting a PDF file into individual 
 
@@ -29,8 +29,10 @@ function documentSplitEvent(sender: PdfDocument, args: PdfDocumentSplitEventArgs
 }
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 document.splitEvent = documentSplitEvent;
@@ -42,6 +44,7 @@ function documentSplitEvent(sender, args): void {
 }
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,8 +67,10 @@ function documentSplitEvent(sender: PdfDocument, args: PdfDocumentSplitEventArgs
 }
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 document.splitEvent = documentSplitEvent;
@@ -77,6 +82,7 @@ function documentSplitEvent(sender, args): void {
 }
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -99,8 +105,10 @@ function documentSplitEvent(sender: PdfDocument, args: PdfDocumentSplitEventArgs
 }
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 document.splitEvent = documentSplitEvent;
@@ -112,5 +120,6 @@ function documentSplitEvent(sender, args): void {
 }
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}

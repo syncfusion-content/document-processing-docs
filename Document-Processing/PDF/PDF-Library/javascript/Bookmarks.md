@@ -34,6 +34,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add page
@@ -43,49 +44,6 @@ var bookmarks = document.bookmarks;
 // Add a new outline to the PDF document
 var bookmark = bookmarks.add('Introduction');
 // Set destination to the bookmark
-bookmark.destination = new ej.pdf.PdfDestination(page, { x: 100, y: 200 });
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-## Adding Bookmarks in an existing PDF document
-
-This example demonstrates how to add bookmarks to an existing PDF document using the `PdfBookmark` class. This allows you to enhance navigation in already created PDF document.
-
-{% tabs %}
-{% highlight javascript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfBookmarkBase, PdfDestination} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Get page
-let page: PdfPage = document.getPage(0);
-// Get the bookmarks
-let bookmarks: PdfBookmarkBase = document.bookmarks;
-// Gets the bookmark at the specified index
-let bookmark: PdfBookmark = bookmarks.at(0) as PdfBookmark;
-// Set the destination
-bookmark.destination = new PdfDestination(page, { x: 100, y: 200 });
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-    
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Get page
-var page = document.getPage(0);
-// Get the bookmarks
-var bookmarks = document.bookmarks;
-// Get the bookmark at the specified index
-var bookmark = bookmarks.at(0);
-// Set the destination
 bookmark.destination = new ej.pdf.PdfDestination(page, { x: 100, y: 200 });
 // Save the document
 document.save('Output.pdf');
@@ -109,7 +67,7 @@ let document: PdfDocument = new PdfDocument(data);
 let page: PdfPage = document.getPage(0) as PdfPage;
 // Get the bookmarks
 let bookmarks: PdfBookmarkBase = document.bookmarks;
-// Add a new outline to the PDF document
+// Add a new bookmark at the specified page index
 let bookmark: PdfBookmark = bookmarks.add('Introduction', 1);
 // Sets destination to the bookmark
 bookmark.destination = new PdfDestination(page, { x: 100, y: 200 });
@@ -120,13 +78,14 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Get the first page
 var page = document.getPage(0);
 // Get the bookmarks
 var bookmarks = document.bookmarks;
-// Add a new outline to the PDF document
+// Add a new bookmark at the specified page index
 var bookmark = bookmarks.add('Introduction', 1);
 // Set destination to the bookmark
 bookmark.destination = new ej.pdf.PdfDestination(page, { x: 100, y: 200 });
@@ -160,6 +119,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Get the first page
@@ -199,6 +159,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Get the first page
@@ -238,6 +199,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Get the bookmarks
@@ -275,6 +237,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Get bookmarks
