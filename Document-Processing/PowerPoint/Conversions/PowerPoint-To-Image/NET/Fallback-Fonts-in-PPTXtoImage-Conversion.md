@@ -103,7 +103,7 @@ using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Ope
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Fallback-fonts-based-on-scripttype).
 
-## Fallback Symbols based on script type
+## Fallback fonts for symbols
 
 The following code example demonstrates how a user can add fallback fonts for Symbols and Emojis, which Presentation considers internally when converting a PowerPoint presentation to an Image.
 
@@ -141,6 +141,8 @@ using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Ope
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Fallback-symbols-based-on-scripttype/)
 
 ## Fallback fonts for range of Unicode text
 
