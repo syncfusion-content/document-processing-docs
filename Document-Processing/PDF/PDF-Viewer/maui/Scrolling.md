@@ -137,3 +137,31 @@ PdfViewer.ShowScrollHead = false;
 {% endtabs %}
 
 N> The scroll head is available only on **mobile platforms**. It is not supported on **Windows** or **macOS**.
+
+## Render multiple pages while scrolling
+
+When scrolling through large PDF documents, you may notice blank pages appearing temporarily while new pages are being rendered. This happens because the viewer renders pages on demand to optimize memory usage.
+
+To minimize this and provide a smoother scrolling experience, the SfPdfViewer control offers the `OverscanCount` property. This property defines how many pages should be pre-rendered and kept in memory on each side of the current viewport. Increasing this value reduces the chance of blank pages during fast scrolling but may increase memory usage. 
+
+The following example shows how to set `OverscanCount` property:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfPdfViewer  x:Name="PdfViewer"
+                         OverscanCount ="15" />
+{% endhighlight %}
+
+{% highlight c# %}
+SfPdfViewer PdfViewer = new SfPdfViewer();
+
+// Set the cache range (number of pages before and after the current viewport)
+PdfViewer.OverscanCount = 15;
+
+// Load a PDF document
+PdfViewer.LoadDocument("sample.pdf");
+{% endhighlight %}
+{% endtabs %} 
+
+N> - Use a reasonable OverscanCount value. Large values can cause memory spikes and app freezes.
+N> - Pages with very high resolution may still render slowly due to native rendering limitations.
