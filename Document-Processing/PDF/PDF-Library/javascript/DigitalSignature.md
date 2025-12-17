@@ -327,7 +327,7 @@ field.setSignature(signature);
 // Add the signature field to the document form
 document.form.add(field);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Release resources used by the document
 document.destroy();
 
@@ -347,7 +347,7 @@ field.setSignature(signature);
 //// Add the signature field to the document form
 document.form.add(field);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Release resources used by the document
 document.destroy();
 
@@ -375,7 +375,7 @@ field.setSignature(signature);
 // Add the signature field to the document form
 document.form.add(field);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Release resources used by the document
 document.destroy();
 
@@ -395,7 +395,7 @@ field.setSignature(signature);
 // Add the signature field to the document form
 document.form.add(field);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Release resources used by the document
 document.destroy();
 
@@ -459,7 +459,7 @@ signature = PdfSignature.create(
 // Bind the signature to the second field
 field.setSignature(signature);
 // Save the document
-ldocument.save('Output.pdf');
+ldocument.save('output.pdf');
 // Dispose of the document
 ldocument.destroy();
 
@@ -513,7 +513,7 @@ signature = ej.pdf.PdfSignature.create(
 // Bind the signature to the second field
 field.setSignature(signature);
 // Save the document
-ldocument.save('Output.pdf');
+ldocument.save('output.pdf');
 // Dispose of the document
 ldocument.destroy();
 
@@ -557,7 +557,7 @@ document.form.add(field);
 // Apply the signature to the field
 field.setSignature(signature);
 // Save the Document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Release document resources
 document.destroy();
 
@@ -593,7 +593,7 @@ document.form.add(field);
 // Apply the signature to the field
 field.setSignature(signature);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Release document resources
 document.destroy();
 

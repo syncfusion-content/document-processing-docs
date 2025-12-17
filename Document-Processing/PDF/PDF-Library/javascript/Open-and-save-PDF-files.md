@@ -65,7 +65,7 @@ let document= new ej.pdf.PdfDocument(binaryData);
 {% endhighlight %}
 {% endtabs %}
 
-## Opening an Encrypted PDF document with password
+## Opening an encrypted PDF document with password
 
 Open an encrypted PDF document using the `PdfDocument` class by providing the correct password.
 

@@ -11,7 +11,7 @@ The PDF provides support to extract images from PDF documents and retrieve their
 
 N> For redaction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on. Please verify the platform's actual root directory where the `openjpeg` file is extracted. Depending on the platform, the root path may vary. Check which root folder is being used by reviewing the path referenced in the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-asp-net-core) page.
 
-## Extract Images from a PDF
+## Extract images from a PDF
 
 This code demonstrates how to extract embedded images and their metadata from a PDF using  `PdfDataExtractor`. It loads a PDF, retrieves all  `PdfEmbeddedImage` entries across pages, accesses the first image's raw byte data, and reads its properties format, page index, occurrence index, bounds, interpolation status, and masking flags before saving/disposing resources by destroying the document.
 
@@ -60,7 +60,7 @@ document.destroy();
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
-var extractor= new ej.pdf.PdfDataExtractor(document);
+var extractor= new ej.pdfdataextract.PdfDataExtractor(document);
 // Extract collection of `PdfEmbeddedImage` from the PDF document
 var imageInfoCollection = extractor.extractImages({
   startPageIndex: 0,
