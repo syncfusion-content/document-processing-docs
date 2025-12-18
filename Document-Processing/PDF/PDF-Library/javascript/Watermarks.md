@@ -333,17 +333,23 @@ Remove a watermark annotation from the page's annotation collection using the `P
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfAnnotation} from '@syncfusion/ej2-pdf';
-
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Access first page
-let page: PdfPage = document.getPage(0);
-// Get the first annotation is a watermark
-let annotation: PdfAnnotation = page.annotations.at(0);
-// Remove an annotation
-page.annotations.remove(annotation);
-// Removes an annotation from the page at the specified index
-page.annotations.removeAt(1);
+// Loop through all pages in the PDF document
+for (let pageIndex = 0; pageIndex < document.pageCount; pageIndex++) {
+  // Get the current page by its index
+  const page: PdfPage = document.getPage(pageIndex);
+  // Iterate through the annotations on the page in reverse order
+  for (let i: number = page.annotations.count - 1; i >= 0; i--) {
+    // Get the annotation at the current index
+    const annotation: PdfAnnotation = page.annotations.at(i);
+    // Check if the annotation is a watermark annotation
+    if (annotation instanceof PdfWatermarkAnnotation) {      
+        // Remove the watermark annotation from the page
+        page.annotations.removeAt(i);
+    }
+  }
+}
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -354,14 +360,21 @@ document.destroy();
 
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Access first page
-var page = document.getPage(0);
-// Get the first annotation is a watermark
-var annotation = page.annotations.at(0);
-// Remove an annotation
-page.annotations.remove(annotation);
-// Removes an annotation from the page at the specified index
-page.annotations.removeAt(1);
+// Loop through all pages in the PDF document
+for (var pageIndex = 0; pageIndex < document.pageCount; pageIndex++) {
+  // Get the current page by its index
+  var page = document.getPage(pageIndex);
+  // Iterate through the annotations on the page in reverse order
+  for (var i = page.annotations.count - 1; i >= 0; i--) {
+    // Get the annotation at the current index
+    var annotation = page.annotations.at(i);
+    // Check if the annotation is a watermark annotation
+    if (annotation instanceof ej.pdf.PdfWatermarkAnnotation) {      
+        // Remove the watermark annotation from the page
+        page.annotations.removeAt(i);
+    }
+  }
+}
 // Save the document
 document.save('output.pdf');
 // Destroy the document

@@ -67,13 +67,15 @@ let page: PdfPage = document.addPage();
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
 // Save the current graphics state and apply transformations
-graphics.save();
+let state: PdfGraphicsState = graphics.save();
 graphics.translateTransform({ x: 100, y: 50});
 graphics.rotateTransform(45);
 // Set font
 let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
 // Draw text
 graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
+// Restore the graphics state
+graphics.restore(state);
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -87,13 +89,15 @@ var page = document.addPage();
 // Get graphics from the page
 var graphics = page.graphics;
 // Save the current graphics state and apply transformations
-graphics.save();
+var state = graphics.save();
 graphics.translateTransform({ x: 100, y: 50 });
 graphics.rotateTransform(45);
 // Set font
 var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
 // Draw text
 graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Restore the graphics state
+graphics.restore(state);
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -159,7 +163,7 @@ let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
 // Set font
-let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10);
+let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
 // Draw text
 page.graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
 // Save the document
@@ -173,7 +177,7 @@ var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
 // Set font
-var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10);
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
 // Draw text
 page.graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
 // Save the document
@@ -233,7 +237,7 @@ let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
 // Set font
-let font: PdfCjkStandardFont = document.embedFont(PdfCjkFontFamily.heiseiMinchoW3, 10);
+let font: PdfCjkStandardFont = document.embedFont(PdfCjkFontFamily.heiseiMinchoW3, 10, PdfFontStyle.regular);
 // Draw text
 page.graphics.drawString('こんにちは世界', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
 // Save the document
@@ -247,7 +251,7 @@ var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
 // Set font
-var font = document.embedFont(ej.pdf.PdfCjkFontFamily.heiseiMinchoW3, 10);
+var font = document.embedFont(ej.pdf.PdfCjkFontFamily.heiseiMinchoW3, 10, ej.pdf.PdfFontStyle.regular);
 // Draw text
 page.graphics.drawString('こんにちは世界', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
 // Save the document

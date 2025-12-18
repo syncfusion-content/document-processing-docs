@@ -70,7 +70,7 @@ let document: PdfDocument = new PdfDocument(data);
 let page: PdfPage = document.getPage(0);
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Draw the image.
 image.draw(graphics, { x: 10, y: 10});

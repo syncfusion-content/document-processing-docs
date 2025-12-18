@@ -17,7 +17,7 @@ This code demonstrates how to extract embedded images and their metadata from a 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument } from '@syncfusion/ej2-pdf';
+import { PdfDocument, Size } from '@syncfusion/ej2-pdf';
 import { PdfDataExtractor, PdfEmbeddedImage} from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document

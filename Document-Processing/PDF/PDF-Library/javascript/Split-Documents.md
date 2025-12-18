@@ -17,6 +17,7 @@ The PDF library allows splitting the pages of an existing PDF document into mult
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfDocumentSplitEventArgs} from '@syncfusion/ej2-pdf';
+import { Save } from '@syncfusion/ej2-file-utils';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);

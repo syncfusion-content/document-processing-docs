@@ -15,7 +15,7 @@ This example demonstrates how to create a web link annotation in a PDF document 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, PdfFontFamily, PdfTextWebLinkAnnotation, PdfFontStyle  } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, PdfFontFamily, PdfTextWebLinkAnnotation, PdfFontStyle, Size  } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument();
