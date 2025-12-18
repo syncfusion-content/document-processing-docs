@@ -131,7 +131,7 @@ The following example code illustrates how to enable and update custom metadata 
 
 ```js
 var container = new ej.documenteditor.DocumentEditor({
-  serviceUrl: hostUrl,
+  serviceUrl: 'hostUrl',
   height: '590px',
   enableTrackChanges: true,
   documentEditorSettings: {

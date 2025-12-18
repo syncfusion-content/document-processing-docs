@@ -178,7 +178,7 @@ The following example code illustrates how to enable and update custom metadata 
 import { DocumentEditorContainer, Ribbon } from '@syncfusion/ej2-documenteditor';
 let container: DocumentEditorContainer = new DocumentEditorContainer({ 
   height: '590px',
-  serviceUrl= hostUrl, 
+  serviceUrl= 'hostUrl', 
   enableTrackChanges= true,
   documentEditorSettings: {
     revisionSettings: { customData : "Developer", showCustomDataWithAuthor : true }}

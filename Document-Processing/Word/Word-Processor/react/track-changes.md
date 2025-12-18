@@ -214,7 +214,7 @@ function App() {
         container = scope;
       }}
       height={'590px'}
-      serviceUrl="HostURL"
+      serviceUrl="HostUrl"
       enableTrackChanges={true}
       documentEditorSettings={settings}
     />
