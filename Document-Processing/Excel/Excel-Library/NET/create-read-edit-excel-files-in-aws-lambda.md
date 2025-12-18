@@ -222,17 +222,9 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A9:A14"].RowHeight = 15;
   worksheet.Range["A15:A23"].RowHeight = 18;  
   
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();  
+  MemoryStream stream = new MemoryStream();
   workbook.SaveAs(stream);
-  
-  //Set the position as '0'.
-  stream.Position = 0;
-  
-  //Download the Excel file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");  
-  fileStreamResult.FileDownloadName = "Output.xlsx";  
-  return fileStreamResult;
+  return Convert.ToBase64String(stream.ToArray());
 }
 
 {% endhighlight %}
