@@ -306,7 +306,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Create and certify a digital signature field
+## Certified Signature
 
 This example demonstrates how to add a signature field to a PDF, create a digital signature using certificate data and a password, certify the document, and save the signed PDF document.
 
@@ -354,7 +354,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Create and lock a digitally signed PDF
+## Lock Signature
 
 This example shows how to add a signature field to a PDF, create a digital signature using certificate data and a password, lock the document after signing, and save the result in PDF library.
 

@@ -207,3 +207,35 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
+
+## Flatten annotations and form fields
+
+The `flatten` property allows you to convert all annotations and form fields in a PDF into static page content, removing interactivity while preserving their visual appearance.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument } from '@syncfusion/ej2-pdf';
+ 
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Flatten PDF annotations and form fields
+document.flatten = true;
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document= new PdfDocument(data);
+// Flatten PDF annotations and form fields
+document.flatten = true;
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}

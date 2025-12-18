@@ -20,13 +20,9 @@ Step 2: The JS 2 global scripts and styles are hosted on the CDN in the followin
 
 **Syntax:**
 > Script: `https://cdn.syncfusion.com/ej2/{Version}/dist/{PACKAGE_NAME}.min.js`
->
-> Styles: `https://cdn.syncfusion.com/ej2/{Version}/{PACKAGE_NAME}/styles/material.css`
 
 **Example:**
 > Script: [`https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js`](https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js)
->
-> Styles: [`https://cdn.syncfusion.com/ej2/31.2.15/ej2-base/styles/material.css`](https://cdn.syncfusion.com/ej2/31.2.15/ej2-base/styles/material.css)
 
 Step 3: Create a HTML page (index.html) in `my-app` location and add the CDN link references.
 
