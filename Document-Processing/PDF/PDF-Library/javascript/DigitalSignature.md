@@ -488,8 +488,9 @@ var signature = ej.pdf.PdfSignature.create(
 );
 // Bind the certifying signature to the first signature field
 field.setSignature(signature);
-//// Add both signature fields to the document form
+// Add the first signature field
 document.form.add(field);
+// Add the second signature field
 document.form.add(field2);
 // Save the current state to a Uint8Array
 var data = document.save();

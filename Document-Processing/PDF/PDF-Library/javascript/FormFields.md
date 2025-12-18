@@ -819,6 +819,142 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+## Ordering form fields
+
+This example demonstrates how to organize form fields in an existing PDF document using the `PdfFormFieldsTabOrder`. This sample ensures that fields follow a specific tab order, improving navigation and user experience.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfFormFieldsTabOrder } from '@syncfusion/ej2-pdf';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Order the form fields based on page tab order.
+document.form.orderFormFields(PdfFormFieldsTabOrder.row);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document. Destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Order the form fields based on page tab order.
+document.form.orderFormFields(ej.pdf.PdfFormFieldsTabOrder.row);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document. Destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Field Auto Naming
+
+To prevent grouping when adding fields with the same name, you can enable the `fieldAutoNaming` property of `PdfForm` class. Setting fieldAutoNaming to true ensures that each field gets a unique name internally, even if you specify the same name during creation.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, pdfPage, PdfFontFamily, PdfFontStyle, PdfTextBoxField } from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document instance
+let document: PdfDocument = new PdfDocument();
+// Add a new page to the document
+let page: pdfPage = document.addPage();
+// Access the form collection of the document
+let form = document.form;
+//Enable the field auto naming
+form.fieldAutoNaming = true;
+// Embed a font into the PDF document.
+let font = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular)
+// Create a text box field named 'Name' on the page at specified position and size
+let field1: PdfTextBoxField = new PdfTextBoxField(
+    page,
+    'Name',
+    { x: 0, y: 0, width: 100, height: 50},{
+        text: 'John',
+        font: font,
+        backColor: {r: 255, g: 0, b: 0},
+        borderColor: {r: 0, g: 0, b: 255},
+        toolTip: 'FirstName',
+        color: {r: 0, g: 255, b: 0},
+ 
+    });
+// Add the first field to the form
+form.add(field1);
+// Create another text box field named 'Name' at a different position
+let field2: PdfTextBoxField = new PdfTextBoxField(
+    page,
+    'Name',
+    {x: 0, y: 50, width: 100, height: 50}, {
+        text: 'Doe',
+        backColor: {r: 128, g: 0, b: 128},
+        borderColor: {r: 255, g: 165, b: 0},
+        toolTip: 'SecondName',
+        color: {r: 0, g: 128, b: 0}
+    });
+// Add the second field to the form
+form.add(field2);
+// Saves and download the PDF document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+
+// Create a new PDF document instance
+var document = new ej.pdf.PdfDocument();
+// Add a new page to the document
+var page = document.addPage();
+// Access the form collection of the document
+var form = document.form;
+// Enable the field auto naming
+form.fieldAutoNaming = true;
+// Embed a font into the PDF document
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
+// Create a text box field named 'Name' on the page
+var field1 = new ej.pdf.PdfTextBoxField(
+    page,
+    'Name',
+    { x: 0, y: 0, width: 100, height: 50 },
+    {
+        text: 'John',
+        font: font,
+        backColor: { r: 255, g: 0, b: 0 },
+        borderColor: { r: 0, g: 0, b: 255 },
+        toolTip: 'FirstName',
+        color: { r: 0, g: 255, b: 0 }
+    }
+);
+// Add the first field to the form
+form.add(field1);
+// Create another text box field named 'Name' at a different position
+var field2 = new ej.pdf.PdfTextBoxField(
+    page,
+    'Name',
+    { x: 0, y: 50, width: 100, height: 50 },
+    {
+        text: 'Doe',
+        backColor: { r: 128, g: 0, b: 128 },
+        borderColor: { r: 255, g: 165, b: 0 },
+        toolTip: 'SecondName',
+        color: { r: 0, g: 128, b: 0 }
+    }
+);
+// Add the second field to the form
+form.add(field2);
+// Save and download the PDF document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Removing the form fields from existing PDF document
 
 This example demonstrates how to remove items from an existing form field in a PDF document using the `remove()` method of the `PdfField` class. The following code snippet illustrates how to access a form field and remove its first item.

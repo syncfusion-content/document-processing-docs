@@ -56,6 +56,7 @@ The PDF library allows splitting a certain range of pages into a separate PDF do
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfDocumentSplitEventArgs} from '@syncfusion/ej2-pdf';
+import { Save } from '@syncfusion/ej2-file-utils';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -94,6 +95,7 @@ The PDF library allows splitting by fixed number of pages of an existing PDF doc
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfDocumentSplitEventArgs} from '@syncfusion/ej2-pdf';
+import { Save } from '@syncfusion/ej2-file-utils';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);

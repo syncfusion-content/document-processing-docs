@@ -1011,6 +1011,56 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+## Custom appearance in stamp annotation
+
+This example demonstrates how to add a rubber stamp annotation to an existing PDF using the `PdfRubberStampAnnotation` class. This feature allows embedding custom images as stamp appearances within a specific location on the page.
+
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfRubberStampAnnotation, PdfImage, PdfBitmap} from '@syncfusion/ej2-pdf';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Get the first page
+let page: PdfPage = document.getPage(0) as PdfPage;
+// Create a new rubber stamp annotation
+let annotation: PdfRubberStampAnnotation = new PdfRubberStampAnnotation({x: 50, y: 100, width: 100, height: 50});
+// Create new image object by using JPEG image data as Base64 string format
+let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
+// Access the normal template of the appearance and draw the image
+annotation.appearance.normal.graphics.drawImage(image, {x: 0, y: 0, width: 100, height: 50});
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Get the first page
+var page = document.getPage(0) as PdfPage;
+// Create a new rubber stamp annotation
+var annotation = new ej.pdf.PdfRubberStampAnnotation({x: 50, y: 100, width: 100, height: 50});
+// Create new image object by using JPEG image data as Base64 string format
+var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
+// Access the normal template of the appearance and draw the image
+annotation.appearance.normal.graphics.drawImage(image, {x: 0, y: 0, width: 100, height: 50});
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+
 ## Measurement Annotations
 
 This example demonstrates how to access a measurement annotation from a PDF page using the `PdfLineAnnotation` class. A measurement annotation allows defining and displaying dimensions such as distances or lengths within a PDF document.

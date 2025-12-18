@@ -8,7 +8,7 @@ documentation: ug
 keywords: angular create pdf, angular generate pdf, angular pdf library, ej2 pdf angular, JavaScript
 ---
 
-# Create or generate PDF file in Angular application
+# Create or Generate PDF file in Angular application
 
 The Syncfusion<sup>&reg;</sup> JavaScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 

@@ -58,7 +58,7 @@ This example demonstrates the importance of saving and restoring the graphics st
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfGraphics, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfGraphics, PdfGraphicsState, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -230,7 +230,7 @@ This example demonstrates how to draw text using fonts in a PDF document by util
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfCjkStandardFont, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfCjkStandardFont, PdfBrush, PdfFontStyle } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();

@@ -15,7 +15,7 @@ This example demonstrates how to create a web link annotation in a PDF document 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, PdfFontFamily, PdfTextWebLinkAnnotation, PdfFontStyle, Size  } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, PdfFontFamily, PdfTextWebLinkAnnotation, PdfFontStyle, Size } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument();
@@ -67,7 +67,7 @@ This example demonstrates how to create internal navigation within a PDF documen
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, PdfDocumentLinkAnnotation, PdfTextAlignment, PdfFontFamily, PdfFontStyle, PdfDestination, PdfDestinationMode  } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfStringFormat, PdfStandardFont, PdfDocumentLinkAnnotation, PdfTextAlignment, PdfFontFamily, PdfFontStyle, PdfDestination, PdfDestinationMode, Size } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -82,17 +82,11 @@ let size: Size = font.measureString('Syncfusion');
 // Create a new text web link annotation
 let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation({ x: 50, y: 40, width: size.width, height: size.height }, { r: 0, g: 0, b: 0}, { r: 165, g: 42, b: 42 }, 1);
 // Initializes a new instance of the `PdfDestination` class.
-let destination: PdfDestination = new PdfDestination();
-// Sets the zoom factor.
-destination.zoom = 20;
-// Sets the page where the destination is situated.
-destination.page = page;
-// Sets the mode of the destination.
-destination.mode = PdfDestinationMode.fitToPage;
-// Sets the location of the destination.
-destination.location = { x: 20, y: 20};
-// Sets the bounds of the destination.
-destination.destinationBounds = { x: 20, y: 20, width: 100, height: 50};
+let destination: PdfDestination = new PdfDestination(
+    page,
+    { x: 20, y: 20, width: 100, height: 50 },
+    { zoom: 20, mode: PdfDestinationMode.fitToPage }
+);
 // Sets destination to  document link annotation.
 annotation.destination = destination;
 // Save the document
@@ -116,17 +110,11 @@ var size = font.measureString('Syncfusion');
 // Create a new text web link annotation
 var annotation = new ej.pdf.PdfDocumentLinkAnnotation({ x: 50, y: 40, width: size.width, height: size.height }, { r: 0, g: 0, b: 0 }, { r: 165, g: 42, b: 42 }, 1);
 // Initializes a new instance of the `PdfDestination` class.
-var destination = new ej.pdf.PdfDestination();
-// Sets the zoom factor.
-destination.zoom = 20;
-// Sets the page where the destination is situated.
-destination.page = page;
-// Sets the mode of the destination.
-destination.mode = ej.pdf.PdfDestinationMode.fitToPage;
-// Sets the location of the destination.
-destination.location = { x: 20, y: 20 };
-// Sets the bounds of the destination.
-destination.destinationBounds = { x: 20, y: 20, width: 100, height: 50 };
+var destination = new ej.pdf.PdfDestination(
+    page,
+    { x: 20, y: 20, width: 100, height: 50 },
+    { zoom: 20, mode: ej.pdf.PdfDestinationMode.fitToPage }
+);
 // Sets destination to  document link annotation.
 annotation.destination = destination;
 // Save the document

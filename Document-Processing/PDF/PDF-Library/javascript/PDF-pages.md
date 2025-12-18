@@ -138,7 +138,7 @@ new PdfStringFormat(PdfTextAlignment.left)
 );
 // Save the PDF
 document.save('Output.pdf');
-// Close the dcument
+// Close the document
 document.destroy();
 
 {% endhighlight %}
