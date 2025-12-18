@@ -26,7 +26,7 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
-// Load the image(base64 / uint8array)
+// Load the image(base64 / Uint8Array)
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Draw the image.
 image.draw(graphics, { x: 10, y: 10});
@@ -44,7 +44,7 @@ var document = new ej.pdf.PdfDocument();
 var page = document.addPage();
 // Get graphics from the page
 var graphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Draw the image
 image.draw(graphics, { x: 10, y: 10 });
@@ -70,7 +70,7 @@ let document: PdfDocument = new PdfDocument(data);
 let page: PdfPage = document.getPage(0);
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Draw the image.
 image.draw(graphics, { x: 10, y: 10});
@@ -88,7 +88,7 @@ var document = new ej.pdf.PdfDocument(data);
 var page = document.getPage(0);
 // Get graphics from the page
 var graphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Draw the image.
 image.draw(graphics, {x: 10, y: 10});
@@ -114,7 +114,7 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the current graphics state (to restore later)
 let state: PdfGraphicsState = graphics.save();
@@ -137,7 +137,7 @@ var document = new ej.pdf.PdfDocument();
 var page = document.addPage();
 // Get graphics from the page
 var graphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the current graphics state (to restore later)
 var state = graphics.save();
@@ -168,7 +168,7 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the current graphics state (to restore later)
 let state: PdfGraphicsState = graphics.save();
@@ -196,7 +196,7 @@ var document = new ej.pdf.PdfDocument();
 var page = document.addPage();
 // Get graphics from the page
 var graphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the current graphics state (to restore later)
 var state = graphics.save();

@@ -141,9 +141,22 @@ let document: PdfDocument = new PdfDocument(data);
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
 // Extract `TextLine` from the PDF document.
 let textLines: Array<TextLine> = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
+// Iterate through each text line in the collection
 textLines.forEach((textLine: TextLine) => {
-  // Gets the bounds of the text line.
-  let lineBounds: Rectangle = textLine.bounds;
+    // Gets the bounds of the text line.
+    let lineBounds: Rectangle = textLine.bounds;
+    // Gets the single line of extracted text from the PDF page.
+    let line: string = textLine.text;
+    // Gets the page index of the text line extracted.
+    let pageIndex: number = textLine.pageIndex;
+    // Gets the collection of text words extracted from a specified page in a PDF document.
+    let words: TextWord[] = textLine.words;
+    // Gets the name of the font used for a particular line of text.
+    let fontName: string = textLine.fontName;
+    // Gets the font style used for a particular line of text.
+    let fontStyle: PdfFontStyle = textLine.fontStyle;
+    // Gets the font size used for a particular line of text.
+    let fontSize: number = textLine.fontSize;
 });
 // Save the document
 document.save('output.pdf');
@@ -159,9 +172,22 @@ var document = new ej.pdf.PdfDocument(data);
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
 // Extract `TextLine` from the PDF document.
 var textLines = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
+// Iterate through each text line in the collection
 textLines.forEach((textLine) => {
-  // Gets the bounds of the text line.
-  var lineBounds = textLine.bounds;
+    // Gets the bounds of the text line.
+    var lineBounds = textLine.bounds;
+    // Gets the single line of extracted text from the PDF page.
+    var line = textLine.text;
+    // Gets the page index of the text line extracted.
+    var pageIndex = textLine.pageIndex;
+    // Gets the collection of text words extracted from a specified page in a PDF document.
+    var words = textLine.words;
+    // Gets the name of the font used for a particular line of text.
+    var fontName = textLine.fontName;
+    // Gets the font style used for a particular line of text.
+    var fontStyle = textLine.fontStyle;
+    // Gets the font size used for a particular line of text.
+    var fontSize = textLine.fontSize;
 });
 // Save the document
 document.save('output.pdf');

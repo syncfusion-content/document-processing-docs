@@ -14,7 +14,7 @@ The Syncfusion<sup>&reg;</sup> JavaScript PDF library is used to create, read, a
 
 This guide explains how to integrate the JavaScript PDF library into an ASP.NET Core MVC application.
 
-## Integrate PDF library into an ASP.NET MVC Core application
+## Integrate PDF library into an ASP.NET Core MVC application
 
 Step 1: Start Visual Studio and select **Create a new project**.
 Step 2: Create a new ASP.NET MVC Web Application project.

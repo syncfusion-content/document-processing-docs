@@ -47,6 +47,11 @@ All Syncfusion JS 2 packages are published in `npmjs.com` registry.
 ```bash
 npm install @syncfusion/ej2-pdf --save
 ```
+or
+```bash
+yarn add @syncfusion/ej2-pdf
+```
+
 N> For image/data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
 * Copy the contents of the openjpeg folder from ./node_modules/@syncfusion/ej2-pdf-data-extract/dist to the public directory using the command:
 ```bash

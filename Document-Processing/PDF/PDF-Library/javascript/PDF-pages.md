@@ -66,7 +66,7 @@ document.destroy();
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Define page settings with margins
-var settings = new ej.pdf.PdfPageSettings({margins: new PdfMargins(50)});
+var settings = new ej.pdf.PdfPageSettings({margins: new ej.pdf.PdfMargins(50)});
 // Add a page
 var page = document.addPage(settings);
 // Save the document
@@ -106,9 +106,7 @@ const page1: PdfPage = section1.addPage();
 const g1: PdfGraphics = page1.graphics;
 const rectPen = new PdfPen({ r: 0, g: 0, b: 0 }, 1);      // black 1pt outline
 g1.drawRectangle({ x: 60, y: 80, width: 200, height: 120 }, rectPen);
-// SECTION 1: Second page draw rectangle (A4 landscape)
-const section2: PdfSection = document.addSection(settingsA4Portrait);
-const page2: PdfPage = section2.addPage();
+const page2: PdfPage = section1.addPage();
 const g2: PdfGraphics = page2.graphics;
 g2.drawRectangle({ x: 80, y: 100, width: 250, height: 150 }, rectPen);
 //Prepare font once for text pages
@@ -118,9 +116,9 @@ const font: PdfStandardFont = document.embedFont(
   PdfFontStyle.regular
 );
 const textBrush = new PdfBrush({ r: 0, g: 0, b: 0 }); // black text
-// SECTION 3: Third page draw string (A5 portrait, 30pt margins)
-const section3: PdfSection = document.addSection(settingsA5Portrait);
-const page3: PdfPage = section3.addPage();
+// SECTION 2: Third page draw string (A5 portrait, 30pt margins)
+const section2: PdfSection = document.addSection(settingsA5Portrait);
+const page3: PdfPage = section2.addPage();
 const g3: PdfGraphics = page3.graphics;
 g3.drawString(
   'Hello from A5 Portrait with 30pt margins!',
@@ -129,20 +127,18 @@ g3.drawString(
   textBrush,
   new PdfStringFormat(PdfTextAlignment.left)
 );
-// SECTION 4: Fourth page draw string (A5 portrait, 30pt margins)
-const section4: PdfSection = document.addSection(settingsA5Portrait);
-const page4: PdfPage = section4.addPage();
+const page4: PdfPage = section2.addPage();
 const g4: PdfGraphics = page4.graphics;
 g4.drawString(
   'Hello from A5 Portrait with 30pt margins!',
   font,
   { x: 60, y: 90, width: 400, height: 50 },
   textBrush,
-   new PdfStringFormat(PdfTextAlignment.left)
+new PdfStringFormat(PdfTextAlignment.left)
 );
 // Save the PDF
 document.save('Output.pdf');
-// Close the dcument
+// Close the document
 document.destroy();
 
 {% endhighlight %}
@@ -307,7 +303,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Rotating a PDF page
+## Add rotated PDF pages
 
 This example demonstrates how to rotate a PDF page using the `rotation` property of the `PdfPageSettings` class. The property accepts a value from the `PdfRotationAngle` enumeration, such as angle180, to specify the rotation angle applied to the page.
 
@@ -391,7 +387,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Insert a duplicate Page at a specific index
+## Insert a duplicate page at a specific index
 
 Duplicates a page from a source PDF and inserts it into the destination document at the specified index using `PdfPageImportOptions.targetIndex`. This is useful for reusing or cloning content across documents or within the same document.
 
