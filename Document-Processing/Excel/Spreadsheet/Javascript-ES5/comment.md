@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Comment in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Comment feature in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Comment in EJ2 JavaScript Spreadsheet control | Syncfusion
+description: Learn here all about Comment feature in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Comment
 documentation: ug
 ---
 
-# Comment in EJ2 TypeScript Spreadsheet control
+# Comment in EJ2 JavaScript Spreadsheet control
 The **Comment** feature allows you to add feedback to cells without changing their values, enabling contextual discussions through threaded **replies**. Unlike [Notes](./notes), Comment include advanced review tools such as **resolve** and **reopen** to track status, plus an optional **Comments Review Pane** for browsing and managing threads.
 
 Cells with comment display a small comment indicator; hover to preview the comment editor. This provides a clear, collaborative workflow while keeping data intact.
@@ -17,13 +17,12 @@ Cells with comment display a small comment indicator; hover to preview the comme
 ## Author identity
 The Syncfusion Spreadsheet does not automatically track user identity. To tag new comments and replies with an author name, set the `author` property when initializing the Spreadsheet.
 
-```ts
-    import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
+```js
     // Initialize Spreadsheet component
-    const spreadsheet: Spreadsheet = new Spreadsheet(
+    var spreadsheet = new ej.spreadsheet.Spreadsheet({
         // Set the author name, If not set, "Guest User" will be shown as the author by default.
         author: 'Place the Author Name Here'
-    );
+    });
     // Render initialized Spreadsheet
     spreadsheet.appendTo('#element');
 ```
@@ -76,7 +75,7 @@ You can also use the `isResolved` property in the comment model when initializin
 
 **Example: Using `isResolved` property in the comment model with the `updateCell` method**
 
-```ts
+```js
 // Update a cell with a comment using the updateCell method
     spreadsheet.updateCell({
     comment: {
@@ -169,15 +168,15 @@ You can bind **comment thread** to cells at initial load by providing a `comment
 In the below sample, comments are added to a specific cell using cell data binding. The "Comments" review pane is shown initially by enabling the `showCommentsPane` property, and comments are added using `updateCell` method in the `created` event.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/comment-cs1/index.ts %}
+{% highlight ts tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/comment-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es6/comment-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/comment-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/comment-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/comment-cs1" %}
 
 ### Important Notes
 * **One thread per cell**: Attach a single `comment` object per cell. New remarks should be added as replies inside the existing thread.
