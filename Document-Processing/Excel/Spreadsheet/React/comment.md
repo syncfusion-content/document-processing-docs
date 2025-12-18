@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Comment in EJ2 JavaScript Spreadsheet control | Syncfusion
-description: Learn here all about Comment feature in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Comment in React Spreadsheet control | Syncfusion
+description: Learn here all about Comment feature in Syncfusion React Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Comment
 documentation: ug
 ---
 
-# Comment in EJ2 JavaScript Spreadsheet control
+# Comment in React Spreadsheet control
 The **Comment** feature allows you to add feedback to cells without changing their values, enabling contextual discussions through threaded **replies**. Unlike [Notes](./notes), Comment include advanced review tools such as **resolve** and **reopen** to track status, plus an optional **Comments Review Pane** for browsing and managing threads.
 
 Cells with comment display a small comment indicator; hover to preview the comment editor. This provides a clear, collaborative workflow while keeping data intact.
@@ -17,14 +17,20 @@ Cells with comment display a small comment indicator; hover to preview the comme
 ## Author identity
 The Syncfusion Spreadsheet does not automatically track user identity. To tag new comments and replies with an author name, set the `author` property when initializing the Spreadsheet.
 
-```js
-    // Initialize Spreadsheet component
-    var spreadsheet = new ej.spreadsheet.Spreadsheet({
-        // Set the author name, If not set, "Guest User" will be shown as the author by default.
-        author: 'Place the Author Name Here'
-    });
-    // Render initialized Spreadsheet
-    spreadsheet.appendTo('#element');
+```ts
+    import * as React from 'react';
+    import { createRoot } from 'react-dom/client';
+    import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
+    export default function App() {
+        return (
+            <SpreadsheetComponent 
+                // Set the author name, If not set, "Guest User" will be shown as the author by default.
+                author='Place the Author Name Here'>
+            </SpreadsheetComponent>
+        );
+    }
+    const root = createRoot(document.getElementById('root')!);
+    root.render(<App />);
 ```
 >If the author property is not set, "Guest User" will be displayed as the author for comment and replies by default.
 
@@ -75,19 +81,18 @@ You can also use the `isResolved` property in the comment model when initializin
 
 **Example: Using `isResolved` property in the comment model with the `updateCell` method**
 
-```js
+```ts
 // Update a cell with a comment using the updateCell method
     spreadsheet.updateCell({
-    comment: {
-        author: 'Chistoper', text: 'Are you completed the report',
-        createdTime: 'January 03, 2026 at 5:00 PM',
-        // Set to true to mark the thread as resolved; false keeps it active
-        isResolved: false,
-        replies: [{ author: 'John', text: 'Yes, completed',
-        createdTime: 'January 03, 2026 at 7:00 PM' }]
-    }
+        comment: {
+            author: 'Chistoper', text: 'Are you completed the report',
+            createdTime: 'January 03, 2026 at 5:00 PM',
+            // Set to true to mark the thread as resolved; false keeps it active
+            isResolved: false,
+            replies: [{ author: 'John', text: 'Yes, completed',
+            createdTime: 'January 03, 2026 at 7:00 PM' }]
+        }
     }, 'Sheet1!D5');
-
 ```
 
 ## Deleting a comment or reply
@@ -168,15 +173,15 @@ You can bind **comment thread** to cells at initial load by providing a `comment
 In the below sample, comments are added to a specific cell using cell data binding. The "Comments" review pane is shown initially by enabling the `showCommentsPane` property, and comments are added using `updateCell` method in the `created` event.
 
 {% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/javascript-es5/comment-cs1/index.js %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/comemnt-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es5/comment-cs1/index.html %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/comemnt-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/comment-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/comemnt-cs1" %}
 
 ### Important Notes
 * **One thread per cell**: Attach a single `comment` object per cell. New remarks should be added as replies inside the existing thread.
