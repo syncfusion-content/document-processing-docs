@@ -12,42 +12,7 @@ A cell range is a set of selected cells in a Spreadsheet, typically specified us
 
 ## Cell formatting
 
-Cell formatting enhances the visual presentation of data by applying styles such as font changes, colors, borders, and alignment to individual cells or cell ranges. This helps organize content and emphasize important information for faster interpretation.
-
-Cell formatting options include:
-
-* **Bold** - Applies a heavier font weight to make the text stand out in the Spreadsheet.
-
-* **Italic** - Slants the text to give it a distinct look, often used for emphasis or to highlight differences.
-
-*   **Underline** - Adds a line below the text, commonly used for emphasis or to indicate hyperlinks.
-
-*   **Strikethrough** - Draws a line through the text, often used to show completed tasks or outdated information.
-
-*   **Font Family** - Changes the typeface of the text (e.g., Arial, Calibri, Times New Roman, and more) to enhance readability or visual appeal.
-
-*   **Font Size** - Adjusts the size of the text to create visual hierarchy or improve readability in the Spreadsheet.
-
-*   **Font Color** - Changes the color of the text to improve visual hierarchy or to organize information using color codes.
-
-*   **Fill Color** - Adds color to the cell background to visually organize data or highlight important information.
-
-*  **Horizontal Alignment** - Controls the position of text from left to right within a cell. Options include:
-    * **Left** - Default for text
-    * **Center** - Useful for headings
-    * **Right** - Default for numbers
-
-*   **Vertical Alignment** - Controls the position of text from top to bottom within a cell. Options include:
-    * **Top** – Aligns content to the top of the cell
-    * **Middle** – Centers content vertically
-    * **Bottom** – Default alignment
-
-*   **Wrap Text** - Displays long content on multiple lines within a single cell, preventing it from overflowing into adjacent cells. To enable text wrapping:
-    1. Select the target cell or range (e.g., C5).
-    2. Go to the Home tab.
-    3. Click Wrap Text in the ribbon to toggle text wrapping for the selected cells.
-
-Cell formatting can be applied or removed from a cell or range by using the options available in the component's built-in **Ribbon** under the **Home** tab.
+To know more about cell formatting, refer [here](./formatting#text-and-cell-formatting).
 
 ## Autofill
 
@@ -59,6 +24,35 @@ Autofill can be performed in one of the following ways:
 
 *   Drag and drop the cell using the fill handle element.
 *   Use the [AutofillAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AutofillAsync_System_String_System_String_) method programmatically.
+
+### Autofill options
+
+Autofill supports multiple behaviors that control how adjacent cells are populated when using the fill handle. The available options are:
+
+- Copy Cells
+- Fill Series
+- Fill Formatting Only
+- Fill Without Formatting
+
+#### Copy Cells
+
+Copies the source cell content and formatting to the selected destination range. After dragging the fill handle from the selection to the target area, choose **Copy Cells** from the **AutoFillOption** menu to replicate both values and presentation. When the source contains formulas, relative references are adjusted to match the destination.
+
+#### Fill Series
+
+Extends a recognizable pattern—such as numbers (1, 2, 3), days or months (Mon, Tue; Jan, Feb), or dates—into the destination range while preserving the source formatting. Drag the fill handle to the target cells and choose **Fill Series** in the **AutoFillOptions** menu to continue the detected sequence.
+
+#### Fill Formatting Only
+
+Applies only the source styling—number format, font, fill color, borders, and alignment—to the destination range, leaving existing values unchanged. Drag the fill handle over the target cells and select **Fill Formatting Only** from the **AutoFillOptions** menu to unify appearance without altering data.
+
+#### Fill Without Formatting
+
+Continues the detected series into the destination range but retains the destination’s existing formatting. After dragging the fill handle, choose **Fill Without Formatting** from the **AutoFillOptions** menu to apply only the new values while keeping the target style intact.
+
+The following illustration demonstrates the use of autofill in the Spreadsheet component.
+
+![Autofill Illustration](images/autofill.gif)
 
 The `AutofillAsync()` method accepts string parameters in A1 notation for `fillRange` and `dataRange`. The available parameters are:
 
@@ -99,10 +93,6 @@ The `AutofillAsync()` method accepts string parameters in A1 notation for `fillR
 
 {% endhighlight %}
 {% endtabs %}
-
-The following illustration demonstrates the use of autofill in the Spreadsheet component.
-
-![Autofill Illustration](images/autofill.gif)
 
 ## Events
 
@@ -164,7 +154,7 @@ The event uses the [AutofillActionBeginEventArgs](https://help.syncfusion.com/cr
 {% endhighlight %}
 {% endtabs %}
 
-**AutofillActionEnd**
+### AutofillActionEnd
 
 The `AutofillActionEnd` event is triggered after an autofill operation has been successfully completed. This event provides detailed information about the completed autofill action, enabling further processing or logging if required.
 

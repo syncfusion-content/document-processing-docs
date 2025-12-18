@@ -6,7 +6,7 @@ control: PowerPoint
 documentation: UG
 ---
 
-# Convert PowerPoint to PDF using Syncfusion<sup>&reg;</sup> PowerPoint library
+# Convert PowerPoint to PDF using Syncfusion® PowerPoint library
 
 Syncfusion<sup>&reg;</sup> PowerPoint library (Presentation) allows you to convert PowerPoint Presentation document to PDF within a few lines of code in .NET applications and also it does not require Adobe and Microsoft PowerPoint application to be installed in the machine. Using this, you can create an input PowerPoint Presentation document from scratch or load an existing PowerPoint Presentation document and then easily convert to PDF.
 
@@ -532,6 +532,75 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Convert-PowerPoint-into-accessible-PDF).
 
+## PowerPoint shapes to PDF form field 
+
+This setting allows you to **preserve PowerPoint shapes as PDF form fields** in the converted PDF document. Shapes with names starting with **FormField_** will be converted into **editable text form fields** in the resulting PDF. This feature helps in creating **interactive and fillable PDF forms** from PowerPoint presentations.
+
+The following code sample shows how to preserve PowerPoint form fields as PDF form fields in the converted PDF document.
+
+{% tabs %}
+
+{% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Create-fillable-PDF-from-PPTX/.NET/Create-fillable-PDF-from-PPTX/Program.cs" %}
+//Open the PowerPoint file stream. 
+using (FileStream fileStream = new FileStream(Path.GetFullPath(@"Data/Template.pptx"), FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+{
+    //Load an existing PowerPoint Presentation. 
+    using (IPresentation pptxDoc = Presentation.Open(fileStream))
+    {
+        // Create new instance for PresentationToPdfConverterSettings
+        PresentationToPdfConverterSettings settings = new PresentationToPdfConverterSettings();
+        //Enables a flag to preserve form fields by converting shapes with names starting with 'FormField_' into editable text form fields in the PDF.
+        settings.PreserveFormFields = true;
+        //Convert PowerPoint into PDF document. 
+        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
+        {
+            //Save the PDF file to file system. 
+            using (FileStream outputStream = new FileStream(Path.GetFullPath(@"Output/PPTXToPDF.pdf"), FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
+            {
+                pdfDocument.Save(outputStream);
+            }
+        }
+    }
+}
+{% endhighlight %}
+
+{% highlight C# tabtitle="C# [Windows-specific]" %}
+//Open a PowerPoint Presentation.
+using (IPresentation pptxDoc = Presentation.Open("Template.pptx"))
+{
+    // Create new instance for PresentationToPdfConverterSettings
+    PresentationToPdfConverterSettings settings = new PresentationToPdfConverterSettings();
+    //Enables a flag to preserve form fields by converting shapes with names starting with 'FormField_' into editable text form fields in the PDF.
+    settings.PreserveFormFields = true;
+    //Convert the PowerPoint Presentation into a PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc, pdfConverterSettings))
+    {
+        //Save a PDF document.
+        pdfDocument.Save("Result.pdf");
+    }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Open a PowerPoint Presentation.
+Using pptxDoc As IPresentation = Presentation.Open("Template.pptx")
+    'Create new instance for PresentationToPdfConverterSettings
+    Dim settings As New PresentationToPdfConverterSettings()
+    'Enables a flag to preserve form fields by converting shapes with names starting with 'FormField_' into editable text form fields in the PDF.
+    settings.PreserveFormFields = True
+    'Convert the PowerPoint Presentation into a PDF document.
+    Using pdfDocument As PdfDocument = PresentationToPdfConverter.Convert(pptxDoc, settings)
+        'Save a PDF document.
+        pdfDocument.Save("Result.pdf")
+    End Using
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Create-fillable-PDF-from-PPTX).
+
 ## Chart quality
 
 The Presentation library provides an option to decide the quality of the charts to optimize the converted PDF document size. 
@@ -681,9 +750,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to convert a PowerPoint presentation to PDF using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/pptxtopdf#/bootstrap5).
-* See how to convert a PowerPoint presentation to PDF/UA using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/pptxtopdfua#/bootstrap5).
-* See how to convert a PowerPoint presentation to PDF/A using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/pptxtopdfa#/bootstrap5).
+* Explore how to convert a PowerPoint presentation to PDF using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind).
+* See how to convert a PowerPoint presentation to PDF/UA using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/pptxtopdfua#/tailwind).
+* See how to convert a PowerPoint presentation to PDF/A using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/pptxtopdfa#/tailwind).
 
 ## See Also
 

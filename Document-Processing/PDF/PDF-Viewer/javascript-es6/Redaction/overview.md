@@ -12,6 +12,43 @@ domainurl: ##DomainURL##
 
 Redaction annotations are used to hide confidential or sensitive information in a PDF. The Syncfusion JavaScript PDF Viewer (EJ2) lets you mark areas or entire pages for redaction, customize their appearance, and permanently apply them with a single action.
 
+## Enable the redaction toolbar
+
+To enable the redaction toolbar, configure the `toolbarSettings.toolbarItems` property of the PdfViewer instance to include the **RedactionEditTool**.
+
+The following example shows how to enable the redaction toolbar:
+
+```ts
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner);
+
+let viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
+    toolbarSettings: {
+        toolbarItems: [
+            'OpenOption',
+            'UndoRedoTool',
+            'PageNavigationTool',
+            'MagnificationTool',
+            'PanTool',
+            'SelectionTool',
+            'CommentTool',
+            'SubmitForm',
+            'AnnotationEditTool',
+            'RedactionEditTool',   // Enables Redaction toolbar
+            'FormDesignerEditTool',
+            'SearchOption',
+            'PrintOption',
+            'DownloadOption'
+        ]
+    }
+});
+
+viewer.appendTo('#pdfViewer');
+```
+
 N> Prerequisites: Add the PdfViewer control to your JavaScript application and ensure the redaction feature is available in the version you are using. Once applied, redaction permanently removes the selected content.
 
 ![Toolbar with the Redaction tool highlighted](redaction-annotations-images/redaction-icon-toolbar.png)

@@ -72,6 +72,117 @@ An Excel file encoded as a Base64 string can be loaded into the Spreadsheet comp
 {% endhighlight %}
 {% endtabs %}
 
+### Open an Excel file from Google Drive
+To load an Excel file from `Google Drive` in the Blazor Spreadsheet, follow the steps below.
+
+**Prerequisites:**
+- [Google Cloud project](https://developers.google.com/workspace/guides/create-project) in the Google Cloud Console.
+- [Service account](https://cloud.google.com/iam/docs/service-accounts-create) within the GCP project.
+- [Service account key](https://cloud.google.com/iam/docs/keys-create-delete) (JSON) available on disk.
+- [Google Drive API enabled](https://console.cloud.google.com/apis/library/drive.googleapis.com) for the project.
+- [Google Drive account](https://drive.google.com/) with access to the file to download.
+- [Google.Apis.Drive.v3](https://www.nuget.org/packages/Google.Apis.Drive.v3) NuGet package installed in your project to access Google Drive API.
+
+**Step 1:** Install required NuGet packages
+
+To use Google Drive with the Blazor Spreadsheet, install the following packages:
+
+- [Google.Apis.Drive.v3](https://www.nuget.org/packages/Google.Apis.Drive.v3) — to access the Google Drive API
+- [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet) — to use the Syncfusion Blazor Spreadsheet component
+
+**Step 2:** Include the following namespaces in the **Index.razor** file
+
+Import the required namespaces at the top of the file:
+
+```
+@using Google.Apis.Auth.OAuth2;
+@using Google.Apis.Drive.v3;
+@using Google.Apis.Services;
+@using Syncfusion.Blazor.Spreadsheet;
+@using System.IO;
+```
+
+**Step 3:** Download the Excel file, convert to bytes, and prepare for binding
+
+Add the below code example to download the `Google Drive` file using the Drive API, convert the stream to a byte array, and bind it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DataSource) property.
+
+{% tabs %}
+{% highlight razor %}
+
+@page "/"
+
+@if (IsSpreadsheetDataLoaded)
+{
+    <SfSpreadsheet DataSource="DataSourceBytes">
+        <SpreadsheetRibbon></SpreadsheetRibbon>
+    </SfSpreadsheet>
+}
+@code{
+ 
+    public byte[] DataSourceBytes { get; set; }
+ 
+    // Flag to indicate whether the spreadsheet data has been loaded and is ready for rendering
+    public bool IsSpreadsheetDataLoaded { get; set; }
+ 
+    protected override async Task OnInitializedAsync()
+    {
+        //Download the document from Google Drive
+        MemoryStream stream = await GetDocumentFromGoogleDrive();
+
+        //Set the position as '0'
+        stream.Position = 0;
+
+        // Convert the MemoryStream to a byte array to be used as the DataSource
+        DataSourceBytes = stream.ToArray();
+ 
+        // Set the flag to true to indicate that the spreadsheet data is ready
+        IsSpreadsheetDataLoaded = true;
+    }
+ 
+    // Download file from Google Drive
+    public async Task<MemoryStream> GetDocumentFromGoogleDrive()
+    {
+        //Define the path to the service account key file
+        string serviceAccountKeyPath = "Your_service_account_key_path";
+
+        //Specify the file ID of the file to download
+        string fileID = "Your_file_id";
+ 
+        try
+        {
+            //Authenticate the Google Drive API access using the service account key
+            GoogleCredential credential = GoogleCredential.FromFile(serviceAccountKeyPath).CreateScoped(DriveService.ScopeConstants.Drive);
+ 
+            //Create the Google Drive service
+            DriveService service = new DriveService(new BaseClientService.Initializ()
+            {
+                HttpClientInitializer = credential
+            });
+ 
+            //Create a request to get the file from Google Drive
+            var request = service.Files.Get(fileID);
+ 
+            //Download the file into a MemoryStream
+            MemoryStream stream = new MemoryStream();
+            await request.DownloadAsync(stream);
+ 
+            return stream;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error retrieving document from Google Drive: {ex.Message}");
+            throw;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Replace **Your_file_id** with the actual Google Drive file ID, and **Your_service_account_key_path** with the actual path to your service account key JSON file.
+
+N> The **FileID** is the unique identifier for a Google Drive file. For example, if the file URL is: `https://drive.google.com/file/d/abc123xyz456/view?usp=sharing`, then the file ID is `abc123xyz456`.
+
 ### Supported file formats
 The Spreadsheet component supports opening the following file formats:
 * Microsoft Excel Workbook (.xlsx)
@@ -92,6 +203,87 @@ When a protected sheet or workbook is saved or downloaded, all associated settin
 
 ### Supported file formats
 The Spreadsheet component supports saving files in the Microsoft Excel (.xlsx) format.
+
+### Save an Excel file programmatically
+
+The Blazor Spreadsheet component provides two methods for saving Excel files programmatically:
+
+- [SaveAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsync_Syncfusion_Blazor_Spreadsheet_SaveOptions_) – Saves the spreadsheet as an Excel file.
+- [SaveAsStreamAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsStreamAsync) – Returns the spreadsheet content as a [MemoryStream](https://learn.microsoft.com/dotnet/api/system.io.memorystream) for further processing or storage.
+
+#### Save as an Excel file
+
+The [SaveAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsync_Syncfusion_Blazor_Spreadsheet_SaveOptions_) method saves the spreadsheet content as an Excel file programmatically and supports customization through the [SaveOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveOptions.html) parameter.
+
+| Parameter | Type | Description |
+| -- | -- | -- |
+| options | [SaveOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveOptions.html) | Specifies settings for the save operation, such as the file name and file type (for example, XLSX). |
+
+N> If options are not provided, the default settings are **FileName**: `"Spreadsheet"` (the downloaded file will be named `"Spreadsheet.xlsx"`) and **SaveType**: [SaveType.Xlsx](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveType.html).
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<button OnClick="SaveWorkbookHandler">Save as Excel</button>
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes"></SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public async Task SaveWorkbookHandler()
+    {
+        // Exports the workbook as "MonthlyReport.xlsx"
+        await SpreadsheetInstance.SaveAsync(new SaveOptions
+        {
+            SaveType = SaveType.Xlsx,
+            FileName = "MonthlyReport"
+        });
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+#### Save as a MemoryStream
+
+The [SaveAsStreamAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsStreamAsync) method retrieves the spreadsheet content as a [MemoryStream](https://learn.microsoft.com/dotnet/api/system.io.memorystream) for further processing, such as saving to a database or cloud storage.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<button OnClick="SaveToServer">Save to Server</button>
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes"></SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public async Task SaveToServer()
+    {
+        var stream = await SpreadsheetInstance.SaveAsStreamAsync();
+        // Example: Saves the stream to a file named "ServerReport.xlsx"
+        using var fileStream = File.Create("wwwroot/ServerReport.xlsx");
+        stream.CopyTo(fileStream);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
 ## New
 To create a new, blank workbook through the UI, select **File > New** from the **Ribbon**. This action initializes a blank spreadsheet component, ready for data entry or formatting. If unsaved changes are present, a confirmation dialog will appear, indicating that these changes will be lost. The dialog presents options to proceed with creating the new workbook by selecting **OK**, or to cancel the operation by selecting **Cancel**.
