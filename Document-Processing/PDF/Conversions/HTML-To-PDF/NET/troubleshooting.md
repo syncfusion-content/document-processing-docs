@@ -1452,6 +1452,45 @@ After the service restarts, try the conversion or operation again to ensure the 
 
 </table>
 
+## Ubuntu 24.04 dependency install fails: libasound2 migrated to libasound2t64; libgconf-2-4 removed
+
+<table>
+<th style="font-size:14px" width="100px">Exception</th>
+<th style="font-size:14px">Installing dependencies on Ubuntu 24.04 fails when attempting to install libasound2 and libgconf-2-4, leading to build/launch errors
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+<b>Time64 transition:</b> Ubuntu 24.04 adopted 64-bit timestamp support, renaming several libraries with the t64 suffix. libasound2 is now a virtual package provided by libasound2t64, so installing libasound2 directly fails.
+
+<b>Deprecated removal:</b> libgconf-2-4 was deprecated and removed starting with Ubuntu 23.10 and is not available in 24.04 repositories.
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+Update the dependency installation script to use t64 packages and omit libgconf-2-4. The following command installs the supported libraries on Ubuntu 24.04:
+
+{% tabs %}
+{% highlight C# %}
+
+Run apt-get update && apt-get install -yq --no-install-recommends \
+  libasound2t64 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 \
+  libfontconfig1 libgcc-s1 libgdk-pixbuf2.0-0 libglib2.0-0t64 libgtk-3-0t64 \
+  libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 \
+  libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 \
+  libxrender1 libxss1 libxtst6 libnss3 libgbm1
+
+{% endhighlight %}
+{% endtabs %}
+
+After applying this change, all required dependencies are installed successfully.
+</td>
+</tr>
+
+</table>
+
 ## Localized Content Not Reflected in PDF Output When Using Blink HTML-to-PDF Conversion Despite Browser Culture Change
 
 <table>
