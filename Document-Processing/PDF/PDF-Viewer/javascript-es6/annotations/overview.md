@@ -112,4 +112,18 @@ The PDF Viewer control provides options to add, edit, and delete comments for th
 
 You can save and reload annotations by exporting and importing them in JSON format. This makes it easy to persist annotations or share them across sessions.
 
-For more details, see the [Export and import annotations documentation](../how-to/import-export-annotation-ts).
+For more details, see the [Export and import annotations documentation](../annotations/export-import/export-annotation.md).
+
+## See also
+
+- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
+- [Create and Modify Annotation](../annotations/create-modify-annotation)
+- [Customize Annotation](../annotations/customize-annotation)
+- [Remove Annotation](../annotations/delete-annotation)
+- [Handwritten Signature](../annotations/signature-annotation)
+- [Export and Import Annotation](../annotations/export-import/export-annotation)
+- [Annotation Permission](../annotations/annotation-permission)
+- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
+- [Annotation Events](../annotations/annotation-event)
+- [Annotation API](../annotations/annotations-api)
