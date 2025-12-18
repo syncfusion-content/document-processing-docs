@@ -131,10 +131,6 @@ End Function
 ## See Also
 
 * [How to import data table with its data type using template markers?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-import-data-table-with-its-data-type-using-template-markers)
-* [How to import data from DataTable?](https://help.syncfusion.com/file-formats/xlsio/working-with-data#import-data-from-datatable)
-* [How to import data from DataColumn?](https://help.syncfusion.com/file-formats/xlsio/working-with-data#import-data-from-datacolumn)
-* [How to import data from DataView?](https://help.syncfusion.com/file-formats/xlsio/working-with-data#import-data-from-dataview)
-* [How to export data from worksheet to DataTable?](https://help.syncfusion.com/file-formats/xlsio/working-with-data#import-data-from-datatable)
-* [What are Import Data Options?](https://help.syncfusion.com/file-formats/xlsio/working-with-data#import-data-options)
+* [Import to Excel Document](https://help.syncfusion.com/document-processing/excel/excel-library/net/import-export/import-to-excel)
 * [How to bind from DataTable?](https://help.syncfusion.com/file-formats/xlsio/working-with-template-markers#bind-from-datatable)
 * [How to bind from Nested Collection Objects with import data and group options?](https://help.syncfusion.com/file-formats/xlsio/working-with-template-markers#bind-from-nested-collection-objects-with-import-data-and-group-options)
