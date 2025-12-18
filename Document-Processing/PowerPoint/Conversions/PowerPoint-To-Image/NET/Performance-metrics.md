@@ -6,7 +6,7 @@ control: Presentation
 documentation: UG
 ---
 
-# PowerPoint to image performance benchmarks using .NET PowerPoint Library
+# PowerPoint to image performance metrics in .NET PowerPoint Library
 
 The Syncfusion<sup>&reg;</sup> .NET PowerPoint library (Presentation) enables seamless integration with PowerPoint files, offering robust features for handling presentations in various formats. This performance benchmark report highlights the speed and efficiency of PowerPoint to image conversion, demonstrating how our library performs in real-world scenarios.
 
@@ -14,11 +14,11 @@ The Syncfusion<sup>&reg;</sup> .NET PowerPoint library (Presentation) enables se
 
 The following system configurations were used for benchmarking: 
 
-* **Operating System:** Windows 10
-* **Processor:** 11th Gen Intel(R) Core(TM)
-* **RAM:** 16GB
+* **Operating System:** Windows 11
+* **Processor:** 12th Gen Intel(R) Core(TM) i5-1235U (1.30 GHz)
+* **RAM:** 24GB
 * **.NET Version:** .NET 8.0
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.PresentationRenderer.Net.Core v30.1.37](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/30.1.37)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.PresentationRenderer.Net.Core v32.1.19](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/32.1.19)
 
 ## PowerPoint to image conversion 
 
@@ -41,12 +41,12 @@ The following system configurations were used for benchmarking:
 <tr>
     <td>100</td>
     <td>{{'[PowerPoint-100.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-100.pptx)'| markdownify }}</td>
-    <td>2.8</td>
+    <td>2.2</td>
 </tr>
 <tr>
     <td>500</td>
     <td>{{'[PowerPoint-500.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-500.pptx)'| markdownify }}</td>
-    <td>32</td>
+    <td>23.5</td>
 </tr>
 </table>
 
