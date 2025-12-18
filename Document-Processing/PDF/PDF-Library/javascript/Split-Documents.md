@@ -8,7 +8,7 @@ documentation: UG
 
 # Split in JavaScript PDF library
 
-The PDF library supports Splitting PDF file into single-page or multiple-page PDF documents.
+The PDF library supports splitting PDF file into single-page or multiple-page PDF documents.
 
 ## Splitting a PDF file into individual 
 
@@ -17,6 +17,7 @@ The PDF library allows splitting the pages of an existing PDF document into mult
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfDocumentSplitEventArgs} from '@syncfusion/ej2-pdf';
+import { Save } from '@syncfusion/ej2-file-utils';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -29,8 +30,10 @@ function documentSplitEvent(sender: PdfDocument, args: PdfDocumentSplitEventArgs
 }
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 document.splitEvent = documentSplitEvent;
@@ -42,6 +45,7 @@ function documentSplitEvent(sender, args): void {
 }
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,6 +56,7 @@ The PDF library allows splitting a certain range of pages into a separate PDF do
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfDocumentSplitEventArgs} from '@syncfusion/ej2-pdf';
+import { Save } from '@syncfusion/ej2-file-utils';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -64,8 +69,10 @@ function documentSplitEvent(sender: PdfDocument, args: PdfDocumentSplitEventArgs
 }
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 document.splitEvent = documentSplitEvent;
@@ -77,6 +84,7 @@ function documentSplitEvent(sender, args): void {
 }
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,6 +95,7 @@ The PDF library allows splitting by fixed number of pages of an existing PDF doc
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfDocumentSplitEventArgs} from '@syncfusion/ej2-pdf';
+import { Save } from '@syncfusion/ej2-file-utils';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -99,8 +108,10 @@ function documentSplitEvent(sender: PdfDocument, args: PdfDocumentSplitEventArgs
 }
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 document.splitEvent = documentSplitEvent;
@@ -112,5 +123,6 @@ function documentSplitEvent(sender, args): void {
 }
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}

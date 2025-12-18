@@ -58,7 +58,7 @@ This example demonstrates the importance of saving and restoring the graphics st
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfGraphics, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfGraphics, PdfGraphicsState, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -67,13 +67,15 @@ let page: PdfPage = document.addPage();
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
 // Save the current graphics state and apply transformations
-graphics.save();
+let state: PdfGraphicsState = graphics.save();
 graphics.translateTransform({ x: 100, y: 50});
 graphics.rotateTransform(45);
 // Set font
 let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
 // Draw text
 graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
+// Restore the graphics state
+graphics.restore(state);
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -87,13 +89,15 @@ var page = document.addPage();
 // Get graphics from the page
 var graphics = page.graphics;
 // Save the current graphics state and apply transformations
-graphics.save();
+var state = graphics.save();
 graphics.translateTransform({ x: 100, y: 50 });
 graphics.rotateTransform(45);
 // Set font
 var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
 // Draw text
 graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Restore the graphics state
+graphics.restore(state);
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -159,7 +163,7 @@ let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
 // Set font
-let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10);
+let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
 // Draw text
 page.graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
 // Save the document
@@ -173,7 +177,7 @@ var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
 // Set font
-var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10);
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
 // Draw text
 page.graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
 // Save the document
@@ -183,7 +187,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Draw Text using TrueType fonts
+### Draw text using TrueType fonts
 
 This example demonstrates how to draw text using TrueType fonts in a PDF document by utilizing the `drawString` method of the `PdfGraphics` class along with a `PdfTrueTypeFont` instance. The TrueType font provides enhanced text rendering with support for custom font styles.
 
@@ -195,7 +199,7 @@ import { PdfDocument, PdfPage, PdfTrueTypeFont, PdfBrush } from '@syncfusion/ej2
 let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
-// Set font
+// Embed a TTF font into the PDF
 let font: PdfTrueTypeFont = document.embedFont(data, 10);
 // Draw text
 page.graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
@@ -209,7 +213,7 @@ document.destroy();
 var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
-// Set font
+// Embed a TTF font into the PDF
 var font = document.embedFont(data, 10);
 // Draw text
 page.graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
@@ -226,14 +230,14 @@ This example demonstrates how to draw text using fonts in a PDF document by util
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfCjkStandardFont, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfCjkStandardFont, PdfBrush, PdfFontStyle } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
 // Set font
-let font: PdfCjkStandardFont = document.embedFont(PdfCjkFontFamily.heiseiMinchoW3, 10);
+let font: PdfCjkStandardFont = document.embedFont(PdfCjkFontFamily.heiseiMinchoW3, 10, PdfFontStyle.regular);
 // Draw text
 page.graphics.drawString('こんにちは世界', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
 // Save the document
@@ -247,7 +251,7 @@ var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
 // Set font
-var font = document.embedFont(ej.pdf.PdfCjkFontFamily.heiseiMinchoW3, 10);
+var font = document.embedFont(ej.pdf.PdfCjkFontFamily.heiseiMinchoW3, 10, ej.pdf.PdfFontStyle.regular);
 // Draw text
 page.graphics.drawString('こんにちは世界', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
 // Save the document
@@ -302,7 +306,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## LineLimit, ClipPath, NoClip properties in PdfStringFormat
+## LineLimit, NoClip properties in PdfStringFormat
 
 **LineLimit:** When LineLimit is enabled, the provided string will be laid out within the specified bounds. If the LineLimit property is disabled, the layout will continue to fill any remaining space. The default value of the LineLimit property is true.
 
