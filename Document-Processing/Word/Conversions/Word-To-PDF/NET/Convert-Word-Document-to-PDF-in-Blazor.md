@@ -1312,4 +1312,3 @@ Click [here](https://www.syncfusion.com/document-processing/word-framework/blazo
 
 An online sample link to [convert Word document to PDF](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind) in ASP.NET Core.
 
-

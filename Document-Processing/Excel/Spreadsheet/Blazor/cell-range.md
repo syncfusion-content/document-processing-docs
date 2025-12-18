@@ -25,6 +25,35 @@ Autofill can be performed in one of the following ways:
 *   Drag and drop the cell using the fill handle element.
 *   Use the [AutofillAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AutofillAsync_System_String_System_String_) method programmatically.
 
+### Autofill options
+
+Autofill supports multiple behaviors that control how adjacent cells are populated when using the fill handle. The available options are:
+
+- Copy Cells
+- Fill Series
+- Fill Formatting Only
+- Fill Without Formatting
+
+#### Copy Cells
+
+Copies the source cell content and formatting to the selected destination range. After dragging the fill handle from the selection to the target area, choose **Copy Cells** from the **AutoFillOption** menu to replicate both values and presentation. When the source contains formulas, relative references are adjusted to match the destination.
+
+#### Fill Series
+
+Extends a recognizable pattern—such as numbers (1, 2, 3), days or months (Mon, Tue; Jan, Feb), or dates—into the destination range while preserving the source formatting. Drag the fill handle to the target cells and choose **Fill Series** in the **AutoFillOptions** menu to continue the detected sequence.
+
+#### Fill Formatting Only
+
+Applies only the source styling—number format, font, fill color, borders, and alignment—to the destination range, leaving existing values unchanged. Drag the fill handle over the target cells and select **Fill Formatting Only** from the **AutoFillOptions** menu to unify appearance without altering data.
+
+#### Fill Without Formatting
+
+Continues the detected series into the destination range but retains the destination’s existing formatting. After dragging the fill handle, choose **Fill Without Formatting** from the **AutoFillOptions** menu to apply only the new values while keeping the target style intact.
+
+The following illustration demonstrates the use of autofill in the Spreadsheet component.
+
+![Autofill Illustration](images/autofill.gif)
+
 The `AutofillAsync()` method accepts string parameters in A1 notation for `fillRange` and `dataRange`. The available parameters are:
 
 | Parameter | Type | Description |
@@ -64,10 +93,6 @@ The `AutofillAsync()` method accepts string parameters in A1 notation for `fillR
 
 {% endhighlight %}
 {% endtabs %}
-
-The following illustration demonstrates the use of autofill in the Spreadsheet component.
-
-![Autofill Illustration](images/autofill.gif)
 
 ## Events
 

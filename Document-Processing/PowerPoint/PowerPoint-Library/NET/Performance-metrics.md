@@ -14,11 +14,11 @@ The Syncfusion<sup>&reg;</sup> .NET PowerPoint library (Presentation) enables se
 
 The following system configurations were used for benchmarking: 
 
-* **Operating System:** Windows 10
-* **Processor:** 11th Gen Intel(R) Core(TM)
-* **RAM:** 16GB
+* **Operating System:** Windows 11
+* **Processor:** 12th Gen Intel(R) Core(TM) i5-1235U (1.30 GHz)
+* **RAM:** 24GB
 * **.NET Version:** .NET 8.0
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.Presentation.Net.Core v30.1.37](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/30.1.37)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.Presentation.Net.Core v32.1.19](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/32.1.19)
 
 ## Open and save Presentation 
 
@@ -46,7 +46,7 @@ The following system configurations were used for benchmarking:
 <tr>
     <td>500</td>
     <td>{{'[PowerPoint-500.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Open-and-save/.NET/Open-and-save-PowerPoint/Data/PowerPoint-500.pptx)'| markdownify }}</td>
-    <td>2.6</td>
+    <td>1.06</td>
 </tr>
 </table>
 
