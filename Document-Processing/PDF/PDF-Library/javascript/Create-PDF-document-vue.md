@@ -69,23 +69,22 @@ export default {
   name: 'App',
   methods: {
     createPdf() {
-      
-        // Create a new PDF document
-        const pdf = new ej.pdf.PdfDocument();
-        // Add a new page
-        const page: ej.pdf.PdfPage = pdf.addPage();
-        // Get graphics from the page
-        const graphics: ej.pdf.PdfGraphics = page.graphics;
-        // Set font
-        const font: ej.pdf.PdfStandardFont = pdf.embedFont(ej.pdf.PdfFontFamily.helvetica, 36, ej.pdf.PdfFontStyle.regular);
-        // Create a new black brush
-        const brush = new ej.pdf.PdfBrush({r: 0, g: 0, b: 0});
-        // Draw text
-        graphics.drawString('Hello World!!!', font, {x: 20, y: 20, width: graphics.clientSize.width - 20, height: 60}, brush);
-        // Save and download PDF
-        pdf.save('Output.pdf');
-        // Destroy the PDF document instance
-        pdf.destroy();
+    // Create a new PDF document
+    const pdf = new ej.pdf.PdfDocument();
+    // Add a new page
+    const page: ej.pdf.PdfPage = pdf.addPage();
+    // Get graphics from the page
+    const graphics: ej.pdf.PdfGraphics = page.graphics;
+    // Set font
+    const font: ej.pdf.PdfStandardFont = pdf.embedFont(ej.pdf.PdfFontFamily.helvetica, 36, ej.pdf.PdfFontStyle.regular);
+    // Create a new black brush
+    const brush = new ej.pdf.PdfBrush({r: 0, g: 0, b: 0});
+    // Draw text
+    graphics.drawString('Hello World!!!', font, {x: 20, y: 20, width: graphics.clientSize.width - 20, height: 60}, brush);
+    // Save and download PDF
+    pdf.save('Output.pdf');
+    // Destroy the PDF document instance
+    pdf.destroy();
 
     }
   }
