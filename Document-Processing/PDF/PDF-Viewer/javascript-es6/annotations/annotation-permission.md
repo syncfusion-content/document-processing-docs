@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations Permission in TypeScript PDF Viewer | Syncfusion
-description: Learn how to use annotation permission in Syncfusion TypeScript PDF Viewer using programmatic APIs.
+description: Learn how to use annotation permissions in Syncfusion TypeScript PDF Viewer using programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
