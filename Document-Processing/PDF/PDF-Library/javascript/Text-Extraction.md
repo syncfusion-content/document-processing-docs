@@ -9,7 +9,7 @@ documentation: UG
 
 The PDF allows you to extract the text from a particular page or the entire PDF document. 
 
-N> For redaction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on. Please verify the platform's actual root directory where the `openjpeg` file is extracted. Depending on the platform, the root path may vary. Check which root folder is being used by reviewing the path referenced in the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-asp-net-core) page.
+N> For redaction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
 
 ## Working with basic text extraction
 
