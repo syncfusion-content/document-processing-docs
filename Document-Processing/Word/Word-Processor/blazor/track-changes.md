@@ -87,7 +87,7 @@ In DocumentEditor, we have built-in review panel in which we have provided suppo
 
 ## Custom metadata along with author
 
-The Document Editor provides options to customize revisions using [`Revisionsettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_RevisionSettings). The `CustomData` property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the `showCustomDataWithAuthor` property.
+The Document Editor provides options to customize revisions using [`RevisionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_RevisionSettings). The `CustomData` property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the `ShowCustomDataWithAuthor` property.
 
 The following example code illustrates how to enable and update custom metadata for track changes revisions.
 

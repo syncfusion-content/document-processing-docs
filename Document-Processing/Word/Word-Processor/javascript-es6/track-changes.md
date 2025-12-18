@@ -179,7 +179,7 @@ import { DocumentEditorContainer, Ribbon } from '@syncfusion/ej2-documenteditor'
 let container: DocumentEditorContainer = new DocumentEditorContainer({ 
   height: '590px',
   serviceUrl= hostUrl, 
-  enableTrackChanges=true,
+  enableTrackChanges= true,
   documentEditorSettings: {
     revisionSettings: { customData : "Developer", showCustomDataWithAuthor : true }}
 });
