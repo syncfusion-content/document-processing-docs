@@ -36,30 +36,34 @@ When creating a new project, choose the option `Default ([Vue 2] babel, es-lint)
 
 ![Vue 2 project](Getting_started_images/vue2-terminal.png)
 
-Once the `quick start` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Once the `quick start` project is set up with default settings, proceed to add Syncfusion<sup>&reg;</sup> components to the project.
 
 * **Installing Syncfusion<sup>&reg;</sup> JavaScript PDF package**
 
-All the available JS 2 packages are published in `npmjs.com` registry.
+All Syncfusion JS 2 packages are published in `npmjs.com` registry.
 
-* To install PDF component, use the following command.
+* To install the PDF library, use the following command.
 
 ```bash
 npm install @syncfusion/ej2-pdf --save
 ```
-N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
+or
+```bash
+yarn add @syncfusion/ej2-pdf
+```
 
+N> For image/data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
 * Copy the contents of the openjpeg folder from ./node_modules/@syncfusion/ej2-pdf-data-extract/dist to the public directory using the command:
 ```bash
 cp -R ./node_modules/@syncfusion/ej2-pdf-data-extract/dist/openjpeg public/js/openjpeg
 ```
-* Confirm that there is an 'openjpeg' directory within your public directory, if you extracting images from PDF.
-* Validate that your server has been configured to utilize the Content-Type: application/wasm MIME type. Additional information can be found in the [Troubleshooting](./troubleshooting/troubleshooting) section.
+* Confirm that there is an 'openjpeg' directory within your public directory if you are extracting images from PDFs.
+* Ensure your server serves .wasm files with the Content-Type: application/wasm MIME type.
 
-* **Create a PDF document** : Add the script in `App.vue` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
+* **Create a PDF document**: Add the script in `App.vue` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}
-{% highlight vue tabtitle="~/App.vue" %}
+{% highlight html tabtitle="~/App.vue" %}
 <script>
 export default {
   name: 'App',
