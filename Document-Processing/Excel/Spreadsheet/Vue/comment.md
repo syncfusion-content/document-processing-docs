@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Comment in React Spreadsheet control | Syncfusion
-description: Learn here all about Comment feature in Syncfusion React Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Comment in Vue Spreadsheet control | Syncfusion
+description: Learn here all about Comment feature in Syncfusion Vue Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Comment
 documentation: ug
 ---
 
-# Comment in React Spreadsheet control
+# Comment in Vue Spreadsheet control
 The **Comment** feature allows you to add feedback to cells without changing their values, enabling contextual discussions through threaded **replies**. Unlike [Notes](./notes), Comment include advanced review tools such as **resolve** and **reopen** to track status, plus an optional **Comments Review Pane** for browsing and managing threads.
 
 Cells with comment display a small comment indicator; hover to preview the comment editor. This provides a clear, collaborative workflow while keeping data intact.
@@ -18,19 +18,21 @@ Cells with comment display a small comment indicator; hover to preview the comme
 The Syncfusion Spreadsheet does not automatically track user identity. To tag new comments and replies with an author name, set the `author` property when initializing the Spreadsheet.
 
 ```ts
-    import * as React from 'react';
-    import { createRoot } from 'react-dom/client';
-    import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-    export default function App() {
-        return (
-            <SpreadsheetComponent 
-                // Set the author name, If not set, "Guest User" will be shown as the author by default.
-                author='Place the Author Name Here'>
-            </SpreadsheetComponent>
-        );
+    <template>
+        <ejs-spreadsheet ref="spreadsheet" :author="'Place the Author Name Here'">
+        </ejs-spreadsheet>
+    </template>
+
+    <script>
+    import { SpreadsheetComponent } from "@syncfusion/ej2-vue-spreadsheet";
+
+    export default {
+        name: "App",
+        components: {
+            "ejs-spreadsheet": SpreadsheetComponent
+        }
     }
-    const root = createRoot(document.getElementById('root')!);
-    root.render(<App />);
+    </script>
 ```
 >If the author property is not set, "Guest User" will be displayed as the author for comment and replies by default.
 
@@ -93,6 +95,7 @@ You can also use the `isResolved` property in the comment model when initializin
             createdTime: 'January 03, 2026 at 7:00 PM' }]
         }
     }, 'Sheet1!D5');
+
 ```
 
 ## Deleting a comment or reply
@@ -173,15 +176,15 @@ You can bind **comment thread** to cells at initial load by providing a `comment
 In the below sample, comments are added to a specific cell using cell data binding. The "Comments" review pane is shown initially by enabling the `showCommentsPane` property, and comments are added using `updateCell` method in the `created` event.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/comment-cs1/app/app.jsx %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/comment-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/comment-cs1/app/app.tsx %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/comment-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/comment-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/comment-cs1" %}
 
 ### Important Notes
 * **One thread per cell**: Attach a single `comment` object per cell. New remarks should be added as replies inside the existing thread.
