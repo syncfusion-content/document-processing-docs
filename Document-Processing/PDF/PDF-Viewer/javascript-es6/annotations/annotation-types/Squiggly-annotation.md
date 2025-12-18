@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Squiggly annotation in TypeScript PDF Viewer
 
-The PDF Viewer provides options to add, edit, and delete Squiggly text markup annotations on text. You can add squigglies via the UI (context menu or annotation toolbar) and programmatically. You can also customize color, opacity, author/subject, and default settings, and use undo/redo, save, print, or disable them as needed.
+The PDF Viewer provides options to add, edit, and delete Squiggly text markup annotations on text. You can add squiggles via the UI (context menu or annotation toolbar) and programmatically. You can also customize color, opacity, author/subject, and default settings, and use undo/redo, save, print, or disable them as needed.
 
 ![Squiggly annotations overview](../../images/squiggly_button.png)
 
@@ -83,7 +83,7 @@ document.getElementById('setNone')?.addEventListener('click', () => {
 
 ### Add squiggly annotation programmatically
 
-Add squiggly annotations programmatically using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
+Add squiggly annotations programmatically using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 ```html
 <button id="addSquiggly">Add Squiggly annotation programmatically</button>

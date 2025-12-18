@@ -106,7 +106,7 @@ N> To set up the **server-backed PDF Viewer**, add the below `serviceUrl` in the
 
 #### Add highlight annotation programmatically
 
-Programmatically add highlights using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add highlights using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 ```html
 <button id="highlight">Add TextMarkup annotation programmatically</button>
