@@ -1,5 +1,4 @@
-
-
+import { createRoot } from 'react-dom/client';
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
