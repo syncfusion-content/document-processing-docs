@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Document in JavaScript PDF library
 
-The PDF provides support to create, read, and manipulate PDF documents, allowing you to generate high-quality, secure, and feature-rich PDF files programmatically.
+The PDF library provides support to create, read, and manipulate PDF documents, allowing you to generate high-quality, secure, and feature-rich PDF files programmatically.
 
 ## Adding the document settings
 
@@ -15,7 +15,7 @@ This example shows how to configure custom page settings before adding a page to
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfPageSettings, PdfRotationAngle, PdfMargins, PdfPageOrientation, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfPageSettings, PdfGraphics, PdfRotationAngle, PdfMargins, PdfPageOrientation, PdfFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
  
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -31,15 +31,16 @@ let page: PdfPage = document.addPage(pageSettings);
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
 // Set font
-let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
+let font: PdfFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
 // Draw text
 graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Create a new PDF page settings instance
@@ -58,70 +59,14 @@ var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFont
 // Draw text
 graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
-## Creating sections in a PDF
-
-This example demonstrates how to create a section in a PDF document with custom page settings. It shows how to configure rotation, orientation, margins, and page size using `PdfPageSettings`. The `PdfSection` class is used to apply different page customizations within a single PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfPageSettings, PdfRotationAngle, PdfMargins, PdfPageOrientation, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
- 
-// Create a new PDF document
-let document: PdfDocument = new PdfDocument();
-// Create a new PDF page settings with custom options
-let pageSettings = new PdfPageSettings({
-  orientation: PdfPageOrientation.landscape,
-  size: { width: 842, height: 595 },
-  margins: new PdfMargins(40),
-  rotation: PdfRotationAngle.angle90
-});
-// Add a section to the document with the specified settings
-let section: PdfSection = document.addSection(pageSettings);
-// Add a page
-let page: PdfPage = section.addPage();
-// Get graphics from the page
-let graphics: PdfGraphics = page.graphics;
-// Set font
-let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
-// Draw text
-graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Create a new PDF document
-var document = new ej.pdf.PdfDocument();
-// Create a new PDF page settings with custom options
-let pageSettings = new ej.pdf.PdfPageSettings({
-  orientation: ej.pdf.PdfPageOrientation.landscape,
-  size: { width: 842, height: 595 },
-  margins: new ej.pdf.PdfMargins(40),
-  rotation: ej.pdf.PdfRotationAngle.angle90
-});
-// Add a section to the document with the specified settings
-var section = document.addSection(pageSettings);
-// Add a page
-var page = section.addPage();
-// Get graphics from the page
-var graphics = page.graphics;
-// Set font
-var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
-// Draw text
-graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-{% endhighlight %}
-{% endtabs %}
+N> The PDF page is created using the default settings, which include A4 page size, portrait orientation, and 40 point page margins.
 
 ## Working with document properties
 
@@ -129,7 +74,7 @@ This example demonstrates how to create a PDF document, get and set its metadata
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfDocumentInformation, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
+ { PdfDocument, PdfDocumentInformation }
  
 // Create a PDF document
 let document: PdfDocument = new PdfDocument();
@@ -166,20 +111,14 @@ let language = documentProperties.language;
 let creationDate = documentProperties.creationDate;
 // Gets the modification date of the PDF document
 let modificationDate = documentProperties.modificationDate;
-// Add a page
-let page: PdfPage = document.addPage();
-// Get graphics from the page
-let graphics: PdfGraphics = page.graphics;
-// Set font
-let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
-// Draw text
-graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a PDF document
 var document = new ej.pdf.PdfDocument();
 // Set or update document properties
@@ -195,7 +134,7 @@ creationDate: new Date(),            // Creation date
 modificationDate: new Date()         // Last modified date
 });
 // Access the document information
-var documentProperties: PdfDocumentInformation = document.getDocumentInformation();
+var documentProperties = document.getDocumentInformation();
 // Gets the title of the PDF document
 var title = documentProperties.title;
 // Gets the author of the PDF document
@@ -214,16 +153,8 @@ var language = documentProperties.language;
 var creationDate = documentProperties.creationDate;
 // Gets the modification date of the PDF document
 var modificationDate = documentProperties.modificationDate;
-// Add a page
-var page = document.addPage();
-// Get graphics from the page
-var graphics = page.graphics;
-// Set font
-var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
-// Draw text
-graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 {% endhighlight %}
@@ -235,7 +166,7 @@ The `isIncrementalUpdate` property allows you to check if the PDF document suppo
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfGraphics, PdfStandardFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfGraphics, PdfFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
  
 // Create a PDF document
 let document: PdfDocument = new PdfDocument();
@@ -246,15 +177,17 @@ let page: PdfPage = document.addPage();
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
 // Set font
-let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
+let font: PdfFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
 // Draw text
-graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({r: 0, g: 0, b: 255}));
+graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200}, new PdfBrush({ r: 0, g: 0, b: 255 }));
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a PDF document
 var document = new ej.pdf.PdfDocument();
 // Disable incremental update to rewrite the entire file
@@ -268,8 +201,41 @@ var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFont
 // Draw text
 graphics.drawString('Hello World', font, { x: 10, y: 20, width: 100, height: 200 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Flatten annotations and form fields
+
+The `flatten` property allows you to convert all annotations and form fields in a PDF into static page content, removing interactivity while preserving their visual appearance.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument } from '@syncfusion/ej2-pdf';
+ 
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Flatten PDF annotations and form fields
+document.flatten = true;
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document= new PdfDocument(data);
+// Flatten PDF annotations and form fields
+document.flatten = true;
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
