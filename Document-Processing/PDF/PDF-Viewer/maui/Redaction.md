@@ -85,7 +85,7 @@ void DisableRedactionMode()
 
 ### Add redaction mark on the PDF
 
-You can mark regions for text or specific areas programmatically using the `AddRedactionMark` method of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), and redact entire pages using the [AddPageRedactionMarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddPageRedactionMarks_System_Collections_Generic_List_System_Int32__) method. The following example demonstrates how to mark regions for redaction, such as a specific area and page in the PDF document.
+You can mark regions for text or specific areas programmatically using the [AddRedactionMark](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddRedactionMark_Syncfusion_Maui_PdfViewer_RedactionMark_) method of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), and redact entire pages using the [AddPageRedactionMarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddPageRedactionMarks_System_Collections_Generic_List_System_Int32__) method. The following example demonstrates how to mark regions for redaction, such as a specific area and page in the PDF document.
 
 {% tabs %}
 {% highlight C# %}
@@ -127,13 +127,13 @@ void RemoveSelectedRedactionMark()
 
 ### Remove all the redaction marks in the PDF
 
-You can remove all redaction marks from a document programmatically by calling the `RemoveAllRedactionMarks` method. The following example demonstrates how to remove all redaction marks from a PDF document.
+You can remove all redaction marks from a document programmatically by calling the [RemoveAllRedactionMarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RemoveAllRedactionMarks) method. The following example demonstrates how to remove all redaction marks from a PDF document.
 
 {% tabs %}
 {% highlight C# %}
 void RemoveAllRedactionMarksDrawn()
 {
-    // Removes all the redaction marks from a PDF document using `RemoveAllRedactionMarks` method of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
+    // Removes all the redaction marks from a PDF document using [RemoveAllRedactionMarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RemoveAllRedactionMarks) method of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
     PdfViewer.RemoveAllRedactionMarks();
 }
 {% endhighlight %}
