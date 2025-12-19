@@ -53,7 +53,7 @@ Step 6: **Create a PDF document**: Add the script in `~/Views/Home/Index.cshtml`
 </div>
 @section Scripts {
     <script>
-         document.getElementById('btnCreatePdf').addEventListener('click', function () {
+        document.getElementById('btnCreatePdf').addEventListener('click', function () {
         // Create a new PDF document
         let pdf = new ej.pdf.PdfDocument();
         // Add a new page
