@@ -25,10 +25,10 @@ let page: PdfPage = document.addPage();
 let bookmarks: PdfBookmarkBase = document.bookmarks;
 // Add a new bookmark to the PDF document
 let bookmark: PdfBookmark = bookmarks.add('Introduction', 0, {
-    destination: new PdfDestination(page, { x: 100, y: 100 }, { zoom: 1 }),
-	namedDestination: new PdfNamedDestination('First', new PdfDestination(page, { x: 0, y: 10 }, {zoom: 1 })),
-    color: { r: 0, g: 0, b: 255 },
-    textStyle: PdfTextStyle.bold});
+destination: new PdfDestination(page, { x: 100, y: 100 }, { zoom: 1 }),
+namedDestination: new PdfNamedDestination('First', new PdfDestination(page, { x: 0, y: 10 }, {zoom: 1 })),
+color: { r: 0, g: 0, b: 255 },
+textStyle: PdfTextStyle.bold});
 // Save the document
 document.save('output.pdf');
 // Close the document
@@ -45,10 +45,10 @@ var page = document.addPage();
 var bookmarks = document.bookmarks;
 // Add a new bookmark to the PDF document
 var bookmark = bookmarks.add('Introduction', 0, {
-    destination: new ej.pdf.PdfDestination(page, { x: 100, y: 100 }, { zoom: 1 }),
-	namedDestination: new ej.pdf.PdfNamedDestination('First', new ej.pdf.PdfDestination(page, { x: 0, y: 10 }, {zoom: 1 })),
-    color: { r: 0, g: 0, b: 255 },
-    textStyle: ej.pdf.PdfTextStyle.bold});
+destination: new ej.pdf.PdfDestination(page, { x: 100, y: 100 }, { zoom: 1 }),
+namedDestination: new ej.pdf.PdfNamedDestination('First', new ej.pdf.PdfDestination(page, { x: 0, y: 10 }, {zoom: 1 })),
+color: { r: 0, g: 0, b: 255 },
+textStyle: ej.pdf.PdfTextStyle.bold});
 // Save the document
 document.save('output.pdf');
 // Close the document
@@ -117,16 +117,16 @@ let page: PdfPage = document.addPage();
 let bookmarks: PdfBookmarkBase = document.bookmarks;
 // Add a new bookmark to the PDF document
 let bookmark: PdfBookmark = bookmarks.add('Introduction', 0, {
-    destination: new PdfDestination(page, { x: 100, y: 100 }, { zoom: 1 }),
-    namedDestination: new PdfNamedDestination('First', new PdfDestination(page, { x: 0, y: 10 }, {zoom: 1 })),
-    color: { r: 0, g: 0, b: 255 },
-    textStyle: PdfTextStyle.bold});
+destination: new PdfDestination(page, { x: 100, y: 100 }, { zoom: 1 }),
+namedDestination: new PdfNamedDestination('First', new PdfDestination(page, { x: 0, y: 10 }, {zoom: 1 })),
+color: { r: 0, g: 0, b: 255 },
+textStyle: PdfTextStyle.bold});
 // Add a child bookmark to the PDF document
 let childbookmark: PdfBookmark = bookmark.add('FirstChild', 0, {
-    destination: new PdfDestination(page, { x: 100, y: 150 }, { zoom: 1 }),
-    namedDestination: new PdfNamedDestination('Second', new PdfDestination(page, { x: 0, y: 10 }, {zoom: 1 })),
-    color: { r: 0, g: 0, b: 255 },
-    textStyle: PdfTextStyle.bold});
+destination: new PdfDestination(page, { x: 100, y: 150 }, { zoom: 1 }),
+namedDestination: new PdfNamedDestination('Second', new PdfDestination(page, { x: 0, y: 10 }, {zoom: 1 })),
+color: { r: 0, g: 0, b: 255 },
+textStyle: PdfTextStyle.bold});
 // Save the document
 document.save('output.pdf');
 // Close the document
@@ -143,16 +143,16 @@ var page= document.addPage();
 var bookmarks = document.bookmarks;
 // Add a new bookmark to the PDF document
 var bookmark = bookmarks.add('Introduction', 0, {
-    destination: new ej.pdf.PdfDestination(page, { x: 100, y: 100 }, { zoom: 1 }),
-    namedDestination: new ej.pdf.PdfNamedDestination('First', new ej.pdf.PdfDestination(page, { x: 0, y: 10 }, {zoom: 1 })),
-    color: { r: 0, g: 0, b: 255 },
-    textStyle: ej.pdf.PdfTextStyle.bold});
+destination: new ej.pdf.PdfDestination(page, { x: 100, y: 100 }, { zoom: 1 }),
+namedDestination: new ej.pdf.PdfNamedDestination('First', new ej.pdf.PdfDestination(page, { x: 0, y: 10 }, {zoom: 1 })),
+color: { r: 0, g: 0, b: 255 },
+textStyle: ej.pdf.PdfTextStyle.bold});
 // Add a child bookmark to the PDF document
 var childbookmark = bookmark.add('FirstChild', 0, {
-    destination: new ej.pdf.PdfDestination(page, { x: 100, y: 150 }, { zoom: 1 }),
-    namedDestination: new ej.pdf.PdfNamedDestination('Second', new ej.pdf.PdfDestination(page, { x: 0, y: 10 }, {zoom: 1 })),
-    color: { r: 0, g: 0, b: 255 },
-    textStyle: ej.pdf.PdfTextStyle.bold});
+destination: new ej.pdf.PdfDestination(page, { x: 100, y: 150 }, { zoom: 1 }),
+namedDestination: new ej.pdf.PdfNamedDestination('Second', new ej.pdf.PdfDestination(page, { x: 0, y: 10 }, {zoom: 1 })),
+color: { r: 0, g: 0, b: 255 },
+textStyle: ej.pdf.PdfTextStyle.bold});
 // Save the document
 document.save('output.pdf');
 // Close the document

@@ -1067,9 +1067,7 @@ document.destroy();
 
 ## Importing form fields data
 
-### Importing FDF file to PDF
-
-This example demonstrates how to import form data from an FDF file into a PDF document using the `importFormData` method. Importing FDF data allows you to populate form fields in a PDF with values from an external data source.
+This example demonstrates how to import form data from an FDF file into a PDF document using the `importFormData` method. The DataFormat enum specifies the format of the annotation data being imported, such as FDF, XFDF, JSON, or XML.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1083,43 +1081,14 @@ document.importFormData(fdfData, DataFormat.fdf);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Imports form data into the PDF document.
 document.importFormData(fdfData, ej.pdf.DataFormat.fdf);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-{% endhighlight %}
-{% endtabs %}
-
-### Importing XFDF file to PDF
-
-This example demonstrates how to import form data from an XFDF file into a PDF document using the `importFormData` method. Importing XFDF data allows you to populate form fields in a PDF with values from an external data source.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, DataFormat} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Imports form data into the PDF document.
-document.importFormData(xfdfData, DataFormat.xfdf);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Imports form data into the PDF document.
-document.importFormData(xfdfData, ej.pdf.DataFormat.xfdf);
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -1130,9 +1099,7 @@ document.destroy();
 
 ## Exporting form fields data
 
-### Export PDF file to FDF
-
-This example demonstrates how to export form data from a PDF document to an FDF file using the `exportFormData` method. Exporting FDF data allows you to save the values of form fields in a lightweight format for reuse or integration with other systems.
+This example demonstrates how to export form data from a PDF document to an FDF file using the `exportFormData` method. The DataFormat enum specifies the format of the annotation data being imported, such as FDF, XFDF, JSON, or XML.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1140,68 +1107,26 @@ import {PdfDocument, PdfFormFieldExportSettings, DataFormat } from '@syncfusion/
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Sets the form field data export settings with output data format.
+// Sets the form field data export settings with output data format
 let settings: PdfFormFieldExportSettings = new PdfFormFieldExportSettings();
-settings.dataFormat = DataFormat.fdf;
-// Export form field to fdf format
-let fdf: Uint8Array = document.exportFormData(settings);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
+settings.dataFormat = DataFormat.json;
+// Export form field to JSON format
+document.exportFormData('formData.json', settings);
+// Destroy the document
+document. Destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Sets the form field data export settings with output data format.
+// Sets the form field data export settings with output data format
 var settings = new ej.pdf.PdfFormFieldExportSettings();
-settings.dataFormat = ej.pdf.DataFormat.fdf;
-// Export form field to fdf format
-var fdf = document.exportFormData(settings);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-### Export PDF file to XFDF
-
-This example demonstrates how to export form data from a PDF document to an XFDF file using the `exportFormData` method. Exporting XFDF data allows you to save the values of form fields in a lightweight format for reuse or integration with other systems.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfFormFieldExportSettings, DataFormat } from '@syncfusion/ej2-pdf';
-    
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Sets the form field data export settings with output data format.
-let settings: PdfFormFieldExportSettings = new PdfFormFieldExportSettings();
-settings.dataFormat = DataFormat.xfdf;
-// Export form field to XFDF format
-let xfdf: Uint8Array = document.exportFormData(settings);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Sets the form field data export settings with output data format.
-var settings = new ej.pdf.PdfFormFieldExportSettings();
-settings.dataFormat = ej.pdf.DataFormat.xfdf;
-// Export form field to XFDF format
-var xfdf = document.exportFormData(settings);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
+settings.dataFormat = ej.pdf.DataFormat.json;
+// Export form field to JSON format
+document.exportFormData('formData.json', settings);
+// Destroy the document
+document. Destroy();
 
 {% endhighlight %}
 {% endtabs %}

@@ -50,8 +50,8 @@ Step 4: **Create a PDF document**: Add the script in `index.html` by creating a 
     <button id="btnCreatePdf" class="btn btn-primary">Generate PDF document</button>
 </div>
 @section Scripts {
-     <script>
-         document.getElementById('btnCreatePdf').addEventListener('click', function () {
+    <script>
+        document.getElementById('btnCreatePdf').addEventListener('click', function () {
         // Create a new PDF document
         var pdf = new ej.pdf.PdfDocument();
         // Add a new page
