@@ -50,4 +50,12 @@ viewer.appendTo("#PdfViewer");
 
 N> Text search: When using the `extractTextOption.TextOnly` or `extractTextOption.None` options, the `findText` method is unavailable. Use the `findTextAsync` method to perform text searches asynchronously.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to/)
+[View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to/Extract%20Text%20Option)
+
+## See Also
+
+[Text Search Features](../text-search/text-search-features)
+[Find Text](../text-search/find-text)
+[Text Search Events](../text-search/text-search-events)
+[Extract Text](../how-to/extract-text-ts.md)
+[Extract Text Completed](./extract-text-completed-ts)
