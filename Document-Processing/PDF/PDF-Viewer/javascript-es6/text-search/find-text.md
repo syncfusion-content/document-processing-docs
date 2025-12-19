@@ -8,10 +8,12 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Find text method
+# Find text method in TypeScript PDF Viewer
+
 Use the `findText` method to locate a string or an array of strings and return the bounding rectangles for each match. Optional parameters support case-sensitive comparisons and page scoping so you can retrieve coordinates for a single page or the entire document.
 
 ## Find and get the bounds of a text
+
 Searches for the specified text within the document and returns the bounding rectangles of the matched text. The search can be case-sensitive based on the provided parameter. It returns the bounding rectangles for all pages in the document where the text was found. The following code snippet shows how to get the bounds of the specified text:
 The following code snippet shows how to get the bounds of the specified text:
 
@@ -57,6 +59,7 @@ document.getElementById('textbounds')?.addEventListener('click', function() {
 {% endtabs %}
 
 ## Find and get the bounds of a text on the desired page
+
 Searches for the specified text within the document and returns the bounding rectangles of the matched text. The search can be case-sensitive based on the provided parameter. It returns the bounding rectangles for that page in the document where the text was found. The following code snippet shows how to retrieve bounds for the specified text on a selected page:
 The following code snippet shows how to retrieve bounds for the specified text on a selected page:
 
@@ -146,6 +149,7 @@ document.getElementById('textbounds')?.addEventListener('click', function() {
 {% endtabs %}
 
 ## Find and get the bounds of the list of text on desired page
+
 Searches for an array of strings within the document and returns the bounding rectangles for each occurrence. The search can be case-sensitive based on the provided parameters. It returns the bounding rectangles for these search strings on that particular page where the strings were found.
 
 ```html

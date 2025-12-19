@@ -7,7 +7,7 @@ control: Text search
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Text search in TypeScript PDF Viewer control
+# Text search Features in TypeScript PDF Viewer control
 
 The text search feature in the PDF Viewer locates and highlights matching content within a document. Enable or disable this capability with the following configuration.
 
@@ -153,10 +153,10 @@ pdfviewer.textSearch.searchText('pdf', false, true);
 
 The following text search methods are available in the PDF Viewer,
 
-* [**Search text**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchtext): Searches the target text in the PDF document and highlights each occurrence in the pages.
-* [**Search next**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchnext): Searches the next occurrence of the current query from the active match.
-* [**Search previous**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchprevious): Searches the previous occurrence of the current query from the active match.
-* [**Cancel text search**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#canceltextsearch): Cancels the current text search and removes the highlighted occurrences from the PDF Viewer.
+* [**Search text**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch#searchtext): Searches the target text in the PDF document and highlights each occurrence in the pages.
+* [**Search next**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch#searchnext): Searches the next occurrence of the current query from the active match.
+* [**Search previous**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch#searchprevious): Searches the previous occurrence of the current query from the active match.
+* [**Cancel text search**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch#canceltextsearch): Cancels the current text search and removes the highlighted occurrences from the PDF Viewer.
 
 ![Alt text](../images/search.png)
 
