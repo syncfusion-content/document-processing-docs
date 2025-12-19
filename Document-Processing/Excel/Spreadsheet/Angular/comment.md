@@ -183,8 +183,6 @@ In the below sample, comments are added to a specific cell using cell data bindi
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/spreadsheet/angular/comment-cs1" %}
-
 ### Important Notes
 * **One thread per cell**: Attach a single `comment` object per cell. New remarks should be added as replies inside the existing thread.
 * **Author Identity**: The author name for each comment and reply is static once set. When exporting, the author information is preserved for all comments, even if multiple authors exist in the workbook.
