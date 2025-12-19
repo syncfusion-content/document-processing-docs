@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# How to apply styles to the entire worksheet in Excel using C#?
+# How to apply styles to the entire worksheet in Excel?
 
 The following examples show how to apply font attributes (name and size) and fill color to an entire worksheet using C# (cross-platform and Windows-specific) and VB.NET.
 
