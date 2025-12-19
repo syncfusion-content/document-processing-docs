@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard Shortcuts in ASP.NET MVC Spreadsheet Control
+title: Keyboard Shortcuts in ASP.NET MVC Spreadsheet Control | Syncfusion
 description: Learn about Keyboard Shortcuts in ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Keyboard Shortcuts
