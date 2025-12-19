@@ -22,7 +22,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Creates a new popup annotation
-let popup = new PdfPopupAnnotation(
+let popup: PdfPopupAnnotation = new PdfPopupAnnotation(
     'Test popup annotation',
     { x: 10, y: 40, width: 30, height: 30 },
     {
@@ -42,64 +42,11 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Creates a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
 var page = document.addPage();
-// Creates a new popup annotation
-var popup = new ej.pdf.PdfPopupAnnotation('Test popup annotation',{x:10,y:40,width:30,height:30},{
-author:'Syncfusion',
-subject:'General',
-color:{r:255,g:255,b:0},
-icon:ej.pdf.PdfPopupIcon.newParagraph,
-open:true
-});
-popup.border = new ej.pdf.PdfAnnotationBorder({width:4,hRadius:20,vRadius:30});
-// Adds annotation to the page
-page.annotations.add(popup);
-// Saves and download the PDF document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-The following code snippet explains how to add a popup annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfPopupAnnotation, PdfPopupIcon, PdfAnnotationBorder} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Creates a new popup annotation
-let popup = new PdfPopupAnnotation(
-    'Test popup annotation',
-    { x: 10, y: 40, width: 30, height: 30 },
-    {
-        author: 'Syncfusion',
-        subject: 'General',
-        color: { r: 255, g: 255, b: 0 },
-        icon: PdfPopupIcon.newParagraph,
-        open: true
-    });
-popup.border = new PdfAnnotationBorder({width: 4, hRadius: 20, vRadius: 30});
-// Adds annotation to the page
-page.annotations.add(popup);
-// Saves and download the PDF document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
 // Creates a new popup annotation
 var popup = new ej.pdf.PdfPopupAnnotation('Test popup annotation',{x:10,y:40,width:30,height:30},{
 author:'Syncfusion',
@@ -134,7 +81,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Creates a file link annotation
-let fileLink = new PdfFileLinkAnnotation(
+let fileLink: PdfFileLinkAnnotation = new PdfFileLinkAnnotation(
     { x: 100, y: 150, width: 120, height: 18 },
     'logo.png',
     {
@@ -142,7 +89,7 @@ let fileLink = new PdfFileLinkAnnotation(
         author: 'Syncfusion',
         subject: 'File Link Annotation',
         color: { r: 0, g: 0, b: 255 },
-        action: "app.alert('Launching file');"
+        action: "app.alert('Launching file')"
     });
 // Adds annotation to the page
 page.annotations.add(fileLink);
@@ -153,6 +100,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Creates a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -163,59 +111,7 @@ text:'Open attachment',
 author:'Syncfusion',
 subject:'File Link Annotation',
 color:{r:0,g:0,b:255},
-action:"app.alert('Launching file');"
-});
-// Adds annotation to the page
-page.annotations.add(fileLink);
-// Saves and download the PDF document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-The following code snippet explains how to add a file link annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfFileLinkAnnotation} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Creates a file link annotation
-let fileLink = new PdfFileLinkAnnotation(
-    { x: 100, y: 150, width: 120, height: 18 },
-    'logo.png',
-    {
-        text: 'Open attachment',
-        author: 'Syncfusion',
-        subject: 'File Link Annotation',
-        color: { r: 0, g: 0, b: 255 },
-        action: "app.alert('Launching file');"
-    });
-// Adds annotation to the page
-page.annotations.add(fileLink);
-// Saves and download the PDF document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Creates a file link annotation
-var fileLink = new ej.pdf.PdfFileLinkAnnotation({x:100,y:150,width:120,height:18},'logo.png',{
-text:'Open attachment',
-author:'Syncfusion',
-subject:'File Link Annotation',
-color:{r:0,g:0,b:255},
-action:"app.alert('Launching file');"
+action:"app.alert('Launching file')"
 });
 // Adds annotation to the page
 page.annotations.add(fileLink);
@@ -240,7 +136,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create new free text annotation
-let freeText = new PdfFreeTextAnnotation({ x: 250, y: 260, width: 180, height: 80 },
+let freeText: PdfFreeTextAnnotation = new PdfFreeTextAnnotation({ x: 250, y: 260, width: 180, height: 80 },
     {
         text: 'Free Text with Callout',
         annotationIntent: PdfAnnotationIntent.freeTextCallout,
@@ -263,6 +159,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Creates a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -273,75 +170,13 @@ text:'Free Text with Callout',
 annotationIntent:ej.pdf.PdfAnnotationIntent.freeTextCallout,
 calloutLines:[{x:200,y:320},{x:260,y:300},{x:260,y:300}],
 lineEndingStyle:ej.pdf.PdfLineEndingStyle.openArrow,
-font:new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica,9,ej.pdf.PdfFontStyle.italic),
+font:document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular),
 textMarkUpColor:{r:40,g:40,b:40},
 innerColor:{r:240,g:248,b:255},
 borderColor:{r:0,g:0,b:0},
 textAlignment:ej.pdf.PdfTextAlignment.left,
 opacity:1,
 border:new ej.pdf.PdfAnnotationBorder({width:1,hRadius:0,vRadius:0,style:ej.pdf.PdfBorderStyle.solid})
-});
-// Adds annotation to the page
-page.annotations.add(freeText);
-// Saves and download the PDF document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-The following code snippet explains how to add a free text annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfAnnotationIntent, PdfFreeTextAnnotation, PdfTextAlignment, PdfAnnotationBorder, PdfBorderStyle, PdfLineEndingStyle, PdfFontFamily, PdfFontStyle} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Create new free text annotation
-let freeText = new PdfFreeTextAnnotation({ x: 250, y: 260, width: 180, height: 80 },
-    {
-        text: 'Free Text with Callout',
-        annotationIntent: PdfAnnotationIntent.freeTextCallout,
-        calloutLines: [{ x: 200, y: 320 }, { x: 260, y: 300 }, { x: 260, y: 300 }],
-        lineEndingStyle: PdfLineEndingStyle.openArrow,
-        font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
-        textMarkUpColor: { r: 40, g: 40, b: 40 },
-        innerColor: { r: 240, g: 248, b: 255 },
-        borderColor: { r: 0, g: 0, b: 0 },
-        textAlignment: PdfTextAlignment.left,
-        opacity: 1,
-        border: new PdfAnnotationBorder({ width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })
-    });
-// Adds annotation to the page
-page.annotations.add(freeText);
-// Saves and download the PDF document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Create new free text annotation
-var freeText = new ej.pdf.PdfFreeTextAnnotation({x:250,y:260,width:180,height:80},{
-  text:'Free Text with Callout',
-  annotationIntent:ej.pdf.PdfAnnotationIntent.freeTextCallout,
-  calloutLines:[{x:200,y:320},{x:260,y:300},{x:260,y:300}],
-  lineEndingStyle:ej.pdf.PdfLineEndingStyle.openArrow,
-  font:new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica,9,ej.pdf.PdfFontStyle.italic),
-  textMarkUpColor:{r:40,g:40,b:40},
-  innerColor:{r:240,g:248,b:255},
-  borderColor:{r:0,g:0,b:0},
-  textAlignment:ej.pdf.PdfTextAlignment.left,
-  opacity:1,
-  border:new ej.pdf.PdfAnnotationBorder({width:1,hRadius:0,vRadius:0,style:ej.pdf.PdfBorderStyle.solid})
 });
 // Adds annotation to the page
 page.annotations.add(freeText);
@@ -388,71 +223,11 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Creates a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
 var page = document.addPage();
-// Creates a new line annotation.
-var lineAnnotation = new ej.pdf.PdfLineAnnotation({x:80,y:420},{x:150,y:420},{
-text:'Line Annotation',
-author:'Syncfusion',
-color:{r:255,g:0,b:0},
-innerColor:{r:255,g:255,b:0},
-lineEndingStyle:new ej.pdf.PdfAnnotationLineEndingStyle({begin:ej.pdf.PdfLineEndingStyle.circle,end:ej.pdf.PdfLineEndingStyle.diamond}),
-opacity:0.5
-});
-// Assigns the leader line
-lineAnnotation.leaderExt = 0;
-lineAnnotation.leaderLine = 0;
-// Assigns the line caption type
-lineAnnotation.caption = new ej.pdf.PdfAnnotationCaption({cap:true,type:ej.pdf.PdfLineCaptionType.inline});
-// Adds annotation to the page
-page.annotations.add(lineAnnotation);
-// Saves and download the PDF document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-The following code snippet explains how to add a line annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfLineAnnotation, PdfAnnotationLineEndingStyle, PdfLineEndingStyle, PdfAnnotationCaption, PdfLineCaptionType} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Creates a new line annotation.
-let lineAnnotation: PdfLineAnnotation = new PdfLineAnnotation({ x: 80, y: 420 }, { x: 150, y: 420 }, {
-    text: 'Line Annotation',
-    author: 'Syncfusion',
-    color: { r: 255, g: 0, b: 0 },
-    innerColor: { r: 255, g: 255, b: 0 },
-    lineEndingStyle: new PdfAnnotationLineEndingStyle({ begin: PdfLineEndingStyle.circle, end: PdfLineEndingStyle.diamond }),
-    opacity: 0.5
-});
-// Assigns the leader line
-lineAnnotation.leaderExt = 0;
-lineAnnotation.leaderLine = 0;
-// Assigns the line caption type
-lineAnnotation.caption = new PdfAnnotationCaption({ cap: true, type: PdfLineCaptionType.inline });
-// Adds annotation to the page
-page.annotations.add(lineAnnotation);
-// Saves and download the PDF document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
 // Creates a new line annotation.
 var lineAnnotation = new ej.pdf.PdfLineAnnotation({x:80,y:420},{x:150,y:420},{
 text:'Line Annotation',
@@ -523,50 +298,6 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-The following code snippet explains how to add a rubber stamp annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfRubberStampAnnotation, PdfRubberStampAnnotationIcon} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Creates a new rubber stamp annotation
-let stamp: PdfRubberStampAnnotation = new PdfRubberStampAnnotation({ x: 40, y: 60, width: 80, height: 20 },
-    {
-        icon: PdfRubberStampAnnotationIcon.draft,
-        text: 'Text Properties Rubber Stamp Annotation'
-    });
-// Adds annotation to the page
-page.annotations.add(stamp);
-// Saves and download the PDF document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Creates a new rubber stamp annotation
-var stamp = new ej.pdf.PdfRubberStampAnnotation({x:40,y:60,width:80,height:20},{
-  icon:ej.pdf.PdfRubberStampAnnotationIcon.draft,
-  text:'Text Properties Rubber Stamp Annotation'
-});
-// Adds annotation to the page
-page.annotations.add(stamp);
-// Saves and download the PDF document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
 ### Ink Annotation
 
 This example demonstrates how to add an ink annotation to a PDF page using the `PdfInkAnnotation` class. An ink annotation allows drawing freehand marks or sketches directly on a PDF page.
@@ -580,7 +311,7 @@ let document: PdfDocument = new PdfDocument();
 // Add a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create an ink annotation
-let annotation = new PdfInkAnnotation(
+let annotation: PdfInkAnnotation = new PdfInkAnnotation(
     { x: 50, y: 100, width: 200, height: 150 },
     [
         { x: 60, y: 120 },
@@ -610,12 +341,13 @@ let annotation = new PdfInkAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a new page to the PDF
@@ -640,85 +372,7 @@ var annotation = new ej.pdf.PdfInkAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-The following code snippet explains how to add a ink annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfInkAnnotation} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Create an ink annotation
-let annotation = new PdfInkAnnotation(
-    { x: 50, y: 100, width: 200, height: 150 },
-    [
-        { x: 60, y: 120 },
-        { x: 120, y: 180 },
-        { x: 200, y: 160 }
-    ],
-    {
-        text: 'Ink',
-        author: 'Syncfusion',
-        subject: 'Ink Annotation',
-        color: { r: 0, g: 0, b: 255 },
-        thickness: 2,
-        opacity: 0.8,
-        pointsCollection: [
-            [
-                { x: 60, y: 120 },
-                { x: 90, y: 130 },
-                { x: 110, y: 140 }
-            ],
-            [
-                { x: 120, y: 180 },
-                { x: 150, y: 175 }
-            ]
-        ]
-    }
-);
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Create an ink annotation
-var annotation = new ej.pdf.PdfInkAnnotation(
-  {x:50,y:100,width:200,height:150},
-  [{x:60,y:120},{x:120,y:180},{x:200,y:160}],
-  {
-    text:'Ink',
-    author:'Syncfusion',
-    subject:'Ink Annotation',
-    color:{r:0,g:0,b:255},
-    thickness:2,
-    opacity:0.8,
-    pointsCollection:[
-      [{x:60,y:120},{x:90,y:130},{x:110,y:140}],
-      [{x:120,y:180},{x:150,y:175}]
-    ]
-  }
-);
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -738,7 +392,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create a new popup annotation
-let annotation = new PdfPopupAnnotation('Review this paragraph',
+let annotation: PdfPopupAnnotation = new PdfPopupAnnotation('Review this paragraph',
 {x: 10, y: 40, width: 30, height: 30},
 {
   author: 'Reviewer',
@@ -753,12 +407,13 @@ let annotation = new PdfPopupAnnotation('Review this paragraph',
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -776,62 +431,7 @@ var annotation = new ej.pdf.PdfPopupAnnotation('Review this paragraph',{x:10,y:4
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-The following code snippet explains how to add a popup annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfPopupAnnotation, PdfPopupIcon, PdfAnnotationState, PdfAnnotationStateModel} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-let annotation = new PdfPopupAnnotation('Review this paragraph',
-    {x: 10, y: 40, width: 30, height: 30},
-    {
-author: 'Reviewer',
-      subject: 'General',
-      color: { r: 255, g: 255, b: 0 },
-      icon: PdfPopupIcon.comment,
-      open: true,
-      state: PdfAnnotationState.accepted,
-      stateModel: PdfAnnotationStateModel.review
-    }
-    );
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Create a new popup annotation
-var annotation = new ej.pdf.PdfPopupAnnotation('Review this paragraph',{x:10,y:40,width:30,height:30},{
-  author:'Reviewer',
-  subject:'General',
-  color:{r:255,g:255,b:0},
-  icon:ej.pdf.PdfPopupIcon.comment,
-  open:true,
-  state:ej.pdf.PdfAnnotationState.accepted,
-  stateModel:ej.pdf.PdfAnnotationStateModel.review
-});
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -851,7 +451,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create a new attachment annotation
-let annotation = new PdfAttachmentAnnotation(
+let annotation: PdfAttachmentAnnotation = new PdfAttachmentAnnotation(
       { x: 300, y: 200, width: 30, height: 30 },
       'Nature.jpg',
        imageData,
@@ -861,12 +461,13 @@ let annotation = new PdfAttachmentAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -887,61 +488,7 @@ var annotation = new ej.pdf.PdfAttachmentAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-The following code snippet explains how to add a file attachment annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfAttachmentAnnotation, PdfAttachmentIcon, PdfAnnotationBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Create a new attachment annotation
-let annotation = new PdfAttachmentAnnotation(
-      { x: 300, y: 200, width: 30, height: 30 },
-      'Nature.jpg',
-       imageData,
-       { text: 'Attachment', icon: PdfAttachmentIcon.pushPin, color: { r: 255, g: 0, b: 0 }, opacity: 1,
-        border: new PdfAnnotationBorder({ width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })}
-    );
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Create a new attachment annotation
-var annotation = new ej.pdf.PdfAttachmentAnnotation(
-  {x:300,y:200,width:30,height:30},
-  'Nature.jpg',
-  imageData,
-  {
-    text:'Attachment',
-    icon:ej.pdf.PdfAttachmentIcon.pushPin,
-    color:{r:255,g:0,b:0},
-    opacity:1,
-    border:new ej.pdf.PdfAnnotationBorder({width:1,hRadius:0,vRadius:0,style:ej.pdf.PdfBorderStyle.solid})
-  }
-);
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -965,12 +512,13 @@ let annotation: PdfUriAnnotation = new PdfUriAnnotation({ x: 100, y: 150, width:
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -980,44 +528,7 @@ var annotation = new ej.pdf.PdfUriAnnotation({x:100,y:150,width:200,height:100},
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-The following code snippet explains how to add a URI annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfUriAnnotation} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Create a new URI annotation
-let annotation: PdfUriAnnotation = new PdfUriAnnotation({ x: 100, y: 150, width: 200, height: 100 }, 'http://www.google.com');
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Create a new URI annotation
-var annotation = new ej.pdf.PdfUriAnnotation({x:100,y:150,width:200,height:100},'http://www.google.com');
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1037,9 +548,9 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create new document link annotation
-let annotation = new PdfDocumentLinkAnnotation(
+let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation(
       { x: 80, y: 100, width: 120, height: 18 },
-      new PdfDestination({page, location: { x: 0, y: 0 }, mode: PdfDestinationMode.fitToPage}),
+      new PdfDestination(page, { x: 0, y: 0 }, {mode: PdfDestinationMode.fitToPage}),
       {
 color: { r: 0, g: 128, b: 0 }, opacity: 1,
      border: new PdfAnnotationBorder({ width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })}
@@ -1047,12 +558,13 @@ color: { r: 0, g: 128, b: 0 }, opacity: 1,
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1060,73 +572,13 @@ var page = document.addPage();
 // Create new document link annotation
 var annotation = new ej.pdf.PdfDocumentLinkAnnotation(
   {x:80,y:100,width:120,height:18},
-  new ej.pdf.PdfDestination({page:page,location:{x:0,y:0},mode:ej.pdf.PdfDestinationMode.fitToPage}),
+  new ej.pdf.PdfDestination(page:page,{x:0,y:0},{mode:ej.pdf.PdfDestinationMode.fitToPage}),
   {color:{r:0,g:128,b:0},opacity:1,border:new ej.pdf.PdfAnnotationBorder({width:1,hRadius:0,vRadius:0,style:ej.pdf.PdfBorderStyle.solid})}
 );
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-The following code snippet explains how to add a document link annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfDocumentLinkAnnotation, PdfDestination, PdfAnnotationBorder, PdfDestinationMode, PdfBorderStyle} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Create new document link annotation
-let annotation = new PdfDocumentLinkAnnotation(
-      { x: 80, y: 100, width: 120, height: 18 },
-      new PdfDestination({page, location: { x: 0, y: 0 }, mode: PdfDestinationMode.fitToPage}),
-      {
-color: { r: 0, g: 128, b: 0 }, opacity: 1,
-     border: new PdfAnnotationBorder({ width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })}
-    );
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Create new document link annotation
-var annotation = new ej.pdf.PdfDocumentLinkAnnotation(
-  { x: 80, y: 100, width: 120, height: 18 },
-  new ej.pdf.PdfDestination({
-    page: page,
-    location: { x: 0, y: 0 },
-    mode: ej.pdf.PdfDestinationMode.fitToPage
-  }),
-  {
-    color: { r: 0, g: 128, b: 0 },
-    opacity: 1,
-    border: new ej.pdf.PdfAnnotationBorder({
-      width: 1,
-      hRadius: 0,
-      vRadius: 0,
-      style: ej.pdf.PdfBorderStyle.solid
-    })
-  }
-);
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1152,18 +604,18 @@ borderColor: { r: 255, g: 0, b: 0},
           repeatText: true,
           overlayText: 'Sample Overlay',
           font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular),
-          textColor: { r: 0, g: 0, b: 0},
-          appearanceFillColor: { r: 255, g: 255, b: 255}
+          textColor: { r: 0, g: 0, b: 0}
 });
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1176,69 +628,13 @@ var annotation = new ej.pdf.PdfRedactionAnnotation(
     repeatText: true,
     overlayText: 'Sample Overlay',
     font: document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular),
-    textColor: { r: 0, g: 0, b: 0 },
-    appearanceFillColor: { r: 255, g: 255, b: 255 }
+    textColor: { r: 0, g: 0, b: 0 }
   }
 );
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-The following code snippet explains how to add a redaction annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfRedactionAnnotation, PdfFontFamily, PdfFontStyle } from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Create a new redaction annotation
-let annotation: PdfRedactionAnnotation = new PdfRedactionAnnotation({ x: 100, y: 100, width: 100, height: 100 },
-        {
-borderColor: { r: 255, g: 0, b: 0},
-          repeatText: true,
-          overlayText: 'Sample Overlay',
-          font: document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular),
-          textColor: { r: 0, g: 0, b: 0},
-          appearanceFillColor: { r: 255, g: 255, b: 255}
-});
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Create a new redaction annotation
-var annotation = new ej.pdf.PdfRedactionAnnotation(
-  { x: 100, y: 100, width: 100, height: 100 },
-  {
-    borderColor: { r: 255, g: 0, b: 0 },
-    repeatText: true,
-    overlayText: 'Sample Overlay',
-    font: document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular),
-    textColor: { r: 0, g: 0, b: 0 },
-    appearanceFillColor: { r: 255, g: 255, b: 255 }
-  }
-);
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1264,12 +660,13 @@ annotation.color = { r: 0, g: 0, b: 0};
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1281,48 +678,7 @@ annotation.color = { r: 0, g: 0, b: 0 };
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-The following code snippet explains how to add a watermark annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfWatermarkAnnotation} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Create a new water mark annotation
-let annotation: PdfWatermarkAnnotation = new PdfWatermarkAnnotation('Water Mark', { x: 50, y: 100, width: 100, height: 50 });
-// Set the color of the annotation
-annotation.color = { r: 0, g: 0, b: 0};
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Create a new watermark annotation
-var annotation = new ej.pdf.PdfWatermarkAnnotation('Water Mark', { x: 50, y: 100, width: 100, height: 50 });
-// Set the color of the annotation
-annotation.color = { r: 0, g: 0, b: 0 };
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1343,7 +699,7 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Create a new text markup annotation
 // Create a new text markup annotation
-let annotation = new PdfTextMarkupAnnotation('Water Mark', {x: 0, y: 0, width: 0, height: 0}, {
+let annotation: PdfTextMarkupAnnotation = new PdfTextMarkupAnnotation('Water Mark', {x: 0, y: 0, width: 0, height: 0}, {
 boundsCollection: [{ x: 50, y: 200, width: 120, height: 14}, { x: 50, y: 215, width: 90, height: 14}],
        textMarkupType: PdfTextMarkupAnnotationType.underline, author: 'Syncfusion', subject: 'Annotation',
        textMarkUpColor: { r: 0, g: 128, b: 255}, innerColor: { r: 0, g: 0, b: 255}, opacity: 0.5,
@@ -1352,12 +708,13 @@ boundsCollection: [{ x: 50, y: 200, width: 120, height: 14}, { x: 50, y: 215, wi
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1388,70 +745,7 @@ var annotation = new ej.pdf.PdfTextMarkupAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
-// Close the document
-
-{% endhighlight %}
-{% endtabs %}
-
-The following code snippet explains how to add a text markup annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfTextMarkupAnnotation, PdfTextMarkupAnnotationType, PdfAnnotationBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Create a new text markup annotation
-// Create a new text markup annotation
-let annotation = new PdfTextMarkupAnnotation('Water Mark', {x: 0, y: 0, width: 0, height: 0}, {
-boundsCollection: [{ x: 50, y: 200, width: 120, height: 14}, { x: 50, y: 215, width: 90, height: 14}],
-       textMarkupType: PdfTextMarkupAnnotationType.underline, author: 'Syncfusion', subject: 'Annotation',
-       textMarkUpColor: { r: 0, g: 128, b: 255}, innerColor: { r: 0, g: 0, b: 255}, opacity: 0.5,
-       border: new PdfAnnotationBorder({ width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })
-     });
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Create a new text markup annotation
-var annotation = new ej.pdf.PdfTextMarkupAnnotation(
-  'Water Mark',
-  { x: 0, y: 0, width: 0, height: 0 },
-  {
-    boundsCollection: [
-      { x: 50, y: 200, width: 120, height: 14 },
-      { x: 50, y: 215, width: 90, height: 14 }
-    ],
-    textMarkupType: ej.pdf.PdfTextMarkupAnnotationType.underline,
-    author: 'Syncfusion',
-    subject: 'Annotation',
-    textMarkUpColor: { r: 0, g: 128, b: 255 },
-    innerColor: { r: 0, g: 0, b: 255 },
-    opacity: 0.5,
-    border: new ej.pdf.PdfAnnotationBorder({
-      width: 1,
-      hRadius: 0,
-      vRadius: 0,
-      style: ej.pdf.PdfBorderStyle.solid
-    })
-  }
-);
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1471,7 +765,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create a new rectangle annotation with bounds
-let annotation = new PdfRectangleAnnotation({ x: 50, y: 80, width: 200, height: 100 }, {
+let annotation: PdfRectangleAnnotation = new PdfRectangleAnnotation({ x: 50, y: 80, width: 200, height: 100 }, {
 text: 'Rect', author: 'Syncfusion', subject: 'Rectangle Annotation',
        color: { r: 255, g: 0, b: 0 },
        innerColor: { r: 255, g: 240, b: 240 },
@@ -1481,12 +775,13 @@ text: 'Rect', author: 'Syncfusion', subject: 'Rectangle Annotation',
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1512,66 +807,7 @@ var annotation = new ej.pdf.PdfRectangleAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-The following code snippet explains how to add a rectangle annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfRectangleAnnotation, PdfAnnotationBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Create a new square annotation with bounds
-let annotation = new PdfRectangleAnnotation({ x: 50, y: 80, width: 200, height: 100 }, {
-text: 'Rect', author: 'Syncfusion', subject: 'Rectangle Annotation',
-       color: { r: 255, g: 0, b: 0 },
-       innerColor: { r: 255, g: 240, b: 240 },
-       opacity: 0.6,
-       border: new PdfAnnotationBorder({ width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })
-    });
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Create a new square annotation with bounds
-var annotation = new ej.pdf.PdfRectangleAnnotation(
-  { x: 50, y: 80, width: 200, height: 100 },
-  {
-    text: 'Rect',
-    author: 'Syncfusion',
-    subject: 'Rectangle Annotation',
-    color: { r: 255, g: 0, b: 0 },
-    innerColor: { r: 255, g: 240, b: 240 },
-    opacity: 0.6,
-    border: new ej.pdf.PdfAnnotationBorder({
-      width: 1,
-      hRadius: 0,
-      vRadius: 0,
-      style: ej.pdf.PdfBorderStyle.solid
-    })
-  }
-);
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1591,7 +827,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create a new polygon annotation with bounds
-let annotation = new PdfPolygonAnnotation(
+let annotation: PdfPolygonAnnotation = new PdfPolygonAnnotation(
 [{ x: 100, y: 300 }, { x: 150, y: 200 }, { x: 300, y: 200 }, { x: 350, y: 300 }, { x: 300, y: 400 }, { x: 150, y: 400 }],
        {
 text: 'Polygon', author: 'Syncfusion', subject: 'Polygon Annotation',
@@ -1603,12 +839,13 @@ text: 'Polygon', author: 'Syncfusion', subject: 'Polygon Annotation',
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1641,75 +878,7 @@ var annotation = new ej.pdf.PdfPolygonAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-The following code snippet explains how to add a polygon annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfPolygonAnnotation, PdfAnnotationBorder, PdfBorderStyle } from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Create a new polygon annotation with bounds
-let annotation = new PdfPolygonAnnotation(
-[{ x: 100, y: 300 }, { x: 150, y: 200 }, { x: 300, y: 200 }, { x: 350, y: 300 }, { x: 300, y: 400 }, { x: 150, y: 400 }],
-       {
-text: 'Polygon', author: 'Syncfusion', subject: 'Polygon Annotation',
-         color: { r: 0, g: 128, b: 255 },
-         innerColor: { r: 220, g: 240, b: 255 },
-         opacity: 0.7,
-         border: new PdfAnnotationBorder({ width: 2, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })
-    });
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Create a new polygon annotation with bounds
-var annotation = new ej.pdf.PdfPolygonAnnotation(
-  [
-    { x: 100, y: 300 },
-    { x: 150, y: 200 },
-    { x: 300, y: 200 },
-    { x: 350, y: 300 },
-    { x: 300, y: 400 },
-    { x: 150, y: 400 }
-  ],
-  {
-    text: 'Polygon',
-    author: 'Syncfusion',
-    subject: 'Polygon Annotation',
-    color: { r: 0, g: 128, b: 255 },
-    innerColor: { r: 220, g: 240, b: 255 },
-    opacity: 0.7,
-    border: new ej.pdf.PdfAnnotationBorder({
-      width: 2,
-      hRadius: 0,
-      vRadius: 0,
-      style: ej.pdf.PdfBorderStyle.solid
-    })
-  }
-);
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -1729,7 +898,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create a new circle annotation with circle bounds
-let annotation = new PdfCircleAnnotation({ x: 50, y: 100, width: 120, height: 120 }, {
+let annotation: PdfCircleAnnotation = new PdfCircleAnnotation({ x: 50, y: 100, width: 120, height: 120 }, {
 text: 'Diameter',
        author: 'Syncfusion',
        color: { r: 255, g: 0, b: 0},
@@ -1741,12 +910,13 @@ text: 'Diameter',
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1773,73 +943,8 @@ var annotation = new ej.pdf.PdfCircleAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
-
-{% endhighlight %}
-{% endtabs %}
-
-The following code snippet explains how to add a circle annotation in an existing PDF document.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfCircleAnnotation, PdfAnnotationBorder, PdfBorderStyle, PdfMeasurementUnit, PdfCircleMeasurementType} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Create a new circle annotation with circle bounds
-let annotation = new PdfCircleAnnotation({ x: 50, y: 100, width: 120, height: 120 }, {
-text: 'Diameter',
-       author: 'Syncfusion',
-       color: { r: 255, g: 0, b: 0},
-       innerColor: { r: 255, g: 255, b: 200},
-       opacity: 0.9,
-       border: new PdfAnnotationBorder({ width: 2, hRadius: 0, vRadius: 0, style: PdfBorderStyle.dashed, dash: [3, 2]}),
-       measure: { unit: PdfMeasurementUnit.centimeter, type: PdfCircleMeasurementType.diameter }
-});
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Create a new circle annotation with circle bounds
-var annotation = new ej.pdf.PdfCircleAnnotation(
-  { x: 50, y: 100, width: 120, height: 120 },
-  {
-    text: 'Diameter',
-    author: 'Syncfusion',
-    color: { r: 255, g: 0, b: 0 },
-    innerColor: { r: 255, g: 255, b: 200 },
-    opacity: 0.9,
-    border: new ej.pdf.PdfAnnotationBorder({
-      width: 2,
-      hRadius: 0,
-      vRadius: 0,
-      style: ej.pdf.PdfBorderStyle.dashed,
-      dash: [3, 2]
-    }),
-    measure: {
-      unit: ej.pdf.PdfMeasurementUnit.centimeter,
-      type: ej.pdf.PdfCircleMeasurementType.diameter
-    }
-  }
-);
-// Add annotation to the page
-page.annotations.add(annotation);
-// Save the document
-document.save('Output.pdf');
-// Close the document
-document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -1857,7 +962,7 @@ let document: PdfDocument = new PdfDocument();
 // Adds a new page to the PDF
 let page: PdfPage = document.addPage();
 // Create a new ellipse annotation with bounds
-let annotation = new PdfEllipseAnnotation({ x: 80, y: 120, width: 160, height: 100 }, {
+let annotation: PdfEllipseAnnotation = new PdfEllipseAnnotation({ x: 80, y: 120, width: 160, height: 100 }, {
 text: 'Ellipse', author: 'Syncfusion', subject: 'Ellipse Annotation',
        color: { r: 0, g: 128, b: 255},
        innerColor: { r: 220, g: 240, b: 255},
@@ -1867,12 +972,13 @@ text: 'Ellipse', author: 'Syncfusion', subject: 'Ellipse Annotation',
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Adds a new page to the PDF
@@ -1898,71 +1004,62 @@ var annotation = new ej.pdf.PdfEllipseAnnotation(
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
 
-The following code snippet explains how to add a ellipse annotation in an existing PDF document.
+## Custom appearance in stamp annotation
+
+This example demonstrates how to add a rubber stamp annotation to an existing PDF using the `PdfRubberStampAnnotation` class. This feature allows embedding custom images as stamp appearances within a specific location on the page.
+
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfEllipseAnnotation, PdfAnnotationBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfRubberStampAnnotation, PdfImage, PdfBitmap} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Create a new ellipse annotation with bounds
-let annotation = new PdfEllipseAnnotation({ x: 80, y: 120, width: 160, height: 100 }, {
-text: 'Ellipse', author: 'Syncfusion', subject: 'Ellipse Annotation',
-       color: { r: 0, g: 128, b: 255},
-       innerColor: { r: 220, g: 240, b: 255},
-       opacity: 0.7,
-       border: new PdfAnnotationBorder({ width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })
-    });
+// Get the first page
+let page: PdfPage = document.getPage(0) as PdfPage;
+// Create a new rubber stamp annotation
+let annotation: PdfRubberStampAnnotation = new PdfRubberStampAnnotation({x: 50, y: 100, width: 100, height: 50});
+// Create new image object by using JPEG image data as Base64 string format
+let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
+// Access the normal template of the appearance and draw the image
+annotation.appearance.normal.graphics.drawImage(image, {x: 0, y: 0, width: 100, height: 50});
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
-// Close the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Create a new ellipse annotation with bounds
-var annotation = new ej.pdf.PdfEllipseAnnotation(
-  { x: 80, y: 120, width: 160, height: 100 },
-  {
-    text: 'Ellipse',
-    author: 'Syncfusion',
-    subject: 'Ellipse Annotation',
-    color: { r: 0, g: 128, b: 255 },
-    innerColor: { r: 220, g: 240, b: 255 },
-    opacity: 0.7,
-    border: new ej.pdf.PdfAnnotationBorder({
-      width: 1,
-      hRadius: 0,
-      vRadius: 0,
-      style: ej.pdf.PdfBorderStyle.solid
-    })
-  }
-);
+// Get the first page
+var page = document.getPage(0) as PdfPage;
+// Create a new rubber stamp annotation
+var annotation = new ej.pdf.PdfRubberStampAnnotation({x: 50, y: 100, width: 100, height: 50});
+// Create new image object by using JPEG image data as Base64 string format
+var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
+// Access the normal template of the appearance and draw the image
+annotation.appearance.normal.graphics.drawImage(image, {x: 0, y: 0, width: 100, height: 50});
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
-document.save('Output.pdf');
-// Close the document
+document.save('output.pdf');
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
+
 
 ## Measurement Annotations
 
@@ -1970,10 +1067,68 @@ This example demonstrates how to access a measurement annotation from a PDF page
 
 Common types of measurement annotations include:
 
-* Line   - Represents a straight distance between two points.
-* Circle - Used to measure circular dimensions.
-* Square - Defines rectangular or square measurements.
-* Angle  - Displays angular measurements between two intersecting lines.
+* Line   - Represents a straight distance between two points.(distance)
+* Circle - Used to measure circular dimensions.(Radius)
+* Square - Defines rectangular or square measurements.(Area)
+* Angle  - Displays angular measurements between two intersecting lines.(degrees)
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfLineAnnotation, PdfAnnotationLineEndingStyle, PdfLineEndingStyle, PdfAnnotationCaption, PdfLineCaptionType, PdfMeasurementUnit} from '@syncfusion/ej2-pdf';
+
+// Creates a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Adds a new page to the PDF
+let page: PdfPage = document.addPage();
+// Creates a new line annotation.
+let lineAnnotation: PdfLineAnnotation = new PdfLineAnnotation({ x: 80, y: 420 }, { x: 150, y: 420 }, {
+    text: 'Line Annotation',
+    author: 'Syncfusion',
+    color: { r: 255, g: 0, b: 0 },
+    innerColor: { r: 255, g: 255, b: 0 },
+    lineEndingStyle: new PdfAnnotationLineEndingStyle({ begin: PdfLineEndingStyle.circle, end: PdfLineEndingStyle.diamond }),
+    opacity: 0.5,
+    measurementUnit: PdfMeasurementUnit.centimeter
+});
+// Assigns the line caption type
+lineAnnotation.caption = new PdfAnnotationCaption({ cap: true, type: PdfLineCaptionType.inline });
+// Adds annotation to the page
+page.annotations.add(lineAnnotation);
+// Saves and download the PDF document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Creates a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Adds a new page to the PDF
+var page = document.addPage();
+// Creates a new line annotation.
+var lineAnnotation = new ej.pdf.PdfLineAnnotation({x:80,y:420},{x:150,y:420},{
+text:'Line Annotation',
+author:'Syncfusion',
+color:{r:255,g:0,b:0},
+innerColor:{r:255,g:255,b:0},
+lineEndingStyle:new ej.pdf.PdfAnnotationLineEndingStyle({begin:ej.pdf.PdfLineEndingStyle.circle,end:ej.pdf.PdfLineEndingStyle.diamond}),
+opacity:0.5,
+measurementUnit: PdfMeasurementUnit.centimeter
+});
+// Assigns the line caption type
+lineAnnotation.caption = new ej.pdf.PdfAnnotationCaption({cap:true,type:ej.pdf.PdfLineCaptionType.inline});
+// Adds annotation to the page
+page.annotations.add(lineAnnotation);
+// Saves and download the PDF document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+The following code snippet explains how to add a measurement annotation in an existing PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1984,16 +1139,19 @@ let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Access the annotation at index 0
-let annotation: PdfLineAnnotation = page.annotations.at(0) PdfLineAnnotation;
+let annotation: PdfLineAnnotation = page.annotations.at(0) as PdfLineAnnotation;
 // Sets the measurement unit of line measurement annoation as centimeter
 annotation.unit = PdfMeasurementUnit.centimeter;
+// Sets the flag to have measurement dictionary of the line annotation.
+annotation.measure = true;
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -2003,9 +1161,10 @@ var annotation = page.annotations.at(0);
 // Sets the measurement unit of line measurement annotation as centimeter
 if (annotation instanceof ej.pdf.PdfLineAnnotation) {
   annotation.unit = ej.pdf.PdfMeasurementUnit.centimeter;
+  annotation.measure = true;
 }
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -2028,16 +1187,16 @@ let page: PdfPage = document.getPage(0);
 let annotation: PdfPopupAnnotation = page.annotations.at(0) as PdfPopupAnnotation;
 // Modified its properties
 annotation.text = 'Popup annotation';
-annotation.color = { r: 0, g: 128, b: 255}
-;
+annotation.color = { r: 0, g: 128, b: 255};
 annotation.opacity = 0.5;
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -2051,7 +1210,7 @@ if (annotation instanceof ej.pdf.PdfPopupAnnotation) {
   annotation.opacity = 0.5;
 }
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -2074,8 +1233,10 @@ let page: PdfPage = document.getPage(0);
 let annotation: PdfAnnotation = page.annotations.at(0);
 // Remove an annotation from the collection
 page.annotations.remove(annotation);
+// Remove an annotation with specific index
+page.annotations.removeAt(1);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -2089,8 +1250,10 @@ var page = document.getPage(0);
 var annotation = page.annotations.at(0);
 // Remove an annotation from the collection
 page.annotations.remove(annotation);
+// Remove an annotation with specific index
+page.annotations.removeAt(1);
 // Save the document
-document.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
@@ -2134,58 +1297,67 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+N> Setting `document.flatten = true;` flattens all interactive elements in the PDF, converting form fields and annotations into static content throughout the entire document.
+
 ## Importing annotations
 
-This example demonstrates how to import annotations into a PDF document using the PdfDocument. `importAnnotations` method.
+This example demonstrates how to import annotations into a PDF document using the `importAnnotations` method. The DataFormat enum specifies the format of the annotation data being imported, such as FDF, XFDF, JSON, or XML.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import {PdfDocument, DataFormat} from '@syncfusion/ej2-pdf';
 
 // Load the base PDF document from resources
-let pdfDocument: PdfDocument = new PdfDocument(data);
+let document: PdfDocument = new PdfDocument(data);
 // Imports annotations from to the PDF document.
-document.importAnnotations('annotations.json', DataFormat.json);
+document.importAnnotations(jsonData, DataFormat.json);
 // Save the PDF document
-pdfDocument.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load the base PDF document from resources
-var pdfDocument = new ej.pdf.PdfDocument(data);
+var document = new ej.pdf.PdfDocument(data);
 // Import annotations into the PDF document
-pdfDocument.importAnnotations('annotations.json', ej.pdf.DataFormat.json);
+document.importAnnotations(jsonData, ej.pdf.DataFormat.json);
 // Save the PDF document
-pdfDocument.save('Output.pdf');
+document.save('output.pdf');
 // Close the document
-pdfDocument.destroy();
+document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Exporting annotations
 
-This example demonstrates how to export annotations from a PDF document using the PdfDocument.exportAnnotations method. 
+This example demonstrates how to export annotations from a PDF document using the `exportAnnotations` method. The DataFormat enum specifies the format of the annotation data being exported, such as FDF, XFDF, JSON, or XML.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfAnnotationExportSettings, DataFormat} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Exports the annotations from the PDF document.
-let data: Uint8Array = document.exportAnnotations();
-// Close the document
+// Sets export data format as JSON for annotation export settings
+let settings: PdfAnnotationExportSettings = new PdfAnnotationExportSettings();
+settings.dataFormat = DataFormat.json;
+// Export annotations to JSON format
+document.exportAnnotations('annotations.json', settings);
+// Destroy the document
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Export the annotations from the PDF document
-var data = document.exportAnnotations();
+// Sets export data format as JSON for annotation export settings
+var settings = new ej.pdf.PdfAnnotationExportSettings();
+settings.dataFormat = ej.pdf.DataFormat.json;
+// Export annotations to JSON format
+document.exportAnnotations('annotations.json', settings);
 // Close the document
 document.destroy();
 
