@@ -22,35 +22,36 @@ The following code snippet shows how to get the bounds of the specified text:
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
-    TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer} from "../src/index";
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
 
-    PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
-    TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer);
+// Inject required modules
+PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
 
-    let viewer: PdfViewer = new PdfViewer();
-    viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-    document.getElementById('textbounds').addEventListener('click', function() {
-        console.log(viewer.textSearch.findText('pdf', false));
-    });
-    viewer.appendTo("#pdfViewer");
+const viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
+});
+viewer.appendTo("#pdfViewer");
+document.getElementById('textbounds')?.addEventListener('click', function() {
+    console.log(viewer.textSearch.findText('pdf', false));
+});
 
 {% endhighlight %}
 {% highlight ts tabtitle="Server-backed" %}
 
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
-    TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer} from "../src/index";
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
 
-    PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
-    TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer);
+// Inject required modules
+PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
 
-    let viewer: PdfViewer = new PdfViewer();
-    viewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
-    viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-    document.getElementById('textbounds').addEventListener('click', function() {
-        console.log(viewer.textSearch.findText('pdf', false));
-    });
-    viewer.appendTo("#pdfViewer");
+const viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
+});
+viewer.appendTo("#pdfViewer");
+document.getElementById('textbounds')?.addEventListener('click', function() {
+    console.log(viewer.textSearch.findText('pdf', false));
+});
 
 {% endhighlight %}
 {% endtabs %}
@@ -66,35 +67,36 @@ The following code snippet shows how to retrieve bounds for the specified text o
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
-    TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer} from "../src/index";
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
 
-    PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
-    TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer);
+// Inject required modules
+PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
 
-    let viewer: PdfViewer = new PdfViewer();
-    viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-    document.getElementById('textbounds').addEventListener('click', function() {
+const viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
+});
+viewer.appendTo("#pdfViewer");
+document.getElementById('textbounds')?.addEventListener('click', function() {
         console.log(viewer.textSearch.findText('pdf', false, 7));
-    });
-    viewer.appendTo("#pdfViewer");
+});
 
 {% endhighlight %}
 {% highlight ts tabtitle="Server-backed" %}
 
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
-    TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer} from "../src/index";
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
 
-    PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
-    TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer);
+// Inject required modules
+PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
 
-    let viewer: PdfViewer = new PdfViewer();
-    viewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
-    viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-    document.getElementById('textbounds').addEventListener('click', function() {
+const viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
+});
+viewer.appendTo("#pdfViewer");
+document.getElementById('textbounds')?.addEventListener('click', function() {
         console.log(viewer.textSearch.findText('pdf', false, 7));
-    });
-    viewer.appendTo("#pdfViewer");
+});
 
 {% endhighlight %}
 {% endtabs %}
@@ -109,35 +111,36 @@ Searches for an array of strings within the document and returns the bounding re
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
-    TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer} from "../src/index";
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
 
-    PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
-    TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer);
+// Inject required modules
+PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
 
-    let viewer: PdfViewer = new PdfViewer();
-    viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-    document.getElementById('textbounds').addEventListener('click', function() {
-        console.log(viewer.textSearch.findText(['adobe', 'pdf'], false));
-    });
-    viewer.appendTo("#pdfViewer");
+const viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
+});
+viewer.appendTo("#pdfViewer");
+document.getElementById('textbounds')?.addEventListener('click', function() {
+    console.log(viewer.textSearch.findText(['adobe', 'pdf'], false));
+});
 
 {% endhighlight %}
 {% highlight ts tabtitle="Server-backed" %}
 
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
-    TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer} from "../src/index";
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
 
-    PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
-    TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer);
+// Inject required modules
+PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
 
-    let viewer: PdfViewer = new PdfViewer();
-    viewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
-    viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-    document.getElementById('listTextbounds').addEventListener('click', function() {
-        console.log(viewer.textSearch.findText(['adobe', 'pdf'], false));
-    });
-    viewer.appendTo("#pdfViewer");
+const viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
+});
+viewer.appendTo("#pdfViewer");
+document.getElementById('textbounds')?.addEventListener('click', function() {
+    console.log(viewer.textSearch.findText(['adobe', 'pdf'], false));
+});
 
 {% endhighlight %}
 {% endtabs %}
@@ -152,35 +155,46 @@ Searches for an array of strings within the document and returns the bounding re
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
-    TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer} from "../src/index";
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
 
-    PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
-    TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer);
+// Inject required modules
+PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
 
-    let viewer: PdfViewer = new PdfViewer();
-    viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-    document.getElementById('textbounds').addEventListener('click', function() {
+const viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
+});
+viewer.appendTo("#pdfViewer");
+document.getElementById('textbounds')?.addEventListener('click', function() {
         console.log(viewer.textSearch.findText(['adobe', 'pdf'], false, 7));
     });
-    viewer.appendTo("#pdfViewer");
 
 {% endhighlight %}
 {% highlight ts tabtitle="Server-backed" %}
 
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
-    TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer} from "../src/index";
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
 
-    PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
-    TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer);
+// Inject required modules
+PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
 
-    let viewer: PdfViewer = new PdfViewer();
-    viewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
-    viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-    document.getElementById('listTextbounds').addEventListener('click', function() {
+const viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
+});
+viewer.appendTo("#pdfViewer");
+document.getElementById('textbounds')?.addEventListener('click', function() {
         console.log(viewer.textSearch.findText(['adobe', 'pdf'], false, 7));
     });
-    viewer.appendTo("#pdfViewer");
 
 {% endhighlight %}
 {% endtabs %}
+
+[View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
+
+## See Also
+
+[Text Search Features](./text-search-features)
+[Text Search Events](./text-search-events)
+[Extract Text](../how-to/extract-text-ts)
+[Extract Text Options](../how-to/extract-text-option-ts)
+[Extract Text Completed](../how-to/extract-text-completed-ts)

@@ -82,3 +82,13 @@ const viewer: PdfViewer = new PdfViewer({
 });
 viewer.appendTo('#pdfViewer');
 ```
+
+[View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
+
+## See Also
+
+[Text Search Features](./text-search-features)
+[Find Text](./find-text)
+[Extract Text](../how-to/extract-text-ts)
+[Extract Text Options](../how-to/extract-text-option-ts)
+[Extract Text Completed](../how-to/extract-text-completed-ts)

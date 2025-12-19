@@ -48,7 +48,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 
 PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
 
-let pdfviewer: PdfViewer = new PdfViewer({enableTextSearch: true, documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
+let pdfviewer: PdfViewer = new PdfViewer({enableTextSearch: true, documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"});
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -114,10 +114,13 @@ pdfviewer.textSearch.searchText('search text', false, false);
 Set the `isMatchCase` parameter to `true` to perform a case-sensitive search that mirrors the Match Case option in the search panel.
 
 ```typescript
-import { PdfViewer } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer} from "@syncfusion/ej2-pdfviewer";
+
+PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer);
 
 let pdfviewer: PdfViewer = new PdfViewer({
-    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
+    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
 });
 pdfviewer.appendTo('#PdfViewer');
 
@@ -131,10 +134,13 @@ pdfviewer.textSearch.searchText('PDF', true);
 Set the `isMatchWholeWord` parameter to `true` to restrict results to whole-word matches. For example, a search for "view" will not match "viewer".
 
 ```typescript
-import { PdfViewer } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer} from "@syncfusion/ej2-pdfviewer";
+
+PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer);
 
 let pdfviewer: PdfViewer = new PdfViewer({
-    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
+    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
 });
 pdfviewer.appendTo('#PdfViewer');
 
@@ -153,3 +159,13 @@ The following text search methods are available in the PDF Viewer,
 * [**Cancel text search**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#canceltextsearch): Cancels the current text search and removes the highlighted occurrences from the PDF Viewer.
 
 ![Alt text](../images/search.png)
+
+[View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
+
+## See Also
+
+[Find Text](./find-text)
+[Text Search Events](./text-search-events)
+[Extract Text](../how-to/extract-text-ts)
+[Extract Text Options](../how-to/extract-text-option-ts)
+[Extract Text Completed](../how-to/extract-text-completed-ts)
