@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text Search Events
+# Text Search Events in TypeScript PDF Viewer
 
 The PDF Viewer triggers events during text search operations, allowing you to customize behavior and respond to different stages of the search process.
 
@@ -59,13 +59,13 @@ viewer.appendTo('#pdfViewer');
 
 ## textSearchComplete
 
-The [textSearchComplete](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchcompleteevent) event runs after the search engine finishes scanning the document for the current query. Use it to update match counts, toggle navigation controls, or notify users when no results were found.
+The [textSearchComplete](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#textsearchcompleteevent) event runs after the search engine finishes scanning the document for the current query. Use it to update match counts, toggle navigation controls, or notify users when no results were found.
 
 - Typical uses:
   - Update UI with the total number of matches and enable navigation controls.
   - Hide loading indicators or show a "no results" message if none were found.
   - Record analytics for search effectiveness.
-- Event arguments: [TextSearchCompleteEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchCompleteEventArgs/) exposes:
+- Event arguments: [TextSearchCompleteEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchCompleteEventArgs) exposes:
   - `totalMatches`: total number of occurrences found.
   - `isMatchFound`: indicates whether at least one match was found.
   - `searchText`: the searched term.
