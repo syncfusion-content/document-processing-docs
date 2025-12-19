@@ -18,8 +18,10 @@ Cells with comment display a small comment indicator; hover to preview the comme
 The Syncfusion Spreadsheet does not automatically track user identity. To tag new comments and replies with an author name, set the `author` property when initializing the Spreadsheet.
 
 ```js
-    <ejs-spreadsheet id="spreadsheet" author="Place the Author Name Here">
-    </ejs-spreadsheet>
+    @(Html.EJ2().Spreadsheet("spreadsheet")
+        .Author("Place the Author Name Here")
+        .Render()
+    )
 ```
 >If the author property is not set, "Guest User" will be displayed as the author for comment and replies by default.
 
@@ -72,7 +74,7 @@ You can also use the `isResolved` property in the comment model when initializin
 
 ```ts
 // Update a cell with a comment using the updateCell method
-    this.updateCell({
+    spreadsheet.updateCell({
         comment: {
             author: 'Chistoper', text: 'Are you completed the report',
             createdTime: 'January 03, 2026 at 5:00 PM',
