@@ -108,6 +108,7 @@ The keyboard shortcuts supported in the spreadsheet are,
 | Shift + Enter | Complete the cell editing and select the cell above in the same column. |
 | Tab | Complete the cell editing and select the next cell in the same row. |
 | Shift + Tab | Complete the cell editing and select the previous cell in the same row. |
+| Ctrl + Shift + F2 | Opens the comment editor for the active cell. Upon pressing the `Esc` key, the comment editor in focus will close. |
 | Shift + F2 | Open the dialog box to add or edit notes for the desired cells. Meanwhile, upon pressing the `Esc` key, the dialog box for notes, when in focus, will save and close. |
 | Alt | Focus on the active ribbon tab. |
 | Left | Move the focus to the previous items in the ribbon content. |
