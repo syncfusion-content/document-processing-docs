@@ -1301,7 +1301,7 @@ N> Setting `document.flatten = true;` flattens all interactive elements in the P
 
 ## Importing annotations
 
-This example demonstrates how to import annotations into a PDF document using the PdfDocument. `importAnnotations` method. The DataFormat enum specifies the format of the annotation data being imported, such as FDF, XFDF, JSON, or XML.
+This example demonstrates how to import annotations into a PDF document using the `importAnnotations` method. The DataFormat enum specifies the format of the annotation data being imported, such as FDF, XFDF, JSON, or XML.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1333,7 +1333,7 @@ document.destroy();
 
 ## Exporting annotations
 
-This example demonstrates how to export annotations from a PDF document using the PdfDocument.exportAnnotations method. The DataFormat enum specifies the format of the annotation data being exported, such as FDF, XFDF, JSON, or XML.
+This example demonstrates how to export annotations from a PDF document using the `exportAnnotations` method. The DataFormat enum specifies the format of the annotation data being exported, such as FDF, XFDF, JSON, or XML.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1345,7 +1345,7 @@ let document: PdfDocument = new PdfDocument(data);
 let settings: PdfAnnotationExportSettings = new PdfAnnotationExportSettings();
 settings.dataFormat = DataFormat.json;
 // Export annotations to JSON format
-let jsonData = document.exportAnnotations('annotations.json', settings);
+document.exportAnnotations('annotations.json', settings);
 // Destroy the document
 document.destroy();
 
@@ -1357,7 +1357,7 @@ var document = new ej.pdf.PdfDocument(data);
 var settings = new ej.pdf.PdfAnnotationExportSettings();
 settings.dataFormat = ej.pdf.DataFormat.json;
 // Export annotations to JSON format
-var jsonData = document.exportAnnotations('annotations.json', settings);
+document.exportAnnotations('annotations.json', settings);
 // Close the document
 document.destroy();
 
