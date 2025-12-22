@@ -75,4 +75,11 @@ extractTextButtons.addEventListener('click', function () {
 - Single page: Extracts text from page 1 (`startIndex = 1`) using `TextOnly`.
 - Multiple pages: Extracts text from pages 0–2 (`startIndex = 0, endIndex = 2`) using `TextOnly`.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to/)
+[View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to/Extract%20Text)
+
+## See Also
+
+[Extract Text Options](./extract-text-option-ts)
+[Find Text](../text-search/find-text)
+[Text Search Features](../text-search/text-search-events)
+[Text Search Events](../text-search/text-search-events)
