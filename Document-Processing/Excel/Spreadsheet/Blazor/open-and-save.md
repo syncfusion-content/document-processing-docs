@@ -227,7 +227,7 @@ JSON data can be loaded from a local JSON file, converted to Excel format using 
 
 #### Load an Excel file from a remote JSON URL
 
-This approach enables loading JSON data from a remote URL into the Spreadsheet component. HttpClient retrieves the JSON data asynchronously, which is then converted to Excel format using XlsIO and bound to the Spreadsheet as a byte array. This method is particularly useful for integrating real-time data from REST APIs or other web services.
+Remote JSON data can be integrated into the Spreadsheet component by converting it into an Excel-compatible format. The process begins with asynchronous retrieval of JSON from the specified endpoint using HttpClient. The fetched data is then transformed into an Excel workbook through XlsIO, and the resulting byte array is passed to the Spreadsheet for rendering. This approach is particularly useful for integrating real-time data from REST APIs or other web services.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
