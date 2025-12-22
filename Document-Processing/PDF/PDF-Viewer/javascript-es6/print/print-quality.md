@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize Print Quality in TypeScript PDF Viewer | Syncfusion
-description: Learn how to customize print quality in the Syncfusion TypeScript PDF Viewer component.
+description: Learn how to customize print quality for PDF Documents in the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug

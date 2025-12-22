@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print in TypeScript PDF Viewer | Syncfusion
-description: Learn how to enable, customize, and monitor printing in the Syncfusion TypeScript PDF Viewer component.
+title: Print Overview in TypeScript PDF Viewer | Syncfusion
+description: Learn how to enable, monitor and customize printing in the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print Overview in TypeScript PDF Viewer
+# Print Overview in TypeScript PDF Viewer Control
 
 The TypeScript PDF Viewer includes built‑in printing via the toolbar and APIs so you can control how documents are printed and monitor the process.
 
@@ -113,7 +113,7 @@ if (printButton) {
 - Control output quality with the printScaleFactor property (0.5–5)
 - Auto‑rotate pages during print using enablePrintRotation
 - Choose where printing happens with printMode (Default or NewWindow)
-- Track the lifecycle with printStart and printEnd events
+- Track the life cycle with printStart and printEnd events
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
 

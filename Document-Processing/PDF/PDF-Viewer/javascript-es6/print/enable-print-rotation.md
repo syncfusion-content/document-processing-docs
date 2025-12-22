@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable Print Rotation in TypeScript PDF Viewer | Syncfusion
-description: Learn how to enable print rotation in the Syncfusion TypeScript PDF Viewer component.
+description: Learn how to enable print rotation for landscape documents in the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug
