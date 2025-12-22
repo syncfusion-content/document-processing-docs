@@ -18,13 +18,13 @@ Follow these steps to enable and configure the Liquid Glass Effect in the [SfPdf
 
 ### Step 1: Wrap the control inside glass effect view
 
-To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control, wrap the control inside the `SfGlassEffectView` class.
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control, wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
 
-For more details, refer to the `Liquid Glass Getting Started documentation`.
+For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/glassy-controls).
 
 ### Step 2: Enable the liquid glass effect on SfPdfViewer
 
-Set the `EnableLiquidGlassEffect` property to `true` in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_EnableLiquidGlassEffect) property to `true` in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
 
 ### Step 3: Customize the background
 
