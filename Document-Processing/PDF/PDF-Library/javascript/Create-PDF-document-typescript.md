@@ -32,7 +32,7 @@ Ensure your server serves .wasm files with the Content-Type: application/wasm MI
 
 The following list of dependencies are required to use the `TypeScript PDF library` component in your application.
 
-```text
+```bash
 |-- @syncfusion/ej2-compression
 |-- @syncfusion/ej2-base
 ```
@@ -57,15 +57,18 @@ The following list of dependencies are required to use the `TypeScript PDF libra
 * Include the following namespaces in `index.ts` file.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight typescript tabtitle="index.ts" %}
+
 import { PdfDocument, PdfGraphics, PdfPage, PdfFont, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
+
 {% endhighlight %}
 {% endtabs %}
 
 * Include the following code example in the click event of the button in `index.ts` to generate a PDF document 
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight typescript tabtitle="index.ts" %}
+
 document.getElementById('normalButton').onclick = (): void => {
   // Create a new PDF document
   let pdf = new PdfDocument();
@@ -84,6 +87,7 @@ document.getElementById('normalButton').onclick = (): void => {
   // Destroy the PDF document instance
   pdf.destroy();
 };
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -91,7 +95,7 @@ document.getElementById('normalButton').onclick = (): void => {
 
 The quickstart project is configured to compile and run in the browser. Use the following command to start the application:
 
-````bash
+```bash
 npm start
 ```
 
