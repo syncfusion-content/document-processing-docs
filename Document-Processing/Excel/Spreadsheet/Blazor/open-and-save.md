@@ -514,6 +514,87 @@ When a protected sheet or workbook is saved or downloaded, all associated settin
 ### Supported file formats
 The Spreadsheet component supports saving files in the Microsoft Excel (.xlsx) format.
 
+### Save an Excel file programmatically
+
+The Blazor Spreadsheet component provides two methods for saving Excel files programmatically:
+
+- [SaveAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsync_Syncfusion_Blazor_Spreadsheet_SaveOptions_) – Saves the spreadsheet as an Excel file.
+- [SaveAsStreamAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsStreamAsync) – Returns the spreadsheet content as a [MemoryStream](https://learn.microsoft.com/dotnet/api/system.io.memorystream) for further processing or storage.
+
+#### Save as an Excel file
+
+The [SaveAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsync_Syncfusion_Blazor_Spreadsheet_SaveOptions_) method saves the spreadsheet content as an Excel file programmatically and supports customization through the [SaveOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveOptions.html) parameter.
+
+| Parameter | Type | Description |
+| -- | -- | -- |
+| options | [SaveOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveOptions.html) | Specifies settings for the save operation, such as the file name and file type (for example, XLSX). |
+
+N> If options are not provided, the default settings are **FileName**: `"Spreadsheet"` (the downloaded file will be named `"Spreadsheet.xlsx"`) and **SaveType**: [SaveType.Xlsx](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveType.html).
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<button OnClick="SaveWorkbookHandler">Save as Excel</button>
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes"></SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public async Task SaveWorkbookHandler()
+    {
+        // Exports the workbook as "MonthlyReport.xlsx"
+        await SpreadsheetInstance.SaveAsync(new SaveOptions
+        {
+            SaveType = SaveType.Xlsx,
+            FileName = "MonthlyReport"
+        });
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+#### Save as a MemoryStream
+
+The [SaveAsStreamAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsStreamAsync) method retrieves the spreadsheet content as a [MemoryStream](https://learn.microsoft.com/dotnet/api/system.io.memorystream) for further processing, such as saving to a database or cloud storage.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<button OnClick="SaveToServer">Save to Server</button>
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes"></SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public async Task SaveToServer()
+    {
+        var stream = await SpreadsheetInstance.SaveAsStreamAsync();
+        // Example: Saves the stream to a file named "ServerReport.xlsx"
+        using var fileStream = File.Create("wwwroot/ServerReport.xlsx");
+        stream.CopyTo(fileStream);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## New
 To create a new, blank workbook through the UI, select **File > New** from the **Ribbon**. This action initializes a blank spreadsheet component, ready for data entry or formatting. If unsaved changes are present, a confirmation dialog will appear, indicating that these changes will be lost. The dialog presents options to proceed with creating the new workbook by selecting **OK**, or to cancel the operation by selecting **Cancel**.
 
