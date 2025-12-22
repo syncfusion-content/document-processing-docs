@@ -27,7 +27,7 @@ Step 2: The JS 2 global scripts and styles are hosted on the CDN in the followin
 Step 3: Create a HTML page (index.html) in `my-app` location and add the CDN link references.
 
 {% tabs %}
-{% highlight html tabtitle="index.html" %}
+{% highlight javascript tabtitle="index.html" %}
 <head>
     <!-- Syncfusion JavaScript PDF Library (CDN) -->
     <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
@@ -43,7 +43,7 @@ Ensure your server serves .wasm files with the Content-Type: application/wasm MI
 Step 4: **Create a PDF document**: Add the script in `index.html` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}
-{% highlight html tabtitle="~/Index.html" %}
+{% highlight javascript tabtitle="index.html" %}
 <div class="container py-4">
     <h1 class="h4 mb-3">Create PDF document</h1>
     <p class="text-muted">Click the button to generate and download a PDF.</p>
@@ -55,7 +55,7 @@ Step 4: **Create a PDF document**: Add the script in `index.html` by creating a 
         // Create a new PDF document
         var pdf = new ej.pdf.PdfDocument();
         // Add a new page
-        var page = document.addPage();
+        var page = pdf.addPage();
         // Get graphics from the page
         var graphics = page.graphics;
         // Set font
