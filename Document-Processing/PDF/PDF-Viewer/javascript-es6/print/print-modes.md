@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print Modes in TypeScript PDF Viewer | Syncfusion
-description: Learn about print modes in the Syncfusion TypeScript PDF Viewer component.
+description: Learn how to configure print modes for PDF Documents in the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug
