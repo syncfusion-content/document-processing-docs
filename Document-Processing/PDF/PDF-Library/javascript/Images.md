@@ -26,7 +26,7 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
-// Load the image(base64 / uint8array)
+// Load the image(base64 / Uint8Array)
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Draw the image.
 image.draw(graphics, { x: 10, y: 10});
@@ -34,15 +34,17 @@ image.draw(graphics, { x: 10, y: 10});
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
 // Get graphics from the page
 var graphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Draw the image
 image.draw(graphics, { x: 10, y: 10 });
@@ -50,6 +52,7 @@ image.draw(graphics, { x: 10, y: 10 });
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -67,7 +70,7 @@ let document: PdfDocument = new PdfDocument(data);
 let page: PdfPage = document.getPage(0);
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Draw the image.
 image.draw(graphics, { x: 10, y: 10});
@@ -75,15 +78,17 @@ image.draw(graphics, { x: 10, y: 10});
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access first page
 var page = document.getPage(0);
 // Get graphics from the page
 var graphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Draw the image.
 image.draw(graphics, {x: 10, y: 10});
@@ -91,6 +96,7 @@ image.draw(graphics, {x: 10, y: 10});
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -108,7 +114,7 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the current graphics state (to restore later)
 let state: PdfGraphicsState = graphics.save();
@@ -121,15 +127,17 @@ graphics.restore(state);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
 // Get graphics from the page
 var graphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the current graphics state (to restore later)
 var state = graphics.save();
@@ -142,6 +150,7 @@ graphics.restore(state);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -159,7 +168,7 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the current graphics state (to restore later)
 let state: PdfGraphicsState = graphics.save();
@@ -177,15 +186,17 @@ graphics.restore(state);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
 // Get graphics from the page
 var graphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the current graphics state (to restore later)
 var state = graphics.save();
@@ -203,5 +214,6 @@ graphics.restore(state);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}

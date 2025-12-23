@@ -19,7 +19,7 @@ The following code snippet shows how to convert an Excel chart to an image using
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Chart%20to%20Image/Chart%20to%20Image/.NET/Chart%20to%20Image/Chart%20to%20Image/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  //Initialize application
+	//Initialize application
   IApplication application = excelEngine.Excel;
 
   //Set the default version as Xlsx
@@ -35,7 +35,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   application.XlsIORenderer.ChartRenderingOptions.ScalingMode = ScalingMode.Best;
 
   //Open existing workbook with chart
-  IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
+  FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+  IWorkbook workbook = application.Workbooks.Open(inputStream);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Access the chart from the worksheet
@@ -49,6 +50,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Dispose streams
   outputStream.Dispose();
+  inputStream.Dispose();
 }
 {% endhighlight %}
 

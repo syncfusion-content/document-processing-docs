@@ -36,11 +36,11 @@ The PDF Viewer component triggers various events based on user interactions and 
 
 ### annotationAdd
 
-The [annotationAdd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#annotationaddevent) event is triggered when an annotation is added to a PDF document's page.
+The [annotationAdd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#annotationaddevent) event is triggered when an annotation is added to a PDF document's page.
 
 #### Event Arguments
 
-For event data, see [AnnotationAddEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationAddEventArgs/). It provides properties such as `annotationId`, `pageNumber`, `annotationType`, and `bounds`.
+For event data, see [AnnotationAddEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationAddEventArgs). It provides properties such as `annotationId`, `pageNumber`, `annotationType`, and `bounds`.
 
 The following example illustrates how to handle the `annotationAdd` event.
 
@@ -90,11 +90,11 @@ viewer.appendTo('#pdfViewer');
 
 ### annotationDoubleClick
 
-The [annotationDoubleClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#annotationdoubleclickevent) event is triggered when an annotation is double-clicked.
+The [annotationDoubleClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#annotationdoubleclickevent) event is triggered when an annotation is double-clicked.
 
 #### Event Arguments
 
-For event data, see [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationDoubleClickEventArgs/).
+For event data, see [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationDoubleClickEventArgs).
 
 The following example illustrates how to handle the `annotationDoubleClick` event.
 
@@ -142,11 +142,11 @@ viewer.appendTo('#pdfViewer');
 
 ### annotationMouseLeave
 
-The [annotationMouseLeave](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#annotationmouseleaveevent) event is triggered when the user's mouse pointer moves away from an annotation object.
+The [annotationMouseLeave](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#annotationmouseleaveevent) event is triggered when the user's mouse pointer moves away from an annotation object.
 
 #### Event Arguments
 
-For event data, see [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMouseLeaveEventArgs/).
+For event data, see [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMouseLeaveEventArgs).
 
 The following example illustrates how to handle the `annotationMouseLeave` event.
 
@@ -194,11 +194,11 @@ viewer.appendTo('#pdfViewer');
 
 ### annotationMouseover
 
-The [annotationMouseover](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#annotationmouseoverevent) event is triggered when the mouse is moved over an annotation object.
+The [annotationMouseover](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#annotationmouseoverevent) event is triggered when the mouse is moved over an annotation object.
 
 #### Event Arguments
 
-For event data, see [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMouseOverEventArgs/).
+For event data, see [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMouseOverEventArgs).
 
 The following example illustrates how to handle the `annotationMouseover` event.
 
@@ -247,11 +247,11 @@ viewer.appendTo('#pdfViewer');
 
 ### annotationMove
 
-The [annotationMove](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#annotationmoveevent) event is triggered when an annotation is moved over the page of the PDF document.
+The [annotationMove](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#annotationmoveevent) event is triggered when an annotation is moved over the page of the PDF document.
 
 #### Event Arguments
 
-For event data, see [AnnotationMoveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMoveEventArgs/).
+For event data, see [AnnotationMoveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMoveEventArgs).
 
 The following example illustrates how to handle the `annotationMove` event.
 
@@ -300,11 +300,11 @@ viewer.appendTo('#pdfViewer');
 
 ### annotationMoving
 
-The [annotationMoving](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#annotationmovingevent) event is triggered while an annotation is being moved.
+The [annotationMoving](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#annotationmovingevent) event is triggered while an annotation is being moved.
 
 #### Event Arguments
 
-For event data, see [AnnotationMovingEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMovingEventArgs/).
+For event data, see [AnnotationMovingEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMovingEventArgs).
 
 The following example illustrates how to handle the `annotationMoving` event.
 
@@ -353,11 +353,11 @@ viewer.appendTo('#pdfViewer');
 
 ### annotationPropertiesChange
 
-The [annotationPropertiesChange](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#annotationpropertieschangeevent) event is triggered when an annotation's property is modified on a PDF document page.
+The [annotationPropertiesChange](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#annotationpropertieschangeevent) event is triggered when an annotation's property is modified on a PDF document page.
 
 #### Event Arguments
 
-For event data, see [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationPropertiesChangeEventArgs/). It provides properties such as `annotationId`, `pageNumber`, and `action`.
+For event data, see [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationPropertiesChangeEventArgs). It provides properties such as `annotationId`, `pageNumber`, and `action`.
 
 The following example illustrates how to handle the `annotationPropertiesChange` event.
 
@@ -406,11 +406,11 @@ viewer.appendTo('#pdfViewer');
 
 ### annotationRemove
 
-The [annotationRemove](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#annotationremoveevent) event is triggered when an annotation is removed from a PDF document's page.
+The [annotationRemove](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#annotationremoveevent) event is triggered when an annotation is removed from a PDF document's page.
 
 #### Event Arguments
 
-For event data, see [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationRemoveEventArgs/). It provides properties such as `annotationId` and `pageNumber`.
+For event data, see [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationRemoveEventArgs). It provides properties such as `annotationId` and `pageNumber`.
 
 The following example illustrates how to handle the `annotationRemove` event.
 
@@ -459,11 +459,11 @@ viewer.appendTo('#pdfViewer');
 
 ### annotationResize
 
-The [annotationResize](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#annotationresizeevent) event is triggered when an annotation is resized on a PDF document page.
+The [annotationResize](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#annotationresizeevent) event is triggered when an annotation is resized on a PDF document page.
 
 #### Event Arguments
 
-For event data, see [AnnotationResizeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationResizeEventArgs/).
+For event data, see [AnnotationResizeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationResizeEventArgs).
 
 The following example illustrates how to handle the `annotationResize` event.
 
@@ -512,11 +512,11 @@ viewer.appendTo('#pdfViewer');
 
 ### annotationSelect
 
-The [annotationSelect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#annotationselectevent) event is triggered when an annotation is selected on a PDF document's page.
+The [annotationSelect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#annotationselectevent) event is triggered when an annotation is selected on a PDF document's page.
 
 #### Event Arguments
 
-For event data, see [AnnotationSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationSelectEventArgs/).
+For event data, see [AnnotationSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationSelectEventArgs).
 
 The following example illustrates how to handle the `annotationSelect` event.
 
@@ -565,11 +565,11 @@ viewer.appendTo('#pdfViewer');
 
 ### annotationUnselect
 
-The [annotationUnselect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#annotationunselectevent) event is triggered when an annotation is unselected from the PDF document's page.
+The [annotationUnselect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#annotationunselectevent) event is triggered when an annotation is unselected from the PDF document's page.
 
 #### Event Arguments
 
-For event data, see [AnnotationUnSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationUnSelectEventArgs/).
+For event data, see [AnnotationUnSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationUnSelectEventArgs).
 
 The following example illustrates how to handle the `annotationUnselect` event.
 
@@ -618,11 +618,11 @@ viewer.appendTo('#pdfViewer');
 
 ### beforeAddFreeText
 
-The [beforeAddFreeText](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#beforeaddfreetextevent) event is triggered before adding a text in the freeText annotation.
+The [beforeAddFreeText](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#beforeaddfreetextevent) event is triggered before adding a text in the freeText annotation.
 
 #### Event Arguments
 
-For event data, see [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/beforeAddFreeTextEventArgs/).
+For event data, see [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/beforeAddFreeTextEventArgs).
 
 The following example illustrates how to handle the `beforeAddFreeText` event.
 
@@ -675,11 +675,11 @@ viewer.appendTo('#pdfViewer');
 
 ### addSignature
 
-The [addSignature](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#addsignatureevent) event is triggered when a signature is added to a page of a PDF document.
+The [addSignature](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#addsignatureevent) event is triggered when a signature is added to a page of a PDF document.
 
 #### Event Arguments
 
-For event data, see [AddSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/addSignatureEventArgs/). It provides properties such as `pageNumber`.
+For event data, see [AddSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/addSignatureEventArgs). It provides properties such as `pageNumber`.
 
 The following example illustrates how to handle the `addSignature` event.
 
@@ -728,11 +728,11 @@ viewer.appendTo('#pdfViewer');
 
 ### removeSignature
 
-The [removeSignature](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#removesignatureevent) event is triggered when the signature is removed from the page of a PDF document.
+The [removeSignature](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#removesignatureevent) event is triggered when the signature is removed from the page of a PDF document.
 
 #### Event Arguments
 
-For event data, see [RemoveSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/removeSignatureEventArgs/). It provides properties such as `pageNumber`.
+For event data, see [RemoveSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/removeSignatureEventArgs). It provides properties such as `pageNumber`.
 
 The following example illustrates how to handle the `removeSignature` event.
 
@@ -781,11 +781,11 @@ viewer.appendTo('#pdfViewer');
 
 ### resizeSignature
 
-The [resizeSignature](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#resizesignatureevent) event is triggered when the signature is resized and placed on a page of a PDF document.
+The [resizeSignature](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#resizesignatureevent) event is triggered when the signature is resized and placed on a page of a PDF document.
 
 #### Event Arguments
 
-For event data, see [ResizeSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/resizeSignatureEventArgs/).
+For event data, see [ResizeSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/resizeSignatureEventArgs).
 
 The following example illustrates how to handle the `resizeSignature` event.
 
@@ -834,11 +834,11 @@ viewer.appendTo('#pdfViewer');
 
 ### signaturePropertiesChange
 
-The [signaturePropertiesChange](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#signaturepropertieschangeevent) event is triggered when the property of the signature is changed in the page of the PDF document.
+The [signaturePropertiesChange](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#signaturepropertieschangeevent) event is triggered when the property of the signature is changed in the page of the PDF document.
 
 #### Event Arguments
 
-For event data, see [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs/).
+For event data, see [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs).
 
 The following example illustrates how to handle the `signaturePropertiesChange` event.
 
@@ -887,11 +887,11 @@ viewer.appendTo('#pdfViewer');
 
 ### signatureSelect
 
-The [signatureSelect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#signatureselectevent) event is triggered when signature is selected over the page of the PDF document.
+The [signatureSelect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#signatureselectevent) event is triggered when signature is selected over the page of the PDF document.
 
 #### Event Arguments
 
-For event data, see [SignatureSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signatureSelectEventArgs/).
+For event data, see [SignatureSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signatureSelectEventArgs).
 
 The following example illustrates how to handle the `signatureSelect` event.
 
@@ -940,11 +940,11 @@ viewer.appendTo('#pdfViewer');
 
 ### signatureUnselect
 
-The [signatureUnselect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#signatureunselectevent) event is triggered when signature is unselected over the page of the PDF document.
+The [signatureUnselect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#signatureunselectevent) event is triggered when signature is unselected over the page of the PDF document.
 
 #### Event Arguments
 
-For event data, see [SignatureUnSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signatureUnSelectEventArgs/).
+For event data, see [SignatureUnSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signatureUnSelectEventArgs).
 
 The following example illustrates how to handle the `signatureUnselect` event.
 
@@ -990,3 +990,17 @@ let viewer: PdfViewer = new PdfViewer({
 });
 viewer.appendTo('#pdfViewer');
 ```
+
+## See also
+
+- [Annotation Overview](../overview)
+- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
+- [Create and Modify Annotation](../annotations/create-modify-annotation)
+- [Customize Annotation](../annotations/customize-annotation)
+- [Remove Annotation](../annotations/delete-annotation)
+- [Handwritten Signature](../annotations/signature-annotation)
+- [Export and Import Annotation](../annotations/export-import/export-annotation)
+- [Annotation Permission](../annotations/annotation-permission)
+- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
+- [Annotation API](../annotations/annotations-api)

@@ -43,8 +43,10 @@ list.draw(page, { x: 0, y: 20, width: 500, height: 700 });
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -68,6 +70,7 @@ list.draw(page, { x: 0, y: 20, width: 500, height: 700 });
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -104,8 +107,10 @@ list.draw(page, { x: 0, y: 20, width: 500, height: 700 });
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load the existing document
 var document = new ej.pdf.PdfDocument(data);
 // Access the first page
@@ -129,5 +134,6 @@ list.draw(page, { x: 0, y: 20, width: 500, height: 700 });
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}

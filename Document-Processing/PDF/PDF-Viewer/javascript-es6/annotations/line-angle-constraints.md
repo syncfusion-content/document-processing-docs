@@ -90,3 +90,18 @@ When modifying existing line annotations using selectors:
 [View a sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to)
 
 N> Refer to the TypeScript PDF Viewer [feature tour](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) for feature highlights. Explore the [TypeScript PDF Viewer examples](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples) to learn how to render and configure the PDF Viewer.
+
+## See also
+
+- [Annotation Overview](../overview)
+- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
+- [Create and Modify Annotation](../annotations/create-modify-annotation)
+- [Customize Annotation](../annotations/customize-annotation)
+- [Remove Annotation](../annotations/delete-annotation)
+- [Handwritten Signature](../annotations/signature-annotation)
+- [Export and Import Annotation](../annotations/export-import/export-annotation)
+- [Annotation Permission](../annotations/annotation-permission)
+- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
+- [Annotation Events](../annotations/annotation-event)
+- [Annotation API](../annotations/annotations-api)
