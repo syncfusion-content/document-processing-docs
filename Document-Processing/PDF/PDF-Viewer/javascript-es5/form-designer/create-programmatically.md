@@ -37,7 +37,7 @@ Use the addFormField method to add form fields programmatically. Pass the form f
 N> To configure the server-backed PDF Viewer, add the following `serviceUrl` in the `index.html` file:
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/addformfield-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/addformfield-cs1" %}
 
 ## Edit/Update form field programmatically
 
@@ -55,7 +55,7 @@ Use the updateFormField method to modify a form field programmatically. Retrieve
 N> To configure the server-backed PDF Viewer, add the following `serviceUrl` in the `index.html` file:
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/updateformfield-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/updateformfield-cs1" %}
 
 ## Delete form field programmatically
 
@@ -73,7 +73,7 @@ Use the deleteFormField method to remove a form field programmatically. Retrieve
 N> To configure the server-backed PDF Viewer, add the following `serviceUrl` in the `index.html` file:
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/deleteformfield-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/deleteformfield-cs1" %}
 
 ## Saving the form fields
 

@@ -66,7 +66,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-hide-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-hide-cs1" %}
 
 * **Show/Hide toolbar using showToolbar as in the following code snippet**
 
@@ -80,7 +80,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-method-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-method-cs1" %}
 
 ## Show/Hide the default toolbaritem
 
@@ -98,7 +98,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-cs1" %}
 
 * **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
 
@@ -112,7 +112,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-method-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-method-cs1" %}
 
 ## Customize Built-In Toolbar
 
