@@ -291,7 +291,7 @@ or
 yarn run serve
 ```
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/getting-started-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/vue/getting-started-cs1" %}
 
 ## Module injection
 
