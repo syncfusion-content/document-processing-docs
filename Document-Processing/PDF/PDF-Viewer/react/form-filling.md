@@ -12,6 +12,9 @@ domainurl: ##DomainURL##
 
 The PDF Viewer displays existing form fields in a PDF and enables users to fill, validate, and download the filled data.
 
+Check the following video to learn how to work with form fields in React PDF Viewer. 
+{% youtube "https://www.youtube.com/watch?v=MUWTCg1MoAE" %}
+
 The PDF Viewer supports the following form field types:
 
 * Text box
