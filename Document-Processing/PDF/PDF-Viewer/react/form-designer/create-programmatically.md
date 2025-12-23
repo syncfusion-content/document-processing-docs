@@ -20,6 +20,9 @@ The PDF Viewer component provides options to add, edit, and delete form fields. 
 - Signature field
 - Initial field
 
+Check the following video to learn how to work with form Designer in React PDF Viewer.
+{% youtube "https://www.youtube.com/watch?v=MUWTCg1MoAE" %}
+
 ## Add a form field to PDF document programmatically
 
 Use the addFormField method to add form fields programmatically. Pass the form field type and the corresponding property object as parameters. The following example demonstrates adding multiple fields on document load.
