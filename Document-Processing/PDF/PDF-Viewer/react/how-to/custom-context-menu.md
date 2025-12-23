@@ -324,6 +324,6 @@ The following is the output of the custom context menu with customization.
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.TSX` or `index.JSX` file:
 **serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**.
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/react/custom-context-menu/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/react/custom-context-menu" %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/Custom%20Context%20Menu)
