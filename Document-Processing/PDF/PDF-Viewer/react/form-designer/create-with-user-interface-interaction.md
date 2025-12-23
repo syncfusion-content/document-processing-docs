@@ -20,6 +20,9 @@ The PDF Viewer component supports interactive form field design, including drawi
 - Signature field
 - Initial field
 
+Check the following video to learn how to work with form Designer in React PDF Viewer.
+{% youtube "https://www.youtube.com/watch?v=MUWTCg1MoAE" %}
+
 ## Enable or Disable form designer toolbar
 
 Inject the FormDesigner module and set enableFormDesignerToolbar to true to display the Form Designer icon on the toolbar. The default value is true. Use the following code to enable the toolbar option.
