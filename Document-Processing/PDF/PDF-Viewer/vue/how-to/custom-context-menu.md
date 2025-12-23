@@ -849,6 +849,6 @@ N> To set up the **server-backed PDF Viewer** in the app.Vue file, include the f
 **serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/custom-context-menu/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/vue/custom-context-menu" %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to/Customize%20context%20menu)
