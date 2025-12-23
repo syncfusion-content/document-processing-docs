@@ -152,7 +152,7 @@ document.getElementById('load').addEventListener('click', function () {
 
 N> The Web API link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/ used in the `serviceUrl` property is intended for demonstration and evaluation only. For production, host your own web service with the required server configuration. You can reuse the [GitHub web service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server). **Standalone mode is strongly recommended.**
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/getting-started-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/getting-started-cs1" %}
 
 ## Module injection
 
