@@ -150,7 +150,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 ```
 
-{% previewsample "Document-Processing/samples/pdfviewer/angular/getting-started-cs1/index.html" %}
+{% previewsample "/document-processing/samples/pdfviewer/angular/getting-started-cs1" %}
 
 > For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service)
 
