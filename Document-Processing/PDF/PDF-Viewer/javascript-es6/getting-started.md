@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with TypeScript PDF Viewer (standalone) | Syncfusion
-description: Learn how to set up and use the Syncfusion TypeScript PDF Viewer in standalone mode using the EJ2 quickstart, including local resource configuration and module injection.
+title: Getting started with standalone TypeScript PDF Viewer | Syncfusion
+description: Learn how to set up and use the Syncfusion TypeScript PDF Viewer in standalone mode, including local resource configuration and module injection.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
