@@ -676,10 +676,6 @@ DocIO is a non-UI component that provides a full-fledged document object model t
 
 #Sensitivity Labels in Word Documents
 
-##What are sensitivity labels? 
-Sensitivity labels are used to classify and protect files in accordance with your organization’s information protection policies. These labels can be applied manually by users or automatically based on predefined rules. Sensitivity labels indicate the classification level of a file and can enforce protection settings such as encryption and access restrictions.
-Microsoft Purview Information Protection provides sensitivity labels to help organizations safeguard their data while maintaining user productivity and collaboration.
-
 ##Does DocIO support sensitivity labels?
 No, Sensitivity labels are organization-level settings and are not stored within the word document itself. Therefore, DocIO does not support applying or preserving sensitivity labels.
 
