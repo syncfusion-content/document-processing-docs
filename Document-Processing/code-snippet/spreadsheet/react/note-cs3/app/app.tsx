@@ -10,6 +10,7 @@ function App() {
         let spreadsheet = spreadsheetRef.current;
         if (spreadsheet) {
             spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:H1');
+            spreadsheet.updateCell({ notes: { text: 'These shoes have been the most profitable this month.' } }, 'A10:A10');
         }
     }
 
@@ -24,12 +25,7 @@ function App() {
                         <RowsDirective>
                             <RowDirective index={2}>
                                 <CellsDirective>
-                                    <CellDirective index={0} notes={"These shoes have the highest sales in terms of quantity this month."}></CellDirective>
-                                </CellsDirective>
-                            </RowDirective>
-                            <RowDirective index={5}>
-                                <CellsDirective>
-                                    <CellDirective index={0} notes={"These shoes have been the most profitable this month."}></CellDirective>
+                                    <CellDirective index={0} notes={{ text: 'These shoes have the highest sales in terms of quantity this month.', isVisible: true }}></CellDirective>
                                 </CellsDirective>
                             </RowDirective>
                         </RowsDirective>
