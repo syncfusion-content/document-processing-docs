@@ -37,7 +37,7 @@ This guide explains how to create the PDF Viewer component and configure its fea
 {% endhighlight %}
 {% endtabs %}
 
-N> We have provided the support to dynamically change the [serviceURL](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl). So, after changing the `serviceURL` dynamically, you need invoke the `pdfViewer.dataBind()` method to update the `serviceURL` quickly. This will effectively change the `serviceURL` dynamically. Ensure that this step is performed after version 23.1.36.
+N> We have provided the support to dynamically change the [serviceURL](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl). So, after changing the `serviceURL` dynamically, you need invoke the `pdfViewer.dataBind()` method to update the `serviceURL` quickly. This will effectively change the `serviceURL` dynamically. Ensure that this step is performed after version 23.1.36.
 document.getElementById('load').addEventListener('click', function () {
    pdfViewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
    pdfViewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";

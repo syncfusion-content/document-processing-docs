@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize the context menu in PDF Viewer in React
 
-PDF Viewer supports adding custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#addcustommenu) method. Define actions for custom items with the [customContextMenuSelect()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#customcontextMenuselect) method.
+PDF Viewer supports adding custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#addcustommenu) method. Define actions for custom items with the [customContextMenuSelect()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#customcontextMenuselect) method.
 
 ### Add a custom option
 
@@ -76,7 +76,7 @@ root.render(<App />);
 
 #### Show or hide custom items before opening
 
-Use [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#customcontextMenubeforeopen) to hide or show custom options dynamically.
+Use [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#customcontextMenubeforeopen) to hide or show custom options dynamically.
 
 ```js
  export function App() {
