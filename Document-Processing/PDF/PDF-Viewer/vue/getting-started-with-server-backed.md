@@ -107,7 +107,7 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
 {% endhighlight %}
 {% endtabs %}
 
-2. In the `template` section, define the PDF Viewer component and bind the [documentPath](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#documentpath) and [serviceUrl](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#serviceurl) properties.
+2. In the `template` section, define the PDF Viewer component and bind the [documentPath](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#documentpath) and [serviceUrl](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#serviceurl) properties.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -337,7 +337,7 @@ These modules are registered with the component by providing them through the `p
   dotnet run
 ```
 
-6.You can see that the PDF Viewer server instance runs in the localhost with the port number `localhost:5001`. Navigate to the PDF Viewer web control `localhost:5001/pdfviewer`, which returns the default GET response. Bind the link to the [serviceUrl](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer as shown below.
+6.You can see that the PDF Viewer server instance runs in the localhost with the port number `localhost:5001`. Navigate to the PDF Viewer web control `localhost:5001/pdfviewer`, which returns the default GET response. Bind the link to the [serviceUrl](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#serviceurl) property of the PDF Viewer as shown below.
 
   ```js
   export default {

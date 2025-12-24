@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 # Customize the context menu in PDF Viewer
 
 PDF Viewer allows you to add custom option in context menu. It can be achieved by using the `addCustomMenu()` method and custom action is defined using the `customContextMenuSelect()`method.
-PDF Viewer supports adding custom options to the context menu using the `addCustomMenu()`(https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#addcustommenu)method. Define actions for custom items with the [customContextMenuSelect()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#customcontextmenuselect) method.
+PDF Viewer supports adding custom options to the context menu using the `addCustomMenu()`(https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#addcustommenu)method. Define actions for custom items with the [customContextMenuSelect()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#customcontextmenuselect) method.
 
 ### Add a custom option
 
@@ -102,7 +102,7 @@ Toggle the display of the default context menu. When the addCustomMenu parameter
 
 #### show or hide custom items before opening
 
-Use [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#customcontextmenubeforeopen) to hide or show custom options dynamically.
+Use [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#customcontextmenubeforeopen) to hide or show custom options dynamically.
 
 ```js
 export class CustomContextMenuComponent implements OnInit {
