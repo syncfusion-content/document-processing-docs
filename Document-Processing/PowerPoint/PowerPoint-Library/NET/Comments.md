@@ -337,4 +337,4 @@ N> [Modern comments](https://support.microsoft.com/en-us/office/modern-comments-
 
 ## Online Demo
 
-* Explore how to add comments to a PowerPoint presentation slide using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/powerpoint/comment#/bootstrap5).
+* Explore how to add comments to a PowerPoint presentation slide using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/comment#/tailwind).

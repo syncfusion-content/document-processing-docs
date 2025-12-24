@@ -9,11 +9,11 @@ documentation: UG
 
 Redacting a PDF is the process of permanently removing sensitive or confidential information from PDF documents. Syncfusion<sup>&reg;</sup> PDF library provides an easy way to redact PDF documents. 
 
-N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
+N> For redaction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
 
 ## Removing sensitive content from the PDF document
 
-Redaction permanently removes confidential or sensitive information from a PDF. The `PdfRedactionAnnotation` class allows you to define areas to redact, ensuring the underlying text or image data is completely deleted from the document.
+Redaction permanently removes confidential or sensitive information from a PDF. The `PdfRedactor` and `PdfRedactionRegion` classes allow you to mark specific areas and apply irreversible redaction to the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -27,7 +27,6 @@ let redactor: PdfRedactor = new PdfRedactor(document);
 // Add redactions to the collection
 let redactions: PdfRedactionRegion[] = [];
 redactions.push(new PdfRedactionRegion(0, {x: 10, y: 10, width: 100, height: 50}));
-redactions.push(new PdfRedactionRegion(2, {x: 10, y: 10, width: 100, height: 50}, true, {r: 255, g: 0, b: 0}));
 redactor.add(redactions);
 // Apply redactions on the PDF document
 redactor.redact();
@@ -45,7 +44,6 @@ var redactor = new ej.pdfdataextract.PdfRedactor(document);
 // Add redactions to the collection
 var redactions = [];
 redactions.push(new PdfRedactionRegion(0, {x: 10, y: 10, width: 100, height: 50}));
-redactions.push(new PdfRedactionRegion(2, {x: 10, y: 10, width: 100, height: 50}, true, {r: 255, g: 0, b: 0}));
 redactor.add(redactions);
 // Apply redactions on the PDF document
 redactor.redact();
@@ -67,10 +65,12 @@ import { PdfRedactor, PdfRedactionRegion} from '@syncfusion/ej2-pdf-data-extract
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
+// Add redactions to the collection
+let redactions: PdfRedactionRegion[] = [];
 // Initialize a new instance of the `PdfRedactor` class
 let redactor: PdfRedactor = new PdfRedactor(document);
 // Initialize a new instance of the `PdfRedactionRegion` class.
-let redaction: PdfRedactionRegion = new PdfRedactionRegion(0, {x: 40, y: 41.809, width: 80, height: 90});
+let redaction: PdfRedactionRegion = new PdfRedactionRegion(0, {x: 40, y: 41, width: 80, height: 90});
 // Sets the fill color used to fill the redacted area.
 redaction.fillColor = {r: 255, g: 0, b: 0};
 redactions.push(redaction);
@@ -86,10 +86,12 @@ document.destroy();
 {% highlight javascript tabtitle="JavaScript" %}
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
+// Add redactions to the collection
+var redactions = [];
 // Initialize a new instance of the `PdfRedactor` class
 var redactor = new ej.pdfdataextract.PdfRedactor(document);
 // Initialize a new instance of the `PdfRedactionRegion` class.
-var redaction = new ej.pdfdataextract.PdfRedactionRegion(0, {x: 40, y: 41.809, width: 80, height: 90});
+var redaction = new ej.pdfdataextract.PdfRedactionRegion(0, {x: 40, y: 41, width: 80, height: 90});
 // Sets the fill color used to fill the redacted area.
 redaction.fillColor = {r: 255, g: 0, b: 0};
 redactions.push(redaction);
@@ -104,9 +106,9 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Redaction appearance fill color
+## Text appearance on the redacted area
 
-Customize the appearance of the redacted area by applying specific fill colors. This helps maintain a consistent design or highlight redacted sections in a visually appealing way.
+Customize the redacted region by drawing text or graphics over it, using `PdfRedactionRegion` and `PdfRedactor` to define the area and apply a custom visual appearance to the redaction.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -114,17 +116,25 @@ import { PdfDocument } from '@syncfusion/ej2-pdf';
 import { PdfRedactor, PdfRedactionRegion } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data, password);
+let document = new PdfDocument(data);
 // Add redactions to the collection
-let redactions: PdfRedactionRegion[] = [];
-// Initialize a new instance of the `PdfRedactor` class
-let redactor: PdfRedactor = new PdfRedactor(document);
-// Initialize a new instance of the `PdfRedactionRegion` class.
-let redaction: PdfRedactionRegion = new PdfRedactionRegion(0, {x: 40, y: 41.809, width: 80, height: 90});
-// Sets the fill color used to fill the redacted area.
-redaction.fillColor = {r: 255, g: 0, b: 0};
+let redactions = [];
+// Initialize a new redaction region with custom appearance
+let redaction = new PdfRedactionRegion(0, { x: 0, y: 0, width: 80, height: 20 }, true);
+let font = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
+redaction.appearance.normal.graphics.drawString(
+  'Redacted Text',
+  font,
+  { x: 0, y: 0, width: 80, height: 20 },
+  new PdfBrush({ r: 255, g: 0, b: 0 })
+);
 redactions.push(redaction);
-// Add redactions with specified options.
+// Add another redaction region (example region coordinates)
+redaction = new PdfRedactionRegion(0, { x: 40, y: 43, width: 80, height: 20 }, true);
+redactions.push(redaction);
+// Initialize a new instance of the PdfRedactor class
+let redactor = new PdfRedactor(document);
+// Add redactions with specified options
 redactor.add(redactions);
 // Apply redactions on the PDF document
 redactor.redact();
@@ -132,26 +142,36 @@ redactor.redact();
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data, password);
-// Add redactions to the collection
+
+// Load an existing PDF document 
+var document = new ej.pdf.PdfDocument(data);
+// Prepare redactions collection
 var redactions = [];
-// Initialize a new instance of the `PdfRedactor` class
-var redactor = new ej.pdfdataextract.PdfRedactor(document);
-// Initialize a new instance of the `PdfRedactionRegion` class.
-var redaction = new ej.pdfdataextract.PdfRedactionRegion(0, {x: 40, y: 41.809, width: 80, height: 90});
-// Sets the fill color used to fill the redacted area.
-redaction.fillColor = {r: 255, g: 0, b: 0};
+// Create a redaction region with a custom appearance (draw "Redacted Text" in red)
+var redaction = new ej.pdf.PdfRedactionRegion(0, { x: 0, y: 0, width: 80, height: 20 }, true);
+var font = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
+// Draw custom appearance on the redaction overlay
+redaction.appearance.normal.graphics.drawString(
+  'Redacted Text',
+  font,
+  { x: 0, y: 0, width: 80, height: 20 },
+  new ej.pdf.PdfBrush({ r: 255, g: 0, b: 0 })
+);
 redactions.push(redaction);
-// Add redactions with specified options.
+// Add another redaction region using the specified coordinates on page 0
+redaction = new ej.pdf.PdfRedactionRegion(0, {  x: 40, y: 43, width: 80, height: 20 }, true);
+redactions.push(redaction);
+// Initialize redactor
+var redactor = new ej.pdf.PdfRedactor(document);
+// Add redactions and apply them
 redactor.add(redactions);
-// Apply redactions on the PDF document
 redactor.redact();
-// Save the document
+// Save and dispose
 document.save('output.pdf');
-// Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
