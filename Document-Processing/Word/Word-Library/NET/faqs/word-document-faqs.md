@@ -673,3 +673,15 @@ No, it's not possible to get the exact position (like X, Y coordinates or page n
 This is because a Word document is a flow-based document, where contents are not preserved page by page. Instead, the contents are preserved sequentially, section by section. Each section may extend across multiple pages based on its contents, such as tables, text, images, and more. Position information of elements is not maintained at the file level in a Word document.
 
 DocIO is a non-UI component that provides a full-fledged document object model to manipulate the Word document contents based on file-level information. Hence, it is not feasible to retrieve the position of an element within a Word document using DocIO.
+
+#Sensitivity Labels in Word Documents
+
+##What are sensitivity labels? 
+Sensitivity labels are used to classify and protect files in accordance with your organization’s information protection policies. These labels can be applied manually by users or automatically based on predefined rules. Sensitivity labels indicate the classification level of a file and can enforce protection settings such as encryption and access restrictions.
+Microsoft Purview Information Protection provides sensitivity labels to help organizations safeguard their data while maintaining user productivity and collaboration.
+
+##Does DocIO support sensitivity labels?
+No, Sensitivity labels are organization-level settings and are not stored within the word document itself. Therefore, DocIO does not support applying or preserving sensitivity labels.
+
+##Can DocIO Open a Document with Sensitivity Labels Applied?
+If a document is encrypted due to its sensitivity label configuration, DocIO cannot open it because the content is stored in an encrypted format and requires an authorized Microsoft account for access.
