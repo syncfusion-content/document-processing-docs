@@ -11,23 +11,27 @@ documentation: ug
 
 This section walks you through the UI customization options supported in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
-## Customize the loading indicator
-
-You can customize the loading indicator’s properties by applying a style with the `TargetType` property to `ActivityIndicator`. You may also need to set the [ApplyToDerivedTypes](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/styles/xaml?view=net-maui-7.0#apply-a-style-to-derived-types) property to `True` to get the style applied to the derived classes. See the following code example to customize the color of the loading indicator.
+## Customize the loading indicator 
+ 
+You can customize the loading indicator's color while loading the pdf and rendering the pages, merge the `SfPdfViewerTheme` key into application resources, you can customize the appearance of SfPdfViewer without merging common theme resource and control style resource dictionaries. Set the color of the loading indicator using the [Themes key for .NET MAUI PdfViewer](https://help.syncfusion.com/maui/themes/keys). Refer the code example below to disable the loading indicator.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="App.xaml" %}
 
-<syncfusion:SfPdfViewer>
-	<syncfusion:SfPdfViewer.Resources>
-		<Style TargetType="ActivityIndicator" 
-			   ApplyToDerivedTypes="True">
-				<Setter Property="Color" Value="Red" />
-			</Style>
-	</syncfusion:SfPdfViewer.Resources>
-</syncfusion:SfPdfViewer>
+<Application.Resources> 
+    <ResourceDictionary> 
+        <ResourceDictionary.MergedDictionaries> 
+            <ResourceDictionary> 
+                <x:String x:Key="SfPdfViewerTheme">Custom Theme</x:String> 
+                <Color x:Key="SfPdfViewerLoadingIndicatorColor">Transparent</Color> 
+            </ResourceDictionary> 
+        </ResourceDictionary.MergedDictionaries> 
+    </ResourceDictionary> 
+</Application.Resources>
 
-{% endhighlight %} 
+{% endhighlight %}  
 {% endtabs %}
 
-N> For complete customization of the PDF Viewer, themes can be applied. Refer to the [theme user guide](https://help.syncfusion.com/maui/themes/themes) for detailed instructions. You can also explore the [sample project](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Styles/PDFViewerThemes), which demonstrates the custom theme implementation for the PDF Viewer in .NET MAUI applications.
+The example project to disable the loading indicator can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Styles/DisableLoadingIndicator).
+
+N> For complete customization of the PDF Viewer, refer to the [theme user guide](https://help.syncfusion.com/maui/themes/themes) for detailed instructions. You can also explore the [sample project](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Styles/PDFViewerThemes), which demonstrates the custom theme implementation for the PDF Viewer in .NET MAUI applications.
