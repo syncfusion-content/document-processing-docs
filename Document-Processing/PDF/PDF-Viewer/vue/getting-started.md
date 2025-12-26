@@ -292,7 +292,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/getting-started-cs2/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/vue/getting-started-cs2" %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20-%20Standalone)
 
