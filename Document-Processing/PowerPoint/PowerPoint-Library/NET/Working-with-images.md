@@ -22,9 +22,8 @@ ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 FileStream pictureStream = new FileStream("Image.png", FileMode.Open);
 //Adds the picture to a slide by specifying its size and position.
 IPicture picture = slide.Pictures.AddPicture(pictureStream, 0, 0, 250, 250);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -91,9 +90,8 @@ MemoryStream memoryStream = new MemoryStream();
 pictureStream.CopyTo(memoryStream);
 //Replaces the existing image with new image.
 picture.ImageData = memoryStream.ToArray();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -163,9 +161,8 @@ FileStream svgImageStream = new FileStream("Image.svg", FileMode.Open);
 FileStream fallbackImageStream = new FileStream("Image.png", FileMode.Open);
 //Adds the icon to a slide by specifying its size and position
 IPicture icon = slide.Pictures.AddPicture(svgImageStream, fallbackImageStream, 0, 0, 250, 250);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Dispose the fallback image stream
 fallbackImageStream.Dispose();
 //Dispose the SVG image stream
@@ -244,9 +241,8 @@ pictureStream.CopyTo(memoryStream);
 //Replaces the existing icon image with new image
 //SvgData property will return null, if it is not an icon
 icon.SvgData = memoryStream.ToArray();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -330,11 +326,8 @@ using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open, Fil
         picture.Crop.OffsetX = 329.04f;
         picture.Crop.OffsetY = -9.36f;
 
-        //Save the PowerPoint Presentation as stream.
-        using (FileStream outputStream = new FileStream("Output.pptx", FileMode.Create))
-        {
-            pptxDoc.Save(outputStream);
-        }                           
+        // Save the PowerPoint Presentation.
+        pptxDoc.Save("Output.pptx");                           
     }                       
 }
 
@@ -417,9 +410,8 @@ foreach (IPicture picture in slide.Pictures)
     slide.Pictures.Remove(picture);
     break;
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}

@@ -29,9 +29,8 @@ slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
 FileStream imageStream = new FileStream(imagePath, FileMode.Open);
 //Add picture to the shape collection
 IPicture picture = slide.Shapes.AddPicture(imageStream, 373, 83, 526, 382);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Closes the stream
 imageStream.Close();
 //Closes the Presentation
@@ -98,9 +97,8 @@ foreach(IShape shape in pptxDoc.Slides[0].Shapes)
     else if (shape is IShape)
         shape.Title = "AutoShape";
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -173,9 +171,8 @@ shape.Fill.PatternFill.Pattern = PatternFillType.DashedDownwardDiagonal;
 shape.Fill.PatternFill.ForeColor = ColorObject.AliceBlue;
 //Sets the back color
 shape.Fill.PatternFill.BackColor = ColorObject.DarkSalmon;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);         
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");         
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -258,9 +255,8 @@ ISlide slide = pptxDoc.Slides[0];
 IShape shape = slide.Shapes[0] as IShape;
 //Removes the shape from the shape collection.
 slide.Shapes.Remove(shape);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
@@ -322,9 +318,8 @@ FileStream pictureStream = new FileStream(imagePath, FileMode.Open);
 groupShape.Shapes.AddPicture(pictureStream, 40, 100, 100, 100);
 //Adds a shape to the group shape
 groupShape.Shapes.AddShape(AutoShapeType.Rectangle, 200, 200, 90, 30);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Sample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -400,9 +395,8 @@ foreach (IShape shape in shapes)
         break;
     }
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -473,9 +467,8 @@ ISlide slide = pptxDoc.Slides[0];
 IGroupShape groupShape = slide.GroupShapes[0];
 //Removes the group shape from group shape collection
 slide.GroupShapes.Remove(groupShape);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the presentation
 pptxDoc.Close();
 {% endhighlight %}

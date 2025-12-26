@@ -1,5 +1,5 @@
 ---
-title: Modify the Appearance of Axes in Chart | Syncfusion
+title: Chart Axis | PowerPoint library | Syncfusion
 description: Learn how to modify the appearance of axes in a chart in a PowerPoint using .NET PowerPoint library (Presentation) without Microsoft PowerPoint.
 platform: document-processing
 control: PowerPoint
@@ -496,11 +496,8 @@ using (IPresentation pptxDoc = Presentation.Open(fileStreamPath))
     //Showing minor gridlines.
     chart.PrimaryValueAxis.HasMinorGridLines = false;
 
-    using (FileStream outputStream = new FileStream("Result.pptx", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-    {
-        //Save the PowerPoint Presentation.
-        pptxDoc.Save(outputStream);
-    }
+	//Save the PowerPoint Presentation.
+    pptxDoc.Save("Result.pptx");
 }
 
 {% endhighlight %}

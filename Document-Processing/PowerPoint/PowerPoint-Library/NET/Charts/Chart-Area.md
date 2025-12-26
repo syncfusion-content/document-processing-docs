@@ -1,5 +1,5 @@
 ---
-title: Modify the Appearance of Chart Area | Syncfusion
+title: Modify the Appearance of Chart Area | PowerPoint library | Syncfusion
 description: Learn how to modify the appearance of chart area in a chart in a PowerPoint using .NET PowerPoint library (Presentation) without Microsoft PowerPoint.
 platform: document-processing
 control: PowerPoint
@@ -110,11 +110,8 @@ using (IPresentation pptxDoc = Presentation.Open(fileStreamPath))
     chartArea.Fill.BackColor = Syncfusion.Drawing.Color.FromArgb(205, 217, 234);
     chartArea.Fill.ForeColor = Syncfusion.Drawing.Color.White;
 
-    using (FileStream outputStream = new FileStream("Result.pptx", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-    {
-        //Save the PowerPoint Presentation.
-        pptxDoc.Save(outputStream);
-    }
+	//Save the PowerPoint Presentation.
+	pptxDoc.Save("Result.pptx");
 }
 
 {% endhighlight %}

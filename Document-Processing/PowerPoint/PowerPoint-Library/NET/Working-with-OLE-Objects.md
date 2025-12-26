@@ -1,12 +1,12 @@
 ---
-title: Create and edit OLE Objects in PowerPoint files |Syncfusion<sup>&reg;</sup>|
+title: Create and edit OLE Objects in PowerPoint files | Syncfusion®|
 description: Create and edit OLE Objects in PowerPoint files; Insert and extract an embedded OLE object in PowerPoint Presentation
 platform: document-processing
 control: Presentation
 documentation: UG
 keywords: OLE Object in PowerPoint presentation
 ---
-# Working with OLE Objects
+# Working with OLE Objects in PowerPoint Library
 
 The OLE Object enables sharing of application objects written in different file formats. In PowerPoint presentation the application data can be inserted into a PowerPoint slide using the [programmatic identifier](https://msdn.microsoft.com/en-us/library/aa171170(v=office.11).aspx#) of each file format.
 
@@ -32,9 +32,8 @@ oleObject.Left = 10;
 oleObject.Top = 10;
 oleObject.Width = 400;
 oleObject.Height = 300;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("OleObjectSample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("OleObjectSample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -111,9 +110,8 @@ oleObject.Width = 400;
 oleObject.Height = 300;
 //Set DisplayAsIcon as true, to open the embedded document in separate (default) application.
 oleObject.DisplayAsIcon = true;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("OleObjectSample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("OleObjectSample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -263,9 +261,8 @@ ISlide slide = pptxDoc.Slides[0];
 IOleObject oleObject = slide.Shapes[1] as IOleObject;
 //Gets the path of linked Ole Object
 string linkOlePath = oleObject.LinkPath;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("OleObjectSample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("OleObjectSample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}

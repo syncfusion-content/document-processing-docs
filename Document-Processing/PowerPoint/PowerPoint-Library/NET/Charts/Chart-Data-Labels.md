@@ -1,5 +1,5 @@
 ---
-title: Modify the Appearance of Data Labels | Syncfusion
+title: Modify the Appearance of Data Labels | PowerPoint library | Syncfusion
 description: Learn how to modify the appearance of data labels in a chart in a PowerPoint using .NET PowerPoint library (Presentation) without Microsoft PowerPoint.
 platform: document-processing
 control: PowerPoint
@@ -138,11 +138,9 @@ using (IPresentation pptxDoc = Presentation.Open(fileStreamPath))
         // Set the position of data labels for the first series.
         chart.Series[i].DataPoints.DefaultDataPoint.DataLabels.Position = OfficeDataLabelPosition.Center;
     }
-    using (FileStream outputStream = new FileStream("Result.pptx", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-    {
-        //Save the PowerPoint Presentation.
-        pptxDoc.Save(outputStream);
-    }
+	
+	//Save the PowerPoint Presentation.
+	pptxDoc.Save("Result.pptx");
 }
 
 {% endhighlight %}

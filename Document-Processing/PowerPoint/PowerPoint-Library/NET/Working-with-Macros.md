@@ -25,9 +25,8 @@ IPresentation pptxDoc = Presentation.Open(inputStream);
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Adds a text box to the slide
 IParagraph paragraph = slide.Shapes.AddTextBox(100, 100, 300, 80).TextBody.AddParagraph("Preserve Macros");
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.PPTM", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.PPTM");
 //Closes the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -75,9 +74,8 @@ IPresentation pptxDoc = Presentation.Open(inputStream);
 //Checks whether the presentation has macros and then removes them
 if (pptxDoc.HasMacros)
     pptxDoc.RemoveMacros();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("Output.pptx");
 //Closes the presentation
 pptxDoc.Close();
 {% endhighlight %}

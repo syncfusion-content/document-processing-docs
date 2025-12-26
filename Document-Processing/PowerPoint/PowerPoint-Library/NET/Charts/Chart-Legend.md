@@ -1,5 +1,5 @@
 ---
-title: Modify the Appearance of Legend | Syncfusion
+title: Modify the Appearance of Legend | PowerPoint library | Syncfusion
 description: Learn how to modify the appearance of legend in a chart in a PowerPoint using .NET PowerPoint library (Presentation) without Microsoft PowerPoint.
 platform: document-processing
 control: PowerPoint
@@ -353,11 +353,8 @@ The complete code snippet illustrating the above options is shown below.
      //Legend without overlapping the chart.
      chart.Legend.IncludeInLayout = true;
 
-     using (FileStream outputStream = new FileStream("Result.pptx", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-     {
-         //Save the PowerPoint Presentation.
-         pptxDoc.Save(outputStream);
-     }
+     //Save the PowerPoint Presentation.
+     pptxDoc.Save("Result.pptx");
  }
 
 {% endhighlight %}
