@@ -114,7 +114,7 @@ The following example code illustrates how to enable and update custom metadata 
 ```ts
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {
-  RibbonService,
+  ToolbarService,
   DocumentEditorContainerComponent,
 } from '@syncfusion/ej2-angular-documenteditor';
 import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documenteditor';
@@ -122,7 +122,7 @@ import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documente
   selector: 'app-container',
   standalone: true,
   imports: [DocumentEditorContainerModule],
-  providers: [RibbonService],
+  providers: [ToolbarService],
   template: `<ejs-documenteditorcontainer #documenteditor_default 
       serviceUrl="hostUrl" 
       height="600px" 
