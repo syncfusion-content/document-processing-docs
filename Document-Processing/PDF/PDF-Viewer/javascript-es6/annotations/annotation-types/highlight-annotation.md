@@ -65,7 +65,7 @@ document.getElementById('set').addEventListener('click', ()=> {
 
 N> To set up the **server-backed PDF Viewer**, add the below `serviceUrl` in the `index.ts` file: `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/highlight-mode-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/highlight-mode-cs1" %}
 
 To switch back to normal mode from highlight mode:
 
@@ -102,7 +102,7 @@ document.getElementById('setNone').addEventListener('click', ()=> {
 N> To set up the **server-backed PDF Viewer**, add the below `serviceUrl` in the `index.ts` file:
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/highlight-normal-mode-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/highlight-normal-mode-cs1" %}
 
 #### Add highlight annotation programmatically
 
@@ -317,7 +317,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/undo-redo-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/undo-redo-cs1" %}
 
 ## Disable highlight annotation
 
