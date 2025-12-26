@@ -186,4 +186,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See Also
 
-* [How to do silent printing to print the Word document by rendering document pages as Image using Essential<sup>&reg;</sup> DocIO](https://support.syncfusion.com/kb/article/4546/how-to-do-silent-printing-to-print-the-word-document-by-rendering-document-pages-as-image)
+* [How to do silent printing to print the Word document by rendering document pages as Image using Essential<sup>&reg;</sup> DocIO](https://support.syncfusion.com/kb/article/4546/how-to-do-silent-printing-to-print-the-word-document-by-rendering-document-pages-as-image-using-docio)
