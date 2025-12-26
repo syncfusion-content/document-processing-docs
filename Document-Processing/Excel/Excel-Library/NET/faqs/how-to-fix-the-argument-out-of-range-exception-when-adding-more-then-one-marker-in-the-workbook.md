@@ -1,12 +1,12 @@
 ---
-title: How to avoid exceptions with multiple XlsIO Template Markers | Syncfusion
+title: Avoid Exceptions with Multiple XlsIO Template Markers | Syncfusion
 description: This page helps to prevent ArgumentOutOfRangeException when applying multiple template markers in Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to avoid ArgumentOutOfRangeException when using multiple template markers in Excel?
+# How to avoid Exception when using multiple template markers in Excel?
 
 When processing multiple template markers in an Excel workbook with Syncfusion XlsIO, an ArgumentOutOfRangeException may occur if a marker variable is not found during an ApplyMarkers call. To prevent this, use UnknownVariableAction.Skip for all ITemplateMarkersProcessor.ApplyMarkers calls except the final one. This ensures that any missing variables are gracefully ignored.
 
