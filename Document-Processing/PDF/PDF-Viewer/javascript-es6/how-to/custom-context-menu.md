@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize the context menu in PDF Viewer
 
-PDF Viewer supports adding custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#addcustommenu) method. Define actions for custom items with the [customContextMenuSelect()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#customcontextMenuselect) method.
+PDF Viewer supports adding custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/documentation/api/pdfviewer#addcustommenu) method. Define actions for custom items with the [customContextMenuSelect()](https://ej2.syncfusion.com/documentation/api/pdfviewer#customcontextMenuselect) method.
 
 ### Add a custom option
 
@@ -127,7 +127,7 @@ Toggle the display of the default context menu. When the addCustomMenu parameter
 
 #### Show or hide custom items before opening
 
-Use [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#customcontextMenubeforeopen) to hide or show custom options dynamically.
+Use [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/documentation/api/pdfviewer#customcontextMenubeforeopen) to hide or show custom options dynamically.
 
 ```ts
 
@@ -290,7 +290,7 @@ The following is the output of the custom context menu with customization.
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
-Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.ts` file
+Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl) in the `index.ts` file
 `viewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/custom-context-menu/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/custom-context-menu" %}
