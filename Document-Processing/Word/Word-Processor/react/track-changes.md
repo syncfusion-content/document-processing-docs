@@ -200,10 +200,10 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent,
-  Ribbon,
+  Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
 
-DocumentEditorContainerComponent.Inject(Ribbon);
+DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
   let container;
   let settings =  { revisionSettings: { customData: 'Developer’, showCustomDataWithAuthor: true} };
