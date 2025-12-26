@@ -1,0 +1,4 @@
+<ejs-documenteditorcontainer id="container" documentEditorSettings="settings"  height="590px" enableTrackChanges=true></ejs-documenteditorcontainer>
+<script>
+    var settings = { revisionSettings: { customData: 'Developer', showCustomDataWithAuthor: true} };
+</script>

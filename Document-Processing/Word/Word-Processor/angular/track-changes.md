@@ -105,11 +105,57 @@ In DocumentEditor, we have built-in review panel in which we have provided suppo
 
 ![Track changes](images/tracked-changes.png)
 
+## Custom metadata along with author
+
+The Document Editor provides options to customize revisions using [`revisionSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [`customData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/revisionsettings#customdata) property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the [`showCustomDataWithAuthor`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property.
+
+The following example code illustrates how to enable and update custom metadata for track changes revisions.
+
+```ts
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {
+  ToolbarService,
+  DocumentEditorContainerComponent,
+} from '@syncfusion/ej2-angular-documenteditor';
+import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documenteditor';
+@Component({
+  selector: 'app-container',
+  standalone: true,
+  imports: [DocumentEditorContainerModule],
+  providers: [ToolbarService],
+  template: `<ejs-documenteditorcontainer #documenteditor_default 
+      serviceUrl="hostUrl" 
+      height="600px" 
+      style="display:block" 
+      [enableTrackChanges]=true
+      [documentEditorSettings]= "Settings" >
+    </ejs-documenteditorcontainer>
+  `,
+})
+export class AppComponent implements OnInit {
+  @ViewChild('documenteditor_default')
+  public container?: DocumentEditorContainerComponent;
+  public Settings = {
+    revisionSettings: {
+      customData: 'Developer',
+      showCustomDataWithAuthor: true,
+    }};
+  ngOnInit(): void {}
+}
+```
+The Track Changes pane will display the author name along with the custom metadata, as shown in the screenshot below.
+
+![Custom metadata along with author](images/track-changes-customData.png)
+
+>Note:
+* When you export the document as SFDT, the customData value is stored in the revision collection. When you reopen the SFDT, the custom data is automatically restored and displayed in the Track Changes pane.
+* Other than SFDT export (e.g. DOCX and other), the customData is not preserved, as it is specific to the Document Editor component.
+
 ## Protect the document in track changes only mode
 
 Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#stopprotection) API.
+Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#stopprotection) API.
 
 The following example code illustrates how to enforce and stop protection in Document editor container.
 
