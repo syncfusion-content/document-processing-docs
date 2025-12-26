@@ -8,12 +8,12 @@ documentation: UG
 
 # How to avoid Exception when using multiple template markers in Excel?
 
-When processing multiple template markers in an Excel workbook with Syncfusion XlsIO, an ArgumentOutOfRangeException may occur if a marker variable is not found during an ApplyMarkers call. To prevent this, use UnknownVariableAction.Skip for all ITemplateMarkersProcessor.ApplyMarkers calls except the final one. This ensures that any missing variables are gracefully ignored.
+When processing multiple template markers in an Excel workbook with Syncfusion XlsIO, an ArgumentOutOfRangeException may occur if a marker variable is not found during an ApplyMarkers call. To prevent this, use [UnknownVariableAction.Skip](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITemplateMarkersProcessor.html#Syncfusion_XlsIO_ITemplateMarkersProcessor_ApplyMarkers_Syncfusion_XlsIO_UnknownVariableAction_) for all ITemplateMarkersProcessor.ApplyMarkers calls except the final one. This ensures that any missing variables are gracefully ignored.
 
 The following code snippets illustrate how to use UnknownVariableAction.Skip when applying markers in C# (cross-platform and Windows-specific) and VB.NET.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Template%20Marker/.NET/TemplateMarker/TemplateMarker/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -142,3 +142,5 @@ Using excelEngine As New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}  
+
+A complete working example that shows how to apply number formatting to an entire column in Excel using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Template%20Marker/.NET/TemplateMarker">this GitHub page</a>.
