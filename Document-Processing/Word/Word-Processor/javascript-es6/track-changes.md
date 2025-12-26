@@ -175,7 +175,7 @@ The Document Editor provides options to customize revisions using [`revisionSett
 The following example code illustrates how to enable and update custom metadata for track changes revisions.
 
 ```ts
-import { DocumentEditorContainer, Ribbon } from '@syncfusion/ej2-documenteditor';
+import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
 let container: DocumentEditorContainer = new DocumentEditorContainer({ 
   height: '590px',
   serviceUrl= 'hostUrl', 
@@ -183,7 +183,7 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({
   documentEditorSettings: {
     revisionSettings: { customData : "Developer", showCustomDataWithAuthor : true }}
 });
-DocumentEditorContainer.Inject(Ribbon);
+DocumentEditorContainer.Inject(Toolbar);
 container.appendTo('#container');
 ```
 
