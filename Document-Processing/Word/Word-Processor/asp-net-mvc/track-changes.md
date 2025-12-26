@@ -126,7 +126,7 @@ In DocumentEditor, we have built-in review panel in which we have provided suppo
 
 ## Custom metadata along with author
 
-The Document Editor provides options to customize revisions using `Revisionsettings`. The `CustomData` property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the `showCustomDataWithAuthor` property.
+The Document Editor provides options to customize revisions using `revisionSettings`. The `customData` property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the `showCustomDataWithAuthor` property.
 
 The following example code illustrates how to enable and update custom metadata for track changes revisions.
 
@@ -165,7 +165,7 @@ The following example code illustrates how to enforce and stop protection in Doc
 {% endhighlight %}
 {% endtabs %}
 
-Tracked changes only protection can be enabled in UI by using [Restrict Editing pane](./document-management#restrict-editing-pane/)
+Tracked changes only protection can be enabled in UI by using [Restrict Editing pane](./document-management#restrict-editing-pane)
 
 ![Enable track changes only protection](images/tracked-changes.png)
 

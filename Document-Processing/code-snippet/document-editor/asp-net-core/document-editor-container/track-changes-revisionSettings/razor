@@ -1,4 +1,4 @@
-@Html.EJS().DocumentEditorContainer("container").EnableTrackChanges(true).EnableToolbar(true).DocumentEditorSettings("settings").Render()
+@Html.EJS().DocumentEditorContainer("container").EnableTrackChanges(true).DocumentEditorSettings("settings").Render()
 <script>
     var settings = { revisionSettings: { customData: 'Developer', showCustomDataWithAuthor: true} };
 </script>

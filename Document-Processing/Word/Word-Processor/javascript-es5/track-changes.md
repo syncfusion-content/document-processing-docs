@@ -125,7 +125,7 @@ container.documentEditor.selection.navigatePreviousRevision();
 ```
 ## Custom metadata along with author
 
-The Document Editor provides options to customize revisions using [`revisionsettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [`customData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/revisionsettings#customdata) property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the [`showCustomDataWithAuthor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property.
+The Document Editor provides options to customize revisions using [`revisionSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [`customData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/revisionsettings#customdata) property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the [`showCustomDataWithAuthor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property.
 
 The following example code illustrates how to enable and update custom metadata for track changes revisions.
 
