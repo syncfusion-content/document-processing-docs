@@ -179,7 +179,7 @@ The following example code illustrates how to enable and update custom metadata 
 </template>
 <script>
   import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Ribbon} from '@syncfusion/ej2-vue-documenteditor';
+  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent, Toolbar} from '@syncfusion/ej2-vue-documenteditor';
 
   Vue.use(DocumentEditorContainerPlugin);
 
@@ -190,7 +190,7 @@ The following example code illustrates how to enable and update custom metadata 
     },
     provide: {
       //Inject require modules.
-      DocumentEditorContainer: [Ribbon]
+      DocumentEditorContainer: [Toolbar]
     }
   }
 </script>
