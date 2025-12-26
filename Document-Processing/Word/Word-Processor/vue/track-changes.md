@@ -165,6 +165,47 @@ In DocumentEditor, we have built-in review panel in which we have provided suppo
 
 ![Track changes](images/track-changes.png)
 
+## Custom metadata along with author
+
+The Document Editor provides options to customize revisions using [`revisionSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [`customData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/revisionsettings#customdata) property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the [`showCustomDataWithAuthor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property.
+
+The following example code illustrates how to enable and update custom metadata for track changes revisions.
+
+```ts
+<template>
+    <div id="app">
+      <ejs-documenteditorcontainer ref='documenteditor' :serviceUrl='serviceUrl' :documentEditorSettings='settings' height="590px" id='container' :enableTrackChanges='true' :documentEditorSettings='settings'></ejs-documenteditorcontainer>
+    </div>
+</template>
+<script>
+  import Vue from 'vue';
+  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent, Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+
+  Vue.use(DocumentEditorContainerPlugin);
+
+  export default {
+    data() {
+      return { serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/',
+      settings: { revisionSettings: { customData: 'Developer', showCustomDataWithAuthor: true} }};
+    },
+    provide: {
+      //Inject require modules.
+      DocumentEditorContainer: [Toolbar]
+    }
+  }
+</script>
+
+
+```
+The Track Changes pane will display the author name along with the custom metadata, as shown in the screenshot below.
+
+![Custom metadata along with author](images/track-changes-customData.png)
+
+>Note:
+* When you export the document as SFDT, the customData value is stored in the revision collection. When you reopen the SFDT, the custom data is automatically restored and displayed in the Track Changes pane.
+* Other than SFDT export (e.g. DOCX and other), the customData is not preserved, as it is specific to the Document Editor component.
+
+
 ## Protect the document in track changes only mode
 
 Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
