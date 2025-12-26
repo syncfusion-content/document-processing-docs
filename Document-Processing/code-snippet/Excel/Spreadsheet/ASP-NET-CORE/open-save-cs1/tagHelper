@@ -1,0 +1,18 @@
+<ejs-spreadsheet id="spreadsheet" openUrl="Home/Open" allowOpen="true" saveUrl="Home/Save" allowSave="true" beforeOpen="beforeOpen">
+</ejs-spreadsheet>
+
+<script>
+    function beforeOpen(args) {
+        // They will be sent to the server with the open request.
+        args.parseOptions = {
+            ignoreStyle: true,
+            ignoreFormat: true,
+            ignoreChart: true,
+            ignoreImage: true,
+            ignoreMergedCell: true,
+            ignoreFormula: true,
+            ignoreValidation: true,
+            ignoreConditionalFormat: true,
+        };
+    }
+</script>
