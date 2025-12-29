@@ -20,6 +20,9 @@ The PDF Viewer component provides options to add, edit, and delete form fields. 
 - Signature field
 - Initial field
 
+Check the following video to learn how to work with form Designer in React PDF Viewer.
+{% youtube "https://www.youtube.com/watch?v=MUWTCg1MoAE" %}
+
 ## Add a form field to PDF document programmatically
 
 Use the addFormField method to add form fields programmatically. Pass the form field type and the corresponding property object as parameters. The following example demonstrates adding multiple fields on document load.
@@ -135,7 +138,7 @@ root.render(<App />);
 N> To configure the server-backed PDF Viewer, add the following `serviceUrl` in the `index.ts` file:
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/react/addformfield-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/react/addformfield-cs1" %}
 
 ## Edit/Update form field programmatically
 
@@ -253,7 +256,7 @@ root.render(<App />);
 N> To configure the server-backed PDF Viewer, add the following `serviceUrl` in the `index.ts` file:
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/react/updateformfield-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/react/updateformfield-cs1" %}
 
 ## Delete form field programmatically
 
@@ -371,7 +374,7 @@ root.render(<App />);
 N> To configure the server-backed PDF Viewer, add the following `serviceUrl` in the `index.ts` file:
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/react/deleteformfield-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/react/deleteformfield-cs1" %}
 
 ## setFormFieldMode programmatically
 

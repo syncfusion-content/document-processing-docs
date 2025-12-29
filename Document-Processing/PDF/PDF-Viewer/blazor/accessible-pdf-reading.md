@@ -16,7 +16,7 @@ This accessible PDF reading feature supports two approaches:
 2. Windows Speech Synthesis API
 
 The following demo illustrates both supported approaches:
-- [Blazor PDF Viewer example -Accessible PDF Reading]()
+- [Blazor PDF Viewer example -Accessible PDF Reading](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/accessible-pdf-reading?theme=fluent2)
 
 ## Microsoft Edge’s Screen Reader
 
@@ -61,7 +61,6 @@ function initPdfAccessibility() {
     });
     mutationObserver.observe(viewerInfo.container, { childList: true, subtree: true });
 }
-
 // Get viewer container and ID
 function getViewerInfo() {
     const container = document.querySelector('.e-pv-viewer-container');
@@ -120,15 +119,13 @@ function wirePage(div) {
     div.addEventListener('click', () => focusPageDiv(div));
     div.setAttribute('data-a11y-init', 'true');
 }
-
 // Reader the selected text aloud - Mircosoft Reader
  function readAloudText(text) {
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
     window.speechSynthesis.speak(utterance);
 }
-
-// Cancel speech and remove highlights - Mircosoft Reader
+// Cancel speech - Mircosoft Reader
  function cancelReading() {
     if (window.speechSynthesis?.speaking) {
         window.speechSynthesis.cancel();
@@ -335,7 +332,6 @@ function getLinesFromPage(pageIndex) {
         })
     );
 }
-
 // Speak text with optional target voiceUri; on end, invoke callbacks and reset UI
 function speakText(text, onEnd) {
     if (!text || !text.trim()) text = "Warning. No readable text found.";
@@ -455,13 +451,12 @@ function clearAllHighlights() {
     clearLineHighlight();
     clearSelectedHighlights();
 }
-
 // Pause or resume speech synthesis
  function readAloudMute(isPaused) {
     const speechSynth = window.speechSynthesis;
     isPaused ? speechSynth.resume() : speechSynth.pause();
 }
-// Cancel speech and remove highlights - Mircosoft Reader
+// Cancel speech and remove highlights
  function cancelReading() {
     if (window.speechSynthesis?.speaking) {
         window.speechSynthesis.cancel();
@@ -582,6 +577,7 @@ function clearAllHighlights() {
             IsNext = false;
         }
     }
+
     // Reads the next line in the PDF
     private async Task NextLine()
     {
@@ -620,6 +616,7 @@ function clearAllHighlights() {
         }
         ReadNextPage = true;
     }
+
     // Navigates to the previous page
     [JSInvokable]
     public async Task GoPreviousPage()
@@ -645,4 +642,4 @@ function clearAllHighlights() {
 
 ## See also
 
-- [Blazor PDF Viewer example -Accessible PDF Reading]()
+- [Blazor PDF Viewer example -Accessible PDF Reading](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/accessible-pdf-reading?theme=fluent2)

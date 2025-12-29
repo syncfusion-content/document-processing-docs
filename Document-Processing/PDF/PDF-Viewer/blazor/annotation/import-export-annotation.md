@@ -13,7 +13,7 @@ The SfPdfViewer component supports importing and exporting annotations as a JSON
 
 * Select Add or Edit annotation in the SfPdfViewer toolbar to enable the annotation tools.
 
-![SfPdfViewer toolbar with the Edit annotation button highlighted](../../blazor-classic/images/blazor-pdfviewer-edit-button.png)
+![SfPdfViewer toolbar with the Edit annotation button highlighted](../images/blazor-pdfviewer-edit-button.png)
 
 * The annotation toolbar appears.
 * Select Comment Panel in the annotation toolbar.
