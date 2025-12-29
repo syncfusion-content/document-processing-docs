@@ -8,7 +8,7 @@ documentation: UG
 
 # How to avoid exception when adding worksheets with same name?
 
-Microsoft Excel throws exception when adding worksheet with existing worksheet name in a workbook and XlsIO does the same. But in some case, if you want to add worksheets with the same name using XlsIO then you can avoid the exception in XlsIO by setting [IgnoreSheetNameException](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_IgnoreSheetNameException) property of [IApplication](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IApplication.html) as true.
+Microsoft Excel throws exception when adding worksheet with existing worksheet name in a workbook and XlsIO does the same. But in some case, if you want to add worksheets with the same name using XlsIO then you can avoid the exception in XlsIO by setting [IgnoreSheetNameException](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_IgnoreSheetNameException) property of [IApplication](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html) as true.
 
 The following code snippet shows how to add two worksheets with same name in a workbook.
 
@@ -72,9 +72,9 @@ End Using
 
 ## See Also
 
-* [How to overcome UnauthorizedAccessException?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-overcome-unauthorizedaccessexception)
-* [How to overcome StackOverflow exception with IWorksheet Calculate()?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-overcome-stackoverflow-exception-with-iworksheet-calculate)
-* [What are the known exceptions of XlsIO?](https://help.syncfusion.com/file-formats/xlsio/known-exceptions)
-* [How to create a named range in Excel?](https://help.syncfusion.com/file-formats/xlsio/migrate-from-office-automation-to-syncfusion-xlsio/create-named-range-in-excel)
+* [How to overcome UnauthorizedAccessException?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-overcome-unauthorizedaccessexception)
+* [How to overcome StackOverflow exception with IWorksheet Calculate()?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-overcome-stackoverflow-exception-with-iworksheet-calculate)
+* [What are the known exceptions of XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/known-exceptions)
+* [How to create a named range in Excel?](https://help.syncfusion.com/document-processing/excel/excel-library/net/migrate-from-office-automation-to-syncfusion-xlsio/create-named-range-in-excel)
 * [How to use Named Ranges with XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-use-named-ranges-with-xlsio)
 
