@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clipboard in ASP.NET MVC Document Editor Component
+title: Clipboard in ASP.NET MVC Document Editor Component | Syncfusion
 description: Learn here all about clipboard in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Clipboard
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Clipboard
+# Clipboard in Document Editor Component
 
 Document editor takes advantage of system clipboard and allows to copy or move a portion of the document into it in HTML format, so that it can be pasted in any application that supports clipboard.
 
@@ -46,6 +46,7 @@ Document editor exposes API to enable local paste within the control. On enablin
 {% include code-snippet/document-editor/asp-net-mvc/clipboard/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Clipboard.cs" %}
+{% include code-snippet/document-editor/asp-net-mvc/clipboard/document-editor.cs %}
 {% endhighlight %}{% endtabs %}
 
 
@@ -90,7 +91,7 @@ The following code snippet illustrates how to achieve this:
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-mvc/clipboard-event/razor %}
 {% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
+{% highlight c# tabtitle="Clipboard.cs" %}
 {% include code-snippet/document-editor/asp-net-mvc/clipboard-event/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}

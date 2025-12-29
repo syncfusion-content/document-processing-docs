@@ -89,7 +89,7 @@ The following code snippet illustrates how to achieve this:
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/clipboard-event/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
+{% highlight c# tabtitle="Clipboard.cs" %}
 {% include code-snippet/document-editor/asp-net-core/clipboard-event/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
