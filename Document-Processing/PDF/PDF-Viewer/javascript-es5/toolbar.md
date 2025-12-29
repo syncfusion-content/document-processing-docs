@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Built-In Toolbar in Javascript Pdfviewer control
+# Built-In Toolbar in JavaScript Pdfviewer control
 
 The PDF Viewer comes with a powerful built-in toolbar to execute important actions such as page navigation, text search,view mode,download,print,bookmark, and thumbnails.
 
@@ -63,10 +63,10 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
-Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.html` file
+Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl) in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-hide-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-hide-cs1" %}
 
 * **Show/Hide toolbar using showToolbar as in the following code snippet**
 
@@ -80,7 +80,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-method-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-method-cs1" %}
 
 ## Show/Hide the default toolbaritem
 
@@ -98,7 +98,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-cs1" %}
 
 * **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
 
@@ -112,17 +112,17 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-method-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-toolbar/toolbar-items-method-cs1" %}
 
 ## Customize Built-In Toolbar
 
 PDF Viewer allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 
-* Add - New items can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/customToolbarItem/) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/javascript/documentation/api/toolbar/clickEventArgs/).
+* Add - New items can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/customToolbarItem) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/javascript/documentation/api/toolbar/clickEventArgs).
 
-* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarItem/).
+* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarItem).
 
-* Enable, Disable -  Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
+* Enable, Disable -  Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar#enabletoolbaritem)
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

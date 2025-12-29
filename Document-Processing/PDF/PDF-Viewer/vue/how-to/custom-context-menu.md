@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize the context menu in PDF Viewer
 
-PDF Viewer supports adding custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#addcustommenu) method. Define actions for custom items with the [customContextMenuSelect()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#customcontextMenuselect) method.
+PDF Viewer supports adding custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/documentation/api/pdfviewer#addcustommenu) method. Define actions for custom items with the [customContextMenuSelect()](https://ej2.syncfusion.com/documentation/api/pdfviewer#customcontextMenuselect) method.
 
 ### Add a custom option
 
@@ -248,7 +248,7 @@ export default {
 
 #### Show or hide custom items before opening
 
-Use [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#customcontextMenubeforeopen) to hide or show custom options dynamically.
+Use [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/documentation/api/pdfviewer#customcontextMenubeforeopen) to hide or show custom options dynamically.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -849,6 +849,6 @@ N> To set up the **server-backed PDF Viewer** in the app.Vue file, include the f
 **serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/custom-context-menu/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/vue/custom-context-menu" %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to/Customize%20context%20menu)
