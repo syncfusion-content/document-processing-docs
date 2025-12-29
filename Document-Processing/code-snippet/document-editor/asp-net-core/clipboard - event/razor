@@ -1,0 +1,21 @@
+@Html.EJS().DocumentEditorContainer("container").EnableToolbar(true).Height("590px").beforePaste("handleBeforePaste").Render()
+<script>
+    var documenteditor;
+    var container;
+    function onCreated() {
+        var documenteditorElement = document.getElementById('container');
+        container = documenteditorElement.ej2_instances[0];
+        documenteditor = container.documentEditor;
+    }
+    function handleBeforePaste (args) {
+         // Block HTML pasteType  and Modify the content
+        if (args.pasteType === "Html") {
+            args.pasteContent = `{"sections":[{"blocks":[{"inlines":[{"characterFormat":{"bold":true,"italic":true},
+            "text":"HTML Content"}]}],"headersFooters":{}}]}`;
+        }
+        // Cancel paste if content matches 'Software'
+        if(args.pasteContent == 'Software'){
+        args.cancel = true;
+        }
+    }
+</script>
