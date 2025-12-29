@@ -1598,7 +1598,8 @@ Essential<sup>&reg;</sup> PDF supports adding sections with different page setti
 The following code snippet explains how to create multiple sections that use different margin.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Insert-New-Page-in-Existing-PDF-with-Same-Size/.NET/Insert-New-Page-in-Existing-PDF-with-Same-Size/Program.cs" %}
+
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -1693,7 +1694,6 @@ document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
-{% endtabs %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
@@ -1709,7 +1709,7 @@ Dim document As New PdfDocument()
 Dim brush As PdfBrush = New PdfSolidBrush(Color.Black)
 Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 14)
 
-' Section – 1 
+'Section–1 
 'Add new section to the document
 Dim section As PdfSection = document.Sections.Add()
 section.PageSettings.Margins.All = 0.5F
@@ -1723,7 +1723,7 @@ g.DrawString(
     font, brush,
     New RectangleF(0, 0, page.GetClientSize().Width - 20, page.GetClientSize().Height))
 
-' Section – 2
+'Section–2
 'Add new section to the document
 section = document.Sections.Add()
 section.PageSettings.Margins.All = 1.5F
