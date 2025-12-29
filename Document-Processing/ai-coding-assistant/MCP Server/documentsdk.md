@@ -55,30 +55,11 @@ Before you can invoke the ```SyncfusionDocumentSDKAssistant``` MCP server, you n
   *	**Arguments**: -y
   *	**Server name**: syncfusionDocumentSDKAssistant
 
-#### API Key Configuration		
+You need to add your [Syncfusion API key](https://syncfusion.com/account/api-key) as an env parameter in the configuration file:
 
-Login to your [Syncfusion account](http://syncfusion.com/account/) and generate an API Key from the [API Key page](https://www.syncfusion.com/account/api-key). Replace `YOUR_API_KEY_FILE_PATH` or `YOUR_API_KEY` in the configuration files with your generated key.
-    
-There are two options:
-    
-* **Using an API Key File (Recommended)**
-
-  Store your API key in a separate file and reference its path in the `Syncfusion_API_Key_Path` environment parameter. This approach is more secure as you don't expose the key directly in configuration files.
-
-  **Supported file formats:** `.txt` or `.key` file
-
-~~~json
-   "env": {
-     "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH" // "D:\\syncfusion-key.txt" (or) "D:\\syncfusion-key.key"
-    }
 ~~~
-* **Direct API Key**
-
-  Paste your `Syncfusion_API_Key` directly in the configuration file's environment parameter.
-
-~~~json
-   "env": {
-     "Syncfusion_API_Key": "YOUR_API_KEY"
+  "env": {
+    "Syncfusion_API_Key": "YOUR_API_KEY"
   }
 ~~~
 
@@ -108,8 +89,6 @@ For additional details, see the Code Studio [documentation](https://help.syncfus
      "@syncfusion/documentsdk-assistant@latest" 
     ],
     "env": {
-     "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH",
-      // or
      "Syncfusion_API_Key": "YOUR_API_KEY"
      }
     }
@@ -117,7 +96,7 @@ For additional details, see the Code Studio [documentation](https://help.syncfus
   }
 ~~~ 
 
-  * After updating the configuration in mcp.json, you’ll notice a “Start” option at the top of the config. This allows you to easily start the <a href ="https://www.npmjs.com/package/@syncfusion/documentsdk-assistant">SyncfusionDocumentSDKAssistant</a> server directly from the settings interface without additional commands.
+  * After updating the configuration in settings.json, you’ll notice a “Start” option at the top of the config. This allows you to easily start the <a href ="https://www.npmjs.com/package/@syncfusion/documentsdk-assistant">SyncfusionDocumentSDKAssistant</a> server directly from the settings interface without additional commands.
 
   * Confirm that <a href ="https://www.npmjs.com/package/@syncfusion/documentsdk-assistant">SyncfusionDocumentSDKAssistant</a> is being used (this does not happen automatically). Look for a statement in the output, which is similar to:
 
@@ -139,8 +118,6 @@ To configure an MCP server for a specific workspace, you can create a .cursor/mc
         "@syncfusion/documentsdk-assistant@latest"
       ],
       "env": {
-      "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH",
-      // or
       "Syncfusion_API_Key": "YOUR_API_KEY"
      }
     }
@@ -165,8 +142,6 @@ For more details, refer to the <a href = "https://docs.cursor.com/en/context/mcp
       "@syncfusion/documentsdk-assistant@latest"
      ],
      "env": {
-     "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH",
-     // or
      "Syncfusion_API_Key": "YOUR_API_KEY"
      }
     }
