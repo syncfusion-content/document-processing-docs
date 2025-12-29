@@ -150,7 +150,7 @@ import { ToolbarService , DocumentEditorContainerModule, , DocumentEditorContain
   standalone: true,
   selector: 'app-root',
   // specifies the template string for the DocumentEditorContainer component
-  template: `<ejs-documenteditorcontainer serviceUrl="hostUrl" height="600px" style="display:block" #documenteditor_default [documentEditorSettings]= "settings" (beforePaste)=" handleBeforePaste($event)" [enableToolbar]=true> </ejs-documenteditorcontainer>`,
+  template: `<ejs-documenteditorcontainer serviceUrl="hostUrl" height="600px" style="display:block" (beforePaste)=" handleBeforePaste($event)" [enableToolbar]=true> </ejs-documenteditorcontainer>`,
   providers: [ToolbarService]
 })
 export class AppComponent implements OnInit {
