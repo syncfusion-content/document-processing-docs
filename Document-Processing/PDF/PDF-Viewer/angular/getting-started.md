@@ -215,7 +215,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "Document-Processing/samples/pdfviewer/angular/getting-started-cs1-standalone/index.html" %}
+{% previewsample "/document-processing/samples/pdfviewer/angular/getting-started-cs1-standalone" %}
 
 ## Module injection
 

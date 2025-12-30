@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with TypeScript PDF Viewer (server-backed) | Syncfusion
-description: Learn how to set up and use the Syncfusion TypeScript PDF Viewer in server-backed mode using the EJ2 quickstart, including module injection and web service configuration.
+title: Getting started with server-backed TypeScript PDF Viewer | Syncfusion
+description: Learn how to set up and use the Syncfusion TypeScript PDF Viewer in server-backed mode, including module injection and web service configuration.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -152,7 +152,7 @@ document.getElementById('load').addEventListener('click', function () {
 
 N> The Web API link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/ used in the `serviceUrl` property is intended for demonstration and evaluation only. For production, host your own web service with the required server configuration. You can reuse the [GitHub web service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server). **Standalone mode is strongly recommended.**
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/getting-started-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/getting-started-cs1" %}
 
 ## Module injection
 
@@ -198,7 +198,7 @@ Inject modules using the `PdfViewer.Inject` method.
  dotnet run
 ```
 
-6. The PDF Viewer server instance runs at `https://localhost:5001`. Navigate to `https://localhost:5001/pdfviewer` to see the default GET response. Bind this URL to the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer as shown below.
+6. The PDF Viewer server instance runs at `https://localhost:5001`. Navigate to `https://localhost:5001/pdfviewer` to see the default GET response. Bind this URL to the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) property of the PDF Viewer as shown below.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
