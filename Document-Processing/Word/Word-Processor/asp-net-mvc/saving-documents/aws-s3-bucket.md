@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save document to AWS S3 in ASP.NET MVC Document editor control | Syncfusion
+title: Save document to AWS S3 in ASP.NET MVC Document editor | Syncfusion
 description:  Learn about how to Save document to AWS S3 in ASP.NET MVC Document editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to AWS S3
