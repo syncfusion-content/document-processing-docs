@@ -8,8 +8,7 @@ documentation: UG
 
 # How to set colors for dynamic series in a Sunburst chart?
 
-The examples below show how to assign custom colors to each data point in a Sunburst chart with Syncfusion XlsIO. Code is provided for C# (cross-platform and Windows-specific) and VB.NET.
-
+The following code shows how to assign custom colors to each data point in a Sunburst chart with Syncfusion XlsIO. 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 {% endhighlight %}
