@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Cloud Storage
+# Save document to Google Cloud Storage in ASP.NET Core
 
 To save a document to Google Cloud Storage, you can follow the steps below
 
@@ -121,15 +121,15 @@ N> Replace **path/to/service-account-key.json** with the actual file path to you
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](../../api/document-editor/#saveAsBlob) and sent to server-side for saving in Google Cloud Storage.
+In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in Google Cloud Storage.
 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/save-google-cloud-storage/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-google-cloud-storage/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor-container/save-google-cloud-storage/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-google-cloud-storage/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save document to AWS S3 in Document editor | Syncfusion
-description:  Learn about how to Save document to AWS S3 in ASP.NET MVC Document editor of Syncfusion Essential JS 2 and more details.
+description:  Learn about how to Save document to AWS S3 in ASP.NET Core Document editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to AWS S3
 documentation: ug
@@ -123,10 +123,10 @@ In the client-side, to export the document into blob the document using [`saveAs
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/save-aws-s3/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-aws-s3/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor-container/save-aws-s3/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-aws-s3/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

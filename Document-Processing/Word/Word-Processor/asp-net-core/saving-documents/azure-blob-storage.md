@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Azure Blob Storage
+# Save document to Azure Blob Storage in ASP.NET Core
 
 To save a document to Azure Blob Storage, you can follow the steps below
 
@@ -113,15 +113,15 @@ N> Replace **Your Connection string from Azure** with the actual connection stri
 
 **Step 3:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](../../api/document-editor/#saveAsBlob) and sent to server-side for saving in Azure Blob Storage container.
+In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in Azure Blob Storage container.
 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/save-azure-blob/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-azure-blob/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor-container/save-azure-blob/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-azure-blob/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

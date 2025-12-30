@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to One Drive
+# Save document to One Drive in ASP.NET Core
 
 To save a document to One Drive, you can follow the steps below
 
@@ -133,19 +133,19 @@ private string GetValue(IFormCollection data, string key)
 
 ```
 
-N> Replace **Your_Tenent_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
+N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_OneDrive** with your actual tenant ID, application ID, and folder name.
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](../../api/document-editor/#saveAsBlob) and sent to server-side for saving in One Drive.
+In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in One Drive.
 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/save-one-drive/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-one-drive/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor-container/save-one-drive/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-one-drive/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
