@@ -138,7 +138,7 @@ root.render(<App />);
 N> To configure the server-backed PDF Viewer, add the following `serviceUrl` in the `index.ts` file:
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/react/addformfield-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/react/addformfield-cs1" %}
 
 ## Edit/Update form field programmatically
 
@@ -256,7 +256,7 @@ root.render(<App />);
 N> To configure the server-backed PDF Viewer, add the following `serviceUrl` in the `index.ts` file:
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/react/updateformfield-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/react/updateformfield-cs1" %}
 
 ## Delete form field programmatically
 
@@ -374,7 +374,7 @@ root.render(<App />);
 N> To configure the server-backed PDF Viewer, add the following `serviceUrl` in the `index.ts` file:
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/react/deleteformfield-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/react/deleteformfield-cs1" %}
 
 ## setFormFieldMode programmatically
 
