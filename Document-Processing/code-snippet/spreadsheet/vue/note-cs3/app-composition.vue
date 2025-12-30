@@ -33,12 +33,11 @@ const width1 = 180;
 const width2 = 130;
 const width3 = 120;
 const rowIndex= 2;
-const rowIndex1 = 5;
-const cells = [{ index: 0, notes: 'These shoes have the highest sales in terms of quantity this month.'}];
-const cells1= [{index: 0, notes: 'These shoes have been the most profitable this month.'}];
+const cells: [{index: 0, notes: { text: 'These shoes have the highest sales in terms of quantity this month.', isVisible: true } }];
 const created = function () {
   spreadsheet.value.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:H1');
   spreadsheet.value.cellFormat({ verticalAlign: 'middle' }, 'A1:H11');
+  spreadsheet.updateCell({ notes: { text: 'These shoes have been the most profitable this month.' } }, 'A10:A10');
 }
 </script>
 <style>
