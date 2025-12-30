@@ -107,6 +107,5 @@ In the client-side, the document is returned from the web service is opening usi
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/open-azure-blob/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 
 N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
