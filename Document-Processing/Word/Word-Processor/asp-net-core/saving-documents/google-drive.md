@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Drive
+# Save document to Google Drive in ASP.NET Core
 
 To save a document to Google Drive, you can follow the steps below
 
@@ -147,15 +147,15 @@ N> You must use a unique `Client_ID` from json file to interface your applicatio
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](../../api/document-editor/#saveAsBlob) and sent to server-side for saving in Google Drive.
+In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in Google Drive.
 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/save-google-drive/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-google-drive/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor-container/save-google-drive/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-google-drive/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Box cloud file storage
+# Save document to Box cloud file storage in ASP.NET MVC
 
 To save a document to Box cloud file storage, you can follow the steps below
 
@@ -127,7 +127,7 @@ N> replace **Your_Box_Storage_Access_Token** with your actual box access token, 
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/aspnetmvc/documentation/api/document-editor#saveAsBlob) and sent to server-side for saving in Box cloud file storage.
+In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in Box cloud file storage.
 
 
 {% tabs %}

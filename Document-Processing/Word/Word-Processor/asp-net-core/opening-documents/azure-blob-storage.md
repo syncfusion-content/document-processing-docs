@@ -96,15 +96,15 @@ N> Replace **Your Connection string from Azure** with the actual connection stri
 
 **Step 3:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using [`open`](../../api/document-editor/#open) method.
+In the client-side, the document is returned from the web service is opening using `open` method.
 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/open-azure-blob/razor %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/open-azure-blob/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor-container/open-azure-blob/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/open-azure-blob/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 {% endif %}
