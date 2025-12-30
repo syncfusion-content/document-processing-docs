@@ -26,19 +26,19 @@ The PDF Viewer supports the following form field types:
 
 Click the Form Field icon on the toolbar, then click on the PDF to draw a form field. See the following GIF for reference.
 
-![Add a form field using the toolbar](../../images/addformfield.gif)
+![Add a form field using the toolbar](../../../javascript-es6/images/addformfield.gif)
 
 ## Drag the form field
 
 Drag the selected form field to reposition it within the PDF document. See the following GIF for reference.
 
-![Drag a selected form field in the PDF Viewer](../../images/dragformfield.gif)
+![Drag a selected form field in the PDF Viewer](../../../javascript-es6/images/dragformfield.gif)
 
 ## Resize the form field
 
 Resize the selected form field using the resize handles on the field boundary. See the following GIF for reference.
 
-![Resize a selected form field in the PDF Viewer](../../images/resizeformfield.gif)
+![Resize a selected form field in the PDF Viewer](../../../javascript-es6/images/resizeformfield.gif)
 
 ## Textbox
 
@@ -48,7 +48,7 @@ Resize the selected form field using the resize handles on the field boundary. S
 2) Select Textbox, then click/tap on the page to place it.
 3) Resize/move as needed and set properties in the property panel.
 
-![Textbox added from UI](../../images/ui-textbox.png)
+![Textbox added from UI](../../../javascript-es6/images/ui-textbox.png)
 
 ### Add Textbox Programmatically
 
@@ -82,7 +82,7 @@ pdfviewer.documentLoad = function() {
 2) Select Password, then place it on the page.
 3) Configure tooltip, required, max length, etc.
 
-![Password added from UI](../../images/ui-password.png)
+![Password added from UI](../../../javascript-es6/images/ui-password.png)
 
 ### Add Password Programmatically
 
@@ -116,7 +116,7 @@ pdfviewer.documentLoad = function() {
 2) Click on the page to place, duplicate for multiple options if needed.
 3) Use the property panel to set IsChecked, tooltip, and appearance.
 
-![CheckBox added from UI](../../images/ui-checkbox.png)
+![CheckBox added from UI](../../../javascript-es6/images/ui-checkbox.png)
 
 ### Add CheckBox Programmatically
 

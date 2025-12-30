@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Import form data into PDF
+# Import form data into PDF in JavaScript
 
 The PDF Viewer provides APIs to import interactive form field values into the currently loaded PDF. You can import from the following formats:
 

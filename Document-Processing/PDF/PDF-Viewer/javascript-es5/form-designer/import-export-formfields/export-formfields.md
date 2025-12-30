@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Export form data from PDF
+# Export form data from PDF in JavaScript
 
 The PDF Viewer component supports exporting and importing form field data using the importFormFields, exportFormFields, and exportFormFieldsAsObject methods in the following formats:
 
