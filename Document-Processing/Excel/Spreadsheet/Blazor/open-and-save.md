@@ -72,6 +72,316 @@ An Excel file encoded as a Base64 string can be loaded into the Spreadsheet comp
 {% endhighlight %}
 {% endtabs %}
 
+### Open an Excel file from JSON data
+
+The Blazor Spreadsheet component accepts data only as a byte array through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DataSource) property. To load JSON data into the Spreadsheet, convert the JSON data into an Excel file format using [XlsIO](https://help.syncfusion.com/file-formats/xlsio/overview), then convert it to a byte array. This approach allows importing JSON data from a local file or a remote URL.
+
+#### Load an Excel file from a local JSON file
+
+JSON data can be loaded from a local JSON file, converted to Excel format using XlsIO, and displayed in the Spreadsheet component. This approach is useful when working with static JSON data files within the application. The implementation reads the JSON file, converts it to Excel format using XlsIO, and binds it to the Spreadsheet as a byte array.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using System.Text.Json
+@using Syncfusion.XlsIO
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet DataSource="DataSourceBytes">
+	<SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+
+	public byte[] DataSourceBytes { get; set; }
+
+	protected override void OnInitialized()
+	{
+		// Build the file path to the JSON data source
+		// Note: Replace "wwwroot" and "sample.json" with the actual folder and file name where your JSON is stored.
+		string jsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "sample.json");
+
+		// Read the entire JSON file content as a string
+		string jsonData = File.ReadAllText(jsonFilePath);
+
+		// Convert the JSON content to an Excel byte array for Spreadsheet binding
+		DataSourceBytes = ConvertJsonToExcel(jsonData);
+	}
+
+	// Converts a JSON string into an Excel workbook byte array using Syncfusion XlsIO
+	private byte[] ConvertJsonToExcel(string jsonData)
+	{
+		// Parse the JSON string into a JsonDocument for processing
+		using JsonDocument jsonDocument = JsonDocument.Parse(jsonData);
+		JsonElement rootJsonElement = jsonDocument.RootElement;
+
+		// Normalize the JSON structure into a list of row dictionaries
+		List<Dictionary<string, JsonElement>> dataRows = NormalizeJsonToRows(rootJsonElement);
+
+		// Extract all unique column headers (keys) from all rows
+		List<string> columnHeaders = dataRows
+			.SelectMany(row => row.Keys)
+			.Distinct()
+			.ToList();
+
+		// Initialize the Excel engine
+		using ExcelEngine excelEngine = new ExcelEngine();
+		IApplication excelApplication = excelEngine.Excel;
+
+		// Create a new workbook with one worksheet
+		IWorkbook workbook = excelApplication.Workbooks.Create(1);
+		IWorksheet worksheet = workbook.Worksheets[0];
+
+		// Write header row with column names
+		int columnCount = columnHeaders.Count;
+		for (int columnIndex = 0; columnIndex < columnCount; columnIndex++)
+		{
+			IRange headerCell = worksheet.Range[1, columnIndex + 1];
+			headerCell.Text = columnHeaders[columnIndex];
+			headerCell.CellStyle.Font.Bold = true;
+		}
+
+		// Write data rows starting from the second row
+		int currentRowIndex = 2;
+		foreach (var dataRow in dataRows)
+		{
+			for (int columnIndex = 0; columnIndex < columnCount; columnIndex++)
+			{
+				string columnKey = columnHeaders[columnIndex];
+
+				// Write cell value if the key exists in the current row
+				if (dataRow.TryGetValue(columnKey, out var cellValue))
+				{
+					worksheet.Range[currentRowIndex, columnIndex + 1].Value2 = cellValue;
+				}
+			}
+			currentRowIndex++;
+		}
+
+		// Save the workbook to a memory stream and return as byte array
+		using MemoryStream memoryStream = new MemoryStream();
+		workbook.SaveAs(memoryStream);
+		return memoryStream.ToArray();
+	}
+
+	// Normalizes various JSON structures (array, object, or single value) into a uniform list of row dictionaries
+	private List<Dictionary<string, JsonElement>> NormalizeJsonToRows(JsonElement rootJsonElement)
+	{
+		// Case 1: JSON is an array - convert each element to a dictionary
+		if (rootJsonElement.ValueKind == JsonValueKind.Array)
+		{
+			return rootJsonElement.EnumerateArray()
+				.Select(JsonToDictionaryList)
+				.ToList();
+		}
+
+		// Case 2: JSON is an object
+		if (rootJsonElement.ValueKind == JsonValueKind.Object)
+		{
+			// Check if the object contains array properties (wrapper pattern)
+			foreach (var property in rootJsonElement.EnumerateObject())
+			{
+				if (property.Value.ValueKind == JsonValueKind.Array)
+				{
+					return property.Value.EnumerateArray()
+						.Select(JsonToDictionaryList)
+						.ToList();
+				}
+			}
+
+			// Single object record - wrap in a list
+			return new List<Dictionary<string, JsonElement>>
+			{
+				JsonToDictionaryList(rootJsonElement)
+			};
+		}
+
+		// Case 3: Fallback for primitive values - wrap in a dictionary with "value" key
+		return new List<Dictionary<string, JsonElement>>
+		{
+			new Dictionary<string, JsonElement> { ["value"] = rootJsonElement }
+		};
+	}
+
+	// Converts a JsonElement to a dictionary of property names and values
+	private Dictionary<string, JsonElement> JsonToDictionaryList(JsonElement jsonElement)
+	{
+		// If not an object, wrap the value in a dictionary with "value" key
+		if (jsonElement.ValueKind != JsonValueKind.Object)
+		{
+			return new Dictionary<string, JsonElement> { ["value"] = jsonElement };
+		}
+
+		// Enumerate all properties and convert to dictionary
+		return jsonElement.EnumerateObject()
+			.ToDictionary(
+				property => property.Name,
+				property => property.Value,
+				StringComparer.OrdinalIgnoreCase
+			);
+	}
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Load an Excel file from a remote JSON URL
+
+Remote JSON data can be integrated into the Spreadsheet component by converting it into an Excel-compatible format. The process begins with asynchronous retrieval of JSON from the specified endpoint using HttpClient. The fetched data is then transformed into an Excel workbook through XlsIO, and the resulting byte array is passed to the Spreadsheet for rendering. This approach is particularly useful for integrating real-time data from REST APIs or other web services.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using System.Text.Json
+@using Syncfusion.XlsIO
+@using Syncfusion.Blazor.Spreadsheet
+@inject HttpClient HttpClient
+
+@if (IsDataLoaded)
+{
+	<SfSpreadsheet DataSource="DataSourceBytes">
+		<SpreadsheetRibbon></SpreadsheetRibbon>
+	</SfSpreadsheet>
+}
+@code {
+
+	public byte[] DataSourceBytes { get; set; }
+
+	// Flag to indicate whether the data has been loaded
+	public bool IsDataLoaded { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		// Define the remote JSON URL
+		// Note: Replace with your actual JSON endpoint URL
+		string jsonUrl = "https://jsonplaceholder.typicode.com/todos";
+
+		// Fetch JSON data from the remote URL
+		string jsonData = await HttpClient.GetStringAsync(jsonUrl);
+
+		// Transform the JSON data to an Excel byte array for Spreadsheet binding
+		DataSourceBytes = ConvertJsonToExcel(jsonData);
+
+		// Set flag to indicate data is loaded
+		IsDataLoaded = true;
+	}
+
+	// Transforms a JSON string into an Excel workbook byte array using Syncfusion XlsIO
+	private byte[] ConvertJsonToExcel(string jsonData)
+	{
+		// Parse the JSON string into a JsonDocument for processing
+		using JsonDocument jsonDocument = JsonDocument.Parse(jsonData);
+		JsonElement rootJsonElement = jsonDocument.RootElement;
+
+		// Normalize the JSON structure into a list of row dictionaries
+		List<Dictionary<string, JsonElement>> dataRows = NormalizeJsonToRows(rootJsonElement);
+
+		// Extract all unique column headers (keys) from all rows
+		List<string> columnHeaders = dataRows
+			.SelectMany(row => row.Keys)
+			.Distinct()
+			.ToList();
+
+		// Initialize the Excel engine
+		using ExcelEngine excelEngine = new ExcelEngine();
+		IApplication excelApplication = excelEngine.Excel;
+
+		// Create a new workbook with one worksheet
+		IWorkbook workbook = excelApplication.Workbooks.Create(1);
+		IWorksheet worksheet = workbook.Worksheets[0];
+
+		// Write header row with column names
+		int columnCount = columnHeaders.Count;
+		for (int columnIndex = 0; columnIndex < columnCount; columnIndex++)
+		{
+			IRange headerCell = worksheet.Range[1, columnIndex + 1];
+			headerCell.Text = columnHeaders[columnIndex];
+		}
+
+		// Write data rows starting from the second row
+		int currentRowIndex = 2;
+		foreach (var dataRow in dataRows)
+		{
+			for (int columnIndex = 0; columnIndex < columnCount; columnIndex++)
+			{
+				string columnKey = columnHeaders[columnIndex];
+
+				// Write cell value if the key exists in the current row
+				if (dataRow.TryGetValue(columnKey, out JsonElement cellValue))
+				{
+					worksheet.Range[currentRowIndex, columnIndex + 1].Value2 = cellValue;
+				}
+			}
+			currentRowIndex++;
+		}
+
+		// Save the workbook to a memory stream and return as byte array
+		using MemoryStream memoryStream = new MemoryStream();
+		workbook.SaveAs(memoryStream);
+		return memoryStream.ToArray();
+	}
+
+	// Normalizes various JSON structures (array, object, or single value) into a uniform list of row dictionaries
+	private List<Dictionary<string, JsonElement>> NormalizeJsonToRows(JsonElement rootJsonElement)
+	{
+		// Case 1: JSON is an array - convert each element to a dictionary
+		if (rootJsonElement.ValueKind == JsonValueKind.Array)
+		{
+			return rootJsonElement.EnumerateArray()
+				.Select(JsonToDictionaryList)
+				.ToList();
+		}
+
+		// Case 2: JSON is an object
+		if (rootJsonElement.ValueKind == JsonValueKind.Object)
+		{
+			// Check if the object contains array properties (wrapper pattern)
+			foreach (var property in rootJsonElement.EnumerateObject())
+			{
+				if (property.Value.ValueKind == JsonValueKind.Array)
+				{
+					return property.Value.EnumerateArray()
+						.Select(JsonToDictionaryList)
+						.ToList();
+				}
+			}
+
+			// Single object record - wrap in a list
+			return new List<Dictionary<string, JsonElement>>
+			{
+				JsonToDictionaryList(rootJsonElement)
+			};
+		}
+
+		// Case 3: Fallback for primitive values - wrap in a dictionary with "value" key
+		return new List<Dictionary<string, JsonElement>>
+		{
+			new Dictionary<string, JsonElement> { ["value"] = rootJsonElement }
+		};
+	}
+
+	// Parses a JsonElement into a dictionary of property names and values
+	private Dictionary<string, JsonElement> JsonToDictionaryList(JsonElement jsonElement)
+	{
+		// If not an object, wrap the value in a dictionary with "value" key
+		if (jsonElement.ValueKind != JsonValueKind.Object)
+		{
+			return new Dictionary<string, JsonElement> { ["value"] = jsonElement };
+		}
+
+		// Enumerate all properties and convert to dictionary
+		return jsonElement.EnumerateObject()
+			.ToDictionary(
+				property => property.Name,
+				property => property.Value,
+				StringComparer.OrdinalIgnoreCase
+			);
+	}
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Open an Excel file from Google Drive
 To load an Excel file from `Google Drive` in the Blazor Spreadsheet, follow the steps below.
 

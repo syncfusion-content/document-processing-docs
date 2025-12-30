@@ -1094,90 +1094,6 @@ fileStream.Dispose();
 
 </table>
 
-## HTML to PDF Performance Benchmarks:
-
-We have prepared the following benchmark details for converting HTML to PDF, using the specified machine configuration and input HTML files:
-
-<h2>Environment Details:</h2>
- 
-
-OS Edition          : Windows 11 Enterprise
-
-Version               : 22H2
-
-Processor           : 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz   2.42 GHz
-
-Installed RAM    : 20.0 GB (19.7 GB usable)
-
-System type       : 64-bit operating system, x64-based processor
- 
-
-<h2>Example Application:</h2>
-
-The benchmark details were obtained using the [Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows) package. You can refer to the following sample, as well as the input and output files used:
-
-Input HTML files         : <a href="https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF/wwwroot/Data">https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF/wwwroot/Data</a>
-
-Output PDF files        : <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/Output-924807763.zip">https://www.syncfusion.com/downloads/support/directtrac/general/ze/Output-924807763.zip</a>
-
-<h2>Results:</h2>
-
-<table border="1">
-<th style="font-size:14px" width="100px">Input Page count</th>
-<th style="font-size:14px">Conversion time
-
-(Avg value of 5 conversions)
-</th>
-<th style="font-size:14px">Process Memory and CPU usage
-</th>
-<tr>
-    <td>10+ Pages</td>
-    <td>2.78 seconds</td>
-    <td>	
-Memory usage: 318 MB
-
-CPU usage: 10%</td>
-</tr>
-<tr>
-    <td>100+ pages</td>
-    <td>3.65 seconds</td>
-    <td>Memory usage: 367 MB
-
-CPU usage: 14%</td>
-</tr>
-<tr>
-    <td>1000+ pages</td>
-    <td>6.72 seconds</td>
-    <td>Memory usage: 813 MB
-
-CPU usage: 27%</td>
-</tr>
-<tr>
-    <td>10 documents with 100+ pages in a loop</td>
-    <td>30.52 seconds</td>
-    <td>	
-Memory usage: 663 MB
-
-CPU usage: 15%</td>
-</tr>
-<tr>
-    <td>10 documents with 1000+ pages in a loop</td>
-    <td>1 minute 10 seconds</td>
-    <td>	
-Memory usage: 2.2 GB
-
-CPU usage: 64%</td>
-</tr>
-</table>
-
-N> The performance metrics were recorded on a freshly configured machine. Speed and memory usage may vary if the machine is running other processes. Additionally, performance can be affected by:
-
-N> * External resources loaded in the HTML (such as images, scripts, and styles)
-N> * Network speed for online URL conversions
-N> * Hardware resources (CPU and memory)
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Performance_Testing/Syncfusion_HTMLtoPDF).
-
 ## Custom fonts are not rendered in Azure App Service and Function Linux using Blink.
 
 <table>
@@ -1531,6 +1447,45 @@ This will trigger the execution of your startup script, resolving installation a
 <br>
 After the service restarts, try the conversion or operation again to ensure the issues are resolved.
 <br>
+</td>
+</tr>
+
+</table>
+
+## Ubuntu 24.04 dependency install fails: libasound2 migrated to libasound2t64; libgconf-2-4 removed
+
+<table>
+<th style="font-size:14px" width="100px">Exception</th>
+<th style="font-size:14px">Installing dependencies on Ubuntu 24.04 fails when attempting to install libasound2 and libgconf-2-4, leading to build/launch errors
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+<b>Time64 transition:</b> Ubuntu 24.04 adopted 64-bit timestamp support, renaming several libraries with the t64 suffix. libasound2 is now a virtual package provided by libasound2t64, so installing libasound2 directly fails.
+
+<b>Deprecated removal:</b> libgconf-2-4 was deprecated and removed starting with Ubuntu 23.10 and is not available in 24.04 repositories.
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+Update the dependency installation script to use t64 packages and omit libgconf-2-4. The following command installs the supported libraries on Ubuntu 24.04:
+
+{% tabs %}
+{% highlight C# %}
+
+Run apt-get update && apt-get install -yq --no-install-recommends \
+  libasound2t64 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 \
+  libfontconfig1 libgcc-s1 libgdk-pixbuf2.0-0 libglib2.0-0t64 libgtk-3-0t64 \
+  libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 \
+  libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 \
+  libxrender1 libxss1 libxtst6 libnss3 libgbm1
+
+{% endhighlight %}
+{% endtabs %}
+
+After applying this change, all required dependencies are installed successfully.
 </td>
 </tr>
 

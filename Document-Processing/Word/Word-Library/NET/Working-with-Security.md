@@ -925,5 +925,5 @@ N> 2. The **SingleUser** and **EditorGroup** properties cannot be set simultaneo
 
 ## Online Demo
 
-* Explore how to encrypt and decrypt the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/encryptanddecrypt#/bootstrap5).  
-* See how to protect the Word document from editing using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/documentprotection#/bootstrap5).
+* Explore how to encrypt and decrypt the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/encryptanddecrypt#/tailwind).  
+* See how to protect the Word document from editing using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/documentprotection#/tailwind).
