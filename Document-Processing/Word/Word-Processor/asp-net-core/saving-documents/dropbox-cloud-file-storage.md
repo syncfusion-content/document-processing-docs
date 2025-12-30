@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Save document to Dropbox cloud in Document editor | Syncfusion
-description:  Learn about how to Save document to Dropbox cloud file storage in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+description:  Learn about how to Save document to Dropbox cloud file storage in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Dropbox cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Dropbox cloud file storage
+# Save document to Dropbox cloud file storage in ASP.NET Core
 
 To save a document to Dropbox cloud file storage, you can follow the steps below
 
@@ -119,15 +119,15 @@ N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token a
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](../../api/document-editor/#saveAsBlob) and sent to server-side for saving in Dropbox cloud file storage.
+In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in Dropbox cloud file storage.
 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/save-dropbox-cloud-file-storage/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-dropbox-cloud-file-storage/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor-container/save-dropbox-cloud-file-storage/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-dropbox-cloud-file-storage/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

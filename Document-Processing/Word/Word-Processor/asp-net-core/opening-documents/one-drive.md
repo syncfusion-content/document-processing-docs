@@ -129,19 +129,19 @@ public async Task<string> LoadFromOneDrive([FromBody] Dictionary<string, string>
 
 ```
 
-N> Replace **Your_Tenent_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
+N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_OneDrive** with your actual tenant ID, application ID, and folder name.
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using [`open`](../../api/document-editor/#open) method.
+In the client-side, the document is returned from the web service is opening using `open` method.
 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/open-one-drive/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/open-one-drive/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor-container/open-one-drive/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/open-one-drive/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
