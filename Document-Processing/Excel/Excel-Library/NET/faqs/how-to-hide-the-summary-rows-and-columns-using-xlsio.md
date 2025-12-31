@@ -8,7 +8,7 @@ documentation: UG
 
 # How to hide the summary rows and columns using XlsIO?
 
-You can hide the summary rows and columns by using the [IsSummaryRowBelow](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryRowBelow) and [IsSummaryColumnRight](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryColumnRight) properties. The following code snippet illustrates this.
+You can hide the summary rows and columns by using the [IsSummaryRowBelow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryRowBelow) and [IsSummaryColumnRight](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryColumnRight) properties. The following code snippet illustrates this.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -69,8 +69,8 @@ End Using
 ## See Also
 
 * [What is the maximum range of Rows and Columns?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/what-is-the-maximum-range-of-rows-and-columns)
-* [How to unfreeze the rows and columns in XlsIO?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-unfreeze-the-rows-and-columns-in-xlsio)
-* [How to sort two or more columns in a pivot table?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-sort-two-or-more-columns-in-a-pivot-table)
-* [How to hide Excel worksheets?](https://help.syncfusion.com/file-formats/xlsio/migrate-from-office-automation-to-syncfusion-xlsio/hide-excel-worksheets)
-* [How to show or hide rows and columns?](https://help.syncfusion.com/file-formats/xlsio/worksheet-rows-and-columns-manipulation#show-or-hide-rows-and-columns)
-* [How to show or hide specific range?](https://help.syncfusion.com/file-formats/xlsio/worksheet-rows-and-columns-manipulation#show-or-hide-specific-range)
+* [How to unfreeze the rows and columns in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-unfreeze-the-rows-and-columns-in-xlsio)
+* [How to sort two or more columns in a pivot table?](https://help.syncfusion.com/document-processing/excel/excel-library/net/migrate-from-office-automation-to-syncfusion-xlsio/hide-excel-worksheets)
+* [How to hide Excel worksheets?](https://help.syncfusion.com/document-processing/excel/excel-library/net/migrate-from-office-automation-to-syncfusion-xlsio/hide-excel-worksheets)
+* [How to show or hide rows and columns?](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-rows-and-columns-manipulation#show-or-hide-rows-and-columns)
+* [How to show or hide specific range?](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-rows-and-columns-manipulation#show-or-hide-specific-range)
