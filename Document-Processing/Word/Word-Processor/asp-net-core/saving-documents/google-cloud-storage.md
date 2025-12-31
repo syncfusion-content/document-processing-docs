@@ -1,21 +1,20 @@
 ---
 layout: post
-title: Save to Google Cloud in ASP.NET MVC Document editor | Syncfusion
-description:  Learn about how to Save document to Google Cloud Storage in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save to Google Cloud Storage Document editor | Syncfusion
+description:  Learn about how to Save document to Google Cloud Storage in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Google Cloud Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Cloud Storage in ASP.NET MVC
+# Save document to Google Cloud Storage in ASP.NET Core
 
 To save a document to Google Cloud Storage, you can follow the steps below
 
+**Step 1:** Create a Simple Document Editor Sample in ASP.NET Core
 
-**Step 1:** Create a Simple Document Editor Sample in ASP.NET MVC
-
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
 
 
 **Step 2:** Create the `DocumentEditorController.cs` File in the Web Service Project
@@ -126,12 +125,13 @@ In the client-side, to export the document into blob the document using `saveAsB
 
 
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/save-google-cloud-storage/razor %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-google-cloud-storage/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/save-google-cloud-storage/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-google-cloud-storage/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
+
 
 N> The **Google.Cloud.Storage.V1** NuGet package must be installed in your application to use the previous code example.

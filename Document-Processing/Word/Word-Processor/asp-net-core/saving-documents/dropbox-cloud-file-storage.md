@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Open Dropbox Files in ASP.NET MVC Document Editor | Syncfusion
-description: Learn about how to Open document from Dropbox cloud file storage in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save document to Dropbox cloud in Document editor | Syncfusion
+description:  Learn about how to Save document to Dropbox cloud file storage in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
-control: Open document from Dropbox cloud file storage
+control: Save document to Dropbox cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Dropbox cloud file storage in ASP.NET MVC
+# Save document to Dropbox cloud file storage in ASP.NET Core
 
-To load a document from Dropbox cloud file storage in a Document editor, you can follow the steps below
+To save a document to Dropbox cloud file storage, you can follow the steps below
 
 **Step 1:** Create a Dropbox API
 
 To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
 
 
-**Step 2:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -51,38 +51,52 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `LoadFromDropBox()` method to load the document from Dropbox cloud file storage.
+* Create the `SaveToDropBox()` method to save the downloaded document to Dropbox cloud file storage bucket
 
 ```csharp
 
 [AcceptVerbs("Post")]
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
-[Route("LoadFromBoxCloud")]
-//Post action for Loading the documents
+[Route("SaveToDropBox")]
+//Post action for downloading the document
 
-public async Task<string> LoadFromDropBox([FromBody] Dictionary<string, string> jsonObject)
+public void SaveToDropBox(IFormCollection data)
 {
-    if (jsonObject == null && !jsonObject.ContainsKey("documentName"))
+  if (data.Files.Count == 0)
+    return;
+
+  IFormFile file = data.Files[0];
+  string documentName = this.GetValue(data, "documentName");
+  string result = Path.GetFileNameWithoutExtension(documentName);
+  string fileName = result + "_downloaded.docx";
+
+  using (var dropBox = new DropboxClient(_accessToken))
+  {
+      Stream stream = new MemoryStream();
+      file.CopyTo(stream);
+
+      // Upload the document to Dropbox
+      var uploadedFile = await dropBox.Files.UploadAsync(
+        _folderName + "/" + fileName,
+        WriteMode.Overwrite.Instance,
+        body: stream
+      );
+  }
+}
+
+private string GetValue(IFormCollection data, string key)
+{
+    if (data.ContainsKey(key))
     {
-      return null
-    }
-    MemoryStream stream = new MemoryStream();
-        
-    using (var dropBox = new DropboxClient(_accessToken))
-    {
-        using (var response = await dropBox.Files.DownloadAsync(_folderName + "/" + fileName))
+        string[] values = data[key];
+        if (values.Length > 0)
         {
-          var byteArray = await response.GetContentAsByteArrayAsync();
-          stream = new MemoryStream(byteArray);
+            return values[0];
         }
     }
-    WordDocument document = WordDocument.Load(stream, FormatType.Docx);
-    string json = Newtonsoft.Json.JsonConvert.SerializeObject(document);
-    document.Dispose();
-    stream.Close();
-    return json;
-} 
+    return "";
+}
 ```
 
 * Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
@@ -105,16 +119,17 @@ N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token a
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using `open` method.
+In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in Dropbox cloud file storage.
 
 
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-dropbox-cloud-file-storage/razor %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-dropbox-cloud-file-storage/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-dropbox-cloud-file-storage/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-dropbox-cloud-file-storage/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
+
 
 N> The **Dropbox.Api** NuGet package must be installed in your application to use the previous code example.
