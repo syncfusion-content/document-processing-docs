@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# CSS Selector
+# CSS Selector - Types, Syntax
 
 CSS selectors are used to select the HTML elements you want to style and apply a set of CSS rules. There are a few different types of CSS Selectors:
 
