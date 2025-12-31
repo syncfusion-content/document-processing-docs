@@ -145,15 +145,15 @@ Here’s how to handle the server-side action for converting word document in to
 
 To know about server-side action, please refer this [page](./web-services-overview).
 
-## Enable Async (Lazy) Loading in Document Editor
+## Load documents asynchronously
 
-Document Editor provides an option to enable Async (Lazy) Loading using the [`openAsyncSettings`](https://ej2.syncfusion.com/documentation/api/document-editor/openasyncsettings) property.
+Document Editor provides an option to load a document asynchronously using the [`openAsyncSettings`](https://ej2.syncfusion.com/documentation/api/document-editor/openasyncsettings) property.
 
 * [`enable`](https://ej2.syncfusion.com/documentation/api/document-editor/openasyncsettings#enable) - Enables or disables async loading.
 * [`initialPageLoadCount`](https://ej2.syncfusion.com/documentation/api/document-editor/openasyncsettings#initialpageloadcount) - Defines the number of pages rendered immediately when the document opens.
 * [`incrementalPageLoadCount`](https://ej2.syncfusion.com/documentation/api/document-editor/openasyncsettings#incrementalpageloadcount) - Specifies how many pages load in each background batch after the initial set.
 
-The following code shows the how to enable the Async loading in Document Editor.
+The following code shows the how to enable the asynchronous loading in Document Editor.
 
 ```c#
 let container: DocumentEditorContainer = new DocumentEditorContainer({
