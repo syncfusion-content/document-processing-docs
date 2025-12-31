@@ -98,15 +98,15 @@ internal static FormatType GetFormatType(string format)
     }
 }
 ```
-## Enable Async (Lazy) Loading in Document Editor
+## Load documents asynchronously
 
-Document Editor provides an option to enable Async (Lazy) Loading using the [`openAsyncSettings`] property.
+Document Editor provides an option to load a document asynchronously using the [`openAsyncSettings`] property.
 
 * [`enable`] - Enables or disables async loading.
 * [`initialPageLoadCount`] - Defines the number of pages rendered immediately when the document opens.
 * [`incrementalPageLoadCount`] - Specifies how many pages load in each background batch after the initial set.
 
-The following code shows the how to enable the Async loading in Document Editor.
+The following code shows the how to enable the asynchronous loading in Document Editor.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
