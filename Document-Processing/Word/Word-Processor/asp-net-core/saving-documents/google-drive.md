@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save to Google Drive in ASP.NET MVC Document editor | Syncfusion
-description:  Learn about how to Save document to Google Drive in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save document to Google Drive in Document editor | Syncfusion
+description:  Learn about how to Save document to Google Drive in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Google Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Drive in ASP.NET MVC
+# Save document to Google Drive in ASP.NET Core
 
 To save a document to Google Drive, you can follow the steps below
 
@@ -17,9 +17,9 @@ To save a document to Google Drive, you can follow the steps below
 You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
 
 
-**Step 2:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -151,12 +151,13 @@ In the client-side, to export the document into blob the document using `saveAsB
 
 
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/save-google-drive/razor %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-google-drive/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/save-google-drive/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-google-drive/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
+
 
 N> The **Google.Apis.Drive.v3** NuGet package must be installed in your application to use the previous code example.

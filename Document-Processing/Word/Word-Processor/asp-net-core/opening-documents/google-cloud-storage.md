@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Save to Google Cloud in ASP.NET MVC Document editor | Syncfusion
-description:  Learn about how to Save document to Google Cloud Storage in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Google Cloud Files in ASP.NET Core Document Editor | Syncfusion
+description: Learn about how to Open document from Google Cloud Storage in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
-control: Save document to Google Cloud Storage
+control: Open document from Google Cloud Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Cloud Storage in ASP.NET MVC
+# Open document from Google Cloud Storage
 
-To save a document to Google Cloud Storage, you can follow the steps below
-
-
-**Step 1:** Create a Simple Document Editor Sample in ASP.NET MVC
-
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+To load a document from Google Cloud Storage in a Document editor, you can follow the steps below
 
 
-**Step 2:** Create the `DocumentEditorController.cs` File in the Web Service Project
+**Step 1:** Create a Simple Document Editor Sample in ASP.NET Core
+
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
+
+
+**Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
 * Open the `DocumentEditorController.cs` file in your web service project.
 
@@ -60,44 +60,33 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `SaveToGoogleCloud()` method to save the downloaded document to Google Cloud Storage bucket
+* Create the `LoadFromGoogleCloud()` method to load the document from Google Cloud Storage.
 
 ```csharp
 [AcceptVerbs("Post")]
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
-[Route("SaveToGoogleCloud")]
-//Post action for downloading the document
-public void SaveToGoogleCloud(IFormCollection data)
+[Route("LoadFromGoogleCloud")]
+//Post action for Loading the documents
+
+public async Task<string> LoadFromGoogleCloud([FromBody] Dictionary<string, string> jsonObject)
 {
-   if (data.Files.Count == 0)
-    return;
-
-  IFormFile file = data.Files[0];
-  string documentName = this.GetValue(data, "documentName");
-  string result = Path.GetFileNameWithoutExtension(documentName);
-
-  string bucketName = _bucketName;
-
-  Stream stream = new MemoryStream();
-  file.CopyTo(stream);
-
-  // Upload the document to Google Cloud Storage
-  _storageClient.UploadObject(bucketName, result + "_downloaded.docx", null, stream);
-
-}   
-
-private string GetValue(IFormCollection data, string key)
-{
-    if (data.ContainsKey(key))
+    if (jsonObject == null && !jsonObject.ContainsKey("documentName"))
     {
-        string[] values = data[key];
-        if (values.Length > 0)
-        {
-            return values[0];
-        }
+      return null
     }
-    return "";
+    MemoryStream stream = new MemoryStream();
+
+    string bucketName = _bucketName;
+    string objectName = jsonObject["document"];
+    _storageClient.DownloadObject(bucketName, objectName, stream);
+    stream.Position = 0;
+
+    WordDocument document = WordDocument.Load(stream, FormatType.Docx);
+    string json = Newtonsoft.Json.JsonConvert.SerializeObject(document);
+    document.Dispose();
+    stream.Close();
+    return json;
 }
 ```
 
@@ -120,18 +109,19 @@ N> Replace **Your Bucket name from Google Cloud Storage** with the actual name o
 
 N> Replace **path/to/service-account-key.json** with the actual file path to your service account key JSON file. Make sure to provide the correct path and filename.
 
-**Step 4:**  Modify the Index.cshtml File in the Document Editor sample
+**Step 3:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in Google Cloud Storage.
+In the client-side, the document is returned from the web service is opening using `open` method.
 
 
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/save-google-cloud-storage/razor %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/open-google-cloud-storage/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/save-google-cloud-storage/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/open-google-cloud-storage/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
+
 
 N> The **Google.Cloud.Storage.V1** NuGet package must be installed in your application to use the previous code example.

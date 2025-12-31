@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Open OneDrive Files in ASP.NET MVC Document editor | Syncfusion
-description: Learn about how to Open document from One Drive in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save document to One Drive Document editor | Syncfusion
+description:  Learn about how to Save document to One Drive in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
-control: Open document from One Drive
+control: Save document to One Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from One Drive in ASP.NET MVC Document editor
+# Save document to One Drive in ASP.NET Core
 
-To load a document from One Drive in a Document editor, you can follow the steps below
+To save a document to One Drive, you can follow the steps below
 
 **Step 1:** Create the Microsoft graph API.
 
 Need to create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs. 
 
 
-**Step 2:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -54,60 +54,64 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `LoadFromOneDrive()` method to load the document from One Drive.
+* Create the `SaveToOneDrive()` method to save the downloaded document to One Drive bucket
 
 ```csharp
 [AcceptVerbs("Post")]
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
-[Route("LoadFromBoxCloud")]
-//Post action for Loading the documents
+[Route("SaveToOneDrive")]
+//Post action for downloading the document
 
-public async Task<string> LoadFromOneDrive([FromBody] Dictionary<string, string> jsonObject)
+public void SaveToOneDrive(IFormCollection data)
 {
-  MemoryStream stream = new MemoryStream();
+
+  if (data.Files.Count == 0)
+    return;
+
+  IFormFile file = data.Files[0];
+  string documentName = this.GetValue(data, "documentName");
+  string result = Path.GetFileNameWithoutExtension(documentName);
+  string fileName = result + "_downloaded.docx";
+
+  Stream stream = new MemoryStream();
+  file.CopyTo(stream);
+  
 
   var config = LoadAppSettings();
   var client = GetAuthenticatedGraphClient(config);
 
   var request = client.Me.Drive.Root.Children.Request();
-  string folderIdToSearch = string.Empty;
+  string folderId = string.Empty;
   var results = await request.GetAsync();
 
   var folder = results.FirstOrDefault(f => f.Name == folderName && f.Folder != null);
   if (folder != null)
   {
     // Save the matching folderId
-    folderIdToSearch = folder.Id;
+    folderId = folder.Id;
   }
 
-  var folderRequest = client.Me.Drive.Items[folderIdToSearch].Children.Request();
-  var folderContents = await folderRequest.GetAsync();
+  var uploadedFile = client.Me.Drive.Items[folderId]
+                     .ItemWithPath(fileName)
+                     .Content
+                     .Request()
+                     .PutAsync<DriveItem>(stream)
+                     .Result;
 
-  string fileIdToDownload = string.Empty;
-  var file = folderContents.FirstOrDefault(f => f.File != null && f.Name == objectName);
-  if (file != null)
-  {
-    // Save the matching fileId
-    fileIdToDownload = file.Id;
-  }
+}
 
-  string fileIds = fileIdToDownload;
-  var fileRequest = client.Me.Drive.Items[fileIdToDownload].Content.Request();
-
-  using (var streamResponse = await fileRequest.GetAsync())
-  {
-    if (streamResponse != null)
+private string GetValue(IFormCollection data, string key)
+{
+    if (data.ContainsKey(key))
     {
-      streamResponse.Seek(0, SeekOrigin.Begin);
-      await streamResponse.CopyToAsync(stream);
+        string[] values = data[key];
+        if (values.Length > 0)
+        {
+            return values[0];
+        }
     }
-  }
-  WordDocument document = WordDocument.Load(stream, FormatType.Docx);
-  string json = Newtonsoft.Json.JsonConvert.SerializeObject(document);
-  document.Dispose();
-  stream.Close();
-  return json;
+    return "";
 }
 ```
 
@@ -124,7 +128,7 @@ public async Task<string> LoadFromOneDrive([FromBody] Dictionary<string, string>
   "AllowedHosts": "*",
   "TenantId": "Your_Tenant_ID",
   "applApplicationIdicationId": "Your_Application_ID",
-  "FolderName": "Your_Folder_Name_To_Access_The_Files_In_OneDrive"
+  "FolderName": "Your_Folder_Name_To_Access_The_Files_In_Onedrive"
 }
 
 ```
@@ -133,17 +137,18 @@ N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_T
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using `open` method.
+In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in One Drive.
 
 
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-one-drive/razor %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-one-drive/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-one-drive/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-one-drive/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
+
 
 N> The following NuGet packages are required to use the previous code example
 * **Microsoft.Identity.Client**

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Box Cloud Files in ASP.NET MVC Document Editor | Syncfusion
-description: Learn here to open a document from Box cloud file storage in Syncfusion ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more.
+title: Open Box Cloud Files in ASP.NET Core Document Editor | Syncfusion
+description: Learn here to open a document from Box cloud file storage in Syncfusion ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Opening from Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
---- 
+---  
 
-# Open document from Box cloud file storage in ASP.NET MVC
+# Open document from Box cloud file storage
 
 To load a document from Box cloud file storage in a document Editor, you can follow the steps below
 
@@ -17,9 +17,9 @@ To load a document from Box cloud file storage in a document Editor, you can fol
 To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/guides), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials Client ID and Client Secret to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
 
 
-**Step 2:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -124,14 +124,14 @@ N> replace **Your_Box_Storage_Access_Token** with your actual box access token, 
 
 In the client-side, the document is returned from the web service is opening using `open` method.
 
-
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-box-cloud-file-storage/razor %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/open-box-cloud-file-storage/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-box-cloud-file-storage/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/open-box-cloud-file-storage/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
+
 
 N> The **Box.V2.Core** NuGet package must be installed in your application to use the previous code example.
