@@ -89,6 +89,6 @@ CSS selectors are used to select the HTML elements you want to style and apply a
 </tr>
 </table>
 
-You can download a complete working sample that includes all these CSS selectors from [GitHub] (https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/HTML-conversions/Convert-HTML-with-CSS-Selctor-to-Word)
+You can download a complete working sample that includes all these CSS selectors from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/HTML-conversions/Convert-HTML-with-CSS-Selctor-to-Word)
 
 
