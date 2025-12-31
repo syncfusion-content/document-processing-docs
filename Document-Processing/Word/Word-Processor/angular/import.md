@@ -151,6 +151,50 @@ Here’s how to handle the server-side action for converting word document in to
 
 To know about server-side action, please refer this [page](./web-services-overview).
 
+## Load documents asynchronously
+
+Document Editor provides an option to load a document asynchronously using the [`openAsyncSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/openasyncsettings) property.
+
+* [`enable`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/openasyncsettings#enable) - Enables or disables async loading.
+* [`initialPageLoadCount`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/openasyncsettings#initialpageloadcount) - Defines the number of pages rendered immediately when the document opens.
+* [`incrementalPageLoadCount`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/openasyncsettings#incrementalpageloadcount) - Specifies how many pages load in each background batch after the initial set.
+
+The following code shows the how to enable the asynchronous loading in Document Editor.
+
+```csharp
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {
+  ToolbarService,
+  DocumentEditorContainerComponent,
+} from '@syncfusion/ej2-angular-documenteditor';
+import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documenteditor';
+@Component({
+  selector: 'app-container',
+  standalone: true,
+  imports: [DocumentEditorContainerModule],
+  providers: [ToolbarService],
+  template: `<ejs-documenteditorcontainer #documenteditor_default 
+      serviceUrl="HostUrl" 
+      height="600px" 
+      style="display:block" 
+      [documentEditorSettings]= "Settings">
+    </ejs-documenteditorcontainer>
+  `,
+})
+export class AppComponent implements OnInit {
+  @ViewChild('documenteditor_default')
+  public container?: DocumentEditorContainerComponent;
+  public Settings = {
+    openAsyncSettings: {
+      enable: true,               // Enable async (lazy) loading
+      initialPageLoadCount: 5,    // Render first 5 pages immediately
+      incrementalPageLoadCount: 3 // Load 3 pages per background batch
+    }
+  };  ngOnInit(): void {}
+}
+```
+>Note: Users can view the pages already loaded, but all other interactions remain restricted until all pages finish loading.
+
 ## Compatibility with Microsoft Word
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor is a minimal viable Word document viewer/editor product for web applications. As most compatible Word editor, the product vision is adding valuable feature sets of Microsoft Word, and not to cover 100% feature sets of Microsoft Word desktop application. You can even see the feature sets difference between Microsoft Word desktop and their Word online application. So kindly don't misunderstand this component as a complete replacement for Microsoft Word desktop application and expect 100% feature sets of it.

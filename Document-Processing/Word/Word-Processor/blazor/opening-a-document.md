@@ -393,3 +393,27 @@ The following example code illustrates how to use `MetafileImageParsed` event fo
     }
 }
 ```
+
+## Load documents asynchronously
+
+Document Editor provides an option to load a document asynchronously using the [`OpenAsyncSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.OpenAsyncSettingsModel.html) property.
+
+* [`Enable`] - Enables or disables async loading.
+* [`InitialPageLoadCount`] - Defines the number of pages rendered immediately when the document opens.
+* [`IncrementalPageLoadCount`] - Specifies how many pages load in each background batch after the initial set.
+
+The following code shows the how to enable the asynchronous loading in Document Editor.
+
+```cshtml
+@using Syncfusion.Blazor.DocumentEditor
+
+<SfDocumentEditorContainer @ref="container" Height="590px" DocumentEditorSettings="@settings">
+</SfDocumentEditorContainer> 
+
+@code {
+    SfDocumentEditorContainer container; 
+    DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { OpenAsyncSettings = { Enable = true, InitialPageLoadCount = 5, IncrementalPageLoadCount= 3 }};
+
+}
+```
+>Note: Users can view the pages already loaded, but all other interactions remain restricted until all pages finish loading.
