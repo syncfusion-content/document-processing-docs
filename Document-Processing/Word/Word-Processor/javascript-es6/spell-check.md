@@ -81,6 +81,14 @@ The following code example illustrates how to enable optimized spell checking.
 documentEditor.spellChecker.enableOptimizedSpellCheck = true;
 ```
 
+### EnableUserDictionary
+
+By default, Document Editor maintains a shared custom dictionary for all users. You can enable user-specific dictionary support using the [`enableUserDictionary`](https://ej2.syncfusion.com/documentation/api/document-editor/spellchecker#enableuserdictionary-boolean) API, which stores and retrieves error words based on the [`currentUser`] property.
+
+```ts
+documentEditor.spellChecker.enableUserDictionary = true;
+```
+
 ### Spell check dictionary cache
 
 Starting from `v20.1.0.xx`, we have optimized the performance and memory usage of spell checker by adding a static method to initialize the dictionaries with specified cache count.
