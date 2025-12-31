@@ -67,7 +67,7 @@ Document editor provides option to spellcheck page by page when loading the docu
 this.container.documentEditor.spellChecker.enableOptimizedSpellCheck = true;
 ```
 
-### Ignoring Uppercase Words
+### Ignore uppercase
 
 By default, the DocumentEditor spell checker evaluates all words, including those written in uppercase. To exclude uppercase words such as acronyms or constants from spell check validation, enable the `ignoreUppercase` property.
 
