@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Save to Google Drive in ASP.NET MVC Document editor | Syncfusion
-description:  Learn about how to Save document to Google Drive in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Google Drive Files in ASP.NET Core Document Editor | Syncfusion
+description: Learn about how to Open document from Google Drive in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
-control: Save document to Google Drive
+control: Open document from Google Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Drive in ASP.NET MVC
+# Open document from Google Drive
 
-To save a document to Google Drive, you can follow the steps below
+To load a document from Google Drive in a Document editor, you can follow the steps below
 
 **Step 1:** Set up Google Drive API
 
 You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
 
 
-**Step 2:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -54,71 +54,62 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `SaveToGoogleDrive()` method to save the downloaded document to Google Drive bucket
+* Create the `LoadFromGoogleDrive()` method to load the document from Google Drive.
 
 ```csharp
 [AcceptVerbs("Post")]
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
-[Route("SaveToGoogleDrive")]
-//Post action for downloading the document
-
-public void SaveToGoogleDrive(IFormCollection data)
+[Route("LoadFromGoogleDrive")]
+//Post action for Loading the documents
+public async Task<string> LoadFromGoogleDrive([FromBody] Dictionary<string, string> jsonObject)
 {
-   if (data.Files.Count == 0)
-    return;
 
-  IFormFile file = data.Files[0];
-  string documentName = this.GetValue(data, "documentName");
-  string result = Path.GetFileNameWithoutExtension(documentName);
-  string fileName = result + "_downloaded.docx";
-          
+  MemoryStream stream = new MemoryStream();
   UserCredential credential;
-
-  using (var memStream = new FileStream(credentialPath, FileMode.Open, FileAccess.Read))
+  using (var stream1 = new FileStream(credentialPath, FileMode.Open, FileAccess.Read))
   {
     string credPath = "token.json";
     credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
-    GoogleClientSecrets.Load(memStream).Secrets,
-    Scopes,
-    "user",
-     CancellationToken.None,
-    new FileDataStore(credPath, true));
+      GoogleClientSecrets.Load(stream1).Secrets,
+      Scopes,
+      "user",
+      CancellationToken.None,
+      new FileDataStore(credPath, true));
   }
-          
-  // Create the Drive API service.
+
+  // Create Google Drive API service.
   var service = new DriveService(new BaseClientService.Initializer()
   {
     HttpClientInitializer = credential,
     ApplicationName = applicationName,
   });
-
-  var fileMetadata = new Google.Apis.Drive.v3.Data.File()
-  {
-    Name = fileName,
-    Parents = new List<string> { folderId }
-  };
-
-  Stream stream = new MemoryStream();
-  file.CopyTo(stream);
-
-  FilesResource.CreateMediaUpload request;
-  request = service.Files.Create(fileMetadata, stream, "application/pdf");
-  request.Fields = "id";
-  object value = await request.UploadAsync();
-}
-
-private string GetValue(IFormCollection data, string key)
-{
-    if (data.ContainsKey(key))
+  // List DOCX files in Google Drive
+  listRequest.Q = "mimeType='application/vnd.openxmlformats-officedocument.wordprocessingml.document' and '" + folderId + "' in parents and trashed=false";
+  listRequest.Fields = "files(id, name)";
+  var files = await listRequest.ExecuteAsync();
+  string fileIdToDownload = string.Empty;
+  foreach (var file in files.Files)
+  { 
+    string fileId = file.Id;
+    string fileName = file.Name;
+    if (fileName == objectName)
     {
-        string[] values = data[key];
-        if (values.Length > 0)
-        {
-            return values[0];
-        }
+      // Save the matching fileId
+      fileIdToDownload = fileId;
+      break;
     }
-    return "";
+  }
+  string fileIds = fileIdToDownload;
+  var request = service.Files.Get(fileIds);
+  await request.DownloadAsync(stream);
+  stream.Position = 0;   
+  
+  WordDocument document = WordDocument.Load(stream, FormatType.Docx);
+  string json = Newtonsoft.Json.JsonConvert.SerializeObject(document);
+  document.Dispose();
+  stream.Close();
+  return json;
 }
 ```
 
@@ -143,20 +134,19 @@ N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **You
 
 N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
 
-N> You must use a unique `Client_ID` from json file to interface your application with the Google Drive API in order to save document directly to Google Drive. This Client_ID will serve as the authentication key, allowing you to save files securely.
-
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in Google Drive.
+In the client-side, the document is returned from the web service is opening using `open` method.
 
 
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/save-google-drive/razor %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/open-google-drive/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/save-google-drive/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/open-google-drive/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
+
 
 N> The **Google.Apis.Drive.v3** NuGet package must be installed in your application to use the previous code example.

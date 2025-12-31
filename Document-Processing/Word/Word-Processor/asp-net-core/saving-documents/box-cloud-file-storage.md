@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Open Box Cloud Files in ASP.NET MVC Document Editor | Syncfusion
-description: Learn here to open a document from Box cloud file storage in Syncfusion ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more.
+title: Save to Box cloud file Document editor | Syncfusion
+description:  Learn about how to Save document to Box cloud file storage in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
-control: Opening from Box cloud file storage
+control: Save document to Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
---- 
+---
 
-# Open document from Box cloud file storage in ASP.NET MVC
+# Save document to Box cloud file storage in ASP.NET Core
 
-To load a document from Box cloud file storage in a document Editor, you can follow the steps below
+To save a document to Box cloud file storage, you can follow the steps below
 
 **Step 1:** Set up a Box developer account and create a Box application
 
 To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/guides), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials Client ID and Client Secret to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
 
 
-**Step 2:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -56,47 +56,52 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `LoadFromBoxCloud()` method to load the document from Box cloud file storage.
+* Create the `SaveToBoxCloud()` method to save the downloaded document to Box cloud file storage bucket
 
 ```csharp
 [AcceptVerbs("Post")]
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
-[Route("LoadFromBoxCloud")]
-//Post action for Loading the documents
+[Route("SaveToBoxCloud")]
+//Post action for downloading the document
 
-public async Task<string> LoadFromBoxCloud([FromBody] Dictionary<string, string> jsonObject)
+public void SaveToBoxCloud(IFormCollection data)
 {
-    if (jsonObject == null && !jsonObject.ContainsKey("documentName"))
+  if (data.Files.Count == 0)
+    return;
+
+  IFormFile file = data.Files[0];
+  string documentName = this.GetValue(data, "documentName");
+  string result = Path.GetFileNameWithoutExtension(documentName);
+
+  // Initialize the Box API client with your authentication credentials
+  var auth = new OAuthSession(_accessToken, "YOUR_REFRESH_TOKEN", 3600, "bearer");
+  var config = new BoxConfigBuilder(_clientID, _clientSecret, new Uri("http://boxsdk")).Build();
+  var client = new BoxClient(config, auth);
+
+  var fileRequest = new BoxFileRequest
+  {
+    Name = result + "_downloaded.docx",
+    Parent = new BoxFolderRequest { Id = _folderID },
+  };
+
+  Stream stream = new MemoryStream();
+  file.CopyTo(stream);
+
+  var boxFile = await client.FilesManager.UploadAsync(fileRequest, stream);
+} 
+ 
+private string GetValue(IFormCollection data, string key)
+{
+    if (data.ContainsKey(key))
     {
-      return null
+        string[] values = data[key];
+        if (values.Length > 0)
+        {
+            return values[0];
+        }
     }
-    MemoryStream stream = new MemoryStream();
-    // Initialize the Box API client with your authentication credentials
-    var auth = new OAuthSession(_accessToken, "YOUR_REFRESH_TOKEN", 3600, "bearer");
-    var config = new BoxConfigBuilder(_clientID, _clientSecret, new Uri("http://boxsdk")).Build();
-    var client = new BoxClient(config, auth);
-
-    // Download the file from Box storage
-    var items = await client.FoldersManager.GetFolderItemsAsync(_folderID, 1000, autoPaginate: true);
-    var files = items.Entries.Where(i => i.Type == "file");
-
-    // Filter the files based on the objectName
-    var matchingFile = files.FirstOrDefault(file => file.Name == objectName);
-
-    // Fetch the file from Box storage by its name
-    var fileStream = await client.FilesManager.DownloadAsync(matchingFile.Id);
-    stream = new MemoryStream();
-    await fileStream.CopyToAsync(stream);
-
-    // Reset the position to the beginning of the stream
-    stream.Position = 0;
-
-    WordDocument document = WordDocument.Load(stream, FormatType.Docx);
-    string json = Newtonsoft.Json.JsonConvert.SerializeObject(document);
-    document.Dispose();
-    stream.Close();
-    return json;
+    return "";
 }
 ```
 
@@ -122,16 +127,17 @@ N> replace **Your_Box_Storage_Access_Token** with your actual box access token, 
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using `open` method.
+In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in Box cloud file storage.
 
 
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-box-cloud-file-storage/razor %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-box-cloud-file-storage/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-box-cloud-file-storage/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-box-cloud-file-storage/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
+
 
 N> The **Box.V2.Core** NuGet package must be installed in your application to use the previous code example.

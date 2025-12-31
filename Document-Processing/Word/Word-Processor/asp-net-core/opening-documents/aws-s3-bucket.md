@@ -1,21 +1,22 @@
 ---
 layout: post
-title: Open document from AWS S3 in ASP.NET MVC Document editor | Syncfusion
-description:  Learn about how to Open document from AWS S3 in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open document from AWS S3 in ASP.NET Core Document editor | Syncfusion
+description:  Learn about how to Open document from AWS S3 in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from AWS S3 ASP.NET MVC Document editor
+# Open document from AWS S3
 
 To load a document from AWS S3 in a Document Editor, you can follow the steps below
 
 
-**Step 1:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 1:** Create a Simple Document Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
+
 
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -112,14 +113,15 @@ N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and
 
 In the client-side, the document is returned from the web service is opening using `open` method.
 
-
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-aws-s3/razor %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/open-aws-s3/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-aws-s3/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/open-aws-s3/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
+
+
 
 N> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.

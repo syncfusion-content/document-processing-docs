@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Dropbox Files in ASP.NET MVC Document Editor | Syncfusion
-description: Learn about how to Open document from Dropbox cloud file storage in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Dropbox Files in ASP.NET Core Document Editor | Syncfusion
+description: Learn about how to Open document from Dropbox cloud file storage in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Dropbox cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Dropbox cloud file storage in ASP.NET MVC
+# Open document from Dropbox cloud file storage in Document Editor
 
 To load a document from Dropbox cloud file storage in a Document editor, you can follow the steps below
 
@@ -17,9 +17,9 @@ To load a document from Dropbox cloud file storage in a Document editor, you can
 To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
 
 
-**Step 2:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -107,13 +107,12 @@ N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token a
 
 In the client-side, the document is returned from the web service is opening using `open` method.
 
-
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-dropbox-cloud-file-storage/razor %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/open-dropbox-cloud-file-storage/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-dropbox-cloud-file-storage/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/open-dropbox-cloud-file-storage/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
