@@ -121,7 +121,7 @@ The following code example illustrates how to enable optimized spell checking.
 this.container.documentEditor.spellChecker.enableOptimizedSpellCheck = true;
 ```
 
-### Ignoring Uppercase Words
+### Ignore uppercase
 
 By default, the DocumentEditor spell checker evaluates all words, including those written in uppercase. To exclude uppercase words such as acronyms or constants from spell check validation, enable the [`ignoreUppercase`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/spellchecker#ignoreuppercase-boolean) property.
 
