@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Clipboard in Document Editor Component | Syncfusion
+# Clipboard in ASP.NET MVC Document editor control
 
 Document editor takes advantage of system clipboard and allows to copy or move a portion of the document into it in HTML format, so that it can be pasted in any application that supports clipboard.
 
@@ -84,7 +84,7 @@ This paste option appears as follows.
 ![Image](images/paste.png)
 
 ## Events
-DocumentEditor provides the `beforePaste` event, which is triggered before content is pasted into the document. This event gives an opportunity to `cancel` the paste operation, modifying the incoming content using `pasteContent`, and determining its format with `pasteType`. The event handler receives a `BeforePasteEventArgs` object that contains all the necessary details about the paste operation.
+DocumentEditor provides the `beforePaste` event, which is triggered before content is pasted into the document. This event gives an opportunity to `cancel` the paste operation, modify the content to be pasted using `pasteContent`, and determining its format with `pasteType`. The event handler receives a `BeforePasteEventArgs` object that contains all the necessary details about the paste operation.
 
 The following code snippet illustrates how to achieve this:
 
