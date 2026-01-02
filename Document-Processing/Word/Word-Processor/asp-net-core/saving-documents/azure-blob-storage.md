@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Save to Azure Blob Storage in ASP.NET MVC Document editor | Syncfusion
-description:  Learn about how to Save document to Azure Blob Storage in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save to Azure Blob in Document editor | Syncfusion
+description:  Learn about how to Save document to Azure Blob Storage in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Azure Blob Storage in ASP.NET MVC
+# Save document to Azure Blob Storage in ASP.NET Core
 
 To save a document to Azure Blob Storage, you can follow the steps below
 
 
-**Step 1:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 1:** Create a Simple Document Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
 
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
-* Create a web service project in .NET Core 3.0 or above. You can refer to this [link](../web-services-overview) for instructions on how to create a web service project.
+* Create a web service project in .NET Core 3.0 or above. You can refer to this [link](../../document-editor/web-services-overview) for instructions on how to create a web service project.
 
 * Open the `DocumentEditorController.cs` file in your web service project.
 
@@ -117,12 +117,13 @@ In the client-side, to export the document into blob the document using `saveAsB
 
 
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/save-azure-blob/razor %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-azure-blob/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/save-azure-blob/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-azure-blob/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
+
 
 N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.

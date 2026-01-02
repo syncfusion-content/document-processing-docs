@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Open document from AWS S3 in ASP.NET MVC Document editor | Syncfusion
-description:  Learn about how to Open document from AWS S3 in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save document to AWS S3 in Document editor | Syncfusion
+description:  Learn about how to Save document to AWS S3 in ASP.NET Core Document editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
-control: Open document from AWS S3
+control: Save document to AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from AWS S3 ASP.NET MVC Document editor
+# Save document to AWS S3 in Document editor Component
 
-To load a document from AWS S3 in a Document Editor, you can follow the steps below
+To save a document to AWS S3, you can follow the steps below
 
 
-**Step 1:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 1:** Create a Simple Document Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
 
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -50,42 +50,50 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `LoadFromS3()` method to load the document from AWS S3.
+* Create the `SaveToS3()` method to save the document to AWS S3 bucket
 
 ```csharp
 
 [AcceptVerbs("Post")]
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
-[Route("LoadFromS3")]
-//Post action for Loading the documents
+[Route("SaveToS3")]
+//Post action for save the document to AWS S3
 
-public async Task<string> LoadFromS3([FromBody] Dictionary<string, string> onObject)
+public void SaveToS3(IFormCollection data)
 {
-  MemoryStream stream = new MemoryStream();
-
-  if (jsonObject == null && !jsonObject.ContainsKey("documentName"))
-  {
-     return null;
-  }
+  if (data.Files.Count == 0)
+    return;
   RegionEndpoint bucketRegion = RegionEndpoint.USEast1;
-
   // Configure the AWS SDK with your access credentials and other settings
   var s3Client = new AmazonS3Client(_accessKey, _secretKey, bucketRegion);
-      
-  string documentName = jsonObject["documentName"];
-      
-  // Specify the document name or retrieve it from a different source
-  var response = await s3Client.GetObjectAsync(_bucketName, documentName);
-      
-  Stream responseStream = response.ResponseStream;
-  responseStream.CopyTo(stream);
-  stream.Seek(0, SeekOrigin.Begin);
-  WordDocument document = WordDocument.Load(stream, FormatType.Docx);
-  string json = Newtonsoft.Json.JsonConvert.SerializeObject(document);
-  document.Dispose();
-  stream.Close();
-  return json;
+  string bucketName = _bucketName;
+  IFormFile file = data.Files[0];
+  string documentName = this.GetValue(data, "documentName");
+  string result = Path.GetFileNameWithoutExtension(documentName);
+  Stream stream = new MemoryStream();
+  file.CopyTo(stream);
+  var request = new PutObjectRequest
+  {
+    BucketName = bucketName,
+    Key = result + "_downloaded.docx",
+    InputStream = stream,
+  };
+  // Upload the document to AWS S3
+  var response = s3Client.PutObjectAsync(request).Result;
+}
+
+private string GetValue(IFormCollection data, string key)
+{
+    if (data.ContainsKey(key))
+    {
+        string[] values = data[key];
+        if (values.Length > 0)
+        {
+            return values[0];
+        }
+    }
+    return "";
 }
 ```
 
@@ -110,16 +118,17 @@ N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and
 
 **Step 3:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using `open` method.
+In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in AWS S3 Bucket.
 
 
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-aws-s3/razor %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-aws-s3/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-aws-s3/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/save-aws-s3/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
+
 
 N> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.

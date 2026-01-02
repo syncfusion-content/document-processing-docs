@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Open Azure Blob Files in ASP.NET MVC Document editor | Syncfusion
-description:  Learn about how to Open document from Azure Blob Storage in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Azure Blob Files in ASP.NET Core Document editor | Syncfusion
+description:  Learn about how to Open document from Azure Blob Storage in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Azure Blob Storage in ASP.NET MVC Document editor
+# Open document from Azure Blob Storage
 
 To load document from Azure Blob Storage in a Document Editor, you can follow the steps below
 
 
-**Step 1:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 1:** Create a Simple Document Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
-
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
 
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -102,10 +101,10 @@ In the client-side, the document is returned from the web service is opening usi
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-azure-blob/razor %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/open-azure-blob/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-azure-blob/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/open-azure-blob/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
