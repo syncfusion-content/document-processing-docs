@@ -674,8 +674,6 @@ This is because a Word document is a flow-based document, where contents are not
 
 DocIO is a non-UI component that provides a full-fledged document object model to manipulate the Word document contents based on file-level information. Hence, it is not feasible to retrieve the position of an element within a Word document using DocIO.
 
-## Sensitivity Labels in Word Documents
-
 ## Does DocIO support sensitivity labels?
 No, Sensitivity labels are organization-level settings and are not stored within the word document itself. Therefore, DocIO does not support applying or preserving sensitivity labels.
 
