@@ -251,6 +251,9 @@ N> Calling the above event is mandatory in ASP.NET Core, UWP, and Xamarin platfo
 ### Supported CSS Selector in DocIO
 
 CSS selectors are used to select the HTML elements you want to style and apply a set of CSS rules.
+
+N> DocIO supports only internally defined CSS selectors during HTML conversion and does not support external CSS selectors referenced in the HTML file.
+
 <table>
 <tr>
     <td><strong>Selectors</strong></td>
