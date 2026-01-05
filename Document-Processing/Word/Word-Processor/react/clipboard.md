@@ -159,8 +159,7 @@ function App() {
         height={'590px'}
         serviceUrl="hostUrl"
         enableToolbar={true}
-        enableTrackChanges={true}
-        beforePaste={handleBeforePaste }
+        beforePaste={handleBeforePaste}
       />
     </div>
   );
