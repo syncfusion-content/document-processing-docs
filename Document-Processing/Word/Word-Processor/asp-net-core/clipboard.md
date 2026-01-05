@@ -81,6 +81,7 @@ This paste option appears as follows.
 ![Image](images/paste.png)
 
 ## Events
+
 DocumentEditor provides the `beforePaste` event, which is triggered before content is pasted into the document. This event gives an opportunity to `cancel` the paste operation, modify the content to be pasted using `pasteContent`, and determining its format with `pasteType`. The event handler receives a `BeforePasteEventArgs` object that contains all the necessary details about the paste operation.
 
 The following code snippet illustrates how to achieve this:

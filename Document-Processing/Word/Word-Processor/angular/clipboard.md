@@ -135,7 +135,8 @@ This paste option appears as follows.
 ![Image](images/paste.png)
 
 ## Events
-DocumentEditor provides the [beforePaste](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#beforepaste) event, which is triggered before content is pasted into the document. This event gives an opportunity to [cancel](https://ej2.syncfusion.com/angular/documentation/api/document-editor/beforepasteeventargs#cancel) the paste operation, modify the content to be pasted using [pasteContent](https://ej2.syncfusion.com/angular/documentation/api/document-editor/beforepasteeventargs#pastecontent), and determining its format with [pasteType](https://ej2.syncfusion.com/angular/documentation/api/document-editor/beforepasteeventargs#pastetype). The event handler receives a [BeforePasteEventArgs](https://ej2.syncfusion.com/angular/documentation/api/document-editor/beforepasteeventargs) object that contains all the necessary details about the paste operation.
+
+DocumentEditor provides the [`beforePaste`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#beforepaste) event, which is triggered before content is pasted into the document. This event gives an opportunity to [`cancel`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/beforepasteeventargs#cancel) the paste operation, modify the content to be pasted using [`pasteContent`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/beforepasteeventargs#pastecontent), and determining its format with [`pasteType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/beforepasteeventargs#pastetype). The event handler receives a [`BeforePasteEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/beforepasteeventargs) object that contains all the necessary details about the paste operation.
 
 The following code snippet illustrates how to achieve this:
 
