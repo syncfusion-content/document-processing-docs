@@ -76,7 +76,7 @@ A complete working example to apply built-in style to pivot table in C# is prese
 
 ## Pivot Cell Formatting
 
-When you apply the cell formatting to pivot table cells, Microsoft Excel maintains the formatting information in pivot table and shows the cell formatting on pivot table cells from that pivot formats. XlsIO supports to apply cell formatting to pivot table range cells. You can apply all the cell formatting using [IPivotTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTable.html) [GetCellFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTable.html#Syncfusion_XlsIO_IPivotTable_GetCellFormat_System_String_) method and [IPivotCellFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotCellFormat.html) interface.
+When you apply the cell formatting to pivot table cells, Microsoft Excel maintains the formatting information in pivot table and shows the cell formatting on pivot table cells from that pivot formats. XlsIO supports to apply cell formatting to pivot table range cells. You can apply all the cell formatting using [IPivotTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html) [GetCellFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html#Syncfusion_XlsIO_IPivotTable_GetCellFormat_System_String_) method and [IPivotCellFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotCellFormat.html) interface.
 
 The following code example illustrates how to apply cell formatting to pivot table cells.
 

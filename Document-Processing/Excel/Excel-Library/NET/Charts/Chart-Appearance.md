@@ -1076,7 +1076,7 @@ A complete working example to apply 3D chart formats in C# is present on [this G
 
 Essential&reg; XlsIO allows you to explode either all data points at a single explosion value or each data point at different explosion using [Percent](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IChartSerieDataFormat.html#Syncfusion_XlsIO_IChartSerieDataFormat_Percent) of [IChartSerieDataFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartSerieDataFormat.html) interface.
 
-You can either create a pie chart and then explode it or directly create an exploded pie chart using XlsIO. Selecting `Pie_Exploded` as [ChartType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IChart.html#Syncfusion_XlsIO_IChart_ChartType) inserts a pie chart with a default explosion of **25%**. Learn how to [Create an Exploded Pie Chart](https://www.syncfusion.com/kb/8539/how-to-create-excel-exploded-pie-chart-in-c-vb-net).
+You can either create a pie chart and then explode it or directly create an exploded pie chart using XlsIO. Selecting `Pie_Exploded` as [ChartType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html#Syncfusion_XlsIO_IChart_ChartType) inserts a pie chart with a default explosion of **25%**. Learn how to [Create an Exploded Pie Chart](https://www.syncfusion.com/kb/8539/how-to-create-excel-exploded-pie-chart-in-c-vb-net).
 
 Refer the following complete code snippets.
 
@@ -1170,7 +1170,7 @@ A complete working example to explode a pie chart in C# is present on [this GitH
 
 ## Add Picture to Chart and assign Hyperlink
 
-Essential&reg; XlsIO supports assigning hyperlink to the picture added in a chart in the Excel workbook. To achieve this, create a [chart in workbook](https://help.syncfusion.com/file-formats/xlsio/working-with-charts#creating-a-chart-sheet) and add picture to the chart using [AddPicture](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Ipictures.html#Syncfusion_XlsIO_IPictures_AddPicture_System_String_) of [IPictures](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPictures.html) interface. You can assign hyperlink to the picture using [Add](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IHyperLinks.html#Syncfusion_XlsIO_IHyperLinks_Add_Syncfusion_XlsIO_IShape_Syncfusion_XlsIO_ExcelHyperLinkType_System_String_System_String_) property of [IHyperLinks](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IHyperLinks.html) interface.
+Essential&reg; XlsIO supports assigning hyperlink to the picture added in a chart in the Excel workbook. To achieve this, create a [chart in workbook](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-charts#creating-a-chart-sheet) and add picture to the chart using [AddPicture](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Ipictures.html#Syncfusion_XlsIO_IPictures_AddPicture_System_String_) of [IPictures](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPictures.html) interface. You can assign hyperlink to the picture using [Add](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IHyperLinks.html#Syncfusion_XlsIO_IHyperLinks_Add_Syncfusion_XlsIO_IShape_Syncfusion_XlsIO_ExcelHyperLinkType_System_String_System_String_) property of [IHyperLinks](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IHyperLinks.html) interface.
 
 Refer to the following complete code snippets.
 
@@ -1269,7 +1269,7 @@ N> XlsIO supports adding picture only to a chart in the workbook,but does not su
 
 Data table beneath the chart clearly represents the chart content in table format. While creating a chart, the data table is hidden, and the option should be manually enabled to view it.
 
-Essential&reg; XlsIO supports adding data table using [HasDataTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IChart.html#Syncfusion_XlsIO_IChart_HasDataTable) of [IChart](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IChart.html) interface. Enabling this property adds the data table beneath the chart.
+Essential&reg; XlsIO supports adding data table using [HasDataTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html#Syncfusion_XlsIO_IChart_HasDataTable) of [IChart](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html) interface. Enabling this property adds the data table beneath the chart.
 
 Refer the following complete code snippets.
 

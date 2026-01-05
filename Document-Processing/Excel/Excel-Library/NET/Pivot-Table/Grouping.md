@@ -186,7 +186,7 @@ End Using
 
 ## Expand or collapse
 
-XlsIO allows you to expand and collapse the [PivotFieldItems](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotFieldItems.html) or simply the pivot table rows using [IsHiddenDetails](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotItemOptions.html#Syncfusion_XlsIO_Implementation_PivotTables_PivotItemOptions_IsHiddenDetails) of [PivotItemOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.PivotTables.PivotItemOptions.html).
+XlsIO allows you to expand and collapse the [PivotFieldItems](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotFieldItems.html) or simply the pivot table rows using [IsHiddenDetails](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotItemOptions.html#Syncfusion_XlsIO_Implementation_PivotTables_PivotItemOptions_IsHiddenDetails) of [PivotItemOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotItemOptions.htmll).
 
 The following code example illustrates how to expand or collapse rows in the pivot table.
 
