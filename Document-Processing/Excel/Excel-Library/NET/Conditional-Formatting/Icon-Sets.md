@@ -100,7 +100,7 @@ A complete working example to apply Icon sets in C# is present on [this GitHub p
 
 ## Custom Icon Sets
 
-You can customize the icon set by changing the [IconSet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IIconConditionValue.html#Syncfusion_XlsIO_IIconConditionValue_IconSet) and [Index](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IIconConditionValue.html#Syncfusion_XlsIO_IIconConditionValue_Index) properties for each icon criteria.
+You can customize the icon set by changing the [IconSet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IIconConditionValue.html#Syncfusion_XlsIO_IIconConditionValue_IconSet) and [Index](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IIconConditionValue.html#Syncfusion_XlsIO_IIconConditionValue_Index) properties for each icon criteria.
 
 Custom Icon sets can be created and customized in XlsIO as follows.
 

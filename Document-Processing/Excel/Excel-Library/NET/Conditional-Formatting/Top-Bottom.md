@@ -339,14 +339,14 @@ N> **ITopBottom** **Rank** value should be in a range between 1 and 100 when set
 
 ## Format Above or Below Average Values
 
-Above/Below average rule in conditional formatting is used to highlight the cells which contains above/below the average values in a data range. Top/Bottom conditional formatting rule can be created and customized using the [IAboveBelowAverage](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IAboveBelowAverage.html) interface in XlsIO.
+Above/Below average rule in conditional formatting is used to highlight the cells which contains above/below the average values in a data range. Top/Bottom conditional formatting rule can be created and customized using the [IAboveBelowAverage](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAboveBelowAverage.html) interface in XlsIO.
 
 The properties of **IAboveBelowAverage** are:
 
 * **AverageType** - Specifies whether the conditional formatting rule looks for cell values that are above average or below average or standard deviation.
 * **StdDevValue** - Specifies standard deviation number for **AboveBelowAverage** conditional formatting rule.
 
-The following code example illustrates shows how to format a range with values that are below average using **IAboveBelowAverage** [AverageType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IAboveBelowAverage.html#Syncfusion_XlsIO_IAboveBelowAverage_AverageType) property in XlsIO.
+The following code example illustrates shows how to format a range with values that are below average using **IAboveBelowAverage** [AverageType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAboveBelowAverage.html#Syncfusion_XlsIO_IAboveBelowAverage_AverageType) property in XlsIO.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]"  playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Above%20and%20Below%20Average/.NET/Above%20and%20Below%20Average/Above%20and%20Below%20Average/Program.cs,180" %}
@@ -443,7 +443,7 @@ By executing the program, you will get the Excel file as below
 
 ### Above or Below Standard Deviation values
 
-The following code example illustrates how to format a range with values above standard deviation, using [IAboveBelowAverage](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IAboveBelowAverage.html) [AverageType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IAboveBelowAverage.html#Syncfusion_XlsIO_IAboveBelowAverage_AverageType) and [StdDevValue](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IAboveBelowAverage.html#Syncfusion_XlsIO_IAboveBelowAverage_StdDevValue) properties in XlsIO.
+The following code example illustrates how to format a range with values above standard deviation, using [IAboveBelowAverage](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAboveBelowAverage.html) [AverageType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAboveBelowAverage.html#Syncfusion_XlsIO_IAboveBelowAverage_AverageType) and [StdDevValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAboveBelowAverage.html#Syncfusion_XlsIO_IAboveBelowAverage_StdDevValue) properties in XlsIO.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]"  playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Above%20and%20Below%20Standard%20Deviation/.NET/Above%20and%20Below%20Standard%20Deviation/Above%20and%20Below%20Standard%20Deviation/Program.cs,180" %}
