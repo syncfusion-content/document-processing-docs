@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clipboard in JavaScript (ES6) Document editor control | Syncfusion
+title: Clipboard in JavaScript (ES6) Document editor | Syncfusion
 description: Learn here all about Clipboard in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Clipboard 
@@ -95,7 +95,7 @@ This paste option appear as follows.
 ![Image](images/paste.PNG)
 
 ## Events
-DocumentEditor provides the [beforePaste](https://ej2.syncfusion.com/documentation/api/document-editor/index-default#beforepaste) event, which is triggered before content is pasted into the document. This event gives an opportunity to [cancel](https://ej2.syncfusion.com/documentation/api/document-editor/beforepasteeventargs#cancel) the paste operation, modifying the incoming content using [pasteContent](https://ej2.syncfusion.com/documentation/api/document-editor/beforepasteeventargs#pastecontent), and determining its format with [pasteType](https://ej2.syncfusion.com/documentation/api/document-editor/beforepasteeventargs#pastetype). The event handler receives a [BeforePasteEventArgs](https://ej2.syncfusion.com/documentation/api/document-editor/beforepasteeventargs) object that contains all the necessary details about the paste operation.
+DocumentEditor provides the [beforePaste](https://ej2.syncfusion.com/documentation/api/document-editor/index-default#beforepaste) event, which is triggered before content is pasted into the document. This event gives an opportunity to [cancel](https://ej2.syncfusion.com/documentation/api/document-editor/beforepasteeventargs#cancel) the paste operation, modify the content to be pasted using [pasteContent](https://ej2.syncfusion.com/documentation/api/document-editor/beforepasteeventargs#pastecontent), and determining its format with [pasteType](https://ej2.syncfusion.com/documentation/api/document-editor/beforepasteeventargs#pastetype). The event handler receives a [BeforePasteEventArgs](https://ej2.syncfusion.com/documentation/api/document-editor/beforepasteeventargs) object that contains all the necessary details about the paste operation.
 
 The following code snippet illustrates how to achieve this:
 
