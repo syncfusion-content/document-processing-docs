@@ -82,13 +82,6 @@ The following code example illustrates how to enable optimized spell checking.
 ```typescript
 this.container.documentEditor.spellChecker.enableOptimizedSpellCheck = true;
 ```
-### EnableUserDictionary
-
-By default, Document Editor maintains a shared custom dictionary for all users. You can enable user-specific dictionary support using the [`enableUserDictionary`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/spellchecker#enableuserdictionary-boolean) API, which stores and retrieves error words based on the `currentUser` property.
-
-```typescript
-this.container.documentEditor.spellChecker.enableUserDictionary = true;
-```
 
 ### Spell check dictionary cache
 
