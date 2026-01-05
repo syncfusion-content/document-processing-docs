@@ -123,6 +123,35 @@ container.documentEditor.selection.navigateNextRevision();
  */
 container.documentEditor.selection.navigatePreviousRevision();
 ```
+## Custom metadata along with author
+
+The Document Editor provides options to customize revisions using [`revisionSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [`customData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/revisionsettings#customdata) property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the [`showCustomDataWithAuthor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property.
+
+The following example code illustrates how to enable and update custom metadata for track changes revisions.
+
+```js
+var container = new ej.documenteditor.DocumentEditor({
+  serviceUrl: hostUrl,
+  height: '590px',
+  enableTrackChanges: true,
+  documentEditorSettings: {
+    revisionSettings: {
+      customData: 'Developer',
+      showCustomDataWithAuthor: true
+    }}  
+});
+DocumentEditorContainer.Inject(Toolbar);
+container.appendTo('#container');
+
+```
+
+The Track Changes pane will display the author name along with the custom metadata, as shown in the screenshot below.
+
+![Custom metadata along with author](images/track-changes-customData.png)
+
+>Note:
+* When you export the document as SFDT, the customData value is stored in the revision collection. When you reopen the SFDT, the custom data is automatically restored and displayed in the Track Changes pane.
+* Other than SFDT export (e.g. DOCX and other), the customData is not preserved, as it is specific to the Document Editor component.
 
 ## Filtering changes based on user
 
