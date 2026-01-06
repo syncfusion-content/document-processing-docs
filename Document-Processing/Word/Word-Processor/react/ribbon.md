@@ -23,9 +23,7 @@ To enable Ribbon in React Document Editor, use the [`toolbarMode`](https://ej2.s
 
 By default, `toolbarMode` is `Toolbar`.
 
-## Adding CSS reference for Ribbon Mode
-
-Add Document Editor component and its dependent component styles available in **../node_modules/@syncfusion** package folder. This can be added as reference in **src/App.css**.
+To use Ribbon mode, add Document Editor component and its dependent component styles available in **../node_modules/@syncfusion** package folder. This can be added as reference in **src/App.css**.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
