@@ -23,6 +23,24 @@ To enable Ribbon in Angular Document Editor, use the [`toolbarMode`](https://ej2
 
 By default, `toolbarMode` is `Toolbar`.
 
+## Adding CSS reference for Ribbon Mode
+
+The following CSS files are available in **../node_modules/@syncfusion** package folder.
+This can be referenced in [src/styles.css] using following code.
+
+```css
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-angular-documenteditor/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-ribbon/styles/material.css';/* Required for Ribbon */
+```
+
 The following code shows the how to enable the `Ribbon` in Document Editor.
 
 ```typescript
