@@ -107,7 +107,7 @@ excelEngine.Dispose()
 {% endhighlight %}
 {% endtabs %}  
 
-For information on Print settings, refer to section [Page Setup Settings](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel-worksheet#page-setup-settings).
+For information on Print settings, refer to section [Page Setup Settings](/document-processing/excel/excel-library/net/working-with-excel-worksheet#page-setup-settings).
 
 ## See Also
 
