@@ -31,3 +31,11 @@ viewer.extractTextCompleted = args => {
 ```
 
 Find the sample: [How to extract text](https://stackblitz.com/edit/kzd4jd-dcser9?file=index.js)
+
+## See Also
+
+[Find Text](../text-search/find-text)
+[Text Search Events](../text-search/text-search-events)
+[Text Search Features](../text-search/text-search-features)
+[Extract Text](../how-to/extract-text-js)
+[Extract Text Options](../how-to/extract-text-option-js)
