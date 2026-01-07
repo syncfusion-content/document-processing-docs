@@ -72,7 +72,7 @@ pdfviewer.appendTo('#PdfViewer');
 ## Typical workflows
 
 - Design → Save → Fill: create or modify fields, save them into the PDF, then fill and validate
-- Fill → Export/Import: complete forms and export data to JSON/XFDF/FDF, or import data to prefill
+- Fill → Export/Import: complete forms and export data to JSON/XFDF/FDF, or import data to fill
 - Customize → Integrate: wire up events and business rules; tailor the designer toolbar for your app
 
 ## See also

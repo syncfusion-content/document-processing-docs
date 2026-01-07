@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Form Designer and Toolbar Customization in TypeScript PDF Viewer Component | Syncfusion
-description: Learn here all about form designer toolbar customization in Syncfusion TypeScript PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Form Designer and Toolbar Customization in TypeScript | Syncfusion
+description: Learn here all about form designer and toolbar in Syncfusion TypeScript PDF Viewer of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -39,7 +39,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 Show or hide the form designer toolbar programmatically during initialization or at runtime.
 
-Use the [EnableFormDesigner](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/pdfViewerModel/#enableformdesigner) property or the [showFormDesignerToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#showformdesignertoolbar) method to toggle visibility.
+Use the [EnableFormDesigner](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/pdfViewerModel#enableformdesigner) property or the [showFormDesignerToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar#showformdesignertoolbar) method to toggle visibility.
 
 The following code snippet explains how to show or hide the toolbar using the `EnableFormDesigner` property.
 
@@ -86,7 +86,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 Choose which tools appear and control their order in the form designer toolbar.
 
-Use [`PdfViewerToolbarSettings`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/) with the [`FormDesignerToolbarItems`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/#formdesignertoolbaritems) property to choose which form design tools are available. The property accepts a list of [`FormDesignerToolbarItem`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formDesignerToolbarItem/) values. The items you include are both displayed and rendered in the order listed; any items you omit are hidden. This provides a streamlined, user-friendly form design experience across devices.
+Use [`PdfViewerToolbarSettings`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings) with the [`FormDesignerToolbarItems`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings#formdesignertoolbaritems) property to choose which form design tools are available. The property accepts a list of [`FormDesignerToolbarItem`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formDesignerToolbarItem) values. The items you include are both displayed and rendered in the order listed; any items you omit are hidden. This provides a streamlined, user-friendly form design experience across devices.
 
 The following example demonstrates how to customize the form designer toolbar by configuring specific tools using `FormDesignerToolbarItem`.
 

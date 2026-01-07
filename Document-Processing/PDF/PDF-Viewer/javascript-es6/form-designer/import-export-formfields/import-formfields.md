@@ -94,7 +94,7 @@ document.getElementById('importJson')!.addEventListener('click', () => {
 
 ## Import as Object
 
-Import data previously exported with exportFormFieldsAsObject. Useful for client-side roundtrips without writing a file.
+Import data previously exported with exportFormFieldsAsObject. Useful for client-side round trips without writing a file.
 
 ```html
 <button id="exportDataAsObject">Export Object</button>
