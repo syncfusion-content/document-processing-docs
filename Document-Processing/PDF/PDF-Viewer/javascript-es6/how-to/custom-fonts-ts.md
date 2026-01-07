@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add custom fonts in PDF Viewer
+# Add custom fonts in TypeScript PDF Viewer
 
 The TypeScript PDF Viewer supports loading, editing, and saving custom fonts in form fields such as text boxes, list boxes, and drop-downs by using the customFonts property. Add the required TTF files to the resource URL directory used by the viewer so they can be loaded at runtime and used in forms.
  
@@ -20,8 +20,8 @@ To use custom fonts in the Syncfusion PDF Viewer, add the custom TTF files to th
 
 Steps to add custom fonts
 
-**Step 1:** Add custom TTF font files to the resource URL path referenced in the application. For example, place the TTF files in the [ej2-pdfviewer-lib](../getting-started/#load-pdf-viewer-with-local-resources) folder that serves as the resource URL path. Make sure this resource URL points to a local path in your application. You may:
-- Place fonts directly under `ej2-pdfviewer-lib` or under `ej2-pdfviewer-lib/fallbackfonts`. Reference them by relative path in `customFonts` (e.g., `"calibri.ttf"`, `"fallbackfonts/msgothic.ttc"`).
+**Step 1:** Add custom TTF font files to the resource URL path referenced in the application. For example, place the TTF files in the [ej2-pdfviewer-lib](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started#add-the-pdf-viewer-component) folder that serves as the resource URL path. Make sure this resource URL points to a local path in your application. You may:
+- Place fonts directly under `ej2-pdfviewer-lib` or under `ej2-pdfviewer-lib/fallback fonts`. Reference them by relative path in `customFonts` (e.g., `"calibri.ttf"`, `"fallback fonts/calibri.ttf"`).
 - Or use a direct absolute URL to the font file if it’s hosted and CORS-accessible.
 
 **Step 2:** Use the following code to configure custom fonts in the PDF Viewer.
