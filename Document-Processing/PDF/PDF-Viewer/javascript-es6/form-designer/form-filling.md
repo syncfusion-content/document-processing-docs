@@ -12,6 +12,27 @@ domainurl: ##DomainURL##
 
 The PDF Viewer displays existing form fields in a PDF and enables users to fill, validate, and download the filled data.
 
+## Form Fields
+
+Work with the runtime form fields present in a PDF Form.
+- Render existing fields
+- Fill fields.
+- Import/Export form data as JSON, XFDF, FDF, or as a plain object
+- Inject FormFields to enable form-filling features.
+
+Use the following code-snippet to enable form-filling by injecting `FormFields` Module.
+
+```ts
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields} from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields);
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
+pdfviewer.appendTo('#PdfViewer');
+```
+
+![FormFilling](../images/FormFill.png)
+
 The PDF Viewer supports the following form field types:
 
 * Text box
@@ -42,7 +63,7 @@ pdfviewer.enableFormDesigner = false;  //To disable Form Desinger
 pdfviewer.appendTo('#PdfViewer');
 ```
 
-## Access interactive form fields
+## Access form fields
 
 You can access the collection of all interactive form fields in the loaded document using the `formFieldCollection` property. Fetch the collection after the document is loaded.
 
