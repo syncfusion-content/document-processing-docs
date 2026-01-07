@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation permissions
+# Annotation permissions in JavaScript PDF Viewer
 
 Use [annotationSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#annotationsettings) to control creation-time permissions and behavior of annotations in the PDF Viewer.
 
