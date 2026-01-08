@@ -32,7 +32,7 @@ pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfview
 pdfviewer.appendTo('#PdfViewer');
 ```
 
-![FormFilling](../images/FormFill.png)
+![FormFilling](../images/FormFields.gif)
 
 ## Form Designer
 
@@ -56,7 +56,7 @@ pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfview
 pdfviewer.appendTo('#PdfViewer');
 ```
 
-![FormDesigner](../images/FormDesigner.png)
+![FormDesigner](../images/FormDesigner.gif)
 
 ## Supported form field types
 
