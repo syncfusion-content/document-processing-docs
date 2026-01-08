@@ -44,7 +44,7 @@ The PDF Viewer supports the following form field types:
 * Signature field
 * Initial field
 
-![Form filling in TypeScript PDF Viewer](../images/form-filling.png)
+![Form filling in TypeScript PDF Viewer](../images/FormFields.gif)
 
 ## Disabling form fields
 

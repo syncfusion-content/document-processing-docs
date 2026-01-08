@@ -33,7 +33,7 @@ pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfview
 pdfviewer.appendTo('#PdfViewer');
 ```
 
-![FormDesigner](../images/FormDesigner.png)
+![FormDesigner](../images/FormDesigner.gif)
 
 ## Show or hide the form designer toolbar
 
