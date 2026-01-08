@@ -48,9 +48,7 @@ export default {
       width2: 130,
       width3: 120,
       rowIndex: 2,
-      rowIndex1: 5,
-      cells: [{index: 0, notes: 'These shoes have the highest sales in terms of quantity this month.'}],
-      cells1: [{index: 0, notes: 'These shoes have been the most profitable this month.'}]
+      cells: [{index: 0, notes: { text: 'These shoes have the highest sales in terms of quantity this month.', isVisible: true } }]
     }
   },
   methods: {
@@ -58,6 +56,7 @@ export default {
       let spreadsheet = this.$refs.spreadsheet;
       spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:H1');
       spreadsheet.cellFormat({ verticalAlign: 'middle' }, 'A1:H11');
+      spreadsheet.updateCell({ notes: { text: 'These shoes have been the most profitable this month.' } }, 'A10:A10');
     }
   }
 }
