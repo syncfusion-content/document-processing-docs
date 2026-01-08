@@ -17,85 +17,137 @@ The PDF Viewer components provides support to control user interaction and outpu
 
 You can set these properties when you create fields, update them later programmatically, or configure default settings so fields created from the Form Designer toolbar inherit the values.
 
-## isReadOnly
+![Form Constraint](../images/ui-form-constraint.png)
 
-Use `isReadOnly` to make a field non-editable in the UI while keeping it modifiable via code.
+## Make Form Fields Read‑Only
 
-- Creation
+Use `isReadOnly` to make a field non-editable in the UI while keeping it modifiable via code. Use the following code-snippets to make form fields read-only.
+
 ```ts
-pdfviewer.formDesignerModule.addFormField('Textbox', {
-  name: 'EmployeeId',
-  bounds: { X: 146, Y: 229, Width: 150, Height: 24 },
-  isReadOnly: true,
-  value: 'EMP-0001'
-} as TextFieldSettings);
-```
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
+         TextSelection, Annotation, FormDesigner, FormFields, TextFieldSettings, SignatureFieldSettings } from '@syncfusion/ej2-pdfviewer';
 
-- Update existing field
-```ts
-const field = pdfviewer.formFieldCollections.find(f => f.name === 'EmployeeId');
-if (field) {
-  pdfviewer.formDesignerModule.updateFormField(field, { isReadOnly: false } as TextFieldSettings);
-}
-```
+PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
+                 TextSelection, Annotation, FormDesigner, FormFields);
 
-- Default for new Textbox fields
-```ts
-pdfviewer.textFieldSettings = { isReadOnly: true };
-```
+let pdfviewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
+});
+pdfviewer.appendTo('#PdfViewer');
 
-## isRequired
+//Use this setting to make Read-only as Default for new Textbox fields
+//pdfviewer.textFieldSettings = { isReadOnly: true }; 
 
-Use `isRequired` to mark fields as mandatory so they participate in validation during print/download. Turn on validation with enableFormFieldsValidation and handle validateFormFields to block actions if required fields are empty.
+pdfviewer.documentLoad = () => {
+    // Read-only Textbox
+    pdfviewer.formDesignerModule.addFormField('Textbox', {
+        name: 'EmployeeId',
+        bounds: { X: 146, Y: 229, Width: 150, Height: 24 },
+        isReadOnly: true,
+        value: 'EMP-0001'
+    } as TextFieldSettings);
 
-- Creation
-```ts
-pdfviewer.formDesignerModule.addFormField('Textbox', {
-  name: 'Email',
-  bounds: { X: 146, Y: 260, Width: 220, Height: 24 },
-  isRequired: true,
-  tooltip: 'Email is required'
-} as TextFieldSettings);
-```
-
-- Validation wiring
-```ts
-pdfviewer.enableFormFieldsValidation = true;
-pdfviewer.validateFormFields = (args: any) => {
-    //validateFormFields event triggers when fields are empty.
-  alert("Please fill all required fields. Missing: "+args.formField[0].name);
+    // Read-only Signature field
+    pdfviewer.formDesignerModule.addFormField('SignatureField', {
+        name: 'ApplicantSign',
+        bounds: { X: 57, Y: 923, Width: 200, Height: 43 },
+        isReadOnly: true,
+        tooltip: 'Sign to accept the terms'
+    } as SignatureFieldSettings);
 };
 ```
 
-- Default for new Textbox fields
+## Mark Fields as Required
+
+Use `isRequired` to mark fields as mandatory so they participate in validation during print/download. Turn on validation with enableFormFieldsValidation and handle validateFormFields to block actions if required fields are empty.
+
 ```ts
+import {
+  PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  TextSelection, TextSearch, Print, Annotation, FormDesigner, FormFields,
+  TextFieldSettings
+} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(
+  Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  TextSelection, TextSearch, Print, Annotation, FormDesigner, FormFields
+);
+
+// Create and configure the viewer
+let pdfviewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
+});
+// 1) Default for new Textbox fields
 pdfviewer.textFieldSettings = { isRequired: true };
+
+// 2) Validation wiring
+pdfviewer.enableFormFieldsValidation = true;
+pdfviewer.validateFormFields = (args: any) => {
+  // Triggers when required fields are empty on submit/validate
+  if (args && args.formField && args.formField.length > 0) {
+    alert('Please fill all required fields. Missing: ' + args.formField[0].name);
+  }
+};
+
+// 3) Creation (add a Textbox form field once the document is loaded)
+pdfviewer.documentLoad = () => {
+  pdfviewer.formDesignerModule.addFormField('Textbox', {
+    name: 'Email',
+    bounds: { X: 146, Y: 260, Width: 220, Height: 24 },
+    isRequired: true,
+    tooltip: 'Email is required'
+  } as TextFieldSettings);
+};
+
+// Mount the viewer
+pdfviewer.appendTo('#pdfViewer'); // Ensure an element with id="pdfViewer" exists in your HTML
 ```
 
-## isPrint
+## Control Field Print Behavior
 
 Use `isPrint` to control whether a field’s appearance is included when printing the PDF from the viewer.
 
-- Creation (do not print a signature field)
 ```ts
-pdfviewer.formDesignerModule.addFormField('SignatureField', {
-  name: 'ApplicantSign',
-  bounds: { X: 57, Y: 923, Width: 200, Height: 43 },
-  isPrint: false
-} as SignatureFieldSettings);
-```
+// npm install @syncfusion/ej2-pdfviewer
 
-- Update existing field
-```ts
-const sign = pdfviewer.formFieldCollections.find(f => f.name === 'ApplicantSign');
-if (sign) {
-  pdfviewer.formDesignerModule.updateFormField(sign, { isPrint: true } as SignatureFieldSettings);
-}
-```
+import {
+  PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  TextSelection, TextSearch, Print, Annotation, FormDesigner, FormFields,
+  SignatureFieldSettings
+} from '@syncfusion/ej2-pdfviewer';
 
-- Default for new signature fields
-```ts
+PdfViewer.Inject(
+  Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  TextSelection, TextSearch, Print, Annotation, FormDesigner, FormFields
+);
+
+// Create and configure the viewer
+let pdfviewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
+});
+
+// 1) Default for new signature fields
 pdfviewer.signatureFieldSettings = { isPrint: false };
+
+// 2) Creation (do not print a signature field)
+pdfviewer.documentLoad = () => {
+  pdfviewer.formDesignerModule.addFormField('SignatureField', {
+    name: 'ApplicantSign',
+    bounds: { X: 57, Y: 923, Width: 200, Height: 43 },
+    isPrint: false
+  } as SignatureFieldSettings);
+
+  // 3) Update existing field (toggle to print)
+  const sign = pdfviewer.formFieldCollections.find(f => f.name === 'ApplicantSign');
+  if (sign) {
+    pdfviewer.formDesignerModule.updateFormField(sign, { isPrint: true } as SignatureFieldSettings);
+  }
+};
+
+pdfviewer.appendTo('#pdfViewer'); // Ensure <div id="pdfViewer"></div> exists
 ```
 
 N> Printing can be invoked programmatically using pdfviewer.print.print(); fields with isPrint: false will not appear in the print output.
@@ -215,9 +267,9 @@ pdfviewer.signatureFieldSettings = {
 
 ## Behavior notes
 
-- isReadOnly only blocks user edits in the UI. You can still update the field programmatically.
-- isRequired participates in the built-in validation flow. Enable validation to enforce before print/download. See Validate form fields for details.
-- isPrint controls field appearance in the print output. It does not affect download/export unless printing is triggered.
+- Use `isReadOnly` API to only blocks user edits in the UI. You can still update the field programmatically.
+- Use `isRequired` API to participates in the built-in validation flow. Enable validation to enforce before print/download. See Validate form fields for details.
+- Use `isPrint` API controls field appearance in the print output. It does not affect download/export unless printing is triggered.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
 
