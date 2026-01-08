@@ -137,7 +137,7 @@ document.getElementById('exportObj')!.addEventListener('click', () => {
 - Export as JSON for easy integration with REST APIs.
 - Export as FDF/XFDF for interoperability with other PDF tools.
 - Export as object to combine with your app state and store securely.
-- Automate exports after validation using validateFormFields.
+- Automate exports after [validation](../form-validation) using validateFormFields.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
 
