@@ -12,6 +12,40 @@ domainurl: ##DomainURL##
 
 The PDF Viewer control provides options to add, edit, and delete free text annotations.
 
+## Enable or Disable Free Text annotation
+
+Enables or disables the free text annotation feature in the PDF Viewer. For more details, see [enableFreeText API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enablefreetext).
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+// Render the PDF viewer control
+var viewer = new ej.pdfviewer.PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
+  enableFreeText: false
+});
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.BookmarkView,
+  ej.pdfviewer.ThumbnailView,
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.TextSearch,
+  ej.pdfviewer.Print,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.LinkAnnotation,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.FormDesigner,
+  ej.pdfviewer.PageOrganizer
+);
+
+viewer.appendTo('#pdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Add a free text annotation to the PDF document
 
 Free text annotations can be added to the PDF document using the annotation toolbar.
@@ -74,7 +108,7 @@ if (addFreeTextAnnotationButton) {
 
 ## Add a free text annotation programmatically to the PDF document
 
-The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation#annotation) method.
 
 Here is an example of adding a free text annotation programmatically using addAnnotation():
 
@@ -293,6 +327,48 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
 pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
+N> To know more about FreeTextSettings, you can refer [FreeTextSettings API documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#freetextsettings)
+
+## Set default free text placeholder
+
+The `isValidFreeText` property specifies whether newly added free text annotations display a placeholder. By default, `isValidFreeText` is `true`.  
+- `true`: Displays **Type here** as placeholder text.  
+- `false`: Leaves the annotation blank so that user-entered text remains visible.
+
+For more information, see [isValidFreeText API documentation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#isvalidfreetext).
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+// Initialize the PDF Viewer
+var viewer = new ej.pdfviewer.PdfViewer({
+  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib',
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+  isValidFreeText: true, // Enables "Type here" as default text
+});
+
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.LinkAnnotation,
+  ej.pdfviewer.ThumbnailView,
+  ej.pdfviewer.BookmarkView,
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.TextSearch,
+  ej.pdfviewer.Print,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.FormDesigner
+);
+
+// Render the viewer
+viewer.appendTo('#pdfViewer');
 
 {% endhighlight %}
 {% endtabs %}

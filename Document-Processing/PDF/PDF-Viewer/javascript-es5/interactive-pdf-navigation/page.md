@@ -16,11 +16,11 @@ The JavaScript PDF Viewer supports different internal and external navigations.
 
 The default toolbar of PDF Viewer contains the following navigation options
 
-* [**Go to page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to the specific page of a PDF document.
-* [**Show next page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page of PDF a document.
-* [**Show previous page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopreviouspage):- Navigates to the previous page of a PDF document.
-* [**Show first page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotofirstpage):-  Navigates to the first page of a PDF document.
-* [**Show last page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of a PDF document.
+* [**Go to page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation#gotopage):- Navigates to the specific page of a PDF document.
+* [**Show next page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation#gotonextpage):- Navigates to the next page of PDF a document.
+* [**Show previous page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation#gotopreviouspage):- Navigates to the previous page of a PDF document.
+* [**Show first page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation#gotofirstpage):-  Navigates to the first page of a PDF document.
+* [**Show last page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation#gotolastpage):- Navigates to the last page of a PDF document.
 
 ```html
 <html>
@@ -174,6 +174,22 @@ viewer.navigation.goToPreviousPage();
 {% endtabs %}
 
 Find the sample [here](https://stackblitz.com/edit/kpzmjpf7?file=index.js) to perform the page navigation options programmatically.
+
+## Enable or disable navigation module and toolbar on load
+
+The `enableNavigation` property gets or sets a boolean value to enable or disable the page navigation of PDF Viewer while loading a document. Defaults to true. You can refer to [enableNavigation API documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enablenavigation ) for more information.
+
+```js
+  // Enable or disable page navigation
+  viewer.enableNavigation = true;
+```
+
+The `enableNavigationToolbar` property gets or sets a boolean value to enable or disable the navigation toolbar of PDF Viewer while loading a document. Defaults to true. You can refer to [enableNavigationToolbar API documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enablenavigationtoolbar) for more information.
+
+```js
+  // Enable or disable navigation toolbar
+  viewer.enableNavigationToolbar = true;
+```
 
 ## See also
 

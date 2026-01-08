@@ -18,6 +18,42 @@ The PDF Viewer control provides options to add, edit, and delete shape annotatio
 * Circle
 * Polygon
 
+## Enable or disable shape annotation support
+
+Enables or disables the shape annotation feature in the PDF Viewer; defaults to true. For more information, see [enableShapeAnnotation API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enableshapeannotation)
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.LinkAnnotation,
+  ej.pdfviewer.ThumbnailView,
+  ej.pdfviewer.BookmarkView,
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.TextSearch,
+  ej.pdfviewer.Print,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.FormDesigner
+);
+
+// Initialize the PDF Viewer
+var viewer = new ej.pdfviewer.PdfViewer({
+  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+  enableShapeAnnotation: false // Disables shape annotation feature
+});
+
+// Render the viewer
+viewer.appendTo('#pdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
 ![Shape annotations overview](../images/shape_annot.png)
 
 ## Adding a shape annotation to the PDF document
@@ -84,7 +120,7 @@ if (circleAnnotationButton) {
 
 ## Add a shape annotation to the PDF document programmatically
 
-The PDF Viewer library allows adding a shape annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library allows adding a shape annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here is an example showing how to add shape annotations programmatically using addAnnotation():
 
@@ -496,6 +532,14 @@ Refer to the following code sample to set the default annotation settings.
 
 ## Set default properties during control initialization
 
+The following properties can be used to set default shape annotation properties:
+
+- **lineSettings**: Default LineSettingsModel. See [LineSettings API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#linesettings)
+- **arrowSettings**: Default ArrowSettingsModel. See [ArrowSettings API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#arrowsettings)
+- **rectangleSettings**: Default RectangleSettingsModel. See [RectangleSettings API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#rectanglesettings)
+- **circleSettings**: Default CircleSettingsModel. See [CircleSettings API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#circlesettings)
+- **polygonSettings**: Default PolygonSettingsModel. See [PolygonSettings API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#polygonsettings)
+
 Default properties for shape annotations can be set before creating the control using LineSettings, ArrowSettings, RectangleSettings, CircleSettings, and PolygonSettings.
 
 {% tabs %}
@@ -532,3 +576,30 @@ pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
+
+## Enable or disable shape label visibility
+
+Enables or disables the display of shape labels in the PDF Viewer; defaults to true. For more information, see [enableShapeLabel API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enableshapelabel)
+
+```js
+// Enable or disable shape labels.
+viewer.enableShapeLabel = true;
+```
+
+## Configure shape label settings
+
+Defines the settings for shape labels using the [ShapeLabelSettingsModel] API. For more information, see [shapeLabelSettings API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#shapelabelsettings)
+
+```js
+// Change the shape label settings.
+viewer.shapeLabelSettings = { 
+    opacity: 1, 
+    fillColor: '#9c2592',
+    borderColor: '#ff0000', 
+    fontColor: '#000', 
+    fontSize: 16, 
+    labelHeight: 24.6, 
+    labelMaxWidth: 151, 
+    labelContent: 'XYZ' 
+};
+````

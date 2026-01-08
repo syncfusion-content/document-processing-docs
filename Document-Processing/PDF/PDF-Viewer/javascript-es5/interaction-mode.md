@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Interaction mode in Javascript PDF Viewer control
+# Interaction mode in JavaScript PDF Viewer control
 
-The PDF Viewer provides interaction mode for easy interaction with the loaded PDF document.  Selection mode and panning mode are the two interactions modes.
+The PDF Viewer provides interaction mode for easy interaction with the loaded PDF document.  Selection mode and panning mode are the two interactions modes. You can refer to [interactionMode API Documentation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#interactionmode) for more information.
 
 ## Selection mode
 
