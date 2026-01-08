@@ -110,9 +110,9 @@ Additional options such as Line Properties (for line/arrow) are available from t
 ### Modify programmatically
 
 Use editAnnotation to apply changes to an existing annotation. Common flow:
-1) Locate the target annotation from annotationCollection
-2) Update the desired properties
-3) Call editAnnotation with the modified object
+- Locate the target annotation from annotationCollection
+- Update the desired properties
+- Call editAnnotation with the modified object
 
 ```html
 <button id="bulkEdit">Bulk edit matching annotations</button>

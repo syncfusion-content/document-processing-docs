@@ -10,109 +10,30 @@ domainurl: ##DomainURL##
 
 # Annotations overview
 
+Annotations in PDFViewer are interactive elements that allow users to add notes, highlights, or text boxes directly to a PDF document. These annotations can be used to add context or feedback directly to PDF files, simplifying collaboration during document reviews.
+
 The PDF Viewer component provides a complete set of annotation tools for reviewing, measuring, and marking up PDFs in JavaScript (ES6).
 
 ## Supported annotations
 
-- Text markup: Highlight, Underline, Squiggly, Strikethrough
-- Shapes: Line, Arrow, Rectangle, Circle, Polygon
-- Text boxes: Free Text
-- Drawing: Ink (freehand)
-- Stamps: Standard and custom stamps
-- Notes: Sticky Notes (comments)
-- Redaction: Mark and apply redactions
-- Measurement: Distance, Perimeter, Area, Radius, Volume
-
-### Text markup annotation in TypeScript PDF Viewer control
-
-The PDF Viewer control provides options to add, edit, and delete text markup annotations. The supported text markup annotation types are:
-
-* Highlight
-* Underline
-* Strikethrough
-* Squiggly
-
-![Text markup annotations](../images/text_markup_annotation.png)
-
-### Shape annotation in TypeScript PDF Viewer control
-
-The PDF Viewer control provides options to add, edit, and delete shape annotations. The supported shape annotation types are:
-
-* Line
-* Arrow
-* Rectangle
-* Circle
-* Polygon
-
-![Shape annotations overview](../images/shape_annot.png)
-
-### Free text annotation in TypeScript PDF Viewer control
-
-The PDF Viewer control provides options to add, edit, and delete free text annotations.
-
-![Free text tool in the annotation toolbar](../images/freetext_tool.png)
-
-### Ink annotation in TypeScript PDF Viewer control
-
-The PDF Viewer control provides options to add, edit, and delete ink annotations.
-
-![Ink annotations overview](../images/ink_annotation.png)
-
-### Stamp annotation in TypeScript PDF Viewer control
-
-The PDF Viewer control provides options to add, edit, delete, and rotate stamp annotations.
-
-![Stamp annotations overview](../images/stamp_annot.png)
-
-### Redaction in TypeScript PDF Viewer control
-
-Redaction annotations are used to hide confidential or sensitive information in a PDF. You can mark areas for redaction and permanently apply them.
-
-![Redaction Annotations](../Redaction/redaction-annotations-images/adding-redaction-annotation.png)
-
-### Measurement annotation in TypeScript PDF Viewer control
-
-The PDF Viewer provides options to add measurement annotations such as:
-
-* Distance
-* Perimeter
-* Area
-* Radius
-* Volume
-
-![Measurement annotations overview](../images/calibrate_annotation.png)
+- Text markup: [Highlight](../annotations/annotation-types/highlight-annotation), [Underline](../annotations/annotation-types/underline-annotation), [Squiggly](../annotations/annotation-types/Squiggly-annotation), [Strikethrough](../annotations/annotation-types/strikethrough-annotation)
+- Shapes: [Line](../annotations/annotation-types/line-annotation), p[Arrow](../annotations/annotation-types/arrow-annotation), [Rectangle](../annotations/annotation-types/rectangle-annotation), [Circle](../annotations/annotation-types/circle-annotation), [Polygon](../annotations/annotation-types/polygon-annotation)
+- Text boxes: [Free Text](../annotations/annotation-types/free-text-annotation)
+- Drawing: [Ink](../annotations/annotation-types/ink-annotation) (freehand)
+- Stamps: [Standard and custom stamps](../annotations/annotation-types/stamp-annotation)
+- Notes: [Sticky Notes](../annotations/annotation-types/sticky-notes-annotation) (comments)
+- Redaction: Mark and apply [redactions](../annotations/annotation-types/redaction-annotation)
+- Measurement: [Distance](../annotations/annotation-types/distance-annotation), [Perimeter](../annotations/annotation-types/perimeter-annotation), [Area](../annotations/annotation-types/area-annotation), [Radius](../annotations/annotation-types/radius-annotation), [Volume](../annotations/annotation-types/volume-annotation)
 
 ## Annotation manipulation capabilities
 
-- Create annotations via toolbar/context menu and through APIs
-- Select single or multiple annotations; marquee selection
-- Move, resize, and rotate (where applicable)
-- Edit contents (for notes and free text) and update properties (color, opacity, thickness, fill, font, line endings)
-- Copy, paste, duplicate, delete; lock/unlock to prevent changes
-- Import/export annotations (e.g., JSON/XFDF) and save with the PDF; optional flattening
-- Undo/redo recent actions
-- Respect document permissions; restrict tools or edits when required
-
-### Comments in TypeScript PDF Viewer control
-
-The PDF Viewer control provides options to add, edit, and delete comments for the following annotations in PDF documents:
-
-* Shape annotation
-* Stamp annotation
-* Sticky note annotation
-* Measurement annotation
-* Text markup annotation
-* Free text annotation
-* Ink annotation
-* Redaction annotation
-
-![Comment panel overview](../images/commentannot.png)
-
-### Import and Export Annotations
-
-You can save and reload annotations by exporting and importing them in JSON format. This makes it easy to persist annotations or share them across sessions.
-
-For more details, see the [Export and import annotations documentation](../annotations/export-import/export-annotation.md).
+- [Create annotations](../annotations/create-modify-annotation): Use the toolbar, context menu, or APIs to add highlights, notes, shapes, and more directly onto the PDF document.
+- [Edit annotations](../annotations/create-modify-annotation.md): Modify existing annotations by moving, resizing, or updating text and style properties like color, opacity, and thickness.
+- [Customize annotations](../annotations/customize-annotation): Adjust appearance and behavior—such as fonts, fill colors, and opacity—through the UI or configuration options.
+- [Undo and redo annotations](../annotations/annotations-undo-redo): Revert or reapply annotation actions (add, edit, delete) using toolbar buttons or corresponding APIs.
+- [Import and export annotations](../annotations/export-import/export-annotation): Save and load annotations in JSON or XFDF formats to persist markups across sessions or share them with others.
+- Set [Permissions](../annotations/annotation-permission): Enable or disable annotation permission, ensuring compliance with document permissions.
+- Add and manage [comments](../annotations/comments): Insert, edit, and delete comments or sticky notes attached to annotations for clearer feedback and collaboration.
 
 ## See also
 
