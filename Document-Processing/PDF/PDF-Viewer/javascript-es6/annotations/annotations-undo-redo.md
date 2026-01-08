@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Perform undo and redo in TypeScript 
+# Perform undo and redo in TypeScript 
 
 The PDF Viewer supports undo and redo for Annotations.
 
