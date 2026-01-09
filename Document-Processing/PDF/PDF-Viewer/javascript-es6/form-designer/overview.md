@@ -43,7 +43,7 @@ Create and customize interactive fields directly on the PDF page.
 - [Control interaction](../form-designer/form-constrain): toggle read-only, show/hide, and manage printing behavior
 - [Manage fields](../form-designer/group-formfields): select, group/ungroup, reorder, or delete
 - [Save and print](../download): persist designed fields in the PDF and print with appearances
-- [Tailor the UI](./form-designer/#how-to-customize-the-form-designer-toolbar): show/hide or customize the Form Designer toolbar; handle events for add/edit/select/move/resize
+- [Tailor the UI](./form-designer#how-to-customize-the-form-designer-toolbar): show/hide or customize the Form Designer toolbar; handle events for add/edit/select/move/resize
 
 Use the following Code-snippet to enable Form Designer by injecting `FormDesigner` Module.
 
@@ -60,20 +60,20 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Supported form field types
 
-- [Textbox](../form-designer/Create-edit-Style-del-formFields/create-formfields/#add-textbox)
-- [Password](../form-designer/Create-edit-Style-del-formFields/create-formfields/#add-password)
-- [CheckBox](../form-designer/Create-edit-Style-del-formFields/create-formfields/#add-checkbox)
-- [RadioButton](../form-designer/Create-edit-Style-del-formFields/create-formfields/#add-radiobutton)
-- [ListBox](../form-designer/Create-edit-Style-del-formFields/create-formfields/#add-listbox)
-- [DropDown](../form-designer/Create-edit-Style-del-formFields/create-formfields/#add-dropdown)
-- [Signature field](../form-designer/Create-edit-Style-del-formFields/create-formfields/#add-signature-field)
-- [Initial field](../form-designer/Create-edit-Style-del-formFields/create-formfields/#add-initial-field)
+- [Textbox](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-textbox)
+- [Password](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-password)
+- [CheckBox](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-checkbox)
+- [RadioButton](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-radiobutton)
+- [ListBox](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-listbox)
+- [DropDown](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-dropdown)
+- [Signature field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-signature-field)
+- [Initial field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-initial-field)
 
 ## Typical workflows
 
 - **Design** → Save → Fill: [create or modify fields](./Create-edit-Style-del-formFields/create-formfields), save them into the PDF, then fill and validate
 - **Fill** → [Export/Import](./import-export-formfields/export-formfields): complete forms and export data to JSON/XFDF/FDF, or import data to fill
-- **Customize** → Integrate: wire up events and business rules; tailor the designer [toolbar](./form-designer/#how-to-customize-the-form-designer-toolbar) for your app
+- **Customize** → Integrate: wire up events and business rules; tailor the designer [toolbar](./form-designer#how-to-customize-the-form-designer-toolbar) for your app
 
 ## See also
 
