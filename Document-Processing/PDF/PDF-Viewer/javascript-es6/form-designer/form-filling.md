@@ -35,18 +35,18 @@ pdfviewer.appendTo('#PdfViewer');
 
 The PDF Viewer supports the following form field types:
 
-* Text box
-* Password
-* Check box
-* Radio button
-* List box
-* Dropdown
-* Signature field
-* Initial field
+* [Text box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-listbox)
+* [Password](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-password)
+* [Check box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-checkbox)
+* [Radio button](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-radiobutton)
+* [List box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-listbox)
+* [Dropdown](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-dropdown)
+* [Signature field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-signature-field)
+* [Initial field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-initial-field)
 
 ![Form filling in TypeScript PDF Viewer](../images/FormFields.gif)
 
-## Disabling form fields
+## Disabling form filling
 
 The PDF Viewer provides an option to disable interaction with form fields using `enableFormDesigner` API. Use the following configuration to disable form fields in the viewer.
 
