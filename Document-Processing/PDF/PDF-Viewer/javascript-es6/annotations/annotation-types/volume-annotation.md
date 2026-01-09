@@ -27,9 +27,7 @@ N> When in pan mode, selecting a measurement annotation switches the viewer to t
 
 ![Measurement toolbar](../../images/calibrate_tool.png)
 
-### Add a volume annotation programmatically
-
-#### Enable volume mode
+### Enable volume mode
 
 The PDF Viewer component allows drawing Volume annotations programmatically after enabling Volume mode in button clicks.
 
@@ -82,7 +80,7 @@ document.getElementById('setNone')?.addEventListener('click', () => {
 {% endhighlight %}
 {% endtabs %}
 
-#### Add volume annotation
+### Add a volume annotation programmatically
 
 Add measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
@@ -143,7 +141,7 @@ You can select, move, and resize Volume annotations directly in the viewer:
 - Resize: drag the handles to adjust its size.
 - Delete or access more options from the context menu.
 
-### Edit the properties of volume annotations
+#### Edit the properties of volume annotations
 
 The fill color, stroke color, thickness, and opacity can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -250,6 +248,62 @@ pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.volumeSettings = { fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow' };
 pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `VolumeSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default Volume settings.
+
+```html
+<button id="Volume">Add Volume</button>
+```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, VolumeSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+//Apply Volume Settings while adding individual Annotation
+document.getElementById('Volume')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Volume', {
+        offset: { x: 200, y: 810 },
+        pageNumber: 1,
+        vertexPoints: [
+            { x: 200, y: 810 }, { x: 200, y: 919 }, { x: 320, y: 919 }, { x: 320, y: 809 }, { x: 200, y: 810 }
+        ],
+        fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'
+    } as VolumeSettings);
+});
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, VolumeSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+//Apply Volume Settings while adding individual Annotation
+document.getElementById('Volume')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Volume', {
+        offset: { x: 200, y: 810 },
+        pageNumber: 1,
+        vertexPoints: [
+            { x: 200, y: 810 }, { x: 200, y: 919 }, { x: 320, y: 919 }, { x: 320, y: 809 }, { x: 200, y: 810 }
+        ],
+        fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'
+    } as VolumeSettings);
+});
 {% endhighlight %}
 {% endtabs %}
 

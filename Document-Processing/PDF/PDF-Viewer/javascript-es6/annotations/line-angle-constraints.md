@@ -12,7 +12,10 @@ domainurl: ##DomainURL##
 
 The PDF Viewer control provides robust **line angle constraints** functionality. This allows users to draw line type annotations with controlled angle snapping, improving accuracy and consistency across technical drawings and measurements across your PDF documents.
 
+![Line Angle Constraint](../annotations/annotation-images/line-angle-constraint.gif)
+
 ## Enable line angle constraints
+
 Configure the `enableLineAngleConstraints` property within `annotationDrawingOptions`. When enabled, supported line-type annotations snap to fixed angles.
 
 The following code demonstrates how to enable line angle constraints:
@@ -25,6 +28,33 @@ The following code demonstrates how to enable line angle constraints:
     viewer.annotationDrawingOptions.restrictLineAngleTo = 90;
     viewer.appendTo("#PdfViewer");
 ```
+
+## Work with constrained annotations
+
+### Drawing Behavior
+
+When line angle constraints are enabled:
+
+- Start drawing a supported annotation (Line, Arrow, Polyline, Distance, or Perimeter).
+- The segment snaps to the nearest allowed angle.
+- A visual indicator reflects snapping in real time.
+- Release to complete the annotation.
+
+### Keyboard Shortcuts
+
+Desktop platforms:
+- Shift + drag: toggles snapping. If constraints are disabled, Shift temporarily enables them; if enabled, Shift enforces snapping.
+
+### Selector-Based Modifications
+
+When modifying existing line annotations using selectors:
+
+- Constraints apply based on the original line direction.
+- The reference angle (0°) is determined by the line’s current orientation.
+- Constraint snapping during modification is supported for Line and Arrow.
+- Adjustments snap to the configured angle increment.
+
+[View a sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to)
 
 ## Configuration Properties
 
@@ -62,32 +92,6 @@ Examples:
 - restrictLineAngleTo: 45 → Snapped angles: 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°, 360°
 - restrictLineAngleTo: 100 → Snapped angles: 0°, 100°, 200°, 300°, 360°
 
-## Work with constrained annotations
-
-### Drawing Behavior
-
-When line angle constraints are enabled:
-
-- Start drawing a supported annotation (Line, Arrow, Polyline, Distance, or Perimeter).
-- The segment snaps to the nearest allowed angle.
-- A visual indicator reflects snapping in real time.
-- Release to complete the annotation.
-
-### Keyboard Shortcuts
-
-Desktop platforms:
-- Shift + drag: toggles snapping. If constraints are disabled, Shift temporarily enables them; if enabled, Shift enforces snapping.
-
-### Selector-Based Modifications
-
-When modifying existing line annotations using selectors:
-
-- Constraints apply based on the original line direction.
-- The reference angle (0°) is determined by the line’s current orientation.
-- Constraint snapping during modification is supported for Line and Arrow.
-- Adjustments snap to the configured angle increment.
-
-[View a sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to)
 
 N> Refer to the TypeScript PDF Viewer [feature tour](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) for feature highlights. Explore the [TypeScript PDF Viewer examples](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples) to learn how to render and configure the PDF Viewer.
 

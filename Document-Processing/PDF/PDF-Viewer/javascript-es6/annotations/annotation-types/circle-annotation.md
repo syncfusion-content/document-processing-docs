@@ -27,9 +27,7 @@ N> When in pan mode, selecting a shape annotation switches the viewer to text se
 
 ![Shape toolbar](../../images/shape_toolbar.png)
 
-### Add a circle annotation programmatically
-
-#### Enable circle mode
+### Enable circle mode
 
 The PDF Viewer library allows drawing Circle annotations programmatically after enabling Circle mode in button clicks.
 
@@ -82,7 +80,7 @@ document.getElementById('setNone')?.addEventListener('click', () => {
 {% endhighlight %}
 {% endtabs %}
 
-#### Add circle annotation
+### Add a circle annotation programmatically
 
 Add shape annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
@@ -141,7 +139,7 @@ You can select, move, and resize Circle annotations directly in the viewer:
 - Resize: drag the corner handles to adjust its diameter.
 - Delete or access more options from the context menu.
 
-### Editing the properties of the circle annotation
+#### Editing the properties of the circle annotation
 
 The fill color, stroke color, thickness, and opacity of circle shape annotations can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -250,6 +248,66 @@ pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.circleSettings = { fillColor: 'orange', opacity: 0.6, strokeColor: 'pink' };
 pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `CircleSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default Circle settings.
+
+```html
+<button id="Circle">Add Circle</button>
+```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, CircleSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+//Apply Circle Settings while adding individual Annotation
+document.getElementById('Circle')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Circle', {
+        offset: { x: 200, y: 480 },
+        pageNumber: 1,
+        width: 150,
+        height: 75,
+        opacity: 0.5,
+        strokeColor: '#FF0000',
+        fillColor: '#000fff#',
+        author: 'User1'
+    } as CircleSettings);
+});
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, CircleSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+//Apply Circle Settings while adding individual Annotation
+document.getElementById('Circle')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Circle', {
+        offset: { x: 200, y: 480 },
+        pageNumber: 1,
+        width: 150,
+        height: 75,
+        opacity: 0.5,
+        strokeColor: '#FF0000',
+        fillColor: '#000fff#',
+        author: 'User1'
+    } as CircleSettings);
+});
 {% endhighlight %}
 {% endtabs %}
 

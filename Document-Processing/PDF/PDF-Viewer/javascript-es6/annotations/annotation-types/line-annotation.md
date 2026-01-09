@@ -27,9 +27,7 @@ N> When in pan mode, selecting a shape annotation switches the viewer to text se
 
 ![Shape toolbar](../annotation-images/line-annot.png)
 
-### Add a line annotation programmatically
-
-#### Enable line mode
+### Enable line mode
 
 The PDF Viewer component allows to add line annotations programmatically after enabling line mode in button clicks.
 
@@ -82,7 +80,7 @@ document.getElementById('setNone')?.addEventListener('click', () => {
 {% endhighlight %}
 {% endtabs %}
 
-#### Add Line Annotation
+### Add a line annotation programmatically
 
 Use the addAnnotation method with Line settings.
 
@@ -144,7 +142,7 @@ Use the toolbar to change appearance:
 
 ![Shape tools](../../images/shape_toolbar.png)
 
-### Editing the properties of the shape annotation
+#### Editing the properties of the shape annotation
 
 The fill color, stroke color, thickness, and opacity of shape annotations can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -265,6 +263,68 @@ pdfviewer.appendTo('#PdfViewer');
 N> In both [Arrow](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#arrowsettings) and [Line](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#linesettings) annotations Settings, the Fill Color option is available only when an arrowhead style is applied at the Start or End. If both Start and End arrowhead styles are set to None, lines do not support fill rendering and the Fill Color option remains disabled.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master)
+
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `lineSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default line settings.
+
+```html
+<button id="line">Add line</button>
+```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, LineSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+pdfviewer.lineSettings={opacity:0.5};
+//Apply line Settings while adding individual Annotation
+document.getElementById('line')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Line', {
+        offset: { x: 200, y: 230 },
+        pageNumber: 1,
+        vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }],
+        fillColor:'#ff1010ff',
+        strokeColor:'#fff000',
+        opacity:0.9,
+        author: 'User 1',
+        thickness: 1
+    } as LineSettings);
+});
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, LineSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+
+//Apply line Settings while adding individual Annotation
+document.getElementById('line')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Line', {
+        offset: { x: 200, y: 230 },
+        pageNumber: 1,
+        vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }],
+        fillColor:'#ff1010ff',
+        strokeColor:'#fff000',
+        opacity:0.9,
+        author: 'User 1',
+        thickness: 1
+    } as LineSettings);
+});
+{% endhighlight %}
+{% endtabs %}
 
 ## See also
 
