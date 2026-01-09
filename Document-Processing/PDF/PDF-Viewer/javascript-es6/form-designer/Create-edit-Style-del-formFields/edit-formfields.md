@@ -13,14 +13,14 @@ The PDF Viewer component allows user to edit PDF form fields using the Form Desi
 
 The PDF Viewer supports editing these field types:
 
-- Textbox
-- Password
-- CheckBox
-- RadioButton
-- ListBox
-- DropDown
-- Signature field
-- Initial field
+- [Textbox](#textbox)
+- [Password](#password)
+- [CheckBox](#checkbox)
+- [RadioButton](#radiobutton)
+- [ListBox](#listbox)
+- [DropDown](#dropdown)
+- [Signature field](#signature-field)
+- [Initial field](#initial-field)
 
 ## Edit with the UI
 

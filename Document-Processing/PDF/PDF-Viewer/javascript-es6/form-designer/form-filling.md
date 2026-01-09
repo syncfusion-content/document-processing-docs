@@ -35,7 +35,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 The PDF Viewer supports the following form field types:
 
-* Text box
+* [Text box](../form-designer/Create-edit-Style-del-formFields/create-formfields/#add-listbox)
 * Password
 * Check box
 * Radio button
