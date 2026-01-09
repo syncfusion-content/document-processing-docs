@@ -14,7 +14,7 @@ The TypeScript PDF Viewer includes built‑in printing via the toolbar and APIs 
 
 Select **Print** in the built-in toolbar to open the browser print dialog.
 
-![Print](../images/print.png)
+![Print](../images/print.gif)
 
 ## Enable or Disable Print in TypeScript PDF Viewer
 
@@ -106,7 +106,7 @@ if (printButton) {
 {% endhighlight %}
 {% endtabs %}
 
-## Key capabilities:
+## Key capabilities
 
 - Enable or disable printing with the enablePrint property
 - Start printing from UI (toolbar Print) or programmatically using print.print()
