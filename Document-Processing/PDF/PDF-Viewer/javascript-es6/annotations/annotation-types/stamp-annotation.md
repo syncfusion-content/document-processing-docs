@@ -289,6 +289,54 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `StampSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default Stamp settings.
+
+```html
+<button id="Stamp">Add Stamp</button>
+```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, DynamicStampItem, StampSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+//Apply Stamp Settings while adding individual Annotation
+document.getElementById('Stamp')?.addEventListener('click', function () {
+     pdfviewer.annotation.addAnnotation('Stamp', {
+    offset: { x: 200, y: 140 }, pageNumber: 1,
+     opacity: 0.3, author: 'Guest User'
+  } as StampSettings, DynamicStampItem.Approved);
+});
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, DynamicStampItem, StampSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+//Apply Stamp Settings while adding individual Annotation
+document.getElementById('Stamp')?.addEventListener('click', function () {
+     pdfviewer.annotation.addAnnotation('Stamp', {
+    offset: { x: 200, y: 140 }, pageNumber: 1,
+     opacity: 0.3, author: 'Guest User'
+  } as StampSettings, DynamicStampItem.Approved);
+});
+{% endhighlight %}
+{% endtabs %}
+
 [View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master)
 
 ## See also
