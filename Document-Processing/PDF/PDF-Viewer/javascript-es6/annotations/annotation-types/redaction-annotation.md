@@ -73,7 +73,7 @@ viewer.annotationAdd = (args) => {
 
 You can select, move, and resize Redaction annotations directly in the viewer. Use the context menu for additional actions.
 
-### Edit the properties of redaction annotations in UI
+#### Edit the properties of redaction annotations in UI
 
 Use the property panel or context menu Properties to change overlay text, font, fill color, and more.
 

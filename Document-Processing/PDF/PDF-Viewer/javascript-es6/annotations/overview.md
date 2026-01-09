@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Annotation in TypeScript PDF Viewer control | Syncfusion
-description: Learn about overview of annotations in the Syncfusion TypeScript PDF Viewer.
+description: Learn about Annotations and how to add, edit, delete, and configure Annotations in the Syncfusion TypeScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -47,4 +47,5 @@ The PDF Viewer component provides a complete set of annotation tools for reviewi
 - [Annotation Permission](../annotations/annotation-permission)
 - [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
 - [Annotation Events](../annotations/annotation-event)
+- [Annotation Undo Redo](../annotations/annotations-undo-redo)
 - [Annotation API](../annotations/annotations-api)

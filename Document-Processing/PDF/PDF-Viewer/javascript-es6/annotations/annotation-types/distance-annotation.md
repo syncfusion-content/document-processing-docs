@@ -27,9 +27,7 @@ N> When in pan mode, selecting a measurement annotation switches the viewer to t
 
 ![Measurement toolbar](../../images/calibrate_tool.png)
 
-### Add a distance annotation programmatically
-
-#### Enable distance mode
+### Enable distance mode
 
 The PDF Viewer component allows drawing Distance annotations programmatically after enabling Distance mode in button clicks.
 
@@ -82,7 +80,7 @@ document.getElementById('setNone')?.addEventListener('click', () => {
 {% endhighlight %}
 {% endtabs %}
 
-#### Add distance annotation
+### Add a distance annotation programmatically
 
 Add measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
@@ -139,7 +137,7 @@ You can select, move, and resize Distance annotations directly in the viewer:
 - Resize: drag the end handles to adjust its length.
 - Delete or access more options from the context menu.
 
-### Edit the properties of area annotations
+#### Edit the properties of area annotations
 
 The fill color, stroke color, thickness, and opacity can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -246,6 +244,58 @@ pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.distanceSettings = { fillColor: 'blue', opacity: 0.6, strokeColor: 'green' };
 pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `DistanceSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default Distance settings.
+
+```html
+<button id="Distance">Add Distance</button>
+```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, DistanceSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+//Apply Distance Settings while adding individual Annotation
+document.getElementById('Ink')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Distance', {
+        offset: { x: 200, y: 230 },
+        pageNumber: 1,
+        vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }],
+        fillColor: 'blue', opacity: 0.6, strokeColor: 'green'
+    } as DistanceSettings);
+});
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, DistanceSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+//Apply Distance Settings while adding individual Annotation
+document.getElementById('Ink')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Distance', {
+        offset: { x: 200, y: 230 },
+        pageNumber: 1,
+        vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }],
+        fillColor: 'blue', opacity: 0.6, strokeColor: 'green'
+    } as DistanceSettings);
+});
 {% endhighlight %}
 {% endtabs %}
 
