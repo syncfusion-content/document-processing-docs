@@ -11,9 +11,9 @@ documentation: ug
 
 The PDF Viewer component supports exporting and importing form field data using the importFormFields, exportFormFields, and exportFormFieldsAsObject methods in the following formats:
 
-- FDF
-- XFDF
-- JSON
+- [FDF](#export-as-fdf)
+- [XFDF](#export-as-xfdf)
+- [JSON](#export-as-json)
 
 ## Export as FDF
 
