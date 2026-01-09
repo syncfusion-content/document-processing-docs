@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Redaction annotation in TypeScript PDF Viewer | Syncfusion
+title: Overview of Redaction in TypeScript PDF Viewer | Syncfusion
 description: Learn to add, edit, delete, and apply redaction annotations in Syncfusion TypeScript PDF Viewer with UI and programmatic examples.
 platform: document-processing
 control: PDF Viewer
@@ -33,7 +33,7 @@ You can also add redaction from the context menu by selecting content and choosi
 
 ![Context menu showing Redact Annotation option](../../Redaction/redaction-annotations-images/redact-text-context-menu.png)
 
-N> Ensure the Redaction tool is included in the toolbar. See [RedactionToolbar](../../Redaction/toolbar.md)for configuration.
+N> Ensure the Redaction tool is included in the toolbar. See [RedactionToolbar](../../Redaction/toolbar.md) for configuration.
 
 ### Add a redaction annotation programmatically
 
