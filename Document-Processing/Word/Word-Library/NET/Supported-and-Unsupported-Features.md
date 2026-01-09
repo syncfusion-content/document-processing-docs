@@ -46,7 +46,7 @@ Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
-No<br/><br/></td><td>
+Yes<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
 <td>
@@ -61,7 +61,7 @@ Yes<br/><br/></td></tr>
 <td>
 Encryption and Decryption<br/><br/></td><td>
 No<br/><br/></td><td>
-No<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes—limited [except Word 2013]<br/><br/></td><td>
 Yes—limited [except Word 2013]<br/><br/></td><td>
 N/A<br/><br/></td><td>
@@ -127,8 +127,8 @@ Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td></tr>
 <tr>
 <td>
 Macros<br/><br/></td><td>
@@ -242,8 +242,8 @@ Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td></tr>
 <tr>
 <td>
 Vertical alignment<br/><br/></td><td>
@@ -294,7 +294,7 @@ Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
-No<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
@@ -400,8 +400,8 @@ No<br/><br/></td></tr>
 WordArt<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
+Yes<br/>VML - No<br/></td><td>
+Yes<br/>VML - No<br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
@@ -524,10 +524,10 @@ Yes<br/><br/></td></tr>
 Suppress hyphenation<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td></tr>
 <tr>
 <td>
 Indents – left, right, first line & hanging<br/><br/></td><td>

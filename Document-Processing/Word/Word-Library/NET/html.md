@@ -252,8 +252,6 @@ N> Calling the above event is mandatory in ASP.NET Core, UWP, and Xamarin platfo
 
 CSS selectors are used to select the HTML elements you want to style and apply a set of CSS rules.
 
-N> DocIO supports only internally defined CSS selectors during HTML conversion and does not support external CSS selectors referenced in the HTML file.
-
 <table>
 <tr>
     <td><strong>Selectors</strong></td>
@@ -327,6 +325,8 @@ N> DocIO supports only internally defined CSS selectors during HTML conversion a
 </table>
 
 You can download a complete working sample that includes all these CSS selectors from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/HTML-conversions/Convert-HTML-with-CSS-Selctor-to-Word)
+
+N> DocIO supports only internally defined CSS selectors during HTML conversion and does not support external CSS selectors referenced in the HTML file.
 
 ## Convert Word to HTML
 

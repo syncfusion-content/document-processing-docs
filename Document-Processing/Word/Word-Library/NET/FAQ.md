@@ -36,6 +36,8 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 * [Can DocIO open or process MPIP-protected Word documents?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#can-docio-open-or-process-mpip-protected-word-documents)
 * [Why does content imported from one Word document to another start on a new page, even without a section break?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#why-does-content-imported-from-one-word-document-to-another-start-on-a-new-page-even-without-a-section-break)
 * [Does DocIO process corrupted Word documents?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#does-docio-process-corrupted-word-documents)
+* [Does DocIO support sensitivity labels?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#does-docio-support-sensitivity-labels)
+* [Can DocIO Open a Document with Sensitivity Labels Applied?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#can-docio-open-a-document-with-sensitivity-labels-applied)
 
 ## Sections
 
