@@ -46,7 +46,7 @@ The PDF Viewer supports the following form field types:
 
 ![Form filling in TypeScript PDF Viewer](../images/FormFields.gif)
 
-## Disabling form fields
+## Disabling form filling
 
 The PDF Viewer provides an option to disable interaction with form fields using `enableFormDesigner` API. Use the following configuration to disable form fields in the viewer.
 
