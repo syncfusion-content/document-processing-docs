@@ -11,9 +11,9 @@ documentation: ug
 
 The PDF Viewer provides APIs to import interactive form field values into the currently loaded PDF. You can import from the following formats:
 
-- FDF
-- XFDF
-- JSON
+- [FDF](#import-as-fdf)
+- [XFDF](#import-as-xfdf)
+- [JSON](#import-as-json)
 
 Supported API:
 - importFormFields(sourceOrObject, format)

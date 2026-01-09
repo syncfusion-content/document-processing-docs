@@ -13,13 +13,13 @@ domainurl: ##DomainURL##
 ## Form Designer
 
 Create and customize interactive fields directly on the PDF page.
-- Add fields: textbox, checkbox, radio button, dropdown, list box, signature, and initials
-- Edit quickly: move, resize, align, distribute, copy/paste, undo/redo
-- Configure properties: name, value, font, color, border, alignment, required/read-only/visibility, tab order
-- Control interaction: toggle read-only, show/hide, and manage printing behavior
-- Manage fields: select, group/ungroup, reorder, or delete
-- Save and print: persist designed fields in the PDF and print with appearances
-- Tailor the UI: show/hide or customize the Form Designer toolbar; handle events for add/edit/select/move/resize
+- **Add fields**: textbox, checkbox, radio button, dropdown, list box, signature, and initials
+- **Edit quickly**: move, resize, align, distribute, copy/paste, undo/redo
+- **Configure properties**: name, value, font, color, border, alignment, required/read-only/visibility, tab order
+- **Control interaction**: toggle read-only, show/hide, and manage printing behavior
+- **Manage fields**: select, group/ungroup, reorder, or delete
+- **Save and print**: persist designed fields in the PDF and print with appearances
+- **Tailor the UI**: show/hide or customize the Form Designer toolbar; handle events for add/edit/select/move/resize
 - The form designer toolbar can be customized by showing or hiding default items and by controlling the order in which the items appear.
 
 Use the following Code-snippet to enable Form Designer by injecting `FormDesigner` Module.

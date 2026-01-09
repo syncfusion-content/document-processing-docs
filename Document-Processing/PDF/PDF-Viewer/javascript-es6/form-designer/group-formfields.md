@@ -13,11 +13,11 @@ In PDF forms, multiple widgets can represent the same logical form field. The Sy
 
 Key behavior when fields share the same Name:
 
-- Textbox and Password: Text entered in one widget appears in all widgets with the same name.
-- CheckBox: Checking one widget checks all widgets with the same name (mirrored state).
-- RadioButton: Widgets with the same name are grouped; only one radio button in the group can be selected at a time.
-- ListBox and DropDown: The selected item is shared across widgets with the same name.
-- Signature field and Initial field: The applied signature/initial is mirrored across widgets with the same name.
+- **Textbox and Password**: Text entered in one widget appears in all widgets with the same name.
+- **CheckBox**: Checking one widget checks all widgets with the same name (mirrored state).
+- **RadioButton**: Widgets with the same name are grouped; only one radio button in the group can be selected at a time.
+- **ListBox and DropDown**: The selected item is shared across widgets with the same name.
+- **Signature field and Initial field**: The applied signature/initial is mirrored across widgets with the same name.
 
 N> Grouping is driven solely by the Name property. Bounds determine placement; name determines grouping.
 
