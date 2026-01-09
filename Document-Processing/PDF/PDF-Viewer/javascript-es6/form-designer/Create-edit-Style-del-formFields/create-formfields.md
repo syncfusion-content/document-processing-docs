@@ -13,14 +13,14 @@ The PDF Viewer component supports interactive form field design, including drawi
 
 The PDF Viewer supports the following form field types:
 
-- Textbox
-- Password
-- CheckBox
-- RadioButton
-- ListBox
-- DropDown
-- Signature field
-- Initial field
+- [Textbox](#add-textbox)
+- [Password](#add-password)
+- [CheckBox](#add-checkbox)
+- [RadioButton](#add-radiobutton)
+- [ListBox](#add-listbox)
+- [DropDown](#add-dropdown)
+- [Signature field](#signature-field)
+- [Initial field](#add-initial-field)
 
 ## Add the form field dynamically
 
