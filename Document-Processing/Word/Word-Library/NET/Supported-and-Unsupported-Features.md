@@ -373,10 +373,10 @@ No<br/><br/></td></tr>
 Equation<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td></tr>
 <tr>
 <td>
 SmartArt<br/><br/></td><td>
@@ -524,10 +524,10 @@ Yes<br/><br/></td></tr>
 Suppress hyphenation<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+No<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 <tr>
 <td>
 Indents – left, right, first line & hanging<br/><br/></td><td>

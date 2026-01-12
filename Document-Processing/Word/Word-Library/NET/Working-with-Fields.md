@@ -1815,86 +1815,32 @@ document.Close()
 
 ## Supported Fields in DocIO
 
-<table>
-  <thead>
-    <tr>
-      <td><b>Field Name</b></td>
-      <td><b>Append</b></td>
-      <td><b>Preservation</b></td>
-      <td><b>Unlink</b></td>
-      <td><b>Update</b></td>
-    </tr>
-  </thead>
-  <tr>
-    <td>Author field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
-    <td>AutoNum field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
-    <td>Comments field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
-    <td>Compare field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
-    <td>Date field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
-    <td>DocProperty field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
-    <td>DocVariable field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
-    <td>Embed field</td><td></td><td></td><td></td><td><b style="color:red;">Not properly insert</b></td>
-  </tr>
-  <tr>
-    <td>Hyperlink field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
-    <td>If field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
-    <td>MergeField field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
-    <td>MergeRec field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes (Ensured through Mail merge)</td>
-  </tr>
-  <tr>
-    <td>MergeSeq field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes (Ensured through Mail merge)</td>
-  </tr>
-  <tr>
-    <td>Next field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes (Ensured through Mail merge)</td>
-  </tr>
-  <tr>
-    <td>NextIf field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes (Ensured through Mail merge)</td>
-  </tr>
-  <tr>
-    <td>NumPages field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
-    <td>Page field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
-    <td>PageRef field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td>
-  </tr>
-  <tr>
-    <td>Ref field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
-    <td>Section field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
-    <td>Seq (Sequence) field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
-    <td>Set field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
-    <td>Subject field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-  </tr>
-  <tr>
+The following fields are supported in DocIO:
+- Author field
+- AutoNum field
+- Comments field
+- Compare field
+- Date field
+- DocProperty field
+- DocVariable field
+- Hyperlink field
+- If field
+- MergeField field
+- MergeRec field
+- MergeSeq field
+- Next field
+- NextIf field
+- NumPages field
+- Page field
+- PageRef field
+- Ref field
+- Section field
+- Seq (Sequence) field
+- Set field
+- Subject field
+- Time field
+- Title field
+- TOC (Table of Contents) field
 
 
 ## Online Demo
