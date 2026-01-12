@@ -27,9 +27,7 @@ N> When in pan mode, selecting a measurement annotation switches the viewer to t
 
 ![Measurement toolbar](../../images/calibrate_tool.png)
 
-### Add an area annotation programmatically
-
-#### Enable area mode
+### Enable area mode
 
 The PDF Viewer library allows drawing measurement annotations programmatically after enabling area mode in button clicks.
 
@@ -67,7 +65,7 @@ document.getElementById('areaMode')?.addEventListener('click', function () {
 {% endhighlight %}
 {% endtabs %}
 
-#### Add Area Annotation
+### Add an area annotation programmatically
 
 The PDF Viewer library allows adding measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
@@ -134,7 +132,7 @@ Use the toolbar to change appearance:
 
 See the sections below for screenshots and details.
 
-### Edit the properties of area annotations
+#### Edit the properties of area annotations
 
 The fill color, stroke color, thickness, and opacity can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -261,6 +259,62 @@ pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.
 
 pdfviewer.areaSettings = { fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange' };
 pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `AreaSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default Area settings.
+
+```html
+<button id="Area">Add Area</button>
+```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, AreaSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+//Apply Area Settings while adding individual Annotation
+document.getElementById('Area')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Area', {
+        offset: { x: 200, y: 500 },
+        pageNumber: 1,
+        vertexPoints: [
+            { x: 200, y: 500 }, { x: 288, y: 499 }, { x: 289, y: 553 }, { x: 200, y: 500 }
+        ],
+        fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'
+    } as AreaSettings);
+});
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, AreaSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+//Apply Area Settings while adding individual Annotation
+document.getElementById('Area')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Area', {
+        offset: { x: 200, y: 500 },
+        pageNumber: 1,
+        vertexPoints: [
+            { x: 200, y: 500 }, { x: 288, y: 499 }, { x: 289, y: 553 }, { x: 200, y: 500 }
+        ],
+        fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'
+    } as AreaSettings);
+});
 {% endhighlight %}
 {% endtabs %}
 
