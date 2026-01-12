@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Form filling in React PDF Viewer Control | Syncfusion
-description: Learn to view, fill, export, and import PDF form fields in Syncfusion TS PDF Viewer, including disabling interaction and handling signatures.
+description: Learn to view, fill, export, and import PDF form fields in Syncfusion PDF Viewer, including disabling interaction and handling signatures.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form filling in React PDF Viewer
+# Form filling in React PDF Viewer Control
 
 The PDF Viewer displays existing form fields in a PDF and enables users to fill, validate, and download the filled data.
 
@@ -62,6 +62,10 @@ The PDF Viewer supports the following form field types:
 * [Initial field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-initial-field)
 
 ![Form filling in TypeScript PDF Viewer](../images/FormFields.gif)
+
+## Updating form field value programmatically
+
+
 
 ## Disabling form fields
 

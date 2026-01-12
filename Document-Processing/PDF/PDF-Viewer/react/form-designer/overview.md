@@ -96,7 +96,7 @@ root.render(<App />);
 
 ![FormDesigner](../images/FormDesigner.gif)
 
-# Supported form field types
+## Supported form field types
 
 - [Textbox](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-textbox)
 - [Password](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-password)

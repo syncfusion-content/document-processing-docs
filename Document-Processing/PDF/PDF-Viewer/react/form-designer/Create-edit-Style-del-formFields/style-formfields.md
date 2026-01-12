@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style form fields in the React PDF Viewer | Syncfusion
-description: Learn how to configure typography, colors, borders, alignment, and other style settings for PDF form fields using the UI and programmatically.
+description: Learn how to configure typography, colors, borders, alignment, and other style settings for form fields using the UI and Programmatically.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

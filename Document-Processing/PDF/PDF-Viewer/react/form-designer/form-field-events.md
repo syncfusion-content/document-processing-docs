@@ -395,7 +395,7 @@ root.render(<App />);
 
 ## formFieldMouseOver event
 
-The [formFieldMouseOver](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/formFieldMouseoverArgs/) event is triggered when the mouse hovers over a form field. The event arguments provide the necessary information about the form field mouse over event.
+The [formFieldMouseOver](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/formFieldMouseoverArgs) event is triggered when the mouse hovers over a form field. The event arguments provide the necessary information about the form field mouse over event.
 
 {% tabs %}
 {% highlight js tabtitle="index.JSX" %}
