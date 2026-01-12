@@ -12,18 +12,56 @@ domainurl: ##DomainURL##
 
 The PDF Viewer displays existing form fields in a PDF and enables users to fill, validate, and download the filled data.
 
+## Form Fields
+
+Work with the runtime form fields present in a PDF Form.
+- Render existing fields
+- Fill fields.
+- Import/Export form data as JSON, XFDF, FDF, or as a plain object
+- Inject FormFields to enable form-filling features.
+
+Use the following code-snippet to enable form-filling by injecting `FormFields` Module.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+import * as ReactDOM from 'react-dom/client';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
+export function App() {
+  return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent 
+        id="container" 
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+        style={{ 'height': '680px' }} 
+      >
+        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+          Print, TextSelection, TextSearch, FormFields]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+{% endhighlight %}
+{% endtabs %}
+
+![FormFilling](../images/FormFill.png)
+
 The PDF Viewer supports the following form field types:
 
-* Text box
-* Password
-* Check box
-* Radio button
-* List box
-* Dropdown
-* Signature field
-* Initial field
+* [Text box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-textBox)
+* [Password](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-password)
+* [Check box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-checkbox)
+* [Radio button](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-radiobutton)
+* [List box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-listbox)
+* [Dropdown](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-dropdown)
+* [Signature field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-signature-field)
+* [Initial field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-initial-field)
 
-![Form filling in React PDF Viewer](../../javascript-es6/images/form-filling.png)
+![Form filling in TypeScript PDF Viewer](../images/FormFields.gif)
 
 ## Disabling form fields
 

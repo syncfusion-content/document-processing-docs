@@ -13,14 +13,14 @@ The PDF Viewer component allows user to edit PDF form fields using the Form Desi
 
 The PDF Viewer supports editing these field types:
 
-- Textbox
-- Password
-- CheckBox
-- RadioButton
-- ListBox
-- DropDown
-- Signature field
-- Initial field
+- [Textbox](#textbox)
+- [Password](#password)
+- [CheckBox](#checkbox)
+- [RadioButton](#radiobutton)
+- [ListBox](#listbox)
+- [DropDown](#dropdown)
+- [Signature field](#signature-field)
+- [Initial field](#initial-field)
 
 ## Edit with the UI
 
@@ -35,8 +35,8 @@ The PDF Viewer supports editing these field types:
 
 ### Edit Textbox
 
-1) Right-click the textbox → Properties.
-2) Change value, font, size, colors, border thickness, alignment, max length, multiline.
+- Right-click the textbox → Properties.
+- Change value, font, size, colors, border thickness, alignment, max length, multiline.
 
 ![Textbox edited from UI](../../../javascript-es6/images/ui-textbox-edit.png)
 
@@ -99,8 +99,8 @@ root.render(<App />);
 
 ### Edit Password
 
-1) Right-click the password field → Properties.
-2) Change tooltip, required, max length, font, and appearance.
+- Right-click the password field → Properties.
+- Change tooltip, required, max length, font, and appearance.
 
 ![Password edited from UI](../../../javascript-es6/images/ui-password-edit.png)
 
@@ -166,8 +166,8 @@ root.render(<App />);
 
 ### Edit CheckBox
 
-1) Right-click the checkbox → Properties.
-2) Toggle checked state, change border/background colors and thickness.
+- Right-click the checkbox → Properties.
+- Toggle checked state, change border/background colors and thickness.
 
 ![CheckBox edited from UI](../../../javascript-es6/images/ui-checkbox-edit.png)
 
@@ -226,8 +226,8 @@ root.render(<App />);
 
 ### Edit RadioButton
 
-1) Right-click a radio button → Properties.
-2) Set selected state, colors, and thickness. Buttons with the same Name form a group; only one can be selected.
+- Right-click a radio button → Properties.
+- Set selected state, colors, and thickness. Buttons with the same Name form a group; only one can be selected.
 
 ![RadioButton edited from UI](../../../javascript-es6/images/ui-radiobutton-edit.png)
 
@@ -281,8 +281,8 @@ root.render(<App />);
 
 ### Edit ListBox
 
-1) Right-click the list box → Properties.
-2) Add/remove items, set selection, and adjust fonts and colors.
+- Right-click the list box → Properties.
+- Add/remove items, set selection, and adjust fonts and colors.
 
 ![ListBox edited from UI](../../../javascript-es6/images/ui-listbox-edit.png)
 
@@ -347,8 +347,8 @@ root.render(<App />);
 
 ### Edit DropDown
 
-1) Right-click the dropdown → Properties.
-2) Add/remove items, set default value, and adjust appearance.
+- Right-click the dropdown → Properties.
+- Add/remove items, set default value, and adjust appearance.
 
 ![DropDown edited from UI](../../../javascript-es6/images/ui-dropdown-edit.png)
 
@@ -413,8 +413,8 @@ root.render(<App />);
 
 ### Edit Signature field
 
-1) Right-click the signature field → Properties.
-2) Change tooltip, thickness, indicator text, required/visibility states.
+- Right-click the signature field → Properties.
+- Change tooltip, thickness, indicator text, required/visibility states.
 
 ![Signature field edited from UI](../../../javascript-es6/images/ui-signature-edit.png)
 
@@ -474,8 +474,8 @@ root.render(<App />);
 
 ### Edit Initial field
 
-1) Right-click the initial field → Properties.
-2) Change tooltip, indicator text, thickness, and required/visibility states.
+- Right-click the initial field → Properties.
+- Change tooltip, indicator text, thickness, and required/visibility states.
 
 ![Initial field edited from UI](../../../javascript-es6/images/ui-initial-edit.png)
 

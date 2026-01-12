@@ -14,40 +14,104 @@ Syncfusion React PDF Viewer provides a complete forms experience. Design new for
 Check the following video to learn how to work with form Designer in React PDF Viewer.
 {% youtube "https://www.youtube.com/watch?v=MUWTCg1MoAE" %}
 
+## Form Fields
+
+Work with the runtime form fields present in a PDF Form.
+- Render existing fields
+- [Fill fields](./form-filling).
+- [Import/Export](./import-export-formfields/export-formfields) form data as JSON, XFDF, FDF, or as a plain object
+- Inject [FormFields](./form-designer) to enable form-filling features.
+
+Use the following code-snippet to enable form-filling by injecting `FormFields` Module.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+import * as ReactDOM from 'react-dom/client';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, Inject } from '@syncfusion/ej2-react-pdfviewer';
+export function App() {
+  return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent 
+        id="container" 
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+        style={{ 'height': '680px' }} 
+      >
+        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+          Print, TextSelection, TextSearch, FormFields]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+{% endhighlight %}
+{% endtabs %}
+
+
+![FormFilling](../images/FormFields.gif)
+
+
 ## Form Designer
 
 Create and customize interactive fields directly on the PDF page.
-- Add fields: textbox, checkbox, radio button, dropdown, list box, signature, and initials
-- Edit quickly: move, resize, align, distribute, copy/paste, undo/redo
-- Configure properties: name, value, font, color, border, alignment, required/read-only/visibility, tab order
-- Manage fields: select, group/ungroup, reorder, or delete
-- Save and print: persist designed fields in the PDF and print with appearances
-- Tailor the UI: show/hide or customize the Form Designer toolbar, and handle events for add/edit/select/move/resize
+- [Add fields](../form-designer/Create-edit-Style-del-formFields/create-formfields): textbox, checkbox, radio button, dropdown, list box, signature, and initials
+- [Edit quickly](../form-designer/Create-edit-Style-del-formFields/edit-formfields): move, resize, align, distribute, copy/paste, undo/redo
+- [Configure properties](../form-designer/Create-edit-Style-del-formFields/style-formfields): name, value, font, color, border, alignment, required/read-only/visibility, tab order
+- [Control interaction](../form-designer/form-constrain): toggle read-only, show/hide, and manage printing behavior
+- [Manage fields](../form-designer/group-formfields): select, group/ungroup, reorder, or delete
+- [Save and print](../download): persist designed fields in the PDF and print with appearances
+- [Tailor the UI](./form-designer#how-to-customize-the-form-designer-toolbar): show/hide or customize the Form Designer toolbar; handle events for add/edit/select/move/resize
 
-## Form Fields
+Use the following Code-snippet to enable Form Designer by injecting `FormDesigner` Module.
 
-Work with the runtime form fields present in a PDF (AcroForm).
-- Parse and render existing fields
-- Fill fields and validate input (required, read-only, print visibility)
-- Import/Export form data as JSON, XFDF, FDF, or as a plain object
-- Control interaction: toggle read-only, show/hide, and manage printing behavior
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+import * as ReactDOM from 'react-dom/client';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
+export function App() {
+  return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent 
+        id="container" 
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+        style={{ 'height': '680px' }} 
+      >
+        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+          Print, TextSelection, TextSearch, FormFields]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+{% endhighlight %}
+{% endtabs %}
 
-## Supported form field types
 
-- Textbox
-- Password
-- CheckBox
-- RadioButton
-- ListBox
-- DropDown
-- Signature field
-- Initial field
+![FormDesigner](../images/FormDesigner.gif)
+
+# Supported form field types
+
+- [Textbox](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-textbox)
+- [Password](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-password)
+- [CheckBox](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-checkbox)
+- [RadioButton](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-radiobutton)
+- [ListBox](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-listbox)
+- [DropDown](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-dropdown)
+- [Signature field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-signature-field)
+- [Initial field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-initial-field)
 
 ## Typical workflows
 
-- Design → Save → Fill: create or modify fields, save them into the PDF, then fill and validate
-- Fill → Export/Import: complete forms and export data to JSON/XFDF/FDF, or import data to prefill
-- Customize → Integrate: wire up events and business rules; tailor the designer toolbar for your app
+- **Design** → Save → Fill: [create or modify fields](./Create-edit-Style-del-formFields/create-formfields), save them into the PDF, then fill and validate
+- **Fill** → [Export/Import](./import-export-formfields/export-formfields): complete forms and export data to JSON/XFDF/FDF, or import data to fill
+- **Customize** → Integrate: wire up events and business rules; tailor the designer [toolbar](./form-designer#how-to-customize-the-form-designer-toolbar) for your app
 
 ## See also
 
