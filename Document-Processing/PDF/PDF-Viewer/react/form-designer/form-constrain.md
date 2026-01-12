@@ -11,15 +11,17 @@ documentation: ug
 
 The PDF Viewer components provides support to control user interaction and output behavior of form fields using the following constraints:
 
-- isReadOnly: Prevents users from editing a field.
-- isRequired: Marks a field as mandatory and participates in validation.
-- isPrint: Includes the field appearance when printing or exporting with print.
+- [isReadOnly](#make-form-fields-readonly): Prevents users from editing a field.
+- [isRequired](#mark-fields-as-required): Marks a field as mandatory and participates in validation.
+- [isPrint](#control-field-print-behavior): Includes the field appearance when printing or exporting with print.
 
 You can set these properties when you create fields, update them later programmatically, or configure default settings so fields created from the Form Designer toolbar inherit the values.
 
+![Form Constraint](../images/ui-form-constraint.png)
+
 ## isReadOnly
 
-Use `isReadOnly` to make a field non-editable in the UI while keeping it modifiable via code.
+Use `isReadOnly` to make a field non-editable in the UI while keeping it modifiable via code. Use the following code-snippets to make form fields read-only.
 
 - Creation
 {% tabs %}
@@ -569,9 +571,9 @@ root.render(<App />);
 
 ## Behavior notes
 
-- isReadOnly only blocks user edits in the UI. You can still update the field programmatically.
-- isRequired participates in the built-in validation flow. Enable validation to enforce before print/download. See Validate form fields for details.
-- isPrint controls field appearance in the print output. It does not affect download/export unless printing is triggered.
+- Use `isReadOnly` API to only blocks user edits in the UI. You can still update the field programmatically.
+- Use `isRequired` API to participates in the built-in validation flow. Enable validation to enforce before print/download. See Validate form fields for details.
+- Use `isPrint` API controls field appearance in the print output. It does not affect download/export unless printing is triggered.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
 

@@ -17,9 +17,9 @@ You can remove designed form fields directly from the Form Designer toolbar.
 
 Steps:
 
-1) Select the target form field on the page.
-2) Click the Delete Form Field icon on the Form Designer toolbar.
-3) Alternatively, press the `Delete key` after selecting one or more fields.
+- Select the target form field on the page.
+- Click the Delete Form Field icon on the Form Designer toolbar.
+- Alternatively, press the `Delete key` after selecting one or more fields.
 
 ![Form Designer toolbar with Delete icon](../../../javascript-es6/images/ui-del-formfields.png)
 
