@@ -43,13 +43,12 @@ All Syncfusion<sup>&reg;</sup> JS 2 packages are published in `npmjs.com` regist
 ```bash
 npm install @syncfusion/ej2-pdf --save
 ```
-N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
-* Copy the contents of the openjpeg folder from ./node_modules/@syncfusion/ej2-pdf-data-extract/dist to the public directory using the command:
-```bash
-cp -R ./node_modules/@syncfusion/ej2-pdf-data-extract/dist/openjpeg ./src/assets/openjpeg
-```
-* Confirm that there is an `openjpeg` directory within your src/assets directory if you are extracting images from PDFs.
-* Ensure your server serves .wasm files with the Content-Type: application/wasm MIME type (Angular dev server handles this by default; configure your production server accordingly).
+N> For image and data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
+* Copy the `ej2-pdf-lib` folder from the @syncfusion/ej2-pdf-data-extract package into your project's **public, dist, or assets** directory (where your static files are served).
+* Make sure the `ej2-pdf-lib` folder exists in your final build output if you need to extract images or data from PDF files.
+* Ensure your server serves .wasm files with the MIME type: **Content-Type: application/wasm**
+(Angular’s development server already handles this; configure production servers manually.)
+* This setup is not required for **basic PDF creation**.
 
 ## Create a PDF document
 
