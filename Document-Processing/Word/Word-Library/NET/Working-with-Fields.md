@@ -1877,7 +1877,7 @@ document.Close()
     <td>Page field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
   </tr>
   <tr>
-    <td>PageRef field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
+    <td>PageRef field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td>
   </tr>
   <tr>
     <td>Ref field</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
