@@ -11,7 +11,7 @@ documentation: UG
 The following code examples demonstrate retrieving the list of named ranges in an Excel workbook using C# (Cross-platform and Windows-specific) and VB.NET.
 
 {% tabs %}   
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/NamedRange/.NET/RetrieveNamedRanges/RetrieveNamedRanges/Program.cs,180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Named%20Range/.NET/RetrieveNamedRanges/RetrieveNamedRanges/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -80,4 +80,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}       
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/NamedRange/.NET/RetrieveNamedRanges">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Named%20Range/.NET/RetrieveNamedRanges">this GitHub page</a>.
