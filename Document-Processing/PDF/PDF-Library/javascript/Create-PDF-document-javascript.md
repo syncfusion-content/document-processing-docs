@@ -35,10 +35,8 @@ Step 3: Create a HTML page (index.html) in `my-app` location and add the CDN lin
 {% endhighlight %}
 {% endtabs %}
 
-N> For image/data extraction features, install and deploy the openjpeg runtime. Place an openjpeg folder alongside your index.html (or any publicly accessible static path) containing:
-*   `openjpeg.js`
-*   `openjpeg.wasm`
-Ensure your server serves .wasm files with the Content-Type: application/wasm MIME type. This is not required for basic PDF creation.
+N> For image and data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
+Ensure that your application includes an `ej2-pdf-lib` folder within a publicly accessible static directory (such as wwwroot, public, or dist). This folder must contain the required `.js` and `.wasm` files needed for image and data extraction.
 
 Step 4: **Create a PDF document**: Add the script in `index.html` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
