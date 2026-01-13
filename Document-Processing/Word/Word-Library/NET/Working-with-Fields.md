@@ -1815,16 +1815,22 @@ document.Close()
 
 ## Supported Fields in DocIO
 
-The following fields are supported in DocIO:
+Using DocIO, you can append, update, or unlink the following fields
+- Advance field
 - Author field
 - AutoNum field
+- AutoNumLgl field
+- AutoNumOut field
 - Comments field
 - Compare field
 - Date field
 - DocProperty field
 - DocVariable field
+- GoToButton field
 - Hyperlink field
 - If field
+- ListNum
+- MacroButton field
 - MergeField field
 - MergeRec field
 - MergeSeq field
@@ -1834,13 +1840,46 @@ The following fields are supported in DocIO:
 - Page field
 - PageRef field
 - Ref field
+- SaveDate field
 - Section field
 - Seq (Sequence) field
 - Set field
 - Subject field
+- Symbol field
 - Time field
 - Title field
+- TOA
 - TOC (Table of Contents) field
+
+
+Using DocIO, you can append the following fields in to document but does not have the support for update for below fields.
+- Ask field
+- AutoText field
+- AutoTextList field
+- CreateDate field
+- FileName field
+- FileSize field
+- Fill-In field
+- = (Formula) field
+- IncludePicture field
+- IncludeText field
+- Index field
+- Info field
+- Keywords field
+- LastSavedBy field
+- NoteRef field
+- NumChars field
+- NumWords field
+- PrintDate field
+- Quote field
+- RevNum field
+- SectionPages field
+- SkipIf field
+- StyleRef field
+- Template field
+- UserAddress field
+- UserInitials field
+- UserName field
 
 
 ## Online Demo

@@ -127,8 +127,8 @@ Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 <tr>
 <td>
 Macros<br/><br/></td><td>
@@ -522,12 +522,12 @@ Yes<br/><br/></td></tr>
 <tr>
 <td>
 Suppress hyphenation<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td></tr>
 <tr>
 <td>
 Indents – left, right, first line & hanging<br/><br/></td><td>
