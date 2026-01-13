@@ -375,8 +375,8 @@ No<br/><br/></td><td>
 No<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 <tr>
 <td>
 SmartArt<br/><br/></td><td>
