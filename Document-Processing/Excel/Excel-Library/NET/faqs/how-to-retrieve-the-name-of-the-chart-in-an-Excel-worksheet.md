@@ -34,7 +34,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    IWorkbook workbook = application.Workbooks.Open(Input.xlsx");
+    IWorkbook workbook = application.Workbooks.Open("Input.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
 
     //Get the chart name 
@@ -43,7 +43,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     Console.WriteLine("The name of the chart is: " + chartName);
 
     //Saving the workbook
-    workbook.SaveAs(Output.xlsx");
+    workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -56,7 +56,7 @@ Using excelEngine As New ExcelEngine()
     application.DefaultVersion = ExcelVersion.Xlsx
 
     ' Open the input workbook
-    Dim workbook As IWorkbook = application.Workbooks.Open("D:\UG and KB\VB Project\VB Project\Data\InputTemplate.xlsx")
+    Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
 
     ' Get the first worksheet
     Dim worksheet As IWorksheet = workbook.Worksheets(0)
