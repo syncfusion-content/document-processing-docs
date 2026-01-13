@@ -11,9 +11,9 @@ documentation: ug
 
 The PDF Viewer component supports exporting and importing form field data using the importFormFields, exportFormFields, and exportFormFieldsAsObject methods in the following formats:
 
-- FDF
-- XFDF
-- JSON
+- [FDF](#export-as-fdf)
+- [XFDF](#export-as-xfdf)
+- [JSON](#export-as-json)
 
 ## Export as FDF
 
@@ -177,7 +177,7 @@ document.getElementById('exportObj').addEventListener('click', function () {
 - Export as JSON for easy integration with REST APIs.
 - Export as FDF/XFDF for interoperability with other PDF tools.
 - Export as object to combine with your app state and store securely.
-- Automate exports after validation using validateFormFields.
+- Automate exports after [validation](../form-validation) using validateFormFields.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
 
