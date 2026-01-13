@@ -8,13 +8,7 @@
                 <e-spreadsheet-row index="2">
                     <e-spreadsheet-cells>
                         <e-spreadsheet-cell index="0"
-                            notes="These shoes have the highest sales in terms of quantity this month."></e-spreadsheet-cell>
-                    </e-spreadsheet-cells>
-                </e-spreadsheet-row>
-                <e-spreadsheet-row index="5">
-                    <e-spreadsheet-cells>
-                        <e-spreadsheet-cell index="0"
-                            notes="These shoes have been the most profitable this month."></e-spreadsheet-cell>
+                            notes={ text:"These shoes have the highest sales in terms of quantity this month.", isVisible: true}></e-spreadsheet-cell>
                     </e-spreadsheet-cells>
                 </e-spreadsheet-row>
             </e-spreadsheet-rows>
@@ -33,5 +27,6 @@
     function created() {
         this.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:H1');
         this.cellFormat({ verticalAlign: 'middle' }, 'A1:H1');
+        this.updateCell({ notes: { text: 'These shoes have been the most profitable this month.' } }, 'A10:A10');
     }
 </script>

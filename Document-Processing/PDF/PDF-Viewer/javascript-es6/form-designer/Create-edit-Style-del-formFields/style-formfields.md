@@ -13,14 +13,14 @@ The PDF Viewer component allows users to style and customize the appearance of P
 
 Supported field types:
 
-- Textbox
-- Password
-- CheckBox
-- RadioButton
-- ListBox
-- DropDown
-- Signature field
-- Initial field
+- [Textbox](#textbox)
+- [Password](#password)
+- [CheckBox](#checkbox)
+- [RadioButton](#radiobutton)
+- [ListBox](#listbox)
+- [DropDown](#dropdown)
+- [Signature field](#signature-field)
+- [Initial field](#initial-field)
 
 ## Textbox
 
@@ -73,7 +73,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 ### Default Textbox settings
 
-The PDF Viewer exposes a default settings APIs for form fields. Use the [TextFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#textfieldsettings) to preconfigure TextBox properties applied when adding fields from the Form Designer toolbar.
+The PDF Viewer exposes a default settings APIs for form fields. Use the [TextFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#textfieldsettings) to pre configure TextBox properties applied when adding fields from the Form Designer toolbar.
 
 ```ts
 // Apply as defaults for Textbox added from toolbar
@@ -138,7 +138,7 @@ if (pw) {
 
 ### Default Password settings
 
-The PDF Viewer exposes default settings APIs for form fields. Use the [PasswordFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#passwordfieldsettings) to preconfigure Password properties applied when adding fields from the Form Designer toolbar.
+The PDF Viewer exposes default settings APIs for form fields. Use the [PasswordFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#passwordfieldsettings) to pre configure Password properties applied when adding fields from the Form Designer toolbar.
 
 ```ts
 pdfviewer.passwordFieldSettings = {
@@ -197,7 +197,7 @@ if (cb) {
 
 ### Default CheckBox settings
 
-The PDF Viewer exposes default settings APIs for form fields. Use the [CheckBoxFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#checkboxfieldsettings) to preconfigure CheckBox properties applied when adding fields from the Form Designer toolbar.
+The PDF Viewer exposes default settings APIs for form fields. Use the [CheckBoxFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#checkboxfieldsettings) to pre configure CheckBox properties applied when adding fields from the Form Designer toolbar.
 
 ```ts
 pdfviewer.checkBoxFieldSettings = {
@@ -246,7 +246,7 @@ if (radios.length > 1) {
 
 ### Default RadioButton settings
 
-The PDF Viewer exposes default settings APIs for form fields. Use the [RadioButtonFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#radiobuttonfieldsettings) to preconfigure RadioButton properties applied when adding fields from the Form Designer toolbar.
+The PDF Viewer exposes default settings APIs for form fields. Use the [RadioButtonFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#radiobuttonfieldsettings) to pre configure RadioButton properties applied when adding fields from the Form Designer toolbar.
 
 ```ts
 pdfviewer.radioButtonFieldSettings = {
@@ -306,7 +306,7 @@ if (lb) {
 
 ### Default ListBox settings
 
-The PDF Viewer exposes default settings APIs for form fields. Use the [listBoxFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#listboxfieldsettings) to preconfigure ListBox properties applied when adding fields from the Form Designer toolbar.
+The PDF Viewer exposes default settings APIs for form fields. Use the [listBoxFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#listboxfieldsettings) to pre configure ListBox properties applied when adding fields from the Form Designer toolbar.
 
 ```ts
 const customOptions = [
@@ -377,7 +377,7 @@ if (dd) {
 
 ### Default DropDown settings
 
-The PDF Viewer exposes default settings APIs for form fields. DropDown uses [DropDownFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#DropDownfieldsettings) to preconfigure properties applied when adding fields from the Form Designer toolbar.
+The PDF Viewer exposes default settings APIs for form fields. DropDown uses [DropDownFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#DropDownfieldsettings) to pre configure properties applied when adding fields from the Form Designer toolbar.
 
 ```ts
 const ddOptions = [
@@ -444,7 +444,7 @@ if (sig) {
 
 ### Default Signature field settings
 
-The PDF Viewer exposes default settings APIs for form fields. Use the [SignatureFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#signaturefieldsettings) to preconfigure Signature properties applied when adding fields from the Form Designer toolbar.
+The PDF Viewer exposes default settings APIs for form fields. Use the [SignatureFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#signaturefieldsettings) to pre configure Signature properties applied when adding fields from the Form Designer toolbar.
 
 ```ts
 pdfviewer.signatureFieldSettings = {
@@ -507,7 +507,7 @@ if (init) {
 
 ### Default Initial field settings
 
-The PDF Viewer exposes default settings APIs for form fields. Use the [InitialFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#initialfieldsettings) to preconfigure Initial properties applied when adding fields from the Form Designer toolbar.
+The PDF Viewer exposes default settings APIs for form fields. Use the [InitialFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#initialfieldsettings) to pre configure Initial properties applied when adding fields from the Form Designer toolbar.
 
 ```ts
 pdfviewer.initialFieldSettings = {

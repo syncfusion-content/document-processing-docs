@@ -143,7 +143,7 @@ Use the toolbar to change the appearance of the selected Free Text annotation:
 
 See the sections below for screenshots and details.
 
-### Edit the properties of free text annotations
+#### Edit the properties of free text annotations
 
 Font family, font size, styles, font color, text alignment, fill color, stroke color, border thickness, and opacity can be edited using the Font Family, Font Size, Font Color, Text Align, Font Style, Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -281,6 +281,72 @@ pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.freeTextSettings = { fillColor: 'green', borderColor: 'blue', fontColor: 'yellow' };
 pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `FreeTextSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default FreeText settings.
+
+```html
+<button id="FreeText">Add FreeText</button>
+```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, FreeTextSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+//Apply FreeText Settings while adding individual Annotation
+document.getElementById('FreeText')?.addEventListener('click', function () {
+  pdfviewer.annotation.addAnnotation('FreeText', {
+    offset: { x: 120, y: 80 },
+    fontSize: 16,
+    fontFamily: 'Helvetica',
+    pageNumber: 1,
+    width: 200,
+    height: 40,
+    isLock: false,
+    defaultText: 'Syncfusion',
+    fillColor: 'green', 
+    borderColor: 'blue', 
+    fontColor: 'yellow'
+  } as FreeTextSettings);
+});
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, FreeTextSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+//Apply FreeText Settings while adding individual Annotation
+document.getElementById('FreeText')?.addEventListener('click', function () {
+  pdfviewer.annotation.addAnnotation('FreeText', {
+    offset: { x: 120, y: 80 },
+    fontSize: 16,
+    fontFamily: 'Helvetica',
+    pageNumber: 1,
+    width: 200,
+    height: 40,
+    isLock: false,
+    defaultText: 'Syncfusion',
+    fillColor: 'green', 
+    borderColor: 'blue', 
+    fontColor: 'yellow'
+  } as FreeTextSettings);
+});
 {% endhighlight %}
 {% endtabs %}
 

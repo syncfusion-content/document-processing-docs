@@ -24,7 +24,7 @@ You can add underlines in two ways:
 * Select text in the PDF document and right-click it.
 * Choose **Underline** in the context menu.
 
-![Underline context](../../images/underline_context.png)
+![Underline context](../annotation-images/underline-context.gif)
 
 <!-- markdownlint-disable MD029 -->
 2. Using the annotation toolbar
@@ -33,7 +33,7 @@ You can add underlines in two ways:
 * Select text to add the underline annotation.
 * Alternatively, select text first and then click **Underline**.
 
-![Underline toolbar](../../images/underline_button.png)
+![Underline toolbar](../annotation-images/underline-tool.gif)
 
 When pan mode is active and a text markup mode is entered, the PDF Viewer switches to text selection mode to enable selection.
 
@@ -218,35 +218,24 @@ if (underline) {
 
 ### Edit underline annotation in UI
 
-#### Delete an underline annotation
-
-The selected annotation can be deleted in the following ways:
-
-1. Using the Delete/Backspace key
-    * Select the annotation.
-    * Press Delete (or Backspace). The selected annotation is removed.
-
-2. Using the annotation toolbar
-    * Select the annotation.
-    * Click **Delete Annotation** in the annotation toolbar. The selected annotation is removed.
-
-![Delete button](../../images/delete_button.png)
-
-#### Edit underline annotation properties
-
 The color and opacity of the underline annotation can be edited using the Edit Color and Edit Opacity tools in the annotation toolbar.
 
-### Edit color
-
+#### Edit color
 Use the color palette in the Edit Color tool to change the annotation color.
 
 ![Edit color](../../images/edit_color.png)
 
-### Edit opacity
-
+#### Edit opacity
 Use the range slider in the Edit Opacity tool to change annotation opacity.
 
 ![Edit opacity](../../images/edit_opacity.png)
+
+#### Delete underline annotation
+
+- Select the annotation and press Delete, or
+- Click **Delete Annotation** in the annotation toolbar.
+
+![Delete button](../../images/delete_button.png)
 
 ### Edit an existing underline annotation programmatically
 
@@ -331,10 +320,10 @@ import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, Thumbnai
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation);
 
-let pdfviewer: PdfViewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  underlineSettings: { author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9}
-});
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
+pdfviewer.underlineSettings= { author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9};
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -344,88 +333,86 @@ import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, Thumbnai
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation);
 
-let pdfviewer: PdfViewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  underlineSettings: { author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9}
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath= 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.underlineSettings= { author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9};
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `underlineSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default highlight settings.
+
+```html
+<button id="underline">Add underline</button>
+```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, UnderlineSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+//Apply Underline Settings while adding individual Annotation
+document.getElementById('underline')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Underline', {
+        bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
+        pageNumber: 1,
+        author: 'User 1',
+        color: '#ffff00',
+        opacity: 0.9
+    } as UnderlineSettings);
+
+    pdfviewer.annotation.addAnnotation('Underline', {
+        bounds: [{ x: 107, y: 220, width: 350, height: 14 }],
+        pageNumber: 1,
+        author: 'User 2',
+        color: '#ff1010ff',
+        opacity: 0.9
+    } as UnderlineSettings);
 });
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, UnderlineSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
 pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 
+//Apply Underline Settings while adding individual Annotation
+document.getElementById('underline')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Underline', {
+        bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
+        pageNumber: 1,
+        author: 'User 1',
+        color: '#ffff00',
+        opacity: 0.9
+    } as UnderlineSettings);
+
+    pdfviewer.annotation.addAnnotation('Underline', {
+        bounds: [{ x: 107, y: 220, width: 350, height: 14 }],
+        pageNumber: 1,
+        author: 'User 2',
+        color: '#ff1010ff',
+        opacity: 0.9
+    } as UnderlineSettings);
+});
 {% endhighlight %}
 {% endtabs %}
-
-## Perform undo and redo
-
-The PDF Viewer supports undo and redo for underline annotations:
-
-* Adding underline annotations
-* Deleting underline annotations
-* Changing color or opacity
-
-Undo and redo actions can be performed in the following ways:
-
-1. Using keyboard shortcuts:
-    After an underline annotation action, press Ctrl+Z to undo and Ctrl+Y to redo.
-2. Using the toolbar:
-    Use the **Undo** and **Redo** tools in the toolbar.
-
-Refer to the following code snippet to call undo and redo actions from the client side.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields);
-
-let pdfviewer: PdfViewer = new PdfViewer({
-    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl:'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
-});
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('undo')?.addEventListener('click', ()=> {
-    pdfviewer.undo();
-});
-
-document.getElementById('redo')?.addEventListener('click', ()=> {
-    pdfviewer.redo();
-});
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>EJ2 PDF Viewer</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="TypeScript PDF Viewer Control" />
-    <meta name="author" content="Syncfusion" />
-    <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
-    <script src="systemjs.config.js"></script>
-</head>
-<body>
-    <div id='loader'>Loading....</div>
-    <!--Element to call undo-->
-    <button id="undo">Undo</button>
-    <!--Element to call redo-->
-    <button id="redo">Redo</button>
-    <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%"></div>
-    </div>
-</body>
-</html>
-{% endhighlight %}
-{% endtabs %}
-
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
-
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/undo-redo-cs1" %}
 
 ## Disable underline annotation
 
@@ -438,7 +425,10 @@ import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, Thumbnai
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation);
 
-let pdfviewer: PdfViewer = new PdfViewer({ documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', enableTextMarkupAnnotation: false });
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
+pdfviewer.enableTextMarkupAnnotation: false;
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -448,8 +438,10 @@ import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, Thumbnai
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation);
 
-let pdfviewer: PdfViewer = new PdfViewer({ documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', enableTextMarkupAnnotation: false });
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.enableTextMarkupAnnotation: false;
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
