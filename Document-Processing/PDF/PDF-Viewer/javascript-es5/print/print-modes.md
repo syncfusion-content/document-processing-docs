@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print modes in the PDF Viewer
+# Print modes in the JavaScript PDF Viewer
 
 Use the `printMode` property to choose how the document is printed.
 
