@@ -4511,7 +4511,7 @@ This section explains how to add a date text box field to a PDF form using the S
 The following code example illustrates how to add a date field to a PDF form.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-a-date-field-to-a-PDF/.NET/Add-a-date-field-to-a-PDF/Program.cs" %}
 
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
@@ -4524,13 +4524,13 @@ using (PdfDocument pdfDocument = new PdfDocument())
     PdfPage pdfPage = pdfDocument.Pages.Add();
     // Create a text box field for entering the name
     PdfTextBoxField nameField = new PdfTextBoxField(pdfPage, "DateField");
-    nameField.Bounds = new RectangleF(10, 40, 200, 20);
+    nameField.Bounds = new RectangleF(10, 40, 70, 20);
     nameField.ToolTip = "Date";
     nameField.Text = "12/01/1995";
     //Set the scriptAction to submitButton
-    nameField.Actions.KeyPressed = new PdfJavaScriptAction("AFDate_KeystrokeEx(\"m/d/yy\")");
-    nameField.Actions.Format = new PdfJavaScriptAction("AFDate_FormatEx(\"m/d/yy\")");
-    nameField.Actions.Validate = new PdfJavaScriptAction("AFDate_Validate(\"m/d/yy\")");
+    nameField.Actions.KeyPressed = new PdfJavaScriptAction("AFDate_KeystrokeEx(\"mm/dd/yyyy\")");
+    nameField.Actions.Format = new PdfJavaScriptAction("AFDate_FormatEx(\"mm/dd/yyyy\")");
+    nameField.Actions.Validate = new PdfJavaScriptAction("AFDate_Validate(\"mm/dd/yyyy\")");
     // Add the field to the form
     pdfDocument.Form.Fields.Add(nameField);
     // Save the PDF document
@@ -4550,13 +4550,13 @@ using (PdfDocument pdfDocument = new PdfDocument())
     PdfPage pdfPage = pdfDocument.Pages.Add();
     // Create a text box field for entering the name
     PdfTextBoxField nameField = new PdfTextBoxField(pdfPage, "DateField");
-    nameField.Bounds = new RectangleF(10, 40, 200, 20);
+    nameField.Bounds = new RectangleF(10, 40, 70, 20);
     nameField.ToolTip = "Date";
     nameField.Text = "12/01/1995";
     //Set the scriptAction to submitButton
-    nameField.Actions.KeyPressed = new PdfJavaScriptAction("AFDate_KeystrokeEx(\"m/d/yy\")");
-    nameField.Actions.Format = new PdfJavaScriptAction("AFDate_FormatEx(\"m/d/yy\")");
-    nameField.Actions.Validate = new PdfJavaScriptAction("AFDate_Validate(\"m/d/yy\")");
+    nameField.Actions.KeyPressed = new PdfJavaScriptAction("AFDate_KeystrokeEx(\"mm/dd/yyyy\")");
+    nameField.Actions.Format = new PdfJavaScriptAction("AFDate_FormatEx(\"mm/dd/yyyy\")");
+    nameField.Actions.Validate = new PdfJavaScriptAction("AFDate_Validate(\"mm/dd/yyyy\")");
     // Add the field to the form
     pdfDocument.Form.Fields.Add(nameField);
     // Save the PDF document
@@ -4575,13 +4575,13 @@ Using pdfDocument As New PdfDocument()
     Dim pdfPage As PdfPage = pdfDocument.Pages.Add()
     ' Create a text box field for entering the name
     Dim nameField As New PdfTextBoxField(pdfPage, "DateField")
-    nameField.Bounds = New RectangleF(10, 40, 200, 20)
+    nameField.Bounds = New RectangleF(10, 40, 70, 20)
     nameField.ToolTip = "Date"
     nameField.Text = "12/01/1995"
     ' Set the scriptAction to submitButton
-    nameField.Actions.KeyPressed = New PdfJavaScriptAction("AFDate_KeystrokeEx(""m/d/yy"")")
-    nameField.Actions.Format = New PdfJavaScriptAction("AFDate_FormatEx(""m/d/yy"")")
-    nameField.Actions.Validate = New PdfJavaScriptAction("AFDate_Validate(""m/d/yy"")")
+    nameField.Actions.KeyPressed = New PdfJavaScriptAction("AFDate_KeystrokeEx(\"mm/dd/yyyy\")")
+    nameField.Actions.Format = New PdfJavaScriptAction("AFDate_FormatEx(\"mm/dd/yyyy\")")
+    nameField.Actions.Validate = New PdfJavaScriptAction("AFDate_Validate(\"mm/dd/yyyy\")")
     ' Add the field to the form
     pdfDocument.Form.Fields.Add(nameField)
     ' Save the PDF document
@@ -4590,7 +4590,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Add-a-date-field-to-a-PDF/.NET).
 
 ## Unified radio button selection
 
