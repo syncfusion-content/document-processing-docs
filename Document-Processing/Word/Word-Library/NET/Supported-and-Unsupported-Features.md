@@ -1117,7 +1117,7 @@ Yes<br/><br/></td></tr>
     <td>= (Formula) field</td>   
     <td> Yes <br/>
         <strong>Known Limitation:</strong><br/>
-        All formula fields are supported except <code>=SUM(ABOVE)</code>, which is not supported.
+        All formula fields are supported except formulas that evaluate an entire column or row (for example, <code>=SUM(ABOVE)</code>), which are not supported
     </td>
     </tr>
     </tr>
@@ -1166,8 +1166,23 @@ Yes<br/><br/></td></tr>
     </td>
     </tr>
     <tr><td>NumWords field</td><td>No</td></tr>
-    <tr><td>Page field</td><td>Yes</td></tr>
-    <tr><td>PageRef field</td><td>Yes</td></tr>
+    <tr>
+    <td>Page field</td>
+    <td>
+        Yes <br>
+        <strong>Known Limitation:</strong><br>
+        Not supported on Silverlight/WinRT platforms. PDF layout limitations may cause incorrect page counts. 
+        Requires <code>UpdateDocumentFields()</code> and PDF assemblies in .NET Core/MAUI.
+    </td>
+    </tr>
+    <tr><td>PageRef field</td>
+    <td>
+        Yes <br>
+        <strong>Known Limitation:</strong><br>
+        Not supported on Silverlight/WinRT platforms. PDF layout limitations may cause incorrect page counts. 
+        Requires <code>UpdateDocumentFields()</code> and PDF assemblies in .NET Core/MAUI.
+    </td>
+    </tr>
     <tr><td>PrintDate field</td><td>No</td></tr>
     <tr><td>Quote field</td><td>No</td></tr>
     <tr><td>Ref field</td><td>Yes</td></tr>
