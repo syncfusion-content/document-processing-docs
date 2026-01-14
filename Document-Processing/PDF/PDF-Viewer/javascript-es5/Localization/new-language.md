@@ -14,6 +14,8 @@ You can localize the PDF Viewer UI by:
 - Registering localized strings for each culture using `L10n.load` at the application level
 - Setting the [`locale`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#locale) property of the `PdfViewer` instance to the desired culture
 
+![German Locale](../../javascript-es6/images/locale-de.gif)
+
 ## Example Code-snippet to change language using Locale
 
 {% tabs %}

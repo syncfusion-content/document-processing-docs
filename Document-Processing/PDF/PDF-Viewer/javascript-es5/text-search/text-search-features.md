@@ -11,6 +11,48 @@ domainurl: ##DomainURL##
 
 The text search feature in the PDF Viewer locates and highlights matching content within a document. Enable or disable this capability with the following configuration.
 
+![Text Search](../../javascript-es6/images/textSearch.gif)
+
+N> The text search functionality requires importing TextSearch and adding it to PdfViewer.Inject(..., TextSearch). Otherwise, the search UI and APIs are not accessible.
+
+## Text search features in UI
+
+### Real-time search suggestions while typing
+Typing in the search box immediately surfaces suggestions that match the entered text. The list refreshes on every keystroke so users can quickly jump to likely results without completing the entire term.
+
+![Search suggestion popup](../images/SingleSearchPopup.png)
+
+### Select search suggestions from the popup
+After typing in the search box, the popup lists relevant matches. Selecting an item jumps directly to the corresponding occurrence in the PDF.
+
+![Search results from popup](../images/SearchResultFromPopup.png)
+
+### Dynamic Text Search for Large PDF Documents
+Dynamic text search is enabled during the initial loading of the document when the document text collection has not yet been fully loaded in the background.
+
+![Dynamic text search in progress](../../javascript-es6/images/dynamic-textSearch.gif)
+
+### Search text with the Match Case option
+Enable the Match Case checkbox to limit results to case-sensitive matches. Navigation commands then step through each exact match in sequence.
+
+![Match case navigation](../images/SearchNavigationMatchCase.png)
+
+### Search text without Match Case
+Leave the Match Case option cleared to highlight every occurrence of the query, regardless of capitalization, and navigate through each result.
+
+![Search navigation without match case](../images/SearchNavigationNoMatchCase.png)
+
+### Search a list of words with Match Any Word
+Enable Match Any Word to split the query into separate words. The popup proposes matches for each word and highlights them throughout the document.
+
+![Match any word search results](../images/MultiSearchPopup.png)
+
+## Text Search Programmatically
+
+### Enable or Disable Text Search 
+
+Use the following code snippet to enable or disable Text Search Features
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +94,8 @@ ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.LinkAnnotation,
     ej.pdfviewer.ThumbnailView,
     ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
+    ej.pdfviewer.TextSelection,
+    ej.Pdfviewer.TextSearch
 );
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
@@ -74,7 +117,8 @@ ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.LinkAnnotation,
     ej.pdfviewer.ThumbnailView,
     ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
+    ej.pdfviewer.TextSelection,
+    ej.Pdfviewer.TextSearch
 );
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
@@ -87,33 +131,6 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-## Text search features
-
-### Real-time search suggestions while typing
-Typing in the search box immediately surfaces suggestions that match the entered text. The list refreshes on every keystroke so users can quickly jump to likely results without completing the entire term.
-
-![Search suggestion popup](../images/SingleSearchPopup.png)
-
-### Select search suggestions from the popup
-After typing in the search box, the popup lists relevant matches. Selecting an item jumps directly to the corresponding occurrence in the PDF.
-
-![Search results from popup](../images/SearchResultFromPopup.png)
-
-### Search text with the Match Case option
-Enable the Match Case checkbox to limit results to case-sensitive matches. Navigation commands then step through each exact match in sequence.
-
-![Match case navigation](../images/SearchNavigationMatchCase.png)
-
-### Search text without Match Case
-Leave the Match Case option cleared to highlight every occurrence of the query, regardless of capitalization, and navigate through each result.
-
-![Search navigation without match case](../images/SearchNavigationNoMatchCase.png)
-
-### Search a list of words with Match Any Word
-Enable Match Any Word to split the query into separate words. The popup proposes matches for each word and highlights them throughout the document.
-
-![Match any word search results](../images/MultiSearchPopup.png)
-
 ### Programmatic search with settings
 
 While the PDF Viewer toolbar offers an interactive search experience, you can also trigger and customize searches programmatically by calling the `searchText` method with tailored options.
@@ -123,12 +140,11 @@ While the PDF Viewer toolbar offers an interactive search experience, you can al
 Use the `searchText` method to start a search with optional filters that control case sensitivity and whole-word behavior.
 
 ```js
-// searchText(text: string, isMatchCase?: boolean, isMatchWholeWord?: boolean)
-pdfviewer.textSearch.searchText('search text', false, false);
+// searchText(text: string, isMatchCase?: boolean)
+pdfviewer.textSearch.searchText('search text', false);
 ```
 
 - `isMatchCase` (optional boolean): Determines whether the search should be case-sensitive.
-- `isMatchWholeWord` (optional boolean): Ensures the entire string is matched as a standalone word.
 
 #### Match Case
 
@@ -162,39 +178,7 @@ pdfviewer.appendTo('#PdfViewer');
 pdfviewer.textSearch.searchText('PDF', true);
 ```
 
-#### Match Whole Word
-
-Set the `isMatchWholeWord` parameter to `true` to restrict results to whole-word matches. For example, a search for "view" will not match "viewer".
-
-```js
-ej.pdfviewer.PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.TextSearch,
-    ej.pdfviewer.Print,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.FormFields,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.PageOrganizer
-);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
-});
-pdfviewer.appendTo('#PdfViewer');
-
-// Later, to search programmatically:
-// This will find "pdf" but not "pdf-succinctly"
-pdfviewer.textSearch.searchText('pdf', false, true);
-```
-
-**Note on Match Any Word:** The Match Any Word checkbox in the toolbar splits the input into multiple words and searches for each term individually. This differs from the `isMatchWholeWord` parameter, which enforces a whole-word match on the entire query string.
+### Search Text Programmatically with the SearchText API
 
 The following text search methods are available in the PDF Viewer,
 
@@ -204,6 +188,158 @@ The following text search methods are available in the PDF Viewer,
 * [**Cancel text search**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch#canceltextsearch): Cancels the current text search and removes the highlighted occurrences from the PDF Viewer.
 
 ![Alt text](../images/search.png)
+
+Use the following code snippet to implement text search using SearchText API's
+
+```html
+  <!-- Search UI -->
+<div style="margin-top: 8px;">
+  <input id="searchBox" type="text" placeholder="Find text" />
+  <label><input id="chkMatchCase" type="checkbox" /> Match case</label>
+  <label><input id="chkWholeWord" type="checkbox" /> Whole word</label>
+
+  <button id="btnSearch">Search</button>
+  <button id="btnNext">Next</button>
+  <button id="btnPrev">Previous</button>
+  <button id="btnCancel">Cancel</button>
+</div>
+<!-- Viewer host -->
+<div id="pdfViewer" style="height: 700px;"></div>
+```
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.LinkAnnotation,
+  ej.pdfviewer.ThumbnailView,
+  ej.pdfviewer.BookmarkView,
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.TextSearch
+);
+
+var viewer = new ej.pdfviewer.PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
+});
+
+viewer.appendTo('#pdfViewer');
+
+// --- Programmatic Text Search API ---
+
+// Searches the target text in the PDF and highlights all matches.
+function searchText(query, matchCase) {
+  if (!query || !query.trim()) return;
+  viewer.textSearch.searchText(query, !!matchCase);
+}
+
+// Navigates to the next occurrence relative to the current active match.
+function searchNext() {
+  viewer.textSearch.searchNext();
+}
+
+// Navigates to the previous occurrence relative to the current active match.
+function searchPrevious() {
+  viewer.textSearch.searchPrevious();
+}
+
+// Cancels the current search and clears all highlights.
+function cancelTextSearch() {
+  viewer.textSearch.cancelTextSearch();
+}
+
+// Example: wire up to buttons/inputs
+var input = document.getElementById('searchBox');
+var btnSearch = document.getElementById('btnSearch');
+if (btnSearch) {
+  btnSearch.addEventListener('click', function () {
+    var val = input ? input.value : '';
+    searchText(val, false);
+  });
+}
+var btnNext = document.getElementById('btnNext');
+if (btnNext) {
+  btnNext.addEventListener('click', function () { searchNext(); });
+}
+var btnPrev = document.getElementById('btnPrev');
+if (btnPrev) {
+  btnPrev.addEventListener('click', function () { searchPrevious(); });
+}
+var btnCancel = document.getElementById('btnCancel');
+if (btnCancel) {
+  btnCancel.addEventListener('click', function () { cancelTextSearch(); });
+}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.LinkAnnotation,
+  ej.pdfviewer.ThumbnailView,
+  ej.pdfviewer.BookmarkView,
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.TextSearch
+);
+
+var viewer = new ej.pdfviewer.PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
+});
+
+viewer.appendTo('#pdfViewer');
+
+// --- Programmatic Text Search API ---
+
+// Searches the target text in the PDF and highlights all matches.
+function searchText(query, matchCase) {
+  if (!query || !query.trim()) return;
+  viewer.textSearch.searchText(query, !!matchCase);
+}
+
+// Navigates to the next occurrence relative to the current active match.
+function searchNext() {
+  viewer.textSearch.searchNext();
+}
+
+// Navigates to the previous occurrence relative to the current active match.
+function searchPrevious() {
+  viewer.textSearch.searchPrevious();
+}
+
+// Cancels the current search and clears all highlights.
+function cancelTextSearch() {
+  viewer.textSearch.cancelTextSearch();
+}
+
+// Example: wire up to buttons/inputs
+var input = document.getElementById('searchBox');
+var btnSearch = document.getElementById('btnSearch');
+if (btnSearch) {
+  btnSearch.addEventListener('click', function () {
+    var val = input ? input.value : '';
+    searchText(val, false);
+  });
+}
+var btnNext = document.getElementById('btnNext');
+if (btnNext) {
+  btnNext.addEventListener('click', function () { searchNext(); });
+}
+var btnPrev = document.getElementById('btnPrev');
+if (btnPrev) {
+  btnPrev.addEventListener('click', function () { searchPrevious(); });
+}
+var btnCancel = document.getElementById('btnCancel');
+if (btnCancel) {
+  btnCancel.addEventListener('click', function () { cancelTextSearch(); });
+}
+{% endhighlight %}
+{% endtabs %}
+
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples)
 
