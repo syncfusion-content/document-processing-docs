@@ -12,18 +12,40 @@ domainurl: ##DomainURL##
 
 The PDF Viewer displays existing form fields in a PDF and enables users to fill, validate, and download the filled data.
 
+## Form Fields
+
+Work with the runtime form fields present in a PDF Form.
+- Render existing fields
+- Fill fields.
+- Import/Export form data as JSON, XFDF, FDF, or as a plain object
+- Inject FormFields to enable form-filling features.
+
+Use the following code-snippet to enable form-filling by injecting `FormFields` Module.
+
+```js
+var pdfviewer = new ej.pdfviewer.PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+});
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
+  pdfviewer.appendTo('#PdfViewer');
+```
+
+![FormFilling](../../javascript-es6/images/FormFill.png)
+
 The PDF Viewer supports the following form field types:
 
-* Text box
-* Password
-* Check box
-* Radio button
-* List box
-* Dropdown
-* Signature field
-* Initial field
+* [Text box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-listbox)
+* [Password](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-password)
+* [Check box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-checkbox)
+* [Radio button](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-radiobutton)
+* [List box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-listbox)
+* [Dropdown](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-dropdown)
+* [Signature field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-signature-field)
+* [Initial field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-initial-field)
 
-![Form filling in JavaScript PDF Viewer](../images/form-filling.png)
+![Form filling in TypeScript PDF Viewer](../../javascript-es6/images/FormFields.gif)
 
 ## Disabling form fields
 
@@ -49,8 +71,15 @@ Add a button to trigger fetching form fields:
 ```html
 <button id="formFieldCollection">Fetch Form Fields Collection</button>
 ```
-
 ```js
+var pdfviewer = new ej.pdfviewer.PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
+  enableFormDesigner: true, //Set 'false' to disable form designer
+});
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
+  pdfviewer.appendTo('#PdfViewer');
   //Click event to get formfields collection
 document.getElementById('formFieldCollection').addEventListener('click', function() {
     var fields = pdfviewer.formFieldCollection; // Gets all form fields

@@ -13,14 +13,14 @@ The PDF Viewer component supports interactive form field design, including drawi
 
 The PDF Viewer supports the following form field types:
 
-- Textbox
-- Password
-- CheckBox
-- RadioButton
-- ListBox
-- DropDown
-- Signature field
-- Initial field
+- [Textbox](#add-textbox)
+- [Password](#add-password)
+- [CheckBox](#add-checkbox)
+- [RadioButton](#add-radiobutton)
+- [ListBox](#add-listbox)
+- [DropDown](#add-dropdown)
+- [Signature field](#signature-field)
+- [Initial field](#add-initial-field)
 
 ## Add the form field dynamically
 
@@ -44,9 +44,9 @@ Resize the selected form field using the resize handles on the field boundary. S
 
 ### Add Textbox
 
-1) Open the Form Designer toolbar.
-2) Select Textbox, then click/tap on the page to place it.
-3) Resize/move as needed and set properties in the property panel.
+- Open the Form Designer toolbar.
+- Select Textbox, then click/tap on the page to place it.
+- Resize/move as needed and set properties in the property panel.
 
 ![Textbox added from UI](../../../javascript-es6/images/ui-textbox.png)
 
@@ -78,9 +78,9 @@ pdfviewer.documentLoad = function() {
 
 ### Add Password
 
-1) Open the Form Designer toolbar.
-2) Select Password, then place it on the page.
-3) Configure tooltip, required, max length, etc.
+- Open the Form Designer toolbar.
+- Select Password, then place it on the page.
+- Configure tooltip, required, max length, etc.
 
 ![Password added from UI](../../../javascript-es6/images/ui-password.png)
 
@@ -112,9 +112,9 @@ pdfviewer.documentLoad = function() {
 
 ### Add CheckBox
 
-1) Choose CheckBox in the Form Designer toolbar.
-2) Click on the page to place, duplicate for multiple options if needed.
-3) Use the property panel to set IsChecked, tooltip, and appearance.
+- Choose CheckBox in the Form Designer toolbar.
+- Click on the page to place, duplicate for multiple options if needed.
+- Use the property panel to set IsChecked, tooltip, and appearance.
 
 ![CheckBox added from UI](../../../javascript-es6/images/ui-checkbox.png)
 
@@ -147,9 +147,9 @@ pdfviewer.documentLoad = function() {
 
 ### Add RadioButton
 
-1) Select RadioButton in the Form Designer toolbar.
-2) Place buttons sharing the same Name to create a group (e.g., Gender).
-3) Use the property panel to set selection, colors, and tooltip.
+- Select RadioButton in the Form Designer toolbar.
+- Place buttons sharing the same Name to create a group (e.g., Gender).
+- Use the property panel to set selection, colors, and tooltip.
 
 ![Radio buttons added from UI](../../../javascript-es6/images/ui-radiobutton.png)
 
@@ -189,9 +189,9 @@ pdfviewer.documentLoad = function() {
 
 ### Add ListBox
 
-1) Choose ListBox in the Form Designer toolbar.
-2) Place the field and add items in the property panel.
-3) Configure font, size, and selection behavior.
+- Choose ListBox in the Form Designer toolbar.
+- Place the field and add items in the property panel.
+- Configure font, size, and selection behavior.
 
 ![ListBox added from UI](../../../javascript-es6/images/ui-listbox.png)
 
@@ -230,9 +230,9 @@ pdfviewer.documentLoad = function() {
 
 ### Add DropDown
 
-1) Select DropDown in the Form Designer toolbar.
-2) Place the field, then add items via the property panel.
-3) Adjust appearance and default value.
+- Select DropDown in the Form Designer toolbar.
+- Place the field, then add items via the property panel.
+- Adjust appearance and default value.
 
 ![DropDown added from UI](../../../javascript-es6/images/ui-dropdown.png)
 
@@ -271,9 +271,9 @@ pdfviewer.documentLoad = function() {
 
 ### Add Signature field
 
-1) Select Signature field in the Form Designer toolbar.
-2) Place the field where the signer should sign.
-3) Configure indicator text, thickness, tooltip, and required state.
+- Select Signature field in the Form Designer toolbar.
+- Place the field where the signer should sign.
+- Configure indicator text, thickness, tooltip, and required state.
 
 ![Signature field added from UI](../../../javascript-es6/images/ui-signature.png)
 
@@ -305,9 +305,9 @@ pdfviewer.documentLoad = function() {
 
 ### Add Initial field
 
-1) Select Initial field in the Form Designer toolbar.
-2) Place the field where initials are required.
-3) Configure indicator text, tooltip, and required state.
+- Select Initial field in the Form Designer toolbar.
+- Place the field where initials are required.
+- Configure indicator text, tooltip, and required state.
 
 ![Initial field added from UI](../../../javascript-es6/images/ui-initial.png)
 

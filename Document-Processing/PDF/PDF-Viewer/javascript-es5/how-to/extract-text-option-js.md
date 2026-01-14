@@ -48,3 +48,11 @@ ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearc
 N> Text search: When using the `extractTextOption.TextOnly` or `extractTextOption.None` options, the `findText` method is unavailable. Use the `findTextAsync` method to perform text searches asynchronously.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to)
+
+## See Also
+
+[Find Text](../text-search/find-text)
+[Text Search Events](../text-search/text-search-events)
+[Text Search Features](../text-search/text-search-features)
+[Extract Text](../how-to/extract-text-js)
+[Extract Text Completed](../how-to/extract-text-completed-js)
