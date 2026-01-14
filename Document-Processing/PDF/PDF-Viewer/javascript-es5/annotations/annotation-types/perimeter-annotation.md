@@ -187,7 +187,7 @@ You can select, move, and resize Perimeter annotations directly in the viewer:
 - Resize/reshape: drag any vertex handle to adjust the polyline points and size.
 - Delete or access more options from the context menu.
 
-### Edit the properties of Perimeter annotations
+#### Edit the properties of Perimeter annotations
 
 The fill color, stroke color, thickness, and opacity can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -358,6 +358,82 @@ pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.
 
 pdfviewer.perimeterSettings = { fillColor: 'green', opacity: 0.6, strokeColor: 'blue' };
 pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `PerimeterSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default Perimeter settings.
+
+```html
+<button id="Perimeter">Add Perimeter</button>
+```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+//Apply Perimeter Settings while adding individual Annotation
+document.getElementById('Perimeter')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Perimeter', {
+        offset: { x: 200, y: 350 },
+        pageNumber: 1,
+        vertexPoints: [{ x: 200, y: 350 }, { x: 285, y: 350 }, { x: 286, y: 412 }],
+        fillColor: 'green', opacity: 0.6, strokeColor: 'blue'
+    });
+});
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+=ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+
+//Apply Perimeter Settings while adding individual Annotation
+document.getElementById('Perimeter')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Perimeter', {
+        offset: { x: 200, y: 350 },
+        pageNumber: 1,
+        vertexPoints: [{ x: 200, y: 350 }, { x: 285, y: 350 }, { x: 286, y: 412 }],
+        fillColor: 'green', opacity: 0.6, strokeColor: 'blue'
+    });
+});
 {% endhighlight %}
 {% endtabs %}
 

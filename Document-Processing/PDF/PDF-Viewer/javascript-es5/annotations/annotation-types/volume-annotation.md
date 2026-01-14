@@ -27,9 +27,7 @@ N> When in pan mode, selecting a measurement annotation switches the viewer to t
 
 ![Measurement toolbar](../../images/calibrate_tool.png)
 
-### Add a volume annotation programmatically
-
-#### Enable volume mode
+### Enable volume mode
 
 The PDF Viewer component allows drawing Volume annotations programmatically after enabling Volume mode in button clicks.
 
@@ -115,7 +113,7 @@ if (setNoneBtn) {
 {% endhighlight %}
 {% endtabs %}
 
-#### Add volume annotation
+### Add a volume annotation programmatically
 
 Add measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
@@ -206,7 +204,7 @@ You can select, move, and resize Volume annotations directly in the viewer:
 - Resize: drag the handles to adjust its size.
 - Delete or access more options from the context menu.
 
-### Edit the properties of volume annotations
+#### Edit the properties of volume annotations
 
 The fill color, stroke color, thickness, and opacity can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 

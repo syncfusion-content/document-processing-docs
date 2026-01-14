@@ -27,9 +27,7 @@ N> When in pan mode, selecting a shape annotation switches the viewer to text se
 
 ![Shape toolbar](../../images/shape_toolbar.png)
 
-### Add a circle annotation programmatically
-
-#### Enable circle mode
+### Enable circle mode
 
 The PDF Viewer library allows drawing Circle annotations programmatically after enabling Circle mode in button clicks.
 
@@ -106,8 +104,8 @@ if (setNone) {
 }
 {% endhighlight %}
 {% endtabs %}
-
-#### Add circle annotation
+ 
+### Add a circle annotation programmatically
 
 Add shape annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
@@ -188,7 +186,7 @@ You can select, move, and resize Circle annotations directly in the viewer:
 - Resize: drag the corner handles to adjust its diameter.
 - Delete or access more options from the context menu.
 
-### Editing the properties of the circle annotation
+#### Editing the properties of the circle annotation
 
 The fill color, stroke color, thickness, and opacity of circle shape annotations can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -196,25 +194,25 @@ The fill color, stroke color, thickness, and opacity of circle shape annotations
 
 The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
 
-![Edit fill color for shapes](../../images/shape_fillColor.png)
+![Edit fill color for shapes](../../../javascript-es6/images/shape_fillColor.png)
 
 ##### Editing stroke color
 
 The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
 
-![Edit stroke color for shapes](../../images/shape_strokecolor.png)
+![Edit stroke color for shapes](../../../javascript-es6/images/shape_strokecolor.png)
 
 ##### Editing thickness
 
 The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
 
-![Edit thickness for shapes](../../images/shape_thickness.png)
+![Edit thickness for shapes](../../../javascript-es6/images/shape_thickness.png)
 
 ##### Editing opacity
 
 The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
 
-![Edit opacity for shapes](../../images/shape_opacity.png)
+![Edit opacity for shapes](../../../javascript-es6/images/shape_opacity.png)
 
 ### Edit an existing circle annotation programmatically
 
@@ -347,6 +345,88 @@ pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.circleSettings = { fillColor: 'orange', opacity: 0.6, strokeColor: 'pink' };
 pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `CircleSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default Circle settings.
+
+```html
+<button id="Circle">Add Circle</button>
+```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+//Apply Circle Settings while adding individual Annotation
+document.getElementById('Circle')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Circle', {
+        offset: { x: 200, y: 480 },
+        pageNumber: 1,
+        width: 150,
+        height: 75,
+        opacity: 0.5,
+        strokeColor: '#FF0000',
+        fillColor: '#000fff#',
+        author: 'User1'
+    });
+});
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+//Apply Circle Settings while adding individual Annotation
+document.getElementById('Circle')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Circle', {
+        offset: { x: 200, y: 480 },
+        pageNumber: 1,
+        width: 150,
+        height: 75,
+        opacity: 0.5,
+        strokeColor: '#FF0000',
+        fillColor: '#000fff#',
+        author: 'User1'
+    });
+});
 {% endhighlight %}
 {% endtabs %}
 

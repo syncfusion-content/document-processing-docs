@@ -24,7 +24,7 @@ You can add strikethrough in two ways:
 * Select text in the PDF document and right-click it.
 * Choose **Strikethrough** in the context menu.
 
-![Strikethrough context](../../images/strikethrough_context.png)
+![Strikethrough context](../../../javascript-es6/annotations/annotation-images/strikethrough-context.gif)
 
 <!-- markdownlint-disable MD029 -->
 2. Using the annotation toolbar
@@ -33,7 +33,7 @@ You can add strikethrough in two ways:
 * Select text to add the strikethrough annotation.
 * Alternatively, select text first and then click **Strikethrough**.
 
-![Strikethrough toolbar](../../images/strikethrough_button.png)
+![Strikethrough toolbar](../../../javascript-es6/annotations/annotation-images/strikethrough-tool.gif)
 
 When pan mode is active and a text markup mode is entered, the PDF Viewer switches to text selection mode to enable selection.
 
@@ -250,35 +250,28 @@ if (strikethrough) {
 
 ### Edit strikethrough annotation in UI
 
-#### Delete a strikethrough annotation
+The color and opacity of the strikethrough annotation can be edited using the Edit Color and Edit Opacity tools in the annotation toolbar.
 
-The selected annotation can be deleted in the following ways:
+#### Edit color
+Use the color palette in the Edit Color tool to change the annotation color.
 
-1. Using the Delete/Backspace key
-    * Select the annotation.
-    * Press Delete (or Backspace). The selected annotation is removed.
+![Edit color](../../../javascript-es6/images/edit_color.png)
 
-2. Using the annotation toolbar
-    * Select the annotation.
-    * Click **Delete Annotation** in the annotation toolbar. The selected annotation is removed.
+#### Edit opacity
+Use the range slider in the Edit Opacity tool to change annotation opacity.
 
-![Delete button](../../images/delete_button.png)
+![Edit opacity](../../../javascript-es6/images/edit_opacity.png)
+
+#### Delete strikethrough annotation
+
+- Select the annotation and press Delete, or
+- Click **Delete Annotation** in the annotation toolbar.
+
+![Delete button](../../../javascript-es6/images/delete_button.png)
 
 #### Edit strikethrough annotation properties
 
 The color and opacity of the strikethrough annotation can be edited using the Edit Color and Edit Opacity tools in the annotation toolbar.
-
-### Edit color
-
-Use the color palette in the Edit Color tool to change the annotation color.
-
-![Edit color](../../images/edit_color.png)
-
-### Edit opacity
-
-Use the range slider in the Edit Opacity tool to change annotation opacity.
-
-![Edit opacity](../../images/edit_opacity.png)
 
 ### Edit an existing strikethrough annotation programmatically
 
@@ -413,86 +406,73 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-## Perform undo and redo
+## Set properties while adding Individual Annotation
 
-The PDF Viewer supports undo and redo for strikethrough annotations:
+Set properties for individual annotation before creating the control using `StrikethroughSettings`.
 
-* Adding strikethrough annotations
-* Deleting strikethrough annotations
-* Changing color or opacity
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
-Undo and redo actions can be performed in the following ways:
+Refer to the following code snippet to set the default highlight settings.
 
-1. Using keyboard shortcuts:
-    After a strikethrough annotation action, press Ctrl+Z to undo and Ctrl+Y to redo.
-2. Using the toolbar:
-    Use the **Undo** and **Redo** tools in the toolbar.
-
-Refer to the following code snippet to call undo and redo actions from the client side.
-
+```html
+<button id="Strikethrough">Add Strikethrough</button>
+```
 {% tabs %}
-{% highlight js tabtitle="index.js" %}
-var PdfViewer = ej.pdfviewer.PdfViewer;
-PdfViewer.Inject(
-    ej.pdfviewer.Toolbar,
-    ej.pdfviewer.Magnification,
-    ej.pdfviewer.Navigation,
-    ej.pdfviewer.LinkAnnotation,
-    ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection,
-    ej.pdfviewer.Annotation,
-    ej.pdfviewer.FormDesigner,
-    ej.pdfviewer.FormFields
-);
+{% highlight js tabtitle="Standalone" %}
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
 
-var pdfviewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
-});
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
 pdfviewer.appendTo('#PdfViewer');
 
-document.getElementById('undo').addEventListener('click', function () {
-    pdfviewer.undo();
-});
+//Apply Strikethrough Settings while adding individual Annotation
+document.getElementById('Strikethrough')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Strikethrough', {
+        bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
+        pageNumber: 1,
+        author: 'User 1',
+        color: '#ffff00',
+        opacity: 0.9
+    });
 
-document.getElementById('redo').addEventListener('click', function () {
-    pdfviewer.redo();
+    pdfviewer.annotation.addAnnotation('Strikethrough', {
+        bounds: [{ x: 107, y: 220, width: 350, height: 14 }],
+        pageNumber: 1,
+        author: 'User 2',
+        color: '#ff1010ff',
+        opacity: 0.9
+    });
 });
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>EJ2 PDF Viewer</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="JavaScript PDF Viewer Control" />
-    <meta name="author" content="Syncfusion" />
-    <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/31.1.23/material.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
-    <script src="systemjs.config.js"></script>
-</head>
-<body>
-    <div id='loader'>Loading....</div>
-    <!--Element to call undo-->
-    <button id="undo">Undo</button>
-    <!--Element to call redo-->
-    <button id="redo">Redo</button>
-    <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%"></div>
-    </div>
-</body>
-</html>
+{% highlight js tabtitle="Server-Backed" %}
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+//Apply Strikethrough Settings while adding individual Annotation
+document.getElementById('Strikethrough')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Strikethrough', {
+        bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
+        pageNumber: 1,
+        author: 'User 1',
+        color: '#ffff00',
+        opacity: 0.9
+    });
+
+    pdfviewer.annotation.addAnnotation('Strikethrough', {
+        bounds: [{ x: 107, y: 220, width: 350, height: 14 }],
+        pageNumber: 1,
+        author: 'User 2',
+        color: '#ff1010ff',
+        opacity: 0.9
+    });
+});
 {% endhighlight %}
 {% endtabs %}
-
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.js` file
-`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
-
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/undo-redo-cs1" %}
 
 ## Disable strikethrough annotation
 

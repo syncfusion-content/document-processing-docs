@@ -112,7 +112,7 @@ You can select and manage sticky notes directly in the viewer:
 - Delete or more options: use the context menu on the selected note.
 - Open comments: right-click the note and choose Comment, or use the Comment Panel button.
 
-### Edit the properties of sticky note annotations
+#### Edit the properties of sticky note annotations
 
 #### Editing opacity
 
@@ -132,7 +132,7 @@ Modify or delete comments or replies, and change status using the menu options i
 
   ![StickyNotesEdit](../../images/sticky_editbtn.png)
 
-#### Edit Annotation programmatically
+### Edit Annotation programmatically
 
 Use editAnnotation to update an existing note's bounds.
 
@@ -259,6 +259,56 @@ pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.stickyNotesSettings = { author: 'Syncfusion' };
 pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `StickyNotesSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default StickyNotes settings.
+
+```html
+<button id="StickyNotes">Add StickyNotes</button>
+```
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+//Apply StickyNotes Settings while adding individual Annotation
+document.getElementById('StickyNotes')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('StickyNotes', {
+    offset: { x: 100, y: 200 },
+    pageNumber: 1,
+    isLock: false,
+    author: 'Syncfusion'
+  });
+});
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+
+//Apply StickyNotes Settings while adding individual Annotation
+document.getElementById('StickyNotes')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('StickyNotes', {
+    offset: { x: 100, y: 200 },
+    pageNumber: 1,
+    isLock: false,
+    author: 'Syncfusion'
+  });
+});
 {% endhighlight %}
 {% endtabs %}
 

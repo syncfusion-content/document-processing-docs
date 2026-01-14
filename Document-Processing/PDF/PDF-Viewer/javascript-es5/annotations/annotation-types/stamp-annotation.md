@@ -275,6 +275,78 @@ pdfviewer.appendTo('#PdfViewer');
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master)
 
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `StampSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default Stamp settings.
+
+```html
+<button id="Stamp">Add Stamp</button>
+```
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer,
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+//Apply Stamp Settings while adding individual Annotation
+document.getElementById('Stamp')?.addEventListener('click', function () {
+     pdfviewer.annotation.addAnnotation('Stamp', {
+    offset: { x: 200, y: 140 }, pageNumber: 1,
+     opacity: 0.3, author: 'Guest User'
+  } ,'Approved');
+});
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer,
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+
+//Apply Stamp Settings while adding individual Annotation
+document.getElementById('Stamp')?.addEventListener('click', function () {
+     pdfviewer.annotation.addAnnotation('Stamp', {
+    offset: { x: 200, y: 140 }, pageNumber: 1,
+     opacity: 0.3, author: 'Guest User'
+  } ,'Approved');
+});
+{% endhighlight %}
+{% endtabs %}
+
 ## See also
 
 - [Annotation Overview](../overview)
