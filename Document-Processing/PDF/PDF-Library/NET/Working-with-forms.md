@@ -4504,6 +4504,94 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Export_checkbox_values/.NET).
 
+## Add a date field to a PDF form
+
+This section explains how to add a date text box field to a PDF form using the Syncfusion PDF library. The field is prefilled with a sample date and uses JavaScript-based formatting to enforce the date format, validate input, and automatically format user entries.
+
+The following code example illustrates how to add a date field to a PDF form.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
+// Create a new PDF document
+using (PdfDocument pdfDocument = new PdfDocument())
+{
+    // Add a new page to the PDF document
+    PdfPage pdfPage = pdfDocument.Pages.Add();
+    // Create a text box field for entering the name
+    PdfTextBoxField nameField = new PdfTextBoxField(pdfPage, "DateField");
+    nameField.Bounds = new RectangleF(10, 40, 200, 20);
+    nameField.ToolTip = "Date";
+    nameField.Text = "12/01/1995";
+    //Set the scriptAction to submitButton
+    nameField.Actions.KeyPressed = new PdfJavaScriptAction("AFDate_KeystrokeEx(\"m/d/yy\")");
+    nameField.Actions.Format = new PdfJavaScriptAction("AFDate_FormatEx(\"m/d/yy\")");
+    nameField.Actions.Validate = new PdfJavaScriptAction("AFDate_Validate(\"m/d/yy\")");
+    // Add the field to the form
+    pdfDocument.Form.Fields.Add(nameField);
+    // Save the PDF document
+    pdfDocument.Save(Path.GetFullPath(@"Output/Output.pdf"));
+}
+{% endhighlight %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
+// Create a new PDF document
+using (PdfDocument pdfDocument = new PdfDocument())
+{
+    // Add a new page to the PDF document
+    PdfPage pdfPage = pdfDocument.Pages.Add();
+    // Create a text box field for entering the name
+    PdfTextBoxField nameField = new PdfTextBoxField(pdfPage, "DateField");
+    nameField.Bounds = new RectangleF(10, 40, 200, 20);
+    nameField.ToolTip = "Date";
+    nameField.Text = "12/01/1995";
+    //Set the scriptAction to submitButton
+    nameField.Actions.KeyPressed = new PdfJavaScriptAction("AFDate_KeystrokeEx(\"m/d/yy\")");
+    nameField.Actions.Format = new PdfJavaScriptAction("AFDate_FormatEx(\"m/d/yy\")");
+    nameField.Actions.Validate = new PdfJavaScriptAction("AFDate_Validate(\"m/d/yy\")");
+    // Add the field to the form
+    pdfDocument.Form.Fields.Add(nameField);
+    // Save the PDF document
+    pdfDocument.Save(Path.GetFullPath(@"Output/Output.pdf"));
+}
+{% endhighlight %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+' Create a new PDF document
+Using pdfDocument As New PdfDocument()
+    ' Add a new page to the PDF document
+    Dim pdfPage As PdfPage = pdfDocument.Pages.Add()
+    ' Create a text box field for entering the name
+    Dim nameField As New PdfTextBoxField(pdfPage, "DateField")
+    nameField.Bounds = New RectangleF(10, 40, 200, 20)
+    nameField.ToolTip = "Date"
+    nameField.Text = "12/01/1995"
+    ' Set the scriptAction to submitButton
+    nameField.Actions.KeyPressed = New PdfJavaScriptAction("AFDate_KeystrokeEx(""m/d/yy"")")
+    nameField.Actions.Format = New PdfJavaScriptAction("AFDate_FormatEx(""m/d/yy"")")
+    nameField.Actions.Validate = New PdfJavaScriptAction("AFDate_Validate(""m/d/yy"")")
+    ' Add the field to the form
+    pdfDocument.Form.Fields.Add(nameField)
+    ' Save the PDF document
+    pdfDocument.Save(Path.GetFullPath("Output/Output.pdf"))
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Unified radio button selection
 
 The essential<sup>&reg;</sup> PDF allows radio buttons within the same group that have identical export values to be selected or deselected simultaneously. 
