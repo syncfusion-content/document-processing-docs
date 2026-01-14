@@ -16,6 +16,8 @@ The supported values are:
 *   `Default`: Prints the document from the same window.
 *   `NewWindow`: Prints the document from a new window or tab, which can help with browser pop-up policies.
 
+![Print in New Window](../../javascript-es6/images/print-newwindow.gif)
+
 N> Browser pop-up blockers must allow new windows or tabs when you use `pdfviewer.printMode ="NewWindow";`.
 
 The following example shows how to set the print mode.
