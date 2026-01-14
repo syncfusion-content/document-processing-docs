@@ -4506,7 +4506,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add a date field to a PDF form
 
-This section explains how to add a date text box field to a PDF form using the Syncfusion PDF library. The field is prefilled with a sample date and uses JavaScript-based formatting to enforce the date format, validate input, and automatically format user entries.
+This section explains how to add a date text box field to a PDF form using the Syncfusion PDF library. The field is initialized with a sample date and uses JavaScript-based formatting to enforce the date format, validate input, and automatically format user entries.
 
 The following code example illustrates how to add a date field to a PDF form.
 
