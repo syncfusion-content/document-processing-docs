@@ -421,6 +421,9 @@ document.getElementById('squiggly')?.addEventListener('click', function () {
         opacity: 0.9
     });
 });
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Disable squiggly annotation
 
