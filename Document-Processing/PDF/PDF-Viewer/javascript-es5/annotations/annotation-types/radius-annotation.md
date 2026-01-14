@@ -27,9 +27,7 @@ N> When in pan mode, selecting a measurement annotation switches the viewer to t
 
 ![Measurement toolbar](../../images/calibrate_tool.png)
 
-### Add a radius annotation programmatically
-
-#### Enable radius mode
+### Enable radius mode
 
 The PDF Viewer component allows drawing Radius annotations programmatically after enabling Radius mode in button clicks.
 
@@ -104,7 +102,7 @@ document.getElementById('setNone').addEventListener('click', function() {
 {% endhighlight %}
 {% endtabs %}
 
-#### Add radius annotation
+### Add a radius annotation programmatically
 
 Add measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
@@ -185,7 +183,7 @@ You can select, move, and resize Radius annotations directly in the viewer:
 - Resize: drag the handles to adjust its size.
 - Delete or access more options from the context menu.
 
-### Edit the properties of radius annotations
+#### Edit the properties of radius annotations
 
 The fill color, stroke color, thickness, and opacity can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -336,6 +334,84 @@ pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.radiusSettings = { fillColor: 'orange', opacity: 0.6, strokeColor: 'pink' };
 pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `RadiusSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default Radius settings.
+
+```html
+<button id="Radius">Add Radius</button>
+```
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+//Apply Radius Settings while adding individual Annotation
+document.getElementById('Radius')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Radius', {
+        offset: { x: 200, y: 630 },
+        pageNumber: 1,
+        width: 90,
+        height: 90,
+        fillColor: 'orange', opacity: 0.6, strokeColor: 'pink'
+    });
+});
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+
+//Apply Radius Settings while adding individual Annotation
+document.getElementById('Radius')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Radius', {
+        offset: { x: 200, y: 630 },
+        pageNumber: 1,
+        width: 90,
+        height: 90,
+        fillColor: 'orange', opacity: 0.6, strokeColor: 'pink'
+    });
+});
 {% endhighlight %}
 {% endtabs %}
 

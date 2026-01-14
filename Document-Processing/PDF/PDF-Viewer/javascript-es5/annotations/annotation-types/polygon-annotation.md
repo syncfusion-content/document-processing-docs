@@ -27,9 +27,7 @@ N> When in pan mode, selecting a shape annotation switches the viewer to text se
 
 ![Shape toolbar](../../images/shape_toolbar.png)
 
-### Add a polygon annotation programmatically
-
-#### Enable polygon mode
+### Enable polygon mode
 
 The PDF Viewer library allows drawing shape annotations programmatically after enabling polygon mode in button clicks.
 
@@ -104,7 +102,7 @@ document.getElementById('setNone') && document.getElementById('setNone').addEven
 {% endhighlight %}
 {% endtabs %}
 
-#### Add Polygon Annotation
+### Add a polygon annotation programmatically
 
 The PDF Viewer library allows adding polygon annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
@@ -192,7 +190,7 @@ Use the toolbar to change appearance:
 
 See the sections below for details.
 
-### Edit the properties of area annotations
+#### Edit the properties of area annotations
 
 The fill color, stroke color, thickness, and opacity can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -345,6 +343,90 @@ pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.polygonSettings = { fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow' };
 pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `PolygonSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default Polygon settings.
+
+```html
+<button id="Polygon">Add Polygon</button>
+```
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+//Apply Polygon Settings while adding individual Annotation
+document.getElementById('Polygon')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Polygon', {
+        offset: { x: 200, y: 800 },
+        pageNumber: 1,
+        vertexPoints: [
+            { x: 200, y: 800 }, { x: 242, y: 771 }, { x: 289, y: 799 }, { x: 278, y: 842 }, { x: 211, y: 842 }, { x: 200, y: 800 }
+        ],
+        fillColor:'#ff000',
+        opacity: 0.9,
+        strokeColor:'##ff000'
+    });
+});
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+
+//Apply Polygon Settings while adding individual Annotation
+document.getElementById('Polygon')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Polygon', {
+        offset: { x: 200, y: 800 },
+        pageNumber: 1,
+        vertexPoints: [
+            { x: 200, y: 800 }, { x: 242, y: 771 }, { x: 289, y: 799 }, { x: 278, y: 842 }, { x: 211, y: 842 }, { x: 200, y: 800 }
+        ],
+        fillColor:'#ff000',
+        opacity: 0.9,
+        strokeColor:'##ff000'
+    });
+});
 {% endhighlight %}
 {% endtabs %}
 

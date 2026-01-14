@@ -25,7 +25,7 @@ Use the annotation toolbar:
 
 ![Ink tool in the annotation toolbar](../../images/ink_tool.png)
 
-#### Enable ink mode
+### Enable ink mode
 
 The PDF Viewer component allows add ink annotations programmatically after enabling ink mode in button clicks.
 
@@ -163,7 +163,7 @@ You can select, move, and resize Ink annotations directly in the viewer:
 - Resize: drag the selector handles to adjust its bounds.
 - Delete or access more options from the context menu.
 
-### Edit the properties of ink annotations
+#### Edit the properties of ink annotations
 
 Stroke color, thickness, and opacity can be edited using the Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -268,8 +268,6 @@ document.getElementById('editInkAnnotation').addEventListener('click', function 
 {% endhighlight %}
 {% endtabs %}
 
-
-
 ## Default ink settings during initialization
 
 Set defaults using inkAnnotationSettings.
@@ -320,6 +318,86 @@ pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/
 pdfviewer.inkAnnotationSettings = { author: 'Syncfusion', strokeColor: 'green', thickness: 3, opacity: 0.6 };
 
 pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `InkSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default Ink settings.
+
+```html
+<button id="Ink">Add Ink</button>
+```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+//Apply Ink Settings while adding individual Annotation
+document.getElementById('Ink')?.addEventListener('click', function () {
+     pdfviewer.annotation.addAnnotation('Ink', {
+        offset: { x: 150, y: 100 },
+        pageNumber: 1,
+        width: 200,
+        height: 60,
+        path: '[{"command":"M","x":244.83,"y":982.00},{"command":"L","x":250.83,"y":953.33}]',
+        author: 'Syncfusion', strokeColor: 'green', thickness: 3, opacity: 0.6 
+    });
+});
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.serviceUrl= 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+
+//Apply Ink Settings while adding individual Annotation
+document.getElementById('Ink')?.addEventListener('click', function () {
+     pdfviewer.annotation.addAnnotation('Ink', {
+        offset: { x: 150, y: 100 },
+        pageNumber: 1,
+        width: 200,
+        height: 60,
+        path: '[{"command":"M","x":244.83,"y":982.00},{"command":"L","x":250.83,"y":953.33}]',
+        author: 'Syncfusion', strokeColor: 'green', thickness: 3, opacity: 0.6 
+    });
+});
 {% endhighlight %}
 {% endtabs %}
 

@@ -60,7 +60,7 @@ viewer.annotationSettings = {
 viewer.appendTo('#pdfViewer');
 ```
 
-## Per-annotation custom data
+## Custom data for Individual Annotation
 
 Provide customData inside individual annotation-type settings when you want specific payloads for different tools.
 
