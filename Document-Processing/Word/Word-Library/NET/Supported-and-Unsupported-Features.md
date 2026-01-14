@@ -1125,7 +1125,7 @@ Yes<br/><br/></td></tr>
     <tr><td>Ask field</td><td>No</td></tr>
     <tr><td>Author field</td><td>Yes</td></tr>
     <tr><td>AutoNum field</td><td>Not Applicable</td></tr>
-    <tr><td>AutoNumLgl field</td><td>Not Applicable</td></tr>
+    <tr><td>AutoNumLGL field</td><td>Not Applicable</td></tr>
     <tr><td>AutoNumOut field</td><td>Not Applicable</td></tr>
     <tr><td>AutoText field</td><td>No</td></tr>
     <tr><td>AutoTextList field</td><td>No</td></tr>

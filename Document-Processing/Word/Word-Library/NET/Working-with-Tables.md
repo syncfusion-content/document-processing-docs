@@ -2161,7 +2161,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to extract tables and add to a new Document in ASP.NETCore Word?](https://support.syncfusion.com/kb/article/19585/how-to-extract-tables-and-add-to-a-new-document-in-aspnetcore-word?)
 * [How to remove multiple rows from a table in a Word Document?](https://support.syncfusion.com/kb/article/19642/how-to-remove-multiple-rows-from-a-table-in-a-word-document)
 * [How to set table row height in a Word document?](https://support.syncfusion.com/kb/article/19688/how-to-set-table-row-height-in-a-word-document)
-* [How to Find and Remove a Table by Title in .Net Core Word document?](https://support.syncfusion.com/kb/article/19677/how-to-find-and-remove-a-table-by-title-in-a-word-document)
+* [How to Find and Remove a Table by Title in .NET Core Word document?](https://support.syncfusion.com/kb/article/19677/how-to-find-and-remove-a-table-by-title-in-a-word-document)
 * [How to adjust the first column to fill remaining space in a Word table?](https://support.syncfusion.com/kb/article/19652/how-to-adjust-the-first-column-to-fill-remaining-space-in-a-word-table)
 * [How to Keep Paragraphs Inside a Table in ASP.NET Core Word?](https://support.syncfusion.com/kb/article/19678/how-to-keep-paragraphs-inside-a-table-in-aspnet-core-word)
 * [How to copy rows from one table to another while preserving formatting in a Word document?](https://support.syncfusion.com/kb/article/20307/how-to-copy-rows-from-one-table-to-another-while-preserving-formatting-in-a-word-document)
