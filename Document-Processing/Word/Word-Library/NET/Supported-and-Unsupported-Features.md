@@ -1152,7 +1152,7 @@ Yes<br/><br/></td></tr>
     <tr><td>MergeField field</td><td>Yes</td></tr>
     <tr><td>MergeRec field</td><td>Yes</td></tr>
     <tr><td>MergeSeq field</td><td>Yes</td></tr>
-    <tr><td>Next field</td><td>No</td></tr>
+    <tr><td>Next field</td><td>Yes</td></tr>
     <tr><td>NextIf field</td><td>Yes</td></tr>
     <tr><td>NoteRef field</td><td>No</td></tr>
     <tr><td>NumChars field</td><td>No</td></tr>

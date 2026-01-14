@@ -246,6 +246,7 @@ Field updating engine calculates the resultant value based on the field code inf
 * DOCPROPERTY
 * COMPARE
 * IF
+* NEXT
 * NEXTIF
 * MERGEREC
 * MERGESEQ
