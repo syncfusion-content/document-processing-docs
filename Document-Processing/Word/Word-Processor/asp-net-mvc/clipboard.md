@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clipboard in ASP.NET MVC Document Editor Component
+title: Clipboard in ASP.NET MVC Document Editor Component | Syncfusion
 description: Learn here all about clipboard in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Clipboard
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Clipboard
+# Clipboard in ASP.NET MVC Document editor control
 
 Document editor takes advantage of system clipboard and allows to copy or move a portion of the document into it in HTML format, so that it can be pasted in any application that supports clipboard.
 
@@ -42,11 +42,13 @@ Document editor exposes API to enable local paste within the control. On enablin
 
 
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
+{% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-mvc/clipboard/razor %}
 {% endhighlight %}
-{% highlight c# tabtitle="Clipboard.cs" %}
-{% endhighlight %}{% endtabs %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-mvc/clipboard/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
@@ -80,6 +82,21 @@ You can paste your system clipboard data in the following ways:
 This paste option appears as follows.
 
 ![Image](images/paste.png)
+
+## Events
+
+DocumentEditor provides the `beforePaste` event, which is triggered before content is pasted into the document. This event gives an opportunity to `cancel` the paste operation, modify the content to be pasted using `pasteContent`, and determining its format with `pasteType`. The event handler receives a `BeforePasteEventArgs` object that contains all the necessary details about the paste operation.
+
+The following code snippet illustrates how to achieve this:
+
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-mvc/clipboard-event/razor %}
+{% endhighlight %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-mvc/clipboard-event/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
 
 ## See Also
 
