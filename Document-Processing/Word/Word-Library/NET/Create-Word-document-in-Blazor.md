@@ -23,7 +23,7 @@ To quickly get started with creating a Word document in Blazor, check this video
 
 * Visual Studio 2019 Preview or later
 * Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
-* 
+  
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
@@ -31,7 +31,7 @@ To quickly get started with creating a Word document in Blazor, check this video
 * Visual Studio Code
 * Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
-* 
+  
 {% endtabcontent %}
  
 {% endtabcontents %}
@@ -295,7 +295,7 @@ Step 12: Build the project.
 
 {% tabcontent Visual Studio %}
 
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+Click on Build → Build Solution or press Ctrl + Shift + B to build the project.
 
 {% endtabcontent %}
  
@@ -569,7 +569,7 @@ Step 9: Build the project.
 
 {% tabcontent Visual Studio %}
 
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+Click on Build → Build Solution or press Ctrl + Shift + B to build the project.
 
 {% endtabcontent %}
  
