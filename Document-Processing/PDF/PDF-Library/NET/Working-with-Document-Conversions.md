@@ -9,7 +9,7 @@ documentation: UG
 
 ## Converting Word documents to PDF
 
-Essential<sup>&reg;</sup> PDF allows you to convert a Word document into PDF. For converting a Word document to PDF, the following assemblies need to be referenced in your application.
+Essential<sup>&reg;</sup> PDF allows you to convert a [Word document into PDF](https://www.syncfusion.com/document-sdk/net-word-library/word-to-pdf-conversion). For converting a Word document to PDF, the following assemblies need to be referenced in your application.
 
 <table>
 <thead>
