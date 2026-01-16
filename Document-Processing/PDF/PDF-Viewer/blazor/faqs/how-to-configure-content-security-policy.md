@@ -19,7 +19,7 @@ When enforcing a strict [Content Security Policy (CSP)](https://csp.withgoogle.c
 
 * The SfPdfViewer uses web workers and makes network requests. Allow these by adding [`worker-src 'self' blob:`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src) and [`connect-src 'self' https://cdn.syncfusion.com data:`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src).
 
-* For JavaScript execution and WebAssembly, include [`script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.syncfusion.com blob:`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) to allow inline scripts, eval, and blob-based scripts.
+* For JavaScript execution and WebAssembly, include [`script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cdn.syncfusion.com blob:`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) to allow inline scripts, eval, and blob-based scripts.
 
 Include the following meta tag inside the `<head>` element to address CSP violations when using the SfPdfViewer with material and tailwind themes.
 
@@ -28,7 +28,7 @@ Include the following meta tag inside the `<head>` element to address CSP violat
 <head>
     <meta http-equiv="Content-Security-Policy" content="default-src 'self';
     frame-src 'self' blob:;
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.syncfusion.com blob:;
+    script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cdn.syncfusion.com blob:;
     style-src 'self' 'unsafe-inline' blob: https://cdn.syncfusion.com https://fonts.googleapis.com;
     img-src 'self' blob: data:;
     worker-src 'self' blob:;
@@ -38,14 +38,19 @@ Include the following meta tag inside the `<head>` element to address CSP violat
 {% endhighlight %}
 {% endtabs %}
 
-N> The SfPdfViewer requires `unsafe-eval` in the `script-src` directive for JavaScript execution and WebAssembly operations. The `worker-src` directive is also required for web worker functionality. Ensure these directives are present for correct behavior under strict CSP.
+N>The `SfPdfViewer` component requires specific Content Security Policy (CSP) directives to function properly in Blazor WebAssembly applications.  
+- In **.NET 9.0**, include `'wasm-unsafe-eval'` in the `script-src` directive to support WebAssembly operations.  
+- In **.NET 8.0**, you must also include `'unsafe-eval'` in the `script-src` directive to avoid runtime errors caused by restricted dynamic JavaScript execution.  
+- Ensure the `worker-src` directive includes `'self'` and `blob:` to enable web worker functionality.  
+These directives are essential for correct behavior under strict CSP environments.
+
 
 ### Directive usage
 
 | Directive                          | Usage                                                                                                                                                                                                                  |
 |------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `default-src 'self';`              | Sets the default policy for loading resources. `'self'` means only allow resources from the same origin (same domain).                                                                                                 |
-| `script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.syncfusion.com blob:;` | Defines where JavaScript code can come from. `'self'` allows scripts from the same origin. `'unsafe-inline'` allows inline scripts. `'unsafe-eval'` allows eval() operations needed for WebAssembly. `blob:` allows loading scripts from Blob URLs. |
+| `script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cdn.syncfusion.com blob:;` | Defines where JavaScript code can come from. `'self'` allows scripts from the same origin. `'unsafe-inline'` allows inline scripts. `'wasm-unsafe-eval'` allows eval() operations for WebAssembly in **.NET 9.0**. `'unsafe-eval'` allows eval() operations for WebAssembly in **.NET 8.0**. `blob:` allows loading scripts from Blob URLs. |
 | `worker-src 'self' blob:;`         | Controls where workers can be loaded from. `'self'` allows same-origin workers. `blob:` allows blob-based workers, common in PDF viewers and heavy JS applications.                                                     |
 | `connect-src 'self' https://cdn.syncfusion.com data:;` | Controls where the application can make network requests, such as `fetch()`, XHR, and WebSockets. `'self'` restricts to the same origin, with additional allowances for Syncfusion CDN and data URLs. |
 | `style-src 'self' 'unsafe-inline' blob: https://cdn.syncfusion.com https://fonts.googleapis.com;` | Defines the sources for stylesheets. `'self'` restricts to the same origin. `'unsafe-inline'` allows inline styles. `blob:` allows dynamically generated styles. External font CDNs are also allowed. |

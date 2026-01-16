@@ -63,12 +63,14 @@ Step 4:  Add code samples in Program.cs file to convert HTML to PDF document usi
 
 //Initialize HTML to PDF converter. 
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-
+BlinkConverterSettings settings = new BlinkConverterSettings();
+//Assign Blink settings to the HTML converter.
+htmlConverter.ConverterSettings = settings;
 //Convert URL to PDF document. 
 PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
-
+FileStream fileStream = new FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
 //Save and close a PDF document. 
-document.Save("Output.pdf");
+document.Save(fileStream);
 document.Close(true);
 
 {% endhighlight %}

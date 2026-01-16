@@ -22,6 +22,7 @@ The layout type can be set during component initialization. The following exampl
 
 ```
 @using Syncfusion.Blazor.DocumentEditor
+
 <SfDocumentEditorContainer @ref="Container" EnableToolbar="true" Height="590px" LayoutType="LayoutType.Continuous">
 </SfDocumentEditorContainer>
 

@@ -16,15 +16,16 @@ Syncfusion<sup>&reg;</sup> HTML-to-PDF converter will work seamlessly in various
 * Converts any [webpage to PDF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#url-to-pdf).
 * Converts any raw [HTML string to PDF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#html-string-to-pdf).
 * Converts [HTML form to fillable PDF form](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#html-form-to-pdf-form).
-* Automatically creates [Table of Contents](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#table-of-contents-with-custom-style).
+* Automatically creates [Table of Contents](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#table-of-contents).
 * Automatically creates [bookmark hierarchy](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#bookmarks).
 * Converts only a [part of the web page to PDF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#partial-webpage-to-pdf).
-* Supports PDF [header and PDF footer](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#header-and-footer).
+* Supports PDF header and PDF footer.
 * Repeats HTML table header and footer in PDF.
 * Supports HTML5, CSS3, SVG, and Web fonts.
 * Converts any [HTML to an image](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#url-to-image).
-* Converts any [SVG to image](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#svg-file-to-image).
-* Supports accessing HTML pages using both [HTTP POST and GET](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#http-get-and-post).
+* Converts any [SVG to image](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#url-to-image).
+* Supports accessing HTML pages using both [HTTP POST and GET](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#http-get-and-post) methods.
+* Supports [HTTP cookies](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#form-authentication).
 * Supports [cookies-based form authentication](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#form-authentication).
 * Thread safe.
 * Supports internal and external [hyperlinks](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#hyperlinks).
@@ -213,9 +214,10 @@ blinkConverterSettings.ViewPortSize = new Syncfusion.Drawing.Size(1280, 0);
 htmlConverter.ConverterSettings = blinkConverterSettings;
 //Convert URL to PDF document.
 PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
-
+//Create a filestream.
+FileStream fileStream = new FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
 //Save and close the PDF document.
-document.Save("Output.pdf");
+document.Save(fileStream);
 document.Close(true);
 
 {% endhighlight %}

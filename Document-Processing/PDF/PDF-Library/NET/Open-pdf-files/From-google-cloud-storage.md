@@ -5,9 +5,10 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Open PDF from Google Cloud storage
+# Open PDF file from Google Cloud storage
 
 To Open a PDF file from Google cloud storage, you can follow the steps below
+
 
 Step 1: Create a simple console application
 
@@ -17,14 +18,15 @@ Step 3: Install the [Google.Cloud.Storage.V1](https://www.nuget.org/packages/Goo
 
 ![NuGet package installation](Open-PDF-Images/Google.Cloud.Storage.V1-nuget.png)
 
+
 Step 4: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using Google.Cloud.Storage.V1;
-using Google.Apis.Auth.OAuth2;
+        using Google.Cloud.Storage.V1;
+        using Google.Apis.Auth.OAuth2;
 
 {% endhighlight %}
 
@@ -37,23 +39,23 @@ Step 5: Add the below code example to create a simple PDF and save in Google clo
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-// Create a byte array
-byte[] pdfBytes;
-// Load the credentials file
-GoogleCredential credential = GoogleCredential.FromFile("credentials.json");
-// Create a storage client
-StorageClient storage = StorageClient.Create(credential);
-// Download the PDF from Google Cloud Storage
-using (MemoryStream stream = new MemoryStream())
-{
-        storage.DownloadObject("bucket50247", "Sample.pdf", stream);
-        pdfBytes = stream.ToArray();
-}
+        // Create a byte array
+        byte[] pdfBytes;
+        // Load the credentials file
+        GoogleCredential credential = GoogleCredential.FromFile("credentials.json");
+        // Create a storage client
+        StorageClient storage = StorageClient.Create(credential);
+        // Download the PDF from Google Cloud Storage
+        using (MemoryStream stream = new MemoryStream())
+        {
+            storage.DownloadObject("bucket50247", "Sample.pdf", stream);
+            pdfBytes = stream.ToArray();
+        }
 
-string filePath = "Sample.pdf";
+        string filePath = "Sample.pdf";
 
-// Write the byte array to a PDF file
-File.WriteAllBytes(filePath, pdfBytes);
+        // Write the byte array to a PDF file
+        File.WriteAllBytes(filePath, pdfBytes);
 
 {% endhighlight %}
 

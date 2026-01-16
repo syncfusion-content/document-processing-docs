@@ -79,7 +79,7 @@ PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
 MemoryStream stream = new MemoryStream();
 //Save and close the document. 
 document.Save(stream);
-document.Close(true); 
+document.Close(); 
 return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
 
 {% endhighlight %}
@@ -163,7 +163,7 @@ PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
 MemoryStream stream = new MemoryStream();
 //Save and close the document. 
 document.Save(stream);
-document.Close(true); 
+document.Close(); 
 return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
 
 {% endhighlight %}
@@ -261,7 +261,7 @@ PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
 MemoryStream stream = new MemoryStream();
 //Save and close the document. 
 document.Save(stream);
-document.Close(true); 
+document.Close(); 
 return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
 
 {% endhighlight %}

@@ -4,6 +4,8 @@
 * Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 * Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
+
+
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new .NET MAUI Application.
 
 ```
@@ -59,13 +61,13 @@ Step 6: Include the following namespaces in the *MainWindow.xaml.cs* file.
 
 {% highlight c# tabtitle="C#" %}
 
-using CreatePdfDemoSample.Services;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Drawing;
-using System.Reflection;
-using System.Xml.Linq;
+    using CreatePdfDemoSample.Services;
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Graphics;
+    using Syncfusion.Pdf.Grid;
+    using Syncfusion.Drawing;
+    using System.Reflection;
+    using System.Xml.Linq;
 
 {% endhighlight %}
 
@@ -372,6 +374,8 @@ Step 7: Add a new action method *createPdf_Click* in *MainWindow.xaml.cs* and in
     }
     #endregion
 
+
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -380,16 +384,16 @@ Step 7: Add a new action method *createPdf_Click* in *MainWindow.xaml.cs* and in
 
 Step 8: Build the project.
 
-Run the following command in terminal to build the project.
+   Run the following command in terminal to build the project.
 
-```
-dotnet build
-```
+   ```
+   dotnet build
+   ```
 
 Step 9: Run the project.
 
-Run the following command in terminal to run the project.
+   Run the following command in terminal to run the project.
 
-```
-dotnet run
+   ```
+   dotnet run
 ```

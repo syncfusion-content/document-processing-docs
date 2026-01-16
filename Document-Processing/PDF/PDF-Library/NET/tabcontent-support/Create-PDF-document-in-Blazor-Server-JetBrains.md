@@ -29,7 +29,7 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the package](JetBrains_Images/Install-Core-BlazorServer-Package.png)
 
-Step 3: Create a new C# file named **ExportService.cs** under **Data** folder and include the following namespaces in the file.
+Step 5: Create a new cs file named **ExportService.cs** under **Data** folder and include the following namespaces in the file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -42,9 +42,9 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) adds text in a PDF document and provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows table creation by entering data manually or from external data sources. 
+Step 6: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
 
-Add the following code sample in the `ExportService` class which illustrates how to create a simple PDF document using `PdfTextElement` and `PdfGrid`.  
+Add the following code sample in ``ExportService`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``. 
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -84,7 +84,7 @@ public static MemoryStream CreatePdf(WeatherForecast[] forecasts)
         pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent1);
 
         //Assign data source.
-        pdfGrid.DataSource = forecasts;
+        pdfGrid.DataSource = forecasts
         pdfGrid.Style.Font = contentFont;
         //Draw PDF grid into the PDF page.
         pdfGrid.Draw(page, new Syncfusion.Drawing.PointF(0, result.Bounds.Bottom + paragraphAfterSpacing));
@@ -103,7 +103,7 @@ public static MemoryStream CreatePdf(WeatherForecast[] forecasts)
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Register the service in the `ConfigureServices` method available in the `Startup.cs` class as follows.
+Register your service in the ``ConfigureServices`` method available in the ``Startup.cs`` class as follows.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -117,7 +117,7 @@ public void ConfigureServices(IServiceCollection services)
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Inject `ExportService` into `FetchData.razor` using the following code.
+Step 7: Inject ``ExportService`` in-to ``FetchData.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -129,7 +129,7 @@ Step 6: Inject `ExportService` into `FetchData.razor` using the following code.
 {% endhighlight %}
 {% endtabs %}
 
-Create a button in the `FetchData.razor` using the following code.
+Create a button in the ``FetchData.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -137,7 +137,7 @@ Create a button in the `FetchData.razor` using the following code.
 {% endhighlight %}
 {% endtabs %}
 
-Add the `ExportToPdf` method in `FetchData.razor` page to call the export service.
+Add the ``ExportToPdf`` method in ``FetchData.razor`` page to call the export service.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -154,7 +154,7 @@ Add the `ExportToPdf` method in `FetchData.razor` page to call the export servic
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Create a class file with `FileUtil` name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 8: Create a class file with  ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 
@@ -173,7 +173,7 @@ public static class FileUtil
 
 {% endtabs %}
 
-Step 8: Add the following JavaScript function in the `_Host.cshtml` available under the `Pages` folder.
+Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available under the ``Pages`` folder.
 
 {% tabs %}
 
@@ -206,10 +206,10 @@ Step 8: Add the following JavaScript function in the `_Host.cshtml` available un
 
 {% endtabs %}
 
-Step 9: Build the project.
+Step 10: Build the project.
 
-To build the project, go to the `Build` menu and select `Build Solution`, or simply press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 10: Run the project.
+Step 11: Run the project.
 
 Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.

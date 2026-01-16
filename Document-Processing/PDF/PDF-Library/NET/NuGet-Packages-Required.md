@@ -199,7 +199,7 @@ N> The HTML to PDF converter library internally uses the Blink rendering engine 
 </tr>
 <tr>
 <td>
-Windows (.NET Core, .NET8, and .NET9)
+(.NET Core, .NET 5, .NET 6 and .NET 8) Windows
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Windows.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows/)'| markdownify }}
@@ -207,7 +207,7 @@ Windows (.NET Core, .NET8, and .NET9)
 </tr>
 <tr>
 <td>
-Linux (.NET Core, .NET8, and .NET9)
+(.NET Core, .NET 5, .NET 6 and .NET 8) Linux
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Linux.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Linux/)'| markdownify }}
@@ -215,7 +215,7 @@ Linux (.NET Core, .NET8, and .NET9)
 </tr>
 <tr>
 <td>
-Mac (.NET Core, .NET8, and .NET9)
+(.NET Core, .NET 5, .NET 6 and .NET 8) Mac
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Mac.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Mac/)'| markdownify }}
@@ -223,7 +223,7 @@ Mac (.NET Core, .NET8, and .NET9)
 </tr>
 <tr>
 <td>
-AWS (.NET Core, .NET8, and .NET9)
+(.NET Core, .NET 5, .NET 6 and .NET 8) Aws
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Aws.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Aws/)'| markdownify }}

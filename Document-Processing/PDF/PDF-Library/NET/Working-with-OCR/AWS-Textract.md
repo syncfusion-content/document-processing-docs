@@ -40,7 +40,8 @@ Step 4: Use the following code sample to perform OCR on a PDF document using [Pe
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
-    PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
+    FileStream stream = new FileStream("Region.pdf", FileMode.Open);
+    PdfLoadedDocument lDoc = new PdfLoadedDocument(stream);
     //Set the OCR language.
     processor.Settings.Language = Languages.English;
     //Initialize the AWS Textract external OCR engine.
@@ -48,11 +49,14 @@ using (OCRProcessor processor = new OCRProcessor())
     processor.ExternalEngine = azureOcrEngine;
     //Perform OCR with input document.
     string text = processor.PerformOCR(lDoc);
-
+    //Create file stream.
+    FileStream fileStream = new FileStream("Output.pdf", FileMode.CreateNew);
     //Save the document into stream.
-    lDoc.Save("Output.pdf");
+    lDoc.Save(fileStream);
     //Close the document.
     lDoc.Close();
+    stream.Dispose();
+    fileStream.Dispose();
 }
 {% endhighlight %}
 

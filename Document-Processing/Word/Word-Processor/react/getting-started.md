@@ -18,7 +18,7 @@ To get started quickly with DocumentEditor component, you can check the video be
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 

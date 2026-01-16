@@ -34,10 +34,10 @@ Step 4: A default controller with name HomeController.cs gets added on creation 
 
 {% highlight c# tabtitle="C#" %}
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Drawing;
-using System.IO;
+   using Syncfusion.Pdf;
+   using Syncfusion.Pdf.Graphics;
+   using Syncfusion.Drawing;
+   using System.IO;
 
 {% endhighlight %}
 
@@ -58,28 +58,30 @@ Step 6: Add a new action method named ``CreatePDFDocument`` in HomeController.cs
 
 {% highlight c# tabtitle="C#" %}
 
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Add a page to the document.
-PdfPage page = document.Pages.Add();
-//Create PDF graphics for the page.
-PdfGraphics graphics = page.Graphics;
-//Set the standard font.
-PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-//Draw the text.
-graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-//Saving the PDF to the MemoryStream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Set the position as '0'.
-stream.Position = 0;
-// Return file result
-return File(stream.ToArray(), "application/pdf", "Sample.pdf");
+   //Create a new PDF document.
+   PdfDocument document = new PdfDocument();
+   //Add a page to the document.
+   PdfPage page = document.Pages.Add();
+   //Create PDF graphics for the page.
+   PdfGraphics graphics = page.Graphics;
+   //Set the standard font.
+   PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+   //Draw the text.
+   graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+   //Saving the PDF to the MemoryStream.
+   MemoryStream stream = new MemoryStream();
+   document.Save(stream);
+   //Set the position as '0'.
+   stream.Position = 0;
+   //Download the PDF document in the browser.
+   FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
+   fileStreamResult.FileDownloadName = "Sample.pdf";
+   return fileStreamResult;
 
 {% endhighlight %}
 Step 7: Build the project.
 
-To build the project, go to the `Build` menu and select `Build Solution`, or simply press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 8: Run the project.
 

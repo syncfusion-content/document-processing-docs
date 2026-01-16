@@ -42,11 +42,6 @@ You can draw a rectangle on new PDF document with **CalGray** brush using [PdfCa
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Draw-rectangle-on-new-PDF-with-CalGray-brush/.NET/Draw-rectangle-on-new-PDF-with-CalGray-brush/Program.cs" %}	
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.ColorSpace;
-using Syncfusion.Pdf.Graphics;
-
 //Creates a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
 //Adds a page to the PDF document
@@ -67,19 +62,22 @@ RectangleF bounds = new RectangleF(0, 0, 300, 300);
 //Draws rectangle by using the PdfBrush
 graphics.DrawRectangle(brush, bounds);
 
-//Save the document
-pdfDocument.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+pdfDocument.Save(stream);
+stream.Position = 0;
 //Closes the document
 pdfDocument.Close(true);
+//Defining the content type for PDF file
+string contentType = "application/pdf";
+//Define the file name
+string fileName = "Output.pdf";
+//Creates a FileContentResult object by using the file contents, content type, and file name
+return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.ColorSpace;
-using Syncfusion.Pdf.Graphics;
 
 //Creates a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -109,11 +107,6 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.ColorSpace
-Imports Syncfusion.Pdf.Graphics
 
 'Creates a new PDF document.
 Dim pdfDocument As New PdfDocument()
@@ -152,14 +145,9 @@ The following code example illustrates how to draw a rectangle with **CalGray** 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Draw-rectangle-with-CalGray-brush-in-an-existing-PDF/.NET/Draw-rectangle-with-CalGray-brush-in-an-existing-PDF/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.ColorSpace;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Parsing;
-
-//Loads the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Load the PDF document.
+FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 //Loads the page.
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 //Acquires graphics of the page.
@@ -178,23 +166,25 @@ RectangleF bounds = new RectangleF(0, 0, 300, 300);
 //Draws rectangle by using the PdfBrush.
 graphics.DrawRectangle(brush, bounds);
 
-//Saves the modified document.
-loadedDocument.Save("Output.pdf");
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+stream.Position = 0;
 //Closes the document.
 loadedDocument.Close(true);
+//Defining the content type for PDF file.
+string contentType = "application/pdf";
+//Define the file name.
+string fileName = "Output.pdf";
+//Creates a FileContentResult object by using the file contents, content type, and file name.
+return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.ColorSpace;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Parsing;
-
 //Loads the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
 //Loads the page.
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 //Acquires graphics of the page.
@@ -222,14 +212,8 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.ColorSpace
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
-
 'Loads the existing PDF document.
-Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+Dim loadedDocument As New PdfLoadedDocument(fileName)
 'Loads the page
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
 'Acquires graphics of the page.
@@ -276,11 +260,6 @@ The following code example illustrates how to set the indexed ICC color space us
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Create-PDF-document-with-ICC-color-space/.NET/Create-PDF-document-with-ICC-color-space/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.ColorSpace;
-using Syncfusion.Pdf.Graphics;
-
 //Creates a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
 //Adds a page to the PDF document.
@@ -314,19 +293,22 @@ RectangleF bounds = new RectangleF(0, 0, 300, 300);
 //Draws rectangle by using the PdfBrush.
 graphics.DrawRectangle(brush, bounds);
 
-//Save the document 
-pdfDocument.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+pdfDocument.Save(stream);
+stream.Position = 0;
 //Closes the document
 pdfDocument.Close(true);
+//Defining the content type for PDF file
+string contentType = "application/pdf";
+//Define the file name
+string fileName = "Output.pdf";
+//Creates a FileContentResult object by using the file contents, content type, and file name
+return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.ColorSpace;
-using Syncfusion.Pdf.Graphics;
 
 //Creates a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -369,11 +351,6 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.ColorSpace
-Imports Syncfusion.Pdf.Graphics
 
 'Creates a new PDF document.
 Dim pdfDocument As New PdfDocument()
@@ -423,14 +400,9 @@ The following code example illustrates how to set the indexed ICC color space in
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Set-ICC-color-space-in-an-existing-PDF-document/.NET/Set-ICC-color-space-in-an-existing-PDF-document/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.ColorSpace;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Parsing;
-
-//Loads the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Load PDF document as stream.
+FileStream docStream = new FileStream(docPath, FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 //Loads the page.
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 //Acquires graphics of the page.
@@ -462,23 +434,25 @@ RectangleF bounds = new RectangleF(0, 0, 300, 300);
 //Draws rectangle by using the PdfBrush.
 graphics.DrawRectangle(brush, bounds);
 
-//Saves the document.
-loadedDocument.Save("Output.pdf");
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+pdfDocument.Save(stream);
+stream.Position = 0;
 //Closes the document.
-loadedDocument.Close(true);
+pdfDocument.Close(true);
+//Defining the ContentType for pdf file.
+string contentType = "application/pdf";
+//Define the file name.
+string fileName = "Output.pdf";
+//Creates a FileContentResult object by using the file contents, content type, and file name.
+return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.ColorSpace;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Parsing;
-
 //Loads the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
 //Loads the page.
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 //Acquires graphics of the page.
@@ -518,12 +492,6 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.ColorSpace
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
 
 'Loads the existing PDF document.
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument(fileName)
@@ -576,12 +544,6 @@ The following code example illustrates how to draw the graphics elements by usin
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Draw-graphics-elements-by-using-Pantone-colors-in-a-PDF/.NET/Draw-graphics-elements-by-using-Pantone-colors-in-a-PDF/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.ColorSpace;
-using Syncfusion.Pdf.Functions;
-using Syncfusion.Pdf.Graphics;
-
 //Creates a new document
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -590,8 +552,10 @@ PdfPage page = document.Pages.Add();
 //Creates exponential interpolation function
 PdfExponentialInterpolationFunction function = new PdfExponentialInterpolationFunction(true);
 float[] numberArray = new float[4];
-numberArray[0] = 0.38f;
-numberArray[1] = 0.88f;
+numberArray[0] = 0f;
+numberArray[1] = 0.44f;
+numberArray[2] = 0.87f;
+numberArray[3] = 0.10f;
 function.C1 = numberArray;
 
 //Creates SeparationColorSpace
@@ -606,21 +570,23 @@ PdfPen pen = new PdfPen(color);
 //Draws the rectangle
 page.Graphics.DrawRectangle(pen, bounds);
 
-//Saves the document
-document.Save("SeparationColor.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+stream.Position = 0;
 //Closes the document
 document.Close(true);
+//Defining the content type for PDF file
+string contentType = "application/pdf";
+//Define the file name
+string fileName = "SeparationColor.pdf";
+//Creates a FileContentResult object by using the file contents, content type, and file name
+return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.ColorSpace;
-using Syncfusion.Pdf.Functions;
-using Syncfusion.Pdf.Graphics;
-
+          
 //Creates a new document
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -653,12 +619,6 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.ColorSpace
-Imports Syncfusion.Pdf.Functions
-Imports Syncfusion.Pdf.Graphics
 
 'Creates a new document
 Dim document As PdfDocument = New PdfDocument()
@@ -701,16 +661,10 @@ The following code example illustrates how to draw the graphics elements by usin
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Add-graphics-elemets-by-Pantone-color-in-existing-PDF/.NET/Add-graphics-elemets-by-Pantone-color-in-existing-PDF/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.ColorSpace;
-using Syncfusion.Pdf.Functions;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Parsing;
-
-//Loads the document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Load the page
+//Load the PDF document
+FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Load the page 
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
 //Creates exponential interpolation function 
@@ -722,7 +676,7 @@ function.C1 = numberArray;
 
 //Creates SeparationColorSpace
 PdfSeparationColorSpace colorSpace = new PdfSeparationColorSpace();
-colorSpace.TintTransform = function
+colorSpace.TintTransform = function;
 colorSpace.Colorant = "PANTONE Orange 021 C";
 PdfSeparationColor color = new PdfSeparationColor(colorSpace);
 color.Tint = 0.7;
@@ -732,24 +686,25 @@ PdfPen pen = new PdfPen(color);
 //Draws the rectangle
 loadedPage.Graphics.DrawRectangle(pen, bounds);
 
-//Saves the document
-loadedDocument.Save("SeparationColor.pdf")
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+stream.Position = 0;
 //Closes the document
 loadedDocument.Close(true);
+//Defining the content type for PDF file
+string contentType = "application/pdf";
+//Define the file name
+string fileName = "SeparationColor.pdf";
+//Creates a FileContentResult object by using the file contents, content type, and file name
+return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.ColorSpace;
-using Syncfusion.Pdf.Functions;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Parsing;
-
 //Loads the document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
 //Load the page
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -781,15 +736,8 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.ColorSpace
-Imports Syncfusion.Pdf.Functions
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
-
 'Loads the document
-Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+Dim loadedDocument As New PdfLoadedDocument(fileName)
 'Load the page
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
 
@@ -833,10 +781,6 @@ The following code illustrates how to use the color spaces in particular objects
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Use-color-space-in-particular-object-in-a-new-PDF/.NET/Use-color-space-in-particular-object-in-a-new-PDF/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-
 //Creates a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
 //Adds a page to the PDF document.
@@ -847,7 +791,7 @@ PdfGraphics graphics = pdfPage.Graphics;
 PdfPen pen = new PdfPen(Color.Red);
 PdfBrush brush = new PdfSolidBrush(Color.Blue);
 RectangleF rectangle = new RectangleF(0, 0, 100, 100);
-//Default color space.
+//Default color space
 graphics.DrawRectangle(pen, brush, rectangle);
 graphics.Save();
 
@@ -865,18 +809,22 @@ graphics.DrawRectangle(pen, brush, rectangle);
 //Draws by using the PdfBrush.
 graphics.DrawRectangle(brush, rectangle);
 
-//Saves the document.
-pdfDocument.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+pdfDocument.Save(stream);
+stream.Position = 0;
 //Closes the document
 pdfDocument.Close(true);
+//Defining the content type for PDF file
+string contentType = "application/pdf";
+//Define the file name
+string fileName = "Output.pdf";
+//Creates a FileContentResult object by using the file contents, content type, and file name
+return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
 
 //Creates a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -914,10 +862,6 @@ pdfDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
 
 'Creates a new PDF document.
 Dim pdfDocument As New PdfDocument()
@@ -964,13 +908,9 @@ The following code illustrates how to use the color spaces in particular objects
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Add-color-space-in-particular-object-in-an-existing-PDF/.NET/Add-color-space-in-particular-object-in-an-existing-PDF/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Parsing;
-
-//Loads the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Load the PDF document
+FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 //Loads the page
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -997,22 +937,25 @@ graphics.DrawRectangle(pen, brush, rectangle);
 //Draws by using the PdfBrush.
 graphics.DrawRectangle(brush, rectangle);
 
-//Saves the document.
-loadedDocument.Save("Output.pdf");
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+stream.Position = 0;
 //Closes the document
 loadedDocument.Close(true);
+//Defining the content type for PDF file
+string contentType = "application/pdf";
+//Define the file name
+string fileName = "Output.pdf";
+//Creates a FileContentResult object by using the file contents, content type, and file name
+return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Parsing;
-
 //Loads the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
 //Loads the page
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
@@ -1047,11 +990,6 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Parsing
 
 'Loads the existing PDF document.
 Dim loadedDocument As New PdfLoadedDocument(fileName)

@@ -56,7 +56,7 @@ Duplicate pages within your PDF document effortlessly:
 *   **Select pages to copy**: Click on the page thumbnails you wish to duplicate.
 *   **Copy selected pages**: Use the copy option to create duplicates. The copied pages will be added to the right of the selected pages.
 
-![Alt text](../images/organize-copy.png)
+![Copying](../images/organize-copy.png)
 
 ## Importing a PDF document
 

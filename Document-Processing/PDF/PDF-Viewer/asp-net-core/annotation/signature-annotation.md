@@ -3,12 +3,20 @@ layout: post
 title: Handwritten signature in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to enable, add programmatically, and customize handwritten signatures in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
+<<<<<<<< HEAD:Document-Processing/PDF/PDF-Viewer/asp-net-core/annotation/signature-annotation.md
 control: PDF Viewer
+========
+control: Hand Written Signature
+>>>>>>>> remotes/origin/hotfix/hotfix-v31.2.2:Document-Processing/PDF/PDF-Viewer/asp-net-core/hand-written-signature.md
 documentation: ug
 ---
 
 
+<<<<<<<< HEAD:Document-Processing/PDF/PDF-Viewer/asp-net-core/annotation/signature-annotation.md
 # Handwritten Signature Annotation
+========
+# Handwritten Signature in EJ2 ASP.NET CORE PDF Viewer
+>>>>>>>> remotes/origin/hotfix/hotfix-v31.2.2:Document-Processing/PDF/PDF-Viewer/asp-net-core/hand-written-signature.md
 
 The PDF Viewer supports adding handwritten signatures to PDF documents. Handwritten signatures reduce paperwork during reviews and provide a simple way to verify documents digitally.
 
@@ -44,15 +52,27 @@ A handwritten signature can be added using the annotation toolbar:
 - Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
 - Select the **HandWritten Signature** button to open the signature panel.
 
+<<<<<<<< HEAD:Document-Processing/PDF/PDF-Viewer/asp-net-core/annotation/signature-annotation.md
 ![PDF Viewer toolbar showing Handwritten Signature button](../images/handwritten_sign.png)
+========
+![HandWrittenSignature](./images/handwritten_sign.png)
+>>>>>>>> remotes/origin/hotfix/hotfix-v31.2.2:Document-Processing/PDF/PDF-Viewer/asp-net-core/hand-written-signature.md
 
 - Draw the signature in the signature panel.
 
+<<<<<<<< HEAD:Document-Processing/PDF/PDF-Viewer/asp-net-core/annotation/signature-annotation.md
 ![Handwritten signature panel](../images/signature_panel.png)
+========
+![SignaturePanel](./images/signature_panel.png)
+>>>>>>>> remotes/origin/hotfix/hotfix-v31.2.2:Document-Processing/PDF/PDF-Viewer/asp-net-core/hand-written-signature.md
 
 - Click **Create**, then move and place the signature at the desired location on the page.
 
+<<<<<<<< HEAD:Document-Processing/PDF/PDF-Viewer/asp-net-core/annotation/signature-annotation.md
 ![Handwritten signature placed on the PDF page](../images/signature_added.png)
+========
+![SignatureAdded](./images/signature_added.png)
+>>>>>>>> remotes/origin/hotfix/hotfix-v31.2.2:Document-Processing/PDF/PDF-Viewer/asp-net-core/hand-written-signature.md
 
 ## Add a handwritten signature programmatically
 
@@ -174,7 +194,7 @@ Use the **addAnnotation()** method to add a handwritten signature programmatical
 
 Edit the stroke color, thickness, and opacity of a handwritten signature using the annotation toolbar’s edit stroke color, edit thickness, and edit opacity tools.
 
-![SignatureProperties](../images/signature_properties.png)
+![SignatureProperties](./images/signature_properties.png)
 
 Use the following example to set default handwritten signature settings.
 

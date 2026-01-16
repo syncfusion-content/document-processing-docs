@@ -30,6 +30,7 @@ Show or hide the toolbar using the `enableToolbar` property:
     <div style="width:100%;height:600px">
          @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableToolbar(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
     </div>
+
 {% endhighlight %}
 {% endtabs %}
 

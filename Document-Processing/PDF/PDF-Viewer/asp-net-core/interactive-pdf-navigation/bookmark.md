@@ -138,5 +138,5 @@ Here is an example of how to use the getBookmarks method:
 
 ## See also
 
-* [Toolbar items](../toolbar)
+* [Toolbar items](../toolbar-customization)
 * [Feature Modules](../feature-module)

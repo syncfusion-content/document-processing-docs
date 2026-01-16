@@ -23,21 +23,22 @@ Step 3: Click **Create** button.
 Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install Syncfusion.Pdf.Net.Core NuGet package](AKS_images/NuGet_package.png)
 
+
 Step 5: A default action method named Index will be present in *HomeController.cs*. Right click on Index method and select Go To View where you will be directed to its associated view page *Index.cshtml*. Add a new button in the *Index.cshtml* as shown below.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
-@{
-    Html.BeginForm("CreatePDFDocument", "Home", FormMethod.Get);
-    {
-        <div>
-            <input type="submit" value="Create PDF Document" style="width:200px;height:27px" />
-        </div>
+    @{
+        Html.BeginForm("CreatePDFDocument", "Home", FormMethod.Get);
+        {
+            <div>
+                <input type="submit" value="Create PDF Document" style="width:200px;height:27px" />
+            </div>
+        }
+        Html.EndForm();
     }
-    Html.EndForm();
-}
 
 {% endhighlight %}
 
@@ -49,10 +50,10 @@ Step 6: Include the following namespaces in *HomeController.cs*.
 
 {% highlight c# tabtitle="C#" %}
 
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf;
-using System.Diagnostics;
-using Syncfusion.Drawing;
+    using Syncfusion.Pdf.Graphics;
+    using Syncfusion.Pdf;
+    using System.Diagnostics;
+    using Syncfusion.Drawing;
 
 {% endhighlight %}
 
@@ -64,7 +65,7 @@ Step 7: Add a new action method named CreatePDFDocument in HomeController.cs fil
 
 {% highlight c# tabtitle="C#" %}
 
-public IActionResult CreatePDFDocument()
+    public IActionResult CreatePDFDocument()
 {
     //Create a new PDF document.
     PdfDocument document = new PdfDocument();
@@ -164,7 +165,7 @@ Step 2: You need to gather the credentials in order to interact with the cluster
 
 {% highlight c# tabtitle="C#" %}
 
-az aks get-credentials --resource-group CreatePdfDocument --name aks-uk-demo-msdn
+    az aks get-credentials --resource-group CreatePdfDocument --name aks-uk-demo-msdn
 
 {% endhighlight %}
 
@@ -174,7 +175,7 @@ Step 3: You can review the credentials with the following command:
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-cat .kube/config
+     cat .kube/config
 
 {% endhighlight %}
 
@@ -186,7 +187,7 @@ Step 4: Now in the Cloud Shell, create a new file called deploy.yaml as follows:
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-code deploy.yaml
+     code deploy.yaml
 
 {% endhighlight %}
 
@@ -235,7 +236,7 @@ Step 6: Once you save and close the code editor, it’s finally time to apply th
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-kubectl apply -f deploy.yaml
+     kubectl apply -f deploy.yaml
 
 {% endhighlight %}
 
@@ -249,10 +250,10 @@ Step 8: You can run the following commands:
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-kubectl get pods
-kubectl get nodes
-kubectl get service
-kubectl describe deployment
+    kubectl get pods
+    kubectl get nodes
+    kubectl get service
+    kubectl describe deployment
 
 {% endhighlight %}
 {% endtabs %}
@@ -261,7 +262,7 @@ or
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-kubectl get all
+    kubectl get all
 
 {% endhighlight %}
 {% endtabs %}
@@ -285,8 +286,8 @@ If you want to clean up the cluster, you can run the following commands:
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-kubectl delete -f deploy.yaml
-kubectl delete svc asp-docker-app --namespace=default
+    kubectl delete -f deploy.yaml
+    kubectl delete svc asp-docker-app --namespace=default
 
 {% endhighlight %}
 {% endtabs %}

@@ -1,7 +1,7 @@
 **Prerequisites**:
 
-* Install .NET SDK: Ensure that the .NET SDK is installed on the system. Download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio from the [official website](https://visualstudio.microsoft.com/downloads/).
+* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
+* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
 Step 1: Create a new C# Blazor server-side application project. Select **Blazor Web App** from the template and click the Next button.
 ![Blazor sample creation](Create-PDF-Blazor/Blazor-web-app.png)
@@ -9,7 +9,7 @@ Step 1: Create a new C# Blazor server-side application project. Select **Blazor 
 Step 2: In the **Interactive Render Mode section**, choose `Server` as the render mode. Then, click the `Create` button to generate a new Blazor Server-Side Application.
 ![Blazor server app](Create-PDF-Blazor/Blazor-Server-App.png)
 
-Step 3: To create a PDF document in a Blazor Server app, install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) package into the Blazor project.
+Step 3: To create a PDF document in a Blazor Server app, install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) package into your Blazor project.
 ![Blazor NuGet installation](Create-PDF-Blazor/Blazor_server_NuGet.png)
 
 Step 4: Create a new cs file named **ExportService.cs** under **Data** folder and include the following namespaces in the file.
@@ -25,9 +25,9 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) adds text in a PDF document and provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows table creation by entering data manually or from external data sources. 
+Step 5: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
 
-Add the following code sample in the `ExportService` class which illustrates how to create a simple PDF document using `PdfTextElement` and `PdfGrid`. 
+Add the following code sample in ``ExportService`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``. 
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -67,7 +67,7 @@ public static MemoryStream CreatePdf(WeatherForecast[] forecasts)
         pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent1);
 
         //Assign data source.
-        pdfGrid.DataSource = forecasts;
+        pdfGrid.DataSource = forecasts
         pdfGrid.Style.Font = contentFont;
         //Draw PDF grid into the PDF page.
         pdfGrid.Draw(page, new Syncfusion.Drawing.PointF(0, result.Bounds.Bottom + paragraphAfterSpacing));
@@ -86,7 +86,7 @@ public static MemoryStream CreatePdf(WeatherForecast[] forecasts)
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Register the service in the `Program.cs` class as follows.
+Step 6: Register your service in the ``Program.cs`` class as follows.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -99,7 +99,7 @@ services.AddSingleton<ExportService>();
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Inject `ExportService` into `Weather.razor` using the following code.
+Step 7: Inject ``ExportService`` in-to ``Weather.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -111,7 +111,7 @@ Step 7: Inject `ExportService` into `Weather.razor` using the following code.
 {% endhighlight %}
 {% endtabs %}
 
-Create a button in the `Weather.razor` using the following code.
+Create a button in the ``Weather.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -119,7 +119,7 @@ Create a button in the `Weather.razor` using the following code.
 {% endhighlight %}
 {% endtabs %}
 
-Add the `ExportToPdf` method in `Weather.razor` page to call the export service.
+Add the ``ExportToPdf`` method in ``Weather.razor`` page to call the export service.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -136,7 +136,7 @@ Add the `ExportToPdf` method in `Weather.razor` page to call the export service.
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Include the `FileUtil` class within the `ExportService.cs` file to enable file-related operations as part of the export functionality.
+Step 8: Include the ``FileUtil`` class within the ``ExportService.cs`` file to enable file-related operations as part of the export functionality.
 
 {% tabs %}
 
@@ -155,7 +155,7 @@ public static class FileUtil
 
 {% endtabs %}
 
-Step 9: Add the following JavaScript function in the `App.razor` available under the `Components` folder.
+Step 9: Add the following JavaScript function in the  ``App.razor`` available under the ``Components`` folder.
 
 {% tabs %}
 
@@ -190,7 +190,7 @@ Step 9: Add the following JavaScript function in the `App.razor` available under
 
 Step 10: Build the project.
 
-To build the project, go to the `Build` menu and select `Build Solution`, or simply press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
+Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
 
 Step 11: Run the project.
 

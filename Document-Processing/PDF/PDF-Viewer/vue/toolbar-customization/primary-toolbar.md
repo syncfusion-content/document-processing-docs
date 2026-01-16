@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Primary Toolbar Customization in PDF Viewer Control
+# Primary Toolbar Customization in Vue PDF Viewer
 
 The primary toolbar of the PDF Viewer can be customized by rearranging existing items, disabling default items, and adding custom items. New items can be placed at specific index positions among the existing items.
 

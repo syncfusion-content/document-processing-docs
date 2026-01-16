@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Primary Toolbar Customization in JavaScript PDF Viewer Component | Syncfusion
+title: Primary Toolbar in JavaScript PDF Viewer Component | Syncfusion
 description: Learn here all about primary toolbar customization in Syncfusion JavaScript PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Primary Toolbar Customization in PDF Viewer Control
+# Primary Toolbar Customization in JavaScript PDF Viewer
 
 The primary toolbar of the PDF Viewer can be customized by rearranging existing items, disabling default items, and adding custom items. New items can be placed at specific index positions among the existing items.
 

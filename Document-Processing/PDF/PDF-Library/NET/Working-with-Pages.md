@@ -1590,3 +1590,158 @@ loadedDocument.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Insert-New-Page-in-Existing-PDF-with-Same-Size/.NET).
+
+## How to add different margin on different pages in PDF document
+
+Essential<sup>&reg;</sup> PDF supports adding sections with different page settings like [Margins](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Margins). You can add sections to a PDF document by using the [PdfSection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfSection.html) available in [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) instance and create page settings to the ``PdfSection`` using the [PageSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfSection.html#Syncfusion_Pdf_PdfSection_PageSettings) property. 
+
+The following code snippet explains how to create multiple sections that use different margin.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Insert-New-Page-in-Existing-PDF-with-Same-Size/.NET/Insert-New-Page-in-Existing-PDF-with-Same-Size/Program.cs" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.IO;
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+
+//Create a solid brush and standard font.
+PdfBrush brush = new PdfSolidBrush(Color.Black);
+PdfFont font  = new PdfStandardFont(PdfFontFamily.Helvetica, 14);
+
+// Section – 1 
+//Add new section to the document
+PdfSection section = document.Sections.Add();
+//Page-settings.
+section.PageSettings.Margins.All = 0.5f;
+section.PageSettings.Width = 300;
+section.PageSettings.Height = 400;
+
+//Add a page and draw text.
+PdfPage page = section.Pages.Add();
+PdfGraphics g = page.Graphics;
+g.DrawString(
+    "Essential PDF is a library with the capability to produce Adobe PDF files",
+    font, brush,
+    new RectangleF(0, 0, page.GetClientSize().Width - 20, page.GetClientSize().Height));
+
+//Section – 2 
+//Add new section to the document
+section = document.Sections.Add();
+section.PageSettings.Margins.All = 5f;
+section.PageSettings.Width = 300;
+section.PageSettings.Height = 400;
+
+page = section.Pages.Add();
+g = page.Graphics;
+g.DrawString(
+    "Essential PDF is a library with the capability to produce Adobe PDF files",
+    font, brush,
+    new RectangleF(0, 0, page.GetClientSize().Width - 20, page.GetClientSize().Height));
+
+//Save and close the document.
+document.Save("Output.pdf");
+document.Close(true);
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using System.Drawing;
+using System.IO;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+
+//Create a solid brush and standard font.
+PdfBrush brush = new PdfSolidBrush(Color.Black);
+PdfFont font  = new PdfStandardFont(PdfFontFamily.Helvetica, 14);
+
+// Section – 1 
+//Add new section to the document
+PdfSection section = document.Sections.Add();
+section.PageSettings.Margins.All = 0.5f;
+section.PageSettings.Width       = 300;
+section.PageSettings.Height      = 400;
+
+PdfPage  page = section.Pages.Add();
+PdfGraphics g = page.Graphics;
+g.DrawString(
+    "Essential PDF is a library with the capability to produce Adobe PDF files",
+    font, brush,
+    new RectangleF(0, 0, page.GetClientSize().Width - 20, page.GetClientSize().Height));
+
+//Section – 2 
+//Add new section to the document
+section = document.Sections.Add();
+section.PageSettings.Margins.All = 5f;
+section.PageSettings.Width       = 300;
+section.PageSettings.Height      = 400;
+
+page = section.Pages.Add();
+g    = page.Graphics;
+g.DrawString(
+    "Essential PDF is a library with the capability to produce Adobe PDF files",
+    font, brush,
+    new RectangleF(0, 0, page.GetClientSize().Width - 20, page.GetClientSize().Height));
+
+//Save the document
+document.Save("Output.pdf");
+//Close the instance of PdfDocument
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports System.IO
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+
+'Create a new PDF document.
+Dim document As New PdfDocument()
+
+'Create a solid brush and standard font.
+Dim brush As PdfBrush = New PdfSolidBrush(Color.Black)
+Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 14)
+
+'Section–1 
+'Add new section to the document
+Dim section As PdfSection = document.Sections.Add()
+section.PageSettings.Margins.All = 0.5F
+section.PageSettings.Width = 300
+section.PageSettings.Height = 400
+
+Dim page As PdfPage = section.Pages.Add()
+Dim g As PdfGraphics = page.Graphics
+g.DrawString(
+    "Essential PDF is a library with the capability to produce Adobe PDF files",
+    font, brush,
+    New RectangleF(0, 0, page.GetClientSize().Width - 20, page.GetClientSize().Height))
+
+'Section–2
+'Add new section to the document
+section = document.Sections.Add()
+section.PageSettings.Margins.All = 1.5F
+section.PageSettings.Width = 300
+section.PageSettings.Height = 400
+
+page = section.Pages.Add()
+g = page.Graphics
+g.DrawString(
+    "Essential PDF is a library with the capability to produce Adobe PDF files",
+    font, brush,
+    New RectangleF(0, 0, page.GetClientSize().Width - 20, page.GetClientSize().Height))
+
+'Save the document
+document.Save("Output.pdf")
+'Close the instance of PdfDocument
+document.Close(True)
+
+{% endhighlight %}
+{% endtabs %}
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Insert-New-Page-in-Existing-PDF-with-Same-Size/.NET).   
