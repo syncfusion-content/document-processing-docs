@@ -8,7 +8,7 @@ documentation: UG
 
 # How to open an Excel file with encoding in .NET Core?
 
-XlsIO do not have direct support to open an Excel file with encoding in .NET Core. But this can be acheived through below workaround.
+XlsIO does not have direct support to open an Excel file with encoding in .NET Core. However, this can be achieved through the following workaround:
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
