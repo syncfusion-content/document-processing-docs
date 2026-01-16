@@ -20,12 +20,7 @@ import { dataSource } from './datasource';
           <e-rows>
           <e-row [index]=2>
             <e-cells>
-              <e-cell [index]=0 notes="These shoes have the highest sales in terms of quantity this month."></e-cell>
-            </e-cells>
-          </e-row>
-          <e-row [index]=5>
-            <e-cells>
-              <e-cell [index]=0 notes="These shoes have been the most profitable this month."></e-cell>
+              <e-cell [index]=0 [notes]="{ text: 'These shoes have the highest sales in terms of quantity this month.', isVisible: true }"></e-cell>
             </e-cells>
           </e-row>
         </e-rows>
@@ -49,5 +44,6 @@ export class AppComponent {
         'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
     created() {
         this.spreadsheetObj!.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:H1');
+        this.spreadsheetObj!.updateCell({ notes: { text: 'These shoes have been the most profitable this month.' } }, 'A10:A10');
     }
 }

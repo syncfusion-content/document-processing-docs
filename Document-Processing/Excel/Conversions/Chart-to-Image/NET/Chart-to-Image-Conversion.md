@@ -19,7 +19,7 @@ The following code snippet shows how to convert an Excel chart to an image using
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Chart%20to%20Image/Chart%20to%20Image/.NET/Chart%20to%20Image/Chart%20to%20Image/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  //Initialize application
+	//Initialize application
   IApplication application = excelEngine.Excel;
 
   //Set the default version as Xlsx
@@ -35,7 +35,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   application.XlsIORenderer.ChartRenderingOptions.ScalingMode = ScalingMode.Best;
 
   //Open existing workbook with chart
-  IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
+  FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+  IWorkbook workbook = application.Workbooks.Open(inputStream);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Access the chart from the worksheet
@@ -49,6 +50,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Dispose streams
   outputStream.Dispose();
+  inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -183,7 +185,9 @@ Line
 <td>
 * Line<br/>
 * Line_Markers<br/>
-* Line_3D
+* Line_3D<br/>
+* Stacked_Line<br/>
+* Stacked_Line_Markers
 </td>
 </tr>
 <tr>
@@ -194,7 +198,8 @@ Pie
 * Pie<br/>
 * Pie_Exploded<br/>
 * Pie_3D<br/>
-* Pie_Exploded_3D
+* Pie_Exploded_3D<br/>
+* PieOfPie
 </td>
 </tr>
 <tr>
@@ -225,7 +230,9 @@ Stock
 </td>
 <td>
 * Stock_HighLowClose<br/>
-* Stock_OpenHighLowClose
+* Stock_OpenHighLowClose<br/>
+* Stock_VolumeOpenHighLowClose<br/>
+* Stock_VolumeHighLowClose
 </td>
 </tr>
 <tr>
@@ -233,13 +240,22 @@ Stock
 Excel 2016 Charts
 </td>
 <td>
-* Funnel<br/>* Waterfall<br/>* Histogram<br/>* Pareto<br/></td>
+* Funnel<br/>
+* Waterfall<br/>
+* Histogram<br/>
+* Pareto<br/>
+* Sunburst<br/>
+* Box and Whisker<br/>
+* Treemap
+</td>
 </tr>
 </table>
 
-N> From the above supported chart types table, Waterfall and Line_3D charts are not supported in chart to image conversion in .NET Standard 2.0 onwards.
+N> From the above supported chart types table, Line_3D charts are not supported in chart to image conversion in .NET Core platforms.
 
-N> Only embedded charts are supported in chart to image conversion. Chart sheets are not supported.
+N> Only embedded charts are supported in chart to image conversion. The Chart sheets are not supported.
+
+N> Pie of Pie, Sunburst, Box and Whisker, and Treemap charts are supported only in .NET Core platforms for chart to image conversion.
 
 ## Supported chart elements
 XlsIO supports the following chart elements in image conversion:

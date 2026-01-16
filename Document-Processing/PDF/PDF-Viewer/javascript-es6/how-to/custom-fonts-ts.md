@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add custom fonts in PDF Viewer
+# Add custom fonts in TypeScript PDF Viewer
 
 The TypeScript PDF Viewer supports loading, editing, and saving custom fonts in form fields such as text boxes, list boxes, and drop-downs by using the customFonts property. Add the required TTF files to the resource URL directory used by the viewer so they can be loaded at runtime and used in forms.
  
@@ -20,35 +20,26 @@ To use custom fonts in the Syncfusion PDF Viewer, add the custom TTF files to th
 
 Steps to add custom fonts
 
-**Step 1:** Add custom TTF font files to the resource URL path referenced in the application. For example, place the TTF files in the ej2-pdfviewer-lib folder that serves as the resource URL path.
+**Step 1:** Add custom TTF font files to the resource URL path referenced in the application. For example, place the TTF files in the [ej2-pdfviewer-lib](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started#add-the-pdf-viewer-component) folder that serves as the resource URL path. Make sure this resource URL points to a local path in your application. You may:
+- Place fonts directly under `ej2-pdfviewer-lib` or under `ej2-pdfviewer-lib/fallback fonts`. Reference them by relative path in `customFonts` (e.g., `"calibri.ttf"`, `"fallback fonts/calibri.ttf"`).
+- Or use a direct absolute URL to the font file if it’s hosted and CORS-accessible.
 
 **Step 2:** Use the following code to configure custom fonts in the PDF Viewer.
 
 {% tabs %}
-{% highlight js tabtitle="Standalone" %}
+{% highlight ts tabtitle="Standalone" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
 
-let viewer: PdfViewer = new PdfViewer();
-PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields);
-viewer.documentPath= 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-viewer.resourceUrl:'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-viewer.customFonts: ["arialbd.ttf", "arial.ttf", "BKANT.TTF", "calibri.ttf", "GARA.TTF", "GARAIT.TTF", "msgothic.ttc", "trebuc.ttf", "wingding.ttf"];
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
+
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+pdfviewer.resourceUrl = window.location.origin + "/resources/ej2-pdfviewer-lib";
+pdfviewer.customFonts = ["simsun.ttc", "sumsinb.ttf", "arial/arialbd.ttf", "arial/arial.ttf", "BKANT.TTF", "calibri.ttf", "GARA.TTF", "GARAIT.TTF", "msgothic.ttc", "trebuc.ttf", "wingding.ttf"];
+pdfviewer.appendTo('#PdfViewer');
 
 //PDF Viewer control rendering starts
 pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-let viewer: PdfViewer = new PdfViewer();
-PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields);
-viewer.documentPath= 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-viewer.serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-viewer.customFonts: ["arialbd.ttf", "arial.ttf", "BKANT.TTF", "calibri.ttf", "GARA.TTF", "GARAIT.TTF", "msgothic.ttc", "trebuc.ttf", "wingding.ttf"];
-
-
-//PDF Viewer control rendering starts
-pdfviewer.appendTo('#PdfViewer');
-
 {% endhighlight %}
 {% endtabs %}
 
