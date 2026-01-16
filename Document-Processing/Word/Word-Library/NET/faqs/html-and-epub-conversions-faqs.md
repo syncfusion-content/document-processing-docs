@@ -119,3 +119,11 @@ By including **pt** as the measurement unit, the spacing and styling are accurat
 The [System.Drawing.ColorTranslator.FromHtml](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.colortranslator.fromhtml?view=net-9.0) function does not support parsing #rrggbbaa (red, green, blue, alpha) hex color notation. This limitation exists because it adheres to the HTML 4.01 and CSS color standards, which only recognize #rrggbb (6-character) and #rgb (3-character) formats. The #rrggbbaa format, which includes alpha transparency, is a modern feature and is not supported by the function.
 
 Similarly, the Syncfusion.Drawing.ColorTranslator.FromHtml function behaves the same as the [System.Drawing.ColorTranslator.FromHtml](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.colortranslator.fromhtml?view=net-9.0) function, and it does not parse #rrggbbaa hex color notation.
+
+## How can I apply custom fonts and sizes to mathematical equations in a Word document using DocIO?
+
+In Microsoft Word, customizing fonts and sizes for mathematical equations can be tricky. When you apply changes to the whole equation, they may not affect all parts as expected. This happens because Word applies changes to the equation container, not the individual parts.
+
+You can customize fonts and sizes for specific parts, like variables (e.g., "A"). However, symbols like parentheses or brackets adjust automatically based on the equation's content and cannot have their font properties directly changed.
+
+With DocIO, you can programmatically set fonts and sizes for variables and letters in an equation. Keep in mind, symbols like parentheses or special characters are dynamic and will adjust automatically, so their fonts can't be directly customized.
