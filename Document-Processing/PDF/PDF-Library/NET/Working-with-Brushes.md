@@ -14,6 +14,7 @@ Brushes are used to draw the content on PDF document with specific color and sty
 	* Linear Gradient Brush
 	* Radial Gradient Brush
 3. Tiling Brush
+4. Hatch Brush
 
 ## Solid Brush
 
@@ -296,4 +297,87 @@ doc.Close(True)
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Brushes/Draw-shape-on-PDF-with-tiling-brush/). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Brushes/Draw-shape-on-PDF-with-tiling-brush/).
+
+## Hatch Brush
+
+The hatch brush is used to fill an object with hatch patterns. Essential<sup>&reg;</sup> PDF supports drawing shapes in a PDF document using a hatch brush with the PdfHatchBrush class. The following code example illustrates this. 
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document
+PdfDocument doc = new PdfDocument(); 
+//Add a page to the document 
+PdfPage page = doc.Pages.Add(); 
+//Create PDF graphics for the page 
+PdfGraphics graphics = page.Graphics; 
+//Define colors for the hatch brush 
+Color systemForeColor = Color.FromArgb(255, 255, 255, 0); 
+Color systemBackColor = Color.FromArgb(255, 78, 167, 46); 
+
+// Create a new PDF hatch brush with a pattern and colors 
+PdfHatchBrush pdfHatchBrush = new PdfHatchBrush(PdfHatchStyle.Plaid, new PdfColor(systemForeColor), new PdfColor(systemBackColor)); 
+
+//Draw rectangle on the page 
+graphics.DrawRectangle(PdfPens.Black, pdfHatchBrush, new Rectangle(100, 100, 300, 200)); 
+
+//Save the PDF document to stream 
+MemoryStream stream = new MemoryStream(); 
+doc.Save(stream); 
+//Close the Pdf Document 
+doc.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document
+PdfDocument doc = new PdfDocument(); 
+//Add a page to the document 
+PdfPage page = doc.Pages.Add(); 
+//Create PDF graphics for the page 
+PdfGraphics graphics = page.Graphics; 
+//Define colors for the hatch brush 
+Color systemForeColor = Color.FromArgb(255, 255, 255, 0); 
+Color systemBackColor = Color.FromArgb(255, 78, 167, 46); 
+
+// Create a new PDF hatch brush with a pattern and colors 
+PdfHatchBrush pdfHatchBrush = new PdfHatchBrush(PdfHatchStyle.Plaid, new PdfColor(systemForeColor), new PdfColor(systemBackColor)); 
+
+//Draw rectangle on the page 
+graphics.DrawRectangle(PdfPens.Black, pdfHatchBrush, new Rectangle(100, 100, 300, 200)); 
+
+//Save the PDF document
+doc.Save("Output.pdf"); 
+//Close the Pdf Document 
+doc.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document
+Dim doc As PdfDocument = New PdfDocument 
+' Add a page to the document 
+Dim page As PdfPage = doc.Pages.Add 
+' Create PDF graphics for the page 
+Dim graphics As PdfGraphics = page.Graphics 
+' Define colors for the hatch brush 
+Dim systemForeColor As Color = Color.FromArgb(255, 255, 255, 0) 
+Dim systemBackColor As Color = Color.FromArgb(255, 78, 167, 46) 
+
+' Create a new PDF hatch brush with a pattern and colors 
+Dim pdfHatchBrush As PdfHatchBrush = New PdfHatchBrush(PdfHatchStyle.Plaid, New PdfColor(systemForeColor), New PdfColor(systemBackColor)) 
+
+' Draw rectangle on the page 
+graphics.DrawRectangle(PdfPens.Black, pdfHatchBrush, New Rectangle(100, 100, 300, 200)) 
+
+' Save the PDF document
+doc.Save("Output.pdf") 
+' Close the PDF document 
+doc.Close(True) 
+
+{% endhighlight %}
+{% endtabs %}
