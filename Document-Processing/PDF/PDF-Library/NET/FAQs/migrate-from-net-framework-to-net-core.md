@@ -387,10 +387,10 @@ Merge(PdfDocumentBase, PdfMergeOptions, Object[]) - Object[] in the form of Stre
 </tr>
 <tr>
 <td>
-{{'[Image.FromFile(String)](https://help.syncfusion.com/document-processing/Syncfusion.Drawing.Image.html#Syncfusion_Drawing_Image_FromFile_System_String_)'| markdownify }}
+{{'[Image.FromFile(String)](https://help.syncfusion.com/document-processing/Syncfusion.Drawing.Image.html_)'| markdownify }}
 </td>
 <td> 
-{{'[Image.FromStream(Stream)](https://help.syncfusion.com/document-processing/Syncfusion.Drawing.Image.html#Syncfusion_Drawing_Image_FromStream_System_IO_Stream_)'| markdownify }}
+{{'[Image.FromStream(Stream)](https://help.syncfusion.com/document-processing/Syncfusion.Drawing.Image.html)'| markdownify }}
 </td>
 </tr>
 <tr>
