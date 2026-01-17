@@ -53,7 +53,7 @@ Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 {% tabcontent Visual Studio Code %}
 
 Step 1: Create a new .NET Core console application project using the command palette.
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+1. Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
 2. Choose the **Console App** template.
 3. Select the project location, type the project name and press enter.
 4. Then choose **Create project**.
