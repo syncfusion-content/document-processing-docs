@@ -83,6 +83,14 @@ The following code example illustrates how to enable optimized spell checking.
 this.container.documentEditor.spellChecker.enableOptimizedSpellCheck = true;
 ```
 
+### Ignore uppercase
+
+By default, the DocumentEditor spell checker evaluates all words, including those written in uppercase. To exclude uppercase words such as acronyms or constants from spell check validation, enable the [`ignoreUppercase`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/spellchecker#ignoreuppercase-boolean) property.
+
+```typescript
+this.container.documentEditor.spellChecker.ignoreUppercase = true;
+```
+
 ### Spell check dictionary cache
 
 Starting from `v20.1.0.xx`, we have optimized the performance and memory usage of spell checker by adding a static method to initialize the dictionaries with specified cache count.
