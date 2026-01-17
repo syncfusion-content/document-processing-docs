@@ -1,4 +1,4 @@
-node('content')
+node('Maui')
 { 
 timestamps
   {
@@ -15,8 +15,9 @@ String platform='file-formats';
 	    { 
 	    dir('Spell-Checker') 
            {
+			 echo '0';
 		     checkout scm
-			 
+			 echo '1';
 			 def branchCommit = 'https://api.github.com/repos/syncfusion-content/'+env.githubSourceRepoHttpUrl.split('/')[env.githubSourceRepoHttpUrl.split('/').size() - 1]+'/pulls/' + env.pullRequestId + '/files'
              
             String branchCommitDetails = bat returnStdout: true, script: 'curl -H "Accept: application/vnd.github.v3+json" -u SyncfusionBuild:' + env.GithubBuildAutomation_PrivateToken + " " + branchCommit
@@ -28,7 +29,7 @@ String platform='file-formats';
             def ChangeFile= ChangeFiles[i].split(',')[0].replace('"', '')
             Content += env.WORKSPACE + "\\Spell-Checker\\" + ChangeFile + "\r\n";
             }
- 
+ 			echo '2'
 		      if (Content) {  
                  writeFile file: env.WORKSPACE+"/cireports/content.txt", text: Content
               }
@@ -37,10 +38,10 @@ String platform='file-formats';
               }
 			  
 		    }
-			 
+			 echo '3'
 		   //Checkout the ug_spellchecker from development Source
 	  checkout([$class: 'GitSCM', branches: [[name: '*/development']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'ug_spellchecker']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: env.githubCredentialId, url: 'https://github.com/syncfusion-content/ug_spellchecker.git']]])
-		 
+		    echo '4'
 	  }
 	}
 	
