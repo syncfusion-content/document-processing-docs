@@ -59,6 +59,45 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/editing-cs1" %}
 
+## Events Triggered During Cell Editing
+
+When a cell is edited manually—such as by **double-clicking the cell**, **pressing the F2 key**, or **modifying it through the formula bar**—the spreadsheet triggers a series of events. These events allow users to monitor and manage the entire editing lifecycle, from initiation to completion.
+
+The sequence of events during manual cell editing is:
+> cellEdit → cellEditing → actionBegin → beforeCellUpdate → beforeCellSave → cellSave / cellEdited → actionComplete
+
+The table below lists each event and its role in the editing process:
+
+| Event             | Description                                                                            |
+|------------------------|---------------------------------------------------------------------------------------------|
+| [`cellEdit`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#celledit)          | Triggers before the cell enters edit mode.                                                 |
+| [`cellEditing`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#cellediting)      | Triggers while editing is in progress; fires for each change made to the cell content.     |
+| [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#actionbegin)       | Triggers when the edit action starts.                                                      |
+| [`beforeCellUpdate`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforecellupdate)  | Triggers before any cell property (style, value, formula, etc.) is modified.               |
+| [`beforeCellSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforecellsave)    | Triggers before the cell value is saved.                                                   |
+| [`cellSave` ](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#cellsave)         | Triggers when the cell value is saved.                                                     |
+| [`cellEdited`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#celledited)        | Triggers after the editing process completes.                                              |
+| [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#actioncomplete)    | Triggers once the entire edit operation is completed.                                      |
+
+The following code example showcases the events triggered during cell edting in spreadsheet.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/editing-cs2/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/editing-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/spreadsheet/react/editing-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/spreadsheet/react/editing-cs2/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/editing-cs2" %}
+
 ## Limitations
 
 * Text overflow in cells is not supported in Editing.
