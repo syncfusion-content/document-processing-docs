@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently Asked Questions
+# Frequently Asked Questions in Word Library
 
 The frequently asked questions under each category in Essential<sup>&reg;</sup> DocIO are listed below.
 
