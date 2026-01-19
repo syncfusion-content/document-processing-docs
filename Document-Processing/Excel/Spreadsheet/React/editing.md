@@ -59,7 +59,7 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/editing-cs1" %}
 
-## Events Triggered During Cell Editing
+## Events triggered during cell editing
 
 When a cell is edited manually—such as by **double-clicking the cell**, **pressing the F2 key**, or **modifying it through the formula bar**—the spreadsheet triggers a series of events. These events allow users to monitor and manage the entire editing process, from initiation to completion.
 

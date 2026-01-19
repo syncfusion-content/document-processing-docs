@@ -145,7 +145,7 @@ The following code example showcases the events triggered during clipboard opera
 
 > **Note**: The events [cellEdit](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#celledit), [cellEditing](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#cellediting), and [beforeCellSave](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforecellsave) are not triggered during clipboard operations. These events are specific to manual cell edits. However, [beforeCellUpdate](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforecellupdate) is triggered for each cell update before any property is changed, including during paste actions.
 
-**Accessing Clipboard Properties**
+**Accessing clipboard properties**
 
 You can access clipboard-related properties such as the copied and pasted ranges during paste operations using the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#actionbegin) and [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#actioncomplete) events. Ensure the action and request type using:
 
