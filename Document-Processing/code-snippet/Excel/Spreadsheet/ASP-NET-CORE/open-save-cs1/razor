@@ -1,0 +1,23 @@
+@using Syncfusion.EJ2
+
+@* 
+    This sets up the Spreadsheet component with open and save functionality,
+    pointing to the actions in your HomeController.
+*@
+@Html.EJS().Spreadsheet("spreadsheet").OpenUrl("Home/Open").AllowOpen(true).SaveUrl("Home/Save").AllowSave(true).BeforeOpen("beforeOpen").Render()
+
+<script>
+    function beforeOpen(args) {
+        // They will be sent to the server with the open request.
+        args.parseOptions = {
+            ignoreStyle: true,
+            ignoreFormat: true,
+            ignoreChart: true,
+            ignoreImage: true,
+            ignoreMergedCell: true,
+            ignoreFormula: true,
+            ignoreValidation: true,
+            ignoreConditionalFormat: true,
+        };
+    }
+</script>
