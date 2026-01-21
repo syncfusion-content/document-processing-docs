@@ -57,7 +57,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 Create and customize interactive fields directly on the PDF page.
 - [Create](./Create-edit-Style-del-formFields/create-formfields), [edit](./Create-edit-Style-del-formFields/edit-formfields), or [remove](./Create-edit-Style-del-formFields/remove-formfields) forms
-- [Add a Signature Field](./Create-edit-Style-del-formFields/create-formfields/#add-signature-field) 
+- [Add a Signature Field](./Create-edit-Style-del-formFields/create-formfields#add-signature-field) 
 - [Edit Form Field](./Create-edit-Style-del-formFields/edit-formfields)
 - [Remove Form Field](./Create-edit-Style-del-formFields/remove-formfields) 
 - [Form Field Constraints](./form-constrain) 

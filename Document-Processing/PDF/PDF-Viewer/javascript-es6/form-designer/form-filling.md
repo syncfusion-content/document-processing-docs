@@ -77,7 +77,7 @@ The PDF Viewer supports common form fields such as text boxes, check boxes, radi
 
 ## Fill PDF forms through Import Data 
 
-The Syncfusion PDF Viewer allows you to import form field data into an existing PDF document using the `importFormFields` API. This feature enables you to prefill form fields using data from an external source without requiring manual user input.
+The Syncfusion PDF Viewer allows you to import form field data into an existing PDF document using the `importFormFields` API. This feature enables you to pre-fill form fields using data from an external source without requiring manual user input.
 
 Imported form field data is automatically mapped to the corresponding form fields in the PDF document based on the field names. Once the data is imported, the populated values are displayed in the PDF Viewer and can be edited through the user interface if required.
 
