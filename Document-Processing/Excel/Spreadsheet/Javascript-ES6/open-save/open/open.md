@@ -224,8 +224,8 @@ public IActionResult Open(IFormCollection openRequest)
 
 The following list of Excel file formats are supported in Spreadsheet:
 
-* MS Excel (.xlsx)
-* MS Excel 97-2003 (.xls)
+* Microsoft Excel (.xlsx)
+* Microsoft Excel 97-2003 (.xls)
 * Comma Separated Values (.csv)
 * Excel Macro-Enabled Workbook (.xlsm)
 * Excel Binary Workbook(.xlsb)

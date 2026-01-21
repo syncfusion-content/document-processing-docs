@@ -151,8 +151,8 @@ The possible values are:
 
 The following list of Excel file formats are supported in Spreadsheet:
 
-* MS Excel (.xlsx)
-* MS Excel 97-2003 (.xls)
+* Microsoft Excel (.xlsx)
+* Microsoft Excel 97-2003 (.xls)
 * Comma Separated Values (.csv)
 * Portable Document Format (.pdf)
 
