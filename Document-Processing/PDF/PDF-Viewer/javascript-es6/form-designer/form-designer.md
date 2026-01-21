@@ -8,21 +8,44 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Designer and Toolbar Customization in TypeScript
+# Form Designer in TypeScript PDF Viewer
 
-## Form Designer
+When `Form Designer mode` is enabled in the Syncfusion `TypeScript PDF Viewer`, a default `Form Designer user interface (UI)` is displayed. This UI includes a built in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
 
-Create and customize interactive fields directly on the PDF page.
-- **Add fields**: textbox, checkbox, radio button, dropdown, list box, signature, and initials
-- **Edit quickly**: move, resize, align, distribute, copy/paste, undo/redo
-- **Configure properties**: name, value, font, color, border, alignment, required/read-only/visibility, tab order
-- **Control interaction**: toggle read-only, show/hide, and manage printing behavior
-- **Manage fields**: select, group/ungroup, reorder, or delete
-- **Save and print**: persist designed fields in the PDF and print with appearances
-- **Tailor the UI**: show/hide or customize the Form Designer toolbar; handle events for add/edit/select/move/resize
-- The form designer toolbar can be customized by showing or hiding default items and by controlling the order in which the items appear.
+Using the Form Designer UI, users can place form fields on the PDF, move and resize them, configure field and widget properties, preview the designed form, and remove fields when required. The Form Designer toolbar can also be shown or hidden and customized to control the available tools based on application requirements, enabling flexible and interactive form design directly within the viewer.
 
-Use the following Code-snippet to enable Form Designer by injecting `FormDesigner` Module.
+**Key Features**
+
+**Add Form Fields**
+You can add the following form fields to the PDF:
+
+- [Text box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-textbox)
+- [Password Field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-password)
+- [Check box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-checkbox)
+- [Radio button](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-radiobutton)
+- [Dropdown List](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-dropdown)
+- [List box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-listbox)
+- [Signature field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-signature-field)
+- [Initial field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-initial-field)
+
+**Edit Form Fields**
+You can move, resize, align, distribute, copy, paste, and undo or redo changes to form fields.
+
+**Set Field Properties**
+You can configure field properties such as name, value, font, color, border, alignment, visibility, tab order, and required or read only state.
+
+**Control Field Behavior**
+You can enable or disable read only mode, show or hide fields, and control whether fields appear when printing the document.
+
+**Manage Form Fields**
+You can select, group or ungroup, reorder, and delete form fields as needed.
+
+**Save and Print Forms**
+Designed form fields can be saved into the PDF document and printed with their appearances.
+
+## Enable Form Designer
+
+To enable form design features, inject the `FormDesigner` module into the PDF Viewer. After injecting the module, use the `enableFormDesigner` API to show or hide the Form Designer option in the main toolbar.
 
 ```ts
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, TextFieldSettings } from '@syncfusion/ej2-pdfviewer';
@@ -30,79 +53,105 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
+pdfviewer.enableFormDesigner= false,
 pdfviewer.appendTo('#PdfViewer');
 ```
 
+## Form Designer UI
+
+When `Form Designer mode` is enabled in the Syncfusion `TypeScript PDF Viewer`, a default `Form Designer user interface (UI)` is displayed. This UI provides a built in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
+
 ![FormDesigner](../images/FormDesigner.gif)
 
-## Show or hide the form designer toolbar
+**Preview of the designed PDF form**
 
-Show or hide the form designer toolbar programmatically during initialization or at runtime.
+![Forms with Filled sample Data](../images/FormFilled.png)
 
-Use the [EnableFormDesigner](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/pdfViewerModel#enableformdesigner) property or the [showFormDesignerToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar#showformdesignertoolbar) method to toggle visibility.
+For more information about creating and editing form fields in the PDF Viewer, refer to the [Form Creation in TypeScript PDF Viewer documentation](./Create-edit-Style-del-formFields/create-formfields).
 
-The following code snippet explains how to show or hide the toolbar using the `EnableFormDesigner` property.
+## Form Designer Toolbar
 
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
+The `Form Designer toolbar` appears at the top of the PDF Viewer and provides quick access to form field creation tools. It includes frequently used field types such as:
 
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation,
-  ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView,
-  ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner
-);
+- [Text box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-textbox)
+- [Password Field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-password)
+- [Check box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-checkbox)
+- [Radio button](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-radiobutton)
+- [Dropdown List](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-dropdown)
+- [List box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-listbox)
+- [Signature field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-signature-field)
+- [Initial field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-initial-field)
 
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-    enableFormDesigner: false,
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/formdesigner.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
-});
+Each toolbar item allows users to place the corresponding form field by selecting the tool and clicking on the desired location in the PDF document.
 
+**GIF – Adding a text box field using the Form Designer toolbar**
+
+![Adding Text Box](../images/AddTextBox.gif)
+
+Use the following Code-snippet to enable Form Designer by injecting `FormDesigner` Module.
+
+```ts
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
+pdfviewer.appendTo('#PdfViewer');
+```
+
+For more information about creating and editing form fields in the PDF Viewer, refer to the [Form Creation in TypeScript PDF Viewer documentation](./Create-edit-Style-del-formFields/create-formfields).
+
+## Show or Hide the Built-in Form Designer Toolbar
+
+You can control the visibility of the Form Designer toolbar using the `isFormDesignerToolbarVisible()` method. This allows you to display or hide the Form Designer tools in the PDF Viewer based on your application requirements.
+
+**Use this method to:**
+- Show the Form Designer toolbar when form design is required
+- Hide the toolbar to provide cleaner viewing experience
+
+```html
+<div id="PdfViewer" style="height:600px;width:100%;"></div>
+
+<!-- Buttons to toggle the Form Designer toolbar -->
+<button id="showDesignerBtn">Show Form Designer Toolbar</button>
+<button id="hideDesignerBtn">Hide Form Designer Toolbar</button>
+```
+```ts
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, TextFieldSettings } from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.appendTo('#PdfViewer');
 
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
+//  Wire up buttons 
+document.getElementById('showDesignerBtn')!.onclick = () => {
+  pdfviewer.isFormDesignerToolbarVisible=true;
+};
+document.getElementById('hideDesignerBtn')!.onclick = () => {
+  pdfviewer.isFormDesignerToolbarVisible=false;
+};
+```
 
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>Essential JS 2</title>
-        <!-- Essential JS 2 tailwind3 theme -->
-        <link href="https://cdn.syncfusion.com/ej2/31.2.2/tailwind3.css" rel="stylesheet" type="text/css"/>
-        <!-- Essential JS 2 PDF Viewer's global script -->
-        <script src="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2.min.js" type="text/javascript"></script>
-    </head>
-    <body>
-        <div id='container'>
-            <div id='PdfViewer' style="height:500px;width:100%;">
-            </div>
-        </div>
-    </body>
-</html>
+## Customize the Built-in Form Designer Toolbar
 
-{% endhighlight %}
-{% endtabs %}
+You can customize the Form Designer toolbar by specifying the tools to display and arranging them in the required order using the `FormDesignerToolbarItems` property.
 
-## How to customize the form designer toolbar
+This customization helps you limit the available tools and simplify the user interface.
 
-Choose which tools appear and control their order in the form designer toolbar.
+**Key Points**
+- Include only the toolbar items you need, in the exact order you specify.
+- Any toolbar items not listed remain hidden, resulting in a cleaner and more focused UI.
 
-Use [`PdfViewerToolbarSettings`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings) with the [`FormDesignerToolbarItems`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings#formdesignertoolbaritems) property to choose which form design tools are available. The property accepts a list of [`FormDesignerToolbarItem`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formDesignerToolbarItem) values. The items you include are both displayed and rendered in the order listed; any items you omit are hidden. This provides a streamlined, user-friendly form design experience across devices.
-
-The following example demonstrates how to customize the form designer toolbar by configuring specific tools using `FormDesignerToolbarItem`.
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation,
-    ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView,
-    ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch,
-    ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner);
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/formdesigner.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
-});
-
+```ts
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, TextFieldSettings } from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
+//Customize the Built-in Form Designer Toolbar
 pdfviewer.toolbarSettings = {
     formDesignerToolbarItems: [
         "TextboxTool",
@@ -115,28 +164,40 @@ pdfviewer.toolbarSettings = {
         "DeleteTool"
     ]
 };
-
 pdfviewer.appendTo('#PdfViewer');
+```
 
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
+## Move, Resize, and Edit Form Fields
 
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>Essential JS 2</title>
-        <!-- Essential JS 2 tailwind3 theme -->
-        <link href="https://cdn.syncfusion.com/ej2/31.2.2/tailwind3.css" rel="stylesheet" type="text/css"/>
-        <!-- Essential JS 2 PDF Viewer's global script -->
-        <script src="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2.min.js" type="text/javascript"></script>
-    </head>
-    <body>
-        <div id='container'>
-            <div id='PdfViewer' style="height:500px;width:100%;">
-            </div>
-        </div>
-    </body>
-</html>
+You can move, resize, and edit an existing form field directly in the PDF Viewer using the Form Designer.
 
-{% endhighlight %}
-{% endtabs %}
+- Move a field by selecting it and dragging it to the required position.
+
+![Moving Form Field](../images/dragformfield.gif)
+
+- Resize a field using the handles displayed on the field boundary.
+
+![Resizing a form field](../images/resizeformfield.gif)
+
+- Edit a field by selecting it to open the Form Field Properties popover. The popover allows you to modify the form field and widget annotation properties. Changes are reflected immediately in the viewer and are saved when the properties popover is closed.
+For more information, see Editing Form Fields
+
+## Deleting Form Fields
+
+You can remove a form field from the PDF document by selecting the field and using one of the following methods:
+- Click the `Delete option` in the Form Designer UI.
+- Press the `Delete key` on the keyboard after selecting the form field.
+
+The selected form field and its associated widget annotation are permanently removed from the page.
+For more information, see  [Deleting Form Fields](./Create-edit-Style-del-formFields/remove-formfields)
+
+## See Also
+
+- [Filling PDF Forms](./form-filling)
+- [Create](./Create-edit-Style-del-formFields/create-formfields), [edit](./Create-edit-Style-del-formFields/edit-formfields), [style](./Create-edit-Style-del-formFields/style-formfields) and [remove](./Create-edit-Style-del-formFields/remove-formfields.) form fields
+- [Grouping form fields](./group-formfields)
+- [Form Constrains](./form-constrain)
+- [Form Validation](./form-validation)
+- [Custom Data](./custom-data)
+- [Import](./import-export-formfields/import-formfields)/[Export Form Data](./import-export-formfields/export-formfields)
+- [Form field events](./form-field-events)
