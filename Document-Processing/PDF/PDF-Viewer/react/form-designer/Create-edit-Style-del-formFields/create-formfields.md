@@ -26,19 +26,19 @@ The PDF Viewer supports the following form field types:
 
 Click the Form Field icon on the toolbar, then click on the PDF to draw a form field. See the following GIF for reference.
 
-![Add a form field using the toolbar](../../images/addformfield.gif)
+![Add a form field using the toolbar](../../../javascript-es6/images/addformfield.gif)
 
 ## Drag the form field
 
 Drag the selected form field to reposition it within the PDF document. See the following GIF for reference.
 
-![Drag a selected form field in the PDF Viewer](../../images/dragformfield.gif)
+![Drag a selected form field in the PDF Viewer](../../../javascript-es6/images/dragformfield.gif)
 
 ## Resize the form field
 
 Resize the selected form field using the resize handles on the field boundary. See the following GIF for reference.
 
-![Resize a selected form field in the PDF Viewer](../../images/resizeformfield.gif)
+![Resize a selected form field in the PDF Viewer](../../../javascript-es6/images/resizeformfield.gif)
 
 ## Textbox
 

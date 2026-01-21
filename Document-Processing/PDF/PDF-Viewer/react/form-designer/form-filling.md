@@ -61,11 +61,9 @@ The PDF Viewer supports the following form field types:
 * [Signature field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-signature-field)
 * [Initial field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-initial-field)
 
-![Form filling in TypeScript PDF Viewer](../images/FormFields.gif)
+![Form filling in TypeScript PDF Viewer](../../javascript-es6/images/FormFields.gif)
 
 ## Updating form field value programmatically
-
-
 
 ## Disabling form fields
 
