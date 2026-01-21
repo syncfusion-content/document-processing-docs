@@ -1813,6 +1813,8 @@ document.Close()
 
 {% endtabs %}
 
+N>  For more information about the fields supported by Essential<sup>&reg;</sup>DocIO, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/supported-and-unsupported-features#supported-fields).
+
 ## Online Demo
 
 * Explore how to update fields in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/updatefields#/tailwind).

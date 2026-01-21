@@ -1120,7 +1120,6 @@ Yes<br/><br/></td></tr>
         All formula fields are supported except formulas that evaluate an entire column or row (for example, <code>=SUM(ABOVE)</code>), which are not supported
     </td>
     </tr>
-    </tr>
     <tr><td>Advance field</td><td>Not Applicable</td></tr>
     <tr><td>Ask field</td><td>No</td></tr>
     <tr><td>Author field</td><td>Yes</td></tr>
