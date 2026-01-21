@@ -1,14 +1,14 @@
 ---
-title: Convert text-formatted date values to DateTime in Excel workbook | Syncfusion
-description: Code example to convert text-formatted date values to DateTime in Excel workbook using Syncfusion .NET Excel library (XlsIO).
+title: Convert text formatted date values to DateTime in Excel workbook | Syncfusion
+description: Code example to convert text formatted date values to DateTime in Excel workbook using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to convert text‑formatted date values to DateTime in an Excel workbook?
+# How to convert text formatted date values to DateTime in an Excel workbook?
 
-The following code examples demonstrate converting text-formatted date values to DateTime in Excel workbook using C# (Cross-platform and Windows-specific) and VB.NET.
+The following code examples demonstrate converting text formatted date values to DateTime in Excel workbook using C# (Cross-platform and Windows-specific) and VB.NET.
 
 {% tabs %}   
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/DateTime/.NET/TextToDateTimeConverter/TextToDateTimeConverter/Program.cs,180" %}
@@ -30,7 +30,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     CultureInfo culture = new CultureInfo("en-IN");
     DateTimeStyles styles = DateTimeStyles.None;
 
-    //Iterate through the used range and convert text-formatted dates to DateTime
+    //Iterate through the used range and convert text formatted dates to DateTime
     for (int row = used.Row; row <= used.LastRow; row++)
     {
         for (int col = used.Column; col <= used.LastColumn; col++)
@@ -75,7 +75,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     CultureInfo culture = new CultureInfo("en-IN");
     DateTimeStyles styles = DateTimeStyles.None;
 
-    //Iterate through the used range and convert text-formatted dates to DateTime
+    //Iterate through the used range and convert text formatted dates to DateTime
     for (int row = used.Row; row <= used.LastRow; row++)
     {
         for (int col = used.Column; col <= used.LastColumn; col++)
@@ -120,7 +120,7 @@ Using excelEngine As New ExcelEngine()
     Dim culture As New CultureInfo("en-IN")
     Dim styles As DateTimeStyles = DateTimeStyles.None
 
-    'Iterate through the used range and convert text-formatted dates to DateTime
+    'Iterate through the used range and convert text formatted dates to DateTime
     For row As Integer = used.Row To used.LastRow
         For col As Integer = used.Column To used.LastColumn
 
