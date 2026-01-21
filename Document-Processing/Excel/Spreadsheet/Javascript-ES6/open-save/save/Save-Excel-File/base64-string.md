@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Save data as a Base64 string in EJ2 TypeScript Spreadsheet | Syncfusion
-description: Learn here all about how to Save data as a Base64 string in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Save to Base64 in JavaScript (ES6) Spreadsheet Editor | Syncfusion
+description: Learn here all about how to Save an excel file to Base64 string data in javascript(ES6) Spreadsheet editor of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: base64
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 In the Spreadsheet control, there is currently no direct option to save data as a `Base64` string. You can achieve this by saving the Spreadsheet data as blob data and then converting that saved blob data to a `Base64` string using `FileReader`. 
 
-> You can get the Spreadsheet data as blob in the [saveComplete](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#savecomplete) event when you set the  `needBlobData` as **true** and `isFullPost` as **false** in the [beforeSave](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#beforesave) event.
+> You can get the Spreadsheet data as blob in the [saveComplete](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#savecomplete) event when you set the  `needBlobData` as **true** and `isFullPost` as **false** in the [beforeSave](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforesave) event.
 
 The following code example shows how to save the spreadsheet data as base64 string.
 

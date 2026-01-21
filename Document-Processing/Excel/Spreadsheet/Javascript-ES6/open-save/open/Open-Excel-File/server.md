@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open an Excel file located on a server in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Open an Excel file located on a server in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Open from Server in JavaScript (ES6) Spreadsheet Editor | Syncfusion
+description: Learn here all about Open an Excel file located on a server in javascript(ES6) Spreadsheet editor of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: server
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Open an Excel file located on a server
 
-By default, the Spreadsheet control provides an option to browse files from the local file system and open them within the control. If you want to load an Excel file located on a server, you need to configure the server endpoint to fetch the Excel file from the server location, process it using `Syncfusion.EJ2.Spreadsheet.AspNet.Core`, and send it back to the client side as `JSON data`. On the client side, you should use the [openFromJson](https://ej2.syncfusion.com/documentation/api/spreadsheet/#openfromjson) method to load that `JSON data` into the Spreadsheet control.
+By default, the Spreadsheet control provides an option to browse files from the local file system and open them within the control. If you want to load an Excel file located on a server, you need to configure the server endpoint to fetch the Excel file from the server location, process it using `Syncfusion.EJ2.Spreadsheet.AspNet.Core`, and send it back to the client side as `JSON data`. On the client side, you should use the [openFromJson](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#openfromjson) method to load that `JSON data` into the Spreadsheet control.
 
 **Server Endpoint**:
 

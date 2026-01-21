@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Save in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Save in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Save Excel in EJ2 TypeScript Spreadsheet control | Syncfusion
+description: Learn here all about Save Excel in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Save
 documentation: ug
 ---
 
-# Save in EJ2 TypeScript Spreadsheet control
+# Save Excel in EJ2 TypeScript Spreadsheet control
 
 When you save the Spreadsheet, the client Spreadsheet model is sent to the server as JSON for processing and saved as Excel file formats. [`Server configuration`](./open-save#server-configuration) is used for this process.
 
 ## Save
 
-The Spreadsheet control saves its data, style, format, and more as Excel file document. To enable this feature, set [`allowSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowsave) as `true` and assign service url to the [`saveUrl`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#saveurl) property.
+The Spreadsheet control saves its data, style, format, and more as Excel file document. To enable this feature, set [`allowSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#allowsave) as `true` and assign service url to the [`saveUrl`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) property.
 
 **User Interface**:
 
 In user interface, you can save Spreadsheet data as Excel document by clicking `File > Save As` menu item in ribbon.
 
-The following sample shows the `Save` option by using the [`saveUrl`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#saveurl) property in the Spreadsheet control. You can also use the [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#beforesave) event to trigger before saving the Spreadsheet as an Excel file.
+The following sample shows the `Save` option by using the [`saveUrl`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) property in the Spreadsheet control. You can also use the [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforesave) event to trigger before saving the Spreadsheet as an Excel file.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -46,12 +46,12 @@ Please find the below table for the beforeSave event arguments.
 
 > * Use `Ctrl + S` keyboard shortcut to save the Spreadsheet data as Excel file.
 
-> * The default value of [allowSave](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowsave) property is `true`. For demonstration purpose, we have showcased the [allowSave](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowsave) property in previous code snippet.
+> * The default value of [allowSave](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#allowsave) property is `true`. For demonstration purpose, we have showcased the [allowSave](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#allowsave) property in previous code snippet.
 > * Demo purpose only, we have used the online web service url link.
 
 ### Configure JSON serialization options
 
-Previously, when saving the Spreadsheet as a workbook JSON object using the [saveAsJson](https://ej2.syncfusion.com/documentation/api/spreadsheet/#saveasjson) method, the entire workbook with all loaded features were processed and saved as a JSON object. 
+Previously, when saving the Spreadsheet as a workbook JSON object using the [saveAsJson](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveasjson) method, the entire workbook with all loaded features were processed and saved as a JSON object.
 
 Now, you have the option to selectively ignore some features while saving the Spreadsheet as a JSON object by configuring serialization options and passing them as arguments to the `saveAsJson` method. This argument is optional, and if not configured, the entire workbook JSON object will be saved without ignoring any features.
 
@@ -88,7 +88,7 @@ The following code snippet demonstrates how to configure the serialization optio
 
 ### Send and receive custom params from client to server
 
-Passing the custom parameters from client to server by using [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#beforesave) event.
+Passing the custom parameters from client to server by using [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforesave) event.
  
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -114,7 +114,7 @@ Server side code snippets:
 
 ### Add custom header during save
 
-You can add your own custom header to the save action in the Spreadsheet. For processing the data, it has to be sent from client to server side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`fileMenuItemSelect`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#filemenuitemselect) event, the custom header can be added to the request during save action.
+You can add your own custom header to the save action in the Spreadsheet. For processing the data, it has to be sent from client to server side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`fileMenuItemSelect`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#filemenuitemselect) event, the custom header can be added to the request during save action.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -129,7 +129,7 @@ You can add your own custom header to the save action in the Spreadsheet. For pr
 
 ### Change the PDF orientation
 
-By default, the PDF document is created in **Portrait** orientation. You can change the orientation of the PDF document by using the `args.pdfLayoutSettings.orientation` argument settings in the [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#beforesave) event.
+By default, the PDF document is created in **Portrait** orientation. You can change the orientation of the PDF document by using the `args.pdfLayoutSettings.orientation` argument settings in the [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforesave) event.
 
 The possible values are:
 
@@ -158,7 +158,7 @@ The following list of Excel file formats are supported in Spreadsheet:
 
 ### Methods
 
-To save the Spreadsheet document as an `xlsx, xls, csv, or pdf` file, by using [`save`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#save) method should be called with the `url`, `fileName` and `saveType` as parameters. The following code example shows to save the spreadsheet file as an `xlsx, xls, csv, or pdf` in the button click event.
+To save the Spreadsheet document as an `xlsx, xls, csv, or pdf` file, by using [`save`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#save) method should be called with the `url`, `fileName` and `saveType` as parameters. The following code example shows to save the spreadsheet file as an `xlsx, xls, csv, or pdf` in the button click event.
  
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
