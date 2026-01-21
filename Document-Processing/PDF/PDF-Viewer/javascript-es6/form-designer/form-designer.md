@@ -173,11 +173,9 @@ You can move, resize, and edit an existing form field directly in the PDF Viewer
 
 - Move a field by selecting it and dragging it to the required position.
 
-![Moving Form Field](../images/dragformfield.gif)
-
 - Resize a field using the handles displayed on the field boundary.
 
-![Resizing a form field](../images/resizeformfield.gif)
+![Moveing and Resizing a form field](../images/move-resize-forms.gif)
 
 - Edit a field by selecting it to open the Form Field Properties popover. The popover allows you to modify the form field and widget annotation properties. Changes are reflected immediately in the viewer and are saved when the properties popover is closed.
 For more information, see Editing Form Fields
