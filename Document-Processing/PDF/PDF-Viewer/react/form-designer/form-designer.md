@@ -93,7 +93,8 @@ Choose which tools appear and control their order in the form designer toolbar.
 
 Use [`PdfViewerToolbarSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarSettings) with the [`FormDesignerToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarSettings#formdesignertoolbaritems) property to choose which form design tools are available. The property accepts a list of [`FormDesignerToolbarItem`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formDesignerToolbarItem) values. The items you include are both displayed and rendered in the order listed; any items you omit are hidden. This provides a streamlined, user-friendly form design experience across devices.
 
-
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import './index.css';
@@ -138,3 +139,5 @@ export function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endhighlight %}
+{% endtabs %}

@@ -51,7 +51,7 @@ root.render(<App />);
 {% endtabs %}
 
 
-![FormFilling](../images/FormFields.gif)
+![FormFilling](../../javascript-es6/images/FormFields.gif)
 
 
 ## Form Designer
@@ -94,7 +94,7 @@ root.render(<App />);
 {% endtabs %}
 
 
-![FormDesigner](../images/FormDesigner.gif)
+![FormDesigner](../../javascript-es6/images/FormDesigner.gif)
 
 ## Supported form field types
 
