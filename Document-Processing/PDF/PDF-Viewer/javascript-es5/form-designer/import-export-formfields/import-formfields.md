@@ -11,9 +11,9 @@ documentation: ug
 
 The PDF Viewer provides APIs to import interactive form field values into the currently loaded PDF. You can import from the following formats:
 
-- FDF
-- XFDF
-- JSON
+- [FDF](#import-as-fdf)
+- [XFDF](#import-as-xfdf)
+- [JSON](#import-as-json)
 
 Supported API:
 - importFormFields(sourceOrObject, format)
@@ -181,7 +181,7 @@ document.getElementById('importData').addEventListener('click', function () {
 - Pre-fill application forms from your database using JSON.
 - Migrate data from other PDF tools using FDF/XFDF.
 - Restore user progress stored locally or on the server using object import.
-- Combine with validation to block print/download until required fields are filled.
+- Combine with [validation](../form-validation) to block print/download until required fields are filled.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples)
 

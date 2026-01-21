@@ -22,7 +22,7 @@ The PDF Viewer control provides options to add, edit, and delete comments for th
 
 ![Comment panel overview](../images/commentannot.png)
 
-## Adding a comment to the annotation
+## Adding a comment to the annotation in UI
 
 Annotation comments, replies, and status can be managed in the PDF document using the comment panel.
 
@@ -109,7 +109,154 @@ Edit comments and replies in the following ways:
 
 >Deleting the root comment from the comment panel also deletes the associated annotation.
 
-## How to check the comments added by the user
+## Add Comments to the annotation Programmatically
+
+### How to Add Commnets and Replies programmatically
+
+Comments can be added to the PDF document programmatically using the `editAnnotation` property.
+
+The following example Shows how to add comments and reply in response to a button click.
+
+```html
+<button id="addComment">Add Comments</button>
+<button id="addReply">Add Reply</button>
+```
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+//for adding Comments programmatically
+document.getElementById("addComment")?.addEventListener("click", function() {
+       let annot = pdfviewer.annotationCollection[0];
+       if (annot) {
+           annot.commentType = "add";
+           annot.note = "New Comment";
+           pdfviewer.annotation.editAnnotation(annot);
+           console.log(pdfviewer.annotationCollection[0]);
+       }
+   });
+//for adding reply programmatically
+document.getElementById("addReply")?.addEventListener("click", function() {
+       let annot = pdfviewer.annotationCollection[0];
+       if (annot) {
+           annot.commentType = "add";
+           annot.replyComment = ["Reply Comment"];
+           pdfviewer.annotation.editAnnotation(annot);
+           console.log(pdfviewer.annotationCollection[0]);
+       }
+   });
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+
+//for adding Comments programmatically
+document.getElementById("addComment")?.addEventListener("click", function() {
+       let annot = pdfviewer.annotationCollection[0];
+       if (annot) {
+           annot.commentType = "add";
+           annot.note = "New Comment";
+           pdfviewer.annotation.editAnnotation(annot);
+           console.log(pdfviewer.annotationCollection[0]);
+       }
+   });
+//for adding reply programmatically
+document.getElementById("addReply")?.addEventListener("click", function() {
+       let annot = pdfviewer.annotationCollection[0];
+       if (annot) {
+           annot.commentType = "add";
+           annot.replyComment = ["Reply Comment"];
+           pdfviewer.annotation.editAnnotation(annot);
+           console.log(pdfviewer.annotationCollection[0]);
+       }
+   });
+{% endhighlight %}
+{% endtabs %}
+
+### How to Edit Comments programmatically
+
+Comments can be edited in the PDF document programmatically using the `editAnnotation` property.
+
+The following example Shows how to edit comments and reply in response to a button click.
+
+```html
+<button id="editComment">Edit Comments</button>
+<button id="editReply">Edit Reply</button>
+```
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+//for Editing Comments programmatically
+document.getElementById("editComment")?.addEventListener("click", function() {
+       let annot = pdfviewer.annotationCollection[0];
+       if (annot) {
+           annot.commentType = "edit";
+           annot.note = "Edited Comment";
+           pdfviewer.annotation.editAnnotation(annot);
+           console.log(pdfviewer.annotationCollection[0]);
+       }
+   });
+ 
+//for Editing reply programmatically
+document.getElementById("editReply")?.addEventListener("click", function() {
+       let annot = pdfviewer.annotationCollection[0];
+       if (annot) {
+           annot.commentType = "edit";
+           annot.replyComment = ["Edited Reply Comment"];
+           pdfviewer.annotation.editAnnotation(annot);
+           console.log(pdfviewer.annotationCollection[0]);
+       }
+   });
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+
+//for Editing Comments programmatically
+document.getElementById("editComment")?.addEventListener("click", function() {
+       let annot = pdfviewer.annotationCollection[0];
+       if (annot) {
+           annot.commentType = "edit";
+           annot.note = "Edited Comment";
+           pdfviewer.annotation.editAnnotation(annot);
+           console.log(pdfviewer.annotationCollection[0]);
+       }
+   });
+ 
+//for Editing reply programmatically
+document.getElementById("editReply")?.addEventListener("click", function() {
+       let annot = pdfviewer.annotationCollection[0];
+       if (annot) {
+           annot.commentType = "edit";
+           annot.replyComment = ["Edited Reply Comment"];
+           pdfviewer.annotation.editAnnotation(annot);
+           console.log(pdfviewer.annotationCollection[0]);
+       }
+   });
+{% endhighlight %}
+{% endtabs %}
+
+### How to check the comments added by the user
 
 Comments added to the PDF document can be read using the annotation's `comments` property.
 
@@ -163,3 +310,18 @@ document.getElementById('checkComments').addEventListener('click', function () {
 });
 
 ```
+
+## See also
+
+- [Annotation Overview](../overview)
+- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
+- [Create and Modify Annotation](../annotations/create-modify-annotation)
+- [Customize Annotation](../annotations/customize-annotation)
+- [Remove Annotation](../annotations/delete-annotation)
+- [Handwritten Signature](../annotations/signature-annotation)
+- [Export and Import Annotation](../annotations/export-import/export-annotation)
+- [Annotation Permission](../annotations/annotation-permission)
+- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
+- [Annotation Events](../annotations/annotation-event)
+- [Annotation API](../annotations/annotations-api)
