@@ -46,7 +46,7 @@ Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
-No<br/><br/></td><td>
+Yes<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
 <td>
@@ -61,7 +61,7 @@ Yes<br/><br/></td></tr>
 <td>
 Encryption and Decryption<br/><br/></td><td>
 No<br/><br/></td><td>
-No<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes—limited [except Word 2013]<br/><br/></td><td>
 Yes—limited [except Word 2013]<br/><br/></td><td>
 N/A<br/><br/></td><td>
@@ -242,8 +242,8 @@ Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td></tr>
 <tr>
 <td>
 Vertical alignment<br/><br/></td><td>
@@ -294,7 +294,7 @@ Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
-No<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
@@ -373,8 +373,8 @@ No<br/><br/></td></tr>
 Equation<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
@@ -400,8 +400,8 @@ No<br/><br/></td></tr>
 WordArt<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
+Yes<br/>VML - No<br/></td><td>
+Yes<br/>VML - No<br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
@@ -522,12 +522,12 @@ Yes<br/><br/></td></tr>
 <tr>
 <td>
 Suppress hyphenation<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td></tr>
 <tr>
 <td>
 Indents – left, right, first line & hanging<br/><br/></td><td>
@@ -1106,6 +1106,107 @@ No<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 </tbody>
 </table>
+
+## Supported Fields
+<table>
+    <tr>
+        <th>Field</th>
+        <th>Supports Update</th>
+    </tr>
+    <tr>
+    <td>= (Formula) field</td>   
+    <td> Yes <br/>
+        <strong>Known Limitation:</strong><br/>
+        All formula fields are supported except formulas that evaluate an entire column or row (for example, <code>=SUM(ABOVE)</code>), which are not supported
+    </td>
+    </tr>
+    </tr>
+    <tr><td>Advance field</td><td>Not Applicable</td></tr>
+    <tr><td>Ask field</td><td>No</td></tr>
+    <tr><td>Author field</td><td>Yes</td></tr>
+    <tr><td>AutoNum field</td><td>Not Applicable</td></tr>
+    <tr><td>AutoNumLGL field</td><td>Not Applicable</td></tr>
+    <tr><td>AutoNumOut field</td><td>Not Applicable</td></tr>
+    <tr><td>AutoText field</td><td>No</td></tr>
+    <tr><td>AutoTextList field</td><td>No</td></tr>
+    <tr><td>Comments field</td><td>Yes</td></tr>
+    <tr><td>Compare field</td><td>Yes</td></tr>
+    <tr><td>CreateDate field</td><td>No</td></tr>
+    <tr><td>Date field</td><td>Yes</td></tr>
+    <tr><td>DocProperty field</td><td>Yes</td></tr>
+    <tr><td>DocVariable field</td><td>Yes</td></tr>
+    <tr><td>FileName field</td><td>No</td></tr>
+    <tr><td>FileSize field</td><td>No</td></tr>
+    <tr><td>Fill-In field</td><td>No</td></tr>
+    <tr><td>GoToButton field</td><td>Not Applicable</td></tr>
+    <tr><td>Hyperlink field</td><td>Not Applicable</td></tr>
+    <tr><td>If field</td><td>Yes</td></tr>
+    <tr><td>IncludePicture field</td><td>Not Applicable</td></tr>
+    <tr><td>IncludeText field</td><td>No</td></tr>
+    <tr><td>Index field</td><td>No</td></tr>
+    <tr><td>Info field</td><td>No</td></tr>
+    <tr><td>Keywords field</td><td>No</td></tr>
+    <tr><td>LastSavedBy field</td><td>No</td></tr>
+    <tr><td>ListNum field</td><td>Not Applicable</td></tr>
+    <tr><td>MacroButton field</td><td>Not Applicable</td></tr>
+    <tr><td>MergeField field</td><td>Yes</td></tr>
+    <tr><td>MergeRec field</td><td>Yes</td></tr>
+    <tr><td>MergeSeq field</td><td>Yes</td></tr>
+    <tr><td>Next field</td><td>Yes</td></tr>
+    <tr><td>NextIf field</td><td>Yes</td></tr>
+    <tr><td>NoteRef field</td><td>No</td></tr>
+    <tr><td>NumChars field</td><td>No</td></tr>
+    <tr>
+    <td>NumPages field</td>
+    <td>
+        Yes <br>
+        <strong>Known Limitation:</strong><br>
+        Not supported on Silverlight/WinRT platforms. PDF layout limitations may cause incorrect page counts. 
+        Requires <code>UpdateDocumentFields()</code> and PDF assemblies in .NET Core/MAUI.
+    </td>
+    </tr>
+    <tr><td>NumWords field</td><td>No</td></tr>
+    <tr>
+    <td>Page field</td>
+    <td>
+        Yes <br>
+        <strong>Known Limitation:</strong><br>
+        Not supported on Silverlight/WinRT platforms. PDF layout limitations may cause incorrect page counts. 
+        Requires <code>UpdateDocumentFields()</code> and PDF assemblies in .NET Core/MAUI.
+    </td>
+    </tr>
+    <tr><td>PageRef field</td>
+    <td>
+        Yes <br>
+        <strong>Known Limitation:</strong><br>
+        Not supported on Silverlight/WinRT platforms. PDF layout limitations may cause incorrect page counts. 
+        Requires <code>UpdateDocumentFields()</code> and PDF assemblies in .NET Core/MAUI.
+    </td>
+    </tr>
+    <tr><td>PrintDate field</td><td>No</td></tr>
+    <tr><td>Quote field</td><td>No</td></tr>
+    <tr><td>Ref field</td><td>Yes</td></tr>
+    <tr><td>RevNum field</td><td>No</td></tr>
+    <tr><td>SaveDate field</td><td>No</td></tr>
+    <tr><td>Section field</td><td>Yes</td></tr>
+    <tr><td>SectionPages field</td><td>No</td></tr>
+    <tr><td>Seq (Sequence) field</td><td>Yes</td></tr>
+    <tr><td>Set field</td><td>Yes</td></tr>
+    <tr><td>SkipIf field</td><td>No</td></tr>
+    <tr><td>StyleRef field</td><td>No</td></tr>
+    <tr><td>Subject field</td><td>Yes</td></tr>
+    <tr><td>Symbol field</td><td>Not Applicable</td></tr>
+    <tr><td>Template field</td><td>No</td></tr>
+    <tr><td>Time field</td><td>Yes</td></tr>
+    <tr><td>Title field</td><td>Yes</td></tr>
+    <tr><td>TOA</td><td>No</td></tr>
+    <tr><td>TOC (Table of Contents) field</td><td>Yes</td></tr>
+    <tr><td>UserAddress field</td><td>No</td></tr>
+    <tr><td>UserInitials field</td><td>No</td></tr>
+    <tr><td>UserName field</td><td>No</td></tr>
+</table>
+
+
 
 ## Blazor supported features
 
