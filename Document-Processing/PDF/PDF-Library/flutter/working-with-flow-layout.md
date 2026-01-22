@@ -2,7 +2,7 @@
 layout: post
 title: Flow layout in Flutter PDF library | Syncfusion
 description: Learn here all about drawing images, paragraph text, header text and tables using Flow layout feature of Syncfusion Flutter non-UI PDF library and more.
-platform: flutter
+platform: document-processing
 control: PDF
 documentation: ug
 ---
