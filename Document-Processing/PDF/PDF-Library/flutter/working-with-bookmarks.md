@@ -2,7 +2,7 @@
 layout: post
 title: Bookmarks in Flutter PDF library | Syncfusion
 description: Learn here all about add, insert, and remove Bookmarks feature of Syncfusion Flutter PDF non-UI library and more.
-platform: flutter
+platform: document-processing
 control: PDF
 documentation: ug
 ---
