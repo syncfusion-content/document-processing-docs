@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Form Designer in TypeScript PDF Viewer
 
-When `Form Designer mode` is enabled in the Syncfusion `TypeScript PDF Viewer`, a default `Form Designer user interface (UI)` is displayed. This UI includes a built in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
+When [Form Designer mode](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesigner) is enabled in the Syncfusion [TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI includes a built in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
 
 Using the Form Designer UI, users can place form fields on the PDF, move and resize them, configure field and widget properties, preview the designed form, and remove fields when required. The Form Designer toolbar can also be shown or hidden and customized to control the available tools based on application requirements, enabling flexible and interactive form design directly within the viewer.
 
-**Key Features**
+## Key Features
 
 **Add Form Fields**
 You can add the following form fields to the PDF:
@@ -45,11 +45,14 @@ Designed form fields can be saved into the PDF document and printed with their a
 
 ## Enable Form Designer
 
-To enable form design features, inject the `FormDesigner` module into the PDF Viewer. After injecting the module, use the `enableFormDesigner` API to show or hide the Form Designer option in the main toolbar.
+To enable form design features, inject the [FormDesigner](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesigner) module into the PDF Viewer. After injecting the module, use the [enableFormDesigner](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#enableformdesigner) API to show or hide the Form Designer option in the main toolbar.
 
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, TextFieldSettings } from '@syncfusion/ej2-pdfviewer';
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
+ ThumbnailView, BookmarkView, TextSelection, TextSearch, 
+ FormFields, FormDesigner, TextFieldSettings } from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, 
+ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
@@ -59,19 +62,17 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Form Designer UI
 
-When `Form Designer mode` is enabled in the Syncfusion `TypeScript PDF Viewer`, a default `Form Designer user interface (UI)` is displayed. This UI provides a built in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
+When [Form Designer mode](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesigner) is enabled in the Syncfusion [TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI provides a built in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
 
 ![FormDesigner](../images/FormDesigner.gif)
 
-**Preview of the designed PDF form**
-
-![Forms with Filled sample Data](../images/FormFilled.png)
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/prefilledforms-cs1" %}
 
 For more information about creating and editing form fields in the PDF Viewer, refer to the [Form Creation in TypeScript PDF Viewer documentation](./Create-edit-Style-del-formFields/create-formfields).
 
 ## Form Designer Toolbar
 
-The `Form Designer toolbar` appears at the top of the PDF Viewer and provides quick access to form field creation tools. It includes frequently used field types such as:
+The [Form Designer toolbar](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesignertoolbarsettings) appears at the top of the PDF Viewer and provides quick access to form field creation tools. It includes frequently used field types such as:
 
 - [Text box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-textbox)
 - [Password Field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-password)
@@ -84,16 +85,17 @@ The `Form Designer toolbar` appears at the top of the PDF Viewer and provides qu
 
 Each toolbar item allows users to place the corresponding form field by selecting the tool and clicking on the desired location in the PDF document.
 
-**GIF – Adding a text box field using the Form Designer toolbar**
-
 ![Adding Text Box](../images/AddTextBox.gif)
 
-Use the following Code-snippet to enable Form Designer by injecting `FormDesigner` Module.
+Use the following Code-snippet to enable Form Designer by injecting [Form Designer mode](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesigner) Module.
 
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, 
+ThumbnailView, BookmarkView, TextSelection, TextSearch, 
+FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, 
+ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf";
@@ -105,7 +107,7 @@ For more information about creating and editing form fields in the PDF Viewer, r
 
 ## Show or Hide the Built-in Form Designer Toolbar
 
-You can control the visibility of the Form Designer toolbar using the `isFormDesignerToolbarVisible()` method. This allows you to display or hide the Form Designer tools in the PDF Viewer based on your application requirements.
+You can control the visibility of the Form Designer toolbar using the [isFormDesignerToolbarVisible()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) method. This allows you to display or hide the Form Designer tools in the PDF Viewer based on your application requirements.
 
 **Use this method to:**
 - Show the Form Designer toolbar when form design is required
@@ -119,8 +121,11 @@ You can control the visibility of the Form Designer toolbar using the `isFormDes
 <button id="hideDesignerBtn">Hide Form Designer Toolbar</button>
 ```
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, TextFieldSettings } from '@syncfusion/ej2-pdfviewer';
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
+ ThumbnailView, BookmarkView, TextSelection, TextSearch, 
+ FormFields, FormDesigner, TextFieldSettings } from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, 
+ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
@@ -137,7 +142,7 @@ document.getElementById('hideDesignerBtn')!.onclick = () => {
 
 ## Customize the Built-in Form Designer Toolbar
 
-You can customize the Form Designer toolbar by specifying the tools to display and arranging them in the required order using the `FormDesignerToolbarItems` property.
+You can customize the Form Designer toolbar by specifying the tools to display and arranging them in the required order using the [FormDesignerToolbarItems](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesignertoolbaritem) property.
 
 This customization helps you limit the available tools and simplify the user interface.
 
@@ -146,8 +151,11 @@ This customization helps you limit the available tools and simplify the user int
 - Any toolbar items not listed remain hidden, resulting in a cleaner and more focused UI.
 
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, TextFieldSettings } from '@syncfusion/ej2-pdfviewer';
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
+ ThumbnailView, BookmarkView, TextSelection, TextSearch, 
+ FormFields, FormDesigner, TextFieldSettings } from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, 
+ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
