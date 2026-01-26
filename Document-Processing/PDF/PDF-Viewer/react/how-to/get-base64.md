@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Retrieving Base64 Value in React Pdfviewer component | Syncfusion
-description: Learn here all about how to retrieve the Base64 value in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Toolbar
+title: Get Base64 from loaded PDF in React PDF Viewer | Syncfusion
+description: Learn how to retrieve the Base64 value of a loaded PDF in the Syncfusion React PDF Viewer using saveAsBlob and FileReader.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Retrieving Base64 Value from a PDF in PDF Viewer
+# Get Base64 value from a loaded PDF
 
 ### Overview
 
-This guide demonstrates how to fetch the base64-encoded value of a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer using React. This is useful for sending the PDF as a base64 string or processing it in the front end.
+This guide shows how to get the base64-encoded value of a PDF loaded in the Syncfusion PDF Viewer using React. This is useful for sending the PDF as a base64 string or processing it on the client.
 
 ### How to Retrieve Base64 Value
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in the [Get started with React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide to create a sample.
 
 
 **Step 2:** Set Up Your React Component
@@ -178,6 +177,6 @@ root.render(<App />);
 
 ### Conclusion
 
-By implementing these steps in your React application, you can convert a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer to a base64 string upon button click. This facilitates the manipulation or transfer of PDF data as needed.
+By following these steps, a loaded PDF can be converted to a Base64 string on button click for transfer or processing.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)

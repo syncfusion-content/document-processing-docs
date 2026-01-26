@@ -15,8 +15,7 @@ Charts can be enhanced by adding error bars which help to view the margin errors
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet sheet = workbook.Worksheets[0];
  
   //Create a Chart
@@ -31,8 +30,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Set error bar
   chart.Series[0].ErrorBar(true, ExcelErrorBarInclude.Plus, ExcelErrorBarType.Percentage, 50);
 
-  FileStream stream = new FileStream("ErrorBars.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  workbook.SaveAs("ErrorBars.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

@@ -1,26 +1,30 @@
 ---
 layout: post
-title: Signature selection events in EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about selection event in ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Handle signatureSelect and signatureUnselect events in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to respond to signatureSelect and signatureUnselect events in the Syncfusion ASP.NET Core PDF Viewer to track handwritten signature interactions.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# SignatureSelect and SignatureUnselect event
+# signatureSelect and signatureUnselect events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer provides event-handling capabilities for various actions, including selecting and unselecting handwritten signatures. The `signatureSelect` and `signatureUnselect` events enable developers to programmatically manage the selection state of signatures within the PDF Viewer component.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer raises the `signatureSelect` and `signatureUnselect` events whenever a handwritten signature annotation gains or loses focus. Use these callbacks to log reviewer actions, update guidance in the surrounding UI, or validate that a signer completes required steps before saving a document.
 
 **signatureSelect**
 
-The `signatureSelect` event triggers when a handwritten signature annotation is selected. This event allows developers to capture the signature selection and handle it programmatically, such as updating the UI or storing the selection data for further processing.
+This event fires when the user taps or clicks an existing handwritten signature or finishes drawing a new one. The event argument includes metadata such as the annotation ID, bounds, and page number so that applications can highlight related UI elements or load signer details.
 
 **signatureUnselect**
 
-The `signatureUnselect` event triggers when a handwritten signature annotation is unselected. This event enables developers to manage the unselection programmatically, which can be useful for tasks like cleanup operations or updating the application's state to reflect that a signature is no longer selected.
+This event fires after the focus moves away from a signature or the user deselects it. Handle the callback to persist edits, disable context commands, or reset state that should only be active while a signature is selected.
 
-The code snippet demonstrates how to subscribe to the `signatureSelect` and `signatureUnselect` events in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component.
+Follow these steps to wire the events in an ASP.NET Core application:
+
+1. Create a PDF Viewer sample by following the [ASP.NET Core getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started). The guide explains how to register the viewer scripts, styles, and controller endpoints.
+2. Place the buttons and script inside the Razor page so the handlers attach after the viewer initializes. The console output appears in the browser developer tools and can be replaced with custom UI updates or service calls.
+
+The following sample subscribes to both events in standalone and server-backed configurations.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -76,4 +80,4 @@ The code snippet demonstrates how to subscribe to the `signatureSelect` and `sig
 {% endhighlight %}
 {% endtabs %}
 
-The `signatureSelect` and `signatureUnselect` events in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer offer robust options for managing the state of handwritten signatures within your application. By handling these events, developers can create a more interactive and dynamic user experience, responding programmatically to signature selection and unselection.
+By handling `signatureSelect` and `signatureUnselect`, applications can audit signer activity, enable or disable toolbar actions, and provide immediate feedback when signatures change state.

@@ -27,7 +27,7 @@ Step 3: Select Blueprint as Empty Function and click **Finish**.
 Step 4: Install the following **NuGet packages** in your application from [Nuget.org](https://www.nuget.org/).
 
 * [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) 
-* [SkiaSharp.NativeAssets.Linux v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)
+* [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
 * [HarfBuzzSharp.NativeAssets.Linux v2.8.2.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/2.8.2.2)
 
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet package](AWS_Images/Lambda_Images/Install_NuGet.png)
@@ -71,8 +71,7 @@ public string FunctionHandler(string input, ILambdaContext context)
     //Initializes the SubstituteFont event to perform font substitution during Excel-to-PDF conversion
     application.SubstituteFont += new SubstituteFontEventHandler(SubstituteFont);
 
-	FileStream excelStream = new FileStream(@"Data/Sample.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(excelStream);
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/Sample.xlsx"));
 
     //Initialize XlsIO renderer.
     XlsIORenderer renderer = new XlsIORenderer();

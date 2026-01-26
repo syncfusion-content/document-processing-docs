@@ -215,7 +215,7 @@ Run the WPF application. The Syncfusion&reg; Blazor PDF Viewer renders inside th
 
 ![WPF Blazor HybridApp SfPdfViewer rendering in browser](../images/blazor-hybrid-wpf-sfpdfviewer.png)
 
->[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/WPF%20Blazor%20App).
+>[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Blazor%20Hybrid%20-%20WPF).
 
 ## See also
 

@@ -11,6 +11,9 @@ documentation: ug
 
 Redaction annotations conceal sensitive content in a PDF. The Syncfusion Blazor PDF Viewer (SfPdfViewer) supports both interactive and programmatic redaction with customizable appearance and a one-click final apply action.
 
+Check the following video to learn how to work with Redaction annotations in Blazor PDF Viewer. 
+{% youtube "https://youtu.be/pUlTIazVyUU" %}
+
 N> Prerequisites: Add the SfPdfViewer component to the Blazor app and ensure the redaction feature is available in the used version. Redaction permanently removes content when applied.
 
 ![Toolbar with the Redaction tool highlighted](redaction-annotations-images/redaction-icon-toolbar.png)

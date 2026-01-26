@@ -71,8 +71,7 @@ Step 5: Include the following code sample in *Program.cs* to create a PDF file.
 {% highlight c# tabtitle="C#" %}
 
 //Create a new PDF document. 
-using (PdfDocument document = new PdfDocument())
-{
+using (PdfDocument document = new PdfDocument()) {
     //Add a page to the document.
     PdfPage page = document.Pages.Add();
     //Create PDF graphics for a page.
@@ -89,11 +88,11 @@ using (PdfDocument document = new PdfDocument())
 
 Step 6: Build the project.
 
-To build the project, go to the `Build` menu and select `Build Solution`, or simply press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
+Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
 
 Step 7: Run the project.
 
-Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
+Click the Start button (green arrow) or press F5 to run the app.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Console/.NET%20Framework/Create%20PDF).
 

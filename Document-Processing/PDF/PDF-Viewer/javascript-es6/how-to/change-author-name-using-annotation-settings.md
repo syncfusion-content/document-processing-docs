@@ -1,34 +1,34 @@
 ---
 layout: post
-title: Change author name using annotation settings in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Change author name using annotation settings in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Change author name using annotation settings in TypeScript PDF Viewer | Syncfusion
+description: Learn how to change the author name and related annotation settings using the annotationSettings API in the TypeScript PDF Viewer.
 platform: document-processing
-control: Change author name using annotation settings
-publishingplatform: Typescript
+control: PDF Viewer
+
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change author name using annotation settings in Typescript Pdfviewer control
+# Change author name using annotation settings in TypeScript PDF Viewer
 
-The Essential JavaScript PDF Viewer supports to customize a single property of the annotation settings by exposing an API for the properties common to all the annotations.
+The PDF Viewer allows customizing individual annotation settings using the annotationSettings API, which exposes properties common to all annotations.
 
-**API Name** : annotationSettings
+API name: annotationSettings
 
-|Property Name|Data type & Default Value|Description|
+| Property Name | Data type & Default Value | Description |
 |---|---|---|
-|author|String(“Guest”)|specifies the author of the annotation.|
-|minWidth|Number(0)|specifies the minWidth of the annotation.|
-|maxWidth|Number(0)|specifies the maxWidth of the annotation.|
-|minHeight|Number(0)|specifies the minHeight of the annotation.|
-|maxHeight|Number(0)|specifies the maxHeight of the annotation.|
-|isLock|Boolean(false)|specifies the locked action of the annotations. [If set true unable to select the annotations]|
-|isPrint|Boolean(true)|specifies whether the annotations are included or not in Print actions.|
-|isDownload|Boolean(true|specifies whether the annotations are included or not in Download actions.|
-|Free Text Settings|
-|allowOnlyTextInput|Boolean(false)|specifies the allow only text action of the free text annotation. [If set true unable to move or resize the annotations]|
+| author | String ("Guest") | Specifies the author of the annotation. |
+| minWidth | Number (0) | Specifies the minimum width of the annotation. |
+| maxWidth | Number (0) | Specifies the maximum width of the annotation. |
+| minHeight | Number (0) | Specifies the minimum height of the annotation. |
+| maxHeight | Number (0) | Specifies the maximum height of the annotation. |
+| isLock | Boolean (false) | Specifies whether the annotation is locked. If true, the annotation cannot be selected. |
+| isPrint | Boolean (true) | Specifies whether the annotation is included in print actions. |
+| isDownload | Boolean (true) | Specifies whether the annotation is included in download actions. |
+| Free Text Settings |
+| allowOnlyTextInput | Boolean (false) | Specifies text-only mode for free text annotations. If true, moving or resizing is disabled. |
 
-You can change the author name and the other properties using the annotationSettings API as in the following code sample.
+Change the author name and other properties using the annotationSettings API as shown below.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

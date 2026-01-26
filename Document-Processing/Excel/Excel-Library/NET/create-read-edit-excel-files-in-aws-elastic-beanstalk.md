@@ -1,6 +1,6 @@
 ---
-title: Create, read, and edit Excel files in AWS Elastic Beanstalk | Syncfusion
-description: Explains how to create, read, and edit Excel files in AWS Elastic Beanstalk.
+title: Create, read, edit Excel files in AWS Elastic Beanstalk | Syncfusion
+description: This page explains how to create, read, and edit Excel files in AWS Elastic Beanstalk using the Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -291,8 +291,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     application.DefaultVersion = ExcelVersion.Xlsx;
 
     //A existing workbook is opened.             
-    FileStream sampleFile = new FileStream("Data/InputTemplate.xlsx", FileMode.Open);
-    IWorkbook workbook = application.Workbooks.Open(sampleFile);
+    IWorkbook workbook = application.Workbooks.Open("Data/InputTemplate.xlsx");
 
     //Access first worksheet from the workbook.
     IWorksheet worksheet = workbook.Worksheets[0];

@@ -1,16 +1,18 @@
 ---
 layout: post
-title: How to change default size in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to change the default width and height in the ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Set Width and Height of ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to set the width and height of the Syncfusion ASP.NET MVC PDF Viewer component to control its dimensions in your web application.
 platform: document-processing
-control: How to change the default width and height
-publishingplatform: document-processing
-documentation: UG
+control: PDF Viewer
+publishingplatform: ASP.NET MVC
+documentation: ug
 ---
 
-# How to change the default width and height
+# Set width and height of PDF Viewer
 
-To change the default width and height of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, modify the `Width` and `Height` properties of the PDFViewer control.
+To control the dimensions of the Syncfusion ASP.NET MVC PDF Viewer, you can modify its `Width` and `Height` properties.
+
+To change the width and height of the PDF Viewer, update the `Width` and `Height` properties of the `PdfViewer` control as follows:
 
 ```html
 <div>
@@ -19,6 +21,7 @@ To change the default width and height of the Syncfusion<sup style="font-size:70
     </div>
 </div>
 ```
-In this example, the Width property is set to `80%`, and the Height property is set to `1000px`. Change these values to any desired size in pixels or percentages.
+
+In this example, the `Width` property is set to `80%`, and the `Height` property is set to `1000px`. You can change these values to any desired size in pixels or percentages. When using percentage-based values for `Width` or `Height`, ensure that the parent container elements also have defined dimensions, otherwise, the PDF Viewer may not render correctly.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/EJ2-69063-defaultWidthHeight/How%20to/Change%20Default%20Height%20and%20Width)

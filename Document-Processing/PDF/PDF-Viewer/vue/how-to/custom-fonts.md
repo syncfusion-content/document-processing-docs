@@ -1,23 +1,28 @@
 ---
 layout: post
-title: Add custom fonts to the PDF Viewer using the PDF document | Syncfusion
-description: Learn here all about how to add custom fonts using the PDF document in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Add custom fonts in Vue PDF Viewer | Syncfusion
+description: Learn how to add and load custom TTF fonts for documents displayed in the Vue PDF Viewer using the customFonts property.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to add custom fonts to the PDF viewer used in the PDF document
+# How to add custom fonts to the PDF viewer
 
-To use custom fonts in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer within your PDF document, you need to add the custom TTF font files to the resource URL directory and configure the viewer to load these fonts. You can specify the custom font names using the
-**customFonts** property, which accepts an array of font names.
+The Vue PDF Viewer supports loading, editing, and saving custom fonts in form fields such as text boxes, list boxes, and drop-downs by using the customFonts property. Add the required TTF files to the resource URL directory used by the viewer so they can be loaded at runtime and used in forms.
+ 
+## Integrating Custom Font Collections into Form Fields in PDF Viewer
+ 
+To ensure proper rendering and saving of form fields that use custom fonts, especially when the fonts are not installed on the system, place the TTF files in the resource URL path referenced by the viewer and specify their names through the customFonts property (string array). These fonts will then be available for loading, editing, and saving form fields in the PDF.
 
-The following steps are used to customize the selection border.
+To use custom fonts in the Syncfusion PDF Viewer, add the custom TTF files to the resource URL directory and configure the viewer to load them. Specify font file names using the `customFonts` property as an array of names.
 
-**Step 1:** Add the custom TTF font files to the resource URL path referenced in your application. For example, place the custom TTF files in the ej2-pdfviewer-lib folder, which will serve as the resource URL path.
+Steps to add custom fonts
 
-**Step 2:** The following code snippet are how you can add custom fonts to the PDF viewer.
+**Step 1:** Add custom TTF font files to the resource URL path referenced in the application. For example, place the TTF files in the ej2-pdfviewer-lib folder that serves as the resource URL path.
+
+**Step 2:** Use the following code to configure custom fonts in the PDF Viewer.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -77,4 +82,6 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, you can successfully integrate and use custom fonts in your PDF documents displayed in the EJ2 PDF Viewer.
+These steps integrate custom fonts into PDF documents displayed in the PDF Viewer.
+
+> Note: If a form field (TextBox, ListBox, DropDown) using a custom font has text larger than the field’s bounds, the downloaded PDF may render incorrectly in browsers or third‑party viewers. It displays correctly in the Syncfusion PDF Viewer. To avoid this, use a font size that fits within the field or enlarge the field before saving/downloading.

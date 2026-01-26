@@ -1,21 +1,20 @@
 ---
 layout: post
-title: Navigation in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Navigation in JavaScript PDF Viewer | Syncfusion
+description: Learn how to navigate PDF documents in the Syncfusion JavaScript PDF Viewer using toolbar controls, bookmarks, thumbnails, and hyperlinks.
 platform: document-processing
-control: Navigation
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigation in Javascript Pdfviewer control
+# Navigation in JavaScript PDF Viewer
 
-The ASP.NET Core PDF Viewer supports different internal and external navigations.
+The JavaScript PDF Viewer supports multiple navigation options, including toolbar controls, programmatic commands, bookmarks, thumbnails, hyperlinks, and table of contents.
 
 ## Toolbar page navigation option
 
-The default toolbar of PDF Viewer contains the following navigation options
+The default toolbar includes the following navigation options:
 
 * [**Go to page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to the specific page of a PDF document.
 * [**Show next page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page of PDF a document.
@@ -44,7 +43,7 @@ The default toolbar of PDF Viewer contains the following navigation options
 {% endraw %}
 ```
 
-You can enable/disable page navigation option in PDF Viewer using the following code snippet.,
+Enable or disable page navigation using the following configuration:
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -70,9 +69,9 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/navigation.png)
+![PDF Viewer toolbar navigation controls](./images/navigation.png)
 
-Also, you can programmatically perform page navigation options as follows.
+You can also perform page navigation programmatically:
 
 ```html
 {% raw %}
@@ -186,11 +185,11 @@ document.getElementById('goToPreviousPage').addEventListener('click', () => {
 {% endhighlight %}
 {% endtabs %}
 
-Find the [here](https://stackblitz.com/edit/39kfnj?file=index.js) to perform the page navigation options programmatically.
+View the [programmatic navigation sample](https://stackblitz.com/edit/39kfnj?file=index.js) for a working example.
 
 ## Bookmark navigation
 
-The Bookmarks saved in PDF files are loaded and made ready for easy navigation. You can enable/disable bookmark navigation by using the following code snippet.,
+Bookmarks saved in PDF files provide quick navigation. Enable or disable bookmark navigation using the following configuration:
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -216,11 +215,11 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/bookmark.png)
+![PDF Viewer bookmark panel](./images/bookmark.png)
 
-To perform bookmark navigation, you can use the **goToBookmark** method. It's important to note that the **goToBookmark** method will throw an error if the specified bookmark does not exist in the PDF document.
+Use the **goToBookmark** method to navigate to a specific bookmark. The method throws an error if the bookmark does not exist in the document.
 
-Here is an example of how to use the **goToBookmark** method:
+Example:
 
 ```
   <button id="gotobookmark">Specfic Page</button>
@@ -236,9 +235,9 @@ x - Specifies the pageIndex for Navigate.
 
 y - Specifies the Y coordinates value of the Page.
 
-Also, you can use the **getBookmarks** method to retrieve a list of all the bookmarks in a PDF document. This method returns a List of Bookmark objects, which contain information about each bookmark.
+Use the **getBookmarks** method to retrieve all bookmarks. The method returns a list of bookmark objects that include metadata for each entry.
 
-Here is an example of how to use the getBookmarks method:
+Example:
 
 ```
  <button id="getBookmarks">retrieve bookmark</button>
@@ -253,8 +252,7 @@ document.getElementById('getBookmarks').addEventListener('click', () => {
 
 ## Thumbnail navigation
 
-Thumbnails is the miniature representation of actual pages in PDF files. This feature displays thumbnails of the pages and allows navigation.
-You can enable/disable thumbnail navigation by using the following code snippet.,
+Thumbnails provide miniature representations of PDF pages for quick navigation. Enable or disable thumbnail navigation using the following configuration:
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -280,19 +278,19 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/thumbnail.png)
+![PDF Viewer thumbnail pane](./images/thumbnail.png)
 
 ## Hyperlink navigation
 
-Hyperlink navigation features enables navigation to the URLs (website links) in a PDF file.
+Hyperlink navigation enables users to open URLs embedded in the PDF.
 
-![Alt text](./images/link.png)
+![PDF Viewer hyperlink navigation](./images/link.png)
 
 ## Table of content navigation
 
-Table of contents navigation allows users to navigate to different parts of a PDF file that are listed in the table of contents section.
+Table of contents navigation allows users to jump to sections defined in the document outline.
 
-You can enable/disable link navigation by using the following code snippet.,
+Enable or disable table of contents navigation using the following configuration:
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -318,7 +316,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-You can change the open state of the hyperlink in the PDF Viewer by using the following code snippet,
+Change the hyperlink open state using the following configuration:
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -345,11 +343,10 @@ pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
-```
 
-![Alt text](./images/toc.png)
+![PDF Viewer table of contents panel](./images/toc.png)
 
 ## See also
 
 * [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/toolbar/)
-* [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/feature-module/)
+* [Feature modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/feature-module/)

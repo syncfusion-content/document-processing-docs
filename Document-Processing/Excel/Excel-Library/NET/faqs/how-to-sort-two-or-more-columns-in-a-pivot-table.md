@@ -27,8 +27,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Pivot Top to Bottom sorting of values in 5th column (E) of the pivot table, (i.e.) 4th data column 
   rowField.AutoSort(PivotFieldSortType.Ascending, 4);
 
-  FileStream stream = new FileStream("TopToBottomSort.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  workbook.SaveAs("TopToBottomSort.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

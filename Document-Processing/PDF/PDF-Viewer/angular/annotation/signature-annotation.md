@@ -1,33 +1,33 @@
 ---
 layout: post
-title: Handwritten signature in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Handwritten signature in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Handwritten signature in Angular PDF Viewer control | Syncfusion
+description: Learn about handwritten signatures in the Syncfusion Angular PDF Viewer (Essential JS 2): add, enable/disable, and edit properties.
 platform: document-processing
 control: Handwritten signature
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Handwritten Signature
+# Handwritten signature in Angular PDF Viewer control
 
-The PDF Viewer control supports adding the handwritten signatures to a PDF document. The handwritten signature reduces the paperwork of reviewing the content and verifies it digitally.
+The PDF Viewer control supports adding handwritten signatures to a PDF document. Handwritten signatures reduce paperwork and enable digital verification.
 
 ## Adding a handwritten signature to the PDF document
 
 The handwritten signature can be added to the PDF document using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Select the **Handwritten Signature** button in the annotation toolbar. The signature panel will appear.
+* Select the **HandWritten Signature** button in the annotation toolbar. The signature panel appears.
 
-![HandWrittenSignature](../images/handwritten_sign.png)
+![[Open the handwritten signature panel](../images/handwritten_sign.png)
 
-* Draw the signature in the signature panel.
+* Draw the signature in the panel.
 
-![SignaturePanel](../images/signature_panel.png)
+![[Open the handwritten signature panel](../images/signature_panel.png)
 
-* Then, click the **Create** button and move the signature using the mouse and place them in the desired location.
+* Click **Create**, move the signature, and place it at the desired location.
 
-![SignatureAdded](../images/signature_added.png)
+![Place the handwritten signature on the page](../images/signature_added.png)
 
 ## Adding a handwritten signature to the PDF document Programmatically
 

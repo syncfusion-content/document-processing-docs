@@ -39,10 +39,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     serie.EnteredDirectlyValues = yValues;
     serie.EnteredDirectlyCategoryLabels = xValues;
 
-    //Saving the workbook as stream
-    FileStream stream = new FileStream("Chart.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
-    stream.Dispose();
+    //Saving the workbook 
+    workbook.SaveAs("Chart.xlsx");
 }
 {% endhighlight %}
 

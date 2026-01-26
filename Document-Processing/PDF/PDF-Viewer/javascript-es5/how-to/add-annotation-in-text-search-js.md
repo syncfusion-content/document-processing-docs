@@ -1,39 +1,36 @@
 ---
 layout: post
-title: Add Annotation in Text Search in JavaScript PdfViewer | Syncfusion
-description: Learn how to add rectangle annotations using search text bounds in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Add rectangle annotation via textSearch | Syncfusion PDF Viewer
+description: Learn to add rectangle annotations using text search bounds in the JavaScript PDF Viewer component, including initialization and search controls.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Rectangle Annotations Using Search Text Bounds in PDF Viewer
+# Add rectangle annotations using text search bounds in JS PDF Viewer
 
-## Overview
+A concise guide to adding rectangle annotations at highlighted text search results in the JavaScript PDF Viewer to visually emphasize matches and improve readability.
 
-This guide demonstrates how to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer. This technique is useful for emphasizing search results with visual markers in annotation-supported applications.
-
-## Steps to Add Rectangle Annotations on Search Result Highlight
+## Steps to add rectangle annotations on search result highlight
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF Viewer sample.
 
-**Step 2:** Initialize the PDF Viewer with Required Modules
+**Step 2:** Initialize the PDF Viewer with the required modules
 
 ```js
 var pdfviewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  resourceUrl:'https://cdn.syncfusion.com/ej2/28.1.33/dist/ej2-pdfviewer-lib'
+  resourceUrl:'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
   ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
 pdfviewer.appendTo('#PdfViewer');
 ```
 
-**Step 3:** Implement code blocks to automatically add Rectangle Annotation on Search Result Highlight
+**Step 3:** Add a rectangle annotation when a search result is highlighted
 
-Define a callback function for the `textSearchHighlight` event to add rectangle annotations
+Define a callback for the `textSearchHighlight` event to add a rectangle annotation at each match.
 
 ```js
 // Highlight event handler for text search, which adds a rectangle annotation where the text is found
@@ -50,9 +47,9 @@ pdfviewer.textSearchHighlight = function(args){
 }
 ```
 
-**Step 3:** Add Search Controls
+**Step 4:** Add search controls
 
-Ensure you have the appropriate HTML buttons for text search operations
+Ensure that the HTML includes buttons for text search operations.
 
 ```html
 <button id="searchText">Search</button>
@@ -60,7 +57,7 @@ Ensure you have the appropriate HTML buttons for text search operations
 <button id="searchCancel">Cancel</button>
 ```
 
-Use the following JavaScript to handle search controls:
+Use the following JavaScript code to handle search controls:
 
 ```js
 // Event listener for initiating a search
@@ -79,6 +76,6 @@ document.getElementById("searchCancel").addEventListener("click", function() {
 });
 ```
 
-By following this guide, you will enable the PDF Viewer to add rectangle annotations at search result locations, thus increasing the visibility of search results in your application.
+Following these steps enables the PDF Viewer to add rectangle annotations at search result locations, improving the visibility of matches.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/)

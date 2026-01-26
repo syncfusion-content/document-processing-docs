@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save document to Google Drive in ASP.NET MVC Document editor control | Syncfusion
+title: Save to Google Drive in ASP.NET MVC Document editor | Syncfusion
 description:  Learn about how to Save document to Google Drive in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Google Drive
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Drive
+# Save document to Google Drive in ASP.NET MVC
 
 To save a document to Google Drive, you can follow the steps below
 
@@ -147,7 +147,7 @@ N> You must use a unique `Client_ID` from json file to interface your applicatio
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/aspnetmvc/documentation/api/document-editor#saveAsBlob) and sent to server-side for saving in Google Drive.
+In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in Google Drive.
 
 
 {% tabs %}

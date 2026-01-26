@@ -1,18 +1,18 @@
 ---
 layout: post
-title: extractTextCompleted Event in Vue Pdfviewer component | Syncfusion
-description: Learn here all about extractTextCompleted Event in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: extractTextCompleted event in Vue PDF Viewer | Syncfusion
+description: Learn how to use the extractTextCompleted event and isExtractText property in the Syncfusion Vue PDF Viewer to extract text and bounds.
 control: extractTextCompleted
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract text using extractTextCompleted Event in Vue Pdfviewer component
+# Extract text using extractTextCompleted Event in Vue PDF Viewer control
 
-The PDF Viewer library allows you to extract the text from a page along with the bounds. Text extraction can be done using the [**isExtractText**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#isextracttext) property and [**extractTextCompleted**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#extracttextcompleted) event.
+Use the [isExtractText](https://ej2.syncfusion.com/documentation/api/pdfviewer/#isextracttext) property and the [extractTextCompleted](https://ej2.syncfusion.com/documentation/api/pdfviewer/#extracttextcompleted) event to extract page text along with bounds.
 
-The following steps are used to extract the text from the page.
+The following example shows how to enable text extraction and handle the completion event:
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) to create a simple PDF Viewer sample.
 

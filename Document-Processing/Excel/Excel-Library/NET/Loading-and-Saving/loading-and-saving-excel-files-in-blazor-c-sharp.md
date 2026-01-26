@@ -1,15 +1,15 @@
 ---
 title: Loading and saving workbook in Blazor | Syncfusion
-description: Explains how to load and save Excel files in Blazor applications using Syncfusion XlsIO.
+description: Explains how to load and save Excel files in Blazor applications using Syncfusion Excel(XlsIO) library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 # Loading and saving workbook in Blazor
 
-## Opening an existing workbook from Stream
+## Opening an existing workbook
 
-You can open an existing workbook from stream by using the overloads of [Open](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_Open_System_IO_Stream_) methods of [IWorkbooks](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbooks.html) interface. 
+You can open an existing workbook by using the overloads of [Open](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_Open_System_String_) methods of [IWorkbooks](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbooks.html) interface. 
 
 The code snippet for this process in Blazor Server-Side application is given below.
 
@@ -21,11 +21,8 @@ ExcelEngine excelEngine = new ExcelEngine();
 //Initialize IApplication
 IApplication application = excelEngine.Excel;
 
-//Load the file into stream
-FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-
 //Loads or open an existing workbook through Open method of IWorkbooks
-IWorkbook workbook = application.Workbooks.Open(inputStream);
+IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 {% endhighlight %}
 {% endtabs %}  
 
@@ -61,11 +58,8 @@ ExcelEngine excelEngine = new ExcelEngine();
 //Initialize IApplication
 IApplication application = excelEngine.Excel;
 
-//Load the file into stream
-FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-
 //Loads or open an existing workbook through Open method of IWorkbooks
-IWorkbook workbook = application.Workbooks.Open(inputStream);
+IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
 //To-Do some manipulation
 //To-Do some manipulation

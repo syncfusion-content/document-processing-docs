@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Select annotation in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Select annotation in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Select annotation in Vue PDF Viewer component | Syncfusion
+description: Learn here all about Select annotation in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Select annotation
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Select annotation in Vue Pdfviewer component
+# Select annotation in Vue PDF Viewer control
 
 The PDF Viewer library allows you to select an annotation from a PDF document. Selecting an annotation can be done using the `selectAnnotation()` method. This method is used to select an annotation using its id.
 

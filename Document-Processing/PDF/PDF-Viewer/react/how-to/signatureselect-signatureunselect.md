@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Signature selection events in React PDF Viewer component | Syncfusion
-description: Learn here all about signatureSelect and signatureUnselect event in Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Handle signatureSelect and signatureUnselect events | Syncfusion
+description: Learn how to handle signatureSelect and signatureUnselect events in the Syncfusion React PDF Viewer to manage handwritten signature selection state.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# SignatureSelect and SignatureUnselect event
+# Handle signatureSelect and signatureUnselect events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer provides event-handling capabilities for various actions, including selecting and unselecting handwritten signatures. The `signatureSelect` and `signatureUnselect` events enable developers to programmatically manage the selection state of signatures within the PDF Viewer component.
+Use the [signatureSelect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#signatureselect) and [signatureUnselect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#signatureunselect) events to manage the selection state of handwritten signatures in the PDF Viewer.
 
 **signatureSelect**
 
-The `signatureSelect` event triggers when a handwritten signature annotation is selected. This event allows developers to capture the signature selection and handle it programmatically, such as updating the UI or storing the selection data for further processing.
+Triggered when a handwritten signature annotation is selected. Use this event to capture selection and update the UI or store state.
 
 **signatureUnselect**
 
-The `signatureUnselect` event triggers when a handwritten signature annotation is unselected. This event enables developers to manage the unselection programmatically, which can be useful for tasks like cleanup operations or updating the application's state to reflect that a signature is no longer selected.
+Triggered when a handwritten signature annotation is unselected. Use this event to handle cleanup or update application state.
 
-The code snippet demonstrates how to subscribe to the `signatureSelect` and `signatureUnselect` events in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component.
+The following code demonstrates how to subscribe to these events:
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -49,7 +49,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         signatureSelect={signatureSelect}
         signatureUnselect={signatureUnselect}
         style={{ 'height': '640px' }}>
@@ -109,6 +109,6 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-The `signatureSelect` and `signatureUnselect` events in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer offer robust options for managing the state of handwritten signatures within your application. By handling these events, developers can create a more interactive and dynamic user experience, responding programmatically to signature selection and unselection.
+These events enable robust management of handwritten signature state, supporting interactive and dynamic user experiences.
 
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)

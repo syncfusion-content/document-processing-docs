@@ -17,8 +17,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IApplication application = excelEngine.Excel;
 
   //Load an existing Excel file into IWorkbook
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
   IWorksheet worksheet = workbook.Worksheets[0];
 
   System.Drawing.Image image = System.Drawing.Image.FromFile("image.png");
@@ -37,13 +36,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   #region Save
   //Saving the workbook
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+  workbook.SaveAs("Output.xlsx");
   #endregion
-
-  //Dispose streams
-  outputStream.Dispose();
-  inputStream.Dispose();
 }
 {% endhighlight %}
 {% endtabs %}

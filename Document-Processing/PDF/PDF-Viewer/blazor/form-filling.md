@@ -21,7 +21,7 @@ The form fields displayed in the SfPdfViewer are:
 * Signature field
 * List box
 
-![Form filling in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-form-filling.png)
+![Form filling in Blazor SfPdfViewer](images/blazor-pdfviewer-form-filling.png)
 
 ## Disabling form fields
 
@@ -48,21 +48,21 @@ Add a handwritten signature to a Signature field by following these steps:
 
 * Click the signature field in the PDF document to open the signature panel.
 
-![Signature field in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-signature-field.png)
+![Signature field in Blazor SfPdfViewer](images/blazor-pdfviewer-signature-field.png)
 
 * Draw the signature in the signature panel.
 
-![Displaying signature panel in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-signature-panel.png)
+![Displaying signature panel in Blazor SfPdfViewer](images/blazor-pdfviewer-signature-panel.png)
 
 * Click the **CREATE** button. The drawn signature is added to the signature field.
 
-![Displaying signature in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-signature.png)
+![Displaying signature in Blazor SfPdfViewer](images/blazor-pdfviewer-signature.png)
 
 ## Delete the signature inside the signature field
 
 Delete a signature placed in a signature field by using the Delete option in the annotation toolbar.
 
-![Deleting signature in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-delete-signature.png)
+![Deleting signature in Blazor SfPdfViewer](images/blazor-pdfviewer-delete-signature.png)
 
 ## Export and import form fields
 

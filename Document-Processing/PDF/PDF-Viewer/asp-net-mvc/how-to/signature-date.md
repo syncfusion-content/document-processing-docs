@@ -1,18 +1,24 @@
 ---
 layout: post
-title: Add date to signature field in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn here all about how to add the date to the signature text in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Add Date to Signature Field in ASP.NET MVC PDF Viewer
+description: Learn how to add the current date to the signature text in the Syncfusion ASP.NET MVC PDF Viewer using the updateFormFieldsValue method.
 platform: document-processing
-control: How to add the date to the signature text
-publishingplatform: document-processing
-documentation: UG
+control: PDF Viewer
+publishingplatform: ASP.NET MVC
+documentation: ug
 ---
 
-# How to add the date to the signature text
+# Add Date to Signature Field
 
-To add a date with the signature text in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, use the `updateFormFieldsValue()` method. Add a signature field to a PDF document and get the signature field in a PDF using the `retrieveFormFields()` method and store it in a variable. Modify the value of the signature field and get the current date. Use the `Date()` method to get the current date and format it as desired.
+In the PDF Viewer, you can programmatically add the current date alongside signature text for compliance, audit trails, or legal documentation. Use the `updateFormFieldsValue()` method to modify the signature field value after retrieving it with `retrieveFormFields()`.
 
-Update the signature field in a PDF using the `updateFormFieldsValue()` method and pass the modified signature field as a parameter.
+Use a PDF with an existing signature field. Call `retrieveFormFields()` to get the field, update the `value` property with text and date using `new Date()`, then apply changes with `updateFormFieldsValue()`.
+
+Follow these steps to add a date to the signature field.
+
+**Step 1:** Set up a PDF Viewer sample by following the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/). Ensure the PDF document contains at least one signature field.
+
+**Step 2:** Place a button in your view to trigger the signature update, and include the JavaScript function to handle it.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -57,4 +63,4 @@ Update the signature field in a PDF using the `updateFormFieldsValue()` method a
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/EJ2-67373-sample/How%20to/Add%20date%20with%20the%20signature)
+View the complete sample in the [GitHub repository](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/EJ2-67373-sample/How%20to/Add%20date%20with%20the%20signature).

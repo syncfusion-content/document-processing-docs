@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Getting started with Javascript PDF Viewer control | Syncfusion
-description:  Checkout and learn about Getting started with Javascript PDF Viewer control of Syncfusion Essential JS 2 and more details.
+title: Getting started with JavaScript PDF Viewer control | Syncfusion
+description:  Checkout and learn about Getting started with JavaScript PDF Viewer control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in Standalone PDF Viewer control
+# Getting started in JavaScript Standalone PDF Viewer control
 
 The Essential JS 2 for JavaScript (global script) is an ES5 formatted pure JavaScript framework which can be directly used in latest web browsers.
 
@@ -38,7 +37,7 @@ The Essential JS 2 for JavaScript (global script) is an ES5 formatted pure JavaS
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-getting-started-cs2/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-getting-started-cs2" %}
 
 
 ### Steps to Load PDF Viewer with Local Resources

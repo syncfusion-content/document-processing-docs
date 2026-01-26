@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Form Field Events in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about different form field in Syncfusion Javascript Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Form Field Events in JavaScript PDF Viewer control | Syncfusion
+description: Learn here all about different form field in Syncfusion JavaScript PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Form Field Events
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF Viewer Form Field events
+# PDF Viewer Form Field events in JavaScript
 
 The PDF Viewer control provides the support to different Form Field events. The Form Field events supported by the PDF Viewer Control are:
 

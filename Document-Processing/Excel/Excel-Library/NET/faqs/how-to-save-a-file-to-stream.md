@@ -15,8 +15,7 @@ XlsIO provides support to save a workbook to a .NET stream. The following code s
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
 
   //Save the workbook to stream
   FileStream fileStream = new FileStream("Output.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);

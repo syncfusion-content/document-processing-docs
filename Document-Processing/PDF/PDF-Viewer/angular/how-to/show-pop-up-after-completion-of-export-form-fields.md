@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Show pop up in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Show pop up after completion of export form fields in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Show pop up in Angular PDF Viewer component | Syncfusion
+description: Learn here all about Show pop up after completion of export form fields in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Show pop up after completion of export form fields
 documentation: ug

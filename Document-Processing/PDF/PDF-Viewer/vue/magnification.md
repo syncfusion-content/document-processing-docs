@@ -1,19 +1,18 @@
 ---
 layout: post
-title: Magnification in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Magnification in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Magnification
+title: Magnification in Vue PDF Viewer | Syncfusion
+description: Learn how to enable and use magnification in the Syncfusion Vue PDF Viewer, including Zoom In, Zoom Out, Fit to Page, and Fit to Width options.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Magnification in Vue Pdfviewer component
+# Magnification in Vue PDF viewer control
 
-The magnification tools of the PDF Viewer contains ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth tools in the
-default toolbar. The PDF Viewer also has an option to show or hide the magnification tools in the default toolbar.
+The PDF Viewer includes magnification tools in the default toolbar: Zoom In, Zoom Out, Zoom (to a specific value), Fit to Page, and Fit to Width. The toolbar can be configured to show or hide these tools.
 
-The following code snippet describes how to enable the magnification in PDF Viewer.
+Use the following configuration to enable magnification in the PDF Viewer:
 
 
 {% tabs %}
@@ -35,7 +34,7 @@ import {
 import { provide } from 'vue';
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
   Annotation, ThumbnailView, Print, TextSelection, TextSearch])
@@ -67,7 +66,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {

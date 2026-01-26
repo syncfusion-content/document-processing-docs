@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Access File Name in ASP.NET MVC Pdfviewer Component
-description: Learn here all about Access File Name in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Access or Change File Name in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to access the loaded PDF filename and change the download filename using the events in the Syncfusion ASP.NET MVC PDF Viewer.
 platform: document-processing
-control: Access File Name
-publishingplatform: ASP.NET MVC
+control: PDF Viewer
 documentation: ug
 ---
 
+# Access or change the PDF filename
 
-# Access file name
+The Syncfusion ASP.NET MVC PDF Viewer allows you to access the filename of the loaded PDF document, and to customize the filename used when the document is downloaded. This is achieved using the `DocumentLoad` and `DownloadEnd` events.
 
-The PDF Viewer server library allows you to can access the filename of the loaded PDF document using the **documentLoad** and **downloadEnd** event. Using these events, we can access the filename while loading and downloading the PDF document.
+The following steps demonstrate how to access and modify the filename in the PDF Viewer:
 
-The following steps are used to access the file name of loaded PDF document in PDF viewer control,
+**Step 1:** Create an ASP.NET MVC PDF Viewer sample by following the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started).
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create simple PDF Viewer sample.
+**Step 2:** Access and change the filename using the code snippets below.
 
-**Step 2:** Access file name using below code snippet,
+In the `DocumentLoad` or `DownloadEnd` event handler, you can access the original filename from `args.fileName`. To change the filename for download, set the `viewer.downloadFileName` property.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -28,9 +28,9 @@ The following steps are used to access the file name of loaded PDF document in P
 <script>
     function documentLoad(args) {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        args.fileName = "pdfsuccintly.pdf";
+        args.fileName = "pdf-succinctly.pdf";
         //Sets the name of the file to be downloaded
-        viewer.downloadFileName = "pdfsuccintly.pdf";
+        viewer.downloadFileName = "pdf-succinctly.pdf";
         console.log(args);
     }
 </script>
@@ -45,9 +45,9 @@ The following steps are used to access the file name of loaded PDF document in P
 <script>
     function documentLoad(args) {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        args.fileName = "pdfsuccintly.pdf";
+        args.fileName = "pdf-succinctly.pdf";
         //Sets the name of the file to be downloaded
-        viewer.downloadFileName = "pdfsuccintly.pdf";
+        viewer.downloadFileName = "pdf-succinctly.pdf";
         console.log(args);
     }
 </script>

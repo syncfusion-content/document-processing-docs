@@ -66,13 +66,13 @@ Step 5: Include the following namespaces in the *MainWindow.xaml.cs* file.
 
 {% highlight c# tabtitle="C#" %}
 
-using CreatePdfDemoSample.Services;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Drawing;
-using System.Reflection;
-using System.Xml.Linq;
+    using CreatePdfDemoSample.Services;
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Graphics;
+    using Syncfusion.Pdf.Grid;
+    using Syncfusion.Drawing;
+    using System.Reflection;
+    using System.Xml.Linq;
 
 {% endhighlight %}
 
@@ -379,6 +379,8 @@ Step 6: Add a new action method *createPdf_Click* in *MainWindow.xaml.cs* and in
     }
     #endregion
 
+
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -387,9 +389,8 @@ Step 6: Add a new action method *createPdf_Click* in *MainWindow.xaml.cs* and in
 
 Step 7: Build the project.
 
-To build the project, go to the `Build` menu and select `Build Solution`, or simply press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 8: Run the project.
 
 Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
-

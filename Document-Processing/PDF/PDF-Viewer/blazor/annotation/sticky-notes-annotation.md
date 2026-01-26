@@ -11,7 +11,7 @@ documentation: ug
 
 The SfPdfViewer control provides options to add, edit, and delete sticky notes annotations in a PDF document.
 
-![StickyNotes Annotation in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-stickynotes-annotation.png)
+![StickyNotes Annotation in Blazor SfPdfViewer](../images/blazor-pdfviewer-stickynotes-annotation.png)
 
 ## Adding a sticky note annotation to the PDF document
 
@@ -21,7 +21,7 @@ Sticky notes annotations can be added using the annotation toolbar.
 * Click the location on the page where the sticky note annotation should appear.
 * The sticky note annotation is added at the clicked position.
 
-![Adding StickyNotes in Blazor SfPdfViewer Toolbar](../../blazor-classic/images/blazor-pdfviewer-add-stickynotes-in-toolbar.png)
+![Adding StickyNotes in Blazor SfPdfViewer Toolbar](../images/blazor-pdfviewer-add-stickynotes-in-toolbar.png)
 
 Annotation comments can be added using the Comment panel.
 
@@ -29,7 +29,7 @@ Annotation comments can be added using the Comment panel.
 * Select the Comment option from the context menu.
 * Use the Comment panel to add Comments, Reply, and Status.
 
-![Blazor SfPdfViewer with StickyNotes Comment](../../blazor-classic/images/blazor-pdfviewer-stickynotes-comment.png)
+![Blazor SfPdfViewer with StickyNotes Comment](../images/blazor-pdfviewer-stickynotes-comment.png)
 
 ## Editing the properties of the sticky note annotation
 
@@ -37,7 +37,7 @@ Annotation comments can be added using the Comment panel.
 
 Adjust the annotation opacity using the range slider in the Edit Opacity tool.
 
-![StickyNotes Opacity in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-stickynotes-opacity.png)
+![StickyNotes Opacity in Blazor SfPdfViewer](../images/blazor-pdfviewer-stickynotes-opacity.png)
 
 ### Editing comments
 
@@ -45,11 +45,11 @@ The comment, comment reply, and comment status of the annotation can be edited u
 
 - Open the Comment panel using the Comment Panel button in the annotation toolbar.
 
-![Editing StickyNotes Comment in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-edit-sticknotes-comment.png)
+![Editing StickyNotes Comment in Blazor SfPdfViewer](../images/blazor-pdfviewer-edit-sticknotes-comment.png)
 
 Use the menu in the Comment panel to modify or delete comments, replies, and their status.
 
-![StickyNotes Editing in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-editing-stickynotes.png)
+![StickyNotes Editing in Blazor SfPdfViewer](../images/blazor-pdfviewer-editing-stickynotes.png)
 
 ## Setting default properties during control initialization
 

@@ -1,23 +1,22 @@
 ---
 layout: post
-title: Export As Image in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Export As Image in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Export pages as images in JavaScript PDF Viewer | Syncfusion
+description: Learn how to export pages as Base64-encoded images in the JavaScript PDF Viewer using exportAsImage and exportAsImages.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export As Image Javascript Pdfviewer control
+# Export pages as images in JavaScript PDF Viewer
 
-The PDF Viewer library allows you to export specified pages as a Base64-encoded image string using the **exportAsImage()** method and exporting a range of pages as Base64-encoded image strings using the **exportAsImages()** method.
+Export a single page as a Base64-encoded image using `exportAsImage()` or export a range of pages using `exportAsImages()`.
 
-The following steps are used to exportAsImage.
+### Steps to export pages as images
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create a simple PDF Viewer sample.
 
-**Step 2:** The following code snippet to implement the functionality for exporting a specified page as a Base64-encoded image string or exporting a range of pages as Base64-encoded image strings.
+**Step 2:** Use the following code to export a specified page as a Base64-encoded image or a range of pages as Base64-encoded images.
 
 ```
 
@@ -38,8 +37,7 @@ document.getElementById('exportAsImage').addEventListener('click', () => {
 
 ```
 
-Similarly, to code snippet for exports the specified page as a Base64-encoded image string, allowing for custom image size:
-
+Export a specified page as a Base64-encoded image with a custom size:
 
 ```
 
@@ -60,8 +58,7 @@ document.getElementById('exportAsImageWithSize').addEventListener('click', () =>
 });
 
 ```
-Similarly, to code snippet for exports the range of pages as Base64-encoded image strings:
-
+Export a range of pages as Base64-encoded image strings:
 
 ```
 
@@ -82,8 +79,7 @@ document.getElementById('exportAsImages').addEventListener('click', () => {
 
 ```
 
-Similarly, to code snippet for exports the range of pages as Base64-encoded image strings, allowing for custom image size:
-
+Export a range of pages as Base64-encoded images with a custom size:
 
 ```
 
@@ -105,4 +101,4 @@ document.getElementById('exportAsImagesWithSize').addEventListener('click', () =
 
 ```
 
-By following these steps, you can successfully integrate and use the export as image API in the EJ2 PDF Viewer.
+These APIs enable exporting viewer pages as images for further processing or download.

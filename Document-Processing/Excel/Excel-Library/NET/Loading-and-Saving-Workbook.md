@@ -78,11 +78,8 @@ ExcelEngine excelEngine = new ExcelEngine();
 //Initialize IApplication
 IApplication application = excelEngine.Excel;
 
-//Load the file into stream
-FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-
 //Loads or open an existing workbook through Open method of IWorkbooks
-IWorkbook workbook = application.Workbooks.Open(inputStream);
+IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
 //To-Do some manipulation
 //To-Do some manipulation

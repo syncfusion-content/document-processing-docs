@@ -19,8 +19,7 @@ The following code snippet illustrate this.
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Sample data
@@ -31,8 +30,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A1:A10"].Text = "UnLocked";
   worksheet.Protect("syncfusion", ExcelSheetProtection.All);
 
-  FileStream stream = new FileStream("ProtectCells.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  workbook.SaveAs("ProtectCells.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

@@ -1,34 +1,35 @@
 ---
 layout: post
-title: Handwritten signature in Typescript PDF Viewer control | Syncfusion
-description: Learn here all about Handwritten signature in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Handwritten signature in TypeScript PDF Viewer control | Syncfusion
+description: Learn about handwritten signatures in the Syncfusion TypeScript PDF Viewer (Essential JS 2): add, enable/disable, and edit properties.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Handwritten signature Typescript PDF Viewer control
+# Handwritten signature in TypeScript PDF Viewer control
 
-The PDF Viewer control supports adding handwritten signatures to a PDF document. The handwritten signature reduces the paper work of reviewing the content and verifies it digitally.
+The PDF Viewer control supports adding handwritten signatures to a PDF document. Handwritten signatures reduce paperwork and enable digital verification.
 
-## Adding a handwritten signature to the PDF document
+## Add Signature Annotation 
+
+### Adding a handwritten signature in UI
 
 The handwritten signature can be added to the PDF document using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Select the **HandWritten Signature** button in the annotation toolbar. The signature panel will appear.
+* Select the **HandWritten Signature** button in the annotation toolbar. The signature panel appears.
 
-![HandWritten Signature](../images/select_sign.png)
+![Open the handwritten signature panel](../images/select_sign.png)
 
-* Draw the signature in the signature panel.
+* Draw the signature in the panel.
 
-![HandWritten Signature](../images/add_sign.png)
+![Draw the handwritten signature](../images/add_sign.png)
 
-* Then click **Create** button and move the signature using the mouse and place them in the desired location.
+* Click **Create**, move the signature, and place it at the desired location.
 
-![HandWritten Signature](../images/create_sign.png)
+![Place the handwritten signature on the page](../images/create_sign.png)
 
 Refer to the following code sample to switch to the handwritten signature mode programmatically.
 
@@ -44,7 +45,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.appendTo('#PdfViewer');
 
 let handWrittenSignature = document.getElementById('handWrittenSignature');
@@ -79,47 +80,11 @@ if (handWrittenSignature) {
 {% endhighlight %}
 {% endtabs %}
 
-
-## How to enable the handwritten signature
-
-The following code snippet describes how to enable the handwritten signature in PDF Viewer. When the value is set to `false` it disables the handwritten signature.
-
-{% tabs %}
-{% highlight ts tabtitle="Standalone" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib";
-pdfviewer.enableHandwrittenSignature  = false
-
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.enableHandwrittenSignature  = false
-
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% endtabs %}
-
-## Adding Handwritten signature programatically to the PDF document
+### Add a handwritten signature programmatically
 
 With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
 
-Here is an example of how you can use the **addAnnotation()** method to add the Handwritten signature programmatically
+Here is an example of adding a handwritten signature programmatically using addAnnotation():
 
 ```html
 <button id="addHandwrittenSignature "> Add Handwritten signature Programmatically</button>
@@ -134,7 +99,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/27.1.48/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.appendTo('#PdfViewer');
 
 let addHandwrittenSignature = document.getElementById('addHandwrittenSignature');
@@ -191,7 +156,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/27.1.48/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 pdfviewer.appendTo('#PdfViewer');
 
 let addHandwrittenSignature = document.getElementById('addHandwrittenSignature');
@@ -244,24 +209,166 @@ if(addHandwrittenSignature){
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to/Add%20Handwritten%20Signature%20Programmatically)
 
-## Editing the properties of handwritten signature
+## Edit Signature Annotation
 
-The stroke color, border thickness, and opacity of the handwritten signature can be edited using the edit stroke color tool, edit thickness tool, and edit opacity tool in the annotation toolbar.
+### Edit Signature Annotation in UI
 
-### Editing stroke color
+Stroke color, border thickness, and opacity can be edited using the Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
-The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
+#### Edit stroke color
 
-![SignatureStrokeColor](../images/change_stroke.png)
+Edit the stroke color using the color palette in the Edit Stroke Color tool.
 
-### Editing thickness
+![Change signature stroke color](../images/change_stroke.png)
 
-The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
+#### Edit thickness
 
-![SignatureThickness](../images/change_thickness.png)
+Edit border thickness using the range slider in the Edit Thickness tool.
 
-### Editing opacity
+![Change signature border thickness](../images/change_thickness.png)
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+#### Edit opacity
 
-![SignatureOpacity](../images/change_opacity.png)
+Edit opacity using the range slider in the Edit Opacity tool.
+
+![Change signature opacity](../images/change_opacity.png)
+
+### Edit Signature Annotation Programmatically
+
+With the PDF Viewer library, you can programmatically edit a handwritten signature to the PDF Viewer control using the **editSignature()** method.
+
+Here is an example of adding a handwritten signature programmatically using editSiganture():
+
+```html
+<button id="Signature">Add Signature Annotation</button>
+<button id="editSignatureAnnotation">Edit Signature Annotation</button>
+```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, DisplayMode, HandWrittenSignatureSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+//Add Signature annotation
+document.getElementById('Signature')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation("HandWrittenSignature", {
+                offset: { x: 200, y: 310 },
+                pageNumber: 1,
+                width: 200,
+                height: 65,
+                signatureItem: ['Signature'],
+                signatureDialogSettings: {
+                    displayMode: DisplayMode.Text, hideSaveSignature: false
+                },
+                canSave: false,
+                path: 'Syncfusion',
+                fontFamily: "Helvetica",
+            } as HandWrittenSignatureSettings);
+});
+
+//Edit Signature annotation
+document.getElementById('editSignatureAnnotation')?.addEventListener('click', () => {
+    for (let i = 0; i < pdfviewer.signatureCollection.length; i++) {
+        if (pdfviewer.signatureCollection[i].shapeAnnotationType === 'SignatureText') {
+            pdfviewer.signatureCollection[i].fontSize = 12;
+            pdfviewer.signatureCollection[i].thickness = 2;
+            pdfviewer.signatureCollection[i].strokeColor = '#0000FF';
+            pdfviewer.signatureCollection[i].opacity = 0.8;
+            pdfviewer.annotationModule.editSignature(pdfviewer.signatureCollection[i]);
+        }
+    }
+});
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, DisplayMode, HandWrittenSignatureSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+//Add Signature annotation
+document.getElementById('Signature')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation("HandWrittenSignature", {
+                offset: { x: 200, y: 310 },
+                pageNumber: 1,
+                width: 200,
+                height: 65,
+                signatureItem: ['Signature'],
+                signatureDialogSettings: {
+                    displayMode: DisplayMode.Text, hideSaveSignature: false
+                },
+                canSave: false,
+                path: 'Syncfusion',
+                fontFamily: "Helvetica",
+            } as HandWrittenSignatureSettings);
+});
+
+//Edit Signature annotation
+document.getElementById('editSignatureAnnotation')?.addEventListener('click', () => {
+    for (let i = 0; i < pdfviewer.signatureCollection.length; i++) {
+        if (pdfviewer.signatureCollection[i].shapeAnnotationType === 'SignatureText') {
+            pdfviewer.signatureCollection[i].fontSize = 12;
+            pdfviewer.signatureCollection[i].thickness = 2;
+            pdfviewer.signatureCollection[i].strokeColor = '#0000FF';
+            pdfviewer.signatureCollection[i].opacity = 0.8;
+            pdfviewer.annotationModule.editSignature(pdfviewer.signatureCollection[i]);
+        }
+    }
+});
+{% endhighlight %}
+{% endtabs %}
+
+## Enable/Disable handwritten signature
+
+The following example enables or disables the handwritten signature in the PDF Viewer. Setting the value to `false` disables the feature.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
+
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
+pdfviewer.enableHandwrittenSignature  = false
+
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
+
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+pdfviewer.enableHandwrittenSignature  = false
+
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
+## See also
+
+- [Annotation Overview](../overview)
+- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
+- [Create and Modify Annotation](../annotations/create-modify-annotation)
+- [Customize Annotation](../annotations/customize-annotation)
+- [Remove Annotation](../annotations/delete-annotation)
+- [Export and Import Annotation](../annotations/export-import/export-annotation)
+- [Annotation Permission](../annotations/annotation-permission)
+- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
+- [Annotation Events](../annotations/annotation-event)
+- [Annotation API](../annotations/annotations-api)

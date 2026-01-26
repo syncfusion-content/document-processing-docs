@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Magnification in ASP.NET MVC Pdfviewer Component
-description: Learn here all about Magnification in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Magnification in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to use magnification tools (Zoom In, Zoom Out, Fit Page, Fit Width) in the Syncfusion ASP.NET MVC PDF Viewer and control zoom behavior.
 platform: document-processing
-control: Magnification
+control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
@@ -11,9 +11,9 @@ documentation: ug
 
 # Magnification
 
-The magnification tools of the PDF viewer contains ZoomIn,ZoomOut,Zoom,FitPage, and FitWidth tools in the default toolbar. The PDF Viewer also has an option to show or hide the magnification tools in the default toolbar.
+The PDF Viewer includes magnification tools on the default toolbar: Zoom In, Zoom Out, Zoom, Fit Page, and Fit Width. The toolbar can also be configured to show or hide magnification tools as needed.
 
-The following code snippet describes how to enable the magnification in PDF Viewer.
+The following example shows how to enable magnification in the PDF Viewer.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -32,18 +32,18 @@ The following code snippet describes how to enable the magnification in PDF View
 {% endhighlight %}
 {% endtabs %}
 
-The following magnification options are available in the default toolbar of PDF Viewer:-
+The following magnification options are available in the default toolbar of the PDF Viewer:
 
-* **ZoomIn**:- perform Zoom in from current zoom value of PDF pages.
-* **ZoomOut**:- perform Zoom out from current zoom value of PDF pages.
-* **Zoom**:- Zoom to specific zoom value of PDF pages.
-* **FitPage**:- Fits the page width with-in the available view port size.
-* **FitWidth**:- Fits the view port width based on the page content size.
+* **ZoomIn**:- Zoom in from the current zoom value.
+* **ZoomOut**:- Zoom out from the current zoom value.
+* **Zoom**:- Zoom to a specific percentage.
+* **FitPage**:- Fit the entire page within the available viewport.
+* **FitWidth**:- Fit the page width to the viewport.
 * **Auto**:- Fits the page content with-in the viewport on resizing action.
 
-![Alt text](../images/zoom.png)
+![Zoom controls in the PDF Viewer toolbar](./images/zoom.png)
 
-N>PDF Viewer can support the zoom value ranges from 10 to 400.
+N> The PDF Viewer supports zoom values from 10% to 400%.
 
 ## See also
 

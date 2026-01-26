@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Magnification in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Magnification in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Magnification in Angular PDF Viewer component | Syncfusion
+description: Learn here all about Magnification in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Magnification
 documentation: ug

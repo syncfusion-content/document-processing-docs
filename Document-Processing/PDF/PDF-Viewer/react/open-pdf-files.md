@@ -2,7 +2,7 @@
 layout: post
 title: Open PDF files in React Pdfviewer component | Syncfusion
 description: This page helps you to learn about how to load PDF files from various locations in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Open PDF files
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##

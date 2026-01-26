@@ -21,9 +21,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //To change the grid line color using ExcelKnownColors
   worksheet.GridLineColor = ExcelKnownColors.Blue;
-
-  FileStream stream = new FileStream("GridLineColor.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  
+  workbook.SaveAs("GridLineColor.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

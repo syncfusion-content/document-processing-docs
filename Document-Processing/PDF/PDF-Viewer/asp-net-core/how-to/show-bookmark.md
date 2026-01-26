@@ -1,24 +1,23 @@
 ---
 layout: post
-title: Show Bookmark in ASP.NET Core Pdfviewer Component
-description: Learn here all about Show Bookmark in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Show the bookmark pane in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to display the bookmark pane programmatically in the Syncfusion ASP.NET Core PDF Viewer by enabling the enableBookmark property.
 platform: document-processing
-control: Show Bookmark
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
 ---
 
-# Show Bookmark
+# Show bookmark
 
-The PDF Viewer server library allows you to show the bookmark programmatically by setting the [**enableBookmark**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#enablebookmark) property to `true`. We can also disable the bookmark by setting the property to `false`.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer can display the bookmark pane automatically by setting the [`enableBookmark`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#enablebookmark) property to `true`. Use this option when documents rely on bookmark navigation for quick access to chapters or tagged sections.
 
-N>Default value of `enableBookmark` property is true.
+N> The default value of `enableBookmark` is `true`, so the bookmark pane remains available unless it is explicitly disabled.
 
-The following steps are used to show the bookmark.
+Follow these steps to show the bookmark pane:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Create a PDF Viewer sample by using the [ASP.NET Core getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) so that the required scripts, styles, and controller endpoints are configured.
 
-**Step 2:** Use the following code snippet to Show the Bookmark.
+**Step 2:** Enable the bookmark pane in the Razor markup, as shown in the following samples.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

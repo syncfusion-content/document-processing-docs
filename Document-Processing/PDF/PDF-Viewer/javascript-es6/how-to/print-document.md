@@ -1,21 +1,19 @@
 ---
 layout: post
-title: Print document in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Print document in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Print a document in TypeScript PDF Viewer | Syncfusion
+description: Learn how to programmatically print a PDF document using the print method in the Syncfusion TypeScript PDF Viewer.
 platform: document-processing
-control: Print document
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Print document in Typescript Pdfviewer control
+# Print a document in TypeScript PDF Viewer
 
-The PDF Viewer library allows you to print the PDF document programmatically using the [**print()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#print) method in the **PrintModule**.
+Print a PDF document programmatically using the [print](https://ej2.syncfusion.com/documentation/api/pdfviewer/#print) method in the Print module.
 
 The following steps are used to print the PDF document programmatically.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in the [Get started with JavaScript ES6 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) guide to create a sample.
 
 **Step 2:** Add the following code snippet to perform the print operation.
 
@@ -30,4 +28,4 @@ document.getElementById('print').addEventListener('click', ()=> {
 });
 ```
 
-Find the Sample, [how to print the PDF document programmatically](https://stackblitz.com/edit/j9tu5j-cc3akh?devtoolsheight=33&file=index.ts)
+Find the sample: [Print the PDF document programmatically](https://stackblitz.com/edit/j9tu5j-cc3akh?devtoolsheight=33&file=index.ts)

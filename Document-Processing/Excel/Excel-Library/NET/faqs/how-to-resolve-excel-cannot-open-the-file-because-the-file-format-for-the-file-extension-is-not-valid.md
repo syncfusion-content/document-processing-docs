@@ -22,8 +22,7 @@ application.DefaultVersion = ExcelVersion.Excel2013;
 //Do some manipulation
 
 //Workbook is saved in Excel2013 format
-FileStream stream = new FileStream("Sample.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-workbook.SaveAs(stream);
+workbook.SaveAs("Sample.xlsx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -66,12 +65,10 @@ These are represented in the below code snippet.
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 workbook.Version = ExcelVersion.Excel97to2003;
-FileStream stream = new FileStream("Sample.xls", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-workbook.SaveAs(stream);
+workbook.SaveAs("Sample.xls");
 
 workbook.Version = ExcelVersion.Excel2013;
-FileStream stream1 = new FileStream("Sample.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-workbook.SaveAs(stream1); 
+workbook.SaveAs("Sample.xlsx"); 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}

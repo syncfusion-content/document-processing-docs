@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Open Bookmark in Vue PDF Viewer component | Syncfusion
-description: Learn here all about Open Bookmark in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Open or close the Bookmark pane programmatically | Syncfusion
+description: Learn how to open and close the Bookmark pane programmatically in the Syncfusion Vue PDF Viewer using openBookmarkPane and closeBookmarkPane.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open and Close Bookmark pane programmatically
+# Open or close the Bookmark pane programmatically
 
-The PDF Viewer library allows you to open the Bookmark pane programmatically using the **openBookmarkPane()** method.
+Open the Bookmark pane programmatically using the `openBookmarkPane()` method.
 
 The following steps are used to open the Bookmark.
 
@@ -39,7 +39,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
@@ -78,7 +78,7 @@ export default {
   },
   data() {
     return {
-      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -198,7 +198,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
@@ -237,7 +237,7 @@ export default {
   },
   data() {
     return {
-      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },

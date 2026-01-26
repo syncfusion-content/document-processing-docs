@@ -730,8 +730,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   application.DefaultVersion = ExcelVersion.Xlsx;
   
   //Load the existing Excel workbook into IWorkbook
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
   
   //Get the first worksheet in the workbook into IWorksheet
   IWorksheet worksheet = workbook.Worksheets[0];
@@ -1420,7 +1419,7 @@ N> It is recommended to use Blazor Server application to reduce the pay back loa
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (Excel) features.
 
-An online sample link to [create an Excel document](https://blazor.syncfusion.com/demos/excel/create-excel?theme=fluent) in Blazor.
+An online sample link to <a href="https://blazor.syncfusion.com/demos/excel/create-excel?theme=fluent">create an Excel document</a> in Blazor.
 
 ## Convert Excel to Image in Blazor WASM application
 
@@ -1692,7 +1691,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 A complete working example of how to convert an Excel file to PDF in Blazor WASM application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/ExcelToPDF).
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. You can also explore our [Blazor Excel library demo](https://blazor.syncfusion.com/demos/excel/create-excel?theme=bootstrap5) that shows how to create and modify Excel files from C# with just five lines of code.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. You can also explore our <a href="https://blazor.syncfusion.com/demos/excel/create-excel?theme=bootstrap5">Blazor Excel library demo</a> that shows how to create and modify Excel files from C# with just five lines of code.
 
 ## Create a simple Excel report in Blazor Server Web application
 
@@ -2424,8 +2423,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   application.DefaultVersion = ExcelVersion.Xlsx;
   
   //Load the existing Excel workbook into IWorkbook
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
   
   //Get the first worksheet in the workbook into IWorksheet
   IWorksheet worksheet = workbook.Worksheets[0];

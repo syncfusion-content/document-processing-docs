@@ -3190,7 +3190,7 @@ The following code snippet demonstrates how to retrieving an existing widget ann
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Get-widget-annotation-in-PDF/.NET/Get-widget-annotation-in-PDF/Program.cs" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
@@ -4354,7 +4354,7 @@ You can set the export value of the check box field in PDF forms using [PdfCheck
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Export_checkbox_values/.NET/Export_checkbox_values/Program.cs" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
@@ -4503,6 +4503,94 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Export_checkbox_values/.NET).
+
+## Add a date field to a PDF form
+
+This section explains how to add a date text box field to a PDF form using the Syncfusion PDF library. The field is initialized with a sample date and uses JavaScript-based formatting to enforce the date format, validate input, and automatically format user entries.
+
+The following code example illustrates how to add a date field to a PDF form.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-a-date-field-to-a-PDF/.NET/Add-a-date-field-to-a-PDF/Program.cs" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
+// Create a new PDF document
+using (PdfDocument pdfDocument = new PdfDocument())
+{
+    // Add a new page to the PDF document
+    PdfPage pdfPage = pdfDocument.Pages.Add();
+    // Create a text box field for entering the name
+    PdfTextBoxField nameField = new PdfTextBoxField(pdfPage, "DateField");
+    nameField.Bounds = new RectangleF(10, 40, 70, 20);
+    nameField.ToolTip = "Date";
+    nameField.Text = "12/01/1995";
+    //Set the scriptAction to submitButton
+    nameField.Actions.KeyPressed = new PdfJavaScriptAction("AFDate_KeystrokeEx(\"mm/dd/yyyy\")");
+    nameField.Actions.Format = new PdfJavaScriptAction("AFDate_FormatEx(\"mm/dd/yyyy\")");
+    nameField.Actions.Validate = new PdfJavaScriptAction("AFDate_Validate(\"mm/dd/yyyy\")");
+    // Add the field to the form
+    pdfDocument.Form.Fields.Add(nameField);
+    // Save the PDF document
+    pdfDocument.Save(Path.GetFullPath(@"Output/Output.pdf"));
+}
+{% endhighlight %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
+// Create a new PDF document
+using (PdfDocument pdfDocument = new PdfDocument())
+{
+    // Add a new page to the PDF document
+    PdfPage pdfPage = pdfDocument.Pages.Add();
+    // Create a text box field for entering the name
+    PdfTextBoxField nameField = new PdfTextBoxField(pdfPage, "DateField");
+    nameField.Bounds = new RectangleF(10, 40, 70, 20);
+    nameField.ToolTip = "Date";
+    nameField.Text = "12/01/1995";
+    //Set the scriptAction to submitButton
+    nameField.Actions.KeyPressed = new PdfJavaScriptAction("AFDate_KeystrokeEx(\"mm/dd/yyyy\")");
+    nameField.Actions.Format = new PdfJavaScriptAction("AFDate_FormatEx(\"mm/dd/yyyy\")");
+    nameField.Actions.Validate = new PdfJavaScriptAction("AFDate_Validate(\"mm/dd/yyyy\")");
+    // Add the field to the form
+    pdfDocument.Form.Fields.Add(nameField);
+    // Save the PDF document
+    pdfDocument.Save(Path.GetFullPath(@"Output/Output.pdf"));
+}
+{% endhighlight %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+' Create a new PDF document
+Using pdfDocument As New PdfDocument()
+    ' Add a new page to the PDF document
+    Dim pdfPage As PdfPage = pdfDocument.Pages.Add()
+    ' Create a text box field for entering the name
+    Dim nameField As New PdfTextBoxField(pdfPage, "DateField")
+    nameField.Bounds = New RectangleF(10, 40, 70, 20)
+    nameField.ToolTip = "Date"
+    nameField.Text = "12/01/1995"
+    ' Set the scriptAction to submitButton
+    nameField.Actions.KeyPressed = New PdfJavaScriptAction("AFDate_KeystrokeEx(\"mm/dd/yyyy\")")
+    nameField.Actions.Format = New PdfJavaScriptAction("AFDate_FormatEx(\"mm/dd/yyyy\")")
+    nameField.Actions.Validate = New PdfJavaScriptAction("AFDate_Validate(\"mm/dd/yyyy\")")
+    ' Add the field to the form
+    pdfDocument.Form.Fields.Add(nameField)
+    ' Save the PDF document
+    pdfDocument.Save(Path.GetFullPath("Output/Output.pdf"))
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Add-a-date-field-to-a-PDF/.NET).
 
 ## Unified radio button selection
 
@@ -5100,6 +5188,134 @@ doc.Close(True)
 {% endhighlight %}
 
 {% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Auto-resize-the-text-of-textboxfield-in-a-PDF).
+
+## Preserve form fields when creating a PDF Template from an existing page
+
+When you create a  [PdfTemplate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTemplate.html) from an existing page, interactive **AcroForm** fields (textbox, checkbox, etc.) are **not copied** to the template.  
+If you still need the visual appearance of those form fields in the final document, you can flatten the form using the [FlattenFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_FlattenFields) API. 
+
+Please refer the code sample to flatten the form fields before saving the PDF document.
+
+N>  Flattening permanently removes interactivity. The resulting PDF shows the form content exactly as it appears on screen, but users can no longer edit the fields.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Preserve-Formfields-in-the-Template-created-from-existing-PDF/Preserve-Formfields-in-the-Template-created-from-existing-PDF/Program.cs" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using System.IO;
+
+//Open the source PDF that contains form fields.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Form.pdf");
+
+//Flatten all form fields to make them part of the page graphics.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+loadedForm.FlattenFields();
+
+//Create a template from the first page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+PdfTemplate template = loadedPage.CreateTemplate();
+
+//Create the destination PDF (no page margins so the template fills it edge-to-edge).
+PdfDocument newDocument = new PdfDocument();
+newDocument.PageSettings.Margins.All = 0;
+PdfPage newPage = newDocument.Pages.Add();
+
+//Draw the template so it fills the entire new page.
+newPage.Graphics.DrawPdfTemplate(
+    template,
+    PointF.Empty,
+    new SizeF(newPage.Size.Width, newPage.Size.Height));
+
+//Save the result.
+newDocument.Save("Output.pdf");
+
+//Close documents.
+loadedDocument.Close(true);
+newDocument.Close(true);
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using System.IO;
+
+//Open the source PDF that contains form fields.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Form.pdf");
+
+//Flatten all form fields.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+loadedForm.FlattenFields();
+
+//Create a template from the first page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+PdfTemplate template = loadedPage.CreateTemplate();
+
+//Create the destination PDF.
+PdfDocument newDocument = new PdfDocument();
+newDocument.PageSettings.Margins.All = 0;
+PdfPage newPage = newDocument.Pages.Add();
+
+//Draw the template so it fills the entire new page.
+newPage.Graphics.DrawPdfTemplate(
+    template,
+    PointF.Empty,
+    new SizeF(newPage.Size.Width, newPage.Size.Height));
+
+//Save the result.
+newDocument.Save(@"Output.pdf");
+
+//Close documents.
+loadedDocument.Close(true);
+newDocument.Close(true);
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+Imports System.Drawing
+Imports System.IO
+
+'Open the source PDF that contains form fields.
+Dim loadedDocument As New PdfLoadedDocument("Form.pdf")
+
+'Flatten all form fields.
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+loadedForm.FlattenFields()
+
+'Create a template from the first page.
+Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
+Dim template As PdfTemplate = loadedPage.CreateTemplate()
+
+'Create the destination PDF.
+Dim newDocument As New PdfDocument()
+newDocument.PageSettings.Margins.All = 0
+Dim newPage As PdfPage = newDocument.Pages.Add()
+
+'Draw the template so it fills the entire new page.
+newPage.Graphics.DrawPdfTemplate(
+        template,
+        PointF.Empty,
+        New SizeF(newPage.Size.Width, newPage.Size.Height))
+
+'Save the result.
+newDocument.Save("Output.pdf")
+
+'Close documents.
+loadedDocument.Close(True)
+newDocument.Close(True)
+End Using
+{% endhighlight %}
+
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Auto-resize-the-text-of-textboxfield-in-a-PDF).
  

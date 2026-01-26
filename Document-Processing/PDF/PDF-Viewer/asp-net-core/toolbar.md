@@ -4,7 +4,6 @@ title: Toolbar in ASP.NET Core Pdfviewer Component|Syncfusion
 description: Learn here all about Toolbar in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Toolbar
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

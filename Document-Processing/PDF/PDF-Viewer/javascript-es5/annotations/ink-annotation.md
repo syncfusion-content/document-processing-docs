@@ -1,31 +1,30 @@
 ---
 layout: post
-title: Ink annotation in Javascript PDF Viewer control | Syncfusion
-description: Learn here all about Ink annotation in Syncfusion Javascript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Ink annotation in JavaScript PDF Viewer control | Syncfusion
+description: Learn about ink annotations in the Syncfusion JavaScript PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ink annotation in Javascript PDF Viewer control
+# Ink annotation in JavaScript PDF Viewer control
 
-The PDF Viewer control provides the options to add, edit, and delete the ink annotations.
+The PDF Viewer control provides options to add, edit, and delete ink annotations.
 
-![InkAnnotation](../images/ink_annotation.png)
+![Ink annotations overview](../images/ink_annotation.png)
 
-## Adding an ink annotation to the PDF document
+## Add an ink annotation to the PDF document
 
-The ink annotations can be added to the PDF document using the annotation toolbar.
+Ink annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Select the **Draw Ink** button in the annotation toolbar. It enables the ink annotation mode.
-* You can draw anything over the pages of the PDF document.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar. The annotation toolbar appears below it.
+* Select the **Draw Ink** button to enable ink annotation mode.
+* Draw on any page of the PDF document.
 
-![InkTool](../images/ink_tool.png)
+![Ink tool in the annotation toolbar](../images/ink_tool.png)
 
-Refer to the following code sample to switch to the ink annotation mode.
+The following example switches to ink annotation mode.
 
 ```html
 <button id="addInkAnnotation">Ink Annotation</button>
@@ -36,7 +35,7 @@ Refer to the following code sample to switch to the ink annotation mode.
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    resourceUrl : "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib",
+                    resourceUrl : "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -74,11 +73,11 @@ if (addInkAnnotation) {
 {% endhighlight %}
 {% endtabs %}
 
-## Adding a Ink annotation programatically to the PDF document
+## Add an ink annotation programmatically to the PDF document
 
-The PDF Viewer library allows you to add the Ink annotation in the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library allows adding an ink annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
 
-Here is an example of how you can use the **addAnnotation()** method to move the Ink annotation programmatically:
+Here is an example of adding an ink annotation programmatically using addAnnotation():
 
 ```html
 <button id="addInkAnnotation"> Add Ink Annotation Programmatically</button>
@@ -89,7 +88,7 @@ Here is an example of how you can use the **addAnnotation()** method to move the
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    resourceUrl : "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib",
+                    resourceUrl : "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -139,11 +138,11 @@ if (addInkAnnotation) {
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the existing Ink annotation programmatically
+## Edit an existing ink annotation programmatically
 
-To modify existing Ink annotation in the Syncfusion PDF viewer programmatically, you can use the **editAnnotation()** method.
+To modify an existing ink annotation programmatically, use the editAnnotation() method.
 
-Here is an example of how you can use the **editAnnotation()** method:
+Here is an example of using editAnnotation():
 
 ```html
 <button id="editInkAnnotation"> Edit Ink Annotation Programmatically</button>
@@ -154,7 +153,7 @@ Here is an example of how you can use the **editAnnotation()** method:
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    resourceUrl : "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib",
+                    resourceUrl : "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -212,33 +211,33 @@ if (editInkAnnotation) {
 {% endhighlight %}
 {% endtabs %}
 
-## Editing the properties of the ink annotation
+## Edit the properties of ink annotations
 
-The stroke color, thickness, and opacity of the ink annotation can be edited using the Edit stroke color tool, Edit thickness tool, and Edit opacity tool in the annotation toolbar.
+Stroke color, thickness, and opacity can be edited using the Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
-### Editing stroke color
+### Edit stroke color
 
-The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
+Edit the stroke color using the color palette in the Edit Stroke Color tool.
 
-![InkStrokeColor](../images/ink_strokecolor.png)
+![Change ink stroke color](../images/ink_strokecolor.png)
 
-### Editing thickness
+### Edit thickness
 
-The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
+Edit thickness using the range slider in the Edit Thickness tool.
 
-![InkThickness](../images/ink_thickness.png)
+![Change ink thickness](../images/ink_thickness.png)
 
-### Editing opacity
+### Edit opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+Edit opacity using the range slider in the Edit Opacity tool.
 
-![InkOpacity](../images/ink_opacity.png)
+![Change ink opacity](../images/ink_opacity.png)
 
-## Setting default properties during the control initialization
+## Set default properties during control initialization
 
-The properties of the ink annotation can be set before creating the control using the InkAnnotationSettings.
+Default properties for ink annotations can be set before creating the control using InkAnnotationSettings.
 
-After editing the default values, they will be changed to the selected values.
+After changing default values, the selected values are applied.
 Refer to the following code sample to set the default ink annotation settings.
 
 {% tabs %}
@@ -250,7 +249,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 pdfviewer.inkAnnotationSettings = {author: 'Syncfusion', strokeColor: 'green', thickness: 3, opacity: 0.6};
 pdfviewer.appendTo('#PdfViewer');
 

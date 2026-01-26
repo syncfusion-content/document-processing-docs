@@ -37,7 +37,7 @@ To add **Blazor PDF Viewer** component in the app, open the NuGet package manage
 
 If using the WebAssembly or Auto interactive render mode, install the NuGet packages in the client project to add the component to the Web App.
 
-N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.116.1. Ensure this version is referenced.
+N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
 * [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
 
 ![SkiaSharp Views Blazor](gettingstarted-images/skia-sharp-image.png)
@@ -95,8 +95,8 @@ dotnet restore
 
 N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for the list of available packages and component details.
 
-N> Syncfusion&reg; uses [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) version 3.116.1. Ensure this version is referenced.
-* dotnet add package SkiaSharp.Views.Blazor -v 3.116.1
+N> Syncfusion&reg; uses [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) version 3.119.1. Ensure this version is referenced.
+* dotnet add package SkiaSharp.Views.Blazor -v 3.119.1
 
 ![SkiaSharp Views Blazor](gettingstarted-images/skia-sharp-image.png)
 
@@ -304,7 +304,7 @@ Run the application to display the PDF file in the Syncfusion&reg; Blazor PDF Vi
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVzNWqXLSZpnuzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Web App SfPdfViewer rendering in browser](gettingstarted-images/blazor-pdfviewer.png)" %}
 
-N> [View the sample on GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer%20%202/BlazorWebApp).
+N> [View the sample on GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer2/NET10/PDFViewer2_WebApp).
 
 ## See also
 

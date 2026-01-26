@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Open PDF from Azure Blob Storage into Pdfviewer Component | Syncfusion
-description: Learn here all about how to Open PDF files from Azure Blob Storage in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Open PDF from Azure Blob Storage into PDF Viewer Component | Syncfusion
+description: Learn here all about how to Open PDF files from Azure Blob Storage in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open PDF files from Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF file from Azure Blob Storage
+# Open PDF from Azure Blob Storage
 
-Currently, it's possible to load a PDF file from Azure Blob Storage into a PDF Viewer using either the Standalone or Server-backend PDF Viewer. Below are the steps and a sample to demonstrate how to open a PDF from Azure Blob Storage.
+The Angular PDF Viewer component supports loading PDF files from Azure Blob Storage using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 
-## Open PDF file from Azure Blob Storage using Standalone PDF Viewer
+## Using the standalone PDF Viewer
 
-To load a PDF file from Azure Blob Storage in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from Azure Blob Storage in the standalone PDF Viewer.
 
 **Step 1:** Create a Simple PDF Viewer Sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will give you a basic setup of the PDF Viewer component.
 
 **Step 2:** Modify the `src/app/app.component.ts` File in the Angular Project
 
@@ -32,7 +32,7 @@ private containerName: string = "*Your container name in Azure*";
 private blobName: string = "*Your Blob name in Azure*";
 ```
 
-2. Constructs the URL to the PDF in Azure Blob Storage. Calls fetchAndConvertToBase64 to fetch the PDF and convert it to a base64 string. Then Loads the base64 string into the PDF Viewer.
+2. Construct the URL to the PDF in Azure Blob Storage. Call fetchAndConvertToBase64 to fetch the PDF and convert it to a base64 string. Then load the base64 string into the PDF Viewer.
 
 ```typescript
 LoadPdfFromBlob() {
@@ -50,7 +50,7 @@ LoadPdfFromBlob() {
 }
 ```
 
-3. Then it retrieves the PDF file from the given URL and converts the fetched Blob to a base64 string using blobToBase64.
+3. Retrieve the PDF from the URL and convert the fetched Blob to a base64 string using blobToBase64.
 
 ```typescript
 async fetchAndConvertToBase64(url: string): Promise<string | null> {
@@ -70,7 +70,7 @@ async fetchAndConvertToBase64(url: string): Promise<string | null> {
 }
 ```
 
-4. Uses FileReader to convert a Blob to a base64 string. Resolves the promise with the base64 string or rejects it in case of an error.
+4. Use FileReader to convert a Blob to a base64 string. Resolve the promise with the base64 string or reject it in case of an error.
 
 ```typescript
 blobToBase64(blob: Blob): Promise<string> {
@@ -88,13 +88,13 @@ blobToBase64(blob: Blob): Promise<string> {
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage).
 
-## Open PDF file from Azure Blob Storage using Server-Backend PDF Viewer
+## Using the server-backed PDF Viewer
 
-To load a PDF file from Azure Blob Storage in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from Azure Blob Storage using the server-backed PDF Viewer.
 
 **Step 1:** Create a Simple PDF Viewer Sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will give you a basic setup of the PDF Viewer component.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -125,7 +125,7 @@ public PdfViewerController(IConfiguration configuration, ILogger<PdfViewerContro
 }
 ```
 
-5. Modify the `Load()` method to load the PDF files from  Azure Blob Storage
+5. Modify the `Load()` method to load PDF files from Azure Blob Storage.
 
 ```csharp
 
@@ -177,11 +177,11 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name
+N> Replace the placeholders with your actual values: Azure storage connection string and container name.
 
-**Step 3:**  Set the PDF Viewer Properties in Angular PDF viewer component
+**Step 3:** Configure the PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Azure Blob Storage. Ensure that you correctly pass the document name from the files available in your azure contanier to the documentPath property.
+Set the serviceUrl to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Azure Blob Storage. Ensure the document name exists in your Azure container.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';

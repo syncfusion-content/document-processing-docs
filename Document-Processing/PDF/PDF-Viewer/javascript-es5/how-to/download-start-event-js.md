@@ -1,21 +1,16 @@
 ---
 layout: post
-title: Controlling File Downloads in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Controlling File Downloads in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Control file downloads in JavaScript PDF Viewer | Syncfusion
+description: Learn how to intercept and control file downloads in the JavaScript PDF Viewer using the downloadStart event.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Controlling File Downloads in Syncfusion PDF Viewer
+# Control file downloads in PDF Viewer
 
-In the Syncfusion PDF Viewer, we've introduced a new feature that enables you to manage file downloads more effectively. This feature allows you to intercept and potentially skip the download process of a PDF document, providing enhanced control over user interactions within your application.
-
-### Using the downloadStart Event
-
-The key to this functionality lies in the downloadStart event, which offers a mechanism to intercept the initiation of the download process. Within the event handler, you can set the cancel argument to true to programmatically prevent the download action from proceeding.
+Use the downloadStart event to intercept the start of a download and optionally cancel it. In the event handler, set `args.cancel = true` to prevent the download.
 
 ```js
 pdfviewer.downloadStart = args => {
@@ -24,8 +19,8 @@ pdfviewer.downloadStart = args => {
 };
 ```
 
-By default, the cancel argument is set to `false`, indicating that the download action will proceed unless explicitly canceled by your custom logic.
+By default, `args.cancel` is `false`, so the download proceeds unless explicitly canceled.
 
-### Enhanced Flexibility
+### Flexibility
 
-By leveraging the [downloadStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadstart) event and its cancel argument, you gain the ability to implement custom logic to control and potentially prevent download actions based on your application's specific requirements. This enhancement provides greater flexibility in managing user interactions with PDF documents, empowering you to tailor the experience according to your needs.
+Leverage the [downloadStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadstart) event to apply custom rules for allowing or preventing downloads based on application needs.

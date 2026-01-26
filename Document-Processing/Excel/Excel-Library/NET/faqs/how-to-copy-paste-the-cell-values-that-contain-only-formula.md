@@ -26,9 +26,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Copy and paste the values using ExcelCopyRangeOption
   sourceRange.CopyTo(destinationRange, ExcelCopyRangeOptions.None);
-
-  FileStream stream = new FileStream("Output.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  
+  workbook.SaveAs("Output.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

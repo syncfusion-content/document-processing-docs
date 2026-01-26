@@ -1,119 +1,117 @@
 ---
 layout: post
-title: Open PDF files from AAD in Vue Pdfviewer component | Syncfusion
-description: Learn about how to Open PDF files from AAD in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Open PDF files from AAD
+title: Open PDF from Azure Active Directory in Vue PDF Viewer | Syncfusion
+description: Learn how to load and save PDFs using Azure Active Directory (AAD) with the Syncfusion Vue PDF Viewer component.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF From Azure Active Directory in Viewer
+# Open PDF from Azure Active Directory
 
-### **Overview**
+### Overview
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer allows you to load and save PDF files directly from Azure Active Directory (AAD). Below are the steps to securely load and store PDF documents from and to AAD using the PDF Viewer.
+The Vue PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps explain how to securely load and store PDFs using AAD.
 
-### **Steps to Open the PDF File from Azure Active Directory**
+### Steps to open a PDF from Azure Active Directory
 
 ---
 
-### **Step 1: Register an Application in Azure Active Directory (AAD)**
+### Step 1: Register an application in Azure Active Directory (AAD)
 
-1. **Go to the Azure Portal**:
+1. **Go to the Azure portal**:
    - Navigate to [Azure Portal](https://portal.azure.com).
 
-2. **Register your Application**:
+2. **Register your application**:
    - In the Azure portal, go to **Azure Active Directory** > **App registrations** > **New registration**.
-   - Register your application and note down the **Application (client) ID** and **Directory (tenant) ID**.
+   - Register your application and note the **Application (client) ID** and **Directory (tenant) ID**.
 
    ![app-registration](../images/app-registration.png)
 
-3. **Create a Client Secret**:
+3. **Create a client secret**:
    - In the registered application, go to **Certificates & secrets**.
    - Click **New client secret**.
-   - Provide a description and set an expiration period.
-   - Click **Add**.
+   - Provide a description, set an expiration period, and click **Add**.
    - Copy the client secret value immediately, as it will be hidden later. Store it securely.
 
    ![client-secret](../images/client-secret.png)
 
 ---
 
-### **Step 2: Create the Azure Storage Account**
+### Step 2: Create the Azure Storage account
 
-1. **Create a Storage Account**:
-   - In the Azure portal, use the search bar to search for **Storage accounts**.
-   - Create a new storage account by filling in the required details (e.g., name, location, resource group, etc.).
+1. **Create a storage account**:
+   - In the Azure portal, search for **Storage accounts**.
+   - Create a new storage account by entering the required details (for example, name, location, resource group).
 
     ![storage-account](../images/storage-account.png)
 
 ---
 
-### **Step 3: Assign Role to the Application**
+### Step 3: Assign a role to the application
 
-1. **Go to your Storage Account**:
-   - Navigate to **Access control (IAM)** > **Add role assignment** in your Azure Storage Account.
+1. **Open your storage account**:
+   - Navigate to **Access control (IAM)** > **Add role assignment** in your Azure Storage account.
 
-2. **Assign Role**:
+2. **Assign a role**:
    - Assign the **Storage Blob Data Contributor** role to your registered application.
-   - In the **Assign access to** dropdown, select **User, group, or service principal**.
-   - Click on **Select members** and search for your registered application by name or client ID.
-   - Select your application and click **Select**.
-   - Click **Review + assign** to finalize the role assignment.
+   - In the **Assign access to** drop-down, choose **User, group, or service principal**.
+   - Click **Select members**, search for your registered application by name or client ID, choose it, and click **Select**.
+   - Click **Review + assign** to complete the role assignment.
 
     ![add-role](../images/add-role.png)
 ---
 
-### **Step 4: Upload the PDF Document to the Azure Storage Account**
+### Step 4: Upload the PDF to Azure Storage
 
-1. **Navigate to Data Storage**:
+1. **Navigate to data storage**:
    - In the Azure portal, go to **Data storage** > **Containers**.
 
-2. **Upload the PDF File**:
+2. **Upload the PDF file**:
    - Create a new container and upload the PDF document you want to access in the PDF Viewer.
 
     ![upload-pdf](../images/upload-pdf.png)
 ---
 
-### **Step 5: Server-Side Configuration**
+### Step 5: Server-side configuration
 
-1. **Configure Server-Side Code**:
-   - Open the server-side application (e.g., ASP.NET Core) and configure the following details in the `PdfViewerController` file:
+1. **Configure server-side code**:
+   - Open the server-side application (for example, ASP.NET Core) and configure the following details in the `PdfViewerController` file:
      - `tenantId` (your Azure AD tenant ID),
      - `clientId` (your registered application client ID),
      - `clientSecret` (your registered application client secret),
      - `blobServiceEndpoint` (your storage account blob service URL),
      - `containerName` (your container name in Azure Blob Storage).
 
-2. **Run the Web Service**:
-   - After configuring the necessary details, run the web service to make it accessible.
+2. **Run the web service**:
+   - After saving the configuration values, run the web service so that the Vue application can reach it.
 
 ---
 
-### **Step 6: Client-Side Configuration**
+### Step 6: Client-side configuration
 
-1. **Run the Vue Sample**:
-   - Start the Vue sample that includes the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer.
+1. **Run the Vue sample**:
+   - Start the Vue sample that includes the Syncfusion PDF Viewer component.
 
-2. **Load PDF from AAD**:
-   - When the user clicks the **Load from AAD** button, the Vue client will make an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.
-   - The server will retrieve the PDF from Azure, convert it to a base64 string, and return it to the client.
+2. **Load a PDF from AAD**:
+   - When the user selects **Load From AAD**, the Vue client sends an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.
+   - The server retrieves the PDF from Azure, converts it to a Base64 string, and returns it to the client.
 
-3. **Display PDF in the PDF Viewer**:
-   - Once the base64 string is received, the PDF Viewer will load the PDF using the `viewer.load()` method.
+3. **Display the PDF in the viewer**:
+   - After the Base64 string is received, the PDF Viewer loads the document by calling `viewer.load()`.
 
 ---
 
-### **Step 7: Save the PDF Document to Azure**
+### Step 7: Save the PDF to Azure
 
 1. **Save PDF to AAD**:
-   - The user can click the **Save to AAD** button to upload any modifications to the PDF back to Azure Blob Storage.
-   - This action sends the modified PDF to the server, where it is converted into a byte array and saved to the specified Azure Blob container.
+   - When the user selects **Save To AAD**, the application uploads any PDF changes back to Azure Blob Storage.
+   - The server converts the updated PDF into a byte array and writes it to the specified Azure Blob container.
 
 ---
 
-### **Server-Side Code Snippets**
+### Server-side code
 ```csharp
 string tenantId = "Provide the tenant id here";
 string clientId = "Provide the clientid here";
@@ -169,7 +167,7 @@ public async Task<IActionResult> SaveToAAD([FromBody] Dictionary<string, string>
 
 
 
-### **Client-side Code Snippets**
+### Client-side code
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}

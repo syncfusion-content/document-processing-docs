@@ -23,22 +23,14 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     string filepath = @"../../../Data/InputTemplate.xlsx";
 
     //Load an Excel document
-    FileStream fileStream = new FileStream(filepath, FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(fileStream);
+    IWorkbook workbook = application.Workbooks.Open(filepath);
     IWorksheet worksheet = workbook.Worksheets[0];
 
     //Set text in the cell
     worksheet["B1"].Text = "Text";
 
-    //Close the input stream before writing
-    fileStream.Close();
-
     //Save the workbook to the same file
-    fileStream = new FileStream(filepath, FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(fileStream);
-
-    //Dispose the stream
-    fileStream.Dispose();
+    workbook.SaveAs(filepath);
 }
 {% endhighlight %}
 

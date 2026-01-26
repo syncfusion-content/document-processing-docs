@@ -9,9 +9,9 @@ keywords: .net core save pdf, .net core load pdf, c# save pdf, c# load pdf
 
 # Open and save PDF document in ASP.NET Core 
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in ASP.NET Core**. 
+The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in ASP.NET Core**. 
 
-## Steps to open and save PDF document programmatically: 
+## Steps to open and save PDF document programatically: 
 
 Step 1: Create a new ASP.NET Core Web application project. 
 ![Create ASP.NET Core Web application in Visual Studio](Images/Create_ASP_NET_Core_application.png)
@@ -65,8 +65,10 @@ Step 6: Add a new action method **OpenAndSaveDocument** in HomeController.cs and
 
 {% highlight c# tabtitle="C#" %}
 
+//Load PDF document as stream.
+FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read);
 //Load an existing PDF document.
-PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+PdfLoadedDocument document = new PdfLoadedDocument(docStream);
 
 {% endhighlight %}
 

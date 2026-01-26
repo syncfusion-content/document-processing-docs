@@ -22,9 +22,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Save the line break inside the cell
   worksheet.Range["A1"].CellStyle.WrapText = true;
   worksheet.Range["A1"].Text = String.Format("Hello\nworld");
-
-  FileStream stream = new FileStream("LineBreak.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+ 
+  workbook.SaveAs("LineBreak.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

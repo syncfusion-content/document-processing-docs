@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Extract text Option in Vue PDF Viewer component | Syncfusion
-description: Learn here all about Extract text Option in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Configure extractTextOption in Vue PDF Viewer | Syncfusion
+description: Learn how to use the extractTextOption property in the Syncfusion Vue PDF Viewer to control text extraction and memory usage.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract Text Option in Vue Pdfviewer component
+# Extract Text Option in Vue PDF Viewer control
 
-The `extractTextOption` property in the Syncfusion<sup style="font-size:70%">&reg;</sup> PdfViewer control allows you to optimize memory usage by controlling the level of text extraction. This setting influences the data returned in the `extractTextCompleted` event. You can select one of the following options to determine the kind of text extraction and layout information to retrieve.
+The `extractTextOption` property controls how text is extracted and optimizes memory usage. It also affects the data returned in the `extractTextCompleted` event. Choose one of the following options to determine the text and layout data to retrieve.
 
 ### Available Options:
 
@@ -62,7 +62,7 @@ export default {
   data() {
     return {
         documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-        resourceUrl: 'https://cdn.syncfusion.com/ej2/29.1.33/dist/ej2-pdfviewer-lib',
+        resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
         extractTextOption: 'None', // Options: 'None', 'TextOnly', 'BoundsOnly', 'TextAndBounds'
     };
   },
@@ -92,6 +92,6 @@ export default {
 
 **extractTextOption.None:** This option does not extract or return any text or layout information. It is used to optimize memory usage when no text extraction is necessary. This setting is only relevant for the `extractTextCompleted` event and cannot be used with the `ExtractText` method.
 
-N> Text Search: When using the `extractTextOption.TextOnly` and `extractTextOption.None` option, the findText method will not work. Instead, you should use the findTextAsync method to perform text searches asynchronously.
+N> Text search: When using the `extractTextOption.TextOnly` or `extractTextOption.None` options, the `findText` method is unavailable. Use the `findTextAsync` method to perform text searches asynchronously.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to)

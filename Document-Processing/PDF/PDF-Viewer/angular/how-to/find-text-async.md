@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Find Text Async Angular Pdfviewer component | Syncfusion
-description: Learn about the `findTextAsync` in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Find Text Async Angular PDF Viewer component | Syncfusion
+description: Learn about the `findTextAsync` in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Find Text Async
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Find Text using findTextAsync Method in Syncfusion PdfViewer
 
-The findTextAsync method in the Syncfusion PdfViewer control allows you to search for specific text or an array of strings asynchronously within a PDF document. The method returns the bounding rectangles for each occurrence of the search term, allowing you to find and work with text positions in the document.
+The findTextAsync method in the Syncfusion PDF Viewer control allows you to search for specific text or an array of strings asynchronously within a PDF document. The method returns the bounding rectangles for each occurrence of the search term, allowing you to find and work with text positions in the document.
 
 Here is an example of how you can use the **findTextAsync** method:
 

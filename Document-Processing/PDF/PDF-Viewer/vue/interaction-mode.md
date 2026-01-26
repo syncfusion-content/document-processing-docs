@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Interaction mode in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Interaction mode in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Interaction mode
+title: Interaction mode in Vue PDF Viewer | Syncfusion
+description: Learn how to use interaction modes in the Syncfusion Vue PDF Viewer, including selection mode and panning mode, and how to switch between them.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Interaction mode in Vue Pdfviewer component
+# Interaction mode in Vue PDF Viewer
 
-The PDF Viewer provides interaction mode for easy interaction with the loaded PDF document.  Selection mode and panning mode are the two interactions modes.
+The PDF Viewer provides two interaction modes for working with the loaded PDF document: selection mode and panning mode. Use these modes to control whether users select text or pan/scroll the document.
 
 ## Selection mode
 
-In this mode, the text selection can be performed in the PDF document loaded in PDF Viewer. The panning and scrolling of the pages by touch cannot be performed in this mode. It allows users to select and copy text from the PDF files. This is helpful for copying and sharing text content. You can enable/disable the text selection using the following code snippet.
+In this mode, users can select text in the PDF document loaded in the PDF Viewer. Panning and touch-based scrolling are disabled in this mode. Enable or disable text selection using the following configuration:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -35,7 +35,7 @@ import {
 } from '@syncfusion/ej2-vue-pdfviewer';
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
   Annotation, ThumbnailView, Print, TextSelection, TextSearch])
@@ -67,7 +67,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {
@@ -143,13 +143,13 @@ export default {
 
 ![Alt text](./images/selection.png)
 
-## Panning Mode
+## Panning mode
 
-In this mode, the panning and scrolling of the pages by touch can be performed in the PDF document loaded in the PDF Viewer, but the text selection cannot be performed.
+In this mode, users can pan and scroll pages (including touch). Text selection is disabled.
 
-![Alt text](./images/pan.png)
+![Panning mode in PDF Viewer](./images/pan.png)
 
-You can switch the interaction mode of PDF Viewer by using the following code snippet.,
+Switch the interaction mode of the PDF Viewer using the following configuration (set the `interactionMode` property, for example, to `InteractionMode.Pan`):
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -171,7 +171,7 @@ import {
 import { provide } from 'vue';
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 const interactionMode = "InteractionMode.Pan";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -204,7 +204,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
       interactionMode: "InteractionMode.Pan"
     };
   },

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cell Editing in the Blazor Spreadsheet component | Syncfusion
+title: Cell Editing in Blazor Spreadsheet component | Syncfusion
 description: Checkout and learn here about the cell editing features in the Syncfusion Blazor Spreadsheet component and more.
 platform: document-processing
 control: Spreadsheet
@@ -9,7 +9,7 @@ documentation: ug
 
 # Cell editing in the Blazor Spreadsheet component
 
-Cell editing in the Blazor Spreadsheet component enables modification of cell content either directly within the spreadsheet or through the formula bar. This feature is enabled by default and can be controlled using the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowEditing) property. To disable or enable cell editing, set the value of this property accordingly.
+Cell editing in the Blazor Spreadsheet component enables modification of cell content either directly within the spreadsheet or through the formula bar. This feature is enabled by default  but can be disabled by setting the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowEditing) property. To disable or enable cell editing, set the value of this property accordingly.
 
 ## Edit cell
 
@@ -20,7 +20,7 @@ Cell editing can be initiated directly through the UI using any of the following
 - Use the **formula bar** to modify the cell's contents.  
 - Press **BACKSPACE** or **SPACE** to clear the cell and begin editing.
 
-> For additional keyboard shortcuts related to cell editing, refer [here](./accessibility#keyboard-shortcuts).
+> For additional keyboard shortcuts related to cell editing, refer to the [Keyboard Shortcuts](./accessibility#keyboard-shortcuts) documentation.
 
 ## Update cell
 
@@ -44,7 +44,7 @@ If a cell address is incorrectly formatted, refers to a non-existent sheet, or l
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Spreadsheet
-
+@inject HttpClient Http
 <button @onclick="UpdateCell">Update Cell</button>
 
 <SfSpreadsheet @ref=SpreadsheetRef DataSource="DataSourceBytes">
@@ -82,12 +82,111 @@ If a cell address is incorrectly formatted, refers to a non-existent sheet, or l
 
 To exit edit mode without saving changes, press the **ESCAPE** key. This action restores the original content of the cell and cancels any modifications made during editing.
 
-![Cancel Editing](./images/cell-editing.gif)
+![Animation showing a user canceling a cell edit in the Blazor Spreadsheet component.](./images/cell-editing.gif)
+
+## Events
+
+The Blazor Spreadsheet component provides events that are triggered during editing operations, such as [CellEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellEditingEventArgs.html) and [CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellSavedEventArgs.html). These events allow you to perform custom actions before a cell enters edit mode and after its value has been successfully saved, enabling scenarios such as data validation or logging changes.
+
+### CellEditing
+
+The `CellEditing` event is triggered before a cell enters edit mode. It provides an opportunity to validate or cancel the edit operation.
+
+**Purpose**
+
+This event is useful for scenarios where cell editing needs to be controlled dynamically, such as restricting editing in specific ranges or preventing editing based on certain conditions.
+
+**Event Arguments**
+
+The event uses the [CellEditingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellEditingEventArgs.html) class, which includes the following properties:
+
+| Event Arguments | Description |
+|---|---|
+| RowIndex (read-only)| The zero-based row index of the cell being edited. |
+| ColIndex (read-only)| The zero-based column index of the cell being edited. |
+| Address (read-only)| The address of the cell being edited (e.g., "Sheet1!A1"). |
+| Value (read-only)| The current value of the cell before editing. |
+| Cancel | Set to `true` to cancel the editing operation. |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet DataSource="DataSourceBytes" CellEditing="OnCellEditing">
+<SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    private void OnCellEditing(CellEditingEventArgs args)
+    {
+        // Prevents editing in the first row.
+        if (args.RowIndex == 0)
+        {
+            args.Cancel = true;
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### CellSaved
+
+The `CellSaved` event is triggered after a cell’s value has been successfully saved, providing details about the updated value and the action that caused the change (such as Edit, Cut, Paste, or Autofill).
+
+**Purpose**
+
+This event is useful for scenarios where post-editing actions are needed, such as logging the cell change or refreshing the UI.
+
+**Event Arguments**
+
+The event uses the [CellSavedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellSavedEventArgs.html) class, which includes the following properties:
+
+| Event Arguments | Description |
+|---|---|
+| Address (read-only)| The address of the cell whose value was saved (e.g., "Sheet1!A1"). |
+| Value (read-only)| The new value of the cell after saving. |
+| OldValue (read-only)| The original value of the cell before saving. |
+| Action (read-only)| The action that triggered the save (e.g., "Edit", "Cut", "Paste", "Autofill"). |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet DataSource="DataSourceBytes" CellSaved="OnCellSaved">
+<SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+    private void OnCellSaved(CellSavedEventArgs args)
+    {
+        // Log the cell change, including the action that triggered it.
+        Console.WriteLine($"Cell {args.Address} changed from '{args.OldValue}' to '{args.Value}' by {args.Action}.");
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
 ## Cell editing in protected sheet
 
-In a protected sheet, only the unlocked ranges can be edited based on the sheet's protection settings. Attempting to modify a locked range triggers an error message, as shown below:
+In a protected sheet, only unlocked ranges can be edited based on the sheet's protection settings. Attempting to modify a locked range triggers an error message, as shown below:
 
-![Protection Error Dialog](./images/protection-error-dialog.png)
+![Error dialog indicating that a cell is protected and cannot be modified in the Blazor Spreadsheet.](./images/protection-error-dialog.png)
 
-N> For more information on worksheet protection, refer [here](./protection).
+N> For more information on worksheet protection, refer to the [Worksheet Protection](./protection) documentation.

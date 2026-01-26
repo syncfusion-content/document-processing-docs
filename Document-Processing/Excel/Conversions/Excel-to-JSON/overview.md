@@ -29,24 +29,16 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	#region save as JSON
-	//Saves the workbook to a JSON filestream, as schema by default
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Excel-Workbook-To-JSON-as-schema-default.json"), FileMode.Create, FileAccess.ReadWrite);
-	workbook.SaveAsJson(outputStream);
+	//Saves the workbook to JSON, as schema by default
+	workbook.SaveAsJson(Path.GetFullPath("Output/Excel-Workbook-To-JSON-as-schema-default.json"));
 
-	//Saves the workbook to a JSON filestream as schema
-	FileStream stream1 = new FileStream("Output/Excel-Workbook-To-JSON-as-schema.json", FileMode.Create, FileAccess.ReadWrite);
-	workbook.SaveAsJson(stream1, true);
+	//Saves the workbook to JSON as schema
+	workbook.SaveAsJson("Output/Excel-Workbook-To-JSON-as-schema.json", true);
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	stream1.Dispose();
-	inputStream.Dispose();
 
 	#region Open JSON 
 	//Open default JSON
@@ -181,19 +173,13 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	#region save as JSON
-	//Saves the workbook to a JSON file without schema
-	FileStream outputStream = new FileStream("Output/Workbook-To-JSON-without-schema.json", FileMode.Create);
-	workbook.SaveAsJson(outputStream,false);
+	//Saves the workbook to JSON file without schema
+	workbook.SaveAsJson(Path.GetFullPath(@"Output/Workbook-To-JSON-without-schema.json"),false);
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 
 	#region Open JSON 
 	//Open default JSON
@@ -311,24 +297,16 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	#region save as JSON
-	//Saves the workbook to a JSON filestream, as schema by default
-	FileStream outputStream = new FileStream("Output/Excel-Worksheet-To-JSON-filestream-as-schema-default.json", FileMode.Create);
-	workbook.SaveAsJson(outputStream, worksheet);
+	//Saves the workbook to JSON, as schema by default
+	workbook.SaveAsJson(Path.GetFullPath(@"Output/Excel-Worksheet-To-JSON-filestream-as-schema-default.json"), worksheet);
 
-	//Saves the workbook to a JSON filestream as schema
-	FileStream stream1 = new FileStream("Output/Excel-Worksheet-To-JSON-filestream-as-schema.json", FileMode.Create, FileAccess.ReadWrite);
-	workbook.SaveAsJson(stream1, worksheet, true);
+	//Saves the workbook to JSON as schema
+	workbook.SaveAsJson(Path.GetFullPath(@"Output/Excel-Worksheet-To-JSON-filestream-as-schema.json"), worksheet, true);
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	stream1.Dispose();
-	inputStream.Dispose();
 
 	#region Open JSON 
 	//Open default JSON
@@ -466,19 +444,13 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	#region save as JSON
-	//Saves the workbook to a JSON filestream, as schema by default
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Excel-Worksheet-To-JSON-filestream-without-schema.json"), FileMode.Create, FileAccess.ReadWrite);
-	workbook.SaveAsJson(outputStream, worksheet,false);
+	//Saves the workbook to JSON, as schema by default
+	workbook.SaveAsJson(Path.GetFullPath("Output/Excel-Worksheet-To-JSON-filestream-without-schema.json"), worksheet,false);
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 
 	#region Open JSON 
 	//Open default JSON
@@ -602,27 +574,19 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Custom range
 	IRange range = worksheet.Range["A1:F100"];
 
 	#region save as JSON
-	//Saves the workbook to a JSON filestream, as schema by default
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Excel-Range-To-JSON-as-schema-default.json"), FileMode.Create, FileAccess.ReadWrite);
-	workbook.SaveAsJson(outputStream, range);
+	//Saves the workbook to JSON, as schema by default
+	workbook.SaveAsJson(Path.GetFullPath("Output/Excel-Range-To-JSON-as-schema-default.json"), range);
 
-	//Saves the workbook to a JSON filestream as schema
-	FileStream stream1 = new FileStream("Output/Excel-Range-To-JSON-as-schema.json", FileMode.Create, FileAccess.ReadWrite);
-	workbook.SaveAsJson(stream1, range, true);
+	//Saves the workbook to JSON as schema
+	workbook.SaveAsJson(Path.GetFullPath("Output/Excel-Range-To-JSON-as-schema.json"), range, true);
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	stream1.Dispose();
-	inputStream.Dispose();
 
 	#region Open JSON 
 	//Open default JSON
@@ -769,22 +733,16 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Custom range
 	IRange range = worksheet.Range["A1:F100"];
 
 	#region save as JSON
-	//Saves the workbook to a JSON filestream, as schema by default
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Excel-Range-To-JSON-filestream-without-schema.json"), FileMode.Create, FileAccess.ReadWrite);
-	workbook.SaveAsJson(outputStream, range, false);
+	//Saves the workbook to JSON, as schema by default
+	workbook.SaveAsJson(Path.GetFullPath("Output/Excel-Range-To-JSON-filestream-without-schema.json"), range, false);
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 
 	#region Open JSON 
 	//Open default JSON

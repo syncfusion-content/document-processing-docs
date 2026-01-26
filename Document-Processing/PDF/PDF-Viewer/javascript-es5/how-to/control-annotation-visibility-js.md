@@ -1,38 +1,40 @@
 ---
 layout: post
-title: Control Annotations Visibility in JavaScript PdfViewer | Syncfusion
-description: Learn how to Control Annotations Visibility in the Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Control annotation visibility in JavaScript PDF Viewer | Syncfusion
+description: Learn how to control the visibility of PDF annotations in the JavaScript PDF Viewer, ensuring annotations appear only in the viewer as needed.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Control PDF Annotations Visibility in PDF Viewer
+# Control annotation visibility in PDF Viewer
 
 ### Overview
 
-This guide demonstrates how to control the visibility of PDF annotations in documents loaded and saved using the Syncfusion PDF Viewer in JavaScript. This process allows the annotations to be visible only in specific viewers, such as the Syncfusion PDF Viewer.
+This guide explains how to control the visibility of PDF annotations in documents loaded and saved using the Syncfusion PDF Viewer in JavaScript, so annotations are visible only in the viewer when required.
 
-### How to control Annotation Visibility
+### Steps to control annotation visibility
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create a simple PDF Viewer sample.
 
-**Step 2:** Add Buttons for Annotation Modification and Downloading
+**Step 2:** Add buttons for annotation modification and downloading
 
-Include buttons in your HTML for annotation modification and downloading the PDF.
+Include buttons in the HTML for modifying annotations and downloading the PDF.
 
 ```html
 <button id="save">Download</button>
 <div id="PdfViewer"></div>
 ```
-**Step 3**: Add the following code snippet to add annotations to the PDF document. You can also include other annotations as needed.
+
+**Step 3:** Add annotations to the PDF document
+
+Add the following code to insert annotations. Additional annotations can be included as needed.
 
 ```js
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/annotations-v1.pdf',
-    resourceUrl: "https://cdn.syncfusion.com/ej2/28.1.33/dist/ej2-pdfviewer-lib",
+    resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
   });
   ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -53,18 +55,19 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
             });
     };
 ```
-**Step 4:** Add Event Listeners for Button Clicks
 
-Attach event listeners that handle annotation visibility modifications and downloading the document.
+**Step 4:** Add event listeners for button clicks
+
+Attach an event listener to handle annotation visibility changes and document download.
 
 ```js
     // Add event listener to the button with ID 'download'
     document.getElementById('save').addEventListener('click', save);
 ```
 
-**Step 5:** Modify Annotation Flags Function
+**Step 5:** Modify annotation flags
 
-Implement a function that changes the annotation visibility settings for the document.
+Implement a function that updates annotation visibility flags for the document.
 
 ```js
 
@@ -118,6 +121,6 @@ Implement a function that changes the annotation visibility settings for the doc
 }
 ```
 
-By following these steps, the annotations in a PDF document can be set to be visible in the Syncfusion PDF Viewer, providing control over annotation visibility based on different platforms.
+Following these steps ensures annotations are visible in the Syncfusion PDF Viewer while controlling their visibility in the downloaded PDF.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to)

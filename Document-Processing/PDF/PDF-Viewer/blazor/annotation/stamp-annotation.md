@@ -16,7 +16,7 @@ The SfPdfViewer component provides options to add, edit, delete, and rotate the 
 * Standard business stamp
 * Custom stamp
 
-![Stamp annotations displayed in the Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-stamp-annotation.png)
+![Stamp annotations displayed in the Blazor SfPdfViewer](../images/blazor-pdfviewer-stamp-annotation.png)
 
 ## Adding stamp annotations to the PDF document
 
@@ -25,11 +25,11 @@ Stamp annotations can be added using the annotation toolbar.
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
 * Click the **Stamp Annotation** dropdown button. A dropdown appears showing the available stamp types.
 
-![Adding Stamp in Blazor SfPdfViewer Toolbar](../../blazor-classic/images/blazor-pdfviewer-add-stamp-in-toolbar.png)
+![Adding Stamp in Blazor SfPdfViewer Toolbar](../images/blazor-pdfviewer-add-stamp-in-toolbar.png)
 
 * Select the required stamp type from the dropdown to add it to the page.
 
-![Selecting Annotation from Stamp Popup in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-select-stamp-annotation.png)
+![Selecting Annotation from Stamp Popup in Blazor SfPdfViewer](../images/blazor-pdfviewer-select-stamp-annotation.png)
 
 * Place the annotation on the desired page in the PDF document.
 
@@ -41,7 +41,7 @@ When entering stamp mode while in pan mode, the SfPdfViewer automatically switch
 * Click the **Stamp Annotation** dropdown button. A dropdown appears showing the available options.
 * Click the **Custom Stamp** button.
 
-![Custom stamp picker in the Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-custom-stamp.png)
+![Custom stamp picker in the Blazor SfPdfViewer](../images/blazor-pdfviewer-custom-stamp.png)
 
 * In the file explorer dialog, choose an image to add as a stamp on the PDF page.
 

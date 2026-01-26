@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Angular PDF Viewer components
+# Accessible PDF Viewing with Syncfusion Angular Components
 
 The PDF Viewer component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -132,7 +132,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   })
   export class AppComponent implements OnInit {
       public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-      public resourceUrl = 'https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib';
+      public resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
     ngOnInit(): void {
     }

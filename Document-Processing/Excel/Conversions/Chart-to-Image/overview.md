@@ -28,8 +28,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Set converter chart image format to PNG
 	application.XlsIORenderer.ChartRenderingOptions.ImageFormat = ExportImageFormat.Png;
 
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	IChart chart = worksheet.Charts[0];
@@ -42,7 +41,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	//Dispose streams
 	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -190,7 +188,8 @@ Pie
 * Pie<br/>
 * Pie_Exploded<br/>
 * Pie_3D<br/>
-* Pie_Exploded_3D
+* Pie_Exploded_3D<br/>
+* PieOfPie
 </td>
 </tr>
 <tr>
@@ -231,13 +230,22 @@ Stock
 Excel 2016 Charts
 </td>
 <td>
-* Funnel<br/>* Waterfall<br/>* Histogram<br/>* Pareto<br/></td>
+* Funnel<br/>
+* Waterfall<br/>
+* Histogram<br/>
+* Pareto<br/>
+* Sunburst<br/>
+* Box and Whisker<br/>
+* Treemap
+</td>
 </tr>
 </table>
 
-N> From the above supported chart types table, Waterfall and Line_3D charts are not supported in chart to image conversion in .NET Standard 2.0 onwards.
+N> From the above supported chart types table, Line_3D charts are not supported in chart to image conversion in .NET Core platforms.
 
-N> Only embedded charts are supported in chart to image conversion. Chart sheets are not supported.
+N> Only embedded charts are supported in chart to image conversion. The Chart sheets are not supported.
+
+N> Pie of Pie, Sunburst, Box and Whisker, and Treemap charts are supported only in .NET Core platforms for chart to image conversion.
 
 ## Supported chart elements
 XlsIO supports the following chart elements in image conversion:

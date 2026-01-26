@@ -18,8 +18,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;    
-    FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
+    IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
 
     //Enable sheet calculation
@@ -41,10 +40,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
         }
     }
 
-    //Saving the workbook as stream
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(outputStream);
-    outputStream.Dispose();
+    //Saving the workbook 
+    workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 

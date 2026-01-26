@@ -35,6 +35,6 @@ The following code illustrates how to change the highlight color of the text.
 }
 ```
 
-![Highlighted text in Blazor PDF Viewer](../../blazor-classic/images/highlighttext.png)
+![Highlighted text in Blazor PDF Viewer](../images/highlighttext.png)
 
 [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Text%20Markup/Customize%20highlight%20annotation).

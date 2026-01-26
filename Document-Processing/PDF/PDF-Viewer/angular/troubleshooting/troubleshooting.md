@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Copying assets from node_modules into my app in React PDF Viewer component | Syncfusion
+title: Copying assets from node_modules into my app in Angular PDF Viewer component | Syncfusion
 description: Learn here all about copying assets from node_modules into my app in Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer

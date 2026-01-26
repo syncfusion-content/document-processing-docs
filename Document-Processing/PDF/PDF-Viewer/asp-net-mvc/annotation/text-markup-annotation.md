@@ -1,44 +1,43 @@
 ---
 layout: post
-title: Text Markup Annotations in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn here all about Text Markup Annotation in Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Text markup annotation in ASP.NET MVC PDF Viewer control | Syncfusion
+description: Learn to add, edit, delete, and customize text markup annotations like highlight, underline, and squiggly in Syncfusion ASP.NET MVC PDF Viewer.
 platform: document-processing
-control: Text Markup Annotation
-publishingplatform: ASP.NET MVC
+control: PDF Viewer
 documentation: ug
 ---
 
-# Text Markup Annotation in the ASP.NET MVC PDF Viewer component
+# Text markup annotation in ASP.NET MVC PDF Viewer control
 
-The PDF Viewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline, strikethrough and squiggly annotations in the PDF document.
+The PDF Viewer provides options to add, edit, and delete text markup annotations, including Highlight, Underline, Strikethrough, and Squiggly.
 
-![Alt text](../images/text_markup_annotation.png)
+![Text markup annotations overview](../images/text_markup_annotation.png)
 
-## Highlight a text
+## Highlight text
 
-There are two ways to highlight a text in the PDF document:
+There are two ways to highlight text:
 
 1. Using the context menu
-    * Select a text in the PDF document and right-click it.
-    * Select **Highlight** option in the context menu that appears.
+* Select text in the PDF document and right-click it.
+* Select **Highlight** in the context menu.
 
-![Alt text](../images/highlight_context.png)
+![Highlight from context menu](../images/highlight_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2. Using the annotation toolbar
-    * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-    * Select the **Highlight** button in the annotation toolbar. It enables the highlight mode.
-    * Select the text and the highlight annotation will be added.
-    * You can also select the text and apply the highlight annotation using the **Highlight** button.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
+* Select **Highlight** to enable highlight mode.
+* Select text to add the highlight annotation.
+* Alternatively, select text first and then click **Highlight**.
 
-![Alt text](../images/highlight_button.PNG)
+![Highlight button](../images/highlight_button.PNG)
 
-In the pan mode, if the highlight mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for highlighting the text.
+When pan mode is active and a text markup mode is entered, the PDF Viewer switches to text selection mode to enable selection.
 
-Refer to the following code sample to switch to the highlight mode.
+Refer to the following code sample to switch to highlight mode.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
     <!--Element to set text markup annotation mode-->
     <button id="set" onclick="addAnnot()">Highlight</button>
@@ -53,7 +52,7 @@ Refer to the following code sample to switch to the highlight mode.
     </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
     <!--Element to set text markup annotation mode-->
     <button id="set" onclick="addAnnot()">Highlight</button>
@@ -70,10 +69,10 @@ Refer to the following code sample to switch to the highlight mode.
 {% endhighlight %}
 {% endtabs %}
 
-Refer to the following code sample to switch back to normal mode from the highlight mode.
+Refer to the following code sample to switch back to normal mode from highlight mode.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
     <!--Element to set text markup annotation mode-->
     <button id="set" onclick="addAnnot()">Highlight</button>
@@ -95,7 +94,7 @@ Refer to the following code sample to switch back to normal mode from the highli
     </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
     <!--Element to set text markup annotation mode-->
     <button id="set" onclick="addAnnot()">Highlight</button>
@@ -119,11 +118,11 @@ Refer to the following code sample to switch back to normal mode from the highli
 {% endhighlight %}
 {% endtabs %}
 
-## Highlight a text programmatically
+## Highlight text programmatically
 
-The PDF Viewer library enables you to programmatically highlight text within the PDF Viewer control using the **addAnnotation()** method.
+Programmatically add highlights using the **addAnnotation()** method.
 
-Here's an example of how you can use the **addAnnotation()** method to apply highlighting programmatically:
+Here is an example showing how to add highlights programmatically using addAnnotation():
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -162,32 +161,31 @@ Here's an example of how you can use the **addAnnotation()** method to apply hig
 {% endhighlight %}
 {% endtabs %}
 
+## Underline text
 
-## Underline a text
-
-There are two ways to underline a text in the PDF document:
+There are two ways to underline text:
 
 1. Using the context menu
-    * Select a text in the PDF document and right-click it.
-    * Select the **Underline** option in the context menu that appears.
+* Select text in the PDF document and right-click it.
+* Select **Underline** in the context menu.
 
-![Alt text](../images/underline_context.png)
+![Underline from context menu](../images/underline_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2. Using the annotation toolbar
-    * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-    * Select the **Underline** button in the annotation toolbar. It enables the underline mode.
-    * Select the text and the underline annotation will be added.
-    * You can also select the text and apply the underline annotation using the **Underline** button.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
+* Select **Underline** to enable underline mode.
+* Select text to add the underline annotation.
+* Alternatively, select text first and then click **Underline**.
 
-![Alt text](../images/underline_button.png)
+![Underline button](../images/underline_button.png)
 
 In the pan mode, if the underline mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for underlining the text.
 
-Refer to the following code sample to switch to the underline mode.
+Refer to the following code sample to switch to underline mode.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
     <!--Element to set text markup annotation mode-->
     <button id="set" onclick="addAnnot()">Underline</button>
@@ -202,7 +200,7 @@ Refer to the following code sample to switch to the underline mode.
     </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
     <!--Element to set text markup annotation mode-->
     <button id="set" onclick="addAnnot()">Underline</button>
@@ -219,10 +217,10 @@ Refer to the following code sample to switch to the underline mode.
 {% endhighlight %}
 {% endtabs %}
 
-Refer to the following code sample to switch back to normal mode from the underline mode.
+Refer to the following code sample to switch back to normal mode from underline mode.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
     <!--Element to set text markup annotation mode-->
     <button id="set" onclick="addAnnot()">Underline</button>
@@ -244,7 +242,7 @@ Refer to the following code sample to switch back to normal mode from the underl
     </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
     <!--Element to set text markup annotation mode-->
     <button id="set" onclick="addAnnot()">Underline</button>
@@ -268,11 +266,11 @@ Refer to the following code sample to switch back to normal mode from the underl
 {% endhighlight %}
 {% endtabs %}
 
-## Underline a text programmatically
+## Underline text programmatically
 
-The PDF Viewer library enables you to programmatically Underline text within the PDF Viewer control using the **addAnnotation()** method.
+Programmatically add underlines using the **addAnnotation()** method.
 
-Here's an example of how you can use the **addAnnotation()** method to apply Underline programmatically:
+Example:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -311,32 +309,31 @@ Here's an example of how you can use the **addAnnotation()** method to apply Und
 {% endhighlight %}
 {% endtabs %}
 
-## Strikethrough a text
+## Strikethrough text
 
-There are two ways to strikethrough a text in the PDF document:
+There are two ways to strikethrough text:
 
 1. Using the context menu
-    * Select a text in the PDF document and right-click it.
-    * Select the **Strikethrough** option in the context menu that appears.
+* Select text in the PDF document and right-click it.
+* Select **Strikethrough** in the context menu.
 
-![Alt text](../images/strikethrough_context.png)
+![Strikethrough from context menu](../images/strikethrough_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2. Using the annotation toolbar
-    * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-    * Select the **Strikethrough** button in the annotation toolbar. It enables the strikethrough mode.
-    * Select the text and the strikethrough annotation will be added.
-    * You can also select the text and apply the strikethrough annotation using the **Strikethrough** button.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
+* Select **Strikethrough** to enable strikethrough mode.
+* Select text to add the strikethrough annotation.
+* Alternatively, select text first and then click **Strikethrough**.
 
-![Alt text](../images/strikethrough_button.png)
+![Strikethrough button](../images/strikethrough_button.png)
 
 In the pan mode, if the strikethrough mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for striking through the text.
 
-Refer to the following code sample to switch to the strikethrough mode.
+Refer to the following code sample to switch to strikethrough mode.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
-
+{% highlight cshtml tabtitle="Standalone" %}
 
     <!--Element to set text markup annotation mode-->
     <button id="set" onclick="addAnnot()">Strikethrough</button>
@@ -351,7 +348,7 @@ Refer to the following code sample to switch to the strikethrough mode.
     </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
 
     <!--Element to set text markup annotation mode-->
@@ -369,10 +366,10 @@ Refer to the following code sample to switch to the strikethrough mode.
 {% endhighlight %}
 {% endtabs %}
 
-Refer to the following code sample to switch back to normal mode from the strikethrough mode.
+Refer to the following code sample to switch back to normal mode from strikethrough mode.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
     <!--Element to set text markup annotation mode-->
     <button id="set" onclick="addAnnot()">Strikethrough</button>
@@ -394,7 +391,7 @@ Refer to the following code sample to switch back to normal mode from the strike
     </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
     <!--Element to set text markup annotation mode-->
     <button id="set" onclick="addAnnot()">Strikethrough</button>
@@ -418,11 +415,11 @@ Refer to the following code sample to switch back to normal mode from the strike
 {% endhighlight %}
 {% endtabs %}
 
-## Strikethrough a text programmatically
+## Strikethrough text programmatically
 
-The PDF Viewer library enables you to programmatically Strikethrough text within the PDF Viewer control using the **addAnnotation()** method.
+Programmatically add strikethrough using the **addAnnotation()** method.
 
-Here's an example of how you can use the **addAnnotation()** method to apply Strikethrough programmatically:
+Here is an example showing how to add strikethrough programmatically using addAnnotation():
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -461,31 +458,31 @@ Here's an example of how you can use the **addAnnotation()** method to apply Str
 {% endhighlight %}
 {% endtabs %}
 
-## Squiggly a text
+## Add squiggly to text
 
-There are two ways to add a squiggly annotation to text in the PDF document:
+There are two ways to add squiggly to text:
 
 1. Using the context menu
-    * Select a text in the PDF document and right-click it.
-    * Select the **Squiggly** option in the context menu that appears.
+* Select text in the PDF document and right-click it.
+* Select **Squiggly** in the context menu.
 
-![Alt text](../images/squiggly_context.png)
+![Squiggly from context menu](../images/squiggly_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2. Using the annotation toolbar
-    * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-    * Select the **Squiggly** button in the annotation toolbar. It enables the squiggly mode.
-    * Select the text and the squiggly annotation will be added.
-    * You can also select the text and apply the squiggly annotation using the **Squiggly** button.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
+* Select **Squiggly** to enable squiggly mode.
+* Select text to add the squiggly annotation.
+* Alternatively, select text first and then click **Squiggly**.
 
-![Alt text](../images/squiggly_button.png)
+![Squiggly button](../images/squiggly_button.png)
 
 In the pan mode, if the squiggly mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for adding squiggly to the text.
 
-Refer to the following code sample to switch to the squiggly mode.
+Refer to the following code sample to switch to squiggly mode.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
 
     <!--Element to set text markup annotation mode-->
@@ -501,7 +498,7 @@ Refer to the following code sample to switch to the squiggly mode.
     </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
 
     <!--Element to set text markup annotation mode-->
@@ -519,10 +516,10 @@ Refer to the following code sample to switch to the squiggly mode.
 {% endhighlight %}
 {% endtabs %}
 
-Refer to the following code sample to switch back to normal mode from the squiggly mode.
+Refer to the following code sample to switch back to normal mode from squiggly mode.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
     <!--Element to set text markup annotation mode-->
     <button id="set" onclick="addAnnot()">Squiggly</button>
@@ -544,7 +541,7 @@ Refer to the following code sample to switch back to normal mode from the squigg
     </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
     <!--Element to set text markup annotation mode-->
     <button id="set" onclick="addAnnot()">Squiggly</button>
@@ -568,11 +565,11 @@ Refer to the following code sample to switch back to normal mode from the squigg
 {% endhighlight %}
 {% endtabs %}
 
-## Squiggly a text programmatically
+## Add squiggly to text programmatically
 
-The PDF Viewer library enables you to programmatically Squiggly text within the PDF Viewer control using the **addAnnotation()** method.
+Programmatically add squiggly using the **addAnnotation()** method.
 
-Here's an example of how you can use the **addAnnotation()** method to apply Squiggly programmatically:
+Example:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -611,54 +608,53 @@ Here's an example of how you can use the **addAnnotation()** method to apply Squ
 {% endhighlight %}
 {% endtabs %}
 
-
-## Deleting a text markup annotation
+## Delete a text markup annotation
 
 The selected annotation can be deleted in the following ways:
 
 1. Using the Delete key
-    * Select the annotation to be deleted.
-    * Click the Delete key in the keyboard. The selected annotation will be deleted.
+    * Select the annotation to delete.
+    * Press the Delete key. The selected annotation is removed.
 
 2. Using the annotation toolbar
-    * Select the annotation to be deleted.
-    * Click the **Delete Annotation** button in the annotation toolbar. The selected annotation will be deleted.
+    * Select the annotation.
+    * Click the **Delete Annotation** button in the annotation toolbar. The selected annotation is removed.
 
-![Alt text](../images/delete_button.png)
+![Delete annotation](../images/delete_button.png)
 
-## Editing the properties of the text markup annotation
+## Edit text markup annotation properties
 
-The color and the opacity of the text markup annotation can be edited using the Edit Color tool and the Edit Opacity tool in the annotation toolbar.
+The color and the opacity of the text markup annotation can be edited using the Edit Color and Edit Opacity tools in the annotation toolbar.
 
-### Editing color
+### Edit color
 
-The color of the annotation can be edited using the color palette provided in the Edit Color tool.
+Use the color palette in the Edit Color tool to change the annotation color.
 
-![Alt text](../images/edit_color.png)
+![Edit color](../images/edit_color.png)
 
-### Editing opacity
+### Edit opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+Use the range slider in the Edit Opacity tool to change annotation opacity.
 
-![Alt text](../images/edit_opacity.png)
+![Edit opacity](../images/edit_opacity.png)
 
-## Setting default properties during the control initialization
+## Set default properties during control initialization
 
-The properties of the text markup annotation can be set before creating the control using the highlightSettings, underlineSettings, strikethroughSettings and squigglySettings.
+Set default properties before creating the control using highlightSettings, underlineSettings, strikethroughSettings, and squigglySettings.
 
-N>After editing the default color and opacity using the Edit Color tool and Edit Opacity tool, they will be changed to the selected values.
+N> After editing the default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code sample to set the default annotation settings.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").HighlightSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerHighlightSettings{Author = "Guest User", Color = "#ffff00", Opacity = 0.9 }).UnderlineSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerUnderlineSettings{ Author = "Guest User", Color = "#00ffff", Opacity = 0.9 }).StrikethroughSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerStrikethroughSettings{ Author = "Guest User", Color = "#ff00ff", Opacity = 0.9, }).SquigglySettings(new Syncfusion.EJ2.PdfViewer.PdfViewerSquigglySettings{ Author = "Guest User", Color = "#0000ff", Opacity = 0.9 }).Render()
 </div>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").HighlightSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerHighlightSettings{Author = "Guest User", Color = "#ffff00", Opacity = 0.9 }).UnderlineSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerUnderlineSettings{ Author = "Guest User", Color = "#00ffff", Opacity = 0.9 }).StrikethroughSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerStrikethroughSettings{ Author = "Guest User", Color = "#ff00ff", Opacity = 0.9, }).SquigglySettings(new Syncfusion.EJ2.PdfViewer.PdfViewerSquigglySettings{ Author = "Guest User", Color = "#0000ff", Opacity = 0.9 })Render()
@@ -667,25 +663,25 @@ Refer to the following code sample to set the default annotation settings.
 {% endhighlight %}
 {% endtabs %}
 
-## Performing undo and redo
+## Perform undo and redo
 
-The PDF Viewer performs undo and redo for the changes made in the PDF document. In the text markup annotation, undo and redo actions are provided for:
+The PDF Viewer supports undo and redo for changes. For text markup annotations, undo and redo are provided for:
 
 * Inclusion of the text markup annotations.
 * Deletion of the text markup annotations.
 * Change of either color or opacity of the text markup annotations.
 
-The undo and redo actions can be done by the following ways:
+Undo and redo actions can be performed in the following ways:
 
-1. Using the keyboard shortcuts:
-    After performing a text markup annotation action, you can undo it by using the Ctrl + Z shortcut and redo by using the Ctrl + Y shortcut.
-2. Using toolbar:
-    The undo and redo can be done using the **Undo** tool and **Redo** tool provided in the toolbar.
+1. Using keyboard shortcuts:
+    After performing a text markup annotation action, press Ctrl + Z to undo and Ctrl + Y to redo.
+2. Using the toolbar:
+    Use the **Undo** and **Redo** tools in the toolbar.
 
-Refer to the following code sample for calling undo and redo actions from the client-side.
+Refer to the following code sample to call undo and redo actions from the client side.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
 <!--Element to call undo-->
 <button id="undo" onclick="Undo()">Undo</button>
@@ -707,7 +703,7 @@ Refer to the following code sample for calling undo and redo actions from the cl
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
 <!--Element to call undo-->
 <button id="undo" onclick="Undo()">Undo</button>
@@ -731,27 +727,27 @@ Refer to the following code sample for calling undo and redo actions from the cl
 {% endhighlight %}
 {% endtabs %}
 
-## Saving the text markup annotation
+## Save text markup annotations
 
-When you click the download tool in the toolbar, the text markup annotations will be saved in the PDF document. This action will not affect the original document.
+Click the download tool in the toolbar to save text markup annotations to the PDF document. The original document is not modified.
 
-## Printing the text markup annotation
+## Print text markup annotations
 
-When the print tool is selected in the toolbar, the PDF document will be printed along with the text markup annotations added to the pages. This action will not affect the original document.
+Click the print tool in the toolbar to print the PDF document with text markup annotations. The original document is not modified.
 
-## Disabling text markup annotation
+## Disable text markup annotation
 
-The PDF Viewer control provides an option to disable the text markup annotation feature. The code sample for disabling the feature is as follows.
+Disable text markup annotations using the enableTextMarkupAnnotation property.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").EnableTextMarkupAnnotation(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
 </div>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
 <div style="width:100%;height:600px">
      @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).EnableTextMarkupAnnotation(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()

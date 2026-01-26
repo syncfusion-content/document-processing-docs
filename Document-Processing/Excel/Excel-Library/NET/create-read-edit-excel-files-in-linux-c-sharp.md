@@ -213,9 +213,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A9:A14"].RowHeight = 15;
   worksheet.Range["A15:A23"].RowHeight = 18;
 
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create);
-  workbook.SaveAs(outputStream);
-  outputStream.Dispose();
+  workbook.SaveAs("Output.xlsx");
   imageStream.Dispose();
 }
 {% endhighlight %}
@@ -254,8 +252,7 @@ IApplication application = excelEngine.Excel;
 application.DefaultVersion = ExcelVersion.Xlsx;
 
 //A existing workbook is opened.             
-FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-IWorkbook workbook = application.Workbooks.Open(inputStream);
+IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
 //Access first worksheet from the workbook.
 IWorksheet worksheet = workbook.Worksheets[0];
@@ -266,15 +263,8 @@ worksheet.Range["A3"].Text ="Hello World";
 //Access a cell value from Excel
 var value = worksheet.Range["A1"].Value;
 
-//Initialize stream
-FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create);
-
-//Save the workbook as stream
-workbook.SaveAs(outputStream);
-
-//Dispose the streams
-outputStream.Dispose();
-inputStream.Dispose();
+//Save the workbook 
+workbook.SaveAs("Output.xlsx");
 
 workbook.Close();
 excelEngine.Dispose();

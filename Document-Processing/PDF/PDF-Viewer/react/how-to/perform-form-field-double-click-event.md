@@ -23,7 +23,7 @@ The PDF Viewer library allows you to trigger an event when you double click on t
 <PdfViewerComponent
   id="container"
   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
-  resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
   formFieldDoubleClick={formFieldDoubleClick}
   style={{ height: '640px' }}>
 </PdfViewerComponent>

@@ -13,7 +13,7 @@ documentation: ug
 
 ## Indentation
 
-You can modify the left or right indentation of selected paragraphs using the following sample code.
+Indentation is used to adjust the distance between the paragraph and the page margins. The left or right indentation of selected paragraphs can be modified using the following sample code.
 
 ```csharp
 await documentEditor.Selection.ParagraphFormat.SetLeftIndentAsync(24);
@@ -22,7 +22,7 @@ await documentEditor.Selection.ParagraphFormat.SetRightIndentAsync(24);
 
 ## Special indentation
 
-You can define special indent for first line of the paragraph using the following sample code.
+A special indent for the first line of the paragraph can be defined using the following sample code.
 
 ```csharp
 await documentEditor.Selection.ParagraphFormat.SetFirstLineIndentAsync(24);
@@ -30,7 +30,7 @@ await documentEditor.Selection.ParagraphFormat.SetFirstLineIndentAsync(24);
 
 ## Increase indent
 
-You can increase the left indent of selected paragraphs by a factor of 36 points using the following sample code.
+The left indent of selected paragraphs can be increased by a factor of 36 points using the following sample code.
 
 ```csharp
 await documentEditor.Editor.IncreaseIndentAsync();
@@ -38,7 +38,7 @@ await documentEditor.Editor.IncreaseIndentAsync();
 
 ## Decrease indent
 
-You can decrease the left indent of selected paragraphs by a factor of 36 points using the following sample code.
+The left indent of selected paragraphs can be decreased by a factor of 36 points using the following sample code.
 
 ```csharp
 await documentEditor.Editor.DecreaseIndentAsync();
@@ -46,7 +46,7 @@ await documentEditor.Editor.DecreaseIndentAsync();
 
 ## Text alignment
 
-You can get or set the text alignment of selected paragraphs using the following sample code.
+The text alignment of selected paragraphs can be retrieved or set using the following sample code.
 
 ```csharp
 await documentEditor.Selection.ParagraphFormat.SetTextAlignmentAsync(TextAlignment.Center);
@@ -63,8 +63,11 @@ await documentEditor.Editor.ToggleTextAlignmentAsync(TextAlignment.Center);
 You can define the line spacing and its type for selected paragraphs using the following sample code.
 
 ```csharp
+// Set line spacing type
 await documentEditor.Selection.ParagraphFormat.SetLineSpacingTypeAsync(LineSpacingType.AtLeast);
-await documentEditor.Selection.ParagraphFormat.SetLineSpacingAsync(6);
+// Set line spacing value (supports both integer and float)
+await documentEditor.Selection.ParagraphFormat.SetLineSpacingAsync(6);     // Integer value
+await documentEditor.Selection.ParagraphFormat.SetLineSpacingAsync(6.5);   // Float value
 ```
 
 ## Paragraph spacing

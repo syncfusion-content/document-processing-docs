@@ -24,10 +24,6 @@ The solid brush is used to fill an object with solid color. Essential<sup>&reg;<
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Brushes/Fill-an-object-with-solid-brush-in-a-PDF/.NET/Fill-an-object-with-solid-brush-in-a-PDF/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
 //Add a page to the document
@@ -40,18 +36,14 @@ PdfSolidBrush brush = new PdfSolidBrush(Color.Red);
 //Draw ellipse on the page
 graphics.DrawEllipse(brush, new RectangleF(0, 0, 200, 100));
 
-//Save the PDF document
-doc.Save("Output.pdf");
+//Save the PDF document to stream
+MemoryStream stream = new MemoryStream();
+doc.Save(stream);
 //Close the Pdf Document
 doc.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
 //Add a page to the document
@@ -71,11 +63,6 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-
 'Create a new PDF document
 Dim doc As PdfDocument = New PdfDocument
 'Add a page to the document
@@ -106,10 +93,6 @@ The gradient brush is used to fill an object with blend of two or more colors. E
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Brushes/Fill-an-object-with-gradient-brush-in-a-PDF/.NET/Fill-an-object-with-gradient-brush-in-a-PDF/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
 //Add a page to the document
@@ -122,17 +105,14 @@ PdfLinearGradientBrush brush = new PdfLinearGradientBrush(new PointF(0, 0), new 
 //Draw ellipse on the page
 graphics.DrawEllipse(brush, new RectangleF(0, 0, 200, 100));
 
-//Save the PDF document
-doc.Save("Output.pdf");
+//Save the PDF document to stream
+MemoryStream stream = new MemoryStream();
+doc.Save(stream);
 //Close the Pdf Document
 doc.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -154,11 +134,6 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-
 'Create a new PDF document
 Dim doc As PdfDocument = New PdfDocument
 'Add a page to the document
@@ -191,10 +166,6 @@ The following code example demonstrates how to fill a rectangle with a gradient 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Brushes/Linear-Gradient-Brush-with-Multiple-Colors/.NET/Linear-Gradient-Brush-with-Multiple-Colors/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-
 // Create a new PDF document
 using (PdfDocument document = new PdfDocument())
 {
@@ -233,17 +204,16 @@ using (PdfDocument document = new PdfDocument())
     // Draw a rectangle filled with the gradient
     graphics.DrawRectangle(brush, new RectangleF(0, 0, 200, 100));
 
-    //Save the PDF document
-    document.Save("Output.pdf");
+    //Create file stream.
+    using (FileStream outputFileStream = new FileStream(@"Output/Output.pdf", FileMode.Create, FileAccess.ReadWrite))
+    {
+        //Save the PDF document to file stream.
+        document.Save(outputFileStream);
+    }
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-
 // Create a new PDF document
 using (PdfDocument document = new PdfDocument())
 {
@@ -282,17 +252,12 @@ using (PdfDocument document = new PdfDocument())
     // Draw a rectangle filled with the gradient
     graphics.DrawRectangle(brush, new RectangleF(0, 0, 200, 100));
 
-    //Save the PDF document
+    //Save the PDF document to file stream.
     document.Save("Output.pdf");
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-
 ' Create a new PDF document
 Using document As New PdfDocument()
     ' Add a page to the document
@@ -323,7 +288,7 @@ Using document As New PdfDocument()
     ' Draw a rectangle filled with the gradient
     graphics.DrawRectangle(brush, New RectangleF(0, 0, 200, 100))
 
-    ' Save the PDF document
+    ' Save the PDF document to a file stream
     document.Save("Output.pdf")
 End Using
 {% endhighlight %}
@@ -340,10 +305,6 @@ The gradient brush is used to fill an object with blend of two or more colors. Y
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Brushes/Draw-shapes-on-PDF-with-radial-gradient-brush/.NET/Draw-shapes-on-PDF-with-radial-gradient-brush/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
 //Add a page to the document
@@ -356,18 +317,14 @@ PdfRadialGradientBrush brush = new PdfRadialGradientBrush(new PointF(50, 50), 0,
 //Draw ellipse on the page
 graphics.DrawEllipse(brush, new RectangleF(0, 0, 100, 100));
 
-//Save the PDF document
-doc.Save("Output.pdf");
+//Save the PDF document stream
+MemoryStream stream = new MemoryStream();
+doc.Save(stream);
 //Close the Pdf Document
 doc.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
 //Add a page to the document
@@ -387,11 +344,6 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-
 'Create a new PDF document
 Dim doc As PdfDocument = New PdfDocument
 'Add a page to the document
@@ -422,10 +374,6 @@ The tiling brush is used to draw an object repeatedly. You can draw any shape on
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Brushes/Draw-shape-on-PDF-with-tiling-brush/.NET/Draw-shape-on-PDF-with-tiling-brush/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
 //Add a page to the document
@@ -440,18 +388,14 @@ brush.Graphics.DrawEllipse(PdfPens.Red, new RectangleF(0, 0, 10, 10));
 //Draw ellipse
 graphics.DrawEllipse(brush, new RectangleF(0, 0, 200, 100));
 
-//Save the PDF document
-doc.Save("Output.pdf");
+//Save the PDF document to stream
+MemoryStream stream = new MemoryStream();
+doc.Save(stream);
 //Close the Pdf Document
 doc.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
 //Add a page to the document
@@ -473,11 +417,6 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-
 'Create a new PDF document
 Dim doc As PdfDocument = New PdfDocument
 'Add a page to the document
@@ -509,10 +448,6 @@ The hatch brush is used to fill an object with hatch patterns. Essential<sup>&re
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Brushes/Hatch-brush/.NET/Hatch-brush/Program.cs" %}
 
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-
 //Create a new PDF document
 PdfDocument doc = new PdfDocument(); 
 //Add a page to the document 
@@ -529,18 +464,15 @@ PdfHatchBrush pdfHatchBrush = new PdfHatchBrush(PdfHatchStyle.Plaid, new PdfColo
 //Draw rectangle on the page 
 graphics.DrawRectangle(PdfPens.Black, pdfHatchBrush, new Rectangle(100, 100, 300, 200)); 
 
-//Save the PDF document
-doc.Save("Output.pdf");
+//Save the PDF document to stream 
+MemoryStream stream = new MemoryStream(); 
+doc.Save(stream); 
 //Close the Pdf Document 
 doc.Close(true); 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument(); 
@@ -566,10 +498,6 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
 
 ' Create a new PDF document
 Dim doc As PdfDocument = New PdfDocument 

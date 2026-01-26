@@ -10,7 +10,11 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Electronic Signature in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The electronic signature feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove signatures in the PDF document. This section will go through the various types and functions available in PDF Viewer for working with signature.
+The electronic signature feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove signatures in the PDF document. This section will go through the various types and functions available in PDF Viewer for working with signature. 
+
+You can also watch our video tutorial below to learn about working with electronic signatures.
+
+<style>#MAUISfPdfViewerVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUISfPdfViewerVideoTutorial' src='https://www.youtube.com/embed/XinSyPuloqw'></iframe>
 
 ## Types of electronic signature
 

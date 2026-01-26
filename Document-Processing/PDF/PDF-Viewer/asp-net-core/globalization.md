@@ -1,19 +1,18 @@
 ---
 layout: post
-title: Globalization in ASP.NET Core Pdfviewer Component | Syncfusion
-description: Learn here all about Globalization in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Globalization in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn about globalization in the Syncfusion ASP.NET Core PDF Viewer component, including localization strings and culture settings.
 platform: document-processing
-control: Globalization
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
 ---
 
 
-# Localization in ASP.NET Core PDF Viewer control
+# Globalization in ASP.NET Core PDF Viewer
 
-The text contents provided in the PDF Viewer can be localized using the collection of localized strings for different cultures. By default, the PDF Viewer is localized in “__en-US__”.
+The text content in the PDF Viewer can be localized using a collection of culture-specific strings. By default, the PDF Viewer uses the en-US culture.
 
-The following table shows the default text values used in PDF Viewer in 'en-US' culture:
+The following table lists the default text values used by the PDF Viewer in the en-US culture:
 
 |Keywords|Values|
 |---|---|
@@ -267,7 +266,7 @@ The following table shows the default text values used in PDF Viewer in 'en-US' 
 |Exact Matches|EXACT MATCHES|
 |Total Matches|TOTAL MATCHES|
 
-The different locale value for the PDF Viewer can be specified using the locale property.
+You can set the desired culture using the `locale` property of the PDF Viewer.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -297,7 +296,7 @@ The different locale value for the PDF Viewer can be specified using the locale 
 {% endhighlight %}
 {% endtabs %}
 
-You have to map the text content based on locale like following script in sample level.,
+Map the text content for the selected locale using the following script at the sample level:
 
 ```html
 <script>

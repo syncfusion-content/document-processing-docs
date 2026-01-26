@@ -2,7 +2,7 @@
 layout: post
 title: React getting started with Next.js | Syncfusion
 description: Check out and learn here all about how to use the Syncfusion React UI components in the Next.js project.
-control: Next.js
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##

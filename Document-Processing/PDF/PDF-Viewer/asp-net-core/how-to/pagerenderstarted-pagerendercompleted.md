@@ -1,24 +1,23 @@
 ---
 layout: post
-title: Rendering event in EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about Rendering event in ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Handle pageRenderInitiate and pageRenderComplete events in ASP.NET Core PDF Viewer | Syncfusion
+description: Discover how to use the pageRenderInitiate and pageRenderComplete events in the Syncfusion ASP.NET Core PDF Viewer to monitor page rendering stages.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# PageRenderInitiate and pageRenderComplete event
+# pageRenderInitiate and pageRenderComplete event
 
-In Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, `pageRenderInitiate` and `pageRenderComplete` actions are events that occur during the rendering process of PDF documents.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer raises the `pageRenderInitiate` and `pageRenderComplete` events for each page that enters the rendering pipeline. These notifications help track progress, update custom UI, and defer heavy logic until a page is ready.
 
 **pageRenderInitiate**
 
-The `pageRenderInitiate` event is triggered when the rendering of a page in the PDF document begins. This event provides developers with an opportunity to perform any necessary initialization or setup before the rendering of the page content commences. It can be utilized to prepare resources, set up rendering parameters, or execute any other actions required before the page rendering process starts.
+The `pageRenderInitiate` event fires when a page begins rendering. Use it to prepare resources, start timers, or log analytics before drawing occurs. The event argument provides details such as the page number and source so that handlers can apply page-specific logic.
 
 **pageRenderComplete**
 
-The `pageRenderComplete` event is triggered when the rendering of a page in the PDF document is completed. This event allows developers to perform cleanup tasks or finalize rendering-related processes after the rendering of the page content finishes. It can be used to release resources, finalize rendering settings, or handle any post-rendering tasks necessary for the application.
+The `pageRenderComplete` event fires after the viewer finishes rendering a page. Use it to finalize overlays, clean up temporary data, or trigger post-processing tasks. The event argument includes the rendered page index and status information, enabling conditional workflows.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

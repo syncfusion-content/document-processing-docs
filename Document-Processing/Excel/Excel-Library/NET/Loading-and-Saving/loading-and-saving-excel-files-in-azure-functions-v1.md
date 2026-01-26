@@ -1,6 +1,6 @@
 ---
 title: Loading and Saving Excel in Azure Functions v1 | Syncfusion
-description: Explains how to load and save an Excel files in Azure Functions v1 using Syncfusion Excel library.
+description: Explains how to load and save an Excel files in Azure Functions v1 using Syncfusion Excel(XlsIO) library.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -49,8 +49,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     application.DefaultVersion = ExcelVersion.Xlsx;
 
     //Load an existing Excel document
-    FileStream inputStream = new FileStream("Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
+    IWorkbook workbook = application.Workbooks.Open("Data/InputTemplate.xlsx");
 
     //Access first worksheet from the workbook
     IWorksheet worksheet = workbook.Worksheets[0];

@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Unload Document in ASP.NET Core Pdfviewer Component
-description: Learn here all about Unload Document in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Unload a PDF document programmatically in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to call the unload method in the Syncfusion ASP.NET Core PDF Viewer to clear the current PDF document programmatically.
 platform: document-processing
-control: Unload Document
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
 ---
 
 # Unload the PDF document programmatically
 
-The PDF Viewer library allows you to unload the PDF document being displayed in the PDF Viewer control programmatically using the [**unload()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#unload) method.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer exposes the [**unload()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#unload) method to remove the currently displayed document, release associated resources, and reset the viewer UI. Use this approach when switching between files or clearing sensitive content after it has been reviewed.
 
-The following steps are used to unload the PDF document programmatically.
+Follow these steps to unload a PDF document programmatically:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Create a PDF Viewer sample by following the [ASP.NET Core getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) so the required scripts, styles, and controller endpoints are configured.
 
-**Step 2:** Add the following code snippet to perform the unload operation.
+**Step 2:** Add the following markup and script to call `unload()` when the button is clicked. Place the script within the Razor page after the viewer element so the instance is available.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -62,5 +61,7 @@ The following steps are used to unload the PDF document programmatically.
 {% endhighlight %}
 {% endtabs %}
 
+
+After calling `unload()`, the viewer removes the document and toolbar state until a new file is loaded. Apply the same pattern in both standalone and server-backed configurations to ensure cached data is cleared before loading a different PDF.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Unload%20the%20PDF%20document%20programmatically)

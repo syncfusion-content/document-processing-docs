@@ -17,7 +17,7 @@ The Blazor SfPdfViewer supports adding, editing, and deleting shape annotations.
 * Circle
 * Polygon
 
-![Shape annotations in the Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-shape-annotation.png)
+![Shape annotations in the Blazor SfPdfViewer](../images/blazor-pdfviewer-shape-annotation.png)
 
 ## Adding a shape annotation to the PDF document
 
@@ -30,7 +30,7 @@ Shape annotations can be added from the annotation toolbar.
 
 When the viewer is in pan mode and a shape drawing mode is activated, the control switches to text selection mode to enable drawing.
 
-![Adding shape annotations in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-add-shape-in-toolbar.png)
+![Adding shape annotations in Blazor SfPdfViewer](../images/blazor-pdfviewer-add-shape-in-toolbar.png)
 
 
 ```cshtml
@@ -64,31 +64,31 @@ The annotation toolbar provides tools to modify fill color, stroke color, thickn
 
 Use the Edit Color tool to change the annotation’s fill color via the color palette.
 
-![Editing fill color in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-edit-fill-color.png)
+![Editing fill color in Blazor SfPdfViewer](../images/blazor-pdfviewer-edit-fill-color.png)
 
 ### Editing stroke color
 
 Use the Edit Stroke Color tool to change the border color via the color palette.
 
-![Editing stroke color in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-edit-shape-stroke-color.png)
+![Editing stroke color in Blazor SfPdfViewer](../images/blazor-pdfviewer-edit-shape-stroke-color.png)
 
 ### Editing thickness
 
 Use the Edit Thickness tool to adjust the border thickness with the range slider.
 
-![Editing shape border thickness in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-shape-thickness.png)
+![Editing shape border thickness in Blazor SfPdfViewer](../images/blazor-pdfviewer-shape-thickness.png)
 
 ### Editing opacity
 
 Use the Edit Opacity tool to modify transparency with the range slider.
 
-![Editing shape opacity in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-shape-opacity.png)
+![Editing shape opacity in Blazor SfPdfViewer](../images/blazor-pdfviewer-shape-opacity.png)
 
 ### Editing the line properties
 
 Properties for line-based shapes (Line and Arrow) can be adjusted in the Line Properties dialog. Open it by choosing Properties from the context menu after right-clicking a line or arrow annotation.
 
-![Editing line and arrow properties in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-edit-line-property.png)
+![Editing line and arrow properties in Blazor SfPdfViewer](../images/blazor-pdfviewer-edit-line-property.png)
 
 ## Setting default properties during control initialization
 
@@ -184,7 +184,7 @@ The appearance of an annotation’s selector can be customized using [Annotation
 
 ```
 
-![Customized selector in Blazor SfPdfViewer](../../blazor-classic/images/customselector.png)
+![Customized selector in Blazor SfPdfViewer](../images/customselector.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Selector/Customize%20Annotation%20%20Selector).
 

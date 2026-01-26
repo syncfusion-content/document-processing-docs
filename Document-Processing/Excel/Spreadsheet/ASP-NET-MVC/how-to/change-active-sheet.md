@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Changing the active sheet in Spreadsheet control
+# Changing the active sheet in ASP.NET MVC Spreadsheet control
 
 You can change the active sheet of imported file by updating [`activeSheetIndex`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ActiveSheetIndex) property on the [`openComplete`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_OpenComplete) event.
 
@@ -15,9 +15,9 @@ The following code example shows how to set the active sheet when importing an E
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/change-active-sheet/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/change-active-sheet/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="OpenController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/change-active-sheet/opencontroller.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/change-active-sheet/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}

@@ -37,9 +37,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   blueFont.Italic = true;
   blueFont.RGBColor = Color.Blue;
   richText.SetFont(4, 7, blueFont);
-
-  FileStream stream = new FileStream("FormattingText.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+ 
+  workbook.SaveAs("FormattingText.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

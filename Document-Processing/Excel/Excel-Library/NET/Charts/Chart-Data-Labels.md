@@ -158,8 +158,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 	IChartShape chart = worksheet.Charts[0];
 
@@ -191,13 +190,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IChartDataLabels dataLabel = chart.Series[0].DataPoints.DefaultDataPoint.DataLabels;
 	(dataLabel as ChartDataLabelsImpl).NumberFormat = "#,##0.00";
 
-	//Saving the workbook as stream
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.ReadWrite);
-	workbook.SaveAs(outputStream);
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
+	//Saving the workbook 
+	workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
@@ -345,12 +339,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
     #region Save
     //Saving the workbook
-    FileStream outputStream = new FileStream(Path.GetFullPath("Output.xlsx"), FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
+    workbook.SaveAs("Output.xlsx");
     #endregion
-
-    //Dispose streams
-    outputStream.Dispose();
 }
 {% endhighlight %}
 

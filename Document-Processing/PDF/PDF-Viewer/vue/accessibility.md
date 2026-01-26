@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Accessibility in Vue PDF Viewer component | Syncfusion
-description: Learn here all about accessibility in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue PDF Viewer | Syncfusion
+description: Learn about accessibility in the Syncfusion Vue PDF Viewer, including compliance with WCAG 2.2, Section 508, ADA standards, and keyboard navigation support.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer components
+# Accessibility in Syncfusion Vue PDF Viewer
 
 The PDF Viewer component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the PDF Viewer component is outlined below.
+The accessibility compliance for the PDF Viewer component is summarized below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -38,29 +38,31 @@ The accessibility compliance for the PDF Viewer component is outlined below.
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
+Note: Mobile device support is marked as partial due to platform-level constraints on hover interactions, complex keyboard navigation, and screen reader capabilities that vary by device and browser.
+
 ## WAI-ARIA attributes
 
-[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript,and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used in the PDF Viewer component:
+[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript, and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used in the PDF Viewer component:
 
 | Attributes | Purpose |
 | --- | --- |
 | `aria-disabled`| Indicates whether the PDF Viewer component is in a disabled state or not.|
-| `aria-expanded`| Indicates whether the suggestion list has expanded or not. |
-| `aria-readonly` | Indicates the readonly state of the PDF Viewer element. |
-| `aria-haspopup` | Indicates whether the PDF Viewer input element has a suggestion list or not. |
-| `aria-label` | Indicates the breadcrumb item text. |
-| `aria-labelledby` | Provides a label for the PDF Viewer. Typically, the "aria-labelledby" attribute will contain the id of the element used as the PDF Viewer's title. |
-| `aria-describedby` | This attribute points to the PDF Viewer element describing the one it's set on. |
-| `aria-orientation` | Indicates whether the PDF Viewer element is oriented horizontally or vertically. |
-| `aria-valuetext` | Returns the current text of the PDF Viewer. |
-| `aria-valuemax` | Indicates the Maximum value of the PDF Viewer. |
-| `aria-valuemin` | Indicates the Minimum value of the PDF Viewer. |
-| `aria-valuenow` | Indicates the current value of the PDF Viewer. |
-| `aria-controls` | Attribute is set to the button and it points to the corresponding content. |
+| `aria-expanded`| Indicates whether an element within the PDF Viewer is expanded or collapsed. |
+| `aria-readonly` | Indicates the read-only state of a PDF Viewer element. |
+| `aria-haspopup` | Indicates the presence of a popup, such as a context menu or submenu. |
+| `aria-label` | Provides a human-readable label for interactive elements in the PDF Viewer. |
+| `aria-labelledby` | Identifies the element(s) that label the PDF Viewer, often referencing the title element. |
+| `aria-describedby` | Identifies the element(s) that describe the PDF Viewer or its controls. |
+| `aria-orientation` | Indicates whether an element is oriented horizontally or vertically. |
+| `aria-valuetext` | Provides a human-readable text alternative for the current value of a range-type element. |
+| `aria-valuemax` | Specifies the maximum value of a range-type element. |
+| `aria-valuemin` | Specifies the minimum value of a range-type element. |
+| `aria-valuenow` | Specifies the current value of a range-type element. |
+| `aria-controls` | Identifies the element(s) controlled by the current element. |
 
 ## Keyboard interaction
 
-The PDF Viewer component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Message component.
+The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who rely on keyboard navigation. The following keyboard shortcuts are supported by the PDF Viewer component.
 
 | **Press (Windows)** |**Press (Macintosh)** | **To do this** |
 | --- | --- | --- |
@@ -69,7 +71,7 @@ The PDF Viewer component followed the [keyboard interaction](https://www.w3.org/
 | <kbd>CONTROL + Right Arrow (or) CONTROL + Down Arrow</kbd> |<kbd>COMMAND + Right Arrow (or) COMMAND + Down Arrow</kbd> |Navigate to the last page |
 |<kbd>Left Arrow</kbd> |<kbd> Left Arrow (or) Shift + Space </kbd> |Navigate to the previous page|
 | <kbd>Right Arrow</kbd> | <kbd>Right Arrow (or) Space</kbd> | Navigate to the next page |
-| <kbd>CONTROL + G</kbd> | <kbd>COMMAND + G</kbd> | Go To The Page|
+| <kbd>CONTROL + G</kbd> | <kbd>COMMAND + G</kbd> | Go to a specific page|
 |<kbd>Up Arrow</kbd> |<kbd>Up Arrow </kbd> |Scroll up|
 | <kbd>Down Arrow</kbd> | <kbd>Down Arrow</kbd> | Scroll down|
 |||**Shortcuts for Zooming**|
@@ -95,15 +97,7 @@ The PDF Viewer component followed the [keyboard interaction](https://www.w3.org/
 |<kbd>Shift + H</kbd> |<kbd>Shift + H</kbd> |Enable pan mode|
 |<kbd>Shift + V</kbd> |<kbd>Shift + V</kbd> |Enable text selection mode|
 
-The current implementation of our PDF Viewer includes keyboard shortcuts for various functions like scrolling, zooming, text search, printing, and annotation deletion.
-
-To enhance user experience, we're adding additional keyboard shortcuts for actions such as navigating between pages, accessing specific pages, toggling annotation tools, and displaying PDF elements like outlines, annotations, bookmarks, and thumbnails.
-
-To support this, we're introducing a new class called **commandManager**, which handles custom commands triggered by specific key gestures. These custom commands will be defined by users and executed accordingly.
-
-The **commandManager** will have a parameter called Commands, which will hold the collection of custom keyboard commands specified by users. Each custom command will be represented by a KeyboardCommand class, containing the `command name` and associated `keyboard combination`.
-
-Additionally, we're introducing the **keyboardCustomCommands** parameter for the CommandManager, which will utilize the EventCallback to handle keyboard events and trigger appropriate methods when specific key combinations are pressed.
+The PDF Viewer supports custom keyboard commands through a `commandManager`, which handles commands triggered by specific key gestures. Custom commands are defined by users and executed accordingly. The `commandManager` includes a `keyboardCommand` collection to hold custom keyboard commands. Each custom command is represented by a `KeyboardCommand` entry, containing the command name and associated keyboard combination. Additionally, the `keyboardCustomCommands` parameter utilizes an event callback to handle keyboard events and trigger methods when specific key combinations are pressed.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -126,7 +120,7 @@ import {
 
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
   Annotation, ThumbnailView, Print, TextSelection, TextSearch]);
@@ -192,7 +186,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {
@@ -368,18 +362,15 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Each `keyboardCommand` object consists of a name property, specifying the `name` of the `custom command`, and a `gesture property`, defining the key gesture associated with the command.
+Each `keyboardCommand` object consists of a `name` property for the custom command and a `gesture` property defining the key gesture associated with the command. For example, the `customCopy` command is associated with the G key and requires both the Shift and Alt modifier 
 
-For example, the first command named `customCopy` is associated with the **G** key and requires both the **Shift** and **Alt** modifier keys to be pressed simultaneously.
+Key modifiers used in gestures:
+- Ctrl corresponds to the Control key (value `1`).
+- Alt corresponds to the Alt key (value `2`).
+- Shift corresponds to the Shift key (value `4`).
+- Meta corresponds to the Command key on macOS or the Windows key on Windows (value `8`).
 
-Additionally, there's an explanation of the key modifiers used in the gestures:
-
-* Ctrl corresponds to the Control key, represented by the value `1`.
-* Alt corresponds to the Alt key, represented by the value `2`.
-* Shift corresponds to the Shift key, represented by the value `4`.
-* Meta corresponds to the Command key on macOS or the Windows key on Windows, represented by the value `8`.
-
-This setup allows users to perform custom actions within the PDF viewer by pressing specific key combinations, enhancing the user experience and providing more efficient navigation and interaction options.
+This setup enables users to perform custom actions within the PDF Viewer by pressing specific key combinations, improving navigation and interaction efficiency.
 
 ## Ensuring accessibility
 

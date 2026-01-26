@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Formulas in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+title: Formulas in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
 description: Learn here all about Formulas in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Formulas
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Formulas in Spreadsheet control
+# Formulas in ASP.NET Core Spreadsheet control
 
 Formulas are used for calculating the data in a worksheet. You can refer the cell reference from same sheet or from different sheets.
 
@@ -29,14 +29,14 @@ Previously, although you could import culture-based Excel files into the Spreads
 
 When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, ensure to set the [listSeparator](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ListSeparator) property value as the culture-based list separator from your end. Additionally, note that when importing an Excel file, the [listSeparator](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ListSeparator) property will be updated based on the culture of the launched import/export service.
 
-In the example below, the Spreadsheet control is rendered with the `German culture (de)`. Additionally, you can find references on how to set the culture-based argument separator and culture-based formatted numeric value as arguments to the formulas.
+In the example below, the Spreadsheet control is rendered with the `German culture` [`de`]. Additionally, you can find references on how to set the culture-based argument separator and culture-based formatted numeric value as arguments to the formulas.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/formula-cs3/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/formula-cs3/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="FormulaController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/formula-cs3/formulaController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/formula-cs3/formulaController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,10 +50,10 @@ The following code example shows an unsupported formula in the spreadsheet.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/formula/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/formula/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="FormulaController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/formula/formulaController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/formula/formulaController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -63,10 +63,10 @@ The following code example shows how to use `computeExpression` method in the sp
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/formula-cs2/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/formula-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="FormulaController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/formula-cs2/formulaController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/formula-cs2/formulaController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,10 +87,10 @@ The following code example shows the usage of named ranges support.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/defined-names/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/defined-names/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="DefinedNameController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/defined-names/definedNameController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/defined-names/definedNameController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -113,10 +113,10 @@ The following code example demonstrates how to set the Automatic calculation mod
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/calculation-cs1/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/calculation-cs1/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CalculationModeController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/calculation-cs1/calculationModeController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/calculation-cs1/calculationModeController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -133,10 +133,10 @@ The following code example demonstrates how to set the Manual calculation mode i
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/calculation-cs2/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/calculation-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CalculationModeController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/calculation-cs2/calculationModeController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/calculation-cs2/calculationModeController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

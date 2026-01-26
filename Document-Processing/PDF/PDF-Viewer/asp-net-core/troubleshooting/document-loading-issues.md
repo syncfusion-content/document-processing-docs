@@ -1,18 +1,17 @@
 ---
 layout: post
-title: Document Loading Issues in Version 23.1 or Newer ASP.NET Core Pdfviewer Component
-description: Learn here all about troubleshooting Document Loading Issues in Version 23.1 or newer in ASP.NET Core Pdfviewer of Syncfusion Essential JS 2 and more.
+title: Fix document loading issues in v23.1+ for the ASP.NET Core PDF Viewer component
+description: Resolve document rendering failures in v23.1 or newer by calling dataBind before load, verifying source URLs, checking CORS and CSP, and confirming network connectivity in the ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
 # Document Loading Issues in Version 23.1 or Newer
 
-If you're experiencing problems with your document not rendering in the viewer, especially when using version 23.1 or a newer version, follow these troubleshooting steps to resolve the issue:
+If the document does not render in the viewer when using version 23.1 or newer, follow these steps:
 
-1. **Check for `viewer.dataBind()` Requirement**: Ensure that you have called `viewer.dataBind()` as required in version 23.1 or newer. This explicit call is essential for initializing data binding and document rendering correctly. It is must to call the dataBind() method before load.
+1. Call `pdfViewer.dataBind()` before `load()`. Starting with v23.1, an explicit dataBind call is required to initialize data binding and render correctly.
 
 ```html
 <button id="viewer" onclick="documentLoad()">Load</button>
@@ -31,18 +30,18 @@ If you're experiencing problems with your document not rendering in the viewer, 
 </script>
 ```
 
-2. **Verify Document Source**: Confirm that the document source or URL you're trying to display is valid and accessible. Incorrect URLs or document paths can lead to loading issues.
+2. Verify the document source. Ensure the URL or path is valid and accessible.
 
-3. **Network Connectivity**: Ensure that your application has a stable network connection. Document rendering may fail if the viewer can't fetch the document due to network issues.
+3. Check network connectivity. The viewer cannot fetch the document without a stable connection.
 
-4. **Console Errors**: Use your browser's developer tools to check for any error messages or warnings in the console. These messages can provide insights into what's causing the document not to load.
+4. Inspect console errors. Use browser developer tools to identify issues.
 
-5. **Loading Sequence**: Make sure that you're calling `viewer.dataBind()` and initiating document loading in the correct sequence. The viewer should be properly initialized before attempting to load a document.
+5. Validate the initialization order. Initialize the viewer, call `dataBind()`, then call `load()`.
 
-7. **Update Viewer**: Ensure that you're using the latest version of the viewer library or framework. Sometimes, issues related to document loading are resolved in newer releases.
+6. Update to the latest viewer version. Issues may be resolved in newer releases.
 
-8. **Cross-Origin Resource Sharing (CORS)**: If you're loading documents from a different domain, ensure that CORS headers are correctly configured to allow cross-origin requests.
+7. Configure CORS correctly for cross-domain documents.
 
-9. **Content Security Policies (CSP)**: Check if your application's Content Security Policy allows the loading of external resources, as this can affect document loading. Refer [here](https://ej2.syncfusion.com/javascript/documentation/common/troubleshoot/content-security-policy) to troubleshoot.
+8. Review Content Security Policy (CSP) settings. Ensure external resources are permitted. See the [Content Security Policy troubleshooting guide](https://ej2.syncfusion.com/javascript/documentation/common/troubleshoot/content-security-policy) for details.
 
-By following these troubleshooting steps, you should be able to address issues related to document loading in version 23.1 or newer, ensuring that your documents render correctly in the viewer.
+Following this checklist typically resolves document loading issues in v23.1 or newer.

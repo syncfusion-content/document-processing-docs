@@ -1,27 +1,30 @@
 ---
 layout: post
-title: Show Notification Dialog in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn here all about Show Notification Dialog in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Show Notification Dialog for Empty Form Fields in ASP.NET MVC PDF Viewer
+description: Learn how to display a notification dialog when form fields are empty in the Syncfusion ASP.NET MVC PDF Viewer, enhancing user experience during form filling.
 platform: document-processing
-control: Show Notification Dialog
-publishingplatform: document-processing
+control: PDF Viewer
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
+# Show Notification Dialog for Empty Form Fields
 
-# Show the notification dialog in UI When form fields are empty
+The PDF Viewer component enables displaying a notification dialog in the user interface when form fields in a PDF document are empty or unfilled. Use this feature to improve user experience during form completion by guiding users to complete required fields.
 
-The PDF Viewer server library allows you to show the notification dialog in UI when fields in the form are not filled or empty using the following properties and events below,
+Configure the following properties and handle the following event to implement this:
 
-* **EnableFormFieldsValidation**
-* **ShowNotificationDialog**
-* **validateFormFields**
+* **EnableFormFieldsValidation**: Set to `true` to enable validation for form fields.
+* **ShowNotificationDialog**: Set to `false` to suppress automatic notification dialogs and handle custom validation.
+* **validateFormFields**: This event triggers when form validation occurs, providing access to non-fillable fields for custom logic.
 
-The following steps are used to show the notification dialog in UI.
+Supported form field types include text fields, checkboxes, radio buttons, drop-down lists, and combo boxes. The event arguments include an array of non-fillable fields for programmatic access.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a simple PDF Viewer sample.
+Follow these steps to show the notification dialog when form fields are empty.
 
-**Step 2:** Use the following code snippet to show the notification dialog when form fields are empty.
+**Step 1:** Follow the steps provided in the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a basic PDF Viewer sample.
+
+**Step 2:** Use the following code snippet to customize notification display on form validation.
 
 ```cs
 
@@ -38,4 +41,4 @@ The following steps are used to show the notification dialog in UI.
 
 ```
 
-Find the sample of [how to show the notification dialog in UI When form fields are empty](https://www.syncfusion.com/downloads/support/directtrac/general/ze/MVC_SAMPLE_d50d2de6-1937239856.zip)
+Download the sample demonstrating [how to show the notification dialog for empty form fields](https://www.syncfusion.com/downloads/support/directtrac/general/ze/MVC_SAMPLE_d50d2de6-1937239856.zip).

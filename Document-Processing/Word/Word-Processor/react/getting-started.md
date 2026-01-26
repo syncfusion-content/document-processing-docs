@@ -18,11 +18,11 @@ To get started quickly with DocumentEditor component, you can check the video be
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
-Following is the list of minimum dependencies required to use the documenteditor.
+Following is the list of minimum dependencies required to use the document editor.
 
 ```javascript
 |-- @syncfusion/ej2-react-documenteditor
@@ -139,7 +139,7 @@ import * as React from 'react';
 import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
-    return (<DocumentEditorContainerComponent id="container" style={{ 'height': '590px' }} serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" enableToolbar={true}/>);
+    return (<DocumentEditorContainerComponent id="container" height={'590px'} serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" enableToolbar={true}/>);
 }
 export default App
 
@@ -219,7 +219,7 @@ Document Editor output will be displayed as follows.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/react/getting-started/base-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/base-cs2" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Controlling File Downloads in Vue PDF Viewer component | Syncfusion
-description: Learn here how to Controlling File Downloads in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Control file downloads in Vue PDF Viewer | Syncfusion
+description: Learn how to intercept and control file downloads in the Vue PDF Viewer using the downloadStart event.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Controlling File Downloads in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer
+# Controlling File Downloads PDF Viewer
 
 In the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, we've introduced a new feature that enables you to manage file downloads more effectively. This feature allows you to intercept and potentially skip the download process of a PDF document, providing enhanced control over user interactions within your application.
 
@@ -36,7 +36,7 @@ import {
 } from '@syncfusion/ej2-vue-pdfviewer';
 import { provide } from 'vue';
 
-const resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
@@ -75,7 +75,7 @@ export default {
   },
   data() {
     return {
-      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -171,8 +171,8 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-By default, the cancel argument is set to `false`, indicating that the download action will proceed unless explicitly canceled by your custom logic.
+By default, `args.cancel` is `false`, so the download proceeds unless explicitly canceled.
 
 ### Enhanced Flexibility
 
-By leveraging the `downloadStart` event and its cancel argument, you gain the ability to implement custom logic to control and potentially prevent download actions based on your application's specific requirements. This enhancement provides greater flexibility in managing user interactions with PDF documents, empowering you to tailor the experience according to your needs.
+Leverage the [downloadStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadstart) event to apply custom rules for allowing or preventing downloads based on application needs.

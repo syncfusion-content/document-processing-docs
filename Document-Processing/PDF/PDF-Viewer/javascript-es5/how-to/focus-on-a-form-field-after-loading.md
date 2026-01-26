@@ -1,23 +1,22 @@
 ---
 layout: post
-title: Focus on a form field after loading in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Focus on a form field after loading in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Focus on a form field after loading in JavaScript PDF Viewer control | Syncfusion
+description: Learn how to set focus on form fields after loading a document in the Syncfusion JavaScript PDF Viewer control by calling the focusFormField API.
 platform: document-processing
-control: Focus on a form field after loading
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Focus on a form field after loading in Javascript Pdfviewer control
+# Focus on a form field after loading in JavaScript PDF Viewer
 
-The PDF Viewer library allows you to focus to the respective form field using the [`focusFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#focusformfield) API.
+The JavaScript PDF Viewer library enables setting focus on a specific form field by using the [`focusFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#focusformfield) API.
 
-The following steps are used to focus to the respective form field.
+Follow these steps to bring a form field into focus during document load and on demand.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Complete the configuration described in [Getting started with the JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to build a working sample.
 
-**Step 2:** Use the following code sample to focus to the respective form field while loading as well as in a button click.
+**Step 2:** Add the following markup and code to focus the desired form field when the document loads or when a button is clicked.
 
 ```
   <button id="focusFormField">FocusFormField</button>
@@ -38,4 +37,4 @@ viewer.documentLoad = (args) => {
 };
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/Form%20Fields/Focusing%20the%20form%20fields%20while%20loading).
+[View the sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/Form%20Fields/Focusing%20the%20form%20fields%20while%20loading).

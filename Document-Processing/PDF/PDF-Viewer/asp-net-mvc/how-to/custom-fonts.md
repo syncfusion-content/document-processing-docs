@@ -1,47 +1,44 @@
 ---
 layout: post
-title: Add custom fonts to the PDF Viewer using the PDF document | Syncfusion
-description: Learn here all about how to add custom fonts using the PDF document in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Add custom fonts in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to add and load custom TTF fonts for documents displayed in the Syncfusion ASP.NET MVC PDF Viewer using the customFonts property.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# How to add custom fonts to the PDF viewer used in the PDF document
+# Add custom fonts in the ASP.NET MVC PDF Viewer
 
-To use custom fonts in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer within your PDF document, you need to add the custom TTF font files to the resource URL directory and configure the viewer to load these fonts. You can specify the custom font names using the
-**customFonts** property, which accepts an array of font names.
+To use custom fonts in the Syncfusion ASP.NET MVC PDF Viewer, add the custom TTF files to the resource URL directory and configure the viewer to load them. Specify font file names using the `customFonts` property as an array of names.
 
-The following steps are used to customize the selection border.
+## Steps to add custom fonts
 
-**Step 1:** Add the custom TTF font files to the resource URL path referenced in your application. For example, place the custom TTF files in the ej2-pdfviewer-lib folder, which will serve as the resource URL path.
+**Step 1:** Add custom TTF font files to the resource URL path referenced in the application. For example, place the TTF files in the ej2-pdfviewer-lib folder that serves as the resource URL path.
 
-**Step 2:** The following code snippet are how you can add custom fonts to the PDF viewer.
+**Step 2:** Use the following code to configure custom fonts in the PDF Viewer.
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 
 ```html
 
-<div style="width:100%;height:600px">
-    <button id="loadPDF Viewer">Load PDF Viewer</button>
-    <div id="pdfViewer" style="height: 100%;width: 100%;"></div>
+<div id="e-pv-e-sign-pdfViewer-div">
+    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").CustomFonts(["arialbd.ttf", "arial.ttf", "BKANT.TTF", "calibri.ttf", "GARA.TTF", "GARAIT.TTF", "msgothic.ttc", "trebuc.ttf", "wingding.ttf"]).Render()
 </div>
 
-<script>
-    document.getElementById("loadPDF Viewer").addEventListener('click', function () {
-        $.ajax({
-            url: 'https://localhost:44327/pdfviewer/GetPdfDocument',
-            type: "GET",
-            success: function (data) {
-                var viewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: data,
-                });
-                viewer.customFonts = ["arialbd.ttf", "arial.ttf", "BKANT.TTF", "calibri.ttf", "GARA.TTF", "GARAIT.TTF", "msgothic.ttc", "trebuc.ttf", "wingding.ttf"];
-                viewer.appendTo("#pdfViewer");
-            }
-        });
-    });
-</script>
+```
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+```html
+
+<div id="e-pv-e-sign-pdfViewer-div">
+    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").CustomFonts(["arialbd.ttf", "arial.ttf", "BKANT.TTF", "calibri.ttf", "GARA.TTF", "GARAIT.TTF", "msgothic.ttc", "trebuc.ttf", "wingding.ttf"]).Render()
+</div>
 
 ```
+{% endhighlight %}
+{% endtabs %}
 
-By following these steps, you can successfully integrate and use custom fonts in your PDF documents displayed in the EJ2 PDF Viewer.
+These steps integrate custom fonts into PDF documents displayed in the PDF Viewer.

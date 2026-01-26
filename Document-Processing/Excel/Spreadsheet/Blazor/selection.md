@@ -1,39 +1,39 @@
 ---
 layout: post
 title: Selection in Blazor Spreadsheet Component | Syncfusion
-description: Checkout and learn here all about comprehensive selection functionality in Syncfusion Blazor Spreadsheet component and much more.
+description: Learn about the comprehensive selection functionality in the Syncfusion Blazor Spreadsheet component, including programmatic and UI-driven methods.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Selection in Blazor Spreadsheet component
+# Selection in Blazor Spreadsheet Component
 
 The selection feature in the Spreadsheet component enables interactive highlighting and manipulation of cells, rows, or columns for data analysis and editing operations. The functionality offers intuitive mouse and keyboard interactions for efficient data management.
 
 The Blazor Spreadsheet provides multiple selection options to manage and analyze data effectively:
 
-* **Cell Selection** - Select individual cells or ranges of cells for data manipulation
-* **Row Selection** - Select entire rows for row-based operations
-* **Column Selection** - Select entire columns for column-based operations
+*  **Cell Selection**: Select individual cells or range of cells for data manipulation
+*  **Row Selection**: Select entire rows for row-based operations
+*  **Column Selection**: Select entire columns for column-based operations
 
 **Accessing selection via the UI**
 
 In the active sheet, selection can be performed using any of the following ways:
 
 * **Using Mouse Interaction**:
-   * Click to select individual cells
-   * Click and drag to select ranges
-   * Click row or column headers for full row or column selection
+    *   Click a cell to select it.
+    *   Click and drag to select a range of cells.
+    *   Click a row or column header to select the entire row or column.
 
 * **Using Keyboard Navigation**:
-   * Use **Arrow** keys to navigate and select cells
+   * Use **Arrow** keys to navigate between cells
    * Use **Shift + Arrow** keys for range selection
    * Use **Ctrl + Click** for non-adjacent selections
 
-* **Using Name Box**: Enter cell references or range names and press **Enter** key to select the specified range.
+* **Using Name Box**: Enter a cell reference (e.g., `C5`) or a range (`A1:E5`) and press **Enter** key to select the specified range.
 
-## Cell selection
+## Cell Selection
 
 The Blazor Spreadsheet component allows selecting individual cells or ranges of cells for various data operations. Cell selection forms the foundation of most Spreadsheet interactions and serves as the basis for data entry and formatting.
 
@@ -74,9 +74,9 @@ The column selection operation can be performed using the following methods:
 * **Non-adjacent columns**: Hold **Ctrl** while clicking individual column headers
 * **Range with keyboard**: Use **Shift + Arrow** keys after selecting the initial column
 
-## Implementing selection programmatically
+## Implementing Selection Programmatically
 
-The Spreadsheet component supports comprehensive programmatic selection using the [SelectRangeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SelectRangeAsync_System_String_) method. This method accepts various range formats and selection patterns.
+The Spreadsheet component supports programmatic selection for cells, rows, and columns using the [SelectRangeAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SelectRangeAsync_System_String_) method. This method accepts various range formats and selection patterns.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -113,4 +113,4 @@ The Spreadsheet component supports comprehensive programmatic selection using th
 
 The following image illustrates the comprehensive selection capabilities available in the Blazor Spreadsheet component, including cell, row, and column selection using both mouse and keyboard interactions.
 
-![Comprehensive selection operation](./images/selection-types.gif)
+![An animated GIF demonstrating cell, row, and column selection in the Syncfusion Blazor Spreadsheet.](./images/selection-types.gif)

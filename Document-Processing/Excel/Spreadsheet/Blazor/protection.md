@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Protect Sheet in Blazor Spreadsheet Component | Syncfusion
-description: Checkout and learn here all about protect sheet in Syncfusion Blazor Spreadsheet component and more.
+title: Protection in Blazor Spreadsheet Component | Syncfusion
+description: Learn how to protect and unprotect worksheets and workbooks in the Syncfusion Blazor Spreadsheet component, both through the UI and more.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
@@ -11,17 +11,18 @@ documentation: ug
 
 Sheet protection is used to prevent unauthorized modification of data within the sheet.
 
-## Protect Sheet
+## Sheet Protection
 
 The **Protect Sheet** support helps prevent accidental changes such as editing, moving, or deleting data. Protection can be applied with or without a password, depending on the level of security required.
 
-### Protecting sheets via the UI
+### Protecting a sheet via the UI
 
-In the active sheet, the sheet protection can be done by any of the following ways:
+The active sheet can be protected using any of the following ways:
 
-* Select **Protect Sheet** from the **Review** tab in the Ribbon toolbar and choose the desired options.
+*   Navigate to the **Review** tab in the Ribbon and select **Protect Sheet**.
+*   Right-click the sheet's tab in the bottom bar and select **Protect Sheet** from the context menu.
 
-* Right-click the sheet tab context menu option, select **Protect Sheet** from the context menu, and choose the desired options.
+In the **Protect Sheet** dialog, you can set a password and specify which actions users are allowed to perform.
 
 ![Protected Sheet Dialog](./images/protect-sheet.gif)
 

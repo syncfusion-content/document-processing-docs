@@ -1,20 +1,22 @@
 ---
 layout: post
-title: Control Annotations Visibility in Vue Pdfviewer component | Syncfusion
-description: Learn here all about how to Control PDF Annotations Visibility in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Control annotation visibility in Vue PDF Viewer | Syncfusion
+description: Learn how to control the visibility of PDF annotations in the Vue PDF Viewer, ensuring annotations appear only in the viewer as needed.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Control PDF Annotations Visibility in PDF Viewer
+# Control annotation visibility in PDF Viewer for Vue
 
 ### Overview
 
-This guide demonstrates how to control the visibility of PDF annotations in documents loaded and saved using the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. This process allows the annotations to be visible only in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer.
+This guide explains how to control the visibility of PDF annotations in documents loaded and saved using the Syncfusion PDF Viewer in Vue, so annotations are visible only in the viewer when required.
 
 ### How to Control Annotation Visibility
+
+Steps to control annotation visibility
 
 **Step 1:** Follow the steps provided in the [Vue PDF Viewer Getting Started documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
 
@@ -55,7 +57,7 @@ export default {
   },
   data () {
     return {
-      resourceUrl:"https://cdn.syncfusion.com/ej2/28.1.33/dist/ej2-pdfviewer-lib",
+      resourceUrl:"https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
       documentPath:"https://cdn.syncfusion.com/content/pdf/annotations-v1.pdf",
     };
   },
@@ -126,6 +128,6 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, the annotations in a PDF document can be set to be visible in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, providing control over annotation visibility based on different platforms.
+Following these steps ensures annotations are visible in the Syncfusion PDF Viewer while controlling their visibility in the downloaded PDF.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to)

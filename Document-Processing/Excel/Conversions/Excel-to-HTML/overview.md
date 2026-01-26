@@ -35,7 +35,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.SaveAsHtml(stream);
   
   //Save a workbook as HTML file
-  workbook.SaveAsHtml(stream, Syncfusion.XlsIO.Implementation.HtmlSaveOptions.Default);
+  workbook.SaveAsHtml("Sample.html", Syncfusion.XlsIO.Implementation.HtmlSaveOptions.Default);
   stream.Dispose();
   workbook.Close();
 }
@@ -97,12 +97,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save as HTML
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.html"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAsHtml(outputStream, saveOptions);
+	workbook.SaveAsHtml(Path.GetFullPath("Output/Output.html"), saveOptions);
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 

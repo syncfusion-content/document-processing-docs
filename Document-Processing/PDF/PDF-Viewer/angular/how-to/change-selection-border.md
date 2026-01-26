@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Change selection border in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Change selection border in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Change selection border in Angular PDF Viewer component | Syncfusion
+description: Learn here all about Change selection border in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Change selection border
 documentation: ug

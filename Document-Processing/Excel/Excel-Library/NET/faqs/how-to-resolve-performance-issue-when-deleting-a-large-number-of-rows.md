@@ -20,8 +20,7 @@ using(ExcelEngine excelEngine = new ExcelEngine())
     application.DefaultVersion = ExcelVersion.Xlsx;
 
     //Loads an existing file
-    FileStream fileStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(fileStream);
+    IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
     IWorksheet newWorksheet = workbook.Worksheets[1];
 
@@ -44,10 +43,8 @@ using(ExcelEngine excelEngine = new ExcelEngine())
     //Remove the worksheet
     workbook.Worksheets[0].Remove();
 
-    //Saving the workbook as stream
-    FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
-    stream.Dispose();
+    //Saving the workbook 
+    workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 

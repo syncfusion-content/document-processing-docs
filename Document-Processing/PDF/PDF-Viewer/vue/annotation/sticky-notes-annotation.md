@@ -1,43 +1,42 @@
 ---
 layout: post
-title: Sticky notes annotation in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Sticky notes annotation in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Sticky notes annotation
+title: Sticky notes in Vue PDF Viewer control | Syncfusion
+description: Learn about sticky note annotations in the Syncfusion Vue PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sticky notes annotation in Vue Pdfviewer component
+# Sticky notes annotation in Vue PDF Viewer control
 
-The PDF Viewer control provides the options to add, edit, and delete the sticky note annotations in the PDF document.
+The PDF Viewer control provides options to add, edit, and delete sticky note annotations in the PDF document.
 
 ![StickyNotesAnnotation](../images/stickynotes_annotation.png)
 
-## Adding a sticky note annotation to the PDF document
+## Add a sticky note annotation to the PDF document
 
 Sticky note annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Comments** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the position where you want to add sticky note annotation in the PDF document.
-* Sticky note annotation will be added in the clicked positions.
+* Click the **Comments** button in the PDF Viewer toolbar. The annotation toolbar appears below it.
+* Click the position where the sticky note annotation should be added.
+* The sticky note annotation is added at the clicked position.
 
 ![StickyNotesTool](../images/stickynotes_tool.png)
 
-Annotation comments can be added to the PDF document using the comment panel.
+Annotation comments can be added using the comment panel.
 
-* Select a Sticky note annotation in the PDF document and right-click it.
-* Select the Comment option in the context menu that appears.
-* Now, you can add Comments, Reply, and Status using the Comment Panel.
-* Now, you can add Comments, Reply, and Status using the Comment Panel.
+* Select a sticky note annotation in the PDF document and right-click it.
+* Select Comment from the context menu.
+* Add comments, replies, and status using the comment panel.
 
 ![StickyNotesComment](../images/stickynotes_comment.png)
 
-## Adding a sticky note annotation to the PDF document Programmatically
+## Add a sticky note annotation to the PDF document programmatically
 
-With the PDF Viewer library, you can add a sticky note annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library allows adding a sticky note annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
 
-Here's a example of how you can utilize the **addAnnotation()** method to include a sticky note annotation programmatically:
+Here is an example showing how to add a sticky note annotation programmatically using addAnnotation():
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -60,7 +59,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
@@ -102,7 +101,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -208,11 +207,11 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the existing sticky note annotation programmatically
+## Edit an existing sticky note annotation programmatically
 
-To modify existing sticky note annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer programmatically, you can use the **editAnnotation()** method.
+To modify an existing sticky note annotation programmatically, use the editAnnotation() method.
 
-Here is an example of how you can use the **editAnnotation()** method:
+Here is an example of using editAnnotation():
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -235,7 +234,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
@@ -280,7 +279,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -395,31 +394,31 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Editing the properties of the sticky note annotation
+## Edit the properties of sticky note annotations
 
 ### Editing opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+Edit opacity using the range slider in the Edit Opacity tool.
 
 ![StickyNotesOpacity](../images/sticky_opacity.png)
 
 ### Editing comments
 
-The comment, comment reply, and comment status of the annotation can be edited using the Comment Panel.
+Comment text, replies, and status can be edited using the comment panel.
 
-* Open the comment panel using the Comment Panel button showing in the annotation toolbar.
+* Open the comment panel using the Comment Panel button in the annotation toolbar.
 
 ![StickyNotesComment](../images/commentPanel.png)
 
-You can modify or delete the comments or comments replay and it’s status using the menu option provided in the comment panel.
+Modify or delete comments or replies, and change status using the menu options in the comment panel.
 
 ![StickyNotesEdit](../images/sticky_editbtn.png)
 
-## Setting default properties during the control initialization
+## Set default properties during control initialization
 
-The properties of the sticky note annotation can be set before creating the control using the StickyNoteSettings.
+Default properties for sticky note annotations can be set before creating the control using StickyNotesSettings.
 
-After editing the default opacity using the Edit Opacity tool, they will be changed to the selected values. Refer to the following code sample to set the default sticky note annotation settings.
+After changing default opacity using the Edit Opacity tool, the selected value is applied. The following example sets default sticky note annotation settings.
 
 
 {% tabs %}
@@ -443,7 +442,7 @@ import { provide } from 'vue';
 
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 const stickyNotesSettings = { author: 'Syncfusion' };
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -477,7 +476,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
       stickyNotesSettings: { author: 'Syncfusion' }
     };
   },
@@ -556,9 +555,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Disabling sticky note annotations
+## Disable sticky note annotations
 
-The PDF Viewer control provides an option to disable the sticky note annotations feature. The code sample for disabling the feature is as follows.
+The PDF Viewer control provides an option to disable sticky note annotations. The following example disables the feature.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -581,7 +580,7 @@ import {
 import { provide } from 'vue';
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 const enableStickyNotesAnnotation = false;
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -617,7 +616,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
       enableStickyNotesAnnotation: false
     };
   },

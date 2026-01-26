@@ -1,7 +1,7 @@
 ---
 layout: post
-title: extractTextCompleted Event in Angular Pdfviewer component | Syncfusion
-description: Learn here all about extractTextCompleted Event in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: extractTextCompleted Event in Angular PDF Viewer component | Syncfusion
+description: Learn here all about extractTextCompleted Event in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: extractTextCompleted
 documentation: ug

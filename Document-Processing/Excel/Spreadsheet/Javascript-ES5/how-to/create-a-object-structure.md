@@ -171,11 +171,11 @@ In the following demo, the JSON structure is passed to the `openFromJson` method
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/json-structure-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/json-structure-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/json-structure-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/json-structure-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/json-structure-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/json-structure-cs1" %}

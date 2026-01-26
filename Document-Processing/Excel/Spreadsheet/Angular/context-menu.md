@@ -70,15 +70,15 @@ In this demo, Custom Item is added after the Paste item in the context menu.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/contextmenu/addContextMenu-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/contextmenu/addContextMenu-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/contextmenu/addContextMenu-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/contextmenu/addContextMenu-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/contextmenu/addContextMenu-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/contextmenu/addContextMenu-cs1" %}
 
 ### Remove Context Menu Items
 
@@ -88,15 +88,15 @@ In this demo, Insert Column item has been removed from the row/column header con
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/contextmenu/addContextMenu-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/contextmenu/addContextMenu-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/contextmenu/addContextMenu-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/contextmenu/addContextMenu-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/contextmenu/addContextMenu-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/contextmenu/addContextMenu-cs2" %}
 
 ### Enable/Disable Context Menu Items
 
@@ -106,15 +106,15 @@ In this demo, Rename item is disabled in the pager context menu.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/contextmenu/addContextMenu-cs3/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/contextmenu/addContextMenu-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/contextmenu/addContextMenu-cs3/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/contextmenu/addContextMenu-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/contextmenu/addContextMenu-cs3" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/contextmenu/addContextMenu-cs3" %}
 
 ## Note
 

@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Delete A Specific Annotation in ASP.NET Core Pdfviewer Component
-description: Learn here all about Delete A Specific Annotation in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Delete an annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to delete a specific annotation in the Syncfusion ASP.NET Core PDF Viewer using the deleteAnnotationById method.
 platform: document-processing
-control: Delete A Specific Annotation
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
 ---
 
-# Delete a specific annotation using deleteAnnotationById
+# Delete an annotation in the ASP.NET Core PDF Viewer
 
-The PDF Viewer server library allows you to delete a specific annotation from PDF document. Deleting a specific annotation can be done using the **deleteAnnotationById()** method. This method is used to delete a specific annotation using its id.
+Use the `deleteAnnotationById()` method to remove a specific annotation from a PDF document by its id.
 
-The following steps are used to delete a specific annotation from PDF Document.
+## Steps to delete a specific annotation
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [Syncfusion ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
 
-**Step 2:** Use the following code snippet to delete a specific annotation using deleteAnnotationById() method.
+**Step 2:** Use the following code to delete a specific annotation using `deleteAnnotationById()`.
 
 
 {% tabs %}
@@ -61,6 +60,5 @@ The following steps are used to delete a specific annotation from PDF Document.
 
 {% endhighlight %}
 {% endtabs %}
-
-
+ 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Delete%20a%20specific%20annotation%20using%20deleteAnnotationById)

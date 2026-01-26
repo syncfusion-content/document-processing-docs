@@ -23,7 +23,7 @@ Step 2: Name the project.
 Step 3: Install the below NuGet packages as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
-* [SkiaSharp.NativeAssets.Linux v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1) 
+* [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1) 
 
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Docker_Images/docker_images_img3.png)
 ![Install SkiaSharp.NativeAssets.Linux v2.80.2 NuGet Package](Docker_Images/docker_images_img4.png)
@@ -50,8 +50,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream excelStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(excelStream);
+    IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
 
     //Initialize XlsIO renderer.
     XlsIORenderer renderer = new XlsIORenderer();
@@ -59,9 +58,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Convert Excel document into PDF document 
     PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
-    //Create the FileStream to save the converted PDF.
-    FileStream pdfStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite);
-    pdfDocument.Save(pdfStream);
+    //Save the converted PDF.
+    pdfDocument.Save("Output.pdf");
 }
 {% endhighlight %}
 {% endtabs %}

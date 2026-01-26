@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Export As Image in Vue PDF Viewer component | Syncfusion
-description: Learn here all about Export As Image in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Export pages as images in Vue PDF Viewer | Syncfusion
+description: Learn how to export pages as Base64-encoded images in the Vue PDF Viewer using exportAsImage and exportAsImages.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export As Image in Vue Pdfviewer component
+# Export As Image in Vue PDF Viewer
 
-The PDF Viewer library allows you to export specified pages as a Base64-encoded image string using the **exportAsImage()** method and exporting a range of pages as Base64-encoded image strings using the **exportAsImages()** method.
+Export a single page as a Base64-encoded image using `exportAsImage()` or export a range of pages using `exportAsImages()`.
 
-The following steps are used to exportAsImage.
+Steps to export pages as images
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) to create a simple PDF Viewer sample.
 
-**Step 2:** The following code snippet to implement the functionality for exporting a specified page as a Base64-encoded image string or exporting a range of pages as Base64-encoded image strings.
+**Step 2:** Use the following code to export a specified page as a Base64-encoded image or a range of pages as Base64-encoded images.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -39,7 +39,7 @@ import {
 import { provide, ref } from 'vue';
 
 let pdfviewer = ref(null);
-let resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+let resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 let documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
@@ -80,7 +80,7 @@ export default {
   name: "App",
   data() {
     return {
-      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -105,7 +105,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, to code snippet for exports the specified page as a Base64-encoded image string, allowing for custom image size:
+Export a specified page as a Base64-encoded image with a custom size:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -128,7 +128,7 @@ import {
 import { provide, ref } from 'vue';
 
 let pdfviewer = ref(null);
-let resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+let resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 let documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
@@ -170,7 +170,7 @@ export default {
   name: "App",
   data() {
     return {
-      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -196,7 +196,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, to code snippet for exports the range of pages as Base64-encoded image strings:
+Export a range of pages as Base64-encoded image strings:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -219,7 +219,7 @@ import {
 import { provide, ref } from 'vue';
 
 let pdfviewer = ref(null);
-let resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+let resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 let documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
@@ -260,7 +260,7 @@ export default {
     name: "App",
     data() {
       return {
-        resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib",
+        resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       };
     },
@@ -285,7 +285,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, to code snippet for exports the range of pages as Base64-encoded image strings, allowing for custom image size:
+Export a range of pages as Base64-encoded images with a custom size:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -308,7 +308,7 @@ import {
 import { provide, ref } from 'vue';
 
 let pdfviewer = ref(null);
-let resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+let resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 let documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
@@ -350,7 +350,7 @@ export default {
   name: "App",
   data() {
     return {
-      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },

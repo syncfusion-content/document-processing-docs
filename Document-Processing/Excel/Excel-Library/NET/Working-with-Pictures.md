@@ -24,12 +24,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/AddPicture.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/AddPicture.xlsx"));
 	#endregion
 
 	//Dispose streams
-	outputStream.Dispose();
 	imageStream.Dispose();
 }
 {% endhighlight %}
@@ -93,12 +91,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ResizePicture.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ResizePicture.xlsx"));
 	#endregion
 
 	//Dispose streams
-	outputStream.Dispose();
 	imageStream.Dispose();
 }
 {% endhighlight %}
@@ -179,13 +175,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Hide the column
 	worksheet.HideColumn(5);
 
-	//Saving the workbook as stream
-	FileStream OutputStream = new FileStream(Path.GetFullPath(@"Output/Output.xlsx"), FileMode.Create, FileAccess.ReadWrite);
-	workbook.SaveAs(OutputStream);
+	//Saving the workbook 
+	workbook.SaveAs(Path.GetFullPath(@"Output/Output.xlsx"));
 
 	//Dispose streams
 	imageStream.Dispose();
-	OutputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -271,10 +265,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["B1"].RowHeight = 155;
   worksheet.Range["B1"].ColumnWidth = 10; 
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook 
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -338,8 +330,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Get the merged cells
@@ -368,14 +359,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ImageInMergedRegion.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ImageInMergedRegion.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
-
 }
 {% endhighlight %}
 
@@ -467,12 +452,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ExternalImage.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ExternalImage.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -531,12 +512,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/SVGImage.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/SVGImage.xlsx"));
 	#endregion
 
 	//Dispose streams
-	outputStream.Dispose();
 	svgStream.Dispose();
 	pngStream.Dispose();
 }

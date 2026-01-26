@@ -9,11 +9,15 @@ documentation: ug
 
 # Hyperlink in Blazor DocumentEditor Component
 
-[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports hyperlink field. You can link a part of the document content to Internet or file location, mail address, or any text within the document.
+A hyperlink is a reference in a document that links content to another location, such as a web page, an email address, or a bookmark within the same document. The [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) provides comprehensive support for creating, editing, and customizing hyperlinks.
 
 ## Navigate a hyperlink
 
-[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) triggers [`OnRequestNavigate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorEvents.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorEvents_OnRequestNavigate) event whenever user clicks Ctrl key or tap a hyperlink within the document. This event provides necessary details about link type, navigation URL, and local URL (if any) as arguments, and allows you to easily customize the hyperlink navigation functionality. 
+By default, clicking a hyperlink navigates to its destination. This behavior can be customized using the [`OnRequestNavigate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorEvents.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorEvents_OnRequestNavigate) event.
+
+This event is triggered when a user `Ctrl+Clicks` a hyperlink, providing details about the link type and destination. You can intercept this action to define custom logic, such as opening the link in a new tab or handling it within your application.
+
+Setting `args.IsHandled = true` prevents the editor's default navigation action from executing, giving you full control over the process.
 
 ### Add the OnRequestNavigate event for DocumentEditor
 
@@ -21,82 +25,95 @@ The following example illustrates how to add OnRequestNavigate event for Documen
 
 ```cshtml
 <SfDocumentEditor ID="cont" IsReadOnly="false" EnableEditor="true" EnableSelection="true" @ref="container" Height="590px">
-    <DocumentEditorEvents OnRequestNavigate="OnRequestNavigate" Created="OnCreated" ></DocumentEditorEvents>
+    <DocumentEditorEvents OnRequestNavigate="OnRequestNavigate" Created="OnCreated"></DocumentEditorEvents>
 </SfDocumentEditor>
 
 @code {
-    SfDocumentEditorContainer container;
+    SfDocumentEditor container;
 
-    // Add event listener for requestNavigate event to customize hyperlink navigation functionality
-    public void OnRequestNavigate(RequestNavigateEventArgs args)
+    // An event handler to customize hyperlink navigation.
+    public async Task OnRequestNavigate(RequestNavigateEventArgs args)
     {
-        if (args.LinkType != HyperlinkType.Bookmark)
+        // Check if the link is a web URL. Bookmarks are handled internally.
+        if (args.LinkType == HyperlinkType.Web)
         {
-            string link = args.NavigationLink;
-            if (args.LocalReference.Length > 0)
-            {
-                link += '#' + args.LocalReference;
-            }
-            //Customize your code here.
-            
+            // Prevent the default navigation.
             args.IsHandled = true;
+
+            // Get the full URL.
+            string url = args.NavigationLink;
+            if (!string.IsNullOrEmpty(args.LocalReference))
+            {
+                url += "#" + args.LocalReference;
+            }
+
+            // Implement custom logic, e.g., opening the URL in a new browser tab.
+            await JSRuntime.InvokeVoidAsync("open", url, "_blank");
         }
+    }
+
+    public void OnCreated()
+    {
+        // Your creation logic here.
     }
 }
 ```
-
-If the selection is in hyperlink, trigger this event by calling [`NavigateHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_NavigateHyperlinkAsync) method of ‘Selection’ instance. Refer to the following example.
+You can also programmatically trigger navigation for the hyperlink at the current selection by calling the [`NavigateHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_NavigateHyperlinkAsync) method.
 
 ```csharp
 await container.DocumentEditor.Selection.NavigateHyperlinkAsync();
 ```
+## Copy Hyperlink
 
-## Copy link
-
-[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) copies link text of a hyperlink field to the clipboard if the selection is in hyperlink. Refer to the following example.
+To copy the destination URL of a hyperlink to the clipboard, use the [`CopyHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_CopyHyperlinkAsync) method.
 
 ```csharp
 await container.DocumentEditor.Selection.CopyHyperlinkAsync();
 ```
 
-## Add hyperlink
+## Add Hyperlink
 
-To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT + ENTER` / `TAB` key after typing the address, for instance [`http://www.google.com`](http://www.google.com). Document Editor automatically converts this address to a hyperlink field. The text can be considered as a valid URL if it starts with any of the following.
+The Document Editor can automatically format a URL as a hyperlink. Simply type an address and press `ENTER`, `SPACEBAR`, or `TAB`. The text will be converted to a functional hyperlink if it begins with one of the following prefixes:
 
-N> `<http://>`<br>
-<br/> `<https://>`<br>
-<br/> `file:///`<br>
-<br/> `www.`<br>
-<br/> `mail to:`<br>
+*   http://
+*   https://
+*   file:///
+*   www.
+*   mail to:
 
-Also Document Editor expose API [`InsertHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertHyperlinkAsync_System_String_System_String_)to insert hyperlink.
-
-Refer to the following sample code.
+Use the [`InsertHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertHyperlinkAsync_System_String_System_String_) method to create a hyperlink at the current selection. You can specify both the destination URL and the display text.
 
 ```csharp
 await container.DocumentEditor.Editor.InsertHyperlinkAsync("https://www.google.com", "Google");
 ```
 
-## Remove hyperlink
+## Remove Hyperlink
 
-To remove link from hyperlink in the document, press Backspace key at the end of a hyperlink. By removing the link, it will be converted as plain text. You can use [`RemoveHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_RemoveHyperlinkAsync) method of ‘Editor’ instance if the selection is in hyperlink. Refer to the following example.
+To remove a hyperlink and convert it back to plain text, use the [`RemoveHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_RemoveHyperlinkAsync) method. This can also be done by pressing the `Backspace` key at the end of the hyperlinked text.
 
 ```csharp
 await container.DocumentEditor.Editor.RemoveHyperlinkAsync();
 ```
 
-## Hyperlink dialog
+## Hyperlink Dialog
 
-[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) provides dialog support to insert or edit a hyperlink. 
-
-Refer to the following example to open Hyperlink dialog.
+For more control, the component includes a built-in dialog for inserting and editing hyperlinks. To open it, place the cursor on the desired text and press `Ctrl+K`.
+The dialog allows you to:
+*   Link to an existing web page or file by entering its URL.
+*   Link to an email address.
+*   Link to a bookmark within the current document.
+You can also open the dialog programmatically:
 
 ```csharp
 container.DocumentEditor.OpenDialog(DialogType.Hyperlink);
 ```
-
 You can use the following keyboard shortcut to open the hyperlink dialog if the selection is in hyperlink.
 
 | Key Combination | Description |
 |-----------------|-------------|
 |Ctrl + K | Open hyperlink dialog that allows you to create or edit hyperlink|
+
+
+
+
+

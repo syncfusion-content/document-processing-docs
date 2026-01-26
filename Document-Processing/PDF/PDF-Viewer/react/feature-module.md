@@ -2,30 +2,30 @@
 layout: post
 title: Feature module in React Pdfviewer component | Syncfusion
 description: Learn here all about Feature module in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Feature module
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature module in React Pdfviewer component
+# Feature module in React PDF Viewer Control
 
 The PDF Viewer features are segregated into individual feature-wise modules to enable selectively referencing in the application. The required modules should be injected to extend its functionality. The following are the selective modules of PDF Viewer that can be included as required:
 
-The available PdfViewer modules are:
+The available PDF Viewer modules are:
 
-* **Toolbar**:- Built-in toolbar for better user interaction.
-* **Magnification**:- Perform zooming operation for better viewing experience.
-* **Navigation**:- Easy navigation across the PDF pages.
-* **LinkAnnotation**:- Easy navigation within and outside of the PDF document.
-* **ThumbnailView**:- Easy navigation with in the PDF document.
-* **BookmarkView**:- Easy navigation based on the bookmark content of the PDF document.
-* **TextSelection**:- Select and copy text from a PDF file.
-* **TextSearch**:- Search a text easily across the PDF document.
-* **Print**:- Print the entire document or a specific page directly from the browser.
-* **Annotation**:- Annotations can be added or edited in the PDF document.
-* **FormFields**:- Preserve the form fields in the PDF document.
-* **FormDesigner**:- Form fields can be added or edited in the PDF document.
+* [**Toolbar**](./toolbar-customization/annotation-toolbar-customization): Built-in toolbar for user interaction.
+* [**Magnification**](./magnification): Perform zoom operations for a better viewing experience.
+* [**Navigation**](./interactive-pdf-navigation/page-navigation): Navigate across pages.
+* [**LinkAnnotation**](./interactive-pdf-navigation/hyperlink-navigation): Navigate within the document or to external destinations via hyperlinks.
+* [**ThumbnailView**](./interactive-pdf-navigation/page-thumbnail-navigation): Navigate within the document using page thumbnails.
+* [**BookmarkView**](./interactive-pdf-navigation/bookmark-navigation): Navigate using document bookmarks (table of contents).
+* [**TextSelection**](./textselection): Select and copy text from the document.
+* [**TextSearch**](./text-search): Search for text across the document.
+* [**Print**](./print): Print the entire document or specific pages directly from the browser.
+* [**Annotation**](./annotation/text-markup-annotation): Add and edit annotations.
+* [**FormFields**](./form-designer/create-programmatically): Work with form fields in the document.
+* [**FormDesigner**](./form-designer/create-programmatically): Add or edit form fields in the document.
 
 >In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a PDF Viewer instance.
 Refer to the following table.

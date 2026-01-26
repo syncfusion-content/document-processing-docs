@@ -17,12 +17,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IApplication application = excelEngine.Excel;
 
   //Open an existing Excel 2013 file
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
 
   //Save it as "Excel 97 to 2003" format
-  FileStream outputStream = new FileStream("Output.xls", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(outputStream);
+  workbook.SaveAs("Output.xls");
   workbook.Close();
   excelEngine.Dispose();
 }

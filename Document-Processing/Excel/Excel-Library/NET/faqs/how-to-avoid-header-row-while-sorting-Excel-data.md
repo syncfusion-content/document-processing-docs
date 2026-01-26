@@ -51,9 +51,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   sorter.Sort();
   worksheet.UsedRange.AutofitColumns();
 
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
