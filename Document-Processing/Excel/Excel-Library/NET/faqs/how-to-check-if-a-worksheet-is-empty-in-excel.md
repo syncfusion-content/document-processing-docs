@@ -8,7 +8,7 @@ documentation: UG
 
 # How to check if a worksheet is empty in Excel?
 
-The following code examples demonstrate checking if a worksheet is empty in Excel using C# (Cross-platform and Windows-specific) and VB.NET.
+The following code examples demonstrate how to check whether a worksheet is empty in Excel using C# (Cross-platform and Windows-specific) and VB.NET.
 
 {% tabs %}   
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Worksheet/.NET/CheckIfWorksheetIsEmpty/CheckIfWorksheetIsEmpty/Program.cs,180" %}
