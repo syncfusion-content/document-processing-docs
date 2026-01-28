@@ -42,7 +42,7 @@ pdfviewer.formDesignerModule.addFormField('Textbox', {
 **Use programmatic creation when:**
 
 - Building dynamic forms
-- Prefilling forms from databases
+- Pre-filling forms from databases
 - Automating form creation workflows
 
 ## PDF Form Field Types and How to Add Them
