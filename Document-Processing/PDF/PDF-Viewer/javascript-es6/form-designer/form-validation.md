@@ -7,56 +7,56 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Validate form fields in TypeScript PDF Viewer
+# Validate PDF Form Fields in TypeScript PDF Viewer
 
-The PDF Viewer Component can validate form fields during print, download or submit form. Use the [enableFormFieldsValidation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) property to turn on validation and handle the [validateFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/validateformfieldsargs) event to review which required fields are not filled.
+The Syncfusion **TypeScript PDF Viewer** provides built in support for **validating form fields** before users perform actions such as **printing**, **downloading**, or **submitting** a PDF document. Validation ensures that all required form fields are filled before allowing these actions to complete.  
+This feature helps enforce data completeness and improves the reliability of collected form data.
 
-When validation is enabled and the user attempts to print, download or submit form, the event fires with a list of non-filled fields in args.nonFillableFields. You can cancel the operation, show a message, or focus the first invalid field.
+## How PDF Form Validation Works
 
-## Enable validation
+Form field validation follows this flow:
+- Enable validation using the [enableFormFieldsValidation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) property.
+- Handle the [validateFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#validateformfields) event to determine which required fields are not filled.
+- When validation is enabled and a user attempts to print, download, or submit the document:
+  - The [validateFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#validateformfields) event is triggered.
+  - Unfilled required fields are listed in args.nonFillableFields.
+  - You can cancel the action, show an error message, or move focus to an invalid field.
 
-Set `enableFormFieldsValidation` to true and wire the validateFormFields event.
+## Enable PDF Form Field Validation
+
+To enable validation, set the [enableFormFieldsValidation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#validateformfields) property to true and wire the validateFormFields event.
 
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
-         TextSelection, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-pdfviewer';
+import {
+  PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  TextSelection, TextSearch, Print, Annotation, FormDesigner, FormFields,
+  TextFieldSettings
+} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
-                 TextSelection, Annotation, FormDesigner, FormFields);
+PdfViewer.Inject(
+  Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  TextSelection, TextSearch, Print, Annotation, FormDesigner, FormFields
+);
 
+// Create and configure the viewer
 let pdfviewer: PdfViewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
-  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
 });
+// 1) Default for new Textbox fields
+pdfviewer.textFieldSettings = { isRequired: true };
 
-pdfviewer.appendTo('#PdfViewer');
+// 2) Validation wiring
 pdfviewer.enableFormFieldsValidation = true;
-
 pdfviewer.validateFormFields = (args: any) => {
-    alert("Please fill all required fields. Missing: "+args.formField[0].name);
-    console.log(args.nonFillableFields)
+  // Triggers when required fields are empty on submit/validate
+  if (args && args.formField && args.formField.length > 0) {
+    alert('Please fill all required fields. Missing: ' + args.formField[0].name);
+  }
 };
-```
 
-## Mark a field as required and validate
-
-The snippet below creates a required Textbox and demonstrates validation blocking print until the field is filled.
-
-```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
-         BookmarkView, TextSelection, FormDesigner, FormFields, TextFieldSettings } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
-                 BookmarkView, TextSelection, FormDesigner, FormFields);
-
-let pdfviewer: PdfViewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
-  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
-});
-pdfviewer.appendTo('#PdfViewer');
-
+// 3) Creation (add a Textbox form field once the document is loaded)
 pdfviewer.documentLoad = () => {
-  // Add a required Textbox
   pdfviewer.formDesignerModule.addFormField('Textbox', {
     name: 'Email',
     bounds: { X: 146, Y: 260, Width: 220, Height: 24 },
@@ -65,28 +65,58 @@ pdfviewer.documentLoad = () => {
   } as TextFieldSettings);
 };
 
+// Mount the viewer
+pdfviewer.appendTo('#pdfViewer'); // Ensure an element with id="pdfViewer" exists in your HTML
+```
+
+## Mark Fields as Required
+
+Only fields marked as **required** participate in validation. Use the **isRequired** property when creating or updating a form field.
+
+```ts
+// Creation of a required textbox (inside documentLoad) that blocks printing until it is filled.
+pdfviewer.formDesignerModule.addFormField('Textbox', {
+  name: 'Email',
+  bounds: { X: 146, Y: 260, Width: 220, Height: 24 },
+  isRequired: true,
+  tooltip: 'Email is required'
+} as TextFieldSettings);
+```
+
+## Handle PDF Form Validation Results
+
+In the [validateFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#validateformfields) event, you can control the behavior when fields are missing. Typical actions include:
+- Cancel the print or download operation
+- Display an error message to the user
+- Set focus to the first unfilled required field
+
+```ts
 pdfviewer.enableFormFieldsValidation = true;
 pdfviewer.validateFormFields = (args: any) => {
-    alert("Please fill all required fields. Missing: "+args.formField[0].name);
-    console.log(args.nonFillableFields)
+  if (args && args.formField && args.formField.length > 0) {
+    // Example: prevent the pending action and notify the user
+    args.cancel = true;
+    alert('Please fill all required fields. Missing: ' + args.formField[0].name);
+    // Optionally focus or scroll to the field
+  }
 };
 ```
 
 ## Tips
 
-- Use isRequired on individual fields to include them in the validation check.
-- The event only fires when a print or download action is invoked.
-- To perform custom checks (e.g., regex for email), iterate over pdfviewer.retrieveFormFields() and apply your own logic before triggering print or download.
+- Use isRequired to clearly mark mandatory fields.
+- Validation is triggered only during [print](../print), [download](../download), or **submit** actions.
+- For custom validation logic (such as validating an email format):
+  - Retrieve all form fields using [retrieveFormFields()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#retrieveformfields).
+  - Apply custom checks before allowing the action to proceed.
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
-
-## See also
+## See Also
 
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
 - [Create form fields](./Create-edit-Style-del-formFields/create-formfields)
-- [Edit form fields](./Create-edit-Style-del-formFields/edit-formfields)
+- [Modify form fields](./Create-edit-Style-del-formFields/modify-formfields)
 - [Group form fields](./group-formfields)
-- [Add custom data to form fields](./custom-data)
-- [Form Constrain](./form-constrain)
+- [Add custom data to PDF form fields](./custom-data)
+- [Form flags](./form-constrain)
 - [Form fields API](./formfields-api)

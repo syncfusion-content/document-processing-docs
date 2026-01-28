@@ -8,203 +8,93 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF Viewer Form Field events in TypeScript
+# PDF Viewer Form Field Events in TypeScript
 
-The PDF Viewer control provides the support to different Form Field events. The Form Field events supported by the PDF Viewer Control are:
+The Syncfusion **TypeScript PDF Viewer** provides a comprehensive set of **form field events** that allow developers to track user interactions, respond to form changes, and implement custom business logic. These events can be used for scenarios such as [validation](./form-validation), **UI updates**, **logging**, and **workflow automation**. 
+
+Form field events are triggered during actions such as adding, selecting, modifying, moving, resizing, and removing form fields.
+
+## Supported PDF Form Field Events
+
+The following table lists all supported form field events and their descriptions:
 
 | Form Field events | Description |
 |---|---|
-| [formFieldAdd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldAddArgs) | Event trigger when a form field is added.|
-| [formFieldClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldClickArgs) | Events trigger when the form field is selected.|
-| [formFieldDoubleClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldDoubleClickArgs) | Events trigger when the form field is double-clicked.|
-| [formFieldFocusOut](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldFocusOutEventArgs) | Events trigger when focus out from the form fields.|
-| [formFieldMouseLeave](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldMouseLeaveArgs) | Events trigger when the mouse cursor leaves the form field.|
-| [formFieldMouseOver](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldMouseoverArgs) | Events trigger when the mouse cursor is over a form field.|
-| [formFieldMove](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldMoveArgs) | Events trigger when a form field is moved.|
-| [formFieldPropertiesChange](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldPropertiesChangeArgs) | Events trigger when a property of form field is changed.|
-| [formFieldRemove](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldRemoveArgs) | Events trigger when a form field is removed.|
-| [formFieldResize](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldResizeArgs) | Events trigger when a form field is resized.|
-| [formFieldSelect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldSelectArgs) | Events trigger when a form field is selected.|
-| [formFieldUnselect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldUnselectArgs) | Events trigger when a form field is unselected.|
-| [validateFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/validateFormFieldsArgs) | Events trigger when validation is failed.|
+| [formFieldAdd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldAddArgs) | Triggered when a new form field is added, either through the Form Designer UI or programmatically. |
+| [formFieldClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldClickArgs) | Fired when a form field is clicked in the viewer. |
+| [formFieldDoubleClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldDoubleClickArgs) | Fired when a form field is double clicked. |
+| [formFieldFocusOut](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldFocusOutEventArgs) | Triggered when a form field loses focus after editing. |
+| [formFieldMouseLeave](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldMouseLeaveArgs) | Fired when the mouse pointer leaves a form field. |
+| [formFieldMouseOver](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldMouseoverArgs) | Fired when the mouse pointer moves over a form field. |
+| [formFieldMove](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldMoveArgs) | Triggered when a form field is moved to a new position. |
+| [formFieldPropertiesChange](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldPropertiesChangeArgs) | Fired when any form field property changes, such as font, color, or constraint values. |
+| [formFieldRemove](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldRemoveArgs) | Triggered when a form field is deleted from the document. |
+| [formFieldResize](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldResizeArgs) | Fired when a form field is resized. |
+| [formFieldSelect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldSelectArgs) | Fired when a form field is selected in the Form Designer. |
+| [formFieldUnselect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldUnselectArgs) | Fired when a previously selected form field is unselected. |
+| [validateFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/validateFormFieldsArgs) | Fired when form field validation fails during print or download actions. |
 
-## formFieldAdd event
+**Common Use Cases**
 
-The [formFieldAdd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldAddArgs) event is triggered when a new form field is added, either programmatically or through user interaction. The event arguments provide the necessary information about the form field addition.
+Form field events can be used to:
+- Validate form data before printing or downloading
+- Track user interaction with form fields
+- Update UI elements dynamically
+- Log form changes for auditing
+- Trigger workflow actions based on field changes
+- Enforce business rules during form editing
 
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldaddevent-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldaddevent-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
+## Handle PDF Form Field Events
 
-## formFieldClick event
+You can wire up form field events on the PDF Viewer instance to execute custom logic when specific actions occur.
 
-The [formFieldClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldClickArgs) event is triggered when a form field is clicked. The event arguments provide the necessary information about the form field click event.
+```ts
+const pdfViewer = new PdfViewer({
+  // Basic examples for common form-field events
+  formFieldAdd: (args: any) => { console.log('formFieldAdd', args); },
+  formFieldRemove: (args: any) => { console.log('formFieldRemove', args); },
+  formFieldPropertiesChange: (args: any) => { console.log('formFieldPropertiesChange', args); },
 
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldclickevent-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldclickevent-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
+  // Additional events from the table
+  formFieldClick: (args: any) => { console.log('formFieldClick', args); },
+  formFieldDoubleClick: (args: any) => { console.log('formFieldDoubleClick', args); },
+  formFieldFocusOut: (args: any) => { console.log('formFieldFocusOut', args); },
+  formFieldMouseOver: (args: any) => { console.log('formFieldMouseOver', args); },
+  formFieldMouseLeave: (args: any) => { console.log('formFieldMouseLeave', args); },
+  formFieldMove: (args: any) => { console.log('formFieldMove', args); },
+  formFieldResize: (args: any) => { console.log('formFieldResize', args); },
+  formFieldSelect: (args: any) => { console.log('formFieldSelect', args); },
+  formFieldUnselect: (args: any) => { console.log('formFieldUnselect', args); },
+});
 
-## formFieldDoubleClick event
+//Validation Event
+pdfviewer.enableFormFieldsValidation = true;
+pdfviewer.validateFormFields = (args: any) => {
+  if (args && args.formField && args.formField.length > 0) {
+    // Example: prevent the pending action and notify the user
+    args.cancel = true;
+    alert('Please fill all required fields. Missing: ' + args.formField[0].name);
+    // Optionally focus or scroll to the field
+  }
+};
+```
 
-The [formFieldDoubleClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldDoubleClickArgs) event is triggered when a form field is double-clicked. The event arguments provide the necessary information about the form field double-click event.
+**Event Behavior Notes**
 
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfielddoubleclickevent-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfielddoubleclickevent-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
+- Events triggered through the UI and programmatic APIs use the same event handlers.
+- Property related events are raised immediately when changes occur.
+- Validation events are triggered only during print or download operations.
 
-## formFieldFocusOut event
-
-The [formFieldFocusOut](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldFocusOutEventArgs) event is triggered when a form field loses focus. The event arguments provide the necessary information about the form field focus out event.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldfocusoutevent-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldfocusoutevent-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-## formFieldMouseLeave event
-
-The [formFieldMouseLeave](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldMouseLeaveArgs) event is triggered when the mouse leaves a form field. The event arguments provide the necessary information about the form field mouse leave event.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldmouseleaveevent-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldmouseleaveevent-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-## formFieldMouseOver event
-
-The [formFieldMouseOver](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldMouseoverArgs) event is triggered when the mouse hovers over a form field. The event arguments provide the necessary information about the form field mouse over event.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldmouseoverevent-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldmouseoverevent-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-## formFieldMove event
-
-The [formFieldMove](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldMoveArgs) event is triggered when the mouse moves inside a form field. The event arguments provide the necessary information about the form field mouse move event.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldmoveevent-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldmoveevent-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-## formFieldPropertiesChange event
-
-The [formFieldPropertiesChange](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldPropertiesChangeArgs)  event is triggered when the properties of a form field are changed. The event arguments provide the necessary information about which property of the form field has been changed.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldpropertieschangeevent-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldpropertieschangeevent-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-## formFieldRemove event
-
-The [formFieldRemove](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldRemoveArgs) event is triggered when a form field is removed from the PDF. The event arguments provide the necessary information about which form field has been removed.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldremoveevent-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldremoveevent-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-## formFieldResize event
-
-The [formFieldResize](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldResizeArgs) events are triggered when a form field in a PDF is resized. These events provide the relevant details about the specific form field that has been resized.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldresizeevent-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldresizeevent-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-## formFieldSelect event
-
-The [formFieldSelect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldSelectArgs) events are triggered when a form field in a PDF is selected. These events provide the necessary details about the specific form field that has been selected.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldselectevent-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldselectevent-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-## formFieldUnselect event
-
-The [formFieldUnselect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldUnselectArgs) events are triggered when a form field in a PDF is unselected. These events provide the necessary details about the specific form field that has been unselected.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldunselectevent-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldunselectevent-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-## validateFormFields event
-
-The [validateFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/validateFormFieldsArgs) events are triggered when a required form field is left unfilled before downloading the PDF. These events provide the necessary information for validating which form fields are incomplete.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldvalidationevent-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es6/formfieldvalidationevent-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
+[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
 
 ## See also
 
-- [Form Designer overview](./overview)
-- [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
-- [Create form fields](./Create-edit-Style-del-formFields/create-formfields)
-- [Edit form fields](./Create-edit-Style-del-formFields/edit-formfields)
-- [Group form fields](./group-formfields)
-- [Add custom data to form fields](./custom-data)
-- [Form Constrain](./form-constrain)
-- [Form validation](./form-validation)
+- [Form Designer overview](./overview)  
+- [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)  
+- [Create form fields](./Create-edit-Style-del-formFields/create-formfields)  
+- [Edit form fields](./Create-edit-Style-del-formFields/modify-formfields)
+- [Group form fields](./group-formfields)  
+- [Add custom data to form fields](./custom-data)  
+- [Form Field Flags](./form-constrain) 
+- [Form validation](./form-validation)  
 - [Form fields API](./formfields-api)
