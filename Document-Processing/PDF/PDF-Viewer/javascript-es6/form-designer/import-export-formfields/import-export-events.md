@@ -9,7 +9,7 @@ documentation: ug
 
 # PDF Form Import and Export Events in TypeScript
 
-Import/Export events let you **track and customize the entire lifecycle** of form data being imported into or exported from the PDF Viewer.
+Import/Export events let you **track and customize the entire life cycle** of form data being imported into or exported from the PDF Viewer.
 Use these events to:
 - Validate inputs before processing.
 - Show progress indicators.

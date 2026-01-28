@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Form Designer in TypeScript PDF Viewer
 
-When [Form Designer mode](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesigner) is enabled in the Syncfusion [TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI includes a built in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
+When **Form Designer mode** is enabled in the Syncfusion [TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI includes a built in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
 
 Using the Form Designer UI, users can place form fields on the PDF, move and resize them, configure field and widget properties, preview the designed form, and remove fields when required. The Form Designer toolbar can also be shown or hidden and customized to control the available tools based on application requirements, enabling flexible and interactive form design directly within the viewer.
 
@@ -68,11 +68,11 @@ When [Form Designer mode](https://ej2.syncfusion.com/documentation/api/pdfviewer
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/prefilledforms-cs1" %}
 
-For more information about creating and editing form fields in the PDF Viewer, refer to the [Form Creation in TypeScript PDF Viewer documentation](./Create-edit-Style-del-formFields/create-formfields).
+For more information about creating and editing form fields in the PDF Viewer, refer to the [Form Creation](./Create-edit-Style-del-formFields/create-formfields) in TypeScript PDF Viewer documentation.
 
 ## Form Designer Toolbar
 
-The [Form Designer toolbar](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesignertoolbarsettings) appears at the top of the PDF Viewer and provides quick access to form field creation tools. It includes frequently used field types such as:
+The **Form Designer toolbar** appears at the top of the PDF Viewer and provides quick access to form field creation tools. It includes frequently used field types such as:
 
 - [Text box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-textbox)
 - [Password Field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-password)
@@ -87,7 +87,7 @@ Each toolbar item allows users to place the corresponding form field by selectin
 
 ![Adding Text Box](../images/AddTextBox.gif)
 
-Use the following Code-snippet to enable Form Designer by injecting [Form Designer mode](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesigner) Module.
+Use the following Code-snippet to enable Form Designer by injecting **Form Designer mode** Module.
 
 ```ts
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, 
