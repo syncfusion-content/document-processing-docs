@@ -2,7 +2,7 @@
 layout: post
 title: Opening excel from Google Cloud Storage in React Spreadsheet control | Syncfusion
 description: Learn about how to Open an Excel file from Google Cloud Storage in React Spreadsheet control of Syncfusion Essential JS 2.
-platform: React
+platform: document-processing
 control: Open file from Google Cloud Storage
 documentation: ug
 ---
