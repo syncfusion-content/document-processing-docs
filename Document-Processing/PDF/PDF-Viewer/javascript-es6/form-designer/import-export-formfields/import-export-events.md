@@ -7,64 +7,77 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Import/Export events
+# PDF Form Import and Export Events in TypeScript
 
-Import/Export events let you track and customize the full lifecycle of form field data flowing into and out of the PDF Viewer. 
+Import/Export events let you **track and customize the entire lifecycle** of form data being imported into or exported from the PDF Viewer.
+Use these events to:
+- Validate inputs before processing.
+- Show progress indicators.
+- Log audit trails.
+- Block operations based on business rules.
 
-Use them to validate inputs, show progress UI, log audit trails, or block operations based on your business rules. Each event exposes typed event-args (ImportStartEventArgs, ImportSuccessEventArgs, ImportFailureEventArgs, ExportStartEventArgs, ExportSuccessEventArgs, ExportFailureEventArgs) describing the operation context.
+Each event provides detailed context through typed event arguments such as [ImportStartEventArgs](https://ej2.syncfusion.com/documentation/api/pdfviewer/importstarteventargs), [ImportSuccessEventArgs](https://ej2.syncfusion.com/documentation/api/pdfviewer/importsuccesseventargs), [ImportFailureEventArgs](https://ej2.syncfusion.com/documentation/api/pdfviewer/importfailureeventargs), [ExportStartEventArgs](https://ej2.syncfusion.com/documentation/api/pdfviewer/exportstarteventargs), [ExportSuccessEventArgs](https://ej2.syncfusion.com/documentation/api/pdfviewer/exportsuccesseventargs), and [ExportFailureEventArgs](https://ej2.syncfusion.com/documentation/api/pdfviewer/exportfailureeventargs).
 
-Use these events to monitor and customize form field import/export operations.
+## Import Events
+- [importStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importstart) — Fires when an import begins.
+- [importSuccess](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importsuccess) — Fires when form fields are successfully imported.
+- [importFailed](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importfailed) — Fires if the import fails.
 
-## Import events
-- [importStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importstart): Triggers when an import operation starts.
-- [importSuccess](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importsuccess): Triggers when form fields are successfully imported.
-- [importFailed](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importfailed): Triggers when importing form fields fails.
+**Example: Handle Import Events**
 
-## Handle import events
 ```ts
+// ...viewer initialization...
 viewer.importStart = (args: any) => {
   console.log('Import started', args);
+  // e.g. show spinner, validate inputs
 };
 viewer.importSuccess = (args: any) => {
   console.log('Import success', args);
+  // e.g. hide spinner, show toast
 };
 viewer.importFailed = (args: any) => {
   console.error('Import failed', args);
+  // e.g. show error dialog
 };
 ```
 
-## Export events
-- [exportStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportstart): Triggers when an export operation starts.
-- [exportSuccess](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportsuccess): Triggers when form fields are successfully exported.
-- [exportFailed](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportfailed): Triggers when exporting form fields fails.
+## Export Events
+- [exportStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportstart) — Fires when an export begins.
+- [exportSuccess](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportsuccess) — Fires when form fields are successfully exported.
+- [exportFailed](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportfailed) — Fires if the export fails.
 
-## Handle export events
+**Example: Handle Export Events**
+
 ```ts
+// ...viewer initialization...
 viewer.exportStart = (args: any) => {
   console.log('Export started', args);
+  // e.g. disable export UI
 };
 viewer.exportSuccess = (args: any) => {
   console.log('Export success', args);
+  // e.g. enable UI, provide download link
 };
 viewer.exportFailed = (args: any) => {
   console.error('Export failed', args);
+  // e.g. re-enable UI, notify user
 };
 ```
 
-Notes:
-- importStart/importSuccess/importFailed cover the lifecycle of form field imports.
-- exportStart/exportSuccess/exportFailed cover the lifecycle of form field exports.
+## Key Notes
+- importStart, importSuccess, importFailed cover the full import lifecycle.
+- exportStart, exportSuccess, exportFailed cover the full export lifecycle.
 
 ## See also
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
-- [Import form fields](./import-formfields)
-- [Import Export Events](./import-export-events)
-- [Create form fields](../Create-edit-Style-del-formFields/create-formfields)
-- [Edit form fields](../Create-edit-Style-del-formFields//edit-formfields)
-- [Remove form fields](../Create-edit-Style-del-formFields//remove-formfields)
+- [Create form fields](../overview-create-forms)
 - [Group form fields](../group-formfields)
 - [Form validation](../form-validation)
 - [Add custom data to form fields](../custom-data)
+- [Import form fields](./import-formfields)
+- [Export form fields](./export-formfields)
+- [Form validation](../form-validation)
+- [Form fields API](../formfields-api)
 - [Form fields API](../formfields-api)

@@ -7,25 +7,26 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Import form data into PDF
+# Import PDF Form Data into TypeScript PDF Viewer
 
-The PDF Viewer provides APIs to import interactive form field values into the currently loaded PDF. You can import from the following formats:
+The **PDF Viewer** lets you import values into interactive form fields in the currently loaded PDF. You can import data from these formats:
 
 - [FDF](#import-as-fdf)
-- [XFDF](#import-as-xfdf)
-- [JSON](#import-as-json)
+- [XFDF](#import-xfdf)
+- [JSON](#import-json)
 
-Supported API:
-- importFormFields(sourceOrObject, format)
+## API to use
+- [importFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importformfields)(sourceOrObject, format)
 
-Note: When using the server-backed viewer, set serviceUrl before importing.
+N>If you’re using a **server-backed viewer**, set serviceUrl before importing.
 
-## Import as FDF
+### Import FDF
 
 ```html
 <button id="importFdf">Import FDF</button>
 <div id="pdfViewer" style="height: 640px; width: 100%"></div>
 ```
+
 ```ts
 import { PdfViewer, FormFieldDataFormat, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
 
@@ -44,17 +45,14 @@ document.getElementById('importFdf')!.addEventListener('click', () => {
 });
 ```
 
-## Import as XFDF
+### Import XFDF
 
 ```html
 <button id="importXfdf">Import XFDF</button>
 <div id="pdfViewer" style="height: 640px; width: 100%"></div>
 ```
+
 ```ts
-import { PdfViewer, FormFieldDataFormat, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner);
-
 const viewer = new PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
   // serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/' // Server-backed
@@ -68,17 +66,13 @@ document.getElementById('importXfdf')!.addEventListener('click', () => {
 });
 ```
 
-## Import as JSON
+### Import JSON
 
 ```html
 <button id="importJson">Import JSON</button>
 <div id="pdfViewer" style="height: 640px; width: 100%"></div>
 ```
 ```ts
-import { PdfViewer, FormFieldDataFormat, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner);
-
 const viewer = new PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
   // serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/' // Server-backed
@@ -92,52 +86,12 @@ document.getElementById('importJson')!.addEventListener('click', () => {
 });
 ```
 
-## Import as Object
+## Common Use Cases
 
-Import data previously exported with exportFormFieldsAsObject. Useful for client-side round trips without writing a file.
-
-```html
-<button id="exportDataAsObject">Export Object</button>
-<button id="importData">Import Data</button>
-<div id="pdfViewer" style="height: 640px; width: 100%"></div>
-```
-```ts
-import { PdfViewer, FormFieldDataFormat, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner);
-
-const viewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
-  // serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/' // Server-backed
-  resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
-});
-viewer.appendTo('#pdfViewer');
-
-let exportedData: object | undefined;
-
-document.getElementById('exportDataAsObject')!.addEventListener('click', () => {
-  viewer.exportFormFieldsAsObject(FormFieldDataFormat.Fdf).then(value => {
-    exportedData = value;
-  });
-});
-
-document.getElementById('importData')!.addEventListener('click', () => {
-  if (exportedData) {
-    // Import the previously exported object data
-    viewer.importFormFields(exportedData, FormFieldDataFormat.Fdf);
-  }
-  // Alternatives:
-  // viewer.importFormFields(exportedData, FormFieldDataFormat.Xfdf);
-  // viewer.importFormFields(exportedData, FormFieldDataFormat.Json);
-});
-```
-
-## Common use cases
-
-- Pre-fill application forms from your database using JSON.
+- Pre-fill application forms from a database using JSON.
 - Migrate data from other PDF tools using FDF/XFDF.
-- Restore user progress stored locally or on the server using object import.
-- Combine with [validation](../form-validation) to block print/download until required fields are filled.
+- Restore user progress saved locally or on the server.
+- Combine with validation to block print/download until required fields are completed.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
 
@@ -147,9 +101,7 @@ document.getElementById('importData')!.addEventListener('click', () => {
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Export form fields](./export-formfields)
 - [Import Export Events](./import-export-events)
-- [Create form fields](../Create-edit-Style-del-formFields/create-formfields)
-- [Edit form fields](../Create-edit-Style-del-formFields//edit-formfields)
-- [Remove form fields](../Create-edit-Style-del-formFields//remove-formfields)
+- [Create Edit form fields](../overview-create-forms)
 - [Group form fields](../group-formfields)
 - [Form validation](../form-validation)
 - [Add custom data to form fields](../custom-data)
