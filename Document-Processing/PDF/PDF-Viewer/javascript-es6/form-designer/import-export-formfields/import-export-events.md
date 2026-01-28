@@ -65,8 +65,8 @@ viewer.exportFailed = (args: any) => {
 ```
 
 ## Key Notes
-- importStart, importSuccess, importFailed cover the full import lifecycle.
-- exportStart, exportSuccess, exportFailed cover the full export lifecycle.
+- importStart, importSuccess, importFailed cover the full import life cycle.
+- exportStart, exportSuccess, exportFailed cover the full export life cycle.
 
 ## See also
 
