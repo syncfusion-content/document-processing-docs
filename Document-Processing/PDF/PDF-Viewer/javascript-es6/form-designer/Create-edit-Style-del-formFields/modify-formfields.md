@@ -16,7 +16,7 @@ You can modify form fields using the **UI** or **API**.
 - Drag to move; use handles to resize.
 - Use the toolbar to toggle field mode or add new fields.
 
-## Modify PDF Form Field Properties programatically
+## Modify PDF Form Field Properties programmatically
 Use [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) to change behavior/data (including position and size):
 
 ```html

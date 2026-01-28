@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overview for Create edit form fields in the TypeScript PDF Viewer | Syncfusion
+title: Overview of Create form fields in TypeScript PDF Viewer | Syncfusion
 description: Learn how to create edit each form field using the PDF Viewer UI and how to create them programmatically in the Syncfusion TypeScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
