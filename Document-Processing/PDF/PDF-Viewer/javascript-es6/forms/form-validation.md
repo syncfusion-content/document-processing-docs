@@ -114,9 +114,9 @@ pdfviewer.validateFormFields = (args: any) => {
 
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
-- [Create form fields](./manage-form-fields/create-formfields)
-- [Modify form fields](./manage-form-fields/modify-formfields)
-- [Group form fields](./group-formfields)
+- [Create form fields](./manage-form-fields/create-form-fields)
+- [Modify form fields](./manage-form-fields/modify-form-fields)
+- [Group form fields](./group-form-fields)
 - [Add custom data to PDF form fields](./custom-data)
 - [Form flags](./form-constrain)
-- [Form fields API](./formfields-api)
+- [Form fields API](./form-fields-api)
