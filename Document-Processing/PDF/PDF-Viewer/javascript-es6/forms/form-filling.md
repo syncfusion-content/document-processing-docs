@@ -14,7 +14,7 @@ The Syncfusion PDF Viewer supports three types of form-filling:
 
 1.	[Filling Form Fields Programmatically](#fill-pdf-forms-programmatically)
 
-    You can fill or update PDF form fields programmatically using the updateFormFieldsValue APIs. This approach is useful when form data needs to be set dynamically based on application logic.
+    You can fill or update PDF form fields programmatically using the [updateFormFieldsValue](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfieldsvalue) APIs. This approach is useful when form data needs to be set dynamically based on application logic.
 
 2.	[Form Filling Through User Interface](#fill-pdf-forms-through-the-user-interface)
 
@@ -26,7 +26,7 @@ The Syncfusion PDF Viewer supports three types of form-filling:
 
 ## Fill PDF forms programmatically 
 
-You can update the values of PDF form fields programmatically using the updateFormFieldsValue API. This method allows you to set or modify form field values dynamically based on application logic, without user interaction.
+You can update the values of PDF form fields programmatically using the [updateFormFieldsValue](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfieldsvalue) API. This method allows you to set or modify form field values dynamically based on application logic, without user interaction.
 
 The following example demonstrates how to update PDF form field values programmatically:
  
@@ -34,9 +34,12 @@ The following example demonstrates how to update PDF form field values programma
 <button id="updateBtn">Fill Form Fields</button>
 ```
 ```ts
-import {PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormFields} from '@syncfusion/ej2-pdfviewer';
+import {PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, 
+ThumbnailView, BookmarkView, TextSelection, 
+Annotation, FormFields} from '@syncfusion/ej2-pdfviewer';
  
-PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormFields);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, 
+ThumbnailView, BookmarkView, TextSelection, Annotation, FormFields);
  
 let pdfviewer: PdfViewer = new PdfViewer({
   documentPath:
@@ -77,7 +80,7 @@ The PDF Viewer supports common form fields such as text boxes, check boxes, radi
 
 ## Fill PDF forms through Import Data 
 
-The Syncfusion PDF Viewer allows you to import form field data into an existing PDF document using the `importFormFields` API. This feature enables you to pre-fill form fields using data from an external source without requiring manual user input.
+The Syncfusion PDF Viewer allows you to import form field data into an existing PDF document using the [importFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importformfields) API. This feature enables you to pre-fill form fields using data from an external source without requiring manual user input.
 
 Imported form field data is automatically mapped to the corresponding form fields in the PDF document based on the field names. Once the data is imported, the populated values are displayed in the PDF Viewer and can be edited through the user interface if required.
 
@@ -86,9 +89,13 @@ Imported form field data is automatically mapped to the corresponding form field
 <div id="pdfViewer" style="height: 640px; width: 100%"></div>
 ```
 ```ts
-import { PdfViewer, FormFieldDataFormat, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, FormFieldDataFormat, Toolbar, Magnification, Navigation, 
+Annotation, LinkAnnotation, ThumbnailView, BookmarkView, 
+TextSelection, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, 
+LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, 
+FormFields, FormDesigner);
 
 const viewer = new PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
@@ -103,25 +110,29 @@ document.getElementById('importJson')!.addEventListener('click', () => {
 });
 ```
 
-For more details, see [Import Form Data](./import-export-formfields/import-formfields).
+For more details, see [Import Form Data](./import-export-form-fields/import-form-fields).
 
 ## How to get the filled data and store it to a backing system
 
 You can export the filled form field data from the PDF Viewer and store it in a backing system such as a database or file storage. The exported data can later be imported to restore the form state.
 
-For more details, see [Export Form Data](./import-export-formfields/export-formfields).
+For more details, see [Export Form Data](./import-export-form-fields/export-form-fields).
 
 ## How to Validate Form Fields using `validateFormFields` Event
 
-The `validateFormFields` event in the Syncfusion PDF Viewer is triggered when a user tries to download or submit a form while validation is enabled. You can use the `retrieveFormFields()` API to get all the form fields and check them one by one to see if any form fields values are empty.
+The [validateFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#validateformfields) event in the Syncfusion PDF Viewer is triggered when a user tries to download or submit a form while validation is enabled. You can use the [retrieveFormFields()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#retrieveformfields) API to get all the form fields and check them one by one to see if any form fields values are empty.
 
 This validation applies to all form field types in the PDF Viewer. A textbox is empty if no text is entered, a list box or dropdown is empty if no item is selected, a signature or initial field is empty if the user has not signed, and radio buttons or checkboxes are empty if none are chosen. 
-By enabling `enableFormFieldsValidation` and wiring the event, you can go through each field and stop the action if required fields are not filled.
+By enabling [enableFormFieldsValidation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) and wiring the event, you can go through each field and stop the action if required fields are not filled.
 
 ```ts
-import {PdfViewer, Toolbar, Magnification, Navigation,LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation,FormDesigner, FormFields,TextFieldSettings} from '@syncfusion/ej2-pdfviewer';
+import {PdfViewer, Toolbar, Magnification, Navigation,LinkAnnotation, 
+ThumbnailView, BookmarkView, TextSelection, Annotation, 
+FormDesigner, FormFields,TextFieldSettings} from '@syncfusion/ej2-pdfviewer';
  
-PdfViewer.Inject(Toolbar, Magnification, Navigation,LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation,FormDesigner, FormFields);
+PdfViewer.Inject(Toolbar, Magnification, Navigation,LinkAnnotation, 
+ThumbnailView, BookmarkView, TextSelection, Annotation,
+FormDesigner, FormFields);
  
 let pdfviewer: PdfViewer = new PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
@@ -166,10 +177,10 @@ pdfviewer.validateFormFields = (args: any) => {
 
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
-- [Create](./Create-edit-Style-del-formFields/create-formfields), [edit](./Create-edit-Style-del-formFields/edit-formfields), [style](./Create-edit-Style-del-formFields/style-formfields) and [remove](./Create-edit-Style-del-formFields/remove-formfields) form fields
-- [Edit form fields](./Create-edit-Style-del-formFields/edit-formfields)
-- [Group form fields](./group-formfields)
+- [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), [style](./manage-form-fields/customize-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
+- [Edit form fields](./manage-form-fields/edit-form-fields)
+- [Group form fields](./group-form-fields)
 - [Add custom data to form fields](./custom-data)
 - [Form Constrain](./form-constrain)
 - [Form validation](./form-validation)
-- [Form fields API](./formfields-api)
+- [Form fields API](./form-fields-api)
