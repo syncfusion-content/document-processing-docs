@@ -118,10 +118,10 @@ document.getElementById('exportObj')!.addEventListener('click', () => {
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
-- [Import form fields](./import-formfields)
+- [Import form fields](./import-form-fields)
 - [Import Export Events](./import-export-events)
 - [Create form fields](../overview-create-forms)
-- [Group form fields](../group-formfields)
+- [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)
 - [Add custom data to form fields](../custom-data)
-- [Form fields API](../formfields-api)
+- [Form fields API](../form-fields-api)

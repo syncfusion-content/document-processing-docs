@@ -19,14 +19,14 @@ Using the Form Designer UI, users can place form fields on the PDF, move and res
 **Add Form Fields**
 You can add the following form fields to the PDF:
 
-- [Text box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-textbox)
-- [Password Field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-password)
-- [Check box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-checkbox)
-- [Radio button](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-radiobutton)
-- [Dropdown List](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-dropdown)
-- [List box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-listbox)
-- [Signature field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-signature-field)
-- [Initial field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-initial-field)
+- [Text box](../forms/manage-form-fields/create-form-fields#add-textbox)
+- [Password Field](../forms/manage-form-fields/create-form-fields#add-password)
+- [Check box](../forms/manage-form-fields/create-form-fields#add-checkbox)
+- [Radio button](../forms/manage-form-fields/create-form-fields#add-radiobutton)
+- [Dropdown List](../forms/manage-form-fields/create-form-fields#add-dropdown)
+- [List box](../forms/manage-form-fields/create-form-fields#add-listbox)
+- [Signature field](../forms/manage-form-fields/create-form-fields#add-signature-field)
+- [Initial field](../forms/manage-form-fields/create-form-fields#add-initial-field)
 
 **Edit Form Fields**
 You can move, resize, align, distribute, copy, paste, and undo or redo changes to form fields.
@@ -68,20 +68,20 @@ When [Form Designer mode](https://ej2.syncfusion.com/documentation/api/pdfviewer
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/prefilledforms-cs1" %}
 
-For more information about creating and editing form fields in the PDF Viewer, refer to the [Form Creation](./Create-edit-Style-del-formFields/create-formfields) in TypeScript PDF Viewer documentation.
+For more information about creating and editing form fields in the PDF Viewer, refer to the [Form Creation](./manage-form-fields/create-form-fields) in TypeScript PDF Viewer documentation.
 
 ## Form Designer Toolbar
 
 The **Form Designer toolbar** appears at the top of the PDF Viewer and provides quick access to form field creation tools. It includes frequently used field types such as:
 
-- [Text box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-textbox)
-- [Password Field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-password)
-- [Check box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-checkbox)
-- [Radio button](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-radiobutton)
-- [Dropdown List](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-dropdown)
-- [List box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-listbox)
-- [Signature field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-signature-field)
-- [Initial field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-initial-field)
+- [Text box](../forms/manage-form-fields/create-form-fields#add-textbox)
+- [Password Field](../forms/manage-form-fields/create-form-fields#add-password)
+- [Check box](../forms/manage-form-fields/create-form-fields#add-checkbox)
+- [Radio button](../forms/manage-form-fields/create-form-fields#add-radiobutton)
+- [Dropdown List](../forms/manage-form-fields/create-form-fields#add-dropdown)
+- [List box](../forms/manage-form-fields/create-form-fields#add-listbox)
+- [Signature field](../forms/manage-form-fields/create-form-fields#add-signature-field)
+- [Initial field](../forms/manage-form-fields/create-form-fields#add-initial-field)
 
 Each toolbar item allows users to place the corresponding form field by selecting the tool and clicking on the desired location in the PDF document.
 
@@ -103,7 +103,7 @@ pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfview
 pdfviewer.appendTo('#PdfViewer');
 ```
 
-For more information about creating and editing form fields in the PDF Viewer, refer to the [Form Creation in TypeScript PDF Viewer documentation](./Create-edit-Style-del-formFields/create-formfields).
+For more information about creating and editing form fields in the PDF Viewer, refer to the [Form Creation in TypeScript PDF Viewer documentation](./manage-form-fields/create-form-fields).
 
 ## Show or Hide the Built-in Form Designer Toolbar
 
@@ -195,15 +195,15 @@ You can remove a form field from the PDF document by selecting the field and usi
 - Press the `Delete key` on the keyboard after selecting the form field.
 
 The selected form field and its associated widget annotation are permanently removed from the page.
-For more information, see  [Deleting Form Fields](./Create-edit-Style-del-formFields/remove-formfields)
+For more information, see  [Deleting Form Fields](./manage-form-fields/remove-form-fields)
 
 ## See Also
 
 - [Filling PDF Forms](./form-filling)
-- [Create](./Create-edit-Style-del-formFields/create-formfields), [edit](./Create-edit-Style-del-formFields/edit-formfields), [style](./Create-edit-Style-del-formFields/style-formfields) and [remove](./Create-edit-Style-del-formFields/remove-formfields.) form fields
-- [Grouping form fields](./group-formfields)
+- [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), [style](./manage-form-fields/style-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
+- [Grouping form fields](./group-form-fields)
 - [Form Constrains](./form-constrain)
 - [Form Validation](./form-validation)
 - [Custom Data](./custom-data)
-- [Import](./import-export-formfields/import-formfields)/[Export Form Data](./import-export-formfields/export-formfields)
+- [Import](./import-export-form-fields/import-form-fields)/[Export Form Data](./import-export-form-fields/export-form-fields)
 - [Form field events](./form-field-events)
