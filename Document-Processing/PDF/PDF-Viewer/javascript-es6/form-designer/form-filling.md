@@ -8,125 +8,165 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form filling in TypeScript PDF Viewer
+# Filling PDF Forms in TypeScript PDF Viewer
 
-The PDF Viewer displays existing form fields in a PDF and enables users to fill, validate, and download the filled data.
+The Syncfusion PDF Viewer supports three types of form-filling:
 
-## Form Fields
+1.	[Filling Form Fields Programmatically](#fill-pdf-forms-programmatically)
 
-Work with the runtime form fields present in a PDF Form.
-- Render existing fields
-- Fill fields.
-- Import/Export form data as JSON, XFDF, FDF, or as a plain object
-- Inject FormFields to enable form-filling features.
+    You can fill or update PDF form fields programmatically using the updateFormFieldsValue APIs. This approach is useful when form data needs to be set dynamically based on application logic.
 
-Use the following code-snippet to enable form-filling by injecting `FormFields` Module.
+2.	[Form Filling Through User Interface](#fill-pdf-forms-through-the-user-interface)
 
-```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields} from '@syncfusion/ej2-pdfviewer';
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields);
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.appendTo('#PdfViewer');
-```
+    Users can fill in PDF form fields directly through the PDF Viewer user interface by typing text, selecting options, or interacting with supported form elements.
 
-![FormFilling](../images/FormFill.png)
+3.	[Importing Form Field Data](#fill-pdf-forms-through-import-data)
 
-The PDF Viewer supports the following form field types:
+    The PDF Viewer allows you to import form field data into an existing PDF document. This enables pre filled forms using external data sources.
 
-* [Text box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-listbox)
-* [Password](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-password)
-* [Check box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-checkbox)
-* [Radio button](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-radiobutton)
-* [List box](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-listbox)
-* [Dropdown](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-dropdown)
-* [Signature field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-signature-field)
-* [Initial field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-initial-field)
+## Fill PDF forms programmatically 
 
-![Form filling in TypeScript PDF Viewer](../images/FormFields.gif)
+You can update the values of PDF form fields programmatically using the updateFormFieldsValue API. This method allows you to set or modify form field values dynamically based on application logic, without user interaction.
 
-## Disabling form filling
-
-The PDF Viewer provides an option to disable interaction with form fields using `enableFormDesigner` API. Use the following configuration to disable form fields in the viewer.
-
-
-```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.enableFormDesigner = false;  //To disable Form Desinger
-pdfviewer.appendTo('#PdfViewer');
-```
-
-## Access form fields
-
-You can access the collection of all interactive form fields in the loaded document using the `formFieldCollection` property. Fetch the collection after the document is loaded.
-
-Use the following code-snippet to access interactive form fields collection:
+The following example demonstrates how to update PDF form field values programmatically:
+ 
 ```html
-<button id="formFieldCollection">Fetch Form-Fields Collection</button>
+<button id="updateBtn">Fill Form Fields</button>
 ```
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-
-pdfviewer.appendTo('#PdfViewer');
-
-// Access the form fields collection via button click
-document.getElementById('formFieldCollection')?.addEventListener('click',function() {
-    const fields = pdfviewer.formFieldCollection; // Gets all form fields
-    console.log(fields)//Log the formField Collection
+import {PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormFields} from '@syncfusion/ej2-pdfviewer';
+ 
+PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormFields);
+ 
+let pdfviewer: PdfViewer = new PdfViewer({
+  documentPath:
+    'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
 });
+ 
+pdfviewer.appendTo('#pdfViewer');
+ 
+// Wire up the button click
+document.getElementById('updateBtn')!.onclick = () => {
+  //Retriveformfields
+  const fields =
+    pdfviewer.retrieveFormFields?.() || pdfviewer.formFieldCollection || [];
+  //Get form fields by name
+  const field = fields.find((f) => f?.name === 'name') || fields[0];
 
+ //Update the Values
+  if (field) {
+    field.value = 'John Doe';
+    field.tooltip = 'First';
+    pdfviewer.updateFormFieldsValue(field);
+  } else {
+    console.warn('No form fields available to update.');
+  }
+};
 ```
 
-## Add a handwritten signature to a signature field
+## Fill PDF forms through the User Interface
 
-Add a handwritten signature to a signature field by following these steps:
+The Syncfusion PDF Viewer allows users to fill PDF form fields directly through the user interface without using code. Users can click on form fields and enter or select values based on the field type.
 
-* Click the signature field in the PDF document to open the signature panel.
+![Form Filling](../images/FormFields.gif)
 
-![Signature field in TypeScript PDF Viewer](../images/form-filling-signature.png)
+The PDF Viewer supports common form fields such as text boxes, check boxes, radio buttons, drop-down lists, list boxes, and signature fields. Filled values can be edited at any time, and the entered data is retained during the viewing session.
 
-* Draw the signature in the signature panel.
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/prefilledforms-cs1" %}
 
-![Signature panel in TypeScript PDF Viewer](../images/form-filling-signature-dialog.png)
+## Fill PDF forms through Import Data 
 
-* Select **CREATE**. The drawn signature is added to the signature field.
+The Syncfusion PDF Viewer allows you to import form field data into an existing PDF document using the `importFormFields` API. This feature enables you to pre-fill form fields using data from an external source without requiring manual user input.
 
-![Signature added in TypeScript PDF Viewer](../images/form-filling-signature-signed.png)
+Imported form field data is automatically mapped to the corresponding form fields in the PDF document based on the field names. Once the data is imported, the populated values are displayed in the PDF Viewer and can be edited through the user interface if required.
 
-## Delete a signature from a signature field
+```html
+<button id="importJson">Import JSON</button>
+<div id="pdfViewer" style="height: 640px; width: 100%"></div>
+```
+```ts
+import { PdfViewer, FormFieldDataFormat, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
 
-Delete a signature placed in a signature field by using the Delete option in the annotation toolbar.
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner);
 
-![Deleting a signature in TypeScript PDF Viewer](../images/form-filling-signature-del.png)
+const viewer = new PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
+  // serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/' // Server-backed
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
+});
+viewer.appendTo('#pdfViewer');
 
-## Export and import form fields
+document.getElementById('importJson')!.addEventListener('click', () => {
+  // The file for importing should be accessible at the given path or as a file stream depending on your integration
+  viewer.importFormFields('File', FormFieldDataFormat.Json);
+});
+```
 
-The PDF Viewer supports exporting and importing form field data using the `importFormFields`, `exportFormFields`, and `exportFormFieldsAsObject` methods. The following formats are supported:
+For more details, see [Import Form Data](./import-export-formfields/import-formfields).
 
-* FDF
-* XFDF
-* JSON
+## How to get the filled data and store it to a backing system
 
-For more information, see the [Form fields documentation](./import-export-formfields/export-formfields).
+You can export the filled form field data from the PDF Viewer and store it in a backing system such as a database or file storage. The exported data can later be imported to restore the form state.
+
+For more details, see [Export Form Data](./import-export-formfields/export-formfields).
+
+## How to Validate Form Fields using `validateFormFields` Event
+
+The `validateFormFields` event in the Syncfusion PDF Viewer is triggered when a user tries to download or submit a form while validation is enabled. You can use the `retrieveFormFields()` API to get all the form fields and check them one by one to see if any form fields values are empty.
+
+This validation applies to all form field types in the PDF Viewer. A textbox is empty if no text is entered, a list box or dropdown is empty if no item is selected, a signature or initial field is empty if the user has not signed, and radio buttons or checkboxes are empty if none are chosen. 
+By enabling `enableFormFieldsValidation` and wiring the event, you can go through each field and stop the action if required fields are not filled.
+
+```ts
+import {PdfViewer, Toolbar, Magnification, Navigation,LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation,FormDesigner, FormFields,TextFieldSettings} from '@syncfusion/ej2-pdfviewer';
+ 
+PdfViewer.Inject(Toolbar, Magnification, Navigation,LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation,FormDesigner, FormFields);
+ 
+let pdfviewer: PdfViewer = new PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+});
+ 
+pdfviewer.appendTo('#pdfViewer');
+pdfviewer.enableFormFieldsValidation = true;
+ 
+pdfviewer.documentLoad = () => {
+  // Add a required Email field
+  pdfviewer.formDesignerModule.addFormField('Textbox', {
+    name: 'Email',
+    bounds: { X: 146, Y: 260, Width: 220, Height: 24 },
+    isRequired: true,
+    tooltip: 'Email is required',
+  } as TextFieldSettings);
+ 
+  // Add a required Phone field
+  pdfviewer.formDesignerModule.addFormField('Textbox', {
+    name: 'Phone',
+    bounds: { X: 146, Y: 300, Width: 220, Height: 24 },
+    isRequired: true,
+    tooltip: 'Phone number is required',
+  } as TextFieldSettings);
+};
+ 
+// Validate only the added fields
+pdfviewer.validateFormFields = (args: any) => {
+  const fields = pdfviewer.retrieveFormFields();
+ 
+  fields.forEach((field) => {
+    if ((field.name === 'Email' || field.name === 'Phone') && !field.value) {
+      alert(field.name + ' field cannot be empty.');
+      args.isFormSubmitCancelled = true;
+    }
+  });
+};
+```
 
 ## See also
 
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
-- [Create form fields](./Create-edit-Style-del-formFields/create-formfields)
+- [Create](./Create-edit-Style-del-formFields/create-formfields), [edit](./Create-edit-Style-del-formFields/edit-formfields), [style](./Create-edit-Style-del-formFields/style-formfields) and [remove](./Create-edit-Style-del-formFields/remove-formfields) form fields
 - [Edit form fields](./Create-edit-Style-del-formFields/edit-formfields)
 - [Group form fields](./group-formfields)
 - [Add custom data to form fields](./custom-data)
