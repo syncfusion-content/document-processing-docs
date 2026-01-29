@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Opening excel from Azure Blob Storage in React Spreadsheet control | Syncfusion
+title: Open excel from Azure Blob in React Spreadsheet control | Syncfusion
 description: Learn about how to Open an Excel file from Azure Blob Storage in React Spreadsheet control of Syncfusion Essential JS 2.
 platform: document-processing
 control: Open file from Azure Blob Storage

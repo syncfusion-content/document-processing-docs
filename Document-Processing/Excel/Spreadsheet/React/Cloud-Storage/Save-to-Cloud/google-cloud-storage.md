@@ -83,7 +83,7 @@ public async Task<IActionResult> SaveToGoogleCloud([FromForm] SaveSettings saveS
 
 ```
 
-**Step 3:**  Modify the index File in the Spreadsheet sample to using [`saveAsJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#saveasjson) method to serialize the spreadsheet and send it to the backend
+**Step 3:**  Modify the index File in the Spreadsheet sample to using [`saveAsJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to serialize the spreadsheet and send it to the back-end
 
 ```csharp
 
@@ -118,4 +118,4 @@ const saveToGoogleCloud = () => {
 
 ```
 
-N> Note: The backend requires the Google.Cloud.Storage.V1 NuGet package and a service-account key that has Storage Object Admin (or equivalent) permissions on the target bucket.
+N> Note: The back-end requires the Google.Cloud.Storage.V1 NuGet package and a service-account key that has Storage Object Admin (or equivalent) permissions on the target bucket.

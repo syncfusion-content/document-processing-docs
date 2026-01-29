@@ -53,7 +53,7 @@ Please find the below table for the beforeSave event arguments.
 
 ### Configure JSON serialization options
 
-Previously, when saving the Spreadsheet as a workbook JSON object using the [saveAsJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#saveasjson) method, the entire workbook with all loaded features were processed and saved as a JSON object. 
+Previously, when saving the Spreadsheet as a workbook JSON object using the [saveAsJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method, the entire workbook with all loaded features were processed and saved as a JSON object. 
 
 Now, you have the option to selectively ignore some features while saving the Spreadsheet as a JSON object by configuring serialization options and passing them as arguments to the `saveAsJson` method. This argument is optional, and if not configured, the entire workbook JSON object will be saved without ignoring any features.
 
@@ -90,7 +90,7 @@ The following code snippet demonstrates how to configure the serialization optio
 
 ### Send and receive custom params from client to server
 
-Passing the custom parameters from client to server by using [`beforeSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#beforesave) event.
+Passing the custom parameters from client to server by using [`beforeSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforesave) event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -121,7 +121,7 @@ Server side code snippets:
 
 ### Add custom header during save
 
-You can add your own custom header to the save action in the Spreadsheet. For processing the data, it has to be sent from client to server side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`fileMenuItemSelect`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#filemenuitemselect) event, the custom header can be added to the request during save action.
+You can add your own custom header to the save action in the Spreadsheet. For processing the data, it has to be sent from client to server side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`fileMenuItemSelect`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#filemenuitemselect) event, the custom header can be added to the request during save action.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -142,7 +142,7 @@ You can add your own custom header to the save action in the Spreadsheet. For pr
 
 ### Change the PDF orientation
 
-By default, the PDF document is created in **Portrait** orientation. You can change the orientation of the PDF document by using the `args.pdfLayoutSettings.orientation` argument settings in the [`beforeSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#beforesave) event.
+By default, the PDF document is created in **Portrait** orientation. You can change the orientation of the PDF document by using the `args.pdfLayoutSettings.orientation` argument settings in the [`beforeSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforesave) event.
 
 The possible values are:
 
@@ -178,7 +178,7 @@ The following list of Excel file formats are supported in Spreadsheet:
 
 ### Methods
 
-To save the Spreadsheet document as an `xlsx, xls, csv, or pdf` file, by using [save](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#save) method should be called with the `url`, `fileName` and `saveType` as parameters. The following code example shows to save the spreadsheet file as an `xlsx, xls, csv, or pdf` in the button click event.
+To save the Spreadsheet document as an `xlsx, xls, csv, or pdf` file, by using [save](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#save) method should be called with the `url`, `fileName` and `saveType` as parameters. The following code example shows to save the spreadsheet file as an `xlsx, xls, csv, or pdf` in the button click event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
