@@ -1920,15 +1920,15 @@ using System.Text;
 using System.Drawing;
 using System.Drawing.Imaging;
 
-string filePath = "../../Input/multipage_tiff_example.tif";
+string filePath = "multipage_tiff_example.tif";
 
-var output = new StringBuilder();
+StringBuilder output = new StringBuilder();
 
-using (var fs = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read))
-using (var img = Image.FromStream(fs, useEmbeddedColorManagement: false, validateImageData: false))
-using (var processor = new OCRProcessor())
+using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read))
+using (Image img = Image.FromStream(fs, useEmbeddedColorManagement: false, validateImageData: false))
+using (OCRProcessor processor = new OCRProcessor())
 {
-    processor.TessDataPath = "../../TessdataBest/";
+    processor.TessDataPath = "TessdataBest/";
     processor.Settings.Language = Languages.English;
     processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
 
@@ -1949,8 +1949,8 @@ using (var processor = new OCRProcessor())
         catch { /* fallback if needed */ }
 
         // Clone the selected frame to a standalone Bitmap for OCR (important for some engines)
-        using (var frameBmp = new Bitmap(img.Width, img.Height))
-        using (var g = Graphics.FromImage(frameBmp))
+        using (Bitmap frameBmp = new Bitmap(img.Width, img.Height))
+        using (Graphics g = Graphics.FromImage(frameBmp))
         {
             g.DrawImage(img, 0, 0, img.Width, img.Height);
 
@@ -1974,14 +1974,14 @@ Imports System.Text
 Imports Syncfusion.OCRProcessor
 Imports Syncfusion.Pdf
 
-Dim filePath As String = "../../Input/multipage_tiff_example.tif"
+Dim filePath As String = "multipage_tiff_example.tif"
 Dim output = New StringBuilder()
 
 Dim fs = New FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read)
 Dim img = Image.FromStream(fs, useEmbeddedColorManagement:=False, validateImageData:=False)
 
 Using processor As New OCRProcessor()
-    processor.TessDataPath = "..\..\TessdataBest\"
+    processor.TessDataPath = "TessdataBest\"
     processor.Settings.Language = Languages.English
     processor.Settings.TesseractVersion = TesseractVersion.Version5_0
 
