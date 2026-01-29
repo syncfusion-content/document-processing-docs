@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Add Custom Fonts to PDF Forms in TypeScript PDF Viewer
 
-The Syncfusion **TypeScript PDF Viewer** supports loading, editing, and saving **custom fonts** in form fields such as [TextBox](../form-designer/Create-edit-Style-del-formFields/create-formfields#textbox), [ListBox](../form-designer/Create-edit-Style-del-formFields/create-formfields#listbox), and [DropDown](../form-designer/Create-edit-Style-del-formFields/create-formfields#dropdown) fields using the customFonts property. This ensures consistent text rendering even when the required fonts are not installed on the user’s system.  
+The Syncfusion **TypeScript PDF Viewer** supports loading, editing, and saving **custom fonts** in form fields such as [TextBox](../forms/manage-form-fields/create-form-fields#textbox), [ListBox](../forms/manage-form-fields/create-form-fields#listbox), and [DropDown](../forms/manage-form-fields/create-form-fields#dropdown) fields using the customFonts property. This ensures consistent text rendering even when the required fonts are not installed on the user’s system.  
 Custom fonts are embedded and preserved when form fields are modified or saved, making the PDF display correctly across environments.
 
 ## When dynamic fonts are used
@@ -63,9 +63,9 @@ N>Ensure that the font file names match the specified font names.
 
 ## Supported Form Fields
 Custom fonts can be applied to the following form field types:
-- [TextBox](../form-designer/Create-edit-Style-del-formFields/create-formfields#textbox)
-- [ListBox](../form-designer/Create-edit-Style-del-formFields/create-formfields#listbox)
-- [DropDown](../form-designer/Create-edit-Style-del-formFields/create-formfields#dropdown)
+- [TextBox](../forms/manage-form-fields/create-form-fields#textbox)
+- [ListBox](../forms/manage-form-fields/create-form-fields#listbox)
+- [DropDown](../forms/manage-form-fields/create-form-fields#dropdown)
 
 ## Notes and Limitations
 - If text rendered using a custom font exceeds the form field’s bounds, the downloaded PDF may render incorrectly in some third party PDF viewers.

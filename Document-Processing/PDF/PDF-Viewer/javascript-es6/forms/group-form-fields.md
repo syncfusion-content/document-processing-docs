@@ -115,9 +115,9 @@ pdfviewer.documentLoad = () => {
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
-- [Create form fields](./Create-edit-Style-del-formFields/create-formfields)
-- [Modify form fields](./Create-edit-Style-del-formFields/modify-formfields)
+- [Create form fields](./manage-form-fields/create-form-fields)
+- [Modify form fields](./manage-form-fields/modify-form-fields)
 - [Add custom data to form fields](./custom-data)
 - [Form Constrain](./form-constrain)
 - [Form validation](./form-validation)
-- [Form fields API](./formfields-api)
+- [Form fields API](./form-fields-api)

@@ -413,9 +413,9 @@ pdfviewer.enableFormDesignerToolbar(true); // show
 
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
-- [Create form fields](./Create-edit-Style-del-formFields/create-formfields)
-- [Edit form fields](./Create-edit-Style-del-formFields/edit-formfields)
-- [Group form fields](./group-formfields)
+- [Create form fields](./manage-form-fields/create-form-fields)
+- [Edit form fields](./manage-form-fields/modify-form-fields)
+- [Group form fields](./group-form-fields)
 - [Add custom data to form fields](./custom-data)
 - [Form Constrain](./form-constrain)
 - [Form fields Validation](./form-validation)

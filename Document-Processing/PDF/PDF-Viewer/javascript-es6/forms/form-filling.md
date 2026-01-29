@@ -110,13 +110,13 @@ document.getElementById('importJson')!.addEventListener('click', () => {
 });
 ```
 
-For more details, see [Import Form Data](./import-export-formfields/import-formfields).
+For more details, see [Import Form Data](./import-export-form-fields/import-form-fields).
 
 ## How to get the filled data and store it to a backing system
 
 You can export the filled form field data from the PDF Viewer and store it in a backing system such as a database or file storage. The exported data can later be imported to restore the form state.
 
-For more details, see [Export Form Data](./import-export-formfields/export-formfields).
+For more details, see [Export Form Data](./import-export-form-fields/export-form-fields).
 
 ## How to Validate Form Fields using `validateFormFields` Event
 
@@ -177,10 +177,10 @@ pdfviewer.validateFormFields = (args: any) => {
 
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
-- [Create](./Create-edit-Style-del-formFields/create-formfields), [edit](./Create-edit-Style-del-formFields/edit-formfields), [style](./Create-edit-Style-del-formFields/style-formfields) and [remove](./Create-edit-Style-del-formFields/remove-formfields) form fields
-- [Edit form fields](./Create-edit-Style-del-formFields/edit-formfields)
-- [Group form fields](./group-formfields)
+- [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), [style](./manage-form-fields/customize-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
+- [Edit form fields](./manage-form-fields/edit-form-fields)
+- [Group form fields](./group-form-fields)
 - [Add custom data to form fields](./custom-data)
 - [Form Constrain](./form-constrain)
 - [Form validation](./form-validation)
-- [Form fields API](./formfields-api)
+- [Form fields API](./form-fields-api)

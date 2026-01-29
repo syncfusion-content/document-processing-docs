@@ -62,19 +62,19 @@ pdfviewer.appendTo('#PdfViewer');
 ![FormDesigner](../images/FormDesigner.gif)
 
 Create and customize interactive fields directly on the PDF page.
-- [Create](./Create-edit-Style-del-formFields/create-formfields), [edit](./Create-edit-Style-del-formFields/edit-formfields), or [remove](./Create-edit-Style-del-formFields/remove-formfields) forms
-- [Add a Signature Field](./Create-edit-Style-del-formFields/create-formfields#add-signature-field) 
-- [Edit Form Field](./Create-edit-Style-del-formFields/edit-formfields)
-- [Remove Form Field](./Create-edit-Style-del-formFields/remove-formfields) 
+- [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), or [remove](./manage-form-fields/remove-form-fields) forms
+- [Add a Signature Field](./manage-form-fields/create-form-fields#add-signature-field) 
+- [Edit Form Field](./manage-form-fields/modify-form-fields)
+- [Remove Form Field](./manage-form-fields/remove-form-fields) 
 - [Form Field Constraints](./form-constrain) 
 
 ## Supported form field types
 
-- [Textbox](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-textbox)
-- [Password](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-password)
-- [CheckBox](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-checkbox)
-- [RadioButton](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-radiobutton)
-- [ListBox](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-listbox)
-- [DropDown](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-dropdown)
-- [Signature field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-signature-field)
-- [Initial field](../form-designer/Create-edit-Style-del-formFields/create-formfields#add-initial-field)
+- [Textbox](../forms/manage-form-fields/create-form-fields#add-textbox)
+- [Password](../forms/manage-form-fields/create-form-fields#add-password)
+- [CheckBox](../forms/manage-form-fields/create-form-fields#add-checkbox)
+- [RadioButton](../forms/manage-form-fields/create-form-fields#add-radiobutton)
+- [ListBox](../forms/manage-form-fields/create-form-fields#add-listbox)
+- [DropDown](../forms/manage-form-fields/create-form-fields#add-dropdown)
+- [Signature field](../forms/manage-form-fields/create-form-fields#add-signature-field)
+- [Initial field](../forms/manage-form-fields/create-form-fields#add-initial-field)

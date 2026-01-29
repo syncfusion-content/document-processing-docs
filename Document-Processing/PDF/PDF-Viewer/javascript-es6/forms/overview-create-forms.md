@@ -14,7 +14,7 @@ All form field operations can be performed using either the [Form Designer user 
 
 This section explains how to:
 
-- [Create PDF form fields](./Create-edit-Style-del-formFields/create-formfields)
-- [Edit form field behavior and values](./Create-edit-Style-del-formFields/edit-formfields)
-- [Style the appearance of form fields](./Create-edit-Style-del-formFields/style-formfields)
-- [Remove form fields from a PDF document](./Create-edit-Style-del-formFields/remove-formfields)
+- [Create PDF form fields](./manage-form-fields/create-form-fields)
+- [Edit form field behavior and values](./manage-form-fields/modify-form-fields)
+- [Style the appearance of form fields](./manage-form-fields/customize-form-fields)
+- [Remove form fields from a PDF document](./manage-form-fields/remove-form-fields)
