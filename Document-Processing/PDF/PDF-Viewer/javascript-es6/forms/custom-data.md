@@ -30,16 +30,6 @@ This page explains how to:
 You can attach custom data at the time of field creation by passing a **customData** object in the settings parameter of **addFormField()**.
 
 ```ts
-import { PdfViewer, FormDesigner, FormFields, Toolbar, Navigation, Magnification, TextSelection } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Navigation, Magnification, TextSelection, FormFields, FormDesigner);
-
-const viewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
-  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
-});
-viewer.appendTo('#pdfViewer');
-
 viewer.documentLoad = () => {
   const meta = { businessId: 'C-1024', tags: ['profile','kiosk'], requiredRole: 'admin' };
   viewer.formDesignerModule.addFormField('Textbox', {
