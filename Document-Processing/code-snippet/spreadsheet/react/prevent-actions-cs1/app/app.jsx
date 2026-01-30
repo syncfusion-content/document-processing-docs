@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
-import { RangeDirective, ColumnsDirective, ColumnDirective, getRangeIndexes } from '@syncfusion/ej2-react-spreadsheet';
+import { RangeDirective, ColumnsDirective, ColumnDirective, getCellIndexes, getRangeIndexes } from '@syncfusion/ej2-react-spreadsheet';
 import { data } from './datasource';
 
 function App() {
@@ -9,10 +9,11 @@ function App() {
    // Columns to be prevented editing.
     const readOnlyColumns = [0,2];
 
+    // Triggers when cell editing starts in the spreadsheet.
     const cellEdit = (args) =>{
-        var addressRange = getRangeIndexes(args.address);
+        var addressRange = getCellIndexes(args.address.split('!')[1]);
         // preventing cellEditing from the readOnly columns
-        if (readOnlyColumns.includes(addressRange[1]) || readOnlyColumns.includes(addressRange[3])) {
+        if (readOnlyColumns.includes(addressRange[1])) {
             args.cancel = true;
         }
     }

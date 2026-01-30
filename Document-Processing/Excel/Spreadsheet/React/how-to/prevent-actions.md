@@ -35,7 +35,7 @@ This approach ensures that spreadsheet actions such as cut, paste, autofill, for
 
  > **Note:** In this example, we use column indexes to restrict actions. You can also use row indexes or cell addresses for the same purpose.
 
-The following example demonstrates how to prevent actions such as cut, paste, autofill, formatting, validation, and conditional formatting for specific cells in the spreadsheet without protecting the sheet or making the cells read-only. You can also restrict additional actions by following the same approach.
+The following example demonstrates how to prevent actions such as cut, paste, autofill, formatting, validation, and conditional formatting for specific cells(in the first and third columns) in the spreadsheet without protecting the sheet or making the cells read-only. You can also restrict additional actions by following the same approach.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
