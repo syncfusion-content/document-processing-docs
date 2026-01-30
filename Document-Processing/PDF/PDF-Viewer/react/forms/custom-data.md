@@ -78,14 +78,14 @@ root.render(<App />);
 
 When users add form fields using the [Form Designer toolbar](../toolbar-customization/form-designer-toolbar), you can define default customData so that newly created fields automatically inherit it. Default custom data can be configured using per-field settings objects such as:
 
-- [textFieldSettings](https://ej2.syncfusion.com/documentation/react/api/pdfviewer/index-default#textfieldsettings)
-- [passwordFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#passwordfieldsettings)
-- [checkBoxFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#checkboxfieldsettings)
-- [radioButtonFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#radiobuttonfieldsettings)
-- [listBoxFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#listboxfieldsettings)
-- [dropDownFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#dropdownfieldsettings)
-- [signatureFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#signaturefieldsettings)
-- [initialFieldSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#initialfieldsettings)
+- [textFieldSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#textfieldsettings)
+- [passwordFieldSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#passwordfieldsettings)
+- [checkBoxFieldSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#checkboxfieldsettings)
+- [radioButtonFieldSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#radiobuttonfieldsettings)
+- [listBoxFieldSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#listboxfieldsettings)
+- [dropDownFieldSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#dropdownfieldsettings)
+- [signatureFieldSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#signaturefieldsettings)
+- [initialFieldSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#initialfieldsettings)
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

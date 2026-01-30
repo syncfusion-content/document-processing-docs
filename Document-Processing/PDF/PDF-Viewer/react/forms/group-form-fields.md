@@ -41,9 +41,9 @@ N>Form field grouping is controlled by the **Name** property. The position of ea
 4. Assign the same **Name** to all PDF Form Field that belong to the group.
 5. Apply the changes and verify that updates in one widget reflect in the others.
 
-![Grouping textboxes with the same name](../images/groupTextFileds.png)
+![Grouping textboxes with the same name](../../javascript-es6/images/groupTextFileds.png)
 
-![Grouping radio buttons with the same name](../images/groupRadiobutton.png)
+![Grouping radio buttons with the same name](../../javascript-es6/images/groupRadiobutton.png)
 
 ## Group PDF Form Fields Programmatically
 

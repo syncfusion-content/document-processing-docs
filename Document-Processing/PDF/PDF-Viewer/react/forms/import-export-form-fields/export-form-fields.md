@@ -194,7 +194,7 @@ root.render(<App />);
 - Export as JSON for REST API integration.
 - Export as FDF/XFDF for compatibility with other PDF tools.
 - Export as Object to merge with app state or store securely.
-- Automate exports after [validation](../form-validation) using [validateFormFields()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#validateformfields)
+- Automate exports after [validation](../form-validation) using [validateFormFields()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#validateformfields)
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
 
