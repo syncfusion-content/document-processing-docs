@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# PDF Form Import and Export Events in TypeScript
+# PDF Form Import and Export Events in React
 
 Import/Export events let you **track and customize the entire life cycle** of form data being imported into or exported from the PDF Viewer.
 Use these events to:
@@ -42,9 +42,9 @@ viewer.importFailed = (args) => {
 ```
 
 ## Export Events
-- [exportStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportstart) — Fires when an export begins.
-- [exportSuccess](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportsuccess) — Fires when form fields are successfully exported.
-- [exportFailed](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportfailed) — Fires if the export fails.
+- [exportStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportstart) — Fires when an export begins.
+- [exportSuccess](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportsuccess) — Fires when form fields are successfully exported.
+- [exportFailed](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportfailed) — Fires if the export fails.
 
 **Example: Handle Export Events**
 

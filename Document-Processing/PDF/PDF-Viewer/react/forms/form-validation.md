@@ -18,13 +18,13 @@ Form field validation follows this flow:
 - Enable validation using the [enableFormFieldsValidation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) property.
 - Handle the [validateFormFields](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#validateformfields) event to determine which required fields are not filled.
 - When validation is enabled and a user attempts to print, download, or submit the document:
-  - The [validateFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#validateformfields) event is triggered.
+  - The [validateFormFields](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#validateformfields) event is triggered.
   - Unfilled required fields are listed in args.nonFillableFields.
   - You can cancel the action, show an error message, or move focus to an invalid field.
 
 ## Enable PDF Form Field Validation
 
-To enable validation, set the [enableFormFieldsValidation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#validateformfields) property to true and wire the validateFormFields event.
+To enable validation, set the [enableFormFieldsValidation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#validateformfields) property to true and wire the validateFormFields event.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

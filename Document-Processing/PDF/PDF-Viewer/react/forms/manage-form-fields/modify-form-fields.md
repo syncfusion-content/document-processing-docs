@@ -506,7 +506,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
 
 ## See also
 
