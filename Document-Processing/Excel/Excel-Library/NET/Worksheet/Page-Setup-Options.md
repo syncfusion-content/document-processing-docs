@@ -1025,3 +1025,117 @@ End Using
 {% endtabs %}
 
 A complete working example to add headers and footers in an Excel document using C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Header%20and%20Footer/.NET/Header%20and%20Footer)
+
+## Paper Size  
+
+The <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Interfaces.IPageSetupBase.html#Syncfusion_XlsIO_Interfaces_IPageSetupBase_PaperSize">PaperSize</a> functionality allows you to specify the paper size for worksheet.
+
+The following code snippet shows how to use PaperSize.
+
+{% tabs %}   
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PaperSize/.NET/PaperSize/PaperSize/Program.cs,180" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Set the paper size to A4 
+  worksheet.PageSetup.PaperSize = ExcelPaperSize.PaperA4;
+
+  //Saving the workbook
+  workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Set the paper size to A4 
+  worksheet.PageSetup.PaperSize = ExcelPaperSize.PaperA4;
+
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+  'Set the paper size to A4 
+  worksheet.PageSetup.PaperSize = ExcelPaperSize.PaperA4
+
+  'Saving the workbook
+  workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example to set the paper size in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PaperSize/.NET/PaperSize">this GitHub page</a>.
+
+## Orientation  
+
+The <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Interfaces.IPageSetupBase.html#Syncfusion_XlsIO_Interfaces_IPageSetupBase_Orientation">Orientation</a> functionality allows you to specify the orientation for worksheet.
+
+The following code snippet shows how to use Orientation.
+
+{% tabs %}   
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Orientation/.NET/Orientation/Orientation/Program.cs,180" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Set the page orientation 
+  worksheet.PageSetup.Orientation = ExcelPageOrientation.Landscape;
+
+  //Saving the workbook
+  workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Set the page orientation
+  worksheet.PageSetup.Orientation = ExcelPageOrientation.Landscape;
+
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+  'Set the page orientation
+  worksheet.PageSetup.Orientation = ExcelPageOrientation.Landscape
+
+  'Saving the workbook
+  workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example to set the page orientation in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Orientation/.NET/Orientation">this GitHub page</a>.

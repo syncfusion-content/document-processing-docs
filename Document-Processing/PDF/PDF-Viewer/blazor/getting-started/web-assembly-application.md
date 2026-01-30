@@ -9,7 +9,7 @@ documentation: ug
 
 # View PDF files using the PDF Viewer in a Blazor WebAssembly (WASM) app
 
-This article describes how to add the Syncfusion&reg; Blazor PDF Viewer component to a Blazor WebAssembly (WASM) app using Visual Studio or Visual Studio Code. A fully functional example project is available in the [GitHub repository](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Client-side%20application).
+This article describes how to add the Syncfusion&reg; Blazor PDF Viewer component to a Blazor WebAssembly (WASM) app using Visual Studio or Visual Studio Code. A fully functional example project is available in the [GitHub repository](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Blazor%20WebAssembly).
 
 {% tabcontents %}
 
@@ -37,7 +37,7 @@ To add the Blazor PDF Viewer component to the app, open the NuGet Package Manage
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 * [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
 
-N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.116.1. Ensure this version is referenced.
+N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
 
 {% endtabcontent %}
 
@@ -82,14 +82,14 @@ N> The PDF Viewer component is supported on .NET 8.0 and later.
 
 dotnet add package Syncfusion.Blazor.SfPdfViewer -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-dotnet add package SkiaSharp.Views.Blazor -v 3.116.1
+dotnet add package SkiaSharp.Views.Blazor -v 3.119.1
 dotnet restore
 
 {% endhighlight %}
 
 {% endtabs %}
 
-N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.116.1. Ensure this version is referenced.
+N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
 
 N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for the list of available packages and component details.
 

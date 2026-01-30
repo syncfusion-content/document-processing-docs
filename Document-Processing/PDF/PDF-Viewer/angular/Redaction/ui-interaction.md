@@ -37,7 +37,7 @@ After adding a redaction annotation, you can update its properties through the p
 
 ### Update using the property panel
 
-When a redaction annotation is selected, you can change overlay text, font style, fill color, and other properties. Updates are applied immediately in the viewer.
+When a redaction annotation is selected, a two‑tab property panel (General and Appearance) lets you customize text and styling. Changes are reflected instantly on the redaction mark.
 
 The property panel can be opened in two ways:
 
@@ -46,6 +46,45 @@ The property panel can be opened in two ways:
 
 * By right‑clicking (or long‑pressing) the annotation and choosing **Properties** from the context menu.  
 ![Redaction Property Panel via Context Menu](redaction-annotations-images/redaction-property-panel-via-context-menu.png)
+
+#### General tab
+
+Use the General tab to define how the content will look after redaction. These settings control the final, burned‑in result and provide a live preview on hover.
+
+* Use Overlay Text – Enable to show text (for example, Confidential) over the redacted area.
+* Overlay Text – Enter the text to display.
+* Repeat Overlay Text – Tile the text to cover the whole region.
+
+![Overlay Text Options](redaction-annotations-images/redaction-overalytext.png)
+
+* Font options – Choose family, size, color, and alignment for the overlay text.
+* Fill Color – Select the color that will fill the region after redaction is applied.
+
+![Fill Color in General Tab](redaction-annotations-images/after-redaction-fill-color.png)
+
+Note: Hovering the mouse over a redaction annotation shows a preview of this final look. After you click Apply Redaction, these settings are flattened into the page and can’t be edited. Tip: Click Save in the dialog to keep your changes.
+
+#### Appearance tab
+
+Use the Appearance tab to style the redaction annotation itself (before applying). These options help you see and manage the box on the page but do not change the final redacted output.
+
+* Fill Color – Sets the annotation’s fill while you review and move/resize it.
+* Outline Color – Optional border for the annotation.
+* Fill Opacity – Controls how transparent the annotation appears during review.
+
+Note: The Appearance tab affects only the temporary annotation. The final look after applying redaction comes from the General tab settings.
+
+![Appearance Tab Settings](redaction-annotations-images/redaction-annotation-appearance.png)
+
+### What changes after applying redaction?
+
+When you click Apply Redaction:
+
+* The selected content is permanently removed from the page.
+* The redaction region is flattened into the page with a solid fill that uses the General tab Fill Color.
+* If overlay text was enabled, the text is burned into the page. If Repeat Overlay Text was enabled, the text is tiled across the region.
+* All properties become read‑only. You cannot edit overlay text, fill color, outline, or opacity after applying. Set the final look in the General tab and use the Appearance tab only to style the annotation before you apply.
+
 
 ## Delete redaction annotations
 

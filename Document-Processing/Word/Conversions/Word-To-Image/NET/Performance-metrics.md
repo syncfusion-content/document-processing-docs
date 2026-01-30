@@ -14,11 +14,11 @@ The Syncfusion<sup>&reg;</sup> .NET Word library (DocIO) enables high-performanc
 
 The following system configurations were used for benchmarking:
 
-* **Operating System:** Windows 10  
-* **Processor:** 11th Gen Intel(R) Core(TM)  
+* **Operating System:** Windows 11  
+* **Processor:** AMD Ryzen 5 7520U with Radeon Graphics  
 * **RAM:** 16GB  
 * **.NET Version:** .NET 8.0  
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v31.1.17](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/31.1.17)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v32.1.19](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/32.1.19)
 
 ## Word to image conversion
 
@@ -31,22 +31,22 @@ The following system configurations were used for benchmarking:
 <tr>
     <td>2</td>
     <td>{{'[Word-2.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-Image/.NET/Word-document-to-image/Word-document-to-image/Data/Document-2.docx)'| markdownify }}</td>
-    <td>0.77</td>
+    <td>0.44</td>
 </tr>
 <tr>
     <td>50</td>
     <td>{{'[Word-50.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-Image/.NET/Word-document-to-image/Word-document-to-image/Data/Document-50.docx)'| markdownify }}</td>
-    <td>9.6</td>
+    <td>6.02</td>
 </tr>
 <tr>
     <td>100</td>
     <td>{{'[Word-100.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-Image/.NET/Word-document-to-image/Word-document-to-image/Data/Document-100.docx)'| markdownify }}</td>
-    <td>13.9</td>
+    <td>8.2</td>
 </tr>
 <tr>
     <td>500</td>
     <td>{{'[Word-500.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-Image/.NET/Word-document-to-image/Word-document-to-image/Data/Document-500.docx)'| markdownify }}</td>
-    <td>49.8</td>
+    <td>35.9</td>
 </tr>
 </table>
 

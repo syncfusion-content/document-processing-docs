@@ -72,6 +72,427 @@ An Excel file encoded as a Base64 string can be loaded into the Spreadsheet comp
 {% endhighlight %}
 {% endtabs %}
 
+### Open an Excel file from JSON data
+
+The Blazor Spreadsheet component accepts data only as a byte array through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DataSource) property. To load JSON data into the Spreadsheet, convert the JSON data into an Excel file format using [XlsIO](https://help.syncfusion.com/file-formats/xlsio/overview), then convert it to a byte array. This approach allows importing JSON data from a local file or a remote URL.
+
+#### Load an Excel file from a local JSON file
+
+JSON data can be loaded from a local JSON file, converted to Excel format using XlsIO, and displayed in the Spreadsheet component. This approach is useful when working with static JSON data files within the application. The implementation reads the JSON file, converts it to Excel format using XlsIO, and binds it to the Spreadsheet as a byte array.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using System.Text.Json
+@using Syncfusion.XlsIO
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet DataSource="DataSourceBytes">
+	<SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+
+	public byte[] DataSourceBytes { get; set; }
+
+	protected override void OnInitialized()
+	{
+		// Build the file path to the JSON data source
+		// Note: Replace "wwwroot" and "sample.json" with the actual folder and file name where your JSON is stored.
+		string jsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "sample.json");
+
+		// Read the entire JSON file content as a string
+		string jsonData = File.ReadAllText(jsonFilePath);
+
+		// Convert the JSON content to an Excel byte array for Spreadsheet binding
+		DataSourceBytes = ConvertJsonToExcel(jsonData);
+	}
+
+	// Converts a JSON string into an Excel workbook byte array using Syncfusion XlsIO
+	private byte[] ConvertJsonToExcel(string jsonData)
+	{
+		// Parse the JSON string into a JsonDocument for processing
+		using JsonDocument jsonDocument = JsonDocument.Parse(jsonData);
+		JsonElement rootJsonElement = jsonDocument.RootElement;
+
+		// Normalize the JSON structure into a list of row dictionaries
+		List<Dictionary<string, JsonElement>> dataRows = NormalizeJsonToRows(rootJsonElement);
+
+		// Extract all unique column headers (keys) from all rows
+		List<string> columnHeaders = dataRows
+			.SelectMany(row => row.Keys)
+			.Distinct()
+			.ToList();
+
+		// Initialize the Excel engine
+		using ExcelEngine excelEngine = new ExcelEngine();
+		IApplication excelApplication = excelEngine.Excel;
+
+		// Create a new workbook with one worksheet
+		IWorkbook workbook = excelApplication.Workbooks.Create(1);
+		IWorksheet worksheet = workbook.Worksheets[0];
+
+		// Write header row with column names
+		int columnCount = columnHeaders.Count;
+		for (int columnIndex = 0; columnIndex < columnCount; columnIndex++)
+		{
+			IRange headerCell = worksheet.Range[1, columnIndex + 1];
+			headerCell.Text = columnHeaders[columnIndex];
+			headerCell.CellStyle.Font.Bold = true;
+		}
+
+		// Write data rows starting from the second row
+		int currentRowIndex = 2;
+		foreach (var dataRow in dataRows)
+		{
+			for (int columnIndex = 0; columnIndex < columnCount; columnIndex++)
+			{
+				string columnKey = columnHeaders[columnIndex];
+
+				// Write cell value if the key exists in the current row
+				if (dataRow.TryGetValue(columnKey, out var cellValue))
+				{
+					worksheet.Range[currentRowIndex, columnIndex + 1].Value2 = cellValue;
+				}
+			}
+			currentRowIndex++;
+		}
+
+		// Save the workbook to a memory stream and return as byte array
+		using MemoryStream memoryStream = new MemoryStream();
+		workbook.SaveAs(memoryStream);
+		return memoryStream.ToArray();
+	}
+
+	// Normalizes various JSON structures (array, object, or single value) into a uniform list of row dictionaries
+	private List<Dictionary<string, JsonElement>> NormalizeJsonToRows(JsonElement rootJsonElement)
+	{
+		// Case 1: JSON is an array - convert each element to a dictionary
+		if (rootJsonElement.ValueKind == JsonValueKind.Array)
+		{
+			return rootJsonElement.EnumerateArray()
+				.Select(JsonToDictionaryList)
+				.ToList();
+		}
+
+		// Case 2: JSON is an object
+		if (rootJsonElement.ValueKind == JsonValueKind.Object)
+		{
+			// Check if the object contains array properties (wrapper pattern)
+			foreach (var property in rootJsonElement.EnumerateObject())
+			{
+				if (property.Value.ValueKind == JsonValueKind.Array)
+				{
+					return property.Value.EnumerateArray()
+						.Select(JsonToDictionaryList)
+						.ToList();
+				}
+			}
+
+			// Single object record - wrap in a list
+			return new List<Dictionary<string, JsonElement>>
+			{
+				JsonToDictionaryList(rootJsonElement)
+			};
+		}
+
+		// Case 3: Fallback for primitive values - wrap in a dictionary with "value" key
+		return new List<Dictionary<string, JsonElement>>
+		{
+			new Dictionary<string, JsonElement> { ["value"] = rootJsonElement }
+		};
+	}
+
+	// Converts a JsonElement to a dictionary of property names and values
+	private Dictionary<string, JsonElement> JsonToDictionaryList(JsonElement jsonElement)
+	{
+		// If not an object, wrap the value in a dictionary with "value" key
+		if (jsonElement.ValueKind != JsonValueKind.Object)
+		{
+			return new Dictionary<string, JsonElement> { ["value"] = jsonElement };
+		}
+
+		// Enumerate all properties and convert to dictionary
+		return jsonElement.EnumerateObject()
+			.ToDictionary(
+				property => property.Name,
+				property => property.Value,
+				StringComparer.OrdinalIgnoreCase
+			);
+	}
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Load an Excel file from a remote JSON URL
+
+Remote JSON data can be integrated into the Spreadsheet component by converting it into an Excel-compatible format. The process begins with asynchronous retrieval of JSON from the specified endpoint using HttpClient. The fetched data is then transformed into an Excel workbook through XlsIO, and the resulting byte array is passed to the Spreadsheet for rendering. This approach is particularly useful for integrating real-time data from REST APIs or other web services.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using System.Text.Json
+@using Syncfusion.XlsIO
+@using Syncfusion.Blazor.Spreadsheet
+@inject HttpClient HttpClient
+
+@if (IsDataLoaded)
+{
+	<SfSpreadsheet DataSource="DataSourceBytes">
+		<SpreadsheetRibbon></SpreadsheetRibbon>
+	</SfSpreadsheet>
+}
+@code {
+
+	public byte[] DataSourceBytes { get; set; }
+
+	// Flag to indicate whether the data has been loaded
+	public bool IsDataLoaded { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		// Define the remote JSON URL
+		// Note: Replace with your actual JSON endpoint URL
+		string jsonUrl = "https://jsonplaceholder.typicode.com/todos";
+
+		// Fetch JSON data from the remote URL
+		string jsonData = await HttpClient.GetStringAsync(jsonUrl);
+
+		// Transform the JSON data to an Excel byte array for Spreadsheet binding
+		DataSourceBytes = ConvertJsonToExcel(jsonData);
+
+		// Set flag to indicate data is loaded
+		IsDataLoaded = true;
+	}
+
+	// Transforms a JSON string into an Excel workbook byte array using Syncfusion XlsIO
+	private byte[] ConvertJsonToExcel(string jsonData)
+	{
+		// Parse the JSON string into a JsonDocument for processing
+		using JsonDocument jsonDocument = JsonDocument.Parse(jsonData);
+		JsonElement rootJsonElement = jsonDocument.RootElement;
+
+		// Normalize the JSON structure into a list of row dictionaries
+		List<Dictionary<string, JsonElement>> dataRows = NormalizeJsonToRows(rootJsonElement);
+
+		// Extract all unique column headers (keys) from all rows
+		List<string> columnHeaders = dataRows
+			.SelectMany(row => row.Keys)
+			.Distinct()
+			.ToList();
+
+		// Initialize the Excel engine
+		using ExcelEngine excelEngine = new ExcelEngine();
+		IApplication excelApplication = excelEngine.Excel;
+
+		// Create a new workbook with one worksheet
+		IWorkbook workbook = excelApplication.Workbooks.Create(1);
+		IWorksheet worksheet = workbook.Worksheets[0];
+
+		// Write header row with column names
+		int columnCount = columnHeaders.Count;
+		for (int columnIndex = 0; columnIndex < columnCount; columnIndex++)
+		{
+			IRange headerCell = worksheet.Range[1, columnIndex + 1];
+			headerCell.Text = columnHeaders[columnIndex];
+		}
+
+		// Write data rows starting from the second row
+		int currentRowIndex = 2;
+		foreach (var dataRow in dataRows)
+		{
+			for (int columnIndex = 0; columnIndex < columnCount; columnIndex++)
+			{
+				string columnKey = columnHeaders[columnIndex];
+
+				// Write cell value if the key exists in the current row
+				if (dataRow.TryGetValue(columnKey, out JsonElement cellValue))
+				{
+					worksheet.Range[currentRowIndex, columnIndex + 1].Value2 = cellValue;
+				}
+			}
+			currentRowIndex++;
+		}
+
+		// Save the workbook to a memory stream and return as byte array
+		using MemoryStream memoryStream = new MemoryStream();
+		workbook.SaveAs(memoryStream);
+		return memoryStream.ToArray();
+	}
+
+	// Normalizes various JSON structures (array, object, or single value) into a uniform list of row dictionaries
+	private List<Dictionary<string, JsonElement>> NormalizeJsonToRows(JsonElement rootJsonElement)
+	{
+		// Case 1: JSON is an array - convert each element to a dictionary
+		if (rootJsonElement.ValueKind == JsonValueKind.Array)
+		{
+			return rootJsonElement.EnumerateArray()
+				.Select(JsonToDictionaryList)
+				.ToList();
+		}
+
+		// Case 2: JSON is an object
+		if (rootJsonElement.ValueKind == JsonValueKind.Object)
+		{
+			// Check if the object contains array properties (wrapper pattern)
+			foreach (var property in rootJsonElement.EnumerateObject())
+			{
+				if (property.Value.ValueKind == JsonValueKind.Array)
+				{
+					return property.Value.EnumerateArray()
+						.Select(JsonToDictionaryList)
+						.ToList();
+				}
+			}
+
+			// Single object record - wrap in a list
+			return new List<Dictionary<string, JsonElement>>
+			{
+				JsonToDictionaryList(rootJsonElement)
+			};
+		}
+
+		// Case 3: Fallback for primitive values - wrap in a dictionary with "value" key
+		return new List<Dictionary<string, JsonElement>>
+		{
+			new Dictionary<string, JsonElement> { ["value"] = rootJsonElement }
+		};
+	}
+
+	// Parses a JsonElement into a dictionary of property names and values
+	private Dictionary<string, JsonElement> JsonToDictionaryList(JsonElement jsonElement)
+	{
+		// If not an object, wrap the value in a dictionary with "value" key
+		if (jsonElement.ValueKind != JsonValueKind.Object)
+		{
+			return new Dictionary<string, JsonElement> { ["value"] = jsonElement };
+		}
+
+		// Enumerate all properties and convert to dictionary
+		return jsonElement.EnumerateObject()
+			.ToDictionary(
+				property => property.Name,
+				property => property.Value,
+				StringComparer.OrdinalIgnoreCase
+			);
+	}
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Open an Excel file from Google Drive
+To load an Excel file from `Google Drive` in the Blazor Spreadsheet, follow the steps below.
+
+**Prerequisites:**
+- [Google Cloud project](https://developers.google.com/workspace/guides/create-project) in the Google Cloud Console.
+- [Service account](https://cloud.google.com/iam/docs/service-accounts-create) within the GCP project.
+- [Service account key](https://cloud.google.com/iam/docs/keys-create-delete) (JSON) available on disk.
+- [Google Drive API enabled](https://console.cloud.google.com/apis/library/drive.googleapis.com) for the project.
+- [Google Drive account](https://drive.google.com/) with access to the file to download.
+- [Google.Apis.Drive.v3](https://www.nuget.org/packages/Google.Apis.Drive.v3) NuGet package installed in your project to access Google Drive API.
+
+**Step 1:** Install required NuGet packages
+
+To use Google Drive with the Blazor Spreadsheet, install the following packages:
+
+- [Google.Apis.Drive.v3](https://www.nuget.org/packages/Google.Apis.Drive.v3) — to access the Google Drive API
+- [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet) — to use the Syncfusion Blazor Spreadsheet component
+
+**Step 2:** Include the following namespaces in the **Index.razor** file
+
+Import the required namespaces at the top of the file:
+
+```
+@using Google.Apis.Auth.OAuth2;
+@using Google.Apis.Drive.v3;
+@using Google.Apis.Services;
+@using Syncfusion.Blazor.Spreadsheet;
+@using System.IO;
+```
+
+**Step 3:** Download the Excel file, convert to bytes, and prepare for binding
+
+Add the below code example to download the `Google Drive` file using the Drive API, convert the stream to a byte array, and bind it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DataSource) property.
+
+{% tabs %}
+{% highlight razor %}
+
+@page "/"
+
+@if (IsSpreadsheetDataLoaded)
+{
+    <SfSpreadsheet DataSource="DataSourceBytes">
+        <SpreadsheetRibbon></SpreadsheetRibbon>
+    </SfSpreadsheet>
+}
+@code{
+ 
+    public byte[] DataSourceBytes { get; set; }
+ 
+    // Flag to indicate whether the spreadsheet data has been loaded and is ready for rendering
+    public bool IsSpreadsheetDataLoaded { get; set; }
+ 
+    protected override async Task OnInitializedAsync()
+    {
+        //Download the document from Google Drive
+        MemoryStream stream = await GetDocumentFromGoogleDrive();
+
+        //Set the position as '0'
+        stream.Position = 0;
+
+        // Convert the MemoryStream to a byte array to be used as the DataSource
+        DataSourceBytes = stream.ToArray();
+ 
+        // Set the flag to true to indicate that the spreadsheet data is ready
+        IsSpreadsheetDataLoaded = true;
+    }
+ 
+    // Download file from Google Drive
+    public async Task<MemoryStream> GetDocumentFromGoogleDrive()
+    {
+        //Define the path to the service account key file
+        string serviceAccountKeyPath = "Your_service_account_key_path";
+
+        //Specify the file ID of the file to download
+        string fileID = "Your_file_id";
+ 
+        try
+        {
+            //Authenticate the Google Drive API access using the service account key
+            GoogleCredential credential = GoogleCredential.FromFile(serviceAccountKeyPath).CreateScoped(DriveService.ScopeConstants.Drive);
+ 
+            //Create the Google Drive service
+            DriveService service = new DriveService(new BaseClientService.Initializ()
+            {
+                HttpClientInitializer = credential
+            });
+ 
+            //Create a request to get the file from Google Drive
+            var request = service.Files.Get(fileID);
+ 
+            //Download the file into a MemoryStream
+            MemoryStream stream = new MemoryStream();
+            await request.DownloadAsync(stream);
+ 
+            return stream;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error retrieving document from Google Drive: {ex.Message}");
+            throw;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Replace **Your_file_id** with the actual Google Drive file ID, and **Your_service_account_key_path** with the actual path to your service account key JSON file.
+
+N> The **FileID** is the unique identifier for a Google Drive file. For example, if the file URL is: `https://drive.google.com/file/d/abc123xyz456/view?usp=sharing`, then the file ID is `abc123xyz456`.
+
 ### Supported file formats
 The Spreadsheet component supports opening the following file formats:
 * Microsoft Excel Workbook (.xlsx)
@@ -92,6 +513,87 @@ When a protected sheet or workbook is saved or downloaded, all associated settin
 
 ### Supported file formats
 The Spreadsheet component supports saving files in the Microsoft Excel (.xlsx) format.
+
+### Save an Excel file programmatically
+
+The Blazor Spreadsheet component provides two methods for saving Excel files programmatically:
+
+- [SaveAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsync_Syncfusion_Blazor_Spreadsheet_SaveOptions_) – Saves the spreadsheet as an Excel file.
+- [SaveAsStreamAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsStreamAsync) – Returns the spreadsheet content as a [MemoryStream](https://learn.microsoft.com/dotnet/api/system.io.memorystream) for further processing or storage.
+
+#### Save as an Excel file
+
+The [SaveAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsync_Syncfusion_Blazor_Spreadsheet_SaveOptions_) method saves the spreadsheet content as an Excel file programmatically and supports customization through the [SaveOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveOptions.html) parameter.
+
+| Parameter | Type | Description |
+| -- | -- | -- |
+| options | [SaveOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveOptions.html) | Specifies settings for the save operation, such as the file name and file type (for example, XLSX). |
+
+N> If options are not provided, the default settings are **FileName**: `"Spreadsheet"` (the downloaded file will be named `"Spreadsheet.xlsx"`) and **SaveType**: [SaveType.Xlsx](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveType.html).
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<button OnClick="SaveWorkbookHandler">Save as Excel</button>
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes"></SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public async Task SaveWorkbookHandler()
+    {
+        // Exports the workbook as "MonthlyReport.xlsx"
+        await SpreadsheetInstance.SaveAsync(new SaveOptions
+        {
+            SaveType = SaveType.Xlsx,
+            FileName = "MonthlyReport"
+        });
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+#### Save as a MemoryStream
+
+The [SaveAsStreamAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SaveAsStreamAsync) method retrieves the spreadsheet content as a [MemoryStream](https://learn.microsoft.com/dotnet/api/system.io.memorystream) for further processing, such as saving to a database or cloud storage.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<button OnClick="SaveToServer">Save to Server</button>
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes"></SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public async Task SaveToServer()
+    {
+        var stream = await SpreadsheetInstance.SaveAsStreamAsync();
+        // Example: Saves the stream to a file named "ServerReport.xlsx"
+        using var fileStream = File.Create("wwwroot/ServerReport.xlsx");
+        stream.CopyTo(fileStream);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
 ## New
 To create a new, blank workbook through the UI, select **File > New** from the **Ribbon**. This action initializes a blank spreadsheet component, ready for data entry or formatting. If unsaved changes are present, a confirmation dialog will appear, indicating that these changes will be lost. The dialog presents options to proceed with creating the new workbook by selecting **OK**, or to cancel the operation by selecting **Cancel**.

@@ -5742,7 +5742,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The Essential<sup>&reg;</sup> PDF supports removing comments and reviewing status from the PDF annotation.
 
-The following code example explains how to remove comments using [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_RemoveAt_System_Int32_) method from the existing PDF annotation.
+The following code example explains how to remove comments using [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedPopupAnnotationCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPopupAnnotationCollection_RemoveAt_System_Int32_) method from the existing PDF annotation.
 
 {% tabs %}
 
@@ -5766,7 +5766,7 @@ PdfLoadedPopupAnnotationCollection commentsCollection = loadedRectangleAnnotatio
 commentsCollection.RemoveAt(0);
 
 //Save the document
-lDoc.Save("Output.pdf");
+ldoc.Save("Output.pdf");
 //Closes the document
 ldoc.Close(true);
 {% endhighlight %}

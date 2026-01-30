@@ -301,6 +301,6 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/react/base-cs1-standalone/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/react/base-cs1-standalone" %}
 
 > You can refer to our [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) feature tour page for its groundbreaking feature representations. You can also explore our [React PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/default) to understand how to explains core features of PDF Viewer.
