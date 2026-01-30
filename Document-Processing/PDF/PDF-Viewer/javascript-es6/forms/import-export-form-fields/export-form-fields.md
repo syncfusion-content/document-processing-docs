@@ -35,17 +35,6 @@ The following example exports form field data as FDF.
 ```
 
 ```ts
-import { PdfViewer, FormFieldDataFormat, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner);
-
-const viewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
-  // serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/' // Server-backed
-  resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
-});
-viewer.appendTo('#pdfViewer');
-
 document.getElementById('exportFdf')!.addEventListener('click', () => {
   // Destination is optional; if omitted the browser will prompt.
   viewer.exportFormFields('FormData', FormFieldDataFormat.Fdf);
