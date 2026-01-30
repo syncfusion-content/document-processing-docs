@@ -28,17 +28,6 @@ N>If you’re using a **server-backed viewer**, set serviceUrl before importing.
 ```
 
 ```ts
-import { PdfViewer, FormFieldDataFormat, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner);
-
-const viewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
-  // serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/' // Server-backed
-  resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
-});
-viewer.appendTo('#pdfViewer');
-
 document.getElementById('importFdf')!.addEventListener('click', () => {
   // The file for importing should be accessible at the given path or as a file stream depending on your integration
   viewer.importFormFields('File', FormFieldDataFormat.Fdf);
@@ -51,15 +40,7 @@ document.getElementById('importFdf')!.addEventListener('click', () => {
 <button id="importXfdf">Import XFDF</button>
 <div id="pdfViewer" style="height: 640px; width: 100%"></div>
 ```
-
 ```ts
-const viewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
-  // serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/' // Server-backed
-  resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
-});
-viewer.appendTo('#pdfViewer');
-
 document.getElementById('importXfdf')!.addEventListener('click', () => {
   // The file for importing should be accessible at the given path or as a file stream depending on your integration
   viewer.importFormFields('File', FormFieldDataFormat.Xfdf);
@@ -70,16 +51,8 @@ document.getElementById('importXfdf')!.addEventListener('click', () => {
 
 ```html
 <button id="importJson">Import JSON</button>
-<div id="pdfViewer" style="height: 640px; width: 100%"></div>
 ```
 ```ts
-const viewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
-  // serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/' // Server-backed
-  resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
-});
-viewer.appendTo('#pdfViewer');
-
 document.getElementById('importJson')!.addEventListener('click', () => {
   // The file for importing should be accessible at the given path or as a file stream depending on your integration
   viewer.importFormFields('File', FormFieldDataFormat.Json);
