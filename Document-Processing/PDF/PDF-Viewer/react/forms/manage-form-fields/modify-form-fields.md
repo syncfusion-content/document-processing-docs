@@ -7,42 +7,18 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Edit form fields in React PDF Viewer
+# Modify PDF Form Field Properties in React
 
-The PDF Viewer component allows user to edit PDF form fields using the Form Designer UI and update them programmatically.
+You can modify form fields using the **UI** or **API**.
 
-The PDF Viewer supports editing these field types:
+## Modify PDF Form Field Properties using the UI
+- Right click a field → **Properties** to update settings.
+![Textbox properties panel](../../../javascript-es6/images/ui-textbox-edit.png)
+- Drag to move; use handles to resize.
+- Use the toolbar to toggle field mode or add new fields.
 
-- [Textbox](#textbox)
-- [Password](#password)
-- [CheckBox](#checkbox)
-- [RadioButton](#radiobutton)
-- [ListBox](#listbox)
-- [DropDown](#dropdown)
-- [Signature field](#signature-field)
-- [Initial field](#initial-field)
-
-## Edit with the UI
-
-- Select a form field and Right-click to open the Properties panel from the context menu to change its settings.
-
-![Edit FormFields](../../../javascript-es6/images/formFields_properties.png)
-
-- Drag to move; use resize handles to resize.
-- Use the toolbar to toggle field mode and add new fields.
-
-## Textbox
-
-### Edit Textbox
-
-- Right-click the textbox → Properties.
-- Change value, font, size, colors, border thickness, alignment, max length, multiline.
-
-![Textbox edited from UI](../../../javascript-es6/images/ui-textbox-edit.png)
-
-### Edit Textbox programmatically
-
-Use `updateFormField` on a button click for a simple, discoverable flow. The example below retrieves the fields, locates the textbox, and applies value, typography, colors, alignment, and border thickness updates.
+## Modify PDF Form Field Properties programmatically
+Use [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) to change behavior/data (including position and size):
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -95,18 +71,69 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Password
+## Modify PDF Form Field Properties by Field type
 
-### Edit Password
+### Textbox
+- UI: Update value, font, size, colors, border thickness, alignment, max length, multiline.
+![Textbox properties panel](../../../javascript-es6/images/ui-textbox-edit.png)
+- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for value, typography, alignment, colors, borders.
 
-- Right-click the password field → Properties.
-- Change tooltip, required, max length, font, and appearance.
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+import * as ReactDOM from 'react-dom/client';
+import React, { useRef } from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
+export function App() {
+  const viewerRef = useRef(null);
+
+  const onEditTextbox = () => {
+    const viewer = viewerRef.current;
+    if (!viewer) return;
+    const fields = viewer.retrieveFormFields();
+    const field = fields.find(f => f.name === 'First Name') || fields[0];
+    if (field) {
+      viewer.formDesignerModule.updateFormField(field, {
+        value: 'John',
+        fontFamily: 'Courier',
+        fontSize: 12,
+        color: 'black',
+        backgroundColor: 'white',
+        borderColor: 'black',
+        thickness: 2,
+        alignment: 'Left',
+        maxLength: 50
+      });
+    }
+  };
+
+  return (
+    <div className='control-section'>
+      <button onClick={onEditTextbox}>Apply Textbox Changes</button>
+      <PdfViewerComponent
+        ref={viewerRef}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+        style={{ height: '680px' }}
+      >
+        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]} />
+      </PdfViewerComponent>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+{% endhighlight %}
+{% endtabs %}
+
+### Password
+
+- UI: Tooltip, required, max length, font, appearance.
 ![Password edited from UI](../../../javascript-es6/images/ui-password-edit.png)
-
-### Edit Password programmatically
-
-Use `updateFormField` on a button click for a simple, discoverable flow. The example below retrieves the fields, locates the password field, and applies tooltip, validation flags, typography, colors, alignment, max length, and border thickness updates.
+- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, validation flags, typography, colors, alignment, borders.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -162,19 +189,10 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## CheckBox
-
-### Edit CheckBox
-
-- Right-click the checkbox → Properties.
-- Toggle checked state, change border/background colors and thickness.
-
+### CheckBox
+- UI: Toggle checked state.
 ![CheckBox edited from UI](../../../javascript-es6/images/ui-checkbox-edit.png)
-
-### Edit CheckBox programmatically
-
-Use `updateFormField` on a button click for a simple, discoverable flow. The example below retrieves the fields, locates the checkbox field, and applies checked state, tooltip, colors, and border thickness updates.
-
+- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for isChecked, tooltip, colors, borders.
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 import * as ReactDOM from 'react-dom/client';
@@ -222,18 +240,10 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## RadioButton
-
-### Edit RadioButton
-
-- Right-click a radio button → Properties.
-- Set selected state, colors, and thickness. Buttons with the same Name form a group; only one can be selected.
-
+### RadioButton
+•	UI: Set selected item in a group (same Name).
 ![RadioButton edited from UI](../../../javascript-es6/images/ui-radiobutton-edit.png)
-
-### Edit RadioButton programmatically
-
-Use `updateFormField` on a button click for a simple, discoverable flow. The example below retrieves the fields, locates the radio button group, and applies selection state and border appearance updates.
+•	API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) to set selected value and border appearance.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -277,18 +287,10 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## ListBox
-
-### Edit ListBox
-
-- Right-click the list box → Properties.
-- Add/remove items, set selection, and adjust fonts and colors.
-
+### ListBox
+•	UI: Add/remove items, set selection, adjust fonts/colors.
 ![ListBox edited from UI](../../../javascript-es6/images/ui-listbox-edit.png)
-
-### Edit ListBox programmatically
-
-Use `updateFormField` on a button click for a simple, discoverable flow. The example below retrieves the fields, locates the list box, and applies options, selection, typography, colors, and border appearance updates.
+•	API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for items, selection, borders.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -343,19 +345,10 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## DropDown
-
-### Edit DropDown
-
-- Right-click the dropdown → Properties.
-- Add/remove items, set default value, and adjust appearance.
-
+### DropDown
+•	UI: Add/remove items, default value, appearance.
 ![DropDown edited from UI](../../../javascript-es6/images/ui-dropdown-edit.png)
-
-### Edit DropDown programmatically
-
-Use `updateFormField` on a button click for a simple, discoverable flow. The example below retrieves the fields, locates the dropdown, and applies items, value, typography, colors, and border appearance updates.
-
+•	API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for items, value, borders.
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 import * as ReactDOM from 'react-dom/client';
@@ -409,19 +402,10 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Signature field
-
-### Edit Signature field
-
-- Right-click the signature field → Properties.
-- Change tooltip, thickness, indicator text, required/visibility states.
-
+### Signature Field
+•	UI: Tooltip, thickness, indicator text, required/visibility.
 ![Signature field edited from UI](../../../javascript-es6/images/ui-signature-edit.png)
-
-### Edit Signature field programmatically
-
-Use `updateFormField` on a button click for a simple, discoverable flow. The example below retrieves the fields, locates the signature field, and applies tooltip, required/print flags, colors, and border thickness updates.
-
+•	API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 import * as ReactDOM from 'react-dom/client';
@@ -470,19 +454,10 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Initial field
-
-### Edit Initial field
-
-- Right-click the initial field → Properties.
-- Change tooltip, indicator text, thickness, and required/visibility states.
-
+### Initial Field
+•	UI: Tooltip, indicator text, thickness, required/visibility.
 ![Initial field edited from UI](../../../javascript-es6/images/ui-initial-edit.png)
-
-### Edit Initial field programmatically
-
-Use `updateFormField` on a button click for a simple, discoverable flow. The example below retrieves the fields, locates the initial field, and applies tooltip, required/print flags, colors, and border thickness updates.
-
+•	API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 import * as ReactDOM from 'react-dom/client';
@@ -531,15 +506,15 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
 
 ## See also
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
-- [Create form fields](./create-formfields)
-- [Remove form Fields](./remove-formfields)
-- [Style form fields](./style-formfields)
-- [Group form fields](../group-formfields)
+- [Create form fields](./create-form-fields)
+- [Remove form Fields](./remove-form-fields)
+- [Style form fields](./customize-form-fields)
+- [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)
-- [Form fields API](../formfields-api)
+- [Form fields API](../form-fields-api)

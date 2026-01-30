@@ -7,27 +7,18 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Remove form fields in React PDF Viewer control
 
-The PDF Viewer component allows users to remove PDF form fields using the Form Designer UI and programmatically.
+# Remove PDF Form Fields from a PDF in React
 
-## Remove form fields using the UI
-
-You can remove designed form fields directly from the Form Designer toolbar.
-
-Steps:
-
-- Select the target form field on the page.
-- Click the Delete Form Field icon on the Form Designer toolbar.
-- Alternatively, press the `Delete key` after selecting one or more fields.
-
+## Remove Form Fields Using the UI
+**Steps:**
+1.	Enable **Form Designer mode**.
+2.	Select the form field.
+3.	Click **Delete** in the toolbar or press the **Delete** key.
 ![Form Designer toolbar with Delete icon](../../../javascript-es6/images/ui-del-formfields.png)
 
-## Remove form fields programmatically
-
-Use the `deleteFormField` method to remove form fields programmatically. Retrieve the target field from the `formFieldCollections` property (by object or ID) and pass it to `deleteFormField`.
-
-The following example adds three fields on document load (Textbox, Password, and Signature) and shows two ways to remove them using buttons.
+## Remove Form Fields Programmatically
+Use **deleteFormField()** with a field reference or ID.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -103,19 +94,16 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-N> To configure the server-backed PDF Viewer, add the following `serviceUrl` as a prop in the `index.js` file:
-`serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"`
-
-[View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
 
 ## See also
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
-- [Create form fields](./create-formfields)
-- [Edit form fields](./edit-formfields)
-- [Style form fields](./style-formfields)
-- [Group form fields](../group-formfields)
+- [Create form fields](./create-form-fields)
+- [Modify form fields](./modify-form-fields)
+- [Customize form fields](./customize-form-fields)
+- [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)
 - [Add custom data to form fields](../custom-data)
-- [Form fields API](../formfields-api)
+- [Form fields API](../form-fields-api)
