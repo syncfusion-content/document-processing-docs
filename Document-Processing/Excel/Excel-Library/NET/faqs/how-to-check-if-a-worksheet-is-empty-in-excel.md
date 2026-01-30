@@ -1,6 +1,6 @@
 ---
-title: Check if a worksheet is empty in Excel | Syncfusion
-description: Code example to check if a worksheet is empty in Excel using Syncfusion .NET Excel library (XlsIO).
+title: Check whether a worksheet is empty in Excel | Syncfusion
+description: Code example to check whether a worksheet is empty in Excel using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
