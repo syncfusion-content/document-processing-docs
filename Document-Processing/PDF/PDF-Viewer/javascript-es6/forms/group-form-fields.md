@@ -56,19 +56,6 @@ You can also group form fields during creation by assigning the same **Name** th
 - Two checkboxes named **Subscribe** share the checked state.
 
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
-         TextSelection, Annotation, FormDesigner, FormFields, TextFieldSettings,
-         RadioButtonFieldSettings, CheckBoxFieldSettings } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-                 BookmarkView, TextSelection, Annotation, FormDesigner, FormFields);
-
-const pdfviewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
-  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
-});
-pdfviewer.appendTo('#PdfViewer');
-
 pdfviewer.documentLoad = () => {
   // Textbox group: same name => mirrored value
   pdfviewer.formDesignerModule.addFormField('Textbox', {

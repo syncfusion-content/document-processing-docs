@@ -27,22 +27,6 @@ Form field validation follows this flow:
 To enable validation, set the [enableFormFieldsValidation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#validateformfields) property to true and wire the validateFormFields event.
 
 ```ts
-import {
-  PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-  TextSelection, TextSearch, Print, Annotation, FormDesigner, FormFields,
-  TextFieldSettings
-} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(
-  Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-  TextSelection, TextSearch, Print, Annotation, FormDesigner, FormFields
-);
-
-// Create and configure the viewer
-let pdfviewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
-});
 // 1) Default for new Textbox fields
 pdfviewer.textFieldSettings = { isRequired: true };
 
