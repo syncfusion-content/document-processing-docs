@@ -14,21 +14,21 @@ The PDF Viewer provides comprehensive APIs to create, edit, validate, navigate, 
 
 | API | Description |
 |---|---|
-| [updateFormFieldsValue](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfieldsvalue) | Updates the value for one or more form fields.|
-| [updateFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) | Updates the properties of one or more form fields.|
-| [retrieveFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#retrieveformfields) | Retrieves all form fields or by specific criteria.|
-| [resetFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#resetformfields) | Resets the specified or all form fields to their default values.|
-| [importFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importformfields) | Imports values and states for form fields from a JSON object or file stream.|
-| [focusFormField](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#focusformfield) | Sets focus to a form field by name or ID.|
-| [exportFormFieldsAsObject](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportformfieldsasobject) | Exports form fields as a JSON object.|
-| [exportFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportformfields) | Exports form fields as a downloadable file.|
-| [clearFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#clearformfields) | Clears values of specified or all form fields without removing them.|
-| [isFormFieldDocument](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#isformfielddocument) | Indicates whether the loaded document contains form fields.|
-| [isFormDesignerToolbarVisible](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) | Gets whether the Form Designer toolbar is currently visible.|
-| [formFieldCollections](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#formfieldcollections) | Gets the collection of current form fields with their properties.|
-| [enableFormFieldsValidation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) | Enables or disables form field validation.|
-| [enableFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#enableformfields) | Enables or disables interaction with form fields.|
-| [enableFormDesignerToolbar](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#enableformdesignertoolbar) | Shows or hides the Form Designer toolbar.|
+| [updateFormFieldsValue](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfieldsvalue) | Updates the value for one or more form fields.|
+| [updateFormFields](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) | Updates the properties of one or more form fields.|
+| [retrieveFormFields](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#retrieveformfields) | Retrieves all form fields or by specific criteria.|
+| [resetFormFields](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#resetformfields) | Resets the specified or all form fields to their default values.|
+| [importFormFields](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#importformfields) | Imports values and states for form fields from a JSON object or file stream.|
+| [focusFormField](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#focusformfield) | Sets focus to a form field by name or ID.|
+| [exportFormFieldsAsObject](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportformfieldsasobject) | Exports form fields as a JSON object.|
+| [exportFormFields](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportformfields) | Exports form fields as a downloadable file.|
+| [clearFormFields](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#clearformfields) | Clears values of specified or all form fields without removing them.|
+| [isFormFieldDocument](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#isformfielddocument) | Indicates whether the loaded document contains form fields.|
+| [isFormDesignerToolbarVisible](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) | Gets whether the Form Designer toolbar is currently visible.|
+| [formFieldCollections](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#formfieldcollections) | Gets the collection of current form fields with their properties.|
+| [enableFormFieldsValidation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) | Enables or disables form field validation.|
+| [enableFormFields](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enableformfields) | Enables or disables interaction with form fields.|
+| [enableFormDesignerToolbar](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enableformdesignertoolbar) | Shows or hides the Form Designer toolbar.|
 
 ## updateFormFieldsValue
 
