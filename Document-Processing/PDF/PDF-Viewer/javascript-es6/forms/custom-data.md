@@ -9,7 +9,7 @@ documentation: ug
 
 # Add Custom Data to PDF Form Fields in TypeScript PDF Viewer
 
-The Syncfusion **TypeScript PDF Viewer** allows you to attach **custom application-specific data** to form fields by using the customData property. This enables you to associate business identifiers, tags, validation hints, or workflow metadata with form fields.
+The **Syncfusion TypeScript PDF Viewer** allows you to attach **custom application-specific data** to form fields by using the customData property. This enables you to associate business identifiers, tags, validation hints, or workflow metadata with form fields.
 
 The custom data remains linked to the form field throughout the viewer session and can be accessed or updated whenever the field is queried or modified.
 
