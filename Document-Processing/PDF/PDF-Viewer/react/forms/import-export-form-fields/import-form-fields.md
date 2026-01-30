@@ -7,20 +7,20 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Import form data into PDF in React
+# Import PDF Form Data into React PDF Viewer
 
-The PDF Viewer provides APIs to import interactive form field values into the currently loaded PDF. You can import from the following formats:
+The **PDF Viewer** lets you import values into interactive form fields in the currently loaded PDF. You can import data from these formats:
 
 - [FDF](#import-as-fdf)
-- [XFDF](#import-as-xfdf)
-- [JSON](#import-as-json)
+- [XFDF](#import-xfdf)
+- [JSON](#import-json)
 
-Supported API:
-- importFormFields(sourceOrObject, format)
+## API to use
+- [importFormFields](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#importformfields)(sourceOrObject, format)
 
-Note: When using the server-backed viewer, set serviceUrl before importing.
+N>If you’re using a **server-backed viewer**, set serviceUrl before importing.
 
-## Import as FDF
+### Import FDF
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -73,7 +73,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Import as XFDF
+### Import XFDF
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -126,7 +126,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Import as JSON
+### Import JSON
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -179,81 +179,12 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Import as Object
+## Common Use Cases
 
-Import data previously exported with exportFormFieldsAsObject. Useful for client-side roundtrips without writing a file.
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-import * as ReactDOM from 'react-dom/client';
-import React, { useRef, useState } from 'react';
-import './index.css';
-import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  Annotation,
-  LinkAnnotation,
-  ThumbnailView,
-  BookmarkView,
-  TextSelection,
-  FormFields,
-  FormDesigner,
-  Inject,
-  FormFieldDataFormat
-} from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const viewerRef = useRef(null);
-  const [exportedData, setExportedData] = useState(null);
-
-  const exportDataAsObject = async () => {
-    if (viewerRef.current) {
-      const data = await viewerRef.current.exportFormFieldsAsObject(FormFieldDataFormat.Fdf);
-      setExportedData(data);
-    }
-  };
-
-  const importData = () => {
-    if (viewerRef.current && exportedData) {
-      // Import the previously exported object data
-      viewerRef.current.importFormFields(exportedData, FormFieldDataFormat.Fdf);
-      // Alternatives:
-      // viewerRef.current.importFormFields(exportedData, FormFieldDataFormat.Xfdf);
-      // viewerRef.current.importFormFields(exportedData, FormFieldDataFormat.Json);
-    }
-  };
-
-  return (
-    <div>
-      <button id="exportDataAsObject" onClick={exportDataAsObject}>Export Object</button>
-      <button id="importData" onClick={importData}>Import Data</button>
-      <PdfViewerComponent
-        id="container"
-        style={{ height: '680px', width: '100%' }}
-        ref={viewerRef}
-        documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-        // serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/" // Server-backed
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-      >
-        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, FormFields, FormDesigner]} />
-      </PdfViewerComponent>
-    </div>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-{% endhighlight %}
-{% endtabs %}
-
-## Common use cases
-
-- Pre-fill application forms from your database using JSON.
+- Pre-fill application forms from a database using JSON.
 - Migrate data from other PDF tools using FDF/XFDF.
-- Restore user progress stored locally or on the server using object import.
-- Combine with [validation](../form-validation) to block print/download until required fields are filled.
+- Restore user progress saved locally or on the server.
+- Combine with validation to block print/download until required fields are completed.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
 
@@ -261,12 +192,10 @@ root.render(<App />);
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
-- [Export form fields](./export-formfields)
+- [Export form fields](./export-form-fields)
 - [Import Export Events](./import-export-events)
-- [Create form fields](../Create-edit-Style-del-formFields/create-formfields)
-- [Edit form fields](../Create-edit-Style-del-formFields//edit-formfields)
-- [Remove form fields](../Create-edit-Style-del-formFields//remove-formfields)
-- [Group form fields](../group-formfields)
+- [Create Edit form fields](../overview-create-forms)
+- [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)
 - [Add custom data to form fields](../custom-data)
-- [Form fields API](../formfields-api)
+- [Form fields API](../form-fields-api)
