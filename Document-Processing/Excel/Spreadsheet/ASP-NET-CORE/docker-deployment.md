@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Docker image deployment in EJ2 ASP.NET CORE Spreadsheet control | Syncfusion
+title: Docker image deployment in ASP.NET CORE Spreadsheet | Syncfusion
 description: Learn here all about Docker image deployment in Syncfusion EJ2 ASP.NET CORE Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Docker deployment 
