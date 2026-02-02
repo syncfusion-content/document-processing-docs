@@ -42,6 +42,148 @@ Use Microsoft Edge’s built-in Read Aloud to listen to the PDF content.
 {% tabs %}
 {% highlight js tabtitle="accessibility.js" %}
 
+const synth = window.speechSynthesis;
+
+let voices = [];
+
+const voicesReady = new Promise((resolve) => {
+    const tryGet = () => {
+        const voice = synth.getVoices();
+        if (voice && voice.length) {
+            voices = voice;
+            resolve(voice);
+            return true;
+        }
+        return false;
+    };
+    if (tryGet()) return;
+    const onVoices = () => {
+        if (tryGet()) {
+            synth.removeEventListener('voiceschanged', onVoices);
+        }
+    };
+    synth.addEventListener('voiceschanged', onVoices);
+    // Fallback polling for browsers that don't fire voiceschanged reliably
+    let tries = 0;
+    const poll = setInterval(() => {
+        if (tryGet() || ++tries > 30) {
+            clearInterval(poll);
+            voices = synth.getVoices() || [];
+            synth.removeEventListener('voiceschanged', onVoices);
+            resolve(voices);
+        }
+    }, 100);
+});
+
+// iOS/iPadOS Safari requires a user gesture before speech works reliably.
+// This one-time unlock speaks a silent utterance on first tap/click/keydown.
+let __ttsUnlocked = false;
+let __unlockPromise = null;
+function ensureTtsUnlocked() {
+    if (__ttsUnlocked) return Promise.resolve();
+    if (__unlockPromise) return __unlockPromise;
+    __unlockPromise = new Promise((resolve) => {
+        const cleanup = () => {
+            ['click', 'touchstart', 'keydown'].forEach(evt => document.removeEventListener(evt, onEvent, true));
+        };
+        const onEvent = () => {
+            try {
+                const u = new SpeechSynthesisUtterance(''); // silent token
+                u.volume = 0;
+                u.rate = 1;
+                u.onend = () => {
+                    __ttsUnlocked = true;
+                    cleanup();
+                    resolve();
+                };
+                // Queue in a macrotask to avoid race with gesture handling
+                setTimeout(() => synth.speak(u), 0);
+            } catch (_) {
+                __ttsUnlocked = true;
+                cleanup();
+                resolve();
+            }
+        };
+        ['click', 'touchstart', 'keydown'].forEach(evt => document.addEventListener(evt, onEvent, true));
+    });
+    return __unlockPromise;
+}
+
+function populateVoiceList() {
+    voices = synth.getVoices().sort(function (a, b) {
+        const aname = a.name.toUpperCase();
+        const bname = b.name.toUpperCase();
+
+        if (aname < bname) {
+            return -1;
+        } else if (aname == bname) {
+            return 0;
+        } else {
+            return +1;
+        }
+    });
+}
+
+async function speakFromControls(input) {
+    await voicesReady;
+
+    const t = (typeof input === 'string' ? input.trim() : (input?.value || '').trim());
+    if (!t) return;
+
+    // Cancel any current speech to avoid overlaps/refresh quirks
+    if (synth.speaking) {
+        synth.cancel();
+    }
+
+    const utterThis = new SpeechSynthesisUtterance(t);
+
+    utterThis.onend = function () {
+        console.log("SpeechSynthesisUtterance.onend");
+    };
+
+    utterThis.onerror = function (e) {
+        console.error("SpeechSynthesisUtterance.onerror", e);
+    };
+
+    const available = speechSynthesis.getVoices();
+    let voice = null;
+    voice = available.find(v => v.default) || available[0];
+    if (voice) {
+        utterThis.voice = voice;
+        if (voice.lang) utterThis.lang = voice.lang; // Safari iOS respects lang better
+    }
+
+    utterThis.pitch = 1;
+    utterThis.rate = 1;
+
+    // Safari sometimes needs a microtask delay after cancel before speak
+    setTimeout(() => synth.speak(utterThis), 0);
+}
+
+async function initUi() {
+    await voicesReady;
+    // Populate voices now that controls exist
+    populateVoiceList();
+    if (speechSynthesis.onvoiceschanged !== undefined) {
+        speechSynthesis.onvoiceschanged = populateVoiceList;
+    }
+    return true;
+}
+
+// Initialize when DOM is ready; also handle Blazor re-renders
+document.addEventListener('DOMContentLoaded', async () => {
+    // Set up iOS unlock listeners early
+    ensureTtsUnlocked();
+    if (await initUi()) return;
+    const obs = new MutationObserver(async () => {
+        if (await initUi()) obs.disconnect();
+    });
+    obs.observe(document.body, { childList: true, subtree: true });
+});
+
+// Expose a helper to manually unlock from .NET or UI (tap/click)
+window.unlockTtsForIOS = () => ensureTtsUnlocked();
+
 // Initialize PDF accessibility features and observe page changes
 function initPdfAccessibility() {
     const viewerInfo = getViewerInfo();
@@ -61,6 +203,7 @@ function initPdfAccessibility() {
     });
     mutationObserver.observe(viewerInfo.container, { childList: true, subtree: true });
 }
+
 // Get viewer container and ID
 function getViewerInfo() {
     const container = document.querySelector('.e-pv-viewer-container');
@@ -119,13 +262,14 @@ function wirePage(div) {
     div.addEventListener('click', () => focusPageDiv(div));
     div.setAttribute('data-a11y-init', 'true');
 }
+
 // Reader the selected text aloud - Mircosoft Reader
  function readAloudText(text) {
     window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    window.speechSynthesis.speak(utterance);
+     speakFromControls(text);
 }
-// Cancel speech - Mircosoft Reader
+
+// Cancel speech and remove highlights - Mircosoft Reader
  function cancelReading() {
     if (window.speechSynthesis?.speaking) {
         window.speechSynthesis.cancel();
@@ -209,9 +353,154 @@ Use the browser’s Windows Speech Synthesis API (speechSynthesis) to implement 
 
 {% tabs %}
 {% highlight js tabtitle="accessibility.js" %}
+const synth = window.speechSynthesis;
+
+let voices = [];
+
+const voicesReady = new Promise((resolve) => {
+    const tryGet = () => {
+        const voice = synth.getVoices();
+        if (voice && voice.length) {
+            voices = voice;
+            resolve(voice);
+            return true;
+        }
+        return false;
+    };
+    if (tryGet()) return;
+    const onVoices = () => {
+        if (tryGet()) {
+            synth.removeEventListener('voiceschanged', onVoices);
+        }
+    };
+    synth.addEventListener('voiceschanged', onVoices);
+    // Fallback polling for browsers that don't fire voiceschanged reliably
+    let tries = 0;
+    const poll = setInterval(() => {
+        if (tryGet() || ++tries > 30) {
+            clearInterval(poll);
+            voices = synth.getVoices() || [];
+            synth.removeEventListener('voiceschanged', onVoices);
+            resolve(voices);
+        }
+    }, 100);
+});
+
+// iOS/iPadOS Safari requires a user gesture before speech works reliably.
+// This one-time unlock speaks a silent utterance on first tap/click/keydown.
+let __ttsUnlocked = false;
+let __unlockPromise = null;
+function ensureTtsUnlocked() {
+    if (__ttsUnlocked) return Promise.resolve();
+    if (__unlockPromise) return __unlockPromise;
+    __unlockPromise = new Promise((resolve) => {
+        const cleanup = () => {
+            ['click', 'touchstart', 'keydown'].forEach(evt => document.removeEventListener(evt, onEvent, true));
+        };
+        const onEvent = () => {
+            try {
+                const u = new SpeechSynthesisUtterance(''); // silent token
+                u.volume = 0;
+                u.rate = 1;
+                u.onend = () => {
+                    __ttsUnlocked = true;
+                    cleanup();
+                    resolve();
+                };
+                // Queue in a macrotask to avoid race with gesture handling
+                setTimeout(() => synth.speak(u), 0);
+            } catch (_) {
+                __ttsUnlocked = true;
+                cleanup();
+                resolve();
+            }
+        };
+        ['click', 'touchstart', 'keydown'].forEach(evt => document.addEventListener(evt, onEvent, true));
+    });
+    return __unlockPromise;
+}
+
+function populateVoiceList() {
+    voices = synth.getVoices().sort(function (a, b) {
+        const aname = a.name.toUpperCase();
+        const bname = b.name.toUpperCase();
+
+        if (aname < bname) {
+            return -1;
+        } else if (aname == bname) {
+            return 0;
+        } else {
+            return +1;
+        }
+    });
+}
+
+async function speakFromControls(input) {
+    // iOS/iPadOS: require user-gesture unlock and stable voice list
+    await ensureTtsUnlocked().catch(() => { });
+    await voicesReady;
+
+    const t = (typeof input === 'string' ? input.trim() : (input?.value || '').trim());
+    if (!t) return;
+
+    // Cancel any current speech to avoid overlaps/refresh quirks
+    if (synth.speaking) {
+        synth.cancel();
+    }
+
+    const utterThis = new SpeechSynthesisUtterance(t);
+
+    utterThis.onend = function () {
+        console.log("SpeechSynthesisUtterance.onend");
+    };
+
+    utterThis.onerror = function (e) {
+        console.error("SpeechSynthesisUtterance.onerror", e);
+    };
+
+    const available = speechSynthesis.getVoices();
+    let voice = null;
+    voice = available.find(v => v.default) || available[0];
+    if (voice) {
+        utterThis.voice = voice;
+        if (voice.lang) utterThis.lang = voice.lang; // Safari iOS respects lang better
+    }
+
+    utterThis.pitch = 1;
+    utterThis.rate = 1;
+
+    // Safari sometimes needs a microtask delay after cancel before speak
+    setTimeout(() => synth.speak(utterThis), 0);
+}
+
+async function initUi() {
+    await voicesReady;
+    // Populate voices now that controls exist
+    populateVoiceList();
+    if (speechSynthesis.onvoiceschanged !== undefined) {
+        speechSynthesis.onvoiceschanged = populateVoiceList;
+    }
+    return true;
+}
+
+// Initialize when DOM is ready; also handle Blazor re-renders
+document.addEventListener('DOMContentLoaded', async () => {
+    // Set up iOS unlock listeners early
+    ensureTtsUnlocked();
+    if (await initUi()) return;
+    const obs = new MutationObserver(async () => {
+        if (await initUi()) obs.disconnect();
+    });
+    obs.observe(document.body, { childList: true, subtree: true });
+});
+
+// Expose a helper to manually unlock from .NET or UI (tap/click)
+window.unlockTtsForIOS = () => ensureTtsUnlocked();
+
 // Register .NET object for interop
  function registerDotNetObject(dotNetObj) {
-    window.myDotNetObj = dotNetObj;
+     window.myDotNetObj = dotNetObj;
+     ensureTtsUnlocked();
 }
 // Read selected text and highlight
 function readSelectedText(args, zoomLevel, muteVoice) {
@@ -226,7 +515,7 @@ function readSelectedText(args, zoomLevel, muteVoice) {
     });
     if (muteVoice) return;
     requestAnimationFrame(() => {
-        speakText(text, clearAllHighlights);
+        speakFromControls(text);
     });
 }
 // Read a line from page and notify .NET
@@ -258,7 +547,7 @@ function readLineFromPage(pageIndex, lineIndex, isPrev, muteVoice) {
         if (currentLineSpans && !muteVoice) {
             const lineText = currentLineSpans.map(s => s.textContent).join(' ');
             requestAnimationFrame(() => {
-                speakText(lineText, clearAllHighlights);
+                speakFromControls(lineText);
             });
         }
     }
@@ -332,6 +621,7 @@ function getLinesFromPage(pageIndex) {
         })
     );
 }
+
 // Speak text with optional target voiceUri; on end, invoke callbacks and reset UI
 function speakText(text, onEnd) {
     if (!text || !text.trim()) text = "Warning. No readable text found.";
@@ -451,12 +741,13 @@ function clearAllHighlights() {
     clearLineHighlight();
     clearSelectedHighlights();
 }
+
 // Pause or resume speech synthesis
  function readAloudMute(isPaused) {
     const speechSynth = window.speechSynthesis;
     isPaused ? speechSynth.resume() : speechSynth.pause();
 }
-// Cancel speech and remove highlights
+// Cancel speech and remove highlights - Mircosoft Reader
  function cancelReading() {
     if (window.speechSynthesis?.speaking) {
         window.speechSynthesis.cancel();
