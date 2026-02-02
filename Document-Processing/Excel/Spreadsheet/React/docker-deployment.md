@@ -57,7 +57,7 @@ docker-compose up
 
 Now the Spreadsheet server Docker instance runs on localhost with the provided port number `http://localhost:6002`. Open this link in a browser and navigate to the Spreadsheet Web API open and save service at `http://localhost:6002/api/spreadsheet/open` and `http://localhost:6002/api/spreadsheet/save`.
 
-**Step 4:** Append the URLs of the Docker instance running services to the [`openUrl`](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#openurl) property as `http://localhost:6002/api/spreadsheet/open` and the [`saveUrl`](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#saveurl) property as `http://localhost:6002/api/spreadsheet/save` in the client-side Spreadsheet component. For more information on how to get started with the Spreadsheet component, refer to this [`getting started page.`](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started)
+**Step 4:** Append the URLs of the Docker instance running services to the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property as `http://localhost:6002/api/spreadsheet/open` and the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property as `http://localhost:6002/api/spreadsheet/save` in the client-side Spreadsheet component. For more information on how to get started with the Spreadsheet component, refer to this [`getting started page.`](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started)
 
 ```js
 import * as React from 'react';
