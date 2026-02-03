@@ -28,7 +28,7 @@ To use the AI Coding Assistant, you need:
      * [Free Community License](https://www.syncfusion.com/products/communitylicense)
      * [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
   *	An active [API KEY](https://syncfusion.com/account/api-key)
-  *	Any project setup that includes Syncfusion<sup>&reg;</sup> components
+  *	Any project setup that includes Syncfusion Document Processing<sup>&reg;</sup> components
 
 ## Unlimited Access
 
