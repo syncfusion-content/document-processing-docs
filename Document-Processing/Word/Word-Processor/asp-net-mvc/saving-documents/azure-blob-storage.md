@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save document to Azure Blob Storage in ASP.NET MVC Document editor control | Syncfusion
+title: Save to Azure Blob Storage in ASP.NET MVC Document editor | Syncfusion
 description:  Learn about how to Save document to Azure Blob Storage in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Azure Blob Storage
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Azure Blob Storage
+# Save document to Azure Blob Storage in ASP.NET MVC
 
 To save a document to Azure Blob Storage, you can follow the steps below
 
@@ -113,7 +113,7 @@ N> Replace **Your Connection string from Azure** with the actual connection stri
 
 **Step 3:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/aspnetmvc/documentation/api/document-editor#saveAsBlob) and sent to server-side for saving in Azure Blob Storage container.
+In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in Azure Blob Storage container.
 
 
 {% tabs %}

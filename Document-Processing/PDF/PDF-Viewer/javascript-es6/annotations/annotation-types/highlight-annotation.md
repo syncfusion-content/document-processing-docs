@@ -24,18 +24,18 @@ You can add highlights in two ways:
 - Select text in the PDF document and right-click it.
 - Choose **Highlight** in the context menu.
 
-![Alt text](../../images/highlight_context.png)
+![Alt text](../annotation-images/highlight-context.gif)
 
 2. Using the annotation toolbar
 - Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
 - Select **Highlight** to enable highlight mode.
 - Select text to add the highlight annotation. Alternatively, select text first and then click **Highlight**.
 
-![Alt text](../../images/highlight_button.PNG)
+![Alt text](../annotation-images/highlight-tool.gif)
 
 N> When pan mode is active and a text markup mode is entered, the PDF Viewer switches to text selection mode to enable selection.
 
-### Switch to Highlight Mode
+### Enable Highlight Mode
 
 The PDF Viewer component allows add highlight annotations programmatically after enabling Highlight mode in button clicks.
 
@@ -66,6 +66,8 @@ document.getElementById('set').addEventListener('click', ()=> {
 N> To set up the **server-backed PDF Viewer**, add the below `serviceUrl` in the `index.ts` file: `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/highlight-mode-cs1" %}
+
+#### Exit Highlight mode
 
 To switch back to normal mode from highlight mode:
 
@@ -104,7 +106,7 @@ N> To set up the **server-backed PDF Viewer**, add the below `serviceUrl` in the
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/highlight-normal-mode-cs1" %}
 
-#### Add highlight annotation programmatically
+### Add highlight annotation programmatically
 
 Programmatically add highlights using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
@@ -168,7 +170,7 @@ Use the range slider in the Edit Opacity tool to change annotation opacity.
 ![Alt text](../../images/edit_opacity.png)
 
 #### Delete highlight annotation
-- Select the annotation and press Delete (or Backspace), or
+- Select the annotation and press Delete, or
 - Click **Delete Annotation** in the annotation toolbar.
 
 ![Alt text](../../images/delete_button.png)
@@ -245,8 +247,10 @@ TextSelection, Annotation} from '@syncfusion/ej2-pdfviewer';
 PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
 TextSelection, Annotation);
 
-let pdfviewer: PdfViewer = new PdfViewer({ documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-highlightSettings: {author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9} });
+let pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.highlightSettings= {author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9};
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -259,65 +263,85 @@ PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,
 TextSelection, Annotation);
 
 let pdfviewer: PdfViewer = new PdfViewer({ documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-highlightSettings: {author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9} });
+ });
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.highlightSettings= {author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9};
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `highlightSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default highlight settings.
+
+```html
+<button id="highlight">Add Highlight</button>
+```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, HighlightSettings } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+//Apply Highlight Settings while adding individual Annotation
+document.getElementById('highlight')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Highlight', {
+        bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
+        pageNumber: 1,
+        author: 'User 1',
+        color: '#ffff00',
+        opacity: 0.9
+    } as HighlightSettings);
+
+    pdfviewer.annotation.addAnnotation('Highlight', {
+        bounds: [{ x: 107, y: 220, width: 350, height: 14 }],
+        pageNumber: 1,
+        author: 'User 2',
+        color: '#ff1010ff',
+        opacity: 0.9
+    } as HighlightSettings);
+});
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, HighlightSettings } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
 pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 
-{% endhighlight %}
-{% endtabs %}
+//Apply Highlight Settings while adding individual Annotation
+document.getElementById('highlight')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Highlight', {
+        bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
+        pageNumber: 1,
+        author: 'User 1',
+        color: '#ffff00',
+        opacity: 0.9
+    } as HighlightSettings);
 
-## Perform undo and redo
-
-The PDF Viewer supports undo and redo for changes. For highlight annotations, undo and redo are provided for:
-
-* Inclusion of the highlight annotations.
-* Deletion of the highlight annotations.
-* Change of either color or opacity of the highlight annotations.
-
-Undo and redo actions can be performed in the following ways:
-
-1. Using keyboard shortcuts:
-    After performing a highlight annotation action, press Ctrl+Z to undo and Ctrl+Y to redo.
-2. Using the toolbar:
-    Use the **Undo** and **Redo** tools in the toolbar.
-
-Refer to the following code snippet to call undo and redo actions from the client side.
-
-```html
-    <!--Element to call undo-->
-    <button id="undo">Undo</button>
-    <!--Element to call redo-->
-    <button id="redo"> Redo</button>
-```
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,
-    TextSelection, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject( Toolbar,Magnification, Navigation, LinkAnnotation,ThumbnailView,
-             BookmarkView, TextSelection, Annotation, FormDesigner, FormFields);
-
-let pdfviewer: PdfViewer = new PdfViewer({
-    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl:"https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
-});
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('undo').addEventListener('click', ()=> {
-    pdfviewer.undo();
-});
-
-document.getElementById('redo').addEventListener('click', ()=> {
-    pdfviewer.redo();
+    pdfviewer.annotation.addAnnotation('Highlight', {
+        bounds: [{ x: 107, y: 220, width: 350, height: 14 }],
+        pageNumber: 1,
+        author: 'User 2',
+        color: '#ff1010ff',
+        opacity: 0.9
+    } as HighlightSettings);
 });
 {% endhighlight %}
 {% endtabs %}
-
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
-
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/undo-redo-cs1" %}
 
 ## Disable highlight annotation
 
@@ -332,7 +356,8 @@ TextSelection, Annotation} from '@syncfusion/ej2-pdfviewer';
 PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
 TextSelection, Annotation);
 
-let pdfviewer: PdfViewer = new PdfViewer({ documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', enableTextMarkupAnnotation: false });
+let pdfviewer: PdfViewer = new PdfViewer({ documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
+pdfviewer.enableTextMarkupAnnotation= false;
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -344,8 +369,9 @@ TextSelection, Annotation} from '@syncfusion/ej2-pdfviewer';
 PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
 TextSelection, Annotation);
 
-let pdfviewer: PdfViewer = new PdfViewer({ documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', enableTextMarkupAnnotation: false });
+let pdfviewer: PdfViewer = new PdfViewer({ documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
 pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.enableTextMarkupAnnotation= false;
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}

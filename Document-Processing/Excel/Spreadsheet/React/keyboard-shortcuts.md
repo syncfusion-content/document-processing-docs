@@ -68,6 +68,7 @@ The keyboard shortcuts supported in the spreadsheet are,
 | Ctrl + Shift + 0 | Unhide the selected columns. |
 | Ctrl + D | Fill the cell down. |
 | Ctrl + R | Fill the cell right. |
+| Ctrl + Shift + F2 | Opens the comment editor for the active cell. Upon pressing the `Esc` key, the comment editor in focus will close. |
 
 ## Note
 

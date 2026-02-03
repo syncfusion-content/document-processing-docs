@@ -27,9 +27,7 @@ N> When pan mode is active and a shape tool is selected, the viewer switches to 
 
 ![Shape toolbar](../../images/shape_toolbar.png)
 
-### Add a rectangle annotation programmatically
-
-#### Enable rectangle mode
+### Enable rectangle mode
 
 The PDF Viewer library allows drawing shape annotations programmatically after enabling rectangle mode in button clicks.
 
@@ -82,7 +80,7 @@ document.getElementById('setNone')?.addEventListener('click', () => {
 {% endhighlight %}
 {% endtabs %}
 
-#### Add Rectangle Annotation
+### Add a rectangle annotation programmatically
 
 Use the addAnnotation method with Rectangle settings to add a rectangle annotation programmatically.
 
@@ -144,7 +142,7 @@ You can select, move, and resize Rectangle annotations directly in the viewer:
 Use the toolbar to change appearance:
 - Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools.
 
-### Edit the properties of area annotations
+#### Edit the properties of area annotations
 
 The fill color, stroke color, thickness, and opacity can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -253,6 +251,66 @@ pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.rectangleSettings = { fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange' };
 pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `RectangleSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default rectangle settings.
+
+```html
+<button id="Rectangle">Add Rectangle</button>
+```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, RectangleSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+//Apply Rectangle Settings while adding individual Annotation
+document.getElementById('Rectangle')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Rectangle', {
+        offset: { x: 200, y: 480 },
+        pageNumber: 1,
+        width: 150,
+        height: 75,
+        opacity: 0.5,
+        strokeColor: '#FF0000',
+        fillColor: '#000fff#',
+        author: 'User1'
+    } as RectangleSettings);
+});
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, RectangleSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+//Apply Rectangle Settings while adding individual Annotation
+document.getElementById('Rectangle')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('Rectangle', {
+        offset: { x: 200, y: 480 },
+        pageNumber: 1,
+        width: 150,
+        height: 75,
+        opacity: 0.5,
+        strokeColor: '#FF0000',
+        fillColor: '#000fff#',
+        author: 'User1'
+    } as RectangleSettings);
+});
 {% endhighlight %}
 {% endtabs %}
 
