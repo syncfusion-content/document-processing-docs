@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Designer and Toolbar Customization in JavaScript | Syncfusion
-description: Learn here all about form designer and toolbar in Syncfusion JavaScript PDF Viewer and more.
+description: Learn here all about form designer and toolbar in the Syncfusion JavaScript PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
