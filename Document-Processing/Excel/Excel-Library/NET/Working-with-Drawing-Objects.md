@@ -924,6 +924,9 @@ A complete working example to remove comment in C# is present on [this GitHub pa
 
 Threaded comments are a way to add and organize annotations or discussions related to specific cells in a worksheet. [IThreadedComment](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IThreadedComment.html) object represents a threaded comment in a worksheet.
 
+To quickly learn how to add, reply to, resolve, delete, and clear threaded comments in Excel documents, check out this video.
+{% youtube "https://www.youtube.com/watch?v=h8x62gZLxng" %}
+
 ### Create
 
 The following code explains how to create a threaded comment for a specific cell using [AddThreadedComment](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddThreadedComment_System_String_System_String_System_DateTime_) method.
