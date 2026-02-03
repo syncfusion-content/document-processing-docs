@@ -88,7 +88,7 @@ You can select and manage sticky notes directly in the viewer:
 - Delete or more options: use the context menu on the selected note.
 - Open comments: right-click the note and choose Comment, or use the Comment Panel button.
 
-### Edit the properties of sticky note annotations
+#### Edit the properties of sticky note annotations
 
 #### Editing opacity
 
@@ -108,7 +108,7 @@ Modify or delete comments or replies, and change status using the menu options i
 
   ![StickyNotesEdit](../../images/sticky_editbtn.png)
 
-#### Edit Annotation programmatically
+### Edit Annotation programmatically
 
 Use editAnnotation to update an existing note's bounds.
 
@@ -187,6 +187,58 @@ pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.stickyNotesSettings = { author: 'Syncfusion' };
 pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
+## Set properties while adding Individual Annotation
+
+Set properties for individual annotation before creating the control using `StickyNotesSettings`.
+
+> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+
+Refer to the following code snippet to set the default StickyNotes settings.
+
+```html
+<button id="StickyNotes">Add StickyNotes</button>
+```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, StickyNotesSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+//Apply StickyNotes Settings while adding individual Annotation
+document.getElementById('StickyNotes')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('StickyNotes', {
+    offset: { x: 100, y: 200 },
+    pageNumber: 1,
+    isLock: false,
+    author: 'Syncfusion'
+  } as StickyNotesSettings);
+});
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, StickyNotesSettings} from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+
+const pdfviewer: PdfViewer = new PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+//Apply StickyNotes Settings while adding individual Annotation
+document.getElementById('StickyNotes')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation('StickyNotes', {
+    offset: { x: 100, y: 200 },
+    pageNumber: 1,
+    isLock: false,
+    author: 'Syncfusion'
+  } as StickyNotesSettings);
+});
 {% endhighlight %}
 {% endtabs %}
 

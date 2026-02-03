@@ -17,6 +17,8 @@ RTL support in TypeScript PDF Viewer:
 - Load culture-specific strings globally using `L10n.load`.
 - Set the PdfViewer [`locale`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#locale) property to the target culture.
 
+![Arabic Localization](../images/locale-ar.gif)
+
 ## Example Code-snippet to Enable RTL with Arabic Localization
 
 Use the below code-snippet to enable RTL for RTL Languages(Arabic, Hebrew, Persian)

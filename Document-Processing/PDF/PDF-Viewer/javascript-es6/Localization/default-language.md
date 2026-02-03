@@ -12,6 +12,44 @@ domainurl: ##DomainURL##
 
 The PDF Viewer fully supports localization, allowing all UI text, tooltips, and messages to be replaced with culture-specific strings so the interface matches users’ language and regional settings.
 
+![Default Locale](../images/locale-us.gif)
+
+## Default language (en-US)
+
+By default, the PDF Viewer uses the en-US culture and requires no additional configuration.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+import {L10n} from '@syncfusion/ej2-base';
+// Inject required modules
+PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageOrganizer);
+
+const pdfviewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
+    locale: 'en-US', //Using locale update culture
+});
+pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+import {L10n} from '@syncfusion/ej2-base';
+// Inject required modules
+PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageOrganizer);
+
+const pdfviewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+    locale: 'en-US' //Using locale update culture
+});
+pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
+
+
 ## Localization keys reference
 
 The PDF Viewer supports localization using culture-specific string collections. By default, the component uses the "en-US" culture.
@@ -269,65 +307,6 @@ The following table lists the default text values used by the PDF Viewer in the 
 |No More Search Matches|No more matches found|
 |Exact Matches|EXACT MATCHES|
 |Total Matches|TOTAL MATCHES|
-
-## Default language (en-US)
-
-By default, the PDF Viewer uses the en-US culture and requires no additional configuration.
-
-{% tabs %}
-{% highlight ts tabtitle="Standalone" %}
-import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-import {L10n} from '@syncfusion/ej2-base';
-// Inject required modules
-PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageOrganizer);
-
-const pdfviewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
-    locale: 'en-US', //Using locale update culture
-});
-//Use Below code to Load other culutres
-L10n.load({
-            'ar-AE': {
-                'PdfViewer': {
-                    'PdfViewer': 'قوات الدفاع الشعبي المشاهد',
-                    'Cancel': 'إلغاء',
-                    'Download file': 'تحميل الملف',
-                    'Download': 'تحميل', 
-                     //Followed Up by more keys and values
-                    }
-                }
-            });
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-import {L10n} from '@syncfusion/ej2-base';
-// Inject required modules
-PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageOrganizer);
-
-const pdfviewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-    locale: 'en-US' //Using locale update culture
-});
-// Use Below code to Load other culutres
-L10n.load({
-            'ar-AE': {
-                'PdfViewer': {
-                    'PdfViewer': 'قوات الدفاع الشعبي المشاهد',
-                    'Cancel': 'إلغاء',
-                    'Download file': 'تحميل الملف',
-                    'Download': 'تحميل', 
-                     //Followed Up by more keys and values
-                    }
-                }
-            });
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% endtabs %}
-
-[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
 
 ## See Also
 
