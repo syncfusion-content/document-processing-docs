@@ -141,10 +141,6 @@ async function speakFromControls(input) {
         console.log("SpeechSynthesisUtterance.onend");
     };
 
-    utterThis.onerror = function (e) {
-        console.error("SpeechSynthesisUtterance.onerror", e);
-    };
-
     const available = speechSynthesis.getVoices();
     let voice = null;
     voice = available.find(v => v.default) || available[0];
@@ -452,10 +448,6 @@ async function speakFromControls(input) {
 
     utterThis.onend = function () {
         console.log("SpeechSynthesisUtterance.onend");
-    };
-
-    utterThis.onerror = function (e) {
-        console.error("SpeechSynthesisUtterance.onerror", e);
     };
 
     const available = speechSynthesis.getVoices();
