@@ -246,7 +246,6 @@ Field updating engine calculates the resultant value based on the field code inf
 * DOCPROPERTY
 * COMPARE
 * IF
-* NEXT
 * NEXTIF
 * MERGEREC
 * MERGESEQ
@@ -259,6 +258,7 @@ Field updating engine calculates the resultant value based on the field code inf
 The following are the known limitations:
 
 * Updating of NUMPAGES field and Cross Reference field with Page number and Paragraph number options are not supported in Silverlight, WinRT, Universal, and Windows Phone applications.
+* Currently group shapes, drawing canvas, and table auto resizing are not supported in Word to PDF layouting, and this may lead to update incorrect page number and total number of pages.
 
 N> In ASP.NET Core, Blazor, Xamarin, WinUI and .NET MAUI platforms, to update fields like Page and NumPages in a Word document, pass true to the UpdateDocumentFields() method and reference the Word to PDF [assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) or [NuGet](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf) packages in your application.
 
@@ -1812,8 +1812,6 @@ document.Close()
 {% endhighlight %}
 
 {% endtabs %}
-
-N>  For more information about the fields supported by Essential<sup>&reg;</sup>DocIO, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/supported-and-unsupported-features#supported-fields).
 
 ## Online Demo
 

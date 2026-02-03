@@ -75,24 +75,6 @@ A complete working example to import data from DataTable to Excel in C# is prese
 
 N> XlsIO imports the data from data table into Excel worksheet based on the data table column type. So, it is suggested to create the data tables with required column types such as number, text or date time before importing the data table to Excel worksheet.
 
-### Preserve Data Types  
-
-To preserve data types when importing a DataTable into an Excel worksheet, set the **preserveTypes** parameter of the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportDataTable_System_Data_DataTable_System_Boolean_System_Int32_System_Int32_System_Boolean_">ImportDataTable</a> method to **true**.
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-worksheet.ImportDataTable(table, false, 1, 1, true); // preserveTypes = true
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-worksheet.ImportDataTable(table, false, 1, 1, true); // preserveTypes = true
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-worksheet.ImportDataTable(table, False, 1, 1, True) ' preserveTypes = True
-{% endhighlight %}
-{% endtabs %}
-
 ## DataColumn to Excel
 
 The following code example illustrates how to import DataColumn into an Excel using [ImportDataColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportDataColumn_System_Data_DataColumn_System_Boolean_System_Int32_System_Int32_) method.

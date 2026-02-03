@@ -66,7 +66,7 @@ You can downloaded a complete working sample from [GitHub](https://github.com/Sy
 
 ## Performing OCR for a region of the document
 
-To perform OCR on a particular region or several regions of a PDF page with the help of [PageRegion](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.html) class in [OCRSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html), refer to the following code sample. 
+To perform OCR on a particular region or several regions of a PDF page with the help of [PageRegion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.PageRegion.html) class in [OCRSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html), refer to the following code sample. 
 
 {% tabs %} 
 

@@ -10,9 +10,6 @@ documentation: UG
 
 The Essential<sup>&reg;</sup> DocIO converts the Word document into Text file and vice versa. 
 
-To quickly start converting a Word document to Text and vice versa, please check out this video:
-{% youtube "https://www.youtube.com/watch?v=sK71TfWEtk8" %}
-
 ## Convert Word to Text
 
 The following code example shows how to convert the Word document into text file.

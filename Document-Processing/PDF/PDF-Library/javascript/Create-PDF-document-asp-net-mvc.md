@@ -40,8 +40,7 @@ N> Check out the following topics for including script references in an ASP.NET 
 *   [CDN](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references)
 *   [NPM Package](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references#node-package-manager-npm)
 *   [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator)
-For image and data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
-Ensure that your application includes an `ej2-pdf-lib` folder within a publicly accessible static directory (such as wwwroot, public, or dist). This folder must contain the required `.js` and `.wasm` files needed for image and data extraction.
+And ensure the application includes an `openjpeg` folder under `Scripts` (or a publicly accessible static path). This folder must contain the `openjpeg.js` and `openjpeg.wasm` files, along with the PDF file to extract images. Keep these in the same static content area as `ej2.min.js`.
 
 Step 6: **Create a PDF document**: Add the script in `~/Views/Home/Index.cshtml` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 

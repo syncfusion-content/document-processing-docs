@@ -293,6 +293,8 @@ DocIO is a non-UI component that provides a comprehensive document object model 
 
 If you encounter a **Wrong signature** exception while attempting to open an XML file using DocIO, it likely indicates that the XML file is not in the supported Word Processing 2007 or 2003 format. DocIO specifically supports these XML formats. To resolve this issue, please verify that the input XML file adheres to the Word Processing 2007 or 2003 format.
 
+For more information on Word Processing XML, refer to the documentation [here](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-processing-xml-xml).
+
 ## How to set the current culture while running the .NET application?
 
 If you notice that certain content in a Word document, such as dates or other culture-sensitive fields, is displayed in the wrong language or format, it could be due to the culture settings of your application. To ensure that the application displays content according to a specific culture, you can set the current culture programmatically.
@@ -671,9 +673,3 @@ No, it's not possible to get the exact position (like X, Y coordinates or page n
 This is because a Word document is a flow-based document, where contents are not preserved page by page. Instead, the contents are preserved sequentially, section by section. Each section may extend across multiple pages based on its contents, such as tables, text, images, and more. Position information of elements is not maintained at the file level in a Word document.
 
 DocIO is a non-UI component that provides a full-fledged document object model to manipulate the Word document contents based on file-level information. Hence, it is not feasible to retrieve the position of an element within a Word document using DocIO.
-
-## Does DocIO support sensitivity labels?
-No, Sensitivity labels are organization-level settings and are not stored within the word document itself. Therefore, DocIO does not support applying or preserving sensitivity labels.
-
-## Can DocIO Open a Document with Sensitivity Labels Applied?
-If a document is encrypted due to its sensitivity label configuration, DocIO cannot open it because the content is stored in an encrypted format and requires an authorized Microsoft account for access.

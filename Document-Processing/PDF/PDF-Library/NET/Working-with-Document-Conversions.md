@@ -993,7 +993,7 @@ Refer the below code snippet to draw a single frame monochrome TIFF image with J
 <th style="font-size:14px">Compression Applied</th>
 <tr>
     <td>Default</td>
-    <td>Non-TIFF images</td>
+    <td>All images</td>
     <td>Applies <b>Deflate (DEFLATE)</b> compression to monochrome, grayscale, and color images.</td>
 </tr>
 <tr>
@@ -1003,7 +1003,7 @@ Refer the below code snippet to draw a single frame monochrome TIFF image with J
 </tr>
 <tr>
     <td>JBIG2</td>
-    <td>Monochrome (bi-level)</td>
+    <td>All images</td>
     <td>Supported only in lossy mode and only for single-frame TIFF images.</td>
 </tr>
 </table>
@@ -1076,7 +1076,7 @@ N> 2. By default, all monochrome images will be compressed in CITTT4 compression
 
 The XPS (XML Paper Specification) document format is a fixed document format which consists of structured XML markup that defines the layout of a document and the visual appearance of each page, along with rendering rules for distributing, archiving, rendering, processing and printing the documents.
 
-Essential<sup>&reg;</sup> PDF provides support for converting XPS to PDF using [XPSToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XPS.XPSToPdfConverter.html) class.
+Essential<sup>&reg;</sup> PDF provides support for converting XPS to PDF using [XPSToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Base~Syncfusion.XPS.XPSToPdfConverter.html) class.
 
 The below code illustrates how to convert XPS to PDF.
 
@@ -1400,7 +1400,7 @@ N> To know more about PdfToImageConverter and features it provides, please refer
 
 ## HTML to PDF
 
-The [HTML to PDF converter library](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) supports converting web pages and HTML content into high-quality PDF documents.
+The [HTML to PDF converter library](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) supports converting web pages and HTML content into high-quality PDF documents.
 
 **Learn more about the features supported in HTML to PDF conversion here**: [HTML to PDF Features](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features)
 
@@ -1464,7 +1464,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## SVG to PDF 
 
-The [HTML to PDF converter library](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) supports converting the SVG to PDF document. Please refer to the following code example.
+The [HTML to PDF converter library](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) supports converting the SVG to PDF document. Please refer to the following code example.
 
 {% tabs %}
 

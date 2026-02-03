@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently Asked Questions in Word Library
+# Frequently Asked Questions
 
 The frequently asked questions under each category in Essential<sup>&reg;</sup> DocIO are listed below.
 
@@ -28,6 +28,7 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 * [Why does the item index in a Word document differ from the DocIO library?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#why-does-the-item-index-in-a-word-document-differ-from-the-docio-library)
 * [How to view Word documents in my .NET MAUI application using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-view-word-documents-in-my-net-maui-application-using-docio)
 * [How to identify if a Word document is in portrait or landscape?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-identify-if-a-word-document-is-in-portrait-or-landscape)
+* [How to save the Word document with same compatibility using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#saving-word-document-with-compatibility)
 * [How to create a Word document using DocIO in a python wrapper-based web API using .NET Core Word library?](https://support.syncfusion.com/kb/article/20139/how-to-create-a-word-document-using-docio-in-aspnet-core)
 * [How to integrate DocIO functionality in Node.js using ASP.NET Core Web API?](https://support.syncfusion.com/kb/article/20317/how-to-integrate-docio-functionality-in-nodejs-using-aspnet-core-web-api)
 * [Is it possible to fetch the page number of Word document elements using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#is-it-possible-to-fetch-the-page-number-of-word-document-elements-using-docio)
@@ -35,8 +36,6 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 * [Can DocIO open or process MPIP-protected Word documents?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#can-docio-open-or-process-mpip-protected-word-documents)
 * [Why does content imported from one Word document to another start on a new page, even without a section break?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#why-does-content-imported-from-one-word-document-to-another-start-on-a-new-page-even-without-a-section-break)
 * [Does DocIO process corrupted Word documents?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#does-docio-process-corrupted-word-documents)
-* [Does DocIO support sensitivity labels?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#does-docio-support-sensitivity-labels)
-* [Can DocIO Open a Document with Sensitivity Labels Applied?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#can-docio-open-a-document-with-sensitivity-labels-applied)
 
 ## Sections
 
