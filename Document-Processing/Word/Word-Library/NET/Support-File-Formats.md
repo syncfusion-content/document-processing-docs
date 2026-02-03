@@ -25,7 +25,7 @@ DOC
 {{'[DOCX](https://help.syncfusion.com/document-processing/word/word-library/net/open-and-save-word-document-in-console-application#open-and-save-word-document-using-net-core-and-latest)'| markdownify }}
 </th>
 <th>
-{{'[Word Processing XML (2007)](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-open-xml-formats-2007--later)'| markdownify }}
+{{'[Word Processing XML (2007)]()'| markdownify }}
 </th>
 <th>
 DOT
