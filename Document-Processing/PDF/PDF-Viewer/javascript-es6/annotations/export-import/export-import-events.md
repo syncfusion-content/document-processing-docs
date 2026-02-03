@@ -1,13 +1,22 @@
 ---
 layout: post
+<<<<<<<< HEAD:Document-Processing/PDF/PDF-Viewer/javascript-es5/form-designer/import-export-formfields/import-export-events.md
+title: Import/Export events in the JavaScript PDF Viewer | Syncfusion
+description: Learn how to handle Import/Export events for PDF form fields in the Syncfusion JavaScript PDF Viewer component.
+========
 title: Import/Export events for annotations in TypeScript PDF Viewer | Syncfusion
 description: Learn how to handle Import/Export events for annotations in the Syncfusion TypeScript PDF Viewer component.
+>>>>>>>> remotes/origin/hotfix/hotfix-v32.1.19:Document-Processing/PDF/PDF-Viewer/javascript-es6/annotations/export-import/export-import-events.md
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
+<<<<<<<< HEAD:Document-Processing/PDF/PDF-Viewer/javascript-es5/form-designer/import-export-formfields/import-export-events.md
+# Import/Export events in Javascript
+========
 # Import/Export events for annotations
+>>>>>>>> remotes/origin/hotfix/hotfix-v32.1.19:Document-Processing/PDF/PDF-Viewer/javascript-es6/annotations/export-import/export-import-events.md
 
 Import/Export events let you track and customize the full lifecycle of annotation data flowing into and out of the PDF Viewer.
 
@@ -19,7 +28,7 @@ Use them to validate inputs, show progress UI, log audit trails, or block operat
 - [importFailed](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importfailed): Triggers when importing annotations fails.
 
 ## Handle import events
-```ts
+```js
 viewer.importStart = (args: any) => {
   console.log('Import started', args);
 };
@@ -37,7 +46,7 @@ viewer.importFailed = (args: any) => {
 - [exportFailed](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportfailed): Triggers when exporting annotations fails.
 
 ## Handle export events
-```ts
+```js
 viewer.exportStart = (args: any) => {
   console.log('Export started', args);
 };
