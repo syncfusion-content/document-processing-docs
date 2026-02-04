@@ -180,7 +180,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl) in the `index.ts` file
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';`
 
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/toolbar/toolbar-method-cs1" %}
+{% previewsample "/document-Processing/code-snippet/pdfviewer/javascript-es6/toolbar/toolbar-method-cs1" %}
 
 ## Show/Hide the default toolbaritem
 

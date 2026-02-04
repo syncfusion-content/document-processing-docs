@@ -90,7 +90,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/strikethrough-mode-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/strikethrough-mode-cs1/index.html" %}
 
 #### Exit strikethrough mode
 
@@ -151,11 +151,11 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/strikethrough-normal-mode-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/strikethrough-normal-mode-cs1/index.html" %}
 
 ### Add strikethrough annotation programmatically
 
-Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
+Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
 
 Example:
 
