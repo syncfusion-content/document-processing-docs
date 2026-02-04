@@ -60,7 +60,7 @@ Paste can be done in one of the following ways.
 > If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`) from other sources, you should use `Ctrl + V` shortcut while pasting into the spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/clipboard-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -76,7 +76,7 @@ Paste can be done in one of the following ways.
 The following example shows, how to prevent the paste action in spreadsheet. In [`actionBegin`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#actionbegin) event, you can set `cancel` argument as false in paste request type.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/clipboard-cs2/src/app.component.ts %}
 {% endhighlight %}
 

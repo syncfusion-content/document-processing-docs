@@ -51,7 +51,7 @@ If you want to perform scrolling with defined rows and columns, you must define 
 The following code example shows the finite scrolling with defined rows and columns in the spreadsheet. Here, we used rowCount as 20 and colCount as 20, after reaching the 20th row or 20th column you can't able to scroll.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/scrolling-cs1/src/app.component.ts %}
 {% endhighlight %}
 

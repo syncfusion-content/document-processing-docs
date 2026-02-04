@@ -45,7 +45,7 @@ In the active spreadsheet, select the cell where you want to create frozen colum
 In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as ‘2’. Hence, the two columns on the left and the top two rows are frozen.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/freezepane-cs1/src/app.component.ts %}
 {% endhighlight %}
 

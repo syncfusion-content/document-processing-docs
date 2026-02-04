@@ -30,7 +30,7 @@ You can customize the ribbon using the following methods,
 The following code example shows the usage of ribbon customization.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/ribbon/cutomization-cs1/src/app.component.ts %}
 {% endhighlight %}
 

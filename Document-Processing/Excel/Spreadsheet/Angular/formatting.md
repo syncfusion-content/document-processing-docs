@@ -89,7 +89,7 @@ Custom Number formatting can be applied in following ways,
 The following code example shows the number formatting in cell data.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/format/number-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -144,7 +144,7 @@ configureLocalizedFormat(this.spreadsheetObj, deLocaleFormats);
 The following code example demonstrates how to configure culture-based formats for different cultures in the spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/format/globalization-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -215,7 +215,7 @@ Borders can be applied in the following ways,
 The following code example shows the style formatting in text and cells of the spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/format/number-cs2/src/app.component.ts %}
 {% endhighlight %}
 
@@ -313,7 +313,7 @@ You can clear the defined rules by using one of the following ways,
 * Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#clearconditionalformat) method to clear the defined rules.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/conditional-formatting-cs1/src/app.component.ts %}
 {% endhighlight %}
 

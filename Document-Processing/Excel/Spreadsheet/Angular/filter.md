@@ -36,7 +36,7 @@ The [`applyFilter()`](https://ej2.syncfusion.com/angular/documentation/api/sprea
 The following code example shows `filter` functionality in the Spreadsheet control.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/filter-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -86,7 +86,7 @@ Filtering allows you to view specific rows in a spreadsheet while hiding the oth
 The following code example shows how to get the filtered rows.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/filter-cs2/src/app.component.ts %}
 {% endhighlight %}
 

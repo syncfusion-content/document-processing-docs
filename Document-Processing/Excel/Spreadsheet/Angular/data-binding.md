@@ -20,7 +20,7 @@ To bind local data to the Spreadsheet, you can assign a JavaScript object array 
 Refer to the following code example for local data binding.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/local-data-binding-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -42,7 +42,7 @@ By default, when a data source is bound to a sheet, columns are auto-assigned fr
 The following code example demonstrates how to customize the mapping of column data:
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/field-mapping-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -60,7 +60,7 @@ To bind remote data to the Spreadsheet control, assign service data as an instan
 Refer to the following code example for remote data binding.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/remote-data-binding-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -78,7 +78,7 @@ Refer to the following code example for remote data binding.
 `OData` is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the DataManager. Refer to the following code example for remote Data binding using OData service.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/remote-data-binding-cs2/src/app.component.ts %}
 {% endhighlight %}
 
@@ -94,7 +94,7 @@ Refer to the following code example for remote data binding.
 You can use WebApiAdaptor to bind spreadsheet with Web API created using OData endpoint.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/remote-data-binding-cs3/src/app.component.ts %}
 {% endhighlight %}
 
@@ -112,7 +112,7 @@ The Spreadsheet control can bind the data to individual cell in a sheet . To ach
 Refer to the following code example for cell data binding.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/cell-data-binding-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -142,7 +142,7 @@ The following table defines the arguments of the `dataSourceChanged` event.
 > For inserting a row at the end of the datasource range, you should insert a row below at the end of the range to trigger the `dataSourceChanged` event with action `add`.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/dynamic-data-binding-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -162,7 +162,7 @@ To use the [updateRange](https://ej2.syncfusion.com/angular/documentation/api/sp
 The following code example demonstrates how to dynamically update data using the [updateRange](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#updaterange) method.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/dynamic-data-binding-cs2/src/app.component.ts %}
 {% endhighlight %}
 

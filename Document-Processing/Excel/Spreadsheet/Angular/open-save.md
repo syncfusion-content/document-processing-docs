@@ -22,7 +22,7 @@ In user interface you can open an Excel document by clicking `File > Open` menu 
 The following sample shows the `Open` option by using the [`openUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#openUrl) property in the Spreadsheet control. You can also use the [`beforeOpen`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#beforeopen) event to trigger before opening an Excel file.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/open-save-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -51,7 +51,7 @@ If you explore your machine to select and upload an excel document using the fil
 The following code example shows how to import an excel document using file uploader in spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/open-save-cs7/src/app.component.ts %}
 {% endhighlight %}
 
@@ -67,7 +67,7 @@ The following code example shows how to import an excel document using file uplo
 You can achieve to access the remote excel file by using the [`created`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#created) event. In this event you can fetch the excel file and convert it to a blob. Convert this blob to a file and [`open`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#open) this file by using Spreadsheet component open method.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/open-save-cs2/src/app.component.ts %}
 {% endhighlight %}
 
@@ -85,7 +85,7 @@ By default, the Spreadsheet component provides an option to browse files from th
 Please find the code to fetch the blob data and load it into the Spreadsheet component below.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/open-from-blobdata-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -260,7 +260,7 @@ In the Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet component, t
 The following code example shows how to open the spreadsheet data as base64 string.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/base-64-string/src/app.component.ts %}
 {% endhighlight %}
 
@@ -276,7 +276,7 @@ The following code example shows how to open the spreadsheet data as base64 stri
 You can open excel file into a read-only mode by using the [`openComplete`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#opencomplete) event. In this event, you must protect all the sheets and lock its used range cells by using [`protectSheet`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#protectsheet) and [`lockCells`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#lockcells) methods.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/open-save-cs12/src/app.component.ts %}
 {% endhighlight %}
 
@@ -317,7 +317,7 @@ spreadsheet.openFromJson({ file: file }, { ignoreStyle: true });
 The following code snippet demonstrates how to configure the deserialization options and pass them as arguments to the openFromJson method:
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/open-from-json/src/app.component.ts %}
 {% endhighlight %}
 
@@ -436,7 +436,7 @@ The [attachment](https://www.syncfusion.com/downloads/support/directtrac/general
 You can add your own custom header to the open action in the Spreadsheet. For processing the data, it has to be sent from server to client side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`beforeOpen`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#beforeopen) event, the custom header can be added to the request during open action.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/open-save-cs8/src/app.component.ts %}
 {% endhighlight %}
 
@@ -476,7 +476,7 @@ In user interface, you can save Spreadsheet data as Excel document by clicking `
 The following sample shows the `Save` option by using the [`saveUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#saveurl) property in the Spreadsheet control. You can also use the [`beforeSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#beforesave) event to trigger before saving the Spreadsheet as an Excel file.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/open-save-cs3/src/app.component.ts %}
 {% endhighlight %}
 
@@ -510,7 +510,7 @@ By default, the Spreadsheet component saves the Excel file and downloads it to t
 Please find below the code to retrieve blob data from the Spreadsheet component below.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/save-as-blobdata-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -699,7 +699,7 @@ In the Spreadsheet component, there is currently no direct option to save data a
 The following code example shows how to save the spreadsheet data as base64 string.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/base-64-string/src/app.component.ts %}
 {% endhighlight %}
 
@@ -737,7 +737,7 @@ spreadsheet.saveAsJson({ onlyValues: true });
 The following code snippet demonstrates how to configure the serialization options and pass them as arguments to the saveAsJson method:
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/save-as-json/src/app.component.ts %}
 {% endhighlight %}
 
@@ -753,7 +753,7 @@ The following code snippet demonstrates how to configure the serialization optio
 Passing the custom parameters from client to server by using [`beforeSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#beforesave) event.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/open-save-cs4/src/app.component.ts %}
 {% endhighlight %}
 
@@ -780,7 +780,7 @@ Server side code snippets:
 You can add your own custom header to the save action in the Spreadsheet. For processing the data, it has to be sent from client to server side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`fileMenuItemSelect`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#filemenuitemselect) event, the custom header can be added to the request during save action.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/open-save-cs11/src/app.component.ts %}
 {% endhighlight %}
 
@@ -801,7 +801,7 @@ The possible values are:
 * **Landscape** - Used to display content in a horizontal layout.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/open-save-cs6/src/app.component.ts %}
 {% endhighlight %}
 
@@ -820,7 +820,7 @@ The possible values are:
 To save the Spreadsheet document as an `xlsx, xls, csv, or pdf` file, by using [save](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#save) method should be called with the `url`, `fileName` and `saveType` as parameters. The following code example shows to save the spreadsheet file as an `xlsx, xls, csv, or pdf` in the button click event.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/open-save-cs5/src/app.component.ts %}
 {% endhighlight %}
 

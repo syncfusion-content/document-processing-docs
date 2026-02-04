@@ -63,7 +63,7 @@ In the following sample, searching can be done by following ways:
 * You can have more options to find values by selecting the more options in the search toolbar.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/searching-cs1/src/app.component.ts %}
 {% endhighlight %}
 

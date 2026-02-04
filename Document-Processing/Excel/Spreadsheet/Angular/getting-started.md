@@ -7,13 +7,19 @@ control: Getting started
 documentation: ug
 ---
 
-# Getting started with Angular Spreadsheet component
+# Getting started with Angular Spreadsheet component Using Angular CLI and TypeScript
 
-This section explains the steps to create a simple Spreadsheet component with basic features in an Angular environment.
+This guide provides a step-by-step walkthrough for setting up an Angular Spreadsheet component using TypeScript with Angular CLI.
+
+The Angular CLI is a powerful command-line tool that simplifies the creation, management, and building of Angular Spreadsheet component, enabling a quick start to development.
 
 To get start quickly with Angular Spreadsheet using CLI, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=2Ozwe37X-7Q" %}
+
+## Prerequisites
+
+Ensure your development environment meets the [`System Requirements for Syncfusion® Angular Spreadsheet component`](https://help.syncfusion.com/document-processing/system-requirements).
 
 ## Dependencies
 
@@ -37,6 +43,14 @@ You can use [`Angular CLI`](https://github.com/angular/angular-cli) to setup you
 npm install -g @angular/cli
 ```
 
+## Installing a Specific Version
+
+To install a particular version of Angular CLI, use:
+
+```bash
+npm install -g @angular/cli@21.0.0
+```
+
 ## Create an Angular Application
 
 Start a new Angular application using below Angular CLI command.
@@ -58,6 +72,18 @@ This command prompts you to configure settings such as whether to include Angula
 ```
 
 By default, it will create a CSS-based application.
+
+```bash
+ng new syncfusion-angular-app --style=scss
+```
+
+During project setup, when prompted for the Server-side rendering (SSR) option, choose the appropriate configuration.
+
+![Spreadsheet showing a comment](./images/gettingstarted_SSR.png)
+
+Select the required AI tool or ‘none’ if you do not need any AI tool.
+
+![Spreadsheet showing a comment](./images/gettingstarted_AI.png)
 
 Navigate to the created application folder:
 
@@ -155,8 +181,10 @@ ng serve
 
 The following example shows a basic Spreadsheet component
 
+**Note:** For Angular 17+, no longer required to import 'zone.js' in main.ts.
+
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/spreadsheet-cs1/src/app.component.ts %}
 {% endhighlight %}
 

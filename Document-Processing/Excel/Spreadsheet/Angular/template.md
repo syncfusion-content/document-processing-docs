@@ -16,7 +16,7 @@ The following sample describes the above behavior.
 Sample link: [`Cell template`](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/cell-template)
 
 <!-- {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/template-cs1/src/app.component.ts %}
 {% endhighlight %}
 

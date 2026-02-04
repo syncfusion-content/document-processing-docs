@@ -30,7 +30,7 @@ The `printOptions` contain three properties, as described below.
 > When the `print` method is called without any parameters, the default printing will be performed.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/print-cs2/src/app.component.ts %}
 {% endhighlight %}
 
@@ -48,7 +48,7 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 ![Spreadsheet with print option disabled](./images/spreadsheet_print_disable.png)
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/print-cs3/src/app.component.ts %}
 {% endhighlight %}
 

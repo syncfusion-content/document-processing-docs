@@ -29,7 +29,7 @@ The rows can be inserted in the following ways,
 The following code example shows the options for inserting rows in the spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/insert/row-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -50,7 +50,7 @@ The columns can be inserted in the following ways,
 The following code example shows the options for inserting columns in the spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/insert/column-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -73,7 +73,7 @@ The rows and columns can be deleted dynamically in the following ways,
 The following code example shows the delete operation of rows and columns in the spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/delete/row-column-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -116,7 +116,7 @@ The columns can be hidden or shown through following ways,
 The following code example shows the hide/show rows and columns operation in the spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/hide-show-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -134,7 +134,7 @@ Using the [`beforeCellRender`](https://ej2.syncfusion.com/angular/documentation/
 The following code example shows how to change the text in the column headers.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/column-header-change-cs1/src/app.component.ts %}
 {% endhighlight %}
 

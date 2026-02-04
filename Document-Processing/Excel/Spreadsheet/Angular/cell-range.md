@@ -24,7 +24,7 @@ Wrap text can be applied or removed to a cell or range of cells in the following
 The following code example shows the wrap text functionality in spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/wrap-text-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -64,7 +64,7 @@ The available merge options in spreadsheet are,
 The following code example shows the merge cells operation in spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/merge-cells-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -125,7 +125,7 @@ You can clear the highlighted invalid data by using the following ways,
 * Use the [`removeInvalidHighlight()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#removeinvalidhighlight) method programmatically.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/data-validation-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -154,7 +154,7 @@ You can apply custom data validation using two methods.
 The following code example demonstrates how to add custom data validation with a formula in a Spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/data-validation-cs2/src/app.component.ts %}
 {% endhighlight %}
 
@@ -238,7 +238,7 @@ You can do this by one of the following ways,
 In the following sample, you can enable/disable the fill option on the button click event by using the `showFillOptions` property in `autoFillSettings`.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/autofill-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -281,7 +281,7 @@ Clear has the following types in the spreadsheet,
 Clear the cell contents and formats in the Spreadsheet document by using the [clear](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#clear) method. The [clear](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#clear) method has `type` and `range` as parameters. The following code example shows how to clear the cell contents and formats in the button click event.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/clear-cs1/src/app.component.ts %}
 {% endhighlight %}
 

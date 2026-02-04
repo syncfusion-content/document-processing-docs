@@ -31,7 +31,7 @@ When loading spreadsheet data with culture-based formula argument separators usi
 In the example below, the Spreadsheet component is rendered with the `German culture (de)`. Additionally, you can find references on how to set the culture-based argument separator and culture-based formatted numeric value as arguments to the formulas.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/formula-cs3/src/app.component.ts %}
 {% endhighlight %}
 
@@ -51,7 +51,7 @@ You can define and use an unsupported formula, i.e. a user defined/custom formul
 The following code example shows an unsupported formula in the spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/formula-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -67,7 +67,7 @@ Second, if you want to directly compute any formula or expression, you can use t
 The following code example shows how to use `computeExpression` method in the spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/formula-cs2/src/app.component.ts %}
 {% endhighlight %}
 
@@ -94,7 +94,7 @@ You can define a meaningful name for a cell range and use it in the formula for 
 The following code example shows the usage of named ranges support.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/defined-name-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -123,7 +123,7 @@ For example, consider a spreadsheet where cell `C1` contains the formula `=A1+B1
 The following code example demonstrates how to set the Automatic calculation mode in a Spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/calculation-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -146,7 +146,7 @@ For example, imagine a spreadsheet where cell `C1` contains the formula `=A1+B1`
 The following code example demonstrates how to set the Manual calculation mode in a Spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/calculation-cs2/src/app.component.ts %}
 {% endhighlight %}
 

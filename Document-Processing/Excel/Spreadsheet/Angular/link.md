@@ -52,7 +52,7 @@ In the active spreadsheet, click the cell where you want to remove a hyperlink. 
 There is an event named `beforeHyperlinkClick` which triggers only on clicking hyperlink. You can customize where to open the hyperlink by using the `target` property in the arguments of that event.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/link-cs1/src/app.component.ts %}
 {% endhighlight %}
 

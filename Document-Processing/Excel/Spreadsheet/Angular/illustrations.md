@@ -69,7 +69,7 @@ Image feature allows you to view and insert an image in a spreadsheet, and you c
 * Use the `top` and `left` property in the `insertImage()` method programmatically.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/image-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -127,7 +127,7 @@ The available arguments in the `ChartModel` are:
 * markerSettings: Specifies the marker settings. The marker is used to provide information about the data points in the series and is currently only applicable to the line chart.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/chart-cs2/src/app.component.ts %}
 {% endhighlight %}
 
@@ -158,7 +158,7 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 * You can change the position of the chart by drag and drop.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/chart-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -174,7 +174,7 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 Using the [`actionBegin`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/chart-cs3/src/app.component.ts %}
 {% endhighlight %}
 

@@ -36,7 +36,7 @@ The `sort()` method with empty arguments will sort the selected range by active 
 The following code example shows `sort` functionality in the Spreadsheet control.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/sort-by-cell-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -112,7 +112,7 @@ The multi-column sorting can also be performed manually by passing sort options 
 > * When a `sortDescriptor` is specified without field, the field of the first `sortDescriptor` from the collection will be assigned from active cell’s column name and others will be ignored. Hence, it will act as single column sorting.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/passing-sort-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -140,7 +140,7 @@ You can also define the sorting of cell values based on your own customized pers
 In the following demo, the `Trustworthiness` column is sorted based on the custom lists `Perfect`, `Sufficient`, and `Insufficient`.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/custom-sort-cs1/src/app.component.ts %}
 {% endhighlight %}
 

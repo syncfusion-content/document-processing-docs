@@ -23,7 +23,7 @@ The class name returned by the [contextMenuBeforeOpen](https://ej2.syncfusion.co
 The following code example shows how to identify the context menu opened.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/contextmenu-cs1/src/app.component.ts %}
 {% endhighlight %}
 

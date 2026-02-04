@@ -18,7 +18,7 @@ When opening the Excel document with notes in the Spreadsheet, they will be disp
 In the below example, you can add, edit, save, and delete notes.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/note-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -134,7 +134,7 @@ To disable the note functionality, you need to set the [enableNotes](https://ej2
 In the below example, the note functionality is disabled in the Spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/note-cs2/src/app.component.ts %}
 {% endhighlight %}
 
@@ -152,7 +152,7 @@ The notes can be added initially when the Spreadsheet loads using cell data bind
 In the below example, you can navigate between notes using **Previous Note** and **Next Note** options, toggle individual note visibility with **Show/Hide Note**, display all notes at once using **Show All Notes** and see how notes are added using the `updateCell` method in the `created` event.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/note-cs3/src/app.component.ts %}
 {% endhighlight %}
 

@@ -114,7 +114,7 @@ The following code example shows how to set `isFullPost` to **false** in the Spr
     </ejs-spreadsheet>
 {% endhighlight %}
 
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Component, ViewEncapsulation, Inject, ViewChild } from '@angular/core';
 import { BeforeSaveEventArgs, SpreadsheetComponent, SpreadsheetModule } from '@syncfusion/ej2-angular-spreadsheet';

@@ -45,7 +45,7 @@ In the active Spreadsheet, the sheet protection can be done by any of the follow
 The following example shows `Protect Sheet` functionality with password in the Spreadsheet control.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/protect-sheet-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -77,7 +77,7 @@ In the active Spreadsheet, the sheet Unprotection can be done by any of the foll
 In protected spreadsheet, to make some particular cell or range of cells are editable, you can use [`lockCells()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#lockcells) method, with the parameter `range` and `isLocked` property as false.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/lock-cells-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -141,7 +141,7 @@ You can make the cells read-only in the cell data binding by setting the `isRead
 The following example demonstrates how to make rows, columns, and cells read-only without protecting the sheet:
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/readonly-cs1/src/app.component.ts %}
 {% endhighlight %}
 
@@ -167,7 +167,7 @@ In the active Spreadsheet, you can protect the worksheet by selecting the Data t
 The following example shows `Protect Workbook` by using the [`isProtected`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#isprotected) property in the Spreadsheet control.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/local-data-binding-cs4/src/app.component.ts %}
 {% endhighlight %}
 
@@ -181,7 +181,7 @@ The following example shows `Protect Workbook` by using the [`isProtected`](http
 The following example shows `Protect Workbook` by using the [`password`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#password) property in the Spreadsheet control. To unprotect the workbook, click the unprotect workbook button in the data tab and provide the password as syncfusion<sup style="font-size:70%">&reg;</sup> in the dialog box.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/local-data-binding-cs5/src/app.component.ts %}
 {% endhighlight %}
 
