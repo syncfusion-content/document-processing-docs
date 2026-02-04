@@ -9,7 +9,7 @@ documentation: ug
 
 # Data binding in Angular Spreadsheet component
 
-The Spreadsheet uses [`DataManager`](https://helpej2.syncfusion.com/angular/documentation/data/), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [`DataManager`](https://helpej2.syncfusion.com/angular/documentation/data/) or JavaScript object array collection.
+The Spreadsheet uses [DataManager](https://helpej2.syncfusion.com/angular/documentation/data/), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [DataManager](https://helpej2.syncfusion.com/angular/documentation/data/) or JavaScript object array collection.
 
 > To bind data to a cell, use `cell data binding` support.
 
@@ -31,11 +31,11 @@ Refer to the following code example for local data binding.
   
 {% previewsample "/document-processing/samples/spreadsheet/angular/local-data-binding-cs1" %}
 
-> The local data source can also be provided as an instance of the [`DataManager`](https://helpej2.syncfusion.com/angular/documentation/data/). By default, [`DataManager`](https://helpej2.syncfusion.com/angular/documentation/data/) uses [`JsonAdaptor`](https://ej2.syncfusion.com/angular/documentation/data/adaptors#json-adaptor) for local data-binding.
+> The local data source can also be provided as an instance of the [DataManager](https://helpej2.syncfusion.com/angular/documentation/data/). By default, [DataManager](https://helpej2.syncfusion.com/angular/documentation/data/) uses [`JsonAdaptor`](https://ej2.syncfusion.com/angular/documentation/data/adaptors#json-adaptor) for local data-binding.
 
 ### Customizing column data mapping
 
-By default, when a data source is bound to a sheet, columns are auto-assigned from the data source fields sequentially. This means that the first field in the data source is assigned to Column A, the second to Column B, and so on, sequentially. However, now you can customize the column assignments by specifying the appropriate field names in the desired order using the [fieldsOrder](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/rangeModel/#fieldsorder) property.
+By default, when a data source is bound to a sheet, columns are auto-assigned from the data source fields sequentially. This means that the first field in the data source is assigned to Column A, the second to Column B, and so on, sequentially. However, now you can customize the column assignments by specifying the appropriate field names in the desired order using the [fieldsOrder](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/rangemodel#fieldsorder) property.
 
 > You can customize the mapping of column data only in the local data binding support.
 
@@ -55,7 +55,7 @@ The following code example demonstrates how to customize the mapping of column d
 
 ## Remote data
 
-To bind remote data to the Spreadsheet control, assign service data as an instance of [`DataManager`](https://helpej2.syncfusion.com/angular/documentation/data/) to the `dataSource` property. To interact with remote data source, provide the service endpoint `url`.
+To bind remote data to the Spreadsheet control, assign service data as an instance of [DataManager](https://helpej2.syncfusion.com/angular/documentation/data/) to the `dataSource` property. To interact with remote data source, provide the service endpoint `url`.
 
 Refer to the following code example for remote data binding.
 
@@ -155,11 +155,11 @@ The following table defines the arguments of the `dataSourceChanged` event.
 
 ## Dynamic data binding using updateRange method
 
-The [updateRange](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#updaterange) method allows you to dynamically update the [dataSource](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/rangeModel/#datasource) in a spreadsheet without manually iterating through each cell. This method is especially useful for efficiently applying bulk updates to a specific range within the spreadsheet.
+The [updateRange](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#updaterange) method allows you to dynamically update the [dataSource](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/rangemodel#datasource) in a spreadsheet without manually iterating through each cell. This method is especially useful for efficiently applying bulk updates to a specific range within the spreadsheet.
 
-To use the [updateRange](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#updaterange) method, provide the new [dataSource](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/rangeModel/#datasource) and specify the starting cell for the update using the [startCell](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/rangeModel/#startcell) property of the `RangeDirective`. Additionally, set the `sheetIndex` to target the appropriate sheet for the update.
+To use the [updateRange](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#updaterange) method, provide the new [dataSource](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/rangemodel#datasource) and specify the starting cell for the update using the [startCell](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/rangemodel#startcell) property of the `RangeDirective`. Additionally, set the `sheetIndex` to target the appropriate sheet for the update.
 
-The following code example demonstrates how to dynamically update data using the [updateRange](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#updaterange) method.
+The following code example demonstrates how to dynamically update data using the [updateRange](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#updaterange) method.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}

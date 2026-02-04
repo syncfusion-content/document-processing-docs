@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-The [`Localization`](https://helpej2.syncfusion.com/angular/documentation/common/globalization/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#locale) value and translation object.
+The [Localization](https://helpej2.syncfusion.com/angular/documentation/common/globalization/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`]https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#locale) value and translation object.
 
 The following list of properties and their values are used in the Spreadsheet.
 
@@ -423,7 +423,7 @@ The following example demonstrates the Spreadsheet in French [ `fr-CH`] culture.
 
 ## Right to left (RTL)
 
-RTL provides an option to switch the text direction and layout of the Spreadsheet component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Spreadsheet, set the [`enableRtl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#enablertl) to true.
+RTL provides an option to switch the text direction and layout of the Spreadsheet component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Spreadsheet, set the [`enableRtl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#enablertl) to true.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}

@@ -11,7 +11,7 @@ documentation: ug
 
 The Spreadsheet includes several context menus that will open and display depending on the action. When you right-click on a cell, for example, a context menu with options related to the cell element appears.
 
-The class name returned by the [contextMenuBeforeOpen](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#contextmenubeforeopen) event can be used to identify the context menu that is opened. The context menus and their class names are tabulated below.
+The class name returned by the [contextMenuBeforeOpen](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#contextmenubeforeopen) event can be used to identify the context menu that is opened. The context menus and their class names are tabulated below.
 
 | Class name | Context menu name |
 |-------|---------|

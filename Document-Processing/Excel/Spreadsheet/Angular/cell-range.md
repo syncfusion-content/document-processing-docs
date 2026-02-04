@@ -13,13 +13,13 @@ A group of cells in a sheet is known as cell range.
 
 ## Wrap text
 
-Wrap text allows you to display large content as multiple lines in a single cell. By default, the wrap text support is enabled. Use the [`allowWrap`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#allowwrap) property to enable or disable the wrap text support in spreadsheet.
+Wrap text allows you to display large content as multiple lines in a single cell. By default, the wrap text support is enabled. Use the [`allowWrap`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowwrap) property to enable or disable the wrap text support in spreadsheet.
 
 Wrap text can be applied or removed to a cell or range of cells in the following ways,
 
 * Using the `wrap` property in `cell`, you can enable or disable wrap text to a cell at initial load.
 * Select or deselect wrap button from ribbon toolbar to apply or remove the wrap text to the selected range.
-* Using the [`wrap`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#wrap) method, you can apply or remove the wrap text once the component is loaded.
+* Using the [`wrap`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#wrap) method, you can apply or remove the wrap text once the component is loaded.
 
 The following code example shows the wrap text functionality in spreadsheet.
 
@@ -44,13 +44,13 @@ The following features have some limitations in wrap text:
 
 ## Merge cells
 
-Merge cells allows users to span two or more cells in the same row or column into a single cell. When cells with multiple values are merged, top-left most cell data will be the data for the merged cell. By default, the merge cells option is enabled. Use [`allowMerge`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#allowmerge) property to enable or disable the merge cells option in spreadsheet.
+Merge cells allows users to span two or more cells in the same row or column into a single cell. When cells with multiple values are merged, top-left most cell data will be the data for the merged cell. By default, the merge cells option is enabled. Use [`allowMerge`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowmerge) property to enable or disable the merge cells option in spreadsheet.
 
 You can merge the range of cells in the following ways,
 
 * Set the `rowSpan` and `colSpan` property in `cell` to merge the number of cells at initial load.
 * Select the range of cells and apply merge by selecting the desired option from ribbon toolbar.
-* Use [`merge`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#merge) method to merge the range of cells, once the component is loaded.
+* Use [`merge`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#merge) method to merge the range of cells, once the component is loaded.
 
 The available merge options in spreadsheet are,
 
@@ -84,7 +84,7 @@ The following features have some limitations in Merge:
 
 ## Data Validation
 
-Data Validation is used to restrict the user from entering the invalid data. You can use the [`allowDataValidation`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#allowdatavalidation) property to enable or disable data validation.
+Data Validation is used to restrict the user from entering the invalid data. You can use the [`allowDataValidation`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowdatavalidation) property to enable or disable data validation.
 
 > * The default value for `allowDataValidation` property is `true`.
 
@@ -95,7 +95,7 @@ You can apply data validation to restrict the type of data or the values that us
 You can apply data validation by using one of the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Data Validation item.
-* Use the [`addDataValidation()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#adddatavalidation) method programmatically.
+* Use the [`addDataValidation()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#adddatavalidation) method programmatically.
 
 ### Clear Validation
 
@@ -104,7 +104,7 @@ Clear validation feature is used to remove data validations from the specified r
 You can clear data validation rule by one of the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Clear Validation item.
-* Use the [`removeDataValidation()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#removedatavalidation) method programmatically.
+* Use the [`removeDataValidation()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#removedatavalidation) method programmatically.
 
 ### Highlight Invalid Data
 
@@ -113,7 +113,7 @@ Highlight invalid data feature is used to highlight the previously entered inval
 You can highlight an invalid data by using one of the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Highlight Invalid Data item.
-* Use the [`addInvalidHighlight()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#addinvalidhighlight) method programmatically.
+* Use the [`addInvalidHighlight()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#addinvalidhighlight) method programmatically.
 
 ### Clear Highlighted Invalid Data
 
@@ -122,7 +122,7 @@ Clear highlight feature is used to remove the highlight from invalid cells.
 You can clear the highlighted invalid data by using the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Clear Highlight item.
-* Use the [`removeInvalidHighlight()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#removeinvalidhighlight) method programmatically.
+* Use the [`removeInvalidHighlight()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#removeinvalidhighlight) method programmatically.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -149,7 +149,7 @@ When this rule is applied, the Spreadsheet evaluates the entered value against t
 You can apply custom data validation using two methods.
 
 * The first is through the Data Validation dialog in the Ribbon toolbar. Navigate to the Data tab, select the Data Validation option, and choose the Custom type from the Allow dropdown menu.
-* The second method is programmatically, using the [`addDataValidation()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#adddatavalidation) method, which allows developers to set custom rules dynamically via code.
+* The second method is programmatically, using the [`addDataValidation()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#adddatavalidation) method, which allows developers to set custom rules dynamically via code.
 
 The following code example demonstrates how to add custom data validation with a formula in a Spreadsheet.
 
@@ -265,7 +265,7 @@ Clear feature helps you to clear the cell contents (formulas and data), formats 
 You can apply clear feature by using one of the following ways,
 
 * Select the clear icon in the Ribbon toolbar under the Home Tab.
-* Using the [`clear()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#clear) method to clear the values.
+* Using the [`clear()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#clear) method to clear the values.
 
 Clear has the following types in the spreadsheet,
 
@@ -278,7 +278,7 @@ Clear has the following types in the spreadsheet,
 
 ### Methods
 
-Clear the cell contents and formats in the Spreadsheet document by using the [clear](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#clear) method. The [clear](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#clear) method has `type` and `range` as parameters. The following code example shows how to clear the cell contents and formats in the button click event.
+Clear the cell contents and formats in the Spreadsheet document by using the [clear](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#clear) method. The [clear](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#clear) method has `type` and `range` as parameters. The following code example shows how to clear the cell contents and formats in the button click event.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}

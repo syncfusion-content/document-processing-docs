@@ -89,9 +89,9 @@ The following features have some limitations in Image:
 
 ## Chart
 
-A chart is a graphical representation of data, that organizes and represents a set of numerical or qualitative data. It mostly displays the selected range of data in terms of `x`-axis and `y`-axis. You can use the [`allowChart`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#allowchart) property to enable or disable the chart functionality.
+A chart is a graphical representation of data, that organizes and represents a set of numerical or qualitative data. It mostly displays the selected range of data in terms of `x`-axis and `y`-axis. You can use the [`allowChart`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowchart) property to enable or disable the chart functionality.
 
->* The default value for the [`allowChart`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#allowchart) property is `true`.
+>* The default value for the [`allowChart`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowchart) property is `true`.
 
 ### Types of chart
 
@@ -109,9 +109,9 @@ The following types of charts are available in the Spreadsheet.
 You can insert the chart by using one of the following ways,
 
 * Select the chart icon in the Ribbon toolbar under the Insert Tab.
-* Use the [`insertChart()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#insertchart) method programmatically.
+* Use the [`insertChart()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#insertchart) method programmatically.
 
-The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#insertchart) method is,
+The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#insertchart) method is,
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -141,9 +141,9 @@ The available arguments in the `ChartModel` are:
 ### Delete Chart
 
 * If you want to delete the chart, just select the chart, and then press the Delete key.
-* Use the [`deleteChart()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#deletechart) method programmatically.
+* Use the [`deleteChart()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#deletechart) method programmatically.
 
-The available parameter in the [`deleteChart()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#deletechart) method is,
+The available parameter in the [`deleteChart()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#deletechart) method is,
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -171,7 +171,7 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 
 #### Customization of line chart markers
 
-Using the [`actionBegin`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
+Using the [`actionBegin`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}

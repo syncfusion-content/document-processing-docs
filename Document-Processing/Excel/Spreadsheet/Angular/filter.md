@@ -9,7 +9,7 @@ documentation: ug
 
 # Filter in Angular Spreadsheet component
 
-Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#allowfiltering) property to enable or disable filtering functionality.
+Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowfiltering) property to enable or disable filtering functionality.
 
 > * The default value for `allowFiltering` property is `true`.
 
@@ -21,17 +21,17 @@ In the active Spreadsheet, select a range of cells to filter by value of the cel
 
 * Select the filter item in the Ribbon toolbar.
 * Right-click the sheet, select the filter item in the context menu.
-* Use the [`applyFilter()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#applyfilter) method programmatically.
+* Use the [`applyFilter()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#applyfilter) method programmatically.
 * Use `Ctrl + Shift + L` keyboard shortcut to apply the filter.
 
 > * Use `Alt + Up/Down` keyboard shortcut to open the filter dialog.
 
 ## Filter by criteria
 
-The [`applyFilter()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#applyfilter) method will apply the filter UI, based on the predicate and range given in the arguments.
+The [`applyFilter()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#applyfilter) method will apply the filter UI, based on the predicate and range given in the arguments.
 
-> * The [`beforeFilter`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#beforefilter) event will be triggered before filtering the specified range.
-> * The [`filterComplete`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#filtercomplete) event will be triggered after the filter action is completed successfully.
+> * The [`beforeFilter`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforefilter) event will be triggered before filtering the specified range.
+> * The [`filterComplete`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#filtercomplete) event will be triggered after the filter action is completed successfully.
 
 The following code example shows `filter` functionality in the Spreadsheet control.
 
@@ -81,7 +81,7 @@ The following errors have been handled for filtering,
 
 ## Get data from filtered rows
 
-Filtering allows you to view specific rows in a spreadsheet while hiding the others. The [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#allowfiltering) property allows you to enable or disable filtering functionality through the UI. You can also use the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#allowfiltering) property and [`applyFilter`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#applyfilter) method combination to filter data via code behind. The filtered rows can be identified by iterating through the row collection on the sheet and using the `isFiltered` property available in each row object.
+Filtering allows you to view specific rows in a spreadsheet while hiding the others. The [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowfiltering) property allows you to enable or disable filtering functionality through the UI. You can also use the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowfiltering) property and [`applyFilter`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#applyfilter) method combination to filter data via code behind. The filtered rows can be identified by iterating through the row collection on the sheet and using the `isFiltered` property available in each row object.
 
 The following code example shows how to get the filtered rows.
 

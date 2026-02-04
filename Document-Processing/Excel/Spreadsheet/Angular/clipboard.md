@@ -9,7 +9,7 @@ documentation: ug
 
 # Clipboard in Angular Spreadsheet component
 
-The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#enableclipboard) property in Spreadsheet.
+The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#enableclipboard) property in Spreadsheet.
 
 > By default, the `enableClipboard` property is true.
 
@@ -24,7 +24,7 @@ Cut can be done in one of the following ways.
 * Using Cut button in the Ribbon’s HOME tab to perform cut operation.
 * Using Cut option in the Context Menu.
 * Using `Ctrl + X` | `Command + X` keyboard shortcut.
-* Using the [`cut`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#cut) method.
+* Using the [`cut`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#cut) method.
 
 ## Copy
 
@@ -37,7 +37,7 @@ Copy can be done in one of the following ways.
 * Using Copy button in the Ribbon’s HOME tab to perform copy operation.
 * Using Copy option in the Context Menu.
 * Using `Ctrl + C` | `Command + C` keyboard shortcut.
-* Using the [`copy`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#copy) method.
+* Using the [`copy`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#copy) method.
 
 ## Paste
 
@@ -55,7 +55,7 @@ Paste can be done in one of the following ways.
 * Using Paste button in the Ribbon’s HOME tab to perform paste operation.
 * Using Paste option in the Context Menu.
 * Using `Ctrl + V` | `Command + V` keyboard shortcut.
-* Using the [`paste`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#paste) method.
+* Using the [`paste`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#paste) method.
 
 > If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`) from other sources, you should use `Ctrl + V` shortcut while pasting into the spreadsheet.
 
@@ -73,7 +73,7 @@ Paste can be done in one of the following ways.
 
 ## Prevent the paste functionality
 
-The following example shows, how to prevent the paste action in spreadsheet. In [`actionBegin`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#actionbegin) event, you can set `cancel` argument as false in paste request type.
+The following example shows, how to prevent the paste action in spreadsheet. In [`actionBegin`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#actionbegin) event, you can set `cancel` argument as false in paste request type.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
