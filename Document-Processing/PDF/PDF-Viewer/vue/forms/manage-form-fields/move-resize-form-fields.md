@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Move and Resize PDF Form Fields
+# Move and Resize PDF Form Fields in Vue
 - **Move**: Drag the form field to reposition it.
 - **Resize**: Use the resize handles to change width and height.
 

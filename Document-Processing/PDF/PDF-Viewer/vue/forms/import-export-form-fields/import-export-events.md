@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import/Export events in the Vue PDF Viewer | Syncfusion
-description: Learn how to handle Import/Export events for PDF form fields in the Syncfusion Vue PDF Viewer.
+description: Learn how to handle Import/Export events for PDF form fields in the Syncfusion Vue PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
