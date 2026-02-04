@@ -2,27 +2,45 @@
 layout: post
 title: Add custom fonts in Vue PDF Viewer | Syncfusion
 description: Learn how to add and load custom TTF fonts for documents displayed in the Vue PDF Viewer using the customFonts property.
-control: PDF Viewer
 platform: document-processing
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to add custom fonts to the PDF viewer
+# Add Custom Fonts to PDF Forms in Vue PDF Viewer
 
-The Vue PDF Viewer supports loading, editing, and saving custom fonts in form fields such as text boxes, list boxes, and drop-downs by using the customFonts property. Add the required TTF files to the resource URL directory used by the viewer so they can be loaded at runtime and used in forms.
- 
-## Integrating Custom Font Collections into Form Fields in PDF Viewer
- 
-To ensure proper rendering and saving of form fields that use custom fonts, especially when the fonts are not installed on the system, place the TTF files in the resource URL path referenced by the viewer and specify their names through the customFonts property (string array). These fonts will then be available for loading, editing, and saving form fields in the PDF.
+The Syncfusion **Vue PDF Viewer** supports loading, editing, and saving **custom fonts** in form fields such as [TextBox](../forms/manage-form-fields/create-form-fields#textbox), [ListBox](../forms/manage-form-fields/create-form-fields#listbox), and [DropDown](../forms/manage-form-fields/create-form-fields#dropdown) fields using the customFonts property. This ensures consistent text rendering even when the required fonts are not installed on the user’s system.  
+Custom fonts are embedded and preserved when form fields are modified or saved, making the PDF display correctly across environments.
 
-To use custom fonts in the Syncfusion PDF Viewer, add the custom TTF files to the resource URL directory and configure the viewer to load them. Specify font file names using the `customFonts` property as an array of names.
+## When dynamic fonts are used
+Dynamic fonts are currently used in the following scenarios:
+- **Text annotations** — When users enter text annotations that use non standard fonts, the viewer dynamically loads the required fonts to ensure correct character rendering. 
+- **PDF forms** — When users fill form fields that rely on fonts not included by default, dynamic font loading ensures the entered text is rendered correctly.
 
-Steps to add custom fonts
+## How Custom Fonts Work
+The custom font workflow in the PDF Viewer is as follows:
+- Place the required **TrueType Font (TTF)** files in the resource directory used by the viewer.
+- Specify the font names using the customFonts property.
+- The specified fonts become available for:
+  - Rendering form field content
+  - Editing text in form fields
+  - Saving and downloading the PDF with embedded fonts
 
-**Step 1:** Add custom TTF font files to the resource URL path referenced in the application. For example, place the TTF files in the ej2-pdfviewer-lib folder that serves as the resource URL path.
+## Steps to Add Custom Fonts
 
-**Step 2:** Use the following code to configure custom fonts in the PDF Viewer.
+### Add TTF Font Files
+1. Place the TTF font files in the resource path used by the PDF Viewer (for example, the ej2-pdfviewer-lib folder).  
+2. Fonts can be referenced in either of the following ways:
+   - **Relative path** 
+     Example:  
+     calibri.ttf  
+     fallback-fonts/calibri.ttf
+   - **Absolute URL**
+     Fonts can be hosted on a server and referenced using a fully qualified URL. Ensure that the hosting server has **CORS** enabled.
+
+### Configure Custom Fonts in the PDF Viewer
+Specify the required font names in the customFonts property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -82,6 +100,18 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-These steps integrate custom fonts into PDF documents displayed in the PDF Viewer.
+N>Ensure that the font file names match the specified font names.
 
-> Note: If a form field (TextBox, ListBox, DropDown) using a custom font has text larger than the field’s bounds, the downloaded PDF may render incorrectly in browsers or third‑party viewers. It displays correctly in the Syncfusion PDF Viewer. To avoid this, use a font size that fits within the field or enlarge the field before saving/downloading.
+## Supported Form Fields
+Custom fonts can be applied to the following form field types:
+- [TextBox](../forms/manage-form-fields/create-form-fields#textbox)
+- [ListBox](../forms/manage-form-fields/create-form-fields#listbox)
+- [DropDown](../forms/manage-form-fields/create-form-fields#dropdown)
+
+## Notes and Limitations
+- If text rendered using a custom font exceeds the form field’s bounds, the downloaded PDF may render incorrectly in some third party PDF viewers.
+- The same content displays correctly in the **Syncfusion PDF Viewer**.
+
+## To avoid rendering issues:
+- Use an appropriate font size that fits within the form field.
+- Increase the size of the form field before saving or downloading the PDF.
