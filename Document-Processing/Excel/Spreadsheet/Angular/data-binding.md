@@ -107,7 +107,7 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 ## Cell data binding
 
-The Spreadsheet control can bind the data to individual cell in a sheet . To achive this you can use the `value` property.
+The Spreadsheet control can bind the data to individual cell in a sheet . To achieve this you can use the `value` property.
 
 Refer to the following code example for cell data binding.
 

@@ -11,7 +11,7 @@ documentation: ug
 
 Freeze Panes helps you to keep particular rows or columns visible when scrolling the sheet content in the spreadsheet. You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#frozencolumns) properties inside the [`Sheet`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#sheets) property.
 
-## Apply freezepanes on UI
+## Apply freeze panes on UI
 
 **User Interface**:
 
