@@ -18,7 +18,7 @@ You can set formula for a cell in the following ways,
 * Using the `formula` property from `cell`, you can set the formula or expression to each cell at initial load.
 * Set the formula or expression through data binding.
 * You can set formula for a cell by [`editing`](./editing).
-* Using the [`updateCell`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#updatecell) method, you can set or update the cell formula.
+* Using the [`updateCell`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#updatecell) method, you can set or update the cell formula.
 
 ## Culture-Based Argument Separator
 

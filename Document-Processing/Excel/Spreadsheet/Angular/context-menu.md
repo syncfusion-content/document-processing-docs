@@ -23,9 +23,9 @@ Please find the table below for default context menu items and their actions.
 | [`Copy`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#copy) | Copy the selected cells data to the clipboard, so that you can paste it to somewhere else. |
 | [`Paste`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#paste) | Paste the data from clipboard to spreadsheet. |
 | [`Paste Special`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#paste) | `Values` - Paste the data values from clipboard to spreadsheet.  `Formats` - Paste the data formats from clipboard to spreadsheet. |
-| [`Filter`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#filter) | Perform filtering to the selected cells based on an active cell’s value. |
-| [`Sort`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#sort) | Perform sorting to the selected range of cells by ascending or descending. |
-| [`Hyperlink`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#hyperlink) | Create a link in the spreadsheet to navigate to web links or cell reference within the sheet or other sheets in the Spreadsheet. |
+| [`Filter`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#filter) | Perform filtering to the selected cells based on an active cell’s value. |
+| [`Sort`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#sort) | Perform sorting to the selected range of cells by ascending or descending. |
+| [`Hyperlink`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#hyperlink) | Create a link in the spreadsheet to navigate to web links or cell reference within the sheet or other sheets in the Spreadsheet. |
 
 ## Context Menu Items in Row Header / Column Header
 

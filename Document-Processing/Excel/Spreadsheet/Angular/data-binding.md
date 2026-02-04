@@ -9,7 +9,7 @@ documentation: ug
 
 # Data binding in Angular Spreadsheet component
 
-The Spreadsheet uses [DataManager](https://helpej2.syncfusion.com/angular/documentation/data/), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [DataManager](https://helpej2.syncfusion.com/angular/documentation/data/) or JavaScript object array collection.
+The Spreadsheet uses [DataManager](https://helpej2.syncfusion.com/angular/documentation/data), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [DataManager](https://helpej2.syncfusion.com/angular/documentation/data) or JavaScript object array collection.
 
 > To bind data to a cell, use `cell data binding` support.
 
@@ -31,7 +31,7 @@ Refer to the following code example for local data binding.
   
 {% previewsample "/document-processing/samples/spreadsheet/angular/local-data-binding-cs1" %}
 
-> The local data source can also be provided as an instance of the [DataManager](https://helpej2.syncfusion.com/angular/documentation/data/). By default, [DataManager](https://helpej2.syncfusion.com/angular/documentation/data/) uses [`JsonAdaptor`](https://ej2.syncfusion.com/angular/documentation/data/adaptors#json-adaptor) for local data-binding.
+> The local data source can also be provided as an instance of the [DataManager](https://helpej2.syncfusion.com/angular/documentation/data). By default, [DataManager](https://helpej2.syncfusion.com/angular/documentation/data) uses [`JsonAdaptor`](https://ej2.syncfusion.com/angular/documentation/data/adaptors#json-adaptor) for local data-binding.
 
 ### Customizing column data mapping
 
@@ -55,7 +55,7 @@ The following code example demonstrates how to customize the mapping of column d
 
 ## Remote data
 
-To bind remote data to the Spreadsheet control, assign service data as an instance of [DataManager](https://helpej2.syncfusion.com/angular/documentation/data/) to the `dataSource` property. To interact with remote data source, provide the service endpoint `url`.
+To bind remote data to the Spreadsheet control, assign service data as an instance of [DataManager](https://helpej2.syncfusion.com/angular/documentation/data) to the `dataSource` property. To interact with remote data source, provide the service endpoint `url`.
 
 Refer to the following code example for remote data binding.
 

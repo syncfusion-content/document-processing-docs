@@ -125,7 +125,7 @@ The multi-column sorting can also be performed manually by passing sort options 
 
 ## Custom sort comparer
 
-The [`sortDescriptor`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#sortdescriptor) holds the [`sortComparer`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#sortcomparer) property, which is a function and it is used to customize the sort comparer for specific sort criteria. Each `sortDescriptor` can be customized using the custom sort comparer function.
+The [`sortDescriptor`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#sortdescriptor) holds the [`sortComparer`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#sortcomparer) property, which is a function and it is used to customize the sort comparer for specific sort criteria. Each `sortDescriptor` can be customized using the custom sort comparer function.
 
 By customizing sort comparer, you can define the sort action as desired.
 
