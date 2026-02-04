@@ -21,7 +21,7 @@ The PDF has support for adding the below shapes.
 
 ## Adding Shapes to a PDF document
 
-JavaScript PDF supports adding shapes with different types of brushes like solid bush, gradient brush, tiling brush, and image brush along with various color spaces and transparency levels.
+The JavaScript PDF library supports shape rendering exclusively with PDF solid brushes.
 
 ### Line
 
