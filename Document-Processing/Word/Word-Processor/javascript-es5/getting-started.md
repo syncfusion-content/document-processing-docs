@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with JavaScript (ES5) Document editor control | Syncfusion
+title: Getting started with JavaScript (ES5) Document editor | Syncfusion
 description:  Checkout and learn about Getting started with JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting started 
@@ -367,7 +367,7 @@ The Document Editor component requires server-side interactions for the followin
 
 >Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
 
-Please refer the [example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#serviceurl/).
+Please refer the [example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#serviceurl).
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> provides a predefined [Word Processor server docker image](https://hub.docker.com/r/syncfusion/word-processor-server) targeting ASP.NET Core 2.1 framework. You can directly pull this docker image and deploy it in server on the go. You can also create own docker image by customizing the existing [docker project from GitHub](https://github.com/SyncfusionExamples/Word-Processor-Server-Docker).
 
