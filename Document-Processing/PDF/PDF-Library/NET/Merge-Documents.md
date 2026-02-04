@@ -24,21 +24,16 @@ Refer to the following code example to merge multiple documents from disk.
 //Due to platform limitations, the PDF file cannot be loaded from disk. However, you can merge multiple documents from stream using the following code snippet.
 //Creates a PDF document.
 PdfDocument finalDoc = new PdfDocument();
-FileStream stream1 = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
-FileStream stream2 = new FileStream("file2.pdf", FileMode.Open, FileAccess.Read);
-//Creates a PDF stream for merging.
-Stream[] streams = { stream1, stream2 };
+//Creates a string array of source files to be merged.
+string[] source = { "file1.pdf", "file2.pdf" };
 //Merges PDFDocument.
-PdfDocumentBase.Merge(finalDoc, streams);
+PdfDocumentBase.Merge(finalDoc, source);
 
 //Save the document into stream.
 MemoryStream stream = new MemoryStream();
 finalDoc.Save(stream);
 //Close the document.
 finalDoc.Close(true);
-//Disposes the streams.
-stream1.Dispose();
-stream2.Dispose();
 
 {% endhighlight %}
 
@@ -392,22 +387,16 @@ The following code shows how to merge multiple PDF documents using [Merge](https
 
 //Creates a PDF document.
 PdfDocument finalDoc = new PdfDocument();
-//Load the PDF document.
-FileStream stream1 = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
-FileStream stream2 = new FileStream("file2.pdf", FileMode.Open, FileAccess.Read);
-//Creates a PDF stream for merging.
-Stream[] streams = { stream1, stream2 };
+//Creates a string array of source files to be merged.
+string[] source = { "file1.pdf", "file2.pdf" };
 //Merges PDFDocument.
-PdfDocumentBase.Merge(finalDoc, streams);
+PdfDocumentBase.Merge(finalDoc, source);
 
 //Save the document into stream.
 MemoryStream stream = new MemoryStream();
 finalDoc.Save(stream);
 //Close the document.
 finalDoc.Close(true);
-//Disposes the streams.
-stream1.Dispose();
-stream2.Dispose();
 
 {% endhighlight %}
 
@@ -457,25 +446,19 @@ Refer to the following code example to optimize the PDF resources when merging P
 //Due to platform limitations, the PDF file cannot be loaded from disk. However, you can optimize PDF resources when merging multiple documents from stream using the following code snippet.
 //Create a PDF document.
 PdfDocument finalDoc = new PdfDocument();
-//Load the PDF document.
-FileStream stream1 = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
-FileStream stream2 = new FileStream("file2.pdf", FileMode.Open, FileAccess.Read);
-//Creates a PDF stream for merging.
-Stream[] streams = { stream1, stream2 };
+//Creates a string array of source files to be merged.
+string[] source = { "file1.pdf", "file2.pdf" };
 PdfMergeOptions mergeOptions = new PdfMergeOptions();
 //Enable Optimize Resources.
 mergeOptions.OptimizeResources = true;
 //Merges PDFDocument.
-PdfDocumentBase.Merge(finalDoc, mergeOptions, streams);
+PdfDocumentBase.Merge(finalDoc, mergeOptions, source);
 
 //Save the document into stream.
 MemoryStream stream = new MemoryStream();
 finalDoc.Save(stream);
 //Close the document.
 finalDoc.Close(true);
-//Disposes the streams.
-stream1.Dispose();
-stream2.Dispose();
 
 {% endhighlight %}
 
@@ -538,25 +521,19 @@ PdfMargins margin= new PdfMargins();
 margin.All=40;
 //Set margin.
 finalDoc.PageSettings.Margins = margin;
-//Load the PDF document.
-FileStream stream1 = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
-FileStream stream2 = new FileStream("file2.pdf", FileMode.Open, FileAccess.Read);
-//Create a PDF stream for merging.
-Stream[] streams = { stream1, stream2 };
+//Creates a string array of source files to be merged.
+string[] source = { "file1.pdf", "file2.pdf" };
 PdfMergeOptions mergeOptions = new PdfMergeOptions();
 //Enable the Extend Margin.
 mergeOptions.ExtendMargin = true;
 //Merge PDFDocument.
-PdfDocumentBase.Merge(finalDoc, mergeOptions, streams);
+PdfDocumentBase.Merge(finalDoc, mergeOptions, source);
 
 //Save the document into stream.
 MemoryStream stream = new MemoryStream();
 finalDoc.Save(stream);
 //Close the document.
 finalDoc.Close(true);
-//Dispose the stream.
-stream1.Dispose();
-stream2.Dispose();
 
 {% endhighlight %}
 
@@ -625,24 +602,18 @@ The Syncfusion<sup>&reg;</sup> PDF library enables users to merge PDF documents 
 
 //Create a PDF document. 
 PdfDocument finalDoc = new PdfDocument(); 
-//Load the PDF document. 
-FileStream stream1 = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read); 
-FileStream stream2 = new FileStream("file2.pdf", FileMode.Open, FileAccess.Read); 
-//Create a PDF stream for merging. 
-Stream[] streams = { stream1, stream2 }; 
+//Create a string array of source files to be merged.
+string[] source = { "file1.pdf", "file2.pdf" }; 
 PdfMergeOptions mergeOptions = new PdfMergeOptions(); 
 //Enable the Merge Accessibility Tags. 
 mergeOptions.MergeAccessibilityTags = true; 
 //Merge PDFDocument. 
-PdfDocumentBase.Merge(finalDoc, mergeOptions, streams); 
+PdfDocumentBase.Merge(finalDoc, mergeOptions, source); 
 //Save the document into stream. 
 MemoryStream stream = new MemoryStream(); 
 finalDoc.Save(stream); 
 //Close the document. 
-finalDoc.Close(true); 
-//Dispose the stream. 
-stream1.Dispose(); 
-stream2.Dispose(); 
+finalDoc.Close(true);
 
 {% endhighlight %}
 
