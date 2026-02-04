@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Field Events in Vue PDF Viewer | Syncfusion
-description: Learn about form field events in the Syncfusion Vue PDF Viewer component and how to handle them.
+description: Learn here all about form field events in the Syncfusion Vue PDF Viewer component and how to handle them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
