@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form Designer and Toolbar Customization in TypeScript | Syncfusion
-description: Learn here all about form designer and toolbar in Syncfusion TypeScript PDF Viewer of Syncfusion Essential JS 2 and more.
+title: Form Designer and Toolbar Customization in Vue | Syncfusion
+description: Learn here all about form designer and toolbar in the Syncfusion Vue PDF Viewer and how to customize the form designer UI and toolbar.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Designer in TypeScript PDF Viewer
+# Form Designer in Vue PDF Viewer
 
 When **Form Designer mode** is enabled in the Syncfusion [TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI includes a built in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
 
@@ -45,48 +45,59 @@ Designed form fields can be saved into the PDF document and printed with their a
 
 ## Enable Form Designer
 
-To enable form design features, inject the [FormDesigner](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesigner) module into the PDF Viewer. After injecting the module, use the [enableFormDesigner](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#enableformdesigner) API to show or hide the Form Designer option in the main toolbar.
+To enable form design features, inject the [FormDesigner](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesigner) module into the PDF Viewer. After injecting the module, use the [enableFormDesigner](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#enableformdesigner) API to show or hide the Form Designer option in the main toolbar.
 
-```ts
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+<template>
+  <div>
+    <ejs-pdfviewer
+      id="pdfViewer"
+      ref="pdfviewer"
+      :documentPath="documentPath"
+      :resourceUrl="resourceUrl"
+      :enableFormDesigner="false"
+      style="height:640px"
+    />
+  </div>
+</template>
+
+<script>
 import {
-  PdfViewer,
-  FormFields,
-  FormDesigner,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   Annotation,
   TextSelection,
   TextSearch,
-} from '@syncfusion/ej2-pdfviewer';
-PdfViewer.Inject(
   FormFields,
   FormDesigner,
-  Toolbar,
-  Magnification,
-  Navigation,
-  Annotation,
-  TextSelection,
-  TextSearch
-);
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath =
-  'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
-pdfviewer.resourceUrl =
-  'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.enableFormDesigner = false;
-pdfviewer.appendTo('#PdfViewer');
-```
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  provide: { PdfViewer: [Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch, FormFields, FormDesigner] },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+    };
+  }
+};
+</script>
+{% endhighlight %}
+{% endtabs %}
 
 ## Form Designer UI
 
-When [Form Designer mode](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesigner) is enabled in the Syncfusion [TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI provides a built in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
+When [Form Designer mode](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesigner) is enabled in the PDF Viewer, a default Form Designer user interface (UI) is displayed. This UI provides a built-in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
 
-![FormDesigner](../images/FormDesigner.gif)
+![FormDesigner](../../javascript-es6/images/FormDesigner.gif)
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/prefilledforms-cs1" %}
 
-For more information about creating and editing form fields in the PDF Viewer, refer to the [Form Creation](./manage-form-fields/create-form-fields) in TypeScript PDF Viewer documentation.
+For more information about creating and editing form fields in the PDF Viewer, refer to [Create form fields](./manage-form-fields/create-form-fields).
 
 ## Form Designer Toolbar
 
@@ -103,69 +114,70 @@ The **Form Designer toolbar** appears at the top of the PDF Viewer and provides 
 
 Each toolbar item allows users to place the corresponding form field by selecting the tool and clicking on the desired location in the PDF document.
 
-![Adding Text Box](../images/AddTextBox.gif)
+![Adding Text Box](../../javascript-es6/images/AddTextBox.gif)
 
-Use the following Code-snippet to enable Form Designer by injecting **Form Designer mode** Module.
+Use the Vue example above to enable the Form Designer (see the Composition API sample).
 
-```ts
+For more information about creating and editing form fields in the PDF Viewer, refer to [Create form fields](./manage-form-fields/create-form-fields).
+
+## Show or Hide the Built-in Form Designer Toolbar
+
+You can control the visibility of the Form Designer toolbar using the [isFormDesignerToolbarVisible()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) method. This allows you to display or hide the Form Designer tools in the PDF Viewer based on your application requirements.
+
+**Use this method to:**
+- Show the Form Designer toolbar when form design is required
+- Hide the toolbar to provide cleaner viewing experience
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+<template>
+  <div>
+    <button @click="showDesigner">Show Form Designer Toolbar</button>
+    <button @click="hideDesigner">Hide Form Designer Toolbar</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" style="height:640px" />
+  </div>
+</template>
+
+<script>
 import {
-  PdfViewer,
-  FormFields,
-  FormDesigner,
+  PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
   Annotation,
   TextSelection,
   TextSearch,
-} from '@syncfusion/ej2-pdfviewer';
-PdfViewer.Inject(
   FormFields,
   FormDesigner,
-  Toolbar,
-  Magnification,
-  Navigation,
-  Annotation,
-  TextSelection,
-  TextSearch
-);
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath =
-  'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
-pdfviewer.resourceUrl =
-  'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.enableFormDesigner = false;
-pdfviewer.appendTo('#PdfViewer');
-```
+} from '@syncfusion/ej2-vue-pdfviewer';
 
-For more information about creating and editing form fields in the PDF Viewer, refer to the [Form Creation in TypeScript PDF Viewer documentation](./manage-form-fields/create-form-fields).
-
-## Show or Hide the Built-in Form Designer Toolbar
-
-You can control the visibility of the Form Designer toolbar using the [isFormDesignerToolbarVisible()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) method. This allows you to display or hide the Form Designer tools in the PDF Viewer based on your application requirements.
-
-**Use this method to:**
-- Show the Form Designer toolbar when form design is required
-- Hide the toolbar to provide cleaner viewing experience
-
-```html
-<!-- Buttons to toggle the Form Designer toolbar -->
-<button id="showDesignerBtn">Show Form Designer Toolbar</button>
-<button id="hideDesignerBtn">Hide Form Designer Toolbar</button>
-```
-```ts
-//  Wire up buttons 
-document.getElementById('showDesignerBtn')!.onclick = () => {
-  pdfviewer.isFormDesignerToolbarVisible=true;
+export default {
+  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  provide: { PdfViewer: [Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch, FormFields, FormDesigner] },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+    };
+  },
+  methods: {
+    showDesigner() {
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      pdfviewer.isFormDesignerToolbarVisible = true;
+    },
+    hideDesigner() {
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      pdfviewer.isFormDesignerToolbarVisible = false;
+    }
+  }
 };
-document.getElementById('hideDesignerBtn')!.onclick = () => {
-  pdfviewer.isFormDesignerToolbarVisible=false;
-};
-```
+</script>
+{% endhighlight %}
+{% endtabs %}
 
 ## Customize the Built-in Form Designer Toolbar
 
-You can customize the Form Designer toolbar by specifying the tools to display and arranging them in the required order using the [FormDesignerToolbarItems](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesignertoolbaritem) property.
+You can customize the Form Designer toolbar by specifying the tools to display and arranging them in the required order using the [FormDesignerToolbarItems](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesignertoolbaritem) property.
 
 This customization helps you limit the available tools and simplify the user interface.
 
@@ -173,21 +185,56 @@ This customization helps you limit the available tools and simplify the user int
 - Include only the toolbar items you need, in the exact order you specify.
 - Any toolbar items not listed remain hidden, resulting in a cleaner and more focused UI.
 
-```ts
-//Customize the Built-in Form Designer Toolbar
-pdfviewer.toolbarSettings = {
-    formDesignerToolbarItems: [
-        "TextboxTool",
-        "PasswordTool",
-        "CheckBoxTool",
-        "RadioButtonTool",
-        "DropdownTool",
-        "ListboxTool",
-        "DrawSignatureTool",
-        "DeleteTool"
-    ]
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+<template>
+  <div>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" style="height:640px" />
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSelection,
+  TextSearch,
+  FormFields,
+  FormDesigner,
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  provide: { PdfViewer: [Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch, FormFields, FormDesigner] },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+    };
+  },
+  mounted() {
+    const pdfviewer = this.$refs.pdfviewer.ej2Instances;
+    // Customize the Built-in Form Designer Toolbar
+    pdfviewer.toolbarSettings = {
+      formDesignerToolbarItems: [
+        'TextboxTool',
+        'PasswordTool',
+        'CheckBoxTool',
+        'RadioButtonTool',
+        'DropdownTool',
+        'ListboxTool',
+        'DrawSignatureTool',
+        'DeleteTool'
+      ]
+    };
+  }
 };
-```
+</script>
+{% endhighlight %}
+{% endtabs %}
 
 ## Move, Resize, and Edit Form Fields
 
@@ -197,7 +244,7 @@ You can move, resize, and edit an existing form field directly in the PDF Viewer
 
 - Resize a field using the handles displayed on the field boundary.
 
-![Moveing and Resizing a form field](../images/move-resize-forms.gif)
+![Moveing and Resizing a form field](../../javascript-es6/images/move-resize-forms.gif)
 
 - Edit a field by selecting it to open the Form Field Properties popover. The popover allows you to modify the form field and widget annotation properties. Changes are reflected immediately in the viewer and are saved when the properties popover is closed.
 For more information, see Editing Form Fields

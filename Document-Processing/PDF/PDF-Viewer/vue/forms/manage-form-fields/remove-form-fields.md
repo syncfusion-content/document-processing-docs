@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Remove PDF Form Fields from a PDF 
+# Remove PDF Form Fields from a PDF in Vue
 
 ## Remove Form Fields Using the UI
 **Steps:**
