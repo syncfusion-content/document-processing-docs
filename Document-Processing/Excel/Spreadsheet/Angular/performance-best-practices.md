@@ -109,7 +109,7 @@ To mitigate these issues during the save operation, you can set the [`isFullPost
 The following code example shows how to set `isFullPost` to **false** in the Spreadsheet component:
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.html" %}
+{% highlight ts tabtitle="app.html" %}
 <ejs-spreadsheet #default [openUrl]="openUrl" [saveUrl]="saveUrl" (beforeSave)="beforeSave($event)">
     </ejs-spreadsheet>
 {% endhighlight %}
@@ -121,8 +121,8 @@ import { BeforeSaveEventArgs, SpreadsheetComponent, SpreadsheetModule } from '@s
 
 @Component({
     selector: 'app-root',
-    templateUrl: 'app.component.html',
-    styleUrls: ['app.component.css'],
+    templateUrl: 'app.html',
+    styleUrls: ['app.css'],
     encapsulation: ViewEncapsulation.None,
     standalone: true,
     imports: [ SpreadsheetModule, ]
@@ -175,7 +175,7 @@ Benefits:
 You can disable aggregate calculation using the following code example:
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.html" %}
+{% highlight ts tabtitle="app.html" %}
 <ejs-spreadsheet #default [showAggregate]="false">
     </ejs-spreadsheet>
 {% endhighlight %}
