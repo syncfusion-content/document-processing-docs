@@ -39,7 +39,7 @@ The following code example shows `How to update and customize your own actions f
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/undo-redo-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/undo-redo-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

@@ -53,7 +53,7 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/link-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/link-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

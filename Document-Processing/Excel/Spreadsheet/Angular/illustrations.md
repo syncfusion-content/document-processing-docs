@@ -70,7 +70,7 @@ Image feature allows you to view and insert an image in a spreadsheet, and you c
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/image-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/image-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -128,7 +128,7 @@ The available arguments in the `ChartModel` are:
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/chart-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/chart-cs2/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -159,7 +159,7 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/chart-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/chart-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -175,7 +175,7 @@ Using the [`actionBegin`](https://ej2.syncfusion.com/angular/documentation/api/s
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/chart-cs3/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/chart-cs3/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

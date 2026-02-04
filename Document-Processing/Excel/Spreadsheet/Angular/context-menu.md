@@ -70,7 +70,7 @@ In this demo, Custom Item is added after the Paste item in the context menu.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/contextmenu/addContextMenu-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/contextmenu/addContextMenu-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -88,7 +88,7 @@ In this demo, Insert Column item has been removed from the row/column header con
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/contextmenu/addContextMenu-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/contextmenu/addContextMenu-cs2/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -106,7 +106,7 @@ In this demo, Rename item is disabled in the pager context menu.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/contextmenu/addContextMenu-cs3/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/contextmenu/addContextMenu-cs3/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

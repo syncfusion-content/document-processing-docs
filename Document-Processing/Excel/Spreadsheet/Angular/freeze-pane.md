@@ -46,7 +46,7 @@ In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as 
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/freezepane-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/freezepane-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

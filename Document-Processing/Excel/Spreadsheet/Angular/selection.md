@@ -48,7 +48,7 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/selection-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/selection-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -75,7 +75,7 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/selection-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/selection-cs2/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -91,7 +91,7 @@ You can select single or multiple cells, rows, or columns using mouse and keyboa
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/selected-cell-values/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/selected-cell-values/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -107,7 +107,7 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/selection-cs3/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/selection-cs3/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

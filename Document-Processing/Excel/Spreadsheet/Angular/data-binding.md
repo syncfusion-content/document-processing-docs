@@ -21,7 +21,7 @@ Refer to the following code example for local data binding.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/local-data-binding-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -43,7 +43,7 @@ The following code example demonstrates how to customize the mapping of column d
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/field-mapping-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/field-mapping-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -61,7 +61,7 @@ Refer to the following code example for remote data binding.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/remote-data-binding-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/remote-data-binding-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -79,7 +79,7 @@ Refer to the following code example for remote data binding.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/remote-data-binding-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/remote-data-binding-cs2/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -95,7 +95,7 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/remote-data-binding-cs3/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/remote-data-binding-cs3/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -113,7 +113,7 @@ Refer to the following code example for cell data binding.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/cell-data-binding-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/cell-data-binding-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -143,7 +143,7 @@ The following table defines the arguments of the `dataSourceChanged` event.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/dynamic-data-binding-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/dynamic-data-binding-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -163,7 +163,7 @@ The following code example demonstrates how to dynamically update data using the
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/dynamic-data-binding-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/dynamic-data-binding-cs2/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

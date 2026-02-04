@@ -64,7 +64,7 @@ In the following sample, searching can be done by following ways:
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/searching-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/searching-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

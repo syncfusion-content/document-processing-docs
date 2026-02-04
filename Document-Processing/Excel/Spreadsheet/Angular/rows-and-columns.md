@@ -30,7 +30,7 @@ The following code example shows the options for inserting rows in the spreadshe
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/insert/row-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/insert/row-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -51,7 +51,7 @@ The following code example shows the options for inserting columns in the spread
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/insert/column-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/insert/column-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -74,7 +74,7 @@ The following code example shows the delete operation of rows and columns in the
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/delete/row-column-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/delete/row-column-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -117,7 +117,7 @@ The following code example shows the hide/show rows and columns operation in the
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/hide-show-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/hide-show-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -135,7 +135,7 @@ The following code example shows how to change the text in the column headers.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/column-header-change-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/column-header-change-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

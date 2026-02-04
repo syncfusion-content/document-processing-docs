@@ -31,7 +31,7 @@ The following code example shows the usage of ribbon customization.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/ribbon/cutomization-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/ribbon/cutomization-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

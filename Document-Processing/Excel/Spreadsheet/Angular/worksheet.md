@@ -23,7 +23,7 @@ The following code example shows the insert sheet operation in spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/insert/sheet-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/insert/sheet-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -41,7 +41,7 @@ The following code example shows how to insert a sheet programmatically and make
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/insert-sheet-change-active-sheet-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/insert-sheet-change-active-sheet-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -82,7 +82,7 @@ The following code example shows the headers and gridlines operation in spreadsh
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/headers-gridlines-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/headers-gridlines-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -108,7 +108,7 @@ The following code example shows the three types of sheet visibility state.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/sheet-visibility-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/sheet-visibility-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

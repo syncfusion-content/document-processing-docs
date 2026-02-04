@@ -19,7 +19,7 @@ In the below example, you can add, edit, save, and delete notes.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/note-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/note-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -135,7 +135,7 @@ In the below example, the note functionality is disabled in the Spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/note-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/note-cs2/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -153,7 +153,7 @@ In the below example, you can navigate between notes using **Previous Note** and
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/note-cs3/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/note-cs3/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

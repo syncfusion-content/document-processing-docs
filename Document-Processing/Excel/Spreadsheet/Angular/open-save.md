@@ -23,7 +23,7 @@ The following sample shows the `Open` option by using the [`openUrl`](https://ej
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/open-save-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -52,7 +52,7 @@ The following code example shows how to import an excel document using file uplo
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs7/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/open-save-cs7/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -68,7 +68,7 @@ You can achieve to access the remote excel file by using the [`created`](https:/
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/open-save-cs2/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -86,7 +86,7 @@ Please find the code to fetch the blob data and load it into the Spreadsheet com
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/open-from-blobdata-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/open-from-blobdata-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -261,7 +261,7 @@ The following code example shows how to open the spreadsheet data as base64 stri
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/base-64-string/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/base-64-string/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -277,7 +277,7 @@ You can open excel file into a read-only mode by using the [`openComplete`](http
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs12/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/open-save-cs12/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -318,7 +318,7 @@ The following code snippet demonstrates how to configure the deserialization opt
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/open-from-json/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/open-from-json/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -437,7 +437,7 @@ You can add your own custom header to the open action in the Spreadsheet. For pr
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs8/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/open-save-cs8/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -477,7 +477,7 @@ The following sample shows the `Save` option by using the [`saveUrl`](https://ej
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs3/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/open-save-cs3/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -511,7 +511,7 @@ Please find below the code to retrieve blob data from the Spreadsheet component 
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/save-as-blobdata-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/save-as-blobdata-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -700,7 +700,7 @@ The following code example shows how to save the spreadsheet data as base64 stri
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/base-64-string/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/base-64-string/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -738,7 +738,7 @@ The following code snippet demonstrates how to configure the serialization optio
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/save-as-json/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/save-as-json/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -754,7 +754,7 @@ Passing the custom parameters from client to server by using [`beforeSave`](http
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs4/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/open-save-cs4/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -781,7 +781,7 @@ You can add your own custom header to the save action in the Spreadsheet. For pr
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs11/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/open-save-cs11/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -802,7 +802,7 @@ The possible values are:
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs6/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/open-save-cs6/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -821,7 +821,7 @@ To save the Spreadsheet document as an `xlsx, xls, csv, or pdf` file, by using [
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs5/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/open-save-cs5/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

@@ -37,7 +37,7 @@ The following code example shows `sort` functionality in the Spreadsheet control
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/sort-by-cell-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/sort-by-cell-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -113,7 +113,7 @@ The multi-column sorting can also be performed manually by passing sort options 
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/passing-sort-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/passing-sort-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -141,7 +141,7 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/custom-sort-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/custom-sort-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

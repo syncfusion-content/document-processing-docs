@@ -25,7 +25,7 @@ The following code example shows the wrap text functionality in spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/wrap-text-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/wrap-text-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -65,7 +65,7 @@ The following code example shows the merge cells operation in spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/merge-cells-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/merge-cells-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -126,7 +126,7 @@ You can clear the highlighted invalid data by using the following ways,
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/data-validation-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/data-validation-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -155,7 +155,7 @@ The following code example demonstrates how to add custom data validation with a
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/data-validation-cs2/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/data-validation-cs2/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -239,7 +239,7 @@ In the following sample, you can enable/disable the fill option on the button cl
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/autofill-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/autofill-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -282,7 +282,7 @@ Clear the cell contents and formats in the Spreadsheet document by using the [cl
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/clear-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/clear-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

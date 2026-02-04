@@ -17,7 +17,7 @@ Sample link: [`Cell template`](https://document.syncfusion.com/demos/spreadsheet
 
 <!-- {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/template-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/template-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

@@ -7,11 +7,9 @@ control: Getting started
 documentation: ug
 ---
 
-# Getting started with Angular Spreadsheet component Using Angular CLI and TypeScript
+# Getting started with Angular Spreadsheet component
 
-This guide provides a step-by-step walkthrough for setting up an Angular Spreadsheet component using TypeScript with Angular CLI.
-
-The Angular CLI is a powerful command-line tool that simplifies the creation, management, and building of Angular Spreadsheet component, enabling a quick start to development.
+This section explains the steps to create a simple Spreadsheet component with basic features in an Angular environment.
 
 To get start quickly with Angular Spreadsheet using CLI, you can check on this video:
 
@@ -43,14 +41,6 @@ You can use [`Angular CLI`](https://github.com/angular/angular-cli) to setup you
 npm install -g @angular/cli
 ```
 
-## Installing a Specific Version
-
-To install a particular version of Angular CLI, use:
-
-```bash
-npm install -g @angular/cli@21.0.0
-```
-
 ## Create an Angular Application
 
 Start a new Angular application using below Angular CLI command.
@@ -72,10 +62,6 @@ This command prompts you to configure settings such as whether to include Angula
 ```
 
 By default, it will create a CSS-based application.
-
-```bash
-ng new syncfusion-angular-app --style=scss
-```
 
 During project setup, when prompted for the Server-side rendering (SSR) option, choose the appropriate configuration.
 
@@ -181,11 +167,9 @@ ng serve
 
 The following example shows a basic Spreadsheet component
 
-**Note:** For Angular 17+, no longer required to import 'zone.js' in main.ts.
-
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/spreadsheet-cs1/src/app.component.ts %}
+{% include code-snippet/spreadsheet/angular/spreadsheet-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
