@@ -156,7 +156,7 @@ ng serve
 The following example shows a basic Spreadsheet component
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 {% include code-snippet/spreadsheet/angular/spreadsheet-cs1/src/app.ts %}
 {% endhighlight %}
 
