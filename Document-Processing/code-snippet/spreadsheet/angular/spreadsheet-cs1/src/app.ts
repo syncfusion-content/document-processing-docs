@@ -12,6 +12,6 @@ standalone: true,
     selector: 'app-root',
     template: '<ejs-spreadsheet > </ejs-spreadsheet>'
 })
-export class AppComponent { }
+export class App { }
 
 
