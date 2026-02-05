@@ -9,7 +9,7 @@ documentation: ug
 
 # Sort in Angular Spreadsheet component
 
-Sorting helps arranging the data to a specific order in a selected range of cells. You can use the [`allowSorting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#allowsorting) property to enable or disable sorting functionality.
+Sorting helps arranging the data to a specific order in a selected range of cells. You can use the [`allowSorting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowsorting) property to enable or disable sorting functionality.
 
 > * The default value for `allowSorting` property is `true`.
 
@@ -20,7 +20,7 @@ By default, the `sort` module is injected internally into Spreadsheet to perform
 In the active Spreadsheet, select a range of cells to sort by cell value. The range sort can be done by any of the following ways:
 * Select the sort item in the Ribbon toolbar and choose the ascending or descending item.
 * Right-click the sheet, select the sort item in the context menu and choose the ascending/descending item.
-* Use the [`sort()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#sort) method programmatically.
+* Use the [`sort()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#sort) method programmatically.
 
 The cell values can be sorted in the following orders:
 * Ascending
@@ -30,14 +30,14 @@ The cell values can be sorted in the following orders:
 
 The `sort()` method with empty arguments will sort the selected range by active cell’s column as sort column in ascending order.
 
-> * The [`beforeSort`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#beforesort) event will be triggered before sorting the specified range.
-> * The [`sortComplete`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#sortcomplete) event will be triggered after the sort action is completed successfully.
+> * The [`beforeSort`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforesort) event will be triggered before sorting the specified range.
+> * The [`sortComplete`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#sortcomplete) event will be triggered after the sort action is completed successfully.
 
 The following code example shows `sort` functionality in the Spreadsheet control.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/sort-by-cell-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/sort-by-cell-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -49,7 +49,7 @@ The following code example shows `sort` functionality in the Spreadsheet control
 
 ## Data contains header
 
-You can specify whether the selected range of cells contains header. To specify, you need to set the [`containsHeader`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#containsheader) property to `true` and pass it as `sortOption` arguments of the sort() method.
+You can specify whether the selected range of cells contains header. To specify, you need to set the [`containsHeader`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#containsheader) property to `true` and pass it as `sortOption` arguments of the sort() method.
 
 > * If the `containsHeader` property is not set and active cell column’s first cell value type is differed from the second cell value type, the first row data in the range are marked as column headers.
 
@@ -67,7 +67,7 @@ In the custom sort dialog, the `Data contains header` checkbox is checked on loa
 
 ## Case sensitive sort
 
-The default sort functionality of Spreadsheet is a case insensitive sorting. When you want to perform sorting with case sensitive, you need to set the [`caseSensitive`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#casesensitive) property to `true` and pass it as `sortOption` arguments of the sort() method.
+The default sort functionality of Spreadsheet is a case insensitive sorting. When you want to perform sorting with case sensitive, you need to set the [`caseSensitive`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#casesensitive) property to `true` and pass it as `sortOption` arguments of the sort() method.
 
 Case sensitive sorting is applicable only for cells with alphabets. In ascending order sorting with case sensitive enabled, the cells with lower case text will be placed above the cells with upper case text.
 
@@ -104,7 +104,7 @@ You can refer to the [`Data contains header`](./sort#data-contains-header) topic
 ### Passing sort criteria manually
 
 The multi-column sorting can also be performed manually by passing sort options to the `sort()` method programmatically. The `sortOption` have the following arguments:
-* [`sortDescriptors`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#sortdescriptors) – Sort criteria collection that holds the collection of field name, sort order, and [`sortComparer`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#sortcomparer).
+* [`sortDescriptors`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#sortdescriptors) – Sort criteria collection that holds the collection of field name, sort order, and [`sortComparer`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#sortcomparer).
 * `containsHeader` – Boolean argument that specifies whether the range has headers in it.
 * `caseSensitive` – Boolean argument that specifies whether the range needs to consider case.
 
@@ -112,8 +112,8 @@ The multi-column sorting can also be performed manually by passing sort options 
 > * When a `sortDescriptor` is specified without field, the field of the first `sortDescriptor` from the collection will be assigned from active cell’s column name and others will be ignored. Hence, it will act as single column sorting.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/passing-sort-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/passing-sort-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -125,7 +125,7 @@ The multi-column sorting can also be performed manually by passing sort options 
 
 ## Custom sort comparer
 
-The [`sortDescriptor`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#sortdescriptor) holds the [`sortComparer`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#sortcomparer) property, which is a function and it is used to customize the sort comparer for specific sort criteria. Each `sortDescriptor` can be customized using the custom sort comparer function.
+The [`sortDescriptor`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#sortdescriptor) holds the [`sortComparer`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#sortcomparer) property, which is a function and it is used to customize the sort comparer for specific sort criteria. Each `sortDescriptor` can be customized using the custom sort comparer function.
 
 By customizing sort comparer, you can define the sort action as desired.
 
@@ -140,8 +140,8 @@ You can also define the sorting of cell values based on your own customized pers
 In the following demo, the `Trustworthiness` column is sorted based on the custom lists `Perfect`, `Sufficient`, and `Insufficient`.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/custom-sort-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/custom-sort-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
