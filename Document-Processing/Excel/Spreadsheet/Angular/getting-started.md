@@ -127,7 +127,7 @@ This can be referenced in `[src/styles.css]` using following code.
 
 ## Add Spreadsheet component
 
-Modify the template in [src/app/app.component.ts] file to render the spreadsheet component. Add the Angular Spreadsheet by using `<ejs-spreadsheet>` selector in template section of the `app.component.ts` file.
+Modify the template in [src/app/app.component.ts] file to render the spreadsheet component. Add the Angular Spreadsheet by using `<ejs-spreadsheet>` selector in template section of the `app.ts` file.
 
 ```typescript
 import { Component } from '@angular/core';
@@ -141,7 +141,7 @@ import { SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet'
   // specifies the template string for the Spreadsheet component
   template: `<ejs-spreadsheet> </ejs-spreadsheet>`
 })
-export class AppComponent { }
+export class App { }
 
 ```
 
@@ -156,8 +156,8 @@ ng serve
 The following example shows a basic Spreadsheet component
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/spreadsheet-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/spreadsheet-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
