@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-## Changing the active sheet while importing a file in Angular Spreadsheet component
+# Changing the active sheet while importing a file in Angular Spreadsheet component
 
 You can change the active sheet of imported file by updating [`activeSheetIndex`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#activesheetindex) property on the [`openComplete`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#opencomplete) event.
 
