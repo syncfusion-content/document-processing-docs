@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SpreadsheetModule } from '@syncfusion/ej2-angular-spreadsheet';
-import { AppComponent } from './app.component';
+import { AppComponent } from './app';
 
 /**
  * Module
