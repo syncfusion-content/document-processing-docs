@@ -127,7 +127,7 @@ This can be referenced in `[src/styles.css]` using following code.
 
 ## Add Spreadsheet component
 
-Modify the template in [src/app/app.component.ts] file to render the spreadsheet component. Add the Angular Spreadsheet by using `<ejs-spreadsheet>` selector in template section of the `app.ts` file.
+Modify the template in [src/app/app.ts] file to render the spreadsheet component. Add the Angular Spreadsheet by using `<ejs-spreadsheet>` selector in template section of the `app.ts` file.
 
 ```typescript
 import { Component } from '@angular/core';
