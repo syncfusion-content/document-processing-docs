@@ -142,10 +142,10 @@ public IActionResult CreatePDFDocument()
 ## Steps to publish as Azure App Service on Windows 
 
 Step 1: Right-click the project and select **Publish** option.
-![Publish option Image](Azure_images/Azure-app-service-windows/Publish_button_screenshot.png)
+![Publish option Image](Azure_images/Azure-app-service-windows/Publish_button.png)
 
 Step 2: Click the **Add a Publish Profile** button.
-![Add a publish profile](Azure_images/Azure-app-service-windows/Publish_profile_screenshot.png)
+![Add a publish profile](Azure_images/Azure-app-service-windows/Publish_profile.png)
 
 Step 3: Select the publish target as **Azure**.
 ![Select the publish target as Azure](Azure_images/Azure-app-service-windows/Select_target.png)
@@ -175,7 +175,7 @@ Step 11: Now, the published webpage will open in the browser.
 ![Browser will open after publish](Azure_images/Azure-app-service-windows/WebView.png)
 
 Step 12: Select the PDF document and Click **Create PDF document** to create a PDF document.You will get the output PDF document as follows.
-![Azure App Service on Windows](Azure_images/Azure-app-service-windows/Output_screenshot.png)
+![Azure App Service on Windows](Azure_images/Azure-app-service-windows/Output.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure/Azure%20App%20Service).
 
