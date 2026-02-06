@@ -170,8 +170,8 @@ In the following demo, the JSON structure is passed to the [`openFromJson`](http
 
 {% tabs %}
 
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/json-structure-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/json-structure-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="datasource.ts" %}

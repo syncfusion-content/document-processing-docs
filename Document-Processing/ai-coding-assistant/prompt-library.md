@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Prompt Library - AI Coding Assistant
 
-Speed up your projects using these ready-made prompts for Syncfusion® Document Processing libraries. Each prompt is short, easy to understand, and focused on real tasks—like quick setups, tweaks, and fixes.
+Speed up your projects using these ready-made prompts for Syncfusion® components. Each prompt is short, easy to understand, and focused on real tasks—like quick setups, tweaks, and fixes.
 
 ## How to Use
 
 Before starting, make sure your MCP Server is set up and running.
 
 * Choose a prompt that fits your need.
-* Copy the full prompt with the #SyncfusionDocumentSDKAssistant handle.
+* Copy the full prompt with the appropriate assistant handle (for example, `#SyncfusionDocumentSDKAssistant` or `#SyncfusionSpreadsheetEditorSDKAssistant`).
 * Customize the prompt for your specific use case.
 * Execute via the MCP Server.
 * Always check and test the code before adding it to your project.
@@ -226,7 +226,54 @@ The Syncfusion PowerPoint Library enables developers to create, read, edit, and 
 {% endpromptcard %}
 {% endpromptcards %}
 
+### Spreadsheet
+
+The Syncfusion Spreadsheet Editor SDK component enables developers to create, view, edit, and analyze spreadsheets directly in web and desktop applications across multiple platforms, including Angular, React, Vue, JavaScript, Blazor, ASP.NET Core, and more.
+
+{% promptcards %}
+{% promptcard Initialize Spreadsheet %}
+#SyncfusionSpreadsheetEditorSDKAssistant How do I initialize a basic Spreadsheet in Angular with default settings?
+{% endpromptcard %}
+{% promptcard Data Binding %}
+#SyncfusionSpreadsheetEditorSDKAssistant Show me how to bind local JSON data to the Spreadsheet in React?
+{% endpromptcard %}
+{% promptcard Remote Data Binding %}
+#SyncfusionSpreadsheetEditorSDKAssistant Provide an example of binding remote data in Vue Spreadsheet?
+{% endpromptcard %}
+{% promptcard Formulas and Calculation %}
+#SyncfusionSpreadsheetEditorSDKAssistant How can I enable formula support and use named ranges in the Typescript Spreadsheet?
+{% endpromptcard %}
+{% promptcard Charts %}
+#SyncfusionSpreadsheetEditorSDKAssistant How do I insert and customize a column chart in the Blazor Spreadsheet?
+{% endpromptcard %}
+{% promptcard Data Validation %}
+#SyncfusionSpreadsheetEditorSDKAssistant Provide an example of adding list validation in cells in Typescript?
+{% endpromptcard %}
+{% promptcard Import and Export %}
+#SyncfusionSpreadsheetEditorSDKAssistant How to import an Excel file and export the Spreadsheet as XLSX in ASP.NET Core?
+{% endpromptcard %}
+{% promptcard Ribbon and Toolbar %}
+#SyncfusionSpreadsheetEditorSDKAssistant Show how to customize the ribbon toolbar and add custom buttons in the ASP.NET MVC Spreadsheet?
+{% endpromptcard %}
+{% promptcard Grid Lines and Headers %}
+#SyncfusionSpreadsheetEditorSDKAssistant How do I show or hide grid lines and row/column headers in Windows Forms Spreadsheet?
+{% endpromptcard %}
+{% promptcard Sheet Protection %}
+#SyncfusionSpreadsheetEditorSDKAssistant How can I protect a sheet with a password in the WPF Spreadsheet control?
+{% endpromptcard %}
+{% promptcard Conditional Formatting %}
+#SyncfusionSpreadsheetEditorSDKAssistant How to apply conditional formatting such as color scales or data bars in UWP Spreadsheet?
+{% endpromptcard %}
+{% promptcard Cell Formatting %}
+#SyncfusionSpreadsheetEditorSDKAssistant How to apply cell styles, number formatting, and wrap text in the Typescript Spreadsheet?
+{% endpromptcard %}
+{% promptcard Sorting and Filtering %}
+#SyncfusionSpreadsheetEditorSDKAssistant Show me how to enable sorting and filtering features in the React Spreadsheet?
+{% endpromptcard %}
+{% endpromptcards %}
+
 ## See also
 
 * [AI Coding Assistant Overview](https://help.syncfusion.com/document-processing/ai-coding-assistant/overview)
-* [SyncfusionDocumentSDKAssistant MCP Server](https://help.syncfusion.com/document-processing/ai-coding-assistant/mcp-server)
+* [SyncfusionDocumentSDKAssistant MCP Server](https://www.npmjs.com/package/@syncfusion/documentsdk-assistant)
+* [SyncfusionSpreadsheetEditorSDKAssistant MCP Server](https://www.npmjs.com/package/@syncfusion/spreadsheeteditorsdk-assistant)
