@@ -12,7 +12,7 @@ You can modify form fields using the **UI** or **API**.
 
 ## Modify PDF Form Field Properties using the UI
 - Right click a field → **Properties** to update settings.
-![Textbox properties panel](../../javascript-es6/images/ui-textbox-edit.png)
+![Textbox properties panel](../../../javascript-es6/images/ui-textbox-edit.png)
 - Drag to move; use handles to resize.
 - Use the toolbar to toggle field mode or add new fields.
 
@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ### Initial Field
 •	UI: Tooltip, indicator text, thickness, required/visibility.
-![Initial field edited from UI](../../javascript-es6/images/ui-initial-edit.png)
+![Initial field edited from UI](../../../javascript-es6/images/ui-initial-edit.png)
 •	API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
