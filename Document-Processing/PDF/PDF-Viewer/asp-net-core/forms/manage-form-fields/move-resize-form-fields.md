@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Move and Resize form fields in the ASP.NET Core PDF Viewer | Syncfusion
+title: Move and Resize form fields in the Core PDF Viewer | Syncfusion
 description: Learn how to move and resize PDF form fields using the UI and programmatically with APIs in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -11,7 +11,7 @@ documentation: ug
 - **Move**: Drag the form field to reposition it.
 - **Resize**: Use the resize handles to change width and height.
 
-![Moveing and Resizing a form field](../../javascript-es6/images/move-resize-forms.gif)
+![Moveing and Resizing a form field](../../../javascript-es6/images/move-resize-forms.gif)
 
 ## Move and Resize Fields Programmatically (API)
 You can set absolute bounds or move fields by a delta.

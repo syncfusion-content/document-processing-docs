@@ -66,7 +66,7 @@ Each field can be added via the **Form Designer** or **programmatically**.
 
 **Add via Toolbar (UI)**
 - Open **Form Designer** → select **Textbox** → click on the page → configure in **Properties**.
-![Textbox properties panel](../../javascript-es6/images/ui-textbox-edit.png)
+![Textbox properties panel](../../../javascript-es6/images/ui-textbox-edit.png)
 
 **Add Programmatically (API)**
 
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 **Add via Toolbar (UI)**
 - Select **Password** → place it → configure tooltip, required, max length.
-![Password Properties Panel](../../javascript-es6/images/ui-password-edit.png)
+![Password Properties Panel](../../../javascript-es6/images/ui-password-edit.png)
 
 **Add Programmatically (API)**
 {% tabs %}
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
 ### CheckBox
 **Add via Toolbar (UI)**
 - Select **CheckBox** → click to place → duplicate for options → set isChecked, tooltip, appearance.
-![CheckBox Properties Panel](../../javascript-es6/images/ui-checkbox-edit.png)
+![CheckBox Properties Panel](../../../javascript-es6/images/ui-checkbox-edit.png)
 
 **Add Programmatically (API)**
 {% tabs %}
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
 ### RadioButton
 **Add via Toolbar (UI)**
 - Select **RadioButton** → place buttons with the **same Name** to group → configure selection/colors.
-![Radio Button Properties Panel](../../javascript-es6/images/ui-radiobutton-edit.png)
+![Radio Button Properties Panel](../../../javascript-es6/images/ui-radiobutton-edit.png)
 
 **Add Programmatically (API)**
 {% tabs %}
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
 ### ListBox
 **Add via Toolbar (UI)**
 - Select **ListBox** → place → add items in **Properties**.
-![ListBox Properties Panel](../../javascript-es6/images/ui-listbox-edit.png)
+![ListBox Properties Panel](../../../javascript-es6/images/ui-listbox-edit.png)
 
 **Add Programmatically (API)**
 {% tabs %}
@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function () {
 ### DropDown
 **Add via Toolbar (UI)**
 - Select **DropDown** → place → add items → set default value.
-![DropDown Properties Panel](../../javascript-es6/images/ui-dropdown-edit.png)
+![DropDown Properties Panel](../../../javascript-es6/images/ui-dropdown-edit.png)
 
 **Add Programmatically (API)**
 {% tabs %}
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function () {
 ### Signature Field
 **Add via Toolbar (UI)**
 - Select **Signature Field** → place where signing is required → configure indicator text, thickness, tooltip, required.
-![Signature Field](../../javascript-es6/images/ui-signature-edit.png)
+![Signature Field](../../../javascript-es6/images/ui-signature-edit.png)
 
 **Add Programmatically (API)**
 {% tabs %}
@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', function () {
 ### Initial Field
 **Add via Toolbar (UI)**
 - Select **Initial Field** → place where initials are needed → configure text and required state.
-![Initial field Properties Panel](../../javascript-es6/images/ui-initial-edit.png)
+![Initial field Properties Panel](../../../javascript-es6/images/ui-initial-edit.png)
 
 **Add Programmatically (API)**
 {% tabs %}

@@ -16,7 +16,7 @@ Use the **Properties** panel to adjust:
 - Font family/size, text color, alignment
 - Border color/thickness
 - Background color
-![Textbox style from UI](../../javascript-es6/images/ui-textbox-style.png)
+![Textbox style from UI](../../../javascript-es6/images/ui-textbox-style.png)
 
 ## Customize appearance Form Fields Programmatically
 Use [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) to apply styles.
