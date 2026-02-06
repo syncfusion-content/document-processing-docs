@@ -9,7 +9,7 @@ documentation: ug
 
 # Searching in Angular Spreadsheet component
 
-Find and Replace helps you to search for the target text and replace the found text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#allowfindandreplace) property to enable or disable the Find and Replace functionality.
+Find and Replace helps you to search for the target text and replace the found text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowfindandreplace) property to enable or disable the Find and Replace functionality.
 
 > * The default value for `allowFindAndReplace` property is `true`.
 
@@ -30,7 +30,7 @@ Find can be done by any of the following ways:
 > * `Match case`: To find the matched value with case sensitive.
 > * `Match exact cell contents`: To find the exact matched cell value with entire match cases.
 
-* Using [`find()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#find) method to perform find operation.
+* Using [`find()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#find) method to perform find operation.
 
 ## Replace
 
@@ -43,8 +43,8 @@ Replace can be done by any of the following ways:
 * Use `Ctrl + H` key to open the Find and Replace dialog.
 * Use Replace button to change the found value in sheet or workbook.
 * Using Replace All button, all the matched criteria can be replaced with find value based on sheet or workbook.
-* Using [`replace()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#replace) method to perform replace operation by passing the argument `args.replaceby` as `replace`.
-* Using [`replace()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#replace) method to perform replace all operation by passing the argument `args.replaceby` as `replaceall`.
+* Using [`replace()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#replace) method to perform replace operation by passing the argument `args.replaceby` as `replace`.
+* Using [`replace()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#replace) method to perform replace all operation by passing the argument `args.replaceby` as `replaceall`.
 
 ## Go to
 
@@ -53,7 +53,7 @@ Go to feature is used to navigate to a specific cell address in the sheet or wor
 **User Interface**:
 
 * Use `Ctrl + G` key to open the Go To dialog.
-* Use [`goTo()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#goto) method to perform Go To operation.
+* Use [`goTo()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#goto) method to perform Go To operation.
 
 In the following sample, searching can be done by following ways:
 
@@ -63,8 +63,8 @@ In the following sample, searching can be done by following ways:
 * You can have more options to find values by selecting the more options in the search toolbar.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/searching-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/searching-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
