@@ -104,8 +104,8 @@ N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nu
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
-@using Syncfusion.Blazor;
-@using Syncfusion.Blazor.SfPdfViewer;
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.SfPdfViewer
 
 {% endhighlight %}
 {% endtabs %}
@@ -176,6 +176,8 @@ N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 Run the application to display the PDF file in the Syncfusion&reg; Blazor PDF Viewer component in the browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVzNWqXLSZpnuzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor WebAssembly SfPdfViewer rendering in browser](gettingstarted-images/blazor-pdfviewer.png)" %}
+
+N> [View the sample on GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer2/NET10/PDFViewer2_WasmStandalone).
 
 ## See also
 
