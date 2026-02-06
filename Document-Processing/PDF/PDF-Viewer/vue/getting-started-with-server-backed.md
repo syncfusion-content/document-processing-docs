@@ -262,17 +262,6 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-The following summarized code is available in the **src/App.vue** file:
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/pdfviewer/vue/getting-started-cs1/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/pdfviewer/vue/getting-started-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-
 N> We have provided the support to dynamically change the `serviceUrl`. After updating the `serviceUrl` dynamically, invoke the `pdfViewer.dataBind()` method before calling the `load` method. This ensures that the updated `serviceUrl` is applied immediately. Make sure to perform this step in versions 23.1.36 and later.
 
 N> The Web API hosted link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer utilized in the PDF viewer's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service and use for the serviceUrl property. **We strongly recommend using the standalone mode.**
