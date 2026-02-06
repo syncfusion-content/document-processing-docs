@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing in Angular Spreadsheet component
 
-You can edit the contents of a cell directly in the cell or by typing in the formula bar. By default, the editing feature is enabled in the spreadsheet. Use the [`allowEditing`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#allowediting) property to enable or disable the editing feature.
+You can edit the contents of a cell directly in the cell or by typing in the formula bar. By default, the editing feature is enabled in the spreadsheet. Use the [`allowEditing`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowediting) property to enable or disable the editing feature.
 
 ## Edit cell
 
@@ -19,7 +19,7 @@ You can start editing by one of the following ways,
 * Press `F2` key to edit the active cell.
 * Use formula bar to perform editing.
 * Use `BACKSPACE` or `SPACE` key to clear the cell content and start the edit mode.
-* Using the [`startEdit`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#startedit) method.
+* Using the [`startEdit`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#startedit) method.
 
 ## Save cell
 
@@ -27,20 +27,20 @@ If the cell is in editable state, you can save the edited cell by one of the fol
 
 * Perform mouse click on any other cell rather than the current editing cell.
 * Press `Enter` or `Tab` keys to save the edited cell content.
-* Using the [`endEdit`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#endedit) method.
+* Using the [`endEdit`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#endedit) method.
 
 ## Cancel editing
 
 To cancel the editing without saving the changes, you can use one of the following ways,
 
 * Press `ESCAPE` key, this will remove the editable state and update the unchanged cell content.
-* Using the [`closeEdit`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#closeedit) method.
+* Using the [`closeEdit`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#closeedit) method.
 
-The following sample shows how to prevent the editing and cell save. Here `E` column prevent the editing by using cancel argument as true in [`cellEdit`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#celledit) event. In `D` column, prevent saving the edited changes by using cancel argument as true in [`beforeCellSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#beforecellsave) and use [`closeEdit`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#closeedit) method in spreadsheet.
+The following sample shows how to prevent the editing and cell save. Here `E` column prevent the editing by using cancel argument as true in [`cellEdit`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#celledit) event. In `D` column, prevent saving the edited changes by using cancel argument as true in [`beforeCellSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforecellsave) and use [`closeEdit`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#closeedit) method in spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/editing-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/editing-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
