@@ -7,6 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
+
 # Notes in React Spreadsheet component
 
 The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enablenotes) property, which defaults to **true**.

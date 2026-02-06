@@ -7,6 +7,7 @@ control: Notes
 documentation: ug
 ---
 
+
 # Notes in EJ2 JavaScript Spreadsheet control
 
 The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#enablenotes) property, which defaults to **true**.
