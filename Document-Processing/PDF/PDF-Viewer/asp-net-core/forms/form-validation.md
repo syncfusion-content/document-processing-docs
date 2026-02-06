@@ -16,11 +16,9 @@ This feature helps enforce data completeness and improves the reliability of col
 
 Form field validation follows this flow:
 - Enable validation using the [enableFormFieldsValidation](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableFormFieldsValidation) property.
-- Handle the [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields
-) event to determine which required fields are not filled.
+- Handle the [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields) event to determine which required fields are not filled.
 - When validation is enabled and a user attempts to print, download, or submit the document:
-  - The [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields
-  ) event is triggered.
+  - The [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields) event is triggered.
   - Unfilled required fields are listed in args.nonFillableFields.
   - You can cancel the action, show an error message, or move focus to an invalid field.
 
@@ -94,8 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## Handle PDF Form Validation Results
 
-In the [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields
-) event, you can control the behavior when fields are missing. Typical actions include:
+In the [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields) event, you can control the behavior when fields are missing. Typical actions include:
 - Cancel the print or download operation
 - Display an error message to the user
 - Set focus to the first unfilled required field

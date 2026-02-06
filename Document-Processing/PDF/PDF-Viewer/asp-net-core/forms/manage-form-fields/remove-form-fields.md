@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Remove form fields in the ASP.NET Core PDF Viewer component | Syncfusion
+title: Remove form fields in the Core PDF Viewer component | Syncfusion
 description: Learn how to remove PDF form fields using the UI and programmatically in the Syncfusion ASP.NET Core PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
@@ -14,7 +14,7 @@ documentation: ug
 1.	Enable **Form Designer mode**.
 2.	Select the form field.
 3.	Click **Delete** in the toolbar or press the **Delete** key.
-![Form Designer toolbar with Delete icon](../../javascript-es6/images/ui-del-formfields.png)
+![Form Designer toolbar with Delete icon](../../../javascript-es6/images/ui-del-formfields.png)
 
 ## Remove Form Fields Programmatically
 Use **deleteFormField()** with a field reference or ID.
