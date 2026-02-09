@@ -18,7 +18,7 @@ The following system configurations were used for benchmarking:
 * **Processor:** AMD Ryzen 5 7520U with Radeon Graphics  
 * **RAM:** 16GB  
 * **.NET Version:** .NET 8.0  
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIO.Net.Core v32.1.19](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/32.1.19)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIO.Net.Core v32.2.3](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/32.2.3)
 
 ## Benchmark Results.
 
