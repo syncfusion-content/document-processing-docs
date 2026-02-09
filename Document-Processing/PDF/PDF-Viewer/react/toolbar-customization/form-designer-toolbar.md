@@ -21,7 +21,7 @@ Use the [EnableFormDesigner](https://ej2.syncfusion.com/react/documentation/api/
 The following code snippet explains how to show or hide the toolbar using the `EnableFormDesigner` property.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import React, { useRef } from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
     ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -94,7 +94,7 @@ Use [`PdfViewerToolbarSettings`](https://ej2.syncfusion.com/react/documentation/
 The following example demonstrates how to customize the form designer toolbar by configuring specific tools using `FormDesignerToolbarItem`.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import React, { useRef } from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
     ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';

@@ -77,7 +77,7 @@ The [bookmarkClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -115,7 +115,7 @@ The [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -161,7 +161,7 @@ When it triggers
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -207,7 +207,7 @@ The [zoomChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#z
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -246,7 +246,7 @@ The [buttonFieldClick](https://ej2.syncfusion.com/react/documentation/api/pdfvie
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -284,7 +284,7 @@ The [commentAdd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#c
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -322,7 +322,7 @@ The [commentDelete](https://ej2.syncfusion.com/react/documentation/api/pdfviewer
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -359,7 +359,7 @@ The [commentEdit](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -397,7 +397,7 @@ The [commentSelect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -435,7 +435,7 @@ The [commentStatusChanged](https://ej2.syncfusion.com/react/documentation/api/pd
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -473,7 +473,7 @@ The [created](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#crea
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -513,7 +513,7 @@ The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/react/documentation
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -572,7 +572,7 @@ The [customContextMenuSelect](https://ej2.syncfusion.com/react/documentation/api
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -628,7 +628,7 @@ The [documentLoad](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -666,7 +666,7 @@ The [documentLoadFailed](https://ej2.syncfusion.com/react/documentation/api/pdfv
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -703,7 +703,7 @@ The [documentUnload](https://ej2.syncfusion.com/react/documentation/api/pdfviewe
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -741,7 +741,7 @@ The [downloadEnd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -779,7 +779,7 @@ The [downloadStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -817,7 +817,7 @@ The [exportFailed](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -856,7 +856,7 @@ The [exportStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -894,7 +894,7 @@ The [exportSuccess](https://ej2.syncfusion.com/react/documentation/api/pdfviewer
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -932,7 +932,7 @@ The [extractTextCompleted](https://ej2.syncfusion.com/react/documentation/api/pd
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -970,7 +970,7 @@ The [hyperlinkClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewe
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1008,7 +1008,7 @@ The [hyperlinkMouseOver](https://ej2.syncfusion.com/react/documentation/api/pdfv
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -1047,7 +1047,7 @@ The [importFailed](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -1086,7 +1086,7 @@ The [importStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1124,7 +1124,7 @@ The [importSuccess](https://ej2.syncfusion.com/react/documentation/api/pdfviewer
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1169,7 +1169,7 @@ Refer to [Keyboard interaction](./accessibility#keyboard-interaction) for detail
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1222,7 +1222,7 @@ The [moveSignature](https://ej2.syncfusion.com/react/documentation/api/pdfviewer
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1260,7 +1260,7 @@ The [pageChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#p
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1298,7 +1298,7 @@ The [pageClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#pa
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1336,7 +1336,7 @@ The [pageMouseover](https://ej2.syncfusion.com/react/documentation/api/pdfviewer
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1374,7 +1374,7 @@ The [pageOrganizerSaveAs](https://ej2.syncfusion.com/react/documentation/api/pdf
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1412,7 +1412,7 @@ The [pageRenderComplete](https://ej2.syncfusion.com/react/documentation/api/pdfv
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1450,7 +1450,7 @@ The [pageRenderInitiate](https://ej2.syncfusion.com/react/documentation/api/pdfv
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1488,7 +1488,7 @@ The [printEnd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#pri
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1526,7 +1526,7 @@ The [printStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#p
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1564,7 +1564,7 @@ The [removeSignature](https://ej2.syncfusion.com/react/documentation/api/pdfview
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1602,7 +1602,7 @@ The [resizeSignature](https://ej2.syncfusion.com/react/documentation/api/pdfview
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1640,7 +1640,7 @@ The [resourcesLoaded](https://ej2.syncfusion.com/react/documentation/api/pdfview
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1678,7 +1678,7 @@ The [signaturePropertiesChange](https://ej2.syncfusion.com/react/documentation/a
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1716,7 +1716,7 @@ The [signatureSelect](https://ej2.syncfusion.com/react/documentation/api/pdfview
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1754,7 +1754,7 @@ The [signatureUnselect](https://ej2.syncfusion.com/react/documentation/api/pdfvi
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1792,7 +1792,7 @@ The [textSearchComplete](https://ej2.syncfusion.com/react/documentation/api/pdfv
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1830,7 +1830,7 @@ The [textSearchHighlight](https://ej2.syncfusion.com/react/documentation/api/pdf
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1868,7 +1868,7 @@ The [textSearchStart](https://ej2.syncfusion.com/react/documentation/api/pdfview
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1906,7 +1906,7 @@ The [textSelectionEnd](https://ej2.syncfusion.com/react/documentation/api/pdfvie
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1944,7 +1944,7 @@ The [textSelectionStart](https://ej2.syncfusion.com/react/documentation/api/pdfv
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1982,7 +1982,7 @@ The [thumbnailClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewe
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';

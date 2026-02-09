@@ -21,7 +21,7 @@ Use the [EnableAnnotationToolbar](https://ej2.syncfusion.com/react/documentation
 The following code snippet explains how to show or hide the annotation toolbar using the `showAnnotationToolbar` method.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
@@ -111,7 +111,7 @@ The annotation toolbar is presented when entering annotation mode in PDF Viewer 
 The following example demonstrates how to customize the annotation toolbar by specifying a selected set of tools using `AnnotationToolbarItem`.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,

@@ -603,6 +603,8 @@ class CustomToolbar extends React.Component {
 
 Sample :
 [https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/custom-toolbar]
+(https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/custom-toolbar)
+
 
 ## See also
 * [Feature Modules](./feature-module)

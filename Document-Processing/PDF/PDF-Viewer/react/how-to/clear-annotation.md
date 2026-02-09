@@ -42,5 +42,5 @@ function deleteAnnotationbyId() {
 </script>
 ```
 
-Sample: How to clear annotations using deleteAnnotations
+Sample: [How to clear annotations using deleteAnnotations]
 (https://stackblitz.com/edit/react-xlvqkm?file=public%2Findex.html)
