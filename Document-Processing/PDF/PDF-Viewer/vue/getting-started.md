@@ -98,7 +98,6 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
          BookmarkView,ThumbnailView, Print,TextSelection, TextSearch,
          Annotation, FormDesigner, FormFields, PageOrganizer} from '@syncfusion/ej2-vue-pdfviewer';
 
-}
 </script>
 
 {% endhighlight %}

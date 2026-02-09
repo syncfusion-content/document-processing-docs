@@ -67,4 +67,8 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 
 View the sample in GitHub to [load PDF Viewer with local resources](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally)
 
-**Step 4:** Now, run the `index.html` in web browser, it will render the `Essential JS 2 PDF Viewer` component.
+**Step 4:** Now, run the `index.html` in web browser using a local web server, it will render the `Essential JS 2 PDF Viewer` component. You can use the following command to start the server.
+
+   ```
+   npx serve .
+   ```
