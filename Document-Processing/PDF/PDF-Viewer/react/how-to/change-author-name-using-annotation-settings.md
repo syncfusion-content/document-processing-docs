@@ -31,7 +31,7 @@ Change the author name and other properties using the annotationSettings API as 
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
-```ts
+
 import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields } from "../src/index";
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields);
@@ -40,10 +40,10 @@ viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
 viewer.annotationSettings = { author: 'syncfusion', minHeight: 30, maxHeight: 500, minWidth: 30, maxWidth: 500, isLock: false, isPrint: true, isDownload: true  };
 viewer.freeTextSettings = { allowTextOnly : true };
 viewer.appendTo("#pdfViewer");
-```
+
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
-```ts
+
 import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields } from "../src/index";
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields);
@@ -53,6 +53,6 @@ viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
 viewer.annotationSettings = { author: 'syncfusion', minHeight: 30, maxHeight: 500, minWidth: 30, maxWidth: 500, isLock: false, isPrint: true, isDownload: true  };
 viewer.freeTextSettings = { allowTextOnly : true };
 viewer.appendTo("#pdfViewer");
-```
+
 {% endhighlight %}
 {% endtabs %}

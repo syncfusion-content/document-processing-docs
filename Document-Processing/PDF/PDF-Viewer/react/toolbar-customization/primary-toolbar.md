@@ -19,7 +19,7 @@ Toggle the built-in primary toolbar to create custom toolbar experiences or simp
 Show or hide the toolbar using the `enableToolbar` property:
 
 {% tabs %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 import React, { useRef } from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -83,7 +83,7 @@ export default App;
 The following code snippet explains how to show or hide the toolbar using the `showToolbar` method.
 
 {% tabs %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 import React, { useEffect, useRef } from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
 

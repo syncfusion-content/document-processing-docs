@@ -110,6 +110,7 @@ While the PDF Viewer's toolbar provides a user-friendly way to search, you can a
 
 The `searchText` method allows you to initiate a search with specific criteria.
 
+{% highlight ts %}
 {% raw %}
 import React, { useRef } from 'react';
 import { PdfViewerComponent } from '@syncfusion/ej2-react-pdfviewer';
@@ -134,11 +135,13 @@ export default function SearchExample() {
   );
 }
 {% endraw %}
+{% endhighlight %}
 
 #### Match Case
 
 To perform a case-sensitive search, set the `isMatchCase` parameter to `true`. This corresponds to the 'Match Case' checkbox in the search panel.
 
+{% highlight ts %}
 {% raw %}
 import React, { useEffect, useRef } from 'react';
 import { PdfViewerComponent } from '@syncfusion/ej2-react-pdfviewer';
@@ -161,11 +164,13 @@ export default function MatchCaseExample() {
   );
 }
 {% endraw %}
+{% endhighlight %}
 
 #### Match Whole Word
 
 You can search for whole words by setting the `isMatchWholeWord` parameter to `true`. When this is enabled, the search will only match occurrences where the search term is not part of a larger word. For example, a search for "view" will not match "viewer".
 
+{% highlight ts %}
 {% raw %}
 import React, { useEffect, useRef } from 'react';
 import { PdfViewerComponent } from '@syncfusion/ej2-react-pdfviewer';
@@ -188,6 +193,7 @@ export default function WholeWordExample() {
   );
 }
 {% endraw %}
+{% endhighlight %}
 
 **Note on 'Match Any Word':** The 'Match Any Word' checkbox in the UI is a feature that splits the input string into multiple words and performs a search for each of them. This is different from the `isMatchWholeWord` parameter of the `searchText` method, which enforces a whole-word match for the entire search string provided.
 
@@ -591,6 +597,7 @@ export default function App() {
   );
 }
 {% endraw %}
+{% endhighlight %}
 
 ### textSearchHighlight
 
@@ -623,6 +630,7 @@ export default function App() {
   );
 }
 {% endraw %}
+{% endhighlight %}
 
 ### textSearchComplete
 
@@ -659,6 +667,7 @@ export default function App() {
   );
 }
 {% endraw %}
+{% endhighlight %}
 ## See also
 
 * [Toolbar items](./toolbar)
