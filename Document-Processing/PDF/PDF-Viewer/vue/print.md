@@ -125,7 +125,7 @@ export default {
       ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
   },
   methods: {
-    printClicked: function (args) {
+    printClicked: function () {
       this.$refs.pdfviewer.ej2Instances.print.print();
     }
   }
@@ -200,7 +200,7 @@ export default {
   },
 
   methods: {
-    printClicked: function (args) {
+    printClicked: function () {
       this.$refs.pdfviewer.ej2Instances.print.print();
     }
   }

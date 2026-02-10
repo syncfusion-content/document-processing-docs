@@ -239,7 +239,7 @@ provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Bookma
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
 
 const documentLoad = () => {
-  const viewer = this.$refs.pdfviewer.ej2Instances;
+  const viewer = pdfviewer.value.ej2Instances;
   document.getElementById('set').addEventListener('click', () => {
     viewer.annotation.setAnnotationMode('Highlight');
   });
@@ -329,7 +329,7 @@ provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Bookma
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
 
 const documentLoad = () => {
-  const viewer = this.$refs.pdfviewer.ej2Instances;
+  const viewer = pdfviewer.value.ej2Instances;
   document.getElementById('set').addEventListener('click', () => {
     viewer.annotation.setAnnotationMode('Highlight');
   });
@@ -425,7 +425,7 @@ provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Bookma
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
 
 const addAnnotation = function () {
-  const viewer = this.$refs.pdfviewer.ej2Instances;
+  const viewer = pdfviewer.value.ej2Instances;
   viewer.annotation.addAnnotation("Highlight", {
     bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
     pageNumber: 1
@@ -947,7 +947,7 @@ Programmatically add underlines using the [addAnnotation](https://ej2.syncfusion
 Example:
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
 
 <template>
   <div id="app">
@@ -983,7 +983,7 @@ const addAnnotation = function () {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight html tabtitle="Options API (Standalone)" %}
 
 <template>
   <div id="app">
@@ -1162,7 +1162,7 @@ provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Bookma
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
 
 const documentLoad = () => {
-  const viewer = this.$refs.pdfviewer.ej2Instances;
+  const viewer = pdfviewer.value.ej2Instances;
   document.getElementById('set').addEventListener('click', () => {
     viewer.annotation.setAnnotationMode('Strikethrough');
   });
@@ -1216,7 +1216,7 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
 
 <template>
   <div id="app">
@@ -1686,7 +1686,7 @@ In the pan mode, if the squiggly mode is entered, the PDF Viewer control will sw
 Refer to the following code snippet to switch to squiggly mode.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
 
 <template>
   <div id="app">
@@ -1713,7 +1713,7 @@ provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Bookma
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
 
 const documentLoad = () => {
-  const viewer = this.$refs.pdfviewer.ej2Instances;
+  const viewer = pdfviewer.value.ej2Instances;
   document.getElementById('set').addEventListener('click', () => {
     viewer.annotation.setAnnotationMode('Squiggly');
   });
@@ -1767,7 +1767,7 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
 
 <template>
   <div id="app">
@@ -2426,7 +2426,7 @@ Refer to the following code snippet for calling undo and redo actions from the c
     <button id="undo">Undo</button>
     <button id="redo">Redo</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl"
-      :documentLoad="documentLoad">
+      :documentLoad="documentLoad" :style="{ height: '800px', width: '1200px' }">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -2434,37 +2434,27 @@ Refer to the following code snippet for calling undo and redo actions from the c
 <script setup>
 
 import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
   TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
 
-export default {
-  name: "App",
-  components: {
-    "ejs-pdfviewer": PdfViewerComponent
-  },
-  data() {
-    return {
-      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-      Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer]
-  },
-  methods: {
-    documentLoad() {
-      viewer = this.$refs.pdfviewer.ej2Instances;
-      document.getElementById('undo').addEventListener('click', () => {
-        viewer.undo();
-      });
-      document.getElementById('redo').addEventListener('click', () => {
-        viewer.redo();
-      });
-    }
-  }
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+const pdfviewer = ref(null);
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
+
+const documentLoad = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  document.getElementById('undo').addEventListener('click', () => {
+    viewer.undo();
+  });
+  document.getElementById('redo').addEventListener('click', () => {
+    viewer.redo();
+  });
 }
 </script>
 
@@ -2506,7 +2496,7 @@ export default {
   },
   methods: {
     documentLoad() {
-      viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       document.getElementById('undo').addEventListener('click', () => {
         viewer.undo();
       });
@@ -2519,7 +2509,7 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
 
 <template>
   <div id="app">
@@ -2538,16 +2528,17 @@ import {
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
   TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
+import { provide, ref } from 'vue';
 
 const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const pdfviewer = ref(null);
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
 
 const documentLoad = function () {
-  const viewer = this.$refs.pdfviewer.ej2Instances;
+  const viewer = pdfviewer.value.ej2Instances;
   document.getElementById('undo').addEventListener('click', () => {
     viewer.undo();
   });
@@ -2559,7 +2550,7 @@ const documentLoad = function () {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
 
 <template>
   <div id="app">
