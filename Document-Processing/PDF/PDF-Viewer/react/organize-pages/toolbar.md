@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Organize Page Toolbar Customization in React PDF Viewer control | Syncfusion
+title: Organize Page Toolbar Customization in React | Syncfusion
 description: Learn here all about Organize Page Toolbar Customization in Syncfusion React PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
