@@ -111,6 +111,7 @@ Edit comments and replies in the following ways:
 >Deleting the root comment from the comment panel also deletes the associated annotation.
 ```html
 <button id="checkComments">Check the Comments</button>
+```
 ## How to check the comments added by the user
 
 Comments added to the PDF document can be read using the annotation's `comments` property.

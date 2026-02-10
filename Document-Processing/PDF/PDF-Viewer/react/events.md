@@ -70,14 +70,14 @@ Note: For annotation and signature events, see the dedicated Annotations Events 
 
 ## bookmarkClick
 
-The [bookmarkClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#bookmarkclickevent) event triggers when a bookmark item is clicked in the bookmark panel.
+The [bookmarkClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#bookmarkclickevent) event triggers when a bookmark item is clicked in the bookmark panel.
 
-- Event arguments: [BookmarkClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkClickEventArgs/).
+- Event arguments: [BookmarkClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkClickEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -108,14 +108,14 @@ root.render(<App />);
 
 ## toolbarClick
 
-The [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#toolbarclickevent) event triggers when a toolbar item is clicked. Use it to handle actions based on the clicked item's id or name.
+The [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#toolbarclickevent) event triggers when a toolbar item is clicked. Use it to handle actions based on the clicked item's id or name.
 
 - Event arguments: `ClickEventArgs`.
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -146,9 +146,9 @@ root.render(<App />);
 
 ## validateFormFields
 
-The [validateFormFields](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#validateformfieldsevent) event triggers when form field validation fails, typically before a download or submit action proceeds. Use this event to inspect which required fields are empty and show custom messages or block application logic if needed.
+The [validateFormFields](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#validateformfieldsevent) event triggers when form field validation fails, typically before a download or submit action proceeds. Use this event to inspect which required fields are empty and show custom messages or block application logic if needed.
 
-- Event arguments: [ValidateFormFieldsArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/validateFormFieldsArgs/)
+- Event arguments: [ValidateFormFieldsArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/validateFormFieldsArgs)
   - name: Event name
   - documentName: Current document name
   - formField: The last interacted field’s data (if applicable)
@@ -161,7 +161,7 @@ When it triggers
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -200,14 +200,14 @@ Tip
 
 ## zoomChange
 
-The [zoomChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#zoomchangeevent) event triggers when the magnification value changes.
+The [zoomChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#zoomchangeevent) event triggers when the magnification value changes.
 
-- Event arguments: [ZoomChangeEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/zoomChangeEventArgs/).
+- Event arguments: [ZoomChangeEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/zoomChangeEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -239,14 +239,14 @@ root.render(<App />);
 
 ## buttonFieldClick
 
-The [buttonFieldClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#buttonfieldclickevent) event triggers when a button form field is clicked.
+The [buttonFieldClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#buttonfieldclickevent) event triggers when a button form field is clicked.
 
-- Event arguments: [ButtonFieldClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/buttonFieldClickEventArgs/).
+- Event arguments: [ButtonFieldClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/buttonFieldClickEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -277,14 +277,14 @@ root.render(<App />);
 
 ## commentAdd
 
-The [commentAdd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#commentaddevent) event triggers when a comment is added in the comment panel.
+The [commentAdd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#commentaddevent) event triggers when a comment is added in the comment panel.
 
-- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/commentEventArgs/).
+- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/commentEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -315,14 +315,14 @@ root.render(<App />);
 
 ## commentDelete
 
-The [commentDelete](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#commentdeleteevent) event triggers when a comment is deleted in the comment panel.
+The [commentDelete](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#commentdeleteevent) event triggers when a comment is deleted in the comment panel.
 
-- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/commentEventArgs/).
+- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/commentEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -352,14 +352,14 @@ root.render(<App />);
 
 ## commentEdit
 
-The [commentEdit](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#commenteditevent) event triggers when a comment is edited in the comment panel.
+The [commentEdit](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#commenteditevent) event triggers when a comment is edited in the comment panel.
 
-- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/commentEventArgs/).
+- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/commentEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -390,14 +390,14 @@ root.render(<App />);
 
 ## commentSelect
 
-The [commentSelect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#commentselectevent) event triggers when a comment is selected in the comment panel.
+The [commentSelect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#commentselectevent) event triggers when a comment is selected in the comment panel.
 
-- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/commentEventArgs/).
+- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/commentEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -428,14 +428,14 @@ root.render(<App />);
 
 ## commentStatusChanged
 
-The [commentStatusChanged](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#commentstatuschangedevent) event triggers when a comment status is changed in the comment panel.
+The [commentStatusChanged](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#commentstatuschangedevent) event triggers when a comment status is changed in the comment panel.
 
-- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/commentEventArgs/).
+- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/commentEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -466,14 +466,14 @@ root.render(<App />);
 
 ## created
 
-The [created](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#createdevent) event is triggered during the creation of the PDF Viewer component.
+The [created](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#createdevent) event is triggered during the creation of the PDF Viewer component.
 
 - Event arguments: `void`.
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -504,16 +504,16 @@ root.render(<App />);
 
 ## customContextMenuBeforeOpen
 
-The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#customcontextmenubeforeopenevent) event fires just before the context menu is shown. Use it to show or hide items based on the current state (for example, only show search items when text is selected).
+The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#customcontextmenubeforeopenevent) event fires just before the context menu is shown. Use it to show or hide items based on the current state (for example, only show search items when text is selected).
 
-- Event arguments: [CustomContextMenuBeforeOpenEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/customContextMenuBeforeOpenEventArgs/)
+- Event arguments: [CustomContextMenuBeforeOpenEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/customContextMenuBeforeOpenEventArgs)
   - name: Event name
   - ids: Array of menu item ids that will be shown; remove ids to hide items for this open
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -562,9 +562,9 @@ root.render(<App />);
 
 ## customContextMenuSelect
 
-The [customContextMenuSelect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#customcontextmenuselectevent) event fires when a custom menu item is clicked. Use it to branch logic by the clicked item's id.
+The [customContextMenuSelect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#customcontextmenuselectevent) event fires when a custom menu item is clicked. Use it to branch logic by the clicked item's id.
 
-- Event arguments: [CustomContextMenuSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/customContextMenuSelectEventArgs/).
+- Event arguments: [CustomContextMenuSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/customContextMenuSelectEventArgs).
 
 - name: Event name
 - id: The id of the clicked menu item
@@ -572,7 +572,7 @@ The [customContextMenuSelect](https://ej2.syncfusion.com/react/documentation/api
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -621,14 +621,14 @@ root.render(<App />);
 
 ## documentLoad
 
-The [documentLoad](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#documentloadevent) event occurs after a document is successfully loaded and parsed.
+The [documentLoad](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#documentloadevent) event occurs after a document is successfully loaded and parsed.
 
-- Event arguments: [LoadEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/loadEventArgs/).
+- Event arguments: [LoadEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/loadEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -659,14 +659,14 @@ root.render(<App />);
 
 ## documentLoadFailed
 
-The [documentLoadFailed](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#documentloadfailedevent) event triggers when loading a document fails.
+The [documentLoadFailed](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#documentloadfailedevent) event triggers when loading a document fails.
 
-- Event arguments: [LoadFailedEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/loadFailedEventArgs/).
+- Event arguments: [LoadFailedEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/loadFailedEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -696,14 +696,14 @@ root.render(<App />);
 
 ## documentUnload
 
-The [documentUnload](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#documentunloadevent) event triggers when closing the current document.
+The [documentUnload](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#documentunloadevent) event triggers when closing the current document.
 
-- Event arguments: [UnloadEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/unloadEventArgs/).
+- Event arguments: [UnloadEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/unloadEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -734,14 +734,14 @@ root.render(<App />);
 
 ## downloadEnd
 
-The [downloadEnd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#downloadendevent) event triggers after a document download completes.
+The [downloadEnd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#downloadendevent) event triggers after a document download completes.
 
-- Event arguments: [DownloadEndEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/downloadEndEventArgs/).
+- Event arguments: [DownloadEndEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/downloadEndEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -772,14 +772,14 @@ root.render(<App />);
 
 ## downloadStart
 
-The [downloadStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#downloadstartevent) event triggers when the download operation is initiated.
+The [downloadStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#downloadstartevent) event triggers when the download operation is initiated.
 
-- Event arguments: [DownloadStartEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/downloadStartEventArgs/).
+- Event arguments: [DownloadStartEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/downloadStartEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -810,14 +810,14 @@ root.render(<App />);
 
 ## exportFailed
 
-The [exportFailed](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#exportfailedevent) event triggers when exporting annotations fails.
+The [exportFailed](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#exportfailedevent) event triggers when exporting annotations fails.
 
-- Event arguments: [ExportFailureEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/exportFailureEventArgs/).
+- Event arguments: [ExportFailureEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/exportFailureEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -849,14 +849,14 @@ root.render(<App />);
 
 ## exportStart
 
-The [exportStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#exportstartevent) event triggers when exporting annotations starts.
+The [exportStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#exportstartevent) event triggers when exporting annotations starts.
 
-- Event arguments: [ExportStartEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/exportStartEventArgs/).
+- Event arguments: [ExportStartEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/exportStartEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -887,14 +887,14 @@ root.render(<App />);
 
 ## exportSuccess
 
-The [exportSuccess](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#exportsuccessevent) event triggers when annotations are exported successfully.
+The [exportSuccess](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#exportsuccessevent) event triggers when annotations are exported successfully.
 
-- Event arguments: [ExportSuccessEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/exportSuccessEventArgs/).
+- Event arguments: [ExportSuccessEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/exportSuccessEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -925,14 +925,14 @@ root.render(<App />);
 
 ## extractTextCompleted
 
-The [extractTextCompleted](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#extracttextcompletedevent) event triggers when text extraction completes.
+The [extractTextCompleted](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#extracttextcompletedevent) event triggers when text extraction completes.
 
-- Event arguments: [ExtractTextCompletedEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/extractTextCompletedEventArgs/).
+- Event arguments: [ExtractTextCompletedEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/extractTextCompletedEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -963,14 +963,14 @@ root.render(<App />);
 
 ## hyperlinkClick
 
-The [hyperlinkClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#hyperlinkclickevent) event triggers when a hyperlink is clicked.
+The [hyperlinkClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#hyperlinkclickevent) event triggers when a hyperlink is clicked.
 
-- Event arguments: [HyperlinkClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/hyperlinkClickEventArgs/).
+- Event arguments: [HyperlinkClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/hyperlinkClickEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1001,14 +1001,14 @@ root.render(<App />);
 
 ## hyperlinkMouseOver
 
-The [hyperlinkMouseOver](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#hyperlinkmouseoverevent) event triggers when hovering over a hyperlink.
+The [hyperlinkMouseOver](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#hyperlinkmouseoverevent) event triggers when hovering over a hyperlink.
 
 - Event arguments: HyperlinkMouseOverArgs.
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -1040,14 +1040,14 @@ root.render(<App />);
 
 ## importFailed
 
-The [importFailed](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#importfailedevent) event triggers when importing annotations fails.
+The [importFailed](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#importfailedevent) event triggers when importing annotations fails.
 
-- Event arguments: [ImportFailureEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/importFailureEventArgs/).
+- Event arguments: [ImportFailureEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/importFailureEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -1079,14 +1079,14 @@ root.render(<App />);
 
 ## importStart
 
-The [importStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#importstartevent) event triggers when importing annotations starts.
+The [importStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#importstartevent) event triggers when importing annotations starts.
 
-- Event arguments: [ImportStartEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/importStartEventArgs/).
+- Event arguments: [ImportStartEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/importStartEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1117,14 +1117,14 @@ root.render(<App />);
 
 ## importSuccess
 
-The [importSuccess](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#importsuccessevent) event triggers when annotations are imported successfully.
+The [importSuccess](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#importsuccessevent) event triggers when annotations are imported successfully.
 
-- Event arguments: [ImportSuccessEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/importSuccessEventArgs/).
+- Event arguments: [ImportSuccessEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/importSuccessEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1155,9 +1155,9 @@ root.render(<App />);
 
 ## keyboardCustomCommands
 
-The [keyboardCustomCommands](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#keyboardcustomcommandsevent) event triggers when customized keyboard command keys are pressed.
+The [keyboardCustomCommands](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#keyboardcustomcommandsevent) event triggers when customized keyboard command keys are pressed.
 
-- Event arguments: [KeyboardCustomCommandsEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/keyboardCustomCommandsEventArgs/).
+- Event arguments: [KeyboardCustomCommandsEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/keyboardCustomCommandsEventArgs).
 
   - name: Event name
   - keyboardCommand: The command metadata raised by Command Manager
@@ -1169,7 +1169,7 @@ Refer to [Keyboard interaction](./accessibility#keyboard-interaction) for detail
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1215,14 +1215,14 @@ root.render(<App />);
 
 ## moveSignature
 
-The [moveSignature](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#movesignatureevent) event triggers when a signature is moved across the page.
+The [moveSignature](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#movesignatureevent) event triggers when a signature is moved across the page.
 
 - Event arguments: `MoveSignatureEventArgs`.
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1253,14 +1253,14 @@ root.render(<App />);
 
 ## pageChange
 
-The [pageChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#pagechangeevent) event triggers when the current page number changes (for example, via scrolling or navigation controls).
+The [pageChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#pagechangeevent) event triggers when the current page number changes (for example, via scrolling or navigation controls).
 
-- Event arguments: [PageChangeEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageChangeEventArgs/).
+- Event arguments: [PageChangeEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageChangeEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1291,14 +1291,14 @@ root.render(<App />);
 
 ## pageClick
 
-The [pageClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#pageclickevent) event triggers when a mouse click occurs on a page.
+The [pageClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#pageclickevent) event triggers when a mouse click occurs on a page.
 
-- Event arguments: [PageClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageClickEventArgs/).
+- Event arguments: [PageClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageClickEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1329,14 +1329,14 @@ root.render(<App />);
 
 ## pageMouseover
 
-The [pageMouseover](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#pagemouseoverevent) event triggers when the mouse moves over a page.
+The [pageMouseover](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#pagemouseoverevent) event triggers when the mouse moves over a page.
 
 - Event arguments: `PageMouseoverEventArgs`.
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1367,14 +1367,14 @@ root.render(<App />);
 
 ## pageOrganizerSaveAs
 
-The [pageOrganizerSaveAs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#pageorganizersaveasevent) event triggers when a Save As action is performed in the page organizer.
+The [pageOrganizerSaveAs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#pageorganizersaveasevent) event triggers when a Save As action is performed in the page organizer.
 
 - Event arguments: `PageOrganizerSaveAsEventArgs`.
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1405,14 +1405,14 @@ root.render(<App />);
 
 ## pageRenderComplete
 
-The [pageRenderComplete](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#pagerendercompleteevent) event triggers after a page finishes rendering.
+The [pageRenderComplete](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#pagerendercompleteevent) event triggers after a page finishes rendering.
 
-- Event arguments: [PageRenderCompleteEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageRenderCompleteEventArgs/).
+- Event arguments: [PageRenderCompleteEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageRenderCompleteEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1443,14 +1443,14 @@ root.render(<App />);
 
 ## pageRenderInitiate
 
-The [pageRenderInitiate](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#pagerenderinitiateevent) event triggers when page rendering begins.
+The [pageRenderInitiate](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#pagerenderinitiateevent) event triggers when page rendering begins.
 
-- Event arguments: [PageRenderInitiateEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageRenderInitiateEventArgs/).
+- Event arguments: [PageRenderInitiateEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageRenderInitiateEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1481,14 +1481,14 @@ root.render(<App />);
 
 ## printEnd
 
-The [printEnd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#printendevent) event triggers when a print action completes.
+The [printEnd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#printendevent) event triggers when a print action completes.
 
-- Event arguments: [PrintEndEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/printEndEventArgs/).
+- Event arguments: [PrintEndEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/printEndEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1519,14 +1519,14 @@ root.render(<App />);
 
 ## printStart
 
-The [printStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#printstartevent) event triggers when a print action is initiated.
+The [printStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#printstartevent) event triggers when a print action is initiated.
 
-- Event arguments: [PrintStartEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/printStartEventArgs/).
+- Event arguments: [PrintStartEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/printStartEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1557,14 +1557,14 @@ root.render(<App />);
 
 ## removeSignature
 
-The [removeSignature](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#removesignatureevent) event triggers when a signature is removed.
+The [removeSignature](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#removesignatureevent) event triggers when a signature is removed.
 
-- Event arguments: [RemoveSignatureEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/removeSignatureEventArgs/).
+- Event arguments: [RemoveSignatureEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/removeSignatureEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1595,14 +1595,14 @@ root.render(<App />);
 
 ## resizeSignature
 
-The [resizeSignature](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#resizesignatureevent) event triggers when a signature is resized.
+The [resizeSignature](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resizesignatureevent) event triggers when a signature is resized.
 
-- Event arguments: [ResizeSignatureEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/resizeSignatureEventArgs/).
+- Event arguments: [ResizeSignatureEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/resizeSignatureEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1633,14 +1633,14 @@ root.render(<App />);
 
 ## resourcesLoaded
 
-The [resourcesLoaded](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#resourcesloadedevent) event triggers after the viewer's required resources are loaded.
+The [resourcesLoaded](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourcesloadedevent) event triggers after the viewer's required resources are loaded.
 
 - Event arguments: `void`.
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1671,14 +1671,14 @@ root.render(<App />);
 
 ## signaturePropertiesChange
 
-The [signaturePropertiesChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#signaturepropertieschangeevent) event triggers when signature properties change.
+The [signaturePropertiesChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#signaturepropertieschangeevent) event triggers when signature properties change.
 
-- Event arguments: [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs/).
+- Event arguments: [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1709,14 +1709,14 @@ root.render(<App />);
 
 ## signatureSelect
 
-The [signatureSelect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#signatureselectevent) event triggers when a signature is selected.
+The [signatureSelect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#signatureselectevent) event triggers when a signature is selected.
 
-- Event arguments: [SignatureSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/signatureSelectEventArgs/).
+- Event arguments: [SignatureSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/signatureSelectEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1747,14 +1747,14 @@ root.render(<App />);
 
 ## signatureUnselect
 
-The [signatureUnselect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#signatureunselectevent) event triggers when a signature is unselected.
+The [signatureUnselect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#signatureunselectevent) event triggers when a signature is unselected.
 
-- Event arguments: [SignatureUnselectEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/signatureUnselectEventArgs/).
+- Event arguments: [SignatureUnselectEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/signatureUnselectEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1785,14 +1785,14 @@ root.render(<App />);
 
 ## textSearchComplete
 
-The [textSearchComplete](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#textsearchcompleteevent) event triggers when a text search completes.
+The [textSearchComplete](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#textsearchcompleteevent) event triggers when a text search completes.
 
-- Event arguments: [TextSearchCompleteEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearchCompleteEventArgs/).
+- Event arguments: [TextSearchCompleteEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearchCompleteEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1823,14 +1823,14 @@ root.render(<App />);
 
 ## textSearchHighlight
 
-The [textSearchHighlight](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#textsearchhighlightevent) event triggers when searched text is highlighted.
+The [textSearchHighlight](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#textsearchhighlightevent) event triggers when searched text is highlighted.
 
-- Event arguments: [TextSearchHighlightEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearchHighlightEventArgs/).
+- Event arguments: [TextSearchHighlightEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearchHighlightEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1861,14 +1861,14 @@ root.render(<App />);
 
 ## textSearchStart
 
-The [textSearchStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#textsearchstartevent) event triggers when a text search is initiated.
+The [textSearchStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#textsearchstartevent) event triggers when a text search is initiated.
 
-- Event arguments: [TextSearchStartEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearchStartEventArgs/).
+- Event arguments: [TextSearchStartEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearchStartEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1899,14 +1899,14 @@ root.render(<App />);
 
 ## textSelectionEnd
 
-The [textSelectionEnd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#textselectionendevent) event triggers when text selection is complete.
+The [textSelectionEnd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#textselectionendevent) event triggers when text selection is complete.
 
-- Event arguments: [TextSelectionEndEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSelectionEndEventArgs/).
+- Event arguments: [TextSelectionEndEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSelectionEndEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1937,14 +1937,14 @@ root.render(<App />);
 
 ## textSelectionStart
 
-The [textSelectionStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#textselectionstartevent) event triggers when text selection is initiated.
+The [textSelectionStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#textselectionstartevent) event triggers when text selection is initiated.
 
 - Event arguments: `TextSelectionStartEventArgs`.
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -1975,14 +1975,14 @@ root.render(<App />);
 
 ## thumbnailClick
 
-The [thumbnailClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#thumbnailclickevent) event triggers when a thumbnail is clicked.
+The [thumbnailClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#thumbnailclickevent) event triggers when a thumbnail is clicked.
 
-- Event arguments: [ThumbnailClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/thumbnailClickEventArgs/).
+- Event arguments: [ThumbnailClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/thumbnailClickEventArgs).
 
 Example:
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
