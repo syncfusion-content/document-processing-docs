@@ -18,36 +18,45 @@ The following system configurations were used for benchmarking:
 * **Processor:** AMD Ryzen 5 7520U with Radeon Graphics  
 * **RAM:** 16GB  
 * **.NET Version:** .NET 8.0  
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v32.1.19](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/32.1.19)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v32.2.3](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/32.2.3)
 
 ## Word to image conversion
 
+## Benchmark Results.
+
+The table below shows the performance results of various Word document operations, evaluated using predefined input conditions in the previously described environment. 
+
 <table>
 <tr>
-    <td><strong>Pages</strong></td>
-    <td><strong>Input Word File</strong></td>
-    <td><strong>Syncfusion<sup>&reg;</sup> Time (sec)</strong></td>
+    <th>Operation</th>
+    <th>Input Details</th>
+    <th>Syncfusion<sup>&reg;</sup> Time (sec)</th>
+    <th>GitHub Example</th>
 </tr>
 <tr>
-    <td>2</td>
-    <td>{{'[Word-2.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-Image/.NET/Word-document-to-image/Word-document-to-image/Data/Document-2.docx)'| markdownify }}</td>
-    <td>0.44</td>
+    <td>{{'[Word to Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image)'| markdownify }}</td>
+    <td>100 pages</td>
+    <td>7.77</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Word-to-Image/)'| markdownify }}</td>    
 </tr>
 <tr>
-    <td>50</td>
-    <td>{{'[Word-50.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-Image/.NET/Word-document-to-image/Word-document-to-image/Data/Document-50.docx)'| markdownify }}</td>
-    <td>6.02</td>
+    <td>{{'[Fallback font](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/fallback-fonts-word-to-image)'| markdownify }}</td>
+    <td>1 page</td>
+    <td>0.63</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Fallback-Font-Image/)'| markdownify }}</td>
 </tr>
 <tr>
-    <td>100</td>
-    <td>{{'[Word-100.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-Image/.NET/Word-document-to-image/Word-document-to-image/Data/Document-100.docx)'| markdownify }}</td>
-    <td>8.2</td>
+    <td>{{'[Font-Substitution](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/font-substituion-word-to-image)'| markdownify }}</td>
+    <td>2 pages</td>
+    <td>0.79</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Font-Substitution-Image/)'| markdownify }}</td>
 </tr>
 <tr>
-    <td>500</td>
-    <td>{{'[Word-500.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-Image/.NET/Word-document-to-image/Word-document-to-image/Data/Document-500.docx)'| markdownify }}</td>
-    <td>35.9</td>
+    <td>Use embedded word fonts</td>
+    <td>2 pages</td>
+    <td>1.1</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Use-embedded-Word-fonts-image/)'| markdownify }}</td>
 </tr>
 </table>
 
-You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Word-to-Image).
+N> Execution times are based on the sample documents and may vary with different content or environments.
