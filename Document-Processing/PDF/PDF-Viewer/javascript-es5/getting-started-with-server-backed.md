@@ -93,12 +93,12 @@ To enable additional features, inject the required modules. The following module
    dotnet run
    ```
 
-6. The PDF Viewer server instance runs at `https://localhost:5001`. Navigate to `https://localhost:5001/pdfviewer`, which returns the default GET response method. Bind this link to the `serviceUrl` property of the PDF Viewer as shown below.
+6. The PDF Viewer server instance runs at `https://localhost:7255`. Navigate to `https://localhost:7255/pdfviewer`, which returns the default GET response method. Bind this link to the `serviceUrl` property of the PDF Viewer as shown below.
 
 ```javascript
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-    serviceUrl: 'https://localhost:5001/pdfviewer'
+    serviceUrl: 'https://localhost:7255/pdfviewer'
 });
 ```
 

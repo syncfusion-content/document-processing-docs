@@ -116,8 +116,8 @@ N> Syncfusion&reg; uses [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
-@using Syncfusion.Blazor;
-@using Syncfusion.Blazor.SfPdfViewer;
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.SfPdfViewer
 
 {% endhighlight %}
 {% endtabs %}
@@ -281,6 +281,7 @@ N> If the interactivity location is set to Global and the render mode is set to 
 {% endtabs %}
 
 N> If the interactivity location is set to Global, a render mode does not need to be specified per page. The interactivity mode applies to the entire app.
+<br />Enable interactivity only via client-side rendering (CSR) by using the WebAssembly or Auto option
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component in the **~/Pages/Index.razor** file.
 
@@ -304,7 +305,7 @@ Run the application to display the PDF file in the Syncfusion&reg; Blazor PDF Vi
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVzNWqXLSZpnuzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Web App SfPdfViewer rendering in browser](gettingstarted-images/blazor-pdfviewer.png)" %}
 
-N> [View the sample on GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer2/NET10/PDFViewer2_WebApp).
+N> [View the sample on GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer2/NET10/PDFViewer2_WebAppServerMode).
 
 ## See also
 
