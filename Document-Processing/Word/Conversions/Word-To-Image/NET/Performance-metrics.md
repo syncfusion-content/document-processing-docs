@@ -34,19 +34,19 @@ The table below shows the performance results of various Word document operation
     <th>GitHub Example</th>
 </tr>
 <tr>
-    <td>[Word to Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image) </td>
+    <td>{{'[Word to Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image)'| markdownify }}</td>
     <td>100 pages</td>
     <td>7.77</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Word-to-Image/)'| markdownify }}</td>    
 </tr>
 <tr>
-    <td>[Fallback font](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/fallback-fonts-word-to-image)</td>
+    <td>{{'[Fallback font](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/fallback-fonts-word-to-image)'| markdownify }}</td>
     <td>1 page</td>
     <td>0.63</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Fallback-Font-Image/)'| markdownify }}</td>
 </tr>
 <tr>
-    <td>[Font-Substitution](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/font-substituion-word-to-image)</td>
+    <td>{{'[Font-Substitution](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/font-substituion-word-to-image)'| markdownify }}</td>
     <td>2 pages</td>
     <td>0.79</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Font-Substitution-Image/)'| markdownify }}</td>
