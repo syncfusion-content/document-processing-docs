@@ -9,7 +9,7 @@ documentation: ug
 
 # Validate PDF Form Fields in Angular PDF Viewer
 
-The Syncfusion **Angular PDF Viewer** provides built in support for **validating form fields** before users perform actions such as **printing**, **downloading**, or **submitting** a PDF document. Validation ensures that all required form fields are filled before allowing these actions to complete.  
+The Syncfusion **Angular PDF Viewer** provides built-in support for **validating form fields** before end users perform actions such as **printing**, **downloading**, or **submitting** a PDF document. Validation ensures that all required form fields are completed before allowing these actions to proceed.
 This feature helps enforce data completeness and improves the reliability of collected form data.
 
 ## How PDF Form Validation Works
@@ -17,14 +17,14 @@ This feature helps enforce data completeness and improves the reliability of col
 Form field validation follows this flow:
 - Enable validation using the [enableFormFieldsValidation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) property.
 - Handle the [validateFormFields](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#validateformfields) event to determine which required fields are not filled.
-- When validation is enabled and a user attempts to print, download, or submit the document:
-  - The [validateFormFields](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#validateformfields) event is triggered.
-  - Unfilled required fields are listed in args.nonFillableFields.
-  - You can cancel the action, show an error message, or move focus to an invalid field.
+- When validation is enabled and an end user attempts to print, download, or submit the document:
+- The [validateFormFields](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#validateformfields) event is triggered.
+- Unfilled required fields are listed in `args.nonFillableFields`.
+- The application can cancel the action, display an error message, or move focus to an invalid field.
 
 ## Enable PDF Form Field Validation
 
-To enable validation, set the [enableFormFieldsValidation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#validateformfields) property to true and wire the validateFormFields event.
+Enable validation by setting the [enableFormFieldsValidation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#validateformfields) property to `true` and handling the `validateFormFields` event.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -96,7 +96,7 @@ export class AppComponent implements OnInit {
   onValidateFormFields(args: any): void {
     // Triggers when required fields are empty on submit/validate
     if (args && args.formField && args.formField.length > 0) {
-      // Example: prevent the pending action and notify the user
+      // Example: prevent the pending action and notify the end user
       args.cancel = true;
       alert('Please fill all required fields. Missing: ' + args.formField[0].name);
     }
@@ -107,7 +107,7 @@ export class AppComponent implements OnInit {
 
 ## Mark Fields as Required
 
-Only fields marked as **required** participate in validation. Use the **isRequired** property when creating or updating a form field.
+Only fields marked as **required** participate in validation. Use the `isRequired` property when creating or updating a form field.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -123,9 +123,9 @@ this.pdfviewer.formDesignerModule.addFormField('Textbox', {
 
 ## Handle PDF Form Validation Results
 
-In the [validateFormFields](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#validateformfields) event, you can control the behavior when fields are missing. Typical actions include:
+In the [validateFormFields](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#validateformfields) event, the application can control the behavior when fields are missing. Typical actions include:
 - Cancel the print or download operation
-- Display an error message to the user
+- Display an error message to the end user
 - Set focus to the first unfilled required field
 
 {% tabs %}
@@ -144,7 +144,7 @@ onValidate(args: any): void {
 
 ## Tips
 
-- Use isRequired to clearly mark mandatory fields.
+- Use `isRequired` to clearly mark mandatory fields.
 - Validation is triggered only during [print](../print), [download](../download), or **submit** actions.
 - For custom validation logic (such as validating an email format):
   - Retrieve all form fields using [retrieveFormFields()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#retrieveformfields).

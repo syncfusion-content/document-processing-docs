@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# title: Text markup annotation in Angular PDF Viewer | Syncfusion
+# Text markup annotation in Angular PDF Viewer
 
-The PDF Viewer provides options to add, edit, and delete text markup annotations, including Highlight, Underline, Strikethrough, and Squiggly.
+The PDF Viewer provides options to add, edit, and delete text markup annotations, including highlight, underline, strikethrough, and squiggly.
 
-![Alt text](../images/text_markup_annotation.png)
+![Text markup annotations: highlight, underline, strikethrough, and squiggly](../images/text_markup_annotation.png)
 
 ## Highlight text
 
@@ -22,7 +22,7 @@ There are two ways to highlight text:
 * Select text in the PDF document and right-click it.
 * Select **Highlight** in the context menu.
 
-![Alt text](../images/highlight_context.png)
+![Context menu option to highlight selected text](../images/highlight_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2. Using the annotation toolbar
@@ -31,7 +31,7 @@ There are two ways to highlight text:
     * Select text to add the highlight annotation.
     * Alternatively, select text first and then click **Highlight**.
 
-![Alt text](../images/highlight_button.PNG)
+![Highlight button in the annotation toolbar](../images/highlight_button.PNG)
 
 When pan mode is active and a text markup mode is entered, the PDF Viewer switches to text selection mode to enable selection.
 
@@ -300,7 +300,7 @@ There are two ways to underline text:
     *Select text in the PDF document and right-click it.
     * Select **Underline** in the context menu.
 
-![Alt text](../images/underline_context.png)
+![Context menu option to underline selected text](../images/underline_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2. Using the annotation toolbar
@@ -309,7 +309,7 @@ There are two ways to underline text:
     * Select text to add the underline annotation.
     * Alternatively, select text first and then click **Underline**.
 
-![Alt text](../images/underline_button.png)
+![Underline button in the annotation toolbar](../images/underline_button.png)
 
 In the pan mode, if the underline mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for underlining the text.
 
@@ -578,7 +578,7 @@ There are two ways to strikethrough text:
 * Select text in the PDF document and right-click it.
 * Select **Strikethrough** in the context menu.
 
-![Alt text](../images/strikethrough_context.png)
+![Context menu option to strikethrough selected text](../images/strikethrough_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2. Using the annotation toolbar
@@ -587,9 +587,9 @@ There are two ways to strikethrough text:
     * Select text to add the strikethrough annotation.
     * Alternatively, select text first and then click **Strikethrough**.
 
-![Alt text](../images/strikethrough_button.png)
+![Strikethrough button in the annotation toolbar](../images/strikethrough_button.png)
 
-N> While you're in the pan mode, for navigating through the document, and you click on the strikethrough button, the PDF Viewer control will smoothly transition to text select mode. This seamless transition ensures a fluid experience when switching between different interaction modes within the PDF Viewer interface.
+N> While in pan mode, clicking the strikethrough button switches the viewer to text select mode so text can be selected for annotation.
 
 Refer to the following code sample to switch to strikethrough mode.
 
@@ -856,7 +856,7 @@ There are two ways to add squiggly to text:
 * Select text in the PDF document and right-click it.
 * Select **Squiggly** in the context menu.
 
-![Alt text](../images/squiggly_context.png)
+![Context menu option to add a squiggly underline to selected text](../images/squiggly_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2. Using the annotation toolbar
@@ -865,9 +865,9 @@ There are two ways to add squiggly to text:
     * Select text to add the squiggly annotation.
     * Alternatively, select text first and then click **Squiggly**.
 
-![Alt text](../images/squiggly_button.png)
+![Squiggly button in the annotation toolbar](../images/squiggly_button.png)
 
-N> While you're in the pan mode, for navigating through the document, and you click on the squiggly button, the PDF Viewer control will smoothly transition to text select mode. This seamless transition ensures a fluid experience when switching between different interaction modes within the PDF Viewer interface.
+N> While in pan mode, clicking the squiggly button switches the viewer to text select mode so text can be selected for annotation.
 
 Refer to the following code sample to switch to squiggly mode.
 
@@ -1039,7 +1039,7 @@ export class AppComponent implements OnInit {
 
 ## Squiggly text programmatically
 
-Refer to the following code snippet to switch back to normal mode from squiggly mode.(https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+Refer to the following code snippet to switch back to normal mode from squiggly mode. Use the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) API to add squiggly annotations.
 
 Example:
 
@@ -1138,29 +1138,29 @@ The selected annotation can be deleted in the following ways:
     * Select the annotation.
     * Click **Delete Annotation** in the annotation toolbar. The selected annotation is removed.
 
-![Alt text](../images/delete_button.png)
+![Delete annotation button in the annotation toolbar](../images/delete_button.png)
 
-## Edi text markup annotation properties
+## Edit text markup annotation properties
 
-The color and the opacity of the text markup annotation can be edited using the Edit Color tool and the Edit Opacity tool in the annotation toolbar.
+The color and opacity of text markup annotations can be edited using the Edit Color and Edit Opacity tools in the annotation toolbar.
 
 ### Edit color
 
 Use the color palette in the Edit Color tool to change the annotation color.
 
-![Alt text](../images/edit_color.png)
+![Color palette in the Edit Color tool for text markup annotations](../images/edit_color.png)
 
 ### Edit opacity
 
 Use the range slider in the Edit Opacity tool to change annotation opacity.
 
-![Alt text](../images/edit_opacity.png)
+![Range slider in the Edit Opacity tool for text markup annotations](../images/edit_opacity.png)
 
 ## Set default properties during control initialization
 
 Set default properties before creating the control using `highlightSettings`, `underlineSettings`, `strikethroughSettings`, and `squigglySettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity with the Edit Color and Edit Opacity tools, the default values update to the selected settings.
 
 Refer to the following code sample to set the default annotation settings.
 

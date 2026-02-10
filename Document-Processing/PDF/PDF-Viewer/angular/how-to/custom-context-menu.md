@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize the context menu in PDF Viewer
 
-PDF Viewer allows you to add custom option in context menu. It can be achieved by using the `addCustomMenu()` method and custom action is defined using the `customContextMenuSelect()`method.
-PDF Viewer supports adding custom options to the context menu using the `addCustomMenu()`(https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#addcustommenu)method. Define actions for custom items with the [customContextMenuSelect()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#customcontextmenuselect) method.
+The PDF Viewer supports adding custom options to the context menu using the `addCustomMenu()` method; define custom actions with `customContextMenuSelect()`. See the addCustomMenu and [customContextMenuSelect()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#customcontextmenuselect) API.
 
 ### Add a custom option
 
@@ -222,10 +221,9 @@ The following is the output of the custom context menu with customization.
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**,
-Add the below serviceUrl in the `app.component.ts` file
-`public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`;
-Within the template, configure the PDF Viewer by adding the `[serviceUrl]='service'` attribute inside the div element.
+N> To set up the server-backed PDF Viewer, add the following service URL in `app.component.ts`:
+`public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
+Then configure the PDF Viewer template with the `[serviceUrl]='service'` attribute on the viewer container.
 
 {% previewsample "/document-processing/samples/pdfviewer/angular/custom-context-menu" %}
 

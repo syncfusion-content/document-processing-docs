@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Delete a specific annotation using deleteAnnotationById
 
-The PDF Viewer library allows you to delete a specific annotation from a PDF document. Deleting a specific annotation can be done using the **deleteAnnotationById()** method. This method is used to delete a specific annotation using its id.
+This article shows how to remove a specific annotation from a PDF document using the `deleteAnnotationById()` method. The example below demonstrates a simple delete flow; for production code prefer accessing the viewer instance with Angular `@ViewChild` rather than `document.getElementById`.
 
-The following steps are used to delete a specific annotation from PDF Document.
+The following steps are used to delete a specific annotation from PDF Document:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Create a basic PDF Viewer sample by following the [getting-started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) guide.
 
-**Step 2:** Use the following code snippet to delete a specific annotation using `deleteAnnotationById()` method.
+**Step 2:** Use the following snippet to trigger deletion using `deleteAnnotationById()`.
 
 ```html
 <button (click)="deleteAnnotationbyId()">Delete Annotation by Id</button>
@@ -32,4 +32,4 @@ deleteAnnotationbyId() {
 }
 ```
 
-Find the sample [how to delete a specific annotation using deleteAnnotationById](https://stackblitz.com/edit/angular-pfuexf?file=app.component.ts)
+Find the StackBlitz sample demonstrating this flow here: https://stackblitz.com/edit/angular-pfuexf?file=app.component.ts

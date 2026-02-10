@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ink Annotation in Angular PDF Viewer component
+# Ink annotation in Angular PDF Viewer component
 
 The PDF Viewer control provides options to add, edit, and delete ink annotations.
 
@@ -305,7 +305,7 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-## EEdit the properties of ink annotations
+## Edit the properties of ink annotations
 
 Stroke color, thickness, and opacity can be edited using the Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -331,7 +331,7 @@ Edit opacity using the range slider in the Edit Opacity tool.
 
 Default properties for ink annotations can be set before creating the control using InkAnnotationSettings.
 
-After changing default values, the selected values are applied.
+After changing default values, the new defaults are applied to subsequently created ink annotations.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

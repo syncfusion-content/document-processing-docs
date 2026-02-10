@@ -8,34 +8,36 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF Viewer Annotations events in Angular
+# PDF Viewer annotation events in Angular
 
-The PDF Viewer control provides support for several annotation events. The annotation events supported by the PDF Viewer control are:
+The PDF Viewer control supports several annotation events that enable applications to respond to user interactions—adding, moving, resizing, selecting, and removing annotations. Examples in this article reference the resource URL shown in the code samples.
+
+The annotation events supported by the PDF Viewer control are:
 
 | Annotation events               | Description                                                        |
 |---------------------------------|--------------------------------------------------------------------|
-| [annotationAdd](#annotationadd)                      | Event triggers when an annotation is added.                        |
-| [annotationDoubleClick](#annotationdoubleclick)      | Event triggers when an annotation is double-clicked.              |
-| [annotationMouseLeave](#annotationmouseleave)        | Event triggers when the mouse cursor leaves an annotation.        |
-| [annotationMouseover](#annotationmouseover)          | Event triggers when the mouse cursor moves over an annotation.    |
-| [annotationMove](#annotationmove)                    | Event triggers when an annotation is moved.                       |
-| [annotationMoving](#annotationmoving)                | Event triggers while an annotation is being moved.                |
-| [annotationPropertiesChange](#annotationpropertieschange) | Event triggers when an annotation’s properties are changed.       |
-| [annotationRemove](#annotationremove)                | Event triggers when an annotation is removed.                     |
-| [annotationResize](#annotationresize)                | Event triggers when an annotation is resized.                     |
-| [annotationSelect](#annotationselect)                | Event triggers when an annotation is selected.                    |
-| [annotationUnselect](#annotationunselect)            | Event triggers when an annotation is unselected.                  |
-| [beforeAddFreeText](#beforeaddfreetext)              | Event triggers before adding free text.                           |
-| [addSignature](#addsignature)                        | Event triggers when a signature is added.                         |
-| [removeSignature](#removesignature)                  | Event triggers when a signature is removed.                       |
-| [resizeSignature](#resizesignature)                  | Event triggers when a signature is resized.                       |
-| [signaturePropertiesChange](#signaturepropertieschange) | Event triggers when signature properties change.                  |
-| [signatureSelect](#signatureselect)                  | Event triggers when a signature is selected.                      |
-| [signatureUnselect](#signatureunselect)              | Event triggers when a signature is unselected.                    |
+| [annotationAdd](#annotationadd)                      | Triggers when an annotation is added.                             |
+| [annotationDoubleClick](#annotationdoubleclick)      | Triggers when an annotation is double-clicked.                    |
+| [annotationMouseLeave](#annotationmouseleave)        | Triggers when the mouse cursor leaves an annotation.              |
+| [annotationMouseover](#annotationmouseover)          | Triggers when the mouse cursor moves over an annotation.          |
+| [annotationMove](#annotationmove)                    | Triggers when an annotation is moved.                             |
+| [annotationMoving](#annotationmoving)                | Triggers while an annotation is being moved.                      |
+| [annotationPropertiesChange](#annotationpropertieschange) | Triggers when an annotation's properties are changed.             |
+| [annotationRemove](#annotationremove)                | Triggers when an annotation is removed.                           |
+| [annotationResize](#annotationresize)                | Triggers when an annotation is resized.                           |
+| [annotationSelect](#annotationselect)                | Triggers when an annotation is selected.                          |
+| [annotationUnselect](#annotationunselect)            | Triggers when an annotation is unselected.                        |
+| [beforeAddFreeText](#beforeaddfreetext)              | Triggers before adding free text.                                 |
+| [addSignature](#addsignature)                        | Triggers when a signature is added.                               |
+| [removeSignature](#removesignature)                  | Triggers when a signature is removed.                             |
+| [resizeSignature](#resizesignature)                  | Triggers when a signature is resized.                             |
+| [signaturePropertiesChange](#signaturepropertieschange) | Triggers when signature properties change.                        |
+| [signatureSelect](#signatureselect)                  | Triggers when a signature is selected.                            |
+| [signatureUnselect](#signatureunselect)              | Triggers when a signature is unselected.                          |
 
 ### annotationAdd 
 
-The [annotationAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationadd) event is triggered when an annotation is added to the PDF Viewer.
+The [annotationAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationadd) event triggers when an annotation is added to the PDF Viewer.
 
 #### Event Arguments
 
@@ -124,7 +126,7 @@ export class AppComponent {
 
 ### annotationDoubleClick
 
-The [annotationDoubleClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationdoubleclick) event is triggered when an annotation is double-clicked.
+The [annotationDoubleClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationdoubleclick) event triggers when an annotation is double-clicked.
 
 #### Event Arguments
 
@@ -211,17 +213,11 @@ export class AppComponent {
 
 
 
-The [annotationDoubleClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationDoubleClickArgs/) event is triggered when an annotation is double-clicked.
 
-{% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-
-{% endhighlight %}
-{% endtabs %}
 
 ### annotationMouseLeave
 
-The [annotationMouseLeave](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationmouseleave) event is triggered when the mouse cursor leaves an annotation.
+The [annotationMouseLeave](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationmouseleave) event triggers when the mouse cursor leaves an annotation.
 
 #### Event Arguments
 
@@ -311,8 +307,7 @@ export class AppComponent {
 
 ### annotationMouseover
 
-The [annotationMouseover](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationmouseover) event is triggered when the mouse cursor moves 
-over an annotation.
+The [annotationMouseover](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationmouseover) event triggers when the mouse cursor moves over an annotation.
 
 #### Event Arguments
 
@@ -394,7 +389,7 @@ export class AppComponent implements OnInit {
 
 ### annotationMove
 
-The [annotationMove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationmove) event is triggered when an annotation is moved.
+The [annotationMove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationmove) event triggers when an annotation is moved.
 
 #### Event Arguments
 
@@ -477,7 +472,7 @@ export class AppComponent implements OnInit {
 
 ### annotationMoving
 
-The [annotationMoving](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationmoving) event is triggered while an annotation is being moved.
+The [annotationMoving](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationmoving) event triggers while an annotation is being moved.
 
 #### Event Arguments
 
@@ -560,7 +555,7 @@ export class AppComponent implements OnInit {
 
 ### annotationPropertiesChange
 
-The [annotationPropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationpropertieschange) event is triggered when an annotation’s properties are changed.
+The [annotationPropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationpropertieschange) event triggers when an annotation’s properties are changed.
 
 #### Event Arguments
 
@@ -645,7 +640,7 @@ export class AppComponent implements OnInit {
 
 ### annotationRemove
 
-The [annotationRemove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationremove) event is triggered when an annotation is removed.
+The [annotationRemove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationremove) event triggers when an annotation is removed.
 
 #### Event Arguments
 
@@ -728,7 +723,7 @@ export class AppComponent implements OnInit {
 
 ### annotationResize
 
-The [annotationResize](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationresize) event is triggered when an annotation is resized.
+The [annotationResize](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationresize) event triggers when an annotation is resized.
 
 #### Event Arguments
 
@@ -811,7 +806,7 @@ export class AppComponent implements OnInit {
 
 ### annotationSelect
 
-The [annotationSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationselect) event is triggered when an annotation is selected.
+The [annotationSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationselect) event triggers when an annotation is selected.
 
 #### Event Arguments
 
@@ -894,7 +889,7 @@ export class AppComponent implements OnInit {
 
 ### annotationUnselect
 
-The [annotationUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationunselect) event is triggered when an annotation is unselected.
+The [annotationUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationunselect) event triggers when an annotation is unselected.
 
 #### Event Arguments
 
@@ -975,7 +970,7 @@ export class AppComponent implements OnInit {
 
 ### beforeAddFreeText
 
-The [beforeAddFreeText](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#beforeaddfreetext) event is triggered before adding free text to the PDF Viewer.
+The [beforeAddFreeText](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#beforeaddfreetext) event triggers before adding free text to the PDF Viewer.
 
 #### Event Arguments
 
@@ -1061,7 +1056,7 @@ export class AppComponent implements OnInit {
 
 ### addSignature
 
-The [addSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#addsignature) event is triggered when a signature is added to the PDF Viewer.
+The [addSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#addsignature) event triggers when a signature is added to the PDF Viewer.
 
 #### Event Arguments
 
@@ -1142,7 +1137,7 @@ export class AppComponent implements OnInit {
 
 ### removeSignature
 
-The [removeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#removesignature) event is triggered when a signature is removed from the PDF Viewer.
+The [removeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#removesignature) event triggers when a signature is removed from the PDF Viewer.
 
 #### Event Arguments
 
@@ -1222,7 +1217,7 @@ export class AppComponent implements OnInit {
 
 ### resizeSignature
 
-The [resizeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#resizesignature) event is triggered when a signature is resized in the PDF Viewer.
+The [resizeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#resizesignature) event triggers when a signature is resized in the PDF Viewer.
 
 #### Event Arguments
 
@@ -1303,7 +1298,7 @@ export class AppComponent implements OnInit {
 
 ### signaturePropertiesChange
 
-The [signaturePropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signaturepropertieschange) event is triggered when signature properties are changed in the PDF Viewer.
+The [signaturePropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signaturepropertieschange) event triggers when signature properties are changed in the PDF Viewer.
 
 #### Event Arguments
 
@@ -1383,7 +1378,7 @@ export class AppComponent implements OnInit {
 
 ### signatureSelect
 
-The [signatureSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signatureselect) event is triggered when a signature is selected in the PDF Viewer.
+The [signatureSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signatureselect) event triggers when a signature is selected in the PDF Viewer.
 
 #### Event Arguments
 
@@ -1465,7 +1460,7 @@ export class AppComponent implements OnInit {
 
 ### signatureUnselect
 
-The [signatureUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signatureunselect) event is triggered when a signature is unselected in the PDF Viewer.
+The [signatureUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signatureunselect) event triggers when a signature is unselected in the PDF Viewer.
 
 #### Event Arguments
 

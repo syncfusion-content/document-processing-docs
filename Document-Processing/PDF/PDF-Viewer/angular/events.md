@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Events in Angular PDF Viewer
 
-The PDF Viewer component triggers events for creation, page navigation, document life cycle, context menu interactions, comments, bookmarks, download and export, hyperlinks, annotation import/export, custom keyboard commands, printing, signatures, text search, and text selection. Use these events to integrate custom logic into application workflows.
+The PDF Viewer component raises events for document life cycle, navigation, annotations, forms, context menus, comments, printing, bookmarks, downloads and exports, custom keyboard commands, text search and selection, hyperlinks, and signatures. This reference describes each event, its arguments, and practical examples for common integration scenarios.
 
 The following table lists commonly used events supported by the PDF Viewer component:
 
@@ -134,7 +134,7 @@ export class AppComponent {
 
 ## toolbarClick
 
-The [toolbarClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#toolbarclickevent) event triggers when a toolbar item is clicked. Use it to handle actions based on the clicked item's id or name.
+The [toolbarClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#toolbarclickevent) event triggers when a toolbar item is clicked. Use this event to handle actions based on the clicked item's id or name.
 
 - Event arguments: `ClickEventArgs`.
 
@@ -790,7 +790,7 @@ export class AppComponent {
 
 ## customContextMenuBeforeOpen
 
-The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#customcontextmenubeforeopenevent) event fires just before the context menu is shown. Use it to show or hide items based on the current state (for example, only show search items when text is selected).
+The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#customcontextmenubeforeopenevent) event fires just before the context menu is shown. Use this event to show or hide items based on the current state (for example, only show search items when text is selected).
 
 - Event arguments: [CustomContextMenuBeforeOpenEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/customContextMenuBeforeOpenEventArgs/)
   - name: Event name
@@ -869,7 +869,7 @@ export class AppComponent {
 
 ## customContextMenuSelect
 
-The [customContextMenuSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#customcontextmenuselectevent) event fires when a custom menu item is clicked. Use it to branch logic by the clicked item's id.
+The [customContextMenuSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#customcontextmenuselectevent) event fires when a custom menu item is clicked. Use this event to branch logic by the clicked item's id.
 
 - Event arguments: [CustomContextMenuSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/customContextMenuSelectEventArgs/).
 
@@ -1755,7 +1755,7 @@ The [keyboardCustomCommands](https://ej2.syncfusion.com/angular/documentation/ap
   - keyboardCommand: The command metadata raised by Command Manager
   
 When it triggers
-- After registering gestures in commandManager.keyboardCommand. For example, pressing Shift + Alt + G or Shift + Alt + H triggers the event. Use this to handle custom keyboard shortcuts.
+- After registering gestures in commandManager.keyboardCommand. For example, pressing Shift + Alt + G or Shift + Alt + H triggers the event. Use this event to handle custom keyboard shortcuts.
 
 Refer to [Keyboard interaction](./accessibility#keyboard-interaction) for details about adding and handling custom shortcut keys.
 Example:
