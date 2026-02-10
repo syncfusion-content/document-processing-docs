@@ -19,7 +19,7 @@ To enable the redaction toolbar, configure the `toolbarSettings.toolbarItems` pr
 The following example shows how to enable the redaction toolbar:
 
 {% tabs %}
-{% highlight js tabtitle="index.js" %}
+{% highlight js tabtitle="app.jsx" %}
 
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
@@ -52,8 +52,7 @@ export function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl= "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         toolbarSettings={toolbarSettings}
-        
-        style={{ 'height': '680px' }} 
+        style={{ 'height': '680px' }}
       >
         <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
           Print, TextSelection, TextSearch, FormFields, FormDesigner]} />

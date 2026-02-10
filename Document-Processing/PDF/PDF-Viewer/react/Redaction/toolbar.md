@@ -51,7 +51,6 @@ export function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl= "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         toolbarSettings={toolbarSettings}
-        
         style={{ 'height': '680px' }} 
       >
         <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,

@@ -157,7 +157,7 @@ export function App() {
   </div>);
 }
 function extractPage(){
-// Get the PDF viewer instance
+    // Get the PDF viewer instance
     var viewer = document.getElementById('container').ej2_instances[0];
     //Extract Pages 1,2
     const array = viewer.extractPages('1,2');
