@@ -14,6 +14,9 @@ When **Form Designer mode** is enabled in the Syncfusion [React PDF Viewer](http
 
 Using the Form Designer UI, users can place form fields on the PDF, move and resize them, configure field and widget properties, preview the designed form, and remove fields when required. The Form Designer toolbar can also be shown or hidden and customized to control the available tools based on application requirements, enabling flexible and interactive form design directly within the viewer.
 
+Check the following video to learn how to work with form Designer in React PDF Viewer.
+{% youtube "https://www.youtube.com/watch?v=MUWTCg1MoAE" %}
+
 ## Key Features
 
 **Add Form Fields**
