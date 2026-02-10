@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with ASP.NET MVC DocumentEditor | Syncfusion
-description: Checkout and learn about getting started with ASP.NET MVC DocumentEditor control of Syncfusion Essential JS 2 and more details.
+description: Check out and learn about getting started with ASP.NET MVC DocumentEditor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting Started
 documentation: ug
@@ -73,13 +73,22 @@ Also, register the script manager `EJS().ScriptManager()` at the end of `<body>`
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 
 <body>
-...
+    ...
     <!-- Syncfusion ASP.NET MVC Script Manager -->
     @Html.EJS().ScriptManager()
 </body>
 
 {% endhighlight %}
 {% endtabs %}
+
+## Understanding component options
+
+Two DocumentEditor variants are available:
+
+* **DocumentEditor** — a customizable control for building a tailored UI.
+* **DocumentEditorContainer** — a complete container that includes a predefined toolbar, properties pane, and status bar for quick integration.
+
+Choose the control that matches the required level of customization.
 
 ## Add ASP.NET MVC DocumentEditor control
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React Document editor component | Syncfusion
-description:  Checkout and learn about Getting started with React Document editor component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Document Editor component | Syncfusion
+description: Checkout and learn about Getting started with React Document Editor component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: document-processing
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with React Document Editor component
 
-This section explains the steps to create a Word document editor within your application and demonstrates the basic usage of the DocumentEditor component.
+This section explains the steps to create a Word document editor within your application and demonstrates the basic usage of the Document Editor component.
 
 To get started quickly with DocumentEditor component, you can check the video below.
 
@@ -18,11 +18,11 @@ To get started quickly with DocumentEditor component, you can check the video be
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 ## Dependencies
 
-Following is the list of minimum dependencies required to use the document editor.
+The following list shows the minimum dependencies required to use the Document Editor component:
 
 ```javascript
 |-- @syncfusion/ej2-react-documenteditor
@@ -43,7 +43,7 @@ Following is the list of minimum dependencies required to use the document edito
     |-- @syncfusion/ej2-charts
 ```
 
-### Server side dependencies
+### Server-side dependencies
 
 The Document Editor component requires server-side interactions for the following operations:
 
@@ -53,29 +53,37 @@ The Document Editor component requires server-side interactions for the followin
 * [Spell check](./spell-check)
 * [Save as file formats other than SFDT and DOCX](./saving-documents/server-side-export)
 
->Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
+>Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
-To know about server-side dependencies, please refer this [page](./web-services-overview).
+For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
 
-## Setup for Local Development
+## Setup for local development
 
 To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-To create a new React application, run the following command.
+### Create a new React application
+
+To create a new React application, run the following command:
 
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+
+### Set up TypeScript environment
+
+To set up a React application in a TypeScript environment, run the following commands:
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+
+### Set up JavaScript environment
+
+To set up a React application in a JavaScript environment, run the following commands:
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -86,20 +94,20 @@ npm run dev
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 You can choose the component that you want to install.
 
-To install Document Editor component, use the following command
+To install the Document Editor component, use the following command:
 
-```
+```bash
 npm install @syncfusion/ej2-react-documenteditor --save
 ```
 
-> The --save will instruct NPM to include the Document Editor package inside of the **dependencies** section of the package.json.
+>Note: The `--save` flag instructs npm to include the Document Editor package inside the dependencies section of the `package.json` file.
 
 ## Adding CSS reference
 
-Add Document Editor component and its dependent component styles available in **../node_modules/@syncfusion** package folder. This can be added as reference in **src/App.css**.
+Add the Document Editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/App.css` file:
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -113,51 +121,60 @@ Add Document Editor component and its dependent component styles available in **
 @import "../node_modules/@syncfusion/ej2-documenteditor/styles/material.css";
 ```
 
-> To know about individual component CSS, please refer to
-[Individual Component theme files](https://ej2.syncfusion.com/react/documentation/appearance/theme#referring-individual-control-theme) section.
+>Note: To learn about individual component CSS files, refer to the [Individual Component theme files](https://ej2.syncfusion.com/react/documentation/appearance/theme#referring-individual-control-theme) section.
 
-## Adding Component
+## Choosing a component
 
-You can add `DocumentEditorContainer` Component with  predefined toolbar and properties pane options or `DocumentEditor` component with customize options.
+Syncfusion offers two Document Editor components with different feature sets:
 
->Note: Starting from `v19.3.0.x`, we have optimized the accuracy of text size measurements such as to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API [to disable it and retain the document pagination behavior of older versions](./how-to/disable-optimized-text-measuring).
+* **DocumentEditorContainer**: A complete solution with a predefined toolbar and properties pane for comprehensive document editing
+* **DocumentEditor**: A customizable component where you build the UI according to your specific requirements
+
+>Note: Starting from version `v19.3.0.x`, the text size measurement accuracy has been optimized to match Microsoft Word pagination for most documents. This improvement is enabled by default. You can [disable it to retain the pagination behavior of older versions](./how-to/disable-optimized-text-measuring) if needed.
 
 ### DocumentEditorContainer component
 
-DocumentEditorContainer Component is used to create, view, and edit word document. You can use predefined toolbar and properties pane to view and modify word document.
+The DocumentEditorContainer component provides a complete document editing experience with a predefined toolbar and properties pane, allowing users to create, view, and edit Word documents with minimal configuration.
 
 #### Adding DocumentEditorContainer component
 
-Now, you can start adding DocumentEditorContainer component in the application. For getting started, add the DocumentEditorContainer component in `src/App.tsx` file using following code.
-
-Add the below code in the `src/App.tsx` to initialize the DocumentEditor.
+Add the DocumentEditorContainer component to your application. In the `src/App.tsx` file, add the following code to initialize the component:
 
 {% raw %}
 
 ```ts
 import * as React from 'react';
 import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
+
 DocumentEditorContainerComponent.Inject(Toolbar);
+
 function App() {
-    return (<DocumentEditorContainerComponent id="container" height={'590px'} serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" enableToolbar={true}/>);
+    return (
+        <DocumentEditorContainerComponent 
+            id="container" 
+            height={'590px'} 
+            serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
+            enableToolbar={true}
+        />
+    );
 }
-export default App
 
+export default App;
 ```
-
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 {% endraw %}
 
+>Important: The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
+
 #### Run the DocumentEditorContainer application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the following command in the console to start the development server:
 
-```
+```bash
 npm run dev
 ```
 
-DocumentEditorContainer output will be displayed as follows.
+The DocumentEditorContainer output will be displayed as follows:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -173,39 +190,123 @@ DocumentEditorContainer output will be displayed as follows.
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/base-cs3" %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
-
 ### DocumentEditor component
 
-The DocumentEditor Component is used to create, view, and edit Word documents. But here, you can customize the UI options based on your requirements to modify the document.
+The DocumentEditor component provides a flexible foundation for creating, viewing, and editing Word documents. Unlike DocumentEditorContainer, this component allows you to customize the UI options based on your specific requirements.
 
 #### Adding DocumentEditor component
 
-Now, you can start adding DocumentEditor component in the application. For getting started, add the DocumentEditor component in `src/App.tsx` file using following code.
-
-Add the below code in the `src/App.tsx` to initialize the DocumentEditor.
+Add the DocumentEditor component to your application. In the `src/App.tsx` file, add the following code to initialize the component with the required services:
 
 ```ts
 import * as React from 'react';
-import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-react-documenteditor';
-DocumentEditorComponent.Inject(Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog);
+import { 
+    DocumentEditorComponent, 
+    Print, 
+    SfdtExport, 
+    WordExport, 
+    TextExport, 
+    Selection, 
+    Search, 
+    Editor, 
+    ImageResizer, 
+    EditorHistory, 
+    ContextMenu, 
+    OptionsPane, 
+    HyperlinkDialog, 
+    TableDialog, 
+    BookmarkDialog, 
+    TableOfContentsDialog, 
+    PageSetupDialog, 
+    StyleDialog, 
+    ListDialog, 
+    ParagraphDialog, 
+    BulletsAndNumberingDialog, 
+    FontDialog, 
+    TablePropertiesDialog, 
+    BordersAndShadingDialog, 
+    TableOptionsDialog, 
+    CellOptionsDialog, 
+    StylesDialog 
+} from '@syncfusion/ej2-react-documenteditor';
+
+DocumentEditorComponent.Inject(
+    Print, 
+    SfdtExport, 
+    WordExport, 
+    TextExport, 
+    Selection, 
+    Search, 
+    Editor, 
+    ImageResizer, 
+    EditorHistory, 
+    ContextMenu, 
+    OptionsPane, 
+    HyperlinkDialog, 
+    TableDialog, 
+    BookmarkDialog, 
+    TableOfContentsDialog, 
+    PageSetupDialog, 
+    StyleDialog, 
+    ListDialog, 
+    ParagraphDialog, 
+    BulletsAndNumberingDialog, 
+    FontDialog, 
+    TablePropertiesDialog, 
+    BordersAndShadingDialog, 
+    TableOptionsDialog, 
+    CellOptionsDialog, 
+    StylesDialog
+);
+
 function App() {
-    return (<DocumentEditorComponent id="container" height={'330px'} serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" isReadOnly={false} enablePrint={true} enableSelection={true} enableEditor={true} enableEditorHistory={true} enableContextMenu={true} enableSearch={true} enableOptionsPane={true} enableBookmarkDialog={true} enableBordersAndShadingDialog={true} enableFontDialog={true} enableTableDialog={true} enableParagraphDialog={true} enableHyperlinkDialog={true} enableImageResizer={true} enableListDialog={true} enablePageSetupDialog={true} enableSfdtExport={true} enableStyleDialog={true} enableTableOfContentsDialog={true} enableTableOptionsDialog={true} enableTablePropertiesDialog={true} enableTextExport={true} enableWordExport={true} />);
+    return (
+        <DocumentEditorComponent 
+            id="container" 
+            height={'330px'} 
+            serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
+            isReadOnly={false} 
+            enablePrint={true} 
+            enableSelection={true} 
+            enableEditor={true} 
+            enableEditorHistory={true} 
+            enableContextMenu={true} 
+            enableSearch={true} 
+            enableOptionsPane={true} 
+            enableBookmarkDialog={true} 
+            enableBordersAndShadingDialog={true} 
+            enableFontDialog={true} 
+            enableTableDialog={true} 
+            enableParagraphDialog={true} 
+            enableHyperlinkDialog={true} 
+            enableImageResizer={true} 
+            enableListDialog={true} 
+            enablePageSetupDialog={true} 
+            enableSfdtExport={true} 
+            enableStyleDialog={true} 
+            enableTableOfContentsDialog={true} 
+            enableTableOptionsDialog={true} 
+            enableTablePropertiesDialog={true} 
+            enableTextExport={true} 
+            enableWordExport={true} 
+        />
+    );
 }
-export default App
+
+export default App;
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+>Important: The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
 
 #### Run the DocumentEditor application
 
-The `create-vite-app` will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
+Run the following command to compile and start the application:
 
-```
+```bash
 npm run dev
 ```
 
-Document Editor output will be displayed as follows.
+The Document Editor output will be displayed as follows:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -221,12 +322,22 @@ Document Editor output will be displayed as follows.
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/base-cs2" %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+## Next steps
 
-## Frequently Asked Questions
+After successfully setting up the Document Editor component, explore these resources to enhance your implementation:
 
-* [How to localize the Document Editor container](./global-local).
-* [How to load the document by default](./how-to/open-default-document).
-* [How to customize tool bar](./how-to/customize-tool-bar).
-* [How to resize Document editor component](./how-to/resize-document-editor).
-* [How to add a save button to the DocumentEditorContainer component toolbar](./how-to/add-save-button-in-toolbar)
+* [How to localize the Document Editor container](./global-local)
+* [How to load a document by default](./how-to/open-default-document)
+* [How to customize the toolbar](./how-to/customize-tool-bar)
+* [How to resize the Document Editor component](./how-to/resize-document-editor)
+* [How to add a save button to the DocumentEditorContainer toolbar](./how-to/add-save-button-in-toolbar)
+
+## Troubleshooting
+
+If you encounter issues during setup, consider the following:
+
+* Ensure all dependencies are correctly installed by running `npm install`
+* Verify that your Node.js version meets the minimum requirements
+* Check that the CSS imports are correctly referenced in your project structure
+* Clear the npm cache if dependency conflicts occur: `npm cache clean --force`
+* For server-side functionality issues, verify your web service is properly configured and accessible
