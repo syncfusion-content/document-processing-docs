@@ -673,3 +673,7 @@ No, it's not possible to get the exact position (like X, Y coordinates or page n
 This is because a Word document is a flow-based document, where contents are not preserved page by page. Instead, the contents are preserved sequentially, section by section. Each section may extend across multiple pages based on its contents, such as tables, text, images, and more. Position information of elements is not maintained at the file level in a Word document.
 
 DocIO is a non-UI component that provides a full-fledged document object model to manipulate the Word document contents based on file-level information. Hence, it is not feasible to retrieve the position of an element within a Word document using DocIO.
+
+## Does the DocIO library support asynchronous methods for opening or saving Word documents?
+
+No, the Syncfusion DocIO library does not currently provide asynchronous APIs for opening or saving Word documents. However, the library is highly optimized for performance and is thread‑safe, allowing you to safely execute document processing operations.
