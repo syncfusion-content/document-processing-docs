@@ -12,6 +12,9 @@ domainurl: ##DomainURL##
 
 The PDF Viewer provides comprehensive programmatic support for organizing pages, allowing you to integrate and manage PDF functionalities directly within your application. This section details the available APIs to enable, control, and interact with the page organization features.
 
+Check the following video to learn how to organize pages in PDF Document in React PDF Viewer.
+{% youtube "https://www.youtube.com/watch?v=08kPdR0AZQk" %}
+
 ## Enable or disable the page organizer
 
 The page organizer feature can be enabled or disabled using the `enablePageOrganizer` property. By default, this feature is enabled.
