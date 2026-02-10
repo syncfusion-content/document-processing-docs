@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Clear annotations in React PDF Viewer
 
-Use the [deleteAnnotations](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#deleteannotations) method to clear all annotations in the currently loaded document.
+Use the [deleteAnnotations](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#deleteannotations) method to clear all annotations in the currently loaded document.
 
 Example: Clear all annotations in the loaded document
 

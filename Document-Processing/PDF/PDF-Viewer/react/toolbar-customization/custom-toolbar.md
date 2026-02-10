@@ -16,7 +16,7 @@ Follow these steps to create a custom toolbar for the PDF Viewer:
 
 **Step 1: Create a simple PDF Viewer sample.**
 
-Follow the steps provided in the [getting started](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started/) guide to create a basic PDF Viewer sample.
+Follow the steps provided in the [getting started](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started) guide to create a basic PDF Viewer sample.
 
 **Step 2: Add HTML elements for the custom toolbar.**
 
