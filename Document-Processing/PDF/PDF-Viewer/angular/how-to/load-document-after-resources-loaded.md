@@ -22,7 +22,7 @@ The `resourcesLoaded` event fires once the viewer finishes loading all required 
 - Listen to `(resourcesLoaded)` and call `load` inside the handler.
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   #pdfViewer
   id="pdfViewer"
@@ -34,13 +34,13 @@ The `resourcesLoaded` event fires once the viewer finishes loading all required 
 ```
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component, ViewChild } from '@angular/core';
 import { PdfViewerComponent, ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -54,7 +54,7 @@ import { PdfViewerComponent, ToolbarService, MagnificationService, NavigationSer
     FormFieldsService,
     PageOrganizerService
   ],
-  styleUrls: ['app.component.css'],
+  styleUrls: ['app.css'],
   standalone: true,
   imports: [PdfViewerModule],
 })

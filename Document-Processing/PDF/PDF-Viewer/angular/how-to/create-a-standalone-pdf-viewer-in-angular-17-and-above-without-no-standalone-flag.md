@@ -79,7 +79,7 @@ import {
                     style="height:640px;display:block">
                 </ejs-pdfviewer>
              </div>`,
-  styleUrl: './app.component.css',
+  styleUrl: './app.css',
   providers: [LinkAnnotationService, BookmarkViewService, MagnificationService,
     ThumbnailViewService, ToolbarService, NavigationService,
     TextSearchService, TextSelectionService, PrintService,
@@ -143,7 +143,7 @@ import {
                     style="height:640px;display:block">
                 </ejs-pdfviewer>
              </div>`,
-  styleUrl: './app.component.css',
+  styleUrl: './app.css',
   providers: [LinkAnnotationService, BookmarkViewService, MagnificationService,
     ThumbnailViewService, ToolbarService, NavigationService,
     TextSearchService, TextSelectionService, PrintService,

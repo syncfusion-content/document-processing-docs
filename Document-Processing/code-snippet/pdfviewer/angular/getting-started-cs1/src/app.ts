@@ -18,7 +18,7 @@ import { Component, OnInit } from '@angular/core';
   providers: [LinkAnnotationService, BookmarkViewService, MagnificationService,ThumbnailViewService, ToolbarService
     , NavigationService, AnnotationService, TextSearchService, TextSelectionService, PrintService, FormDesignerService, FormFieldsService, PageOrganizerService]
 })
-export class App implements OnInit {
+export class AppComponent implements OnInit {
     public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
     ngOnInit(): void {

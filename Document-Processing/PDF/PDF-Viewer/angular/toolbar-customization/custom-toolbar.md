@@ -79,7 +79,7 @@ Hide the default toolbar using `enableToolbar` and `enableThumbnail` properties:
 {% highlight ts tabtitle="Standalone" %}
 {% raw %}
 
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="container"
   [enableToolbar]="false"
@@ -94,7 +94,7 @@ Hide the default toolbar using `enableToolbar` and `enableThumbnail` properties:
 {% highlight ts tabtitle="Server-Backed" %}
 {% raw %}
 
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="container"
   [enableToolbar]="false"
@@ -295,7 +295,7 @@ Add Syncfusion EJ2 Toolbar components to perform magnification actions in the PD
 
 >The icons are embedded in the font file used in the previous code snippet.
 
-**Step 7:** Add the following code snippet in `app.component.ts` file for performing a user interaction in PDF Viewer in code behind.
+**Step 7:** Add the following code snippet in `app.ts` file for performing a user interaction in PDF Viewer in code behind.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

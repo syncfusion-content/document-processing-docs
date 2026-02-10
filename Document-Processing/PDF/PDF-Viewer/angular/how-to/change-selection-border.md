@@ -16,7 +16,7 @@ The following steps are used to customize the selection border.
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create simple PDF Viewer sample in Angular.
 
-**Step 2:** Add the following code snippet in app.component.html and app.component.ts files to customize selection borders.
+**Step 2:** Add the following code snippet in app.html and app.ts files to customize selection borders.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}

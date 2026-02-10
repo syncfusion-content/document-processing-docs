@@ -60,7 +60,7 @@ Add CSS references needed for a PDF Viewer in `src/styles.css` from the `../node
 ```
 ### Add PDF Viewer component
 
-In `src/app/app.component.ts``, use <ejs-pdfviewer> selector in the template attribute of the @Component directive to render the Syncfusion Angular PDF Viewer component.
+In `src/app/app.ts``, use <ejs-pdfviewer> selector in the template attribute of the @Component directive to render the Syncfusion Angular PDF Viewer component.
 
 ```
 import { Component, OnInit } from '@angular/core';

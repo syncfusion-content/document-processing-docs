@@ -32,26 +32,14 @@ Change the author name and other properties using the annotationSettings API as 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 ```ts
-// app.module.ts
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { PdfViewerModule, ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, TextSearchService, PrintService, AnnotationService, FormFieldsService } from '@syncfusion/ej2-angular-pdfviewer';
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, PdfViewerModule],
-  providers: [ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, TextSearchService, PrintService, AnnotationService, FormFieldsService],
-  bootstrap: [AppComponent]
-})
-export class AppModule {}
-
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
-import { AnnotationSettingsModel, FreeTextSettingsModel } from '@syncfusion/ej2-angular-pdfviewer';
+import { AnnotationService, AnnotationSettingsModel, BookmarkViewService, FormFieldsService, FreeTextSettingsModel, LinkAnnotationService, MagnificationService, NavigationService, PageOrganizerService, PdfViewerModule, PrintService, TextSearchService, TextSelectionService, ThumbnailViewService, ToolbarService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
+  imports: [ PdfViewerModule ],
+  providers: [ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, TextSearchService, PrintService, AnnotationService, FormFieldsService, PageOrganizerService],
   template: `
     <ejs-pdfviewer id="pdfViewer"
       [documentPath]="docPath"
@@ -63,36 +51,24 @@ import { AnnotationSettingsModel, FreeTextSettingsModel } from '@syncfusion/ej2-
 export class AppComponent {
   public docPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   public annotationSettings: AnnotationSettingsModel = {
-    author: 'syncfusion', minHeight: 30, maxHeight: 500, minWidth: 30, maxWidth: 500, isLock: false, isPrint: true, isDownload: true
+    author: 'syncfusion', minHeight: 30, maxHeight: 500, minWidth: 30, maxWidth: 500, isLock: false, skipPrint: false, skipDownload: false
   };
   public freeTextSettings: FreeTextSettingsModel = {
-    allowTextOnly: true
+    allowEditTextOnly: true
   };
 }
 ```
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
 ```ts
-// app.module.ts
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { PdfViewerModule, ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, TextSearchService, PrintService, AnnotationService, FormFieldsService } from '@syncfusion/ej2-angular-pdfviewer';
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, PdfViewerModule],
-  providers: [ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, TextSearchService, PrintService, AnnotationService, FormFieldsService],
-  bootstrap: [AppComponent]
-})
-export class AppModule {}
-
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
-import { AnnotationSettingsModel, FreeTextSettingsModel } from '@syncfusion/ej2-angular-pdfviewer';
+import { AnnotationService, AnnotationSettingsModel, BookmarkViewService, FormFieldsService, FreeTextSettingsModel, LinkAnnotationService, MagnificationService, NavigationService, PageOrganizerService, PdfViewerModule, PrintService, TextSearchService, TextSelectionService, ThumbnailViewService, ToolbarService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
+  imports: [ PdfViewerModule ],
+  providers: [ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, TextSearchService, PrintService, AnnotationService, FormFieldsService, PageOrganizerService],
   template: `
     <ejs-pdfviewer id="pdfViewer"
       [serviceUrl]="serviceUrl"
@@ -106,10 +82,10 @@ export class AppComponent {
   public serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
   public docPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   public annotationSettings: AnnotationSettingsModel = {
-    author: 'syncfusion', minHeight: 30, maxHeight: 500, minWidth: 30, maxWidth: 500, isLock: false, isPrint: true, isDownload: true
+    author: 'syncfusion', minHeight: 30, maxHeight: 500, minWidth: 30, maxWidth: 500, isLock: false, skipPrint: false, skipDownload: false
   };
   public freeTextSettings: FreeTextSettingsModel = {
-    allowTextOnly: true
+    allowEditTextOnly: true
   };
 }
 ```

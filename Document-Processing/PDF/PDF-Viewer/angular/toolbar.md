@@ -684,7 +684,7 @@ The PDF Viewer provides API for user interactions options provided in its built-
 
 >The icons are embedded in the font file used in the previous code snippet.
 
-**Step 5:** Add the following code snippet in `app.component.ts` file for performing a user interaction in PDF Viewer in code behind.
+**Step 5:** Add the following code snippet in `app.ts` file for performing a user interaction in PDF Viewer in code behind.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

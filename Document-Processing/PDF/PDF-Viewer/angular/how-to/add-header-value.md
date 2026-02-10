@@ -39,7 +39,7 @@ import {
  */
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html',
+  templateUrl: 'app.html',
   encapsulation: ViewEncapsulation.None,
   // tslint:disable-next-line:max-line-length
   providers: [
@@ -57,7 +57,7 @@ import {
     FormDesignerService,
     PageOrganizerService,
   ],
-  styleUrls: ['app.component.css'],
+  styleUrls: ['app.css'],
   standalone: true,
   imports: [PdfViewerModule],
 })

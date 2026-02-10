@@ -56,7 +56,7 @@ The following example illustrates how to handle the `annotationAdd` event.
   </div>
 ```
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewEncapsulation, OnInit, ViewChild } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -79,7 +79,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html',
+  templateUrl: 'app.html',
   encapsulation: ViewEncapsulation.None,
   providers: [
     LinkAnnotationService,
@@ -96,7 +96,7 @@ import {
     FormDesignerService,
     PageOrganizerService,
   ],
-  styleUrls: ['app.component.css'],
+  styleUrls: ['app.css'],
   standalone: true,
   imports: [PdfViewerModule],
 })
@@ -145,7 +145,7 @@ The following example illustrates how to handle the `annotationDoubleClick` even
   </div>
 ```
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewEncapsulation, OnInit, ViewChild } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -168,7 +168,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html',
+  templateUrl: 'app.html',
   encapsulation: ViewEncapsulation.None,
   providers: [
     LinkAnnotationService,
@@ -185,7 +185,7 @@ import {
     FormDesignerService,
     PageOrganizerService,
   ],
-  styleUrls: ['app.component.css'],
+  styleUrls: ['app.css'],
   standalone: true,
   imports: [PdfViewerModule],
 })
@@ -214,7 +214,7 @@ export class AppComponent {
 The [annotationDoubleClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationDoubleClickArgs/) event is triggered when an annotation is double-clicked.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -243,7 +243,7 @@ The following example illustrates how to handle the `annotationMouseLeave` event
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewEncapsulation, OnInit, ViewChild } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -265,7 +265,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html',
+  templateUrl: 'app.html',
   encapsulation: ViewEncapsulation.None,
 
   providers: [
@@ -283,7 +283,7 @@ import {
     FormDesignerService,
     PageOrganizerService,
   ],
-  styleUrls: ['app.component.css'],
+  styleUrls: ['app.css'],
   standalone: true,
   imports: [PdfViewerModule],
 })
@@ -333,7 +333,7 @@ The following example illustrates how to handle the `annotationMouseover` event.
 </div>
 ```
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
@@ -354,9 +354,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -416,7 +416,7 @@ The following example illustrates how to handle the `annotationMove` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
@@ -437,9 +437,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -499,7 +499,7 @@ The following example illustrates how to handle the `annotationMoving` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
@@ -520,9 +520,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -582,7 +582,7 @@ The following example illustrates how to handle the `annotationPropertiesChange`
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
@@ -603,9 +603,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -667,7 +667,7 @@ The following example illustrates how to handle the `annotationRemove` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
@@ -688,9 +688,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -750,7 +750,7 @@ The following example illustrates how to handle the `annotationResize` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
@@ -771,9 +771,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -833,7 +833,7 @@ The following example illustrates how to handle the `annotationSelect` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
@@ -854,9 +854,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -916,7 +916,7 @@ The following example illustrates how to handle the `annotationUnselect` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -936,9 +936,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -997,7 +997,7 @@ The following example illustrates how to handle the `beforeAddFreeText` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -1017,9 +1017,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1083,7 +1083,7 @@ The following example illustrates how to handle the `addSignature` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -1103,9 +1103,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1163,7 +1163,7 @@ The following example illustrates how to handle the `removeSignature` event.
 </div>
 ```
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -1183,9 +1183,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1244,7 +1244,7 @@ The following example illustrates how to handle the `resizeSignature` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -1264,9 +1264,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1324,7 +1324,7 @@ The following example illustrates how to handle the `signaturePropertiesChange` 
 </div>
 ```
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -1344,9 +1344,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1405,7 +1405,7 @@ The following example illustrates how to handle the `signatureSelect` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -1425,9 +1425,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1487,7 +1487,7 @@ The following example illustrates how to handle the `signatureUnselect` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -1507,9 +1507,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,

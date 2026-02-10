@@ -77,7 +77,7 @@ The [bookmarkClick](https://ej2.syncfusion.com/angular/documentation/api/pdfview
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -95,7 +95,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -121,7 +121,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -141,7 +141,7 @@ The [toolbarClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewe
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -159,7 +159,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -185,7 +185,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -213,7 +213,7 @@ When it triggers
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -231,7 +231,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -261,7 +261,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -285,7 +285,7 @@ The [zoomChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -303,7 +303,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -329,7 +329,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -349,7 +349,7 @@ The [buttonFieldClick](https://ej2.syncfusion.com/angular/documentation/api/pdfv
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -367,7 +367,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -393,7 +393,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -413,7 +413,7 @@ The [commentAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -431,7 +431,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -457,7 +457,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -477,7 +477,7 @@ The [commentDelete](https://ej2.syncfusion.com/angular/documentation/api/pdfview
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -495,7 +495,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -521,7 +521,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -541,7 +541,7 @@ The [commentEdit](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -559,7 +559,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -585,7 +585,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -605,7 +605,7 @@ The [commentSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfview
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -623,7 +623,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -649,7 +649,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -669,7 +669,7 @@ The [commentStatusChanged](https://ej2.syncfusion.com/angular/documentation/api/
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -687,7 +687,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -713,7 +713,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -733,7 +733,7 @@ The [created](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#cr
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -751,7 +751,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -777,7 +777,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -799,13 +799,13 @@ The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/angular/documentati
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component, ViewChild } from '@angular/core';
 import { PdfViewerComponent, ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -854,7 +854,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   #pdfViewer
   id="pdfViewer"
@@ -879,13 +879,13 @@ The [customContextMenuSelect](https://ej2.syncfusion.com/angular/documentation/a
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component, ViewChild } from '@angular/core';
 import { PdfViewerComponent, ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -934,7 +934,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   #pdfViewer
   id="pdfViewer"
@@ -956,13 +956,13 @@ The [documentLoad](https://ej2.syncfusion.com/angular/documentation/api/pdfviewe
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import { ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -988,7 +988,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1008,13 +1008,13 @@ The [documentLoadFailed](https://ej2.syncfusion.com/angular/documentation/api/pd
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import { ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1039,7 +1039,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1058,13 +1058,13 @@ The [documentUnload](https://ej2.syncfusion.com/angular/documentation/api/pdfvie
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import { ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1090,7 +1090,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1110,13 +1110,13 @@ The [downloadEnd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import { ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1142,7 +1142,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1162,13 +1162,13 @@ The [downloadStart](https://ej2.syncfusion.com/angular/documentation/api/pdfview
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import { ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1194,7 +1194,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1214,13 +1214,13 @@ The [exportFailed](https://ej2.syncfusion.com/angular/documentation/api/pdfviewe
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import { ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1246,7 +1246,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1266,13 +1266,13 @@ The [exportStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import { ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1298,7 +1298,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1318,13 +1318,13 @@ The [exportSuccess](https://ej2.syncfusion.com/angular/documentation/api/pdfview
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import { ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1350,7 +1350,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1370,7 +1370,7 @@ The [extractTextCompleted](https://ej2.syncfusion.com/angular/documentation/api/
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1388,7 +1388,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1414,7 +1414,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1434,7 +1434,7 @@ The [hyperlinkClick](https://ej2.syncfusion.com/angular/documentation/api/pdfvie
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1452,7 +1452,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1478,7 +1478,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1498,7 +1498,7 @@ The [hyperlinkMouseOver](https://ej2.syncfusion.com/angular/documentation/api/pd
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1516,7 +1516,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1542,7 +1542,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1562,7 +1562,7 @@ The [importFailed](https://ej2.syncfusion.com/angular/documentation/api/pdfviewe
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1580,7 +1580,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1606,7 +1606,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1626,7 +1626,7 @@ The [importStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1644,7 +1644,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1670,7 +1670,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1690,7 +1690,7 @@ The [importSuccess](https://ej2.syncfusion.com/angular/documentation/api/pdfview
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1708,7 +1708,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1734,7 +1734,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1761,13 +1761,13 @@ Refer to [Keyboard interaction](./accessibility#keyboard-interaction) for detail
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component, ViewChild } from '@angular/core';
 import { PdfViewerComponent, ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1810,7 +1810,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   #pdfViewer
   id="pdfViewer"
@@ -1832,7 +1832,7 @@ The [moveSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfview
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1850,7 +1850,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1876,7 +1876,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1896,7 +1896,7 @@ The [pageChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1914,7 +1914,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1940,7 +1940,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1960,7 +1960,7 @@ The [pageClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1978,7 +1978,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2004,7 +2004,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2024,7 +2024,7 @@ The [pageMouseover](https://ej2.syncfusion.com/angular/documentation/api/pdfview
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2042,7 +2042,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2068,7 +2068,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2088,7 +2088,7 @@ The [pageOrganizerSaveAs](https://ej2.syncfusion.com/angular/documentation/api/p
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2106,7 +2106,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2132,7 +2132,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2152,7 +2152,7 @@ The [pageRenderComplete](https://ej2.syncfusion.com/angular/documentation/api/pd
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2170,7 +2170,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2196,7 +2196,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2216,7 +2216,7 @@ The [pageRenderInitiate](https://ej2.syncfusion.com/angular/documentation/api/pd
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2234,7 +2234,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2260,7 +2260,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2280,7 +2280,7 @@ The [printEnd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#p
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2298,7 +2298,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2324,7 +2324,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2344,7 +2344,7 @@ The [printStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2362,7 +2362,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2388,7 +2388,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2408,7 +2408,7 @@ The [removeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfvi
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2426,7 +2426,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2452,7 +2452,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2472,7 +2472,7 @@ The [resizeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfvi
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2490,7 +2490,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2516,7 +2516,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2536,7 +2536,7 @@ The [resourcesLoaded](https://ej2.syncfusion.com/angular/documentation/api/pdfvi
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2554,7 +2554,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2580,7 +2580,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2600,7 +2600,7 @@ The [signaturePropertiesChange](https://ej2.syncfusion.com/angular/documentation
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2618,7 +2618,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2644,7 +2644,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2664,7 +2664,7 @@ The [signatureSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfvi
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2682,7 +2682,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2708,7 +2708,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2728,7 +2728,7 @@ The [signatureUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdf
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2746,7 +2746,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2772,7 +2772,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2792,7 +2792,7 @@ The [textSearchComplete](https://ej2.syncfusion.com/angular/documentation/api/pd
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2810,7 +2810,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2836,7 +2836,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2856,7 +2856,7 @@ The [textSearchHighlight](https://ej2.syncfusion.com/angular/documentation/api/p
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2874,7 +2874,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2900,7 +2900,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2920,7 +2920,7 @@ The [textSearchStart](https://ej2.syncfusion.com/angular/documentation/api/pdfvi
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2938,7 +2938,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2964,7 +2964,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2984,7 +2984,7 @@ The [textSelectionEnd](https://ej2.syncfusion.com/angular/documentation/api/pdfv
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -3002,7 +3002,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -3028,7 +3028,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -3048,7 +3048,7 @@ The [textSelectionStart](https://ej2.syncfusion.com/angular/documentation/api/pd
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -3066,7 +3066,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -3092,7 +3092,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -3112,7 +3112,7 @@ The [thumbnailClick](https://ej2.syncfusion.com/angular/documentation/api/pdfvie
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -3130,7 +3130,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -3156,7 +3156,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"

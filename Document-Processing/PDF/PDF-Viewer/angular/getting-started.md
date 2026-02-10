@@ -190,7 +190,7 @@ ng serve --open
 The output will appear as follows.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, OnInit } from '@angular/core';
 import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
          MagnificationService, ThumbnailViewService, ToolbarService,
@@ -215,7 +215,7 @@ import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
                TextSearchService, TextSelectionService, PrintService,
                AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
 })
-export class App implements OnInit {
+export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
     public resource: string = "https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2-pdfviewer-lib";
     ngOnInit(): void {
