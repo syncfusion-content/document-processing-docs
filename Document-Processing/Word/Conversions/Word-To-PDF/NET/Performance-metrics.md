@@ -18,36 +18,86 @@ The following system configurations were used for benchmarking:
 * **Processor:** AMD Ryzen 5 7520U with Radeon Graphics  
 * **RAM:** 16GB  
 * **.NET Version:** .NET 8.0  
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v32.1.19](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/32.1.19)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v32.2.3](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/32.2.3)
 
-## Word to PDF conversion
+## Benchmark Results.
+
+The table below shows the performance results of various Word document operations, evaluated using predefined input conditions in the previously described environment. 
 
 <table>
 <tr>
-    <td><strong>Pages</strong></td>
-    <td><strong>Input Word File</strong></td>
-    <td><strong>Syncfusion<sup>&reg;</sup> Time (sec)</strong></td>
+    <th>Operation</th>
+    <th>Input Details</th>
+    <th>Syncfusion<sup>&reg;</sup> Time (sec)</th>
+    <th>GitHub Example</th>
 </tr>
 <tr>
-    <td>2</td>
-    <td>{{'[Word-2.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-PDF/.NET/Word-to-PDF/Word-to-PDF/Data/Document-2.docx)'| markdownify }}</td>
-    <td>0.3</td>
+    <td>[Word to PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf)</td>
+    <td>100 pages</td>
+    <td>5.45</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Word-to-PDF/)'| markdownify }}</td>    
 </tr>
 <tr>
-    <td>50</td>
-    <td>{{'[Word-50.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-PDF/.NET/Word-to-PDF/Word-to-PDF/Data/Document-50.docx)'| markdownify }}</td>
-    <td>4.2</td>
+    <td>[Accessible PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#accessible-pdf-document)</td>
+    <td>2 pages</td>
+    <td>1.1</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Accessible-PDF/)'| markdownify }}</td>
 </tr>
 <tr>
-    <td>100</td>
-    <td>{{'[Word-100.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-PDF/.NET/Word-to-PDF/Word-to-PDF/Data/Document-100.docx)'| markdownify }}</td>
-    <td>5.2</td>
+    <td>[Comments](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#comments-in-word-to-pdf-conversion)</td>
+    <td>2 pages</td>
+    <td>1.1</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Comments/)'| markdownify }}</td>
 </tr>
 <tr>
-    <td>500</td>
-    <td>{{'[Word-500.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-PDF/.NET/Word-to-PDF/Word-to-PDF/Data/Document-500.docx)'| markdownify }}</td>
-    <td>15.8</td>
+    <td>[Embed fonts in PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf#embedding-fonts)</td>
+    <td>2 pages</td>
+    <td>0.98</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Embed-fonts-in-PDF/)'| markdownify }}</td>
+</tr>
+<tr>
+    <td>[Export bookmarks](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#word-document-headings-to-pdf-bookmarks)</td>
+    <td>2 pages</td>
+    <td>0.92</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Export-Bookmarks/)'| markdownify }}</td>
+</tr>
+<tr>
+    <td>[Fallback font](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf)</td>
+    <td>1 page</td>
+    <td>0.79</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Fallback-Font-PDF/)'| markdownify }}</td>
+</tr>
+<tr>
+    <td>[Font-Substitution](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf)</td>
+    <td>2 pages</td>
+    <td>0.89</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Font-substitution-PDF/)'| markdownify }}</td>
+</tr>
+<tr>
+    <td>[PDF Conformance Level](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#pdf-conformance-level)</td>
+    <td>2 pages</td>
+    <td>0.92</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/PDF-Conformance-Level/)'| markdownify }}</td>
+</tr>
+<tr>
+    <td>[Preserve Form Fields](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#word-document-form-field-to-pdf-form-field)</td>
+    <td>1 page</td>
+    <td>0.79</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Preserve-Form-Fields/)'| markdownify }}</td>
+</tr>
+<tr>
+    <td>[Track changes](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#track-changes-in-word-to-pdf-conversion)</td>
+    <td>1 page</td>
+    <td>0.91</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Track%20changes/)'| markdownify }}</td>
+</tr>
+<tr>
+    <td>Use embedded word fonts</td>
+    <td>2 pages</td>
+    <td>1.16</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Use-embeded-word-font-PDF/)'| markdownify }}</td>
 </tr>
 </table>
 
-You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Word-to-PDF).
+N> Execution times are based on the sample documents and may vary with different content or environments.
+
