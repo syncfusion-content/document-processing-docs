@@ -15,7 +15,7 @@ documentation: ug
 <<<<<<<< HEAD:Document-Processing/PDF/PDF-Viewer/asp-net-core/annotation/signature-annotation.md
 # Handwritten Signature Annotation
 ========
-# Handwritten Signature in EJ2 ASP.NET CORE PDF Viewer
+## Handwritten Signature in EJ2 ASP.NET CORE PDF Viewer
 >>>>>>>> remotes/origin/hotfix/hotfix-v31.2.2:Document-Processing/PDF/PDF-Viewer/asp-net-core/hand-written-signature.md
 
 The PDF Viewer supports adding handwritten signatures to PDF documents. Handwritten signatures reduce paperwork during reviews and provide a simple way to verify documents digitally.
