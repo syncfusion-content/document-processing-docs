@@ -45,6 +45,7 @@ The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are liste
 * [Add custom fonts to the PDF Viewer using the PDF document](./how-to/custom-fonts)
 * [Create a Standalone PDF Viewer in Angular 17 and above with --no-standalone flag](./how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-with-no-standalone-flag)
 * [Create a Standalone PDF Viewer in Angular 17 and above without --no-standalone flag](./how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-without-no-standalone-flag)
+* [Create a Standalone PDF Viewer in Angular 12](./how-to/create-a-standalone-pdf-viewer-in-angular-12)
 * [Configure Annotation Selector Setting](./how-to/configure-annotation-selector-setting)
 * [Convert Pdf Library Bounds to Pdf viewer bounds](./how-to/convert-pdf-library-bounds-to-pdf-viewer-bounds)
 * [Display Custom Stamp items in Custom Stamp](./how-to/show-custom-stamp-item)
