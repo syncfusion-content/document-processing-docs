@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Primary Toolbar Customization in React PDF Viewer Component | Syncfusion
+title: Primary Toolbar Customization in React PDF Viewer | Syncfusion
 description: Learn here all about primary toolbar customization in Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
@@ -8,18 +8,18 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Primary Toolbar Customization in PDF Viewer Component
+# Primary Toolbar Customization in React PDF Viewer
 
 The primary toolbar of the PDF Viewer can be customized by rearranging existing items, disabling default items, and adding custom items. New items can be placed at specific index positions among the existing items.
 
 ## Show or hide the primary toolbar
 
-Toggle the built-in primary toolbar to create custom toolbar experiences or simplify the UI. In scenarios where a custom toolbar is required, the built-in toolbar can be hidden. Use the [enableToolbar](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pdfViewerModel/#enabletoolbar) property or the [showToolbar](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar/#showtoolbar) method to show or hide the primary toolbar.
+Toggle the built-in primary toolbar to create custom toolbar experiences or simplify the UI. In scenarios where a custom toolbar is required, the built-in toolbar can be hidden. Use the [enableToolbar](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pdfViewerModel#enabletoolbar) property or the [showToolbar](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar#showtoolbar) method to show or hide the primary toolbar.
 
 Show or hide the toolbar using the `enableToolbar` property:
 
 {% tabs %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 import React, { useRef } from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -83,7 +83,7 @@ export default App;
 The following code snippet explains how to show or hide the toolbar using the `showToolbar` method.
 
 {% tabs %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 import React, { useEffect, useRef } from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
 

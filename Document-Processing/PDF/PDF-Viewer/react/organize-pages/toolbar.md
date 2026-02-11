@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Organize Page Toolbar Customization in React PDF Viewer control | Syncfusion
+title: Organize Page Toolbar Customization in React | Syncfusion
 description: Learn here all about Organize Page Toolbar Customization in Syncfusion React PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
@@ -18,6 +18,7 @@ The `canInsert` property controls the visibility of the insert tool. When set to
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
+{% raw %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -42,21 +43,23 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
+{% raw %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  lwt pdfviewer;
+  let pdfviewer;
   return (
     <PdfViewerComponent
       id="PdfViewer"
       ref={(scope) => { pdfviewer = scope; }}
-      serviceUrl='https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      serviceUrl='https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
       pageOrganizerSettings={{ canInsert: false }}
       style={{ height: '640px' }}
     >
@@ -68,6 +71,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -77,6 +81,7 @@ The `canDelete` property controls the visibility of the delete tool. When set to
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
+{% raw %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -101,8 +106,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
+{% raw %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -127,6 +134,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -136,6 +144,7 @@ The `canRotate` property controls the visibility of the rotate tool. When set to
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
+{% raw %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -160,8 +169,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
+{% raw %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -186,6 +197,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -19,25 +19,25 @@ The following table describes the supported file formats and their conversions i
 </tr>
 <tr>
 <th>
-{{'[DOC](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-binary-97-2003-format)'| markdownify }}
+DOC
 </th>
 <th>
-{{'[DOCX](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#doc-to-docx-and-docx-to-doc)'| markdownify }}
+{{'[DOCX](https://help.syncfusion.com/document-processing/word/word-library/net/open-and-save-word-document-in-console-application#open-and-save-word-document-using-net-core-and-latest)'| markdownify }}
 </th>
 <th>
-{{'[Word Processing XML (2007)](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-open-xml-formats-2007--later)'| markdownify }}
+{{'[Word Processing XML (2007)]()'| markdownify }}
 </th>
 <th>
-{{'[DOT](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#templates)'| markdownify }}
+DOT
 </th>
 <th>
-{{'[DOTX](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#templates)'| markdownify }}
+DOTX
 </th>
 <th>
-{{'[DOCM](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#macros)'| markdownify }}
+DOCM
 </th>
 <th>
-{{'[DOTM](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#macros)'| markdownify }}
+DOTM
 </th>
 <th>
 {{'[ODT](https://help.syncfusion.com/document-processing/word/word-library/net/word-to-odt)'| markdownify }}
@@ -62,7 +62,7 @@ The following table describes the supported file formats and their conversions i
 </th>
 </tr>
 <tr>
-<th>{{'[DOC](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-binary-97-2003-format)'| markdownify }}</th>
+<th>DOC</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -79,7 +79,7 @@ The following table describes the supported file formats and their conversions i
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[DOCX](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#doc-to-docx-and-docx-to-doc)'| markdownify }}</th>
+<th>{{'[DOCX](https://help.syncfusion.com/document-processing/word/word-library/net/open-and-save-word-document-in-console-application#open-and-save-word-document-using-net-core-and-latest)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -96,7 +96,7 @@ The following table describes the supported file formats and their conversions i
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[Word Processing XML (2003)](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-processing-xml-xml)'| markdownify }}</th>
+<th>Word Processing XML (2003)</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -113,7 +113,7 @@ The following table describes the supported file formats and their conversions i
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[Word Processing XML (2007)](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-open-xml-formats-2007--later)'| markdownify }}</th>
+<th>{{'[Word Processing XML (2007)]()'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -130,7 +130,7 @@ The following table describes the supported file formats and their conversions i
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[DOT](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#templates)'| markdownify }}</th>
+<th>DOT</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -147,7 +147,7 @@ The following table describes the supported file formats and their conversions i
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[DOTX](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#templates)'| markdownify }}</th>
+<th>DOTX</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -164,7 +164,7 @@ The following table describes the supported file formats and their conversions i
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[DOCM](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#macros)'| markdownify }}</th>
+<th>DOCM</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -181,7 +181,7 @@ The following table describes the supported file formats and their conversions i
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[DOTM](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#macros)'| markdownify }}</th>
+<th>DOTM</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
