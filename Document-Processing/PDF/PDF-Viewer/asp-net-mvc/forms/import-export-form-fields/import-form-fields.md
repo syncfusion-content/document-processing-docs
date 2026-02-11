@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Import form data in MVC PDF Viewer | Syncfusion
-description: Learn how to import PDF form field data (FDF, XFDF, JSON) using the Syncfusion MVC PDF Viewer.
+description:  Learn how to import PDF form field data (FDF, XFDF, JSON) using the Syncfusion ASP.NET MVC PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-## Import PDF Form Data into MVC PDF Viewer
+# Import PDF Form Data into MVC PDF Viewer
 
 The **PDF Viewer** lets you import values into interactive form fields in the currently loaded PDF. You can import data from these formats:
 
@@ -16,7 +16,7 @@ The **PDF Viewer** lets you import values into interactive form fields in the cu
 - [JSON](#import-json)
 
 ## API to use
-- [importFormFields](https://help.syncfusion.com/aspnetmvc/pdf-viewer/api/pdfviewer#importformfields)(sourceOrObject, format)
+- [importFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importformfields)(sourceOrObject, format)
 
 Note: If you’re using a **server-backed viewer**, include `.ServiceUrl(...)` in the helper so the viewer can access server APIs during import/export.
 

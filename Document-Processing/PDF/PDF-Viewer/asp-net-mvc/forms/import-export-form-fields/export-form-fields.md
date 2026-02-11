@@ -18,13 +18,13 @@ The PDF Viewer allows you to export form field data in multiple formats for easy
 
 ## Available methods
 
-- [exportFormFields](https://help.syncfusion.com/aspnetmvc/pdf-viewer/api/pdfviewer#exportformfields)(destination?, format) — Exports data to a file in the specified format.
-- [exportFormFieldsAsObject](https://help.syncfusion.com/aspnetmvc/pdf-viewer/api/pdfviewer#exportformfieldsasobject)(format) — Exports data as a JavaScript object for custom handling.
-- [importFormFields](https://help.syncfusion.com/aspnetmvc/pdf-viewer/api/pdfviewer#importformfields)(sourceOrObject, format) — Import data back into the PDF.
+- [exportFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportformfields)(destination?, format) — Exports data to a file in the specified format.
+- [exportFormFieldsAsObject](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportformfieldsasobject)(format) — Exports data as a JavaScript object for custom handling.
+- [importFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importformfields)(sourceOrObject, format) — Import data back into the PDF.
 
 ## How to export
 
-Use [exportFormFields()](https://help.syncfusion.com/aspnetmvc/pdf-viewer/api/pdfviewer#exportformfields) with an optional destination path and the format type.
+Use [exportFormFields()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportformfields) with an optional destination path and the format type.
 
 ### Export as FDF
 The following example exports form field data as FDF.
@@ -93,7 +93,7 @@ The following example exports form field data as JSON.
 
 ### Export as Object
 
-Use [exportFormFieldsAsObject()](https://help.syncfusion.com/aspnetmvc/pdf-viewer/api/pdfviewer#exportformfieldsasobject) to obtain form data as a JavaScript object for database or API integration.
+Use [exportFormFieldsAsObject()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportformfieldsasobject) to obtain form data as a JavaScript object for database or API integration.
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div style="width:100%;height:600px">
@@ -126,7 +126,7 @@ Use [exportFormFieldsAsObject()](https://help.syncfusion.com/aspnetmvc/pdf-viewe
 - Export as JSON for REST API integration.
 - Export as FDF/XFDF for compatibility with other PDF tools.
 - Export as Object to merge with app state or store securely.
-- Automate exports after [validation](../form-validation) using [validateFormFields()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#validateformfields)
+- Automate exports after [validation](../form-validation) using [validateFormFields()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields)
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples)
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Designer and Toolbar Customization in MVC | Syncfusion
-description: Learn here all about form designer and toolbar in Syncfusion MVC PDF Viewer and more.
+description: Learn here all about form designer and toolbar in Syncfusion MVC PDF Viewer of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

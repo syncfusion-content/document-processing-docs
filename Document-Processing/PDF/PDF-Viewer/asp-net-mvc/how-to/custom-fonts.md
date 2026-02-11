@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Add Custom Fonts to PDF Forms in MVC PDF Viewer
+# Add Custom Fonts to PDF Forms in MVC PDF Viewer
 
 The Syncfusion **MVC PDF Viewer** supports loading, editing, and saving **custom fonts** in form fields such as [TextBox](../forms/manage-form-fields/create-form-fields#textbox), [ListBox](../forms/manage-form-fields/create-form-fields#listbox), and [DropDown](../forms/manage-form-fields/create-form-fields#dropdown) fields using the customFonts property. This ensures consistent text rendering even when the required fonts are not installed on the user’s system.
 Custom fonts are embedded and preserved when form fields are modified or saved, making the PDF display correctly across environments.
