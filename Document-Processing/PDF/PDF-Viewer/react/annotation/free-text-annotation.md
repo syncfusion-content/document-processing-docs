@@ -103,7 +103,7 @@ root.render(<App />);
 
 ## Add a free-text annotation programmatically
 
-You can add a free-text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#annotation) method.
+You can add a free-text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#annotation) method.
 
 Example: add a free-text annotation using `addAnnotation()`.
 

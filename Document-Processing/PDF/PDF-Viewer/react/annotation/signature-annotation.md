@@ -178,7 +178,7 @@ root.render(<App />);
 
 ## Add a handwritten signature programmatically to the PDF document
 
-The PDF Viewer API supports programmatic creation of handwritten signatures via the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer API supports programmatic creation of handwritten signatures via the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#addannotation) method.
 
 The examples below demonstrate how to add handwritten signatures programmatically using `addAnnotation()`.
 

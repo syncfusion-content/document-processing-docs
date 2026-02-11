@@ -105,7 +105,7 @@ root.render(<App />);
 
 ## Add an ink annotation programmatically to the PDF document
 
-The PDF Viewer library allows adding an ink annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library allows adding an ink annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#annotation) method.
 
 The following examples demonstrate how to add an ink annotation programmatically using `addAnnotation()`.
 

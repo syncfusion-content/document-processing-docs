@@ -27,7 +27,7 @@ Annotation comments are added using the comment panel.
 
 ## Add a sticky note annotation to the PDF document programmatically
 
-Use the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#annotation) method to add a sticky note annotation programmatically.
+Use the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#annotation) method to add a sticky note annotation programmatically.
 
 The following example demonstrates using `addAnnotation()` to create a sticky note annotation.
 

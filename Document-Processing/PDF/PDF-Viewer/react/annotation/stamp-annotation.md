@@ -142,7 +142,7 @@ Only JPG and JPEG image formats are supported for custom stamp annotations.
 
 ## Add a stamp annotation programmatically
 
-Use the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#annotation) method to add stamp annotations programmatically.
+Use the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#annotation) method to add stamp annotations programmatically.
 
 The examples below demonstrate using `addAnnotation()` to create stamp annotations.
 

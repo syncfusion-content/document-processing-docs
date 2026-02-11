@@ -203,7 +203,7 @@ root.render(<App />);
 
 ## Highlight text programmatically
 
-Programmatically add highlights using the [addAnnotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add highlights using the [addAnnotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -476,7 +476,7 @@ root.render(<App />);
 
 ## Underline text programmatically
 
-Programmatically add underlines using the [addAnnotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add underlines using the [addAnnotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -754,7 +754,7 @@ root.render(<App />);
 
 ## Strikethrough text programmatically
 
-Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -1032,7 +1032,7 @@ root.render(<App />);
 
 ## Add squiggly to text programmatically
 
-Programmatically add squiggly using the [addAnnotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add squiggly using the [addAnnotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 

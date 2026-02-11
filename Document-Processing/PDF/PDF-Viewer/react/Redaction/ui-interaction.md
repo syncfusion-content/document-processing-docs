@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redaction UI interactions in React PDF Viewer | Syncfusion
-description: Learn about UI interactions in Redaction annotations of the Syncfusion React PDF Viewer component.
+description: Learn about UI interactions like add, edit and modify in Redaction annotations of the Syncfusion React PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
