@@ -10,7 +10,7 @@ documentation: ug
 # Create, Edit, Style, and Remove Form Fields in MVC PDF Viewer
 
 The [MVC PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/overview) allows you to create interactive PDF form fields, update their behavior and appearance, and remove them when they are no longer needed.
-All form field operations can be performed using either the [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/pdfviewer/formdesigner#/tailwind3) or [MVC APIs.](https://helpstaging.syncfusion.com:14038/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html)
+All form field operations can be performed using either the [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/pdfviewer/formdesigner#/tailwind3) or [MVC APIs.](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html)
 
 This section explains how to:
 

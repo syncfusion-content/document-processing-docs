@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Import/Export events in MVC PDF Viewer | Syncfusion
-description: Learn how to handle Import/Export events for PDF form fields in the Syncfusion MVC PDF Viewer.
+description: Learn how to handle Import/Export events for PDF form fields in the Syncfusion ASP.NET MVC PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-## PDF Form Import and Export Events in MVC
+# PDF Form Import and Export Events in MVC
 
 Import/Export events let you **track and customize the entire life cycle** of form data being imported into or exported from the PDF Viewer.
 Use these events to:
