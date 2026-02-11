@@ -29,9 +29,15 @@ This guide explains how to integrate the ASP.NET Core PDF Viewer control into an
 
 ## ASP.NET Core PDF Viewer NuGet package installation
 
-To add the ASP.NET Core PDF Viewer control, install the following NuGet package in the ASP.NET Core application:
+To add `ASP.NET Core` controls in the application, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/) and then install it. Alternatively, you can utilize the following package manager command to achieve the same.
 
-* [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/)
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.EJ2.AspNet.Core -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Tag Helper
 
