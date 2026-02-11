@@ -13,7 +13,7 @@ The Syncfusion PDF Viewer delivers a complete, easy-to-use PDF forms experience.
 
 The viewer also includes smooth import and export support for form data, making integration effortless. Developers benefit from extensive API control, while end users enjoy a clean and simple interface designed for a seamless and stress-free form-filling experience.
 
-Check the following video to learn how to work with form Designer in React PDF Viewer.
+Check out the following video to learn how to use the Form Fields in the React PDF Viewer.
 {% youtube "https://www.youtube.com/watch?v=MUWTCg1MoAE" %}
 
 ## Filling PDF Forms

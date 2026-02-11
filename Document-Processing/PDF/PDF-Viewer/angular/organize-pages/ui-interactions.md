@@ -12,9 +12,6 @@ domainurl: ##DomainURL##
 
 The PDF Viewer provides an intuitive user interface for managing and organizing pages within a PDF document. This section covers the various UI interactions available in the `Organize Pages` dialog.
 
-Check the following video to learn how to organize pages in PDF Document in React PDF Viewer.
-{% youtube "https://www.youtube.com/watch?v=08kPdR0AZQk" %}
-
 ## Rotating PDF pages
 
 You can adjust the orientation of pages to ensure proper alignment. The rotate icon in the Organize Pages dialog provides the following options:

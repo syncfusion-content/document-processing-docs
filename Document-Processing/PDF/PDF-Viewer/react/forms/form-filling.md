@@ -24,9 +24,6 @@ The Syncfusion PDF Viewer supports three types of form-filling:
 
     The PDF Viewer allows you to import form field data into an existing PDF document. This enables pre filled forms using external data sources.
 
-Check the following video to learn how to work with form filling in React PDF Viewer.
-{% youtube "https://www.youtube.com/watch?v=MUWTCg1MoAE" %}
-
 ## Fill PDF forms programmatically 
 
 You can update the values of PDF form fields programmatically using the [updateFormFieldsValue](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfieldsvalue) API. This method allows you to set or modify form field values dynamically based on application logic, without user interaction.
