@@ -14,6 +14,9 @@ The Angular PDF Viewer component includes an Organize pages panel for preparing 
 
 To open the Organize pages panel, load an editable document, ensure that the Organize Pages toolbar item is enabled, and select **Organize Pages** from the left vertical toolbar. The document must allow page-level edits (for example, it must not be password-protected or restricted); otherwise, the toolbar item is hidden.
 
+Check out the following video to learn how to organize pages in a PDF document with the React PDF Viewer.
+{% youtube "https://www.youtube.com/watch?v=08kPdR0AZQk" %}
+
 The Organize pages panel supports the following actions:
 
 * **Rotate pages**: Fix page orientation in 90-degree increments to correct scanned pages.
