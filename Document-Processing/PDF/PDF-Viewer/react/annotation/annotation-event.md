@@ -112,11 +112,11 @@ export default App;
 
 ### annotationDoubleClick
 
-The [annotationDoubleClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#annotationdoubleclickevent) event is triggered when an annotation is double-clicked.
+The [annotationDoubleClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationdoubleclickevent) event is triggered when an annotation is double-clicked.
 
 #### Event Arguments
 
-For event data, see [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationDoubleClickEventArgs/).
+For event data, see [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationDoubleClickEventArgs).
 
 The following example illustrates how to handle the `annotationDoubleClick` event.
 
@@ -187,11 +187,11 @@ export default App;
 
 ### annotationMouseLeave
 
-The [annotationMouseLeave](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#annotationmouseleaveevent) event is triggered when the user's mouse pointer moves away from an annotation object.
+The [annotationMouseLeave](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotationmouseleave) event is triggered when the user's mouse pointer moves away from an annotation object.
 
 #### Event Arguments
 
-For event data, see [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationMouseLeaveEventArgs/).
+For event data, see [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationMouseLeaveEventArgs).
 
 The following example illustrates how to handle the `annotationMouseLeave` event.
 
@@ -262,11 +262,11 @@ export default App;
 
 ### annotationMouseover
 
-The [annotationMouseover](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#annotationmouseoverevent) event is triggered when the mouse is moved over an annotation object.
+The [annotationMouseover](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationmouseoverevent) event is triggered when the mouse is moved over an annotation object.
 
 #### Event Arguments
 
-For event data, see [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationMouseOverEventArgs/).
+For event data, see [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationMouseOverEventArgs).
 
 The following example illustrates how to handle the `annotationMouseover` event.
 
@@ -337,11 +337,11 @@ export default App;
 
 ### annotationMove
 
-The [annotationMove](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#annotationmoveevent) event is triggered when an annotation is moved over the page of the PDF document.
+The [annotationMove](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationmoveevent) event is triggered when an annotation is moved over the page of the PDF document.
 
 #### Event Arguments
 
-For event data, see [AnnotationMoveEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationMoveEventArgs/).
+For event data, see [AnnotationMoveEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationMoveEventArgs).
 
 The following example illustrates how to handle the `annotationMove` event.
 
@@ -412,11 +412,11 @@ export default App;
 
 ### annotationMoving
 
-The [annotationMoving](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#annotationmovingevent) event is triggered while an annotation is being moved.
+The [annotationMoving](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationmovingevent) event is triggered while an annotation is being moved.
 
 #### Event Arguments
 
-For event data, see [AnnotationMovingEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationMovingEventArgs/).
+For event data, see [AnnotationMovingEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationMovingEventArgs).
 
 The following example illustrates how to handle the `annotationMoving` event.
 
@@ -487,11 +487,11 @@ export default App;
 
 ### annotationPropertiesChange
 
-The [annotationPropertiesChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#annotationpropertieschangeevent) event is triggered when an annotation's property is modified on a PDF document page.
+The [annotationPropertiesChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationpropertieschangeevent) event is triggered when an annotation's property is modified on a PDF document page.
 
 #### Event Arguments
 
-For event data, see [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationPropertiesChangeEventArgs/). It provides properties such as `annotationId`, `pageNumber`, and `action`.
+For event data, see [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationPropertiesChangeEventArgs). It provides properties such as `annotationId`, `pageNumber`, and `action`.
 
 The following example illustrates how to handle the `annotationPropertiesChange` event.
 
@@ -563,11 +563,11 @@ export default App;
 
 ### annotationRemove
 
-The [annotationRemove](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#annotationremoveevent) event is triggered when an annotation is removed from a PDF document's page.
+The [annotationRemove](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationremoveevent) event is triggered when an annotation is removed from a PDF document's page.
 
 #### Event Arguments
 
-For event data, see [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationRemoveEventArgs/). It provides properties such as `annotationId` and `pageNumber`.
+For event data, see [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationRemoveEventArgs). It provides properties such as `annotationId` and `pageNumber`.
 
 The following example illustrates how to handle the `annotationRemove` event.
 
@@ -638,11 +638,11 @@ export default App;
 
 ### annotationResize
 
-The [annotationResize](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#annotationresizeevent) event is triggered when an annotation is resized on a PDF document page.
+The [annotationResize](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationresizeevent) event is triggered when an annotation is resized on a PDF document page.
 
 #### Event Arguments
 
-For event data, see [AnnotationResizeEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationResizeEventArgs/).
+For event data, see [AnnotationResizeEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationResizeEventArgs).
 
 The following example illustrates how to handle the `annotationResize` event.
 
@@ -713,11 +713,11 @@ export default App;
 
 ### annotationSelect
 
-The [annotationSelect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#annotationselectevent) event is triggered when an annotation is selected on a PDF document's page.
+The [annotationSelect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationselectevent) event is triggered when an annotation is selected on a PDF document's page.
 
 #### Event Arguments
 
-For event data, see [AnnotationSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectEventArgs/).
+For event data, see [AnnotationSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectEventArgs).
 
 The following example illustrates how to handle the `annotationSelect` event.
 
@@ -788,11 +788,11 @@ export default App;
 
 ### annotationUnselect
 
-The [annotationUnselect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#annotationunselectevent) event is triggered when an annotation is unselected from the PDF document's page.
+The [annotationUnselect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationunselectevent) event is triggered when an annotation is unselected from the PDF document's page.
 
 #### Event Arguments
 
-For event data, see [AnnotationUnSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationUnSelectEventArgs/).
+For event data, see [AnnotationUnSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationUnSelectEventArgs).
 
 The following example illustrates how to handle the `annotationUnselect` event.
 
@@ -863,11 +863,11 @@ export default App;
 
 ### beforeAddFreeText
 
-The [beforeAddFreeText](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#beforeaddfreetextevent) event is triggered before adding a text in the freeText annotation.
+The [beforeAddFreeText](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#beforeaddfreetextevent) event is triggered before adding a text in the freeText annotation.
 
 #### Event Arguments
 
-For event data, see [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/beforeAddFreeTextEventArgs/).
+For event data, see [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/beforeAddFreeTextEventArgs).
 
 The following example illustrates how to handle the `beforeAddFreeText` event.
 
@@ -942,11 +942,11 @@ export default App;
 
 ### addSignature
 
-The [addSignature](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#addsignatureevent) event is triggered when a signature is added to a page of a PDF document.
+The [addSignature](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#addsignatureevent) event is triggered when a signature is added to a page of a PDF document.
 
 #### Event Arguments
 
-For event data, see [AddSignatureEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/addSignatureEventArgs/). It provides properties such as `pageNumber`.
+For event data, see [AddSignatureEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/addSignatureEventArgs). It provides properties such as `pageNumber`.
 
 The following example illustrates how to handle the `addSignature` event.
 
@@ -1017,11 +1017,11 @@ export default App;
 
 ### removeSignature
 
-The [removeSignature](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#removesignatureevent) event is triggered when the signature is removed from the page of a PDF document.
+The [removeSignature](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#removesignatureevent) event is triggered when the signature is removed from the page of a PDF document.
 
 #### Event Arguments
 
-For event data, see [RemoveSignatureEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/removeSignatureEventArgs/). It provides properties such as `pageNumber`.
+For event data, see [RemoveSignatureEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/removeSignatureEventArgs). It provides properties such as `pageNumber`.
 
 The following example illustrates how to handle the `removeSignature` event.
 
@@ -1092,11 +1092,11 @@ export default App;
 
 ### resizeSignature
 
-The [resizeSignature](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#resizesignatureevent) event is triggered when the signature is resized and placed on a page of a PDF document.
+The [resizeSignature](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resizesignatureevent) event is triggered when the signature is resized and placed on a page of a PDF document.
 
 #### Event Arguments
 
-For event data, see [ResizeSignatureEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/resizeSignatureEventArgs/).
+For event data, see [ResizeSignatureEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/resizeSignatureEventArgs).
 
 The following example illustrates how to handle the `resizeSignature` event.
 
@@ -1167,11 +1167,11 @@ export default App;
 
 ### signaturePropertiesChange
 
-The [signaturePropertiesChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#signaturepropertieschangeevent) event is triggered when the property of the signature is changed in the page of the PDF document.
+The [signaturePropertiesChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#signaturepropertieschangeevent) event is triggered when the property of the signature is changed in the page of the PDF document.
 
 #### Event Arguments
 
-For event data, see [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs/).
+For event data, see [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs).
 
 The following example illustrates how to handle the `signaturePropertiesChange` event.
 
@@ -1242,11 +1242,11 @@ export default App;
 
 ### signatureSelect
 
-The [signatureSelect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#signatureselectevent) event is triggered when signature is selected over the page of the PDF document.
+The [signatureSelect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#signatureselectevent) event is triggered when signature is selected over the page of the PDF document.
 
 #### Event Arguments
 
-For event data, see [SignatureSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/signatureSelectEventArgs/).
+For event data, see [SignatureSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/signatureSelectEventArgs).
 
 The following example illustrates how to handle the `signatureSelect` event.
 
@@ -1317,11 +1317,11 @@ export default App;
 
 ### signatureUnselect
 
-The [signatureUnselect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#signatureunselectevent) event is triggered when signature is unselected over the page of the PDF document.
+The [signatureUnselect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#signatureunselectevent) event is triggered when signature is unselected over the page of the PDF document.
 
 #### Event Arguments
 
-For event data, see [SignatureUnSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/signatureUnSelectEventArgs/).
+For event data, see [SignatureUnSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/signatureUnSelectEventArgs).
 
 The following example illustrates how to handle the `signatureUnselect` event.
 
