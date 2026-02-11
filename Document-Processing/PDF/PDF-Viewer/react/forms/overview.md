@@ -13,6 +13,9 @@ The Syncfusion React PDF Viewer delivers a complete, easy-to-use PDF forms exper
 
 The viewer includes import and export support for form data, simplifying integration with backend systems. Developers have fine-grained API control while end users interact with a streamlined form-filling interface.
 
+Check out the following video to learn how to use the Form Fields in the React PDF Viewer.
+{% youtube "https://www.youtube.com/watch?v=MUWTCg1MoAE" %}
+
 ## Filling PDF Forms
 
 Experience effortless PDF form filling through a clean, intuitive UI or automated workflows using powerful APIs. Flexible form data import and export support ensures smooth and efficient operations when working with PDF forms.
