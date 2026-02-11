@@ -83,4 +83,3 @@ export class AppComponent {
 {% endtabs %}
 
 See the sample [how to add custom headers in AjaxRequestSettings](https://stackblitz.com/edit/angular-pfdpfdzq-o4b3dlur?file=src%2Fapp.component.html,src%2Fapp.component.ts,node_modules%2F%40syncfusion%2Fej2-pdfviewer%2Fsrc%2Fpdfviewer%2Fpdfviewer-model.d.ts,src%2Findex.html)
-Notes

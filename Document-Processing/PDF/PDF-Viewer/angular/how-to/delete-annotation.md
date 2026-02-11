@@ -32,4 +32,4 @@ deleteAnnotationbyId() {
 }
 ```
 
-Find the StackBlitz sample demonstrating this flow here: https://stackblitz.com/edit/angular-pfuexf?file=app.component.ts
+Find the sample [how to delete a specific annotation using deleteAnnotationById](https://stackblitz.com/edit/angular-pfuexf?file=app.component.ts)

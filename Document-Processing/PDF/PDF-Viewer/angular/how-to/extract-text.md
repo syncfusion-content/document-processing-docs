@@ -12,20 +12,20 @@ domainurl: ##DomainURL##
 
 The `extractText` method retrieves text content and, optionally, positional data for elements on one or more pages. It returns a Promise that resolves to an object containing extracted `textData` (detailed items with bounds) and `pageText` (concatenated plain text).
 
-Parameters overview:
+**Parameters overview:**
 
 - `startIndex` — Starting page index (0-based).
 - `endIndex` or options — Either the ending page index for a range extraction, or an options object specifying extraction criteria for a single page.
 - `options` (optional) — Extraction options such as `TextOnly` or `TextAndBounds` to control whether bounds are included.
 
-Returned object shape (example):
+**Returned object shape (example):**
 
 - `textData` — Array of objects describing extracted text items, including bounds and page-level text.
 - `pageText` — Concatenated plain text for the specified page(s).
 
-Usage notes:
+### Usage of extractText in Syncfusion PDF Viewer Control
 
-- The sample code in the repository demonstrates both single-page and range extraction; inspect returned objects to handle text and bounds as required.
+Here is an example that demonstrates how to use the extractText method:
 
 ```ts
 import { Component, OnInit } from '@angular/core';

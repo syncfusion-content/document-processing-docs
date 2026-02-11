@@ -211,7 +211,7 @@ export class AppComponent implements OnInit {
 
 The Print option is not available in mobile mode by default. Enabling the desktop toolbar on mobile via `enableDesktopMode` makes the Print option available.
 
-How to use Print on mobile:
+### How to use Print on mobile:
 
 - Set `enableDesktopMode` to true to load the desktop toolbar on mobile.
 - After enabling desktop mode, the Print option appears in the toolbar and can be used to print the document from the mobile device.

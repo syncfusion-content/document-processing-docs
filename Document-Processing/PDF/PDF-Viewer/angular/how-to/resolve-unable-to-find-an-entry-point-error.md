@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Resolve "Unable to find an entry point named FPDFText_GetCharAngle" error
 
-This error commonly occurs when the web service attempts to load a native Pdfium binary that is missing, incompatible, or from an older Pdfium build. The symptom is often a failing web service (for example, the service does not respond) and an error visible in the browser Network tab. Typical native Pdfium filenames by platform are:
+From the release of version **21.1.0.35 (2023 Volume 1)** of Essential Studio<sup style="font-size:70%">&reg;</sup>, the Pdfium package has been upgraded to improve various functionalities like text search, text selection, rendering, and even performance. If you are updating your project to this version of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, you may encounter the **"Web-Service is not listening"** error. The Network tab can help you identify the root cause of the issue, which is typically caused by an old version of pdfium assembly being referenced in the local web service project. Below are the assemblies to be referred to in the respective operating systems.
 
 - Windows: `pdfium.dll`
 - Linux: `libpdfium.so`
 - macOS: `libpdfium.dylib`
 
-Root causes to check first:
+## To solve this issue, you should follow the below steps
 
 - An outdated or mismatched native Pdfium binary deployed with the web service (different version or built for a different architecture).
 - A missing native library in the published output.

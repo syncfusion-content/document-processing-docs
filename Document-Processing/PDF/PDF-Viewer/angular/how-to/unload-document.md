@@ -12,7 +12,11 @@ domainurl: ##DomainURL##
 
 The PDF Viewer provides the [unload()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#unload) method to remove the currently loaded PDF from the viewer instance. Use this API to free memory or reset the viewer when navigating between documents or closing the viewer.
 
-Example:
+The following steps are used to unload the PDF document programmatically.
+
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
+
+**Step 2:** Add the following code snippet to perform the unload operation.
 
 ```html
  <button (click)="unload()">Unload Document</button>

@@ -41,5 +41,6 @@ public signatureUnselect(args: any): void {
   console.log('Signature unselected:', args);
 }
 ```
+The [signatureSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signatureSelectEventArgs/) and [signatureUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signatureUnselectEventArgs/) events in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer offer robust options for managing the state of handwritten signatures within your application. By handling these events, developers can create a more interactive and dynamic user experience, responding programmatically to signature selection and unselection.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples)

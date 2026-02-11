@@ -46,6 +46,6 @@ load_2() {
 }
 ```
 
-Find the sample: how to load a PDF document dynamically on StackBlitz
+Find the Sample, [how to load the PDF document dynamically](https://stackblitz.com/edit/angular-btme9m-7nzzyd?devtoolsheight=33&file=app.component.ts)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20at%20runtime%20from%20base64%20string%20or%20filename)
