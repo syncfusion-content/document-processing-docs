@@ -195,7 +195,7 @@ export default {
 
 ## Add an Ink annotation programmatically to the PDF document Programmatically
 
-The PDF Viewer library allows adding an ink annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library allows adding an ink annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here is an example of adding an ink annotation programmatically using addAnnotation():
 

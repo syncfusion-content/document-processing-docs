@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print in Vue PDF Viewer | Syncfusion
-description: Learn how to enable, customize, and monitor printing in the Syncfusion Vue PDF Viewer component.
+description: Learn how to enable, customize, and monitor printing functionality in the Syncfusion Vue PDF Viewer component.
 control: Print
 platform: document-processing
 documentation: ug
@@ -212,7 +212,7 @@ export default {
 
 ## Customize print quality using the printScaleFactor API
 
-The PDF Viewer allows you to adjust the print rendering quality by setting the [printScaleFactor](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#printScaleFactor) property. Valid values range from 0.5 to 5. Higher values produce sharper output but also increase rendering time.
+The PDF Viewer allows you to adjust the print rendering quality by setting the [printScaleFactor](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#printScaleFactor) property. Valid values range from 0.5 to 5. Higher values produce sharper output but also increase rendering time.
 
 By default, `printScaleFactor` is set to 1.
 
@@ -662,7 +662,7 @@ export default {
 
 ## Print events
 
-Subscribe to print lifecycle events to track usage and implement custom workflows.
+Subscribe to print life cycle events to track usage and implement custom workflows.
 
 | Name         | Description |
 |--------------|-------------|
@@ -671,11 +671,11 @@ Subscribe to print lifecycle events to track usage and implement custom workflow
 
 ### printStart event
 
-The [`printStart`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#printstart) event runs when printing starts from the toolbar or from code. Use it to validate prerequisites or cancel the action.
+The [`printStart`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#printstart) event runs when printing starts from the toolbar or from code. Use it to validate prerequisites or cancel the action.
 
 #### Event arguments
 
-Review [`PrintStartEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/printStartEventArgs/) for details such as `fileName` and the `cancel` option.
+Review [`PrintStartEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/printStartEventArgs) for details such as `fileName` and the `cancel` option.
 
 The following examples log the file being printed and show how to cancel the operation.
 
@@ -830,11 +830,11 @@ export default {
 
 ### printEnd event
 
-The [`printEnd`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#printend) event triggers after printing completes. Use it to finalize analytics or inform users that printing finished.
+The [`printEnd`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#printend) event triggers after printing completes. Use it to finalize analytics or inform users that printing finished.
 
 #### Event arguments
 
-See [`PrintEndEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/printEndEventArgs/) for available values such as `fileName`.
+See [`PrintEndEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/printEndEventArgs) for available values such as `fileName`.
 
 The following examples log the printed file name.
 
