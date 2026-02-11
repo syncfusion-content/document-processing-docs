@@ -10,34 +10,26 @@ domainurl: ##DomainURL##
 
 # Sticky notes annotation in React PDF Viewer
 
-The PDF Viewer control provides options to add, edit, and delete sticky note annotations in the PDF document.
+The PDF Viewer provides options to add, edit, and delete sticky note annotations.
 
 ![StickyNotesAnnotation](../images/stickynotes_annotation.png)
 
-## Add a sticky note annotation to the PDF document
+## Add a sticky note annotation
 
-Annotation comments can be added using the comment panel.
+Annotation comments are added using the comment panel.
 
-* Select a sticky note annotation in the PDF document and right-click it.
-* Select Comment from the context menu.
-* Add comments, replies, and status using the comment panel.
+* Right-click a sticky note annotation and choose **Comment** from the context menu.
+* Use the comment panel to add comments, reply, and change status.
 
-  ![StickyNotesTool](../images/stickynotes_tool.png)
-
-  Annotation comments can be added to the PDF document using the comment panel.
-
-* Select a Sticky note annotation in the PDF document and right-click it.
-* Select the Comment option in the context menu that appears.
-* Now, you can add Comments, Reply, and Status using the Comment Panel.
-* Now, you can add Comments, Reply, and Status using the Comment Panel.
+![StickyNotesTool](../images/stickynotes_tool.png)
 
 ![StickyNotesComment](../images/stickynotes_comment.png)
 
 ## Add a sticky note annotation to the PDF document programmatically
 
-With the PDF Viewer library, you can add a sticky note annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#annotation) method.
+Use the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#annotation) method to add a sticky note annotation programmatically.
 
-Here is an example showing how to add a sticky note annotation programmatically using addAnnotation():
+The following example demonstrates using `addAnnotation()` to create a sticky note annotation.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -126,9 +118,9 @@ root.render(<App />);
 
 ## Edit an existing sticky note annotation programmatically
 
-To modify an existing sticky note annotation programmatically, use the editAnnotation() method.
+Use the `editAnnotation()` method to modify existing sticky note annotations programmatically.
 
-Here is an example of using editAnnotation():
+The following example demonstrates `editAnnotation()`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -245,9 +237,9 @@ Modify or delete comments or replies, and change status using the menu options i
 
 ## Set default properties during control initialization
 
-Default properties for sticky note annotations can be set before creating the control using StickyNotesSettings.
+Set default properties for sticky note annotations before creating the control by specifying `stickyNotesSettings`.
 
-After changing default opacity using the Edit Opacity tool, the selected value is applied. The following example sets default sticky note annotation settings.
+After changing the default opacity using the Edit Opacity tool, the selected value is applied. The example below shows how to set default sticky note annotation settings.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

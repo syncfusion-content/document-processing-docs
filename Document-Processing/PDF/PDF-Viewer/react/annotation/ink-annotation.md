@@ -18,13 +18,13 @@ The PDF Viewer control provides options to add, edit, and delete ink annotations
 
 Ink annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. The annotation toolbar appears below it.
+* Use the **Edit Annotation** button in the PDF Viewer toolbar. The annotation toolbar appears below it.
 * Select the **Draw Ink** button to enable ink annotation mode.
-* Draw on any page of the PDF document.
+* Draw on any page of the PDF document to create an ink annotation.
 
   ![Ink tool in the annotation toolbar](../images/ink_tool.png)
 
-The following example switches to ink annotation mode.
+The following example switches the viewer to ink annotation mode.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -107,7 +107,7 @@ root.render(<App />);
 
 The PDF Viewer library allows adding an ink annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#annotation) method.
 
-Here is an example of adding an ink annotation programmatically using addAnnotation():
+The following examples demonstrate how to add an ink annotation programmatically using `addAnnotation()`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -200,9 +200,9 @@ root.render(<App />);
 
 ## Edit an existing ink annotation programmatically
 
-To modify an existing ink annotation programmatically, use the editAnnotation() method.
+Use the `editAnnotation()` method to modify an existing ink annotation programmatically.
 
-Here is an example of using editAnnotation():
+The following example demonstrates `editAnnotation()`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -309,27 +309,27 @@ Stroke color, thickness, and opacity can be edited using the Edit Stroke Color, 
 
 ### Edit stroke color
 
-Edit the stroke color using the color palette in the Edit Stroke Color tool.
+Change the stroke color using the color palette in the Edit Stroke Color tool.
 
 ![Change ink stroke color](../images/ink_strokecolor.png)
 
 ### Edit thickness
 
-Edit thickness using the range slider in the Edit Thickness tool.
+Change the stroke thickness using the range slider in the Edit Thickness tool.
 
 ![Change ink thickness](../images/ink_thickness.png)
 
 ### Edit opacity
 
-Edit opacity using the range slider in the Edit Opacity tool.
+Change the opacity using the range slider in the Edit Opacity tool.
 
 ![Change ink opacity](../images/ink_opacity.png)
 
 ## Set default properties during the control initialization
 
-Default properties for ink annotations can be set before creating the control using InkAnnotationSettings.
+Default properties for ink annotations can be set before creating the control by using the `inkAnnotationSettings` property on `PdfViewerComponent` (example below).
 
-After changing default values, the selected values are applied.
+Supported settings include `author`, `strokeColor`, `thickness`, and `opacity`. Set these values on initialization so the viewer uses them when creating new ink annotations.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

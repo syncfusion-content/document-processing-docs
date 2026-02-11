@@ -8,30 +8,30 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotations Events in React PDF Viewer control
+# Annotation events in React PDF Viewer component
 
-The PDF Viewer component triggers various events based on user interactions and changes in the component's state. These events can be used to perform actions when a specific event occurs. This section describes the events available in the PDF Viewer component.
+The PDF Viewer raises events for annotation and signature interactions (add, remove, move, resize, select, etc.). Handle these events to integrate custom workflows, telemetry, or UI updates. Code samples below demonstrate typical handlers — code blocks are preserved unchanged.
 
 | Event                                                              | Description                                                                        |
 | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
-| [`annotationAdd`](#annotationadd)                                  | Triggers when an annotation is added to a page in the PDF document.                |
-| [`annotationDoubleClick`](#annotationdoubleclick)                  | Triggers when an annotation is double-clicked.                                     |
-| [`annotationMouseLeave`](#annotationmouseleave)                    | Triggers when the mouse pointer moves away from an annotation object.              |
-| [`annotationMouseover`](#annotationmouseover)                      | Triggers when the mouse pointer moves over an annotation object.                   |
-| [`annotationMove`](#annotationmove)                                | Triggers when an annotation is moved on a page in the PDF document.                |
-| [`annotationMoving`](#annotationmoving)                            | Triggers while an annotation is being moved.                                       |
-| [`annotationPropertiesChange`](#annotationpropertieschange)        | Triggers when the properties of an annotation are modified on a PDF page.          |
-| [`annotationRemove`](#annotationremove)                            | Triggers when an annotation is removed from a page in the PDF document.            |
-| [`annotationResize`](#annotationresize)                            | Triggers when an annotation is resized on a page in the PDF document.              |
-| [`annotationSelect`](#annotationselect)                            | Triggers when an annotation is selected on a page in the PDF document.             |
-| [`annotationUnSelect`](#annotationunselect)                        | Triggers when an annotation is unselected on a page in the PDF document.           |
-| [`beforeAddFreeText`](#beforeaddfreetext)                          | Triggers before adding a text in the freeText annotation.                          |
-| [`addSignature`](#addsignature)                                    | Triggers when a signature is added to a page in the PDF document.                  |
-| [`removeSignature`](#removesignature)                              | Triggers when a signature is removed from a page in the PDF document.              |
-| [`resizeSignature`](#resizesignature)                              | Triggers when a signature is resized on a page in the PDF document.                |
-| [`signaturePropertiesChange`](#signaturepropertieschange)          | Triggers when the properties of a signature are changed on a page in the PDF document. |
-| [`signatureSelect`](#signatureselect)                              | Triggers when a signature is selected on a page in the PDF document.               |
-| [`signatureUnselect`](#signatureunselect)                          | Triggers when a signature is unselected on a page in the PDF document.             |
+| [`annotationAdd`](#annotationadd)                                  | Fires when an annotation is added to a page in the PDF document.                |
+| [`annotationDoubleClick`](#annotationdoubleclick)                  | Fires when an annotation is double-clicked.                                     |
+| [`annotationMouseLeave`](#annotationmouseleave)                    | Fires when the mouse pointer moves away from an annotation object.              |
+| [`annotationMouseover`](#annotationmouseover)                      | Fires when the mouse pointer moves over an annotation object.                   |
+| [`annotationMove`](#annotationmove)                                | Fires when an annotation is moved on a page in the PDF document.                |
+| [`annotationMoving`](#annotationmoving)                            | Fires while an annotation is being moved.                                       |
+| [`annotationPropertiesChange`](#annotationpropertieschange)        | Fires when the properties of an annotation are modified on a PDF page.          |
+| [`annotationRemove`](#annotationremove)                            | Fires when an annotation is removed from a page in the PDF document.            |
+| [`annotationResize`](#annotationresize)                            | Fires when an annotation is resized on a page in the PDF document.              |
+| [`annotationSelect`](#annotationselect)                            | Fires when an annotation is selected on a page in the PDF document.             |
+| [`annotationUnSelect`](#annotationunselect)                        | Fires when an annotation is unselected on a page in the PDF document.           |
+| [`beforeAddFreeText`](#beforeaddfreetext)                          | Fires before a free-text annotation is added.                          |
+| [`addSignature`](#addsignature)                                    | Fires when a signature is added to a page in the PDF document.                  |
+| [`removeSignature`](#removesignature)                              | Fires when a signature is removed from a page in the PDF document.              |
+| [`resizeSignature`](#resizesignature)                              | Fires when a signature is resized on a page in the PDF document.                |
+| [`signaturePropertiesChange`](#signaturepropertieschange)          | Fires when the properties of a signature are changed on a page in the PDF document. |
+| [`signatureSelect`](#signatureselect)                              | Fires when a signature is selected on a page in the PDF document.               |
+| [`signatureUnselect`](#signatureunselect)                          | Fires when a signature is unselected on a page in the PDF document.             |
 
 
 ### annotationAdd

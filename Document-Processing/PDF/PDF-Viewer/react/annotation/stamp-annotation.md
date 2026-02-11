@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Stamp annotation in React PDF Viewer
 
-The PDF Viewer control provides options to add, edit, delete, and rotate the following stamp annotations in PDF documents:
+The PDF Viewer provides options to add, edit, delete, and rotate the following stamp annotations:
 
 * Dynamic
 * Sign Here
@@ -21,22 +21,22 @@ The PDF Viewer control provides options to add, edit, delete, and rotate the fol
 
 ## Add stamp annotations to the PDF document
 
-The stamp annotations can be added to the PDF document using the annotation toolbar.
+Stamp annotations are added using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the **Stamp Annotation** drop-down button. The pop-up lists available stamp annotation types.
+* Use the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
+* Use the **Stamp Annotation** drop-down to view available stamp annotation types.
 
-     ![StampTool](../images/stamp_tool.png)
+  ![StampTool](../images/stamp_tool.png)
 
-* Select a stamp type to enable its annotation mode.
+* Selecting a stamp type enables its annotation mode.
 
-     ![StampPopup](../images/selectstamp_annot.png)
+  ![StampPopup](../images/selectstamp_annot.png)
 
-* Place the stamp on the pages of the PDF document.
+* Place the stamp on a page in the PDF document.
 
-N> When in pan mode and a stamp annotation tool is selected, the PDF Viewer switches to text select mode automatically for a smooth interaction experience.
+N> When the viewer is in pan mode and a stamp annotation tool is selected, the PDF Viewer automatically switches to text select mode to provide a smoother interaction.
 
-The following examples switch to stamp annotation modes.
+The following examples show how to switch to stamp annotation modes.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -130,23 +130,21 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Add a custom stamp to the PDF document
+## Add a custom stamp
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the **Stamp Annotation** drop-down button. The pop-up lists available stamp annotation types.
-* Click the Custom Stamp button.
+Use the **Edit Annotation** button and the **Stamp Annotation** drop-down to access the Custom Stamp option.
 
-     ![CustomStamp](../images/customStamp.png)
+![CustomStamp](../images/customStamp.png)
 
-* In the file explorer dialog, choose an image and add it to the PDF page.
+Select the Custom Stamp option, then choose an image file to add as a custom stamp on the PDF page.
 
->Only JPG and JPEG image formats are supported for custom stamp annotations.
+Only JPG and JPEG image formats are supported for custom stamp annotations.
 
-## Add a stamp annotation to the PDF document programmatically
+## Add a stamp annotation programmatically
 
-The PDF Viewer library allows adding a stamp annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#annotation) method.
+Use the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#annotation) method to add stamp annotations programmatically.
 
-Here are examples showing how to add stamp annotations programmatically using addAnnotation():
+The examples below demonstrate using `addAnnotation()` to create stamp annotations.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -305,9 +303,9 @@ root.render(<App />);
 
 ## Edit an existing stamp annotation programmatically
 
-To modify an existing stamp annotation programmatically, use the editAnnotation() method.
+Use the `editAnnotation()` method to modify existing stamp annotations programmatically.
 
-Here is an example of using editAnnotation():
+The following example demonstrates `editAnnotation()`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -404,9 +402,9 @@ root.render(<App />);
 
 ## Set default properties during control initialization
 
-Default properties for stamp annotations can be set before creating the control using StampSettings.
+Set default properties for stamp annotations before creating the control by specifying `stampSettings`.
 
-After changing default opacity using the Edit Opacity tool, the selected value is applied. The following example sets default stamp annotation settings.
+After changing the default opacity using the Edit Opacity tool, the selected value is applied. The example below shows how to set default stamp annotation settings.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

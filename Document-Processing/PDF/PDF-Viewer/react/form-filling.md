@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Form filling in React PDF Viewer
 
-The PDF Viewer displays existing form fields in a PDF and enables users to fill, validate, and download the filled data.
+The PDF Viewer displays existing form fields and enables users to fill, validate, and download form data.
 
-Check the following video to learn how to work with form fields in React PDF Viewer. 
+A video demonstrates how to work with form fields in the React PDF Viewer.
 {% youtube "https://www.youtube.com/watch?v=MUWTCg1MoAE" %}
 
 The PDF Viewer supports the following form field types:
@@ -82,14 +82,15 @@ Add a handwritten signature to a signature field by following these steps:
 
 ## Delete a signature from a signature field
 
-Delete a signature placed in a signature field by using the Delete option in the annotation toolbar.
+Use the Delete option in the annotation toolbar to remove a signature placed in a signature field.
 
 ![Deleting a signature in React PDF Viewer](./images/form-filling-signature-del.png)
 
 ## Export and import form fields
 
-The PDF Viewer supports exporting and importing form field data using the `importFormFields`, `exportFormFields`, and `exportFormFieldsAsObject` methods. The following formats are supported:
+The PDF Viewer supports exporting and importing form field data using the `importFormFields`, `exportFormFields`, and `exportFormFieldsAsObject` methods. Supported formats are:
 
+* XML
 * FDF
 * XFDF
 * JSON
