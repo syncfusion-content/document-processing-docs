@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print Overview in JavaScript PDF Viewer | Syncfusion
-description: Learn how to enable, monitor and customize printing in the Syncfusion JavaScript PDF Viewer component.
+description: Enable and customize printing, configure print events, cancel print, and monitor printing in the Syncfusion JavaScript PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug
@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Print Overview in JavaScript PDF Viewer Control
 
-The JavaScript PDF Viewer includes built‑in printing via the toolbar and APIs so you can control how documents are printed and monitor the process.
+The JavaScript PDF Viewer includes built-in printing via the toolbar and APIs so users can control how documents are printed and monitor the process.
 
 Select **Print** in the built-in toolbar to open the browser print dialog.
 
-![Print](../../javascript-es6/images/print.gif)
+![Browser print dialog from PDF Viewer](../../javascript-es6/images/print.gif)
 
 ## Enable or Disable Print in JavaScript PDF Viewer
 
-The Syncfusion JavaScript PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the `enablePrint` property.
+The Syncfusion JavaScript PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the `enablePrint` property (`true` enables printing; `false` disables it).
 
 The following JavaScript examples render the PDF Viewer with printing enabled in standalone and server-backed applications.
 
@@ -69,7 +69,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Print programmatically in JavaScript PDF Viewer
 
-To start printing from code, call the `print.print()` method after loading a document. This approach is useful when you need to wire up custom UI or initiate printing automatically.
+To start printing from code, call the `pdfviewer.print.print()` method after the document is fully loaded. This approach is useful when wiring up custom UI or initiating printing automatically; calling print before the document finishes loading can result in no output or an empty print dialog.
 
 ```html
 <button id="print">Print PDF</button>
@@ -141,7 +141,9 @@ if (printButton) {
 - Control output quality with the printScaleFactor property (0.5–5)
 - Auto‑rotate pages during print using enablePrintRotation
 - Choose where printing happens with printMode (Default or NewWindow)
-- Track the life cycle with printStart and printEnd events
+ - Track the lifecycle with printStart and printEnd events
+
+Note: Ensure the `resourceUrl` value matches the deployed `ej2-pdfviewer-lib` version. Calling `print()` launches the browser print dialog; behavior varies by browser and may be affected by popup blockers or browser settings.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples)
 
