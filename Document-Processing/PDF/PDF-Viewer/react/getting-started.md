@@ -69,7 +69,7 @@ N> The following changes apply to React version 18 and above.
 
 ## Adding PDF Viewer component and the CSS reference
 
-* Add an HTML div element to act as the PDF Viewer element `public/index.html` using the following code.
+* Add an HTML div element to act as the PDF Viewer element `index.html` using the following code.
 
 ```
    <!DOCTYPE html>
@@ -84,6 +84,7 @@ N> The following changes apply to React version 18 and above.
    <body>
       <div id='sample'>
          <div id='loader'>Loading....</div>
+         <script type="module" src="/src/main.tsx"></script>
       </div>
    </body>
    </html>
@@ -102,7 +103,7 @@ N> The following changes apply to React version 18 and above.
    @import "../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
 ```
 
-* Add the React PDF Viewer as shown below in `src/index.js` when using JavaScript (JSX). If you're using TypeScript (TSX), add it in `src/index.tsx` to render the PDF Viewer component.
+* Add the React PDF Viewer as shown below in `src/index.js` when using JavaScript (JSX). If you're using TypeScript (TSX), add it in `src/app.tsx` to render the PDF Viewer component.
 
 
 {% tabs %}
@@ -276,8 +277,10 @@ return (<div>
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
+{% raw %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -294,6 +297,7 @@ root.render(<App />);
 <body>
         <div id='sample'>
             <div id='loader'>Loading....</div>
+            <script type="module" src="/src/main.tsx"></script>
         </div>
 </body>
 </html>

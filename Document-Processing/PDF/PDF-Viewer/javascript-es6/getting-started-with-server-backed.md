@@ -84,7 +84,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
-pdfviewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
+pdfviewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', '');
 
 {% endhighlight %}
 {% endtabs %}
@@ -147,7 +147,7 @@ document.getElementById('load').addEventListener('click', function () {
    pdfViewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
    pdfViewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
    pdfViewer.dataBind();
-   pdfViewer.load(pdfViewer.documentPath, null);
+   pdfViewer.load(pdfViewer.documentPath, '');
 });
 
 N> The Web API link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/ used in the `serviceUrl` property is intended for demonstration and evaluation only. For production, host your own web service with the required server configuration. You can reuse the [GitHub web service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server). **Standalone mode is strongly recommended.**
@@ -198,15 +198,15 @@ Inject modules using the `PdfViewer.Inject` method.
  dotnet run
 ```
 
-6. The PDF Viewer server instance runs at `https://localhost:5001`. Navigate to `https://localhost:5001/pdfviewer` to see the default GET response. Bind this URL to the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl) property of the PDF Viewer as shown below.
+6. The PDF Viewer server instance runs at `https://localhost:7255`. Navigate to `https://localhost:7255/pdfviewer` to see the default GET response. Bind this URL to the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl) property of the PDF Viewer as shown below.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://localhost:5001/pdfviewer';
+pdfviewer.serviceUrl = 'https://localhost:7255/pdfviewer';
 pdfviewer.appendTo('#PdfViewer');
-pdfviewer.load('PDF_Succinctly.pdf', null);
+pdfviewer.load('PDF_Succinctly.pdf', '');
 
 {% endhighlight %}
 {% endtabs %}
