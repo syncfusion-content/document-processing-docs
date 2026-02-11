@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The PDF Viewer provides options to add, edit, and delete text markup annotations, including highlight, underline, strikethrough, and squiggly.
 
-![Text markup annotations: highlight, underline, strikethrough, and squiggly](../images/text_markup_annotation.png)
+![Text markup annotations](../images/text_markup_annotation.png)
 
 ## Highlight text
 
