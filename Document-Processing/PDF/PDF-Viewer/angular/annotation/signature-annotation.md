@@ -31,7 +31,7 @@ Add a handwritten signature using the annotation toolbar.
 
 ## Adding a handwritten signature to the PDF document Programmatically
 
-With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotation) method.
+With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here is an example of using the `addAnnotation()` method to add a handwritten signature programmatically
 

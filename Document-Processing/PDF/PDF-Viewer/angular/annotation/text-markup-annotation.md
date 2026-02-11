@@ -205,7 +205,7 @@ export class AppComponent implements OnInit {
 
 ## Highlight text programmatically
 
-Programmatically add highlights using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+Programmatically add highlights using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotationn) method.
 
 Example:
 
@@ -483,7 +483,7 @@ export class AppComponent implements OnInit {
 
 ## Underline text programmatically
 
-Programmatically add underlines using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+Programmatically add underlines using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotationn) method.
 
 Example:
 
@@ -761,7 +761,7 @@ export class AppComponent implements OnInit {
 
 ## Strikethrough text programmatically
 
-Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotationn) method.
 
 Example:
 
@@ -1039,7 +1039,7 @@ export class AppComponent implements OnInit {
 
 ## Squiggly text programmatically
 
-Refer to the following code snippet to switch back to normal mode from squiggly mode. Use the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) API to add squiggly annotations.
+Refer to the following code snippet to switch back to normal mode from squiggly mode. Use the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotationn) API to add squiggly annotations.
 
 Example:
 

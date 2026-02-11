@@ -102,7 +102,7 @@ import { LinkAnnotationService, BookmarkViewService,
 
 ## Clear selection focus from free text annotation
 
-Clear the selection focus for free text annotations by calling the [setAnnotationMode](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/) API on the `annotationModule`.
+Clear the selection focus for free text annotations by calling the [setAnnotationMode](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation) API on the `annotationModule`.
 
 The following sample removes the selection from the currently selected annotation using a button click.
 
@@ -149,7 +149,7 @@ RemoveSelection() {
 
 ## Add a free text annotation programmatically to the PDF document
 
-Add a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method. The example below demonstrates adding a FreeText annotation with styling and position properties.
+Add a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotationn) method. The example below demonstrates adding a FreeText annotation with styling and position properties.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

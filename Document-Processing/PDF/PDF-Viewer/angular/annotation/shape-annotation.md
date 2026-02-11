@@ -115,7 +115,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 
 ## Add a shape annotation to the PDF document programmatically
 
-The PDF Viewer library allows adding a shape annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library allows adding a shape annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here is an example showing how to add shape annotations programmatically using addAnnotation():
 

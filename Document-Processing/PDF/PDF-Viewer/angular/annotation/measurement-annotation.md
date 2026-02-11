@@ -114,7 +114,7 @@ export class AppComponent implements OnInit {
 
 ## Add a measurement annotation to the PDF document Programmatically
 
-The PDF Viewer library allows adding measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library allows adding measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here is an example showing how to add measurement annotations programmatically using addAnnotation():
 
