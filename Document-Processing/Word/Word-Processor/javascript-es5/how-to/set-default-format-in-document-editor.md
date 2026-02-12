@@ -64,7 +64,6 @@ You can use [`setDefaultParagraphFormat`](https://ej2.syncfusion.com/javascript/
 The following example code illustrates how to change the paragraph format(before spacing, line spacing etc.,) default value in Document editor.
 
 ```js
-import { ParagraphFormatProperties, DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
 
 var container = new ej.documenteditor.DocumentEditorContainer({height: "590px" });
 container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';

@@ -16,8 +16,8 @@ Similarly, you can use [`documentEditorSettings`](https://ej2.syncfusion.com/jav
 
 The following example code illustrates how to Customize the color picker in Document editor container.
 
-```ts
-let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true,height: '590px',
+```js
+var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ enableToolbar: true,height: '590px',
   //Customizing options for color picker.
   documentEditorSettings: {
     colorPickerSettings: { mode: 'Palette', modeSwitcher: true, showButtons: true },
