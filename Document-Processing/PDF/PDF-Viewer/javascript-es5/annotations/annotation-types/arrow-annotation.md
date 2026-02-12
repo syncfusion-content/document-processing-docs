@@ -18,9 +18,9 @@ Arrow is a shape annotation used to point, direct attention, or indicate flow. C
 
 ### Add arrow annotation via UI
 
-Use the annotation toolbar:
+Use the annotation toolbar to:
 - Click the **Edit Annotation** button in the PDF Viewer toolbar.
-- Open the **Shape Annotation**** dropdown.
+- Open the **Shape Annotation** dropdown.
 - Choose **Arrow**, then draw on the page.
 
 N> When in pan mode, selecting a shape annotation switches the viewer to text select mode.
@@ -335,9 +335,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `ArrowSettings`.
+Set properties for individual annotations before creating the control using `ArrowSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default arrow settings.
 

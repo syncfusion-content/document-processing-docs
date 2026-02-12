@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Designer in JavaScript PDF Viewer
+# Form designer in JavaScript PDF Viewer
 
-When **Form Designer mode** is enabled in the Syncfusion [JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI includes a built in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
+When **Form Designer mode** is enabled in the Syncfusion [JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI includes a built-in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop-down lists, list boxes, and signature and initial fields.
 
 Using the Form Designer UI, users can place form fields on the PDF, move and resize them, configure field and widget properties, preview the designed form, and remove fields when required. The Form Designer toolbar can also be shown or hidden and customized to control the available tools based on application requirements, enabling flexible and interactive form design directly within the viewer.
 
-## Key Features
+## Key features
 
 **Add Form Fields**
 You can add the following form fields to the PDF:
@@ -43,7 +43,7 @@ You can select, group or ungroup, reorder, and delete form fields as needed.
 **Save and Print Forms**
 Designed form fields can be saved into the PDF document and printed with their appearances.
 
-## Enable Form Designer
+## Enable form designer
 
 To enable form design features, inject the [FormDesigner](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formdesigner) module into the PDF Viewer. After injecting the module, use the [enableFormDesigner](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enableformdesigner) API to show or hide the Form Designer option in the main toolbar.
 
@@ -71,7 +71,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 pdfviewer.appendTo('#PdfViewer');
 ```
 
-## Form Designer UI
+## Form designer UI
 
 When [Form Designer mode](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formdesigner) is enabled in the Syncfusion [JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI provides a built in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
 
@@ -81,7 +81,7 @@ When [Form Designer mode](https://ej2.syncfusion.com/javascript/documentation/ap
 
 For more information about creating and editing form fields in the PDF Viewer, refer to the [Form Creation](./manage-form-fields/create-form-fields) in JavaScript PDF Viewer documentation.
 
-## Form Designer Toolbar
+## Form designer toolbar
 
 The **Form Designer toolbar** appears at the top of the PDF Viewer and provides quick access to form field creation tools. It includes frequently used field types such as:
 
@@ -175,35 +175,36 @@ pdfviewer.toolbarSettings = {
 };
 ```
 
-## Move, Resize, and Edit Form Fields
+## Move, resize, and edit form fields
 
-You can move, resize, and edit an existing form field directly in the PDF Viewer using the Form Designer.
+Move, resize, and edit an existing form field directly in the PDF Viewer using the Form Designer.
 
 - Move a field by selecting it and dragging it to the required position.
 
 - Resize a field using the handles displayed on the field boundary.
 
-![Moveing and Resizing a form field](../../javascript-es6/images/move-resize-forms.gif)
+![Moving and resizing a form field](../../javascript-es6/images/move-resize-forms.gif)
 
-- Edit a field by selecting it to open the Form Field Properties popover. The popover allows you to modify the form field and widget annotation properties. Changes are reflected immediately in the viewer and are saved when the properties popover is closed.
+- Edit a field by selecting it to open the Form Field Properties popover. The popover allows modification of form field and widget annotation properties. Changes are reflected immediately in the viewer and saved when the properties popover is closed.
 For more information, see Editing Form Fields
 
-## Deleting Form Fields
+## Deleting form fields
 
-You can remove a form field from the PDF document by selecting the field and using one of the following methods:
-- Click the `Delete option` in the Form Designer UI.
-- Press the `Delete key` on the keyboard after selecting the form field.
+Remove a form field from the PDF document by selecting the field and using one of the following methods:
+
+- Click the `Delete` option in the Form Designer UI.
+- Press the `Delete` key on the keyboard after selecting the form field.
 
 The selected form field and its associated widget annotation are permanently removed from the page.
-For more information, see  [Deleting Form Fields](./manage-form-fields/remove-form-fields)
+For more information, see [Deleting form fields](./manage-form-fields/remove-form-fields)
 
-## See Also
+## See also
 
-- [Filling PDF Forms](./form-filling)
+- [Filling PDF forms](./form-filling)
 - [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), [style](./manage-form-fields/style-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
 - [Grouping form fields](./group-form-fields)
-- [Form Constrains](./form-constrain)
-- [Form Validation](./form-validation)
-- [Custom Data](./custom-data)
-- [Import](./import-export-form-fields/import-form-fields)/[Export Form Data](./import-export-form-fields/export-form-fields)
+- [Form constrains](./form-constrain)
+- [Form validation](./form-validation)
+- [Custom data](./custom-data)
+- [Import](./import-export-form-fields/import-form-fields)/[Export form data](./import-export-form-fields/export-form-fields)
 - [Form field events](./form-field-events)

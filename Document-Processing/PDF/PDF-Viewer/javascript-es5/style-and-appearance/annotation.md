@@ -77,7 +77,7 @@ Use the following CSS to update the Calibration annotation toolbar icon.
   }
 ```
 
-## Customize the Free Text icon
+## Customize the free-text icon
 
 Use the following CSS to update the Free Text annotation toolbar icon.
 
@@ -92,7 +92,7 @@ Use the following CSS to update the Free Text annotation toolbar icon.
 
 ## Customize the handwritten signature icon
 
-Use the following CSS to update the Handwritten signature annotation toolbar icon.
+When the icon is rendered via a pseudo-element, target the pseudo-element explicitly.
 
 ```
 /* To specify font size and color */
@@ -115,7 +115,8 @@ Use the following CSS to update the Ink annotation toolbar icon.
     font-size: 20px;
   }
 ```
-## Customize the Close icon
+
+## Customize the close icon
 
 Use the following CSS to hide the Close icon.
 
