@@ -34,7 +34,7 @@ Annotation comments can be added using the comment panel.
 
 ## Add a sticky note annotation to the PDF document programmatically
 
-The PDF Viewer library allows adding a sticky note annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library allows adding a sticky note annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here is an example showing how to add a sticky note annotation programmatically using addAnnotation():
 
@@ -159,7 +159,7 @@ const addAnnotation = function () {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
 
 <template>
   <div id="app">
@@ -254,7 +254,7 @@ const editAnnotation = function () {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight html tabtitle="Options API (Standalone)" %}
 
 <template>
   <div id="app">
