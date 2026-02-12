@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load a PDF only after PDFium resources are ready
+# Load a PDF only after PDFium resources are ready in Angular
 
 In Standalone mode, the Angular PDF Viewer downloads its PDFium runtime assets (scripts/wasm) from the location specified in `resourceUrl`. Attempting to load a document before those assets are available can cause errors. Use the `resourcesLoaded` event to defer document loading until all required assets are ready.
 

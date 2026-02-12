@@ -35,11 +35,11 @@ The PDF Viewer control provides support for several annotation events. The annot
 
 ### annotationAdd 
 
-The [annotationAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationadd) event is triggered when an annotation is added to the PDF Viewer.
+The [annotationAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationadd) event is triggered when an annotation is added to the PDF Viewer.
 
 #### Event Arguments
 
-For event data, see [AnnotationAddEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationaddeventargs/). It provides properties such as `annotationId`, `pageNumber`, `annotationType`, and `bounds`.
+For event data, see [AnnotationAddEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationaddeventargs). It provides properties such as `annotationId`, `pageNumber`, `annotationType`, and `bounds`.
 
 The following example illustrates how to handle the `annotationAdd` event.
 
@@ -124,11 +124,11 @@ export class AppComponent {
 
 ### annotationDoubleClick
 
-The [annotationDoubleClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationdoubleclick) event is triggered when an annotation is double-clicked.
+The [annotationDoubleClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationdoubleclick) event is triggered when an annotation is double-clicked.
 
 #### Event Arguments
 
-For event data, see [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationDoubleClickEventArgs/).
+For event data, see [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationDoubleClickEventArgs).
 
 The following example illustrates how to handle the `annotationDoubleClick` event.
 
@@ -211,7 +211,7 @@ export class AppComponent {
 
 
 
-The [annotationDoubleClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationDoubleClickArgs/) event is triggered when an annotation is double-clicked.
+The [annotationDoubleClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationDoubleClickArgs) event is triggered when an annotation is double-clicked.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -221,11 +221,11 @@ The [annotationDoubleClick](https://ej2.syncfusion.com/angular/documentation/api
 
 ### annotationMouseLeave
 
-The [annotationMouseLeave](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationmouseleave) event is triggered when the mouse cursor leaves an annotation.
+The [annotationMouseLeave](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationmouseleave) event is triggered when the mouse cursor leaves an annotation.
 
 #### Event Arguments
 
-For event data, see [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMouseLeaveEventArgs/).
+For event data, see [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMouseLeaveEventArgs).
 
 The following example illustrates how to handle the `annotationMouseLeave` event.
 
@@ -311,12 +311,12 @@ export class AppComponent {
 
 ### annotationMouseover
 
-The [annotationMouseover](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationmouseover) event is triggered when the mouse cursor moves 
+The [annotationMouseover](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationmouseover) event is triggered when the mouse cursor moves 
 over an annotation.
 
 #### Event Arguments
 
-For event data, see [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMouseOverEventArgs/).
+For event data, see [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMouseOverEventArgs).
 
 The following example illustrates how to handle the `annotationMouseover` event.
 
@@ -394,11 +394,11 @@ export class AppComponent implements OnInit {
 
 ### annotationMove
 
-The [annotationMove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationmove) event is triggered when an annotation is moved.
+The [annotationMove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationmove) event is triggered when an annotation is moved.
 
 #### Event Arguments
 
-For event data, see [AnnotationMoveEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMoveEventArgs/).
+For event data, see [AnnotationMoveEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMoveEventArgs).
 
 The following example illustrates how to handle the `annotationMove` event.
 
@@ -477,11 +477,11 @@ export class AppComponent implements OnInit {
 
 ### annotationMoving
 
-The [annotationMoving](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationmoving) event is triggered while an annotation is being moved.
+The [annotationMoving](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationmoving) event is triggered while an annotation is being moved.
 
 #### Event Arguments
 
-For event data, see [AnnotationMovingEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMovingEventArgs/).
+For event data, see [AnnotationMovingEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMovingEventArgs).
 
 The following example illustrates how to handle the `annotationMoving` event.
 
@@ -560,11 +560,11 @@ export class AppComponent implements OnInit {
 
 ### annotationPropertiesChange
 
-The [annotationPropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationpropertieschange) event is triggered when an annotation’s properties are changed.
+The [annotationPropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationpropertieschange) event is triggered when an annotation’s properties are changed.
 
 #### Event Arguments
 
-For event data, see [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationPropertiesChangeEventArgs/). It provides properties such as `annotationId`, `pageNumber`, and `action`.
+For event data, see [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationPropertiesChangeEventArgs). It provides properties such as `annotationId`, `pageNumber`, and `action`.
 
 The following example illustrates how to handle the `annotationPropertiesChange` event.
 
@@ -645,11 +645,11 @@ export class AppComponent implements OnInit {
 
 ### annotationRemove
 
-The [annotationRemove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationremove) event is triggered when an annotation is removed.
+The [annotationRemove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationremove) event is triggered when an annotation is removed.
 
 #### Event Arguments
 
-For event data, see [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationRemoveEventArgs/). It provides properties such as `annotationId` and `pageNumber`.
+For event data, see [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationRemoveEventArgs). It provides properties such as `annotationId` and `pageNumber`.
 
 The following example illustrates how to handle the `annotationRemove` event.
 
@@ -728,11 +728,11 @@ export class AppComponent implements OnInit {
 
 ### annotationResize
 
-The [annotationResize](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationresize) event is triggered when an annotation is resized.
+The [annotationResize](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationresize) event is triggered when an annotation is resized.
 
 #### Event Arguments
 
-For event data, see [AnnotationResizeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationResizeEventArgs/).
+For event data, see [AnnotationResizeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationResizeEventArgs).
 
 The following example illustrates how to handle the `annotationResize` event.
 
@@ -811,11 +811,11 @@ export class AppComponent implements OnInit {
 
 ### annotationSelect
 
-The [annotationSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationselect) event is triggered when an annotation is selected.
+The [annotationSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationselect) event is triggered when an annotation is selected.
 
 #### Event Arguments
 
-For event data, see [AnnotationSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectEventArgs/).
+For event data, see [AnnotationSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectEventArgs).
 
 The following example illustrates how to handle the `annotationSelect` event.
 
@@ -894,11 +894,11 @@ export class AppComponent implements OnInit {
 
 ### annotationUnselect
 
-The [annotationUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationunselect) event is triggered when an annotation is unselected.
+The [annotationUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationunselect) event is triggered when an annotation is unselected.
 
 #### Event Arguments
 
-For event data, see [AnnotationUnSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationUnSelectEventArgs/).
+For event data, see [AnnotationUnSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationUnSelectEventArgs).
 
 The following example illustrates how to handle the `annotationUnselect` event.
 
@@ -975,11 +975,11 @@ export class AppComponent implements OnInit {
 
 ### beforeAddFreeText
 
-The [beforeAddFreeText](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#beforeaddfreetext) event is triggered before adding free text to the PDF Viewer.
+The [beforeAddFreeText](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#beforeaddfreetext) event is triggered before adding free text to the PDF Viewer.
 
 #### Event Arguments
 
-For event data, see [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/beforeAddFreeTextEventArgs/).
+For event data, see [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/beforeAddFreeTextEventArgs).
 
 The following example illustrates how to handle the `beforeAddFreeText` event.
 
@@ -1061,11 +1061,11 @@ export class AppComponent implements OnInit {
 
 ### addSignature
 
-The [addSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#addsignature) event is triggered when a signature is added to the PDF Viewer.
+The [addSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#addsignature) event is triggered when a signature is added to the PDF Viewer.
 
 #### Event Arguments
 
-For event data, see [AddSignatureEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/addSignatureEventArgs/). It provides properties such as `pageNumber`.
+For event data, see [AddSignatureEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/addSignatureEventArgs). It provides properties such as `pageNumber`.
 
 The following example illustrates how to handle the `addSignature` event.
 
@@ -1142,11 +1142,11 @@ export class AppComponent implements OnInit {
 
 ### removeSignature
 
-The [removeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#removesignature) event is triggered when a signature is removed from the PDF Viewer.
+The [removeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#removesignature) event is triggered when a signature is removed from the PDF Viewer.
 
 #### Event Arguments
 
-For event data, see [RemoveSignatureEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/removeSignatureEventArgs/). It provides properties such as `pageNumber`.
+For event data, see [RemoveSignatureEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/removeSignatureEventArgs). It provides properties such as `pageNumber`.
 
 The following example illustrates how to handle the `removeSignature` event.
 
@@ -1222,11 +1222,11 @@ export class AppComponent implements OnInit {
 
 ### resizeSignature
 
-The [resizeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#resizesignature) event is triggered when a signature is resized in the PDF Viewer.
+The [resizeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resizesignature) event is triggered when a signature is resized in the PDF Viewer.
 
 #### Event Arguments
 
-For event data, see [ResizeSignatureEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/resizeSignatureEventArgs/).
+For event data, see [ResizeSignatureEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/resizeSignatureEventArgs).
 
 The following example illustrates how to handle the `resizeSignature` event.
 
@@ -1303,11 +1303,11 @@ export class AppComponent implements OnInit {
 
 ### signaturePropertiesChange
 
-The [signaturePropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signaturepropertieschange) event is triggered when signature properties are changed in the PDF Viewer.
+The [signaturePropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#signaturepropertieschange) event is triggered when signature properties are changed in the PDF Viewer.
 
 #### Event Arguments
 
-For event data, see [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs/).
+For event data, see [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs).
 
 The following example illustrates how to handle the `signaturePropertiesChange` event.
 
@@ -1383,11 +1383,11 @@ export class AppComponent implements OnInit {
 
 ### signatureSelect
 
-The [signatureSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signatureselect) event is triggered when a signature is selected in the PDF Viewer.
+The [signatureSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#signatureselect) event is triggered when a signature is selected in the PDF Viewer.
 
 #### Event Arguments
 
-For event data, see [SignatureSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signatureSelectEventArgs/).
+For event data, see [SignatureSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signatureSelectEventArgs).
 
 The following example illustrates how to handle the `signatureSelect` event.
 
@@ -1465,11 +1465,11 @@ export class AppComponent implements OnInit {
 
 ### signatureUnselect
 
-The [signatureUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signatureunselect) event is triggered when a signature is unselected in the PDF Viewer.
+The [signatureUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#signatureunselect) event is triggered when a signature is unselected in the PDF Viewer.
 
 #### Event Arguments
 
-For event data, see [SignatureUnSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signatureUnSelectEventArgs/).
+For event data, see [SignatureUnSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signatureUnSelectEventArgs).
 
 The following example illustrates how to handle the `signatureUnselect` event.
 

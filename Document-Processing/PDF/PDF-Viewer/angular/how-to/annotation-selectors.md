@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize annotation selectors in Angular PDF Viewer
 
-Customize the annotation selector using the [annotationSelectorSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationselectorsettings) property of the PDF Viewer.
+Customize the annotation selector using the [annotationSelectorSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationselectorsettings) property of the PDF Viewer.
 
 Example: Customize the selector of a shape annotation
 

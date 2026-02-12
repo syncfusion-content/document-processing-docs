@@ -9,7 +9,7 @@ documentation: ug
 
 # Add header values in the Angular PDF Viewer
 
-Use the ajaxHeaders property in the PDF Viewer’s [ajaxRequestSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#ajaxrequestsettings) to include custom headers with each AJAX request.
+Use the ajaxHeaders property in the PDF Viewer’s [ajaxRequestSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#ajaxrequestsettings) to include custom headers with each AJAX request.
 
 Example: Add a custom Authorization header using ajaxRequestSettings in an Angular component
 
