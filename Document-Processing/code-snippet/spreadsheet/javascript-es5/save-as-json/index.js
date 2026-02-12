@@ -66,7 +66,6 @@ function createOptions() {
 function toggleCheckboxes() {
     var valueOnlyCheckbox = document.getElementById('valueOnly');
     var checkboxes = document.querySelectorAll('#Saveasjson input[type="checkbox"]:not(#valueOnly)');
-    // ES5-friendly loop (NodeList.forEach may not be available in old browsers)
     for (var i = 0; i < checkboxes.length; i++) {
         var checkbox = checkboxes[i];
         checkbox.disabled = valueOnlyCheckbox.checked;
