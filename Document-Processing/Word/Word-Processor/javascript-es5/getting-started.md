@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with JavaScript (ES5) Document Editor | Syncfusion
-description: Checkout and learn about Getting started with JavaScript (ES5) Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Getting started with JavaScript (ES5) Document editor | Syncfusion
+description: Checkout and learn about Getting started with JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting started 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with JavaScript (ES5) Document Editor control
+# Getting started with JavaScript (ES5) Document editor control
 
 The Essential<sup style="font-size:70%">&reg;</sup> JS 2 for JavaScript (global script) is an ES5 formatted pure JavaScript framework designed for compatibility with modern web browsers without requiring build tools.
 
@@ -46,8 +46,8 @@ This approach downloads and hosts the required files locally, providing better c
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Essential JS 2 Document Editor</title>
-    <!-- EJ2 Document Editor dependent material theme -->
+    <title>Essential JS 2 Document editor</title>
+    <!-- EJ2 Document editor dependent material theme -->
     <link href="resources/base/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
     <link href="resources/buttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
     <link href="resources/inputs/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
@@ -59,7 +59,7 @@ This approach downloads and hosts the required files locally, providing better c
     <!-- EJ2 DocumentEditor material theme -->
     <link href="resources/documenteditor/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
 
-    <!-- EJ2 Document Editor dependent scripts -->
+    <!-- EJ2 Document editor dependent scripts -->
     <script src="resources/scripts/ej2-base.min.js" type="text/javascript"></script>
     <script src="resources/scripts/ej2-data.min.js" type="text/javascript"></script>
     <script src="resources/scripts/ej2-svg-base.min.js" type="text/javascript"></script>
@@ -76,7 +76,7 @@ This approach downloads and hosts the required files locally, providing better c
     <script src="resources/scripts/ej2-calendars.min.js" type="text/javascript"></script>
     <script src="resources/scripts/ej2-charts.min.js" type="text/javascript"></script>
     <script src="resources/scripts/ej2-office-chart.min.js" type="text/javascript"></script>
-    <!-- EJ2 Document Editor script -->
+    <!-- EJ2 Document editor script -->
     <script src="resources/scripts/ej2-documenteditor.min.js" type="text/javascript"></script>
 </head>
 <body>
@@ -89,8 +89,8 @@ This approach downloads and hosts the required files locally, providing better c
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Essential JS 2 Document Editor</title>
-    <!-- EJ2 Document Editor dependent material theme -->
+    <title>Essential JS 2 Document editor</title>
+    <!-- EJ2 Document editor dependent material theme -->
     <link href="resources/base/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
     <link href="resources/buttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
     <link href="resources/inputs/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
@@ -102,7 +102,7 @@ This approach downloads and hosts the required files locally, providing better c
     <!-- EJ2 DocumentEditor material theme -->
     <link href="resources/documenteditor/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
 
-    <!-- EJ2 Document Editor dependent scripts -->
+    <!-- EJ2 Document editor dependent scripts -->
     <script src="resources/scripts/ej2-base.min.js" type="text/javascript"></script>
     <script src="resources/scripts/ej2-data.min.js" type="text/javascript"></script>
     <script src="resources/scripts/ej2-svg-base.min.js" type="text/javascript"></script>
@@ -119,7 +119,7 @@ This approach downloads and hosts the required files locally, providing better c
     <script src="resources/scripts/ej2-calendars.min.js" type="text/javascript"></script>
     <script src="resources/scripts/ej2-charts.min.js" type="text/javascript"></script>
     <script src="resources/scripts/ej2-office-chart.min.js" type="text/javascript"></script>
-    <!-- EJ2 Document Editor script -->
+    <!-- EJ2 Document editor script -->
     <script src="resources/scripts/ej2-documenteditor.min.js" type="text/javascript"></script>
 </head>
 <body>
@@ -138,14 +138,14 @@ This approach downloads and hosts the required files locally, providing better c
         documenteditor.enableAllModules();
         documenteditor.pageOutline = '#E0E0E0';
 
-        // Document Editor control rendering
+        // Document editor control rendering
         documenteditor.appendTo('#DocumentEditor');
     </script>
 </body>
 </html>
 ```
 
->Important: The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
+>Important: The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
 
 **Step 6:** Now, run the `index.html` in web browser, it will render the **Essential<sup style="font-size:70%">&reg;</sup> JS 2 DocumentEditor** component.
 
@@ -155,8 +155,8 @@ This approach downloads and hosts the required files locally, providing better c
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Essential JS 2 Document Editor</title>
-    <!-- EJ2 Document Editor dependent material theme -->
+    <title>Essential JS 2 Document editor</title>
+    <!-- EJ2 Document editor dependent material theme -->
     <link href="resources/base/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
     <link href="resources/buttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
     <link href="resources/inputs/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
@@ -168,7 +168,7 @@ This approach downloads and hosts the required files locally, providing better c
     <!-- EJ2 DocumentEditor material theme -->
     <link href="resources/documenteditor/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
 
-    <!-- EJ2 Document Editor dependent scripts -->
+    <!-- EJ2 Document editor dependent scripts -->
     <script src="resources/scripts/ej2-base.min.js" type="text/javascript"></script>
     <script src="resources/scripts/ej2-data.min.js" type="text/javascript"></script>
     <script src="resources/scripts/ej2-svg-base.min.js" type="text/javascript"></script>
@@ -185,7 +185,7 @@ This approach downloads and hosts the required files locally, providing better c
     <script src="resources/scripts/ej2-calendars.min.js" type="text/javascript"></script>
     <script src="resources/scripts/ej2-charts.min.js" type="text/javascript"></script>
     <script src="resources/scripts/ej2-office-chart.min.js" type="text/javascript"></script>
-    <!-- EJ2 Document Editor script -->
+    <!-- EJ2 Document editor script -->
     <script src="resources/scripts/ej2-documenteditor.min.js" type="text/javascript"></script>
 </head>
 <body>
@@ -234,8 +234,8 @@ This approach uses Content Delivery Network (CDN) links to reference the require
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Essential JS 2 Document Editor</title>
-    <!-- EJ2 Document Editor dependent theme -->
+    <title>Essential JS 2 Document editor</title>
+    <!-- EJ2 Document editor dependent theme -->
     <link href="https://cdn.syncfusion.com/ej2/ej2-base/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
     <link href="https://cdn.syncfusion.com/ej2/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
     <link href="https://cdn.syncfusion.com/ej2/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
@@ -244,10 +244,10 @@ This approach uses Content Delivery Network (CDN) links to reference the require
     <link href="https://cdn.syncfusion.com/ej2/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
     <link href="https://cdn.syncfusion.com/ej2/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
     <link href="https://cdn.syncfusion.com/ej2/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <!-- EJ2 Document Editor theme -->
+    <!-- EJ2 Document editor theme -->
     <link href="https://cdn.syncfusion.com/ej2/ej2-documenteditor/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
 
-    <!-- EJ2 Document Editor dependent scripts -->
+    <!-- EJ2 Document editor dependent scripts -->
     <script src="https://cdn.syncfusion.com/ej2/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
     <script src="https://cdn.syncfusion.com/ej2/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
     <script src="https://cdn.syncfusion.com/ej2/ej2-svg-base/dist/global/ej2-svg-base.min.js" type="text/javascript"></script>
@@ -264,7 +264,7 @@ This approach uses Content Delivery Network (CDN) links to reference the require
     <script src="https://cdn.syncfusion.com/ej2/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
     <script src="https://cdn.syncfusion.com/ej2/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
     <script src="https://cdn.syncfusion.com/ej2/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
-    <!-- EJ2 Document Editor script -->
+    <!-- EJ2 Document editor script -->
     <script src="https://cdn.syncfusion.com/ej2/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
 </head>
 <body>
@@ -286,7 +286,7 @@ This approach uses Content Delivery Network (CDN) links to reference the require
         // Set page border color
         documenteditor.pageOutline = '#E0E0E0';
 
-        // Document Editor control rendering
+        // Document editor control rendering
         documenteditor.appendTo('#DocumentEditor');
     </script>
 </body>
@@ -303,8 +303,8 @@ This approach uses Content Delivery Network (CDN) links to reference the require
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Essential JS 2 Document Editor</title>
-    <!-- EJ2 Document Editor dependent theme -->
+    <title>Essential JS 2 Document editor</title>
+    <!-- EJ2 Document editor dependent theme -->
     <link href="https://cdn.syncfusion.com/ej2/ej2-base/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
     <link href="https://cdn.syncfusion.com/ej2/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
     <link href="https://cdn.syncfusion.com/ej2/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
@@ -313,10 +313,10 @@ This approach uses Content Delivery Network (CDN) links to reference the require
     <link href="https://cdn.syncfusion.com/ej2/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
     <link href="https://cdn.syncfusion.com/ej2/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
     <link href="https://cdn.syncfusion.com/ej2/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <!-- EJ2 Document Editor theme -->
+    <!-- EJ2 Document editor theme -->
     <link href="https://cdn.syncfusion.com/ej2/ej2-documenteditor/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
 
-    <!-- EJ2 Document Editor dependent scripts -->
+    <!-- EJ2 Document editor dependent scripts -->
     <script src="https://cdn.syncfusion.com/ej2/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
     <script src="https://cdn.syncfusion.com/ej2/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
     <script src="https://cdn.syncfusion.com/ej2/ej2-svg-base/dist/global/ej2-svg-base.min.js" type="text/javascript"></script>
@@ -333,11 +333,11 @@ This approach uses Content Delivery Network (CDN) links to reference the require
     <script src="https://cdn.syncfusion.com/ej2/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
     <script src="https://cdn.syncfusion.com/ej2/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
     <script src="https://cdn.syncfusion.com/ej2/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
-    <!-- EJ2 Document Editor script -->
+    <!-- EJ2 Document editor script -->
     <script src="https://cdn.syncfusion.com/ej2/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
 </head>
 <body>
-    <!-- Element which is going to render as Document Editor -->
+    <!-- Element which is going to render as Document editor -->
     <div id='DocumentEditor' style='height:620px'></div>
     <script>
         // Initialize DocumentEditorContainer component
@@ -362,7 +362,7 @@ Now, run the `index.html` in web browser, it will render the **Essential<sup sty
 
 ## Server-side dependencies
 
-The Document Editor component requires server-side interactions for the following operations:
+The Document editor component requires server-side interactions for the following operations:
 
 * [Open file formats other than SFDT](./import#convert-word-documents-into-sfdt)
 * [Paste with formatting](./clipboard#paste-with-formatting)
@@ -382,12 +382,12 @@ Syncfusion provides a predefined [Word Processor server Docker image](https://hu
 
 ## Next steps
 
-After successfully setting up the Document Editor component, explore these resources to enhance your implementation:
+After successfully setting up the Document editor component, explore these resources to enhance your implementation:
 
-* [How to localize the Document Editor container](./global-local)
+* [How to localize the Document editor container](./global-local)
 * [How to load a document by default](./how-to/open-default-document)
 * [How to customize the toolbar](./how-to/customize-tool-bar)
-* [How to resize the Document Editor component](./how-to/resize-document-editor)
+* [How to resize the Document editor component](./how-to/resize-document-editor)
 * [How to add a save button to the DocumentEditorContainer toolbar](./how-to/add-save-button-in-toolbar)
 
 ## Troubleshooting

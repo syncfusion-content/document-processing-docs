@@ -1,16 +1,16 @@
 ---
 layout: post
-title: JavaScript (ES6) Document Editor quick start | Syncfusion
-description: Checkout and learn about Getting started with JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Getting started with JavaScript (ES6) Document editor | Syncfusion
+description: Checkout and learn about Getting started with JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting started 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with JavaScript (ES6) Document Editor control
+# Getting started with JavaScript (ES6) Document editor control
 
-This section briefly explains how to create a simple **Document Editor** component and configure its available functionalities in TypeScript, using Essential<sup style="font-size:70%">&reg;</sup> JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository.
+This section briefly explains how to create a simple **Document editor** component and configure its available functionalities in TypeScript, using Essential<sup style="font-size:70%">&reg;</sup> JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository.
 
 > This application uses the latest version of [webpack-cli](https://webpack.js.org/api/cli#commands) integrated with `webpack.config.js` configuration. For more information about webpack and its features, refer to the [webpack documentation](https://webpack.js.org/guides/getting-started/).
 
@@ -36,7 +36,7 @@ The following list shows the minimum dependencies required to use the Document E
 
 ### Server-side dependencies
 
-The Document Editor component requires server-side interactions for the following operations:
+The Document editor component requires server-side interactions for the following operations:
 
 * [Open file formats other than SFDT](./import#convert-word-documents-into-sfdt)
 * [Paste with formatting](./clipboard#paste-with-formatting)
@@ -106,13 +106,13 @@ You can add either the DocumentEditorContainer component with predefined toolbar
 
 >Note: Starting from version `v19.3.0.x`, the accuracy of text size measurements has been optimized to match Microsoft Word pagination for most documents. This improvement is enabled by default. You can [disable it to retain the pagination behavior of older versions](./how-to/disable-optimized-text-measuring) if needed.
 
-### Document Editor component
+### Document editor component
 
-The Document Editor component is used to create, view, and edit Word documents. With this component, you can customize the UI options based on your requirements to modify documents.
+The Document editor component is used to create, view, and edit Word documents. With this component, you can customize the UI options based on your requirements to modify documents.
 
-#### Adding Document Editor component
+#### Adding Document editor component
 
-You can start adding the Essential<sup style="font-size:70%">&reg;</sup> JS 2 Document Editor component to the application. Add the DocumentEditor component in the `app.ts` and `index.html` files using the following code.
+You can start adding the Essential<sup style="font-size:70%">&reg;</sup> JS 2 Document editor component to the application. Add the DocumentEditor component in the `app.ts` and `index.html` files using the following code.
 
 Place the following code in the `app.ts` file:
 
@@ -121,7 +121,7 @@ Place the following code in the `app.ts` file:
 
 import { DocumentEditor } from '@syncfusion/ej2-documenteditor';
 
-// Initialize Document Editor component
+// Initialize Document editor component
 let documenteditor: DocumentEditor = new DocumentEditor({ 
     isReadOnly: false, 
     height: '370px', 
@@ -131,13 +131,13 @@ let documenteditor: DocumentEditor = new DocumentEditor({
 // Enable all built-in modules
 documenteditor.enableAllModules();
 
-// Render the Document Editor component
+// Render the Document editor component
 documenteditor.appendTo('#DocumentEditor');
 
 {% endhighlight %}
 {% endtabs %}
 
->Important: The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
+>Important: The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
 
 Add an HTML div element to act as the DocumentEditor element in the `index.html` file:
 
@@ -148,7 +148,7 @@ Add an HTML div element to act as the DocumentEditor element in the `index.html`
 <html lang="en">
 
 <head>
-    <title>Essential JS 2 Document Editor</title>
+    <title>Essential JS 2 Document editor</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta name="description" content="Essential JS 2" />
@@ -167,7 +167,7 @@ Add an HTML div element to act as the DocumentEditor element in the `index.html`
 {% endhighlight %}
 {% endtabs %}
 
-#### Run the Document Editor application
+#### Run the Document editor application
 
 The quickstart project is configured to compile and run the application in the browser. Use the following command to run the application:
 
@@ -179,7 +179,7 @@ npm start
 {% endhighlight %}
 {% endtabs %}
 
-The Document Editor output will be displayed as follows:
+The Document editor output will be displayed as follows:
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -192,11 +192,11 @@ The Document Editor output will be displayed as follows:
           
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/getting-started-cs1" %}
 
-### Document Editor Container component
+### Document editor Container component
 
 The DocumentEditorContainer is a predefined component that wraps the DocumentEditor, toolbar, properties pane, and status bar into a single component. The toolbar and properties pane allow users to view and modify documents through public APIs available in the DocumentEditor.
 
-#### Adding Document Editor Container component
+#### Adding Document editor Container component
 
 You can start adding the Essential<sup style="font-size:70%">&reg;</sup> JS 2 documenteditor container component to the application. Add the DocumentEditorContainer component in the `app.ts` and `index.html` files using the following code.
 
@@ -220,7 +220,7 @@ documenteditor.appendTo('#DocumentEditor');
 {% endhighlight %}
 {% endtabs %}
 
->Important: The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
+>Important: The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
 
 Add an HTML div element to act as the DocumentEditorContainer element in the `index.html` file:
 
@@ -231,7 +231,7 @@ Add an HTML div element to act as the DocumentEditorContainer element in the `in
 <html lang="en">
 
 <head>
-    <title>Essential JS 2 Document Editor</title>
+    <title>Essential JS 2 Document editor</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta name="description" content="Essential JS 2" />
@@ -250,7 +250,7 @@ Add an HTML div element to act as the DocumentEditorContainer element in the `in
 {% endhighlight %}
 {% endtabs %}
 
-#### Run the Document Editor Container application
+#### Run the Document editor Container application
 
 The quickstart project is configured to compile and run the application in the browser. Use the following command to run the application:
 
@@ -277,12 +277,12 @@ The DocumentEditorContainer output will be displayed as follows:
 
 ## Next steps
 
-After successfully setting up the Document Editor component, explore these resources to enhance your implementation:
+After successfully setting up the Document editor component, explore these resources to enhance your implementation:
 
-* [How to localize the Document Editor container](./global-local)
+* [How to localize the Document editor container](./global-local)
 * [How to load a document by default](./how-to/open-default-document)
 * [How to customize the toolbar](./how-to/customize-tool-bar)
-* [How to resize the Document Editor component](./how-to/resize-document-editor)
+* [How to resize the Document editor component](./how-to/resize-document-editor)
 * [How to add a save button to the DocumentEditorContainer toolbar](./how-to/add-save-button-in-toolbar)
 
 ## Troubleshooting
