@@ -46,7 +46,7 @@ Using one of the above commands will prompt you to configure additional settings
 
 ### Define the project name
 
-Specify the name of the project directly. In this example, the project is named `ej2-nextjs-documenteditor`:
+Specify the name of the project directly. In this example, the project is named `ej2-next js-documenteditor`:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
