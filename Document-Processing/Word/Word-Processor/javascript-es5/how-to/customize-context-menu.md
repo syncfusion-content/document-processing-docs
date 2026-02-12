@@ -18,28 +18,30 @@ Document Editor allows you to add custom option in context menu. It can be achie
 
 The following code shows how to add custom option in context menu.
 
-```ts
-let documentEditor: DocumentEditor = new DocumentEditor({
-    isReadOnly: false, serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
+```js
+var documentEditor = new ej.documenteditor.DocumentEditor({
+    isReadOnly: false,
+    serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 documentEditor.enableAllModules();
 documentEditor.appendTo('#DocumentEditor');
 //Creating custom menu items
-let menuItems: MenuItemModel[] = [
+var menuItems = [
     {
         text: 'Search In Google',
         id: 'search_in_google',
         iconCss: 'e-icons e-de-ctnr-find'
-    }];
+    }
+];
 //Adding custom options
 documentEditor.contextMenu.addCustomMenu(menuItems, false);
 //To handle contextmenu select event
-documentEditor.customContextMenuSelect = (args: CustomContentMenuEventArgs): void => {
-    let item: string = args.id;
-    let id: string = documentEditor.element.id;
+documentEditor.customContextMenuSelect = function (args) {
+    var item = args.id;
+    var id = documentEditor.element.id;
     switch (item) {
         case id + 'search_in_google':
-            let searchContent: string = documentEditor.selection.text;
+            var searchContent = documentEditor.selection.text;
             if (!documentEditor.selection.isEmpty && /\S/.test(searchContent)) {
                 window.open('http://google.com/search?q=' + searchContent);
             }
@@ -56,19 +58,21 @@ Document Editor allows you to customize the added custom option and also to hide
 
 The following code shows how to hide default context menu and add custom option in context menu.
 
-```ts
-let documentEditor: DocumentEditor = new DocumentEditor({
-    isReadOnly: false, serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
+```js
+var documentEditor = new ej.documenteditor.DocumentEditor({
+    isReadOnly: false,
+    serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 documentEditor.enableAllModules();
 documentEditor.appendTo('#DocumentEditor');
 //Creating custom menu items
-let menuItems: MenuItemModel[] = [
+var menuItems = [
     {
         text: 'Search In Google',
         id: 'search_in_google',
         iconCss: 'e-icons e-de-ctnr-find'
-    }];
+    }
+];
 //Adding custom options
 documentEditor.contextMenu.addCustomMenu(menuItems, true);
 ```
@@ -77,37 +81,38 @@ documentEditor.contextMenu.addCustomMenu(menuItems, true);
 
 The following code shows how to hide/show added custom option in context menu using the [`customContextMenuBeforeOpen`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/beforeOpenCloseCustomContentMenuEventArgs/).
 
-```ts
-let documentEditor: DocumentEditor = new DocumentEditor({
+```js
+var documentEditor = new ej.documenteditor.DocumentEditor({
     isReadOnly: false, serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 documentEditor.enableAllModules();
 documentEditor.appendTo('#DocumentEditor');
 //Creating custom menu items
-let menuItems: MenuItemModel[] = [
+var menuItems = [
     {
         text: 'Search In Google',
         id: 'search_in_google',
         iconCss: 'e-icons e-de-ctnr-find'
-    }];
+    }
+];
 //Adding custom options
 documentEditor.contextMenu.addCustomMenu(menuItems, false);
 //To show/hide custom menu item
-documentEditor.customContextMenuBeforeOpen = (args: BeforeOpenCloseCustomContentMenuEventArgs): void => {
-    let search: HTMLElement = document.getElementById(args.ids[0]);
+documentEditor.customContextMenuBeforeOpen = function (args) {
+    var search = document.getElementById(args.ids[0]);
     search.style.display = 'none';
-    let searchContent: string = documentEditor.selection.text;
+    var searchContent = documentEditor.selection.text;
     if ((!documentEditor.selection.isEmpty) && (/\S/.test(searchContent))) {
         search.style.display = 'block';
     }
 };
 //To handle contextmenu select event
-documentEditor.customContextMenuSelect = (args: CustomContentMenuEventArgs): void => {
-    let item: string = args.id;
-    let id: string = documentEditor.element.id;
+documentEditor.customContextMenuSelect = function (args) {
+    var item = args.id;
+    var id = documentEditor.element.id;
     switch (item) {
         case id + 'search_in_google':
-            let searchContent: string = documentEditor.selection.text;
+            var searchContent = documentEditor.selection.text;
             if (!documentEditor.selection.isEmpty && /\S/.test(searchContent)) {
                 window.open('http://google.com/search?q=' + searchContent);
             }
@@ -135,18 +140,10 @@ Document Editor allows you to customize the Context Menu with sub-menu items. It
 
 The following code shows how to add a sub items in the custom option in context menu in Document Editor Container.
  
-```ts
-import {
-  DocumentEditorContainer,
-  Toolbar,
-} from '@syncfusion/ej2-documenteditor';
-import { MenuItemModel } from '@syncfusion/ej2-navigations';
-
-//Inject require modules.
-DocumentEditorContainer.Inject(Toolbar);
+```js
 
 // creating Custom Options
-let menuItems: MenuItemModel[] = [
+var menuItems = [
   {
     text: 'Form field',
     id: 'form field',
@@ -155,25 +152,26 @@ let menuItems: MenuItemModel[] = [
       {
         text: 'Text form',
         id: 'Text form',
-        iconCss: 'e-icons e-de-textform',
+        iconCss: 'e-icons e-de-textform'
       },
       {
         text: 'Check box',
         id: 'Check box',
-        iconCss: 'e-icons e-de-checkbox-form',
+        iconCss: 'e-icons e-de-checkbox-form'
       },
       {
         text: 'Drop down',
         id: 'Drop down',
-        iconCss: 'e-icons e-de-dropdownform',
-      },
-    ],
-  },
+        iconCss: 'e-icons e-de-dropdownform'
+      }
+    ]
+  }
 ];
+
 //Initialize Document Editor component.
-let container: DocumentEditorContainer = new DocumentEditorContainer({
+var container = new ej.documenteditor.DocumentEditorContainer({
   enableToolbar: true,
-  height: '590px',
+  height: '590px'
 });
 
 //Open the default document in `created` event.
@@ -181,8 +179,7 @@ container.created = function () {
   // adding Custom Options
   container.documentEditor.contextMenu.addCustomMenu(menuItems, false, true);
 };
+
 //Render Document Editor Container component.
 container.appendTo('#DocumentEditor');
-
-
 ```

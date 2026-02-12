@@ -18,31 +18,29 @@ Hence, it is recommended to switch the Document editor component as read-only in
 
 The following example code illustrates how to deploy Document Editor component for Mobile.
 
-```ts
+```js
 //Initialize Document Editor Container component.
-import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
 
-DocumentEditorContainer.Inject(Toolbar);
-let container: DocumentEditorContainer = new DocumentEditorContainer({
+var container = new ej.documenteditor.DocumentEditorContainer({
     enableToolbar: true, height: '590px'
 });
 container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 container.appendTo('#DocumentEditor');
 
 //To detect the device
-let isMobileDevice: bool = /Android|Windows Phone|webOS/i.test(navigator.userAgent);
+var isMobileDevice = /Android|Windows Phone|webOS/i.test(navigator.userAgent);
 
-container.documentChange = () => {
+container.documentChange = function () {
     if (isMobileDevice) {
         container.restrictEditing = true;
-        setTimeout(() => {
+        setTimeout(function () {
             container.documentEditor.fitPage("FitPageWidth");
         }, 50);
     }
     else {
         container.restrictEditing = false;
     }
-}
+};
 ```
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.

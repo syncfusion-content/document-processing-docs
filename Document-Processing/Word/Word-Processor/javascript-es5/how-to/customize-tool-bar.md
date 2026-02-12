@@ -20,21 +20,20 @@ DocumentEditorContainer allows you to customize(add, show, hide, enable, and dis
 
 * Enable, Disable -  Toolbar items can be enabled or disable using [`enableItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/toolbar/#enableItems)
 
-```ts
-let toolItem: CustomToolbarItemModel = {
+```js
+var toolItem = {
     prefixIcon: "e-de-ctnr-lock",
     tooltipText: "Disable Image",
     text: onWrapText("Disable Image"),
     id: "Custom"
 };
-
 //Initialize Document Editor Container component with custom toolbar item.
-let container: DocumentEditorContainer = new DocumentEditorContainer({
+var container = new ej.documenteditor.DocumentEditorContainer({
     toolbarItems: [toolItem, 'Undo', 'Redo', 'Separator', 'Image', 'Table', 'Hyperlink', 'Bookmark', 'TableOfContents', 'Separator', 'Header', 'Footer', 'PageSetup', 'PageNumber', 'Break', 'InsertFootnote', 'InsertEndnote', 'Separator', 'Find', 'Separator', 'Comments', 'TrackChanges', 'Separator', 'LocalClipboard', 'RestrictEditing', 'Separator', 'FormFields', 'UpdateFields','ContentControl']
 });
 container.appendTo('#container');
 //To handle custom toolbar click event.
-container.toolbarClick = (args: ClickEventArgs): void => {
+container.toolbarClick = function (args) {
     switch (args.item.id) {
         case 'Custom':
             //Disable image toolbar item.
@@ -42,17 +41,14 @@ container.toolbarClick = (args: ClickEventArgs): void => {
             break;
     }
 };
-
-function onWrapText(text: string): string {
-  let content: string = '';
-    const index: number = text.lastIndexOf(' ');
-
+function onWrapText(text) {
+    var content = '';
+    var index = text.lastIndexOf(' ');
     if (index !== -1) {
         content = text.slice(0, index) + "<div class='e-de-text-wrap'>" + text.slice(index + 1) + "</div>";
     } else {
         content = text;
     }
-
     return content;
 }
 ```

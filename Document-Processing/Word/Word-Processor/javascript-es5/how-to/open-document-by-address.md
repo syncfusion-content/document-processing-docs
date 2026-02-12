@@ -16,20 +16,18 @@ In this article, we are going to see how to open a document from URL in Document
 
 please refer below example for client-side code
 
-```ts
+```js
 //Initialize Document Editor Container component.
-let container: DocumentEditorContainer = new DocumentEditorContainer();
-
+var container = new ej.documenteditor.DocumentEditorContainer();
 container.appendTo('#DocumentEditorContainer');
-
-document.getElementById('import').addEventListener('click', () => {
-    let http: XMLHttpRequest = new XMLHttpRequest();
+document.getElementById('import').addEventListener('click', function () {
+    var http = new XMLHttpRequest();
     //add your url in which you want to open document inside the ""
-    let content = { fileUrl: "" };
-    let baseurl: string = "/api/documenteditor/ImportFileURL";
+    var content = { fileUrl: "" };
+    var baseurl = "/api/documenteditor/ImportFileURL";
     http.open("POST", baseurl, true);
     http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    http.onreadystatechange = () => {
+    http.onreadystatechange = function () {
         if (http.readyState === 4) {
             if (http.status === 200 || http.status === 304) {
                 //open the SFDT text in Document Editor

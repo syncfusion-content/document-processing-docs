@@ -18,12 +18,12 @@ If you want the Document editor component to retain the document pagination (dis
 
 The following example code illustrates how to disable optimized text measuring improvement in `DocumentEditorContainer` instance.
 
-```ts
-import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
+```js
 
-DocumentEditorContainer.Inject(Toolbar);
-
-let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px' });
+var container = new ej.documenteditor.DocumentEditorContainer({
+    enableToolbar: true,
+    height: '590px'
+});
 
 // Disable optimized text measuring improvement
 container.documentEditorSettings = { enableOptimizedTextMeasuring: false };
@@ -37,10 +37,9 @@ container.appendTo('#container');
 
 The following example code illustrates how to disable optimized text measuring improvement in `DocumentEditor` instance.
 
-```ts
-import { DocumentEditor } from '@syncfusion/ej2-documenteditor';
+```js
 
-let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, height: '370px', serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/' });
+var documenteditor = new ej.documenteditor.DocumentEditor({ isReadOnly: false, height: '370px', serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/' });
 
 documenteditor.enableAllModules();
 
