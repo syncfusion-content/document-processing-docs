@@ -10,28 +10,28 @@ domainurl: ##DomainURL##
 
 # Create and modify annotations
 
-Use the PDF Viewer annotation tools to add, edit, and manage markups across your documents. This page provides a quick overview with convenient navigation to each annotation type and common ways to create and modify annotations.
+The PDF Viewer annotation tools add, edit, and manage markups across documents. This page provides an overview with quick navigation to each annotation type and common creation and modification workflows.
 
 ## Quick navigation to annotation types
 
 Jump directly to a specific annotation type for detailed usage and examples:
 
-TextMarkup Annotations:
+Text markup annotations:
 
-- Highlight : [Highlight annotation](./annotation-types/highlight-annotation)
+- Highlight: [Highlight annotation](./annotation-types/highlight-annotation)
 - Strikethrough: [Strikethrough annotation](./annotation-types/strikethrough-annotation)
 - Underline: [Underline annotation](./annotation-types/underline-annotation)
 - Squiggly: [Squiggly annotation](./annotation-types/Squiggly-annotation)
 
-Shape Annotations:
+Shape annotations:
 
 - Line: [Line annotation](./annotation-types/line-annotation)
 - Arrow: [Arrow annotation](./annotation-types/arrow-annotation)
 - Rectangle: [Rectangle annotation](./annotation-types/rectangle-annotation)
-- Circle : [Circle annotation](./annotation-types/circle-annotation)
+- Circle: [Circle annotation](./annotation-types/circle-annotation)
 - Polygon: [Polygon annotation](./annotation-types/polygon-annotation)
 
-Measurement Annotations:
+Measurement annotations:
 
 - Distance: [Distance annotation](./annotation-types/distance-annotation)
 - Perimeter: [Perimeter annotation](./annotation-types/perimeter-annotation)
@@ -39,13 +39,13 @@ Measurement Annotations:
 - Radius: [Radius annotation](./annotation-types/ra)
 - Volume: [Volume annotation](./annotation-types/vo)
 
-Other Annotations:
+Other annotations:
 
 - Redaction: [Redaction annotation](./annotation-types/redaction-annotation)
-- Free Text: [Free text annotation](./annotation-types/free-text-annotation)
-- Ink (Freehand): [Ink annotation](./annotation-types/ink-annotation)
+- Free text: [Free text annotation](./annotation-types/free-text-annotation)
+- Ink (freehand): [Ink annotation](./annotation-types/ink-annotation)
 - Stamp: [Stamp annotation](./annotation-types/stamp-annotation)
-- Sticky Notes: [Sticky notes annotation](./annotation-types/sticky-notes-annotation)
+- Sticky notes: [Sticky notes annotation](./annotation-types/sticky-notes-annotation)
 
 N> Each annotation type page includes both UI steps and programmatic examples specific to that type.
 
@@ -54,18 +54,18 @@ N> Each annotation type page includes both UI steps and programmatic examples sp
 ### Create via UI
 
 - Open the annotation toolbar in the PDF Viewer.
-- Choose the required tool (for example, Shape, Free Text, Ink, Stamp, Redaction).
+- Choose the required tool (for example, Shape, Free text, Ink, Stamp, Redaction).
 - Click or drag on the page to place the annotation.
 
 ![Annotation toolbar](../images/shape_toolbar.png)
 
-Notes:
-- When pan mode is active and you select a shape or stamp tool, the viewer switches to text select mode automatically.
-- Property pickers in the annotation toolbar let you choose color, stroke color, thickness, and opacity while drawing.
+Note:
+- When pan mode is active and a shape or stamp tool is selected, the viewer switches to text select mode automatically.
+- Property pickers in the annotation toolbar let users choose color, stroke color, thickness, and opacity while drawing.
 
 ### Create programmatically
 
-Creation patterns vary slightly by type. Refer to the type pages above for tailored code. Example: creating a Redaction annotation using addAnnotation.
+Creation patterns vary by type. Refer to the individual annotation pages for tailored code. Example: creating a Redaction annotation using `addAnnotation`.
 
 ```html
 <button id="addRedactAnnot">Add Redaction Annotation</button>
@@ -88,20 +88,20 @@ document.getElementById('addRedactAnnot')?.addEventListener('click', () => {
 });
 ```
 
-See the individual annotation pages (links above) for enabling draw modes from UI buttons and other type-specific creation samples.
+Refer to the individual annotation pages for enabling draw modes from UI buttons and other type-specific creation samples.
 
 ## Modify annotations
 
 ### Modify via UI
 
 Use the annotation toolbar after selecting an annotation:
-- Edit Color: change the fill or text color (when applicable)
+- Edit color: change the fill or text color (when applicable)
 ![Edit color](../images/edit_color.png)
-- Edit Stroke Color: change the border/line color (shape and line types)
+- Edit stroke color: change the border or line color (shape and line types)
 ![Edit stroke color](../images/shape_strokecolor.png)
-- Edit Thickness: adjust the border/line thickness
+- Edit thickness: adjust the border or line thickness
 ![Edit thickness](../images/shape_thickness.png)
-- Edit Opacity: change transparency
+- Edit opacity: change transparency
 ![Edit opacity](../images/shape_opacity.png)
 
 
@@ -109,10 +109,10 @@ Additional options such as Line Properties (for line/arrow) are available from t
 
 ### Modify programmatically
 
-Use editAnnotation to apply changes to an existing annotation. Common flow:
-- Locate the target annotation from annotationCollection
-- Update the desired properties
-- Call editAnnotation with the modified object
+Use `editAnnotation` to apply changes to an existing annotation. Common flow:
+- Locate the target annotation from `annotationCollection`.
+- Update the desired properties.
+- Call `editAnnotation` with the modified object.
 
 ```html
 <button id="bulkEdit">Bulk edit matching annotations</button>

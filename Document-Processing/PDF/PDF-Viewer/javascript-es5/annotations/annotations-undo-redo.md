@@ -8,16 +8,16 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Perform undo and redo in JavaScript 
+# Undo and redo annotations in JavaScript PDF Viewer
 
-The PDF Viewer supports undo and redo for Annotations.
+The PDF Viewer supports undo and redo for annotations.
 
 ![Undo-redo](../../javascript-es6/annotations/annotation-images/annotation-undo-redo.png)
 
-Undo and redo actions can be performed in the following ways:
+Undo and redo actions can be performed by using either of the following methods:
 
-1. Using keyboard shortcuts:
-    After performing a highlight annotation action, press Ctrl+Z to undo and Ctrl+Y to redo.
+1. Using keyboard shortcuts (desktop):
+    After performing an annotation action, press `Ctrl+Z` to undo and `Ctrl+Y` to redo on Windows and Linux. On macOS, use `Command+Z` to undo and `Command+Shift+Z` to redo.
 2. Using the toolbar:
     Use the **Undo** and **Redo** tools in the toolbar.
 
@@ -59,8 +59,7 @@ document.getElementById('redo').addEventListener('click', function () {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.js` file
+Note: To set up the **server-backed PDF Viewer**, add the following `serviceUrl` in the `index.js` file:
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/undo-redo-cs1" %}
