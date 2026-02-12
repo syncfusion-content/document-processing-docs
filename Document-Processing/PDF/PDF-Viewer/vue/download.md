@@ -84,7 +84,7 @@ export default {
   },
 
   methods: {
-    downloadClicked: function (args) {
+    downloadClicked: function () {
       this.$refs.pdfviewer.ej2Instances.download();
     }
   }
@@ -158,7 +158,7 @@ export default {
   },
 
   methods: {
-    downloadClicked: function (args) {
+    downloadClicked: function () {
       this.$refs.pdfviewer.ej2Instances.download();
     }
   }

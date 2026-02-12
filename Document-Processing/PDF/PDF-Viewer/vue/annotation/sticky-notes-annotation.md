@@ -159,7 +159,7 @@ const addAnnotation = function () {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
 
 <template>
   <div id="app">
@@ -254,7 +254,7 @@ const editAnnotation = function () {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight html tabtitle="Options API (Standalone)" %}
 
 <template>
   <div id="app">

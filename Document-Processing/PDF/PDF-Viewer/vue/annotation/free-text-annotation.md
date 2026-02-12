@@ -45,8 +45,9 @@ import {
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
   TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
+import { provide, ref } from 'vue';
 
+const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
@@ -55,7 +56,7 @@ provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Bookma
 
 const documentLoad = () => {
   document.getElementById('set').addEventListener('click', () => {
-    this.$refs.pdfviewer.ej2Instances.annotation.setAnnotationMode('FreeText');
+    pdfviewer.value.ej2Instances.annotation.setAnnotationMode('FreeText');
   });
 }
 
@@ -125,8 +126,9 @@ import {
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
   TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
+import { provide, ref } from 'vue';
 
+const pdfviewer = ref(null);
 const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
@@ -135,7 +137,7 @@ provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Bookma
 
 const documentLoad = () => {
   document.getElementById('set').addEventListener('click', () => {
-    this.$refs.pdfviewer.ej2Instances.annotation.setAnnotationMode('FreeText');
+    pdfviewer.value.ej2Instances.annotation.setAnnotationMode('FreeText');
   });
 }
 
@@ -190,7 +192,9 @@ export default {
 
 ## Add a free text annotation programmatically to the PDF document
 
-Add a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method. The example below demonstrates adding a FreeText annotation with styling and position properties.
+The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#annotation) method.
+
+Here is an example of adding a free text annotation programmatically using addAnnotation():
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}

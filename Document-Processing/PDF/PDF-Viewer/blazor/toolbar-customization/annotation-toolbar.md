@@ -9,15 +9,13 @@ documentation: ug
 
 # Annotation toolbar customization
 
-The annotation toolbar can be customized by showing or hiding default items and by controlling the order in which the items appear.
+Customize which tools appear in the annotation toolbar, control their order, and toggle toolbar visibility programmatically.
 
 ## Show or hide the annotation toolbar
 
-Show or hide the annotation toolbar programmatically during initialization or at runtime.
+Toggle the annotation toolbar during initialization or at runtime using the [EnableAnnotationToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableAnnotationToolbar) property or the [ShowAnnotationToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowAnnotationToolbar_System_Boolean_) method.
 
-Use the [EnableAnnotationToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableAnnotationToolbar) property or the [ShowAnnotationToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowAnnotationToolbar_System_Boolean_) method to toggle visibility.
-
-The following code snippet explains how to show or hide the annotation toolbar using the ShowAnnotationToolbar method.
+Example: show the annotation toolbar when a document loads.
 
 ```cshtml
 
@@ -46,15 +44,13 @@ The following code snippet explains how to show or hide the annotation toolbar u
 ```
 [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Annotation%20Toolbar/Show%20or%20hide%20on%20loading).
 
-## How to customize the annotation toolbar
+## Customize annotation toolbar items
 
-Choose which tools appear and control their order in the annotation toolbar.
+Use [PdfViewerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html) to specify which annotation tools are shown and their order. The property accepts a list of [AnnotationToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_AnnotationToolbarItems) values; only listed items are rendered, and the displayed order follows the list sequence.
 
-Use [PdfViewerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html) with the [AnnotationToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_AnnotationToolbarItems) property to choose which tools are displayed in the annotation toolbar. The property accepts a list of [AnnotationToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationToolbarItem.html) values. Only the items included in this list are shown; any item not listed is hidden. The rendered order follows the sequence of items in the list.
+Include the Close tool so users can exit the annotation toolbar when needed. The annotation toolbar appears when entering annotation mode in `SfPdfViewer2` and adapts responsively to available width.
 
-The annotation toolbar is presented when entering annotation mode in SfPdfViewer2 and adapts responsively based on the available width. Include the Close tool to allow users to exit the annotation toolbar when needed.
-
-The following example demonstrates how to customize the annotation toolbar by specifying a selected set of tools using `AnnotationToolbarItem`.
+Example: configure a custom set of annotation tools.
 
 ```cshtml
 
@@ -98,6 +94,7 @@ Refer to the image below for the mobile view (responsive layout adapts to width)
 [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/CustomAnnotationToolbar.razor)
  
 N> Properties tools (color, opacity, thickness, font, etc.) now appear only after you select or add the related annotation. Until you select or add one, these tools are hidden.
+
 N> This change reduces clutter and shows options only when they’re relevant to the selected annotation.
 
 ## See also

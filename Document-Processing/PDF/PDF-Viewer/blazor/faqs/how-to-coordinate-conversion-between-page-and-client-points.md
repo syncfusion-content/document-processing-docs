@@ -126,7 +126,7 @@ window.convertClientPointToPagePoint = function (clientPoint) {
 <div style="display: flex; height: 100vh; width: 100vw;">
     <div style="width: 40%; height: 100%;">
     </div>
-    <div @onmousedown=HandleMouseDown style="width: 60%; height: 100%;">
+    <div @onmousedown="HandleMouseDown" style="width: 60%; height: 100%;">
         <SfPdfViewer2 @ref="SfPdfViewer2"
         DocumentPath="wwwroot/Invoice.pdf"
         Height="100%"

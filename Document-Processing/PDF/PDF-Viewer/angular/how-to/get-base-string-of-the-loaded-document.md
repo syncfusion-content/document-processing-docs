@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get the Base 64 string of the loaded PDF document
+# Get the Base64 string of the loaded PDF document
 
-The PDF Viewer library allows you to get the base 64 string of the loaded PDF document by using **saveAsBlob()** method. The entire PDF document will get as blob as like memory stream. So, we can save the blob or convert into stream and we can save it in the database. We can also load the PDF document from base 64 string using the **load()** method.
+The PDF Viewer exposes `saveAsBlob()` to retrieve the currently loaded PDF as a Blob. Convert that Blob to a Base64 data URL (for example, to save in a database or transfer to a backend) and reload the document later using `load()` with the Base64 data.
 
 The following steps are used to get the base 64 string of the loaded PDF document in the PDF viewer control.
 
