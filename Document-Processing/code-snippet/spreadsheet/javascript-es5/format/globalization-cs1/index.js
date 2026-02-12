@@ -1,12 +1,12 @@
 ej.base.enableRipple(true);
 
 // Loading the culture-related files.
-const loadCultureFiles = (locales) => {
-    const files = ['ca-gregorian', 'numbers', 'timeZoneNames', 'currencies', 'numberingSystems'];
+var loadCultureFiles = (locales) => {
+    var files = ['ca-gregorian', 'numbers', 'timeZoneNames', 'currencies', 'numberingSystems'];
     locales.forEach((locale) => {
-        for (const fileName of files) {
-            const url = './cldr-data/' + (fileName === 'numberingSystems' ? '' : (locale + '/')) + fileName + '.json';
-            const ajax = new ej.base.Ajax(url, 'GET', false);
+        for (var fileName of files) {
+            var url = './cldr-data/' + (fileName === 'numberingSystems' ? '' : (locale + '/')) + fileName + '.json';
+            var ajax = new ej.base.Ajax(url, 'GET', false);
             ajax.onSuccess = (value) => ej.base.loadCldr(JSON.parse(value));
             ajax.send();
         }
@@ -19,7 +19,7 @@ ej.base.setCulture('de');
 // Setting currency code for the German culture.
 ej.base.setCurrencyCode('EUR');
 
-const localeFormats = {
+var localeFormats = {
     'de': [{ id: 37, code: '#,##0;-#,##0' }, { id: 38, code: '#,##0;[Red]-#,##0' },
         { id: 39, code: '#,##0.00;-#,##0.00' }, { id: 40, code: '#,##0.00;[Red]-#,##0.00' }, { id: 5, code: '#,##0 "€";-#,##0 "€"' },
         { id: 6, code: '#,##0 "€";[Red]-#,##0 "€"' }, { id: 7, code: '#,##0.00 "€";-#,##0.00 "€"' },
@@ -50,7 +50,7 @@ const localeFormats = {
 // Mapping default number formats for the 'de' locale before the spreadsheet is created.
 ej.spreadsheet.configureLocalizedFormat(null, localeFormats['de']);
 
-const spreadsheet = new ej.spreadsheet.Spreadsheet({
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
     locale: 'de',
     listSeparator: ';',
     sheets: [{
@@ -68,7 +68,7 @@ const spreadsheet = new ej.spreadsheet.Spreadsheet({
 spreadsheet.appendTo('#spreadsheet');
 
 // Setting culture-specific number formats for cells.
-const applyFormats = () => {
+var applyFormats = () => {
     // Apply format to the specified range in the active sheet.
     // The getFormatFromType method returns the culture-based format code based on the mapped formats.
     // If a format ID is not mapped or is not applicable, it will return the format code based on the loaded culture.
@@ -103,9 +103,9 @@ new ej.dropdowns.DropDownList(
         popupHeight: '200px',
         placeholder: 'Select Locale',
         change: (args) => {
-            const localeOption = args.value.split(' ');
+            var localeOption = args.value.split(' ');
             // Setting the culture name like 'de', 'fr-CH', 'zh', and 'en-US'.
-            const cultureName = localeOption[0];
+            var cultureName = localeOption[0];
             ej.base.setCulture(cultureName);
             // Setting the currency code for the selected locale like 'EUR', 'CNY', 'CHF', and 'USD'.
             ej.base.setCurrencyCode(localeOption[1]);

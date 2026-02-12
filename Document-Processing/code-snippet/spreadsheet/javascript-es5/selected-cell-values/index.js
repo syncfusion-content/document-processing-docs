@@ -1,5 +1,5 @@
 
-let sheet = [{
+var sheet = [{
     ranges: [{ dataSource: defaultData }],
     columns: [
         { width: 180 }, { width: 130 }, { width: 130 }, { width: 180 },
@@ -7,7 +7,7 @@ let sheet = [{
     ]
 }];
 
-let spreadsheet = new ej.spreadsheet.Spreadsheet({
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
     sheets: sheet,
     created: function () {
         // Applies cell formatting to specified range of the active sheet
@@ -18,13 +18,13 @@ let spreadsheet = new ej.spreadsheet.Spreadsheet({
 spreadsheet.appendTo('#spreadsheet');
 
 document.getElementById("getSelectedCellValues").onclick = () => {
-    let sheet = spreadsheet.getActiveSheet();
-    let selectedRange = sheet.selectedRange;
-    let index = ej.spreadsheet.getRangeIndexes(selectedRange);
-    let cellRange = ej.spreadsheet.getSwapRange(index);
-    let swappedRange = ej.spreadsheet.getRangeAddress(cellRange);
-    let valueObject = [];
-    let range = sheet.name + '!' + swappedRange;
+    var sheet = spreadsheet.getActiveSheet();
+    var selectedRange = sheet.selectedRange;
+    var index = ej.spreadsheet.getRangeIndexes(selectedRange);
+    var cellRange = ej.spreadsheet.getSwapRange(index);
+    var swappedRange = ej.spreadsheet.getRangeAddress(cellRange);
+    var valueObject = [];
+    var range = sheet.name + '!' + swappedRange;
     // Get the collection of selected cell values by using the getData() method.
     spreadsheet.getData(range).then((cells) => {
       cells.forEach((cell) => {

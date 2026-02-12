@@ -1,5 +1,5 @@
 //Initialize action items.
-let items = [
+var items = [
   {
     text: "Copy"
   },
@@ -12,7 +12,7 @@ let items = [
 ];
 
 // Initialize the DropDownButton component.
-let drpDownBtn = new ej.splitbuttons.DropDownButton({
+var drpDownBtn = new ej.splitbuttons.DropDownButton({
   items: items,
   cssClass: "e-round-corner",
   select: (args) => {
