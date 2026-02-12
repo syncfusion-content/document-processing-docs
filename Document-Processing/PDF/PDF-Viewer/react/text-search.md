@@ -7,9 +7,9 @@ platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Text search in React Pdfviewer component
+# Text search in React PDF Viewer component
 
-The Text Search option in PDF Viewer is used to find and highlight the text content from the document. You can enable/disable the text search using the following code snippet.
+The Text Search feature finds and highlights text in the PDF document. You can enable or disable text search using the examples below.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -77,30 +77,30 @@ root.render(<App />);
 
 ## Text search Features
 
-### Real time search suggestion while typing
-Entering text into the search input dynamically displays search suggestions based on the provided input. The suggestions are updated in real-time as text is typed, offering relevant matches from the available content. This feature enhances the search experience by allowing quick access to potential results while typing.
+### Real-time search suggestions while typing
+Entering text into the search input dynamically displays search suggestions based on the provided input. Suggestions update in real time as the user types, offering quick access to relevant matches.
 
-![Alt text](./images/SingleSearchPopup.png)
+![Search suggestion popup](./images/SingleSearchPopup.png)
 
-### Selecting Search Suggestions from the Popup
-Entering text into the search input triggers a popup displaying relevant suggestions based on the input. Selecting a suggestion from the popup enables direct navigation to its occurrences in the document.
+### Selecting search suggestions from the popup
+Selecting a suggestion from the popup navigates directly to its occurrences in the document.
 
-![Alt text](./images/SearchResultFromPopup.png)
+![Select suggestion from popup](./images/SearchResultFromPopup.png)
 
-### Search Text with enabling 'Match Case' checkbox
-By enabling the 'Match Case' option and entering text into the search input, only the exact case-sensitive matches in the document are highlighted. This feature allows navigation through each occurrence of the exact text match within the document.
+### Case-sensitive search ('Match Case')
+When 'Match Case' is enabled, only exact case-sensitive matches are highlighted and navigable.
 
-![Alt text](./images/SearchNavigationMatchCase.png)
+![Match case search results](./images/SearchNavigationMatchCase.png)
 
-### Search Text without enabling 'Match Case' checkbox
-When text is entered into the search input without enabling the 'Match Case' option, all instances of the text, regardless of case, are highlighted in the document. This allows easy navigation through every occurrence of the search term.
+### Case-insensitive search (no 'Match Case')
+When 'Match Case' is disabled, searches match text regardless of case and highlight all occurrences.
 
-![Alt text](./images/SearchNavigationNoMatchCase.png)
+![No match case search results](./images/SearchNavigationNoMatchCase.png)
 
-### Search list of text by enabling 'Match Any Word' checkbox
-When the 'Match Any Word' option is enabled, the entered text in the search input is split into individual words based on spaces. As the text is typed, the popup dynamically displays search suggestions for each word in real time, highlighting potential matches within the document.
+### Match Any Word
+When 'Match Any Word' is enabled, the input is split into words and the viewer searches for any of the words, updating suggestions and matches in real time.
 
-![Alt text](./images/MultiSearchPopup.png)
+![Match any word suggestions](./images/MultiSearchPopup.png)
 
 ### Programmatic Search with Settings
 
@@ -110,6 +110,7 @@ While the PDF Viewer's toolbar provides a user-friendly way to search, you can a
 
 The `searchText` method allows you to initiate a search with specific criteria.
 
+{% highlight ts %}
 {% raw %}
 import React, { useRef } from 'react';
 import { PdfViewerComponent } from '@syncfusion/ej2-react-pdfviewer';
@@ -134,11 +135,13 @@ export default function SearchExample() {
   );
 }
 {% endraw %}
+{% endhighlight %}
 
 #### Match Case
 
 To perform a case-sensitive search, set the `isMatchCase` parameter to `true`. This corresponds to the 'Match Case' checkbox in the search panel.
 
+{% highlight ts %}
 {% raw %}
 import React, { useEffect, useRef } from 'react';
 import { PdfViewerComponent } from '@syncfusion/ej2-react-pdfviewer';
@@ -161,11 +164,13 @@ export default function MatchCaseExample() {
   );
 }
 {% endraw %}
+{% endhighlight %}
 
 #### Match Whole Word
 
 You can search for whole words by setting the `isMatchWholeWord` parameter to `true`. When this is enabled, the search will only match occurrences where the search term is not part of a larger word. For example, a search for "view" will not match "viewer".
 
+{% highlight ts %}
 {% raw %}
 import React, { useEffect, useRef } from 'react';
 import { PdfViewerComponent } from '@syncfusion/ej2-react-pdfviewer';
@@ -188,18 +193,19 @@ export default function WholeWordExample() {
   );
 }
 {% endraw %}
+{% endhighlight %}
 
-**Note on 'Match Any Word':** The 'Match Any Word' checkbox in the UI is a feature that splits the input string into multiple words and performs a search for each of them. This is different from the `isMatchWholeWord` parameter of the `searchText` method, which enforces a whole-word match for the entire search string provided.
+**Note on 'Match Any Word':** The UI 'Match Any Word' option splits the input into multiple words and searches for any of them. This differs from the `isMatchWholeWord` parameter of `searchText`, which enforces a whole-word match for the entire search string.
 
 
-The following text search methods are available in the PDF Viewer,
+The following text search methods are available in the PDF Viewer:
 
-* [**Search text**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch/#searchtext):- Searches the target text in the PDF document and highlights the occurrences in the pages.
-* [**Search next**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch/#searchnext):- Searches the next occurrence of the searched text from the current occurrence of the PDF Viewer.
-* [**Search previous**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch/#searchprevious):- Searches the previous occurrence of the searched text from the current occurrence of the PDF Viewer.
-* [**Cancel text search**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch/#canceltextsearch):- The text search can be canceled and the highlighted occurrences from the PDF Viewer can be removed .
+- [**Search text**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch#searchtext): Searches the target text and highlights occurrences.
+- [**Search next**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch#searchnext): Navigates to the next occurrence.
+- [**Search previous**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch#searchprevious): Navigates to the previous occurrence.
+- [**Cancel text search**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearch#canceltextsearch): Cancels the search and clears highlights.
 
-![Alt text](./images/search.png)
+![Text search toolbar and results](./images/search.png)
 
 ## Find text method
 Searches for the specified text or an array of strings within the document and returns the bounding rectangles for each occurrence. The search can be case-sensitive based on the provided parameters. If a specific page index is provided, it returns the bounding rectangles for these search strings on that page; otherwise, it returns the bounding rectangles for all pages in the document where the strings were found.
@@ -560,17 +566,19 @@ The PDF Viewer triggers events during text search operations, allowing you to cu
 
 ### textSearchStart
 
-The [textSearchStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#textsearchstartevent) event is raised the moment a search is initiated from the toolbar UI or by calling `textSearch.searchText(...)` programmatically.
+The [textSearchStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#textsearchstartevent) event is raised the moment a search is initiated from the toolbar UI or by calling `textSearch.searchText(...)` programmatically.
 
 - Triggers when: the user submits a term in the search box or when code calls the search API.
 
-- Event arguments include ([TextSearchStartEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearchStartEventArgs/)):
+- Event arguments include ([TextSearchStartEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearchStartEventArgs)):
   - searchText: string — the term to search.
   - matchCase: boolean — whether case-sensitive search is enabled.
   - isMatchWholeWord: boolean — whether whole-word matching is enabled.
   - name: string — event name.
   - cancel: boolean — set to true to cancel the default search.
 
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
 {% raw %}
 
 import React from 'react';
@@ -591,19 +599,23 @@ export default function App() {
   );
 }
 {% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### textSearchHighlight
 
-The [textSearchHighlight](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#textsearchhighlightevent) event fires whenever an occurrence is highlighted during search or when navigating to next/previous results.
+The [textSearchHighlight](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#textsearchhighlightevent) event fires whenever an occurrence is highlighted during search or when navigating to next/previous results.
 
 - Triggers when: a match is brought into view and highlighted (including navigation between matches).
-- Event arguments include ([TextSearchHighlightEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearchHighlightEventArgs/)):
+- Event arguments include ([TextSearchHighlightEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearchHighlightEventArgs)):
   - bounds: RectangleBoundsModel | RectangleBoundsModel[] — rectangles of the highlighted match.
   - pageNumber: number — page index where the match is highlighted.
   - searchText: string — the searched term.
   - matchCase: boolean — whether case-sensitive search was used.
   - name: string — event name.
 
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
 {% raw %}
 
 import React from 'react';
@@ -623,23 +635,27 @@ export default function App() {
   );
 }
 {% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### textSearchComplete
 
-The [textSearchComplete](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textsearchcompleteevent) event is raised after the search engine finishes scanning and resolving all matches for the current query.
+The [textSearchComplete](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#textsearchcompleteevent) event is raised after the search engine finishes scanning and resolving all matches for the current query.
 
 - Triggers when: the search for the submitted term has completed across the document.
 - Typical uses:
   - Update UI with the total number of matches and enable navigation controls.
   - Hide loading indicators or show a "no results" message if none were found.
   - Record analytics for search effectiveness.
-- Event arguments include ([TextSearchCompleteEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearchCompleteEventArgs/)):
+- Event arguments include ([TextSearchCompleteEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textSearchCompleteEventArgs)):
   - totalMatches: number — total number of occurrences found.
   - isMatchFound: boolean — indicates whether at least one match was found.
   - searchText: string — the searched term.
   - matchCase: boolean — whether case-sensitive search was used.
   - name: string — event name.
 
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
 {% raw %}
 
 import React from 'react';
@@ -659,6 +675,9 @@ export default function App() {
   );
 }
 {% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
 ## See also
 
 * [Toolbar items](./toolbar)

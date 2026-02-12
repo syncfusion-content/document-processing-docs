@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Control file downloads in PDF Viewer
 
-Use the downloadStart event to intercept the start of a download and optionally cancel it. In the event handler, set `args.cancel = true` to prevent the download.
+The PDF Viewer exposes a `downloadStart` event that enables interception of a document download before it begins. Use this event to apply custom logic and, if needed, cancel the download by setting the event's `cancel` flag.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -91,8 +91,8 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-By default, `args.cancel` is `false`, so the download proceeds unless explicitly canceled.
+By default, the `cancel` argument is `false`, so the download proceeds unless the handler explicitly sets `args.cancel = true`.
 
 ### Flexibility
 
-Leverage the [downloadStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#downloadstart) event to apply custom rules for allowing or preventing downloads based on application needs.
+Using the [downloadStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/downloadStartEventArgs/) event enables conditional control over downloads—for example, to enforce authentication, restrict downloads for certain documents, or prompt users for confirmation. When using server-backed viewers, confirm whether server-side behavior requires additional handling; canceling the client-side event prevents the local download but may not affect server workflows.

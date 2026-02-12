@@ -201,7 +201,7 @@ pdfviewer.formDesignerModule.addFormField('Password', {
 
 ## Add Fields Dynamically with setFormFieldMode
 
-Use `setFormFieldMode()` to add fields on the fly based on user actions.
+Use **setFormFieldMode()** to add fields on the fly based on user actions.
 
 ### Edit Form Fields in TypeScript PDF Viewer
 You can edit form fields using the UI or API.

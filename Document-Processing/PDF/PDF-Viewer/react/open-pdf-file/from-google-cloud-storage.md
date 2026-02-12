@@ -9,15 +9,15 @@ documentation: ug
 
 # Open PDF from Google Cloud Storage in React
 
-Follow these steps to load a PDF from Google Cloud Storage using the server-backed PDF Viewer.
+These steps describe how to load a PDF stored in Google Cloud Storage into the Syncfusion React PDF Viewer using a server-backed web service.
 
-**Step 1:** Create a Simple PDF Viewer Sample in React
+**Step 1:** Create a PDF Viewer sample in React
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF viewer sample in React. This will give you a basic setup of the PDF viewer component.
+Start by following the Syncfusion React PDF Viewer 'Getting started' guide to create a basic PDF viewer sample. This establishes the client-side component that requests document data from the server-backed service.
 
 **Step 2:** Modify the PdfViewerController.cs file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. Ensure the project runs over HTTPS in production and configure CORS to allow requests from the client origin. You can refer to this [guide](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on creating the web service project. Install the Google Cloud Storage NuGet package (for example: `Install-Package Google.Cloud.Storage.V1`).
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
@@ -93,7 +93,7 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-6. Open appsettings.json in the web service project and add the following keys below the existing AllowedHosts configuration
+6. Open `appsettings.json` in the web service project and add the following keys below the existing `AllowedHosts` configuration
 
 ```json
 {
@@ -110,11 +110,9 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 
 N> Replace the placeholder with the actual Google Cloud Storage bucket name.
 
-N> Replace path/to/service-account-key.json with the actual file path to your service account key JSON file.
-
 **Step 3:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Google Cloud Storage. Ensure the document name exists in your bucket.
+Set the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set `documentPath` to the PDF file name to load from Google Cloud Storage. Ensure the document name exists in your bucket. Confirm the server CORS policy allows requests from the client origin and that `serviceUrl` uses HTTPS in production.
 
 {% raw %}
 
@@ -149,6 +147,6 @@ root.render(<App />);
 ```
 {% endraw %}
 
-N> The **Google.Cloud.Storage.V1** NuGet package must be installed in your application to use the previous code example.
+N> Install the `Google.Cloud.Storage.V1` NuGet package in the web service project to use the storage client shown above.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-google-cloud-storage)

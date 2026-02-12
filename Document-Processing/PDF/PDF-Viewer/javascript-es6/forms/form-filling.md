@@ -34,21 +34,6 @@ The following example demonstrates how to update PDF form field values programma
 <button id="updateBtn">Fill Form Fields</button>
 ```
 ```ts
-import {PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, 
-ThumbnailView, BookmarkView, TextSelection, 
-Annotation, FormFields} from '@syncfusion/ej2-pdfviewer';
- 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, 
-ThumbnailView, BookmarkView, TextSelection, Annotation, FormFields);
- 
-let pdfviewer: PdfViewer = new PdfViewer({
-  documentPath:
-    'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
-  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
-});
- 
-pdfviewer.appendTo('#pdfViewer');
- 
 // Wire up the button click
 document.getElementById('updateBtn')!.onclick = () => {
   //Retriveformfields
@@ -86,24 +71,8 @@ Imported form field data is automatically mapped to the corresponding form field
 
 ```html
 <button id="importJson">Import JSON</button>
-<div id="pdfViewer" style="height: 640px; width: 100%"></div>
 ```
 ```ts
-import { PdfViewer, FormFieldDataFormat, Toolbar, Magnification, Navigation, 
-Annotation, LinkAnnotation, ThumbnailView, BookmarkView, 
-TextSelection, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, 
-LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, 
-FormFields, FormDesigner);
-
-const viewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
-  // serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/' // Server-backed
-  resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
-});
-viewer.appendTo('#pdfViewer');
-
 document.getElementById('importJson')!.addEventListener('click', () => {
   // The file for importing should be accessible at the given path or as a file stream depending on your integration
   viewer.importFormFields('File', FormFieldDataFormat.Json);
@@ -126,20 +95,6 @@ This validation applies to all form field types in the PDF Viewer. A textbox is 
 By enabling [enableFormFieldsValidation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) and wiring the event, you can go through each field and stop the action if required fields are not filled.
 
 ```ts
-import {PdfViewer, Toolbar, Magnification, Navigation,LinkAnnotation, 
-ThumbnailView, BookmarkView, TextSelection, Annotation, 
-FormDesigner, FormFields,TextFieldSettings} from '@syncfusion/ej2-pdfviewer';
- 
-PdfViewer.Inject(Toolbar, Magnification, Navigation,LinkAnnotation, 
-ThumbnailView, BookmarkView, TextSelection, Annotation,
-FormDesigner, FormFields);
- 
-let pdfviewer: PdfViewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
-});
- 
-pdfviewer.appendTo('#pdfViewer');
 pdfviewer.enableFormFieldsValidation = true;
  
 pdfviewer.documentLoad = () => {

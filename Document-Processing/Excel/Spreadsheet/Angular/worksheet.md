@@ -22,8 +22,8 @@ You can dynamically add or insert a sheet by one of the following ways,
 The following code example shows the insert sheet operation in spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/insert/sheet-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/insert/sheet-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -40,8 +40,8 @@ A sheet is a collection of cells organized in the form of rows and columns that 
 The following code example shows how to insert a sheet programmatically and make it the active sheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/insert-sheet-change-active-sheet-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/insert-sheet-change-active-sheet-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -81,8 +81,8 @@ Gridlines act as a border like appearance of cells. They are used to distinguish
 The following code example shows the headers and gridlines operation in spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/headers-gridlines-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/headers-gridlines-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -107,8 +107,8 @@ There are three visibility state as like Microsoft Excel,
 The following code example shows the three types of sheet visibility state.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/sheet-visibility-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/sheet-visibility-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

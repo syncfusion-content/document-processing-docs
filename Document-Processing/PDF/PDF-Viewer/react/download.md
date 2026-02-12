@@ -7,13 +7,15 @@ platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in React PDF Viewer control
+# Download in React PDF Viewer component
 
-The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
+The PDF Viewer component supports downloading the loaded PDF file. Enable or disable the download using the example below.
 
-![Alt text](./images/download.png)
+![Download button in PDF Viewer](./images/download.png)
 
-You can invoke download action using following code snippet.,
+Invoke the download action using the following example.
+
+N> The examples obtain the viewer instance and call `download()`. Prefer using the component `ref` to access the viewer instance when available rather than direct DOM lookup.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

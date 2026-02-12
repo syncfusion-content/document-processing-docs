@@ -22,14 +22,30 @@ See the [Filling PDF Forms](./form-filling) page for full details.
 Use the following code-snippet to enable form-filling by injecting `FormFields` Module.
 
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
- ThumbnailView, BookmarkView, TextSelection, 
- TextSearch, FormFields} from '@syncfusion/ej2-pdfviewer';
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, 
-ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields);
+import {
+  PdfViewer,
+  FormFields,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSelection,
+  TextSearch,
+} from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(
+  FormFields,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSelection,
+  TextSearch
+);
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
+pdfviewer.documentPath =
+  'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
+pdfviewer.resourceUrl =
+  'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
 pdfviewer.appendTo('#PdfViewer');
 ```
 
@@ -48,14 +64,32 @@ See the [Form Designer](./form-designer) page for full details.
 Use the following Code-snippet to enable Form Designer by injecting `FormDesigner` Module.
 
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
- ThumbnailView, BookmarkView, TextSelection, TextSearch, 
- FormFields, FormDesigner, TextFieldSettings } from '@syncfusion/ej2-pdfviewer';
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
- ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+import {
+  PdfViewer,
+  FormFields,
+  FormDesigner,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSelection,
+  TextSearch,
+} from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(
+  FormFields,
+  FormDesigner,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSelection,
+  TextSearch
+);
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf";
-pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
+pdfviewer.documentPath =
+  'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
+pdfviewer.resourceUrl =
+  'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
 pdfviewer.appendTo('#PdfViewer');
 ```
 

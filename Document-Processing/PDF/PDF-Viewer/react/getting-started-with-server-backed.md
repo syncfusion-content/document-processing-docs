@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with server-backed PDF Viewer component
+# Getting started with server-backed React PDF Viewer component
 
-This section explains the steps required to create a simple React PDF Viewer and demonstrates the basic usage of the PDF Viewer control in a React application.
+This section explains the steps to create a server-backed React PDF Viewer and demonstrates basic usage of the PDF Viewer component in a React application.
 
 ## Prerequisites
 
@@ -20,30 +20,29 @@ To get started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI co
 
 ## Setup for Local Development
 
-1. Create a new React app [`create-react-app`](https://github.com/facebook/create-react-app) and install it using the following command.
+To set up a React application, use Vite (for example, `npm create vite@latest`), which provides a fast development environment, smaller bundle sizes, and optimized production builds compared to traditional tools such as `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/).
+
+N> To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+
+To create a new React application, run the following command.
 
 ```bash
-npm install -g create-react-app
+npm create vite@latest my-app
 ```
+To set-up a React application in TypeScript environment, run the following command.
 
-2. To setup basic `React` sample use following commands.
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
+```
+To set-up a React application in JavaScript environment, run the following command.
 
-{% tabs %}
-{% highlight js tabtitle="JSX" %}
-
-create-react-app quickstart
-cd quickstart
-npm install
-
-{% endhighlight %}
-{% highlight js tabtitle="TSX" %}
-
-npx create-react-app quickstart --template cra-template-typescript
-cd quickstart
-npm install
-
-{% endhighlight %}
-{% endtabs %}
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
+```
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -54,11 +53,11 @@ To install PDF Viewer component, use the following command
 npm install @syncfusion/ej2-react-pdfviewer --save
 ```
 
-N> The following changes applies to React version 18 and above.
+N> The following changes apply to React version 18 and above.
 
 ## Adding PDF Viewer component and the CSS reference
 
-* Add an HTML div element to act as the PDF Viewer element `public/index.html` using the following code.
+* Add an HTML div element to act as the PDF Viewer element `index.html` using the following code.
 
 ```
    <!DOCTYPE html>
@@ -73,6 +72,7 @@ N> The following changes applies to React version 18 and above.
    <body>
       <div id='sample'>
          <div id='loader'>Loading....</div>
+         <script type="module" src="/src/main.tsx"></script>
       </div>
    </body>
    </html>
@@ -173,11 +173,11 @@ $env:NODE_OPTIONS = "--openssl-legacy-provider"
 Output will be appears as follows.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pdfviewer/react/base-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/pdfviewer/react/base-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pdfviewer/react/base-cs1/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/pdfviewer/react/base-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/pdfviewer/react/base-cs1/index.html %}

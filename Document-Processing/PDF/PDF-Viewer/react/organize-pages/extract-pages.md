@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Extract pages in React PDF Viewer
 
-The PDF Viewer component lets you extract pages from a document using the Extract Pages option in the Organize Pages UI.
-The Extract Pages tool is available by default in Organize Pages.
+The PDF Viewer component provides an Extract Pages tool in the Organize Pages UI to export selected pages as a new PDF file. The Extract Pages tool is enabled by default.
 
 ## Extract Pages in Organize Pages
 
@@ -26,31 +25,27 @@ When selected, a secondary toolbar dedicated to extraction is displayed.
 
 ## Extract pages using the UI
 
-You can extract by typing page numbers/ranges or by selecting thumbnails.
+Extract pages by typing page numbers/ranges or by selecting thumbnails.
 
 1. Click Extract Pages in the Organize Pages panel.
-2. In the input box, enter the pages to extract. Supported formats include:
-   - Single pages: 1,3,5
-   - Ranges: 2-6
-   - Combinations: 1,4,7-9
-3. Alternatively, select the page thumbnails you want instead of typing values.
-4. Click Extract to download the extracted pages as a new PDF. Click Cancel to close the tool.
+2. In the input box, enter pages to extract. Supported formats:
+  - Single pages: 1,3,5
+  - Ranges: 2-6
+  - Combinations: 1,4,7-9
+3. Alternatively, select the page thumbnails to extract instead of typing values.
+4. Click Extract to download the selected pages as a new PDF; click Cancel to close the tool.
 
 ![Extract Pages with selected thumbnails](../images/extract-page-selected-thumbnail.png)
 
- N> Page numbers are 1-based (first page is 1). You can start anywhere—enter single pages or ranges like 2-3, 5, or 7-9. Invalid or out-of-range entries are ignored.
+Note: Page numbers are 1-based (the first page is 1). Invalid or out-of-range entries are ignored; only valid pages are processed. Consider validating input before extraction to ensure expected results.
 
 ## Extraction options (checkboxes)
 
-Two options appear in the secondary toolbar:
+The secondary toolbar provides two options:
 
-- **Delete Pages After Extracting:**
-  - When enabled, the selected/entered pages are removed from the document opened in the viewer after the extraction completes. The extracted pages are still downloaded as a new file.
-  - Example: If you enter 1,2 and extract, a PDF containing pages 1 and 2 is downloaded, and pages 1 and 2 are removed from the currently loaded document in the viewer.
+- **Delete Pages After Extracting** — When enabled, the selected pages are removed from the currently loaded document after extraction; the extracted pages are still downloaded as a separate PDF.
 
-- **Extract Pages As Separate Files:**
-  - When enabled, every selected page is exported as an individual PDF file.
-  - Example: If you select pages 3, 5, and 6, three separate PDFs are downloaded (3.pdf, 5.pdf, and 6.pdf). If you enter a range (e.g., 2-4), pages 2, 3, and 4 are each downloaded as separate PDFs.
+- **Extract Pages As Separate Files** — When enabled, each selected page is exported as an individual PDF (for example, selecting pages 3, 5, and 6 downloads 3.pdf, 5.pdf, and 6.pdf).
 
 ![Checkboxes for extract options](../images/extract-page-checkboxes.png)
 
@@ -157,7 +152,7 @@ export function App() {
   </div>);
 }
 function extractPage(){
-// Get the PDF viewer instance
+    // Get the PDF viewer instance
     var viewer = document.getElementById('container').ej2_instances[0];
     //Extract Pages 1,2
     const array = viewer.extractPages('1,2');

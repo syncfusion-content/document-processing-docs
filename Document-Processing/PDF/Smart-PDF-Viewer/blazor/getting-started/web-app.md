@@ -117,7 +117,7 @@ Import the [Syncfusion.Blazor](https://help.syncfusion.com/cr/blazor/Syncfusion.
 If the **Interactive Render Mode** is set to `Server`, the project contains a single **~/Program.cs** file. Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in that **~/Program.cs** file. The configured SignalR maximum message size and memory cache support large document streaming and caching for better performance. Ensure the Syncfusion license is registered during application startup.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="5 7 10" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="1 5 7 10" %}
 
 using Syncfusion.Blazor;
 
@@ -165,12 +165,12 @@ dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.2541
 To configure the AI service, add the following settings to the **~/Program.cs** file in the Blazor Server app.
 
 {% tabs %}
-{% highlight C# tabtitle="~/Program.cs" hl_lines="10 11 12 13 14 15 17" %}
+{% highlight C# tabtitle="~/Program.cs" hl_lines="3 4 5 6 10 11 12 13 14 15 17" %}
 
-using Azure.AI.OpenAI;
-using Microsoft.Extensions.AI;
 using Sample.Components;
 using Syncfusion.Blazor;
+using Azure.AI.OpenAI;
+using Microsoft.Extensions.AI;
 using Syncfusion.Blazor.AI;
 using System.ClientModel;
 
@@ -305,6 +305,19 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 N> Review the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in a Blazor application. Also see [Adding script reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) for different approaches to include scripts.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer component
+
+N> If the interactivity location is set to Global and the render mode is set to Auto, WebAssembly, or Server, the render mode is configured in the App.razor file by default.
+
+If the interactivity location is set to Per page/component, define a render mode at the top of the ~Pages/.razor component as follows:
+
+{% tabs %}
+{% highlight razor %}
+
+@* Your App render mode define here *@
+@rendermode InteractiveServer
+
+{% endhighlight %}
+{% endtabs %}
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer component in the **~Pages/Home.razor** file.
 
