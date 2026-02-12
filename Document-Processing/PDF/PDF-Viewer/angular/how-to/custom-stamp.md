@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Add the custom stamp based on the free text bounds
 
-To add a custom stamp in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer based on the free text bounds, obtain the value of the bound for the free text in the Pixel in the **annotationAdd** event while adding the free text. However, when a custom stamp is added programmatically, the offset values are set in points. So, you must convert the value of the bound for the free text into a point to add the custom stamp to the free text bounds position.
+When adding a stamp programmatically, the PDF Viewer expects offset values in points (1 point = 1/72 inch). Typical displays use 96 DPI for pixels, so convert pixels to points using: points = pixels * 72 / 96. Also consider page scale and rotation when positioning stamps so the stamp appears at the expected location on the page.
 
 Here is an example of how you can add the custom stamp based on the free text bounds:
 

@@ -10,11 +10,12 @@ domainurl: ##DomainURL##
 
 # Magnification in Angular PDF Viewer component
 
-The magnification tools of the PDF Viewer contains ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth tools in the
-default toolbar. The PDF Viewer also has an option to show or hide the magnification tools in the
-default toolbar.
+The PDF Viewer includes magnification controls—ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth—in the
+default toolbar. The magnification controls can be shown or hidden in the toolbar.
 
-The following code snippet describes how to enable the magnification in PDF Viewer.
+The following examples show how to enable magnification in the PDF Viewer. The examples keep the
+component code and providers as shown; ensure the `MagnificationService` is included in the
+component `providers` when using the toolbar and programmatic API.
 
 
 {% tabs %}
@@ -60,14 +61,14 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 @Component({
   selector: 'app-container',
   // specifies the template string for the PDF Viewer component
-  template: `<div class="content-wrapper">
-                  <ejs-pdfviewer id="pdfViewer"
-                                [serviceUrl]='service'
-                                [documentPath]='document'
-                                enableMagnification="true"
-                                style="height:640px;display:block">
-                  </ejs-pdfviewer>
-            </div>`,
+    template: `<div class="content-wrapper">
+        <ejs-pdfviewer id="pdfViewer"
+              [serviceUrl]='service'
+              [documentPath]='document'
+              enableMagnification="true"
+              style="height:640px;display:block">
+        </ejs-pdfviewer>
+      </div>`,
   providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
                ThumbnailViewService, ToolbarService, NavigationService,
                AnnotationService, TextSearchService, TextSelectionService,
@@ -81,18 +82,18 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-The following magnification options are available in the default toolbar of PDF Viewer,
+The following magnification options are available in the default toolbar:
 
-* **ZoomIn**:- Zoom in from the current zoom value of PDF pages.
-* **ZoomOut**:- Zoom out from the current zoom value of PDF pages.
-* **Zoom**:- Zoom to specific zoom value of PDF pages.
-* **FitPage**:- Fits the page width with in the available view port size.
-* **FitWidth**:- Fits the view port width based on the page content size.
-* **Auto**:- Fits the page content with-in the viewport on resizing action.
+* **ZoomIn**: Zoom in from the current zoom value.
+* **ZoomOut**: Zoom out from the current zoom value.
+* **Zoom**: Select a specific zoom level.
+* **FitPage**: Fit the page height within the available viewport.
+* **FitWidth**: Fit the page width to the viewport.
+* **Auto**: Automatically adjust zoom to fit content when the viewport size changes.
 
-![Alt text ](images/zoom.png)
+![PDF Viewer magnification controls showing toolbar buttons](images/zoom.png)
 
->PDF Viewer can support the zoom value ranges from 10 to 400.
+N> The PDF Viewer supports zoom values from 10% to 400%.
 
 ## See also
 
