@@ -88,7 +88,7 @@ Add toolbar components and the PDF Viewer component to your Vue template. One to
       </e-items>
     </ejs-toolbar>
 
-    <input type ="file" id="fileUpload" accept=".pdf" style="display:block;visibility:hidden;width:0;height:0;"></input>
+    <input type ="file" id="fileUpload" accept=".pdf" style="display:block;visibility:hidden;width:0;height:0;">
 
     <div class="control-section">
       <ejs-pdfviewer

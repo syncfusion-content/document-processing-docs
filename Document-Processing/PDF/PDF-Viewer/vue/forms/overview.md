@@ -1,20 +1,17 @@
 ---
 layout: post
-title: Overview of Forms in React PDF Viewer Control | Syncfusion
-description: Learn what the Form Designer in Syncfusion React PDF Viewer offers, supported field types, and how the topics are organized.
+title: Overview of Forms in Vue PDF Viewer Control | Syncfusion
+description: Learn what the Form Designer in Syncfusion Vue PDF Viewer offers, supported field types, and how the topics are organized.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Overview of Forms in React PDF Viewer
+# Overview of Forms in Vue PDF Viewer
 
 The Syncfusion PDF Viewer delivers a complete, easy-to-use PDF forms experience. You can read, fill, add, edit, and delete form fields directly within your PDF documents. These actions are supported through both the intuitive user interface and powerful programmatic APIs.
 
 The viewer also includes smooth import and export support for form data, making integration effortless. Developers benefit from extensive API control, while end users enjoy a clean and simple interface designed for a seamless and stress-free form-filling experience.
-
-Check out the following video to learn how to use the Form Fields in the React PDF Viewer.
-{% youtube "https://www.youtube.com/watch?v=MUWTCg1MoAE" %}
 
 ## Filling PDF Forms
 
@@ -25,28 +22,60 @@ See the [Filling PDF Forms](./form-filling) page for full details.
 Use the following code-snippet to enable form-filling by injecting `FormFields` Module.
 
 {% tabs %}
-{% highlight js tabtitle="index.js" %}
-import * as ReactDOM from 'react-dom/client';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, Inject } from '@syncfusion/ej2-react-pdfviewer';
-export function App() {
-  return (<div>
-    <div className='control-section'>
-      <PdfViewerComponent 
-        id="container" 
-        documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        style={{ 'height': '680px' }} 
-      >
-        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
-          Print, TextSelection, TextSearch, FormFields]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+<template>
+  <div id="app">
+    <ejs-pdfviewer
+      id="pdfViewer"
+      ref="pdfviewer"
+      :documentPath="documentPath"
+      :resourceUrl="resourceUrl"
+      style="height: 640px;"
+    >
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSelection,
+  TextSearch,
+  FormFields,
+  FormDesigner,
+  PageOrganizer,
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: 'App',
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data() {
+    return {
+        documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+        resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
+    };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      Annotation,
+      TextSelection,
+      TextSearch,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
+  },
+};
+</script>
 {% endhighlight %}
 {% endtabs %}
 
@@ -65,28 +94,60 @@ See the [Form Designer](./form-designer) page for full details.
 Use the following Code-snippet to enable Form Designer by injecting `FormDesigner` Module.
 
 {% tabs %}
-{% highlight js tabtitle="index.js" %}
-import * as ReactDOM from 'react-dom/client';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
-export function App() {
-  return (<div>
-    <div className='control-section'>
-      <PdfViewerComponent 
-        id="container" 
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        style={{ 'height': '680px' }} 
-      >
-        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
-          Print, TextSelection, TextSearch, FormFields]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+<template>
+  <div id="app">
+    <ejs-pdfviewer
+      id="pdfViewer"
+      ref="pdfviewer"
+      :documentPath="documentPath"
+      :resourceUrl="resourceUrl"
+      style="height: 640px;"
+    >
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSelection,
+  TextSearch,
+  FormFields,
+  FormDesigner,
+  PageOrganizer,
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: 'App',
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+  },
+  data() {
+    return {
+        documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+        resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
+    };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar,
+      Magnification,
+      Navigation,
+      Annotation,
+      TextSelection,
+      TextSearch,
+      FormFields,
+      FormDesigner,
+      PageOrganizer,
+    ],
+  },
+};
+</script>
 {% endhighlight %}
 {% endtabs %}
 
