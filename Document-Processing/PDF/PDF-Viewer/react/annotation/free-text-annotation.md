@@ -8,23 +8,23 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Free text annotation in React PDF Viewer
+# Free text annotation in React PDF Viewer component
 
-The PDF Viewer control provides options to add, edit, and delete free text annotations.
+The PDF Viewer provides tools to add, edit, and remove free-text annotations.
 
-## Add a free text annotation to the PDF document
+## Add a free-text annotation
 
-The PDF Viewer control provides options to add, edit, and delete free text annotations.
+To add a free-text annotation:
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. The annotation toolbar appears below it.
-* Select the **Free Text Annotation** button to enable free text annotation mode.
-* Add text anywhere on the pages of the PDF document.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar to reveal the annotation toolbar.
+* Select the **Free Text Annotation** button to enter free*text annotation mode.
+* Tap or click anywhere on the page to add text.
 
-When in pan mode, selecting free text annotation switches the PDF Viewer to text select mode.
+When the viewer is in pan mode, selecting the Free Text annotation switches the viewer to text-selection mode.
 
-![Free text tool in the annotation toolbar](../images/freetext_tool.png)
+![Free Text tool in the annotation toolbar](../images/freetext_tool.png)
 
-The following example switches to free text annotation mode using a button click.
+The example below shows switching to free-text annotation mode via a button click.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -101,11 +101,11 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Add a Free Text annotation to the PDF document Programmatically
+## Add a free-text annotation programmatically
 
-The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#annotation) method.
+You can add a free-text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#annotation) method.
 
-Here is an example of adding a free text annotation programmatically using addAnnotation():
+Example: add a free-text annotation using `addAnnotation()`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -212,11 +212,9 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Change the content of an existing free text annotation programmatically
+## Change the content of an existing free-text annotation programmatically
 
-To change the content of an existing free text annotation programmatically, use the editAnnotation() method.
-
-Here is an example of changing the content of a free text annotation using editAnnotation():
+To update the content of an existing free-text annotation, use the `editAnnotation()` method. Example below demonstrates editing an annotation's bounds and text.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -311,71 +309,69 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-N> The current version of the PDF Viewer does not edit existing document text. New free text annotations can be added and modified within the document.
+N> The PDF Viewer does not edit original document text. You can add and modify free-text annotations only.
 
-## Edit the properties of free text annotations
+## Edit free-text annotation properties
 
-Font family, font size, styles, font color, text alignment, fill color, stroke color, border thickness, and opacity can be edited using the Font Family, Font Size, Font Color, Text Align, Font Style, Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
+Use the annotation toolbar to configure font family, size, style, font color, text alignment, fill color, stroke color, border thickness, and opacity.
 
-### Edit font family
+### Font family
 
-Edit the font family by selecting a font in the Font Family tool.
+Choose a font from the Font Family tool.
 
-![Change font family](../images/fontfamily.png)
+![Font family selection](../images/fontfamily.png)
 
-### Edit font size
+### Font size
 
-Edit the font size by selecting a size in the Font Size tool.
+Select a size in the Font Size tool.
 
-![Change font size](../images/fontsize.png)
+![Font size selection](../images/fontsize.png)
 
-### Edit font color
+### Font color
 
-Edit the font color using the color palette in the Font Color tool.
+Pick a color from the Font Color palette.
 
-![Change font color](../images/fontcolor.png)
+![Font color picker](../images/fontcolor.png)
 
-### Edit the text alignment
+### Text alignment
 
-Align text by selecting an option from the Text Align tool.
+Set alignment using the Text Align tool.
 
-![Set text alignment](../images/textalign.png)
+![Text alignment options](../images/textalign.png)
 
-### Edit text styles
+### Text styles
 
-Edit text styles by selecting options in the Font Style tool.
+Toggle styles in the Font Style tool.
 
-![Change text styles](../images/fontstyle.png)
+![Text style options](../images/fontstyle.png)
 
-### Edit fill color
+### Fill color
 
-Edit the fill color using the color palette in the Edit Color tool.
+Set the annotation's fill color with the Edit Color tool.
 
-![Change fill color](../images/fillcolor.png)
+![Fill color picker](../images/fillcolor.png)
 
-### Edit stroke color
+### Stroke color
 
-Edit the stroke color using the color palette in the Edit Stroke Color tool.
+Set the stroke color with the Edit Stroke Color tool.
 
-![Change stroke color](../images/fontstroke.png)
+![Stroke color picker](../images/fontstroke.png)
 
-### Edit thickness
+### Thickness
 
-Edit border thickness using the range slider in the Edit Thickness tool.
+Adjust border thickness with the Edit Thickness slider.
 
-![Change border thickness](../images/fontthickness.png)
+![Border thickness slider](../images/fontthickness.png)
 
-### Edit opacity
+### Opacity
 
-Edit opacity using the range slider in the Edit Opacity tool.
+Adjust opacity with the Edit Opacity slider.
 
-![Change opacity](../images/fontopacity.png)
+![Opacity slider](../images/fontopacity.png)
 
 ## Set default properties during control initialization
 
-Default properties for free text annotations can be set before creating the control using FreeTextSettings.
-
-After changing default values, the selected values are applied. The following example sets default free text annotation settings.
+Set default properties for free-text annotations using `freeTextSettings` when initializing the control. The selected defaults are applied when annotations are created. The example below sets default values.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
