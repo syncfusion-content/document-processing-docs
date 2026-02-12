@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # Events in Vue PDF Viewer
 
-The PDF Viewer component triggers events for creation, page navigation, document life cycle, context menu interactions, comments, bookmarks, download and export, hyperlinks, annotation import/export, custom keyboard commands, printing, signatures, text search, and text selection. Use these events to integrate custom logic into application workflows.
+The PDF Viewer component triggers events throughout its lifecycle, enabling you to respond to user interactions and document state changes. These events are organized into categories: **Component Lifecycle** (created, resourcesLoaded), **Navigation** (pageChange, pageClick), **Document Operations** (documentLoad, documentLoadFailed, downloadStart, downloadEnd, printStart, printEnd), **User Interactions** (toolbarClick, bookmarkClick, thumbnailClick), **Text Operations** (textSelectionStart, textSelectionEnd, textSearchStart, textSearchComplete), **Annotations** (commentAdd, commentEdit, commentDelete), **Forms** (buttonFieldClick, validateFormFields), and **Customization** (customContextMenuBeforeOpen, customContextMenuSelect). Subscribe to events using the `@eventName` syntax to execute custom code when specific actions occur.
+
+## Commonly used events
 
 The following table lists commonly used events supported by the PDF Viewer component:
 

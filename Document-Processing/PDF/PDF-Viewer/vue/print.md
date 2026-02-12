@@ -2,62 +2,19 @@
 layout: post
 title: Print in Vue PDF Viewer | Syncfusion
 description: Learn how to enable, customize, and monitor printing in the Syncfusion Vue PDF Viewer component.
-control: Print
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 # Print in Vue PDF Viewer
 
-The Syncfusion Vue PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the `enablePrint` property.
+The print feature allows users to print PDF documents directly from the Vue PDF Viewer through the toolbar or programmatic methods. You can customize print behavior with scaling, rotation, and print mode options, and track print operations with lifecycle events.
 
-The following HTML and Vue component examples render the PDF Viewer with printing enabled in standalone and server-backed applications.
-
-```
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Essential JS 2</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="Essential JS 2" />
-    <meta name="author" content="Syncfusion" />
-    <link rel="shortcut icon" href="resources/favicon.ico" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!--style reference from app-->
-    <link href="/styles/styles.css" rel="stylesheet" />
-
-    <!--system js reference and configuration-->
-    <script src="node_modules/systemjs/dist/system.src.js" type="text/javascript"></script>
-    <script src="system.config.js" type="text/javascript"></script>
-</head>
-
-<body>
-    <!--Element which will render as PdfViewer -->
-    <div id="PdfViewer"></div>
-</body>
-
-</html>
-```
-
-```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation, Annotation, ThumbnailView,BookmarkView, TextSelection);
-
-let pdfviewer: PdfViewer = new PdfViewer({enablePrint: true, documentPath:'PDF_Succinctly.pdf'});
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-pdfviewer.appendTo('#PdfViewer');
-
-```
-
-Select **Print** in the built-in toolbar to open the browser print dialog.
+By default, printing is enabled through the built-in toolbar. Users can click the **Print** button in the toolbar to open the browser print dialog.
 
 ![PDF Viewer print dialog preview](./images/print.png)
-
-Call the `print.print()` method from your component logic to start printing when a custom action occurs.
+To start printing programmatically, call the `print.print()` method from your component logic:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -210,15 +167,11 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Customize print quality using the printScaleFactor API
+## Customize print quality
 
-The PDF Viewer allows you to adjust the print rendering quality by setting the [printScaleFactor](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#printScaleFactor) property. Valid values range from 0.5 to 5. Higher values produce sharper output but also increase rendering time.
+Use the [printScaleFactor](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#printScaleFactor) property to control print rendering quality. Higher values produce sharper output but increase rendering time. Valid range is 0.5 to 5 (default: 1).
 
-By default, `printScaleFactor` is set to 1.
-
-N> Values outside the 0.5–5 range revert to the standard print quality (value 1).
-
-The following examples demonstrate how to set `printScaleFactor` in Vue applications.
+The following examples demonstrate print quality customization:
 
 
 {% tabs %}
