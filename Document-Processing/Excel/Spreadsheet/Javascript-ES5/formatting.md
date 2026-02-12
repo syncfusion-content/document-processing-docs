@@ -116,7 +116,7 @@ Compared to Excel, the date, time, currency, and accounting formats vary across 
 The code below illustrates how culture-based format codes are mapped to their corresponding number format ID for the `German (de)` culture.
 
 ```js
-const deLocaleFormats = [
+var deLocaleFormats = [
     { id: 14, code: 'dd.MM.yyyy' },
     { id: 15, code: 'dd. MMM yy' },
     { id: 16, code: 'dd. MMM' },
