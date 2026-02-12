@@ -10,14 +10,13 @@ domainurl: ##DomainURL##
 
 # Custom Toolbar in Vue PDF Viewer
 
-The PDF Viewer provides APIs for user interaction options available in its built-in toolbar. Using these, you can create your own custom user interface for toolbar actions at the application level by hiding the default toolbar.
+The PDF Viewer provides APIs for the user interaction options available in its built-in toolbar. Using these APIs, a custom application-level toolbar can be created by hiding the default toolbar and adding Syncfusion EJ2 toolbar components.
 
 Follow these steps to create a custom toolbar for the PDF Viewer:
 
 **Step 1: Create a simple PDF Viewer sample.**
 
-Follow the steps provided in the getting started guide to create a basic PDF Viewer sample:
-- Vue Getting Started: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started
+Create a simple PDF Viewer sample by following the [getting started](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started) guide.
 
 **Step 2: Add template markup for the custom toolbars.**
 

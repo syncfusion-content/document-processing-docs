@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Manage local storage in PDF Viewer
 
-Use the `enableLocalStorage` property to control whether session-specific data is stored in session storage (default) or an internal in-memory collection.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer exposes the `enableLocalStorage` property to control how session-specific viewer data is stored. Configure this property to choose between the viewer's internal storage mechanism (in-memory collection) and the browser's session storage.
 
-### Use enableLocalStorage
+### Using the `enableLocalStorage` property
 
-Set `enableLocalStorage` to manage storage behavior. When `true`, data is kept in memory; otherwise, session storage is used.
+Set `enableLocalStorage` to control whether the viewer preserves session data in an internal (in-memory) collection or uses browser session storage. When `enableLocalStorage` is `true`, the viewer keeps session data in memory for the current application session; when `false` (the default), session storage is used. Review memory implications before enabling in-memory storage for large documents or heavy interactive content.
 
 {% tabs %}
 {% highlight html tabtitle="Server-Backed" %}
@@ -76,14 +76,14 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-### Impact and Considerations
+### Impact and considerations
 
-- Memory usage can increase when using in-memory storage with large documents or many interactive elements.
-- Dispose of the PDF Viewer instance when no longer needed to avoid memory leaks.
-- Default: `enableLocalStorage` is `false`, so session storage is used unless changed.
+- **Increased memory usage**: Enabling in-memory storage can increase memory consumption, especially for large documents or when many interactive elements (form fields, annotations) are present.
+- **Dispose when unused**: Dispose or destroy the PDF Viewer instance when it is no longer required to avoid memory leaks, particularly when `enableLocalStorage` is `true`.
+- **Default behavior**: The default value is `false`, which uses the browser session storage unless explicitly changed.
 
-### Enhanced Control
+### Enhanced control
 
-Leveraging the `enableLocalStorage` property provides greater flexibility in managing how data is stored during a session, allowing you to optimize performance and storage based on your application’s specific requirements.
+Using `enableLocalStorage` gives control over where session-specific state is kept, allowing optimization for performance or persistence needs. Consider the application's memory profile and document characteristics when selecting the storage mode.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to)

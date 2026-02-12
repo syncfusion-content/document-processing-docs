@@ -12,17 +12,17 @@ domainurl: ##DomainURL##
 
 Follow these steps to load a PDF from Google Drive using the server-backed PDF Viewer.
 
-**Step 1** Set up Google Drive API
+**Step 1:** Set up Google Drive API
 
-You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
+Create a project in the Google Developers Console, enable the Google Drive API, and obtain OAuth 2.0 credentials. See the official guide for [details](https://developers.google.com/drive/api/guides/enable-sdk)
 
-**Step 2:** Create a Simple PDF Viewer Sample in Vue
+**Step 2:** Create a simple PDF Viewer sample in Vue
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF viewer sample in Vue. This will give you a basic setup of the PDF viewer component.
+Start by following the steps in this guide to create a simple [PDF Viewer sample](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) in Vue. This establishes a basic PDF Viewer component and its dependencies.
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. For background on the PDF Viewer [web service pattern](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above)
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
@@ -142,9 +142,9 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-N> Replace the placeholders with your actual values: Google Drive Folder ID, Application name, and the path to the OAuth 2.0 client IDs JSON file.
+N> Replace the placeholders with actual values for the Google Drive Folder ID, application name, and the path to the OAuth 2.0 client IDs JSON file.
 
-N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
+N> The `FolderId` is the unique identifier for the Drive folder. For example, if the folder URL is `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
 
 **Step 4:** Configure the PDF Viewer component
 
@@ -214,6 +214,6 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> The **Google.Apis.Drive.v3** NuGet package must be installed in your application to use the previous code example.
+N> The `Google.Apis.Drive.v3` NuGet package must be installed in the web service project to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-google-drive)

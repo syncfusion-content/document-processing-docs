@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Organize Pages in Mobile PDF Viewer vue
 
-The PDF Viewer offers a mobile-responsive layout for the Organize Pages feature, ensuring a seamless experience on smaller devices. When viewed on a mobile device, the toolbar and navigation elements adapt to the screen size, providing easy access to all page management tools.
+The PDF Viewer offers a mobile-responsive layout for the `Organize Pages` feature, ensuring a seamless experience on smaller devices. On mobile devices, the toolbar and navigation elements adapt to screen size to provide easy access to page management tools.
 
 ## Mobile-Friendly Toolbar
 
@@ -18,7 +18,7 @@ In the mobile view, the Organize Pages toolbar is displayed at the bottom of the
 
 ## Context Menu for Page Operations
 
-To perform actions on a page thumbnail, tap and hold on the thumbnail to open a context menu. This menu contains all the available page operations:
+To perform actions on a page thumbnail, tap and hold the thumbnail to open a context menu. This menu contains the available page operations:
 
 - Rotate Clockwise: Rotate the selected page 90 degrees clockwise.
 - Rotate Counter-Clockwise: Rotate the selected page 90 degrees counter-clockwise.
@@ -31,4 +31,4 @@ To perform actions on a page thumbnail, tap and hold on the thumbnail to open a 
 
 To rearrange pages, tap and hold a page thumbnail to select it, then drag it to the desired position. A visual indicator shows the drop location.
 
-By providing a mobile-friendly interface, the PDF Viewer ensures that you can efficiently manage PDF documents from any device, anywhere.
+The mobile interface enables efficient PDF page management on handheld devices.

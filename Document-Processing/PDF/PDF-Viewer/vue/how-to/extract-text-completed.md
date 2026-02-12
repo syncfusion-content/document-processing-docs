@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract text using extractTextCompleted Event in Vue PDF Viewer control
+# Extract text using the extractTextCompleted event in Vue PDF Viewer
 
-Use the [isExtractText](https://ej2.syncfusion.com/documentation/api/pdfviewer/#isextracttext) property and the [extractTextCompleted](https://ej2.syncfusion.com/documentation/api/pdfviewer/#extracttextcompleted) event to extract page text along with bounds.
+The PDF Viewer can extract page text along with bounding information. Enable text extraction using the `isExtractText` property and handle the `extractTextCompleted` event to receive extracted text and bounds for the document.
 
 The following example shows how to enable text extraction and handle the completion event:
 

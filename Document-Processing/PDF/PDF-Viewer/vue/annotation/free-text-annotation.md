@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Free text annotation in Vue PDF Viewer control
 
-The PDF Viewer control provides options to add, edit, and delete free text annotations.
+The PDF Viewer control supports adding, editing, and deleting free text annotations. This article explains how to add free text annotations using the toolbar and programmatically, modify their properties, and manage selection and focus.
 
 ## Add a free text annotation to the PDF document
 
@@ -20,7 +20,7 @@ Free text annotations can be added to the PDF document using the annotation tool
 * Select the **Free Text Annotation** button to enable free text annotation mode.
 * Add text anywhere on the pages of the PDF document.
 
-When in pan mode, selecting free text annotation switches the PDF Viewer to text select mode.
+When in pan mode, selecting free text annotation switches the PDF Viewer to text-selection mode.
 
 ![Free text tool in the annotation toolbar](../images/freetext_tool.png)
 
@@ -190,9 +190,7 @@ export default {
 
 ## Add a free text annotation programmatically to the PDF document
 
-The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#annotation) method.
-
-Here is an example of adding a free text annotation programmatically using addAnnotation():
+Add a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method. The example below demonstrates adding a FreeText annotation with styling and position properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -599,61 +597,61 @@ export default {
 
 N> The current version of the PDF Viewer does not edit existing document text. New free text annotations can be added and modified within the document.
 
-## Edit the properties of free text annotations
+## Edit free text annotation properties
 
-Font family, font size, styles, font color, text alignment, fill color, stroke color, border thickness, and opacity can be edited using the Font Family, Font Size, Font Color, Text Align, Font Style, Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
+Free text annotation properties that can be modified using the annotation toolbar include font family, font size, font styles, font color, text alignment, fill color, stroke color, border thickness, and opacity. The toolbar provides dedicated controls for each of these settings.
 
-### Edit font family
+## Font family
 
-Edit the font family by selecting a font in the Font Family tool.
+Choose a font family from the Font Family tool to update the annotation text.
 
 ![Change font family](../images/fontfamily.png)
 
-### Edit font size
+### Font size
 
-Edit the font size by selecting a size in the Font Size tool.
+Choose a size from the Font Size tool to update the annotation text size.
 
 ![Change font size](../images/fontsize.png)
 
-### Edit font color
+### Font color
 
-Edit the font color using the color palette in the Font Color tool.
+Select a color from the Font Color palette to change the font color.
 
 ![Change font color](../images/fontcolor.png)
 
-### Edit the text alignment
+### Text alignment
 
-Align text by selecting an option from the Text Align tool.
+Use the Text Align tool to set the annotation text alignment.
 
 ![FreeTextAnnotation](../images/textalign.png)
 
-### Edit text styles
+### Font styles
 
-Edit text styles by selecting options in the Font Style tool.
+Enable bold, italic, or underline using the Font Style tool.
 
 ![Change text styles](../images/fontstyle.png)
 
-### Edit fill color
+### Fill color
 
-Edit the fill color using the color palette in the Edit Color tool.
+Set the annotation background using the Edit Color tool.
 
 ![Change fill color](../images/fillcolor.png)
 
-### Edit stroke color
+### Stroke color
 
-Edit the stroke color using the color palette in the Edit Stroke Color tool.
+Set the annotation border color using the Edit Stroke Color tool.
 
 ![Change stroke color](../images/fontstroke.png)
 
-### Edit thickness
+### Thickness
 
-Edit border thickness using the range slider in the Edit Thickness tool.
+Adjust border thickness with the Edit Thickness slider.
 
 ![Change border thickness](../images/fontthickness.png)
 
-### Edit opacity
+### Opacity
 
-Edit opacity using the range slider in the Edit Opacity tool.
+Adjust annotation opacity with the Edit Opacity slider.
 
 ![Change opacity](../images/fontopacity.png)
 

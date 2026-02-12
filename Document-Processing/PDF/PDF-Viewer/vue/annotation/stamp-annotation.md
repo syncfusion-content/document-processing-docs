@@ -17,7 +17,7 @@ The PDF Viewer control provides options to add, edit, delete, and rotate the fol
 * Standard Business
 * Custom Stamp
 
-![StampAnnotation](../images/stamp_annot.png)
+![Stamp annotations example showing dynamic, sign here, standard business, and custom stamps](../images/stamp_annot.png)
 
 ## Add stamp annotations to the PDF document
 
@@ -26,11 +26,11 @@ The stamp annotations can be added to the PDF document using the annotation tool
 * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
 * Click the **Stamp Annotation** drop-down button. The pop-up lists available stamp annotation types.
 
-![StampTool](../images/stamp_tool.png)
+![Stamp annotation tool in the PDF Viewer toolbar](../images/stamp_tool.png)
 
 * Select a stamp type to enable its annotation mode.
 
-![StampPopup](../images/selectstamp_annot.png)
+![Stamp type popup listing available stamps](../images/selectstamp_annot.png)
 
 * Place the stamp on the pages of the PDF document.
 
@@ -208,7 +208,7 @@ export default {
 
 ## Adding a Stamp annotation to the PDF document Programmatically
 
-With the PDF Viewer library, you can add a Stamp annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library allows adding a stamp annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here's a example of how you can utilize the **addAnnotation()** method to include a Stamp annotation programmatically:
 
@@ -526,9 +526,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Edit an existing stamp annotation programmatically
+## Edit the existing stamp annotation programmatically
 
-To modify an existing stamp annotation programmatically, use the editAnnotation() method.
+To modify an existing stamp annotation in the Syncfusion® PDF Viewer programmatically, use the **editAnnotation()** method.
 
 Here is an example of using editAnnotation():
 
@@ -724,19 +724,17 @@ export default {
 * Click the **Stamp Annotation** drop-down button. The pop-up lists available stamp annotation types.
 * Click the Custom Stamp button.
 
-![CustomStamp](../images/customStamp.png)
+![Add a custom stamp using the file picker dialog](../images/customStamp.png)
 
 * In the file explorer dialog, choose an image and add it to the PDF page.
 
->Only JPG and JPEG image formats are supported for custom stamp annotations.
+N> Only JPG and JPEG image formats are supported for custom stamp annotations.
 
 ## Setting default properties during control initialization
 
-The properties of the stamp annotation can be set before creating the control using the StampSettings.
+Default properties for stamp annotations can be set before creating the control using StampSettings.
 
-After editing the default opacity using the Edit Opacity tool, they will be changed to the selected values.
-
-Refer to the following code sample to set the default sticky note annotation settings.
+After changing the default opacity using the Edit Opacity tool, the selected value is applied to subsequent stamps. The following example shows how to set default stamp annotation settings.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}

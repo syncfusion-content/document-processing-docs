@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text markup annotation in Vue PDF viewer component
+# Text markup annotation in Vue PDF Viewer
 
-The PDF Viewer provides options to add, edit, and delete text markup annotations, including Highlight, Underline, Strikethrough, and Squiggly.
+The PDF Viewer provides options to add, edit, and delete text markup annotations, including highlight, underline, strikethrough, and squiggly.
 
-![Alt text](../images/text_markup_annotation.png)
+![Text markup annotations](../images/text_markup_annotation.png)
 
 ## Highlight text
 
@@ -22,7 +22,7 @@ There are two ways to highlight text:
   * Select text in the PDF document and right-click it.
   * Select **Highlight** in the context menu.
 
-  ![Alt text](../images/highlight_context.png)
+  ![Context menu option to highlight selected text](../images/highlight_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2.Using the annotation toolbar
@@ -31,7 +31,7 @@ There are two ways to highlight text:
   * Select text to add the highlight annotation.
   * Alternatively, select text first and then click **Highlight**.
 
-  ![Alt text](../images/highlight_button.png)
+  ![Highlight button in the annotation toolbar](../images/highlight_button.png)
 
 When pan mode is active and a text markup mode is entered, the PDF Viewer switches to text selection mode to enable selection.
 
@@ -395,7 +395,7 @@ export default {
 
 ## Highlight text programmatically
 
-Programmatically add highlights using the [addAnnotation](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add highlights using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -571,7 +571,7 @@ There are two ways to underline text:
     * Select text in the PDF document and right-click it.
     * Select **Underline** in the context menu.
 
-  ![Alt text](../images/underline_context.png)
+  ![Context menu option to underline selected text](../images/underline_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2.Using the annotation toolbar
@@ -580,7 +580,7 @@ There are two ways to underline text:
     * Select text to add the underline annotation.
     * Alternatively, select text first and then click **Underline**.
 
-  ![Alt text](../images/underline_button.png)
+  ![Underline button in the annotation toolbar](../images/underline_button.png)
 
 In the pan mode, if the underline mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for underlining the text.
 
@@ -942,7 +942,7 @@ export default {
 
 ## Underline a text programmatically
 
-Programmatically add underlines using the [addAnnotation](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add underlines using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -1119,7 +1119,7 @@ There are two ways to strikethrough text:
       * Select text in the PDF document and right-click it.
       * Select **Strikethrough** in the context menu.
 
-  ![Alt text](../images/strikethrough_context.png)
+  ![Context menu option to strikethrough selected text](../images/strikethrough_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2.Using the annotation toolbar
@@ -1128,9 +1128,9 @@ There are two ways to strikethrough text:
       * Select text to add the strikethrough annotation.
       * Alternatively, select text first and then click **Strikethrough**.
 
-  ![Alt text](../images/strikethrough_button.png)
+  ![Strikethrough button in the annotation toolbar](../images/strikethrough_button.png)
 
-In the pan mode, if the strikethrough mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for striking through the text.
+N> While in pan mode, clicking the strikethrough button switches the viewer to text select mode so text can be selected for annotation.
 
 Refer to the following code snippet to switch to strikethrough mode.
 
@@ -1491,7 +1491,7 @@ export default {
 
 ## Strikethrough text programmatically
 
-Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply Strikethrough programmatically:
 
@@ -1670,7 +1670,7 @@ There are two ways to add squiggly to text:
       * Select text in the PDF document and right-click it.
       * Select **Squiggly** in the context menu.
 
-  ![Alt text](../images/squiggly_context.png)
+  ![Context menu option to add a squiggly underline to selected text](../images/squiggly_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2.Using the annotation toolbar
@@ -1679,9 +1679,9 @@ There are two ways to add squiggly to text:
       * Select the text and the squiggly annotation will be added.
       * You can also select the text and apply the squiggly annotation using the **Squiggly** button.
 
-  ![Alt text](../images/squiggly_button.png)
+  ![Squiggly button in the annotation toolbar](../images/squiggly_button.png)
 
-In the pan mode, if the squiggly mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for adding squiggly to the text.
+N> While in pan mode, clicking the squiggly button switches the viewer to text select mode so text can be selected for annotation.
 
 Refer to the following code snippet to switch to squiggly mode.
 
@@ -2042,7 +2042,7 @@ export default {
 
 ## Squiggly a text programmatically
 
-The PDF Viewer library enables you to programmatically Squiggly text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+Refer to the following code snippet to switch back to normal mode from squiggly mode. Use the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) API to add squiggly annotations.
 
 Here's an example of how you can use the **addAnnotation()** method to apply Squiggly programmatically:
 
@@ -2225,29 +2225,29 @@ The selected annotation can be deleted by the following ways:
       * Select the annotation to be deleted.
       * Click the **Delete Annotation** button in the annotation toolbar. The selected annotation will be deleted.
 
-  ![Alt text](../images/delete_button.png)
+  ![Delete annotation button in the annotation toolbar](../images/delete_button.png)
 
-## Editing the properties of the text markup annotation
+## Edit text markup annotation properties
 
-The color and the opacity of the text markup annotation can be edited using the Edit Color tool and the Edit Opacity tool in the annotation toolbar.
+The color and opacity of text markup annotations can be edited using the Edit Color and Edit Opacity tools in the annotation toolbar.
 
-### Editing color
+### Edit color
 
-The color of the annotation can be edited using the color palette provided in the Edit Color tool.
+Use the color palette in the Edit Color tool to change the annotation color.
 
-![Alt text](../images/edit_color.png)
+![Color palette in the Edit Color tool for text markup annotations](../images/edit_color.png)
 
-### Editing opacity
+### Edit opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+Use the range slider in the Edit Opacity tool to change annotation opacity.
 
-![Alt text](../images/edit_opacity.png)
+![Range slider in the Edit Opacity tool for text markup annotations](../images/edit_opacity.png)
 
-## Setting default properties during control initialization
+## Set default properties during control initialization
 
 The properties of the text markup annotation can be set before creating the control using highlightSettings, underlineSettings,  strikethroughSettings, squigglySettings.
 
->After editing the default color and opacity using the Edit Color tool and Edit Opacity tool, they will be changed to the selected values.
+N> After editing default color and opacity with the Edit Color and Edit Opacity tools, the default values update to the selected settings.
 
 Refer to the following code snippet to set the default annotation settings.
 

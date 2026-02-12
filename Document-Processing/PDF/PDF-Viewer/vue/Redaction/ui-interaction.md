@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Redaction UI interactions in Vue PdfViewer
+# Redaction UI interactions in Vue PDF Viewer
 
 ## Add redaction annotations from the toolbar
 
@@ -27,21 +27,21 @@ N> The redaction tool is hidden by default. Customize the toolbar to include it.
 
 ## Add redaction annotations using the context menu
 
-In addition to the toolbar, you can add redaction annotations directly from the context menu. Select the text or region, right‑click (or long‑press on mobile), and choose the **Redact Annotation** option. This creates a redaction mark over the selected content.
+In addition to the toolbar, redaction annotations can be added directly from the context menu. To add from the context menu, select the text or region, right‑click (or long‑press on mobile), and choose the **Redact Annotation** option. This creates a redaction mark over the selected content.
 
 ![Context menu showing Redact Annotation option](redaction-annotations-images/redact-text-context-menu.png)
 
 ## Update redaction properties
 
-After adding a redaction annotation, you can update its properties through the property panel or programmatically.
+After adding a redaction annotation, properties can be updated through the property panel or programmatically.
 
 ### Update using the property panel
 
-When a redaction annotation is selected, a two‑tab property panel (General and Appearance) lets you customize text and styling. Changes are reflected instantly on the redaction mark.
+When a redaction annotation is selected, a two‑tab property panel (General and Appearance) allows customization of text and styling. Changes are reflected instantly on the redaction mark.
 
 The property panel can be opened in two ways:
 
-* By clicking the **redaction property panel** icon in the toolbar.  
+* By clicking the **Redaction property panel** icon in the toolbar.
 ![Redaction Property Panel Icon](redaction-annotations-images/redaction-property-panel-icon.png)
 
 * By right‑clicking (or long‑pressing) the annotation and choosing **Properties** from the context menu.  
@@ -62,7 +62,7 @@ Use the General tab to define how the content will look after redaction. These s
 
 ![Fill Color in General Tab](redaction-annotations-images/after-redaction-fill-color.png)
 
-Note: Hovering the mouse over a redaction annotation shows a preview of this final look. After you click Apply Redaction, these settings are flattened into the page and can’t be edited. Tip: Click Save in the dialog to keep your changes.
+N> Hovering over a redaction annotation shows a preview of the final look. After Apply Redaction is selected, these settings are flattened into the page and cannot be edited. Tip: Select Save in the dialog to persist changes.
 
 #### Appearance tab
 
@@ -78,12 +78,12 @@ Note: The Appearance tab affects only the temporary annotation. The final look a
 
 ### What changes after applying redaction?
 
-When you click Apply Redaction:
+When Apply Redaction is selected:
 
 * The selected content is permanently removed from the page.
 * The redaction region is flattened into the page with a solid fill that uses the General tab Fill Color.
 * If overlay text was enabled, the text is burned into the page. If Repeat Overlay Text was enabled, the text is tiled across the region.
-* All properties become read‑only. You cannot edit overlay text, fill color, outline, or opacity after applying. Set the final look in the General tab and use the Appearance tab only to style the annotation before you apply.
+* All properties become read‑only. Overlay text, fill color, outline, and opacity cannot be edited after applying. Set the final look in the General tab and use the Appearance tab only to style the annotation before applying.
 
 ## Delete redaction annotations
 
@@ -107,7 +107,7 @@ Entire pages can be marked for redaction using the **Redact Pages** option in th
 * **Even Pages Only** – Redacts all even‑numbered pages.  
 * **Specific Pages** – Enter page numbers or ranges (e.g., 1, 3–5, 7) to redact.
 
-After choosing the range, click **Save** to apply redaction marks to the selected pages.
+After choosing the range, select **Save** to apply redaction marks to the selected pages.
 
 ![Page Redaction Panel](redaction-annotations-images/page-redaction-panel.png)
 
@@ -120,7 +120,7 @@ The **Apply Redaction** button permanently removes all marked content from the d
 
 ![Redact Button Icon](redaction-annotations-images/redact-button-icon.png)
 
-A confirmation dialog appears before applying redaction to ensure you acknowledge the irreversible nature of the process.
+A confirmation dialog appears before applying redaction to ensure acknowledgement of the irreversible nature of the process.
 
 ![Apply Redaction Dialog](redaction-annotations-images/apply-redaction-dialog.png)
 

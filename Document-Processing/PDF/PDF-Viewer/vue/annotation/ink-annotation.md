@@ -195,7 +195,7 @@ export default {
 
 ## Add an Ink annotation programmatically to the PDF document Programmatically
 
-The PDF Viewer library allows adding an ink annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library allows adding an ink annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here is an example of adding an ink annotation programmatically using addAnnotation():
 
@@ -607,7 +607,7 @@ Edit opacity using the range slider in the Edit Opacity tool.
 
 Default properties for ink annotations can be set before creating the control using InkAnnotationSettings.
 
-After changing default values, the selected values are applied. Refer to the following code sample to set the default ink annotation settings.
+After changing default values, the new defaults are applied to subsequently created ink annotations.. Refer to the following code sample to set the default ink annotation settings.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}

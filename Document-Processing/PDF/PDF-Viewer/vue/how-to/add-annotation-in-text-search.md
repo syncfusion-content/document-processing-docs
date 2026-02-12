@@ -12,13 +12,13 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-A concise guide to adding rectangle annotations at highlighted text search results in the Vue PDF Viewer to visually emphasize matches and improve readability.
+A concise guide that demonstrates how to add rectangle annotations at highlighted text search results in the Vue PDF Viewer. The guide explains where to wire the callback, required services, and quick troubleshooting steps.
 
 ## Steps to add rectangle annotations on search result highlight
 
 **Step 1:** Follow the steps provided in the [Vue PDF Viewer Getting Started documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
 
-**Step 2:** Initialize the PDF Viewer with the required modules
+**Step 2:** Set up the PDF Viewer component to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -121,6 +121,6 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Following these steps enables the PDF Viewer to add rectangle annotations at search result locations, improving the visibility of matches.
+Following this guide enables the PDF Viewer to add rectangle annotations at text search result locations, improving visibility for users navigating search matches.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to)
