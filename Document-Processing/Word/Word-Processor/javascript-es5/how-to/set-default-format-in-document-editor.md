@@ -63,14 +63,14 @@ You can use [`setDefaultParagraphFormat`](https://ej2.syncfusion.com/javascript/
 
 The following example code illustrates how to change the paragraph format(before spacing, line spacing etc.,) default value in Document editor.
 
-```ts
+```js
 import { ParagraphFormatProperties, DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
 
-let container: DocumentEditorContainer = new DocumentEditorContainer({ height: "590px" });
+var container = new ej.documenteditor.DocumentEditorContainer({height: "590px" });
 container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
-DocumentEditorContainer.Inject(Toolbar);
+ ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
 
-let defaultParagraphFormat: ParagraphFormatProperties = {
+var defaultParagraphFormat = {
     beforeSpacing: 8,
     lineSpacing: 1.5,
     leftIndent: 24,
@@ -88,26 +88,24 @@ You can use [`setDefaultSectionFormat`](https://ej2.syncfusion.com/javascript/do
 
 The following example code illustrates how to change the section format(header and footer distance, page width and height, etc.,) default value in Document editor.
 
-```ts
-import { SectionFormatProperties, DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
-
-let container: DocumentEditorContainer = new DocumentEditorContainer({ height: "590px" });
+```js
+var container = new ej.documenteditor.DocumentEditorContainer({height: "590px" });
 container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
-DocumentEditorContainer.Inject(Toolbar);
+ ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
 
-let defaultSectionFormat: SectionFormatProperties = {
+var defaultSectionFormat = {
     pageWidth: 500,
     pageHeight: 800,
     headerDistance: 56,
     footerDistance: 48,
-    leftMargin: 12,
+    leftMargin: 24,
     rightMargin: 12,
     topMargin: 0,
     bottomMargin: 0
 
 };
 container.setDefaultSectionFormat(defaultSectionFormat);
-container.appendTo('#container');  
+container.appendTo('#container');    
 ```
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.

@@ -18,8 +18,8 @@ DocumentEditorContainer initially render with default height. You can change hei
 
 The following example code illustrates how to change height of Document Editor.
 
-```ts
-let container: DocumentEditorContainer = new DocumentEditorContainer({
+```js
+var container = new ej.documenteditor.DocumentEditorContainer({
     enableToolbar: true, height: "590px"
 });
 container.appendTo('#DocumentEditor');
@@ -33,9 +33,9 @@ DocumentEditorContainer initially render with default width. You can change widt
 
 The following example code illustrates how to change width of Document Editor.
 
-```ts
-let container: DocumentEditorContainer = new DocumentEditorContainer({
-    enableToolbar: true, width: "100%"
+```js
+var container = new ej.documenteditor.DocumentEditorContainer({
+    enableToolbar: true,  width: "100%"
 });
 container.appendTo('#DocumentEditor');
 ```
@@ -48,18 +48,13 @@ Using [`resize`](https://ej2.syncfusion.com/javascript/documentation/api/documen
 
 The following example code illustrates how to fit Document Editor to browser window size.
 
-```ts
-import {
-    DocumentEditorContainer,
-    Toolbar,
-} from '@syncfusion/ej2-documenteditor';
-
-let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px' });
-DocumentEditorContainer.Inject(Toolbar);
+```js
+var container = new ej.documenteditor.DocumentEditorContainer({ enableToolbar: true, height: '590px' });
+ ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
 container.serviceUrl =
     'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
-container.created = (): void => {
+container.created = () => {
     setInterval(() => {
         updateDocumentEditorSize();
     }, 100);

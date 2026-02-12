@@ -16,14 +16,14 @@ Similarly, you can use [`documentEditorSettings`](https://ej2.syncfusion.com/jav
 
 The following example code illustrates how to change the font families in Document editor container.
 
-```ts
-let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true,height: '590px',
+```js
+var container = new ej.documenteditor.DocumentEditorContainer({ enableToolbar: true,height: '590px',
 // Add required font families to list it in font drop down
   documentEditorSettings: {
     fontFamilies: ['Algerian', 'Arial', 'Calibri', 'Windings'],
   }
 });
-DocumentEditorContainer.Inject(Toolbar);
+ ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
 container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 container.appendTo('#container');
 ```
