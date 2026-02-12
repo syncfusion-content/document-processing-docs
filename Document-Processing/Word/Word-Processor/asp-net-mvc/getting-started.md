@@ -108,7 +108,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-Get
 
 ## See also
 
-* [How to localize the Document Editor container](./global-local).
+* [How to localize the Document editor container](./global-local).
 * [How to load the document by default](./how-to/open-default-document).
 * [How to customize tool bar](./how-to/customize-tool-bar).
 * [How to resize Document editor component](./how-to/resize-document-editor).

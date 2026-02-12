@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Getting started with React Document Editor component | Syncfusion
-description: Checkout and learn about Getting started with React Document Editor component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Document editor component | Syncfusion
+description: Checkout and learn about Getting started with React Document editor component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Document Editor component
+# Getting started with React Document editor component
 
-This section explains the steps to create a Word document editor within your application and demonstrates the basic usage of the Document Editor component.
+This section explains the steps to create a Word document editor within your application and demonstrates the basic usage of the Document editor component.
 
 To get started quickly with DocumentEditor component, you can check the video below.
 
@@ -18,11 +18,11 @@ To get started quickly with DocumentEditor component, you can check the video be
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Document editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 ## Dependencies
 
-The following list shows the minimum dependencies required to use the Document Editor component:
+The following list shows the minimum dependencies required to use the Document editor component:
 
 ```javascript
 |-- @syncfusion/ej2-react-documenteditor
@@ -45,7 +45,7 @@ The following list shows the minimum dependencies required to use the Document E
 
 ### Server-side dependencies
 
-The Document Editor component requires server-side interactions for the following operations:
+The Document editor component requires server-side interactions for the following operations:
 
 * [Open file formats other than SFDT](./import#convert-word-documents-into-sfdt)
 * [Paste with formatting](./clipboard#paste-with-formatting)
@@ -97,17 +97,17 @@ npm run dev
 All available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 You can choose the component that you want to install.
 
-To install the Document Editor component, use the following command:
+To install the Document editor component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-documenteditor --save
 ```
 
->Note: The `--save` flag instructs npm to include the Document Editor package inside the dependencies section of the `package.json` file.
+>Note: The `--save` flag instructs npm to include the Document editor package inside the dependencies section of the `package.json` file.
 
 ## Adding CSS reference
 
-Add the Document Editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/App.css` file:
+Add the Document editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/App.css` file:
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -125,7 +125,7 @@ Add the Document Editor component and its dependent component styles available i
 
 ## Choosing a component
 
-Syncfusion offers two Document Editor components with different feature sets:
+Syncfusion offers two Document editor components with different feature sets:
 
 * **DocumentEditorContainer**: A complete solution with a predefined toolbar and properties pane for comprehensive document editing
 * **DocumentEditor**: A customizable component where you build the UI according to your specific requirements
@@ -164,7 +164,7 @@ export default App;
 
 {% endraw %}
 
->Important: The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
+>Important: The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
 
 #### Run the DocumentEditorContainer application
 
@@ -296,7 +296,7 @@ function App() {
 export default App;
 ```
 
->Important: The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
+>Important: The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
 
 #### Run the DocumentEditor application
 
@@ -306,7 +306,7 @@ Run the following command to compile and start the application:
 npm run dev
 ```
 
-The Document Editor output will be displayed as follows:
+The Document editor output will be displayed as follows:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -324,12 +324,12 @@ The Document Editor output will be displayed as follows:
 
 ## Next steps
 
-After successfully setting up the Document Editor component, explore these resources to enhance your implementation:
+After successfully setting up the Document editor component, explore these resources to enhance your implementation:
 
-* [How to localize the Document Editor container](./global-local)
+* [How to localize the Document editor container](./global-local)
 * [How to load a document by default](./how-to/open-default-document)
 * [How to customize the toolbar](./how-to/customize-tool-bar)
-* [How to resize the Document Editor component](./how-to/resize-document-editor)
+* [How to resize the Document editor component](./how-to/resize-document-editor)
 * [How to add a save button to the DocumentEditorContainer toolbar](./how-to/add-save-button-in-toolbar)
 
 ## Troubleshooting

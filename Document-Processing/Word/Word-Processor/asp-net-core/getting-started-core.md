@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with ASP.NET Core DocumentEditor Control | Syncfusion
+title: Getting Started with Syncfusion Document Editor Control
 description: Check out and learn about getting started with Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting Started Core
