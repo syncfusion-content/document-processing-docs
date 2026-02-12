@@ -20,8 +20,6 @@ The following system configurations were used for benchmarking:
 * **.NET Version:** .NET 8.0  
 * **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v32.2.3](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/32.2.3)
 
-## Word to image conversion
-
 ## Benchmark Results.
 
 The table below shows the performance results of various Word document operations, evaluated using predefined input conditions in the previously described environment. 
