@@ -103,7 +103,7 @@ Now the Spreadsheet server Docker instance runs on localhost with the provided p
     <div id='Spreadsheet'></div>
     <script>
       // Initialize Spreadsheet component.
-      const spreadsheet = new ej.spreadsheet.Spreadsheet({
+      var spreadsheet = new ej.spreadsheet.Spreadsheet({
         openUrl: 'http://localhost:6002/api/spreadsheet/open',
         saveUrl: 'http://localhost:6002/api/spreadsheet/save'
       });

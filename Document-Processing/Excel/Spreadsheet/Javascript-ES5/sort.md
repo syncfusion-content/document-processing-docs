@@ -56,7 +56,7 @@ You can also enable or disable this property using `beforeSort` event arguments,
 
 ```ts
 
-let spreadsheet: Spreadsheet = new Spreadsheet({
+var spreadsheet: Spreadsheet = new Spreadsheet({
 
     beforeSort: function (args) {
         args.sortOptions.containsHeader = true;
@@ -79,7 +79,7 @@ You can also enable or disable this property using `beforeSort` event arguments,
 
 ```ts
 
-let spreadsheet: Spreadsheet = new Spreadsheet({
+var spreadsheet: Spreadsheet = new Spreadsheet({
 
     beforeSort: function (args) {
         args.sortOptions.caseSensitive = true;
