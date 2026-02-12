@@ -1,20 +1,17 @@
 ---
 layout: post
-title: Overview of Forms in React PDF Viewer Control | Syncfusion
-description: Learn what the Form Designer in Syncfusion React PDF Viewer offers, supported field types, and how the topics are organized.
+title: Overview of Forms in MVC PDF Viewer Control | Syncfusion
+description: Learn what the Form Designer in Syncfusion MVC PDF Viewer offers, supported field types, and how the topics are organized.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Overview of Forms in React PDF Viewer
+# Overview of Forms in MVC PDF Viewer
 
 The Syncfusion PDF Viewer delivers a complete, easy-to-use PDF forms experience. You can read, fill, add, edit, and delete form fields directly within your PDF documents. These actions are supported through both the intuitive user interface and powerful programmatic APIs.
 
 The viewer also includes smooth import and export support for form data, making integration effortless. Developers benefit from extensive API control, while end users enjoy a clean and simple interface designed for a seamless and stress-free form-filling experience.
-
-Check out the following video to learn how to use the Form Fields in the React PDF Viewer.
-{% youtube "https://www.youtube.com/watch?v=MUWTCg1MoAE" %}
 
 ## Filling PDF Forms
 
@@ -22,31 +19,15 @@ Experience effortless PDF form filling through a clean, intuitive UI or automate
 
 See the [Filling PDF Forms](./form-filling) page for full details.
 
-Use the following code-snippet to enable form-filling by injecting `FormFields` Module.
+Use the following ASP.NET MVC code-snippet to enable basic PDF Viewer rendering.
 
 {% tabs %}
-{% highlight js tabtitle="index.js" %}
-import * as ReactDOM from 'react-dom/client';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, Inject } from '@syncfusion/ej2-react-pdfviewer';
-export function App() {
-  return (<div>
-    <div className='control-section'>
-      <PdfViewerComponent 
-        id="container" 
-        documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        style={{ 'height': '680px' }} 
-      >
-        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
-          Print, TextSelection, TextSearch, FormFields]} />
-      </PdfViewerComponent>
+{% highlight cshtml tabtitle="Standalone" %}
+
+    <div style="width:100%;height:600px">
+        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
     </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -62,31 +43,15 @@ A built in Form Designer lets you quickly add, edit, move, and delete form field
 
 See the [Form Designer](./form-designer) page for full details.
 
-Use the following Code-snippet to enable Form Designer by injecting `FormDesigner` Module.
+Use the following ASP.NET MVC code-snippet to enable the Form Designer rendering.
 
 {% tabs %}
-{% highlight js tabtitle="index.js" %}
-import * as ReactDOM from 'react-dom/client';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
-export function App() {
-  return (<div>
-    <div className='control-section'>
-      <PdfViewerComponent 
-        id="container" 
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        style={{ 'height': '680px' }} 
-      >
-        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
-          Print, TextSelection, TextSearch, FormFields]} />
-      </PdfViewerComponent>
+{% highlight cshtml tabtitle="Standalone" %}
+
+    <div style="width:100%;height:600px">
+        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
     </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+
 {% endhighlight %}
 {% endtabs %}
 
