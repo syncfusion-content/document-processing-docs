@@ -1,12 +1,12 @@
 ---
-title: Get the maximum number of rows and columns supported in an Excel worksheet | Syncfusion
+title: Get maximum rows and columns in a worksheet | Syncfusion
 description: Code example to get the maximum number of rows and columns supported in an Excel worksheet using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to get the maximum number of rows and columns supported in an Excel worksheet?
+# How to get the maximum rows and columns in a worksheet using XlsIO?
 
 The [MaxRowCount](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_MaxRowCount) and [MaxColumnCount](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_MaxColumnCount) properties of [IWorkbook](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html) return the maximum number of rows and columns supported in an Excel worksheet.
 
