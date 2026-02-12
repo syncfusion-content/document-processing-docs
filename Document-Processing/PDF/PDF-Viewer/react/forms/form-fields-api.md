@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # Form Fields API in React PDF Viewer
 
-The PDF Viewer provides comprehensive APIs to create, edit, validate, navigate, and manage form fields programmatically. The following APIs are available:
+The PDF Viewer exposes a set of programmatic APIs to create, edit, validate, navigate, and manage form fields. These APIs enable automation of common tasks such as updating values, exporting/importing form data, resetting fields, and toggling designer or validation features. The examples below demonstrate usage patterns; code samples remain unchanged and are runnable when the viewer is initialized.
+
+Each sample demonstrates a single API call or small workflow (for example, updating a field value or exporting form data). Use the provided APIs in application logic or UI handlers to automate form workflows.
 
 | API | Description |
 |---|---|

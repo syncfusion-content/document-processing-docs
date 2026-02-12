@@ -19,9 +19,9 @@ Create a project in Google Cloud Console and enable the Google Drive API. Obtain
 
 Follow the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) guide to create a basic Blazor application with the SfPdfViewer component.
 
-**Step 3:** Include the following namespaces in the **Index.razor** file.
+**Step 3:** Include the following namespaces in the `Index.razor` file.
 
-1. Import the required namespaces at the top of the file:
+Import the required namespaces at the top of the file:
 
 ```csharp
 @using Google.Apis.Drive.v3;
@@ -30,7 +30,7 @@ Follow the [Getting Started](https://help.syncfusion.com/document-processing/pdf
 @using Google.Apis.Util.Store;
 @using System.Threading.Tasks;
 @using Syncfusion.Blazor.SfPdfViewer;
-@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Buttons;
 ```
 
 **Step 4:** Add the following example to save the downloaded PDF file to `Google Drive`.

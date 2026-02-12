@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Configure annotation selector settings
 
-Use the [annotationSelectorSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectorSettings/) property to customize the appearance and behavior of the annotation selector in the UI.
+Use the [annotationSelectorSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectorSettings/) property to customize the appearance and interaction behavior of the annotation selector in the react PDF Viewer UI.
 
 AnnotationSelectorSettingsModel
 
-The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationAnnotationSettingsModel/) defines settings such as border colors, sizes, and shapes, enabling fine-grained control over how annotations are displayed and interacted with.
+The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectorSettingsModel/) defines selector appearance and behavior settings—such as border colors, resizer appearance, and selector line style—providing fine-grained control over how annotations are displayed and manipulated.
 
 Steps to configure annotation selector settings
 - Step 1: Create a PDF Viewer instance and initialize it.

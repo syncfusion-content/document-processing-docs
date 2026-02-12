@@ -7,19 +7,19 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Open PDF file from AWS S3 in SfPdfViewer
+# Open PDF from AWS S3 in SfPdfViewer
 
-To load a PDF file from AWS S3 in the SfPdfViewer component, follow the steps below.
+This article shows how to load a PDF stored in AWS S3 into the Syncfusion Blazor `SfPdfViewer` component.
 
-**Step 1:** Create AWS S3 account 
+## Step 1 — Create an S3 bucket and grant read access
 
 Set up an AWS account by following the official guide: [AWS Management Console](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html). Create an S3 bucket, upload a PDF file, and create an IAM user with permissions to read objects (for example, s3:GetObject). Generate access keys and store them securely.
 
-**Step 2:** Create a simple SfPdfViewer sample in Blazor
+## Step 2 — Create a simple SfPdfViewer sample
 
 Follow the steps in the Blazor Server [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) guide for PDF Viewer to create a basic sample. This provides the required project setup and SfPdfViewer configuration.
 
-**Step 3:** Include the following namespaces in the **Index.razor** file.
+## Step 3 — Add required namespaces
 
 1. Import the required namespaces at the top of the file:
 
@@ -30,7 +30,9 @@ Follow the steps in the Blazor Server [getting started](https://help.syncfusion.
 @using Syncfusion.Blazor.SfPdfViewer;
 ```
 
-**Step 4:** Add the following code example to the Index.razor file.
+## Step 4 — Example: load a PDF from S3 and set DocumentPath
+
+The example below retrieves the PDF from S3, converts it to a base64 data URL, and assigns it to `DocumentPath`.
 
 ```csharp
 
@@ -70,15 +72,15 @@ Follow the steps in the Blazor Server [getting started](https://help.syncfusion.
 }
 ```
 
-Replace the fileName value with the actual S3 object key for the PDF to load. Pass the document name to the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property of the SfPdfViewer component.
+Replace `fileName` with the S3 object key for the PDF. Assign the resulting value to the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property of `SfPdfViewer`.
 
 N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with valid values for your environment. Do not expose credentials in client-side code; store secrets securely using app settings, environment variables, or IAM roles.
 
-N> The **AWSSDK.S3** NuGet package must be installed in the application to use the previous code example.
+N> The `AWSSDK.S3` NuGet package must be installed to use the AWS SDK in this example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20AWS%20S3)
 
-N> Ensure that the RegionEndpoint in the code matches the region of the target S3 bucket to avoid authorization or not-found errors.
+N> Ensure `RegionEndpoint` matches the S3 bucket region to avoid authorization or not-found errors.
 
 ## See also
 
