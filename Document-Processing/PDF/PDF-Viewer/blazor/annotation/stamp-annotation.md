@@ -51,7 +51,7 @@ When entering stamp mode while in Pan mode, the viewer switches to Text Select m
 
 * In the file explorer dialog, choose an image to add as a stamp on the PDF page.
 
->**Note:** Only JPEG (JPG/JPEG) image formats are supported for custom stamp annotations.
+N> Only JPEG (JPG/JPEG) image formats are supported for custom stamp annotations.
 
 ## Setting default properties during control initialization
 
@@ -243,7 +243,7 @@ This code adds a stamp annotation to the first page of the PDF document. Note th
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Stamp/Add).
 
->**Note:** To add a custom stamp annotation programmatically, set the annotation type to [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationType.html#Syncfusion_Blazor_SfPdfViewer_AnnotationType_Image) and provide the custom image data using the [CustomStampSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html#Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_CustomStampSource) API. Then call [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to add the annotation.
+N> To add a custom stamp annotation programmatically, set the annotation type to [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationType.html#Syncfusion_Blazor_SfPdfViewer_AnnotationType_Image) and provide the custom image data using the [CustomStampSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html#Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_CustomStampSource) API. Then call [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to add the annotation.
 
 ## Edit stamp annotation programmatically
 
