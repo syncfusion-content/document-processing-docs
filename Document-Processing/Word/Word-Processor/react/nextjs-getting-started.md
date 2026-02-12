@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Document Editor getting started with Next.js | Syncfusion
-description: Check out and learn here all about how to use the Syncfusion React UI components in the Next.js project.
+description: Integrate the Syncfusion React Document Editor into a Next.js application with step‑by‑step setup and usage.
 control: Next.js
 platform: document-processing
 documentation: ug
