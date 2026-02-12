@@ -15,12 +15,12 @@ The SfPdfViewer component supports adding handwritten signatures to PDF document
 
 Add a handwritten signature using the annotation toolbar.
 
-* Click the **Edit Annotation** in the SfPdfViewer toolbar to open the annotation toolbar.
-* Select the **HandWritten Signature** tool to open the signature panel.
+* Click the **Edit Annotation** button in the SfPdfViewer toolbar to open the annotation toolbar.
+* Select the **Handwritten Signature** tool to open the signature panel.
 
 ![Handwritten signature option in Blazor SfPdfViewer](images/blazor-pdfviewer-handwritten-sign.png)
 
-* Draw the signature in the signature panel using a mouse, or touch.
+* Draw the signature in the signature panel using a mouse or touch input.
 
 ![Signature panel displayed in Blazor SfPdfViewer](images/blazor-pdfviewer-sign-panel.png)
 
@@ -32,7 +32,7 @@ The added signature becomes part of the PDF annotations and is preserved when sa
 
 ## Editing the properties of handwritten signature
 
-The stroke color, thickness, and opacity of a handwritten signature can be adjusted using the annotation toolbar’s edit stroke color tool, edit thickness tool, and edit opacity tools. Select the signature on the page to enable these property editors for that item. After placement, the signature can also be moved, resized, or removed like other annotations.
+Stroke color, thickness, and opacity can be adjusted using the annotation toolbar’s property editors. Select the signature on the page to enable these editors. After placement, the signature can be moved, resized, or removed like other annotations.
 
 ![Editing handwritten signature properties in Blazor SfPdfViewer](images/blazor-pdfviewer-signature-properties.png)
 

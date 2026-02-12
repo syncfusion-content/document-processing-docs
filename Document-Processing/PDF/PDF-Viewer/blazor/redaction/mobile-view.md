@@ -7,17 +7,17 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Redaction in Mobile View in Blazor SfPdfViewer Component
+# Redaction in mobile view
 
-The **Redaction Tool** enables users to permanently mark and remove sensitive content from PDF documents in mobile view using the SfPdfViewer component. This feature is optimized for touch interactions and provides a streamlined redaction workflow specifically designed for mobile devices.
+Redaction mode in mobile view provides a touch-optimized toolbar and tools to mark, review, and apply redactions on the go.
 
-![Redaction in Mobile View](./redaction-annotations-images/redaction-mobile-view.png)
+![Redaction in mobile view](./redaction-annotations-images/redaction-mobile-view.png)
 
 N> In mobile view, the redaction toolbar appears at the bottom of the viewer for easy thumb access. Mobile layout activates automatically on small screens.
 
-## Adding Redaction in Mobile View
+## Enable redaction in mobile view
 
-To enable redaction functionality in your Blazor application, configure the PDF Viewer with the following setup,
+Configure the viewer toolbar to include redaction tools for both desktop and mobile. Example:
 
 ```cshtml
 @page "/"
@@ -73,60 +73,25 @@ To enable redaction functionality in your Blazor application, configure the PDF 
 }
 ```
 
-## Understanding Mobile Redaction Toolbar Tools
+## Toolbar tools overview
 
-When you enter redaction mode in mobile view, a specialized redaction toolbar appears with multiple tools optimized for touch interaction. Each tool serves a specific purpose in the redaction workflow.
+### Redaction annotation
 
-### Redaction Annotation Tool
+Draw rectangular overlays to mark selective content for redaction. Overlays are editable until applied.
 
-The **Redaction Annotation** tool is the primary redaction feature that allows you to draw redaction rectangles on specific content:
+![Redaction annotation tool](./redaction-annotations-images/redaction-annotation-annot.png)
 
-**Function**: Creates visual redaction annotations that mark content for permanent removal
-**Usage**: 
-Touch and drag to draw rectangular redaction overlays on any content area.
+### Page redaction
 
-**Process**: 
-- Selected content appears with a customizable overlay (default black)
-- Annotations remain editable until explicitly applied
-- Can be repositioned or deleted before final application
+Redact whole pages or page ranges using patterns (odd/even/ranges/current page).
 
-![Redaction Annotation Tool](./redaction-annotations-images/redaction-annotation-annot.png)
+![Page redaction tool](./redaction-annotations-images/page-redaction-annot.png)
 
-### Page Redaction Tool
+### Redaction properties
 
-The **Page Redaction** tool enables batch redaction of entire pages based on specific patterns.
+Customize overlay color, outline, overlay text, font, alignment, and size before applying redactions.
 
-![Page Redaction Tool](./redaction-annotations-images/page-redaction-annot.png)
-
-**Function**: Redacts complete pages or page ranges with a single action
-**Options Available**:
-- **Odd Pages**: Redacts only odd-numbered pages (1, 3, 5, etc.)
-- **Even Pages**: Redacts only even-numbered pages (2, 4, 6, etc.)
-- **Specific Page**: Specify single pages, ranges (e.g., 1-5, 10-15), or comma-separated lists (e.g., 1,3,5-7)
-- **Current Page**: Redacts only the currently displayed page
-
-**Usage**: 
-Select desired pattern → Review affected pages in the viewer → Confirm redaction scope
-
-![Page Redaction Tool Dialog](./redaction-annotations-images/page-redaction-dialog-annot.png)
-
-### Redaction Properties Tool
-
-The **Redaction Properties** tool allows customization of redaction appearance before application.
-
-![Redaction Properties Mobile View](./redaction-annotations-images/redaction-properties-annot.png)
-
-**Function**: Customize the visual appearance of redaction overlays and text replacement
-**Customizable Properties**:
-- **Fill Color**: Change the redaction overlay color (default: black)
-- **Outline Color**: Set outline color for redaction boxes (optional)
-- **Overlay Text**: Add custom text to appear on redacted areas (e.g., "REDACTED", "CONFIDENTIAL")
-- **Text Color**: Change overlay text color for better visibility
-- **Text Font**: Select font family for overlay text
-- **Text Alignment**: Position overlay text within redaction boxes
-- **Text Size**: Adjust overlay text size relative to redaction area
-
-![Redaction Properties Dialog Mobile View](./redaction-annotations-images/redaction-properties-dialog-annot.png)
+![Redaction properties](./redaction-annotations-images/redaction-properties-annot.png)
 
 ## Enabling Redaction Mode in Mobile View
 
@@ -161,7 +126,7 @@ The **Redaction Properties** tool allows customization of redaction appearance b
 3. **Preview**: See changes applied to existing annotations
 4. **Apply**: Use customized appearance for final redaction
 
-## Applying Redactions in Mobile View
+## Apply redactions
 
 N> Applying redactions is permanent. After applying, the underlying content and text are removed from the document and cannot be recovered.
 
@@ -195,11 +160,11 @@ To remove existing redaction annotations before they are applied:
 
 ![Delete Redaction Annotation](./redaction-annotations-images/delete-redaction-annotation-annot.png)
 
-N> Once redactions have been applied to the document, they become part of the PDF content and cannot be removed or modified.
+N> After redactions are applied they become part of the PDF content and cannot be removed.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar)
 
-## See Also
+## See also
 
 * [Mobile Toolbar](../toolbar-customization/mobile-toolbar)
 * [Annotation in Mobile View](../annotation/annotations-in-mobile-view)
