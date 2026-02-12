@@ -309,9 +309,3 @@ The PDF Viewer supports smooth rotation for Custom stamps and customized templat
 ## See also
 
 * [How to delete the annotation programmatically](./text-markup-annotation#delete-annotation-programmatically)
-
-**Best practices**
-
-- Prefer JPEG images under a reasonable size to minimize load times for custom stamps.
-- When adding stamps programmatically, validate image data and use streams to reduce memory usage for large images.
-- Provide clear stamp names and use sufficient contrast for accessibility when stamping documents.
