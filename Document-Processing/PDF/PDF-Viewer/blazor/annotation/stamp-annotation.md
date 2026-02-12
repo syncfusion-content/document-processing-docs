@@ -18,12 +18,6 @@ The SfPdfViewer component provides options to add, edit, delete, and rotate the 
 
 ![Stamp annotations displayed in the Blazor SfPdfViewer](../images/blazor-pdfviewer-stamp-annotation.png)
 
-## Prerequisites
-
-- Install and reference the `Syncfusion.Blazor.SfPdfViewer` package.
-- Register the PDF Viewer services and include the viewer's scripts and styles in your app.
-- Ensure images used for custom stamps are accessible to the hosting environment.
-
 ## Adding stamp annotations to the PDF document
 
 Stamp annotations can be added using the annotation toolbar.
