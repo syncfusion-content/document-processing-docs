@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Vue Document editor component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Document editor component of Syncfusion Essential JS 2 and more details.
+description: Checkout and learn about Getting started with Vue Document editor component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: document-processing
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue DocumentEditor Component in Vue 2
 
-To get started quickly with the Vue DocumentEditor component, you can check the [video](https://www.syncfusion.com/tutorial-videos/vue/word-processor?title=getting-started-with-the-vue-word-processor).
+To get started quickly with the Vue DocumentEditor component, view the getting-started video: https://www.syncfusion.com/tutorial-videos/vue/word-processor?title=getting-started-with-the-vue-word-processor
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Document Editor component
 
@@ -47,16 +47,17 @@ The Document Editor component requires server-side interactions for the followin
 * [Open file formats other than SFDT](./import#convert-word-documents-into-sfdt)
 * [Paste with formatting](./clipboard#paste-with-formatting)
 * [Restrict editing](./document-management)
-* [SpellCheck](./spell-check)
+* [Spell check](./spell-check)
 * [Save as file formats other than SFDT and DOCX](./saving-documents/server-side-export)
 
->Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
+Note: If these features are not required, the component can be deployed as a client-side solution without server-side interactions.
 
 To know about server-side dependencies, please refer this [page](./web-services-overview).
 
 ## Setting up the Vue 2 project
 
 To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+Using npm (global Vue CLI):
 
 ```bash
 npm install -g @vue/cli
@@ -65,7 +66,7 @@ cd quickstart
 npm run serve
 ```
 
-or
+Or using Yarn (global Vue CLI):
 
 ```bash
 yarn global add @vue/cli
@@ -89,6 +90,7 @@ This article uses the [Vue Document editor component](https://www.syncfusion.com
 ```bash
 npm install @syncfusion/ej2-vue-documenteditor --save
 ```
+
 or
 
 ```bash
