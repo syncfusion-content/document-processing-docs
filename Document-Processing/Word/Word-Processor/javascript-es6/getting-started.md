@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with JavaScript (ES6) Document editor control | Syncfusion
+title: JavaScript (ES6) Document Editor quick start | Syncfusion
 description: Checkout and learn about Getting started with JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting started 
@@ -86,7 +86,7 @@ npm install
 
 ## Import the Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript controls come with [built-in themes](https://ej2.syncfusion.com/documentation/appearance/theme/), which are available in the installed packages. It's easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript controls to match the style of your application by referring to one of the built-in themes.
+Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript controls come with [built-in themes](https://ej2.syncfusion.com/documentation/appearance/theme), which are available in the installed packages. It's easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript controls to match the style of your application by referring to one of the built-in themes.
 
 The quickstart application is preconfigured to use the `Material` theme in the `~/src/styles/styles.css` file, as shown below: 
 
@@ -98,7 +98,7 @@ The quickstart application is preconfigured to use the `Material` theme in the `
 {% endhighlight %}
 {% endtabs %}
 
->Note: To learn more about built-in themes and CSS reference for individual controls, refer to the [themes](https://ej2.syncfusion.com/documentation/appearance/theme/) section.
+>Note: To learn more about built-in themes and CSS reference for individual controls, refer to the [themes](https://ej2.syncfusion.com/documentation/appearance/theme) section.
 
 ## Adding component
 
