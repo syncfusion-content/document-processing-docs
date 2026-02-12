@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with JavaScript (ES5) Document Editor control
 
-The Essential<sup style="font-size:70%">&reg;</sup> JS 2 for JavaScript (global script) is an ES5 formatted pure JavaScript framework designed for compatibility with modern web browsers without requiring build tools or transpilation.
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 for JavaScript (global script) is an ES5 formatted pure JavaScript framework designed for compatibility with modern web browsers without requiring build tools.
 
 ## Component Initialization
 
