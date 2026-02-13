@@ -41,7 +41,7 @@ import {
  */
 @Component({
   selector: 'app-root',
-  // templateUrl: 'app.component.html',
+  // templateUrl: 'app.html',
     template: `
     <div class="control-section">
       <div class="content-wrapper">
@@ -75,7 +75,7 @@ import {
     FormDesignerService,
     PageOrganizerService,
   ],
-  styleUrls: ['app.component.css'],
+  styleUrls: ['app.css'],
   standalone: true,
   imports: [PdfViewerModule],
     
@@ -120,7 +120,7 @@ import {
  */
 @Component({
   selector: 'app-root',
-  // templateUrl: 'app.component.html',
+  // templateUrl: 'app.html',
     template: `
     <div class="control-section">
       <div class="content-wrapper">
@@ -154,7 +154,7 @@ import {
     FormDesignerService,
     PageOrganizerService,
   ],
-  styleUrls: ['app.component.css'],
+  styleUrls: ['app.css'],
   standalone: true,
   imports: [PdfViewerModule],
     
