@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Open the thumbnail pane programmatically
 
-Open the thumbnail pane programmatically using the [openThumbnailPane()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/thumbnailView/#openthumbnailpane) method.
+The PDF Viewer exposes a `openThumbnailPane()` API to open the thumbnail pane from application code. Use this API when the UI needs to show the thumbnail pane in response to user actions or programmatic workflows.
 
-The following steps are used to open the thumbnail.
+Follow these steps to open the thumbnail pane from application code.
 
-**Step 1:** Follow the steps in the [Get started with JavaScript ES5 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) guide to create a sample.
+**Step 1:**  Create a basic PDF Viewer sample using the [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) guide.
 
-**Step 2:** Use the following code snippet to open thumbnail.
+**Step 2:** Use the code snippet below to open the thumbnail pane.
 
 ```
 <button id="openThumbnail">Open Thumbnail Pane</button>
