@@ -121,7 +121,7 @@ The **Apply Redaction** button permanently removes all marked content from the d
 
 ![Redact Button Icon](redaction-annotations-images/redact-button-icon.png)
 
-A confirmation dialog appears before applying redaction to ensure acknowledgement of the irreversible nature of the process.
+A confirmation dialog appears before applying redaction to ensure acknowledgment of the irreversible nature of the process.
 
 ![Apply Redaction Dialog](redaction-annotations-images/apply-redaction-dialog.png)
 

@@ -33,7 +33,7 @@ You can also add redaction annotations from the context menu by selecting conten
 
 ![Context menu showing Redact Annotation option](../../Redaction/redaction-annotations-images/redact-text-context-menu.png)
 
-N> Ensure the Redaction tool is included in the toolbar. See [RedactionToolbar](../../Redaction/toolbar.md)for configuration.
+N> Ensure the Redaction tool is included in the toolbar. See [RedactionToolbar](../../Redaction/toolbar.md) for configuration.
 
 ### Add redaction annotations programmatically
 
