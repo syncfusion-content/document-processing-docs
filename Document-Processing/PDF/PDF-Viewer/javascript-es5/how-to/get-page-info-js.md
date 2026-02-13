@@ -10,7 +10,8 @@ domainurl: ##DomainURL##
 
 # Get page info in JavaScript PDF Viewer
 
-Use the **getPageInfo()** method to retrieve information for a specified page, including height, width, and rotation.
+
+Use the **getPageInfo()** method to retrieve metadata for a specified page, including height, width, and rotation. The method returns an object with numeric `height` and `width` values (in CSS pixels) and a `rotation` value (degrees).
 
 The following steps show how to use `getPageInfo`.
 
