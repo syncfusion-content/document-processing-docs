@@ -11,18 +11,18 @@ documentation: ug
 
 ## Why PDF Viewer (Classic) to PDF Viewer control
 
-Migrating to the PDF Viewer control delivers better performance and a simplified deployment model. Scrolling, page navigation, and printing are optimized for a smoother user experience. The newer viewer also removes the WebAssembly server service dependency required by the classic control, reducing app complexity and maintenance.
+Migrating to SfPdfViewer delivers better performance and a simplified deployment model. Scrolling, page navigation, and printing are optimized for a smoother user experience. SfPdfViewer also removes the WebAssembly server service dependency required by the classic viewer, reducing app complexity and maintenance.
 
 * **Enhanced performance**:
 Experience faster scrolling, more responsive page navigation, and improved printing throughput for large documents.
 
 * **No server service dependency**:
-The newer viewer does not require a separate ServiceUrl or server-side WebAssembly service; client-side rendering is handled by the component.
+SfPdfViewer does not require a separate `ServiceUrl` or server-side WebAssembly service; client-side rendering is handled by the component.
 
 * **Unified package across platforms**:
 A single package supports Windows, macOS, and Linux, making installation consistent across environments.
 
-### Nuget Package
+### NuGet package
 
 To initialize the PDF Viewer component, add the following package references to the project **.csproj** file.
 
@@ -71,7 +71,7 @@ To initialize the PDF Viewer component, add the following package references to 
 
 To use the PDF Viewer component, add the corresponding script reference in the app host page (**Host.cshtml** or **Layout.cshtml**) based on the framework version.
 
-N> The same script file is used for both `Server application` and `Web assembly application` for the PDF Viewer component.
+N> The same script file is used for both `Server application` and `WebAssembly application` for the PDF Viewer component.
 
 <table>
 <tr>
@@ -159,7 +159,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ### Index.razor
 
-To render the PDF Viewer component, add the following code in the **Index.razor** file. In the newer viewer, a ServiceUrl is not required; specify only the DocumentPath and layout attributes.
+To render the PDF Viewer component, add the following code in the **Index.razor** file. In the newer viewer, the `ServiceUrl` is not required; specify only the `DocumentPath` and layout attributes.
 
 <table>
 <tr>
@@ -225,7 +225,7 @@ For WebAssembly applications, include the following properties in the project **
 
 N> For WebAssembly applications, install the [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package.
 
-N> When hosting in certain environments (for example, Azure App Service), use [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) instead of [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly). Align native asset versions in the project file with the installed package version.
+N> When hosting in certain environments (for example, Azure App Service), consider using [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) instead of [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly). Align native asset versions in the project file with the installed package version.
 
 ## See also
 

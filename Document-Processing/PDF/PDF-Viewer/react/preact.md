@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the React PDF Viewer Component in the Preact Framework
+# Getting started with the React PDF Viewer component in Preact
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React PDF Viewer component.
+This article shows how to set up a [Preact](https://preactjs.com/) project and integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React PDF Viewer component.
 
-`Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors.
+Preact is a fast, lightweight JavaScript library for building user interfaces and is commonly used when a small bundle size and fast load times are important.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ This article provides a step-by-step guide for setting up a [Preact](https://pre
 
 ## Set up the Preact project
 
-To create a new `Preact` project, use one of the commands that are specific to either NPM or Yarn.
+To create a new Preact project using the official initializer, run:
 
 ```bash
 npm init preact
@@ -79,7 +79,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 cd my-project
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Now add Syncfusion React packages to the project.
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
@@ -99,9 +99,9 @@ yarn add @syncfusion/ej2-react-pdfviewer
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to know more about built-in themes and different ways to refer to theme's in a React project.
+Themes for Syncfusion React components can be imported from npm packages, a CDN, or created with Theme Studio. See the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/) documentation for details.
 
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the PDF Viewer component and its dependents were imported into the **src/style.css** file.
+This article uses the `Material 3` theme. Import the required CSS files into `src/style.css` as shown below.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/style.css" %}
@@ -122,9 +122,9 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React PDF Viewer component to the Vite project:
+Follow these steps to add the React PDF Viewer component to the Preact project:
 
-1\. Before adding the PDF Viewer component to your markup, import the PDF Viewer component in the **src/index.jsx** file.
+1. Before adding the viewer to markup, import the PDF Viewer component in `src/index.jsx`.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -135,7 +135,7 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
 {% endhighlight %}
 {% endtabs %}
 
-2\. Then, define the PDF Viewer component in the **src/index.jsx** file, as shown below:
+2. Define the PDF Viewer component in `src/index.jsx`, as shown below:
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -174,7 +174,7 @@ render(<App />, document.getElementById('app'));
 
 ## Run the project
 
-To run the project, use the following command:
+Run the project with:
 
 ```bash
 npm run dev
@@ -186,7 +186,7 @@ or
 yarn run dev
 ```
 
-The output will appear as follows:
+The app should open in the browser and display the PDF Viewer.
 
 ![preact](./images/preact.png)
 

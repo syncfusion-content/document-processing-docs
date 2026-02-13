@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Download in Angular PDF Viewer component
 
-The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
+The Angular PDF Viewer lets users download the currently loaded PDF. Enable the download toolbar button with `enableDownload` for both standalone and server-backed viewers. The examples below demonstrate typical configurations and how to trigger a programmatic download.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -72,10 +72,9 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 {% endhighlight %}
 {% endtabs %}
+![PDF Viewer toolbar with download button](images/download.png)
 
-![Alt text](images/download.png)
-
-You can invoke download action using following code snippet.,
+To invoke download programmatically, use the following snippet:
 
 ```html
 <script>

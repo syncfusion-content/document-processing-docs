@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Redaction in React PdfViewer
 
-Redaction annotations are used to hide confidential or sensitive information in a PDF. The Syncfusion React PDF Viewer (EJ2) lets you mark areas or entire pages for redaction, customize their appearance, and permanently apply them with a single action.
+Redaction annotations hide confidential or sensitive information in a PDF. The Syncfusion React PDF Viewer (EJ2) enables marking areas or entire pages for redaction, customizing appearance, and applying changes permanently.
 
 ## Enable the redaction toolbar
 
@@ -19,7 +19,7 @@ To enable the redaction toolbar, configure the `toolbarSettings.toolbarItems` pr
 The following example shows how to enable the redaction toolbar:
 
 {% tabs %}
-{% highlight js tabtitle="index.js" %}
+{% highlight js tabtitle="app.jsx" %}
 
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
@@ -52,8 +52,7 @@ export function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl= "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         toolbarSettings={toolbarSettings}
-        
-        style={{ 'height': '680px' }} 
+        style={{ 'height': '680px' }}
       >
         <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
           Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
@@ -110,7 +109,7 @@ A confirmation dialog appears before applying redaction to ensure you acknowledg
 
 ![Confirmation dialog for applying redaction](redaction-annotations-images/apply-redaction-dialog.png)
 
-N> After redaction is applied, the original content cannot be recovered.
+N> After redaction is applied the original content cannot be recovered.
 
 ## Comment Support
 

@@ -8,31 +8,31 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Built-In Toolbar in React Pdfviewer component
+# Built-in toolbar in React PDF Viewer component
 
-The PDF Viewer comes with a powerful built-in toolbar to execute important actions such as page navigation, text search,view mode,download,print,bookmark, and thumbnails.
+The PDF Viewer includes a built-in toolbar to perform common actions such as page navigation, text search, view mode, download, print, bookmarks, and thumbnails.
 
-The following table shows built-in toolbar items and its actions:-
+The following table lists built-in toolbar items and their actions:
 
 | Option | Description |
 |---|---|
-| OpenOption | This option provides an action to load the PDF documents to the PDF Viewer.|
-| PageNavigationTool | This option provides an action to navigate the pages in the PDF Viewer. It contains GoToFirstPage,GoToLastPage,GotoPage,GoToNext, and GoToLast tools.|
-| MagnificationTool |This option provides an action to magnify the pages either with predefined or user defined zoom factors in the PDF Viewer. Contains ZoomIn, ZoomOut, Zoom, FitPage and FitWidth tools|
-| PanTool | This option provides an action for panning the pages in the PDF Viewer.|
-| SelectionTool | This option provides an action to enable/disable the text selection in the PDF Viewer.|
-| SearchOption | This option provides an action to search a word in the PDF documents.|
-| PrintOption | This option provides an action to print the PDF document being loaded in the PDF Viewer.|
-| DownloadOption |This Download option provides an action to download the PDF document that has been loaded in the PDF Viewer.|
-| UndoRedoTool | This tool provides options to undo and redo the annotation actions performed in the PDF Viewer.|
-| AnnotationEditTool | This tool provides options to enable or disable the edit mode of annotation in the PDF Viewer.|
-| FormDesignerEditTool | This tool provides options to enable or disable the edit mode of form fields in the PDF Viewer.|
+| OpenOption | Loads PDF documents into the PDF Viewer. |
+| PageNavigationTool | Navigates pages (GoToFirstPage, GoToLastPage, GoToPage, GoToNext, GoToPrevious). |
+| MagnificationTool | Controls zoom (ZoomIn, ZoomOut, Zoom, FitPage, FitWidth). |
+| PanTool | Enables panning of pages. |
+| SelectionTool | Enables or disables text selection. |
+| SearchOption | Opens the search panel to find text in the document. |
+| PrintOption | Prints the currently loaded PDF. |
+| DownloadOption |Downloads the currently loaded PDF. |
+| UndoRedoTool | Undoes or redoes annotation actions. |
+| AnnotationEditTool | Toggles annotation edit mode. |
+| FormDesignerEditTool | Toggles form designer edit mode. |
 
 ## Show/Hide the built-in toolbar
 
-The PDF Viewer has an option to show or hide the complete built-in toolbar. You can achieve this by using following two ways.,
+The PDF Viewer can show or hide the built-in toolbar. You can do this in two ways:
 
-* **Show/Hide toolbar using enableToolbar API as in the following code snippet**
+- **Show/Hide toolbar using enableToolbar**
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -95,14 +95,14 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
-**serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**.
+N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within your component:
+`serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"`.
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/react/base-cs2" %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/blob/master/Toolbar/How%20to%20hide%20toolbar/src/index.js)
 
-* **Show/Hide toolbar using showToolbar as in the following code snippet**
+- **Show/Hide toolbar using showToolbar**
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -180,11 +180,11 @@ N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` wi
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/react/base-cs3" %}
 
-## Show/Hide the built-in toolbaritem
+## Show/Hide built-in toolbar items
 
-The PDF Viewer has an option to show or hide these grouped items in the built-in toolbar.
+You can show or hide grouped toolbar items by configuring `toolbarSettings.toolbarItems` and related settings.
 
-* **Show/Hide toolbaritem using toolbarSettings as in the following code snippet.**
+- **Show/Hide toolbar items using toolbarSettings**
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -252,7 +252,7 @@ N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` wi
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/react/base-cs4" %}
 
-* **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
+- **Show/Hide specific toolbar items using showToolbarItem**
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -670,7 +670,7 @@ The PDF Viewer provides API for user interactions options provided in it's built
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3:** Import and inject the modules used for the custom toolbar,
+**Step 3:** Import and inject the modules used for the custom toolbar.
 
 
   ```ts
@@ -686,7 +686,7 @@ The PDF Viewer provides API for user interactions options provided in it's built
 
   ```
 
-**Step 4:** Hide the built-in toolbar of PDF Viewer using below code snippet,
+**Step 4:** Hide the built-in toolbar of the PDF Viewer using the snippet below.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -729,7 +729,7 @@ style={{ 'display': 'block', 'height': '640px' }}>
 {% endhighlight %}
 {% endtabs %}
 
-**Step 5:** Add the following style to achieve the custom toolbar styling,
+**Step 5:** Add the following styles to achieve the custom toolbar appearance.
 
   ```
    #magnificationToolbarItems {
@@ -838,7 +838,7 @@ style={{ 'display': 'block', 'height': '640px' }}>
 
   The icons are embedded in the font file used in above code snippet.
 
-**Step 6:** Add the following scripts for performing user interaction in PDF Viewer in code behind
+**Step 6:** Add the following scripts for performing user interactions in the PDF Viewer.
 
    ```ts
 

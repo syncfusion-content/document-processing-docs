@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export As Image in Angular PDF Viewer component
+## Export as image in Angular PDF Viewer component
 
-The PDF Viewer library allows you to export specified pages as a Base64-encoded image string using the **exportAsImage()** method and exporting a range of pages as Base64-encoded image strings using the **exportAsImages()** method.
+The PDF Viewer component can export pages as Base64-encoded image strings using the `exportAsImage()` method (single page) and `exportAsImages()` method (page range). The examples below demonstrate single-page export, range export, and how to specify a custom image size.
 
 The following steps are used to exportAsImage.
 
@@ -33,7 +33,10 @@ exportAsImage() {
   });
 }
 ```
-Similarly, to code snippet for exports the specified page as a Base64-encoded image string, allowing for custom image size:
+
+### Export a single page with a custom size
+
+Use the same API and pass a `Size` object to request a custom image size.
 
 ```html
 <button (click)="exportAsImageWithSize()">exportAsImageWithSize</button>
@@ -51,7 +54,10 @@ exportAsImageWithSize() {
   });
 }
 ```
-Similarly, to code snippet for exports the range of pages as Base64-encoded image strings:
+
+### Export a range of pages
+
+Export a page range; the method returns an array of Base64-encoded image strings for the requested pages.
 
 ```html
 <button (click)="exportAsImages()">exportAsImages</button>
@@ -68,7 +74,10 @@ exportAsImages() {
   });
 }
 ```
-Similarly, to code snippet for exports the range of pages as Base64-encoded image strings, allowing for custom image size:
+
+### Export a range of pages with a custom size
+
+Pass a `Size` object when exporting a page range to control the output image dimensions.
 
 ```html
 <button (click)="exportAsImageWithSize()">exportAsImageWithSize</button>
@@ -87,4 +96,8 @@ exportAsImageWithSize() {
 }
 ```
 
-By following these steps, you can successfully integrate and use the export as image API in the EJ2 PDF Viewer.
+Notes:
+
+- Examples use `pageIndex` values starting at `1` as shown; confirm indexing for the viewer version in use.
+- Keep code-blocks unchanged when copying samples; adjust variable names and method names to match application conventions (for example, use `exportAsImagesWithSize` for a range export if that naming improves clarity).
+- For complete API details, consult the PDF Viewer documentation and API reference.
