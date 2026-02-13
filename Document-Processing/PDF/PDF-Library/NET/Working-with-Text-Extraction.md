@@ -652,3 +652,17 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     </tr>
   </tbody>
 </table>
+
+## Troubleshooting and FAQ’s
+
+### What is the recommended way to extract form field values from a PDF document?
+
+The [ExtractText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ExtractText) API returns only visible, rendered text on a page; it does not return values stored in interactive form fields (text boxes, checkboxes, radio buttons, etc.). Form fields live in the PDF’s interactive form structure, not the page content stream.
+
+To retrieve form field values, you have two recommended options:
+
+1. [Flatten form fields](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms#flattening-form-fields-in-a-pdf): Converts interactive form fields into static page content, embedding their values directly into the PDF’s text stream. After flattening, any text extraction process (such as ExtractText) will include these values.
+
+Refer to the text extraction section of the PDF [UG documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text-extraction) for more details.
+
+2. [Iterate through form fields directly](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms#enumerate-the-form-fields): Access each form field in the PDF’s form collection and read its value programmatically. This approach provides the most accurate and structured method for extracting form data.
