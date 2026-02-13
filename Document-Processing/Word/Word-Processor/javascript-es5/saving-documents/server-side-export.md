@@ -40,29 +40,28 @@ Please refer the following code example.
 
 Please refer the client side example to serialize the sfdt and send to the server.
 
-```ts
-import { DocumentEditor, FormatType, WordExport, SfdtExport } from '@syncfusion/ej2-documenteditor';
+```js
 
-//Inject require modules.
-DocumentEditor.Inject(WordExport, SfdtExport);
-
-let documenteditor: DocumentEditor = new DocumentEditor({ enableSfdtExport: true, enableWordExport: true, enableTextExport: true });
+var documenteditor = new ej.documenteditor.DocumentEditor({ enableSfdtExport: true, enableWordExport: true, enableTextExport: true });
 
 documenteditor.appendTo('#DocumentEditor');
 
-//Open the sfdt document.
+// Open the SFDT document.
 documenteditor.open(sfdt);
 
-document.getElementById('export').addEventListener('click', () => {
-    let http: XMLHttpRequest = new XMLHttpRequest();
+document.getElementById('export').addEventListener('click', function () {
+    var http = new XMLHttpRequest();
     http.open('POST', 'http://localhost:5000/api/documenteditor/ExportSFDT');
     http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
     http.responseType = 'json';
-    //Serialize document content as SFDT.
-    let sfdt: any = { content: documenteditor.serialize() };
-    //Send the sfdt content to server side.
+
+    // Serialize document content as SFDT.
+    var sfdt = { content: documenteditor.serialize() };
+
+    // Send the SFDT content to server.
     http.send(JSON.stringify(sfdt));
 });
+
 
 ```
 
