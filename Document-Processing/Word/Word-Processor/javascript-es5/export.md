@@ -145,7 +145,6 @@ document.getElementById('export').addEventListener('click', function () {
     // The blob can be processed further
   });
 });
-
 ```
 
 For instance, to export the document as Rich Text Format file, implement an ASP.NET MVC web API controller using DocIO library by passing the DOCX blob. Refer to the following code example.
