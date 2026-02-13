@@ -17,12 +17,39 @@ To convert HTML to PDF, send a request to the /v1/conversion/html-to-pdf endpoin
 
 {% highlight c# tabtitle="Curl" %}
 
+For URL
+
 curl --location 'http://localhost:8003/v1/conversion/html-to-pdf' \
   --form-string 'settings={
     "JobID": "job-123",
+    "IndexFile":"",
     "PaperSize": "A4",
     "Settings": {
       "Url": "https://www.syncfusion.com/",
+      "AdditionalDelay": 500,
+      "EnableScripts": true,
+      "EnableLinks": true,
+      "EnableBookmarks": true,
+      "EnableForms": false,
+      "EnableToc": false,
+      "Margins": 24,
+      "Rotation": 0,
+      "Orientation": "Portrait",
+      "SinglePagePdf": false,
+      "ShowHeader": true,
+      "ShowFooter": true
+    }
+  }'
+
+For File
+
+curl --location 'http://localhost:8003/v1/conversion/html-to-pdf' \
+  --form-string 'settings={
+    "JobID": "job-123",
+    "IndexFile":"index.html",
+    "PaperSize": "A4",
+    "Settings": {
+      "Url": "",
       "AdditionalDelay": 500,
       "EnableScripts": true,
       "EnableLinks": true,
@@ -42,14 +69,44 @@ curl --location 'http://localhost:8003/v1/conversion/html-to-pdf' \
 
 {% highlight javaScript tabtitle="JavaScript" %}
 
+For Url
+
 const formdata = new FormData();
 formdata.append(
     "settings",
     JSON.stringify({
       JobID: "job-200",
+      "IndexFile":"",
       PaperSize: "A4",
       Settings: {
         Url: "https://example.com/invoice/5678",
+        AdditionalDelay: 800,
+        EnableScripts: true,
+        Enablelinks: true,
+        EnableBookmarks: true,
+        EnableForms: false,
+        EnableToc: false,
+        Margins: 24, // points
+        Rotation: 0,
+        Orientation: "Portrait", // or "Landscape"
+        SinglePagePdf: false,
+        ShowHeader: true,
+        ShowFooter: true
+      }
+    })
+  );
+
+For File
+
+const formdata = new FormData();
+formdata.append(
+    "settings",
+    JSON.stringify({
+      JobID: "job-200",
+      "IndexFile":"index.html",
+      PaperSize: "A4",
+      Settings: {
+        Url: "",
         AdditionalDelay: 800,
         EnableScripts: true,
         Enablelinks: true,
@@ -84,9 +141,13 @@ fetch("http://localhost:8003/v1/conversion/html-to-pdf", requestOptions)
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/html-to-pdf");
 var content = new MultipartFormDataContent();
+
+For Url
+
 var settings = new
 {
     JobID = "job-300",
+    "IndexFile":"",
     PaperSize = "A4",
     Settings = new
     {
@@ -105,6 +166,32 @@ var settings = new
         ShowFooter = true
     }
 };
+
+For File
+
+var settings = new
+{
+    JobID = "job-300",
+    "IndexFile":"index.html",
+    PaperSize = "A4",
+    Settings = new
+    {
+        Url = "",
+        AdditionalDelay = 700,
+        EnableScripts = true,
+        Enablelinks = true,
+        EnableBookmarks = true,
+        EnableForms = false,
+        EnableToc = false,
+        Margins = 24,
+        Rotation = 0,
+        Orientation = "Portrait",
+        SinglePagePdf = false,
+        ShowHeader = true,
+        ShowFooter = true
+    }
+};
+
 
 content.Add(new StringContent(JsonSerializer.Serialize(settings)), "settings");
 request.Content = content;
