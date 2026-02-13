@@ -21,6 +21,7 @@ DocumentEditorContainer allows you to customize(add, show, hide, enable, and dis
 * Enable, Disable -  Toolbar items can be enabled or disable using [`enableItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/toolbar/#enableItems)
 
 ```js
+
 var toolItem = {
     prefixIcon: "e-de-ctnr-lock",
     tooltipText: "Disable Image",
