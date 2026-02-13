@@ -86,10 +86,19 @@ There are two options:
 
 ### Syncfusion<sup>&reg;</sup> Code Studio
 
-  *	In [Code Studio](https://www.syncfusion.com/code-studio/), open MCP Marketplace and navigate to the ```Custom Servers``` tab.
-  *	Enter the Server Name as ```pdfviewersdk-mcp```, choose Server Type as npm package, and set the NPM Package name to ```@syncfusion/pdfviewersdk-assistant```.
-  *	Add an environment variable as ```Syncfusion_API_Key``` and value as your [Syncfusion API key](https://syncfusion.com/account/api-key), then click **Install Server**.
+  *	In [Code Studio](https://www.syncfusion.com/code-studio/), open MCP Marketplace
+  ![Code Studio Marketplace](../../PDF/PDF-Viewer/blazor/images/code-studio-marketplace.png)
+  * Go to the ```Custom Servers``` tab and click **Add MCP Servers**
+  ![Custom Server Tab](../../PDF/PDF-Viewer/blazor/images/mcp-custom-server.png)
+  * In the dialog that appears, select **Accept and Continue** to launch the runtime window for configuring the PDF Viewer SDK MCP.
+  ![Run Time Window](../../PDF/PDF-Viewer/blazor/images/mcp-runtime-window.png)
+  * Choose the NPM package installation mode. Enter the command **@syncfusion/pdfviewersdk-assistant** in the runtime window and press **Enter**
+  ![NPM package](../../PDF/PDF-Viewer/blazor/images/mcp-npm-package.png)
+  * When prompted, click allow in the opened options and select **Direct API key**. Enter the API key generated from the [Syncfusion API key](https://www.syncfusion.com/account/api-key), then press **Enter**.
+  ![Syncfusion API key](../../PDF/PDF-Viewer/blazor/images/mcp-syncfusion-api-key.png)
+  *	Provide server name such as ```syncfusion-pdfviewersdk-assistant```, then press **Enter**. The PDF Viewer SDK MCP server will get installed.
   *	Once installed, the server will appear in the User Installed Server list and will be added to the **config.yaml** file.
+  ![PDF Viewer MCP server](../../PDF/PDF-Viewer/blazor/images/mcp-server-installed.png)
   *	The server is now ready for use in Code Studio. For more details, refer to the Code Studio [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/customservers).
 
 For additional details, see the Code Studio [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/customservers).
@@ -119,7 +128,7 @@ For additional details, see the Code Studio [documentation](https://help.syncfus
   ```
 
 * After updating the configuration in mcp.json, you’ll notice a “Start” option at the top of the config. This allows you to easily start the <a href ="https://www.npmjs.com/package/@syncfusion/pdfviewersdk-assistant">SyncfusionPDFViewerSDKAssistant</a> server directly from the settings interface without additional commands.
-
+![Start PDF Viewer AI Assistant](../../PDF/PDF-Viewer/blazor/images/mcp-start-pdfviewer.png)
 * Confirm that [SyncfusionPDFViewerSDKAssistant](https://www.npmjs.com/package/@syncfusion/pdfviewersdk-assistant) is being used (this does not happen automatically). Look for a statement in the output, which is similar to:
     * ```SyncfusionPDFViewerSDKAssistant is running...``` (in VS Code)
 
