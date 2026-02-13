@@ -18,13 +18,13 @@ To flatten a PDF document, send a request to the /v1/edit-pdf/flatten endpoint w
 {% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/edit-pdf/flatten' \
---form 'file=@"Form.pdf"' \
---form 'settings="{
-  \"File\": \"file\",
-  \"Password\": null,
-  \"FlattenFormFields\": true,
-  \"FlattenAnnotations\": true
-}"'
+--form 'file=@Input.pdf' \
+--form 'settings={
+  "File": "file",
+  "Password": null,
+  "FlattenFormFields": true,
+  "FlattenAnnotations": true
+}'
 
 {% endhighlight %}
 
@@ -32,7 +32,15 @@ curl --location 'http://localhost:8003/v1/edit-pdf/flatten' \
 
 const formdata = new FormData();
 formdata.append("file", fileInput.files[0], "Form.pdf");
-formdata.append("settings", "{\n  \"File\": \"file\",\n  \"Password\": null,\n  \"FlattenFormFields\": true,\n  \"FlattenAnnotations\": true\n}");
+formdata.append(
+  "settings",
+  JSON.stringify({
+    File: "file",
+    Password: null,
+    FlattenFormFields: true,
+    FlattenAnnotations: true
+  })
+);
 
 const requestOptions = {
   method: "POST",
@@ -40,7 +48,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/flatten", requestOptions)
+fetch("http://localhost:8003/v1/edit-pdf/flatten", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -52,14 +60,22 @@ fetch("http://localhost:4000/v1/edit-pdf/flatten", requestOptions)
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/flatten");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("Form.pdf")), "file", "Form.pdf");
-content.Add(new StringContent("{
-  \"File\": \"file\",
-  \"Password\": null,
-  \"FlattenFormFields\": true,
-  \"FlattenAnnotations\": true
-}"), "settings");
+content.Add(new StreamContent(File.OpenRead("Input.pdf")), "file1", "Input.pdf");
+
+var settings = new
+{
+    File = "file",
+    Password = (string?)null,
+    FlattenFormFields = true,
+    FlattenAnnotations = true
+};
+
+var json = JsonSerializer.Serialize(settings);
+var settingsContent = new StringContent(json, Encoding.UTF8, "application/json");
+// When sending JSON as a field inside multipart, you can still name the part:
+content.Add(settingsContent, "settings");
 request.Content = content;
+
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
@@ -86,7 +102,8 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
+curl --location 'http://localhost:8003/v1/conversion/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
+  --output Output.pdf
 --header 'Authorization: Bearer {{Placeholder for token}}'
 
 {% endhighlight %}
@@ -98,7 +115,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:8003/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));

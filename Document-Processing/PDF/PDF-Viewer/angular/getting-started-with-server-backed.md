@@ -10,7 +10,13 @@ domainurl: ##DomainURL##
 
 # Getting started with Angular PDF Viewer (server-backed)
 
-This guide explains how to create the PDF Viewer component and configure its features in Angular using Essential JS 2 in server-backed mode.
+This guide explains how to create the PDF Viewer component and configure its features in Angular 21 using the Essential JS 2 in server-backed mode.
+
+> Note: This guide supports **Angular 21** and other recent Angular versions. For detailed compatibility with other Angular versions, please refer to the [Angular version support matrix](https://ej2.syncfusion.com/angular/documentation/system-requirement#angular-version-compatibility). Starting from Angular 19, standalone components are the default, and this guide reflects that architecture.
+
+## Prerequisites
+
+Ensure your development environment meets the [System Requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Angular UI Components](https://ej2.syncfusion.com/angular/documentation/system-requirement).
 
 ## Set up the development environment
 
@@ -21,16 +27,51 @@ To install the latest Angular CLI globally use the following command.
 npm install -g @angular/cli
 ```
 
+> **Angular 21 Standalone Architecture:** Standalone components are the default in Angular 21. This guide uses the modern standalone architecture. If you need more information about the standalone architecture, refer to the [Standalone Guide](https://ej2.syncfusion.com/angular/documentation/getting-started/angular-standalone).
+
+### Installing a specific version
+
+To install a particular version of Angular CLI, use:
+
+```bash
+npm install -g @angular/cli@21.0.0
+```
+
 ## Create an Angular application
 
 Start a new Angular application using the Angular CLI command as follows.
 
 ```bash
 ng new my-app
+```
+
+* This command will prompt you to configure settings like enabling Angular routing and choosing a stylesheet format.
+
+![Initial_setup](images/getting-started-styles.png)
+
+* By default, a CSS-based application is created. Use SCSS if required:
+
+```bash
+ng new my-app --style=scss
+```
+
+* During project setup, when prompted for the Server-side rendering (SSR) option, choose the appropriate configuration.
+
+![Initial_setup](images/getting-started-ssr.png)
+
+* Select the required AI tool or 'none' if you do not need any AI tool.
+
+![Initial_setup](images/getting-started-ai.png)
+
+* Navigate to your newly created application directory:
+
+```bash
 cd my-app
 ```
 
-## Add Syncfusion JavaScript packages
+> Note: In Angular 19 and below, it uses `app.component.ts`, `app.component.html`, `app.component.css` etc. In Angular 20+, the CLI generates a simpler structure with `src/app/app.ts`, `app.html`, and `app.css` (no `.component.` suffixes).
+
+## Installing Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer package
 
 All the available Essential JS 2 packages are published in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. To install PDF Viewer component, use the following command.
 
@@ -56,33 +97,7 @@ Add the component CSS in the `~/src/styles.css` file, as shown below:
 
 ## Add the PDF Viewer component
 
-Import PDF Viewer module into Angular application(app.module.ts) from the package `@syncfusion/ej2-angular-pdfviewer` [src/app/app.module.ts].
-
-```typescript
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-// import the PdfViewer Module for the PDF Viewer component
-import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
-         MagnificationService, ThumbnailViewService, ToolbarService,
-         NavigationService, TextSearchService, TextSelectionService,
-         PrintService, FormDesignerService, FormFieldsService,
-         AnnotationService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
-import { AppComponent } from './app.component';
-
-@NgModule({
-  //declaration of ej2-angular-pdfviewer module into NgModule
-  imports: [BrowserModule, PdfViewerModule],
-  declarations: [AppComponent],
-  bootstrap: [AppComponent],
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               TextSearchService, TextSelectionService, PrintService,
-               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
-})
-export class AppModule { }
-```
-
-Add the Angular PDF Viewer by using `<ejs-pdfviewer>` selector in `template` section of the `src/app/app.component.ts` file to render the PDF Viewer component.
+Add the Angular PDF Viewer by using `<ejs-pdfviewer>` selector in `template` section of the `src/app/app.ts` file to render the PDF Viewer component.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -102,12 +117,13 @@ import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
                        style="height:640px;display:block">
                 </ejs-pdfviewer>
              </div>`,
+  imports: [ PdfViewerModule ],
   providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
                ThumbnailViewService, ToolbarService, NavigationService,
                TextSearchService, TextSelectionService, PrintService,
                AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
 })
-export class AppComponent implements OnInit {
+export class App implements OnInit {
   public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   ngOnInit(): void {
@@ -127,8 +143,8 @@ ng serve --open
 The output will appear as follows.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/angular/getting-started-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/pdfviewer/angular/getting-started-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -136,19 +152,6 @@ The output will appear as follows.
 {% endhighlight %}
 {% endtabs %}
 
-N> If using Angular versions below 17, import the `AppModule` in `main.ts`.
-
-```typescript
-
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
-import { AppModule } from './app/app.module';
-
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
-
-```
 
 {% previewsample "/document-processing/samples/pdfviewer/angular/getting-started-cs1" %}
 
@@ -199,11 +202,11 @@ N> To create a PDF Viewer `serviceUrl`, follow the steps in [Create PDF Viewer s
  dotnet run
 ```
 
-6. The PDF Viewer server instance runs at `https://localhost:5001`. Navigate to `https://localhost:5001/pdfviewer` to see the default GET response. Bind this URL to the `serviceUrl` property of the PDF Viewer as shown below.
+6. The PDF Viewer server instance runs at `https://localhost:7255`. Navigate to `https://localhost:7255/pdfviewer` to see the default GET response. Bind this URL to the `serviceUrl` property of the PDF Viewer as shown below.
 
    ```javascript
-   export class AppComponent implements OnInit {
-      public service = 'https://localhost:5001/pdfviewer';
+   export class App implements OnInit {
+      public service = 'https://localhost:7255/pdfviewer';
       public document = 'PDF_Succinctly.pdf';
       ngOnInit(): void {
       }
