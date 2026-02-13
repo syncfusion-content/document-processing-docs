@@ -20,7 +20,7 @@ The following system configurations were used for benchmarking:
 * **.NET Version:** .NET 8.0  
 * **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIO.Net.Core v32.2.3](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/32.2.3)
 
-## Benchmark Results.
+## Benchmark Results
 
 The table below shows the performance results of various Word document operations, evaluated using predefined input conditions in the previously described environment. 
 
