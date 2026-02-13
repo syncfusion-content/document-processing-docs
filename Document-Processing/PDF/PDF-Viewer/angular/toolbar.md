@@ -262,9 +262,9 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 The PDF Viewer supports customizing toolbar items: add, show, hide, enable, and disable.
 
-* Add: Define new items using the [CustomToolbarItemModel](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/customToolbarItemModel/) and include them in the [ToolbarSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) property. Handle item clicks with the [toolbarclick](https://ej2.syncfusion.com/angular/documentation/api/toolbar/clickEventArgs/) event.
-* Show / Hide: Show or hide predefined items through `ToolbarSettings`. See the [ToolbarItem](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarItem/) API for available identifiers.
-* Enable / Disable: Enable or disable toolbar items using the [enabletoolbaritem](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar/#enabletoolbaritem) API.
+* Add: Define new items using the [CustomToolbarItemModel](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/customToolbarItemModel) and include them in the [ToolbarSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings) property. Handle item clicks with the [toolbarclick](https://ej2.syncfusion.com/angular/documentation/api/toolbar/clickEventArgs) event.
+* Show / Hide: Show or hide predefined items through `ToolbarSettings`. See the [ToolbarItem](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarItem) API for available identifiers.
+* Enable / Disable: Enable or disable toolbar items using the [enabletoolbaritem](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar#enabletoolbaritem) API.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}

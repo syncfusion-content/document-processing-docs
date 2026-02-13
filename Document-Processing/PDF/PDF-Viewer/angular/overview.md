@@ -97,7 +97,7 @@ export class AppComponent implements OnInit {
 
 * [`View PDF Document`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) - Open and display both normal and protected PDF files.
 * [`Annotations`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/text-markup-annotation) - Annotate documents with text markup, shapes, stamps, ink, and sticky notes. Form filling and form designing are supported.
-* [`Form Fields`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/form-designer/create-programmatically) - Create and fill form fields; supports form designing features.
+* [`Form Fields`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/forms/overview) - Create and fill form fields; supports form designing features.
 * [`Signature`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/signature-annotation) - Support for hand-written and digital signatures.
 * [`Toolbar`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/toolbar) - Built-in and customizable toolbars for common PDF Viewer actions.
 * [`Navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/navigation) - Navigate using bookmarks, thumbnails, hyperlinks, and the table of contents.

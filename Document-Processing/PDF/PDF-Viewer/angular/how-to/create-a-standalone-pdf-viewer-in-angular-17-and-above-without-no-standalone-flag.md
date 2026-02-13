@@ -46,7 +46,7 @@ npm install @syncfusion/ej2-angular-pdfviewer --save
 cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib  src/assets/ej2-pdfviewer-lib
 ```
 
-On Windows, use an equivalent command (for example, PowerShell `xcopy` or `robocopy`) or add an npm script to copy assets cross-platform. Ensure the development server serves WebAssembly with the `Content-Type: application/wasm` MIME type; see the [Troubleshooting](./troubleshooting/troubleshooting) section for details.
+On Windows, use an equivalent command or add an npm script to copy assets cross-platform. Ensure the development server serves WebAssembly with the `Content-Type: application/wasm` MIME type; see the [Troubleshooting](./troubleshooting/troubleshooting) section for details.
 
 ## Registering PDF Viewer Module and Adding PDF Viewer component
 

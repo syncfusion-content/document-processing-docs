@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize annotation selectors in Angular PDF Viewer
 
-Use the [annotationSelectorSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationselectorsettings) property to configure the appearance and behavior of annotation selectors. This includes selection handles and resizers (for example, handle shape and size), which determine how users interact with annotations during editing.
+Use the [annotationSelectorSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationselectorsettings) property to configure the appearance and behavior of annotation selectors. This includes selection handles and resizer (for example, handle shape and size), which determine how users interact with annotations during editing.
 
 The example below changes the selector's resizer handle shape to circular and opens an existing annotation for editing. Setting `resizerShape = 'Circle'` updates the selector appearance to circular resizer handles; ensure an annotation exists before calling `editAnnotation` to avoid runtime errors.
 

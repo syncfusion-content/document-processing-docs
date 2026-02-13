@@ -101,7 +101,7 @@ SavePdfToBlob() {
 }
 ```
 
-N> Install the Azure Storage Blob client package for browser use: `npm install @azure/storage-blob`. For server-side operations use `dotnet add package Azure.Storage.Blobs`.
+N> Install the Azure Storage Blob client package for browser use: `npm install @azure/storage-blob`.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Standalone).
 
