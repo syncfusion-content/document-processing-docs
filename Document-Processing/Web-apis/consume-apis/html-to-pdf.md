@@ -17,8 +17,6 @@ To convert HTML to PDF, send a request to the /v1/conversion/html-to-pdf endpoin
 
 {% highlight c# tabtitle="Curl" %}
 
-For URL
-
 curl --location 'http://localhost:8003/v1/conversion/html-to-pdf' \
   --form-string 'settings={
     "JobID": "job-123",
@@ -41,35 +39,9 @@ curl --location 'http://localhost:8003/v1/conversion/html-to-pdf' \
     }
   }'
 
-For File
-
-curl --location 'http://localhost:8003/v1/conversion/html-to-pdf' \
-  --form-string 'settings={
-    "JobID": "job-123",
-    "IndexFile":"index.html",
-    "PaperSize": "A4",
-    "Settings": {
-      "Url": "",
-      "AdditionalDelay": 500,
-      "EnableScripts": true,
-      "EnableLinks": true,
-      "EnableBookmarks": true,
-      "EnableForms": false,
-      "EnableToc": false,
-      "Margins": 24,
-      "Rotation": 0,
-      "Orientation": "Portrait",
-      "SinglePagePdf": false,
-      "ShowHeader": true,
-      "ShowFooter": true
-    }
-  }'
-
 {% endhighlight %}
 
 {% highlight javaScript tabtitle="JavaScript" %}
-
-For Url
 
 const formdata = new FormData();
 formdata.append(
@@ -96,7 +68,90 @@ formdata.append(
     })
   );
 
-For File
+const requestOptions = {
+  method: "POST",
+  body: formdata,
+  redirect: "follow"
+};
+
+fetch("http://localhost:8003/v1/conversion/html-to-pdf", requestOptions)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
+
+{% endhighlight %} 
+
+{% highlight c# tabtitle="C#" %}
+
+var client = new HttpClient();
+var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/html-to-pdf");
+var content = new MultipartFormDataContent();
+
+var settings = new
+{
+    JobID = "job-300",
+    "IndexFile":"",
+    PaperSize = "A4",
+    Settings = new
+    {
+        Url = "https://example.com/guide",
+        AdditionalDelay = 700,
+        EnableScripts = true,
+        Enablelinks = true,
+        EnableBookmarks = true,
+        EnableForms = false,
+        EnableToc = false,
+        Margins = 24,
+        Rotation = 0,
+        Orientation = "Portrait",
+        SinglePagePdf = false,
+        ShowHeader = true,
+        ShowFooter = true
+    }
+};
+
+content.Add(new StringContent(JsonSerializer.Serialize(settings)), "settings");
+request.Content = content;
+
+var response = await client.SendAsync(request);
+response.EnsureSuccessStatusCode();
+Console.WriteLine(await response.Content.ReadAsStringAsync());
+
+{% endhighlight %} 
+
+{% endtabs %}
+
+To convert HTML to PDF, send a request to the /v1/conversion/html-to-pdf endpoint, including the HTML file as input as follows:
+
+{% tabs %}
+
+{% highlight c# tabtitle="Curl" %}
+
+curl --location 'http://localhost:8003/v1/conversion/html-to-pdf' \
+  --form-string 'settings={
+    "JobID": "job-123",
+    "IndexFile":"index.html",
+    "PaperSize": "A4",
+    "Settings": {
+      "Url": "",
+      "AdditionalDelay": 500,
+      "EnableScripts": true,
+      "EnableLinks": true,
+      "EnableBookmarks": true,
+      "EnableForms": false,
+      "EnableToc": false,
+      "Margins": 24,
+      "Rotation": 0,
+      "Orientation": "Portrait",
+      "SinglePagePdf": false,
+      "ShowHeader": true,
+      "ShowFooter": true
+    }
+  }'
+
+{% endhighlight %}
+
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
 formdata.append(
@@ -142,33 +197,6 @@ var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/html-to-pdf");
 var content = new MultipartFormDataContent();
 
-For Url
-
-var settings = new
-{
-    JobID = "job-300",
-    "IndexFile":"",
-    PaperSize = "A4",
-    Settings = new
-    {
-        Url = "https://example.com/guide",
-        AdditionalDelay = 700,
-        EnableScripts = true,
-        Enablelinks = true,
-        EnableBookmarks = true,
-        EnableForms = false,
-        EnableToc = false,
-        Margins = 24,
-        Rotation = 0,
-        Orientation = "Portrait",
-        SinglePagePdf = false,
-        ShowHeader = true,
-        ShowFooter = true
-    }
-};
-
-For File
-
 var settings = new
 {
     JobID = "job-300",
@@ -191,7 +219,6 @@ var settings = new
         ShowFooter = true
     }
 };
-
 
 content.Add(new StringContent(JsonSerializer.Serialize(settings)), "settings");
 request.Content = content;
