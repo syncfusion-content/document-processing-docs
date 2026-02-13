@@ -83,8 +83,6 @@ Also, register the script manager `EJS().ScriptManager()` at the end of `<body>`
 
 ## Understanding component options
 
-Two DocumentEditor variants are available:
-
 * **DocumentEditor** — a customizable control for building a tailored UI.
 * **DocumentEditorContainer** — a complete container that includes a predefined toolbar, properties pane, and status bar for quick integration.
 

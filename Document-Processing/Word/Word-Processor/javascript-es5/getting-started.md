@@ -145,7 +145,7 @@ This approach downloads and hosts the required files locally, providing better c
 </html>
 ```
 
->Important: The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
 
 **Step 6:** Now, run the `index.html` in web browser, it will render the **Essential<sup style="font-size:70%">&reg;</sup> JS 2 DocumentEditor** component.
 
@@ -380,23 +380,10 @@ Syncfusion provides a predefined [Word Processor server Docker image](https://hu
 
 >Note: Starting from version `v19.3.0.x`, the accuracy of text size measurements has been optimized to match Microsoft Word pagination for most documents. This improvement is enabled by default. You can [disable it to retain the pagination behavior of older versions](./how-to/disable-optimized-text-measuring) if needed.
 
-## Next steps
-
-After successfully setting up the Document editor component, explore these resources to enhance your implementation:
+## Frequently Asked Questions
 
 * [How to localize the Document editor container](./global-local)
 * [How to load a document by default](./how-to/open-default-document)
 * [How to customize the toolbar](./how-to/customize-tool-bar)
 * [How to resize the Document editor component](./how-to/resize-document-editor)
 * [How to add a save button to the DocumentEditorContainer toolbar](./how-to/add-save-button-in-toolbar)
-
-## Troubleshooting
-
-If you encounter issues during setup, consider the following:
-
-* Ensure all script and style references are correctly loaded in the browser's developer console
-* Verify that the HTML structure and element IDs match the JavaScript initialization code
-* Check that the web server is properly serving the files (for local script approach)
-* Confirm CDN links are accessible and not blocked by network policies
-* For server-side functionality issues, verify the web service is properly configured and accessible
-* Check browser compatibility - the component requires modern browsers with ES5 support
