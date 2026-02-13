@@ -18,7 +18,7 @@ Create a developer account and Box application in the [Box Developer Console](ht
 
 **Step 2:** Create a PDF Viewer sample in Vue
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF viewer sample in Vue. This will give you a basic setup of the PDF Viewer component.
+Start by following the PDF Viewer [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) guide for Vue to create a simple PDF Viewer sample. This provides the basic setup for the PDF Viewer component.
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
@@ -35,7 +35,7 @@ using Box.V2.Config;
 using Box.V2.Models;
 ```
 
-4. Add the following private fields and constructor parameters to `PdfViewerController`. In the constructor, assign values from configuration to the corresponding fields.
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign configuration values to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -125,7 +125,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-N> Replace the placeholders with your actual Box values: Access Token, Folder ID, Client ID, and Client Secret.
+N> Replace the placeholders with the actual Box values: Access Token, Folder ID, Client ID, and Client Secret. 
 
 **Step 4:** Configure the Vue PDF Viewer component
 
@@ -195,8 +195,8 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> The **Box.V2.Core** NuGet package must be installed in your application to use the previous code example.
+N> The **Box.V2.Core** NuGet package must be installed in the web service project to use the Box SDK.
 
-N> Replace `PDF_Succinctly.pdf` with the actual document name that you want to load from Box cloud file storage. Make sure to pass the document name from the box folder to the `documentPath` property of the PDF Viewer component.
+N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud storage. Ensure the specified document name exists in the configured Box folder and is passed to the `documentPath` property of the PDF Viewer component.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-box-cloud-file-storage)

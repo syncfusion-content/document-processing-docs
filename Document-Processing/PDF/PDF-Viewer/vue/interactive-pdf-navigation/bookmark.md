@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bookmark navigation in Vue PDF Viewer component | Syncfusion
-description: Learn here all about Bookmark navigation in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Use bookmarks to navigate quickly within PDF documents in the Syncfusion Vue PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,7 +10,10 @@ domainurl: ##DomainURL##
 
 # Bookmark navigation in Vue PDF Viewer component
 
-The PDF Viewer loads the bookmarks saved in a document so that users can quickly navigate between sections. You can enable or disable the bookmark panel by using the `enableBookmark` property.
+Bookmarks embedded in PDF files are loaded and made available for quick navigation within the viewer.
+Enable or disable bookmark navigation using the examples below.
+
+The examples show a Standalone (client-only) setup and a Server-Backed setup; the primary difference is the viewer's `resourceUrl`/`service` configuration used to locate PDF resources.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -223,11 +226,13 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-![PDF Viewer bookmark panel](../images/bookmark.png)
+![PDF viewer bookmarks panel](../images/bookmark.png)
 
 ## Programmatic bookmark navigation
 
-Use the [**goToBookmark**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/bookmark/#gotobookmark) method to navigate to a specific bookmark. The method throws an error if the bookmark is not available in the document.
+Use the **goToBookmark** method to navigate to a bookmark programmatically. The method expects valid bookmark coordinates (zero-based page index and a Y offset). If the specified bookmark does not exist, the call may throw an error—guard calls with error handling or verify existence first using `getBookmarks()`.
+
+The examples below demonstrate using `goToBookmark` and `getBookmarks()`; do not modify code samples unless adapting them for a specific app.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API" %}

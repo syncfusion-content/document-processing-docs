@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from AWS S3
+# Open PDF files from AWS S3
 
-The Vue PDF Viewer component supports loading PDF files from AWS S3 using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
+The Vue PDF Viewer component supports loading PDF files from AWS S3 using either the standalone or the server-backed PDF Viewer. The following sections demonstrate both approaches and include prerequisites and security guidance.
 
 ## Using the standalone PDF Viewer
 
@@ -36,7 +36,7 @@ Follow the instructions in the [getting started guide (Vue)](https://help.syncfu
 
 2. Configure the AWS SDK with the region, access key, and secret access key so the application can interact with S3.
 
-N> Replace **Your Region** with the actual Region of your AWS S3 account and **Your Access Key** with the actual Access Key of your AWS S3 account and **Your Security Access Key** with the actual Security Access Key of your AWS S3 account.
+N> Replace the placeholder values with valid values when testing. Do not embed production credentials in client-side code; use server-side authentication or pre-signed URLs for secure access.
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
@@ -54,7 +54,7 @@ N> Replace **Your Region** with the actual Region of your AWS S3 account and **Y
 
 3. Set parameters for fetching the PDF document from S3, including the bucket name and file key. Use S3.getObject to retrieve the document, convert it to a Base64 string, and pass it to viewer.load in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer.
 
-N> Replace **Your Bucket Name** with the actual Bucket name of your AWS S3 account and **Your Key** with the actual File Key of your AWS S3 account.
+N> Replace **Your Bucket Name** and **Your Key** with the target S3 bucket name and object key when testing.
 
 
 {% tabs %}
@@ -93,7 +93,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> The **npm install aws-sdk** package must be installed in your application to use the previous code example.
+N> Install the AWS SDK package appropriate for the project. For v2 use `npm install aws-sdk`; for v3 prefer the modular packages such as `@aws-sdk/client-s3`.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3/tree/master/Open%20and%20Save%20PDF%20in%20AWS%20S3%20using%20Standalone).
 
@@ -203,7 +203,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
+N> Replace the placeholders with actual values when testing. For production deployments, avoid storing AWS credentials in configuration files; use secure server-side credential management, IAM roles, or pre-signed URLs.
 
 **Step 3:** Configure the PDF Viewer component
 

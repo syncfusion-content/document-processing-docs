@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in Syncfusion Vue PDF Viewer
 
-The PDF Viewer component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The PDF Viewer component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used to evaluate accessibility.
 
 The accessibility compliance for the PDF Viewer component is summarized below.
 
@@ -62,7 +62,7 @@ Note: Mobile device support is marked as partial due to platform-level constrain
 
 ## Keyboard interaction
 
-The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who rely on keyboard navigation. The following keyboard shortcuts are supported by the PDF Viewer component.
+The PDF Viewer follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline to support users who rely on assistive technologies (AT) or keyboard navigation. The following keyboard shortcuts are supported by the PDF Viewer.
 
 | **Press (Windows)** |**Press (Macintosh)** | **To do this** |
 | --- | --- | --- |
@@ -97,7 +97,15 @@ The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/W
 |<kbd>Shift + H</kbd> |<kbd>Shift + H</kbd> |Enable pan mode|
 |<kbd>Shift + V</kbd> |<kbd>Shift + V</kbd> |Enable text selection mode|
 
-The PDF Viewer supports custom keyboard commands through a `commandManager`, which handles commands triggered by specific key gestures. Custom commands are defined by users and executed accordingly. The `commandManager` includes a `keyboardCommand` collection to hold custom keyboard commands. Each custom command is represented by a `KeyboardCommand` entry, containing the command name and associated keyboard combination. Additionally, the `keyboardCustomCommands` parameter utilizes an event callback to handle keyboard events and trigger methods when specific key combinations are pressed.
+The PDF Viewer includes keyboard shortcuts for scrolling, zooming, text search, printing, and annotation deletion.
+
+Additional keyboard shortcuts are available for common actions such as navigating between pages, accessing specific pages, toggling annotation tools, and displaying PDF elements (outlines, annotations, bookmarks, thumbnails).
+
+To support custom key bindings, the viewer provides a `commandManager` configuration object that handles custom commands triggered by specified key gestures. Custom commands are defined by name and executed when their associated key gesture is detected.
+
+The `commandManager` configuration includes a `keyboardCommand` collection that holds user-defined keyboard commands. Each command is represented by a `KeyboardCommand` object containing a `name` and an associated `gesture` describing the key combination.
+
+The `keyboardCustomCommands` parameter is an event callback invoked when a custom key combination is detected; handlers can perform application-specific actions in response.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -370,7 +378,7 @@ Key modifiers used in gestures:
 - Shift corresponds to the Shift key (value `4`).
 - Meta corresponds to the Command key on macOS or the Windows key on Windows (value `8`).
 
-This setup enables users to perform custom actions within the PDF Viewer by pressing specific key combinations, improving navigation and interaction efficiency.
+This enables custom actions within the PDF Viewer when specific key combinations are pressed, improving navigation and interaction efficiency.
 
 ## Ensuring accessibility
 
