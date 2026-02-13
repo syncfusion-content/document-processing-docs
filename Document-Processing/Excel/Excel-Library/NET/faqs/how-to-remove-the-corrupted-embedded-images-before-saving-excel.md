@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# How to remove corrupted embedded images before saving?
+# How to remove corrupted embedded images before saving an Excel document?
 
 The following code example demonstrate how to remove the corrupted embedded images before saving an Excel file using C# (Cross-platform).
 
