@@ -53,6 +53,6 @@ This section focuses on evaluating how the Spreadsheet handles file import and e
 ## See Also
 
 * [Open and Save](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/open-save)
-* [Peformance Best Practices](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/performance-best-practices)
+* [Performance Best Practices](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/performance-best-practices)
 * [Docker Deployment](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/docker-deployment)
 * [Scrolling](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/scrolling)
