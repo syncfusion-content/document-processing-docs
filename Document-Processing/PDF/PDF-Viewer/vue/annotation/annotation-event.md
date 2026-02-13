@@ -41,7 +41,7 @@ The [annotationAdd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#a
 
 #### Event Arguments
 
-For event data, see [AnnotationAddEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationAddEventArgs/). It provides properties such as `annotationId`, `pageNumber`, `annotationType`, and `bounds`.
+For event data, see [AnnotationAddEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationAddEventArgs). It provides properties such as `annotationId`, `pageNumber`, `annotationType`, and `bounds`.
 
 The following example illustrates how to handle the `annotationAdd` event.
 
@@ -120,7 +120,7 @@ The [annotationDoubleClick](https://ej2.syncfusion.com/vue/documentation/api/pdf
 
 #### Event Arguments
 
-For event data, see [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationDoubleClickEventArgs/).
+For event data, see [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationDoubleClickEventArgs).
 
 The following example illustrates how to handle the `annotationDoubleClick` event.
 
@@ -197,7 +197,7 @@ The [annotationMouseLeave](https://ej2.syncfusion.com/vue/documentation/api/pdfv
 
 #### Event Arguments
 
-For event data, see [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationMouseLeaveEventArgs/).
+For event data, see [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationMouseLeaveEventArgs).
 
 The following example illustrates how to handle the `annotationMouseLeave` event.
 
@@ -274,7 +274,7 @@ The [annotationMouseover](https://ej2.syncfusion.com/vue/documentation/api/pdfvi
 
 #### Event Arguments
 
-For event data, see [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationMouseOverEventArgs/).
+For event data, see [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationMouseOverEventArgs).
 
 The following example illustrates how to handle the `annotationMouseover` event.
 
@@ -351,7 +351,7 @@ The [annotationMove](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#
 
 #### Event Arguments
 
-For event data, see [AnnotationMoveEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationMoveEventArgs/).
+For event data, see [AnnotationMoveEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationMoveEventArgs).
 
 The following example illustrates how to handle the `annotationMove` event.
 
@@ -428,7 +428,7 @@ The [annotationMoving](https://ej2.syncfusion.com/vue/documentation/api/pdfviewe
 
 #### Event Arguments
 
-For event data, see [AnnotationMovingEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationMovingEventArgs/).
+For event data, see [AnnotationMovingEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationMovingEventArgs).
 
 The following example illustrates how to handle the `annotationMoving` event.
 
@@ -505,7 +505,7 @@ The [annotationPropertiesChange](https://ej2.syncfusion.com/vue/documentation/ap
 
 #### Event Arguments
 
-For event data, see [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationPropertiesChangeEventArgs/). It provides properties such as `annotationId`, `pageNumber`, and `action`.
+For event data, see [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationPropertiesChangeEventArgs). It provides properties such as `annotationId`, `pageNumber`, and `action`.
 
 The following example illustrates how to handle the `annotationPropertiesChange` event.
 
@@ -584,7 +584,7 @@ The [annotationRemove](https://ej2.syncfusion.com/vue/documentation/api/pdfviewe
 
 #### Event Arguments
 
-For event data, see [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationRemoveEventArgs/). It provides properties such as `annotationId` and `pageNumber`.
+For event data, see [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationRemoveEventArgs). It provides properties such as `annotationId` and `pageNumber`.
 
 The following example illustrates how to handle the `annotationRemove` event.
 
@@ -661,7 +661,7 @@ The [annotationResize](https://ej2.syncfusion.com/vue/documentation/api/pdfviewe
 
 #### Event Arguments
 
-For event data, see [AnnotationResizeEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationResizeEventArgs/).
+For event data, see [AnnotationResizeEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationResizeEventArgs).
 
 The following example illustrates how to handle the `annotationResize` event.
 
@@ -738,7 +738,7 @@ The [annotationSelect](https://ej2.syncfusion.com/vue/documentation/api/pdfviewe
 
 #### Event Arguments
 
-For event data, see [AnnotationSelectEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationSelectEventArgs/).
+For event data, see [AnnotationSelectEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationSelectEventArgs).
 
 The following example illustrates how to handle the `annotationSelect` event.
 
@@ -815,7 +815,7 @@ The [annotationUnselect](https://ej2.syncfusion.com/vue/documentation/api/pdfvie
 
 #### Event Arguments
 
-For event data, see [AnnotationUnSelectEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationUnSelectEventArgs/).
+For event data, see [AnnotationUnSelectEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationUnSelectEventArgs).
 
 The following example illustrates how to handle the `annotationUnselect` event.
 
@@ -892,7 +892,7 @@ The [beforeAddFreeText](https://ej2.syncfusion.com/vue/documentation/api/pdfview
 
 #### Event Arguments
 
-For event data, see [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/beforeAddFreeTextEventArgs/).
+For event data, see [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/beforeAddFreeTextEventArgs).
 
 The following example illustrates how to handle the `beforeAddFreeText` event.
 
@@ -975,7 +975,7 @@ The [addSignature](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#ad
 
 #### Event Arguments
 
-For event data, see [AddSignatureEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/addSignatureEventArgs/). It provides properties such as `pageNumber`.
+For event data, see [AddSignatureEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/addSignatureEventArgs). It provides properties such as `pageNumber`.
 
 The following example illustrates how to handle the `addSignature` event.
 
@@ -1052,7 +1052,7 @@ The [removeSignature](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer
 
 #### Event Arguments
 
-For event data, see [RemoveSignatureEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/removeSignatureEventArgs/). It provides properties such as `pageNumber`.
+For event data, see [RemoveSignatureEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/removeSignatureEventArgs). It provides properties such as `pageNumber`.
 
 The following example illustrates how to handle the `removeSignature` event.
 
@@ -1129,7 +1129,7 @@ The [resizeSignature](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer
 
 #### Event Arguments
 
-For event data, see [ResizeSignatureEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/resizeSignatureEventArgs/).
+For event data, see [ResizeSignatureEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/resizeSignatureEventArgs).
 
 The following example illustrates how to handle the `resizeSignature` event.
 
@@ -1206,7 +1206,7 @@ The [signaturePropertiesChange](https://ej2.syncfusion.com/vue/documentation/api
 
 #### Event Arguments
 
-For event data, see [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs/).
+For event data, see [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs).
 
 The following example illustrates how to handle the `signaturePropertiesChange` event.
 
@@ -1283,7 +1283,7 @@ The [signatureSelect](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer
 
 #### Event Arguments
 
-For event data, see [SignatureSelectEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/signatureSelectEventArgs/).
+For event data, see [SignatureSelectEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/signatureSelectEventArgs).
 
 The following example illustrates how to handle the `signatureSelect` event.
 
@@ -1360,7 +1360,7 @@ The [signatureUnselect](https://ej2.syncfusion.com/vue/documentation/api/pdfview
 
 #### Event Arguments
 
-For event data, see [SignatureUnSelectEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/signatureUnSelectEventArgs/).
+For event data, see [SignatureUnSelectEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/signatureUnSelectEventArgs).
 
 The following example illustrates how to handle the `signatureUnselect` event.
 

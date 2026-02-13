@@ -22,7 +22,7 @@ Sticky note annotations can be added to the PDF document using the annotation to
 * Click the position where the sticky note annotation should be added.
 * The sticky note annotation appears at the selected position.
 
-![* The sticky note annotation appears at the selected position.](../images/stickynotes_tool.png)
+![Sticky note annotation tool](../images/stickynotes_tool.png)
 
 Annotation comments can be added using the comment panel.
 
