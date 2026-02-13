@@ -8,7 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Frequently Asked Questions Section in Angular PDF Viewer control
+# Angular PDF Viewer — Frequently Asked Questions
+
+The following FAQ provides concise solutions and links to detailed how-to articles for the Angular PDF Viewer. Each entry links to a step-by-step article with examples and troubleshooting notes.
 
 The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are listed below.
 

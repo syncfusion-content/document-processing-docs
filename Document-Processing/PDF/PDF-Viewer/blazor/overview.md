@@ -9,25 +9,25 @@ documentation: ug
 
 # Overview of Blazor PDF Viewer Component
 
-The Blazor SfPdfViewer component enables viewing, editing, printing, and downloading PDF files in Blazor applications without a web service dependency. It is optimized for speed and responsiveness and provides a feature set comparable to the classic Blazor PDF Viewer. The component is straightforward to integrate into both Blazor Server and Blazor WebAssembly (WASM) applications.
+The Blazor `SfPdfViewer` component enables viewing, annotating, printing, and downloading PDF files in Blazor applications without requiring a separate server-side PDF service. It provides fast, responsive rendering and is straightforward to integrate into both Blazor Server and Blazor WebAssembly (WASM) applications.
 
-The SfPdfViewer component provides the same key capabilities as the [Blazor PDF Viewer component](../blazor-classic/overview), with additional advantages described below.
+`SfPdfViewer` delivers the core capabilities of the [Blazor PDF Viewer component](../blazor-classic/overview) while adding client-side rendering, reduced server round-trips, and a unified cross-platform package. Key advantages are summarized below.
 
 ## Performance Improvements
 
-Rendering, scrolling, zooming, panning, and printing have been optimized for faster, smoother interaction.
+Rendering, scrolling, zooming, panning, and printing have been optimized for faster, smoother interaction and reduced latency.
 
 ## Elimination of Service Dependency
 
-The classic PDF Viewer required a separate [service URL](./getting-started/web-assembly-application) to load documents. In the [Blazor SfPdfViewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application), documents can be loaded directly without a service URL, enabling offline scenarios and reducing network overhead. Server-side hosting remains supported when needed.
+The classic PDF Viewer required a separate [service URL](./getting-started/web-assembly-application) to load documents. `SfPdfViewer` can load documents directly in the browser (see the [Blazor WebAssembly](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application)), enabling offline scenarios and reducing network overhead. Server-side hosting remains supported when required.
 
 ## Common Package
 
-Previously, separate NuGet packages were required for each operating system: [Windows](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows), [Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux), and [OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX). The [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) package now provides a single, cross-platform package for all environments.
+Previously, separate NuGet packages were required for each operating system: [Windows](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows), [Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux), and [OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX). The `Syncfusion.Blazor.SfPdfViewer` package now provides a single, cross-platform distribution for all supported environments.
 
 ## Reduced Server Calls
 
-In the classic viewer, many C# service calls were required to retrieve information such as page text, hyperlinks, and page images. The SfPdfViewer moves these operations to the client side, decreasing round trips and improving responsiveness.
+In the classic viewer, many C# service calls were required to retrieve page text, hyperlinks, and page images. `SfPdfViewer` performs these operations client-side where possible, decreasing round trips and improving responsiveness.
 
 ## Some of the key features are listed below
 
@@ -49,14 +49,14 @@ In the classic viewer, many C# service calls were required to retrieve informati
     * [Measurement annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/measurement-annotation)
     * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/free-text-annotation)
     * [Redaction annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/redaction/overview)
-    * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/sticky-notes-annotation) for all annotation types
+    * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/sticky-notes-annotation)
 * [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/form-filling)
 * [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/form-designer)
 * [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/hand-written-signature)
 
 ### Supported Features: Desktop vs Mobile
 
-The table below lists supported and unsupported features on desktop and mobile devices.
+The following table summarizes feature support on desktop and mobile devices.
 
 | Feature | Desktop | Mobile devices |
 |--|--|--|
@@ -78,10 +78,12 @@ The table below lists supported and unsupported features on desktop and mobile d
 | Add annotation through touch | Yes | No |
 | Import/export annotation | Yes | Yes |
 | Form fields rendering | Yes | Yes |
+| Form Designer | Yes | Yes |
+| Modern Navigation Panel | Yes | Yes |
+| Organize Pages | Yes | Yes |
 
 N> Enable desktop mode on mobile devices using the [EnableDesktopMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDesktopMode) property to display the toolbar as on desktop.
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> provides the SfPdfViewer component for both Blazor Server and Blazor WebAssembly applications.
-<br />For both Blazor WebAssembly and Blazor Server applications, use the [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.SfPdfViewer.html) component from the Syncfusion.Blazor.SfPdfViewer NuGet package. This component does not require server-side processing through a web service to render PDF files <br />For Windows, Linux, and macOS, use the [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) NuGet package.
+N> The `SfPdfViewer` component is available for both Blazor Server and Blazor WebAssembly applications. Use the `SfPdfViewer` component from the `Syncfusion.Blazor.SfPdfViewer` NuGet package; server-side processing through a web service is not required to render PDF files in client scenarios. For platform-specific server packages, see the NuGet listings for Windows, Linux, and macOS.
 
-N> Refer to the [Blazor SfPdfViewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) for an overview of its capabilities. Explore the [Blazor SfPdfViewer demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/default-functionalities?theme=fluent) to see the core features in action.
+N> See the [Blazor SfPdfViewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) for a concise overview of capabilities and the [Blazor SfPdfViewer demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/default-functionalities?theme=fluent) to explore core features interactively.

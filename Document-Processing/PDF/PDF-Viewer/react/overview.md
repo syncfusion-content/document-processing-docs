@@ -6,9 +6,9 @@ control: PDF Viewer
 documentation: UG
 ---
 
-# Overview of React PDF Viewer Component
+# Overview of React PDF Viewer component
 
-The [`React PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
+The [`React PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a lightweight, modular control for viewing and printing PDF files. It supports core interactions such as zooming, scrolling, text searching, text selection, and text copying. Thumbnails, bookmarks, hyperlinks, and table-of-contents support enable easy navigation inside and outside PDF files.
 
 ## Setup
 
@@ -90,12 +90,12 @@ root.render(<App />);
 *[`Print`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/print) - Print the entire document or a specific page directly from the browser.
 *[`Globalization`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/globalization) - Provides inherent support to localize the UI.
 
-## Supported Web platforms
+## Supported web platforms
 
-* [Javascript(ES5)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started)
-* [Javascript](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started)
-* [Angular](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
-* [Vue](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started)
-* [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started)
-* [ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started)
-* [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview)
+- [JavaScript (ES5)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started)
+- [JavaScript (ES6)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started)
+- [Angular](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
+- [Vue](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started)
+- [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started)
+- [ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started)
+- [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview)

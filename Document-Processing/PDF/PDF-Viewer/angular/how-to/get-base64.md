@@ -8,21 +8,21 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieving Base64 Value from a PDF in PDF Viewer
+# Retrieve Base64 from a PDF in PDF Viewer
 
 ### Overview
 
-This guide demonstrates how to fetch the base64-encoded value of a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer using Angular. This is useful for sending the PDF as a base64 string or processing it in the front end.
+This guide shows how to obtain the Base64-encoded value of a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer using Angular. Producing a Base64 string is useful for sending the PDF to a server, embedding it in JSON payloads, or client-side processing.
 
-### How to Retrieve Base64 Value
+### How to retrieve the Base64 value
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
+**Step 1: Create the PDF Viewer sample**
 
+Follow the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) guide for the Angular PDF Viewer.
 
-**Step 2:** Set Up Your Angular Component
+**Step 2: Set up the Angular component**
 
-Create an Angular component and update the template to include a button that triggers the conversion to a base64 string.
-
+Create an Angular component and update the template to include a button that triggers conversion to a Base64 string. The samples below show both standalone and server-backed viewer configurations.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -83,7 +83,7 @@ export class AppComponent implements OnInit {
       const reader = new FileReader();
       reader.onload = () => {
         const base64data = reader.result as string;
-        console.log(base64data);  // Outputs the base64 string of the PDF
+        console.log(base64data);  // Outputs a data URL containing the Base64 string of the PDF
       };
       reader.readAsDataURL(blobData);
     });
@@ -149,7 +149,7 @@ export class AppComponent implements OnInit {
       const reader = new FileReader();
       reader.onload = () => {
         const base64data = reader.result as string;
-        console.log(base64data);  // Outputs the base64 string of the PDF
+        console.log(base64data);  // Outputs a data URL containing the Base64 string of the PDF
       };
       reader.readAsDataURL(blobData);
     });
@@ -161,6 +161,6 @@ export class AppComponent implements OnInit {
 
 ### Conclusion
 
-By implementing these steps in your Angular component, you can convert a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer to a base64 string upon button click. This facilitates the manipulation or transfer of PDF data as needed.
+By implementing these steps in the Angular component, a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer can be converted into a Base64-encoded data URL when a button is clicked. This facilitates the manipulation or transfer of PDF data as needed.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)

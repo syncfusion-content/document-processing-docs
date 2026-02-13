@@ -130,7 +130,7 @@ export class App implements OnInit {
   }
 }
 ```
-N> The Web API link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/ used in the `serviceUrl` property is intended for demonstration and evaluation only. For production, host your own web service with the required server configuration. You can reuse the [GitHub web service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server). **Standalone mode is strongly recommended.**
+N> The Web API endpoint at https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/ used in the `serviceUrl` property is provided for demonstration and evaluation only. For production, host a dedicated web service with the appropriate server configuration. Reusable deployment options include the [GitHub web service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) and the official [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server). Standalone mode is strongly recommended for production deployments.
 
 ## Run the application
 
@@ -177,7 +177,7 @@ To enable additional features, inject the required modules. The following module
 
 Inject modules using the `providers` property in `@NgModule`.
 
-> To create a PDF Viewer `serviceUrl`, follow the steps in [Create PDF Viewer service](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service).
+N> To create a PDF Viewer `serviceUrl`, follow the steps in [Create PDF Viewer service](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service).
 
 ## Run the PDF Viewer web service
 
@@ -212,11 +212,11 @@ Inject modules using the `providers` property in `@NgModule`.
       }
    ```
 
-N> In server-backed mode, do not include `pdfium.js` and `pdfium.wasm`. Unlike standalone mode, the server-backed PDF Viewer renders PDFs on the server. These files and their copy steps are not required for deployment in this context.
+N> In server-backed mode, do not include `pdfium.js` and `pdfium.wasm`. Unlike standalone mode, the server-backed PDF Viewer renders PDFs on the server; these files and their copy steps are not required for deployment in this context.
 
-> Refer to the [Angular PDF Viewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk) for an overview of capabilities. Explore the [Angular PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/angular/#/tailwind3/pdfviewer/default.html) to see core features in action.
+N> Refer to the [Angular PDF Viewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk) for an overview of capabilities. Explore the [Angular PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/angular/#/tailwind3/pdfviewer/default.html) to see core features in action.
 
-N> For hosting the web service on Linux, include [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1). For AWS environments, use the following packages:
+N> For hosting the web service on Linux, include the [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1) package. For AWS environments, consider the NuGet packages listed below.
 
 | **Amazon Web Services (AWS)** |**NuGet package name** |
 | --- | --- |

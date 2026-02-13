@@ -12,11 +12,10 @@ domainurl: ##DomainURL##
 
 The PDF Viewer library allows you to customize the annotations selection borders using the [**annotationSelectorSettings**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectorSettingsModel#annotationselectorsettingsmodel) Property.
 
-The following steps are used to customize the selection border.
+Recommended steps
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create simple PDF Viewer sample in Angular.
-
-**Step 2:** Add the following code snippet in app.html and app.ts files to customize selection borders.
+1. Create a basic PDF Viewer sample by following the [getting-started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) guide.
+2. Apply `annotationSelectorSettings` in the component to customize selector appearance (examples below show usage with `freeTextSettings`, `rectangleSettings`, and `stampSettings`).
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
