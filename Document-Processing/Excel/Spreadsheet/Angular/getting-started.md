@@ -15,6 +15,10 @@ To get start quickly with Angular Spreadsheet using CLI, you can check on this v
 
 {% youtube "https://www.youtube.com/watch?v=2Ozwe37X-7Q" %}
 
+## Prerequisites
+
+Ensure your development environment meets the [`System Requirements for Syncfusion® Angular Spreadsheet component`](https://help.syncfusion.com/document-processing/system-requirements).
+
 ## Dependencies
 
 The following list of dependencies are required to use the Spreadsheet component in your application.
@@ -58,6 +62,14 @@ This command prompts you to configure settings such as whether to include Angula
 ```
 
 By default, it will create a CSS-based application.
+
+During project setup, when prompted for the Server-side rendering (SSR) option, choose the appropriate configuration.
+
+![Spreadsheet showing a comment](./images/gettingstarted_SSR.png)
+
+Select the required AI tool or ‘none’ if you do not need any AI tool.
+
+![Spreadsheet showing a comment](./images/gettingstarted_AI.png)
 
 Navigate to the created application folder:
 
@@ -127,7 +139,7 @@ This can be referenced in `[src/styles.css]` using following code.
 
 ## Add Spreadsheet component
 
-Modify the template in [src/app/app.component.ts] file to render the spreadsheet component. Add the Angular Spreadsheet by using `<ejs-spreadsheet>` selector in template section of the `app.component.ts` file.
+Modify the template in [src/app/app.ts] file to render the spreadsheet component. Add the Angular Spreadsheet by using `<ejs-spreadsheet>` selector in template section of the `app.ts` file.
 
 ```typescript
 import { Component } from '@angular/core';
@@ -156,8 +168,8 @@ ng serve
 The following example shows a basic Spreadsheet component
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/spreadsheet-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/spreadsheet-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
