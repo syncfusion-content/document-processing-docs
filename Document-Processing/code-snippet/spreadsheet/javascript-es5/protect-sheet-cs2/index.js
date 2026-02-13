@@ -1,7 +1,7 @@
 // Initialize the Spreadsheet component.
 var columns = [{ width: 100 }, { width: 100 },{ width: 100},
     { width: 100 }];
-let spreadsheet = new ej.spreadsheet.Spreadsheet({
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
     sheets: [{ name: 'Budget', ranges: [{ dataSource: budgetData }], columns: columns,isProtected: true, protectSettings: {selectCells: true} },
                 {name: 'Salary', ranges: [{ dataSource: salaryData }], columns: columns}],
     dataBound: function () {

@@ -166,11 +166,11 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
     beforeOpen: (eventArgs) => {
         eventArgs.cancel = true; // To prevent the default open action.
         if (eventArgs.file) {
-            const reader = new FileReader();
+            var reader = new FileReader();
             reader.readAsDataURL(eventArgs.file);
             reader.onload = () => {
                 // Removing the xlsx file content-type.
-                const base64Data = reader.result.replace('data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,', '');
+                var base64Data = reader.result.replace('data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,', '');
                 openExcel({
                     file: base64Data,
                     extension: eventArgs.file.name.slice(eventArgs.file.name.lastIndexOf('.') + 1),
@@ -180,7 +180,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
         }
     }
 });
-const openExcel = (requestData) => {
+var openExcel = (requestData) => {
     // Fetch call to AWS server for open processing.
     fetch('https://xxxxxxxxxxxxxxxxxx.amazonaws.com/Prod/api/spreadsheet/open', {
         method: 'POST',
@@ -344,7 +344,7 @@ The following code example demonstrates the client-side and server-side configur
 **Client Side**:
 
 ```javascript
-const spreadsheet = new ej.spreadsheet.Spreadsheet({
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
     openSettings: {
         // Specifies the size (in bytes) of each chunk for the server response when opening a document.
         chunkSize: 1000000,
@@ -497,7 +497,7 @@ By default, the Spreadsheet control saves the Excel file and downloads it to the
 
     // Convert the spreadsheet workbook to JSON data.
     spreadsheet.saveAsJson().then((json) => {
-        const formData = new FormData();
+        var formData = new FormData();
         formData.append('FileName', "Sample");
         formData.append('saveType', 'Xlsx');
         // Passing the JSON data to perform the save operation.
@@ -581,11 +581,11 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
         }
     }
 });
-const saveAsExcel = (eventArgs) => {
+var saveAsExcel = (eventArgs) => {
     // Convert the spreadsheet workbook to JSON data.
     spreadsheet.saveAsJson().then(Json => {
         saveInitiated = false;
-        const formData = new FormData();
+        var formData = new FormData();
         // Passing the JSON data to server to perform save operation.
         formData.append('JSONData', JSON.stringify(Json.jsonObject.Workbook));
         formData.append('saveType', 'Xlsx');
@@ -599,23 +599,23 @@ const saveAsExcel = (eventArgs) => {
                 return response.blob();
             }
         }).then(data => {
-            const reader = new FileReader();
+            var reader = new FileReader();
             reader.onload = function () {
                 //Converts the result of the file reading operation into a base64 string.
-                const textBase64Str = reader.result.toString();
+                var textBase64Str = reader.result.toString();
                 //Converts the base64 string into a Excel base64 string.
-                const excelBase64Str = atob(textBase64Str.replace('data:text/plain;base64,', ''));
+                var excelBase64Str = atob(textBase64Str.replace('data:text/plain;base64,', ''));
                 //Converts the Excel base64 string into byte characters.
-                const byteCharacters = atob(excelBase64Str.replace('data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,', ''));
-                const byteArrays = [];
-                for (let i = 0; i < byteCharacters.length; i++) {
+                var byteCharacters = atob(excelBase64Str.replace('data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,', ''));
+                var byteArrays = [];
+                for (var i = 0; i < byteCharacters.length; i++) {
                     byteArrays.push(byteCharacters.charCodeAt(i));
                 }
-                const byteArray = new Uint8Array(byteArrays);
+                var byteArray = new Uint8Array(byteArrays);
                 //creates a blob data from the byte array with xlsx content type.
-                const blobData = new Blob([byteArray], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-                const blobUrl = URL.createObjectURL(blobData);
-                const anchor = document.createElement('a');
+                var blobData = new Blob([byteArray], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+                var blobUrl = URL.createObjectURL(blobData);
+                var anchor = document.createElement('a');
                 anchor.download = 'Sample.xlsx';
                 anchor.href = blobUrl;
                 document.body.appendChild(anchor);

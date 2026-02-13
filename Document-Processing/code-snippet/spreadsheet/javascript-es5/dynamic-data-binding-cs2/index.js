@@ -1,5 +1,5 @@
 
-let sheet = [{
+var sheet = [{
     ranges: [{ dataSource: defaultData }],
     columns: [
         { width: 180 }, { width: 130 }, { width: 130 }, { width: 180 },
@@ -7,7 +7,7 @@ let sheet = [{
     ]
 }];
 
-let spreadsheet = new ej.spreadsheet.Spreadsheet({
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
     sheets: sheet,
     created: function () {
         // Applies cell formatting to specified range of the active sheet
@@ -18,7 +18,7 @@ let spreadsheet = new ej.spreadsheet.Spreadsheet({
 spreadsheet.appendTo('#spreadsheet');
 
 document.getElementById("updateDynamicData").onclick = () => {
-    let newDataCollection = {
+    var newDataCollection = {
         dataSource: [
           {
             'Payment Mode': 'Debit Card',
