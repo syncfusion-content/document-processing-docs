@@ -1574,7 +1574,7 @@ Refer to the following package reference:
 
 <ItemGroup>
     <PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Windows" Version="32.1.21">
-        <IncludeAssets>compile</IncludeAssets>
+        <IncludeAssets>compile;runtime</IncludeAssets>
     </PackageReference>
 </ItemGroup>
 
