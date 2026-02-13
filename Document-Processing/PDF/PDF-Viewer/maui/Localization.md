@@ -615,4 +615,96 @@ The following table contains the default name and value details used in the SfPd
 <td>InvalidPasswordError</td>
 <td>Can't open an encrypted document. The password is invalid.</td>
 </tr>
+<tr>
+<td>AddReply</td>
+<td>Add Reply</td>
+</tr> 
+<tr> 
+<td>AddYourComment</td>
+<td>Add comment</td>
+</tr>
+<tr>
+<td>CanOpenWebPage</td>
+<td>Do you want to open</td> 
+</tr> 
+<tr> 
+<td>Comments</td>
+<td>Comments</td>
+</tr> 
+<tr> 
+<td>Edit</td>
+<td>Edit</td> 
+</tr> 
+<tr> 
+<td>EditYourComment</td> 
+<td>Edit comment</td> 
+</tr> 
+<tr> 
+<td>GuestUser</td> 
+<td>Guest User</td> 
+</tr> 
+<tr> 
+<td>NoBookmark</td> 
+<td>No Bookmark</td> 
+</tr> 
+<tr> 
+<td>NoComments</td> 
+<td>No Comments available</td> 
+</tr> 
+<tr>
+<td>Square</td>
+<td>Square</td>
+</tr>
+<tr>
+<td>MarkForRedaction</td>
+<td>Mark for Redaction</td>
+</tr> 
+<tr> 
+<td>RedactionProperties</td>
+<td>Redaction properties</td> 
+</tr> 
+<tr> 
+<td>RedactedAreaFillColor</td> 
+<td>Redacted area fill color</td> 
+</tr> 
+<tr> 
+<td>UseOverlayText</td> 
+<td>Use overlay text</td> 
+</tr> 
+<tr> 
+<td>RedactionMarkAppearance</td> 
+<td>Redaction mark appearance</td> 
+</tr> 
+<tr> 
+<td>FillColor</td> 
+<td>Fill color</td> 
+</tr> 
+<tr> 
+<td>OutlineColor</td> 
+<td>Outline color</td> 
+</tr> 
+<tr> 
+<td>FillOpacity</td> 
+<td>Fill opacity</td> 
+</tr> 
+<tr> 
+<td>MarkPageRange</td> 
+<td>Mark page range</td> 
+</tr> 
+<tr> 
+<td>CurrentPage</td> 
+<td>Current page</td> 
+</tr> 
+<tr> 
+<td>OddPagesOnly</td>
+<td>Odd pages only</td> 
+</tr> 
+<tr> 
+<td>EvenPagesOnly</td> 
+<td>Even pages only</td> 
+</tr> 
+<tr> 
+<td>SpecificPage</td> 
+<td>Specific page</td> 
+</tr>
 </table>
