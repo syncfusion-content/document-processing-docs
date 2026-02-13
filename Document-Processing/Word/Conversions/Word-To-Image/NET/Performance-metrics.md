@@ -20,9 +20,7 @@ The following system configurations were used for benchmarking:
 * **.NET Version:** .NET 8.0  
 * **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v32.2.3](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/32.2.3)
 
-## Word to image conversion
-
-## Benchmark Results.
+## Benchmark Results
 
 The table below shows the performance results of various Word document operations, evaluated using predefined input conditions in the previously described environment. 
 
@@ -52,7 +50,7 @@ The table below shows the performance results of various Word document operation
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Font-Substitution-Image/)'| markdownify }}</td>
 </tr>
 <tr>
-    <td>Use embedded word fonts</td>
+    <td>{{'[Use embedded word fonts](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion#suggestion-3:-embed-fonts-in-docx)'| markdownify }}</td>
     <td>2 pages</td>
     <td>1.1</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Use-embedded-Word-fonts-image/)'| markdownify }}</td>
