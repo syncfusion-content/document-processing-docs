@@ -92,3 +92,19 @@ docker-compose up -d
 Step3: After successfully running the server, you'll encounter the following message upon opening the host URL in your browser http://localhost:8003/
 
 ![Browser](images/browser.jpg)
+
+**Deployment Options**
+
+You can deploy the APIs as Docker containers on major cloud platforms. Follow the guides below to deploy quickly and efficiently:
+
+- Microsoft Azure
+Run the container using Azure Container Instances:
+🔗 [Deploy to Azure](https://learn.microsoft.com/en-us/azure/container-instances/container-instances-quickstart)
+
+- Amazon Web Services (AWS)
+Deploy the container using Amazon ECS or other services:
+🔗 [Deploy to AWS](https://aws.amazon.com/getting-started/hands-on/deploy-docker-containers/)
+
+- Google Cloud Platform (GCP)
+Use Google Cloud Run to deploy your containerized API:
+🔗 [Deploy to Google Cloud](https://cloud.google.com/run/docs/deploying)
