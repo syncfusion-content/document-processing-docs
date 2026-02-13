@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Prevent actions without read-only and protection in Angular Spreadsheet
+# Prevent actions without read-only and protection in Spreadsheet
 
 In Syncfusion Angular Spreadsheet, the [**read-only**](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/protect-sheet#make-cells-read-only-without-protecting-worksheet) feature makes a range of cells, rows, or columns completely non-editable and restricts all spreadsheet actions on those cells. Similarly, the [**sheet protection**](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/protect-sheet#protect-sheet) feature locks the entire sheet and restricts all spreadsheet actions on the sheet. It does not allow actions such as formatting cells, rows, or columns, selecting cells, or inserting hyperlinks—unless these options are explicitly enabled in the [`protectSettings`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/protectsettingsmodel).
 
