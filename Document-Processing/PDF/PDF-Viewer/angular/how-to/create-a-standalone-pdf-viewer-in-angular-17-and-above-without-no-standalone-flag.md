@@ -14,7 +14,7 @@ This section explains the steps required to create a simple Standalone Angular P
 
 ## Setup Angular Environment
 
-You can use the [`Angular CLI`](https://github.com/angular/angular-cli) to setup your Angular applications.
+Use the Angular CLI to create and manage Angular applications.
 To install the latest Angular CLI globally use the following command.
 
 ```bash
@@ -46,9 +46,7 @@ npm install @syncfusion/ej2-angular-pdfviewer --save
 cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib  src/assets/ej2-pdfviewer-lib
 ```
 
-* Confirm that there is an 'ej2-pdfviewer-lib' directory within your public directory, housing the assets of the PDF Viewer library.
-
-* Validate that your server has been configured to utilize the Content-Type: application/wasm MIME type. Additional information can be found in the [Troubleshooting](./troubleshooting/troubleshooting) section.
+On Windows, use an equivalent command or add an npm script to copy assets cross-platform. Ensure the development server serves WebAssembly with the `Content-Type: application/wasm` MIME type; see the [Troubleshooting](./troubleshooting/troubleshooting) section for details.
 
 ## Registering PDF Viewer Module and Adding PDF Viewer component
 
@@ -79,7 +77,7 @@ import {
                     style="height:640px;display:block">
                 </ejs-pdfviewer>
              </div>`,
-  styleUrl: './app.component.css',
+  styleUrl: './app.css',
   providers: [LinkAnnotationService, BookmarkViewService, MagnificationService,
     ThumbnailViewService, ToolbarService, NavigationService,
     TextSearchService, TextSelectionService, PrintService,
@@ -143,7 +141,7 @@ import {
                     style="height:640px;display:block">
                 </ejs-pdfviewer>
              </div>`,
-  styleUrl: './app.component.css',
+  styleUrl: './app.css',
   providers: [LinkAnnotationService, BookmarkViewService, MagnificationService,
     ThumbnailViewService, ToolbarService, NavigationService,
     TextSearchService, TextSelectionService, PrintService,

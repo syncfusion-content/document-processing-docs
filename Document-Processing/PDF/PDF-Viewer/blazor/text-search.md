@@ -27,7 +27,7 @@ Enable or disable the text search UI using the [EnableTextSearch](https://help.s
 
 ```
 
-Text search can also be performed programmatically using the following APIs: [SearchTextAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SearchTextAsync_System_String_System_Boolean_), [SearchNextAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SearchNextAsync), [SearchPreviousAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SearchPreviousAsync), and [CancelTextSearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CancelTextSearchAsync).
+Text search can also be performed programmatically using the following APIs: [SearchTextAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SearchTextAsync_System_String_System_Boolean_), [SearchNextAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SearchNextAsync), [SearchPreviousAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SearchPreviousAsync), and [CancelTextSearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CancelTextSearchAsync). These APIs enable programmatic control of search initiation, navigation, and cancellation.
 
 ```cshtml
 
@@ -83,7 +83,7 @@ Text search can also be performed programmatically using the following APIs: [Se
 
 ## Customize text search highlight colors
 
-Use the [PdfViewerTextSearchColorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerTextSearchColorSettings.html) to customize the highlight appearance used for search results. Configure [SearchColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerTextSearchColorSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerTextSearchColorSettings_SearchColor) for other matches and [SearchHighlightColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerTextSearchColorSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerTextSearchColorSettings_SearchHighlightColor) for the current match. By default, distinct colors are applied for current and other occurrences; adjust these to align with application theme requirements.
+Use the [PdfViewerTextSearchColorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerTextSearchColorSettings.html) to customize the highlight appearance used for search results. Configure [SearchColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerTextSearchColorSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerTextSearchColorSettings_SearchColor) for other matches and [SearchHighlightColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerTextSearchColorSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerTextSearchColorSettings_SearchHighlightColor) for the current match. By default, distinct colors are applied for the current occurrence and other matches; adjust these to align with application theme and accessibility contrast requirements.
 
 ```cshtml
 
@@ -101,25 +101,25 @@ Use the [PdfViewerTextSearchColorSettings](https://help.syncfusion.com/cr/blazor
 
 ![Blazor SfPdfViewer text search highlight color customization](./images/blazor-pdfviewer-text-search-settings.png)
 
-## Text Search Events
+## Text search events
 
-The following events are available for text search in the SfPdfViewer component.
+The following events are available for text search in the `SfPdfViewer` component.
 
 |Name|Description|
 |---|---|
-|OnTextSearchStart|Triggers when a text search starts.|
-|OnTextSearchComplete|Triggers when a text search is completed.|
-|OnTextSearchHighlight|Triggers when searched text is highlighted.|
+|OnTextSearchStart|Triggers when a text search begins.|
+|OnTextSearchComplete|Triggers when a text search completes.|
+|OnTextSearchHighlight|Triggers when search results are highlighted.|
 
-### OnTextSearchStart Event
+### OnTextSearchStart event
 
-The [OnTextSearchStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSearchStart) event triggers when the text search is started.
+The [OnTextSearchStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSearchStart) event triggers when a text search begins.
 
-#### Event Arguments
+#### Event arguments
 
-See [TextSearchStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextSearchStartEventArgs.html) for details such as matchcase, search text.
+See [TextSearchStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextSearchStartEventArgs.html) for details such as `SearchText` and `MatchCase`.
 
-The following example illustrates how to handle the TextSearchStart event.
+The following example illustrates how to handle the `OnTextSearchStart` event.
 
 ```cshtml
 
@@ -137,15 +137,15 @@ The following example illustrates how to handle the TextSearchStart event.
 
 ```
 
-### OnTextSearchComplete Event
+### OnTextSearchComplete event
 
-The [OnTextSearchComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSearchComplete) event triggers when the text search is completed.
+The [OnTextSearchComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSearchComplete) event triggers when a text search completes.
 
-#### Event Arguments
+#### Event arguments
 
-[TextSearchCompleteEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextSearchCompleteEventArgs.html) triggers when the text search is completed.
+See [TextSearchCompleteEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextSearchCompleteEventArgs.html) for details such as total match counts and summary information.
 
-The following example illustrates how to handle the TextSearchComplete event.
+The following example illustrates how to handle the `OnTextSearchComplete` event.
 
 ```cshtml
 
@@ -163,15 +163,15 @@ The following example illustrates how to handle the TextSearchComplete event.
 
 ```
 
-### OnTextSearchHighlight Event
+### OnTextSearchHighlight event
 
-The [OnTextSearchHighlight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSearchHighlight) event triggers when the text search text is highlighted.
+The [OnTextSearchHighlight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSearchHighlight) event triggers when search results are highlighted on the page.
 
-#### Event Arguments
+#### Event arguments
 
-[TextSearchHighlightEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextSearchHighlightEventArgs.html) for details such as bounds, pagenumber of the highlighted text.
+See [TextSearchHighlightEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextSearchHighlightEventArgs.html) for details such as highlight bounds and `PageNumber`.
 
-The following example illustrates how to handle the TextSearchHighlight event.
+The following example illustrates how to handle the `OnTextSearchHighlight` event.
 
 ```cshtml
 

@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with server-backed PDF Viewer component
+# Getting started with server-backed React PDF Viewer component
 
-This section explains the steps required to create a simple React PDF Viewer and demonstrates the basic usage of the PDF Viewer control in a React application.
+This section explains the steps to create a server-backed React PDF Viewer and demonstrates basic usage of the PDF Viewer component in a React application.
 
 ## Prerequisites
 
@@ -20,9 +20,9 @@ To get started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI co
 
 ## Setup for Local Development
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To set up a React application, use Vite (for example, `npm create vite@latest`), which provides a fast development environment, smaller bundle sizes, and optimized production builds compared to traditional tools such as `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/).
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+N> To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
 To create a new React application, run the following command.
 
@@ -53,7 +53,7 @@ To install PDF Viewer component, use the following command
 npm install @syncfusion/ej2-react-pdfviewer --save
 ```
 
-N> The following changes applies to React version 18 and above.
+N> The following changes apply to React version 18 and above.
 
 ## Adding PDF Viewer component and the CSS reference
 

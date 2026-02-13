@@ -18,7 +18,7 @@ To compress a PDF document, send a request to the /v1/edit-pdf/compress endpoint
 {% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/edit-pdf/compress' \
---form 'file=@"4mb.pdf"' \
+--form 'file=@"Input.pdf"' \
 --form 'settings="{
   \"File\": \"file\",
   \"Password\": null,
@@ -36,7 +36,19 @@ curl --location 'http://localhost:8003/v1/edit-pdf/compress' \
 
 const formdata = new FormData();
 formdata.append("file", fileInput.files[0], "4mb.pdf");
-formdata.append("settings", "{\n  \"File\": \"file\",\n  \"Password\": null,\n  \"ImageQuality\": 50,\n  \"OptimizeFont\": true,\n  \"RemoveMetadata\": false,\n  \"OptimizePageContents\": true,\n  \"FlattenFormFields\": true,\n  \"FlattenAnnotations\": true\n}");
+formdata.append(
+  "settings",
+  JSON.stringify({
+    File: "file",
+    Password: null,
+    ImageQuality: 50,
+    OptimizeFont: true,
+    RemoveMetadata: false,
+    OptimizePageContents: true,
+    FlattenFormFields: true,
+    FlattenAnnotations: true
+  })
+);
 
 const requestOptions = {
   method: "POST",
@@ -44,7 +56,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/compress", requestOptions)
+fetch("http://localhost:8003/v1/edit-pdf/compress", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -56,19 +68,26 @@ fetch("http://localhost:4000/v1/edit-pdf/compress", requestOptions)
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/compress");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("4mb.pdf")), "file", "4mb.pdf");
-content.Add(new StringContent("{
-  \"File\": \"file\",
-  \"Password\": null,
-  \"ImageQuality\": 50,
-  \"OptimizeFont\": true,
-  \"RemoveMetadata\": false,
-  \"OptimizePageContents\": true,
-  \"FlattenFormFields\": true,
-  \"FlattenAnnotations\": true
-}"), "settings");
+content.Add(new StreamContent(File.OpenRead("Sample.pdf")), "file1", "Sample.pdf");
+
+var settings = new
+{
+    File = "file",
+    Password = (string?)null,
+    ImageQuality = 50,
+    OptimizeFont = true,
+    RemoveMetadata = false,
+    OptimizePageContents = true,
+    FlattenFormFields = true,
+    FlattenAnnotations = true
+};
+
+var json = JsonSerializer.Serialize(settings);
+var settingsContent = new StringContent(json, Encoding.UTF8, "application/json");
+content.Add(settingsContent, "settings");
 request.Content = content;
-var response = await client.SendAsync(request);
+
+using var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
 
@@ -94,7 +113,8 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df'
+curl --location 'http://localhost:8003/v1/conversion/status/9b131bfe-d4eb-4f1d-b946-46443a363eb5' \
+  --output Output.pdf
 
 {% endhighlight %}
 
@@ -104,7 +124,7 @@ const requestOptions = {
   method: "GET",
   redirect: "follow"
 };
-fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:8003/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));

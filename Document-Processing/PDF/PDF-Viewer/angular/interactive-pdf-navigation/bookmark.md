@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bookmark Navigation in Angular PDF Viewer | Syncfusion
-description: Learn how to use bookmarks for quick navigation in the Syncfusion Angular PDF Viewer control, enhancing user experience and accessibility.
+description: Use bookmarks to navigate quickly within PDF documents in the Syncfusion Angular PDF Viewer for Angular.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,8 +10,10 @@ domainurl: ##DomainURL##
 
 # Bookmark navigation in Angular PDF Viewer control
 
-The Bookmarks saved in PDF files are loaded and made ready for easy navigation.
-You can enable/disable bookmark navigation by using the following code snippet.,
+Bookmarks embedded in PDF files are loaded and made available for quick navigation within the viewer.
+Enable or disable bookmark navigation using the examples below.
+
+The examples show a Standalone (client-only) setup and a Server-Backed setup; the primary difference is the viewer's `resourceUrl`/`service` configuration used to locate PDF resources.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -39,7 +41,7 @@ import {
  */
 @Component({
   selector: 'app-root',
-  // templateUrl: 'app.component.html',
+  // templateUrl: 'app.html',
     template: `
     <div class="control-section">
       <div class="content-wrapper">
@@ -73,7 +75,7 @@ import {
     FormDesignerService,
     PageOrganizerService,
   ],
-  styleUrls: ['app.component.css'],
+  styleUrls: ['app.css'],
   standalone: true,
   imports: [PdfViewerModule],
     
@@ -118,7 +120,7 @@ import {
  */
 @Component({
   selector: 'app-root',
-  // templateUrl: 'app.component.html',
+  // templateUrl: 'app.html',
     template: `
     <div class="control-section">
       <div class="content-wrapper">
@@ -152,7 +154,7 @@ import {
     FormDesignerService,
     PageOrganizerService,
   ],
-  styleUrls: ['app.component.css'],
+  styleUrls: ['app.css'],
   standalone: true,
   imports: [PdfViewerModule],
     
@@ -173,11 +175,11 @@ export class AppComponent {
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/bookmark.png)
+![PDF viewer bookmarks panel](../images/bookmark.png)
 
-To perform bookmark navigation, you can use the **goToBookmark** method. It's important to note that the **goToBookmark** method will throw an error if the specified bookmark does not exist in the PDF document.
+Use the **goToBookmark** method to navigate to a bookmark programmatically. The method expects valid bookmark coordinates (zero-based page index and a Y offset). If the specified bookmark does not exist, the call may throw an error—guard calls with error handling or verify existence first using `getBookmarks()`.
 
-Here is an example of how to use the **goToBookmark** method:
+The examples below demonstrate using `goToBookmark` and `getBookmarks()`; do not modify code samples unless adapting them for a specific app.
 
 ```
   <button id="gotobookmark">Specfic Page</button>
@@ -245,5 +247,7 @@ export class AppComponent implements AfterViewInit {
 
 ## See also
 
-* [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/toolbar)
-* [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/feature-module)
+        Related topics that demonstrate viewer features and module setup:
+
+        - [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/toolbar)
+        - [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/feature-module)

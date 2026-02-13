@@ -107,7 +107,7 @@ Edit comments and replies in the following ways:
 
 ![Delete comments or replies](../images/commentsdelete.png)
 
->Deleting the root comment from the comment panel also deletes the associated annotation.
+N> Deleting the root comment from the comment panel also deletes the associated annotation.
 
 ## How to check the comments added by the user
 
