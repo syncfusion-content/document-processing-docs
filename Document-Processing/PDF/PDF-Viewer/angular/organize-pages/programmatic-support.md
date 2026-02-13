@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Programmatic Support for Organize Pages in Angular PDF Viewer control
 
-The PDF Viewer provides comprehensive programmatic support for organizing pages, allowing you to integrate and manage PDF functionalities directly within your application. This section details the available APIs to enable, control, and interact with the page organization features.
+The PDF Viewer exposes programmatic APIs to manage page organization. Use these APIs to enable the page organizer, open or close the organizer dialog, and customize page-management behaviors from application code.
 
 ## Enable or disable the page organizer
 
-The page organizer feature can be enabled or disabled using the `enablePageOrganizer` property. By default, this feature is enabled.
+Enable the page organizer using the `enablePageOrganizer` property. The default value is `true`.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -79,7 +79,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 ## Open the page organizer on document load
 
-You can control whether the page organizer dialog opens automatically when a document is loaded using the `isPageOrganizerOpen` property. The default value is `false`.
+Control whether the page organizer opens automatically when a document loads using the `isPageOrganizerOpen` property. The default value is `false`.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -144,7 +144,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 ## Customize page organizer settings
 
-The `pageOrganizerSettings` API allows you to customize the page management functionalities. You can enable or disable actions such as deleting, inserting, rotating, copying, importing, and rearranging pages, as well as configure thumbnail zoom settings. By default, all actions are enabled, and standard zoom settings are applied.
+Use the `pageOrganizerSettings` property to configure page-management actions and thumbnail zoom behavior. Settings include toggles for deleting, inserting, rotating, copying, importing, and rearranging pages, and controls for thumbnail zoom. By default, all actions are enabled, and standard zoom settings are applied.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -209,7 +209,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 ## Open the page organizer dialog
 
-The `openPageOrganizer` method programmatically opens the page organizer dialog, providing access to page management tools.
+Call the `openPageOrganizer` method on the viewer's `pageOrganizer` API to programmatically open the organizer dialog and access page-management tools.
 
 ```html
 <button id="openPageOrganizer">Open PageOrganizer Pane</button>
@@ -238,7 +238,7 @@ export class AppComponent {
 
 ## Close the page organizer dialog
 
-The `closePageOrganizer` method programmatically closes the page organizer dialog.
+Call the `closePageOrganizer` method on the viewer's `pageOrganizer` API to programmatically close the organizer dialog.
 
 ```html
 <button id="closePageOrganizer">Close PageOrganizer Pane</button>

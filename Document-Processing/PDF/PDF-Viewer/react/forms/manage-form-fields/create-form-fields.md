@@ -9,7 +9,7 @@ documentation: ug
 
 # Create PDF Form Fields in React
 
-You can create or add new form fields either visually using the [Form Designer UI](https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/form-designer) or dynamically using APIs.
+Create or add new form fields visually using the [Form Designer UI](https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/form-designer) or programmatically using the API.
 
 ## Create Form Fields Using the Form Designer UI
 Use this approach when you want to design forms manually without writing code.

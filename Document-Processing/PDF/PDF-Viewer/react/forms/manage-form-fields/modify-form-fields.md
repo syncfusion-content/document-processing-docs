@@ -9,16 +9,16 @@ documentation: ug
 
 # Modify PDF Form Field Properties in React
 
-You can modify form fields using the **UI** or **API**.
+Modify form fields using the UI or programmatically via the API.
 
-## Modify PDF Form Field Properties using the UI
+## Modify PDF form field properties using the UI
 - Right click a field → **Properties** to update settings.
-![Textbox properties panel](../../../javascript-es6/images/ui-textbox-edit.png)
+![Textbox properties panel showing properties and layout](../../../javascript-es6/images/ui-textbox-edit.png)
 - Drag to move; use handles to resize.
 - Use the toolbar to toggle field mode or add new fields.
 
-## Modify PDF Form Field Properties programmatically
-Use [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) to change behavior/data (including position and size):
+## Modify PDF form field properties programmatically
+Use [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) to change behavior or data (including position and size):
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -75,7 +75,7 @@ root.render(<App />);
 
 ### Textbox
 - UI: Update value, font, size, colors, border thickness, alignment, max length, multiline.
-![Textbox properties panel](../../../javascript-es6/images/ui-textbox-edit.png)
+![Textbox properties panel showing value and typography settings](../../../javascript-es6/images/ui-textbox-edit.png)
 - API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for value, typography, alignment, colors, borders.
 
 {% tabs %}
@@ -132,7 +132,7 @@ root.render(<App />);
 ### Password
 
 - UI: Tooltip, required, max length, font, appearance.
-![Password edited from UI](../../../javascript-es6/images/ui-password-edit.png)
+![Password properties panel showing tooltip and validation settings](../../../javascript-es6/images/ui-password-edit.png)
 - API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, validation flags, typography, colors, alignment, borders.
 
 {% tabs %}
@@ -191,7 +191,7 @@ root.render(<App />);
 
 ### CheckBox
 - UI: Toggle checked state.
-![CheckBox edited from UI](../../../javascript-es6/images/ui-checkbox-edit.png)
+![CheckBox properties panel showing checked state](../../../javascript-es6/images/ui-checkbox-edit.png)
 - API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for isChecked, tooltip, colors, borders.
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -241,9 +241,9 @@ root.render(<App />);
 {% endtabs %}
 
 ### RadioButton
-•	UI: Set selected item in a group (same Name).
-![RadioButton edited from UI](../../../javascript-es6/images/ui-radiobutton-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) to set selected value and border appearance.
+- UI: Set selected item in a group (same Name).
+![RadioButton properties panel showing grouped options](../../../javascript-es6/images/ui-radiobutton-edit.png)
+- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) to set selected value and border appearance.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -288,9 +288,9 @@ root.render(<App />);
 {% endtabs %}
 
 ### ListBox
-•	UI: Add/remove items, set selection, adjust fonts/colors.
-![ListBox edited from UI](../../../javascript-es6/images/ui-listbox-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for items, selection, borders.
+- UI: Add/remove items, set selection, adjust fonts/colors.
+![ListBox properties panel showing items and selection](../../../javascript-es6/images/ui-listbox-edit.png)
+- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for items, selection, borders.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -346,9 +346,9 @@ root.render(<App />);
 {% endtabs %}
 
 ### DropDown
-•	UI: Add/remove items, default value, appearance.
-![DropDown edited from UI](../../../javascript-es6/images/ui-dropdown-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for items, value, borders.
+- UI: Add/remove items, default value, appearance.
+![DropDown properties panel showing list items and default value](../../../javascript-es6/images/ui-dropdown-edit.png)
+- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for items, value, borders.
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 import * as ReactDOM from 'react-dom/client';
@@ -403,9 +403,9 @@ root.render(<App />);
 {% endtabs %}
 
 ### Signature Field
-•	UI: Tooltip, thickness, indicator text, required/visibility.
-![Signature field edited from UI](../../../javascript-es6/images/ui-signature-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
+- UI: Tooltip, thickness, indicator text, required/visibility.
+![Signature field properties panel showing indicator and appearance](../../../javascript-es6/images/ui-signature-edit.png)
+- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 import * as ReactDOM from 'react-dom/client';
@@ -455,9 +455,9 @@ root.render(<App />);
 {% endtabs %}
 
 ### Initial Field
-•	UI: Tooltip, indicator text, thickness, required/visibility.
-![Initial field edited from UI](../../../javascript-es6/images/ui-initial-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
+- UI: Tooltip, indicator text, thickness, required/visibility.
+![Initial field properties panel showing indicator and tooltip](../../../javascript-es6/images/ui-initial-edit.png)
+- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 import * as ReactDOM from 'react-dom/client';
