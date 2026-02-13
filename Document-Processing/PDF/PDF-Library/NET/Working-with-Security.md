@@ -1603,6 +1603,83 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Security/Change-the-permission-of-the-PDF-document/).
 
+## View document permission flags
+
+Read a PDF document permission flags via the [Security.Permissions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_Permissions) property, which returns a bitwise combination of values from the [PdfPermissionsFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfPermissionsFlags.html) enumeration.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load an existing PDF
+using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
+{
+    // Access the document security settings
+    PdfSecurity security = loadedDocument.Security;
+    // Get the permission flags (bitwise enum)
+    PdfPermissionsFlags permissions = security.Permissions;
+    Console.WriteLine("Permissions in the document:");
+    // Enumerate all flags and print the enabled ones
+    foreach (PdfPermissionsFlags flag in Enum.GetValues(typeof(PdfPermissionsFlags)))
+    {
+        if (flag == 0) continue; // Skip None (0)
+        // Check whether the specific flag is set
+        if (permissions.HasFlag(flag))
+        {
+            Console.WriteLine($"- {flag}");
+        }
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load an existing PDF
+using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
+{
+    // Access the document security settings
+    PdfSecurity security = loadedDocument.Security;
+    // Get the permission flags (bitwise enum)
+    PdfPermissionsFlags permissions = security.Permissions;
+    Console.WriteLine("Permissions in the document:");
+    // Enumerate all flags and print the enabled ones
+    foreach (PdfPermissionsFlags flag in Enum.GetValues(typeof(PdfPermissionsFlags)))
+    {
+        if (flag == 0) continue; // Skip None (0)
+        // Check whether the specific flag is set
+        if (permissions.HasFlag(flag))
+        {
+            Console.WriteLine($"- {flag}");
+        }
+    }
+}
+
+{% endhighlight %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load an existing PDF
+Using loadedDocument As New PdfLoadedDocument("Input.pdf")
+    ' Access the document security settings
+    Dim security As PdfSecurity = loadedDocument.Security
+    ' Get the permission flags (bitwise enum)
+    Dim permissions As PdfPermissionsFlags = security.Permissions
+    Console.WriteLine("Permissions in the document:")
+    ' Enumerate all flags and print the enabled ones
+    For Each flag As PdfPermissionsFlags In [Enum].GetValues(GetType(PdfPermissionsFlags))
+        If flag = 0 Then
+            Continue For ' Skip None (0)
+        End If
+        ' Check whether the specific flag is set
+        If permissions.HasFlag(flag) Then
+            Console.WriteLine($"- {flag}")
+        End If
+    Next
+End Using
+
+{% endhighlight %}
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Remove password from the user password PDF document
 
 You can remove the [UserPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_UserPassword) from the encrypted PDF document by using the following code snippet.
