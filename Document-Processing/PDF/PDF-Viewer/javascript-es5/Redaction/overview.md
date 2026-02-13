@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redaction annotation in Javascript PDF Viewer | Syncfusion
-description: Learn how to hide sensitive information with interactive and programmatic redaction using the Syncfusion JavaScript PDF Viewer.
+description: Learn how to hide sensitive information with interactive and programmatic redaction using the Syncfusion JavaScript(ES5) PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -81,7 +81,7 @@ After adding redaction annotations, permanently apply them to the document using
 
 ![Toolbar showing the Apply Redaction button](redaction-annotations-images/redact-button-icon.png)
 
-A confirmation dialog appears before applying redaction to ensure acknowledgement of the irreversible action.
+A confirmation dialog appears before applying redaction to ensure acknowledgment of the irreversible action.
 
 ![Confirmation dialog for applying redaction](redaction-annotations-images/apply-redaction-dialog.png)
 
