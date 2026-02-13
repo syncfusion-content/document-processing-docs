@@ -89,8 +89,6 @@ Also, register the script manager `<ejs-script>` at the end of `<body>` in the A
 
 ## Understanding component options
 
-Syncfusion offers two DocumentEditor components with different feature sets:
-
 * **DocumentEditor**: A customizable component where you build the UI according to your specific requirements
 * **DocumentEditorContainer**: A complete solution with a predefined toolbar, properties pane, and status bar for comprehensive document editing
 

@@ -125,8 +125,6 @@ Add the Document editor component and its dependent component styles available i
 
 ## Choosing a component
 
-Syncfusion offers two Document editor components with different feature sets:
-
 * **DocumentEditorContainer**: A complete solution with a predefined toolbar and properties pane for comprehensive document editing
 * **DocumentEditor**: A customizable component where you build the UI according to your specific requirements
 
@@ -164,7 +162,7 @@ export default App;
 
 {% endraw %}
 
->Important: The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
 
 #### Run the DocumentEditorContainer application
 
@@ -296,7 +294,7 @@ function App() {
 export default App;
 ```
 
->Important: The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
 
 #### Run the DocumentEditor application
 
@@ -322,22 +320,10 @@ The Document editor output will be displayed as follows:
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/base-cs2" %}
 
-## Next steps
-
-After successfully setting up the Document editor component, explore these resources to enhance your implementation:
+## Frequently Asked Questions
 
 * [How to localize the Document editor container](./global-local)
 * [How to load a document by default](./how-to/open-default-document)
 * [How to customize the toolbar](./how-to/customize-tool-bar)
 * [How to resize the Document editor component](./how-to/resize-document-editor)
 * [How to add a save button to the DocumentEditorContainer toolbar](./how-to/add-save-button-in-toolbar)
-
-## Troubleshooting
-
-If you encounter issues during setup, consider the following:
-
-* Ensure all dependencies are correctly installed by running `npm install`
-* Verify that your Node.js version meets the minimum requirements
-* Check that the CSS imports are correctly referenced in your project structure
-* Clear the npm cache if dependency conflicts occur: `npm cache clean --force`
-* For server-side functionality issues, verify your web service is properly configured and accessible
